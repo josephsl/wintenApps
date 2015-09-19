@@ -1,5 +1,6 @@
-# Joseph Lee
-# Windows 10 Insider Hub app module
+# WinTenApps/pilotshubapp.py
+# Part of Windows 10 Apps Essentials collection
+# Copyright 2015 Joseph Lee, released under GPL.
 
 # Workarounds for radio button label issues.
 

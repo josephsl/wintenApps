@@ -1,13 +1,14 @@
-# Joseph Lee
-# Experimental UIA/app module for new style Calculator in Windows 10
+# WinTenApps/calculator.py
+# Part of Windows 10 App Essentials collection
+# Copyright 2015 Joseph Lee, released under GPL.
+
+# Provides enhanced support for modern Calculator, including announcing results.
 
 import appModuleHandler
 import api
 import controlTypes
 from NVDAObjects.UIA import UIA
 import queueHandler
-import tones
-import time
 
 
 class AppModule(appModuleHandler.AppModule):
@@ -25,5 +26,6 @@ class AppModule(appModuleHandler.AppModule):
 				queueHandler.queueFunction(queueHandler.eventQueue, result.setFocus)
 
 	__gestures={
-		"kb:enter":"enter"
+		"kb:enter":"enter",
+		"kb:numpadEnter":"enter"
 	}
