@@ -7,19 +7,21 @@ This add-on is a collection of app modules for various Windows 10 apps, as well 
 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
-* Modern calculator.
+* Alarms and Clock.
+* Calculator (modern).
 * Insider Hub (Windows Insiders only).
 * Twitter.
-* Alarms and Clock.
+* TeamViewer Touch.
 
 ## Calculator
 
 * When ENTER is pressed, NVDA announces calculation results.
 
-## Insider Hub
+## Insider Hub and TeamViewer Touch
 
-* Meant to be used by Windows Insiders running an Insider build.
+* Insider Hub only: Meant to be used by Windows Insiders running an Insider build.
 * Labels for radio buttons are announced.
+* TeamViewer Touch: Lables for buttons are announced.
 
 ## Twitter
 
