@@ -1,5 +1,4 @@
-# Joseph Lee
-# Windows 10 contorls repository
+# Windows 10 controls repository
 # Copyright 2015 Joseph Lee, released under GPL.
 
 # Adds handlers for vairous UIA controls found in Windows 10.
@@ -10,10 +9,8 @@ import controlTypes
 from NVDAObjects.UIA import UIA
 import api
 import speech
-import addonHandler
-addonHandler.initTranslation()
 
-# Until NVDA Core ticket 5323 is implemtned, have our own find app mod from PID handy.
+# Until NVDA Core ticket 5323 is implemented, have our own find app mod from PID handy.
 def getAppModuleFromProcessID(processID):
 	"""Finds the appModule that is for the given process ID. The module is also cached for later retreavals.
 	@param processID: The ID of the process for which you wish to find the appModule.
