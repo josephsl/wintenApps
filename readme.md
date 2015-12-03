@@ -1,6 +1,7 @@
 # Windows 10 App Essentials
 
 * Author: Joseph Lee
+* Download [stable version][1]
 * Download [development version][2]
 
 This add-on is a collection of app modules for various Windows 10 apps, as well as fixes for certain windows 10 controls.
