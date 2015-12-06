@@ -39,6 +39,13 @@ class LoopingSelectorItem(UIA):
 		api.setNavigatorObject(self)
 		self.reportFocus()
 
+# Certain UIA combo box items are no longer announced.
+class ComboBoxItem(UIA):
+
+	def event_UIA_elementSelected(self):
+		api.setNavigatorObject(self)
+
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
@@ -52,3 +59,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if isinstance(obj, UIA):
 			if obj.role==controlTypes.ROLE_LISTITEM and obj.UIAElement.cachedClassName == "LoopingSelectorItem":
 				clsList.append(LoopingSelectorItem)
+			# Combo box items are not announced when using up or down arrows.
+			elif obj.role==controlTypes.ROLE_LISTITEM and obj.UIAElement.cachedClassName == "ComboBoxItem":
+				clsList.append(ComboBoxItem)
