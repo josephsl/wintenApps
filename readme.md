@@ -14,6 +14,10 @@ The following app modules or support modules for some apps are included (see eac
 * Twitter.
 * TeamViewer Touch.
 
+## General
+
+* Certain combo box items are now announced.
+
 ## Calculator
 
 * When ENTER is pressed, NVDA announces calculation results.
