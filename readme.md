@@ -13,6 +13,11 @@ The following app modules or support modules for some apps are included (see eac
 * Insider Hub (Windows Insiders only).
 * Twitter.
 * TeamViewer Touch.
+* Miscellaneous modules for controls such as Start Menu tiles.
+
+## General
+
+* In context menus for Start Menu tiles, submenus are properly recognized.
 
 ## Calculator
 
