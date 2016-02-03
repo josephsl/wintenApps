@@ -20,9 +20,9 @@ The following app modules or support modules for some apps are included (see eac
 
 * In context menus for Start Menu tiles, submenus are properly recognized.
 
-## General
+## Alarms and clock
 
-* Certain combo box items are now announced.
+* Time picker values are now announced. This also affects the control used to select when to restart to finish installing Windows updates.
 
 ## Calculator
 
@@ -41,10 +41,6 @@ The following app modules or support modules for some apps are included (see eac
 ## Twitter
 
 * Button labels are now announced.
-
-## Alarms and clock
-
-* Time picker values are now announced. This also affects the control used to select when to restart to finish installing Windows updates.
 
 [1]: http://addons.nvda-project.org/files/get.php?file=w10
 
