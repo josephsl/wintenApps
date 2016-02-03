@@ -11,8 +11,14 @@ The following app modules or support modules for some apps are included (see eac
 * Alarms and Clock.
 * Calculator (modern).
 * Insider Hub (Windows Insiders only).
+* Settings (system settings, Windows+I).
 * Twitter.
 * TeamViewer Touch.
+* Miscellaneous modules for controls such as Start Menu tiles.
+
+## General
+
+* In context menus for Start Menu tiles, submenus are properly recognized.
 
 ## General
 
@@ -27,6 +33,10 @@ The following app modules or support modules for some apps are included (see eac
 * Insider Hub only: Meant to be used by Windows Insiders running an Insider build.
 * Labels for radio buttons are announced.
 * TeamViewer Touch: Lables for buttons are announced.
+
+## Settings
+
+* Certain information such as Windows Update progress is now reported automatically.
 
 ## Twitter
 
