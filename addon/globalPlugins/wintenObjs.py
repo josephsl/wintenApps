@@ -1,7 +1,8 @@
 # Windows 10 controls repository
-# Copyright 2015 Joseph Lee, released under GPL.
+# Copyright 2015-2016 Joseph Lee, released under GPL.
 
-# Adds handlers for vairous UIA controls found in Windows 10.
+# Adds handlers for various UIA controls found in Windows 10.
+# Also adds interceptors for certain keyboard commands.
 
 import globalPluginHandler
 import appModuleHandler # Huge workaround.
@@ -45,6 +46,9 @@ class ComboBoxItem(UIA):
 	def event_UIA_elementSelected(self):
 		api.setNavigatorObject(self)
 
+# Tell Search UI app module to silence NVDA while the following is happenig.
+letCortanaListen = False
+
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
@@ -62,3 +66,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Combo box items are not announced when using up or down arrows.
 			elif obj.role==controlTypes.ROLE_LISTITEM and obj.UIAElement.cachedClassName == "ComboBoxItem":
 				clsList.append(ComboBoxItem)
+
+	def script_voiceActivation(self, gesture):
+		gesture.send()
+		import sys
+		if sys.getwindowsversion().major == 10:
+			global letCortanaListen
+			letCortanaListen = True
+
+
+	__gestures={"kb:windows+c":"voiceActivation"}
+
