@@ -4,44 +4,17 @@
 #See the file COPYING for more details.
 # Extended by Joseph Lee (released under GPL)
 
-import appModuleHandler
-import controlTypes
-import api
-import speech
-from NVDAObjects.UIA import UIA
-from NVDAObjects.UIA.edge import EdgeList
-from NVDAObjects.IAccessible import IAccessible, ContentGenericClient
-import ui
+from nvdaBuiltin.appModules.searchui import *
 
-# Windows 10 Search UI suggestion list item
-class SuggestionListItem(UIA):
-
-	role=controlTypes.ROLE_LISTITEM
-
-	def event_UIA_elementSelected(self):
-		focusControllerFor=api.getFocusObject().controllerFor
-		if len(focusControllerFor)>0 and focusControllerFor[0].appModule is self.appModule and self.name:
-			speech.cancelSpeech()
-			api.setNavigatorObject(self)
-			self.reportFocus()
-
-class AppModule(appModuleHandler.AppModule):
-
-	def chooseNVDAObjectOverlayClasses(self,obj,clsList):
-		if isinstance(obj,UIA) and isinstance(obj.parent,EdgeList):
-			clsList.insert(0,SuggestionListItem)
-		elif isinstance(obj,IAccessible):
-			try:
-				# #5288: Never use ContentGenericClient, as this uses displayModel
-				# which will freeze if the process is suspended.
-				clsList.remove(ContentGenericClient)
-			except ValueError:
-				pass
+class AppModule(AppModule):
 
 	# Past responses from Cortana (cached to prevent repetition, initially an empty string).
 	CortanaResponseCache = ""
+	# NVDA should not speak while Cortana is speaking.
+	CortanaIsListening = False 
 
 	def event_nameChange(self, obj, nextHandler):
+		if self.CortanaIsListening: return
 		# NVDA, can you act as a mouthpiece for Cortana?
 		if isinstance(obj, UIA):
 			element = obj.UIAElement
@@ -50,3 +23,13 @@ class AppModule(appModuleHandler.AppModule):
 					ui.message(obj.name)
 		nextHandler()
 
+	def event_appModule_gainFocus(self):
+		import globalPlugins
+		if globalPlugins.wintenObjs.letCortanaListen:
+			self.CortanaIsListening = True
+
+	def event_appModule_loseFocus(self):
+		if self.CortanaIsListening:
+			self.CortanaIsListening = False
+			import globalPlugins
+			globalPlugins.wintenObjs.letCortanaListen = False
