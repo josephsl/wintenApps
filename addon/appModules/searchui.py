@@ -4,6 +4,7 @@
 #See the file COPYING for more details.
 # Extended by Joseph Lee (released under GPL)
 
+import ui
 from nvdaBuiltin.appModules.searchui import *
 
 class AppModule(AppModule):
