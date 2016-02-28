@@ -10,6 +10,7 @@ The following app modules or support modules for some apps are included (see eac
 
 * Alarms and Clock.
 * Calculator (modern).
+* Cortana
 * Insider Hub (Windows Insiders only).
 * Settings (system settings, Windows+I).
 * Twitter.
@@ -19,6 +20,7 @@ The following app modules or support modules for some apps are included (see eac
 ## General
 
 * In context menus for Start Menu tiles, submenus are properly recognized.
+* When minimizing windows (Windows+M), "pane" is no longer announced (noticeable if using Insider Preview builds).
 
 ## Alarms and clock
 
@@ -27,6 +29,10 @@ The following app modules or support modules for some apps are included (see eac
 ## Calculator
 
 * When ENTER is pressed, NVDA announces calculation results.
+
+## Cortana
+
+* Textual responses from Cortana are announced in most situations (if it doesn't, reopen Start menu and try searching again).
 
 ## Insider Hub and TeamViewer Touch
 
