@@ -61,7 +61,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# NVDA Core ticket 5231: Announce values in time pickers.
 		if isinstance(obj, UIA):
-			if obj.role==controlTypes.ROLE_LISTITEM and obj.UIAElement.cachedClassName == "LoopingSelectorItem":
+			# Handle both Threshold and Redstone looping selector items.
+			if obj.role==controlTypes.ROLE_LISTITEM and "LoopingSelectorItem" in obj.UIAElement.cachedClassName:
 				clsList.append(LoopingSelectorItem)
 			# Combo box items are not announced when using up or down arrows.
 			elif obj.role==controlTypes.ROLE_LISTITEM and obj.UIAElement.cachedClassName == "ComboBoxItem":
