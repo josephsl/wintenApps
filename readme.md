@@ -34,9 +34,9 @@ The following app modules or support modules for some apps are included (see eac
 
 * Textual responses from Cortana are announced in most situations (if it doesn't, reopen Start menu and try searching again).
 
-## Insider Hub and TeamViewer Touch
+## Insider/Feedback Hub and TeamViewer Touch
 
-* Insider Hub only: Meant to be used by Windows Insiders running an Insider build.
+* Insider Hub (Feedback Hub in Anniversary Update) only: Meant to be used by Windows Insiders running an Insider build.
 * Labels for radio buttons are announced.
 * TeamViewer Touch: Lables for buttons are announced.
 
