@@ -21,6 +21,7 @@ The following app modules or support modules for some apps are included (see eac
 
 * In context menus for Start Menu tiles, submenus are properly recognized.
 * When minimizing windows (Windows+M), "pane" is no longer announced (noticeable if using Insider Preview builds).
+* Certain dialogs are now recognized as proper dialogs. This include Insider Preview dialog (settings app) and new-style UAC dialog in build 14328 and later.
 
 ## Alarms and clock
 

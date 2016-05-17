@@ -8,6 +8,7 @@ import globalPluginHandler
 import appModuleHandler # Huge workaround.
 import controlTypes
 from NVDAObjects.UIA import UIA
+from NVDAObjects.behaviors import Dialog
 import api
 import speech
 
@@ -49,6 +50,8 @@ class ComboBoxItem(UIA):
 # Tell Search UI app module to silence NVDA while the following is happenig.
 letCortanaListen = False
 
+# We know the following elements are dialogs.
+wintenDialogs=("Shell_Dialog", "Credential Dialog Xaml Host")
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
@@ -67,6 +70,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Combo box items are not announced when using up or down arrows.
 			elif obj.role==controlTypes.ROLE_LISTITEM and obj.UIAElement.cachedClassName == "ComboBoxItem":
 				clsList.append(ComboBoxItem)
+			# Windows that are really dialogs.
+			if obj.UIAIsWindowElement and obj.UIAElement.cachedClassName in wintenDialogs:
+				clsList.insert(0, Dialog)
 
 	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
