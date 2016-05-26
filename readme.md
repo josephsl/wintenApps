@@ -11,7 +11,7 @@ The following app modules or support modules for some apps are included (see eac
 * Alarms and Clock.
 * Calculator (modern).
 * Cortana
-* Insider Hub (Windows Insiders only).
+* Insider Hub/Feedback Hub (Windows Insiders only).
 * Settings (system settings, Windows+I).
 * Twitter.
 * TeamViewer Touch.
