@@ -51,7 +51,7 @@ class ComboBoxItem(UIA):
 letCortanaListen = False
 
 # We know the following elements are dialogs.
-wintenDialogs=("Shell_Dialog", "Credential Dialog Xaml Host")
+wintenDialogs=("Shell_Dialog", "Credential Dialog Xaml Host", "Popup")
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
@@ -71,7 +71,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif obj.role==controlTypes.ROLE_LISTITEM and obj.UIAElement.cachedClassName == "ComboBoxItem":
 				clsList.append(ComboBoxItem)
 			# Windows that are really dialogs.
-			if obj.UIAIsWindowElement and obj.UIAElement.cachedClassName in wintenDialogs:
+			if obj.UIAElement.cachedClassName in wintenDialogs:
 				clsList.insert(0, Dialog)
 
 	# Focus announcement hacks.
