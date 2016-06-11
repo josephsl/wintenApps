@@ -9,6 +9,7 @@ This add-on is a collection of app modules for various Windows 10 apps, as well 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
 * Alarms and Clock.
+* Bank of America
 * Calculator (modern).
 * Cortana
 * Insider Hub/Feedback Hub (Windows Insiders only).
@@ -45,7 +46,7 @@ The following app modules or support modules for some apps are included (see eac
 
 * Certain information such as Windows Update progress is now reported automatically.
 
-## Twitter
+## Bank of America/Twitter
 
 * Button labels are now announced.
 
