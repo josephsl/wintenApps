@@ -6,10 +6,13 @@
 
 import appModuleHandler
 import ui
+import controlTypes
 
 class AppModule(appModuleHandler.AppModule):
 
 	def event_nameChange(self, obj, nextHandler):
 		# For now, all name change events will result in items being announced.
-		ui.message(obj.name)
+		# Prevent repeats, especially if it is part of a progress bar.
+		if obj.role != controlTypes.ROLE_PROGRESSBAR:
+			ui.message(obj.name)
 		nextHandler()
