@@ -13,6 +13,7 @@ The following app modules or support modules for some apps are included (see eac
 * Calculator (modern).
 * Cortana
 * Insider Hub/Feedback Hub (Windows Insiders only).
+* Microsoft Edge
 * Settings (system settings, Windows+I).
 * Twitter.
 * TeamViewer Touch.
@@ -23,6 +24,7 @@ The following app modules or support modules for some apps are included (see eac
 * In context menus for Start Menu tiles, submenus are properly recognized.
 * When minimizing windows (Windows+M), "pane" is no longer announced (noticeable if using Insider Preview builds).
 * Certain dialogs are now recognized as proper dialogs. This include Insider Preview dialog (settings app) and new-style UAC dialog in build 14328 and later.
+* Time picker announcement works in non-English locales.
 
 ## Alarms and clock
 
@@ -42,9 +44,15 @@ The following app modules or support modules for some apps are included (see eac
 * Labels for radio buttons are announced.
 * TeamViewer Touch: Lables for buttons are announced.
 
+## Microsoft Edge
+
+* Notifications such as file downloads are now announced.
+* Note that overall support is experimental at this point (you should not use Edge as your primary browser for a while).
+
 ## Settings
 
 * Certain information such as Windows Update progress is now reported automatically.
+* Progress bar values are no longer announced twice.
 
 ## Bank of America/Twitter
 
