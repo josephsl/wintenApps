@@ -4,6 +4,7 @@
 # Adds handlers for various UIA controls found in Windows 10.
 # Also adds interceptors for certain keyboard commands.
 
+import sys
 import globalPluginHandler
 import appModuleHandler # Huge workaround.
 import controlTypes
@@ -91,7 +92,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_voiceActivation(self, gesture):
 		gesture.send()
-		import sys
 		if sys.getwindowsversion().major == 10:
 			global letCortanaListen
 			letCortanaListen = True
