@@ -60,6 +60,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Hack: Some executables, particular UWA apps have a dot in the middle.
 		# Therefore coerce the app module handler to use the modified routine above.
 		appModuleHandler.getAppModuleFromProcessID = getAppModuleFromProcessID
+		# Cortana listening mode command has changed in Redstone build 14383.
+		if sys.getwindowsversion().build >= 14383:
+			self.bindGesture("kb:windows+shift+c", "voiceActivation")
+		else:
+			self.bindGesture("kb:windows+c", "voiceActivation")
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# NVDA Core ticket 5231: Announce values in time pickers.
@@ -90,7 +95,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if sys.getwindowsversion().major == 10:
 			global letCortanaListen
 			letCortanaListen = True
-
-
-	__gestures={"kb:windows+c":"voiceActivation"}
 
