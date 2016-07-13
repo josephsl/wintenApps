@@ -7,8 +7,16 @@
 import appModuleHandler
 import ui
 import controlTypes
+from NVDAObjects.UIA import UIA
 
 class AppModule(appModuleHandler.AppModule):
+
+	def event_NVDAObject_init(self, obj):
+		if isinstance(obj, UIA):
+			# Despite repeated feedback, there's at least one unlabeled toggle button in Settings app.
+			# One particular case is Settings/Update/Developer Mode with USB/LAN discovery toggle button in Redstone.
+			if obj.name == "" and obj.role == controlTypes.ROLE_TOGGLEBUTTON:
+				obj.name = obj.previous.name
 
 	def event_nameChange(self, obj, nextHandler):
 		# For now, all name change events will result in items being announced.
