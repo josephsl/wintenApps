@@ -1,4 +1,4 @@
-# Windows 10 Settings appModuleHandler
+# Windows 10 Settings
 # Part of Windows 10 App Essentials
 # Copyright 2016 Joseph Lee, released under GPL
 
@@ -8,6 +8,9 @@ import appModuleHandler
 import ui
 import controlTypes
 from NVDAObjects.UIA import UIA
+
+# Filter out name change event for the following objects.
+noRepeatAnnouncement = ("ContentPresenter")
 
 class AppModule(appModuleHandler.AppModule):
 
@@ -20,7 +23,7 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_nameChange(self, obj, nextHandler):
 		# For now, all name change events will result in items being announced.
-		# Prevent repeats, especially if it is part of a progress bar.
-		if obj.role != controlTypes.ROLE_PROGRESSBAR:
+		# Prevent repeats, especially if it is part of a progress bar and for extraneous presentational objects.
+		if isinstance(obj, UIA) and obj.role != controlTypes.ROLE_PROGRESSBAR and obj.UIAElement.cachedAutomationID not in noRepeatAnnouncement:
 			ui.message(obj.name)
 		nextHandler()
