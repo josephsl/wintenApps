@@ -10,20 +10,21 @@ Windows 10, а также исправлений для некоторых ти�
 Включены следующие модули поддержки или модули для некоторых приложений
 (смотрите каждый раздел приложения для подробной информации):
 
-* Alarms and Clock.
+* Будильники и часы.
 * Bank of America
-* Calculator (modern).
+* Калькулятор (modern).
 * Cortana
 * Insider Hub/Feedback Hub (Windows Insiders only).
 * Microsoft Edge
 * Настройки (настройки системы, Windows+I).
 * Twitter.
-* TeamViewer Touch.
-* Miscellaneous modules for controls such as Start Menu tiles.
+* Сенсорный экран TeamViewer.
+* Разные модули для типов управления, таких, как плитки главного меню.
 
 ## Общие
 
-* In context menus for Start Menu tiles, submenus are properly recognized.
+* В контекстных меню для плиток главного меню, правильно распознаются
+  подменю.
 * When minimizing windows (Windows+M), "pane" is no longer announced
   (noticeable if using Insider Preview builds).
 * Certain dialogs are now recognized as proper dialogs. This include Insider
@@ -31,7 +32,7 @@ Windows 10, а также исправлений для некоторых ти�
   later.
 * Time picker announcement works in non-English locales.
 
-## Alarms and clock
+## Будильники и часы
 
 * Time picker values are now announced. This also affects the control used
   to select when to restart to finish installing Windows updates.
@@ -50,13 +51,13 @@ Windows 10, а также исправлений для некоторых ти�
 * Insider Hub (Feedback Hub in Anniversary Update) only: Meant to be used by
   Windows Insiders running an Insider build.
 * Метки радиокнопок теперь объявляются.
-* TeamViewer Touch: Lables for buttons are announced.
+* Сенсорный экран TeamViewer: Теперь объявляются метки кнопок.
 
 ## Microsoft Edge
 
 * Теперь объявляются уведомления, такие как загрузка файлов.
-* Note that overall support is experimental at this point (you should not
-  use Edge as your primary browser for a while).
+* Отметим, что на данный момент поддержка экспериментальна (Вы не должны
+  использовать EDGE в качестве браузера по умолчанию ещё некоторое время).
 
 ## Настройки
 

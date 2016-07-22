@@ -4,7 +4,7 @@
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
 
-Tämä lisäosa sisältää kokoelman sovellusmoduuleita Windows 10:n mukana
+Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä korjauksia tietyille säätimille.
 
 Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot

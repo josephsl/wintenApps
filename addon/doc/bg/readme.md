@@ -1,4 +1,4 @@
-# Windows 10 App Essentials (Базов пакет от спомагателни модули за приложения в Windows 10) #
+# Базов пакет за приложения в Windows 10 (Windows 10 App Essentials) #
 
 * Автор: Joseph Lee
 * Изтегляне на [стабилна версия][1]
@@ -33,7 +33,8 @@
 * Някои диалогови прозорци вече биват коректно разпознати като такива. Това
   включва диалоговия прозорец за Insider Preview (приложението Настройки) и
   новия тип диалогови прозорци за UAC в компилация 14328 и по-нови.
-* Time picker announcement works in non-English locales.
+* Съобщаването на избраните стойности в приспособлението за избор на време
+  работи и когато интерфейса не е на английски.
 
 ## Аларми и часовник
 
@@ -62,15 +63,16 @@
 
 ## Microsoft Edge
 
-* Notifications such as file downloads are now announced.
-* Note that overall support is experimental at this point (you should not
-  use Edge as your primary browser for a while).
+* Известията, като тези за изтеглянето на файл, вече биват съобщавани.
+* Имайте предвид, че цялостната поддръжка към този момент е експериментална
+  (поне засега не се препоръчва да използвате Edge като ваш основен
+  браузър).
 
 ## Настройки
 
 * Определена информация, като например напредъка на Windows Update, сега
   бива докладвана автоматично.
-* Progress bar values are no longer announced twice.
+* Стойностите на лентите за напредъка вече не се съобщават двукратно.
 
 ## Bank of America/Twitter
 
