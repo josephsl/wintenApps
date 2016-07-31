@@ -15,6 +15,7 @@ The following app modules or support modules for some apps are included (see eac
 * Insider Hub/Feedback Hub (Windows Insiders only).
 * Microsoft Edge
 * Settings (system settings, Windows+I).
+* Skype Preview
 * Twitter.
 * TeamViewer Touch.
 * Miscellaneous modules for controls such as Start Menu tiles.
@@ -52,7 +53,10 @@ The following app modules or support modules for some apps are included (see eac
 ## Settings
 
 * Certain information such as Windows Update progress is now reported automatically.
-* Progress bar values are no longer announced twice.
+* Progress bar values and other information are no longer announced twice.
+
+## Skype Preview
+* Typing indicator text is announced just like Skype for Desktop client.
 
 ## Bank of America/Twitter
 

@@ -7,14 +7,12 @@
 import appModuleHandler
 import ui
 from NVDAObjects.UIA import UIA
-import tones
 
 class AppModule(appModuleHandler.AppModule):
 
 	def event_nameChange(self, obj, nextHandler):
 		if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "TextBlock" and obj.next is not None:
 			# Announce typing indicator (same as Skype for Desktop).
-			tones.beep(440, 100)
 			nextElement = obj.next.UIAElement
 			if nextElement.cachedClassName == "RichEditBox" and nextElement.cachedAutomationID == "ChatEditBox":
 				ui.message(obj.name if obj.name != "" else "Typing stopped")
