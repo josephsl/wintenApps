@@ -42,12 +42,6 @@ class LoopingSelectorItem(UIA):
 		api.setNavigatorObject(self)
 		self.reportFocus()
 
-# Certain UIA combo box items are no longer announced.
-class ComboBoxItem(UIA):
-
-	def event_UIA_elementSelected(self):
-		api.setNavigatorObject(self)
-
 # Tell Search UI app module to silence NVDA while the following is happenig.
 letCortanaListen = False
 
@@ -73,9 +67,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Handle both Threshold and Redstone looping selector items.
 			if obj.role==controlTypes.ROLE_LISTITEM and "LoopingSelectorItem" in obj.UIAElement.cachedClassName:
 				clsList.append(LoopingSelectorItem)
-			# Combo box items are not announced when using up or down arrows.
-			elif obj.role==controlTypes.ROLE_LISTITEM and obj.UIAElement.cachedClassName == "ComboBoxItem":
-				clsList.append(ComboBoxItem)
 			# Windows that are really dialogs.
 			if obj.UIAElement.cachedClassName in wintenDialogs:
 				clsList.insert(0, Dialog)
