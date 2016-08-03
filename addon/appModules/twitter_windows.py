@@ -12,5 +12,8 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_NVDAObject_init(self, obj):
 		# Somehow, UIA places various Twitter buttons as child of the button itself (quite odd).
-		if isinstance(obj, UIA) and obj.role == controlTypes.ROLE_BUTTON and obj.name == "":
-			obj.name = obj.firstChild.name
+		try:
+			if isinstance(obj, UIA) and obj.role == controlTypes.ROLE_BUTTON and obj.name == "":
+				obj.name = obj.firstChild.name
+		except AttributeError:
+			pass
