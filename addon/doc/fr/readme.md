@@ -19,6 +19,7 @@ est inclus) :
 * Insider Hub/Feedback Hub  (Windows Insiders seulement).
 * Microsoft Edge
 * Paramètres (paramètres système, Windows+I).
+* Skype Preview
 * Twitter.
 * TeamViewer Touch.
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
@@ -70,7 +71,12 @@ est inclus) :
 
 * Certaines informations telles que l'avancement de la Mise à jour de
   Windows est maintenant signalé automatiquement.
-* Les valeurs de la barre de progression ne sont plus annoncés deux fois.
+* Les valeurs de la barre de progression et d'autres informations ne sont
+  plus annoncés deux fois.
+
+## Skype Preview
+* L'indicateur de frappe de texte est annoncé exactement comme pour le Skype
+  for Desktop client.
 
 ## Bank of America/Twitter
 

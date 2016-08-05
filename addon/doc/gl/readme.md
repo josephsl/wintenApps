@@ -18,6 +18,7 @@ se inclúe):
 * Insider Hub/Feedback Hub (Só Windows Insiders).
 * Microsoft Edge
 * Opcións (opcións do sistema, Windows+I).
+* Previsualización de Skype
 * Twitter.
 * TeamViewer Touch.
 * Módulos misceláneos para controis como mosaicos do Menú Inicio.
@@ -66,7 +67,12 @@ se inclúe):
 
 * Certa información como o progreso da Actualización de Windows agora é
   anunciada automáticamente.
-* Os valores da barra de progreso xa non se anuncian dúas veces.
+* Os valores da barra de progreso e outra información xa non se anuncian
+  dúas veces.
+
+## Previsualización de Skype
+* Ao teclear o indicador de texto anúnciase só coma cliente Skype para
+  Escritorio.
 
 ## Bank of America/Twitter
 
