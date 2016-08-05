@@ -8,6 +8,7 @@ import sys
 import globalPluginHandler
 import appModuleHandler # Huge workaround.
 import controlTypes
+import ui
 from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import Dialog
 import api
@@ -79,6 +80,24 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Non-English locales does not fire item selected event for looping selector unless navigator is first set to it.
 		if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "CustomLoopingSelector":
 			api.setNavigatorObject(obj.simpleFirstChild)
+		nextHandler()
+
+	# Needed to prevent double announcement...
+	valueCharCount = -1
+
+	def event_valueChange(self, obj, nextHandler):
+		# Announce at least suggestions count and the topmost one.
+		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "TextBox" and obj.UIAElement.cachedClassName == "TextBox":
+			if self.valueCharCount != len(obj.value):
+				self.valueCharCount = len(obj.value)
+				if len(obj.value) > 0:
+					try:
+						suggestions = api.getFocusObject().controllerFor
+						if len(suggestions) > 0:
+							ui.message("Suggestions: {count}".format(count = suggestions[0].childCount))
+							ui.message(suggestions[0].firstChild.name)
+					except AttributeError:
+						pass
 		nextHandler()
 
 	def script_voiceActivation(self, gesture):
