@@ -18,6 +18,7 @@ welche inbegriffen sind):
 * Insider Hub/Feedback-Hub (Nur für Windows Insider).
 * Microsoft Edge
 * Einstellungen (System-Einstellungen mit Win+I).
+* Skype Preview
 * Twitter.
 * TeamViewer Touch.
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
@@ -66,7 +67,10 @@ welche inbegriffen sind):
 
 * Bestimmte Informationen wie der Fortschritt bei Windows Updates werden nun
   automatisch angesagt.
-* Progress bar values are no longer announced twice.
+* Progress bar values and other information are no longer announced twice.
+
+## Skype Preview
+* Typing indicator text is announced just like Skype for Desktop client.
 
 ## Bank of America/Twitter
 

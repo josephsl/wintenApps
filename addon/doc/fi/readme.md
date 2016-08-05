@@ -17,6 +17,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Insider-/Palautekeskus (vain Windows Insider -ohjelmaan liittyneillä).
 * Microsoft Edge
 * Asetukset (järjestelmän asetukset, Windows+I).
+* Skypen esiversio
 * Twitter
 * TeamViewer Touch
 * Sekalaisia moduuleita sellaisille säätimille kuin Käynnistä-valikon
@@ -67,7 +68,10 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 * Määrätyt tiedot, kuten Windows Updaten päivitysten asennuksen edistyminen,
   puhutaan nyt automaattisesti.
-* Edistymispalkkien arvoja ei lueta enää kahdesti.
+* Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
+
+## Skypen esiversio
+* Kirjoitusilmaisimen teksti puhutaan kuten Skypen työpöytäversiossa.
 
 ## Bank of America/Twitter
 
