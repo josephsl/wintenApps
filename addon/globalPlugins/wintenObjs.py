@@ -47,7 +47,7 @@ class LoopingSelectorItem(UIA):
 letCortanaListen = False
 
 # We know the following elements are dialogs.
-wintenDialogs=("Shell_Dialog", "Credential Dialog Xaml Host", "Popup")
+wintenDialogs=("Shell_Dialog", "Popup")
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
@@ -70,7 +70,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				clsList.append(LoopingSelectorItem)
 			# Windows that are really dialogs.
 			if obj.UIAElement.cachedClassName in wintenDialogs:
-				clsList.insert(0, Dialog)
+				# But some are not dialogs despite what UIA says (for example, search popup in Store).
+				if obj.UIAElement.cachedAutomationID != "SearchPopUp":
+					clsList.insert(0, Dialog)
 
 	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
