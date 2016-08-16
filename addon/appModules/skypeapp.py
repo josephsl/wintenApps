@@ -41,6 +41,8 @@ class AppModule(appModuleHandler.AppModule):
 			if isinstance(element, UIA) and element.UIAElement.cachedAutomationID == "chatMessagesListView":
 				pos = int(gesture.displayName[-1])
 				if pos == 0: pos += 10
-				ui.message(element.getChild(0-pos).name)
+				message = element.getChild(0-pos)
+				api.setNavigatorObject(message)
+				ui.message(message.name)
 				return
 		ui.message("Chat history not found")
