@@ -100,6 +100,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if UIA_ControllerForPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
 			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIA_ControllerForPropertyId] = "UIA_controllerFor"
 			# Unfortunately, UIA handler must be restarted in order for changes to take effect (ugly hack, but it's a must until a plug-in model is developed).
+			UIAHandler.terminate()
 			UIAHandler.initialize()
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
