@@ -8,6 +8,7 @@ import sys
 import globalPluginHandler
 import appModuleHandler # Huge workaround.
 import controlTypes
+import UIAHandler
 import ui
 from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import Dialog
@@ -49,6 +50,29 @@ letCortanaListen = False
 # We know the following elements are dialogs.
 wintenDialogs=("Shell_Dialog", "Popup")
 
+# Extra UIA constants
+UIA_ControllerForPropertyId = 30104
+
+# Search fields.
+# Some of them raise controller for event, an event fired if another UI element depends on this control.
+class SearchField(UIA):
+
+	def event_UIA_controllerFor(self):
+		# Only useful if suggestions appear and disappear.
+		focus = api.getFocusObject()
+		focusControllerFor = focus.controllerFor
+		if len(focusControllerFor)>0:
+			ui.message("suggestions")
+		else:
+			# Manually locate live region until NVDA Core implements this.
+			obj = focus
+			while obj is not None:
+				if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "Popup":
+					ui.message(obj.description)
+					return
+				obj = obj.next
+			ui.message("suggestions closed")
+
 # General suggestions item handler
 # A testbed for NVDA Core ticket 6241.
 class SuggestionsListItem(UIA):
@@ -72,6 +96,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self.bindGesture("kb:windows+shift+c", "voiceActivation")
 		else:
 			self.bindGesture("kb:windows+c", "voiceActivation")
+		# Listen for controller for events (to be removed once NVDA Core itself supports this).
+		if UIA_ControllerForPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
+			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIA_ControllerForPropertyId] = "UIA_controllerFor"
+			# Unfortunately, UIA handler must be restarted in order for changes to take effect (ugly hack, but it's a must until a plug-in model is developed).
+			UIAHandler.initialize()
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# NVDA Core ticket 5231: Announce values in time pickers.
@@ -84,6 +113,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				# But some are not dialogs despite what UIA says (for example, search popup in Store).
 				if obj.UIAElement.cachedAutomationID != "SearchPopUp":
 					clsList.insert(0, Dialog)
+			# Search field that does raise controller for event.
+			elif obj.UIAElement.cachedClassName == "TextBox" and obj.UIAElement.cachedAutomationID in ("TextBox", "SearchTextBox"):
+				clsList.insert(0, SearchField)
 			# Suggestions themselves.
 			elif isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
 				clsList.insert(0, SuggestionsListItem)
