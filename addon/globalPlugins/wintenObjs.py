@@ -49,6 +49,17 @@ letCortanaListen = False
 # We know the following elements are dialogs.
 wintenDialogs=("Shell_Dialog", "Popup")
 
+# General suggestions item handler
+# A testbed for NVDA Core ticket 6241.
+class SuggestionsListItem(UIA):
+
+	def event_UIA_elementSelected(self):
+		focusControllerFor=api.getFocusObject().controllerFor
+		if len(focusControllerFor)>0 and focusControllerFor[0].appModule is self.appModule and self.name:
+			speech.cancelSpeech()
+			api.setNavigatorObject(self)
+			self.reportFocus()
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
@@ -69,10 +80,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if obj.role==controlTypes.ROLE_LISTITEM and "LoopingSelectorItem" in obj.UIAElement.cachedClassName:
 				clsList.append(LoopingSelectorItem)
 			# Windows that are really dialogs.
-			if obj.UIAElement.cachedClassName in wintenDialogs:
+			elif obj.UIAElement.cachedClassName in wintenDialogs:
 				# But some are not dialogs despite what UIA says (for example, search popup in Store).
 				if obj.UIAElement.cachedAutomationID != "SearchPopUp":
 					clsList.insert(0, Dialog)
+			# Suggestions themselves.
+			elif isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
+				clsList.insert(0, SuggestionsListItem)
 
 	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
@@ -82,24 +96,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Non-English locales does not fire item selected event for looping selector unless navigator is first set to it.
 		if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "CustomLoopingSelector":
 			api.setNavigatorObject(obj.simpleFirstChild)
-		nextHandler()
-
-	# Needed to prevent double announcement...
-	valueCharCount = -1
-
-	def event_valueChange(self, obj, nextHandler):
-		# Announce at least suggestions count and the topmost one.
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "TextBox" and obj.UIAElement.cachedClassName == "TextBox":
-			if self.valueCharCount != len(obj.value):
-				self.valueCharCount = len(obj.value)
-				if len(obj.value) > 0:
-					try:
-						suggestions = api.getFocusObject().controllerFor
-						if len(suggestions) > 0:
-							ui.message("Suggestions: {count}".format(count = suggestions[0].childCount))
-							ui.message(suggestions[0].firstChild.name)
-					except AttributeError:
-						pass
 		nextHandler()
 
 	def script_voiceActivation(self, gesture):
