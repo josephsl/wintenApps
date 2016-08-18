@@ -118,7 +118,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif obj.UIAElement.cachedClassName == "TextBox" and obj.UIAElement.cachedAutomationID in ("TextBox", "SearchTextBox"):
 				clsList.insert(0, SearchField)
 			# Suggestions themselves.
-			elif isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
+			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
 				clsList.insert(0, SuggestionsListItem)
 
 	# Focus announcement hacks.
