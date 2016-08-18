@@ -4,6 +4,7 @@
 
 # Workarounds for Skype UWP, providing similar features to Skype for Desktop client support (skype.py found in NVDA Core).
 
+import re
 import appModuleHandler
 import ui
 from NVDAObjects.UIA import UIA
@@ -16,6 +17,16 @@ class AppModule(appModuleHandler.AppModule):
 		for pos in xrange(10):
 			self.bindGesture("kb:control+nvda+%s"%pos, "readMessage")
 
+	# Borrowed from Skype for Desktop app module (NVDA Core).
+	RE_MESSAGE = re.compile(r"^From (?P<from>.*), (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?$")
+
+	def reportMessage(self, message):
+		# Just like Desktop client, messages are quite verbose.
+		m = self.RE_MESSAGE.match(message)
+		if m:
+			text = "%s, %s" % (m.group("from"), m.group("body"))
+		ui.message(text)
+
 	def event_nameChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
 			uiElement = obj.UIAElement
@@ -25,7 +36,7 @@ class AppModule(appModuleHandler.AppModule):
 				if nextElement.cachedClassName == "RichEditBox" and nextElement.cachedAutomationID == "ChatEditBox":
 					ui.message(obj.name if obj.name != "" else "Typing stopped")
 			elif uiElement.cachedAutomationID == "Message" and uiElement.cachedClassName == "ListViewItem":
-				ui.message(obj.name)
+				self.reportMessage(obj.name)
 		nextHandler()
 
 	def script_readMessage(self, gesture):
@@ -43,6 +54,6 @@ class AppModule(appModuleHandler.AppModule):
 				if pos == 0: pos += 10
 				message = element.getChild(0-pos)
 				api.setNavigatorObject(message)
-				ui.message(message.name)
+				self.reportMessage(message.name)
 				return
 		ui.message("Chat history not found")
