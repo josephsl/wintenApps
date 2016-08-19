@@ -24,8 +24,8 @@ class AppModule(appModuleHandler.AppModule):
 		# Just like Desktop client, messages are quite verbose.
 		m = self.RE_MESSAGE.match(message)
 		if m:
-			text = "%s, %s" % (m.group("from"), m.group("body"))
-		ui.message(text)
+			message = "%s, %s" % (m.group("from"), m.group("body"))
+		ui.message(message)
 
 	def event_nameChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
