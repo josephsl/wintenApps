@@ -67,7 +67,10 @@ Windows 10, а также исправлений для некоторых ти�
 * Progress bar values and other information are no longer announced twice.
 
 ## Skype Preview
+
 * Typing indicator text is announced just like Skype for Desktop client.
+* Partial return of Control+NvDA+number row commands to read recent chat
+  history.
 
 ## Bank of America/Twitter
 

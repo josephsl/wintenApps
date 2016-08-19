@@ -75,8 +75,11 @@ est inclus) :
   plus annoncés deux fois.
 
 ## Skype Preview
+
 * L'indicateur de frappe de texte est annoncé exactement comme pour le Skype
   for Desktop client.
+* Retour partiel de Contrôle+NVDA+commandes numéro de ligne pour lire
+  l'historique de conversation récente.
 
 ## Bank of America/Twitter
 

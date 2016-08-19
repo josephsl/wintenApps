@@ -71,7 +71,10 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
 
 ## Skypen esiversio
+
 * Kirjoitusilmaisimen teksti puhutaan kuten Skypen työpöytäversiossa.
+* Osittainen Control+NVDA+numero-komentojen paluu tuoreen
+  keskusteluhistorian lukemiseen.
 
 ## Bank of America/Twitter
 

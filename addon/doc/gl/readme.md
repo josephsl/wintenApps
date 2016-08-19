@@ -71,8 +71,11 @@ se inclúe):
   dúas veces.
 
 ## Previsualización de Skype
+
 * Ao teclear o indicador de texto anúnciase só coma cliente Skype para
   Escritorio.
+* Partial return of Control+NvDA+number row commands to read recent chat
+  history.
 
 ## Bank of America/Twitter
 
