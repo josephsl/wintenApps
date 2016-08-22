@@ -11,7 +11,11 @@ import appModuleHandler
 from NVDAObjects import NVDAObject
 
 #Regexp for deciding whether this ID should be a tab control
-RE_TAB_AUTOMATION_MATCH = re.compile(r"L1NavigationButton_\d+")
+RE_TAB_AUTOMATION_MATCH = re.compile("|".join([
+	r"L1NavigationButton_\d+",
+	r"L1NavigationButton_Feedback",
+]))
+
 #Regexp for deciding if this should be a button
 RE_BUTTONCONTROL = re.compile("|".join([
 	r"L1NavigationButton_Settings",
