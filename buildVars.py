@@ -21,7 +21,7 @@ addon_info = {
 	# version
 	"addon_version" : "16.08.1",
 	# Author(s)
-	"addon_author" : u"Joseph Lee <joseph.lee22590@gmail.com> and others",
+	"addon_author" : u"Joseph Lee <joseph.lee22590@gmail.com>, Derek Riemer <driemer.riemer@gmail.com> and others",
 	# URL for the add-on documentation support
 	"addon_url" : "http://addons.nvda-project.org/",
 	# Documentation file name
