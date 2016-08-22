@@ -1,6 +1,6 @@
 # Windows 10 App Essentials
 
-* Author: Joseph Lee
+* Authors: Joseph Lee, Derek Riemer and other Windows 10 users
 * Download [stable version][1]
 * Download [development version][2]
 
@@ -18,6 +18,7 @@ The following app modules or support modules for some apps are included (see eac
 * Skype Preview
 * Twitter.
 * TeamViewer Touch.
+* Weather.
 * Miscellaneous modules for controls such as Start Menu tiles.
 
 ## General
@@ -63,6 +64,11 @@ The following app modules or support modules for some apps are included (see eac
 ## Bank of America/Twitter
 
 * Button labels are now announced.
+
+## Weather
+
+* Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by Derek Riemer).
+* when reading a forecast, use the left and right arrows to move between items. Use the up and down arrows to read the individual items. For example, pressing the right arrow might report "Monday: 79 degrees, partly cloudy, ..." pressing the down arrow will say "Monday" Then pressing it again will read the next item (Like the temperature). This currently works for daily and hourly forecasts.
 
 [1]: http://addons.nvda-project.org/files/get.php?file=w10
 
