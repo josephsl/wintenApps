@@ -71,8 +71,11 @@ si veda la relativa sezione per ulteriori informazioni:
   volte.
 
 ## Anteprima Skype
+
 * Viene annunciato quando un utente sta scrivendo, così come accade in Skype
   per desktop.
+* Partial return of Control+NvDA+number row commands to read recent chat
+  history.
 
 ## Bank of America/Twitter
 
