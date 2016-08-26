@@ -77,8 +77,8 @@ qué se incluye):
 
 * Al teclear el indicador de texto se anuncia sólo como cliente Skype para
   Escritorio.
-* Partial return of Control+NvDA+number row commands to read recent chat
-  history.
+* Retorno parcial de las órdenes Control+NVDA+fila de números para leer el
+  histórico de chats recientes.
 
 ## Bank of America/Twitter
 
