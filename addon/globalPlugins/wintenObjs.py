@@ -5,6 +5,7 @@
 # Also adds interceptors for certain keyboard commands.
 
 import sys
+import os
 import globalPluginHandler
 import appModuleHandler # Huge workaround.
 import controlTypes
@@ -14,6 +15,7 @@ from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import Dialog
 import api
 import speech
+import nvwave
 
 # Until NVDA Core ticket 5323 is implemented, have our own find app mod from PID handy.
 def getAppModuleFromProcessID(processID):
@@ -60,7 +62,7 @@ class SearchField(UIA):
 		focus = api.getFocusObject()
 		focusControllerFor = focus.controllerFor
 		if len(focusControllerFor)>0:
-			ui.message("suggestions")
+			nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion.wav"))
 		else:
 			# Manually locate live region until NVDA Core implements this.
 			obj = focus
@@ -69,7 +71,7 @@ class SearchField(UIA):
 					ui.message(obj.description)
 					return
 				obj = obj.next
-			ui.message("suggestions closed")
+			nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion1.wav"))
 
 # General suggestions item handler
 # A testbed for NVDA Core ticket 6241.
@@ -113,7 +115,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if obj.UIAElement.cachedAutomationID != "SearchPopUp":
 					clsList.insert(0, Dialog)
 			# Search field that does raise controller for event.
-			elif obj.UIAElement.cachedClassName == "TextBox" and obj.UIAElement.cachedAutomationID in ("TextBox", "SearchTextBox"):
+			elif obj.UIAElement.cachedClassName == "TextBox" and obj.UIAElement.cachedAutomationID in ("TextBox",):
 				clsList.insert(0, SearchField)
 			# Suggestions themselves.
 			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
