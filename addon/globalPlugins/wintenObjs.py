@@ -48,7 +48,7 @@ class LoopingSelectorItem(UIA):
 letCortanaListen = False
 
 # We know the following elements are dialogs.
-wintenDialogs=("Shell_Dialog", "Popup")
+wintenDialogs=("Shell_Dialog", "Popup", "Shell_Flyout")
 
 # Extra UIA constants
 UIA_ControllerForPropertyId = 30104
