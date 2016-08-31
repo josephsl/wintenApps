@@ -36,5 +36,8 @@ class AppModule(appModuleHandler.AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
-			if obj.role in (controlTypes.ROLE_STATICTEXT, controlTypes.ROLE_BUTTON) and obj.parent.parent.UIAElement.cachedClassName == "Map":
-				clsList.insert(0, MapLocation)
+			try:
+				if obj.role in (controlTypes.ROLE_STATICTEXT, controlTypes.ROLE_BUTTON) and obj.parent.parent.UIAElement.cachedClassName == "Map":
+					clsList.insert(0, MapLocation)
+			except AttributeError:
+				pass
