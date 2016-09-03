@@ -15,6 +15,7 @@ from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import Dialog
 import api
 import speech
+import braille
 import nvwave
 
 # Until NVDA Core ticket 5323 is implemented, have our own find app mod from PID handy.
@@ -63,6 +64,8 @@ class SearchField(UIA):
 		focusControllerFor = focus.controllerFor
 		if len(focusControllerFor)>0:
 			nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion.wav"))
+			# For deaf-blind users
+			braille.handler.message("suggestions")
 		else:
 			# Manually locate live region until NVDA Core implements this.
 			obj = focus
