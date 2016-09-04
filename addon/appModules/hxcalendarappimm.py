@@ -18,6 +18,11 @@ class AppointmentSubject(UIA):
 
 class AppModule(appModuleHandler.AppModule):
 
+	def event_NVDAObject_init(self, obj):
+		# It is quite anoying to hear the same text for name and description, so forget the description.
+		if obj.name != "" and obj.description == obj.name:
+			obj.description = None
+
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
 			# Very redundant to say "read-only" when we do know messages are read-only.
