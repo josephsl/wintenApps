@@ -10,9 +10,12 @@ The following app modules or support modules for some apps are included (see eac
 
 * Alarms and Clock.
 * Bank of America
+* Calendar
 * Calculator (modern).
 * Cortana
 * Insider Hub/Feedback Hub (Windows Insiders only).
+* Mail
+* Maps
 * Microsoft Edge
 * Settings (system settings, Windows+I).
 * Skype Preview
@@ -21,17 +24,23 @@ The following app modules or support modules for some apps are included (see eac
 * Weather.
 * Miscellaneous modules for controls such as Start Menu tiles.
 
+Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NVDA 2015.4 or later.
+
 ## General
 
 * In context menus for Start Menu tiles, submenus are properly recognized.
 * When minimizing windows (Windows+M), "pane" is no longer announced (noticeable if using Insider Preview builds).
-* Certain dialogs are now recognized as proper dialogs. This include Insider Preview dialog (settings app) and new-style UAC dialog in build 14328 and later.
+* Certain dialogs are now recognized as proper dialogs. This include Insider Preview dialog (settings app) and new-style UAC dialog in build 14328 and later for NvDA 2016.2.1 or earlier.
 * Time picker announcement works in non-English locales.
-* Appearance/close of suggestions for certain search fields (notably Settings app) is announced via sounds.
+* Appearance/close of suggestions for certain search fields (notably Settings app) is announced via sounds and/or brailled.
 
 ## Alarms and clock
 
 * Time picker values are now announced. This also affects the control used to select when to restart to finish installing Windows updates.
+
+* Calendar and Mail
+
+* NVDA no longer announces "read-only" for appointment subject in Calendar and message content in Mail.
 
 ## Calculator
 
@@ -40,12 +49,17 @@ The following app modules or support modules for some apps are included (see eac
 ## Cortana
 
 * Textual responses from Cortana are announced in most situations (if it doesn't, reopen Start menu and try searching again).
+* For better experience when talking to Cortana, press Cortana listening mode hotkey (Windows+C on Versions 1507 and 1511, Windows+Shift+C in version 1607).
 
 ## Insider/Feedback Hub and TeamViewer Touch
 
 * Insider Hub (Feedback Hub in Anniversary Update) only: Meant to be used by Windows Insiders running an Insider build.
 * Labels for radio buttons are announced.
 * TeamViewer Touch: Lables for buttons are announced.
+
+## Maps
+
+* NVDA plays location beep for map locations.
 
 ## Microsoft Edge
 
@@ -60,7 +74,7 @@ The following app modules or support modules for some apps are included (see eac
 ## Skype Preview
 
 * Typing indicator text is announced just like Skype for Desktop client.
-* Partial return of Control+NvDA+number row commands to read recent chat history.
+* Partial return of Control+NvDA+number row commands to read recent chat history and to move navigator object to chat entries just like Skype for Desktop.
 
 ## Bank of America/Twitter
 
