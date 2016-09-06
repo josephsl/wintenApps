@@ -38,7 +38,7 @@ Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NV
 
 * Time picker values are now announced. This also affects the control used to select when to restart to finish installing Windows updates.
 
-* Calendar and Mail
+## Calendar and Mail
 
 * NVDA no longer announces "read-only" for appointment subject in Calendar and message content in Mail.
 
