@@ -93,9 +93,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super(GlobalPlugin, self).__init__()
 		# Hack: Some executables, particular UWA apps have a dot in the middle.
 		# Therefore coerce the app module handler to use the modified routine above.
-		appModuleHandler.getAppModuleFromProcessID = getAppModuleFromProcessID
-		# Cortana listening mode command has changed in Redstone build 14383.
-		if sys.getwindowsversion().build >= 14383:
+		# This is no longer the case as of 2016.4 (check if version build var is present, and if not, coerce).
+		import versionInfo
+		if not hasattr(versionInfo, "version_build"):
+			appModuleHandler.getAppModuleFromProcessID = getAppModuleFromProcessID
+		# Cortana listening mode command has changed in Redstone build 14383 (14393 for the release build).
+		if sys.getwindowsversion().build >= 14393:
 			self.bindGesture("kb:windows+shift+c", "voiceActivation")
 		else:
 			self.bindGesture("kb:windows+c", "voiceActivation")
@@ -139,4 +142,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if sys.getwindowsversion().major == 10:
 			global letCortanaListen
 			letCortanaListen = True
+			# Sometimes, one may press Cortana key while Cortana search box is focused.
+			focusedApp = api.getFocusObject().appModule
+			if focusedApp.appName == "searchui":
+				focusedApp.CortanaIsListening = True
 
