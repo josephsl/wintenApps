@@ -1,6 +1,6 @@
 # Windows 10 App Essentials #
 
-* Autor: Joseph Lee
+* Autores: Joseph Lee, Derek Riemer y otros usuarios de Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
 
@@ -13,16 +13,23 @@ qué se incluye):
 
 * Reloj y alarmas.
 * Bank of America
+* Calendario
 * Calculadora (modern).
 * Cortana
 * Insider Hub/Feedback Hub (sólo Windows Insiders).
+* Correo
+* Mapas
 * Microsoft Edge
 * Opciones (opciones de sistema, Windows+I).
 * Previsualización de Skype
 * Twitter.
 * TeamViewer Touch.
+* El Tiempo
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
+
+Nota: este complemento requiere de Windows 10 Versión 1507 (build 10240) o
+posterior y NVDA 2015.4 o posterior.
 
 ## General
 
@@ -30,17 +37,26 @@ qué se incluye):
   se reconocen apropiadamente.
 * Al minimizar windows (Windows+M), ya no se anuncia "panel" ­(­perceptible
   si se utilizan compilaciones Insider Preview).
-* Ahora se reconocen ciertos diálogos como diálogos propios. Esto incluye el
-  diálogo Insider Preview (settings app) y el diálogo de nuevo estilo del
-  UAC en la compilación 14328 y anterior.
+* Ahora se reconocen ciertos diálogos como diálogos apropiadamente. Esto
+  incluye el diálogo Insider Preview (aplicación de configuración) y el
+  diálogo de nuevo estilo del UAC en la compilación 14328 y posteriores para
+  NvDA 2016.2.1 o anteriores.
 * El anunciado de selector de hora funciona en localizaciones diferentes al
   inglés.
+* La apariencia/cierre de sugerencias para ciertos campos de búsqueda (en
+  particular la app Opciones) se anuncian a través de sonidos y/o de
+  braille.
 
 ## Alarmas y reloj
 
 * Ahora se anuncian los valores del selector de hora. Esto también afecta al
   control utilizado para seleccionar cuándo reiniciar para finalizar la
   instalación de las actualizaciones de Windows.
+
+## Calendario y Correo
+
+* NVDA ya no anuncia "solo lectura" para el asunto de la cita en Calendario
+  y contenidos de mensajes en Correo.
 
 ## Calculadora
 
@@ -51,6 +67,9 @@ qué se incluye):
 * Las respuestas textuales de Cortana se anuncian en la mayoría de las
   situaciones (si no se reabre el menú Inicio y  se trata de buscar de
   nuevo).
+* Para una mejor experiencia al hablar a Cortana, pulsa la combinación de
+  teclas del modo de escucha de Cortana (Windows+C en Versiones 1507 y 1511,
+  Windows+Shift+C en la versión 1607).
 
 ## Insider/Feedback Hub y TeamViewer Touch
 
@@ -59,6 +78,10 @@ qué se incluye):
   Insider.
 * Se anuncian las etiquetas para botones de opción.
 * TeamViewer Touch: se anuncian las etiquetas para los botones.
+
+## Mapas
+
+* NVDA reproduce pitidos de localización para lugares en el mapa.
 
 ## Microsoft Edge
 
@@ -78,11 +101,24 @@ qué se incluye):
 * Al teclear el indicador de texto se anuncia sólo como cliente Skype para
   Escritorio.
 * Retorno parcial de las órdenes Control+NVDA+fila de números para leer el
-  histórico de chats recientes.
+  historial de chats recientes y para mover el navegador de objetos a las
+  entradas de chat como en Skype para Escritorio.
 
 ## Bank of America/Twitter
 
 * Ahora se anuncian las etiquetas de los botones.
+
+## El Tiempo
+
+* Pestañas tales como "pronósticos" y "mapas" se reconocen como propias
+  pestañas (parche de Derek Riemer).
+* cuando se lea un pronóstico, utiliza las flechas izquierda y derecha para
+  moverte entre elementos. Utiliza flechas arriba y abajo para leer los
+  elementos individuales. Por ejemplo, pulsando la flecha derecha anunciaría
+  "Lunes: 79 grados, parcialmente nublado, ..." pulsando flecha abajo dirá
+  "lunes" entonces pulsándola de nuevo leerá el siguiente elemento (como la
+  temperatura). Actualmente esto funciona para los pronósticos diarios y
+  horarios.
 
 [[!tag dev stable]]
 

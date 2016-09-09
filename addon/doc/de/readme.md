@@ -1,6 +1,6 @@
 # Windows 10 App Essentials #
 
-* Autor: Joseph Lee
+* Authors: Joseph Lee, Derek Riemer and other Windows 10 users
 * [Stabile Version][1] herunterladen
 * [Entwicklerversion][2] herunterladen
 
@@ -13,25 +13,34 @@ welche inbegriffen sind):
 
 * Wecker und Uhr.
 * Bank of America
+* Calendar
 * Rechner (modern).
 * Cortana
 * Insider Hub/Feedback-Hub (Nur für Windows Insider).
+* Mail
+* Maps
 * Microsoft Edge
 * Einstellungen (System-Einstellungen mit Win+I).
 * Skype Preview
 * Twitter.
 * TeamViewer Touch.
+* Weather.
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
+
+Note: this add-on requires Windows 10 Version 1507 (build 10240) or later
+and NVDA 2015.4 or later.
 
 ## Allgemein
 
 * Im Kontextmenü von Kacheln werden untermenüs korrekt erkannt
 * Beim Minimieren aller Anwendungen mit Windows+m wird nicht mehr "Feld"
   angezeigt (betrifft die Insider-Versionen)
-* Einige Dialoge werden jetzt als richtige Dialoge erkannt. Dazu gehören
-  Dialoge der technischen Vorschau (Einstellungs-app) sowie neue UAC-Dialoge
-  in Version 14328 und neuer.
+* Certain dialogs are now recognized as proper dialogs. This include Insider
+  Preview dialog (settings app) and new-style UAC dialog in build 14328 and
+  later for NvDA 2016.2.1 or earlier.
 * Time picker announcement works in non-English locales.
+* Appearance/close of suggestions for certain search fields (notably
+  Settings app) is announced via sounds and/or brailled.
 
 ## Wecker und Uhr
 
@@ -39,6 +48,11 @@ welche inbegriffen sind):
   betrifft auch das Steuerelement zum Einstellen des geplanten Zeitpunkts
   für einen neustart des Systems nach der Installation von Aktualisierungen
   für Windows.
+
+## Calendar and Mail
+
+* NVDA no longer announces "read-only" for appointment subject in Calendar
+  and message content in Mail.
 
 ## Rechner
 
@@ -49,6 +63,9 @@ welche inbegriffen sind):
 
 * Textuelle Antworten von Cortana werden in den meisten Fällen angezeigt
   (falls nicht, öffnen Sie das StartMenü und starten Sie die Suche erneut).
+* For better experience when talking to Cortana, press Cortana listening
+  mode hotkey (Windows+C on Versions 1507 and 1511, Windows+Shift+C in
+  version 1607).
 
 ## Insider/Feedback Hub und TeamViewer Touch
 
@@ -56,6 +73,10 @@ welche inbegriffen sind):
   Insider benutzt wird, wird auch nur die Insider-Version verwendet.
 * Beschriftungen für Auswahlschalter werden nun angesagt.
 * TeamViewer Touch: Schalterbeschriftungen werden nun angesagt.
+
+## Maps
+
+* NVDA plays location beep for map locations.
 
 ## Microsoft Edge
 
@@ -73,11 +94,23 @@ welche inbegriffen sind):
 
 * Typing indicator text is announced just like Skype for Desktop client.
 * Partial return of Control+NvDA+number row commands to read recent chat
-  history.
+  history and to move navigator object to chat entries just like Skype for
+  Desktop.
 
 ## Bank of America/Twitter
 
 * Schalterbeschriftungen werden nun angesagt.
+
+## Weather
+
+* Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by
+  Derek Riemer).
+* when reading a forecast, use the left and right arrows to move between
+  items. Use the up and down arrows to read the individual items. For
+  example, pressing the right arrow might report "Monday: 79 degrees, partly
+  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
+  again will read the next item (Like the temperature). This currently works
+  for daily and hourly forecasts.
 
 [[!tag dev stable]]
 
