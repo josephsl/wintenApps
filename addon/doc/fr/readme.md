@@ -1,6 +1,6 @@
 # Windows 10 App Essentials #
 
-* Auteur : Joseph Lee
+* Auteurs: Joseph Lee, Derek Riemer et d’autres utilisateurs de Windows 10
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
 
@@ -14,15 +14,22 @@ est inclus) :
 
 * Alarmes et Horloge.
 * Bank of America
+* Calendrier
 * Calculatrice (modern).
 * Cortana
 * Insider Hub/Feedback Hub  (Windows Insiders seulement).
+* Courrier
+* Cartes
 * Microsoft Edge
 * Paramètres (paramètres système, Windows+I).
 * Skype Preview
 * Twitter.
 * TeamViewer Touch.
+* Météo.
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
+
+Note: ce module complémentaire nécessite Windows 10 Version 1507 (build
+10240) ou version ultérieure et NVDA 2015.4 ou version ultérieure.
 
 ## Générale
 
@@ -32,16 +39,24 @@ est inclus) :
   (notable si on utilise les préversions Insider).
 * Certaines boîtes de dialogue sont maintenant reconnues comme des boîtes de
   dialogue propres. Ceci incluent le dialogue Insider Preview (settings app)
-  et le dialogue nouveau style UAC dans la build 14328 et versions
-  ultérieur.
+  et le dialogue nouveau style UAC dans la build 14328 et version ultérieur
+  pour NVDA 2016.2.1 ou version antérieure.
 * L'annonce  du sélecteur de l'heure fonctionne dans des différente
   localizations de l'anglais.
+* Apparence/fermeture des suggestions pour certains champs de recherche
+  (notamment Settings app) est annoncé En passant par des sons et/ou le
+  braille.
 
 ## Alarmes et horloge
 
 * Les valeurs du sélecteur de l'heure sont maintenant annoncées. Ceci
   affecte également le contrôle utilisé pour sélectionner lors de redémarrer
   pour terminer l'installation des mises à jour de Windows.
+
+## Calendrier et Courrier
+
+* NVDA n'annoncera plus "lecture seule" pour le sujet du rendez-vous dans le
+  Calendrier et le contenu du message dans le Courrier.
 
 ## Calculatrice
 
@@ -52,6 +67,9 @@ est inclus) :
 * Les réponses textuelles de Cortana sont annoncées dans la plupart des
   situations (si ce n'est pas le cas, réouvrez le menu Démarrer et réessayez
   la recherche).
+* Pour une meilleure expérience lorsque vous parlez à Cortana, appuyer sur
+  le raccourci clavier  pour Cortana en mode écoute (Windows+C dans la
+  Versions 1507 et 1511, Windows+MAJ+C dans la version 1607).
 
 ## Insider/Feedback Hub et TeamViewer Touch
 
@@ -59,6 +77,10 @@ est inclus) :
   être utilisé par Windows Insiders en exécution d'une Insider build.
 * Étiquettes pour les boutons radio sont annoncés.
 * TeamViewer Touch: Étiquettes pour les boutons sont annoncés.
+
+## Cartes
+
+* NVDA joue un bip du lieux pour les lieux sur la carte.
 
 ## Microsoft Edge
 
@@ -79,11 +101,25 @@ est inclus) :
 * L'indicateur de frappe de texte est annoncé exactement comme pour le Skype
   for Desktop client.
 * Retour partiel de Contrôle+NVDA+commandes numéro de ligne pour lire
-  l'historique de conversation récente.
+  l'historique de conversation récente et pour déplacer l'objet navigator
+  aux entrées de conversation tout comme Skype for Desktop.
 
 ## Bank of America/Twitter
 
 * Étiquettes des boutons sont maintenant annoncées.
+
+## Météo
+
+* Les onglets tels que "prévisions" et "cartes" sont reconnus comme des
+  onglets propres (patch par Derek Riemer).
+* Lorsque vous lisez une prévision, utilisez les flèches gauche et droite
+  pour vous déplacer entre les éléments. Utilisez les flèches haut et bas
+  pour lire les éléments individuels. Par exemple, en appuyant sur la flèche
+  droite peut annoncer "Lundi: 79 degrés, partiellement nuageux, ..." en
+  appuyant sur la flèche bas il va dire "Lundi" Puis en appuyant à nouveau
+  sur celle-ci il va lire l'élément suivant (Comme la température). Ceci
+  travaille actuellement pour les prévisions quotidiennes et toutes les
+  heures.
 
 [[!tag dev stable]]
 

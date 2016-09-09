@@ -8,23 +8,24 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2016-07-23 12:01+0200\n"
+"PO-Revision-Date: 2016-09-03 11:31+0100\n"
+"Last-Translator: Michel Such <michel.such@free.fr>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Michel Such <michel.such@free.fr>\n"
-"Language-Team: \n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 1.7.1\n"
+
+msgid "No more weather data for this item."
+msgstr "Aucune donnée supplémentaire météo pour cet élément."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-#: buildVars.py:17
 msgid "Windows 10 App Essentials"
 msgstr "Windows 10 App Essentials"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-#: buildVars.py:20
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Une collection de modules pour diverses applications Windows 10"
