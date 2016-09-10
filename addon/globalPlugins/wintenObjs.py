@@ -143,7 +143,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			global letCortanaListen
 			letCortanaListen = True
 			# Sometimes, one may press Cortana key while Cortana search box is focused.
-			focusedApp = api.getFocusObject().appModule
-			if focusedApp.appName == "searchui":
-				focusedApp.CortanaIsListening = True
+			#focusedApp = api.getFocusObject().appModule
+			#if focusedApp.appName == "searchui":
+				#focusedApp.CortanaIsListening = True
 
