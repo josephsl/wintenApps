@@ -2,7 +2,6 @@
 # Copyright 2015-2016 Joseph Lee, released under GPL.
 
 # Adds handlers for various UIA controls found in Windows 10.
-# Also adds interceptors for certain keyboard commands.
 
 import sys
 import os
@@ -44,9 +43,6 @@ class LoopingSelectorItem(UIA):
 		speech.cancelSpeech()
 		api.setNavigatorObject(self)
 		self.reportFocus()
-
-# Tell Search UI app module to silence NVDA while the following is happenig.
-letCortanaListen = False
 
 # We know the following elements are dialogs.
 wintenDialogs=("Shell_Dialog", "Popup", "Shell_Flyout")
@@ -91,17 +87,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
-		# Hack: Some executables, particular UWA apps have a dot in the middle.
+		# Hack: Some executables, particularly UWP apps have a dot in the middle.
 		# Therefore coerce the app module handler to use the modified routine above.
 		# This is no longer the case as of 2016.4 (check if version build var is present, and if not, coerce).
 		import versionInfo
 		if not hasattr(versionInfo, "version_build"):
 			appModuleHandler.getAppModuleFromProcessID = getAppModuleFromProcessID
-		# Cortana listening mode command has changed in Redstone build 14383 (14393 for the release build).
-		if sys.getwindowsversion().build >= 14393:
-			self.bindGesture("kb:windows+shift+c", "voiceActivation")
-		else:
-			self.bindGesture("kb:windows+c", "voiceActivation")
 		# Listen for controller for events (to be removed once NVDA Core itself supports this).
 		if UIA_ControllerForPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
 			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIA_ControllerForPropertyId] = "UIA_controllerFor"
@@ -110,8 +101,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			UIAHandler.initialize()
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		# NVDA Core ticket 5231: Announce values in time pickers.
 		if isinstance(obj, UIA):
+			# NVDA Core ticket 5231: Announce values in time pickers.
 			# Handle both Threshold and Redstone looping selector items.
 			if obj.role==controlTypes.ROLE_LISTITEM and "LoopingSelectorItem" in obj.UIAElement.cachedClassName:
 				clsList.append(LoopingSelectorItem)
@@ -136,14 +127,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "CustomLoopingSelector":
 			api.setNavigatorObject(obj.simpleFirstChild)
 		nextHandler()
-
-	def script_voiceActivation(self, gesture):
-		gesture.send()
-		if sys.getwindowsversion().major == 10:
-			global letCortanaListen
-			letCortanaListen = True
-			# Sometimes, one may press Cortana key while Cortana search box is focused.
-			#focusedApp = api.getFocusObject().appModule
-			#if focusedApp.appName == "searchui":
-				#focusedApp.CortanaIsListening = True
-
