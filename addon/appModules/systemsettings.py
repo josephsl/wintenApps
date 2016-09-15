@@ -25,5 +25,9 @@ class AppModule(appModuleHandler.AppModule):
 		# For now, all name change events will result in items being announced.
 		# Prevent repeats, especially if it is part of a progress bar and for extraneous presentational objects.
 		if isinstance(obj, UIA) and obj.role != controlTypes.ROLE_PROGRESSBAR and obj.UIAElement.cachedAutomationID not in noRepeatAnnouncement:
+			# Don't repeat the fact that update download/installation is in progress if progress bar beep is on.
+			prev = obj.previous
+			if prev and prev.role == controlTypes.ROLE_PROGRESSBAR and prev.value > "0":
+				return
 			ui.message(obj.name)
 		nextHandler()
