@@ -34,7 +34,8 @@ class AppModule(appModuleHandler.AppModule):
 				# Announce typing indicator (same as Skype for Desktop).
 				nextElement = obj.next.UIAElement
 				if nextElement.cachedClassName == "RichEditBox" and nextElement.cachedAutomationID == "ChatEditBox":
-					ui.message(obj.name if obj.name != "" else "Typing stopped")
+					# Translaotrs: Presented when someone stops typing in Skype app (same as Skype for Desktop).
+					ui.message(obj.name if obj.name != "" else _("Typing stopped"))
 			elif uiElement.cachedAutomationID == "Message" and uiElement.cachedClassName == "ListViewItem":
 				self.reportMessage(obj.name)
 		nextHandler()
@@ -59,4 +60,7 @@ class AppModule(appModuleHandler.AppModule):
 					return
 				except IndexError:
 					return
-		ui.message("Chat history not found")
+		# Translators: Presented when message history isn't found in Skype Preview app.
+		ui.message(_("Chat history not found"))
+	# Translators: Input help mode message for a command in Skype Preview app.
+	script_readMessage.__doc__ = _("Reports and moves the review cursor to a recent message")
