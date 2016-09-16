@@ -19,6 +19,7 @@ The following app modules or support modules for some apps are included (see eac
 * Microsoft Edge
 * Settings (system settings, Windows+I).
 * Skype Preview
+* Store
 * Twitter.
 * TeamViewer Touch.
 * Weather.
@@ -31,7 +32,6 @@ Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NV
 * In context menus for Start Menu tiles, submenus are properly recognized.
 * When minimizing windows (Windows+M), "pane" is no longer announced (noticeable if using Insider Preview builds).
 * Certain dialogs are now recognized as proper dialogs. This include Insider Preview dialog (settings app) and new-style UAC dialog in build 14328 and later for NvDA 2016.2.1 or earlier.
-* Time picker announcement works in non-English locales.
 * Appearance/close of suggestions for certain search fields (notably Settings app) is announced via sounds and/or brailled.
 
 ## Alarms and clock
@@ -49,7 +49,7 @@ Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NV
 ## Cortana
 
 * Textual responses from Cortana are announced in most situations (if it doesn't, reopen Start menu and try searching again).
-* For better experience when talking to Cortana, press Cortana listening mode hotkey (Windows+C on Versions 1507 and 1511, Windows+Shift+C in version 1607).
+* NVDA will be silent when you talk to Cortana via voice.
 
 ## Insider/Feedback Hub and TeamViewer Touch
 
@@ -75,6 +75,10 @@ Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NV
 
 * Typing indicator text is announced just like Skype for Desktop client.
 * Partial return of Control+NvDA+number row commands to read recent chat history and to move navigator object to chat entries just like Skype for Desktop.
+
+## Store
+
+* After checking for app updates, app names in list of apps to be updated are correctly labeled.
 
 ## Bank of America/Twitter
 
