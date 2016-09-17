@@ -11,6 +11,7 @@ from NVDAObjects.UIA import UIA
 import controlTypes
 
 # Submenus in Start menu tiles context menu are not recognized as such (at least in WinTen Version 1511).
+# Also, make sure to get rid of position info announcement, as it's quite anoying.
 class TileSubMenu(UIA):
 
 	def _get_states(self):
@@ -18,6 +19,9 @@ class TileSubMenu(UIA):
 		states = super(TileSubMenu, self).states
 		states.add(controlTypes.STATE_HASPOPUP)
 		return states
+
+	def _get_positionInfo(self):
+		return {}
 
 class AppModule(appModuleHandler.AppModule):
 
@@ -32,4 +36,3 @@ class AppModule(appModuleHandler.AppModule):
 		elif isinstance(obj, UIA):
 			if obj.UIAElement.cachedClassName == "MenuFlyoutSubItem":
 				clsList.insert(0, TileSubMenu)
-

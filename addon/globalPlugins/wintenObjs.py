@@ -83,6 +83,12 @@ class SuggestionsListItem(UIA):
 			api.setNavigatorObject(self)
 			self.reportFocus()
 
+# Some context menu items expose position info, which is quite anoying.
+class MenuItemNoPosInfo(UIA):
+
+	def _get_positionInfo(self):
+		return {}
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
@@ -117,6 +123,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Suggestions themselves.
 			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
 				clsList.insert(0, SuggestionsListItem)
+			# Menu items should never expose position info (seen in various context menus such as in Edge).
+			elif obj.UIAElement.cachedClassName == "MenuFlyoutItem":
+				clsList.insert(0, MenuItemNoPosInfo)
 
 	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
