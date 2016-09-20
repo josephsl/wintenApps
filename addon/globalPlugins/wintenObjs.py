@@ -63,6 +63,9 @@ class SearchField(UIA):
 			# For deaf-blind users
 			braille.handler.message("suggestions")
 		else:
+			# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
+			if self.UIAElement.cachedAutomationID == "addressEditBox" and self != focus:
+				return
 			# Manually locate live region until NVDA Core implements this.
 			obj = focus
 			while obj is not None:
