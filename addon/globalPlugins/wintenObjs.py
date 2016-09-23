@@ -56,18 +56,17 @@ class SearchField(UIA):
 
 	def event_UIA_controllerFor(self):
 		# Only useful if suggestions appear and disappear.
-		focus = api.getFocusObject()
-		focusControllerFor = focus.controllerFor
-		if len(focusControllerFor)>0:
+		# Obtain controller for property directly instead of relying on focused control.
+		if len(self.controllerFor)>0:
 			nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion.wav"))
 			# For deaf-blind users
 			braille.handler.message("suggestions")
 		else:
 			# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
-			if self.UIAElement.cachedAutomationID == "addressEditBox" and self != focus:
+			if self.UIAElement.cachedAutomationID == "addressEditBox" and self != api.getFocusObject():
 				return
 			# Manually locate live region until NVDA Core implements this.
-			obj = focus
+			obj = self
 			while obj is not None:
 				if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "Popup":
 					ui.message(obj.description)
