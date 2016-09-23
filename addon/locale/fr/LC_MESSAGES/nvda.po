@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2016-09-03 11:31+0100\n"
-"Last-Translator: Michel Such <michel.such@free.fr>\n"
+"PO-Revision-Date: 2016-09-16 19:20+0100\n"
+"Last-Translator: Bachir BENANOU <ben_bach@yahoo.fr>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,19 @@ msgstr ""
 "X-Generator: Poedit 1.7.1\n"
 
 msgid "No more weather data for this item."
-msgstr "Aucune donnée supplémentaire météo pour cet élément."
+msgstr "Aucune donnée météo supplémentaire pour cet élément."
+
+#. Translaotrs: Presented when someone stops typing in Skype app (same as Skype for Desktop).
+msgid "Typing stopped"
+msgstr "Arrêt de la frappe"
+
+#. Translators: Presented when message history isn't found in Skype Preview app.
+msgid "Chat history not found"
+msgstr "Historique de discussion non trouvé"
+
+#. Translators: Input help mode message for a command in Skype Preview app.
+msgid "Reports and moves the review cursor to a recent message"
+msgstr "Annoncer un message récent et y déplacer le curseur de revue"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

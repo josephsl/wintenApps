@@ -21,14 +21,17 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Microsoft Edge
 * Asetukset (järjestelmän asetukset, Windows+I).
 * Skypen esiversio
+* Kauppa
 * Twitter
 * TeamViewer Touch
 * Sää
 * Sekalaisia moduuleita sellaisille säätimille kuin Käynnistä-valikon
   tiilet.
 
-Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1507 (koontiversio
-10240) tai uudempaa ja NVDA:n 2015.4-versiota tai uudempaa.
+Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1507 (koontikäännös
+10240) tai uudempaa ja NVDA 2016.3:a tai uudempaa. Voit asentaa sen myös
+Windows 7 service pack 1:een osana Windows 10:een päivittämisen
+valmisteluja.
 
 ## Yleistä
 
@@ -40,7 +43,6 @@ Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1507 (koontiversio
   valintaikkuna (Asetukset-sovelluksessa) sekä uudentyylinen Käyttäjätilien
   valvonnan valintaikkuna koontiversiossa 14328 ja uudemmissa NVDA
   2016.2.1:ssä tai vanhemmassa.
-* Ajanvalitsimen lukeminen toimii muillakin kuin englannin kielialueilla.
 * Tiettyjen hakukenttien ehdotusten ilmestyminen/loppuminen (varsinkin
   Asetukset-sovelluksessa) ilmaistaan nyt äänimerkeillä ja/tai
   pistekirjoituksella.
@@ -65,9 +67,7 @@ Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1507 (koontiversio
 * Cortanan tekstimuotoiset vastaukset puhutaan useimmissa tilanteissa
   (mikäli näin ei ole, avaa Käynnistä-valikko uudelleen ja yritä hakua
   toistamiseen).
-* Cortanalle puhuttaessa saadaan parempi kokemus painamalla Cortanan
-  kuuntelutilan pikanäppäintä (Windows+C versioissa 1507 ja 1511,
-  Windows+Shift+C versiossa 1607).
+* NVDA on hiljaa puhuessasi Cortanalle mikrofonin välityksellä.
 
 ## Insider-/Palautekeskus ja TeamViewer Touch
 
@@ -99,6 +99,11 @@ Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1507 (koontiversio
 * Osittainen Control+NVDA+numero-komentojen paluu tuoreen
   keskusteluhistorian lukemiseen sekä navigointiobjektin siirtämiseen
   keskustelukohteisiin kuten Skypen työpöytäversiossa.
+
+## Kauppa
+
+* Sovellusten nimet näytetään oikein päivitettävien sovellusten luettelossa
+  päivitystarkistuksen jälkeen.
 
 ## Bank of America/Twitter
 

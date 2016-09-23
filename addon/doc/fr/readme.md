@@ -23,13 +23,16 @@ est inclus) :
 * Microsoft Edge
 * Paramètres (paramètres système, Windows+I).
 * Skype Preview
+* Store
 * Twitter.
 * TeamViewer Touch.
 * Météo.
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
-Note: ce module complémentaire nécessite Windows 10 Version 1507 (build
-10240) ou version ultérieure et NVDA 2015.4 ou version ultérieure.
+Note : ce module requiert Windows 10 Version 1507 (build 10240) ou au-delà
+et NVDA 2016.3 ou au-delà. Vous pouvez aussi installer ce module sur Windows
+7 service pack 1 dans le cadre de la préparation de la mise à jour vers
+Windows 10.
 
 ## Générale
 
@@ -41,8 +44,6 @@ Note: ce module complémentaire nécessite Windows 10 Version 1507 (build
   dialogue propres. Ceci incluent le dialogue Insider Preview (settings app)
   et le dialogue nouveau style UAC dans la build 14328 et version ultérieur
   pour NVDA 2016.2.1 ou version antérieure.
-* L'annonce  du sélecteur de l'heure fonctionne dans des différente
-  localizations de l'anglais.
 * Apparence/fermeture des suggestions pour certains champs de recherche
   (notamment Settings app) est annoncé En passant par des sons et/ou le
   braille.
@@ -67,9 +68,7 @@ Note: ce module complémentaire nécessite Windows 10 Version 1507 (build
 * Les réponses textuelles de Cortana sont annoncées dans la plupart des
   situations (si ce n'est pas le cas, réouvrez le menu Démarrer et réessayez
   la recherche).
-* Pour une meilleure expérience lorsque vous parlez à Cortana, appuyer sur
-  le raccourci clavier  pour Cortana en mode écoute (Windows+C dans la
-  Versions 1507 et 1511, Windows+MAJ+C dans la version 1607).
+* NVDA sera silencieux quand vous vous adresserez vocalement à Cortana.
 
 ## Insider/Feedback Hub et TeamViewer Touch
 
@@ -103,6 +102,12 @@ Note: ce module complémentaire nécessite Windows 10 Version 1507 (build
 * Retour partiel de Contrôle+NVDA+commandes numéro de ligne pour lire
   l'historique de conversation récente et pour déplacer l'objet navigator
   aux entrées de conversation tout comme Skype for Desktop.
+
+## Store
+
+* Après vérification des mises à jour d'applications, le nom des
+  applications dans la liste des applications à mettre à jour sera
+  correctement étiqueté.
 
 ## Bank of America/Twitter
 
