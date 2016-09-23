@@ -22,13 +22,16 @@ se inclúe):
 * Microsoft Edge
 * Opcións (opcións do sistema, Windows+I).
 * Previsualización de Skype
+* Tenda
 * Twitter.
 * TeamViewer Touch.
 * O Tempo
 * Módulos misceláneos para controis como mosaicos do Menú Inicio.
 
 Nota: este complemento require do Windows 10 Versión 1507 (build 10240) ou
-posterior e NVDA 2015.4 ou posterior.
+posterior e do NVDA 2016.3 ou posterior. Tamén podes instalar este
+complemento no Windows 7 service pack 1 se quixeras instalar este
+complemento como parte das preparacións para actualizar a Windows 10.
 
 ## Xeral
 
@@ -39,8 +42,6 @@ posterior e NVDA 2015.4 ou posterior.
 * Agora recoñécense certos diálogos como proprios diálogos. Esto inclúe o
   diálogo Insider Preview (settings app) e o diálogo de novo estilo do UAC
   na compilación 14328 e anteriores para o NVDA 2016.2.1 e anteriores.
-* O anunciado do selector de tempo funciona Nas localizacións distintas do
-  inglés.
 * A apariencia/peche de suxerencias para certos campos de procura (en
   particular o aplikcativo Configuración) anúnciase a través de sons e/ou de
   braille.
@@ -64,9 +65,7 @@ posterior e NVDA 2015.4 ou posterior.
 
 * As respostas testuais de Cortana anúncianse na mayoría das situacións(se
   non se reabre o menú inicio e téntase a procura de novo).
-* Para una mellor experiencia cando fales co Cortana, preme a combinación de
-  teclas do modo escoita do Cortana (Windows+C nas Versións 1507 e 1511,
-  Windows+Shift+C na versión 1607).
+* NVDA silenciarase cando lle fales ao Cortana a través da voz.
 
 ## Insider/Feedback Hub y TeamViewer Touch
 
@@ -99,6 +98,11 @@ posterior e NVDA 2015.4 ou posterior.
 * Volta parcial das ordes Control+NVDA+fila de números para ler o histórico
   de chats recentes e para mover o navegador de obxectos a entradas de chat
   como Skype para Escritorio.
+
+## Tenda
+
+* Despois de buscar actualizacións das aplicacións, os nomes das aplicacións
+  na lista de aplicacions actualizarán as etiquetas correctamente.
 
 ## Bank of America/Twitter
 

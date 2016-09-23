@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2016-09-02 15:21+0200\n"
+"PO-Revision-Date: 2016-09-16 16:19+0200\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: bg\n"
@@ -19,6 +19,18 @@ msgstr ""
 
 msgid "No more weather data for this item."
 msgstr "Няма повече синоптични данни за този елемент."
+
+#. Translaotrs: Presented when someone stops typing in Skype app (same as Skype for Desktop).
+msgid "Typing stopped"
+msgstr "Писането спря"
+
+#. Translators: Presented when message history isn't found in Skype Preview app.
+msgid "Chat history not found"
+msgstr "Съдържанието на дискусията не бе намерено"
+
+#. Translators: Input help mode message for a command in Skype Preview app.
+msgid "Reports and moves the review cursor to a recent message"
+msgstr "Докладва и премества курсора за преглед до скорошно съобщение"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

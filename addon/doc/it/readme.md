@@ -21,13 +21,16 @@ si veda la relativa sezione per ulteriori informazioni:
 * Microsoft Edge
 * Impostazioni (Impostazioni Windows, Windows+i)
 * Anteprima Skype
+* Store
 * Twitter.
 * TeamViewer Touch.
 * Weather.
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
 Note: this add-on requires Windows 10 Version 1507 (build 10240) or later
-and NVDA 2015.4 or later.
+and NVDA 2016.3 or later. You can also install this add-on on Windows 7
+service pack 1 if you'd like to install this add-on as part of preparations
+to upgrade to Windows 10.
 
 ## Generale
 
@@ -38,8 +41,6 @@ and NVDA 2015.4 or later.
 * Certain dialogs are now recognized as proper dialogs. This include Insider
   Preview dialog (settings app) and new-style UAC dialog in build 14328 and
   later for NvDA 2016.2.1 or earlier.
-* La selezione dei valori dell'orario funziona anche nei sistemi con lingua
-  diversa dall'inglese.
 * Appearance/close of suggestions for certain search fields (notably
   Settings app) is announced via sounds and/or brailled.
 
@@ -63,9 +64,7 @@ and NVDA 2015.4 or later.
 * Le risposte di tipo testuale di Cortana vengono lette nella maggior parte
   dei casi, se non dovesse funzionare riaprire il menu avvio e ripetere la
   ricerca.
-* For better experience when talking to Cortana, press Cortana listening
-  mode hotkey (Windows+C on Versions 1507 and 1511, Windows+Shift+C in
-  version 1607).
+* NVDA will be silent when you talk to Cortana via voice.
 
 ## Insider/Feedback Hub e TeamViewer Touch
 
@@ -98,6 +97,11 @@ and NVDA 2015.4 or later.
 * Partial return of Control+NvDA+number row commands to read recent chat
   history and to move navigator object to chat entries just like Skype for
   Desktop.
+
+## Store
+
+* After checking for app updates, app names in list of apps to be updated
+  are correctly labeled.
 
 ## Bank of America/Twitter
 

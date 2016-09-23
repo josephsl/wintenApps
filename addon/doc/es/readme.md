@@ -22,6 +22,7 @@ qué se incluye):
 * Microsoft Edge
 * Opciones (opciones de sistema, Windows+I).
 * Previsualización de Skype
+* Tienda
 * Twitter.
 * TeamViewer Touch.
 * El Tiempo
@@ -29,7 +30,9 @@ qué se incluye):
   Inicio.
 
 Nota: este complemento requiere de Windows 10 Versión 1507 (build 10240) o
-posterior y NVDA 2015.4 o posterior.
+posterior y NVDA 2016.3 o posterior. También puedes instalar este
+complemento en Windows 7 service pack 1 si quisieras instalar este
+complemento como parte de las preparaciones para actualizar a Windows 10.
 
 ## General
 
@@ -41,8 +44,6 @@ posterior y NVDA 2015.4 o posterior.
   incluye el diálogo Insider Preview (aplicación de configuración) y el
   diálogo de nuevo estilo del UAC en la compilación 14328 y posteriores para
   NvDA 2016.2.1 o anteriores.
-* El anunciado de selector de hora funciona en localizaciones diferentes al
-  inglés.
 * La apariencia/cierre de sugerencias para ciertos campos de búsqueda (en
   particular la app Opciones) se anuncian a través de sonidos y/o de
   braille.
@@ -67,9 +68,7 @@ posterior y NVDA 2015.4 o posterior.
 * Las respuestas textuales de Cortana se anuncian en la mayoría de las
   situaciones (si no se reabre el menú Inicio y  se trata de buscar de
   nuevo).
-* Para una mejor experiencia al hablar a Cortana, pulsa la combinación de
-  teclas del modo de escucha de Cortana (Windows+C en Versiones 1507 y 1511,
-  Windows+Shift+C en la versión 1607).
+* NVDA se silenciará cuando hables a Cortana a través de la voz.
 
 ## Insider/Feedback Hub y TeamViewer Touch
 
@@ -103,6 +102,12 @@ posterior y NVDA 2015.4 o posterior.
 * Retorno parcial de las órdenes Control+NVDA+fila de números para leer el
   historial de chats recientes y para mover el navegador de objetos a las
   entradas de chat como en Skype para Escritorio.
+
+## Tienda
+
+* Después de buscar actualizaciones de aplicaciones, los nombres de las
+  aplicaciones en la lista de aplicaciones etiquetadas se actualizan
+  correctamente.
 
 ## Bank of America/Twitter
 

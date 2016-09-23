@@ -1,6 +1,6 @@
 # Windows 10 App Essentials #
 
-* Authors: Joseph Lee, Derek Riemer and other Windows 10 users
+* Авторы: Joseph Lee, Derek Riemer и другие пользователи Windows 10
 * Загрузить [стабильную версию][1]
 * Загрузить [разрабатываемую версию][2]
 
@@ -12,22 +12,25 @@ Windows 10, а также исправлений для некоторых ти�
 
 * Будильники и часы.
 * Bank of America
-* Calendar
+* Календарь
 * Калькулятор (modern).
 * Cortana
 * Insider Hub/Feedback Hub (Windows Insiders only).
-* Mail
-* Maps
+* Почта
+* Карты
 * Microsoft Edge
 * Настройки (настройки системы, Windows+I).
 * Skype Preview
+* Store
 * Twitter.
 * Сенсорный экран TeamViewer.
-* Weather.
+* Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
 
-Note: this add-on requires Windows 10 Version 1507 (build 10240) or later
-and NVDA 2015.4 or later.
+Примечание: Это дополнение требует Windows 10 Версии 1507 (сборки 10240) или
+позднее и NVDA 2016.3 или позднее. Вы также можете установить это дополнение
+в Windows 7 с пакетом исправлений 1, если вы хотите установить его в рамках
+подготовки к обновлению до Windows 10.
 
 ## Общие
 
@@ -38,7 +41,6 @@ and NVDA 2015.4 or later.
 * Certain dialogs are now recognized as proper dialogs. This include Insider
   Preview dialog (settings app) and new-style UAC dialog in build 14328 and
   later for NvDA 2016.2.1 or earlier.
-* Time picker announcement works in non-English locales.
 * Appearance/close of suggestions for certain search fields (notably
   Settings app) is announced via sounds and/or brailled.
 
@@ -47,7 +49,7 @@ and NVDA 2015.4 or later.
 * Time picker values are now announced. This also affects the control used
   to select when to restart to finish installing Windows updates.
 
-## Calendar and Mail
+## Календарь и Почта
 
 * NVDA no longer announces "read-only" for appointment subject in Calendar
   and message content in Mail.
@@ -60,9 +62,7 @@ and NVDA 2015.4 or later.
 
 * Textual responses from Cortana are announced in most situations (if it
   doesn't, reopen Start menu and try searching again).
-* For better experience when talking to Cortana, press Cortana listening
-  mode hotkey (Windows+C on Versions 1507 and 1511, Windows+Shift+C in
-  version 1607).
+* NVDA will be silent when you talk to Cortana via voice.
 
 ## Insider/Feedback Hub and TeamViewer Touch
 
@@ -71,7 +71,7 @@ and NVDA 2015.4 or later.
 * Метки радиокнопок теперь объявляются.
 * Сенсорный экран TeamViewer: Теперь объявляются метки кнопок.
 
-## Maps
+## Карты
 
 * NVDA plays location beep for map locations.
 
@@ -95,11 +95,16 @@ and NVDA 2015.4 or later.
   history and to move navigator object to chat entries just like Skype for
   Desktop.
 
+## Store
+
+* After checking for app updates, app names in list of apps to be updated
+  are correctly labeled.
+
 ## Bank of America/Twitter
 
 * Теперь объявляются метки кнопок.
 
-## Weather
+## Погода
 
 * Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by
   Derek Riemer).
