@@ -12,5 +12,5 @@ from NVDAObjects.UIA import UIA
 class AppModule(appModuleHandler.AppModule):
 
 	def event_NVDAObject_init(self, obj):
-		if isinstance(obj, UIA) and obj.role == controlTypes.ROLE_LISTITEM and obj.firstChild.UIAElement.cachedAutomationID == "InstallControl":
+		if isinstance(obj, UIA) and obj.role == controlTypes.ROLE_LISTITEM and obj.firstChild and obj.firstChild.UIAElement.cachedAutomationID == "InstallControl":
 			obj.name = obj.firstChild.firstChild.name
