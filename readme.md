@@ -13,7 +13,6 @@ The following app modules or support modules for some apps are included (see eac
 * Calendar
 * Calculator (modern).
 * Cortana
-* Insider Hub/Feedback Hub (Windows Insiders only).
 * Mail
 * Maps
 * Microsoft Edge
@@ -33,6 +32,7 @@ Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NV
 * When minimizing windows (Windows+M), "pane" is no longer announced (noticeable if using Insider Preview builds).
 * Certain dialogs are now recognized as proper dialogs. This include Insider Preview dialog (settings app) and new-style UAC dialog in build 14328 and later for NvDA 2016.2.1 or earlier.
 * Appearance/close of suggestions for certain search fields (notably Settings app) is announced via sounds and/or brailled.
+* In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 
 ## Alarms and clock
 
@@ -50,12 +50,11 @@ Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NV
 
 * Textual responses from Cortana are announced in most situations (if it doesn't, reopen Start menu and try searching again).
 * NVDA will be silent when you talk to Cortana via voice.
+* NVDA will now announce reminder confirmation after you set one.
 
-## Insider/Feedback Hub and TeamViewer Touch
+## Mail and calendar
 
-* Insider Hub (Feedback Hub in Anniversary Update) only: Meant to be used by Windows Insiders running an Insider build.
-* Labels for radio buttons are announced.
-* TeamViewer Touch: Lables for buttons are announced.
+* NVDA no longer announces "edit" or "read-only" in message body and other fields.
 
 ## Maps
 
@@ -79,6 +78,11 @@ Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NV
 ## Store
 
 * After checking for app updates, app names in list of apps to be updated are correctly labeled.
+
+## TeamViewer Touch
+
+* Labels for radio buttons are announced.
+* Lables for buttons are announced.
 
 ## Bank of America/Twitter
 
