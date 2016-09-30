@@ -18,34 +18,39 @@ msgstr ""
 "X-Generator: Poedit 1.6.10\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: addon/appModules/microsoft_msn_weather.py:40
-#: addon/appModules/microsoft_msn_weather.py:48
+#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on)..
+#, python-brace-format
+msgid ""
+"You are using an older version of Windows. This add-on requires "
+"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
+"anyway?"
+msgstr ""
+
+#. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
+msgid "Old Windows version"
+msgstr ""
+
 msgid "No more weather data for this item."
 msgstr "אין פירטי מזג אוויר עבור פריט זה"
 
 #. Translaotrs: Presented when someone stops typing in Skype app (same as Skype for Desktop).
-#: addon/appModules/skypeapp.py:38
 msgid "Typing stopped"
 msgstr "ההקלדה הופסקה"
 
 #. Translators: Presented when message history isn't found in Skype Preview app.
-#: addon/appModules/skypeapp.py:64
 msgid "Chat history not found"
 msgstr "לא נמצא היסטורית שיחה"
 
 #. Translators: Input help mode message for a command in Skype Preview app.
-#: addon/appModules/skypeapp.py:66
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "מדווח ומעביר את הסמן לפריט האחרון"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-#: buildVars.py:17
 msgid "Windows 10 App Essentials"
 msgstr "חבילת תוספים בסיסית לחלונות 10Windows 10 App Essentials"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-#: buildVars.py:20
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "מקבץ תוספים עבור שימוש נוח יותר בחלונות 10"

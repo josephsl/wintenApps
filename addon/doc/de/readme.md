@@ -16,7 +16,6 @@ welche inbegriffen sind):
 * Calendar
 * Rechner (modern).
 * Cortana
-* Insider Hub/Feedback-Hub (Nur für Windows Insider).
 * Mail
 * Maps
 * Microsoft Edge
@@ -29,9 +28,7 @@ welche inbegriffen sind):
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
 
 Note: this add-on requires Windows 10 Version 1507 (build 10240) or later
-and NVDA 2016.3 or later. You can also install this add-on on Windows 7
-service pack 1 if you'd like to install this add-on as part of preparations
-to upgrade to Windows 10.
+and NVDA 2016.3 or later.
 
 ## Allgemein
 
@@ -43,6 +40,8 @@ to upgrade to Windows 10.
   later for NvDA 2016.2.1 or earlier.
 * Appearance/close of suggestions for certain search fields (notably
   Settings app) is announced via sounds and/or brailled.
+* In certain context menus (such as in Edge), position information (e.g. 1
+  of 2) is no longer announced.
 
 ## Wecker und Uhr
 
@@ -66,13 +65,12 @@ to upgrade to Windows 10.
 * Textuelle Antworten von Cortana werden in den meisten Fällen angezeigt
   (falls nicht, öffnen Sie das StartMenü und starten Sie die Suche erneut).
 * NVDA will be silent when you talk to Cortana via voice.
+* NVDA will now announce reminder confirmation after you set one.
 
-## Insider/Feedback Hub und TeamViewer Touch
+## Mail and calendar
 
-* Nur Insider Hub (Feedback Hub in jährlichen Updates): Sofern Windows
-  Insider benutzt wird, wird auch nur die Insider-Version verwendet.
-* Beschriftungen für Auswahlschalter werden nun angesagt.
-* TeamViewer Touch: Schalterbeschriftungen werden nun angesagt.
+* NVDA no longer announces "edit" or "read-only" in message body and other
+  fields.
 
 ## Maps
 
@@ -101,6 +99,11 @@ to upgrade to Windows 10.
 
 * After checking for app updates, app names in list of apps to be updated
   are correctly labeled.
+
+## TeamViewer Touch
+
+* Beschriftungen für Auswahlschalter werden nun angesagt.
+* Lables for buttons are announced.
 
 ## Bank of America/Twitter
 

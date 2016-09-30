@@ -15,7 +15,6 @@ Windows 10, а также исправлений для некоторых ти�
 * Календарь
 * Калькулятор (modern).
 * Cortana
-* Insider Hub/Feedback Hub (Windows Insiders only).
 * Почта
 * Карты
 * Microsoft Edge
@@ -27,10 +26,8 @@ Windows 10, а также исправлений для некоторых ти�
 * Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
 
-Примечание: Это дополнение требует Windows 10 Версии 1507 (сборки 10240) или
-позднее и NVDA 2016.3 или позднее. Вы также можете установить это дополнение
-в Windows 7 с пакетом исправлений 1, если вы хотите установить его в рамках
-подготовки к обновлению до Windows 10.
+Note: this add-on requires Windows 10 Version 1507 (build 10240) or later
+and NVDA 2016.3 or later.
 
 ## Общие
 
@@ -43,6 +40,8 @@ Windows 10, а также исправлений для некоторых ти�
   later for NvDA 2016.2.1 or earlier.
 * Appearance/close of suggestions for certain search fields (notably
   Settings app) is announced via sounds and/or brailled.
+* In certain context menus (such as in Edge), position information (e.g. 1
+  of 2) is no longer announced.
 
 ## Будильники и часы
 
@@ -63,13 +62,12 @@ Windows 10, а также исправлений для некоторых ти�
 * Textual responses from Cortana are announced in most situations (if it
   doesn't, reopen Start menu and try searching again).
 * NVDA will be silent when you talk to Cortana via voice.
+* NVDA will now announce reminder confirmation after you set one.
 
-## Insider/Feedback Hub and TeamViewer Touch
+## Mail and calendar
 
-* Insider Hub (Feedback Hub in Anniversary Update) only: Meant to be used by
-  Windows Insiders running an Insider build.
-* Метки радиокнопок теперь объявляются.
-* Сенсорный экран TeamViewer: Теперь объявляются метки кнопок.
+* NVDA no longer announces "edit" or "read-only" in message body and other
+  fields.
 
 ## Карты
 
@@ -99,6 +97,11 @@ Windows 10, а также исправлений для некоторых ти�
 
 * After checking for app updates, app names in list of apps to be updated
   are correctly labeled.
+
+## TeamViewer Touch
+
+* Метки радиокнопок теперь объявляются.
+* Lables for buttons are announced.
 
 ## Bank of America/Twitter
 

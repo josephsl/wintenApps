@@ -16,7 +16,6 @@ qué se incluye):
 * Calendario
 * Calculadora (modern).
 * Cortana
-* Insider Hub/Feedback Hub (sólo Windows Insiders).
 * Correo
 * Mapas
 * Microsoft Edge
@@ -29,10 +28,8 @@ qué se incluye):
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Nota: este complemento requiere de Windows 10 Versión 1507 (build 10240) o
-posterior y NVDA 2016.3 o posterior. También puedes instalar este
-complemento en Windows 7 service pack 1 si quisieras instalar este
-complemento como parte de las preparaciones para actualizar a Windows 10.
+Note: this add-on requires Windows 10 Version 1507 (build 10240) or later
+and NVDA 2016.3 or later.
 
 ## General
 
@@ -47,6 +44,8 @@ complemento como parte de las preparaciones para actualizar a Windows 10.
 * La apariencia/cierre de sugerencias para ciertos campos de búsqueda (en
   particular la app Opciones) se anuncian a través de sonidos y/o de
   braille.
+* In certain context menus (such as in Edge), position information (e.g. 1
+  of 2) is no longer announced.
 
 ## Alarmas y reloj
 
@@ -69,14 +68,12 @@ complemento como parte de las preparaciones para actualizar a Windows 10.
   situaciones (si no se reabre el menú Inicio y  se trata de buscar de
   nuevo).
 * NVDA se silenciará cuando hables a Cortana a través de la voz.
+* NVDA will now announce reminder confirmation after you set one.
 
-## Insider/Feedback Hub y TeamViewer Touch
+## Mail and calendar
 
-* Insider Hub (Retroalimentación de Hub en Anniversary Update) solo:
-  Significa que se utiliza por Windows Insiders ejecutando una compilación
-  Insider.
-* Se anuncian las etiquetas para botones de opción.
-* TeamViewer Touch: se anuncian las etiquetas para los botones.
+* NVDA no longer announces "edit" or "read-only" in message body and other
+  fields.
 
 ## Mapas
 
@@ -108,6 +105,11 @@ complemento como parte de las preparaciones para actualizar a Windows 10.
 * Después de buscar actualizaciones de aplicaciones, los nombres de las
   aplicaciones en la lista de aplicaciones etiquetadas se actualizan
   correctamente.
+
+## TeamViewer Touch
+
+* Se anuncian las etiquetas para botones de opción.
+* Lables for buttons are announced.
 
 ## Bank of America/Twitter
 

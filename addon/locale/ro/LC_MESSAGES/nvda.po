@@ -17,6 +17,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.9\n"
 
+#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on)..
+#, python-brace-format
+msgid ""
+"You are using an older version of Windows. This add-on requires "
+"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
+"anyway?"
+msgstr ""
+
+#. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
+msgid "Old Windows version"
+msgstr ""
+
 msgid "No more weather data for this item."
 msgstr "Nu există mai multe date meteorologice pentru acest element."
 
@@ -40,4 +52,5 @@ msgstr "Windows 10 App Essentials"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
-msgstr "O colecție a modulelor de aplicații pentru diferite aplicații din Windows 10"
+msgstr ""
+"O colecție a modulelor de aplicații pentru diferite aplicații din Windows 10"
