@@ -28,8 +28,8 @@ qué se incluye):
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Note: this add-on requires Windows 10 Version 1507 (build 10240) or later
-and NVDA 2016.3 or later.
+Nota: este complemento requiere de Windows 10 Versión 1507 (build 10240) o
+posterior y NVDA 2016.3 o posterior.
 
 ## General
 
@@ -44,8 +44,8 @@ and NVDA 2016.3 or later.
 * La apariencia/cierre de sugerencias para ciertos campos de búsqueda (en
   particular la app Opciones) se anuncian a través de sonidos y/o de
   braille.
-* In certain context menus (such as in Edge), position information (e.g. 1
-  of 2) is no longer announced.
+* En ciertos menús de contexto (tales como en Edge), la información de
+  posición (ej.: 1 de 2) ya no se anuncia.
 
 ## Alarmas y reloj
 
@@ -68,12 +68,12 @@ and NVDA 2016.3 or later.
   situaciones (si no se reabre el menú Inicio y  se trata de buscar de
   nuevo).
 * NVDA se silenciará cuando hables a Cortana a través de la voz.
-* NVDA will now announce reminder confirmation after you set one.
+* NVDA ahora anunciará confirmación de recuerdo después de configurarla.
 
-## Mail and calendar
+## Correo y calendario
 
-* NVDA no longer announces "edit" or "read-only" in message body and other
-  fields.
+* NVDA ya no anuncia "editar" o "sólo lectura" en el cuerpo del mensaje y
+  otros campos.
 
 ## Mapas
 
@@ -109,7 +109,7 @@ and NVDA 2016.3 or later.
 ## TeamViewer Touch
 
 * Se anuncian las etiquetas para botones de opción.
-* Lables for buttons are announced.
+* Se anuncian las etiquetas para botones de opción.
 
 ## Bank of America/Twitter
 

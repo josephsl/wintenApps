@@ -1,4 +1,4 @@
-# Windows 10 App Essentials #
+# Windows 10 Aplicații Esențiale #
 
 * Autori: Joseph Lee, Derek Riemer și alți utilizatori Windows 10 
 * Descărcați [versiunea stabilă][1]
