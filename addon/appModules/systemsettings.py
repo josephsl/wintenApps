@@ -9,9 +9,6 @@ import ui
 import controlTypes
 from NVDAObjects.UIA import UIA
 
-# Filter out name change event for the following objects.
-noRepeatAnnouncement = ("ContentPresenter")
-
 class AppModule(appModuleHandler.AppModule):
 
 	def event_NVDAObject_init(self, obj):
@@ -21,13 +18,24 @@ class AppModule(appModuleHandler.AppModule):
 			if obj.name == "" and obj.role == controlTypes.ROLE_TOGGLEBUTTON:
 				obj.name = obj.previous.name
 
+	# Live region changed event is treated as a name change for now.
+	# Sometimes, the same text is announced, so consult this cache.
+	_nameChangeCache = ""
+
 	def event_nameChange(self, obj, nextHandler):
 		# For now, all name change events will result in items being announced.
-		# Prevent repeats, especially if it is part of a progress bar and for extraneous presentational objects.
-		if isinstance(obj, UIA) and obj.role != controlTypes.ROLE_PROGRESSBAR and obj.UIAElement.cachedAutomationID not in noRepeatAnnouncement:
+		if isinstance(obj, UIA) and obj.name != self._nameChangeCache:
+			automationID = obj.UIAElement.cachedAutomationID
 			# Don't repeat the fact that update download/installation is in progress if progress bar beep is on.
-			prev = obj.previous
-			if prev and prev.role == controlTypes.ROLE_PROGRESSBAR and prev.value > "0":
-				return
-			ui.message(obj.name)
+			if ((automationID == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock" and obj.previous.value <= "0")
+			# For search progress bar, do not repeat it.
+			or (automationID == "ProgressBar")
+			# Do not announce "result not found" error unless have to.
+			or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")):
+				self._nameChangeCache = obj.name
+				ui.message(obj.name)
+		nextHandler()
+
+	def event_UIA_controllerFor(self, obj, nextHandler):
+		self._nameChangeCache = ""
 		nextHandler()
