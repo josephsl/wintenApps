@@ -84,6 +84,8 @@ class SuggestionsListItem(UIA):
 			speech.cancelSpeech()
 			api.setNavigatorObject(self)
 			self.reportFocus()
+			# Based on work on NvDA core ticket 6414.
+			braille.handler.message(braille.getBrailleTextForProperties(name=self.name, role=self.role, positionInfo=self.positionInfo))
 
 # Some context menu items expose position info, which is quite anoying.
 class MenuItemNoPosInfo(UIA):
