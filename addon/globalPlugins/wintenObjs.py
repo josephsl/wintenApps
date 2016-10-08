@@ -51,6 +51,9 @@ wintenDialogs=("Shell_Dialog", "Popup", "Shell_Flyout")
 UIA_LiveRegionChangedEventId = 20024 # Coerce this to name change event for now.
 UIA_ControllerForPropertyId = 30104 # Auto-suggestions.
 
+# UIA COM constants
+TreeScope_Subtree = 7
+
 # Search fields.
 # Some of them raise controller for event, an event fired if another UI element depends on this control.
 class SearchField(UIA):
@@ -107,11 +110,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Listen for additional events (to be removed once NVDA Core itself supports them.
 		if UIA_ControllerForPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
 			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIA_ControllerForPropertyId] = "UIA_controllerFor"
+			UIAHandler.handler.clientObject.AddPropertyChangedEventHandler(UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler,[UIA_ControllerForPropertyId])
 		if UIA_LiveRegionChangedEventId not in UIAHandler.UIAEventIdsToNVDAEventNames:
 			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_LiveRegionChangedEventId] = "nameChange"
-			# Unfortunately, UIA handler must be restarted in order for changes to take effect (ugly hack, but it's a must until a plug-in model is developed).
-			UIAHandler.terminate()
-			UIAHandler.initialize()
+			UIAHandler.handler.clientObject.addAutomationEventHandler(UIA_LiveRegionChangedEventId,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
