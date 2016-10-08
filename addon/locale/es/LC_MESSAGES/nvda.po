@@ -17,6 +17,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.11\n"
 
+#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on)..
+#, python-brace-format
+msgid ""
+"You are using an older version of Windows. This add-on requires "
+"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
+"anyway?"
+msgstr ""
+
+#. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
+msgid "Old Windows version"
+msgstr ""
+
 msgid "No more weather data for this item."
 msgstr "No hay más datos del clima para este elemento."
 

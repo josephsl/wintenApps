@@ -17,7 +17,6 @@ est inclus) :
 * Calendrier
 * Calculatrice (modern).
 * Cortana
-* Insider Hub/Feedback Hub  (Windows Insiders seulement).
 * Courrier
 * Cartes
 * Microsoft Edge
@@ -29,10 +28,8 @@ est inclus) :
 * Météo.
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
-Note : ce module requiert Windows 10 Version 1507 (build 10240) ou au-delà
-et NVDA 2016.3 ou au-delà. Vous pouvez aussi installer ce module sur Windows
-7 service pack 1 dans le cadre de la préparation de la mise à jour vers
-Windows 10.
+Note: ce module complémentaire nécessite Windows 10 Version 1507 (build
+10240) ou version ultérieure et NVDA 2016.3 ou version ultérieure.
 
 ## Générale
 
@@ -47,6 +44,8 @@ Windows 10.
 * Apparence/fermeture des suggestions pour certains champs de recherche
   (notamment Settings app) est annoncé En passant par des sons et/ou le
   braille.
+* Dans certains menus contextuels (comme dans Edge), les informations sur la
+  position (par exemple 1 sur 2) n'est plus annoncé.
 
 ## Alarmes et horloge
 
@@ -69,13 +68,13 @@ Windows 10.
   situations (si ce n'est pas le cas, réouvrez le menu Démarrer et réessayez
   la recherche).
 * NVDA sera silencieux quand vous vous adresserez vocalement à Cortana.
+* NVDA annoncera maintenant un rappel de confirmation après que vous
+  définissez une.
 
-## Insider/Feedback Hub et TeamViewer Touch
+## Courrier et calendrier
 
-* Insider Hub (Feedback Hub in Anniversary Update) seulement : Destiné à
-  être utilisé par Windows Insiders en exécution d'une Insider build.
-* Étiquettes pour les boutons radio sont annoncés.
-* TeamViewer Touch: Étiquettes pour les boutons sont annoncés.
+* NVDA n'annoncera plus "edition" ou "lecture seule" dans le corps du
+  message et d'autres  champs.
 
 ## Cartes
 
@@ -108,6 +107,11 @@ Windows 10.
 * Après vérification des mises à jour d'applications, le nom des
   applications dans la liste des applications à mettre à jour sera
   correctement étiqueté.
+
+## TeamViewer Touch
+
+* Étiquettes pour les boutons radio sont annoncés.
+* Étiquettes pour les boutons sont annoncés.
 
 ## Bank of America/Twitter
 

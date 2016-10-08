@@ -15,7 +15,6 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Kalenteri
 * Laskin (moderni)
 * Cortana
-* Insider-/Palautekeskus (vain Windows Insider -ohjelmaan liittyneillä).
 * Sähköposti
 * Kartat
 * Microsoft Edge
@@ -28,10 +27,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sekalaisia moduuleita sellaisille säätimille kuin Käynnistä-valikon
   tiilet.
 
-Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1507 (koontikäännös
-10240) tai uudempaa ja NVDA 2016.3:a tai uudempaa. Voit asentaa sen myös
-Windows 7 service pack 1:een osana Windows 10:een päivittämisen
-valmisteluja.
+Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1507 (koontiversio
+10240) tai uudempaa ja NVDA:n 2016.3-versiota tai uudempaa.
 
 ## Yleistä
 
@@ -43,9 +40,11 @@ valmisteluja.
   valintaikkuna (Asetukset-sovelluksessa) sekä uudentyylinen Käyttäjätilien
   valvonnan valintaikkuna koontiversiossa 14328 ja uudemmissa NVDA
   2016.2.1:ssä tai vanhemmassa.
-* Tiettyjen hakukenttien ehdotusten ilmestyminen/loppuminen (varsinkin
+* Tiettyjen hakukenttien ehdotusten ilmestyminen/sulkeutuminen (varsinkin
   Asetukset-sovelluksessa) ilmaistaan nyt äänimerkeillä ja/tai
   pistekirjoituksella.
+* Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
+  (kuten Edgessä).
 
 ## Hälytykset ja kello
 
@@ -68,14 +67,12 @@ valmisteluja.
   (mikäli näin ei ole, avaa Käynnistä-valikko uudelleen ja yritä hakua
   toistamiseen).
 * NVDA on hiljaa puhuessasi Cortanalle mikrofonin välityksellä.
+* NVDA puhuu nyt vahvistuksen muistutusta lisättäessä.
 
-## Insider-/Palautekeskus ja TeamViewer Touch
+## Sähköposti ja kalenteri
 
-* Vain Insider-keskus (Palautekeskus Anniversary Update -versiossa):
-  Tarkoitettu Windows Insider -ohjelmaan liittyneiden käyttöön, joilla on
-  asennettuna Windowsin Insider-versio.
-* Valintapainikkeiden nimet luetaan.
-* TeamViewer Touch: Painikkeiden nimet luetaan.
+* NVDA ei enää ilmoita "muokattava" tai "vain luku" viestisisällössä ja
+  muissa kentissä.
 
 ## Kartat
 
@@ -104,6 +101,11 @@ valmisteluja.
 
 * Sovellusten nimet näytetään oikein päivitettävien sovellusten luettelossa
   päivitystarkistuksen jälkeen.
+
+## TeamViewer Touch
+
+* Valintapainikkeiden nimet luetaan.
+* Painikkeiden nimet luetaan.
 
 ## Bank of America/Twitter
 
