@@ -48,7 +48,8 @@ class LoopingSelectorItem(UIA):
 wintenDialogs=("Shell_Dialog", "Popup", "Shell_Flyout")
 
 # Extra UIA constants
-UIA_ControllerForPropertyId = 30104
+UIA_LiveRegionChangedEventId = 20024 # Coerce this to name change event for now.
+UIA_ControllerForPropertyId = 30104 # Auto-suggestions.
 
 # Search fields.
 # Some of them raise controller for event, an event fired if another UI element depends on this control.
@@ -103,9 +104,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		import versionInfo
 		if not hasattr(versionInfo, "version_build"):
 			appModuleHandler.getAppModuleFromProcessID = getAppModuleFromProcessID
-		# Listen for controller for events (to be removed once NVDA Core itself supports this).
+		# Listen for additional events (to be removed once NVDA Core itself supports them.
 		if UIA_ControllerForPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
 			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIA_ControllerForPropertyId] = "UIA_controllerFor"
+		if UIA_LiveRegionChangedEventId not in UIAHandler.UIAEventIdsToNVDAEventNames:
+			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_LiveRegionChangedEventId] = "nameChange"
 			# Unfortunately, UIA handler must be restarted in order for changes to take effect (ugly hack, but it's a must until a plug-in model is developed).
 			UIAHandler.terminate()
 			UIAHandler.initialize()
