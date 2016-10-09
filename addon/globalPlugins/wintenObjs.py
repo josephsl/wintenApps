@@ -36,6 +36,16 @@ def getAppModuleFromProcessID(processID):
 			appModuleHandler.runningTable[processID]=mod
 	return mod
 
+# Extra UIA constants
+UIA_LiveRegionChangedEventId = 20024 # Coerce this to name change event for now.
+UIA_ControllerForPropertyId = 30104 # Auto-suggestions.
+
+# UIA COM constants
+TreeScope_Subtree = 7
+
+# We know the following elements are dialogs.
+wintenDialogs=("Shell_Dialog", "Popup", "Shell_Flyout")
+
 # Looping selectors are used in apps such as Alarms and Clock and Windows Update to select time values.
 class LoopingSelectorItem(UIA):
 
@@ -43,16 +53,6 @@ class LoopingSelectorItem(UIA):
 		speech.cancelSpeech()
 		api.setNavigatorObject(self)
 		self.reportFocus()
-
-# We know the following elements are dialogs.
-wintenDialogs=("Shell_Dialog", "Popup", "Shell_Flyout")
-
-# Extra UIA constants
-UIA_LiveRegionChangedEventId = 20024 # Coerce this to name change event for now.
-UIA_ControllerForPropertyId = 30104 # Auto-suggestions.
-
-# UIA COM constants
-TreeScope_Subtree = 7
 
 # Search fields.
 # Some of them raise controller for event, an event fired if another UI element depends on this control.
@@ -97,6 +97,7 @@ class MenuItemNoPosInfo(UIA):
 	def _get_positionInfo(self):
 		return {}
 
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
@@ -107,7 +108,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		import versionInfo
 		if not hasattr(versionInfo, "version_build"):
 			appModuleHandler.getAppModuleFromProcessID = getAppModuleFromProcessID
-		# Listen for additional events (to be removed once NVDA Core itself supports them.
+		# Listen for additional events (to be removed once NVDA Core supports them.
 		if UIA_ControllerForPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
 			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIA_ControllerForPropertyId] = "UIA_controllerFor"
 			UIAHandler.handler.clientObject.AddPropertyChangedEventHandler(UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler,[UIA_ControllerForPropertyId])

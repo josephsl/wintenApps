@@ -23,7 +23,7 @@ class AppModule(AppModule):
 			element = obj.UIAElement
 			# There are two Cortana response lines. Usually line 2 is more reliable.
 			# However, Redstone seems to favor line 1 better.
-			# A specific automation ID is seen for reminders and others.
+			# A specific automation ID is used for reminders and others.
 			if element.cachedAutomationID in ("SpeechContentLabel", "WeSaidTextBlock", self.greetingLine):
 				ui.message(obj.name)
 				self.CortanaResponseCache = obj.name

@@ -1,5 +1,5 @@
 # WinTenApps/teamviewertouch.py
-# Part of Windows 10 Apps Essentials collection
+# Part of Windows 10 App Essentials collection
 # Copyright 2015 Joseph Lee, released under GPL.
 
 # TeamViewer Touch allows tablets to connect to remote computers.

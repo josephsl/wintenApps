@@ -18,4 +18,3 @@ class AppModule(appModuleHandler.AppModule):
 			if obj.role == controlTypes.ROLE_STATICTEXT and obj.parent.UIAElement.cachedClassName == "NotificationBar":
 				ui.message(obj.name)
 		nextHandler()
-

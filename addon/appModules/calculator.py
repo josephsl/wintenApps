@@ -1,6 +1,6 @@
 # WinTenApps/calculator.py
 # Part of Windows 10 App Essentials collection
-# Copyright 2015 Joseph Lee, released under GPL.
+# Copyright 2015-2016 Joseph Lee, released under GPL.
 
 # Provides enhanced support for modern Calculator, including announcing results.
 
@@ -19,9 +19,6 @@ class CalculatorResult(UIA):
 			return
 		else:
 			self.appModule.enterPressed = False
-			# Handle Redstone weirdness where pressing ENTER does not set focus to equals button.
-			#if winVersion.winVersion[2] > 10586:
-				#queueHandler.queueFunction(queueHandler.eventQueue, self.reportFocus)
 
 
 class AppModule(appModuleHandler.AppModule):
