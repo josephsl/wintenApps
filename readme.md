@@ -69,6 +69,7 @@ Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NV
 
 * Certain information such as Windows Update progress is now reported automatically.
 * Progress bar values and other information are no longer announced twice.
+* If it takes a while to search for settings, NVDA will announce "searching" and search result status such as if a setting cannot be found.
 
 ## Skype Preview
 
