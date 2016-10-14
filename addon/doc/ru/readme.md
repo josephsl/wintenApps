@@ -85,6 +85,8 @@ and NVDA 2016.3 or later.
   индикатор обновления Windows.
 * Значения индикатора выполнения и другая информация теперь не объявляются
   дважды.
+* If it takes a while to search for settings, NVDA will announce "searching"
+  and search result status such as if a setting cannot be found.
 
 ## Skype Preview
 

@@ -89,6 +89,9 @@ posterior e NVDA 2016.3 ou posterior.
   anunciada automáticamente.
 * Os valores da barra de progreso e outra información xa non se anuncian
   dúas veces.
+* Se está a tomar un tempo para procurar unha configuración, NVDA anunciará
+  "buscando" e o resultado do estado da procura como se unha opción non se
+  poidera atopar.
 
 ## Previsualización de Skype
 

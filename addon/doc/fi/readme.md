@@ -89,6 +89,8 @@ Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1507 (koontiversio
 * Määrätyt tiedot, kuten Windows Updaten päivitysten asennuksen edistyminen,
   puhutaan nyt automaattisesti.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
+* Mikäli asetusten etsiminen kestää jonkin aikaa, NVDA ilmoittaa "etsitään"
+  sekä hakutulosten tilan, kuten sen, jos asetusta ei löydy.
 
 ## Skypen esiversio
 

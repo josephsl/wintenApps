@@ -93,6 +93,9 @@ Note: ce module complémentaire nécessite Windows 10 Version 1507 (build
   Windows est maintenant signalé automatiquement.
 * Les valeurs de la barre de progression et d'autres informations ne sont
   plus annoncés deux fois.
+* Si il faut du temps pour rechercher des paramètres, NVDA annoncera
+  "recherch en cours" et l'état du résultat de la recherche tel comme si un
+  paramètre est introuvable.
 
 ## Skype Preview
 

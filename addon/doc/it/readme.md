@@ -87,6 +87,8 @@ and NVDA 2016.3 or later.
   operazioni di Windows Update.
 * Le informazioni delle barre di avanzamento non vengono più lette due
   volte.
+* If it takes a while to search for settings, NVDA will announce "searching"
+  and search result status such as if a setting cannot be found.
 
 ## Anteprima Skype
 

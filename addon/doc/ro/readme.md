@@ -90,6 +90,8 @@ nou și NVDA 2016.3 sau mai nou.
   și/sau instalare esunt raportate automat.
 * Valorile barei de progres și alte informații nu mai sunt anunțate de două
   ori.
+* Dacă durează ceva timp să căutați în setări, NVDA va anunța „se caută” și
+  starea rezultatului căutării, cum ar fi dacă o setare nu poate fi găsită.
 
 ## Skype Preview
 

@@ -87,6 +87,8 @@ and NVDA 2016.3 or later.
 * Bestimmte Informationen wie der Fortschritt bei Windows Updates werden nun
   automatisch angesagt.
 * Progress bar values and other information are no longer announced twice.
+* If it takes a while to search for settings, NVDA will announce "searching"
+  and search result status such as if a setting cannot be found.
 
 ## Skype Preview
 
