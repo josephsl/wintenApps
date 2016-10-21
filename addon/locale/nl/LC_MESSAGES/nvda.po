@@ -5,53 +5,63 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: wintenApps 16.07\n"
+"Project-Id-Version: wintenApps 16.10\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2016-10-01 05:14+0100\n"
-"Last-Translator: Jožef Gregorc <jozko.gregorc@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: sl\n"
+"POT-Creation-Date: 2016-09-30 22:05+1000\n"
+"PO-Revision-Date: 2016-10-20 22:41+0200\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"Last-Translator: Leonard de Ruijter <dev@systeemdenker.nl>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.6\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on)..
+#: addon/installTasks.py:15
+#, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Uporabljate zastarelo različico Oken. Za delovanje tega dodatka potrebujete "
-"{minSupportedVersion} ali novejšo. Ste prepričani, da neglede na to želite "
-"namestiti ta dodatek?"
+"U gebruikt een oudere versie van Windows. Deze add-on vereist "
+"{minSupportedVersion} of later. Weet u zeker dat u deze add-on toch wilt "
+"installeren?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
+#: addon/installTasks.py:17
 msgid "Old Windows version"
-msgstr "Stara različica Oken"
+msgstr "Oude Windowsversie"
 
+#: addon/appModules/microsoft_msn_weather.py:40
+#: addon/appModules/microsoft_msn_weather.py:48
 msgid "No more weather data for this item."
-msgstr "Ni več vremenskih podatkov za to postavko."
+msgstr "Geen weergegevens meer voor dit item."
 
 #. Translaotrs: Presented when someone stops typing in Skype app (same as Skype for Desktop).
+#: addon/appModules/skypeapp.py:38
 msgid "Typing stopped"
-msgstr "Tipkanje ustavljeno"
+msgstr "Typen gestopt"
 
 #. Translators: Presented when message history isn't found in Skype Preview app.
+#: addon/appModules/skypeapp.py:64
 msgid "Chat history not found"
-msgstr "Zgodovina klepeta se ni našla"
+msgstr "Chatgeschiedenis niet gevonden"
 
 #. Translators: Input help mode message for a command in Skype Preview app.
+#: addon/appModules/skypeapp.py:66
 msgid "Reports and moves the review cursor to a recent message"
-msgstr "Sporoča in premika pregledno utripalko na zadnje sporočilo"
+msgstr "Meldt en verplaatst de leescursor naar een recent bericht"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
+#: buildVars.py:17
 msgid "Windows 10 App Essentials"
-msgstr "Windows 10 Osnova Aplikacijam"
+msgstr "Windows 10 App Essentials"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:20
 msgid "A collection of app modules for various Windows 10 apps"
-msgstr "Zbirka aplikacijskih modulov za več Windows 10 aplikacij"
+msgstr "A collectie app modules voor verschillende Windows 10 apps"
