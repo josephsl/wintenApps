@@ -17,7 +17,23 @@ class AppModule(appModuleHandler.AppModule):
 		for pos in xrange(10):
 			self.bindGesture("kb:control+nvda+%s"%pos, "readMessage")
 
-	# Borrowed from Skype for Desktop app module (NVDA Core).
+	# Locate various elements, as this is one of the best ways to do this in Skype Preview.
+	# The best criteria is automation ID (class names are quite generic).
+	def locateElement(self, automationID):
+		# Foreground isn't reliable.
+		fg = api.getForegroundObject()
+		if fg.getChild(1).childCount > 0:
+			screenContent = fg.getChild(1)
+		else:
+			screenContent = fg.getChild(2)
+		# Element placement (according to UIA changes from time to time.
+		# Wish there is a more elegant way to do this...
+		for element in screenContent.children:
+			if isinstance(element, UIA) and element.UIAElement.cachedAutomationID == automationID:
+				return element
+		return None
+
+			# Borrowed from Skype for Desktop app module (NVDA Core).
 	RE_MESSAGE = re.compile(r"^From (?P<from>.*), (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?$")
 
 	def reportMessage(self, message):
@@ -34,33 +50,28 @@ class AppModule(appModuleHandler.AppModule):
 				# Announce typing indicator (same as Skype for Desktop).
 				nextElement = obj.next.UIAElement
 				if nextElement.cachedClassName == "RichEditBox" and nextElement.cachedAutomationID == "ChatEditBox":
-					# Translaotrs: Presented when someone stops typing in Skype app (same as Skype for Desktop).
+					# Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 					ui.message(obj.name if obj.name != "" else _("Typing stopped"))
 			elif uiElement.cachedAutomationID == "Message" and uiElement.cachedClassName == "ListViewItem":
 				self.reportMessage(obj.name)
 		nextHandler()
 
 	def script_readMessage(self, gesture):
-		# Foreground isn't reliable, so need to locate the actual chat contents list.
-		fg = api.getForegroundObject()
-		if fg.getChild(1).childCount > 0:
-			screenContent = fg.getChild(1)
-		else:
-			screenContent = fg.getChild(2)
+		chatHistory = self.locateElement("chatMessagesListView")
 		# Position of chat history in object hierarchy changes based on which tabv is active.
 		# Wish there is a more elegant way to do this...
-		for element in screenContent.children:
-			if isinstance(element, UIA) and element.UIAElement.cachedAutomationID == "chatMessagesListView":
-				pos = int(gesture.displayName[-1])
-				if pos == 0: pos += 10
-				try:
-					message = element.getChild(0-pos)
-					api.setNavigatorObject(message)
-					self.reportMessage(message.name)
-					return
-				except IndexError:
-					return
-		# Translators: Presented when message history isn't found in Skype Preview app.
-		ui.message(_("Chat history not found"))
+		if chatHistory is None:
+			# Translators: Presented when message history isn't found in Skype Preview app.
+			ui.message(_("Chat history not found"))
+			return
+		pos = int(gesture.displayName[-1])
+		if pos == 0: pos += 10
+		try:
+			message = chatHistory.getChild(0-pos)
+			api.setNavigatorObject(message)
+			self.reportMessage(message.name)
+			return
+		except IndexError:
+			return
 	# Translators: Input help mode message for a command in Skype Preview app.
 	script_readMessage.__doc__ = _("Reports and moves the review cursor to a recent message")
