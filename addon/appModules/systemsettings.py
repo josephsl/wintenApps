@@ -26,14 +26,17 @@ class AppModule(appModuleHandler.AppModule):
 		# For now, all name change events will result in items being announced.
 		if isinstance(obj, UIA) and obj.name != self._nameChangeCache:
 			automationID = obj.UIAElement.cachedAutomationID
-			# Don't repeat the fact that update download/installation is in progress if progress bar beep is on.
-			if ((automationID == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock" and obj.previous.value <= "0")
-			# For search progress bar, do not repeat it.
-			or (automationID == "ProgressBar")
-			# Do not announce "result not found" error unless have to.
-			or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")):
-				self._nameChangeCache = obj.name
-				ui.message(obj.name)
+			try:
+				# Don't repeat the fact that update download/installation is in progress if progress bar beep is on.
+				if ((automationID == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock" and obj.previous.value <= "0")
+				# For search progress bar, do not repeat it.
+				or (automationID == "ProgressBar")
+				# Do not announce "result not found" error unless have to.
+				or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")):
+					self._nameChangeCache = obj.name
+					ui.message(obj.name)
+			except AttributeError:
+				pass
 		nextHandler()
 
 	def event_UIA_controllerFor(self, obj, nextHandler):
