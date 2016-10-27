@@ -16,6 +16,8 @@ class AppModule(appModuleHandler.AppModule):
 		super(AppModule, self).__init__(*args, **kwargs)
 		for pos in xrange(10):
 			self.bindGesture("kb:control+nvda+%s"%pos, "readMessage")
+		for pos in xrange(1, 4):
+			self.bindGesture("kb:alt+%s"%pos, "moveToArea")
 
 	# Locate various elements, as this is one of the best ways to do this in Skype Preview.
 	# The best criteria is automation ID (class names are quite generic).
@@ -75,3 +77,21 @@ class AppModule(appModuleHandler.AppModule):
 			return
 	# Translators: Input help mode message for a command in Skype Preview app.
 	script_readMessage.__doc__ = _("Reports and moves the review cursor to a recent message")
+
+	# Various utility scripts to move to various parts of Skype Preview.
+	# Tuple below holds UIA automation ID for the element and errors if the element is not found.
+	moveTo = (
+	(None, None),
+	("ContactList", "Contacts list not found"),
+	("ConversationHistoryPanel", "Conversation history not found"),
+	("ChatEditBox", "Chat edit field not found"),
+	)
+
+	def script_moveToArea(self, gesture):
+		area = int(gesture.displayName.split("+")[-1])
+		element = self.locateElement(self.moveTo[area][0])
+		if element is None:
+			ui.message(self.moveTo[area][1])
+			return
+		element.setFocus()
+		return
