@@ -24,7 +24,7 @@ The following app modules or support modules for some apps are included (see eac
 * Weather.
 * Miscellaneous modules for controls such as Start Menu tiles.
 
-Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NVDA 2016.3 or later.
+Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NVDA 2016.3 or later. For best results, use the add-on with latest stable build (build 14393).
 
 ## General
 
@@ -33,6 +33,7 @@ Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NV
 * Certain dialogs are now recognized as proper dialogs. This include Insider Preview dialog (settings app) and new-style UAC dialog in build 14328 and later for NvDA 2016.2.1 or earlier.
 * Appearance/close of suggestions for certain search fields (notably Settings app) is announced via sounds and/or brailled.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
+* The following UIA events are recognized: Controller for, live region changed (handled by name change event).
 
 ## Alarms and clock
 
@@ -75,6 +76,7 @@ Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NV
 
 * Typing indicator text is announced just like Skype for Desktop client.
 * Partial return of Control+NvDA+number row commands to read recent chat history and to move navigator object to chat entries just like Skype for Desktop.
+* You can now press Alt+number row to locate and move to contacts list (1), conversations (2) and chat edit field (3). Note that one must activate these tabs to move to the desired part.
 
 ## Store
 
