@@ -28,7 +28,8 @@ welche inbegriffen sind):
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
 
 Note: this add-on requires Windows 10 Version 1507 (build 10240) or later
-and NVDA 2016.3 or later.
+and NVDA 2016.3 or later. For best results, use the add-on with latest
+stable build (build 14393).
 
 ## Allgemein
 
@@ -42,6 +43,8 @@ and NVDA 2016.3 or later.
   Settings app) is announced via sounds and/or brailled.
 * In certain context menus (such as in Edge), position information (e.g. 1
   of 2) is no longer announced.
+* The following UIA events are recognized: Controller for, live region
+  changed (handled by name change event).
 
 ## Wecker und Uhr
 
@@ -96,6 +99,9 @@ and NVDA 2016.3 or later.
 * Partial return of Control+NvDA+number row commands to read recent chat
   history and to move navigator object to chat entries just like Skype for
   Desktop.
+* You can now press Alt+number row to locate and move to contacts list (1),
+  conversations (2) and chat edit field (3). Note that one must activate
+  these tabs to move to the desired part.
 
 ## Store
 

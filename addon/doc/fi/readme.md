@@ -28,7 +28,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
   tiilet.
 
 Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1507 (koontiversio
-10240) tai uudempaa ja NVDA:n 2016.3-versiota tai uudempaa.
+10240) tai uudempaa ja NVDA:n 2016.3-versiota tai uudempaa. Käytä parhaiden
+tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 
 ## Yleistä
 
@@ -45,6 +46,8 @@ Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1507 (koontiversio
   pistekirjoituksella.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
+* Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, aktiivinen alue
+  muuttunut (nimenmuutostapahtuman käsittelemänä).
 
 ## Hälytykset ja kello
 
@@ -98,6 +101,10 @@ Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1507 (koontiversio
 * Osittainen Control+NVDA+numero-komentojen paluu tuoreen
   keskusteluhistorian lukemiseen sekä navigointiobjektin siirtämiseen
   keskustelukohteisiin kuten Skypen työpöytäversiossa.
+* Voit painaa nyt Alt+numerorivin numeroita etsiäksesi kontaktiluettelon
+  (1), keskustelut (2) ja keskustelumuokkauskentän (3) sekä siirtyäksesi
+  niihin. Huomaa, että nämä välilehdet on aktivoitava haluttuun osioon
+  siirtymiseksi.
 
 ## Kauppa
 

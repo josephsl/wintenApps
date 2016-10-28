@@ -29,7 +29,9 @@ est inclus) :
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
 Note: ce module complémentaire nécessite Windows 10 Version 1507 (build
-10240) ou version ultérieure et NVDA 2016.3 ou version ultérieure.
+10240) ou version ultérieure et NVDA 2016.3 ou version ultérieure. Pour de
+meilleurs résultats, utilisez le module complémentaire avec la dernière
+build stable (build 14393).
 
 ## Générale
 
@@ -46,6 +48,8 @@ Note: ce module complémentaire nécessite Windows 10 Version 1507 (build
   braille.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
+* Les événements UIA suivants sont reconnus : Controller pour, live region
+  changed (handled par name change event).
 
 ## Alarmes et horloge
 
@@ -104,6 +108,10 @@ Note: ce module complémentaire nécessite Windows 10 Version 1507 (build
 * Retour partiel de Contrôle+NVDA+commandes numéro de ligne pour lire
   l'historique de conversation récente et pour déplacer l'objet navigator
   aux entrées de conversation tout comme Skype for Desktop.
+* Vous pouvez maintenant appuyer sur Alt+numéro de ligne pour localiser et
+  se déplacer à la liste des contacts (1), conversations (2) et la zone
+  d'édition de la conversation (3). Notez que l'on doit activer ces onglets
+  pour passer à la partie souhaitée.
 
 ## Store
 

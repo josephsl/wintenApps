@@ -28,7 +28,8 @@ privire la ceea ce este inclus):
 * Diverse module de control precum tile-urile din meniul start.
 
 Notă: acest add-on necesită Windows 10 versiunea 1507 (build 10240) sau mai
-nou și NVDA 2016.3 sau mai nou.
+nou și NVDA 2016.3 sau mai nou.. Pentru rezultate bune, folosiți add-on-ul
+cu ultimul build stabil (build 14393).
 
 ## General
 
@@ -45,6 +46,8 @@ nou și NVDA 2016.3 sau mai nou.
   în aplicația Setări) este anunțat prin sunete și/sau braille.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.g. 1 din 2) nu mai este anunțată.
+* Următoarele evenimente UIA sunt recunoscute: Controler pentru, schimbarea
+  regiunii în care locuiți (tratarea evenimentului schimbării numelui).
 
 ## Alarme și ceas
 
@@ -100,6 +103,10 @@ nou și NVDA 2016.3 sau mai nou.
 * Revenire parțială a comenzii Control+NvDA+1 până la 0 pentru citirea
   istoricul chatului recent și pentru deplasarea obiectului navigator la
   intrările chatului (la fel ca Skype pentru Desktop).
+* Puteți apăsa Alt+rândul cu numere pentru a localiza și a vă deplasa la
+  lista de contacte (1), conversații (2) și câmpul de editare a chatului
+  (3). Rețineți că trebuie să activați aceste etichete pentru a vă deplasa
+  la partea dorită.
 
 ## Magazin
 

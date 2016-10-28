@@ -27,8 +27,10 @@ se inclúe):
 * O Tempo
 * Módulos misceláneos para controis como mosaicos do Menú Inicio.
 
-Nota: este complemento require do Windows 10 Versión 1507 (build 10240) ou
-posterior e NVDA 2016.3 ou posterior.
+Nota: este complemento require do Windows 10 Versión 1507 (compilación
+10240) ou posterior e NVDA 2016.3 ou posterior. Para uns mellores
+resultados, usa o complemento coa última versión estable (compilación
+14393).
 
 ## Xeral
 
@@ -44,6 +46,8 @@ posterior e NVDA 2016.3 ou posterior.
   braille.
 * En certos menús de contexto (coma no Edge), a información de posición
   (ex.: 1 de 2) xa non se anuncia.
+* Recoñécense os seguintes eventos UIA: Controller for, live region changed
+  (Nanexados por evento de cambio de nome).
 
 ## Alarmas e reloxo
 
@@ -100,6 +104,10 @@ posterior e NVDA 2016.3 ou posterior.
 * Volta parcial das ordes Control+NVDA+fila de números para ler o histórico
   de chats recentes e para mover o navegador de obxectos a entradas de chat
   como Skype para Escritorio.
+* Agora podes premer Alt+fila de números para localizar e moverte cara a
+  lista de contactos (1), conversacións (2) e campo de edición de chat
+  (3). Ten en conta que deben activarse estas pestanas para moverte cara a
+  parte decidida.
 
 ## Tenda
 
