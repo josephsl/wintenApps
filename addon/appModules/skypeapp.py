@@ -9,6 +9,7 @@ import appModuleHandler
 import ui
 from NVDAObjects.UIA import UIA
 import api
+import controlTypes
 
 class AppModule(appModuleHandler.AppModule):
 
@@ -18,6 +19,14 @@ class AppModule(appModuleHandler.AppModule):
 			self.bindGesture("kb:control+nvda+%s"%pos, "readMessage")
 		for pos in xrange(1, 4):
 			self.bindGesture("kb:alt+%s"%pos, "moveToArea")
+
+	def event_NVDAObject_init(self, obj):
+		if isinstance(obj, UIA):
+			# Skype Preview 11.9 includes audio/video config combo boxes but they are not labeled correctly.
+			# Thankfully the label is right next door.
+			if obj.role == controlTypes.ROLE_COMBOBOX and obj.name == "" and obj.UIAElement.cachedAutomationID.startswith("AudioVideoDevices"):
+				obj.name = obj.previous.name
+
 
 	# Locate various elements, as this is one of the best ways to do this in Skype Preview.
 	# The best criteria is automation ID (class names are quite generic).
