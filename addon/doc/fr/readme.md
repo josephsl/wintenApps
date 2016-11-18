@@ -112,6 +112,8 @@ build stable (build 14393).
   se déplacer à la liste des contacts (1), conversations (2) et la zone
   d'édition de la conversation (3). Notez que l'on doit activer ces onglets
   pour passer à la partie souhaitée.
+* Étiquettes de liste déroulante pour Skype preview app publié en Novembre
+  2016 sont annoncées.
 
 ## Store
 

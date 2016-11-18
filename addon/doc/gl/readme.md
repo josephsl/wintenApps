@@ -108,6 +108,8 @@ resultados, usa o complemento coa última versión estable (compilación
   lista de contactos (1), conversacións (2) e campo de edición de chat
   (3). Ten en conta que deben activarse estas pestanas para moverte cara a
   parte decidida.
+* Anúncianse as etiquetas das caixas combinadas para a aplicación Skype
+  preview liberada en novembro do 2016.
 
 ## Tenda
 

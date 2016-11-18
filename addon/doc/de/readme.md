@@ -102,6 +102,8 @@ stable build (build 14393).
 * You can now press Alt+number row to locate and move to contacts list (1),
   conversations (2) and chat edit field (3). Note that one must activate
   these tabs to move to the desired part.
+* Combo box labels for Skype preview app released in November 2016 are
+  announced.
 
 ## Store
 

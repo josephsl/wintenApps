@@ -109,6 +109,8 @@ utiliza el complemento con la compilación estable más reciente (compilación
 * Ahora puedes pulsar Alt+fila de números para localizar y mover a lista de
   contactos (1), conversaciones (2) y campo de edición de chat (3). Ten en
   cuenta que deben activarse esas pestañas para moverse a la parte decidida.
+* Se anuncian las etiquetas de los cuadros combinados para la aplicación
+  Skype preview liberada en Noviembre de 2016.
 
 ## Tienda
 

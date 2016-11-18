@@ -105,6 +105,8 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
   (1), keskustelut (2) ja keskustelumuokkauskentän (3) sekä siirtyäksesi
   niihin. Huomaa, että nämä välilehdet on aktivoitava haluttuun osioon
   siirtymiseksi.
+* Marraskuussa 2016 julkaistun Skype-sovelluksen esiversion
+  yhdistelmäruutujen selitteet puhutaan.
 
 ## Kauppa
 
@@ -113,12 +115,12 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 
 ## TeamViewer Touch
 
-* Valintapainikkeiden nimet luetaan.
-* Painikkeiden nimet luetaan.
+* Valintapainikkeiden selitteet puhutaan.
+* Painikkeiden selitteet puhutaan.
 
 ## Bank of America/Twitter
 
-* Painikkeiden nimet luetaan.
+* Painikkeiden selitteet puhutaan.
 
 ## Sää
 

@@ -107,6 +107,8 @@ cu ultimul build stabil (build 14393).
   lista de contacte (1), conversații (2) și câmpul de editare a chatului
   (3). Rețineți că trebuie să activați aceste etichete pentru a vă deplasa
   la partea dorită.
+* Etichetele Casetelor combinate pentru aplicația Skype preview, lansată în
+  Noiembrie 2016, sunt anunțate.
 
 ## Magazin
 
