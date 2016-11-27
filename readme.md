@@ -24,7 +24,7 @@ The following app modules or support modules for some apps are included (see eac
 * Weather.
 * Miscellaneous modules for controls such as Start Menu tiles.
 
-Note: this add-on requires Windows 10 Version 1507 (build 10240) or later and NVDA 2016.3 or later. For best results, use the add-on with latest stable build (build 14393).
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NVDA 2016.3 or later. For best results, use the add-on with latest stable build (build 14393).
 
 ## General
 
