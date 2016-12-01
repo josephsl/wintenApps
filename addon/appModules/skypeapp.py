@@ -1,5 +1,5 @@
 # Skype Preview/UWP
-# Part of Windows 10 App Essentials
+# Part of Windows 10 App Essentials collection
 # Copyright 2016 Joseph Lee, released under GPL
 
 # Workarounds for Skype UWP, providing similar features to Skype for Desktop client support (skype.py found in NVDA Core).

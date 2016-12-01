@@ -1,4 +1,4 @@
-# WinTenApps/BankOfAmeria.py
+# WinTenApps/BankOfAmerica.py
 # Part of Windows 10 App Essentials collection
 # Copyright 2016 Joseph Lee, released under GPL.
 
