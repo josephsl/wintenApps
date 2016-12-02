@@ -28,8 +28,8 @@ qué se incluye):
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Nota: este complemento requiere de Windows 10 Versión 1507 (compilación
-10240) o posterior y NVDA 2016.3 o posterior. Para unos mejores resultados,
+Nota: este complemento requiere de Windows 10 Versión 1511 (compilación
+10286) o posterior y NVDA 2016.3 o posterior. Para unos mejores resultados,
 utiliza el complemento con la compilación estable más reciente (compilación
 14393).
 

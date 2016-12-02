@@ -28,10 +28,9 @@ est inclus) :
 * Météo.
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
-Note: ce module complémentaire nécessite Windows 10 Version 1507 (build
-10240) ou version ultérieure et NVDA 2016.3 ou version ultérieure. Pour de
-meilleurs résultats, utilisez le module complémentaire avec la dernière
-build stable (build 14393).
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+and NVDA 2016.3 or later. For best results, use the add-on with latest
+stable build (build 14393).
 
 ## Générale
 

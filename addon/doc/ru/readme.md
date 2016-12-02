@@ -26,7 +26,7 @@ Windows 10, а также исправлений для некоторых ти�
 * Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
 
-Note: this add-on requires Windows 10 Version 1507 (build 10240) or later
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
 and NVDA 2016.3 or later. For best results, use the add-on with latest
 stable build (build 14393).
 

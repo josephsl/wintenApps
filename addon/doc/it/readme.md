@@ -26,7 +26,7 @@ si veda la relativa sezione per ulteriori informazioni:
 * Weather.
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
-Note: this add-on requires Windows 10 Version 1507 (build 10240) or later
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
 and NVDA 2016.3 or later. For best results, use the add-on with latest
 stable build (build 14393).
 

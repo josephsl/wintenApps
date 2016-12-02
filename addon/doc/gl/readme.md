@@ -27,8 +27,8 @@ se inclúe):
 * O Tempo
 * Módulos misceláneos para controis como mosaicos do Menú Inicio.
 
-Nota: este complemento require do Windows 10 Versión 1507 (compilación
-10240) ou posterior e NVDA 2016.3 ou posterior. Para uns mellores
+Nota: este complemento require do Windows 10 Versión 1511 (compilación
+10286) ou posterior e NVDA 2016.3 ou posterior. Para uns mellores
 resultados, usa o complemento coa última versión estable (compilación
 14393).
 

@@ -27,9 +27,9 @@ privire la ceea ce este inclus):
 * Meteo.
 * Diverse module de control precum tile-urile din meniul start.
 
-Notă: acest add-on necesită Windows 10 versiunea 1507 (build 10240) sau mai
-nou și NVDA 2016.3 sau mai nou.. Pentru rezultate bune, folosiți add-on-ul
-cu ultimul build stabil (build 14393).
+Notă: acest add-on necesită Windows 10 versiunea 1511 (build 10586) sau mai
+nou și NVDA 2016.3 sau mai nou.. Pentru rezultate foarte bune, folosiți
+add-on-ul cu ultimul build stabil (build 14393).
 
 ## General
 

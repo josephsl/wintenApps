@@ -27,7 +27,7 @@ welche inbegriffen sind):
 * Weather.
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
 
-Note: this add-on requires Windows 10 Version 1507 (build 10240) or later
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
 and NVDA 2016.3 or later. For best results, use the add-on with latest
 stable build (build 14393).
 
