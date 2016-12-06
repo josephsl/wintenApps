@@ -13,6 +13,7 @@ The following app modules or support modules for some apps are included (see eac
 * Calendar
 * Calculator (modern).
 * Cortana
+* Groove Music
 * Mail
 * Maps
 * Microsoft Edge
@@ -52,6 +53,10 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 * Textual responses from Cortana are announced in most situations (if it doesn't, reopen Start menu and try searching again).
 * NVDA will be silent when you talk to Cortana via voice.
 * NVDA will now announce reminder confirmation after you set one.
+
+## Groove Music
+
+* Appearance of suggestions when searching for tracks is now detected.
 
 ## Mail and calendar
 
