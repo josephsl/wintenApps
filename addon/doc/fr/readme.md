@@ -17,6 +17,7 @@ est inclus) :
 * Calendrier
 * Calculatrice (modern).
 * Cortana
+* Groove Music
 * Courrier
 * Cartes
 * Microsoft Edge
@@ -73,6 +74,10 @@ stable build (build 14393).
 * NVDA sera silencieux quand vous vous adresserez vocalement à Cortana.
 * NVDA annoncera maintenant un rappel de confirmation après que vous
   définissez une.
+
+## Groove Music
+
+* Appearance of suggestions when searching for tracks is now detected.
 
 ## Courrier et calendrier
 

@@ -15,6 +15,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Kalenteri
 * Laskin (moderni)
 * Cortana
+* Groove Music
 * Sähköposti
 * Kartat
 * Microsoft Edge
@@ -71,6 +72,10 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
   toistamiseen).
 * NVDA on hiljaa puhuessasi Cortanalle mikrofonin välityksellä.
 * NVDA puhuu nyt vahvistuksen muistutusta lisättäessä.
+
+## Groove Music
+
+* Appearance of suggestions when searching for tracks is now detected.
 
 ## Sähköposti ja kalenteri
 
