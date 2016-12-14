@@ -54,6 +54,20 @@ class LoopingSelectorItem(UIA):
 		api.setNavigatorObject(self)
 		self.reportFocus()
 
+# Looping selector lists.
+# Announce selected value if told to do so.
+class LoopingSelectorList(UIA):
+
+	def reportFocus(self):
+		loopingValue = self.simpleFirstChild
+		while loopingValue:
+			if 4 in loopingValue.states:
+				self.value = loopingValue.name
+				break
+			loopingValue = loopingValue.next
+		super(UIA, self).reportFocus()
+
+
 # Search fields.
 # Some of them raise controller for event, an event fired if another UI element depends on this control.
 class SearchField(UIA):
@@ -122,6 +136,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Handle both Threshold and Redstone looping selector items.
 			if obj.role==controlTypes.ROLE_LISTITEM and "LoopingSelectorItem" in obj.UIAElement.cachedClassName:
 				clsList.append(LoopingSelectorItem)
+			# Also announce values when focus moves to it.
+			elif obj.role==controlTypes.ROLE_LIST and "LoopingSelector" in obj.UIAElement.cachedClassName:
+				clsList.insert(0, LoopingSelectorList)
 			# Windows that are really dialogs.
 			elif obj.UIAElement.cachedClassName in wintenDialogs:
 				# But some are not dialogs despite what UIA says (for example, search popup in Store).
