@@ -75,7 +75,7 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 
 ## Groove Music
 
-* Appearance of suggestions when searching for tracks is now detected.
+* Ehdotusten ilmestyminen havaitaan nyt kappaleita etsittäessä.
 
 ## Sähköposti ja kalenteri
 
