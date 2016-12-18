@@ -58,14 +58,14 @@ class LoopingSelectorItem(UIA):
 # Announce selected value if told to do so.
 class LoopingSelectorList(UIA):
 
-	def reportFocus(self):
+	def _get_value(self):
 		loopingValue = self.simpleFirstChild
 		while loopingValue:
 			if 4 in loopingValue.states:
-				self.value = loopingValue.name
+				return loopingValue.name
 				break
 			loopingValue = loopingValue.next
-		super(UIA, self).reportFocus()
+		return None
 
 
 # Search fields.
