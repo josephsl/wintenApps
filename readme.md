@@ -23,6 +23,7 @@ The following app modules or support modules for some apps are included (see eac
 * Twitter.
 * TeamViewer Touch.
 * Weather.
+* Windows Defender UWP (Creators Update and later)
 * Miscellaneous modules for controls such as Start Menu tiles.
 
 Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NVDA 2016.3 or later. For best results, use the add-on with latest stable build (build 14393).
@@ -38,11 +39,7 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 
 ## Alarms and clock
 
-* Time picker values are now announced. This also affects the control used to select when to restart to finish installing Windows updates.
-
-## Calendar and Mail
-
-* NVDA no longer announces "read-only" for appointment subject in Calendar and message content in Mail.
+* Time picker values are now announced, noticeable when moving focus to picker controls. This also affects the control used to select when to restart to finish installing Windows updates.
 
 ## Calculator
 
@@ -69,7 +66,7 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 ## Microsoft Edge
 
 * Notifications such as file downloads are now announced.
-* Note that overall support is experimental at this point (you should not use Edge as your primary browser for a while).
+* Edge support is a work in progress.
 
 ## Settings
 
@@ -93,9 +90,10 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 * Labels for radio buttons are announced.
 * Lables for buttons are announced.
 
-## Bank of America/Twitter
+## Bank of America/Twitter/Windows Defender UWP
 
 * Button labels are now announced.
+* Windows Defender universal app is included in build 14986 and later and support for this app from this add-on is subject to change.
 
 ## Weather
 
