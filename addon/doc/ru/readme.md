@@ -15,6 +15,7 @@ Windows 10, а также исправлений для некоторых ти�
 * Календарь
 * Калькулятор (modern).
 * Cortana
+* Groove Music
 * Почта
 * Карты
 * Microsoft Edge
@@ -66,6 +67,10 @@ stable build (build 14393).
   doesn't, reopen Start menu and try searching again).
 * NVDA will be silent when you talk to Cortana via voice.
 * NVDA will now announce reminder confirmation after you set one.
+
+## Groove Music
+
+* Appearance of suggestions when searching for tracks is now detected.
 
 ## Mail and calendar
 

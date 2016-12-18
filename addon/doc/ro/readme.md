@@ -16,6 +16,7 @@ privire la ceea ce este inclus):
 * Calendar
 * Calculator (modern).
 * Cortana
+* Muzică Groove
 * Poștă electronică
 * Hărți
 * Microsoft Edge
@@ -71,6 +72,10 @@ add-on-ul cu ultimul build stabil (build 14393).
   nou).
 * NVDA va tace atunci când vorbiți cu Cortana prin voce.
 * NVDA va anunța o confirmare memento după ce ați setat unul.
+
+## Muzică Groove
+
+* Aspectul sugestiilor la căutarea pieselor este acum detectat.
 
 ## Poșta electronică și calendarul
 

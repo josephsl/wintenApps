@@ -15,6 +15,7 @@ si veda la relativa sezione per ulteriori informazioni:
 * Calendar
 * Calcolatrice (moderna).
 * Cortana
+* Groove Music
 * Mail
 * Maps
 * Microsoft Edge
@@ -68,6 +69,10 @@ stable build (build 14393).
   ricerca.
 * NVDA will be silent when you talk to Cortana via voice.
 * NVDA will now announce reminder confirmation after you set one.
+
+## Groove Music
+
+* Appearance of suggestions when searching for tracks is now detected.
 
 ## Mail and calendar
 

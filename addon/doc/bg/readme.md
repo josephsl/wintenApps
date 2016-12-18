@@ -17,6 +17,7 @@
 * Календар
 * Калкулатор (универсално приложение).
 * Cortana
+* Groove Music
 * Поща
 * Карти
 * Microsoft Edge
@@ -73,6 +74,10 @@
 * NVDA няма да изговаря нищо докато комуникирате с Cortana посредством глас.
 * NVDA вече ще съобщава потвърждението за напомняне, след като сте задали
   такова.
+
+## Groove Music
+
+* Appearance of suggestions when searching for tracks is now detected.
 
 ## Поща и Календар
 

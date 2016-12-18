@@ -16,6 +16,7 @@ qué se incluye):
 * Calendario
 * Calculadora (modern).
 * Cortana
+* Groove Music
 * Correo
 * Mapas
 * Microsoft Edge
@@ -73,6 +74,10 @@ utiliza el complemento con la compilación estable más reciente (compilación
   nuevo).
 * NVDA se silenciará cuando hables a Cortana a través de la voz.
 * NVDA ahora anunciará confirmación de recuerdo después de configurarla.
+
+## Groove Music
+
+* Appearance of suggestions when searching for tracks is now detected.
 
 ## Correo y calendario
 
