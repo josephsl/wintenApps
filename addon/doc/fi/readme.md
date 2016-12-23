@@ -25,6 +25,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Twitter
 * TeamViewer Touch
 * Sää
+* Windows Defender UWP (Creators Update ja uudemmat)
 * Sekalaisia moduuleita sellaisille säätimille kuin Käynnistä-valikon
   tiilet.
 
@@ -52,14 +53,10 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 
 ## Hälytykset ja kello
 
-* Ajanvalitsimen arvot luetaan. Tämä vaikuttaa myös säätimeen, josta
-  valitaan, milloin Windows käynnistetään uudelleen päivitysten asennuksen
+* Ajanvalitsimen arvot puhutaan - havaittavissa siirrettäessä kohdistusta
+  valitsimen säätimiin. Tämä vaikuttaa myös säätimeen, jolla valitaan,
+  milloin Windows käynnistetään uudelleen päivitysten asentamisen
   viimeistelemiseksi.
-
-## Kalenteri ja Sähköposti
-
-* NVDA ei enää ilmoita "vain luku" Kalenterissa tapaamisen aiheen kohdalla
-  ja Sähköpostin viestisisällössä.
 
 ## Laskin
 
@@ -89,8 +86,7 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 ## Microsoft Edge
 
 * Ilmoitukset, kuten tiedostojen lataukset, luetaan.
-* Huomaa, että yleistuki on tällä hetkellä kokeellinen (Edgeä ei tulisi
-  käyttää vielä vähään aikaan ensisijaisena selaimena).
+* Edge-tuki on työn alla.
 
 ## Asetukset
 
@@ -123,9 +119,11 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 * Valintapainikkeiden selitteet puhutaan.
 * Painikkeiden selitteet puhutaan.
 
-## Bank of America/Twitter
+## Bank of America/Twitter/Windows Defender UWP
 
 * Painikkeiden selitteet puhutaan.
+* Windows Defenderin universaali sovellus sisältyy koontiversioon 14986 ja
+  sitä uudempiin, ja tämän lisäosan tuki ko. sovellukselle voi muuttua.
 
 ## Sää
 

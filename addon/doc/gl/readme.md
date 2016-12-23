@@ -26,6 +26,7 @@ se inclúe):
 * Twitter.
 * TeamViewer Touch.
 * O Tempo
+* Windows Defender UWP (Creators Update and later)
 * Módulos misceláneos para controis como mosaicos do Menú Inicio.
 
 Nota: este complemento require do Windows 10 Versión 1511 (compilación
@@ -52,14 +53,9 @@ resultados, usa o complemento coa última versión estable (compilación
 
 ## Alarmas e reloxo
 
-* Agora anúncianse os valores do selector de hora. Esto tamén afecta ó
-  control usado para selecionar cando reiniciar para rematar a instalación
-  das actualizacións de Windows.
-
-## Calendario e Correo
-
-* NVDA xa non anuncia "só lectura" para asuntos da cita no Calendario e no
-  contido do mensaxe no Correo.
+* Time picker values are now announced, noticeable when moving focus to
+  picker controls. This also affects the control used to select when to
+  restart to finish installing Windows updates.
 
 ## Calculadora
 
@@ -75,7 +71,7 @@ resultados, usa o complemento coa última versión estable (compilación
 
 ## Groove Music
 
-* Appearance of suggestions when searching for tracks is now detected.
+* Agora detéctase a aparición de suxerencias cando se procuran pistas.
 
 ## Correo e calendario
 
@@ -89,8 +85,7 @@ resultados, usa o complemento coa última versión estable (compilación
 ## Microsoft Edge
 
 * Agora anúncianse notificacións como a descarga de ficheiros.
-* Ten en conta que o soporte global é experimental polo de agora (Non
-  deberías usar Edge como o teu navegador principal de momento).
+* Edge support is a work in progress.
 
 ## Opcións
 
@@ -126,9 +121,11 @@ resultados, usa o complemento coa última versión estable (compilación
 * Anúncianse as etiquetas para botóns de opción.
 * Anúncianse as etiquetas para botóns de opción.
 
-## Bank of America/Twitter
+## Bank of America/Twitter/Windows Defender UWP
 
 * Agora anúncianse as etiquetas dos botóns.
+* Windows Defender universal app is included in build 14986 and later and
+  support for this app from this add-on is subject to change.
 
 ## O Tempo
 

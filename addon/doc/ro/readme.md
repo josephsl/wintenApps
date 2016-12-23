@@ -26,6 +26,7 @@ privire la ceea ce este inclus):
 * Twitter.
 * TeamViewer Touch.
 * Meteo.
+* Windows Defender UWP (creatori de actualizeări și mai nou)
 * Diverse module de control precum tile-urile din meniul start.
 
 Notă: acest add-on necesită Windows 10 versiunea 1511 (build 10586) sau mai
@@ -52,14 +53,10 @@ add-on-ul cu ultimul build stabil (build 14393).
 
 ## Alarme și ceas
 
-* Acum sunt anunțate valorile selectorului de dată. De asemenea, aceasta
-  afectează comanda utilizată pentru a selecta atunci când reporniți ca să
-  finalizați actualizările Windows.
-
-## Calendarul și Poșta electronică
-
-* NVDA nu mai anunță „doar citire” pentru numirea subiectului în calendar și
-  conținutul mesajului în Poșta electronică.
+* valorile selectorului de dată sunt acum anunțate, de observat atunci când
+  focalizarea se deplasează la selectorul de comenzi. De asemenea, aceasta
+  afectează comanda utilizată pentru a selecta când să repornească pentru
+  finalizarea actualizărilor Windows.
 
 ## Calculator
 
@@ -89,8 +86,7 @@ add-on-ul cu ultimul build stabil (build 14393).
 ## Microsoft Edge
 
 * Notificări, cum ar fi descărcări de fișiere, sunt acum anunțate.
-* Rețineți că sprijinul global este experimental în acest moment (nu trebuie
-  să utilizați Edge ca browser-ul principal pentru un timp).
+* Se lucrează la suportul pentru Edge.
 
 ## Setări
 
@@ -125,9 +121,12 @@ add-on-ul cu ultimul build stabil (build 14393).
 * sunt anunțate etichete pentru butoane rotative.
 * sunt anunțate etichete pentru butoane.
 
-## Banca Americii/Twitter
+## Banca Americii/Twitter/Windows Defender UWP
 
 * Etichetele butoanelor sunt acum anunțate.
+* Aplicația universală Windows Defender este inclusă în buildul 14986 și mai
+  nou, iar suportul pentru această aplicație de la acest add-on este un
+  subiect pentru schimbare.
 
 ## Meteo
 

@@ -1,6 +1,6 @@
 # Windows 10 App Essentials #
 
-* Authors: Joseph Lee, Derek Riemer and other Windows 10 users
+* Autori: Joseph Lee, Derek Riemer e altri utenti Windows 10.
 * Download [versione stabile][1]
 * Download [versione in sviluppo][2]
 
@@ -12,24 +12,26 @@ si veda la relativa sezione per ulteriori informazioni:
 
 * Allarmi e sveglia.
 * Bank of America
-* Calendar
+* Calendario
 * Calcolatrice (moderna).
 * Cortana
 * Groove Music
-* Mail
-* Maps
+* Posta
+* Mappe
 * Microsoft Edge
 * Impostazioni (Impostazioni Windows, Windows+i)
 * Anteprima Skype
 * Store
 * Twitter.
 * TeamViewer Touch.
-* Weather.
+* Meteo
+* Windows Defender UWP (Creators Update and later)
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
-and NVDA 2016.3 or later. For best results, use the add-on with latest
-stable build (build 14393).
+Nota: questo add-on richiede  Windows 10 Versione 1511 (build 10586) o
+successive e NVDA 2016.3 o successive. Per avere le prestazioni migliori,
+utilizzare il componente aggiuntivo con l'ultima build stabile (build
+14393).
 
 ## Generale
 
@@ -50,13 +52,8 @@ stable build (build 14393).
 ## Allarmi e sveglia
 
 * I valori per selezionare l'ora adesso vengono annunciati. Questo comprende
-  anche la sezione inerente la scelta dell'orario sul quando eseguire
-  Windows Update e quando debbano essere installati gli aggiornamenti.
-
-## Calendar and Mail
-
-* NVDA no longer announces "read-only" for appointment subject in Calendar
-  and message content in Mail.
+  anche la sezione inerente la scelta dell'orario sul quando riavviare per
+  terminare gli aggiornamenti di Windows Update
 
 ## Calcolatrice
 
@@ -76,18 +73,18 @@ stable build (build 14393).
 
 ## Mail and calendar
 
-* NVDA no longer announces "edit" or "read-only" in message body and other
-  fields.
+* Insider Hub (centro di supporto in Anniversary Update): solo per quegli
+  utenti che usano una versione Insider di Windows, servendosi del centro
+  Feedback Insider per aggiornamenti.
 
-## Maps
+## Mappe
 
 * NVDA plays location beep for map locations.
 
 ## Microsoft Edge
 
 * Vengono annunciate correttamente le notifiche dei download dei file.
-* Si noti che il supporto per il momento è sperimentale, non usare Edge come
-  browser predefinito.
+* Edge support is a work in progress.
 
 ## Impostazioni
 
@@ -119,11 +116,13 @@ stable build (build 14393).
 ## TeamViewer Touch
 
 * Vengono lette le etichette dei pulsanti radio.
-* Lables for buttons are announced.
+* Vengono lette le etichette dei pulsanti.
 
-## Bank of America/Twitter
+## Bank of America/Twitter/Windows Defender UWP
 
 * Vengono annunciate correttamente le etichette dei pulsanti.
+* Windows Defender universal app is included in build 14986 and later and
+  support for this app from this add-on is subject to change.
 
 ## Weather
 

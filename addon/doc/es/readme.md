@@ -26,6 +26,7 @@ qué se incluye):
 * Twitter.
 * TeamViewer Touch.
 * El Tiempo
+* Windows Defender UWP (Creators Update and later)
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
@@ -54,14 +55,9 @@ utiliza el complemento con la compilación estable más reciente (compilación
 
 ## Alarmas y reloj
 
-* Ahora se anuncian los valores del selector de hora. Esto también afecta al
-  control utilizado para seleccionar cuándo reiniciar para finalizar la
-  instalación de las actualizaciones de Windows.
-
-## Calendario y Correo
-
-* NVDA ya no anuncia "solo lectura" para el asunto de la cita en Calendario
-  y contenidos de mensajes en Correo.
+* Time picker values are now announced, noticeable when moving focus to
+  picker controls. This also affects the control used to select when to
+  restart to finish installing Windows updates.
 
 ## Calculadora
 
@@ -77,7 +73,8 @@ utiliza el complemento con la compilación estable más reciente (compilación
 
 ## Groove Music
 
-* Appearance of suggestions when searching for tracks is now detected.
+* Ahora se detecta la aparición de sugerencias cuando se detecta búsqueda de
+  pistas .
 
 ## Correo y calendario
 
@@ -91,8 +88,7 @@ utiliza el complemento con la compilación estable más reciente (compilación
 ## Microsoft Edge
 
 * Ahora se anuncian notificaciones tales como descargas de ficheros.
-* Ten en cuenta que el soporte global es experimental en este momento (No
-  deberías utilizar Edge como tu navegador principal por ahora).
+* Edge support is a work in progress.
 
 ## Opciones
 
@@ -128,9 +124,11 @@ utiliza el complemento con la compilación estable más reciente (compilación
 * Se anuncian las etiquetas para botones de opción.
 * Se anuncian las etiquetas para botones de opción.
 
-## Bank of America/Twitter
+## Bank of America/Twitter/Windows Defender UWP
 
 * Ahora se anuncian las etiquetas de los botones.
+* Windows Defender universal app is included in build 14986 and later and
+  support for this app from this add-on is subject to change.
 
 ## El Tiempo
 

@@ -27,11 +27,13 @@ est inclus) :
 * Twitter.
 * TeamViewer Touch.
 * Météo.
+* Windows Defender UWP (Creators Update et ultérieure)
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
-and NVDA 2016.3 or later. For best results, use the add-on with latest
-stable build (build 14393).
+Note: ce module complémentaire nécessite Windows 10 Version 1511 (build
+10586) ou version ultérieure et NVDA 2016.3 ou version ultérieure. Pour de
+meilleurs résultats, utilisez le module complémentaire avec la dernière
+build stable (build 14393).
 
 ## Générale
 
@@ -53,14 +55,11 @@ stable build (build 14393).
 
 ## Alarmes et horloge
 
-* Les valeurs du sélecteur de l'heure sont maintenant annoncées. Ceci
-  affecte également le contrôle utilisé pour sélectionner lors de redémarrer
-  pour terminer l'installation des mises à jour de Windows.
-
-## Calendrier et Courrier
-
-* NVDA n'annoncera plus "lecture seule" pour le sujet du rendez-vous dans le
-  Calendrier et le contenu du message dans le Courrier.
+* Les valeurs du sélecteur de l'heure sont maintenant annoncées, elles sont
+  perceptibles lors du déplacement du focus vers les commandes du
+  sélecteur. Ceci affecte également le contrôle utilisé pour sélectionner
+  lors de redémarrer pour terminer l'installation des mises à jour de
+  Windows.
 
 ## Calculatrice
 
@@ -77,7 +76,8 @@ stable build (build 14393).
 
 ## Groove Music
 
-* Appearance of suggestions when searching for tracks is now detected.
+* L'apparition de suggestions lors de la recherche de pistes est maintenant
+  détectée.
 
 ## Courrier et calendrier
 
@@ -92,8 +92,7 @@ stable build (build 14393).
 
 * Notifications telles que les téléchargements de fichiers sont maintenant
   annoncées.
-* Notez que le support global est expérimental à ce point (vous ne devez pas
-  utiliser Edge comme votre navigateur principal pendant un certain temps).
+* Le support Edge est un travail en cours.
 
 ## Paramètres
 
@@ -130,9 +129,12 @@ stable build (build 14393).
 * Étiquettes pour les boutons radio sont annoncés.
 * Étiquettes pour les boutons sont annoncés.
 
-## Bank of America/Twitter
+## Bank of America/Twitter/Windows Defender UWP
 
 * Étiquettes des boutons sont maintenant annoncées.
+* Windows Defender universal app est inclus dans la build 14986 ou version
+  ultérieure et le support pour cette app à partir de ce module
+  complémentaire est sujette à changement.
 
 ## Météo
 

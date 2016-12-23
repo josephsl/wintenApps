@@ -25,6 +25,7 @@ Windows 10, а также исправлений для некоторых ти�
 * Twitter.
 * Сенсорный экран TeamViewer.
 * Погода.
+* Windows Defender UWP (Creators Update and later)
 * Разные модули для типов управления, таких, как плитки главного меню.
 
 Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
@@ -49,13 +50,9 @@ stable build (build 14393).
 
 ## Будильники и часы
 
-* Time picker values are now announced. This also affects the control used
-  to select when to restart to finish installing Windows updates.
-
-## Календарь и Почта
-
-* NVDA no longer announces "read-only" for appointment subject in Calendar
-  and message content in Mail.
+* Time picker values are now announced, noticeable when moving focus to
+  picker controls. This also affects the control used to select when to
+  restart to finish installing Windows updates.
 
 ## Калькулятор
 
@@ -84,8 +81,7 @@ stable build (build 14393).
 ## Microsoft Edge
 
 * Теперь объявляются уведомления, такие как загрузка файлов.
-* Отметим, что на данный момент поддержка экспериментальна (Вы не должны
-  использовать EDGE в качестве браузера по умолчанию ещё некоторое время).
+* Edge support is a work in progress.
 
 ## Настройки
 
@@ -118,9 +114,11 @@ stable build (build 14393).
 * Метки радиокнопок теперь объявляются.
 * Lables for buttons are announced.
 
-## Bank of America/Twitter
+## Bank of America/Twitter/Windows Defender UWP
 
 * Теперь объявляются метки кнопок.
+* Windows Defender universal app is included in build 14986 and later and
+  support for this app from this add-on is subject to change.
 
 ## Погода
 
