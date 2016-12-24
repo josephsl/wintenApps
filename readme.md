@@ -14,7 +14,6 @@ The following app modules or support modules for some apps are included (see eac
 * Calculator (modern).
 * Cortana
 * Groove Music
-* Mail
 * Maps
 * Microsoft Edge
 * Settings (system settings, Windows+I).
@@ -26,7 +25,7 @@ The following app modules or support modules for some apps are included (see eac
 * Windows Defender UWP (Creators Update and later)
 * Miscellaneous modules for controls such as Start Menu tiles.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NVDA 2016.3 or later. For best results, use the add-on with latest stable build (build 14393).
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NVDA 2016.4 or later. For best results, use the add-on with latest stable build (build 14393).
 
 ## General
 
@@ -45,6 +44,10 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 
 * When ENTER is pressed, NVDA announces calculation results.
 
+## calendar
+
+* NVDA no longer announces "edit" or "read-only" in message body and other fields.
+
 ## Cortana
 
 * Textual responses from Cortana are announced in most situations (if it doesn't, reopen Start menu and try searching again).
@@ -54,10 +57,6 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 ## Groove Music
 
 * Appearance of suggestions when searching for tracks is now detected.
-
-## Mail and calendar
-
-* NVDA no longer announces "edit" or "read-only" in message body and other fields.
 
 ## Maps
 

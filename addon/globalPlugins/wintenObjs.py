@@ -3,10 +3,8 @@
 
 # Adds handlers for various UIA controls found in Windows 10.
 
-import sys
 import os
 import globalPluginHandler
-import appModuleHandler # Huge workaround.
 import controlTypes
 import UIAHandler
 import ui
@@ -16,25 +14,6 @@ import api
 import speech
 import braille
 import nvwave
-
-# Until NVDA Core ticket 5323 is implemented, have our own find app mod from PID handy.
-def getAppModuleFromProcessID(processID):
-	"""Finds the appModule that is for the given process ID. The module is also cached for later retreavals.
-	@param processID: The ID of the process for which you wish to find the appModule.
-	@type processID: int
-	@returns: the appModule, or None if there isn't one
-	@rtype: appModule 
-	"""
-	with appModuleHandler._getAppModuleLock:
-		mod=appModuleHandler.runningTable.get(processID)
-		if not mod:
-			# #5323: Certain executables contain dots as part of its file name.
-			appName=appModuleHandler.getAppNameFromProcessID(processID).replace(".","_")
-			mod=appModuleHandler.fetchAppModule(processID,appName)
-			if not mod:
-				raise RuntimeError("error fetching default appModule")
-			appModuleHandler.runningTable[processID]=mod
-	return mod
 
 # Extra UIA constants
 UIA_LiveRegionChangedEventId = 20024 # Coerce this to name change event for now.
@@ -66,7 +45,6 @@ class LoopingSelectorList(UIA):
 				break
 			loopingValue = loopingValue.next
 		return None
-
 
 # Search fields.
 # Some of them raise controller for event, an event fired if another UI element depends on this control.
@@ -116,12 +94,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
-		# Hack: Some executables, particularly UWP apps have a dot in the middle.
-		# Therefore coerce the app module handler to use the modified routine above.
-		# This is no longer the case as of 2016.4 (check if version build var is present, and if not, coerce).
-		import versionInfo
-		if not hasattr(versionInfo, "version_build"):
-			appModuleHandler.getAppModuleFromProcessID = getAppModuleFromProcessID
 		# Listen for additional events (to be removed once NVDA Core supports them.
 		if UIA_ControllerForPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
 			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIA_ControllerForPropertyId] = "UIA_controllerFor"
