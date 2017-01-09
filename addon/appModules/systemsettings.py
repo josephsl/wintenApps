@@ -14,9 +14,12 @@ class AppModule(appModuleHandler.AppModule):
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):
 			# Despite repeated feedback, there's at least one unlabeled toggle button in Settings app.
-			# One particular case is Settings/Update/Developer Mode with USB/LAN discovery toggle button in Redstone.
+			# One particular case is Settings/Update/Developer Mode with USB/LAN discovery toggle button in Redstone (fixed in build 14986).
 			if obj.name == "" and obj.role == controlTypes.ROLE_TOGGLEBUTTON:
 				obj.name = obj.previous.name
+			# Recognize groups of controls for contextual output (more prominent in Redstone 2).
+			elif obj.UIAElement.cachedAutomationID.endswith("GroupTitleTextBlock"):
+				obj.role = controlTypes.ROLE_GROUPING
 
 	# Live region changed event is treated as a name change for now.
 	# Sometimes, the same text is announced, so consult this cache.
