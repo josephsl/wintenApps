@@ -15,3 +15,8 @@ class AppModule(appModuleHandler.AppModule):
 		# Extraneous information announced when going through apps to be updated/installed, so use a grandchild's name.
 		if isinstance(obj, UIA) and obj.role == controlTypes.ROLE_LISTITEM and obj.firstChild and obj.firstChild.UIAElement.cachedAutomationID == "InstallControl":
 			obj.name = obj.firstChild.firstChild.name
+
+	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "SearchTextBox":
+			import globalPlugins.wintenObjs
+			clsList.insert(0, globalPlugins.wintenObjs.SearchField)
