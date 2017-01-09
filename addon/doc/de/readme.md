@@ -1,6 +1,6 @@
 # Windows 10 App Essentials #
 
-* Authors: Joseph Lee, Derek Riemer and other Windows 10 users
+* Autors: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version][1] herunterladen
 * [Entwicklerversion][2] herunterladen
 
@@ -11,20 +11,22 @@ Die folgenden App-Module oder unterstützte Module für einige Apps sind
 inbegriffen (siehen Sie in jeden App-Bereich für Details, um zu sehen,
 welche inbegriffen sind):
 
-* Wecker und Uhr.
+* Wecker und Uhr
 * Bank of America
-* Calendar
-* Rechner (modern).
+* Kalender
+* Rechner (modern)
 * Cortana
+* Groove Music
 * Mail
 * Maps
 * Microsoft Edge
 * Einstellungen (System-Einstellungen mit Win+I).
-* Skype Preview
+* Skype-Vorschau
 * Store
-* Twitter.
-* TeamViewer Touch.
-* Weather.
+* Twitter
+* TeamViewer Touch
+* Wetter
+* Windows Defender UWP (Creators Update and later)
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
 
 Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
@@ -48,15 +50,9 @@ stable build (build 14393).
 
 ## Wecker und Uhr
 
-* Das Steuerelement zum Einstellen der Weckzeit wird nun erkannt. Dies
-  betrifft auch das Steuerelement zum Einstellen des geplanten Zeitpunkts
-  für einen neustart des Systems nach der Installation von Aktualisierungen
-  für Windows.
-
-## Calendar and Mail
-
-* NVDA no longer announces "read-only" for appointment subject in Calendar
-  and message content in Mail.
+* Time picker values are now announced, noticeable when moving focus to
+  picker controls. This also affects the control used to select when to
+  restart to finish installing Windows updates.
 
 ## Rechner
 
@@ -70,7 +66,11 @@ stable build (build 14393).
 * NVDA will be silent when you talk to Cortana via voice.
 * NVDA will now announce reminder confirmation after you set one.
 
-## Mail and calendar
+## Groove Music
+
+* Appearance of suggestions when searching for tracks is now detected.
+
+## Mail und Kalender
 
 * NVDA no longer announces "edit" or "read-only" in message body and other
   fields.
@@ -82,8 +82,7 @@ stable build (build 14393).
 ## Microsoft Edge
 
 * Notifications such as file downloads are now announced.
-* Note that overall support is experimental at this point (you should not
-  use Edge as your primary browser for a while).
+* An einer Unterstützung für Microsoft Edge wird gearbeitet.
 
 ## Einstellungen
 
@@ -93,7 +92,7 @@ stable build (build 14393).
 * If it takes a while to search for settings, NVDA will announce "searching"
   and search result status such as if a setting cannot be found.
 
-## Skype Preview
+## Skype-Vorschau
 
 * Typing indicator text is announced just like Skype for Desktop client.
 * Partial return of Control+NvDA+number row commands to read recent chat
@@ -115,11 +114,13 @@ stable build (build 14393).
 * Beschriftungen für Auswahlschalter werden nun angesagt.
 * Lables for buttons are announced.
 
-## Bank of America/Twitter
+## Bank of America/Twitter/Windows Defender UWP
 
 * Schalterbeschriftungen werden nun angesagt.
+* Windows Defender universal app is included in build 14986 and later and
+  support for this app from this add-on is subject to change.
 
-## Weather
+## Wetter
 
 * Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by
   Derek Riemer).

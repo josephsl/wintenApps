@@ -26,7 +26,7 @@ qué se incluye):
 * Twitter.
 * TeamViewer Touch.
 * El Tiempo
-* Windows Defender UWP (Creators Update and later)
+* Windows Defender UWP (Creators Update y posterior)
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
@@ -55,9 +55,9 @@ utiliza el complemento con la compilación estable más reciente (compilación
 
 ## Alarmas y reloj
 
-* Time picker values are now announced, noticeable when moving focus to
-  picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates.
+* Ahora se anuncian los valores del selector de hora. Esto también afecta al
+  control utilizado para seleccionar cuándo reiniciar para finalizar la
+  instalación de las actualizaciones de Windows.
 
 ## Calculadora
 
@@ -88,7 +88,7 @@ utiliza el complemento con la compilación estable más reciente (compilación
 ## Microsoft Edge
 
 * Ahora se anuncian notificaciones tales como descargas de ficheros.
-* Edge support is a work in progress.
+* El soporte para Edge es un trabajo en progreso.
 
 ## Opciones
 
@@ -127,8 +127,8 @@ utiliza el complemento con la compilación estable más reciente (compilación
 ## Bank of America/Twitter/Windows Defender UWP
 
 * Ahora se anuncian las etiquetas de los botones.
-* Windows Defender universal app is included in build 14986 and later and
-  support for this app from this add-on is subject to change.
+* La app Windows Defender universal se incluye en la build 14986 y posterior
+  y el soporte para esta app de este complemento está sujeta a cambios.
 
 ## El Tiempo
 
