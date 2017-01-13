@@ -12,8 +12,9 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_NVDAObject_init(self, obj):
 		# Until Microsoft fixes this...
+		# Oddly enough, in build 15007 and later, button label is not the last child, but the one before that.
 		if isinstance(obj, UIA) and obj.role == controlTypes.ROLE_BUTTON and obj.name == "":
 			try:
-				obj.name = obj.lastChild.name
+				obj.name = obj.getChild(-2).name
 			except AttributeError:
 				pass
