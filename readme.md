@@ -23,7 +23,7 @@ The following app modules or support modules for some apps are included (see eac
 * Twitter.
 * TeamViewer Touch.
 * Weather.
-* Windows Defender UWP (Creators Update and later)
+* Windows Defender Security Center (Creators Update and later)
 * Miscellaneous modules for controls such as Start Menu tiles.
 
 Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NVDA 2016.3 or later. For best results, use the add-on with latest stable build (build 14393).
@@ -33,7 +33,7 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 * In context menus for Start Menu tiles, submenus are properly recognized.
 * When minimizing windows (Windows+M), "pane" is no longer announced (noticeable if using Insider Preview builds).
 * Certain dialogs are now recognized as proper dialogs. This include Insider Preview dialog (settings app) and new-style UAC dialog in build 14328 and later for NvDA 2016.2.1 or earlier.
-* Appearance/close of suggestions for certain search fields (notably Settings app) is announced via sounds and/or brailled.
+* Appearance/close of suggestions for certain search fields (notably Settings and Store apps) is announced via sounds and/or brailled.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, live region changed (handled by name change event).
 
@@ -73,6 +73,7 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 * Certain information such as Windows Update progress is now reported automatically.
 * Progress bar values and other information are no longer announced twice.
 * If it takes a while to search for settings, NVDA will announce "searching" and search result status such as if a setting cannot be found.
+* Settings groups are recognized when using object navigation to navigate between controls.
 
 ## Skype Preview
 
@@ -84,16 +85,17 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 ## Store
 
 * After checking for app updates, app names in list of apps to be updated are correctly labeled.
+* Appearance of search suggestions are now announced.
 
 ## TeamViewer Touch
 
 * Labels for radio buttons are announced.
 * Lables for buttons are announced.
 
-## Bank of America/Twitter/Windows Defender UWP
+## Bank of America/Twitter/Windows Defender Security Center
 
 * Button labels are now announced.
-* Windows Defender universal app is included in build 14986 and later and support for this app from this add-on is subject to change.
+* Windows Defender Security Center (universal app) is included in build 14986 and later and support for this app from this add-on is subject to change.
 
 ## Weather
 
