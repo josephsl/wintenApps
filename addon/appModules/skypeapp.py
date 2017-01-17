@@ -27,8 +27,16 @@ class AppModule(appModuleHandler.AppModule):
 			if obj.role == controlTypes.ROLE_COMBOBOX and obj.name == "" and obj.UIAElement.cachedAutomationID.startswith("AudioVideoDevices"):
 				obj.name = obj.previous.name
 
+	def event_gainFocus(self, obj, nextHandler):
+		# Prevent NVDA from announcing messages multiple times under some circumstances (chiefly when gain focus event is fired).
+		# Credit: Derek Riemer
+		uiElement = obj.UIAElement
+		if uiElement.cachedAutomationID == "Message" and uiElement.cachedClassName == "ListViewItem":
+			self.reportMessage(obj.name)
+			return
+		nextHandler()
 
-	# Locate various elements, as this is one of the best ways to do this in Skype Preview.
+				# Locate various elements, as this is one of the best ways to do this in Skype Preview.
 	# The best criteria is automation ID (class names are quite generic).
 	def locateElement(self, automationID):
 		# Foreground isn't reliable.
@@ -45,7 +53,9 @@ class AppModule(appModuleHandler.AppModule):
 		return None
 
 			# Borrowed from Skype for Desktop app module (NVDA Core).
-	RE_MESSAGE = re.compile(r"^From (?P<from>.*), (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?$")
+			# #14: Drop channel type (e.g. Skype Message).
+	RE_MESSAGE = re.compile(r"^From (?P<from>.*), Skype (?P<channel>.*), (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?$")
+	#RE_MESSAGE = re.compile(r"^From (?P<from>.*), (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?$")
 
 	def reportMessage(self, message):
 		# Just like Desktop client, messages are quite verbose.
