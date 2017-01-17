@@ -60,7 +60,8 @@ class AppModule(appModuleHandler.AppModule):
 			if uiElement.cachedClassName == "TextBlock" and obj.next is not None:
 				# Announce typing indicator (same as Skype for Desktop).
 				nextElement = obj.next.UIAElement
-				if nextElement.cachedClassName == "RichEditBox" and nextElement.cachedAutomationID == "ChatEditBox":
+				# Make sure to catch all possible UI placement changes between Skype Preview releases.
+				if nextElement.cachedClassName == "RichEditBox" and nextElement.cachedAutomationID in ("ChatEditBox", "ChatTranslationSettings"):
 					# Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 					ui.message(obj.name if obj.name != "" else _("Typing stopped"))
 			elif uiElement.cachedAutomationID == "Message" and uiElement.cachedClassName == "ListViewItem":
