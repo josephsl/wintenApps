@@ -52,16 +52,16 @@ class AppModule(appModuleHandler.AppModule):
 				return element
 		return None
 
-			# Borrowed from Skype for Desktop app module (NVDA Core).
+	# Borrowed from Skype for Desktop app module (NVDA Core).
 			# #14: Drop channel type (e.g. Skype Message).
-	RE_MESSAGE = re.compile(r"^From (?P<from>.*), Skype (?P<channel>.*), (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?$")
-	#RE_MESSAGE = re.compile(r"^From (?P<from>.*), (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?$")
+	RE_MESSAGE = re.compile(r"^From (?P<from>.*), Skype (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?$")
 
 	def reportMessage(self, message):
 		# Just like Desktop client, messages are quite verbose.
 		m = self.RE_MESSAGE.match(message)
 		if m:
-			message = "%s, %s" % (m.group("from"), m.group("body"))
+			messageBody = m.group("body")
+			message = "%s, %s" % (m.group("from"), messageBody[messageBody.find(", ")+1:])
 		ui.message(message)
 
 	def event_nameChange(self, obj, nextHandler):
