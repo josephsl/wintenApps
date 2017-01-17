@@ -28,7 +28,7 @@ class AppModule(appModuleHandler.AppModule):
 				obj.name = obj.previous.name
 
 	def event_gainFocus(self, obj, nextHandler):
-		# Prevent NVDA from announcing messages multiple times under some circumstances (chiefly when gain focus event is fired).
+		# Skype message/channel info and other extraneous text should not be announced.
 		# Credit: Derek Riemer
 		uiElement = obj.UIAElement
 		if uiElement.cachedAutomationID == "Message" and uiElement.cachedClassName == "ListViewItem":
@@ -71,7 +71,7 @@ class AppModule(appModuleHandler.AppModule):
 				# Announce typing indicator (same as Skype for Desktop).
 				nextElement = obj.next.UIAElement
 				# Make sure to catch all possible UI placement changes between Skype Preview releases.
-				if nextElement.cachedClassName == "RichEditBox" and nextElement.cachedAutomationID in ("ChatEditBox", "ChatTranslationSettings"):
+				if nextElement.cachedAutomationID in ("ChatEditBox", "ChatTranslationSettings"):
 					# Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 					ui.message(obj.name if obj.name != "" else _("Typing stopped"))
 			elif uiElement.cachedAutomationID == "Message" and uiElement.cachedClassName == "ListViewItem":
