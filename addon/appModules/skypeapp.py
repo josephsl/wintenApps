@@ -54,7 +54,8 @@ class AppModule(appModuleHandler.AppModule):
 
 	# Borrowed from Skype for Desktop app module (NVDA Core).
 			# #14: Drop channel type (e.g. Skype Message).
-	RE_MESSAGE = re.compile(r"^From (?P<from>.*), Skype (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?$")
+			# Also match multi-line messages.
+	RE_MESSAGE = re.compile(r"\AFrom (?P<from>.*), Skype (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?\Z", re.M|re.S)
 
 	def reportMessage(self, message):
 		# Just like Desktop client, messages are quite verbose.
