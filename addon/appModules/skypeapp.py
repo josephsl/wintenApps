@@ -62,7 +62,7 @@ class AppModule(appModuleHandler.AppModule):
 		m = self.RE_MESSAGE.match(message)
 		if m:
 			messageBody = m.group("body")
-			message = "%s, %s" % (m.group("from"), messageBody[messageBody.find(", ")+1:])
+			message = "%s, %s" % (m.group("from"), messageBody[messageBody.find(", ")+2:])
 		ui.message(message)
 
 	def event_nameChange(self, obj, nextHandler):
