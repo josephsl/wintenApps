@@ -70,7 +70,8 @@ class SearchField(UIA):
 		braille.handler.message("suggestions")
 		# Announce number of items found (except in Start search box where the suggestions are selected as one types).
 		# Oddly, Edge's address omnibar returns 0 for suggestion count when there are clearly suggestions (implementation differences).
-		if self.controllerFor[0].childCount and self.UIAElement.cachedAutomationID != "SearchTextBox":
+		# Because inaccurate count could be announced (when users type, suggestion count changes), thus announce if position info reporting is enabled.
+		if config.conf["presentation"]["reportObjectPositionInformation"] and self.UIAElement.cachedAutomationID == "TextBox":
 			# Item count must be the last one spoken.
 			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, "%s suggestions"%self.controllerFor[0].childCount)
 
