@@ -7,6 +7,7 @@
 # Overall update check routine comes from StationPlaylist Studio add-on (Joseph Lee).)
 
 import os
+import threading
 import urllib
 import time
 import re
@@ -37,9 +38,17 @@ def updateQualify(url):
 	version = re.search("wintenApps-(?P<version>.*).nvda-addon", url.url).groupdict()["version"]
 	return None if version == addonVersion else version
 
+# To avoid freezes, a background thread will run after the global plugin constructor calls wx.CallAfter.
+def startupUpdateCheck():
+	threading.Thread(target=updateCheck, kwargs={"startupCheck":True}).start()
+
 progressDialog = None
 def updateCheck(startupCheck=False):
 	global progressDialog
+	# At least let users know that update check has started with a short beep.
+	if startupCheck:
+		import tones
+		tones.beep(500, 50)
 	config.conf["wintenApps"]["updateCheckTime"] = int(time.time())
 	updateCandidate = False
 	updateURL = channels[config.conf["wintenApps"]["updateChannel"]]
