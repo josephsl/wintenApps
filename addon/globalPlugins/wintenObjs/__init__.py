@@ -141,8 +141,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if obj.UIAElement.cachedAutomationID != "SearchPopUp":
 					clsList.insert(0, Dialog)
 			# Search field that does raise controller for event.
-			# Also take care of Edge address omnibar.
-			elif obj.UIAElement.cachedClassName in ("TextBox", "RichEditBox") and obj.UIAElement.cachedAutomationID in ("TextBox", "addressEditBox"):
+			# Also take care of Edge address omnibar and Start search box.
+			elif obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
 				clsList.insert(0, SearchField)
 			# Suggestions themselves.
 			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
