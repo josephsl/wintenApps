@@ -1,5 +1,5 @@
 # Windows 10 controls repository
-# Copyright 2015-2016 Joseph Lee, released under GPL.
+# Copyright 2015-2017 Joseph Lee, released under GPL.
 
 # Adds handlers for various UIA controls found in Windows 10.
 
@@ -110,7 +110,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
 		if config.conf["wintenApps"]["autoUpdateCheck"]:
-			threading.Thread(target=w10config.updateCheck, kwargs={"startupCheck":True}).start()
+			wx.CallAfter(w10config.updateCheck, True)
 
 	def terminate(self):
 		super(GlobalPlugin, self).terminate()
