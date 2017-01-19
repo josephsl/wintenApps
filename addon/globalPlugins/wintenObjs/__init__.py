@@ -4,7 +4,6 @@
 # Adds handlers for various UIA controls found in Windows 10.
 
 import os
-import threading
 import globalPluginHandler
 import controlTypes
 import UIAHandler
@@ -53,27 +52,35 @@ class LoopingSelectorList(UIA):
 
 # Search fields.
 # Some of them raise controller for event, an event fired if another UI element depends on this control.
+# Core-based blueprint found in I6241 branch.
 class SearchField(UIA):
 
 	def event_UIA_controllerFor(self):
 		# Only useful if suggestions appear and disappear.
 		# Obtain controller for property directly instead of relying on focused control.
 		if len(self.controllerFor)>0:
-			nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion.wav"))
-			# For deaf-blind users
-			braille.handler.message("suggestions")
+			self.event_suggestionsOpened()
 		else:
-			# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
-			if self.UIAElement.cachedAutomationID == "addressEditBox" and self != api.getFocusObject():
+			self.event_suggestionsClosed()
+
+	def event_suggestionsOpened(self):
+		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion.wav"))
+		# For deaf-blind users
+		braille.handler.message("suggestions")
+
+	def event_suggestionsClosed(self):
+		# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
+		if self.UIAElement.cachedAutomationID == "addressEditBox" and self != api.getFocusObject():
+			return
+		# Manually locate live region until NVDA Core implements this.
+		obj = self
+		while obj is not None:
+			if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "Popup":
+				ui.message(obj.description)
 				return
-			# Manually locate live region until NVDA Core implements this.
-			obj = self
-			while obj is not None:
-				if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "Popup":
-					ui.message(obj.description)
-					return
-				obj = obj.next
-			nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion1.wav"))
+			obj = obj.next
+		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion1.wav"))
+
 
 # General suggestions item handler
 # A testbed for NVDA Core ticket 6241.
