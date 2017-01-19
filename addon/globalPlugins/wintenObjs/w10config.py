@@ -45,10 +45,6 @@ def startupUpdateCheck():
 progressDialog = None
 def updateCheck(startupCheck=False):
 	global progressDialog
-	# At least let users know that update check has started with a short beep.
-	if startupCheck:
-		import tones
-		tones.beep(500, 50)
 	config.conf["wintenApps"]["updateCheckTime"] = int(time.time())
 	updateCandidate = False
 	updateURL = channels[config.conf["wintenApps"]["updateChannel"]]
@@ -85,7 +81,7 @@ def updateCheck(startupCheck=False):
 			wx.CallAfter(getUpdateResponse, checkMessage, _("Windows 10 App Essentials update"), updateURL)
 
 def getUpdateResponse(message, caption, updateURL):
-	if gui.messageBox(message, caption, wx.YES | wx.NO | wx.CANCEL | wx.CENTER | wx.ICON_QUESTION) == wx.YES:
+	if gui.messageBox(message, caption, wx.YES_NO | wx.NO_DEFAULT | wx.CANCEL | wx.CENTER | wx.ICON_QUESTION) == wx.YES:
 		os.startfile(updateURL)
 
 class WinTenAppsConfigDialog(wx.Dialog):
