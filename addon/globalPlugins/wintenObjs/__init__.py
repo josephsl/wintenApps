@@ -17,6 +17,7 @@ import nvwave
 import gui
 import wx
 import config
+import queueHandler
 import w10config
 
 # Extra UIA constants
@@ -67,6 +68,11 @@ class SearchField(UIA):
 		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion.wav"))
 		# For deaf-blind users
 		braille.handler.message("suggestions")
+		# Announce number of items found (except in Start search box where the suggestions are selected as one types).
+		# Oddly, Edge's address omnibar returns 0 for suggestion count when there are clearly suggestions (implementation differences).
+		if self.controllerFor[0].childCount and self.UIAElement.cachedAutomationID != "SearchTextBox":
+			# Item count must be the last one spoken.
+			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, "%s suggestions"%self.controllerFor[0].childCount)
 
 	def event_suggestionsClosed(self):
 		# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
