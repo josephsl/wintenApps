@@ -25,7 +25,7 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Twitter
 * Team viewer za zaslone osjetljive na dodir
 * Prognoza
-* Windows Defender UWP (nadogradnja creators i novije)
+* Windows Defender Security Center (Creators Update and later)
 * Dodatni moduli za dijelove sustava kao što su to izbornik start i
   pripadajuće mu ikonice
 
@@ -42,7 +42,7 @@ dodatak sa posljednjom stabilnom podverzijom (podverzija 14393).
   Preview dialog (settings app) and new-style UAC dialog in build 14328 and
   later for NvDA 2016.2.1 or earlier.
 * Appearance/close of suggestions for certain search fields (notably
-  Settings app) is announced via sounds and/or brailled.
+  Settings and Store apps) is announced via sounds and/or brailled.
 * In certain context menus (such as in Edge), position information (e.g. 1
   of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, live region
@@ -90,6 +90,8 @@ dodatak sa posljednjom stabilnom podverzijom (podverzija 14393).
 * Progress bar values and other information are no longer announced twice.
 * If it takes a while to search for settings, NVDA will announce "searching"
   and search result status such as if a setting cannot be found.
+* Settings groups are recognized when using object navigation to navigate
+  between controls.
 
 ## Preview inačica skypea
 
@@ -107,17 +109,19 @@ dodatak sa posljednjom stabilnom podverzijom (podverzija 14393).
 
 * After checking for app updates, app names in list of apps to be updated
   are correctly labeled.
+* Appearance of search suggestions are now announced.
 
 ## TeamViewer za ekrane osjetljive na dodir
 
 * Natpisi na izbornim gumbima se izgovaraju.
 * Oznake na gumbima se izgovaraju.
 
-## Bank of America/Twitter
+## Bank of America/Twitter/Windows Defender Security Center
 
 * Oznake na gumbima se sada izgovaraju.
-* Windows Defender universal app is included in build 14986 and later and
-  support for this app from this add-on is subject to change.
+* Windows Defender Security Center (universal app) is included in build
+  14986 and later and support for this app from this add-on is subject to
+  change.
 
 ## Prognoza
 

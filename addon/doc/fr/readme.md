@@ -27,7 +27,7 @@ est inclus) :
 * Twitter.
 * TeamViewer Touch.
 * Météo.
-* Windows Defender UWP (Creators Update et ultérieure)
+* Windows Defender Security Center (Creators Update et ultérieure)
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
 Note: ce module complémentaire nécessite Windows 10 Version 1511 (build
@@ -45,9 +45,9 @@ build stable (build 14393).
   dialogue propres. Ceci incluent le dialogue Insider Preview (settings app)
   et le dialogue nouveau style UAC dans la build 14328 et version ultérieur
   pour NVDA 2016.2.1 ou version antérieure.
-* Apparence/fermeture des suggestions pour certains champs de recherche
-  (notamment Settings app) est annoncé En passant par des sons et/ou le
-  braille.
+* L'apparition/fermeture des suggestions pour certains champs de recherche
+  (notamment Settings et Store app) est annoncé En passant par des sons
+  et/ou le braille.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
 * Les événements UIA suivants sont reconnus : Controller pour, live region
@@ -103,6 +103,8 @@ build stable (build 14393).
 * Si il faut du temps pour rechercher des paramètres, NVDA annoncera
   "recherch en cours" et l'état du résultat de la recherche tel comme si un
   paramètre est introuvable.
+* Les groupes de paramètres sont reconnus lorsque vous utilisez la
+  navigation par objet pour naviguer entre les commandes.
 
 ## Skype Preview
 
@@ -123,18 +125,19 @@ build stable (build 14393).
 * Après vérification des mises à jour d'applications, le nom des
   applications dans la liste des applications à mettre à jour sera
   correctement étiqueté.
+* L'apparition des suggestions de recherche est maintenant annoncée.
 
 ## TeamViewer Touch
 
 * Étiquettes pour les boutons radio sont annoncés.
 * Étiquettes pour les boutons sont annoncés.
 
-## Bank of America/Twitter/Windows Defender UWP
+## Bank of America/Twitter/Windows Defender Security Center
 
 * Étiquettes des boutons sont maintenant annoncées.
-* Windows Defender universal app est inclus dans la build 14986 ou version
-  ultérieure et le support pour cette app à partir de ce module
-  complémentaire est sujette à changement.
+* Windows Defender Security Center (universal app) est inclus dans la build
+  14986 ou version ultérieure et le support pour cette app à partir de ce
+  module complémentaire est sujette à changement.
 
 ## Météo
 

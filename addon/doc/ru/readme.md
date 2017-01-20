@@ -25,7 +25,7 @@ Windows 10, а также исправлений для некоторых ти�
 * Twitter.
 * Сенсорный экран TeamViewer.
 * Погода.
-* Windows Defender UWP (Creators Update and later)
+* Windows Defender Security Center (Creators Update and later)
 * Разные модули для типов управления, таких, как плитки главного меню.
 
 Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
@@ -42,7 +42,7 @@ stable build (build 14393).
   Preview dialog (settings app) and new-style UAC dialog in build 14328 and
   later for NvDA 2016.2.1 or earlier.
 * Appearance/close of suggestions for certain search fields (notably
-  Settings app) is announced via sounds and/or brailled.
+  Settings and Store apps) is announced via sounds and/or brailled.
 * In certain context menus (such as in Edge), position information (e.g. 1
   of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, live region
@@ -91,6 +91,8 @@ stable build (build 14393).
   дважды.
 * If it takes a while to search for settings, NVDA will announce "searching"
   and search result status such as if a setting cannot be found.
+* Settings groups are recognized when using object navigation to navigate
+  between controls.
 
 ## Skype Preview
 
@@ -108,17 +110,19 @@ stable build (build 14393).
 
 * After checking for app updates, app names in list of apps to be updated
   are correctly labeled.
+* Appearance of search suggestions are now announced.
 
 ## TeamViewer Touch
 
 * Метки радиокнопок теперь объявляются.
 * Lables for buttons are announced.
 
-## Bank of America/Twitter/Windows Defender UWP
+## Bank of America/Twitter/Windows Defender Security Center
 
 * Теперь объявляются метки кнопок.
-* Windows Defender universal app is included in build 14986 and later and
-  support for this app from this add-on is subject to change.
+* Windows Defender Security Center (universal app) is included in build
+  14986 and later and support for this app from this add-on is subject to
+  change.
 
 ## Погода
 

@@ -26,7 +26,7 @@ se inclúe):
 * Twitter.
 * TeamViewer Touch.
 * O Tempo
-* Windows Defender UWP (Creators Update e posterior)
+* Windows Defender Security Center  (Creators Update e posterior)
 * Módulos misceláneos para controis como mosaicos do Menú Inicio.
 
 Nota: este complemento require do Windows 10 Versión 1511 (compilación
@@ -43,7 +43,7 @@ resultados, usa o complemento coa última versión estable (compilación
 * Agora recoñécense certos diálogos como proprios diálogos. Esto inclúe o
   diálogo Insider Preview (settings app) e o diálogo de novo estilo do UAC
   na compilación 14328 e anteriores para o NVDA 2016.2.1 e anteriores.
-* A apariencia/peche de suxerencias para certos campos de procura (en
+* A apariencia ou peche de suxerencias para certos campos de procura (en
   particular o aplikcativo Configuración) anúnciase a través de sons e/ou de
   braille.
 * En certos menús de contexto (coma no Edge), a información de posición
@@ -96,6 +96,8 @@ resultados, usa o complemento coa última versión estable (compilación
 * Se está a tomar un tempo para procurar unha configuración, NVDA anunciará
   "buscando" e o resultado do estado da procura como se unha opción non se
   poidera atopar.
+* Os grupos de opcións recoñécense ao se usar a navegación de obxectos para
+  navegar entre controis.
 
 ## Previsualización de Skype
 
@@ -115,17 +117,19 @@ resultados, usa o complemento coa última versión estable (compilación
 
 * Despois de buscar actualizacións das aplicacións, os nomes das aplicacións
   na lista de aplicacions actualizarán as etiquetas correctamente.
+* Agora anúnciase a aparición de suxerencias de procura.
 
 ## TeamViewer Touch
 
 * Anúncianse as etiquetas para botóns de opción.
 * Anúncianse as etiquetas para botóns de opción.
 
-## Bank of America/Twitter/Windows Defender UWP
+## Bank of America/Twitter/Windows Defender Security Center
 
 * Agora anúncianse as etiquetas dos botóns.
-* A app Windows Defender universal inclúese na build 14986 e posterior e o
-  soporte para esta app dende este complemento está suxeito a cambios.
+* A app Windows Defender Security Center universal inclúese na build 14986 e
+  posterior e o soporte para esta app dende este complemento está suxeito a
+  cambios.
 
 ## O Tempo
 

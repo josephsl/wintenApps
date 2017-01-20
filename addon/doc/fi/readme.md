@@ -25,7 +25,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Twitter
 * TeamViewer Touch
 * Sää
-* Windows Defender UWP (Creators Update ja uudemmat)
+* Windows Defender -tietoturvakeskus (Creators Update ja uudemmat)
 * Sekalaisia moduuleita sellaisille säätimille kuin Käynnistä-valikon
   tiilet.
 
@@ -44,7 +44,7 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
   valvonnan valintaikkuna koontiversiossa 14328 ja uudemmissa NVDA
   2016.2.1:ssä tai vanhemmassa.
 * Tiettyjen hakukenttien ehdotusten ilmestyminen/sulkeutuminen (varsinkin
-  Asetukset-sovelluksessa) ilmaistaan nyt äänimerkeillä ja/tai
+  Asetukset- ja Kauppa-sovelluksessa) ilmaistaan nyt äänimerkeillä ja/tai
   pistekirjoituksella.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
@@ -95,6 +95,8 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
 * Mikäli asetusten etsiminen kestää jonkin aikaa, NVDA ilmoittaa "etsitään"
   sekä hakutulosten tilan, kuten sen, jos asetusta ei löydy.
+* Asetusryhmät tunnistetaan säätimien välillä liikuttaessa
+  objektinavigointia käyttäen.
 
 ## Skypen esiversio
 
@@ -113,17 +115,19 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 
 * Sovellusten nimet näytetään oikein päivitettävien sovellusten luettelossa
   päivitystarkistuksen jälkeen.
+* Hakutulosehdotusten ilmestyminen ilmoitetaan.
 
 ## TeamViewer Touch
 
 * Valintapainikkeiden selitteet puhutaan.
 * Painikkeiden selitteet puhutaan.
 
-## Bank of America/Twitter/Windows Defender UWP
+## Bank of America/Twitter/Windows Defender -tietoturvakeskus
 
 * Painikkeiden selitteet puhutaan.
-* Windows Defenderin universaali sovellus sisältyy koontiversioon 14986 ja
-  sitä uudempiin, ja tämän lisäosan tuki ko. sovellukselle voi muuttua.
+* Windows Defender -tietoturvakeskus (universaali sovellus) sisältyy
+  koontiversioon 14986 ja sitä uudempiin, ja tämän lisäosan tuki
+  ko. sovellukselle voi muuttua.
 
 ## Sää
 
