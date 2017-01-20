@@ -26,7 +26,8 @@ privire la ceea ce este inclus):
 * Twitter.
 * TeamViewer Touch.
 * Meteo.
-* Windows Defender UWP (creatori de actualizeări și mai nou)
+* Centrul de securitate Windows Defender (creatori de actualizeări și mai
+  nou)
 * Diverse module de control precum tile-urile din meniul start.
 
 Notă: acest add-on necesită Windows 10 versiunea 1511 (build 10586) sau mai
@@ -44,8 +45,8 @@ add-on-ul cu ultimul build stabil (build 14393).
   corespunzătoare. Aceasta include dialogul de examinare al insiderului (în
   aplicația Setări) și un nou stil în dialogul UAC în build 14328 și mai nou
   pentru NvDA 2016.2.1 sau mai vechi.
-* Aspectul/aproape de sugestii pentru anumite domenii de căutare (în special
-  în aplicația Setări) este anunțat prin sunete și/sau braille.
+* Aspectul/aproape de sugestii pentru anumite câmpuri de căutare (în special
+  în aplicațiile Setări și Magazin) este anunțat prin sunete și/sau braille.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.g. 1 din 2) nu mai este anunțată.
 * Următoarele evenimente UIA sunt recunoscute: Controler pentru, schimbarea
@@ -96,6 +97,8 @@ add-on-ul cu ultimul build stabil (build 14393).
   ori.
 * Dacă durează ceva timp să căutați în setări, NVDA va anunța „se caută” și
   starea rezultatului căutării, cum ar fi dacă o setare nu poate fi găsită.
+* Grupurile de setări sunt recunoscute la utilizarea navigării obiectului
+  pentru a naviga printre controale.
 
 ## Skype Preview
 
@@ -115,18 +118,19 @@ add-on-ul cu ultimul build stabil (build 14393).
 
 * După căutarea actualizărilor aplicației, nume de aplicații în lista
   aplicațiilor care urmează să fie actualizate sunt etichetate corect.
+* Aspectele sugestiilor de căutare sunt acum anunțate.
 
 ## TeamViewer Touch.
 
 * sunt anunțate etichete pentru butoane rotative.
 * sunt anunțate etichete pentru butoane.
 
-## Banca Americii/Twitter/Windows Defender UWP
+## Banca Americii/Twitter/Centrul de securitate Windows Defender
 
 * Etichetele butoanelor sunt acum anunțate.
-* Aplicația universală Windows Defender este inclusă în buildul 14986 și mai
-  nou, iar suportul pentru această aplicație de la acest add-on este un
-  subiect pentru schimbare.
+* Aplicația universală Windows Defender Security Center este inclusă în
+  buildul 14986 și mai nou, iar suportul pentru această aplicație de la
+  acest add-on este un subiect pentru schimbare.
 
 ## Meteo
 
