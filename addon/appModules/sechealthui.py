@@ -7,6 +7,7 @@
 import appModuleHandler
 import controlTypes
 from NVDAObjects.UIA import UIA
+import winVersion
 
 class AppModule(appModuleHandler.AppModule):
 
@@ -15,6 +16,6 @@ class AppModule(appModuleHandler.AppModule):
 		# Oddly enough, in build 15007 and later, button label is not the last child, but the one before that.
 		if isinstance(obj, UIA) and obj.role == controlTypes.ROLE_BUTTON and obj.name == "":
 			try:
-				obj.name = obj.getChild(-2).name
+				obj.name = obj.getChild(-2).name if winVersion.winVersion.build > 15000 else obj.lastChild.name
 			except AttributeError:
 				pass
