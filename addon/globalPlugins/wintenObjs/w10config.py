@@ -11,7 +11,6 @@ import threading
 import urllib
 import time
 import re
-import threading
 import config
 import gui
 import wx
@@ -22,12 +21,13 @@ confspec = {
 	"autoUpdateCheck": "boolean(default=true)",
 	"updateChannel": "string(default=dev)",
 	"updateCheckTime": "integer(default=0)",
+	"updateCheckTimeInterval": "integer(min=0, max=30, default=7)",
 }
 config.conf.spec["wintenApps"] = confspec
 
 _addonDir = os.path.join(os.path.dirname(__file__), "..", "..")
 addonVersion = addonHandler.Addon(_addonDir).manifest['version']
-addonCheckInterval = 86400
+addonUpdateCheckInterval = 86400
 
 channels={
 	"stable":"http://addons.nvda-project.org/files/get.php?file=w10",
@@ -38,14 +38,22 @@ def updateQualify(url):
 	version = re.search("wintenApps-(?P<version>.*).nvda-addon", url.url).groupdict()["version"]
 	return None if version == addonVersion else version
 
+updateChecker = None
 # To avoid freezes, a background thread will run after the global plugin constructor calls wx.CallAfter.
-def startupUpdateCheck():
-	threading.Thread(target=updateCheck, kwargs={"startupCheck":True}).start()
+def autoUpdateCheck():
+	currentTime = time.time()
+	whenToCheck = config.conf["wintenApps"]["updateCheckTime"]
+	if currentTime >= whenToCheck:
+		threading.Thread(target=updateCheck, kwargs={"autoCheck":True}).start()
+	else:
+		global updateChecker
+		updateChecker = wx.PyTimer(autoUpdateCheck)
+		updateChecker.Start(whenToCheck-currentTime, True)
 
 progressDialog = None
-def updateCheck(startupCheck=False):
+def updateCheck(autoCheck=False):
 	global progressDialog
-	config.conf["wintenApps"]["updateCheckTime"] = int(time.time())
+	config.conf["wintenApps"]["updateCheckTime"] = int(time.time()) + config.conf["wintenApps"]["updateCheckTimeInterval"] * addonUpdateCheckInterval
 	updateCandidate = False
 	updateURL = channels[config.conf["wintenApps"]["updateChannel"]]
 	try:
@@ -58,7 +66,7 @@ def updateCheck(startupCheck=False):
 			# Translators: Error text shown when add-on update check fails.
 			wx.CallAfter(gui.messageBox, _("Error checking for update."), _("Studio add-on update"), wx.ICON_ERROR)
 		return
-	if not startupCheck:
+	if not autoCheck:
 		wx.CallAfter(progressDialog.done)
 		progressDialog = None
 	if url.code != 200:
@@ -96,7 +104,8 @@ class WinTenAppsConfigDialog(wx.Dialog):
 		# Translators: A checkbox to toggle automatic add-on updates.
 		self.autoUpdateCheckbox=w10Helper.addItem(wx.CheckBox(self,label=_("Automatically check for add-on &updates")))
 		self.autoUpdateCheckbox.SetValue(config.conf["wintenApps"]["autoUpdateCheck"])
-		# Translators: The label for a setting in SPL add-on settings/advanced options to select automatic update interval in days.
+		# Translators: The label for a setting in WinTenApps add-on settings to select automatic update interval in days.
+		self.updateInterval=w10Helper.addLabeledControl(_("Update &interval in days"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=30, initial=config.conf["wintenApps"]["updateCheckTimeInterval"])
 		# Translators: The label for a combo box to select update channel.
 		labelText = _("&Add-on update channel:")
 		self.channels=w10Helper.addLabeledControl(labelText, wx.Choice, choices=["development", "stable"])
@@ -116,7 +125,18 @@ class WinTenAppsConfigDialog(wx.Dialog):
 		self.Center(wx.BOTH | wx.CENTER_ON_SCREEN)
 
 	def onOk(self, evt):
+		global updateChecker
+		if updateChecker and updateChecker.IsRunning(): updateChecker.Stop()
 		config.conf["wintenApps"]["autoUpdateCheck"] = self.autoUpdateCheckbox.Value
+		config.conf["wintenApps"]["updateCheckTimeInterval"] = self.updateInterval.Value
+		if not self.updateInterval.Value:
+			config.conf["wintenApps"]["updateCheckTime"] = 0
+			updateChecker = None
+		else:
+			updateChecker = wx.PyTimer(autoUpdateCheck)
+			currentTime = time.time()
+			whenToCheck = currentTime+(self.updateInterval.Value * addonUpdateCheckInterval)
+			updateChecker.Start(whenToCheck-currentTime, True)
 		config.conf["wintenApps"]["updateChannel"] = ("dev", "stable")[self.channels.GetSelection()]
 		self.Destroy()
 

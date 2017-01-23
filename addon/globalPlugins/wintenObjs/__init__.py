@@ -125,7 +125,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
 		if config.conf["wintenApps"]["autoUpdateCheck"]:
-			wx.CallAfter(w10config.startupUpdateCheck)
+			wx.CallAfter(w10config.autoUpdateCheck)
 
 	def terminate(self):
 		super(GlobalPlugin, self).terminate()
@@ -133,6 +133,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self.prefsMenu.RemoveItem(self.w10Settings)
 		except AttributeError, wx.PyDeadObjectError:
 			pass
+		if w10config.updateChecker and w10config.updateChecker.IsRunning():
+			w10config.updateChecker.Stop()
+		w10config.updateChecker = None
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
