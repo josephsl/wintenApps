@@ -21,7 +21,7 @@ confspec = {
 	"autoUpdateCheck": "boolean(default=true)",
 	"updateChannel": "string(default=dev)",
 	"updateCheckTime": "integer(default=0)",
-	"updateCheckTimeInterval": "integer(min=0, max=30, default=7)",
+	"updateCheckTimeInterval": "integer(min=0, max=30, default=1)",
 }
 config.conf.spec["wintenApps"] = confspec
 
@@ -60,7 +60,7 @@ def updateCheck(autoCheck=False):
 		url = urllib.urlopen(updateURL)
 		url.close()
 	except IOError:
-		if not startupCheck:
+		if not autoCheck:
 			wx.CallAfter(progressDialog.done)
 			progressDialog = None
 			# Translators: Error text shown when add-on update check fails.
@@ -70,7 +70,7 @@ def updateCheck(autoCheck=False):
 		wx.CallAfter(progressDialog.done)
 		progressDialog = None
 	if url.code != 200:
-		if not startupCheck:
+		if not autoCheck:
 			# Translators: Text shown when update check fails for some odd reason.
 			wx.CallAfter(gui.messageBox, _("Add-on update check failed."), _("Windows 10 App Essentials update"))
 		return
@@ -78,7 +78,7 @@ def updateCheck(autoCheck=False):
 		# Am I qualified to update?
 		qualified = updateQualify(url)
 		if qualified is None:
-			if not startupCheck:
+			if not autoCheck:
 				# Translators: Presented when no add-on update is available.
 				wx.CallAfter(gui.messageBox, _("No add-on update available."), _("Windows 10 App Essentials update"))
 			return
