@@ -68,12 +68,13 @@ class SearchField(UIA):
 		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion.wav"))
 		# For deaf-blind users
 		braille.handler.message("suggestions")
-		# Announce number of items found (except in Start search box where the suggestions are selected as one types).
+		# Announce number of items found (except in Start search box where the suggestions are selected as user types).
 		# Oddly, Edge's address omnibar returns 0 for suggestion count when there are clearly suggestions (implementation differences).
 		# Because inaccurate count could be announced (when users type, suggestion count changes), thus announce if position info reporting is enabled.
-		if config.conf["presentation"]["reportObjectPositionInformation"] and self.UIAElement.cachedAutomationID == "TextBox":
-			# Item count must be the last one spoken.
-			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, "%s suggestions"%self.controllerFor[0].childCount)
+		if config.conf["presentation"]["reportObjectPositionInformation"]:
+			if self.UIAElement.cachedAutomationID == "TextBox" or self.UIAElement.cachedAutomationID == "SearchTextBox" and self.appModule.appName != "searchui":
+				# Item count must be the last one spoken.
+				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, "%s suggestions"%self.controllerFor[0].childCount)
 
 	def event_suggestionsClosed(self):
 		# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
