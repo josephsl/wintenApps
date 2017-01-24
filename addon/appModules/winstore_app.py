@@ -39,6 +39,6 @@ class AppModule(appModuleHandler.AppModule):
 				self._appInstallProgress = obj.name
 				# Don't forget to announce product title.
 				productTitle = obj.parent.previous
-				if productTitle.UIAElement.cachedAutomationID == "_productTitle":
+				if productTitle and productTitle.UIAElement.cachedAutomationID == "_productTitle":
 					ui.message(" ".join([productTitle.name, obj.name]))
 		nextHandler()
