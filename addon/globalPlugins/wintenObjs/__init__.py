@@ -66,8 +66,8 @@ class SearchField(UIA):
 
 	def event_suggestionsOpened(self):
 		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion.wav"))
-		# For deaf-blind users
-		braille.handler.message("suggestions")
+		# Translators: Announced in braille when suggestions appear.
+		braille.handler.message(_("suggestions"))
 		# Announce number of items found (except in Start search box where the suggestions are selected as user types).
 		# Oddly, Edge's address omnibar returns 0 for suggestion count when there are clearly suggestions (implementation differences).
 		# Because inaccurate count could be announced (when users type, suggestion count changes), thus announce if position info reporting is enabled.

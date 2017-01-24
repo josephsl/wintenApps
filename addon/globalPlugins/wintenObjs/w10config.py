@@ -64,7 +64,7 @@ def updateCheck(autoCheck=False):
 			wx.CallAfter(progressDialog.done)
 			progressDialog = None
 			# Translators: Error text shown when add-on update check fails.
-			wx.CallAfter(gui.messageBox, _("Error checking for update."), _("Studio add-on update"), wx.ICON_ERROR)
+			wx.CallAfter(gui.messageBox, _("Error checking for update."), _("Windows 10 App Essentials update"), wx.ICON_ERROR)
 		return
 	if not autoCheck:
 		wx.CallAfter(progressDialog.done)
