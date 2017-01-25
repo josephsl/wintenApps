@@ -66,7 +66,8 @@ class AppModule(appModuleHandler.AppModule):
 		ui.message(message)
 
 	def event_nameChange(self, obj, nextHandler):
-		if isinstance(obj, UIA):
+		# NVDA Core #6713: Windows.UI.Core control can be any UWP window, which causes NVDA to announce Skype messages from other apps.
+		if api.getForegroundObject().name.startswith("Skype ") and isinstance(obj, UIA):
 			uiElement = obj.UIAElement
 			if uiElement.cachedClassName == "TextBlock" and obj.next is not None:
 				# Announce typing indicator (same as Skype for Desktop).
