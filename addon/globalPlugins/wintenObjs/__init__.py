@@ -18,6 +18,7 @@ import gui
 import wx
 import config
 import queueHandler
+from logHandler import log
 import w10config
 
 # Extra UIA constants
@@ -162,6 +163,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif obj.UIAElement.cachedClassName == "MenuFlyoutItem":
 				clsList.insert(0, MenuItemNoPosInfo)
 
+	# Record UIA property info about an object if debug logging is enabled.
+	def uiaDebugLogging(self, obj, event=None):
+		if isinstance(obj, UIA):
+			element = obj.UIAElement
+			if not obj.name:
+				obj.name = "unavailable"
+			automationID = element.cachedAutomationID
+			if not automationID: automationID = "unavailable"
+			className = element.cachedClassName
+			if not className: className = "unavailable"
+			if not event:
+				event = "no event specified"
+			log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s"%(obj.name, event, obj.appModule, automationID, className))
+
 	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
 		# Never allow WorkerW thread to send gain focus event (seen in Insider builds but was observed in release builds for some).
@@ -170,4 +185,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Non-English locales does not fire item selected event for looping selector unless navigator is first set to it.
 		if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "CustomLoopingSelector":
 			api.setNavigatorObject(obj.simpleFirstChild)
+		nextHandler()
+
+	def event_nameChange(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "nameChange")
+		nextHandler()
+
+	def event_valueChange(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "valueChange")
+		nextHandler()
+
+	def event_UIA_controllerFor(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "controllerFor")
 		nextHandler()
