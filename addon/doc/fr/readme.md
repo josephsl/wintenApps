@@ -31,7 +31,7 @@ est inclus) :
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
 Note: ce module complémentaire nécessite Windows 10 Version 1511 (build
-10586) ou version ultérieure et NVDA 2016.3 ou version ultérieure. Pour de
+10586) ou version ultérieure et NVDA 2016.4 ou version ultérieure. Pour de
 meilleurs résultats, utilisez le module complémentaire avec la dernière
 build stable (build 14393).
 
@@ -47,11 +47,21 @@ build stable (build 14393).
   pour NVDA 2016.2.1 ou version antérieure.
 * L'apparition/fermeture des suggestions pour certains champs de recherche
   (notamment Settings et Store app) est annoncé En passant par des sons
-  et/ou le braille.
+  et/ou le braille. Cela inclut également la zone de recherche du menu
+  Démarrer.
+* NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
+  majorité des cas. Cette option est contrôlée par "Annoncer le rang de
+  l'objet dans une liste" dans la boîte de dialogue Présentation des Objets.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
 * Les événements UIA suivants sont reconnus : Controller pour, live region
   changed (handled par name change event).
+* Ajout de la possibilité de vérifier les mises à jour du module
+  complémentaire(automatiques ou manuelles) via la nouvelle boîte de
+  dialogue Windows 10 App Essentials qui se trouve dans le menu Préférences
+  de NVDA. Par défaut, les versions stables et de développement vérifieront
+  automatiquement les nouvelles mises à jour sur une base hebdomadaire ou
+  quotidienne, respectivement.
 
 ## Alarmes et horloge
 
@@ -64,6 +74,11 @@ build stable (build 14393).
 ## Calculatrice
 
 * Lorsque vous appuyez sur entrée, NVDA annonce les résultats du calcul.
+
+## calendrier
+
+* NVDA n'annoncera plus "edition" ou "lecture seule" dans le corps du
+  message et d'autres  champs.
 
 ## Cortana
 
@@ -79,10 +94,11 @@ build stable (build 14393).
 * L'apparition de suggestions lors de la recherche de pistes est maintenant
   détectée.
 
-## Courrier et calendrier
+## Courrier
 
-* NVDA n'annoncera plus "edition" ou "lecture seule" dans le corps du
-  message et d'autres  champs.
+* Lorsque vous examinez les éléments dans la liste des messages, vous pouvez
+  maintenant utiliser les commandes de navigation de tableau pour examiner
+  les en-têtes des messages.
 
 ## Cartes
 
@@ -119,6 +135,8 @@ build stable (build 14393).
   pour passer à la partie souhaitée.
 * Étiquettes de liste déroulante pour Skype preview app publié en Novembre
   2016 sont annoncées.
+* NVDA n'annoncera plus "Message Skype"lors de la révision des messages pour
+  la majorité des cas.
 
 ## Store
 
@@ -126,6 +144,8 @@ build stable (build 14393).
   applications dans la liste des applications à mettre à jour sera
   correctement étiqueté.
 * L'apparition des suggestions de recherche est maintenant annoncée.
+* Lors du téléchargement de contenus tels que des applications et des films,
+  NVDA annoncera le nom du produit et la progression du téléchargement.
 
 ## TeamViewer Touch
 

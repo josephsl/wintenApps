@@ -29,7 +29,7 @@ si veda la relativa sezione per ulteriori informazioni:
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
 Nota: questo add-on richiede  Windows 10 Versione 1511 (build 10586) o
-successive e NVDA 2016.3 o successive. Per avere le prestazioni migliori,
+successive e NVDA 2016.4 o successive. Per avere le prestazioni migliori,
 utilizzare il componente aggiuntivo con l'ultima build stabile (build
 14393).
 
@@ -39,15 +39,26 @@ utilizzare il componente aggiuntivo con l'ultima build stabile (build
   riconosciuti in maniera corretta i sottomenu.
 * Quando vengono ridotte a icona tutte le finestre (Windows+M), non verrà
   più annunciata la parola "riquadro".
-* Certain dialogs are now recognized as proper dialogs. This include Insider
-  Preview dialog (settings app) and new-style UAC dialog in build 14328 and
-  later for NvDA 2016.2.1 or earlier.
-* Appearance/close of suggestions for certain search fields (notably
-  Settings and Store apps) is announced via sounds and/or brailled.
-* In certain context menus (such as in Edge), position information (e.g. 1
-  of 2) is no longer announced.
-* The following UIA events are recognized: Controller for, live region
-  changed (handled by name change event).
+* Molte finestre di dialogo vengono gestite correttamente, soprattutto
+  quelle inerenti il feedback su Windows Insider e le impostazioni, nonché i
+  nuovi controlli UAC presenti dalla build 14328 e successive per NVDA
+  2016.2.1 in poi
+* Viene annunciata la comparsa di suggerimenti nei risultati di ricerca,
+  soprattutto nelle impostazioni e nello store, attraverso sia suoni che
+  braille. In questo è compresa anche la finestra di ricerca del menu avvio.
+* NVDA può annunciare il numero dei suggerimenti quando si esegue una
+  ricerca, almeno nella maggior parte dei casi. Questa funzione è
+  controllata dall'opzione "leggi le informazioni sulla posizione
+  dell'oggetto" nella finestra presentazioni oggetti di NVDA.
+* In alcuni menu di contesto, come in Edge, le informazioni sulla posizione
+  come 1 su 2 non vengono più annunciate.
+* Vengono riconosciuti e gestiti i seguenti eventi UIA: Controller for, live
+  region changed (handled by name change event).
+* Aggiunta la possibilità di controllare automaticamente o manualmente la
+  presenza di aggiornamenti di questo componente aggiuntivo mediante la
+  finestra di dialogo Windows10 Essentials presente al menu preferenze di
+  NVDA. Di default le versioni stabili eseguiranno un controllo settimanale,
+  mentre quelle in sviluppo giornaliero.
 
 ## Allarmi e sveglia
 
@@ -59,32 +70,39 @@ utilizzare il componente aggiuntivo con l'ultima build stabile (build
 
 * Quando viene premuto invio, NVDA annuncia il risultato del calcolo.
 
-## Cortana
-
-* Le risposte di tipo testuale di Cortana vengono lette nella maggior parte
-  dei casi, se non dovesse funzionare riaprire il menu avvio e ripetere la
-  ricerca.
-* NVDA will be silent when you talk to Cortana via voice.
-* NVDA will now announce reminder confirmation after you set one.
-
-## Groove Music
-
-* Appearance of suggestions when searching for tracks is now detected.
-
-## Mail and calendar
+## calendario
 
 * Insider Hub (centro di supporto in Anniversary Update): solo per quegli
   utenti che usano una versione Insider di Windows, servendosi del centro
   Feedback Insider per aggiornamenti.
 
+## Cortana
+
+* Le risposte di tipo testuale di Cortana vengono lette nella maggior parte
+  dei casi, se non dovesse funzionare riaprire il menu avvio e ripetere la
+  ricerca.
+* NVDA rimarrà in silenzio mentre si parla a Cortana  con la voce.
+* NVDA annuncerà la conferma di un promemoria quando ne viene inserito uno.
+
+## Groove Music
+
+* Viene annunciata la comparsa di suggerimenti mentre si stanno cercando
+  elementi all'interno delle tracce
+
+## Posta
+
+* Quando si scorrono gli elementi in un elenco messaggi, è possibile
+  utilizzare i comandi di navigazione tabella per controllare le
+  intestazioni.
+
 ## Mappe
 
-* NVDA plays location beep for map locations.
+* NVDA emette dei segnali acustici per le posizioni presenti nella mappa.
 
 ## Microsoft Edge
 
 * Vengono annunciate correttamente le notifiche dei download dei file.
-* Edge support is a work in progress.
+* Il Supporto per Microsoft Edge è in continuo sviluppo.
 
 ## Impostazioni
 
@@ -92,29 +110,33 @@ utilizzare il componente aggiuntivo con l'ultima build stabile (build
   operazioni di Windows Update.
 * Le informazioni delle barre di avanzamento non vengono più lette due
   volte.
-* If it takes a while to search for settings, NVDA will announce "searching"
-  and search result status such as if a setting cannot be found.
-* Settings groups are recognized when using object navigation to navigate
-  between controls.
+* Se la ricerca di un'impostazione richiede troppo tempo, NVDA si comporterà
+  come se non ci siano risultati da visualizzare.
+* Il gruppo impostazioni viene riconosciuto quando ci si sposta tra i
+  controlli usando la navigazione ad oggetti.
 
 ## Anteprima Skype
 
 * Viene annunciato quando un utente sta scrivendo, così come accade in Skype
   per desktop.
-* Partial return of Control+NvDA+number row commands to read recent chat
-  history and to move navigator object to chat entries just like Skype for
-  Desktop.
-* You can now press Alt+number row to locate and move to contacts list (1),
-  conversations (2) and chat edit field (3). Note that one must activate
-  these tabs to move to the desired part.
-* Combo box labels for Skype preview app released in November 2016 are
-  announced.
+* Implementazione parziale della funzionalità di lettura rapida delle chat
+  con ctrl+NVDA+numeri da 1 a 9, come accade in Skype Desktop.
+* è possibile premere il tasto alt in combinazione con i numeri per attivare
+  le schede, ossia alt-1 contatti, alt-2 elenco conversazioni, alt-3 va nel
+  campo editazione della chat. Le schede devono essere attivate per
+  potercisi spostare.
+* Vengono lette le etichette delle caselle combinate in anteprima Skype
+  novembre 2016
+* Nella maggior parte dei casi, NVDA non leggerà più i messaggi Skype di
+  continuo quando se ne sta controllando uno
 
 ## Store
 
-* After checking for app updates, app names in list of apps to be updated
-  are correctly labeled.
-* Appearance of search suggestions are now announced.
+* Dopo aver controllato la presenza di aggiornamenti di app, i nomi delle
+  app nell'elenco degli aggiornamenti viene correttamente etichettato.
+* viene annunciata la comparsa  dei suggerimenti di ricerca
+* Mentre si scaricano contenuti quali app o film, NVDA ne leggerà il nome e
+  l'avanzamento del download.
 
 ## TeamViewer Touch
 
@@ -124,20 +146,21 @@ utilizzare il componente aggiuntivo con l'ultima build stabile (build
 ## Bank of America/Twitter/Windows Defender Security Center
 
 * Vengono annunciate correttamente le etichette dei pulsanti.
-* Windows Defender Security Center (universal app) is included in build
-  14986 and later and support for this app from this add-on is subject to
-  change.
+* Potrebbero esserci modifiche al supporto da parte di questo componente
+  aggiuntivo per Windows Defender Security Center, in quanto viene inclusa
+  come app universale dalla build 14986 
 
-## Weather
+## Meteo
 
-* Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by
-  Derek Riemer).
-* when reading a forecast, use the left and right arrows to move between
-  items. Use the up and down arrows to read the individual items. For
-  example, pressing the right arrow might report "Monday: 79 degrees, partly
-  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
-  again will read the next item (Like the temperature). This currently works
-  for daily and hourly forecasts.
+* Schede come "previsioni" e "mappe" vengono riconosciute correttamente
+  (patch da Derek Riemer). 
+* durante la lettura di una previsione, utilizzare le frecce sinistra e
+  destra per spostarsi tra gli elementi. Utilizzare le frecce su e giù per
+  leggere i singoli elementi. Per esempio, premendo la freccia destra
+  potrebbe venir annunciato "lunedì: 29 gradi, parzialmente nuvoloso, ..."
+  premendo la freccia giù dirà "lunedì", Quindi premerla di nuovo per
+  leggere il prossimo elemento (ad esempio la temperatura). Ciò funziona per
+  previsioni orarie e giornaliere.
 
 [[!tag dev stable]]
 
