@@ -13,14 +13,13 @@ import tempfile
 import hashlib
 import ctypes.wintypes
 import ssl
-import shellapi
 import time
 import re
 import config
 import gui
 import wx
 import addonHandler
-import updateCheck as coreUpdateCheck
+import updateCheck
 import winUser
 
 # Add-on config database
@@ -51,14 +50,14 @@ def autoUpdateCheck():
 	currentTime = time.time()
 	whenToCheck = config.conf["wintenApps"]["updateCheckTime"]
 	if currentTime >= whenToCheck:
-		threading.Thread(target=updateCheck, kwargs={"autoCheck":True}).start()
+		threading.Thread(target=addonUpdateCheck, kwargs={"autoCheck":True}).start()
 	else:
 		global updateChecker
 		updateChecker = wx.PyTimer(autoUpdateCheck)
 		updateChecker.Start(whenToCheck-currentTime, True)
 
 progressDialog = None
-def updateCheck(autoCheck=False):
+def addonUpdateCheck(autoCheck=False):
 	global progressDialog
 	config.conf["wintenApps"]["updateCheckTime"] = int(time.time()) + config.conf["wintenApps"]["updateCheckTimeInterval"] * addonUpdateCheckInterval
 	updateCandidate = False
@@ -97,7 +96,7 @@ def updateCheck(autoCheck=False):
 
 def getUpdateResponse(message, caption, updateURL):
 	if gui.messageBox(message, caption, wx.YES_NO | wx.NO_DEFAULT | wx.CANCEL | wx.CENTER | wx.ICON_QUESTION) == wx.YES:
-		W10UpdateDownloader([updateURL]).start() if config.isInstalledCopy() else os.startfile(updateURL)
+		W10UpdateDownloader([updateURL]).start()
 
 class WinTenAppsConfigDialog(wx.Dialog):
 
@@ -158,7 +157,7 @@ class WinTenAppsConfigDialog(wx.Dialog):
 		_("Add-on update check"),
 		# Translators: The message displayed while checking for newer version of WinTenApps add-on.
 		_("Checking for new version of Windows 10 App Essentials add-on..."))
-		threading.Thread(target=updateCheck).start()
+		threading.Thread(target=addonUpdateCheck).start()
 
 def onConfigDialog(evt):
 	gui.mainFrame._popupSettingsDialog(WinTenAppsConfigDialog)
@@ -215,7 +214,7 @@ def checkForUpdate(auto=False):
 	return info
 
 
-class W10UpdateDownloader(coreUpdateCheck.UpdateDownloader):
+class W10UpdateDownloader(updateCheck.UpdateDownloader):
 	"""Overrides NVDA Core's downloader.)
 	No hash checking for now, and URL's and temp file paths are different.
 	"""
@@ -267,10 +266,8 @@ class W10UpdateDownloader(coreUpdateCheck.UpdateDownloader):
 		gui.messageBox(_("Add-on update downloaded. It will now be installed."),
 			# Translators: The title of the dialog displayed when the update is about to be installed.
 			_("Install Add-on Update"))
-		# #4475: ensure that the new process shows its first window, by providing SW_SHOWNORMAL
-		shellapi.ShellExecute(None, None,
-			self.destPath.decode("mbcs"),
-			None, None, winUser.SW_SHOWNORMAL)
+		from gui import addonGui
+		wx.CallAfter(addonGui.AddonsDialog.handleRemoteAddonInstall, self.destPath.decode("mbcs"))
 
 
 # These structs are only complete enough to achieve what we need.
