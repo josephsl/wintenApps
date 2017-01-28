@@ -1,6 +1,6 @@
 # Windows 10 Settings
 # Part of Windows 10 App Essentials collection
-# Copyright 2016 Joseph Lee, released under GPL
+# Copyright 2016-2017 Joseph Lee, released under GPL
 
 # Several hacks related to Settings app.
 
@@ -20,6 +20,11 @@ class AppModule(appModuleHandler.AppModule):
 			# Recognize groups of controls for contextual output (more prominent in Redstone 2).
 			elif obj.UIAElement.cachedAutomationID.endswith("GroupTitleTextBlock"):
 				obj.role = controlTypes.ROLE_GROUPING
+			# Build 15019: Game bar shortcut fields are not labeled.)
+			# Description and default shortcuts are next to each other.
+			elif obj.name == "" and obj.UIAElement.cachedAutomationID == "ShortcutTextBox":
+				# Add a colon just for output.
+				obj.name = ": ".join([obj.previous.previous.name, obj.previous.name])
 
 	# Live region changed event is treated as a name change for now.
 	# Sometimes, the same text is announced, so consult this cache.
