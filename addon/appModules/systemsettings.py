@@ -7,7 +7,27 @@
 import appModuleHandler
 import ui
 import controlTypes
-from NVDAObjects.UIA import UIA
+import UIAHandler
+import api
+from NVDAObjects.UIA import UIA, ListItem
+
+# Some Settings app combo boxes do expose value selection pattern but requires focus to be reminded of value changes.
+
+# A placeholder combo box object with value pattern (for some settings app combo boxes).
+class ComboBoxWithValuePattern(UIA):
+	pass
+
+class ComboBoxItemWithValuePattern(ListItem):
+
+	def event_stateChange(self):
+		# Borrowed from NVDA Core.
+		if not self.hasFocus:
+			parent = self.parent
+			focus=api.getFocusObject()
+			if parent and isinstance(parent, ComboBoxWithValuePattern) and parent==focus: 
+				# Sometimes, focus needs to be reminded that state change has occured.
+				focus.event_valueChange()
+		super(ComboBoxItemWithValuePattern, self).event_stateChange()
 
 class AppModule(appModuleHandler.AppModule):
 
@@ -25,6 +45,13 @@ class AppModule(appModuleHandler.AppModule):
 			elif obj.name == "" and obj.UIAElement.cachedAutomationID == "ShortcutTextBox":
 				# Add a colon just for output.
 				obj.name = ": ".join([obj.previous.previous.name, obj.previous.name])
+
+	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+		if isinstance(obj, UIA):
+			if obj.role == controlTypes.ROLE_COMBOBOX and obj.UIAElement.getCurrentPropertyValue(UIAHandler.UIA_IsValuePatternAvailablePropertyId):
+				clsList.insert(0, ComboBoxWithValuePattern)
+			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, ComboBoxWithValuePattern):
+				clsList.insert(0, ComboBoxItemWithValuePattern)
 
 	# Live region changed event is treated as a name change for now.
 	# Sometimes, the same text is announced, so consult this cache.
