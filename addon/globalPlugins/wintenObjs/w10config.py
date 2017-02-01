@@ -21,6 +21,7 @@ import wx
 import addonHandler
 import updateCheck
 import winUser
+from logHandler import log
 
 # Add-on config database
 confspec = {
@@ -36,13 +37,10 @@ addonVersion = addonHandler.Addon(_addonDir).manifest['version']
 addonUpdateCheckInterval = 86400
 
 channels={
-	"stable":"http://addons.nvda-project.org/files/get.php?file=w10",
-	"dev":"http://addons.nvda-project.org/files/get.php?file=w10-dev",
+	"stable":"https://addons.nvda-project.org/files/get.php?file=w10",
+	"dev":"https://addons.nvda-project.org/files/get.php?file=w10-dev",
 }
 
-def updateQualify(url):
-	version = re.search("wintenApps-(?P<version>.*).nvda-addon", url.url).groupdict()["version"]
-	return None if version == addonVersion else version
 
 updateChecker = None
 # To avoid freezes, a background thread will run after the global plugin constructor calls wx.CallAfter.
@@ -50,22 +48,43 @@ def autoUpdateCheck():
 	currentTime = time.time()
 	whenToCheck = config.conf["wintenApps"]["updateCheckTime"]
 	if currentTime >= whenToCheck:
-		threading.Thread(target=addonUpdateCheck, kwargs={"autoCheck":True}).start()
+		t = threading.Thread(target=addonUpdateCheck, kwargs={"autoCheck":True})
+		t.daemon = True
+		t.start()
 	else:
 		global updateChecker
 		updateChecker = wx.PyTimer(autoUpdateCheck)
 		updateChecker.Start(whenToCheck-currentTime, True)
 
+# Borrowed ideas from NVDA Core.
+def checkForAddonUpdate():
+	updateURL = channels[config.conf["wintenApps"]["updateChannel"]]
+	try:
+		res = urllib.urlopen(updateURL)
+		res.close()
+	except IOError as e:
+		# SSL issue (seen in NVDA Core earlier than 2014.1).
+		if isinstance(e.strerror, ssl.SSLError) and e.strerror.reason == "CERTIFICATE_VERIFY_FAILED":
+			_updateWindowsRootCertificates()
+			res = urllib.urlopen(updateURL)
+		else:
+			raise
+	if res.code != 200:
+		raise RuntimeError("Checking for update failed with code %d" % res.code)
+	# Build emulated add-on update dictionary if there is indeed a new verison.
+	version = re.search("wintenApps-(?P<version>.*).nvda-addon", res.url).groupdict()["version"]
+	if addonVersion != version:
+		return {"curVersion": addonVersion, "newVersion": version, "path": res.url}
+	return None
+
 progressDialog = None
 def addonUpdateCheck(autoCheck=False):
 	global progressDialog
 	config.conf["wintenApps"]["updateCheckTime"] = int(time.time()) + config.conf["wintenApps"]["updateCheckTimeInterval"] * addonUpdateCheckInterval
-	updateCandidate = False
-	updateURL = channels[config.conf["wintenApps"]["updateChannel"]]
 	try:
-		url = urllib.urlopen(updateURL)
-		url.close()
-	except IOError:
+		info = checkForAddonUpdate()
+	except:
+		log.debugWarning("Error checking for update", exc_info=True)
 		if not autoCheck:
 			wx.CallAfter(progressDialog.done)
 			progressDialog = None
@@ -75,24 +94,16 @@ def addonUpdateCheck(autoCheck=False):
 	if not autoCheck:
 		wx.CallAfter(progressDialog.done)
 		progressDialog = None
-	if url.code != 200:
+	if info is None:
 		if not autoCheck:
-			# Translators: Text shown when update check fails for some odd reason.
-			wx.CallAfter(gui.messageBox, _("Add-on update check failed."), _("Windows 10 App Essentials update"))
-		return
-	else:
-		# Am I qualified to update?
-		qualified = updateQualify(url)
-		if qualified is None:
-			if not autoCheck:
-				# Translators: Presented when no add-on update is available.
-				wx.CallAfter(gui.messageBox, _("No add-on update available."), _("Windows 10 App Essentials update"))
+			# Translators: Presented when no add-on update is available.
+			wx.CallAfter(gui.messageBox, _("No add-on update available."), _("Windows 10 App Essentials update"))
 			return
-		else:
-			# Translators: Text shown if an add-on update is available.
-			checkMessage = _("Windows 10 App Essentials {newVersion} is available. Would you like to update?").format(newVersion = qualified)
-			# Translators: Title of the add-on update check dialog.
-			wx.CallAfter(getUpdateResponse, checkMessage, _("Windows 10 App Essentials update"), updateURL)
+	else:
+		# Translators: Text shown if an add-on update is available.
+		checkMessage = _("Windows 10 App Essentials {newVersion} is available. Would you like to update?").format(newVersion = info["newVersion"])
+		# Translators: Title of the add-on update check dialog.
+		wx.CallAfter(getUpdateResponse, checkMessage, _("Windows 10 App Essentials update"), info["path"])
 
 def getUpdateResponse(message, caption, updateURL):
 	if gui.messageBox(message, caption, wx.YES_NO | wx.NO_DEFAULT | wx.CANCEL | wx.CENTER | wx.ICON_QUESTION) == wx.YES:
@@ -169,51 +180,6 @@ def onConfigDialog(evt):
 #: The download block size in bytes.
 DOWNLOAD_BLOCK_SIZE = 8192 # 8 kb
 
-def checkForUpdate(auto=False):
-	"""Check for an updated version of NVDA.
-	This will block, so it generally shouldn't be called from the main thread.
-	@param auto: Whether this is an automatic check for updates.
-	@type auto: bool
-	@return: Information about the update or C{None} if there is no update.
-	@rtype: dict
-	@raise RuntimeError: If there is an error checking for an update.
-	"""
-	params = {
-		"autoCheck": auto,
-		"version": versionInfo.version,
-		"versionType": versionInfo.updateVersionType,
-		"osVersion": winVersion.winVersionText,
-		"x64": os.environ.get("PROCESSOR_ARCHITEW6432") == "AMD64",
-		"language": languageHandler.getLanguage(),
-		"installed": config.isInstalledCopy(),
-	}
-	url = "%s?%s" % (CHECK_URL, urllib.urlencode(params))
-	try:
-		res = urllib.urlopen(url)
-	except IOError as e:
-		if isinstance(e.strerror, ssl.SSLError) and e.strerror.reason == "CERTIFICATE_VERIFY_FAILED":
-			# #4803: Windows fetches trusted root certificates on demand.
-			# Python doesn't trigger this fetch (PythonIssue:20916), so try it ourselves
-			_updateWindowsRootCertificates()
-			# and then retry the update check.
-			res = urllib.urlopen(url)
-		else:
-			raise
-	if res.code != 200:
-		raise RuntimeError("Checking for update failed with code %d" % res.code)
-	info = {}
-	for line in res:
-		line = line.rstrip()
-		try:
-			key, val = line.split(": ", 1)
-		except ValueError:
-			raise RuntimeError("Error in update check output")
-		info[key] = val
-	if not info:
-		return None
-	return info
-
-
 class W10UpdateDownloader(updateCheck.UpdateDownloader):
 	"""Overrides NVDA Core's downloader.)
 	No hash checking for now, and URL's and temp file paths are different.
@@ -228,7 +194,7 @@ class W10UpdateDownloader(updateCheck.UpdateDownloader):
 		"""
 		super(W10UpdateDownloader, self).__init__(urls, fileHash)
 		self.urls = urls
-		self.destPath = tempfile.mktemp(prefix="stationPlaylist_update-", suffix=".nvda-addon")
+		self.destPath = tempfile.mktemp(prefix="wintenApps_update-", suffix=".nvda-addon")
 		self.fileHash = fileHash
 
 	def start(self):
@@ -297,7 +263,7 @@ def _updateWindowsRootCertificates():
 	crypt = ctypes.windll.crypt32
 	# Get the server certificate.
 	sslCont = ssl._create_unverified_context()
-	u = urllib.urlopen("https://www.nvaccess.org/nvdaUpdateCheck", context=sslCont)
+	u = urllib.urlopen("https://addons.nvda-project.org", context=sslCont)
 	cert = u.fp._sock.getpeercert(True)
 	u.close()
 	# Convert to a form usable by Windows.
