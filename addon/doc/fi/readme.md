@@ -29,8 +29,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sekalaisia moduuleita sellaisille säätimille kuin Käynnistä-valikon
   tiilet.
 
-Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1507 (koontiversio
-10240) tai uudempaa ja NVDA:n 2016.3-versiota tai uudempaa. Käytä parhaiden
+Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1511 (koontiversio
+10586) tai uudempaa ja NVDA:n 2016.4-versiota tai uudempaa. Käytä parhaiden
 tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 
 ## Yleistä
@@ -44,12 +44,19 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
   valvonnan valintaikkuna koontiversiossa 14328 ja uudemmissa NVDA
   2016.2.1:ssä tai vanhemmassa.
 * Tiettyjen hakukenttien ehdotusten ilmestyminen/sulkeutuminen (varsinkin
-  Asetukset- ja Kauppa-sovelluksessa) ilmaistaan nyt äänimerkeillä ja/tai
-  pistekirjoituksella.
+  Asetukset- ja Kauppa-sovelluksessa) ilmaistaan nyt äänimerkeillä ja
+  pistekirjoituksella. Tämä koskee myös Käynnistä-valikon hakukenttää.
+* NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
+  suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
+  -asetuksella Objektien lukuasetukset -valintaikkunasta.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
 * Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, aktiivinen alue
   muuttunut (nimenmuutostapahtuman käsittelemänä).
+* Lisätty lisäosan päivitysmahdollisuus (automaattinen tai manuaalinen)
+  NVDA:n Asetukset-valikosta löytyvän uuden Windows 10:n keskeiset
+  sovellukset -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat
+  oletuksena automaattisen päivitystarkistuksen viikoittain tai päivittäin.
 
 ## Hälytykset ja kello
 
@@ -61,6 +68,11 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 ## Laskin
 
 * NVDA ilmoittaa laskutoimituksen tuloksen Enter-näppäintä painettaessa.
+
+## Kalenteri
+
+* NVDA ei enää ilmoita "muokattava" tai "vain luku" viestisisällössä ja
+  muissa kentissä.
 
 ## Cortana
 
@@ -74,10 +86,10 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 
 * Ehdotusten ilmestyminen havaitaan nyt kappaleita etsittäessä.
 
-## Sähköposti ja kalenteri
+## Sähköposti
 
-* NVDA ei enää ilmoita "muokattava" tai "vain luku" viestisisällössä ja
-  muissa kentissä.
+* Voit nyt käyttää viestiluettelon kohteita tarkastellessasi
+  taulukkonavigointikomentoja viestiotsakkeiden lukemiseen.
 
 ## Kartat
 
@@ -110,12 +122,16 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
   siirtymiseksi.
 * Marraskuussa 2016 julkaistun Skype-sovelluksen esiversion
   yhdistelmäruutujen selitteet puhutaan.
+* NVDA ei enää sano "Skype-viesti" useimmissa tapauksissa viestejä
+  tarkasteltaessa.
 
 ## Kauppa
 
 * Sovellusten nimet näytetään oikein päivitettävien sovellusten luettelossa
   päivitystarkistuksen jälkeen.
 * Hakutulosehdotusten ilmestyminen ilmoitetaan.
+* NVDA ilmoittaa sisältöä, kuten sovelluksia ja elokuvia, ladattaessa
+  tuotteen nimen ja latauksen edistymisen.
 
 ## TeamViewer Touch
 

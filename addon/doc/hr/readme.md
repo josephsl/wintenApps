@@ -29,9 +29,9 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Dodatni moduli za dijelove sustava kao što su to izbornik start i
   pripadajuće mu ikonice
 
-Napomena: Ovaj dodatak zahtijeva Windows 10 Inačicu 1511 (podverziju 10586)
-ili noviju i NVDA 2016.3 ili noviji. Za najbolje rezultate, koristite
-dodatak sa posljednjom stabilnom podverzijom (podverzija 14393).
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+and NVDA 2016.4 or later. For best results, use the add-on with latest
+stable build (build 14393).
 
 ## Općenito
 
@@ -42,11 +42,19 @@ dodatak sa posljednjom stabilnom podverzijom (podverzija 14393).
   Preview dialog (settings app) and new-style UAC dialog in build 14328 and
   later for NvDA 2016.2.1 or earlier.
 * Appearance/close of suggestions for certain search fields (notably
-  Settings and Store apps) is announced via sounds and/or brailled.
+  Settings and Store apps) is announced via sounds and braille. This also
+  includes Start menu search box.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases. This option is controlled by "Report object position information"
+  in Object presentation dialog.
 * In certain context menus (such as in Edge), position information (e.g. 1
   of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, live region
   changed (handled by name change event).
+* Added ability to check for add-on updates (automatic or manual) via the
+  new Windows 10 App Essentials dialog found in NvDA Preferences menu. By
+  default, stable and development versions will check for new updates
+  automatically on a weekly or daily basis, respectively.
 
 ## Alarms and clock
 
@@ -57,6 +65,11 @@ dodatak sa posljednjom stabilnom podverzijom (podverzija 14393).
 ## Kalkulator
 
 * Kada je pritisnuta tipka enter, NVDA izgovara rezultate izračuna.
+
+## calendar
+
+* NVDA no longer announces "edit" or "read-only" in message body and other
+  fields.
 
 ## Cortana
 
@@ -69,10 +82,10 @@ dodatak sa posljednjom stabilnom podverzijom (podverzija 14393).
 
 * Appearance of suggestions when searching for tracks is now detected.
 
-## Mail and calendar
+## Pošta
 
-* NVDA no longer announces "edit" or "read-only" in message body and other
-  fields.
+* When reviewing items in messages list, you can now use table navigation
+  commands to review message headers.
 
 ## Karte
 
@@ -104,12 +117,16 @@ dodatak sa posljednjom stabilnom podverzijom (podverzija 14393).
   these tabs to move to the desired part.
 * Combo box labels for Skype preview app released in November 2016 are
   announced.
+* NVDA will no longer announce "Skype Message" when reviewing messages for
+  majority of cases.
 
 ## Trgovina
 
 * After checking for app updates, app names in list of apps to be updated
   are correctly labeled.
 * Appearance of search suggestions are now announced.
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress.
 
 ## TeamViewer za ekrane osjetljive na dodir
 

@@ -31,7 +31,7 @@ privire la ceea ce este inclus):
 * Diverse module de control precum tile-urile din meniul start.
 
 Notă: acest add-on necesită Windows 10 versiunea 1511 (build 10586) sau mai
-nou și NVDA 2016.3 sau mai nou.. Pentru rezultate foarte bune, folosiți
+nou și NVDA 2016.4 sau mai nou. Pentru rezultate foarte bune, folosiți
 add-on-ul cu ultimul build stabil (build 14393).
 
 ## General
@@ -46,11 +46,19 @@ add-on-ul cu ultimul build stabil (build 14393).
   aplicația Setări) și un nou stil în dialogul UAC în build 14328 și mai nou
   pentru NvDA 2016.2.1 sau mai vechi.
 * Aspectul/aproape de sugestii pentru anumite câmpuri de căutare (în special
-  în aplicațiile Setări și Magazin) este anunțat prin sunete și/sau braille.
+  în aplicațiile Setări și Magazin) este anunțat prin sunete și/sau
+  braille. De asemenea, aceasta include caseta de căutare a meniului Start.
+* NVDA poate anunța numărul de sugestii la efectuarea unei căutări în
+  majoritatea cazurilor. Această opțiune este controlată de „informația
+  poziției obiectului în dialogul prezentării obiectului.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.g. 1 din 2) nu mai este anunțată.
 * Următoarele evenimente UIA sunt recunoscute: Controler pentru, schimbarea
   regiunii în care locuiți (tratarea evenimentului schimbării numelui).
+* A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
+  (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
+  meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă și
+  cea în dezvoltare vor căuta noi actualizări automat săptămânal sau zilnic.
 
 ## Alarme și ceas
 
@@ -62,6 +70,11 @@ add-on-ul cu ultimul build stabil (build 14393).
 ## Calculator
 
 * Când Enterul este apăsat, NVDA anunță rezultatele calculului.
+
+## calendar
+
+* NVDA nu mai anunță „Editare” sau „doar citire” în corpul mesajului sau în
+  alte câmpuri.
 
 ## Cortana
 
@@ -75,10 +88,10 @@ add-on-ul cu ultimul build stabil (build 14393).
 
 * Aspectul sugestiilor la căutarea pieselor este acum detectat.
 
-## Poșta electronică și calendarul
+## Poștă electronică
 
-* NVDA nu mai anunță „Editare” sau „doar citire” în corpul mesajului sau în
-  alte câmpuri.
+* Când examinați elemente în lista de mesaje, puteți să folosiți comenzile
+  de navigare ale tabelului pentru a examina antetele mesajelor.
 
 ## Hărți
 
@@ -113,12 +126,16 @@ add-on-ul cu ultimul build stabil (build 14393).
   la partea dorită.
 * Etichetele Casetelor combinate pentru aplicația Skype preview, lansată în
   Noiembrie 2016, sunt anunțate.
+* NVDA nu mai anunță „Mesaj Skype” la examinarea mesajelor pentru
+  majoritatea cazurilor.
 
 ## Magazin
 
 * După căutarea actualizărilor aplicației, nume de aplicații în lista
   aplicațiilor care urmează să fie actualizate sunt etichetate corect.
 * Aspectele sugestiilor de căutare sunt acum anunțate.
+* La descărcarea conținutului, cum ar fi aplicații și filme, NVDA va anunța
+  numele produsului și descărcarea în curs.
 
 ## TeamViewer Touch.
 
