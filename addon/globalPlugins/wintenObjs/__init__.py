@@ -18,6 +18,7 @@ import gui
 import wx
 import config
 import queueHandler
+import globalVars
 from logHandler import log
 import w10config
 
@@ -126,7 +127,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
 		if config.conf["wintenApps"]["autoUpdateCheck"]:
-			wx.CallAfter(w10config.autoUpdateCheck)
+			# But not when NVDA itself is updating.
+			if not (globalVars.appArgs.install and globalVars.appArgs.minimal):
+				wx.CallAfter(w10config.autoUpdateCheck)
 
 	def terminate(self):
 		super(GlobalPlugin, self).terminate()

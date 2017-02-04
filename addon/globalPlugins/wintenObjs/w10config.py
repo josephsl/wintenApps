@@ -227,11 +227,6 @@ class W10UpdateDownloader(updateCheck.UpdateDownloader):
 
 	def _downloadSuccess(self):
 		self._stopped()
-		# Translators: The message presented when the update has been successfully downloaded
-		# and is about to be installed.
-		gui.messageBox(_("Add-on update downloaded. It will now be installed."),
-			# Translators: The title of the dialog displayed when the update is about to be installed.
-			_("Install Add-on Update"))
 		from gui import addonGui
 		wx.CallAfter(addonGui.AddonsDialog.handleRemoteAddonInstall, self.destPath.decode("mbcs"))
 
