@@ -2,7 +2,7 @@
 #Copyright (C) 2015 NV Access Limited
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
-# Borrowed directly from NVDA Core (2016 Joseph Lee)
+# Borrowed directly from NVDA Core (2016-2017 Joseph Lee)
 
 import appModuleHandler
 from NVDAObjects.IAccessible import IAccessible, ContentGenericClient
@@ -35,3 +35,8 @@ class AppModule(appModuleHandler.AppModule):
 		elif isinstance(obj, UIA):
 			if obj.UIAElement.cachedClassName == "MenuFlyoutSubItem":
 				clsList.insert(0, TileSubMenu)
+
+	def event_NVDAObject_init(self, obj):
+		if isinstance(obj, UIA):
+			if obj.name == "" and obj.UIAElement.cachedAutomationID == "TextBoxPinEntry":
+				obj.name = obj.previous.name
