@@ -168,7 +168,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Record UIA property info about an object if debug logging is enabled.
 	def uiaDebugLogging(self, obj, event=None):
-		if isinstance(obj, UIA):
+		if isinstance(obj, UIA) and globalVars.appArgs.debugLogging:
 			element = obj.UIAElement
 			if not obj.name:
 				obj.name = "unavailable"
