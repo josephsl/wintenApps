@@ -35,7 +35,8 @@ class AppModule(appModuleHandler.AppModule):
 		if isinstance(obj, UIA):
 			# Despite repeated feedback, there's at least one unlabeled toggle button in Settings app.
 			# One particular case is Settings/Update/Developer Mode with USB/LAN discovery toggle button in Redstone (fixed in build 14986).
-			if obj.name == "" and obj.role == controlTypes.ROLE_TOGGLEBUTTON:
+			# Another case is with various combo boxes in Redstone 2 with no labels.
+			if obj.name == "" and obj.role in (controlTypes.ROLE_TOGGLEBUTTON, controlTypes.ROLE_COMBOBOX) and obj.UIAElement.cachedAutomationID:
 				obj.name = obj.previous.name
 			# Recognize groups of controls for contextual output (more prominent in Redstone 2).
 			elif obj.UIAElement.cachedAutomationID.endswith("GroupTitleTextBlock"):
