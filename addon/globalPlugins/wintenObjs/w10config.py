@@ -227,8 +227,50 @@ class W10UpdateDownloader(updateCheck.UpdateDownloader):
 
 	def _downloadSuccess(self):
 		self._stopped()
+		# Emulate add-on update (don't prompt to install).
 		from gui import addonGui
-		wx.CallAfter(addonGui.AddonsDialog.handleRemoteAddonInstall, self.destPath.decode("mbcs"))
+		closeAfter = addonGui.AddonsDialog._instance is None
+		try:
+			try:
+				bundle=addonHandler.AddonBundle(self.destPath.decode("mbcs"))
+			except:
+				log.error("Error opening addon bundle from %s"%addonPath,exc_info=True)
+				# Translators: The message displayed when an error occurs when opening an add-on package for adding. 
+				gui.messageBox(_("Failed to open add-on package file at %s - missing file or invalid file format")%addonPath,
+					# Translators: The title of a dialog presented when an error occurs.
+					_("Error"),
+					wx.OK | wx.ICON_ERROR)
+				return
+			bundleName=bundle.manifest['name']
+			for addon in addonHandler.getAvailableAddons():
+				if not addon.isPendingRemove and bundleName==addon.manifest['name']:
+					addon.requestRemove()
+					break
+			progressDialog = gui.IndeterminateProgressDialog(gui.mainFrame,
+			# Translators: The title of the dialog presented while an Addon is being updated.
+			_("Updating Add-on"),
+			# Translators: The message displayed while an addon is being updated.
+			_("Please wait while the add-on is being updated."))
+			try:
+				gui.ExecAndPump(addonHandler.installAddonBundle,bundle)
+			except:
+				log.error("Error installing  addon bundle from %s"%addonPath,exc_info=True)
+				if not closeAfter: addonGui.AddonsDialog(gui.mainFrame).refreshAddonsList()
+				progressDialog.done()
+				del progressDialog
+				# Translators: The message displayed when an error occurs when installing an add-on package.
+				gui.messageBox(_("Failed to update add-on  from %s")%addonPath,
+					# Translators: The title of a dialog presented when an error occurs.
+					_("Error"),
+					wx.OK | wx.ICON_ERROR)
+				return
+			else:
+				if not closeAfter: addonGui.AddonsDialog(gui.mainFrame).refreshAddonsList(activeIndex=-1)
+				progressDialog.done()
+				del progressDialog
+		finally:
+			if closeAfter:
+				wx.CallLater(1, addonGui.AddonsDialog(gui.mainFrame).Close)
 
 
 # These structs are only complete enough to achieve what we need.
