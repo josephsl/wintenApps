@@ -17,7 +17,7 @@ privire la ceea ce este inclus):
 * Calculator (modern).
 * Cortana
 * Muzică Groove
-* Poștă electronică
+* Mail
 * Hărți
 * Microsoft Edge
 * Setări (setări sistem, Windows+I).
@@ -26,8 +26,7 @@ privire la ceea ce este inclus):
 * Twitter.
 * TeamViewer Touch.
 * Meteo.
-* Centrul de securitate Windows Defender (creatori de actualizeări și mai
-  nou)
+* Centrul de securitate Windows Defender (Creators Update și mai nou)
 * Diverse module de control precum tile-urile din meniul start.
 
 Notă: acest add-on necesită Windows 10 versiunea 1511 (build 10586) sau mai
@@ -88,7 +87,7 @@ add-on-ul cu ultimul build stabil (build 14393).
 
 * Aspectul sugestiilor la căutarea pieselor este acum detectat.
 
-## Poștă electronică
+## Mail
 
 * Când examinați elemente în lista de mesaje, puteți să folosiți comenzile
   de navigare ale tabelului pentru a examina antetele mesajelor.
