@@ -10,8 +10,7 @@ import os
 import threading
 import urllib
 import tempfile
-import hashlib
-import ctypes.wintypes
+import ctypes
 import ssl
 import time
 import re
@@ -20,7 +19,6 @@ import gui
 import wx
 import addonHandler
 import updateCheck
-import winUser
 from logHandler import log
 
 # Add-on config database
@@ -176,10 +174,6 @@ def onConfigDialog(evt):
 
 # Update downloader (credit: NV Access)
 # Customized for WinTenApps add-on.
-
-#: The download block size in bytes.
-DOWNLOAD_BLOCK_SIZE = 8192 # 8 kb
-
 class W10UpdateDownloader(updateCheck.UpdateDownloader):
 	"""Overrides NVDA Core's downloader.)
 	No hash checking for now, and URL's and temp file paths are different.
@@ -234,9 +228,9 @@ class W10UpdateDownloader(updateCheck.UpdateDownloader):
 			try:
 				bundle=addonHandler.AddonBundle(self.destPath.decode("mbcs"))
 			except:
-				log.error("Error opening addon bundle from %s"%addonPath,exc_info=True)
+				log.error("Error opening addon bundle from %s"%self.destPath,exc_info=True)
 				# Translators: The message displayed when an error occurs when opening an add-on package for adding. 
-				gui.messageBox(_("Failed to open add-on package file at %s - missing file or invalid file format")%addonPath,
+				gui.messageBox(_("Failed to open add-on package file at %s - missing file or invalid file format")%self.destPath,
 					# Translators: The title of a dialog presented when an error occurs.
 					_("Error"),
 					wx.OK | wx.ICON_ERROR)
@@ -254,12 +248,12 @@ class W10UpdateDownloader(updateCheck.UpdateDownloader):
 			try:
 				gui.ExecAndPump(addonHandler.installAddonBundle,bundle)
 			except:
-				log.error("Error installing  addon bundle from %s"%addonPath,exc_info=True)
+				log.error("Error installing  addon bundle from %s"%self.destPath,exc_info=True)
 				if not closeAfter: addonGui.AddonsDialog(gui.mainFrame).refreshAddonsList()
 				progressDialog.done()
 				del progressDialog
 				# Translators: The message displayed when an error occurs when installing an add-on package.
-				gui.messageBox(_("Failed to update add-on  from %s")%addonPath,
+				gui.messageBox(_("Failed to update add-on  from %s")%self.destPath,
 					# Translators: The title of a dialog presented when an error occurs.
 					_("Error"),
 					wx.OK | wx.ICON_ERROR)
@@ -269,33 +263,15 @@ class W10UpdateDownloader(updateCheck.UpdateDownloader):
 				progressDialog.done()
 				del progressDialog
 		finally:
+			try:
+				os.remove(self.destPath)
+			except OSError:
+				pass
 			if closeAfter:
 				wx.CallLater(1, addonGui.AddonsDialog(gui.mainFrame).Close)
 
 
-# These structs are only complete enough to achieve what we need.
-class CERT_USAGE_MATCH(ctypes.Structure):
-	_fields_ = (
-		("dwType", ctypes.wintypes.DWORD),
-		# CERT_ENHKEY_USAGE struct
-		("cUsageIdentifier", ctypes.wintypes.DWORD),
-		("rgpszUsageIdentifier", ctypes.c_void_p), # LPSTR *
-	)
-
-class CERT_CHAIN_PARA(ctypes.Structure):
-	_fields_ = (
-		("cbSize", ctypes.wintypes.DWORD),
-		("RequestedUsage", CERT_USAGE_MATCH),
-		("RequestedIssuancePolicy", CERT_USAGE_MATCH),
-		("dwUrlRetrievalTimeout", ctypes.wintypes.DWORD),
-		("fCheckRevocationFreshnessTime", ctypes.wintypes.BOOL),
-		("dwRevocationFreshnessTime", ctypes.wintypes.DWORD),
-		("pftCacheResync", ctypes.c_void_p), # LPFILETIME
-		("pStrongSignPara", ctypes.c_void_p), # PCCERT_STRONG_SIGN_PARA
-		("dwStrongSignFlags", ctypes.wintypes.DWORD),
-	)
-
-# Borrowed from NVDA Core (the only difference is the URL).
+# Borrowed from NVDA Core (the only difference is the URL and where structures are coming from).
 def _updateWindowsRootCertificates():
 	crypt = ctypes.windll.crypt32
 	# Get the server certificate.
@@ -311,8 +287,8 @@ def _updateWindowsRootCertificates():
 	# Ask Windows to build a certificate chain, thus triggering a root certificate update.
 	chainCont = ctypes.c_void_p()
 	crypt.CertGetCertificateChain(None, certCont, None, None,
-		ctypes.byref(CERT_CHAIN_PARA(cbSize=ctypes.sizeof(CERT_CHAIN_PARA),
-			RequestedUsage=CERT_USAGE_MATCH())),
+		ctypes.byref(updateCheck.CERT_CHAIN_PARA(cbSize=ctypes.sizeof(updateCheck.CERT_CHAIN_PARA),
+			RequestedUsage=updateCheck.CERT_USAGE_MATCH())),
 		0, None,
 		ctypes.byref(chainCont))
 	crypt.CertFreeCertificateChain(chainCont)
