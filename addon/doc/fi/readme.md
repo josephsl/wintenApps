@@ -1,4 +1,4 @@
-# Windows 10:n keskeiset sovellukset #
+# Windows 10 App Essentials #
 
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
@@ -54,9 +54,9 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 * Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, aktiivinen alue
   muuttunut (nimenmuutostapahtuman käsittelemänä).
 * Lisätty lisäosan päivitysmahdollisuus (automaattinen tai manuaalinen)
-  NVDA:n Asetukset-valikosta löytyvän uuden Windows 10:n keskeiset
-  sovellukset -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat
-  oletuksena automaattisen päivitystarkistuksen viikoittain tai päivittäin.
+  NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App Essentials
+  -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat oletuksena
+  automaattisen päivitystarkistuksen viikoittain tai päivittäin.
 
 ## Hälytykset ja kello
 
@@ -71,8 +71,8 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 
 ## Kalenteri
 
-* NVDA ei enää ilmoita "muokattava" tai "vain luku" viestisisällössä ja
-  muissa kentissä.
+* NVDA ei sano enää "muokattava" tai "vain luku" viestisisällössä ja muissa
+  kentissä.
 
 ## Cortana
 
@@ -130,8 +130,8 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 * Sovellusten nimet näytetään oikein päivitettävien sovellusten luettelossa
   päivitystarkistuksen jälkeen.
 * Hakutulosehdotusten ilmestyminen ilmoitetaan.
-* NVDA ilmoittaa sisältöä, kuten sovelluksia ja elokuvia, ladattaessa
-  tuotteen nimen ja latauksen edistymisen.
+* NVDA ilmoittaa tuotteen nimen ja latauksen edistymisen sisältöä, kuten
+  sovelluksia ja elokuvia, ladattaessa.
 
 ## TeamViewer Touch
 

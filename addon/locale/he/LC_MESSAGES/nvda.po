@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.09.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-09-16 22:05+1000\n"
-"PO-Revision-Date: 2016-10-01 22:03+0200\n"
+"PO-Revision-Date: 2017-01-30 08:15+0200\n"
 "Last-Translator:  <shmuel_naaman@yahoo.com>\n"
 "Language-Team: Shmuel Naaman <shmuel_naaman@yahoo.com>\n"
 "Language: he\n"
@@ -25,6 +25,9 @@ msgid ""
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
+"הינך משתמש בגרסה ישנה של חלונות(Windows). הרחבה זו דורשת "
+"{minSupportedVersion} או מאוחרת יותר. האם אתה רוצה להתקין הרחבה זאת בכל "
+"מקרה? "
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
@@ -33,7 +36,7 @@ msgstr "dגירסת חלונות ישנה"
 msgid "No more weather data for this item."
 msgstr "אין פירטי מזג אוויר עבור פריט זה"
 
-#. Translaotrs: Presented when someone stops typing in Skype app (same as Skype for Desktop).
+#. Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 msgid "Typing stopped"
 msgstr "ההקלדה הופסקה"
 
@@ -44,6 +47,67 @@ msgstr "לא נמצא היסטורית שיחה"
 #. Translators: Input help mode message for a command in Skype Preview app.
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "מדווח ומעביר את הסמן לפריט האחרון"
+
+#. Translators: Announced in braille when suggestions appear.
+msgid "suggestions"
+msgstr "הצעות"
+
+msgid "Windows 10 App Essentials..."
+msgstr "חבילת תוספים בסיסית לחלונות 10 "
+
+msgid "Windows 10 App Essentials add-on settings"
+msgstr "הגדרות לחבילת התוספים הבסיסית לחלונות 10"
+
+#. Translators: Error text shown when add-on update check fails.
+msgid "Error checking for update."
+msgstr "נכשל בבדיקה לעדכון"
+
+#. Translators: Title of the add-on update check dialog.
+msgid "Windows 10 App Essentials update"
+msgstr "עדכון לחבילת התוספים הבסיסית של חלונות 10"
+
+#. Translators: Text shown when update check fails for some odd reason.
+msgid "Add-on update check failed."
+msgstr "עדכון הרחבה נכשל"
+
+#. Translators: Presented when no add-on update is available.
+msgid "No add-on update available."
+msgstr "אין עדכון זמין להרחבה זו."
+
+#. Translators: Text shown if an add-on update is available.
+#, python-brace-format
+msgid ""
+"Windows 10 App Essentials {newVersion} is available. Would you like to "
+"update?"
+msgstr "חבילת תוספים בסיסית לחלונות 10 {newVersion} זמינה. האם תרצה לעדכן? "
+
+#. Translators: The title of a dialog to configure advanced SPL add-on options such as update checking.
+msgid "Windows 10 App Essentials settings"
+msgstr "הגדרות לחבילת התוספים לחלונות 10"
+
+#. Translators: A checkbox to toggle automatic add-on updates.
+msgid "Automatically check for add-on &updates"
+msgstr "בדוק אוטומטית עבור הרחבות ועדכונים"
+
+#. Translators: The label for a setting in WinTenApps add-on settings to select automatic update interval in days.
+msgid "Update &interval in days"
+msgstr "עדכן אוטומטית מרווח בימים"
+
+#. Translators: The label for a combo box to select update channel.
+msgid "&Add-on update channel:"
+msgstr "הרחבת עדכון ערוץ:"
+
+#. Translators: The label of a button to check for add-on updates.
+msgid "Check for add-on &update"
+msgstr "בדוק עבור הרחבות ועדכונים"
+
+#. Translators: The title of the dialog presented while checking for add-on updates.
+msgid "Add-on update check"
+msgstr "חיפוש אחר עדכונים"
+
+#. Translators: The message displayed while checking for newer version of Studio add-on.
+msgid "Checking for new version of Windows 10 App Essentials add-on..."
+msgstr "מחפש עבור גרסה חדשה לחבילת התוספים הבסיסית לחלונות 10(Windows)."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

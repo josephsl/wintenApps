@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2016-09-30 15:36+0200\n"
+"PO-Revision-Date: 2017-02-10 19:11+0100\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.11\n"
+"X-Generator: Poedit 1.8.7\n"
+"Language-Team: \n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on)..
 #, python-brace-format
@@ -35,7 +35,7 @@ msgstr "Стара версия на Windows"
 msgid "No more weather data for this item."
 msgstr "Няма повече синоптични данни за този елемент."
 
-#. Translaotrs: Presented when someone stops typing in Skype app (same as Skype for Desktop).
+#. Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 msgid "Typing stopped"
 msgstr "Писането спря"
 
@@ -46,6 +46,71 @@ msgstr "Съдържанието на дискусията не бе намер�
 #. Translators: Input help mode message for a command in Skype Preview app.
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "Докладва и премества курсора за преглед до скорошно съобщение"
+
+#. Translators: Announced in braille when suggestions appear.
+msgid "suggestions"
+msgstr "предложения"
+
+msgid "Windows 10 App Essentials..."
+msgstr "Базов пакет за приложения в Windows 10..."
+
+msgid "Windows 10 App Essentials add-on settings"
+msgstr "Настройки на добавката Базов пакет за приложения в Windows 10"
+
+#. Translators: Error text shown when add-on update check fails.
+msgid "Error checking for update."
+msgstr "Грешка при проверката за обновления."
+
+#. Translators: Title of the add-on update check dialog.
+msgid "Windows 10 App Essentials update"
+msgstr "Обновяване на Базов пакет за приложения в Windows 10"
+
+#. Translators: Text shown when update check fails for some odd reason.
+msgid "Add-on update check failed."
+msgstr "Неуспешна проверка за обновления за добавката."
+
+#. Translators: Presented when no add-on update is available.
+msgid "No add-on update available."
+msgstr "Няма налични обновления за добавката."
+
+#. Translators: Text shown if an add-on update is available.
+#, python-brace-format
+msgid ""
+"Windows 10 App Essentials {newVersion} is available. Would you like to "
+"update?"
+msgstr ""
+"Налична е версия {newVersion} на Базов пакет за приложения в Windows 10. "
+"Желаете ли да обновите?"
+
+#. Translators: The title of a dialog to configure advanced SPL add-on options such as update checking.
+msgid "Windows 10 App Essentials settings"
+msgstr "Настройки на Базов пакет за приложения в Windows 10"
+
+#. Translators: A checkbox to toggle automatic add-on updates.
+msgid "Automatically check for add-on &updates"
+msgstr "Автоматично проверявай за &обновления на добавката"
+
+#. Translators: The label for a setting in WinTenApps add-on settings to select automatic update interval in days.
+msgid "Update &interval in days"
+msgstr "&Периодичност на проверката за обновления (в дни)"
+
+#. Translators: The label for a combo box to select update channel.
+msgid "&Add-on update channel:"
+msgstr "&Канал за обновление на добавката:"
+
+#. Translators: The label of a button to check for add-on updates.
+msgid "Check for add-on &update"
+msgstr "Проверка за &обновления на добавката"
+
+#. Translators: The title of the dialog presented while checking for add-on updates.
+msgid "Add-on update check"
+msgstr "Проверка за обновления на добавката"
+
+#. Translators: The message displayed while checking for newer version of Studio add-on.
+msgid "Checking for new version of Windows 10 App Essentials add-on..."
+msgstr ""
+"Проверка за нова версия на добавката Базов пакет за приложения в Windows "
+"10..."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

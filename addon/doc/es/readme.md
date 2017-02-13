@@ -30,9 +30,10 @@ qué se incluye):
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
-and NVDA 2016.4 or later. For best results, use the add-on with latest
-stable build (build 14393).
+Nota: este complemento requiere de Windows 10 Versión 1511 (compilación
+10286) o posterior y NVDA 2016.3 o posterior. Para unos mejores resultados,
+utiliza el complemento con la compilación estable más reciente (compilación
+14393).
 
 ## General
 
@@ -44,20 +45,21 @@ stable build (build 14393).
   incluye el diálogo Insider Preview (aplicación de configuración) y el
   diálogo de nuevo estilo del UAC en la compilación 14328 y posteriores para
   NvDA 2016.2.1 o anteriores.
-* Appearance/close of suggestions for certain search fields (notably
-  Settings and Store apps) is announced via sounds and braille. This also
-  includes Start menu search box.
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation dialog.
+* La apariencia o cierre de sugerencias para ciertos campos de búsqueda (en
+  particular la app Opciones) se anuncian a través de sonidos y/o de
+  braille. Esto también incluye el cuadro de búsqueda del menú Inicio.
+* NVDA puede anunciar cuenta de sugerencias cuando se realiza una búsqueda
+  en la mayoría de casos. Esta opción se controla por "Anunciar información
+  de posición del objeto" en el diálogo Presentación de Objetos.
 * En ciertos menús de contexto (tales como en Edge), la información de
   posición (ej.: 1 de 2) ya no se anuncia.
 * Se reconocen los siguientes eventos UIA: Controller para, live region
   cambiada (manejada por  evento de cambio de nombre).
-* Added ability to check for add-on updates (automatic or manual) via the
-  new Windows 10 App Essentials dialog found in NvDA Preferences menu. By
-  default, stable and development versions will check for new updates
-  automatically on a weekly or daily basis, respectively.
+* Engadida a capacidade de procurar actualizacións do complemento
+  (automática ou manual) a través do novo diálogo Windows 10 App Essentials
+  que se atopa no menú Preferencias do NVDA. Por defecto, procuraranse as
+  actualizacións para as versións estable e de desenvolvemento
+  automáticamente semanal ou diáriamente, respectivamente.
 
 ## Alarmas y reloj
 
@@ -69,7 +71,7 @@ stable build (build 14393).
 
 * Cuando se pulse INTRO, NVDA anuncia los resultados del cálculo.
 
-## calendar
+## calendario
 
 * NVDA ya no anuncia "editar" o "sólo lectura" en el cuerpo del mensaje y
   otros campos.
@@ -89,8 +91,8 @@ stable build (build 14393).
 
 ## Correo
 
-* When reviewing items in messages list, you can now use table navigation
-  commands to review message headers.
+* Cando se revisan elementos na listaxe de mensaxes, agora podes usar ordes
+  de navegación de táboas para revisar as cabeceiras de mensaxe.
 
 ## Mapas
 
@@ -125,8 +127,8 @@ stable build (build 14393).
   cuenta que deben activarse esas pestañas para moverse a la parte decidida.
 * Se anuncian las etiquetas de los cuadros combinados para la aplicación
   Skype preview liberada en Noviembre de 2016.
-* NVDA will no longer announce "Skype Message" when reviewing messages for
-  majority of cases.
+* NVDA ya no anuncia "Mensaje Skype" cuando se revisen mensajes para la
+  mayoría de los casos.
 
 ## Tienda
 
@@ -134,8 +136,8 @@ stable build (build 14393).
   aplicaciones en la lista de aplicaciones etiquetadas se actualizan
   correctamente.
 * Ahora se anuncia la aparición de sugerencias de búsqueda.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* Cuando se cargue contenido tal como aplicaciones y películas, NVDA
+  anunciará el nombre del producto y el progreso de la descarga.
 
 ## TeamViewer Touch
 
