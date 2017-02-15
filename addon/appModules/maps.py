@@ -10,6 +10,7 @@ import controlTypes
 import config
 from NVDAObjects.UIA import UIA
 import tones
+import ui
 
 # Map locations
 # A static text denoting where one is located on the map.
@@ -41,3 +42,10 @@ class AppModule(appModuleHandler.AppModule):
 					clsList.insert(0, MapLocation)
 			except AttributeError:
 				pass
+
+	def event_nameChange(self, obj, nextHandler):
+		if isinstance(obj, UIA):
+			# #18: Announce street side changes as one uses the keyboard.
+			if obj.UIAElement.cachedAutomationID == "StreetsideAddressTextBlock":
+				ui.message(obj.name)
+		nextHandler()
