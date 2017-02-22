@@ -145,7 +145,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if isinstance(obj, UIA):
 			# NVDA Core ticket 5231: Announce values in time pickers.
 			# Handle both Threshold and Redstone looping selector items.
-			if obj.role==controlTypes.ROLE_LISTITEM and "LoopingSelectorItem" in obj.UIAElement.cachedClassName:
+			# #19: since February 2017 update, looping selector exposes correct UIA routines, which results in double announcement.
+			if obj.role==controlTypes.ROLE_LISTITEM and obj.parent.parent.UIAElement.cachedAutomationID != "AlarmTimePicker" and "LoopingSelectorItem" in obj.UIAElement.cachedClassName:
 				clsList.append(LoopingSelectorItem)
 			# Also announce values when focus moves to it.
 			elif obj.role==controlTypes.ROLE_LIST and "LoopingSelector" in obj.UIAElement.cachedClassName:
