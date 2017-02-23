@@ -36,9 +36,11 @@ wintenDialogs=("Shell_Dialog", "Popup", "Shell_Flyout")
 class LoopingSelectorItem(UIA):
 
 	def event_UIA_elementSelected(self):
-		speech.cancelSpeech()
-		api.setNavigatorObject(self)
-		self.reportFocus()
+		# #19: since February 2017, some looping selectors such as Alarms and Clock exposes correct UIA routines, which results in double announcement.
+		# Specifically, looping selector items expose focusable state.
+		if 0x1000000 not in self.states:
+			speech.cancelSpeech()
+			self.reportFocus()
 
 # Looping selector lists.
 # Announce selected value if told to do so.
@@ -145,8 +147,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if isinstance(obj, UIA):
 			# NVDA Core ticket 5231: Announce values in time pickers.
 			# Handle both Threshold and Redstone looping selector items.
-			# #19: since February 2017 update, looping selector exposes correct UIA routines, which results in double announcement.
-			if obj.role==controlTypes.ROLE_LISTITEM and obj.parent.parent.UIAElement.cachedAutomationID != "AlarmTimePicker" and "LoopingSelectorItem" in obj.UIAElement.cachedClassName:
+			if obj.role==controlTypes.ROLE_LISTITEM and "LoopingSelectorItem" in obj.UIAElement.cachedClassName:
 				clsList.append(LoopingSelectorItem)
 			# Also announce values when focus moves to it.
 			elif obj.role==controlTypes.ROLE_LIST and "LoopingSelector" in obj.UIAElement.cachedClassName:
