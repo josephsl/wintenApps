@@ -9,7 +9,6 @@ This add-on is a collection of app modules for various Windows 10 apps, as well 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
 * Alarms and Clock.
-* Bank of America
 * Calendar
 * Calculator (modern).
 * Cortana
@@ -20,13 +19,11 @@ The following app modules or support modules for some apps are included (see eac
 * Settings (system settings, Windows+I).
 * Skype Preview
 * Store
-* Twitter.
-* TeamViewer Touch.
 * Weather.
 * Windows Defender Security Center (Creators Update and later)
 * Miscellaneous modules for controls such as Start Menu tiles.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NVDA 2016.4 or later. For best results, use the add-on with latest stable build (build 14393).
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NVDA 2016.4 or later. For best results, use the add-on with latest stable build (build 14393) and latest stable version of NVDA.
 
 ## General
 
@@ -38,6 +35,7 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, live region changed (handled by name change event).
 * Added ability to check for add-on updates (automatic or manual) via the new Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
+* Ability to track events coming from Universal Windows Platform (UWP) apps if NVDA is run with debug logging enabled (2017.1 or later).
 
 ## Alarms and clock
 
@@ -68,11 +66,11 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 ## Maps
 
 * NVDA plays location beep for map locations.
+* When using street side view and if "use keyboard" option is enabled, NVDA will announce street addresses as you use arrow keys to navigate the map.
 
 ## Microsoft Edge
 
 * Notifications such as file downloads are now announced.
-* Edge support is a work in progress.
 
 ## Settings
 
@@ -80,6 +78,7 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 * Progress bar values and other information are no longer announced twice.
 * If it takes a while to search for settings, NVDA will announce "searching" and search result status such as if a setting cannot be found.
 * Settings groups are recognized when using object navigation to navigate between controls.
+* For some combo boxes, NVDA will no longer fail to recognize labels and/or announce value changes.
 
 ## Skype Preview
 
@@ -95,21 +94,16 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 * Appearance of search suggestions are now announced.
 * When downloading content such as apps and movies, NVDA will announce product name and download progress.
 
-## TeamViewer Touch
-
-* Labels for radio buttons are announced.
-* Lables for buttons are announced.
-
-## Bank of America/Twitter/Windows Defender Security Center
-
-* Button labels are now announced.
-* Windows Defender Security Center (universal app) is included in build 14986 and later and support for this app from this add-on is subject to change.
-
 ## Weather
 
 * Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by Derek Riemer).
 * when reading a forecast, use the left and right arrows to move between items. Use the up and down arrows to read the individual items. For example, pressing the right arrow might report "Monday: 79 degrees, partly cloudy, ..." pressing the down arrow will say "Monday" Then pressing it again will read the next item (Like the temperature). This currently works for daily and hourly forecasts.
 
-[1]: http://addons.nvda-project.org/files/get.php?file=w10
+## Windows Defender Security Center
 
-[2]: http://addons.nvda-project.org/files/get.php?file=w10-dev
+* Button labels are now announced.
+* Windows Defender Security Center (universal app) is included in build 14986 and later and support for this app from this add-on is subject to change.
+
+[1]: https://addons.nvda-project.org/files/get.php?file=w10
+
+[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
