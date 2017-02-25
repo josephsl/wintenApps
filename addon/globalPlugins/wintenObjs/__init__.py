@@ -118,6 +118,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
+		# #20: don't even think about proceeding in secure screens (especially add-on updates).
+		if globalVars.appArgs.secure: return
 		# Listen for additional events (to be removed once NVDA Core supports them.
 		if UIA_ControllerForPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
 			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIA_ControllerForPropertyId] = "UIA_controllerFor"
