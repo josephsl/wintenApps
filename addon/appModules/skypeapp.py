@@ -10,6 +10,8 @@ import ui
 from NVDAObjects.UIA import UIA
 import api
 import controlTypes
+import addonHandler
+addonHandler.initTranslation()
 
 class AppModule(appModuleHandler.AppModule):
 

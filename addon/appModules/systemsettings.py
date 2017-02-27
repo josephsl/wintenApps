@@ -41,11 +41,6 @@ class AppModule(appModuleHandler.AppModule):
 			# Recognize groups of controls for contextual output (more prominent in Redstone 2).
 			elif obj.UIAElement.cachedAutomationID.endswith("GroupTitleTextBlock"):
 				obj.role = controlTypes.ROLE_GROUPING
-			# Build 15019: Game bar shortcut fields are not labeled.)
-			# Description and default shortcuts are next to each other.
-			elif obj.name == "" and obj.UIAElement.cachedAutomationID == "ShortcutTextBox":
-				# Add a colon just for output.
-				obj.name = ": ".join([obj.previous.previous.name, obj.previous.name])
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):

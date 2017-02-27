@@ -8,6 +8,8 @@
 import sys
 import gui
 import wx
+import addonHandler
+addonHandler.initTranslation()
 
 def onInstall():
 	requiredVer = "Windows 10 Version 1511"

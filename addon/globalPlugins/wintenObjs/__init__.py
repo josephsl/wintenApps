@@ -21,6 +21,8 @@ import queueHandler
 import globalVars
 from logHandler import log
 import w10config
+import addonHandler
+addonHandler.initTranslation()
 
 # Extra UIA constants
 UIA_LiveRegionChangedEventId = 20024 # Coerce this to name change event for now.
