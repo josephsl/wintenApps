@@ -24,7 +24,7 @@ from logHandler import log
 # Add-on config database
 confspec = {
 	"autoUpdateCheck": "boolean(default=true)",
-	"updateChannel": "string(default=dev)",
+	"updateChannel": "string(default=stable)",
 	"updateCheckTime": "integer(default=0)",
 	"updateCheckTimeInterval": "integer(min=0, max=30, default=7)",
 }
