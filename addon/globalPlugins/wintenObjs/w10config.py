@@ -27,7 +27,7 @@ confspec = {
 	"autoUpdateCheck": "boolean(default=true)",
 	"updateChannel": "string(default=stable)",
 	"updateCheckTime": "integer(default=0)",
-	"updateCheckTimeInterval": "integer(min=0, max=30, default=1)",
+	"updateCheckTimeInterval": "integer(min=0, max=30, default=7)",
 }
 config.conf.spec["wintenApps"] = confspec
 
