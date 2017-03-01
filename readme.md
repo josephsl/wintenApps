@@ -23,7 +23,7 @@ The following app modules or support modules for some apps are included (see eac
 * Windows Defender Security Center (Creators Update and later)
 * Miscellaneous modules for controls such as Start Menu tiles.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NVDA 2016.4 or later. For best results, use the add-on with latest stable build (build 14393) and latest stable version of NVDA.
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NVDA 2016.4 or later. For best results, use the add-on with latest stable build (build 14393) and latest stable version of NVDA. Also, after changing update settings for the add-on, be sure to save NVDA settings.
 
 ## General
 
