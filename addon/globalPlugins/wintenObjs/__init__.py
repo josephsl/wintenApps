@@ -80,7 +80,9 @@ class SearchField(UIA):
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
 			if self.UIAElement.cachedAutomationID == "TextBox" or self.UIAElement.cachedAutomationID == "SearchTextBox" and self.appModule.appName != "searchui":
 				# Item count must be the last one spoken.
-				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, "%s suggestions"%self.controllerFor[0].childCount)
+				suggestionsCount = self.controllerFor[0].childCount
+				suggestionsMessage = "1 suggestion" if suggestionsCount == 1 else "%s suggestions"%suggestionsCount
+				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
 
 	def event_suggestionsClosed(self):
 		# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
