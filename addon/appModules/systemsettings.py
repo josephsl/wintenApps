@@ -36,7 +36,9 @@ class AppModule(appModuleHandler.AppModule):
 			# Despite repeated feedback, there's at least one unlabeled toggle button in Settings app.
 			# One particular case is Settings/Update/Developer Mode with USB/LAN discovery toggle button in Redstone (fixed in build 14986).
 			# Another case is with various combo boxes in Redstone 2 with no labels.
-			if obj.name == "" and obj.role in (controlTypes.ROLE_TOGGLEBUTTON, controlTypes.ROLE_COMBOBOX) and obj.UIAElement.cachedAutomationID:
+			# Yet another case is Devices/Bluetooth lists.
+			if obj.name == "" and (obj.role in (controlTypes.ROLE_TOGGLEBUTTON, controlTypes.ROLE_COMBOBOX) and obj.UIAElement.cachedAutomationID
+				or obj.role == controlTypes.ROLE_LIST and obj.UIAElement.cachedAutomationID in ("SystemSettings_Devices_AudioDeviceList_ListView", "SystemSettings_Devices_OtherDeviceList_ListView")):
 				obj.name = obj.previous.name
 			# Recognize groups of controls for contextual output (more prominent in Redstone 2).
 			elif obj.UIAElement.cachedAutomationID.endswith("GroupTitleTextBlock"):
