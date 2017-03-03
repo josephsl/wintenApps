@@ -13,7 +13,6 @@ apps sont inclus (voir chaque section app pour plus de détails sur ce qui
 est inclus) :
 
 * Alarmes et Horloge.
-* Bank of America
 * Calendrier
 * Calculatrice (modern).
 * Cortana
@@ -24,8 +23,6 @@ est inclus) :
 * Paramètres (paramètres système, Windows+I).
 * Skype Preview
 * Store
-* Twitter.
-* TeamViewer Touch.
 * Météo.
 * Windows Defender Security Center (Creators Update et ultérieure)
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
@@ -33,7 +30,7 @@ est inclus) :
 Note: ce module complémentaire nécessite Windows 10 Version 1511 (build
 10586) ou version ultérieure et NVDA 2016.4 ou version ultérieure. Pour de
 meilleurs résultats, utilisez le module complémentaire avec la dernière
-build stable (build 14393).
+build stable (build 14393) et la dernière version stable de NVDA.
 
 ## Générale
 
@@ -62,6 +59,9 @@ build stable (build 14393).
   de NVDA. Par défaut, les versions stables et de développement vérifieront
   automatiquement les nouvelles mises à jour sur une base hebdomadaire ou
   quotidienne, respectivement.
+* Possibilité de suivre les événements provenant des apps Universal Windows
+  Platform (UWP) si NVDA est exécuté avec la journalisation de débogage
+  activée (2017.1 ou ultérieure).
 
 ## Alarmes et horloge
 
@@ -103,12 +103,14 @@ build stable (build 14393).
 ## Cartes
 
 * NVDA joue un bip du lieux pour les lieux sur la carte.
+* Lorsque vous utilisez la vue latérale de la rue et que l'option "utiliser
+  le clavier" est activée, NVDA annoncera les adresses des rues lorsque vous
+  utilisez les touches fléchées pour naviguer dans la carte.
 
 ## Microsoft Edge
 
 * Notifications telles que les téléchargements de fichiers sont maintenant
   annoncées.
-* Le support Edge est un travail en cours.
 
 ## Paramètres
 
@@ -121,6 +123,8 @@ build stable (build 14393).
   paramètre est introuvable.
 * Les groupes de paramètres sont reconnus lorsque vous utilisez la
   navigation par objet pour naviguer entre les commandes.
+* Pour certaines zones de liste déroulantes, NVDA ne manquera plus de
+  reconnaître les étiquettes et/ou d'annoncer les changements de valeur.
 
 ## Skype Preview
 
@@ -147,18 +151,6 @@ build stable (build 14393).
 * Lors du téléchargement de contenus tels que des applications et des films,
   NVDA annoncera le nom du produit et la progression du téléchargement.
 
-## TeamViewer Touch
-
-* Étiquettes pour les boutons radio sont annoncés.
-* Étiquettes pour les boutons sont annoncés.
-
-## Bank of America/Twitter/Windows Defender Security Center
-
-* Étiquettes des boutons sont maintenant annoncées.
-* Windows Defender Security Center (universal app) est inclus dans la build
-  14986 ou version ultérieure et le support pour cette app à partir de ce
-  module complémentaire est sujette à changement.
-
 ## Météo
 
 * Les onglets tels que "prévisions" et "cartes" sont reconnus comme des
@@ -172,8 +164,15 @@ build stable (build 14393).
   travaille actuellement pour les prévisions quotidiennes et toutes les
   heures.
 
+## Windows Defender Security Center
+
+* Étiquettes des boutons sont maintenant annoncées.
+* Windows Defender Security Center (universal app) est inclus dans la build
+  14986 ou version ultérieure et le support pour cette app à partir de ce
+  module complémentaire est sujette à changement.
+
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=w10
 
-[2]: http://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev

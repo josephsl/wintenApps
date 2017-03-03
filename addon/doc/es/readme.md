@@ -12,7 +12,6 @@ aplicaciones (consulta cada sección para la aplicación para detalles sobre
 qué se incluye):
 
 * Reloj y alarmas.
-* Bank of America
 * Calendario
 * Calculadora (modern).
 * Cortana
@@ -23,17 +22,15 @@ qué se incluye):
 * Opciones (opciones de sistema, Windows+I).
 * Previsualización de Skype
 * Tienda
-* Twitter.
-* TeamViewer Touch.
 * El Tiempo
 * Windows Defender Security Center (Creators Update y posterior)
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
 Nota: este complemento requiere de Windows 10 Versión 1511 (compilación
-10286) o posterior y NVDA 2016.3 o posterior. Para unos mejores resultados,
+10286) o posterior y NVDA 2016.4 o posterior. Para unos mejores resultados,
 utiliza el complemento con la compilación estable más reciente (compilación
-14393).
+14393) y con la versión estable más reciente de NVDA.
 
 ## General
 
@@ -60,6 +57,9 @@ utiliza el complemento con la compilación estable más reciente (compilación
   que se atopa no menú Preferencias do NVDA. Por defecto, procuraranse as
   actualizacións para as versións estable e de desenvolvemento
   automáticamente semanal ou diáriamente, respectivamente.
+* Capacidad para seguir eventos que lleguen desde aplicaciones Universal
+  Windows Platform (UWP) si NVDA se está ejecutando con el registro de
+  depuración habilitado (2017.1 o posterior).
 
 ## Alarmas y reloj
 
@@ -97,11 +97,13 @@ utiliza el complemento con la compilación estable más reciente (compilación
 ## Mapas
 
 * NVDA reproduce pitidos de localización para lugares en el mapa.
+* Cuando se utiliza la vista lateral de la calle y si la opción "usar
+  teclado" está habilitada, NVDA anunciará las direcciones de las calles
+  según utilices las teclas de flechas para navegar por el mapa.
 
 ## Microsoft Edge
 
 * Ahora se anuncian notificaciones tales como descargas de ficheros.
-* El soporte para Edge es un trabajo en progreso.
 
 ## Opciones
 
@@ -114,6 +116,8 @@ utiliza el complemento con la compilación estable más reciente (compilación
   ocpión no se encontrara.
 * Los grupos de opciones se reconocen cuando se utilice la navegación de
   objetos para navegar entre controles.
+* Para algunos cuadros combinados, NVDA ya no fallará al reconocer etiquetas
+  y/o al anunciar cambios de valores.
 
 ## Previsualización de Skype
 
@@ -139,18 +143,6 @@ utiliza el complemento con la compilación estable más reciente (compilación
 * Cuando se cargue contenido tal como aplicaciones y películas, NVDA
   anunciará el nombre del producto y el progreso de la descarga.
 
-## TeamViewer Touch
-
-* Se anuncian las etiquetas para botones de opción.
-* Se anuncian las etiquetas para botones de opción.
-
-## Bank of America/Twitter/Windows Defender Security Center
-
-* Ahora se anuncian las etiquetas de los botones.
-* La app Windows Defender Security Center universal se incluye en la build
-  14986 y posterior y el soporte para esta app de este complemento está
-  sujeta a cambios.
-
 ## El Tiempo
 
 * Pestañas tales como "pronósticos" y "mapas" se reconocen como propias
@@ -163,8 +155,15 @@ utiliza el complemento con la compilación estable más reciente (compilación
   temperatura). Actualmente esto funciona para los pronósticos diarios y
   horarios.
 
+## Windows Defender Security Center
+
+* Ahora se anuncian las etiquetas de los botones.
+* La app Windows Defender Security Center universal se incluye en la build
+  14986 y posterior y el soporte para esta app de este complemento está
+  sujeta a cambios.
+
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=w10
 
-[2]: http://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev

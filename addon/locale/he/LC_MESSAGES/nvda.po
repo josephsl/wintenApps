@@ -66,10 +66,6 @@ msgstr "נכשל בבדיקה לעדכון"
 msgid "Windows 10 App Essentials update"
 msgstr "עדכון לחבילת התוספים הבסיסית של חלונות 10"
 
-#. Translators: Text shown when update check fails for some odd reason.
-msgid "Add-on update check failed."
-msgstr "עדכון הרחבה נכשל"
-
 #. Translators: Presented when no add-on update is available.
 msgid "No add-on update available."
 msgstr "אין עדכון זמין להרחבה זו."
@@ -81,7 +77,7 @@ msgid ""
 "update?"
 msgstr "חבילת תוספים בסיסית לחלונות 10 {newVersion} זמינה. האם תרצה לעדכן? "
 
-#. Translators: The title of a dialog to configure advanced SPL add-on options such as update checking.
+#. Translators: The title of a dialog to configure advanced WinTenApps add-on options such as update checking.
 msgid "Windows 10 App Essentials settings"
 msgstr "הגדרות לחבילת התוספים לחלונות 10"
 
@@ -105,9 +101,46 @@ msgstr "בדוק עבור הרחבות ועדכונים"
 msgid "Add-on update check"
 msgstr "חיפוש אחר עדכונים"
 
-#. Translators: The message displayed while checking for newer version of Studio add-on.
+#. Translators: The message displayed while checking for newer version of WinTenApps add-on.
 msgid "Checking for new version of Windows 10 App Essentials add-on..."
 msgstr "מחפש עבור גרסה חדשה לחבילת התוספים הבסיסית לחלונות 10(Windows)."
+
+#. Translators: The title of the dialog displayed while downloading add-on update.
+msgid "Downloading Add-on Update"
+msgstr ""
+
+#. Translators: The progress message indicating that a connection is being established.
+msgid "Connecting"
+msgstr ""
+
+#. Translators: A message indicating that an error occurred while downloading an update to NVDA.
+#, fuzzy
+msgid "Error downloading add-on update."
+msgstr "נכשל בבדיקה לעדכון"
+
+#. Translators: The title of a dialog presented when an error occurs.
+msgid "Error"
+msgstr ""
+
+#. Translators: The message displayed when an error occurs when opening an add-on package for adding.
+#, python-format
+msgid ""
+"Failed to open add-on package file at %s - missing file or invalid file "
+"format"
+msgstr ""
+
+#. Translators: The title of the dialog presented while an Addon is being updated.
+msgid "Updating Add-on"
+msgstr ""
+
+#. Translators: The message displayed while an addon is being updated.
+msgid "Please wait while the add-on is being updated."
+msgstr ""
+
+#. Translators: The message displayed when an error occurs when installing an add-on package.
+#, python-format
+msgid "Failed to update add-on  from %s"
+msgstr ""
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -118,3 +151,6 @@ msgstr "חבילת תוספים בסיסית לחלונות 10Windows 10 App Ess
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "מקבץ תוספים עבור שימוש נוח יותר בחלונות 10"
+
+#~ msgid "Add-on update check failed."
+#~ msgstr "עדכון הרחבה נכשל"

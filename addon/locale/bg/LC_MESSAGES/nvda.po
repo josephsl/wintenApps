@@ -10,12 +10,12 @@ msgstr ""
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
 "PO-Revision-Date: 2017-02-10 19:11+0100\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
+"Language-Team: \n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.7\n"
-"Language-Team: \n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on)..
 #, python-brace-format
@@ -65,10 +65,6 @@ msgstr "Грешка при проверката за обновления."
 msgid "Windows 10 App Essentials update"
 msgstr "Обновяване на Базов пакет за приложения в Windows 10"
 
-#. Translators: Text shown when update check fails for some odd reason.
-msgid "Add-on update check failed."
-msgstr "Неуспешна проверка за обновления за добавката."
-
 #. Translators: Presented when no add-on update is available.
 msgid "No add-on update available."
 msgstr "Няма налични обновления за добавката."
@@ -82,7 +78,7 @@ msgstr ""
 "Налична е версия {newVersion} на Базов пакет за приложения в Windows 10. "
 "Желаете ли да обновите?"
 
-#. Translators: The title of a dialog to configure advanced SPL add-on options such as update checking.
+#. Translators: The title of a dialog to configure advanced WinTenApps add-on options such as update checking.
 msgid "Windows 10 App Essentials settings"
 msgstr "Настройки на Базов пакет за приложения в Windows 10"
 
@@ -106,11 +102,48 @@ msgstr "Проверка за &обновления на добавката"
 msgid "Add-on update check"
 msgstr "Проверка за обновления на добавката"
 
-#. Translators: The message displayed while checking for newer version of Studio add-on.
+#. Translators: The message displayed while checking for newer version of WinTenApps add-on.
 msgid "Checking for new version of Windows 10 App Essentials add-on..."
 msgstr ""
 "Проверка за нова версия на добавката Базов пакет за приложения в Windows "
 "10..."
+
+#. Translators: The title of the dialog displayed while downloading add-on update.
+msgid "Downloading Add-on Update"
+msgstr ""
+
+#. Translators: The progress message indicating that a connection is being established.
+msgid "Connecting"
+msgstr ""
+
+#. Translators: A message indicating that an error occurred while downloading an update to NVDA.
+#, fuzzy
+msgid "Error downloading add-on update."
+msgstr "Грешка при проверката за обновления."
+
+#. Translators: The title of a dialog presented when an error occurs.
+msgid "Error"
+msgstr ""
+
+#. Translators: The message displayed when an error occurs when opening an add-on package for adding.
+#, python-format
+msgid ""
+"Failed to open add-on package file at %s - missing file or invalid file "
+"format"
+msgstr ""
+
+#. Translators: The title of the dialog presented while an Addon is being updated.
+msgid "Updating Add-on"
+msgstr ""
+
+#. Translators: The message displayed while an addon is being updated.
+msgid "Please wait while the add-on is being updated."
+msgstr ""
+
+#. Translators: The message displayed when an error occurs when installing an add-on package.
+#, python-format
+msgid "Failed to update add-on  from %s"
+msgstr ""
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -121,3 +154,6 @@ msgstr "Базов пакет за приложения в Windows 10"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Колекция от спомагателни модули за разни приложения в Windows 10."
+
+#~ msgid "Add-on update check failed."
+#~ msgstr "Неуспешна проверка за обновления за добавката."
