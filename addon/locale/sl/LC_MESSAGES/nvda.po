@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2017-02-02 18:04+0100\n"
+"PO-Revision-Date: 2017-03-08 02:40+0100\n"
 "Last-Translator: Jožef Gregorc <jozko.gregorc@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sl\n"
@@ -18,7 +18,6 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on)..
-#, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
@@ -70,7 +69,6 @@ msgid "No add-on update available."
 msgstr "Nobena posodobitev dodatka ni na voljo."
 
 #. Translators: Text shown if an add-on update is available.
-#, python-brace-format
 msgid ""
 "Windows 10 App Essentials {newVersion} is available. Would you like to "
 "update?"
@@ -109,20 +107,19 @@ msgstr ""
 
 #. Translators: The title of the dialog displayed while downloading add-on update.
 msgid "Downloading Add-on Update"
-msgstr ""
+msgstr "Prenašanje Posodobitve Dodatka"
 
 #. Translators: The progress message indicating that a connection is being established.
 msgid "Connecting"
-msgstr ""
+msgstr "Povezovanje"
 
 #. Translators: A message indicating that an error occurred while downloading an update to NVDA.
-#, fuzzy
 msgid "Error downloading add-on update."
-msgstr "Napaka pri preverjanju za posodobitev."
+msgstr "Napaka med prenosom posodobitve dodatka."
 
 #. Translators: The title of a dialog presented when an error occurs.
 msgid "Error"
-msgstr ""
+msgstr "Napaka"
 
 #. Translators: The message displayed when an error occurs when opening an add-on package for adding.
 #, python-format
@@ -130,19 +127,21 @@ msgid ""
 "Failed to open add-on package file at %s - missing file or invalid file "
 "format"
 msgstr ""
+"Odpiranje paketne datoteke dodatka iz %s spodletelo - manjka datoteka ali je "
+"oblika datoteke neveljavna"
 
 #. Translators: The title of the dialog presented while an Addon is being updated.
 msgid "Updating Add-on"
-msgstr ""
+msgstr "Posodabljanje Dodatka"
 
 #. Translators: The message displayed while an addon is being updated.
 msgid "Please wait while the add-on is being updated."
-msgstr ""
+msgstr "Prosimo, počakajte, medtem, ko se dodatek posodablja."
 
 #. Translators: The message displayed when an error occurs when installing an add-on package.
 #, python-format
 msgid "Failed to update add-on  from %s"
-msgstr ""
+msgstr "Posodobitev dodatka iz %s spodletela"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

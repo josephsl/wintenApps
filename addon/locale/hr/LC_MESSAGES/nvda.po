@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2017-01-27 19:33+0100\n"
-"Last-Translator: Zvonimir Stanečić  <zvonimirek222@yandex.com>\n"
+"PO-Revision-Date: 2017-03-03 13:11+0100\n"
+"Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: \n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
@@ -107,20 +107,19 @@ msgstr "Provjera nadogradnje za Windows 10 App Essentials dodatak..."
 
 #. Translators: The title of the dialog displayed while downloading add-on update.
 msgid "Downloading Add-on Update"
-msgstr ""
+msgstr "Preuzimam nadogradnju dodatka"
 
 #. Translators: The progress message indicating that a connection is being established.
 msgid "Connecting"
-msgstr ""
+msgstr "Spajanje"
 
 #. Translators: A message indicating that an error occurred while downloading an update to NVDA.
-#, fuzzy
 msgid "Error downloading add-on update."
-msgstr "Greška prilikom provjere nadogradnje."
+msgstr "Greška pri preuzimanju nadogradnje dodatka."
 
 #. Translators: The title of a dialog presented when an error occurs.
 msgid "Error"
-msgstr ""
+msgstr "Greška"
 
 #. Translators: The message displayed when an error occurs when opening an add-on package for adding.
 #, python-format
@@ -128,19 +127,21 @@ msgid ""
 "Failed to open add-on package file at %s - missing file or invalid file "
 "format"
 msgstr ""
+"Nemoguće otvoriti datoteku s dodatkom iz %s - Nedostajuća datoteka ili "
+"nepravilan format datoteke"
 
 #. Translators: The title of the dialog presented while an Addon is being updated.
 msgid "Updating Add-on"
-msgstr ""
+msgstr "Nadograđujem dodatak"
 
 #. Translators: The message displayed while an addon is being updated.
 msgid "Please wait while the add-on is being updated."
-msgstr ""
+msgstr "Molimo pričekajte dok se dodatak nadogradi."
 
 #. Translators: The message displayed when an error occurs when installing an add-on package.
 #, python-format
 msgid "Failed to update add-on  from %s"
-msgstr ""
+msgstr "Ne mogu nadograditi dodatak sa %s"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

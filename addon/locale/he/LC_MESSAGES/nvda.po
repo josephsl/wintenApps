@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.09.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-09-16 22:05+1000\n"
-"PO-Revision-Date: 2017-01-30 08:15+0200\n"
-"Last-Translator:  <shmuel_naaman@yahoo.com>\n"
+"PO-Revision-Date: 2017-03-04 23:40+0200\n"
+"Last-Translator: shmuel naaman <shmuel_naaman@yahoo.com>\n"
 "Language-Team: Shmuel Naaman <shmuel_naaman@yahoo.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
@@ -107,40 +107,39 @@ msgstr "מחפש עבור גרסה חדשה לחבילת התוספים הבסי
 
 #. Translators: The title of the dialog displayed while downloading add-on update.
 msgid "Downloading Add-on Update"
-msgstr ""
+msgstr "מוריד עידקון לתוסף"
 
 #. Translators: The progress message indicating that a connection is being established.
 msgid "Connecting"
-msgstr ""
+msgstr "מתחבר"
 
 #. Translators: A message indicating that an error occurred while downloading an update to NVDA.
-#, fuzzy
 msgid "Error downloading add-on update."
-msgstr "נכשל בבדיקה לעדכון"
+msgstr "הורדת העדכון לתוסף נכשלה."
 
 #. Translators: The title of a dialog presented when an error occurs.
 msgid "Error"
-msgstr ""
+msgstr "שגיאה "
 
 #. Translators: The message displayed when an error occurs when opening an add-on package for adding.
 #, python-format
 msgid ""
 "Failed to open add-on package file at %s - missing file or invalid file "
 "format"
-msgstr ""
+msgstr "נסיון לפתוח את התוסף %s נכשל , יתכן ומדובר בהורדה לא תקינה של קובץ."
 
 #. Translators: The title of the dialog presented while an Addon is being updated.
 msgid "Updating Add-on"
-msgstr ""
+msgstr "מעדכן את התוסף"
 
 #. Translators: The message displayed while an addon is being updated.
 msgid "Please wait while the add-on is being updated."
-msgstr ""
+msgstr "אנא המתן בזמן העדכון של התוסף...."
 
 #. Translators: The message displayed when an error occurs when installing an add-on package.
 #, python-format
 msgid "Failed to update add-on  from %s"
-msgstr ""
+msgstr "עעדכון התוסף מ%s  נכשל ."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

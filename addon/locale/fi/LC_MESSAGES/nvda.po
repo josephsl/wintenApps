@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2017-01-29 16:31+0200\n"
+"PO-Revision-Date: 2017-03-03 16:22+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -107,20 +107,19 @@ msgstr "Etsitään Windows 10 App Essentials -lisäosan uutta versiota..."
 
 #. Translators: The title of the dialog displayed while downloading add-on update.
 msgid "Downloading Add-on Update"
-msgstr ""
+msgstr "Ladataan lisäosan päivitystä"
 
 #. Translators: The progress message indicating that a connection is being established.
 msgid "Connecting"
-msgstr ""
+msgstr "Yhdistetään"
 
 #. Translators: A message indicating that an error occurred while downloading an update to NVDA.
-#, fuzzy
 msgid "Error downloading add-on update."
-msgstr "Virhe tarkistettaessa päivityksiä."
+msgstr "Virhe ladattaessa lisäosan päivitystä."
 
 #. Translators: The title of a dialog presented when an error occurs.
 msgid "Error"
-msgstr ""
+msgstr "Virhe"
 
 #. Translators: The message displayed when an error occurs when opening an add-on package for adding.
 #, python-format
@@ -128,19 +127,21 @@ msgid ""
 "Failed to open add-on package file at %s - missing file or invalid file "
 "format"
 msgstr ""
+"Lisäosapaketin %s avaaminen epäonnistui - tiedosto puuttuu tai sen muoto on "
+"virheellinen"
 
 #. Translators: The title of the dialog presented while an Addon is being updated.
 msgid "Updating Add-on"
-msgstr ""
+msgstr "Päivitetään lisäosaa"
 
 #. Translators: The message displayed while an addon is being updated.
 msgid "Please wait while the add-on is being updated."
-msgstr ""
+msgstr "Odota, kun lisäosaa päivitetään."
 
 #. Translators: The message displayed when an error occurs when installing an add-on package.
 #, python-format
 msgid "Failed to update add-on  from %s"
-msgstr ""
+msgstr "Lisäosan päivitys epäonnistui tiedostosta %s"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

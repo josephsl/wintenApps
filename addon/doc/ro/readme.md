@@ -4,7 +4,7 @@
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
 
-Acest add-on cuprinde o colecție de module pentru diverse aplicații din
+Acest supliment cuprinde o colecție de module pentru diverse aplicații din
 Windows 10 și soluții pentru anumite comenzi din Windows 10.
 
 Următoarele module de aplicații sau module de suport pentru unele aplicații
@@ -26,10 +26,10 @@ privire la ceea ce este inclus):
 * Centrul de securitate Windows Defender (Creators Update și mai nou)
 * Diverse module de control precum tile-urile din meniul start.
 
-Notă: acest add-on necesită Windows 10 versiunea 1511 (build 10586) sau mai
-nou și NVDA 2016.4 sau mai nou. Pentru rezultate foarte bune, folosiți
-add-on-ul cu ultimul build stabil (build 14393) și cea mai recentă versiune
-stabilă a NVDA-ului.
+Notă: acest supliment necesită Windows 10 versiunea 1511 (build 10586) sau
+mai nou și NVDA 2016.4 sau mai nou. Pentru rezultate foarte bune, folosiți-l
+cu ultimul build stabil (build 14393) și cea mai recentă versiune stabilă a
+NVDA-ului.
 
 ## General
 

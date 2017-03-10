@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.08\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-08-05 22:05+1000\n"
-"PO-Revision-Date: 2017-01-27 15:07+0100\n"
+"PO-Revision-Date: 2017-03-03 13:10+0100\n"
 "Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -110,20 +110,19 @@ msgstr "Controllo di nuove versioni di Windows10 App Essentials in corso..."
 
 #. Translators: The title of the dialog displayed while downloading add-on update.
 msgid "Downloading Add-on Update"
-msgstr ""
+msgstr "Download aggiornamento componente aggiuntivo"
 
 #. Translators: The progress message indicating that a connection is being established.
 msgid "Connecting"
-msgstr ""
+msgstr "Connessione in corso"
 
 #. Translators: A message indicating that an error occurred while downloading an update to NVDA.
-#, fuzzy
 msgid "Error downloading add-on update."
-msgstr "Errore nel controllo aggiornamenti"
+msgstr "Errore nel download dell'aggiornamento."
 
 #. Translators: The title of a dialog presented when an error occurs.
 msgid "Error"
-msgstr ""
+msgstr "Errore"
 
 #. Translators: The message displayed when an error occurs when opening an add-on package for adding.
 #, python-format
@@ -131,19 +130,21 @@ msgid ""
 "Failed to open add-on package file at %s - missing file or invalid file "
 "format"
 msgstr ""
+"Impossibile aprire il pacchetto del componente aggiuntivo al percorso %s - "
+"file mancante o formato file errato"
 
 #. Translators: The title of the dialog presented while an Addon is being updated.
 msgid "Updating Add-on"
-msgstr ""
+msgstr "Aggiornamento componente aggiuntivo in corso"
 
 #. Translators: The message displayed while an addon is being updated.
 msgid "Please wait while the add-on is being updated."
-msgstr ""
+msgstr "Attendere mentre il componente aggiuntivo viene aggiornato."
 
 #. Translators: The message displayed when an error occurs when installing an add-on package.
 #, python-format
 msgid "Failed to update add-on  from %s"
-msgstr ""
+msgstr "Impossibile aggiornare l'add-on da %s"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
