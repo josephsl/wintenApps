@@ -11,7 +11,6 @@ Segue l'elenco di tutti gli appmodule contenuti nel componente aggiuntivo,
 si veda la relativa sezione per ulteriori informazioni:
 
 * Allarmi e sveglia.
-* Bank of America
 * Calendario
 * Calcolatrice (moderna).
 * Cortana
@@ -22,16 +21,14 @@ si veda la relativa sezione per ulteriori informazioni:
 * Impostazioni (Impostazioni Windows, Windows+i)
 * Anteprima Skype
 * Store
-* Twitter.
-* TeamViewer Touch.
 * Meteo
 * Windows Defender Security Center (Creators Update and later)
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
 Nota: questo add-on richiede  Windows 10 Versione 1511 (build 10586) o
 successive e NVDA 2016.4 o successive. Per avere le prestazioni migliori,
-utilizzare il componente aggiuntivo con l'ultima build stabile (build
-14393).
+utilizzare il componente aggiuntivo con l'ultima build stabile (build 14393)
+e l'ultima versione stabile di NVDA.
 
 ## Generale
 
@@ -59,6 +56,9 @@ utilizzare il componente aggiuntivo con l'ultima build stabile (build
   finestra di dialogo Windows10 Essentials presente al menu preferenze di
   NVDA. Di default le versioni stabili eseguiranno un controllo settimanale,
   mentre quelle in sviluppo giornaliero.
+* Capacità di tenere traccia di eventi proveniente dalle app Universal
+  Windows Platform (UWP), se NVDA è in esecuzione con il debug del log
+  attivato. (dalla 2017.1 in su).
 
 ## Allarmi e sveglia
 
@@ -98,11 +98,13 @@ utilizzare il componente aggiuntivo con l'ultima build stabile (build
 ## Mappe
 
 * NVDA emette dei segnali acustici per le posizioni presenti nella mappa.
+* Quando si usa la visualizzazione per strade e l'opzione "utilizza
+  tastiera" è attiva, NVDA annuncerà gli indirizzi delle vie mentre si
+  scorre la mappa con le frecce.
 
 ## Microsoft Edge
 
 * Vengono annunciate correttamente le notifiche dei download dei file.
-* Il Supporto per Microsoft Edge è in continuo sviluppo.
 
 ## Impostazioni
 
@@ -114,6 +116,8 @@ utilizzare il componente aggiuntivo con l'ultima build stabile (build
   come se non ci siano risultati da visualizzare.
 * Il gruppo impostazioni viene riconosciuto quando ci si sposta tra i
   controlli usando la navigazione ad oggetti.
+* Per alcune caselle combinate, NVDA non commetterà più errori nel
+  riconoscere le etichette o annunciare i cambiamenti dei valori.
 
 ## Anteprima Skype
 
@@ -138,18 +142,6 @@ utilizzare il componente aggiuntivo con l'ultima build stabile (build
 * Mentre si scaricano contenuti quali app o film, NVDA ne leggerà il nome e
   l'avanzamento del download.
 
-## TeamViewer Touch
-
-* Vengono lette le etichette dei pulsanti radio.
-* Vengono lette le etichette dei pulsanti.
-
-## Bank of America/Twitter/Windows Defender Security Center
-
-* Vengono annunciate correttamente le etichette dei pulsanti.
-* Potrebbero esserci modifiche al supporto da parte di questo componente
-  aggiuntivo per Windows Defender Security Center, in quanto viene inclusa
-  come app universale dalla build 14986 
-
 ## Meteo
 
 * Schede come "previsioni" e "mappe" vengono riconosciute correttamente
@@ -162,8 +154,15 @@ utilizzare il componente aggiuntivo con l'ultima build stabile (build
   leggere il prossimo elemento (ad esempio la temperatura). Ciò funziona per
   previsioni orarie e giornaliere.
 
+## Windows Defender Security Center
+
+* Vengono annunciate correttamente le etichette dei pulsanti.
+* Potrebbero esserci modifiche al supporto da parte di questo componente
+  aggiuntivo per Windows Defender Security Center, in quanto viene inclusa
+  come app universale dalla build 14986 
+
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=w10
 
-[2]: http://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev

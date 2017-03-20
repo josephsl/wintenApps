@@ -11,7 +11,6 @@ Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 * Hälytykset ja kello
-* Bank of America
 * Kalenteri
 * Laskin (moderni)
 * Cortana
@@ -22,16 +21,15 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Asetukset (järjestelmän asetukset, Windows+I).
 * Skypen esiversio
 * Kauppa
-* Twitter
-* TeamViewer Touch
 * Sää
 * Windows Defender -tietoturvakeskus (Creators Update ja uudemmat)
 * Sekalaisia moduuleita sellaisille säätimille kuin Käynnistä-valikon
   tiilet.
 
 Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1511 (koontiversio
-10586) tai uudempaa ja NVDA:n 2016.4-versiota tai uudempaa. Käytä parhaiden
-tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
+10586) tai uudempaa ja NVDA 2016.4:ää tai uudempaa. Käytä parhaiden tulosten
+varmistamiseksi viimeisintä vakaata koontiversiota (14393) sekä viimeisintä
+vakaata NVDA:n versiota.
 
 ## Yleistä
 
@@ -57,6 +55,9 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
   NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App Essentials
   -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat oletuksena
   automaattisen päivitystarkistuksen viikoittain tai päivittäin.
+* Mahdollisuus Universal Windows Platform (UWP) -sovelluksista tulevien
+  tapahtumien seuraamiseen, mikäli NVDA:ta käytetään
+  virheenkorjaus-lokitasolla (2017.1 tai uudempi).
 
 ## Hälytykset ja kello
 
@@ -94,11 +95,13 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 ## Kartat
 
 * NVDA soittaa äänimerkin karttasijainneille.
+* NVDA ilmoittaa katuosoitteet käyttäessäsi nuolinäppäimiä kartalla
+  liikkumiseen oltaessa street side -näkymässä ja mikäli "use keyboard"
+  -vaihtoehto on otettu käyttöön.
 
 ## Microsoft Edge
 
 * Ilmoitukset, kuten tiedostojen lataukset, luetaan.
-* Edge-tuki on työn alla.
 
 ## Asetukset
 
@@ -109,6 +112,8 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
   sekä hakutulosten tilan, kuten sen, jos asetusta ei löydy.
 * Asetusryhmät tunnistetaan säätimien välillä liikuttaessa
   objektinavigointia käyttäen.
+* NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen selitteiden
+  tunnistamisessa ja/tai arvomuutosten ilmoittamisessa.
 
 ## Skypen esiversio
 
@@ -133,18 +138,6 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
 * NVDA ilmoittaa tuotteen nimen ja latauksen edistymisen sisältöä, kuten
   sovelluksia ja elokuvia, ladattaessa.
 
-## TeamViewer Touch
-
-* Valintapainikkeiden selitteet puhutaan.
-* Painikkeiden selitteet puhutaan.
-
-## Bank of America/Twitter/Windows Defender -tietoturvakeskus
-
-* Painikkeiden selitteet puhutaan.
-* Windows Defender -tietoturvakeskus (universaali sovellus) sisältyy
-  koontiversioon 14986 ja sitä uudempiin, ja tämän lisäosan tuki
-  ko. sovellukselle voi muuttua.
-
 ## Sää
 
 * Sellaiset välilehdet kuten "ennuste" ja "kartat" tunnistetaan oikeiksi
@@ -157,8 +150,15 @@ tulosten saamiseksi viimeisintä vakaata koontiversiota (14393).
   lämpötilan). Toimii tällä hetkellä päivittäisiin ja tunnin välein
   tehtäviin ennusteisiin.
 
+## Windows Defender -tietoturvakeskus
+
+* Painikkeiden selitteet puhutaan.
+* Windows Defender -tietoturvakeskus (universaali sovellus) sisältyy
+  koontiversioon 14986 ja sitä uudempiin, ja tämän lisäosan tuki
+  ko. sovellukselle voi muuttua.
+
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=w10
 
-[2]: http://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev

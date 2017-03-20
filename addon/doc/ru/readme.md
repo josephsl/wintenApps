@@ -11,7 +11,6 @@ Windows 10, а также исправлений для некоторых ти�
 (смотрите каждый раздел приложения для подробной информации):
 
 * Будильники и часы.
-* Bank of America
 * Календарь
 * Калькулятор (modern).
 * Cortana
@@ -22,15 +21,13 @@ Windows 10, а также исправлений для некоторых ти�
 * Настройки (настройки системы, Windows+I).
 * Skype Preview
 * Store
-* Twitter.
-* Сенсорный экран TeamViewer.
 * Погода.
 * Windows Defender Security Center (Creators Update and later)
 * Разные модули для типов управления, таких, как плитки главного меню.
 
 Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
 and NVDA 2016.4 or later. For best results, use the add-on with latest
-stable build (build 14393).
+stable build (build 14393) and latest stable version of NVDA.
 
 ## Общие
 
@@ -42,7 +39,7 @@ stable build (build 14393).
   Preview dialog (settings app) and new-style UAC dialog in build 14328 and
   later for NvDA 2016.2.1 or earlier.
 * Appearance/close of suggestions for certain search fields (notably
-  Settings and Store apps) is announced via sounds and braille. This also
+  Settings and Store apps) is announced via sounds and braille.. This also
   includes Start menu search box.
 * NVDA can announce suggestion count when performing a search in majority of
   cases. This option is controlled by "Report object position information"
@@ -55,6 +52,8 @@ stable build (build 14393).
   new Windows 10 App Essentials dialog found in NvDA Preferences menu. By
   default, stable and development versions will check for new updates
   automatically on a weekly or daily basis, respectively.
+* Ability to track events coming from Universal Windows Platform (UWP) apps
+  if NVDA is run with debug logging enabled (2017.1 or later).
 
 ## Будильники и часы
 
@@ -90,11 +89,12 @@ stable build (build 14393).
 ## Карты
 
 * NVDA plays location beep for map locations.
+* When using street side view and if "use keyboard" option is enabled, NVDA
+  will announce street addresses as you use arrow keys to navigate the map.
 
 ## Microsoft Edge
 
 * Теперь объявляются уведомления, такие как загрузка файлов.
-* Edge support is a work in progress.
 
 ## Настройки
 
@@ -106,6 +106,8 @@ stable build (build 14393).
   and search result status such as if a setting cannot be found.
 * Settings groups are recognized when using object navigation to navigate
   between controls.
+* For some combo boxes, NVDA will no longer fail to recognize labels and/or
+  announce value changes.
 
 ## Skype Preview
 
@@ -129,18 +131,6 @@ stable build (build 14393).
 * When downloading content such as apps and movies, NVDA will announce
   product name and download progress.
 
-## TeamViewer Touch
-
-* Метки радиокнопок теперь объявляются.
-* Lables for buttons are announced.
-
-## Bank of America/Twitter/Windows Defender Security Center
-
-* Теперь объявляются метки кнопок.
-* Windows Defender Security Center (universal app) is included in build
-  14986 and later and support for this app from this add-on is subject to
-  change.
-
 ## Погода
 
 * Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by
@@ -152,8 +142,15 @@ stable build (build 14393).
   again will read the next item (Like the temperature). This currently works
   for daily and hourly forecasts.
 
+## Windows Defender Security Center
+
+* Теперь объявляются метки кнопок.
+* Windows Defender Security Center (universal app) is included in build
+  14986 and later and support for this app from this add-on is subject to
+  change.
+
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=w10
 
-[2]: http://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
