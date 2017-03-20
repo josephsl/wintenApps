@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2017-01-27 20:01+0200\n"
+"PO-Revision-Date: 2017-03-05 18:00+0200\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
@@ -24,7 +24,7 @@ msgid ""
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Utilizați o versiune veche de Windows. Această extensie add-on necesită "
+"Utilizați o versiune veche de Windows. Acest supliment necesită "
 "{minSupportedVersion} sau mai nou. Sunteți sigur că doriți să instalați "
 "acest supliment oricum?"
 
@@ -52,7 +52,7 @@ msgid "suggestions"
 msgstr "sugestii"
 
 msgid "Windows 10 App Essentials..."
-msgstr "Windows 10 App Essentials."
+msgstr "Windows 10 App Essentials..."
 
 msgid "Windows 10 App Essentials add-on settings"
 msgstr "Setări Windows 10 App Essentials"
@@ -64,10 +64,6 @@ msgstr "Eroare la căutarea actualizărilor."
 #. Translators: Title of the add-on update check dialog.
 msgid "Windows 10 App Essentials update"
 msgstr "Actualizare Windows 10 App Essentials"
-
-#. Translators: Text shown when update check fails for some odd reason.
-msgid "Add-on update check failed."
-msgstr "Căutarea de actualizări ale add-on-ului a eșuat."
 
 #. Translators: Presented when no add-on update is available.
 msgid "No add-on update available."
@@ -82,7 +78,7 @@ msgstr ""
 "{newVersion} Window 10 App Essentials este disponibilă. Doriți să "
 "actualizați?"
 
-#. Translators: The title of a dialog to configure advanced SPL add-on options such as update checking.
+#. Translators: The title of a dialog to configure advanced WinTenApps add-on options such as update checking.
 msgid "Windows 10 App Essentials settings"
 msgstr "Setări Windows 10 App Essentials"
 
@@ -104,11 +100,49 @@ msgstr "&Caută actualizări"
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"
-msgstr "Căutare actualizări ale add-on-ului"
+msgstr "Căutare actualizări ale suplimentului"
 
-#. Translators: The message displayed while checking for newer version of Studio add-on.
+#. Translators: The message displayed while checking for newer version of WinTenApps add-on.
 msgid "Checking for new version of Windows 10 App Essentials add-on..."
 msgstr "Se caută o nouă versiune a Windows 10 App Essentials."
+
+#. Translators: The title of the dialog displayed while downloading add-on update.
+msgid "Downloading Add-on Update"
+msgstr "Se descarcă actualizarea suplimentului"
+
+#. Translators: The progress message indicating that a connection is being established.
+msgid "Connecting"
+msgstr "Conectare"
+
+#. Translators: A message indicating that an error occurred while downloading an update to NVDA.
+msgid "Error downloading add-on update."
+msgstr "Eroare la descărcarea actualizării."
+
+#. Translators: The title of a dialog presented when an error occurs.
+msgid "Error"
+msgstr "Eroare"
+
+#. Translators: The message displayed when an error occurs when opening an add-on package for adding.
+#, python-format
+msgid ""
+"Failed to open add-on package file at %s - missing file or invalid file "
+"format"
+msgstr ""
+"Eșuare la deschiderea pachetului suplimentului la %s - fișierul este omis "
+"sau formatul acestuia este invalid"
+
+#. Translators: The title of the dialog presented while an Addon is being updated.
+msgid "Updating Add-on"
+msgstr "Se actualizează suplimentul"
+
+#. Translators: The message displayed while an addon is being updated.
+msgid "Please wait while the add-on is being updated."
+msgstr "Vă rugăm să așteptați până ce suplimentul este actualizat."
+
+#. Translators: The message displayed when an error occurs when installing an add-on package.
+#, python-format
+msgid "Failed to update add-on  from %s"
+msgstr "Eșuare la actualizarea suplimentului de la %s"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -120,3 +154,6 @@ msgstr "Windows 10 App Essentials"
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr ""
 "O colecție a modulelor de aplicații pentru diferite aplicații din Windows 10"
+
+#~ msgid "Add-on update check failed."
+#~ msgstr "Căutarea de actualizări ale add-on-ului a eșuat."

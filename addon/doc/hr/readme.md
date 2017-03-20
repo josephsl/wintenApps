@@ -11,7 +11,6 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 što je uključeno):
 
 * Alarmi i Sat
-* Bank of America
 * Kalendar
 * kalkulator (moderan).
 * Cortana
@@ -22,123 +21,121 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Postavke (Postavke sustava, Windows+I).
 * Preview inačica skypea
 * Trgovina
-* Twitter
-* Team viewer za zaslone osjetljive na dodir
 * Prognoza
-* Windows Defender Security Center (Creators Update and later)
+* Windows Defender centar za sigurnost (Creators Update i noviji)
 * Dodatni moduli za dijelove sustava kao što su to izbornik start i
   pripadajuće mu ikonice
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
-and NVDA 2016.4 or later. For best results, use the add-on with latest
-stable build (build 14393).
+Napomena: Ovaj dodatak zahtijeva Windows 10 Inačicu 1511 (podverziju 10586)
+ili noviju i NVDA 2016.3 ili noviji. Za najbolje rezultate, koristite
+dodatak sa posljednjom stabilnom podverzijom (podverzija 14393).
 
 ## Općenito
 
-* In context menus for Start Menu tiles, submenus are properly recognized.
-* When minimizing windows (Windows+M), "pane" is no longer announced
-  (noticeable if using Insider Preview builds).
-* Certain dialogs are now recognized as proper dialogs. This include Insider
-  Preview dialog (settings app) and new-style UAC dialog in build 14328 and
-  later for NvDA 2016.2.1 or earlier.
-* Appearance/close of suggestions for certain search fields (notably
-  Settings and Store apps) is announced via sounds and braille. This also
-  includes Start menu search box.
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation dialog.
-* In certain context menus (such as in Edge), position information (e.g. 1
-  of 2) is no longer announced.
-* The following UIA events are recognized: Controller for, live region
-  changed (handled by name change event).
-* Added ability to check for add-on updates (automatic or manual) via the
-  new Windows 10 App Essentials dialog found in NvDA Preferences menu. By
-  default, stable and development versions will check for new updates
-  automatically on a weekly or daily basis, respectively.
+* U kontekstnim izbornicima za pločice početnog izbornika, Podizbornici se
+  prepoznaju ispravno.
+* Prilikom minimiziranja prozora (Windows+M), "ploha" se više ne izgovara
+  (vidljivo ako se koriste testne inačice).
+* Većina dijaloških okvir sada se prepoznaje kao pravi dijaloški okviri. Ovo
+  ukljućuje dijaloški okvir insider preview (aplikacija postavke) to
+  ukljućuje i novi dijaloški okvir kontrole korisničkog računa u buildu
+  14328 i noviji za NVDA 2016.2.1 i ranije.
+* Izgled/zatvaranje prijedloga za većinu uređivačkih polja (vidljivo u
+  Postavkama i Trgovini) se izgovara putem zvuka i brajice.. to također
+  ukljućuje polje pretrage u izborniku start.
+* NVDA može čitati broj prijedloga prilikom pretrage u većini slučajeva. Ova
+  opcija se kontrolira u "izgovori poziciju objekta" u dijaloškom okviru
+  prezentacija objekt.
+* U većini kontekstnih izbornika (kao što je to u Edgeu), informacije o
+  poziciji (NPR. 1 od 2) se više ne izgovara.
+* Slijedeći UIA događaji se izgovaraju: Controller for, live region changed
+  (handled by name change event).
+* Dodana mogućnost provjere nadogradnje dodatka (ručno ili automatski) preko
+  novog win 10 app Essentials u izborniku postavki. Podrazumijevano,
+  stabilne i razvojne inačice se provjeravaju na danjoj ili tjednoj bazi.
+* Mogućnost praćenja događaja koji dolaze iz  Univerzalnih Windows Platform
+  (UWP) aplikacija ako je NVDA sa postavljenim načinom zapisa na debug
+  (2017.1 ili noviji).
 
-## Alarms and clock
+## Alarm i sat
 
-* Time picker values are now announced, noticeable when moving focus to
-  picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates.
+* Odabirnici vremena se sada izgovaraju, vidljivo prilikom odabira kontrole
+  odabirnika. Ovo se također primjenjuje na kontrolu koja utjeće nana odabir
+  vremena instalacije Windows nadogradnji.
 
 ## Kalkulator
 
 * Kada je pritisnuta tipka enter, NVDA izgovara rezultate izračuna.
 
-## calendar
+## Kalendar
 
-* NVDA no longer announces "edit" or "read-only" in message body and other
-  fields.
+* NVDA više ne izgovara "uređivanje" ili "samo za čitanje" u tijelu poruke i
+  drugim poljima.
 
 ## Cortana
 
-* Textual responses from Cortana are announced in most situations (if it
-  doesn't, reopen Start menu and try searching again).
-* NVDA will be silent when you talk to Cortana via voice.
-* NVDA will now announce reminder confirmation after you set one.
+* U većini slučajeva tekstualni odgovori Cortane se čitaju, ako to nije
+  slučaj, ponovno otvorite izbornik start.
+* NVDA će biti tih kada pričate sa Cortanom.
+* NVDA će izgovarati potvrdu termina ako ga postavite.
 
 ## Groove Music
 
-* Appearance of suggestions when searching for tracks is now detected.
+* Prisutstvo prijedloga se izgovara prilikom traženja muzičkih numera.
 
 ## Pošta
 
-* When reviewing items in messages list, you can now use table navigation
-  commands to review message headers.
+* Prilikom pregleda stavaka u popisu poruka, sada možete koristiti prečice
+  za navigaciju po tablicama kako biste pregledali zaglavlja poruke.
 
 ## Karte
 
-* NVDA plays location beep for map locations.
+* NVDA reproducira zvuk lokacije za lokacije na mapi.
+* Prilikom korištenja prikaza ulice te ako je opcija "korištenje tipkovnice"
+  omogućena, NVDA će izgovarati adrese i kućne brojeve prilikom kretanja
+  strelicama po mapi.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads are now announced.
-* Edge support is a work in progress.
+* Obavijesti kao što su to preuzimanja datoteka sada se čitaju.
 
-## Settings
+## Postavke
 
-* Certain information such as Windows Update progress is now reported
-  automatically.
-* Progress bar values and other information are no longer announced twice.
-* If it takes a while to search for settings, NVDA will announce "searching"
-  and search result status such as if a setting cannot be found.
-* Settings groups are recognized when using object navigation to navigate
-  between controls.
+* Većina informacija poput Windows Update trake napredovanja  izgovaraju se
+  automatski.
+* Vrijednosti trake napredovanja i druge informacije više se ne izgovaraju
+  duplo.
+* Ako je potrebno duže vremena traženja postavki, NVDA će izgovoriti
+  "traženje" i stanje rezultata pretrage kao što je to na primjer
+  nemogučnost pronalaska dane opcije.
+* Prupe postavaka se prepoznaju prilikom korištenja objektne navigacije za
+  kretanje po elementima.
+* Za većinu odabirnih okvira, NVDA više neće neuspjevati prepoznavati lznaku
+  i-ili promjenu vrijednosti.
 
 ## Preview inačica skypea
 
-* Typing indicator text is announced just like Skype for Desktop client.
-* Partial return of Control+NvDA+number row commands to read recent chat
-  history and to move navigator object to chat entries just like Skype for
-  Desktop.
-* You can now press Alt+number row to locate and move to contacts list (1),
-  conversations (2) and chat edit field (3). Note that one must activate
-  these tabs to move to the desired part.
-* Combo box labels for Skype preview app released in November 2016 are
-  announced.
-* NVDA will no longer announce "Skype Message" when reviewing messages for
-  majority of cases.
+* Obavijest prilikom pisanja teksta je je izgovarana kao u skzpeu za radnu
+  površinu.
+* Djelomičan povratak prečaca  Control+NvDA+gornji numerički red za čitanje
+  zadnje povijesti poruka i za premještanje objekta navigatora na popis
+  poruka kao i u skypeu za radnu površinu.
+* Sada možete pritisnuti Alt+gorni brojčani red kako biste locirali i
+  premjestili se na popis kontakata (1), razgovori (2) i i polje uređivanja
+  za čavrljanja (3). Imajte na umu da biste trebali aktivirati te kartice
+  ako želite se premještati na njih.
+* oznake odabirnih okvira za Skype preview app objavljenu u studenom 2016 se
+  izgovaraju.
+* NVDA više neće izgovarati "skype message" prilikom pregleda poruka u
+  većini slučajeva.
 
 ## Trgovina
 
-* After checking for app updates, app names in list of apps to be updated
-  are correctly labeled.
-* Appearance of search suggestions are now announced.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
-
-## TeamViewer za ekrane osjetljive na dodir
-
-* Natpisi na izbornim gumbima se izgovaraju.
-* Oznake na gumbima se izgovaraju.
-
-## Bank of America/Twitter/Windows Defender Security Center
-
-* Oznake na gumbima se sada izgovaraju.
-* Windows Defender Security Center (universal app) is included in build
-  14986 and later and support for this app from this add-on is subject to
-  change.
+* poslije provjere nadogradnji aplikacija, aplikacije na popisu koje se
+  trebaju nadograditi su pravilno označene.
+* Sada se izgovaraju prijedlozi pretrage.
+* Prilikom preuzimanja sadržaja kao što su to aplikacije i filmovi, NVDA će
+  izgovarati naziv proizvoda i traku napredovanja.
 
 ## Prognoza
 
@@ -152,8 +149,14 @@ stable build (build 14393).
   pritišćući još jedamput pročitati će slijedeću stavku (poput
   temperature). Ovo trenutno radi za dnevnu i svakosatnu vremensku prognozu.
 
+## Windows Defender Centar za sigurnost
+
+* Oznake na gumbima se sada izgovaraju.
+* Windows Defender Security Center (universal app) uključena je u podverziji
+  14986 i novijoj i podrška ove aplikacije je podložna promjenama.
+
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=w10
 
-[2]: http://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev

@@ -4,7 +4,7 @@
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
 
-Acest add-on cuprinde o colecție de module pentru diverse aplicații din
+Acest supliment cuprinde o colecție de module pentru diverse aplicații din
 Windows 10 și soluții pentru anumite comenzi din Windows 10.
 
 Următoarele module de aplicații sau module de suport pentru unele aplicații
@@ -12,7 +12,6 @@ sunt incluse (verificați fiecare secțiune a aplicației pentru detalii cu
 privire la ceea ce este inclus):
 
 * Alarme și ceas.
-* Banca Americii
 * Calendar
 * Calculator (modern).
 * Cortana
@@ -23,15 +22,14 @@ privire la ceea ce este inclus):
 * Setări (setări sistem, Windows+I).
 * Skype Preview
 * Magazin
-* Twitter.
-* TeamViewer Touch.
 * Meteo.
 * Centrul de securitate Windows Defender (Creators Update și mai nou)
 * Diverse module de control precum tile-urile din meniul start.
 
-Notă: acest add-on necesită Windows 10 versiunea 1511 (build 10586) sau mai
-nou și NVDA 2016.4 sau mai nou. Pentru rezultate foarte bune, folosiți
-add-on-ul cu ultimul build stabil (build 14393).
+Notă: acest supliment necesită Windows 10 versiunea 1511 (build 10586) sau
+mai nou și NVDA 2016.4 sau mai nou. Pentru rezultate foarte bune, folosiți-l
+cu ultimul build stabil (build 14393) și cea mai recentă versiune stabilă a
+NVDA-ului.
 
 ## General
 
@@ -58,6 +56,9 @@ add-on-ul cu ultimul build stabil (build 14393).
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
   meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă și
   cea în dezvoltare vor căuta noi actualizări automat săptămânal sau zilnic.
+* Abilitatea de a urmări evenimentele care provin din platforma universală
+  Windows (UWP) și din aplicații, în cazul în care NVDA rulează cu
+  diagnosticarea activată (2017.1 sau mai nou).
 
 ## Alarme și ceas
 
@@ -95,11 +96,13 @@ add-on-ul cu ultimul build stabil (build 14393).
 ## Hărți
 
 * NVDA redă bipul locației pentru locațiile hărții.
+* Atunci când se utilizează vedere din stradă laterală și în cazul în care
+  opțiunea "utilizare tastatură" este activată, NVDA va anunța adrese pe
+  măsură ce utilizați tastele săgeată pentru a naviga pe hartă.
 
 ## Microsoft Edge
 
 * Notificări, cum ar fi descărcări de fișiere, sunt acum anunțate.
-* Se lucrează la suportul pentru Edge.
 
 ## Setări
 
@@ -111,6 +114,8 @@ add-on-ul cu ultimul build stabil (build 14393).
   starea rezultatului căutării, cum ar fi dacă o setare nu poate fi găsită.
 * Grupurile de setări sunt recunoscute la utilizarea navigării obiectului
   pentru a naviga printre controale.
+* Pentru unele casete combinate, NVDA nu va mai eșua la recunoașterea
+  etichetelor și/sau anunțarea schimbărilor valorii.
 
 ## Skype Preview
 
@@ -136,18 +141,6 @@ add-on-ul cu ultimul build stabil (build 14393).
 * La descărcarea conținutului, cum ar fi aplicații și filme, NVDA va anunța
   numele produsului și descărcarea în curs.
 
-## TeamViewer Touch.
-
-* sunt anunțate etichete pentru butoane rotative.
-* sunt anunțate etichete pentru butoane.
-
-## Banca Americii/Twitter/Centrul de securitate Windows Defender
-
-* Etichetele butoanelor sunt acum anunțate.
-* Aplicația universală Windows Defender Security Center este inclusă în
-  buildul 14986 și mai nou, iar suportul pentru această aplicație de la
-  acest add-on este un subiect pentru schimbare.
-
 ## Meteo
 
 * Etichete precum „vremea” și „hărțile” sunt recunoscute ca etichete
@@ -160,8 +153,15 @@ add-on-ul cu ultimul build stabil (build 14393).
   fel ca temperatura). Acest lucru funcționează în prezent pentru
   previziunile zilnice și orare.
 
+## Centrul de securitate Windows Defender
+
+* Etichetele butoanelor sunt acum anunțate.
+* Aplicația universală Windows Defender Security Center este inclusă în
+  buildul 14986 și mai nou, iar suportul pentru această aplicație de la
+  acest add-on este un subiect pentru schimbare.
+
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=w10
 
-[2]: http://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
