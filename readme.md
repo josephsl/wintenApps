@@ -16,11 +16,10 @@ The following app modules or support modules for some apps are included (see eac
 * Mail
 * Maps
 * Microsoft Edge
-* Settings (system settings, Windows+I).
-* Skype Preview
+* Settings (system settings, Windows+I)
+* Skype (universal app)
 * Store
 * Weather.
-* Windows Defender Security Center (Creators Update and later)
 * Miscellaneous modules for controls such as Start Menu tiles.
 
 Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NVDA 2016.4 or later. For best results, use the add-on with latest stable build (build 14393) and latest stable version of NVDA. Also, after changing update settings for the add-on, be sure to save NVDA settings.
@@ -71,6 +70,7 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 ## Microsoft Edge
 
 * Notifications such as file downloads are now announced.
+* In Creators Update, NVDA will no longer announce "WebRuntime Content View" when going to another site.
 
 ## Settings
 
@@ -80,7 +80,7 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 * Settings groups are recognized when using object navigation to navigate between controls.
 * For some combo boxes, NVDA will no longer fail to recognize labels and/or announce value changes.
 
-## Skype Preview
+## Skype
 
 * Typing indicator text is announced just like Skype for Desktop client.
 * Partial return of Control+NvDA+number row commands to read recent chat history and to move navigator object to chat entries just like Skype for Desktop.
@@ -98,11 +98,6 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 
 * Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by Derek Riemer).
 * when reading a forecast, use the left and right arrows to move between items. Use the up and down arrows to read the individual items. For example, pressing the right arrow might report "Monday: 79 degrees, partly cloudy, ..." pressing the down arrow will say "Monday" Then pressing it again will read the next item (Like the temperature). This currently works for daily and hourly forecasts.
-
-## Windows Defender Security Center
-
-* Button labels are now announced.
-* Windows Defender Security Center (universal app) is included in build 14986 and later and support for this app from this add-on is subject to change.
 
 [1]: https://addons.nvda-project.org/files/get.php?file=w10
 
