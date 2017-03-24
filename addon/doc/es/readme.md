@@ -19,18 +19,17 @@ qué se incluye):
 * Correo
 * Mapas
 * Microsoft Edge
-* Opciones (opciones de sistema, Windows+I).
-* Previsualización de Skype
+* Settings (system settings, Windows+I)
+* Skype (universal app)
 * Tienda
 * El Tiempo
-* Windows Defender Security Center (Creators Update y posterior)
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Nota: este complemento requiere de Windows 10 Versión 1511 (compilación
-10286) o posterior y NVDA 2016.4 o posterior. Para unos mejores resultados,
-utiliza el complemento con la compilación estable más reciente (compilación
-14393) y con la versión estable más reciente de NVDA.
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+and NVDA 2016.4 or later. For best results, use the add-on with latest
+stable build (build 14393) and latest stable version of NVDA. Also, after
+changing update settings for the add-on, be sure to save NVDA settings.
 
 ## General
 
@@ -104,6 +103,8 @@ utiliza el complemento con la compilación estable más reciente (compilación
 ## Microsoft Edge
 
 * Ahora se anuncian notificaciones tales como descargas de ficheros.
+* In Creators Update, NVDA will no longer announce "WebRuntime Content View"
+  when going to another site.
 
 ## Opciones
 
@@ -119,7 +120,7 @@ utiliza el complemento con la compilación estable más reciente (compilación
 * Para algunos cuadros combinados, NVDA ya no fallará al reconocer etiquetas
   y/o al anunciar cambios de valores.
 
-## Previsualización de Skype
+## Skype
 
 * Al teclear el indicador de texto se anuncia sólo como cliente Skype para
   Escritorio.
@@ -154,13 +155,6 @@ utiliza el complemento con la compilación estable más reciente (compilación
   "lunes" entonces pulsándola de nuevo leerá el siguiente elemento (como la
   temperatura). Actualmente esto funciona para los pronósticos diarios y
   horarios.
-
-## Windows Defender Security Center
-
-* Ahora se anuncian las etiquetas de los botones.
-* La app Windows Defender Security Center universal se incluye en la build
-  14986 y posterior y el soporte para esta app de este complemento está
-  sujeta a cambios.
 
 [[!tag dev stable]]
 

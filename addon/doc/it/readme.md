@@ -19,16 +19,17 @@ si veda la relativa sezione per ulteriori informazioni:
 * Mappe
 * Microsoft Edge
 * Impostazioni (Impostazioni Windows, Windows+i)
-* Anteprima Skype
+* Skype (universal app)
 * Store
 * Meteo
-* Windows Defender Security Center (Creators Update and later)
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
 Nota: questo add-on richiede  Windows 10 Versione 1511 (build 10586) o
 successive e NVDA 2016.4 o successive. Per avere le prestazioni migliori,
 utilizzare il componente aggiuntivo con l'ultima build stabile (build 14393)
-e l'ultima versione stabile di NVDA.
+e l'ultima versione stabile di NVDA. Si ricorda che dopo aver modificato le
+impostazioni di aggiornamento automatico del componente aggiuntivo, è
+consigliabile salvare la configurazione di NVDA.
 
 ## Generale
 
@@ -105,6 +106,8 @@ e l'ultima versione stabile di NVDA.
 ## Microsoft Edge
 
 * Vengono annunciate correttamente le notifiche dei download dei file.
+* Nell'aggiornamento Creators, NVDA non annuncerà più "WebRuntime Content
+  View" quando si passa ad un altro sito web.
 
 ## Impostazioni
 
@@ -119,7 +122,7 @@ e l'ultima versione stabile di NVDA.
 * Per alcune caselle combinate, NVDA non commetterà più errori nel
   riconoscere le etichette o annunciare i cambiamenti dei valori.
 
-## Anteprima Skype
+## Skype
 
 * Viene annunciato quando un utente sta scrivendo, così come accade in Skype
   per desktop.
@@ -153,13 +156,6 @@ e l'ultima versione stabile di NVDA.
   premendo la freccia giù dirà "lunedì", Quindi premerla di nuovo per
   leggere il prossimo elemento (ad esempio la temperatura). Ciò funziona per
   previsioni orarie e giornaliere.
-
-## Windows Defender Security Center
-
-* Vengono annunciate correttamente le etichette dei pulsanti.
-* Potrebbero esserci modifiche al supporto da parte di questo componente
-  aggiuntivo per Windows Defender Security Center, in quanto viene inclusa
-  come app universale dalla build 14986 
 
 [[!tag dev stable]]
 

@@ -18,18 +18,18 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sähköposti
 * Kartat
 * Microsoft Edge
-* Asetukset (järjestelmän asetukset, Windows+I).
-* Skypen esiversio
+* Asetukset (järjestelmän asetukset, Windows+I)
+* Skype (universaali sovellus)
 * Kauppa
 * Sää
-* Windows Defender -tietoturvakeskus (Creators Update ja uudemmat)
 * Sekalaisia moduuleita sellaisille säätimille kuin Käynnistä-valikon
   tiilet.
 
 Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1511 (koontiversio
-10586) tai uudempaa ja NVDA 2016.4:ää tai uudempaa. Käytä parhaiden tulosten
-varmistamiseksi viimeisintä vakaata koontiversiota (14393) sekä viimeisintä
-vakaata NVDA:n versiota.
+10586) tai uudempaa ja NVDA 2016.4:ää tai uudempaa. Käytä parhaan
+käyttökokemuksen varmistamiseksi viimeisintä vakaata koontiversiota (14393)
+sekä viimeisintä vakaata NVDA:n versiota. Varmista myös, että tallennat
+NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 
 ## Yleistä
 
@@ -102,6 +102,8 @@ vakaata NVDA:n versiota.
 ## Microsoft Edge
 
 * Ilmoitukset, kuten tiedostojen lataukset, luetaan.
+* NVDA ei enää sano Windowsin Creators Update -versiossa "WebRuntime Content
+  View" siirryttäessä toiselle sivustolle.
 
 ## Asetukset
 
@@ -115,7 +117,7 @@ vakaata NVDA:n versiota.
 * NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen selitteiden
   tunnistamisessa ja/tai arvomuutosten ilmoittamisessa.
 
-## Skypen esiversio
+## Skype
 
 * Kirjoitusilmaisimen teksti puhutaan kuten Skypen työpöytäversiossa.
 * Osittainen Control+NVDA+numero-komentojen paluu tuoreen
@@ -149,13 +151,6 @@ vakaata NVDA:n versiota.
   "Maanantai". Uudelleen painaminen lukee seuraavan kohteen (kuten
   lämpötilan). Toimii tällä hetkellä päivittäisiin ja tunnin välein
   tehtäviin ennusteisiin.
-
-## Windows Defender -tietoturvakeskus
-
-* Painikkeiden selitteet puhutaan.
-* Windows Defender -tietoturvakeskus (universaali sovellus) sisältyy
-  koontiversioon 14986 ja sitä uudempiin, ja tämän lisäosan tuki
-  ko. sovellukselle voi muuttua.
 
 [[!tag dev stable]]
 

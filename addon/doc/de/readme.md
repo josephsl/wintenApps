@@ -19,16 +19,16 @@ welche inbegriffen sind):
 * Mail
 * Maps
 * Microsoft Edge
-* Einstellungen (System-Einstellungen mit Win+I).
-* Skype-Vorschau
+* Settings (system settings, Windows+I)
+* Skype (universal app)
 * Store
 * Wetter
-* Windows Defender Security Center (Creators Update and later)
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
 
 Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
 and NVDA 2016.4 or later. For best results, use the add-on with latest
-stable build (build 14393) and latest stable version of NVDA.
+stable build (build 14393) and latest stable version of NVDA. Also, after
+changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Allgemein
 
@@ -96,6 +96,8 @@ stable build (build 14393) and latest stable version of NVDA.
 ## Microsoft Edge
 
 * Notifications such as file downloads are now announced.
+* In Creators Update, NVDA will no longer announce "WebRuntime Content View"
+  when going to another site.
 
 ## Einstellungen
 
@@ -109,7 +111,7 @@ stable build (build 14393) and latest stable version of NVDA.
 * For some combo boxes, NVDA will no longer fail to recognize labels and/or
   announce value changes.
 
-## Skype-Vorschau
+## Skype
 
 * Typing indicator text is announced just like Skype for Desktop client.
 * Partial return of Control+NvDA+number row commands to read recent chat
@@ -141,13 +143,6 @@ stable build (build 14393) and latest stable version of NVDA.
   cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
   again will read the next item (Like the temperature). This currently works
   for daily and hourly forecasts.
-
-## Windows Defender Security Center
-
-* Schalterbeschriftungen werden nun angesagt.
-* Windows Defender Security Center (universal app) is included in build
-  14986 and later and support for this app from this add-on is subject to
-  change.
 
 [[!tag dev stable]]
 

@@ -19,17 +19,16 @@ privire la ceea ce este inclus):
 * Mail
 * Hărți
 * Microsoft Edge
-* Setări (setări sistem, Windows+I).
-* Skype Preview
+* Settings (system settings, Windows+I)
+* Skype (universal app)
 * Magazin
 * Meteo.
-* Centrul de securitate Windows Defender (Creators Update și mai nou)
 * Diverse module de control precum tile-urile din meniul start.
 
-Notă: acest supliment necesită Windows 10 versiunea 1511 (build 10586) sau
-mai nou și NVDA 2016.4 sau mai nou. Pentru rezultate foarte bune, folosiți-l
-cu ultimul build stabil (build 14393) și cea mai recentă versiune stabilă a
-NVDA-ului.
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+and NVDA 2016.4 or later. For best results, use the add-on with latest
+stable build (build 14393) and latest stable version of NVDA. Also, after
+changing update settings for the add-on, be sure to save NVDA settings.
 
 ## General
 
@@ -103,6 +102,8 @@ NVDA-ului.
 ## Microsoft Edge
 
 * Notificări, cum ar fi descărcări de fișiere, sunt acum anunțate.
+* In Creators Update, NVDA will no longer announce "WebRuntime Content View"
+  when going to another site.
 
 ## Setări
 
@@ -117,7 +118,7 @@ NVDA-ului.
 * Pentru unele casete combinate, NVDA nu va mai eșua la recunoașterea
   etichetelor și/sau anunțarea schimbărilor valorii.
 
-## Skype Preview
+## Skype
 
 * Textul indicatorului de scriere este anunțat la fel ca Skype pentru
   Desktop.
@@ -152,13 +153,6 @@ NVDA-ului.
   în jos va spune "luni" Apoi, apăsând din nou va citi elementul următor (La
   fel ca temperatura). Acest lucru funcționează în prezent pentru
   previziunile zilnice și orare.
-
-## Centrul de securitate Windows Defender
-
-* Etichetele butoanelor sunt acum anunțate.
-* Aplicația universală Windows Defender Security Center este inclusă în
-  buildul 14986 și mai nou, iar suportul pentru această aplicație de la
-  acest add-on este un subiect pentru schimbare.
 
 [[!tag dev stable]]
 

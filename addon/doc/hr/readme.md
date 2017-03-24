@@ -18,17 +18,18 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Pošta
 * Karte
 * Microsoft Edge
-* Postavke (Postavke sustava, Windows+I).
-* Preview inačica skypea
+* Postavke (postavke sustava, Windows+I)
+* Skype (univerzalna aplikacija)
 * Trgovina
 * Prognoza
-* Windows Defender centar za sigurnost (Creators Update i noviji)
 * Dodatni moduli za dijelove sustava kao što su to izbornik start i
   pripadajuće mu ikonice
 
-Napomena: Ovaj dodatak zahtijeva Windows 10 Inačicu 1511 (podverziju 10586)
-ili noviju i NVDA 2016.3 ili noviji. Za najbolje rezultate, koristite
-dodatak sa posljednjom stabilnom podverzijom (podverzija 14393).
+Upozorenje: ovaj dodatak zahtjeva Windows 10 Verziju 1511 (podverziju 10586)
+ili noviju i NVDA 2016.4 ili noviji. za najbolje rezultate, koristite
+dodatak sa zadnjom stabilnom inačicom (podverzija 14393) i zadnju stabilnu
+inačicu nvda. Također, prilikom spremanja postavki za nadogradnju dodatka,
+budite sigurni da ste spremili postavke za NVDA.
 
 ## Općenito
 
@@ -98,6 +99,8 @@ dodatak sa posljednjom stabilnom podverzijom (podverzija 14393).
 ## Microsoft Edge
 
 * Obavijesti kao što su to preuzimanja datoteka sada se čitaju.
+* U nadogradnji za tvorce, NVDA više neće izgovarati "WebRuntime Content
+  View" prilikom prebacivanja na drugi prikaz.
 
 ## Postavke
 
@@ -113,7 +116,7 @@ dodatak sa posljednjom stabilnom podverzijom (podverzija 14393).
 * Za većinu odabirnih okvira, NVDA više neće neuspjevati prepoznavati lznaku
   i-ili promjenu vrijednosti.
 
-## Preview inačica skypea
+## Skype
 
 * Obavijest prilikom pisanja teksta je je izgovarana kao u skzpeu za radnu
   površinu.
@@ -148,12 +151,6 @@ dodatak sa posljednjom stabilnom podverzijom (podverzija 14393).
   ..." pritiskom na strelicu dolje će izgovoriti "Ponedjeljak" potom
   pritišćući još jedamput pročitati će slijedeću stavku (poput
   temperature). Ovo trenutno radi za dnevnu i svakosatnu vremensku prognozu.
-
-## Windows Defender Centar za sigurnost
-
-* Oznake na gumbima se sada izgovaraju.
-* Windows Defender Security Center (universal app) uključena je u podverziji
-  14986 i novijoj i podrška ove aplikacije je podložna promjenama.
 
 [[!tag dev stable]]
 

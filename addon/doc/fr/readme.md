@@ -20,17 +20,16 @@ est inclus) :
 * Courrier
 * Cartes
 * Microsoft Edge
-* Paramètres (paramètres système, Windows+I).
-* Skype Preview
+* Settings (system settings, Windows+I)
+* Skype (universal app)
 * Store
 * Météo.
-* Windows Defender Security Center (Creators Update et ultérieure)
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
-Note: ce module complémentaire nécessite Windows 10 Version 1511 (build
-10586) ou version ultérieure et NVDA 2016.4 ou version ultérieure. Pour de
-meilleurs résultats, utilisez le module complémentaire avec la dernière
-build stable (build 14393) et la dernière version stable de NVDA.
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+and NVDA 2016.4 or later. For best results, use the add-on with latest
+stable build (build 14393) and latest stable version of NVDA. Also, after
+changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Générale
 
@@ -111,6 +110,8 @@ build stable (build 14393) et la dernière version stable de NVDA.
 
 * Notifications telles que les téléchargements de fichiers sont maintenant
   annoncées.
+* In Creators Update, NVDA will no longer announce "WebRuntime Content View"
+  when going to another site.
 
 ## Paramètres
 
@@ -126,7 +127,7 @@ build stable (build 14393) et la dernière version stable de NVDA.
 * Pour certaines zones de liste déroulantes, NVDA ne manquera plus de
   reconnaître les étiquettes et/ou d'annoncer les changements de valeur.
 
-## Skype Preview
+## Skype
 
 * L'indicateur de frappe de texte est annoncé exactement comme pour le Skype
   for Desktop client.
@@ -163,13 +164,6 @@ build stable (build 14393) et la dernière version stable de NVDA.
   sur celle-ci il va lire l'élément suivant (Comme la température). Ceci
   travaille actuellement pour les prévisions quotidiennes et toutes les
   heures.
-
-## Windows Defender Security Center
-
-* Étiquettes des boutons sont maintenant annoncées.
-* Windows Defender Security Center (universal app) est inclus dans la build
-  14986 ou version ultérieure et le support pour cette app à partir de ce
-  module complémentaire est sujette à changement.
 
 [[!tag dev stable]]
 

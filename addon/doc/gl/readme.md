@@ -19,17 +19,16 @@ se inclúe):
 * Correo
 * Mapas
 * Microsoft Edge
-* Opcións (opcións do sistema, Windows+I).
-* Previsualización de Skype
+* Settings (system settings, Windows+I)
+* Skype (universal app)
 * Tenda
 * O Tempo
-* Windows Defender Security Center  (Creators Update e posterior)
 * Módulos misceláneos para controis como mosaicos do Menú Inicio.
 
-Nota: este complemento require do Windows 10 Versión 1511 (compilación
-10286) ou posterior e NVDA 2016.4 ou posterior. Para uns mellores
-resultados, usa o complemento coa última versión estable (compilación 14393)
-e coa última versión estable do NVDA.
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+and NVDA 2016.4 or later. For best results, use the add-on with latest
+stable build (build 14393) and latest stable version of NVDA. Also, after
+changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Xeral
 
@@ -101,6 +100,8 @@ e coa última versión estable do NVDA.
 ## Microsoft Edge
 
 * Agora anúncianse notificacións como a descarga de ficheiros.
+* In Creators Update, NVDA will no longer announce "WebRuntime Content View"
+  when going to another site.
 
 ## Opcións
 
@@ -116,7 +117,7 @@ e coa última versión estable do NVDA.
 * Para algunhas caixas combinadas, NVDA xa non fallará ao recoñecer
   etiquetas e/ou ao anunciar cambios de valores.
 
-## Previsualización de Skype
+## Skype
 
 * Ao teclear o indicador de texto anúnciase só coma cliente Skype para
   Escritorio.
@@ -151,13 +152,6 @@ e coa última versión estable do NVDA.
   logo preméndoo de novo lerá o seguinte elemento (como a
   temperatura). Actualmente esto traballa para pronósticos diarios e
   horarios.
-
-## Windows Defender Security Center
-
-* Agora anúncianse as etiquetas dos botóns.
-* A app Windows Defender Security Center universal inclúese na build 14986 e
-  posterior e o soporte para esta app dende este complemento está suxeito a
-  cambios.
 
 [[!tag dev stable]]
 
