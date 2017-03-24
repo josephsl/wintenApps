@@ -39,7 +39,11 @@ class AppModule(appModuleHandler.AppModule):
 			# Yet another case is Devices/Bluetooth lists.
 			if obj.name == "" and (obj.role in (controlTypes.ROLE_TOGGLEBUTTON, controlTypes.ROLE_COMBOBOX) and obj.UIAElement.cachedAutomationID
 				or obj.role == controlTypes.ROLE_LIST and obj.UIAElement.cachedAutomationID in ("SystemSettings_Devices_AudioDeviceList_ListView", "SystemSettings_Devices_OtherDeviceList_ListView")):
-				obj.name = obj.previous.name
+				# But some combo boxes, such as Insider level combo box in Creators Update has the following problem.
+				try:
+					obj.name = obj.previous.name
+				except AttributeError:
+					obj.name = obj.parent.previous.name
 			# Recognize groups of controls for contextual output (more prominent in Redstone 2).
 			elif obj.UIAElement.cachedAutomationID.endswith("GroupTitleTextBlock"):
 				obj.role = controlTypes.ROLE_GROUPING
