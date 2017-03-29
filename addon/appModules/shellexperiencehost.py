@@ -40,3 +40,6 @@ class AppModule(appModuleHandler.AppModule):
 		if isinstance(obj, UIA):
 			if obj.name == "" and obj.UIAElement.cachedAutomationID == "TextBoxPinEntry":
 				obj.name = obj.previous.name
+			# NVDA Core issue 6994: Never treat Action Center grid as layout.
+			elif obj.UIAElement.cachedAutomationID == "QuickActionsGridView":
+				obj.presentationType = obj.presType_content
