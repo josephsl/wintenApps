@@ -19,16 +19,17 @@ privire la ceea ce este inclus):
 * Mail
 * Hărți
 * Microsoft Edge
-* Settings (system settings, Windows+I)
-* Skype (universal app)
+* Setări (setări sistem, Windows+I)
+* Skype (aplicație universală)
 * Magazin
 * Meteo.
 * Diverse module de control precum tile-urile din meniul start.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
-and NVDA 2016.4 or later. For best results, use the add-on with latest
-stable build (build 14393) and latest stable version of NVDA. Also, after
-changing update settings for the add-on, be sure to save NVDA settings.
+Notă: acest supliment necesită Windows 10 versiunea 1511 (build 10586) sau
+mai nou și NVDA 2016.4 sau mai nou. Pentru rezultate foarte bune, folosiți-l
+cu ultimul build stabil (build 14393) și cea mai recentă versiune stabilă a
+NVDA-ului. De asemenea, după modificarea setărilor de actualizare pentru
+supliment, asigurați-vă că salvați setările NVDA-ului.
 
 ## General
 
@@ -102,8 +103,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
 ## Microsoft Edge
 
 * Notificări, cum ar fi descărcări de fișiere, sunt acum anunțate.
-* In Creators Update, NVDA will no longer announce "WebRuntime Content View"
-  when going to another site.
+* În Creators Update, NVDA nu va mai anunța "WebRuntime Content View" atunci
+  când se merge pe un alt site.
 
 ## Setări
 
