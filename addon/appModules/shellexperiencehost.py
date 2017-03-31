@@ -1,5 +1,5 @@
 #A part of NonVisual Desktop Access (NVDA)
-#Copyright (C) 2015 NV Access Limited
+#Copyright (C) 2015-2017 NV Access Limited
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
 # Borrowed directly from NVDA Core (2016-2017 Joseph Lee)
@@ -40,6 +40,3 @@ class AppModule(appModuleHandler.AppModule):
 		if isinstance(obj, UIA):
 			if obj.name == "" and obj.UIAElement.cachedAutomationID == "TextBoxPinEntry":
 				obj.name = obj.previous.name
-			# NVDA Core issue 6994: Never treat Action Center grid as layout.
-			elif obj.UIAElement.cachedAutomationID == "QuickActionsGridView":
-				obj.presentationType = obj.presType_content
