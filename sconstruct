@@ -54,6 +54,16 @@ def mdTool(env):
 
 env = Environment(ENV=os.environ, tools=['gettexttool', mdTool])
 env.Append(**buildVars.addon_info)
+AddOption("", "--dev", default=False)
+AddOption("", "--av")
+
+if GetOption("av") is not None:
+	env["addon_version"] = GetOption("av")
+elif GetOption("dev"):
+	import datetime
+	buildDate = datetime.datetime.now()
+	year, month, day = str(buildDate.year), str(buildDate.month), str(buildDate.day)
+	env["addon_version"] = "".join([year, month.zfill(2), day.zfill(2), "-dev"])
 
 addonFile = env.File("${addon_name}-${addon_version}.nvda-addon")
 
@@ -106,9 +116,11 @@ def createAddonBundleFromPath(path, dest):
 	return dest
 
 def generateManifest(source, dest):
+	addon_info = buildVars.addon_info
+	addon_info["addon_version"] = env["addon_version"]
 	with codecs.open(source, "r", "utf-8") as f:
 		manifest_template = f.read()
-	manifest = manifest_template.format(**buildVars.addon_info)
+	manifest = manifest_template.format(**addon_info)
 	with codecs.open(dest, "w", "utf-8") as f:
 		f.write(manifest)
 
