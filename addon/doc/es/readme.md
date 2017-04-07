@@ -19,17 +19,19 @@ qué se incluye):
 * Correo
 * Mapas
 * Microsoft Edge
-* Settings (system settings, Windows+I)
-* Skype (universal app)
+* Opciones (opciones de sistema, Windows+I)
+* Skype (aplicación universal)
 * Tienda
 * El Tiempo
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
-and NVDA 2016.4 or later. For best results, use the add-on with latest
-stable build (build 14393) and latest stable version of NVDA. Also, after
-changing update settings for the add-on, be sure to save NVDA settings.
+Nota: este complemento requiere de Windows 10 Versión 1511 (compilación
+10286) o posterior y NVDA 2016.4 o posterior. Para unos mejores resultados,
+utiliza el complemento con la compilación estable más reciente (compilación
+14393) y con la versión estable más reciente de NVDA. También, después de
+cambiar las opciones de la actualización para el complemento, asegúrate de
+guardar las opciones de NVDA.
 
 ## General
 
@@ -103,8 +105,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
 ## Microsoft Edge
 
 * Ahora se anuncian notificaciones tales como descargas de ficheros.
-* In Creators Update, NVDA will no longer announce "WebRuntime Content View"
-  when going to another site.
+* En la actualización Creators, NVDA ya no anunciará "WebRuntime Content
+  View" cuando vaya a otro sitio.
 
 ## Opciones
 
