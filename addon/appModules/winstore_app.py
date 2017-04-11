@@ -1,6 +1,6 @@
 # Windows 10 Store
 # Part of Windows 10 App Essentials collection
-# Copyright 2016 Joseph Lee, released under GPL
+# Copyright 2016-2017 Joseph Lee, released under GPL
 
 # Enhancements to support Windows Store.
 
@@ -39,6 +39,9 @@ class AppModule(appModuleHandler.AppModule):
 				self._appInstallProgress = obj.name
 				# Don't forget to announce product title.
 				productTitle = obj.parent.previous
+				# Since March 2017 update, it is no longer the product name, but a progress button.
+				if productTitle.role == controlTypes.ROLE_BUTTON:
+					productTitle = productTitle.parent.previous
 				if productTitle and productTitle.UIAElement.cachedAutomationID == "_productTitle":
 					ui.message(" ".join([productTitle.name, obj.name]))
 		nextHandler()
