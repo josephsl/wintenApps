@@ -28,6 +28,7 @@ confspec = {
 	"updateChannel": "string(default=dev)",
 	"updateCheckTime": "integer(default=0)",
 	"updateCheckTimeInterval": "integer(min=0, max=30, default=1)",
+	"suggestionSounds": "boolean(default=true)",
 }
 config.conf.spec["wintenApps"] = confspec
 
@@ -131,6 +132,10 @@ class WinTenAppsConfigDialog(wx.Dialog):
 		updateCheckButton = w10Helper.addItem(wx.Button(self, label=_("Check for add-on &update")))
 		updateCheckButton.Bind(wx.EVT_BUTTON, self.onUpdateCheck)
 
+		# Translators: A checbox to enable or disable sounds for suggestions.
+		self.suggestionSoundsCheckbox=w10Helper.addItem(wx.CheckBox(self,label=_("&Play sounds for search suggestions")))
+		self.suggestionSoundsCheckbox.SetValue(config.conf["wintenApps"]["suggestionSounds"])
+		
 		w10Helper.addDialogDismissButtons(self.CreateButtonSizer(wx.OK | wx.CANCEL))
 		self.Bind(wx.EVT_BUTTON, self.onOk, id=wx.ID_OK)
 		self.Bind(wx.EVT_BUTTON, self.onCancel, id=wx.ID_CANCEL)
@@ -154,6 +159,7 @@ class WinTenAppsConfigDialog(wx.Dialog):
 			whenToCheck = currentTime+(self.updateInterval.Value * addonUpdateCheckInterval)
 			updateChecker.Start(whenToCheck-currentTime, True)
 		config.conf["wintenApps"]["updateChannel"] = ("dev", "stable")[self.channels.GetSelection()]
+		config.conf["wintenApps"]["suggestionSounds"] = self.suggestionSoundsCheckbox.Value
 		self.Destroy()
 
 	def onCancel(self, evt):
