@@ -1,6 +1,6 @@
 # Skype Preview/UWP
 # Part of Windows 10 App Essentials collection
-# Copyright 2016 Joseph Lee, released under GPL
+# Copyright 2016-2017 Joseph Lee, released under GPL
 
 # Workarounds for Skype UWP, providing similar features to Skype for Desktop client support (skype.py found in NVDA Core).
 
@@ -19,7 +19,7 @@ class AppModule(appModuleHandler.AppModule):
 		super(AppModule, self).__init__(*args, **kwargs)
 		for pos in xrange(10):
 			self.bindGesture("kb:control+nvda+%s"%pos, "readMessage")
-		for pos in xrange(1, 4):
+		for pos in xrange(1, 5):
 			self.bindGesture("kb:alt+%s"%pos, "moveToArea")
 
 	def event_NVDAObject_init(self, obj):
@@ -105,13 +105,18 @@ class AppModule(appModuleHandler.AppModule):
 	# Tuple below holds UIA automation ID for the element and errors if the element is not found.
 	moveTo = (
 	(None, None),
-	("ContactList", "Contacts list not found"),
 	("ConversationHistoryPanel", "Conversation history not found"),
+	("ContactList", "Contacts list not found"),
+	(" BotList", "Skype bots list not found"),
 	("ChatEditBox", "Chat edit field not found"),
 	)
 
 	def script_moveToArea(self, gesture):
 		area = int(gesture.displayName.split("+")[-1])
+		# However, since March 2017, areas received keyboard shortcuts, such as Alt+2 for contacts list.
+		if self.productVersion >= "11.13.133.0" and area < 4:
+			gesture.send()
+			return
 		element = self.locateElement(self.moveTo[area][0])
 		if element is None:
 			ui.message(self.moveTo[area][1])
