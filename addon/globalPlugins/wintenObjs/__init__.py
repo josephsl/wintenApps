@@ -71,7 +71,8 @@ class SearchField(UIA):
 			self.event_suggestionsClosed()
 
 	def event_suggestionsOpened(self):
-		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion.wav"))
+		if config.conf["wintenApps"]["suggestionSounds"]:
+			nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion.wav"))
 		# Translators: Announced in braille when suggestions appear.
 		braille.handler.message(_("suggestions"))
 		# Announce number of items found (except in Start search box where the suggestions are selected as user types).
@@ -95,7 +96,8 @@ class SearchField(UIA):
 				ui.message(obj.description)
 				return
 			obj = obj.next
-		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion1.wav"))
+		if config.conf["wintenApps"]["suggestionSounds"]:
+			nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion1.wav"))
 
 
 # General suggestions item handler
