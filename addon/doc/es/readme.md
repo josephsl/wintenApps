@@ -19,17 +19,19 @@ qué se incluye):
 * Correo
 * Mapas
 * Microsoft Edge
-* Settings (system settings, Windows+I)
-* Skype (universal app)
+* Opciones (opciones de sistema, Windows+I)
+* Skype (aplicación universal)
 * Tienda
 * El Tiempo
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
-and NVDA 2016.4 or later. For best results, use the add-on with latest
-stable build (build 14393) and latest stable version of NVDA. Also, after
-changing update settings for the add-on, be sure to save NVDA settings.
+Nota: este complemento requiere de Windows 10 Versión 1511 (compilación
+10286) o posterior y NVDA 2016.4 o posterior. Para unos mejores resultados,
+utiliza el complemento con la compilación estable más reciente (compilación
+14393) y con la versión estable más reciente de NVDA. También, después de
+cambiar las opciones de la actualización para el complemento, asegúrate de
+guardar las opciones de NVDA.
 
 ## General
 
@@ -51,11 +53,11 @@ changing update settings for the add-on, be sure to save NVDA settings.
   posición (ej.: 1 de 2) ya no se anuncia.
 * Se reconocen los siguientes eventos UIA: Controller para, live region
   cambiada (manejada por  evento de cambio de nombre).
-* Engadida a capacidade de procurar actualizacións do complemento
-  (automática ou manual) a través do novo diálogo Windows 10 App Essentials
-  que se atopa no menú Preferencias do NVDA. Por defecto, procuraranse as
-  actualizacións para as versións estable e de desenvolvemento
-  automáticamente semanal ou diáriamente, respectivamente.
+* Añadida la capacidad de buscar actualizaciones del complemento (automática
+  o manual) a través del nuevo diálogo Windows 10 App Essentials que se
+  encuentra en el menú Preferencias de NVDA. Por defecto, se buscarán las
+  actualizaciones para las versiones estable y de desarrollo automáticamente
+  semanal o diáriamente, respectivamente.
 * Capacidad para seguir eventos que lleguen desde aplicaciones Universal
   Windows Platform (UWP) si NVDA se está ejecutando con el registro de
   depuración habilitado (2017.1 o posterior).
@@ -90,8 +92,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Correo
 
-* Cando se revisan elementos na listaxe de mensaxes, agora podes usar ordes
-  de navegación de táboas para revisar as cabeceiras de mensaxe.
+* Cuando se revisan elementos en la lista de mensajes, ahora puedes utilizar
+  órdenes de navegación de tablas para revisar los encabezados de mensaje.
 
 ## Mapas
 
@@ -103,8 +105,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
 ## Microsoft Edge
 
 * Ahora se anuncian notificaciones tales como descargas de ficheros.
-* In Creators Update, NVDA will no longer announce "WebRuntime Content View"
-  when going to another site.
+* En la actualización Creators, NVDA ya no anunciará "WebRuntime Content
+  View" cuando vaya a otro sitio.
 
 ## Opciones
 

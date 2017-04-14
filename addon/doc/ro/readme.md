@@ -124,14 +124,14 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * Textul indicatorului de scriere este anunțat la fel ca Skype pentru
   Desktop.
 * Revenire parțială a comenzii Control+NvDA+1 până la 0 pentru citirea
-  istoricul chatului recent și pentru deplasarea obiectului navigator la
+  istoricului chatului recent și pentru deplasarea obiectului navigator la
   intrările chatului (la fel ca Skype pentru Desktop).
 * Puteți apăsa Alt+rândul cu numere pentru a localiza și a vă deplasa la
-  lista de contacte (1), conversații (2) și câmpul de editare a chatului
+  lista de contacte (1), conversații (2) și câmpul de editare al chatului
   (3). Rețineți că trebuie să activați aceste etichete pentru a vă deplasa
   la partea dorită.
 * Etichetele Casetelor combinate pentru aplicația Skype preview, lansată în
-  Noiembrie 2016, sunt anunțate.
+  noiembrie 2016, sunt anunțate.
 * NVDA nu mai anunță „Mesaj Skype” la examinarea mesajelor pentru
   majoritatea cazurilor.
 
