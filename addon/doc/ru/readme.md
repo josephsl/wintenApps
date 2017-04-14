@@ -18,16 +18,17 @@ Windows 10, а также исправлений для некоторых ти�
 * Почта
 * Карты
 * Microsoft Edge
-* Settings (system settings, Windows+I)
+* Настройки (настройки системы, Windows+I)
 * Skype (universal app)
 * Store
 * Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
-and NVDA 2016.4 or later. For best results, use the add-on with latest
-stable build (build 14393) and latest stable version of NVDA. Also, after
-changing update settings for the add-on, be sure to save NVDA settings.
+Примечание: Это дополнение требует Windows 10 Версии 1511 (сборки 10586) или
+позднее и NVDA 2016.4 или позднее. Для наилучших результатов используйте
+дополнение с последней стабильной сборкой (сборка 14393) и последней
+стабильной версией NVDA. Кроме того, после изменения настроек обновления для
+дополнения, обязательно сохраните настройки программы NVDA.
 
 ## Общие
 
@@ -65,7 +66,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 * Когда нажимаете ENTER, NVDA сообщает результаты расчёта.
 
-## calendar
+## календарь
 
 * NVDA no longer announces "edit" or "read-only" in message body and other
   fields.
@@ -129,7 +130,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 * After checking for app updates, app names in list of apps to be updated
   are correctly labeled.
-* Appearance of search suggestions are now announced.
+* Объявляются Появление поисковых подсказок.
 * When downloading content such as apps and movies, NVDA will announce
   product name and download progress.
 

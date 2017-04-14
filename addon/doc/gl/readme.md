@@ -50,11 +50,11 @@ da actualización para o complemento, asegúrate de gardar as opcións do NVDA.
   (ex.: 1 de 2) xa non se anuncia.
 * Recoñécense os seguintes eventos UIA: Controller for, live region changed
   (Nanexados por evento de cambio de nome).
-* Añadida la capacidad de buscar actualizaciones del complemento (automática
-  o manual) a través del nuevo diálogo Windows 10 App Essentials que se
-  encuentra en el menú Preferencias de NVDA. Predeterminadamente, se
-  buscarán las actualizaciones para las versiones estable y de desarrollo
-  automáticamente semanal o diáriamente, respectivamente.
+* Engadida a capacidade de procurar as actualizacións do complemento
+  (automática ou manual) a través do novo diálogo Windows 10 App Essentials
+  que se atopa no menú Preferencias do NVDA. Por defecto, procuraranse as
+  actualizacións para as versións estable e de desenvolvementeo
+  automáticamente semanal ou diáriamente, respectivamente.
 * Capacidade para seguir eventos que cheguen dende aplicacións Universal
   Windows Platform (UWP) se o NVDA se está a executar co rexistro de
   depuración habilitado (2017.1 ou posterior).
@@ -88,8 +88,8 @@ da actualización para o complemento, asegúrate de gardar as opcións do NVDA.
 
 ## Correo
 
-* Cuando se revisan elementos en la lista de mensajes, ahora puedes utilizar
-  órdenes de navegación de tablas para revisar los encabezados de mensaje.
+* Cando se revisan elementos na listaxe de mensaxes, agora podes usar ordes
+  de navegación de táboas para revisar as cabeceiras de mensaxe.
 
 ## Mapas
 

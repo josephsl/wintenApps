@@ -53,11 +53,11 @@ guardar las opciones de NVDA.
   posición (ej.: 1 de 2) ya no se anuncia.
 * Se reconocen los siguientes eventos UIA: Controller para, live region
   cambiada (manejada por  evento de cambio de nombre).
-* Engadida a capacidade de procurar actualizacións do complemento
-  (automática ou manual) a través do novo diálogo Windows 10 App Essentials
-  que se atopa no menú Preferencias do NVDA. Por defecto, procuraranse as
-  actualizacións para as versións estable e de desenvolvemento
-  automáticamente semanal ou diáriamente, respectivamente.
+* Añadida la capacidad de buscar actualizaciones del complemento (automática
+  o manual) a través del nuevo diálogo Windows 10 App Essentials que se
+  encuentra en el menú Preferencias de NVDA. Por defecto, se buscarán las
+  actualizaciones para las versiones estable y de desarrollo automáticamente
+  semanal o diáriamente, respectivamente.
 * Capacidad para seguir eventos que lleguen desde aplicaciones Universal
   Windows Platform (UWP) si NVDA se está ejecutando con el registro de
   depuración habilitado (2017.1 o posterior).
@@ -92,8 +92,8 @@ guardar las opciones de NVDA.
 
 ## Correo
 
-* Cando se revisan elementos na listaxe de mensaxes, agora podes usar ordes
-  de navegación de táboas para revisar as cabeceiras de mensaxe.
+* Cuando se revisan elementos en la lista de mensajes, ahora puedes utilizar
+  órdenes de navegación de tablas para revisar los encabezados de mensaje.
 
 ## Mapas
 
