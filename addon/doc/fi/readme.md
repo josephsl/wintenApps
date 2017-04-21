@@ -27,7 +27,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1511 (koontiversio
 10586) tai uudempaa ja NVDA 2016.4:ää tai uudempaa. Käytä parhaan
-käyttökokemuksen varmistamiseksi viimeisintä vakaata koontiversiota (14393)
+käyttökokemuksen varmistamiseksi viimeisintä vakaata koontiversiota (15063)
 sekä viimeisintä vakaata NVDA:n versiota. Varmista myös, että tallennat
 NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 
@@ -42,7 +42,7 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   valvonnan valintaikkuna koontiversiossa 14328 ja uudemmissa NVDA
   2016.2.1:ssä tai vanhemmassa.
 * Tiettyjen hakukenttien ehdotusten ilmestyminen/sulkeutuminen (varsinkin
-  Asetukset- ja Kauppa-sovelluksessa) ilmaistaan nyt äänimerkeillä ja
+  Asetukset- ja Kauppa-sovelluksissa) ilmaistaan nyt äänimerkeillä ja
   pistekirjoituksella. Tämä koskee myös Käynnistä-valikon hakukenttää.
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
@@ -123,10 +123,11 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 * Osittainen Control+NVDA+numero-komentojen paluu tuoreen
   keskusteluhistorian lukemiseen sekä navigointiobjektin siirtämiseen
   keskustelukohteisiin kuten Skypen työpöytäversiossa.
-* Voit painaa nyt Alt+numerorivin numeroita etsiäksesi kontaktiluettelon
-  (1), keskustelut (2) ja keskustelumuokkauskentän (3) sekä siirtyäksesi
-  niihin. Huomaa, että nämä välilehdet on aktivoitava haluttuun osioon
-  siirtymiseksi.
+* Voit nyt painaa Alt+numerorivin numeroita etsiäksesi kontaktiluettelon
+  (1), keskustelut (2), botit (3) ja keskustelumuokkauskentän, mikäli se on
+  näkyvissä (4) sekä siirtyäksesi niihin. Huomaa, että nämä komennot
+  toimivat oikein, jos maaliskuussa 2017 julkistettu Skype-päivitys on
+  asennettu.
 * Marraskuussa 2016 julkaistun Skype-sovelluksen esiversion
   yhdistelmäruutujen selitteet puhutaan.
 * NVDA ei enää sano "Skype-viesti" useimmissa tapauksissa viestejä

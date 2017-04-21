@@ -26,8 +26,8 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
   pripadajuće mu ikonice
 
 Upozorenje: ovaj dodatak zahtjeva Windows 10 Verziju 1511 (podverziju 10586)
-ili noviju i NVDA 2016.4 ili noviji. za najbolje rezultate, koristite
-dodatak sa zadnjom stabilnom inačicom (podverzija 14393) i zadnju stabilnu
+ili noviju i NVDA 2016.4 ili noviji. Za najbolje rezultate, koristite
+dodatak sa zadnjom stabilnom inačicom (podverzija 15063) i zadnju stabilnu
 inačicu nvda. Također, prilikom spremanja postavki za nadogradnju dodatka,
 budite sigurni da ste spremili postavke za NVDA.
 
@@ -123,10 +123,10 @@ budite sigurni da ste spremili postavke za NVDA.
 * Djelomičan povratak prečaca  Control+NvDA+gornji numerički red za čitanje
   zadnje povijesti poruka i za premještanje objekta navigatora na popis
   poruka kao i u skypeu za radnu površinu.
-* Sada možete pritisnuti Alt+gorni brojčani red kako biste locirali i
-  premjestili se na popis kontakata (1), razgovori (2) i i polje uređivanja
-  za čavrljanja (3). Imajte na umu da biste trebali aktivirati te kartice
-  ako želite se premještati na njih.
+* Sada možete pritisnuti Alt+brojčani red kako biste locirali i prebacivali
+  se između razgovora (1), popis kontakata (2), botova (3) i i polja za upis
+  poruke u čavrljanju, ako je vidljivo (4). Imajte na umu, da će ovi prečaci
+  raditi samo sa instaliranim ažuriranjem izdanom u ožujku 2017.
 * oznake odabirnih okvira za Skype preview app objavljenu u studenom 2016 se
   izgovaraju.
 * NVDA više neće izgovarati "skype message" prilikom pregleda poruka u

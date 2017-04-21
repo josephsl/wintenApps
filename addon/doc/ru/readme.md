@@ -20,13 +20,13 @@ Windows 10, а также исправлений для некоторых ти�
 * Microsoft Edge
 * Настройки (настройки системы, Windows+I)
 * Skype (universal app)
-* Store
+* Магазин
 * Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
 
 Примечание: Это дополнение требует Windows 10 Версии 1511 (сборки 10586) или
 позднее и NVDA 2016.4 или позднее. Для наилучших результатов используйте
-дополнение с последней стабильной сборкой (сборка 14393) и последней
+дополнение с последней стабильной сборкой (сборка 15063) и последней
 стабильной версией NVDA. Кроме того, после изменения настроек обновления для
 дополнения, обязательно сохраните настройки программы NVDA.
 
@@ -40,7 +40,7 @@ Windows 10, а также исправлений для некоторых ти�
   Preview dialog (settings app) and new-style UAC dialog in build 14328 and
   later for NvDA 2016.2.1 or earlier.
 * Appearance/close of suggestions for certain search fields (notably
-  Settings and Store apps) is announced via sounds and braille.. This also
+  Settings and Store apps) is announced via sounds and braille. This also
   includes Start menu search box.
 * NVDA can announce suggestion count when performing a search in majority of
   cases. This option is controlled by "Report object position information"
@@ -118,26 +118,27 @@ Windows 10, а также исправлений для некоторых ти�
 * Partial return of Control+NvDA+number row commands to read recent chat
   history and to move navigator object to chat entries just like Skype for
   Desktop.
-* You can now press Alt+number row to locate and move to contacts list (1),
-  conversations (2) and chat edit field (3). Note that one must activate
-  these tabs to move to the desired part.
+* You can now press Alt+number row to locate and move to conversations (1),
+  contacts list (2), bots (3) and chat edit field if visible (4). Note that
+  these commands will work properly if Skype update released in March 2017
+  is installed.
 * Combo box labels for Skype preview app released in November 2016 are
   announced.
 * NVDA will no longer announce "Skype Message" when reviewing messages for
   majority of cases.
 
-## Store
+## Магазин
 
-* After checking for app updates, app names in list of apps to be updated
-  are correctly labeled.
+* После проверки обновлений для приложений, обновлённые названия приложений
+  в списке приложений будут правильно помечены.
 * Объявляются Появление поисковых подсказок.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* При загрузке содержимого, такого как приложения и фильмы, NVDA будет
+  сообщать Наименование продукта и прогресс загрузки.
 
 ## Погода
 
-* Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by
-  Derek Riemer).
+* Вкладки, такие как "прогноз" и "карты" расспознаются надлежащим образом
+  (патч Derek Riemer).
 * when reading a forecast, use the left and right arrows to move between
   items. Use the up and down arrows to read the individual items. For
   example, pressing the right arrow might report "Monday: 79 degrees, partly

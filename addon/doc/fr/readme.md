@@ -20,16 +20,18 @@ est inclus) :
 * Courrier
 * Cartes
 * Microsoft Edge
-* Settings (system settings, Windows+I)
+* Paramètres (paramètres système, Windows+I)
 * Skype (universal app)
 * Store
 * Météo.
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
-and NVDA 2016.4 or later. For best results, use the add-on with latest
-stable build (build 14393) and latest stable version of NVDA. Also, after
-changing update settings for the add-on, be sure to save NVDA settings.
+Note: ce module complémentaire nécessite Windows 10 Version 1511 (build
+10586) ou version ultérieure et NVDA 2016.4 ou version ultérieure. Pour de
+meilleurs résultats, utilisez le module complémentaire avec la dernière
+build stable (build 15063) et la dernière version stable de NVDA. De plus,
+après avoir modifié les paramètres de mise à jour pour le module
+complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 
 ## Générale
 
@@ -110,8 +112,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 * Notifications telles que les téléchargements de fichiers sont maintenant
   annoncées.
-* In Creators Update, NVDA will no longer announce "WebRuntime Content View"
-  when going to another site.
+* Dans Creators Update NVDA n'annoncera plus"WebRuntime Content View" en
+  allant vers un autre site.
 
 ## Paramètres
 
@@ -135,9 +137,10 @@ changing update settings for the add-on, be sure to save NVDA settings.
   l'historique de conversation récente et pour déplacer l'objet navigator
   aux entrées de conversation tout comme Skype for Desktop.
 * Vous pouvez maintenant appuyer sur Alt+numéro de ligne pour localiser et
-  se déplacer à la liste des contacts (1), conversations (2) et la zone
-  d'édition de la conversation (3). Notez que l'on doit activer ces onglets
-  pour passer à la partie souhaitée.
+  se déplacer à la conversations (1), liste des contacts (2), bots (3) et la
+  zone d'édition de la conversation si visible (4). Notez que ces commandes
+  fonctionneront correctement si la mise à jour de Skype mise à jour en mars
+  2017 est installée.
 * Étiquettes de liste déroulante pour Skype preview app publié en Novembre
   2016 sont annoncées.
 * NVDA n'annoncera plus "Message Skype"lors de la révision des messages pour

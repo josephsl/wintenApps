@@ -27,7 +27,7 @@ welche inbegriffen sind):
 
 Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
 and NVDA 2016.4 or later. For best results, use the add-on with latest
-stable build (build 14393) and latest stable version of NVDA. Also, after
+stable build (build 15063) and latest stable version of NVDA. Also, after
 changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Allgemein
@@ -39,7 +39,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
   Preview dialog (settings app) and new-style UAC dialog in build 14328 and
   later for NvDA 2016.2.1 or earlier.
 * Appearance/close of suggestions for certain search fields (notably
-  Settings and Store apps) is announced via sounds and braille.. This also
+  Settings and Store apps) is announced via sounds and braille. This also
   includes Start menu search box.
 * NVDA can announce suggestion count when performing a search in majority of
   cases. This option is controlled by "Report object position information"
@@ -117,9 +117,10 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * Partial return of Control+NvDA+number row commands to read recent chat
   history and to move navigator object to chat entries just like Skype for
   Desktop.
-* You can now press Alt+number row to locate and move to contacts list (1),
-  conversations (2) and chat edit field (3). Note that one must activate
-  these tabs to move to the desired part.
+* You can now press Alt+number row to locate and move to conversations (1),
+  contacts list (2), bots (3) and chat edit field if visible (4). Note that
+  these commands will work properly if Skype update released in March 2017
+  is installed.
 * Combo box labels for Skype preview app released in November 2016 are
   announced.
 * NVDA will no longer announce "Skype Message" when reviewing messages for

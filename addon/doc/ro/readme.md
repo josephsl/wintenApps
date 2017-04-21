@@ -19,7 +19,7 @@ privire la ceea ce este inclus):
 * Mail
 * Hărți
 * Microsoft Edge
-* Setări (setări sistem, Windows+I)
+* Setări (setări de sistem, Windows+I)
 * Skype (aplicație universală)
 * Magazin
 * Meteo.
@@ -27,7 +27,7 @@ privire la ceea ce este inclus):
 
 Notă: acest supliment necesită Windows 10 versiunea 1511 (build 10586) sau
 mai nou și NVDA 2016.4 sau mai nou. Pentru rezultate foarte bune, folosiți-l
-cu ultimul build stabil (build 14393) și cea mai recentă versiune stabilă a
+cu ultimul build stabil (build 15063) și cea mai recentă versiune stabilă a
 NVDA-ului. De asemenea, după modificarea setărilor de actualizare pentru
 supliment, asigurați-vă că salvați setările NVDA-ului.
 
@@ -43,8 +43,8 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
   aplicația Setări) și un nou stil în dialogul UAC în build 14328 și mai nou
   pentru NvDA 2016.2.1 sau mai vechi.
 * Aspectul/aproape de sugestii pentru anumite câmpuri de căutare (în special
-  în aplicațiile Setări și Magazin) este anunțat prin sunete și/sau
-  braille. De asemenea, aceasta include caseta de căutare a meniului Start.
+  în aplicațiile Setări și Magazin) este anunțat prin sunete și braille. De
+  asemenea, acesta include caseta de căutare a meniului Start.
 * NVDA poate anunța numărul de sugestii la efectuarea unei căutări în
   majoritatea cazurilor. Această opțiune este controlată de „informația
   poziției obiectului în dialogul prezentării obiectului.
@@ -54,8 +54,9 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
   regiunii în care locuiți (tratarea evenimentului schimbării numelui).
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
-  meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă și
-  cea în dezvoltare vor căuta noi actualizări automat săptămânal sau zilnic.
+  în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
+  și cea în dezvoltare vor căuta noi actualizări automat săptămânal sau
+  zilnic.
 * Abilitatea de a urmări evenimentele care provin din platforma universală
   Windows (UWP) și din aplicații, în cazul în care NVDA rulează cu
   diagnosticarea activată (2017.1 sau mai nou).
@@ -127,9 +128,9 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
   istoricului chatului recent și pentru deplasarea obiectului navigator la
   intrările chatului (la fel ca Skype pentru Desktop).
 * Puteți apăsa Alt+rândul cu numere pentru a localiza și a vă deplasa la
-  lista de contacte (1), conversații (2) și câmpul de editare al chatului
-  (3). Rețineți că trebuie să activați aceste etichete pentru a vă deplasa
-  la partea dorită.
+  conversații (1), lista de contacte (2), boți (3) și câmpul de editare dacă
+  e vizibil (4). Rețineți că aceste comenzi vor funcționa corespunzător dacă
+  actualizarea Skype-ului lansată în martie 2017 este instalată.
 * Etichetele Casetelor combinate pentru aplicația Skype preview, lansată în
   noiembrie 2016, sunt anunțate.
 * NVDA nu mai anunță „Mesaj Skype” la examinarea mesajelor pentru

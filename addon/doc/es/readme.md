@@ -29,7 +29,7 @@ qué se incluye):
 Nota: este complemento requiere de Windows 10 Versión 1511 (compilación
 10286) o posterior y NVDA 2016.4 o posterior. Para unos mejores resultados,
 utiliza el complemento con la compilación estable más reciente (compilación
-14393) y con la versión estable más reciente de NVDA. También, después de
+15063) y con la versión estable más reciente de NVDA. También, después de
 cambiar las opciones de la actualización para el complemento, asegúrate de
 guardar las opciones de NVDA.
 
@@ -44,8 +44,9 @@ guardar las opciones de NVDA.
   diálogo de nuevo estilo del UAC en la compilación 14328 y posteriores para
   NvDA 2016.2.1 o anteriores.
 * La apariencia o cierre de sugerencias para ciertos campos de búsqueda (en
-  particular la app Opciones) se anuncian a través de sonidos y/o de
-  braille. Esto también incluye el cuadro de búsqueda del menú Inicio.
+  particular las aplicaciones configuración y tienda) se anuncian a través
+  de sonidos y/o de braille. Esto también incluye el cuadro de búsqueda del
+  menú Inicio.
 * NVDA puede anunciar cuenta de sugerencias cuando se realiza una búsqueda
   en la mayoría de casos. Esta opción se controla por "Anunciar información
   de posición del objeto" en el diálogo Presentación de Objetos.
@@ -129,9 +130,10 @@ guardar las opciones de NVDA.
 * Retorno parcial de las órdenes Control+NVDA+fila de números para leer el
   historial de chats recientes y para mover el navegador de objetos a las
   entradas de chat como en Skype para Escritorio.
-* Ahora puedes pulsar Alt+fila de números para localizar y mover a lista de
-  contactos (1), conversaciones (2) y campo de edición de chat (3). Ten en
-  cuenta que deben activarse esas pestañas para moverse a la parte decidida.
+* Ahora puedes pulsar Alt+fila de números para localizar y mover a
+  conversaciones (1), lista de contactos (2), bots (3) y campo de edición de
+  chat (4). Ten en cuenta que estas órdenes funcionarán apropiadamente si
+  está instalada la actualización de Skype liberada en Marzo de 2017.
 * Se anuncian las etiquetas de los cuadros combinados para la aplicación
   Skype preview liberada en Noviembre de 2016.
 * NVDA ya no anuncia "Mensaje Skype" cuando se revisen mensajes para la

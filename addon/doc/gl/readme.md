@@ -27,7 +27,7 @@ se inclúe):
 
 Nota: este complemento require do Windows 10 Versión 1511 (compilación
 10286) ou posterior e NVDA 2016.4 ou posterior. Para uns mellores
-resultados, usa o complemento coa última versión estable (compilación 14393)
+resultados, usa o complemento coa última versión estable (compilación 15063)
 e coa última versión estable do NVDA. Tamén, despois de cambiar as opcións
 da actualización para o complemento, asegúrate de gardar as opcións do NVDA.
 
@@ -41,8 +41,8 @@ da actualización para o complemento, asegúrate de gardar as opcións do NVDA.
   diálogo Insider Preview (settings app) e o diálogo de novo estilo do UAC
   na compilación 14328 e anteriores para o NVDA 2016.2.1 e anteriores.
 * A apariencia ou peche de suxerencias para certos campos de procura (en
-  particular o aplikcativo Configuración) anúnciase a través de sons e/ou de
-  braille. Esto tamén inclúe a Caixa de procura do menú Inicio.
+  particular os aplikcativos Configuración e tenda) anúnciase a través de
+  sons e/ou de braille. Esto tamén inclúe a Caixa de procura do menú Inicio.
 * NVDA pode anunciar conta de suxerencias cando se realiza unha procura na
   maioría dos casos. Esta opción contrólase por "Anunciar información de
   posición do obxecto" no diálogo Presentación de Obxectos.
@@ -125,10 +125,10 @@ da actualización para o complemento, asegúrate de gardar as opcións do NVDA.
 * Volta parcial das ordes Control+NVDA+fila de números para ler o histórico
   de chats recentes e para mover o navegador de obxectos a entradas de chat
   como Skype para Escritorio.
-* Agora podes premer Alt+fila de números para localizar e moverte cara a
-  lista de contactos (1), conversacións (2) e campo de edición de chat
-  (3). Ten en conta que deben activarse estas pestanas para moverte cara a
-  parte decidida.
+* Agora podes premer Alt+fila de números para localizar e mover a
+  conversacións (1), listaxe de contactos (2), bots (3) e campo de edición
+  do chat (4). Ten en conta que estas ordes funcionarán apropriadamente se
+  está instalada a actualización do Skype liberada en Marzo do 2017.
 * Anúncianse as etiquetas das caixas combinadas para a aplicación Skype
   preview liberada en novembro do 2016.
 * NVDA xa non anuncia "Mensaxe Skype" cando se revisen mensaxes para a

@@ -26,7 +26,7 @@ si veda la relativa sezione per ulteriori informazioni:
 
 Nota: questo add-on richiede  Windows 10 Versione 1511 (build 10586) o
 successive e NVDA 2016.4 o successive. Per avere le prestazioni migliori,
-utilizzare il componente aggiuntivo con l'ultima build stabile (build 14393)
+utilizzare il componente aggiuntivo con l'ultima build stabile (build 15063)
 e l'ultima versione stabile di NVDA. Si ricorda che dopo aver modificato le
 impostazioni di aggiornamento automatico del componente aggiuntivo, è
 consigliabile salvare la configurazione di NVDA.
@@ -128,10 +128,11 @@ consigliabile salvare la configurazione di NVDA.
   per desktop.
 * Implementazione parziale della funzionalità di lettura rapida delle chat
   con ctrl+NVDA+numeri da 1 a 9, come accade in Skype Desktop.
-* è possibile premere il tasto alt in combinazione con i numeri per attivare
-  le schede, ossia alt-1 contatti, alt-2 elenco conversazioni, alt-3 va nel
-  campo editazione della chat. Le schede devono essere attivate per
-  potercisi spostare.
+* è possibile premere il tasto alt in combinazione con i numeri per
+  spostarsi tra conversazioni (1), elenco contatti  (2), bots (3) e campo
+  editazione della chat se visibile (4). Si noti che questi comandi
+  funzioneranno a dovere se è stato installato l'aggiornamento di Skype di
+  marzo 2017.
 * Vengono lette le etichette delle caselle combinate in anteprima Skype
   novembre 2016
 * Nella maggior parte dei casi, NVDA non leggerà più i messaggi Skype di
