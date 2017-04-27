@@ -138,7 +138,7 @@ class WinTenAppsConfigDialog(wx.Dialog):
 		mainSizer.Fit(self)
 		self.Sizer = mainSizer
 		self.autoUpdateCheckbox.SetFocus()
-		self.Center(wx.BOTH | wx.CENTER_ON_SCREEN)
+		self.Center(wx.BOTH | (wx.CENTER_ON_SCREEN if hasattr(wx, "CENTER_ON_SCREEN") else 2))
 
 	def onOk(self, evt):
 		global updateChecker

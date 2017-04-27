@@ -143,7 +143,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super(GlobalPlugin, self).terminate()
 		try:
 			self.prefsMenu.RemoveItem(self.w10Settings)
-		except AttributeError, wx.PyDeadObjectError:
+		except RuntimeError, AttributeError, wx.PyDeadObjectError:
 			pass
 		if w10config.updateChecker and w10config.updateChecker.IsRunning():
 			w10config.updateChecker.Stop()
