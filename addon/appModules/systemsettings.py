@@ -47,6 +47,9 @@ class AppModule(appModuleHandler.AppModule):
 			# Recognize groups of controls for contextual output (more prominent in Redstone 2).
 			elif obj.UIAElement.cachedAutomationID.endswith("GroupTitleTextBlock"):
 				obj.role = controlTypes.ROLE_GROUPING
+			# From Redstone 1 onwards, update history shows status rather than the title.
+			elif obj.role == controlTypes.ROLE_LINK and obj.UIAElement.cachedAutomationID.startswith("HistoryEvent") and obj.name != obj.previous.name:
+				obj.name = ", ".join([obj.previous.name, obj.name])
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):

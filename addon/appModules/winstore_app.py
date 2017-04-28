@@ -40,7 +40,7 @@ class AppModule(appModuleHandler.AppModule):
 				# Don't forget to announce product title.
 				productTitle = obj.parent.previous
 				# Since March 2017 update, it is no longer the product name, but a progress button.
-				if productTitle.role == controlTypes.ROLE_BUTTON:
+				if productTitle and productTitle.role == controlTypes.ROLE_BUTTON:
 					productTitle = productTitle.parent.previous
 				if productTitle and productTitle.UIAElement.cachedAutomationID == "_productTitle":
 					ui.message(" ".join([productTitle.name, obj.name]))
