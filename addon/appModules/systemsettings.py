@@ -37,7 +37,8 @@ class AppModule(appModuleHandler.AppModule):
 			# One particular case is Settings/Update/Developer Mode with USB/LAN discovery toggle button in Redstone (fixed in build 14986).
 			# Another case is with various combo boxes in Redstone 2 with no labels.
 			# Yet another case is Devices/Bluetooth lists.
-			if obj.name == "" and (obj.role in (controlTypes.ROLE_TOGGLEBUTTON, controlTypes.ROLE_COMBOBOX) and obj.UIAElement.cachedAutomationID
+			# Still another is notification syncing toggle button in Cortana/Notifications in redstone 3 build 16188.
+			if obj.name == "" and (obj.role in (controlTypes.ROLE_TOGGLEBUTTON, controlTypes.ROLE_COMBOBOX) and (obj.UIAElement.cachedAutomationID or obj.previous.UIAElement.cachedAutomationID == "CortanaSettingsPageGroup_SendBetweenDevices_GroupTitleTextBlock")
 				or obj.role == controlTypes.ROLE_LIST and obj.UIAElement.cachedAutomationID in ("SystemSettings_Devices_AudioDeviceList_ListView", "SystemSettings_Devices_OtherDeviceList_ListView")):
 				# But some combo boxes, such as Insider level combo box in Creators Update has the following problem.
 				try:
