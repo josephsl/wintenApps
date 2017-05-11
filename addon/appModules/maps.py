@@ -21,7 +21,7 @@ class MapLocation(UIA):
 		l,t,w,h=self.location
 		x = l+(w/2)
 		y = t+(h/2)
-		screenWidth, screenHeight = api.getDesktopObject().location[2], api.getDesktopObject().location[3]
+		screenWidth, screenHeight = api.getDesktopObject().location[2:]
 		if x <= screenWidth or y <= screenHeight:
 			minPitch=config.conf['mouse']['audioCoordinates_minPitch']
 			maxPitch=config.conf['mouse']['audioCoordinates_maxPitch']

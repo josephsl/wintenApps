@@ -27,4 +27,4 @@ class AppModule(appModuleHandler.AppModule):
 		if isinstance(obj, UIA):
 			# Very redundant to say "read-only" when we do know messages are read-only.
 			if obj.UIAElement.cachedAutomationID == "QuickItemSubject":
-					clsList.insert(0, AppointmentSubject)
+				clsList.insert(0, AppointmentSubject)
