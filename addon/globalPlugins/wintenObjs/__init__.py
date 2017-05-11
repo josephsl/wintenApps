@@ -205,7 +205,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
 				clsList.insert(0, SearchFieldEx if searchFieldIncorporated else SearchField)
 			# Suggestions themselves.
-			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
+			# No longer needed in NVDA 2017.3 as the Core will include this.
+			elif not "reportAutoSuggestionsWithSound" in config.conf["presentation"] and obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
 				clsList.insert(0, SuggestionsListItem)
 			# Menu items should never expose position info (seen in various context menus such as in Edge).
 			elif obj.UIAElement.cachedClassName == "MenuFlyoutItem":
