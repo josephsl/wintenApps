@@ -29,7 +29,7 @@ addonHandler.initTranslation()
 try:
 	from NVDAObjects.UIA import SearchField as CoreSearchField
 	searchFieldIncorporated = True
-except AttributeError, ImportError:
+except ImportError:
 	searchFieldIncorporated = False
 
 # Extra UIA constants
@@ -106,32 +106,35 @@ class SearchField(UIA):
 		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestionsClosed.wav"))
 
 
-class SearchFieldEx(CoreSearchField):
+try:
+	class SearchFieldEx(CoreSearchField):
 
-	def event_suggestionsOpened(self):
-		super(SearchFieldEx, self).event_suggestionsOpened()
-		# Announce number of items found (except in Start search box where the suggestions are selected as user types).
-		# Oddly, Edge's address omnibar returns 0 for suggestion count when there are clearly suggestions (implementation differences).
-		# Because inaccurate count could be announced (when users type, suggestion count changes), thus announce if position info reporting is enabled.
-		if config.conf["presentation"]["reportObjectPositionInformation"]:
-			if self.UIAElement.cachedAutomationID == "TextBox" or self.UIAElement.cachedAutomationID == "SearchTextBox" and self.appModule.appName != "searchui":
-				# Item count must be the last one spoken.
-				suggestionsCount = self.controllerFor[0].childCount
-				suggestionsMessage = "1 suggestion" if suggestionsCount == 1 else "%s suggestions"%suggestionsCount
-				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
+		def event_suggestionsOpened(self):
+			super(SearchFieldEx, self).event_suggestionsOpened()
+			# Announce number of items found (except in Start search box where the suggestions are selected as user types).
+			# Oddly, Edge's address omnibar returns 0 for suggestion count when there are clearly suggestions (implementation differences).
+			# Because inaccurate count could be announced (when users type, suggestion count changes), thus announce if position info reporting is enabled.
+			if config.conf["presentation"]["reportObjectPositionInformation"]:
+				if self.UIAElement.cachedAutomationID == "TextBox" or self.UIAElement.cachedAutomationID == "SearchTextBox" and self.appModule.appName != "searchui":
+					# Item count must be the last one spoken.
+					suggestionsCount = self.controllerFor[0].childCount
+					suggestionsMessage = "1 suggestion" if suggestionsCount == 1 else "%s suggestions"%suggestionsCount
+					queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
 
-	def event_suggestionsClosed(self):
-		# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
-		if self.UIAElement.cachedAutomationID == "addressEditBox" and self != api.getFocusObject():
-			return
-		# Manually locate live region until NVDA Core implements this.
-		obj = self
-		while obj is not None:
-			if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "Popup":
-				ui.message(obj.description)
+		def event_suggestionsClosed(self):
+			# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
+			if self.UIAElement.cachedAutomationID == "addressEditBox" and self != api.getFocusObject():
 				return
-			obj = obj.next
-		super(SearchFieldEx, self).event_suggestionsClosed()
+			# Manually locate live region until NVDA Core implements this.
+			obj = self
+			while obj is not None:
+				if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "Popup":
+					ui.message(obj.description)
+					return
+				obj = obj.next
+			super(SearchFieldEx, self).event_suggestionsClosed()
+except NameError:
+	pass
 
 
 # General suggestions item handler
