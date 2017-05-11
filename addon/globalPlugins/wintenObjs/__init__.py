@@ -2,6 +2,7 @@
 # Copyright 2015-2017 Joseph Lee, released under GPL.
 
 # Adds handlers for various UIA controls found in Windows 10.
+# Since May 2017, suggestions sounds are based on wave files produced by NV Access (copyright 2017).
 
 import os
 import globalPluginHandler
@@ -23,6 +24,13 @@ from logHandler import log
 import w10config
 import addonHandler
 addonHandler.initTranslation()
+
+# As long as NVDA Core ticket 6241 is incubating...
+try:
+	from NVDAObjects.UIA import SearchField as CoreSearchField
+	searchFieldIncorporated = True
+except AttributeError, ImportError:
+	searchFieldIncorporated = False
 
 # Extra UIA constants
 UIA_LiveRegionChangedEventId = 20024 # Coerce this to name change event for now.
@@ -71,7 +79,7 @@ class SearchField(UIA):
 			self.event_suggestionsClosed()
 
 	def event_suggestionsOpened(self):
-		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion.wav"))
+		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestionsOpened.wav"))
 		# Translators: Announced in braille when suggestions appear.
 		braille.handler.message(_("suggestions"))
 		# Announce number of items found (except in Start search box where the suggestions are selected as user types).
@@ -95,7 +103,35 @@ class SearchField(UIA):
 				ui.message(obj.description)
 				return
 			obj = obj.next
-		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestion1.wav"))
+		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestionsClosed.wav"))
+
+
+class SearchFieldEx(CoreSearchField):
+
+	def event_suggestionsOpened(self):
+		super(SearchFieldEx, self).event_suggestionsOpened()
+		# Announce number of items found (except in Start search box where the suggestions are selected as user types).
+		# Oddly, Edge's address omnibar returns 0 for suggestion count when there are clearly suggestions (implementation differences).
+		# Because inaccurate count could be announced (when users type, suggestion count changes), thus announce if position info reporting is enabled.
+		if config.conf["presentation"]["reportObjectPositionInformation"]:
+			if self.UIAElement.cachedAutomationID == "TextBox" or self.UIAElement.cachedAutomationID == "SearchTextBox" and self.appModule.appName != "searchui":
+				# Item count must be the last one spoken.
+				suggestionsCount = self.controllerFor[0].childCount
+				suggestionsMessage = "1 suggestion" if suggestionsCount == 1 else "%s suggestions"%suggestionsCount
+				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
+
+	def event_suggestionsClosed(self):
+		# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
+		if self.UIAElement.cachedAutomationID == "addressEditBox" and self != api.getFocusObject():
+			return
+		# Manually locate live region until NVDA Core implements this.
+		obj = self
+		while obj is not None:
+			if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "Popup":
+				ui.message(obj.description)
+				return
+			obj = obj.next
+		super(SearchFieldEx, self).event_suggestionsClosed()
 
 
 # General suggestions item handler
@@ -165,8 +201,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					clsList.insert(0, Dialog)
 			# Search field that does raise controller for event.
 			# Also take care of Edge address omnibar and Start search box.
+			# This is no longer necessary in NVDA 2017.3 (incubating as of May 2017).
 			elif obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
-				clsList.insert(0, SearchField)
+				clsList.insert(0, SearchFieldEx if searchFieldIncorporated else SearchField)
 			# Suggestions themselves.
 			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
 				clsList.insert(0, SuggestionsListItem)
