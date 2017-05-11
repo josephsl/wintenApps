@@ -231,9 +231,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
-		# Never allow WorkerW thread to send gain focus event (seen in Insider builds but was observed in release builds for some).
-		if obj.role == controlTypes.ROLE_PANE and obj.appModule.appModuleName == "explorer" and obj.windowClassName == "WorkerW" and obj.name is None:
-			return
 		# Non-English locales does not fire item selected event for looping selector unless navigator is first set to it.
 		if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "CustomLoopingSelector":
 			api.setNavigatorObject(obj.simpleFirstChild)
