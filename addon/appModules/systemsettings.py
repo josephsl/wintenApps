@@ -10,6 +10,7 @@ import controlTypes
 import UIAHandler
 import api
 from NVDAObjects.UIA import UIA, ListItem
+import config
 
 # Some Settings app combo boxes do expose value selection pattern but requires focus to be reminded of value changes.
 
@@ -53,7 +54,8 @@ class AppModule(appModuleHandler.AppModule):
 				obj.name = ", ".join([obj.previous.name, obj.name])
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		if isinstance(obj, UIA):
+		# These are no longer needed with nVDA 2017.3.
+		if "reportAutoSuggestionsWithSound" not in config.conf["presentation"] and isinstance(obj, UIA):
 			if obj.role == controlTypes.ROLE_COMBOBOX and obj.UIAElement.getCurrentPropertyValue(UIAHandler.UIA_IsValuePatternAvailablePropertyId):
 				clsList.insert(0, ComboBoxWithValuePattern)
 			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, ComboBoxWithValuePattern):
