@@ -38,7 +38,7 @@ class AppModule(appModuleHandler.AppModule):
 			return
 		nextHandler()
 
-				# Locate various elements, as this is one of the best ways to do this in Skype Preview.
+	# Locate various elements, as this is one of the best ways to do this in Skype Preview.
 	# The best criteria is automation ID (class names are quite generic).
 	def locateElement(self, automationID):
 		# Foreground isn't reliable.
@@ -47,6 +47,11 @@ class AppModule(appModuleHandler.AppModule):
 			screenContent = fg.getChild(1)
 		else:
 			screenContent = fg.getChild(2)
+		# Thanks to My Peple in Redstone 3, screen content so far could actually be the title bar, and the actual foreground window is next door.
+		# In other words, Skype window is embedded inside My People window.
+		if screenContent.UIAElement.cachedAutomationID == "TitleBar":
+			# The following traversal path may change in future builds.
+			screenContent = screenContent.next.simpleLastChild.simpleFirstChild
 		# Element placement (according to UIA changes from time to time.
 		# Wish there is a more elegant way to do this...
 		for element in screenContent.children:
@@ -55,8 +60,8 @@ class AppModule(appModuleHandler.AppModule):
 		return None
 
 	# Borrowed from Skype for Desktop app module (NVDA Core).
-			# #14: Drop channel type (e.g. Skype Message).
-			# Also match multi-line messages.
+	# #14: Drop channel type (e.g. Skype Message).
+	# Also match multi-line messages.
 	RE_MESSAGE = re.compile(r"\AFrom (?P<from>.*), Skype (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?\Z", re.M|re.S)
 
 	def reportMessage(self, message):
