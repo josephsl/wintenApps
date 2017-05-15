@@ -65,10 +65,9 @@ class LoopingSelectorList(UIA):
 			loopingValue = loopingValue.next
 		return None
 
-# Search fields.
-# Some of them raise controller for event, an event fired if another UI element depends on this control.
-# Core-based blueprint found in I6241 branch.
-class SearchField(UIA):
+# General UIA controller for edit field.
+# Used nod as a base class for controls such as Mail's composition window, search fields and such.
+class UIAEditableTextWithSuggestions(UIA):
 
 	def event_UIA_controllerFor(self):
 		# Only useful if suggestions appear and disappear.
@@ -78,10 +77,24 @@ class SearchField(UIA):
 		else:
 			self.event_suggestionsClosed()
 
+	# The following events emulate routines found in Core as of May 2017.
+
 	def event_suggestionsOpened(self):
 		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestionsOpened.wav"))
 		# Translators: Announced in braille when suggestions appear.
 		braille.handler.message(_("suggestions"))
+
+	def event_suggestionsClosed(self):
+		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestionsClosed.wav"))
+
+
+# Search fields.
+# Some of them raise controller for event, an event fired if another UI element depends on this control.
+# Core-based blueprint found in I6241 branch.
+class SearchField(UIAEditableTextWithSuggestions):
+
+	def event_suggestionsOpened(self):
+		super(SearchField, self).event_suggestionsOpened()
 		# Announce number of items found (except in Start search box where the suggestions are selected as user types).
 		# Oddly, Edge's address omnibar returns 0 for suggestion count when there are clearly suggestions (implementation differences).
 		# Because inaccurate count could be announced (when users type, suggestion count changes), thus announce if position info reporting is enabled.
@@ -207,6 +220,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# This is no longer necessary in NVDA 2017.3 (incubating as of May 2017).
 			elif obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
 				clsList.insert(0, SearchFieldEx if searchFieldIncorporated else SearchField)
+			# A dedicated version for Mail app's address/mention suggestions.
+			elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
+				clsList.insert(0, UIAEditableTextWithSuggestions)
 			# Suggestions themselves.
 			# No longer needed in NVDA 2017.3 as the Core will include this.
 			elif not "reportAutoSuggestionsWithSound" in config.conf["presentation"] and obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
@@ -227,7 +243,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if not className: className = "unavailable"
 			if not event:
 				event = "no event specified"
-			log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s"%(obj.name, event, obj.appModule, automationID, className))
+			if event != "controllerFor":
+				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s"%(obj.name, event, obj.appModule, automationID, className))
+			else:
+				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s, controller for count: %s"%(obj.name, event, obj.appModule, automationID, className, len(obj.controllerFor)))
 
 	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
