@@ -28,6 +28,7 @@ addonHandler.initTranslation()
 # As long as NVDA Core ticket 6241 is incubating...
 try:
 	from NVDAObjects.UIA import SearchField as CoreSearchField
+	from NVDAObjects.behaviors import EditableTextWithSuggestions
 	searchFieldIncorporated = True
 except ImportError:
 	searchFieldIncorporated = False
@@ -163,6 +164,23 @@ class SuggestionsListItem(UIA):
 			# Based on work on NvDA core ticket 6414.
 			braille.handler.message(braille.getBrailleTextForProperties(name=self.name, role=self.role, positionInfo=self.positionInfo))
 
+
+# Contacts search field in People app and other places.
+# An ugly hack to prevent suggestion founds from repeating.
+_playSuggestionsSounds = False
+
+# For UIA search fields that does not raise any controller for at all.
+class QueryInputTextBox(EditableTextWithSuggestions, UIA):
+
+	def event_valueChange(self):
+		global _playSuggestionsSounds
+		if len(self.value) and self.simpleNext.firstChild.role == controlTypes.ROLE_LISTITEM:
+			if not _playSuggestionsSounds:
+				super(QueryInputTextBox, self).event_suggestionsOpened()
+				_playSuggestionsSounds = True
+		elif len(self.value) == 0:
+			_playSuggestionsSounds = False
+
 # Some context menu items expose position info, which is quite anoying.
 class MenuItemNoPosInfo(UIA):
 
@@ -227,6 +245,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# No longer needed in NVDA 2017.3 as the Core will include this.
 			elif not "reportAutoSuggestionsWithSound" in config.conf["presentation"] and obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
 				clsList.insert(0, SuggestionsListItem)
+			# Some search fields does not raise controller for but suggestions are next to them.
+			elif obj.UIAElement.cachedAutomationID == "QueryInputTextBox":
+				clsList.insert(0, QueryInputTextBox)
 			# Menu items should never expose position info (seen in various context menus such as in Edge).
 			elif obj.UIAElement.cachedClassName == "MenuFlyoutItem":
 				clsList.insert(0, MenuItemNoPosInfo)
