@@ -170,16 +170,20 @@ class SuggestionsListItem(UIA):
 _playSuggestionsSounds = False
 
 # For UIA search fields that does not raise any controller for at all.
-class QueryInputTextBox(EditableTextWithSuggestions, UIA):
+try:
+	class QueryInputTextBox(EditableTextWithSuggestions, UIA):
 
-	def event_valueChange(self):
-		global _playSuggestionsSounds
-		if len(self.value) and self.simpleNext.firstChild.role == controlTypes.ROLE_LISTITEM:
-			if not _playSuggestionsSounds:
-				super(QueryInputTextBox, self).event_suggestionsOpened()
-				_playSuggestionsSounds = True
-		elif len(self.value) == 0:
-			_playSuggestionsSounds = False
+		def event_valueChange(self):
+			global _playSuggestionsSounds
+			if len(self.value) and self.simpleNext.firstChild.role == controlTypes.ROLE_LISTITEM:
+				if not _playSuggestionsSounds:
+					super(QueryInputTextBox, self).event_suggestionsOpened()
+					_playSuggestionsSounds = True
+			elif len(self.value) == 0:
+				_playSuggestionsSounds = False
+except NameError:
+	pass
+
 
 # Some context menu items expose position info, which is quite anoying.
 class MenuItemNoPosInfo(UIA):
