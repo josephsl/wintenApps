@@ -170,8 +170,23 @@ class SuggestionsListItem(UIA):
 _playSuggestionsSounds = False
 
 # For UIA search fields that does not raise any controller for at all.
+# Until EditableTextWithsuggestions becomes available in 2017.3, have two identical classes handy.
+# The "Ex" class is for newer style with suggestions events.
+class QueryInputTextBox(UIA):
+
+	def event_valueChange(self):
+		global _playSuggestionsSounds
+		if len(self.value) and self.simpleNext.firstChild.role == controlTypes.ROLE_LISTITEM:
+			if not _playSuggestionsSounds:
+				nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestionsOpened.wav"))
+				braille.handler.message(_("suggestions"))
+				_playSuggestionsSounds = True
+		elif len(self.value) == 0:
+			_playSuggestionsSounds = False
+
+
 try:
-	class QueryInputTextBox(EditableTextWithSuggestions, UIA):
+	class QueryInputTextBoxEx(EditableTextWithSuggestions, UIA):
 
 		def event_valueChange(self):
 			global _playSuggestionsSounds

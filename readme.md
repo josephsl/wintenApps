@@ -16,6 +16,7 @@ The following app modules or support modules for some apps are included (see eac
 * Mail
 * Maps
 * Microsoft Edge
+* People
 * Settings (system settings, Windows+I)
 * Skype (universal app)
 * Store
@@ -61,6 +62,7 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 ## Mail
 
 * When reviewing items in messages list, you can now use table navigation commands to review message headers.
+* When writing a message, appearance of at mention suggestions are indicated by sounds.
 
 ## Maps
 
@@ -71,6 +73,10 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 
 * Notifications such as file downloads are now announced.
 * In Creators Update, NVDA will no longer announce "WebRuntime Content View" when going to another site.
+
+## People
+
+* When searching for contacts, a sound will play if there are search results.
 
 ## Settings
 
