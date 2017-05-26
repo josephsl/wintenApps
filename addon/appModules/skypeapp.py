@@ -1,8 +1,10 @@
-# Skype Preview/UWP
-# Part of Windows 10 App Essentials collection
-# Copyright 2016-2017 Joseph Lee, released under GPL
+#appModules/skypeapp.py
+#A part of NonVisual Desktop Access (NVDA)
+#Copyright (C) 2016-2017 NV Access Limited, Joseph Lee
+#This file is covered by the GNU General Public License.
+#See the file COPYING for more details.
 
-# Workarounds for Skype UWP, providing similar features to Skype for Desktop client support (skype.py found in NVDA Core).
+"""Routines for universal app version of Skype."""
 
 import re
 import appModuleHandler
