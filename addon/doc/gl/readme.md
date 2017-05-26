@@ -19,6 +19,7 @@ se inclúe):
 * Correo
 * Mapas
 * Microsoft Edge
+* People
 * Opcións (opcións do sistema, Windows+I)
 * Skype (aplicación universal)
 * Tenda
@@ -90,6 +91,8 @@ da actualización para o complemento, asegúrate de gardar as opcións do NVDA.
 
 * Cando se revisan elementos na listaxe de mensaxes, agora podes usar ordes
   de navegación de táboas para revisar as cabeceiras de mensaxe.
+* When writing a message, appearance of at mention suggestions are indicated
+  by sounds.
 
 ## Mapas
 
@@ -103,6 +106,11 @@ da actualización para o complemento, asegúrate de gardar as opcións do NVDA.
 * Agora anúncianse notificacións como a descarga de ficheiros.
 * Na actualización Creators, NVDA xa non anunciará "WebRuntime Content View"
   cando vaia a outro sitio.
+
+## People
+
+* When searching for contacts, a sound will play if there are search
+  results.
 
 ## Opcións
 

@@ -18,6 +18,7 @@ si veda la relativa sezione per ulteriori informazioni:
 * Posta
 * Mappe
 * Microsoft Edge
+* Persone
 * Impostazioni (Impostazioni Windows, Windows+i)
 * Skype (universal app)
 * Store
@@ -95,6 +96,8 @@ consigliabile salvare la configurazione di NVDA.
 * Quando si scorrono gli elementi in un elenco messaggi, è possibile
   utilizzare i comandi di navigazione tabella per controllare le
   intestazioni.
+* Durante la composizione di un messaggio, verranno emessi segnali acustici
+  nel caso ci siano dei suggerimenti per menzioni dopo la chiocciola
 
 ## Mappe
 
@@ -108,6 +111,11 @@ consigliabile salvare la configurazione di NVDA.
 * Vengono annunciate correttamente le notifiche dei download dei file.
 * Nell'aggiornamento Creators, NVDA non annuncerà più "WebRuntime Content
   View" quando si passa ad un altro sito web.
+
+## Persone
+
+* Durante la ricerca di contatti, verrà emesso un segnale acustico nel caso
+  appaiono dei risultati di ricerca.
 
 ## Impostazioni
 

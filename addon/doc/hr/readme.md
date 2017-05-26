@@ -18,6 +18,7 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Pošta
 * Karte
 * Microsoft Edge
+* People
 * Postavke (postavke sustava, Windows+I)
 * Skype (univerzalna aplikacija)
 * Trgovina
@@ -88,6 +89,8 @@ budite sigurni da ste spremili postavke za NVDA.
 
 * Prilikom pregleda stavaka u popisu poruka, sada možete koristiti prečice
   za navigaciju po tablicama kako biste pregledali zaglavlja poruke.
+* When writing a message, appearance of at mention suggestions are indicated
+  by sounds.
 
 ## Karte
 
@@ -101,6 +104,11 @@ budite sigurni da ste spremili postavke za NVDA.
 * Obavijesti kao što su to preuzimanja datoteka sada se čitaju.
 * U nadogradnji za tvorce, NVDA više neće izgovarati "WebRuntime Content
   View" prilikom prebacivanja na drugi prikaz.
+
+## People
+
+* When searching for contacts, a sound will play if there are search
+  results.
 
 ## Postavke
 

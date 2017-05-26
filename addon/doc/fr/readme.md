@@ -20,6 +20,7 @@ est inclus) :
 * Courrier
 * Cartes
 * Microsoft Edge
+* People
 * Paramètres (paramètres système, Windows+I)
 * Skype (universal app)
 * Store
@@ -100,6 +101,8 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 * Lorsque vous examinez les éléments dans la liste des messages, vous pouvez
   maintenant utiliser les commandes de navigation de tableau pour examiner
   les en-têtes des messages.
+* When writing a message, appearance of at mention suggestions are indicated
+  by sounds.
 
 ## Cartes
 
@@ -114,6 +117,11 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
   annoncées.
 * Dans Creators Update NVDA n'annoncera plus"WebRuntime Content View" en
   allant vers un autre site.
+
+## People
+
+* When searching for contacts, a sound will play if there are search
+  results.
 
 ## Paramètres
 

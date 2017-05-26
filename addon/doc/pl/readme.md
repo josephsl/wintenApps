@@ -1,40 +1,40 @@
 # Windows 10 App Essentials #
 
-* Авторы: Joseph Lee, Derek Riemer и другие пользователи Windows 10
-* Загрузить [стабильную версию][1]
-* Загрузить [разрабатываемую версию][2]
+* Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
+* Pobierz [wersja stabilna][1]
+* Pobierz [Wersja rozwojowa][2]
 
-Это дополнение представляет собой сборник модулей для различных приложений
-Windows 10, а также исправлений для некоторых типов управления Windows 10.
+Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, a też i
+poprawek dla niektórych kontrolek w Windowsie 10.
 
-Включены следующие модули поддержки или модули для некоторых приложений
-(смотрите каждый раздел приложения для подробной информации):
+Następujące moduły wspierające aplikacji są dołączone (sprawdź rozdział
+każdej aplikacji co jest wspierane):
 
-* Будильники и часы.
-* Календарь
-* Калькулятор (modern).
+* Alarmy i zegar.
+* Kalendarz
+* Kalkulator (nowoczesny).
 * Cortana
-* Groove Music
-* Почта
-* Карты
+* Muzyka Groowe
+* Poczta
+* Mapy
 * Microsoft Edge
 * People
-* Настройки (настройки системы, Windows+I)
-* Skype (universal app)
-* Магазин
-* Погода.
-* Разные модули для типов управления, таких, как плитки главного меню.
+* Ustawienia (Ustawienia systemowe, Windows+I)
+* Skype (aplikacja uniwersalna)
+* Sklep
+* Pogoda.
+* Różne moduły dla takich kontrolek, jak kafelki menu start.
 
-Примечание: Это дополнение требует Windows 10 Версии 1511 (сборки 10586) или
-позднее и NVDA 2016.4 или позднее. Для наилучших результатов используйте
-дополнение с последней стабильной сборкой (сборка 15063) и последней
-стабильной версией NVDA. Кроме того, после изменения настроек обновления для
-дополнения, обязательно сохраните настройки программы NVDA.
+Uwaga: Ten dodatek wymaga Windows 10 Wersję 1511 (kompilację 10586) lub
+nowszą i NVDA 2016.4 lub nowszą. Dla lepszych wyników, trzeba będzie używać
+dodatek z najnowszą stabilną kompilacją (kompilacja 15063) i ostatnią
+stabilną wersję NVDA. Także, po zmianie ustawień aktualizacji dla dodatku,
+trzeba się upewnić, czy konfiguracja jest zachowana.
 
-## Общие
+## Ogólne
 
-* В контекстных меню для плиток главного меню, правильно распознаются
-  подменю.
+* W meni kontekstowym kafelek meni start, meni rozwijane są prawidłowo
+  rozpoznawane.
 * When minimizing windows (Windows+M), "pane" is no longer announced
   (noticeable if using Insider Preview builds).
 * Certain dialogs are now recognized as proper dialogs. This include Insider
@@ -57,17 +57,17 @@ Windows 10, а также исправлений для некоторых ти�
 * Ability to track events coming from Universal Windows Platform (UWP) apps
   if NVDA is run with debug logging enabled (2017.1 or later).
 
-## Будильники и часы
+## Alarms and clock
 
 * Time picker values are now announced, noticeable when moving focus to
   picker controls. This also affects the control used to select when to
   restart to finish installing Windows updates.
 
-## Калькулятор
+## Calculator
 
-* Когда нажимаете ENTER, NVDA сообщает результаты расчёта.
+* When ENTER is pressed, NVDA announces calculation results.
 
-## календарь
+## calendar
 
 * NVDA no longer announces "edit" or "read-only" in message body and other
   fields.
@@ -79,18 +79,18 @@ Windows 10, а также исправлений для некоторых ти�
 * NVDA will be silent when you talk to Cortana via voice.
 * NVDA will now announce reminder confirmation after you set one.
 
-## Groove Music
+## Muzyka Groowe
 
 * Appearance of suggestions when searching for tracks is now detected.
 
-## Почта
+## Poczta
 
 * When reviewing items in messages list, you can now use table navigation
   commands to review message headers.
 * When writing a message, appearance of at mention suggestions are indicated
   by sounds.
 
-## Карты
+## Mapy
 
 * NVDA plays location beep for map locations.
 * When using street side view and if "use keyboard" option is enabled, NVDA
@@ -98,7 +98,7 @@ Windows 10, а также исправлений для некоторых ти�
 
 ## Microsoft Edge
 
-* Теперь объявляются уведомления, такие как загрузка файлов.
+* Notifications such as file downloads are now announced.
 * In Creators Update, NVDA will no longer announce "WebRuntime Content View"
   when going to another site.
 
@@ -107,12 +107,11 @@ Windows 10, а также исправлений для некоторых ти�
 * When searching for contacts, a sound will play if there are search
   results.
 
-## Настройки
+## Settings
 
-* Теперь автоматически сообщается определённая информация, такая, как
-  индикатор обновления Windows.
-* Значения индикатора выполнения и другая информация теперь не объявляются
-  дважды.
+* Certain information such as Windows Update progress is now reported
+  automatically.
+* Progress bar values and other information are no longer announced twice.
 * If it takes a while to search for settings, NVDA will announce "searching"
   and search result status such as if a setting cannot be found.
 * Settings groups are recognized when using object navigation to navigate
@@ -135,18 +134,18 @@ Windows 10, а также исправлений для некоторых ти�
 * NVDA will no longer announce "Skype Message" when reviewing messages for
   majority of cases.
 
-## Магазин
+## Sklep
 
-* После проверки обновлений для приложений, обновлённые названия приложений
-  в списке приложений будут правильно помечены.
-* Объявляются Появление поисковых подсказок.
-* При загрузке содержимого, такого как приложения и фильмы, NVDA будет
-  сообщать Наименование продукта и прогресс загрузки.
+* After checking for app updates, app names in list of apps to be updated
+  are correctly labeled.
+* Appearance of search suggestions are now announced.
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress.
 
-## Погода
+## Weather
 
-* Вкладки, такие как "прогноз" и "карты" расспознаются надлежащим образом
-  (патч Derek Riemer).
+* Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by
+  Derek Riemer).
 * when reading a forecast, use the left and right arrows to move between
   items. Use the up and down arrows to read the individual items. For
   example, pressing the right arrow might report "Monday: 79 degrees, partly

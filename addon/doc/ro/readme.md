@@ -19,6 +19,7 @@ privire la ceea ce este inclus):
 * Mail
 * Hărți
 * Microsoft Edge
+* People
 * Setări (setări de sistem, Windows+I)
 * Skype (aplicație universală)
 * Magazin
@@ -93,6 +94,8 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 
 * Când examinați elemente în lista de mesaje, puteți să folosiți comenzile
   de navigare ale tabelului pentru a examina antetele mesajelor.
+* When writing a message, appearance of at mention suggestions are indicated
+  by sounds.
 
 ## Hărți
 
@@ -106,6 +109,11 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * Notificări, cum ar fi descărcări de fișiere, sunt acum anunțate.
 * În Creators Update, NVDA nu va mai anunța "WebRuntime Content View" atunci
   când se merge pe un alt site.
+
+## People
+
+* When searching for contacts, a sound will play if there are search
+  results.
 
 ## Setări
 
