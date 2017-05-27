@@ -38,7 +38,10 @@ class SkypeMessage(UIA):
 		if m:
 			messageBody = m.group("body")
 			message = "%s, %s" % (m.group("from"), messageBody[messageBody.find(", ")+2:])
-		return message
+			return message
+		else:
+			return self.name
+		
 
 	def script_showMessageLongDesc(self, gesture):
 		ui.message(self._message)
