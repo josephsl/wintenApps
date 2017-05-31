@@ -161,12 +161,8 @@ class SuggestionsListItem(UIA):
 			speech.cancelSpeech()
 			api.setNavigatorObject(self)
 			self.reportFocus()
-			# Construct the braille flash message (name, position info).
-			# Ideally NvDA objects should have a method to construct braille flash messages.
-			suggestionMessage=[self.name]
-			if config.conf["presentation"]["reportObjectPositionInformation"]:
-				suggestionMessage.append(_("{number} of {total}").format(number=self.positionInfo["indexInGroup"], total=self.positionInfo["similarItemsInGroup"]))
-			braille.handler.message(" ".join(suggestionMessage))
+			# Based on work on NvDA core ticket 6414.
+			braille.handler.message(braille.getBrailleTextForProperties(name=self.name, role=self.role, positionInfo=self.positionInfo))
 
 
 # Contacts search field in People app and other places.
@@ -245,6 +241,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
 			# NVDA Core ticket 5231: Announce values in time pickers.
+			# Handle both Threshold and Redstone looping selector items.
 			if obj.role==controlTypes.ROLE_LISTITEM and "LoopingSelectorItem" in obj.UIAElement.cachedClassName:
 				clsList.append(LoopingSelectorItem)
 			# Also announce values when focus moves to it.
@@ -265,7 +262,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				clsList.insert(0, UIAEditableTextWithSuggestions)
 			# Suggestions themselves.
 			# No longer needed in NVDA 2017.3 as the Core will include this.
-			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID.lower() == "suggestionslist": #and not "reportAutoSuggestionsWithSound" in config.conf["presentation"]:
+			elif not "reportAutoSuggestionsWithSound" in config.conf["presentation"] and obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
 				clsList.insert(0, SuggestionsListItem)
 			# Some search fields does not raise controller for but suggestions are next to them.
 			elif obj.UIAElement.cachedAutomationID == "QueryInputTextBox":
