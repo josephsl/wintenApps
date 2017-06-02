@@ -1,8 +1,10 @@
-# Skype Preview/UWP
-# Part of Windows 10 App Essentials collection
-# Copyright 2016-2017 Joseph Lee, released under GPL
+#appModules/skypeapp.py
+#A part of NonVisual Desktop Access (NVDA)
+#Copyright (C) 2016-2017 NV Access Limited, Joseph Lee
+#This file is covered by the GNU General Public License.
+#See the file COPYING for more details.
 
-# Workarounds for Skype UWP, providing similar features to Skype for Desktop client support (skype.py found in NVDA Core).
+"""Routines for universal app version of Skype."""
 
 import re
 import appModuleHandler
@@ -12,6 +14,44 @@ import api
 import controlTypes
 import addonHandler
 addonHandler.initTranslation()
+
+# #7126: Unfortunately, cherry-picking parts of message items via looking at their children isn't reliable due to odd UIA implementation.
+# Therefore, resort to this regular expression.
+RE_MESSAGE = re.compile(r"\AFrom (?P<from>.*), Skype (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?\Z", re.M|re.S)
+
+class SkypeMessage(UIA):
+	"""Message history item in Skype universal app."""
+
+	_message = ""
+
+	def reportFocus(self):
+		# Skype message/channel info and other extraneous text should not be announced.
+		# Credit: Derek Riemer
+		# But save the old name just in cse it needs to be referred back to.
+		self._message = self.name
+		self.name = self.getShortenedMessage()
+		super(SkypeMessage, self).reportFocus()
+
+	def getShortenedMessage(self):
+		# Just like Desktop client, messages are quite verbose.
+		m = RE_MESSAGE.match(self.name)
+		if m:
+			messageBody = m.group("body")
+			message = "%s, %s" % (m.group("from"), messageBody[messageBody.find(", ")+2:])
+			return message
+		else:
+			return self.name
+		
+
+	def script_showMessageLongDesc(self, gesture):
+		ui.message(self._message)
+	# Translators: the description for the activateLongDescription script on browseMode documents.
+	script_showMessageLongDesc.__doc__=_("Shows the message details.")
+
+	__gestures={
+		"kb:NVDA+d":"showMessageLongDesc",
+	}
+
 
 class AppModule(appModuleHandler.AppModule):
 
@@ -29,14 +69,11 @@ class AppModule(appModuleHandler.AppModule):
 			if obj.role == controlTypes.ROLE_COMBOBOX and obj.name == "" and obj.UIAElement.cachedAutomationID.startswith("AudioVideoDevices"):
 				obj.name = obj.previous.name
 
-	def event_gainFocus(self, obj, nextHandler):
-		# Skype message/channel info and other extraneous text should not be announced.
-		# Credit: Derek Riemer
-		uiElement = obj.UIAElement
-		if uiElement.cachedAutomationID == "Message" and uiElement.cachedClassName == "ListViewItem":
-			self.reportMessage(obj.name)
-			return
-		nextHandler()
+	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+		if isinstance(obj, UIA):
+			uiaElement = obj.UIAElement
+			if uiaElement.cachedAutomationID == "Message" and uiaElement.cachedClassName == "ListViewItem":
+				clsList.insert(0, SkypeMessage)
 
 	# Locate various elements, as this is one of the best ways to do this in Skype Preview.
 	# The best criteria is automation ID (class names are quite generic).
@@ -59,21 +96,10 @@ class AppModule(appModuleHandler.AppModule):
 				return element
 		return None
 
-	# Borrowed from Skype for Desktop app module (NVDA Core).
-	# #14: Drop channel type (e.g. Skype Message).
-	# Also match multi-line messages.
-	RE_MESSAGE = re.compile(r"\AFrom (?P<from>.*), Skype (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?\Z", re.M|re.S)
-
-	def reportMessage(self, message):
-		# Just like Desktop client, messages are quite verbose.
-		m = self.RE_MESSAGE.match(message)
-		if m:
-			messageBody = m.group("body")
-			message = "%s, %s" % (m.group("from"), messageBody[messageBody.find(", ")+2:])
-		ui.message(message)
-
 	def event_nameChange(self, obj, nextHandler):
-		if isinstance(obj, UIA):
+		if isinstance(obj, SkypeMessage):
+			ui.message(obj.getShortenedMessage())
+		elif isinstance(obj, UIA):
 			uiElement = obj.UIAElement
 			if uiElement.cachedClassName == "TextBlock" and obj.next is not None:
 				# Announce typing indicator (same as Skype for Desktop).
@@ -82,8 +108,6 @@ class AppModule(appModuleHandler.AppModule):
 				if nextElement.cachedAutomationID in ("ChatEditBox", "ChatTranslationSettings"):
 					# Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 					ui.message(obj.name if obj.name != "" else _("Typing stopped"))
-			elif uiElement.cachedAutomationID == "Message" and uiElement.cachedClassName == "ListViewItem":
-				self.reportMessage(obj.name)
 		nextHandler()
 
 	def script_readMessage(self, gesture):
@@ -99,7 +123,7 @@ class AppModule(appModuleHandler.AppModule):
 		try:
 			message = chatHistory.getChild(0-pos)
 			api.setNavigatorObject(message)
-			self.reportMessage(message.name)
+			ui.message(message.getShortenedMessage())
 			return
 		except IndexError:
 			return

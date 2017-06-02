@@ -262,7 +262,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				clsList.insert(0, UIAEditableTextWithSuggestions)
 			# Suggestions themselves.
 			# No longer needed in NVDA 2017.3 as the Core will include this.
-			elif not "reportAutoSuggestionsWithSound" in config.conf["presentation"] and obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "SuggestionsList":
+			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID.lower() == "suggestionslist": #and not "reportAutoSuggestionsWithSound" in config.conf["presentation"]:
 				clsList.insert(0, SuggestionsListItem)
 			# Some search fields does not raise controller for but suggestions are next to them.
 			elif obj.UIAElement.cachedAutomationID == "QueryInputTextBox":
