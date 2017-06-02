@@ -43,7 +43,7 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 
 ## Calculator
 
-* When ENTER is pressed, NVDA announces calculation results.
+* When ENTER or Escape is pressed, NVDA announces calculation results.
 
 ## calendar
 
@@ -93,6 +93,8 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 * You can now press Alt+number row to locate and move to conversations (1), contacts list (2), bots (3) and chat edit field if visible (4). Note that these commands will work properly if Skype update released in March 2017 is installed.
 * Combo box labels for Skype preview app released in November 2016 are announced.
 * NVDA will no longer announce "Skype Message" when reviewing messages for majority of cases.
+* Various issues when using Skype with braille displays fixed, including inability to review message history items in braille.
+* From message history list, pressing NVDA+D on a message item will now allow NVDA to announce detailed information about a message such as channel type, sent date and time and so on.
 
 ## Store
 
