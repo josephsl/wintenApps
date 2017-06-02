@@ -19,7 +19,7 @@ privire la ceea ce este inclus):
 * Mail
 * Hărți
 * Microsoft Edge
-* People
+* Persoane
 * Setări (setări de sistem, Windows+I)
 * Skype (aplicație universală)
 * Magazin
@@ -83,7 +83,7 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * Răspunsurile textuale de la Cortana sunt anunțate în cele mai multe
   situații (dacă nu, redeschideți meniul start și încercați căutarea din
   nou).
-* NVDA va tace atunci când vorbiți cu Cortana prin voce.
+* NVDA va fi silențios atunci când vorbiți cu Cortana prin voce.
 * NVDA va anunța o confirmare memento după ce ați setat unul.
 
 ## Muzică Groove
@@ -94,8 +94,8 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 
 * Când examinați elemente în lista de mesaje, puteți să folosiți comenzile
   de navigare ale tabelului pentru a examina antetele mesajelor.
-* When writing a message, appearance of at mention suggestions are indicated
-  by sounds.
+* La scrierea unui mesaj, aspectele sugestiilor de menționare a arondului
+  sunt indicate de sunete.
 
 ## Hărți
 
@@ -110,10 +110,10 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * În Creators Update, NVDA nu va mai anunța "WebRuntime Content View" atunci
   când se merge pe un alt site.
 
-## People
+## Persoane
 
-* When searching for contacts, a sound will play if there are search
-  results.
+* La căutarea contactelor, un sunet se va reda dacă există rezultate de
+  căutare.
 
 ## Setări
 

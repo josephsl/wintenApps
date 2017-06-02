@@ -19,7 +19,7 @@ qué se incluye):
 * Correo
 * Mapas
 * Microsoft Edge
-* People
+* Gente
 * Opciones (opciones de sistema, Windows+I)
 * Skype (aplicación universal)
 * Tienda
@@ -96,8 +96,8 @@ guardar las opciones de NVDA.
 
 * Cuando se revisan elementos en la lista de mensajes, ahora puedes utilizar
   órdenes de navegación de tablas para revisar los encabezados de mensaje.
-* When writing a message, appearance of at mention suggestions are indicated
-  by sounds.
+* Cuando se escribe un mensaje, la apariencia de la mención de sugerencias
+  se indica con sonidos.
 
 ## Mapas
 
@@ -112,10 +112,10 @@ guardar las opciones de NVDA.
 * En la actualización Creators, NVDA ya no anunciará "WebRuntime Content
   View" cuando vaya a otro sitio.
 
-## People
+## Gente
 
-* When searching for contacts, a sound will play if there are search
-  results.
+* Cuando se busquen contactos, se reproducirá un sonido si hay resultados de
+  la búsqueda.
 
 ## Opciones
 

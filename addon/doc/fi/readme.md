@@ -18,7 +18,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sähköposti
 * Kartat
 * Microsoft Edge
-* People
+* Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Skype (universaali sovellus)
 * Kauppa
@@ -92,8 +92,7 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 
 * Voit nyt käyttää viestiluettelon kohteita tarkastellessasi
   taulukkonavigointikomentoja viestiotsakkeiden lukemiseen.
-* When writing a message, appearance of at mention suggestions are indicated
-  by sounds.
+* Ät-maininnan ehdotukset ilmaistaan äänimerkeillä viestiä kirjoitettaessa.
 
 ## Kartat
 
@@ -108,10 +107,9 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 * NVDA ei enää sano Windowsin Creators Update -versiossa "WebRuntime Content
   View" siirryttäessä toiselle sivustolle.
 
-## People
+## Ihmiset
 
-* When searching for contacts, a sound will play if there are search
-  results.
+* Kontakteja etsittäessä toistetaan ääni, mikäli hakutuloksia on.
 
 ## Asetukset
 

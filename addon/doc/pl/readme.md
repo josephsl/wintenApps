@@ -18,7 +18,7 @@ każdej aplikacji co jest wspierane):
 * Poczta
 * Mapy
 * Microsoft Edge
-* People
+* Osoby
 * Ustawienia (Ustawienia systemowe, Windows+I)
 * Skype (aplikacja uniwersalna)
 * Sklep
@@ -35,123 +35,129 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 
 * W meni kontekstowym kafelek meni start, meni rozwijane są prawidłowo
   rozpoznawane.
-* When minimizing windows (Windows+M), "pane" is no longer announced
-  (noticeable if using Insider Preview builds).
-* Certain dialogs are now recognized as proper dialogs. This include Insider
-  Preview dialog (settings app) and new-style UAC dialog in build 14328 and
-  later for NvDA 2016.2.1 or earlier.
-* Appearance/close of suggestions for certain search fields (notably
-  Settings and Store apps) is announced via sounds and braille. This also
-  includes Start menu search box.
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation dialog.
-* In certain context menus (such as in Edge), position information (e.g. 1
-  of 2) is no longer announced.
-* The following UIA events are recognized: Controller for, live region
+* Przy minimalizowaniu okien, (Windows+M), "Okno" więcej nie jest wymawiane
+  (zauważalne przy używaniu kompilacji insider preview).
+* Większość okien dialogowych teraz jest rospoznawana jako właściwie
+  dialogi. Te dialogi stanowią na przykład: okno dialogowe insider preview
+  (aplikacja ustawienia) i nowe stylizowane okno dialogowe kontroli kont
+  użytkownika w kompilacji i nowszych dla NvDA 2016.2.1 i starsze.
+* pojawianie się/zamykanie podpowiedzi dla niektórych pól wyszukiwania
+  (zauważalne w aplikacjach Ustawienia i Sklep) są wymawiane i wyświetlane
+  na monitorze brajlowskim. To również dotyczy pola edycyjnego w meni start.
+* NVDA może ogłaszać liczbę wypowiedzi przy wyszukiwaniu w wielu
+  przypadkach. Ta opcja jest kontrolowana przez opcję "odczytuj położenie
+  obiektu" w oknie dialogowym "prezentacja obiektu".
+* W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
+  położeniu (NP. 1 z 2) więcej nie jest odczytywana.
+* Następne zdarzenia UIA są rospoznawane: Controller for, live region
   changed (handled by name change event).
-* Added ability to check for add-on updates (automatic or manual) via the
-  new Windows 10 App Essentials dialog found in NvDA Preferences menu. By
-  default, stable and development versions will check for new updates
-  automatically on a weekly or daily basis, respectively.
-* Ability to track events coming from Universal Windows Platform (UWP) apps
-  if NVDA is run with debug logging enabled (2017.1 or later).
+* Dodana możliwość sprawdzania aktualizacji dodatku (automatycznie lub
+  ręcznie) poprzez nowe okno dialogowe Windows 10 App Essentials, które
+  można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
+  rozwojowe będą sprawdzane pod kątem nowych aktualizacji codziennie lub
+  tygodniowo.
+* Możliwość śledzenia zdarzeń z aplikacji ujednoliconej platformy Windows
+  (UWP) jeżeli NVDA jest uruchomione w trybie debugowania (2017.1 lub
+  nowsze).
 
-## Alarms and clock
+## Alarmy i zegar
 
-* Time picker values are now announced, noticeable when moving focus to
-  picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates.
+* Teraz są wypowiadane kontrolki wypowiadania czasu, zauważalne przy
+  poruszaniu się po nich. To także dotyczy kontrolki wyboru czasu ponownego
+  uruchomienia po instalacji aktualizacji.
 
-## Calculator
+## Kalkulator
 
-* When ENTER is pressed, NVDA announces calculation results.
+* Kiedy enter jest wciśnięty, NVDA wymawia wynik obliczenia.
 
-## calendar
+## Kalendarz
 
-* NVDA no longer announces "edit" or "read-only" in message body and other
-  fields.
+* NVDA nie wymawia więcej "pole edycji" lub "tylko do odczytu" w ciele
+  wiadomości i innych polach.
 
 ## Cortana
 
-* Textual responses from Cortana are announced in most situations (if it
-  doesn't, reopen Start menu and try searching again).
-* NVDA will be silent when you talk to Cortana via voice.
-* NVDA will now announce reminder confirmation after you set one.
+* Zwroty tekstowe Cortany są wypowiadane w większości sytuacjach (jeżeli nie
+  są, ponownie otwórz meni start, i spróbuj ponownie).
+* NVDA będzie przyciszony, gdy mówisz do Cortany.
+* NVDA teraz wymawia potwierdzenie przypomnienia po jego ustawieniu.
 
 ## Muzyka Groowe
 
-* Appearance of suggestions when searching for tracks is now detected.
+* Przy szukaniu utworów, wyświetlanie podpowiedzi jest wykrywalne.
 
 ## Poczta
 
-* When reviewing items in messages list, you can now use table navigation
-  commands to review message headers.
-* When writing a message, appearance of at mention suggestions are indicated
-  by sounds.
+* Przy wyświetlaniu elementów w liście wiadomości, teraz można użyć skrótów
+  dla nawigacji po tabelach, aby przeczytać nagłówki wiadomości.
+* Przy pisaniu wiadomości, istnienie podpowiedzi o wzmiankach teraz jest
+  oznajmiane dzwiękami.
 
 ## Mapy
 
-* NVDA plays location beep for map locations.
-* When using street side view and if "use keyboard" option is enabled, NVDA
-  will announce street addresses as you use arrow keys to navigate the map.
+* NVDA ottwarza sygnały dźwiękowe położenia dla położenia na mapie.
+* Przy użyciu trybu ulicy i jeśli opcja "użyj klawiatury" jest włączona,
+  NVDA będzie wymawiać adresy ulic przy nawigacji strzałkami po mapie.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads are now announced.
-* In Creators Update, NVDA will no longer announce "WebRuntime Content View"
-  when going to another site.
+* Powiadomienia, takie jak pobierania plików są oznajmiane.
+* W aktualizacji twórczej, NVDA więcej nie będzie wymawiać "WebRuntime
+  Content View" kiedy przechodzimy na inną stronę webową.
 
-## People
+## Osoby
 
-* When searching for contacts, a sound will play if there are search
-  results.
+* Przy wyszukiwaniu kontaktów, dźwięk będzie ottwarzany, jeżeli istnieją
+  wyniki wyszukiwania.
 
-## Settings
+## Ustawienia
 
-* Certain information such as Windows Update progress is now reported
-  automatically.
-* Progress bar values and other information are no longer announced twice.
-* If it takes a while to search for settings, NVDA will announce "searching"
-  and search result status such as if a setting cannot be found.
-* Settings groups are recognized when using object navigation to navigate
-  between controls.
-* For some combo boxes, NVDA will no longer fail to recognize labels and/or
-  announce value changes.
+* Większość informacji, tak jak pasek stanu w Windows update, będzie
+  wypowiadany automatycznie.
+* Wartości paska postępu i inne informacje, nie są wypowiadane
+  automatycznie.
+* Jeżeli wyszukiwanie ustawień trwa dłużej niż zwykle, NVDA będzie wymawiał
+  "wyszukiwanie", oraz wynik wyszukiwania, jeżeli istnieje.
+* Grupy ustawień są rpspoznawane przy użyciu nawigacji obiektowej aby było
+  można poruszać się pomięcy kontrolkami.
+* Dla niektórych pól kombi, NVDA będzie wykrywał nazwę oraz wypowiadał
+  zmiany wartości.
 
 ## Skype
 
-* Typing indicator text is announced just like Skype for Desktop client.
-* Partial return of Control+NvDA+number row commands to read recent chat
-  history and to move navigator object to chat entries just like Skype for
-  Desktop.
-* You can now press Alt+number row to locate and move to conversations (1),
-  contacts list (2), bots (3) and chat edit field if visible (4). Note that
-  these commands will work properly if Skype update released in March 2017
-  is installed.
-* Combo box labels for Skype preview app released in November 2016 are
-  announced.
-* NVDA will no longer announce "Skype Message" when reviewing messages for
-  majority of cases.
+* Powiadomienie o pisaniu będzie wypowiadane, tak jak i w Skype dla pulpitu.
+* Połowicznie przywróciły komendy Ctrl+NvDA+komendy na rzędzie cyfrowym aby
+  móc przeczytać ostatnią historię czatu, a także  aby móc przemieśczać
+  obiekt nawigatora do poszczególnej wiadomości jak i w skype dla pulpitu.
+* Teraz można nacisnąć Alt+rząd cyfrowy aby móc znaleźć i przemieszczać się
+  między  czatami (1), kontaktami (2), botami (3) i polem do wpisywania
+  wiadomości jeżeli jest widoczne (4). Uwaga, te skróty będą poprawnie
+  działać, jeżeli aktualizacja skypea wydana w marcu 2017 jest
+  zainstalowana.
+* Oznaczenia pól kombi dla aplikacji Skype preview wydanej w listopadzie
+  2016 są wypowiadane.
+* NVDA dla większości sytuacji nie będzie wypowiadał "Skype Message" przy
+  przeglądaniu wiadomości.
 
 ## Sklep
 
-* After checking for app updates, app names in list of apps to be updated
-  are correctly labeled.
-* Appearance of search suggestions are now announced.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* Po sprawdzaniu aktualizacji aplikacji, nazyw aplikacji w liście aplikacji
+  do zaktualizowania są poprawnie oznaczone.
+* Istnienie podpowiedzi wyszukiwania teraz jest oznajmiane.
+* Przy pobieraniu zawartości, takiej jak apliakacje i muzyka, NVDA wymówi
+  nazwę produktu i pasek postępu.
 
-## Weather
+## Pogoda
 
-* Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by
-  Derek Riemer).
-* when reading a forecast, use the left and right arrows to move between
-  items. Use the up and down arrows to read the individual items. For
-  example, pressing the right arrow might report "Monday: 79 degrees, partly
-  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
-  again will read the next item (Like the temperature). This currently works
-  for daily and hourly forecasts.
+* Karty właściwości, takie jak "prognoza" i "mapy" są rospoznane jak
+  prawidłowe karty właściwości (poprawił Derek Riemer).
+* Przy czytaniu pogody, użyj strzałek w lewo i w prawo aby się przemieszczać
+  pomiędzy elementami. Użyj strzałki w górę lub w dół, aby przeczytać
+  pojedynczy element. Na przykład, wciskając strzałke w prawo może wymówić
+  "Poniedziałek: 79 stopni, częściowo pochmurno, ..." wciskając strzałkę w
+  dół powie "Poniedziałek" wciskając ję jeszcze raz wypowie następujący
+  element (jak temperaturę). Teraz to działą dla prognozy pogody dzienniej i
+  godzinnej.
 
 [[!tag dev stable]]
 
