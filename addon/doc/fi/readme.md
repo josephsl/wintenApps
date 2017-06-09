@@ -27,10 +27,10 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
   tiilet.
 
 Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1511 (koontiversio
-10586) tai uudempaa ja NVDA 2016.4:ää tai uudempaa. Käytä parhaan
+10586) tai uudempaa ja NVDA 2017.1:tä tai uudempaa. Käytä parhaan
 käyttökokemuksen varmistamiseksi viimeisintä vakaata koontiversiota (15063)
-sekä viimeisintä vakaata NVDA:n versiota. Varmista myös, että tallennat
-NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
+sekä uusinta vakaata NVDA:n versiota. Varmista myös, että tallennat NVDA:n
+asetukset muutettuasi lisäosan päivitysasetuksia.
 
 ## Yleistä
 

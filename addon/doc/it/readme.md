@@ -25,12 +25,10 @@ si veda la relativa sezione per ulteriori informazioni:
 * Meteo
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
-Nota: questo add-on richiede  Windows 10 Versione 1511 (build 10586) o
-successive e NVDA 2016.4 o successive. Per avere le prestazioni migliori,
-utilizzare il componente aggiuntivo con l'ultima build stabile (build 15063)
-e l'ultima versione stabile di NVDA. Si ricorda che dopo aver modificato le
-impostazioni di aggiornamento automatico del componente aggiuntivo, è
-consigliabile salvare la configurazione di NVDA.
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+and NVDA 2017.1 or later. For best results, use the add-on with latest
+stable build (build 15063) and latest stable version of NVDA. Also, after
+changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Generale
 

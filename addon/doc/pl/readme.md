@@ -28,7 +28,7 @@ każdej aplikacji co jest wspierane):
 Uwaga: Ten dodatek wymaga Windows 10 Wersję 1511 (kompilację 10586) lub
 nowszą i NVDA 2016.4 lub nowszą. Dla lepszych wyników, trzeba będzie używać
 dodatek z najnowszą stabilną kompilacją (kompilacja 15063) i ostatnią
-stabilną wersję NVDA. Także, po zmianie ustawień aktualizacji dla dodatku,
+stabilną wersję NVDA. Także, po zmianie ustawień aktualizacji dodatku,
 trzeba się upewnić, czy konfiguracja jest zachowana.
 
 ## Ogólne

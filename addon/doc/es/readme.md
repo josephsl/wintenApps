@@ -27,12 +27,12 @@ qué se incluye):
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Nota: este complemento requiere de Windows 10 Versión 1511 (compilación
-10286) o posterior y NVDA 2016.4 o posterior. Para unos mejores resultados,
-utiliza el complemento con la compilación estable más reciente (compilación
-15063) y con la versión estable más reciente de NVDA. También, después de
-cambiar las opciones de la actualización para el complemento, asegúrate de
-guardar las opciones de NVDA.
+Nota: este complemento requiere Windows 10 Versión 1511 (build 10586) o
+posterior y NVDA 2017.1 o posterior. Para unos mejores resultados, utiliza
+el complemento con la compilación estable más reciente (build 15063) y
+versión estable más reciente de NVDA. También, después de cambiar las
+opciones de actualización para el complemento, asegúrate de guardar la
+configuración de NVDA.
 
 ## General
 
