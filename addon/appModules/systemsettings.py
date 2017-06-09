@@ -4,6 +4,7 @@
 
 # Several hacks related to Settings app.
 
+import sys
 import appModuleHandler
 import ui
 import controlTypes
@@ -50,7 +51,11 @@ class AppModule(appModuleHandler.AppModule):
 				obj.role = controlTypes.ROLE_GROUPING
 			# From Redstone 1 onwards, update history shows status rather than the title.
 			elif obj.role == controlTypes.ROLE_LINK and obj.UIAElement.cachedAutomationID.startswith("HistoryEvent") and obj.name != obj.previous.name:
-				obj.name = ", ".join([obj.previous.name, obj.name])
+				nameList = [obj.previous.name, obj.name]
+				# But in build 16215 and later, the actual update title is next to the update success status text, so obj.previous.previous must be consulted.
+				if sys.getwindowsversion().build >= 16215:
+					nameList.insert(0, obj.previous.previous.name)
+				obj.name = ", ".join(nameList)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# These are no longer needed with nVDA 2017.3.
