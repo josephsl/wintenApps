@@ -19,6 +19,7 @@ welche inbegriffen sind):
 * Mail
 * Maps
 * Microsoft Edge
+* People
 * Settings (system settings, Windows+I)
 * Skype (universal app)
 * Store
@@ -26,7 +27,7 @@ welche inbegriffen sind):
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
 
 Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
-and NVDA 2016.4 or later. For best results, use the add-on with latest
+and NVDA 2017.1 or later. For best results, use the add-on with latest
 stable build (build 15063) and latest stable version of NVDA. Also, after
 changing update settings for the add-on, be sure to save NVDA settings.
 
@@ -86,6 +87,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 * When reviewing items in messages list, you can now use table navigation
   commands to review message headers.
+* When writing a message, appearance of at mention suggestions are indicated
+  by sounds.
 
 ## Maps
 
@@ -98,6 +101,11 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * Notifications such as file downloads are now announced.
 * In Creators Update, NVDA will no longer announce "WebRuntime Content View"
   when going to another site.
+
+## People
+
+* When searching for contacts, a sound will play if there are search
+  results.
 
 ## Einstellungen
 

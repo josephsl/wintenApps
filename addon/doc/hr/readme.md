@@ -18,6 +18,7 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Pošta
 * Karte
 * Microsoft Edge
+* People
 * Postavke (postavke sustava, Windows+I)
 * Skype (univerzalna aplikacija)
 * Trgovina
@@ -25,11 +26,10 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Dodatni moduli za dijelove sustava kao što su to izbornik start i
   pripadajuće mu ikonice
 
-Upozorenje: ovaj dodatak zahtjeva Windows 10 Verziju 1511 (podverziju 10586)
-ili noviju i NVDA 2016.4 ili noviji. Za najbolje rezultate, koristite
-dodatak sa zadnjom stabilnom inačicom (podverzija 15063) i zadnju stabilnu
-inačicu nvda. Također, prilikom spremanja postavki za nadogradnju dodatka,
-budite sigurni da ste spremili postavke za NVDA.
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+and NVDA 2017.1 or later. For best results, use the add-on with latest
+stable build (build 15063) and latest stable version of NVDA. Also, after
+changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Općenito
 
@@ -88,6 +88,8 @@ budite sigurni da ste spremili postavke za NVDA.
 
 * Prilikom pregleda stavaka u popisu poruka, sada možete koristiti prečice
   za navigaciju po tablicama kako biste pregledali zaglavlja poruke.
+* When writing a message, appearance of at mention suggestions are indicated
+  by sounds.
 
 ## Karte
 
@@ -101,6 +103,11 @@ budite sigurni da ste spremili postavke za NVDA.
 * Obavijesti kao što su to preuzimanja datoteka sada se čitaju.
 * U nadogradnji za tvorce, NVDA više neće izgovarati "WebRuntime Content
   View" prilikom prebacivanja na drugi prikaz.
+
+## People
+
+* When searching for contacts, a sound will play if there are search
+  results.
 
 ## Postavke
 

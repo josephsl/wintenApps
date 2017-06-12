@@ -20,6 +20,7 @@ est inclus) :
 * Courrier
 * Cartes
 * Microsoft Edge
+* Personnes
 * Paramètres (paramètres système, Windows+I)
 * Skype (universal app)
 * Store
@@ -27,7 +28,7 @@ est inclus) :
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
 Note: ce module complémentaire nécessite Windows 10 Version 1511 (build
-10586) ou version ultérieure et NVDA 2016.4 ou version ultérieure. Pour de
+10586) ou version ultérieure et NVDA 2017.1 ou version ultérieure. Pour de
 meilleurs résultats, utilisez le module complémentaire avec la dernière
 build stable (build 15063) et la dernière version stable de NVDA. De plus,
 après avoir modifié les paramètres de mise à jour pour le module
@@ -100,6 +101,8 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 * Lorsque vous examinez les éléments dans la liste des messages, vous pouvez
   maintenant utiliser les commandes de navigation de tableau pour examiner
   les en-têtes des messages.
+* Lors de l'écriture d'un message, l'apparence des suggestions de mention
+  est indiquée par des sons.
 
 ## Cartes
 
@@ -114,6 +117,11 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
   annoncées.
 * Dans Creators Update NVDA n'annoncera plus"WebRuntime Content View" en
   allant vers un autre site.
+
+## Personnes
+
+* Lors de la recherche de contacts, un son sera joué s'il existe des
+  résultats de recherche.
 
 ## Paramètres
 

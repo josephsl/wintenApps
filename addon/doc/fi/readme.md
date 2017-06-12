@@ -18,6 +18,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sähköposti
 * Kartat
 * Microsoft Edge
+* Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Skype (universaali sovellus)
 * Kauppa
@@ -26,10 +27,10 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
   tiilet.
 
 Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1511 (koontiversio
-10586) tai uudempaa ja NVDA 2016.4:ää tai uudempaa. Käytä parhaan
+10586) tai uudempaa ja NVDA 2017.1:tä tai uudempaa. Käytä parhaan
 käyttökokemuksen varmistamiseksi viimeisintä vakaata koontiversiota (15063)
-sekä viimeisintä vakaata NVDA:n versiota. Varmista myös, että tallennat
-NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
+sekä uusinta vakaata NVDA:n versiota. Varmista myös, että tallennat NVDA:n
+asetukset muutettuasi lisäosan päivitysasetuksia.
 
 ## Yleistä
 
@@ -91,6 +92,7 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 
 * Voit nyt käyttää viestiluettelon kohteita tarkastellessasi
   taulukkonavigointikomentoja viestiotsakkeiden lukemiseen.
+* Ät-maininnan ehdotukset ilmaistaan äänimerkeillä viestiä kirjoitettaessa.
 
 ## Kartat
 
@@ -104,6 +106,10 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 * Ilmoitukset, kuten tiedostojen lataukset, luetaan.
 * NVDA ei enää sano Windowsin Creators Update -versiossa "WebRuntime Content
   View" siirryttäessä toiselle sivustolle.
+
+## Ihmiset
+
+* Kontakteja etsittäessä toistetaan ääni, mikäli hakutuloksia on.
 
 ## Asetukset
 

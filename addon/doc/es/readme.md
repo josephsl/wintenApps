@@ -19,6 +19,7 @@ qué se incluye):
 * Correo
 * Mapas
 * Microsoft Edge
+* Gente
 * Opciones (opciones de sistema, Windows+I)
 * Skype (aplicación universal)
 * Tienda
@@ -26,12 +27,12 @@ qué se incluye):
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Nota: este complemento requiere de Windows 10 Versión 1511 (compilación
-10286) o posterior y NVDA 2016.4 o posterior. Para unos mejores resultados,
-utiliza el complemento con la compilación estable más reciente (compilación
-15063) y con la versión estable más reciente de NVDA. También, después de
-cambiar las opciones de la actualización para el complemento, asegúrate de
-guardar las opciones de NVDA.
+Nota: este complemento requiere Windows 10 Versión 1511 (build 10586) o
+posterior y NVDA 2017.1 o posterior. Para unos mejores resultados, utiliza
+el complemento con la compilación estable más reciente (build 15063) y
+versión estable más reciente de NVDA. También, después de cambiar las
+opciones de actualización para el complemento, asegúrate de guardar la
+configuración de NVDA.
 
 ## General
 
@@ -95,6 +96,8 @@ guardar las opciones de NVDA.
 
 * Cuando se revisan elementos en la lista de mensajes, ahora puedes utilizar
   órdenes de navegación de tablas para revisar los encabezados de mensaje.
+* Cuando se escribe un mensaje, la apariencia de la mención de sugerencias
+  se indica con sonidos.
 
 ## Mapas
 
@@ -108,6 +111,11 @@ guardar las opciones de NVDA.
 * Ahora se anuncian notificaciones tales como descargas de ficheros.
 * En la actualización Creators, NVDA ya no anunciará "WebRuntime Content
   View" cuando vaya a otro sitio.
+
+## Gente
+
+* Cuando se busquen contactos, se reproducirá un sonido si hay resultados de
+  la búsqueda.
 
 ## Opciones
 

@@ -18,17 +18,17 @@ Windows 10, а также исправлений для некоторых ти�
 * Почта
 * Карты
 * Microsoft Edge
+* People
 * Настройки (настройки системы, Windows+I)
 * Skype (universal app)
 * Магазин
 * Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
 
-Примечание: Это дополнение требует Windows 10 Версии 1511 (сборки 10586) или
-позднее и NVDA 2016.4 или позднее. Для наилучших результатов используйте
-дополнение с последней стабильной сборкой (сборка 15063) и последней
-стабильной версией NVDA. Кроме того, после изменения настроек обновления для
-дополнения, обязательно сохраните настройки программы NVDA.
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+and NVDA 2017.1 or later. For best results, use the add-on with latest
+stable build (build 15063) and latest stable version of NVDA. Also, after
+changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Общие
 
@@ -86,6 +86,8 @@ Windows 10, а также исправлений для некоторых ти�
 
 * When reviewing items in messages list, you can now use table navigation
   commands to review message headers.
+* When writing a message, appearance of at mention suggestions are indicated
+  by sounds.
 
 ## Карты
 
@@ -98,6 +100,11 @@ Windows 10, а также исправлений для некоторых ти�
 * Теперь объявляются уведомления, такие как загрузка файлов.
 * In Creators Update, NVDA will no longer announce "WebRuntime Content View"
   when going to another site.
+
+## People
+
+* When searching for contacts, a sound will play if there are search
+  results.
 
 ## Настройки
 

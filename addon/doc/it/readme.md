@@ -18,18 +18,17 @@ si veda la relativa sezione per ulteriori informazioni:
 * Posta
 * Mappe
 * Microsoft Edge
+* Persone
 * Impostazioni (Impostazioni Windows, Windows+i)
 * Skype (universal app)
 * Store
 * Meteo
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
-Nota: questo add-on richiede  Windows 10 Versione 1511 (build 10586) o
-successive e NVDA 2016.4 o successive. Per avere le prestazioni migliori,
-utilizzare il componente aggiuntivo con l'ultima build stabile (build 15063)
-e l'ultima versione stabile di NVDA. Si ricorda che dopo aver modificato le
-impostazioni di aggiornamento automatico del componente aggiuntivo, è
-consigliabile salvare la configurazione di NVDA.
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+and NVDA 2017.1 or later. For best results, use the add-on with latest
+stable build (build 15063) and latest stable version of NVDA. Also, after
+changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Generale
 
@@ -95,6 +94,8 @@ consigliabile salvare la configurazione di NVDA.
 * Quando si scorrono gli elementi in un elenco messaggi, è possibile
   utilizzare i comandi di navigazione tabella per controllare le
   intestazioni.
+* Durante la composizione di un messaggio, verranno emessi segnali acustici
+  nel caso ci siano dei suggerimenti per menzioni dopo la chiocciola
 
 ## Mappe
 
@@ -108,6 +109,11 @@ consigliabile salvare la configurazione di NVDA.
 * Vengono annunciate correttamente le notifiche dei download dei file.
 * Nell'aggiornamento Creators, NVDA non annuncerà più "WebRuntime Content
   View" quando si passa ad un altro sito web.
+
+## Persone
+
+* Durante la ricerca di contatti, verrà emesso un segnale acustico nel caso
+  appaiono dei risultati di ricerca.
 
 ## Impostazioni
 
