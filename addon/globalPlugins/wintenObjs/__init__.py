@@ -251,7 +251,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
 			# NVDA Core ticket 5231: Announce values in time pickers.
-			# Handle both Threshold and Redstone looping selector items.
 			if obj.role==controlTypes.ROLE_LISTITEM and "LoopingSelectorItem" in obj.UIAElement.cachedClassName:
 				clsList.append(LoopingSelectorItem)
 			# Also announce values when focus moves to it.
@@ -272,17 +271,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				clsList.insert(0, UIAEditableTextWithSuggestions)
 			# Suggestions themselves.
 			# No longer needed in NVDA 2017.3 as the Core will include this.
-			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID.lower() == "suggestionslist": #and not "reportAutoSuggestionsWithSound" in config.conf["presentation"]:
-				clsList.insert(0, SuggestionsListItem)
+			# A floating version (such as Emoji panel) will be checked as well (build 16215).
+			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA):
+				if obj.parent.UIAElement.cachedAutomationID.lower() == "suggestionslist": #and not "reportAutoSuggestionsWithSound" in config.conf["presentation"]:
+					clsList.insert(0, SuggestionsListItem)
+				elif obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_ExpressionFullViewItemsGrid":
+					clsList.insert(0, FloatingSuggestionsListItem)
 			# Some search fields does not raise controller for but suggestions are next to them.
 			elif obj.UIAElement.cachedAutomationID == "QueryInputTextBox":
 				clsList.insert(0, QueryInputTextBox)
 			# Menu items should never expose position info (seen in various context menus such as in Edge).
 			elif obj.UIAElement.cachedClassName == "MenuFlyoutItem":
 				clsList.insert(0, MenuItemNoPosInfo)
-			# Floating suggestion items such as emoji panel (build 16215 and later).
-			elif isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_ExpressionFullViewItemsGrid":
-				clsList.insert(0, FloatingSuggestionsListItem)
 
 	# Record UIA property info about an object if debug logging is enabled.
 	def uiaDebugLogging(self, obj, event=None):
