@@ -88,6 +88,9 @@ class AppModule(appModuleHandler.AppModule):
 				pass
 		nextHandler()
 
+	# Live region changed event is fired for property changes.
+	event_UIA_liveRegionChanged = event_nameChange
+
 	def event_UIA_controllerFor(self, obj, nextHandler):
 		self._nameChangeCache = ""
 		nextHandler()
