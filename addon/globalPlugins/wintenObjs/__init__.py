@@ -164,6 +164,16 @@ class SuggestionsListItem(UIA):
 			# Based on work on NvDA core ticket 6414.
 			braille.handler.message(braille.getBrailleTextForProperties(name=self.name, role=self.role, positionInfo=self.positionInfo))
 
+# A version for floating suggestion items such as Emoji panel in build 16215 and later.
+class FloatingSuggestionsListItem(UIA):
+
+	def event_UIA_elementSelected(self):
+		speech.cancelSpeech()
+		api.setNavigatorObject(self)
+		self.reportFocus()
+		# Based on work on NvDA core ticket 6414.
+		braille.handler.message(braille.getBrailleTextForProperties(name=self.name, role=self.role, positionInfo=self.positionInfo))
+
 
 # Contacts search field in People app and other places.
 # An ugly hack to prevent suggestion founds from repeating.
@@ -270,6 +280,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Menu items should never expose position info (seen in various context menus such as in Edge).
 			elif obj.UIAElement.cachedClassName == "MenuFlyoutItem":
 				clsList.insert(0, MenuItemNoPosInfo)
+			# Floating suggestion items such as emoji panel (build 16215 and later).
+			elif isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_ExpressionFullViewItemsGrid":
+				clsList.insert(0, FloatingSuggestionsListItem)
 
 	# Record UIA property info about an object if debug logging is enabled.
 	def uiaDebugLogging(self, obj, event=None):
