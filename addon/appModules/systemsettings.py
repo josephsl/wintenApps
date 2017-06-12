@@ -79,7 +79,9 @@ class AppModule(appModuleHandler.AppModule):
 				# For search progress bar, do not repeat it.
 				or (automationID == "ProgressBar")
 				# Do not announce "result not found" error unless have to.
-				or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")):
+				or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")
+				# But announce individual update progress in build 16215 and later.
+				or ("ApplicableUpdate" in automationID and automationID.endswith("_DescriptionTextBlock"))):
 					self._nameChangeCache = obj.name
 					ui.message(obj.name)
 			except AttributeError:
