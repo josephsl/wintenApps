@@ -228,7 +228,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIA_ControllerForPropertyId] = "UIA_controllerFor"
 			UIAHandler.handler.clientObject.AddPropertyChangedEventHandler(UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler,[UIA_ControllerForPropertyId])
 		if UIA_LiveRegionChangedEventId not in UIAHandler.UIAEventIdsToNVDAEventNames:
-			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_LiveRegionChangedEventId] = "nameChange"
+			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_LiveRegionChangedEventId] = "UIA_liveRegionChanged"
 			UIAHandler.handler.clientObject.addAutomationEventHandler(UIA_LiveRegionChangedEventId,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
@@ -318,4 +318,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_controllerFor(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "controllerFor")
+		nextHandler()
+
+	def event_UIA_liveRegionChanged(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "liveRegionChanged")
+		nextHandler()
+
+	def event_UIA_elementSelected(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "elementSelected")
 		nextHandler()
