@@ -165,7 +165,7 @@ class SuggestionsListItem(UIA):
 			braille.handler.message(braille.getBrailleTextForProperties(name=self.name, role=self.role, positionInfo=self.positionInfo))
 
 # A version for floating suggestion items such as Emoji panel in build 16215 and later.
-class FloatingSuggestionsListItem(UIA):
+class FloatingSuggestionsEmojiItem(UIA):
 
 	def event_UIA_elementSelected(self):
 		speech.cancelSpeech()
@@ -173,6 +173,19 @@ class FloatingSuggestionsListItem(UIA):
 		self.reportFocus()
 		# Based on work on NvDA core ticket 6414.
 		braille.handler.message(braille.getBrailleTextForProperties(name=self.name, role=self.role, positionInfo=self.positionInfo))
+
+# Emoji categories themselves.
+# This is required so the first emoji can be announced.
+class FloatingSuggestionsEmojiCategory(UIA):
+
+	def event_UIA_elementSelected(self):
+		# When this is fired, the first emoji from this category is selected but not nanounced, thus move the navigator object to that item.
+		speech.cancelSpeech()
+		emoji = self.parent.previous.firstChild
+		api.setNavigatorObject(emoji)
+		emoji.reportFocus()
+		# Based on work on NvDA core ticket 6414.
+		braille.handler.message(braille.getBrailleTextForProperties(name=emoji.name, role=emoji.role, positionInfo=emoji.positionInfo))
 
 
 # Contacts search field in People app and other places.
@@ -273,10 +286,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# No longer needed in NVDA 2017.3 as the Core will include this.
 			# A floating version (such as Emoji panel) will be checked as well (build 16215).
 			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA):
+				# Regular in-process suggestions list.
 				if obj.parent.UIAElement.cachedAutomationID.lower() == "suggestionslist": #and not "reportAutoSuggestionsWithSound" in config.conf["presentation"]:
 					clsList.insert(0, SuggestionsListItem)
+				# Floating emoji palen categories.
+				elif obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_ExpressionFullViewGroupsList":
+					clsList.insert(0, FloatingSuggestionsEmojiCategory)
+				# Floating emoji panel items.
 				elif obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_ExpressionFullViewItemsGrid":
-					clsList.insert(0, FloatingSuggestionsListItem)
+					clsList.insert(0, FloatingSuggestionsEmojiItem)
 			# Some search fields does not raise controller for but suggestions are next to them.
 			elif obj.UIAElement.cachedAutomationID == "QueryInputTextBox":
 				clsList.insert(0, QueryInputTextBox)
