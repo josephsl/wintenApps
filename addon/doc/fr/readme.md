@@ -28,7 +28,7 @@ est inclus) :
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
 Note: ce module complémentaire nécessite Windows 10 Version 1511 (build
-10586) ou version ultérieure et NVDA 2016.4 ou version ultérieure. Pour de
+10586) ou version ultérieure et NVDA 2017.1 ou version ultérieure. Pour de
 meilleurs résultats, utilisez le module complémentaire avec la dernière
 build stable (build 15063) et la dernière version stable de NVDA. De plus,
 après avoir modifié les paramètres de mise à jour pour le module

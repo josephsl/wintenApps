@@ -27,11 +27,10 @@
 * Време
 * Разни модули за контроли, като например плочките в менюто „Старт“.
 
-Забележка: Тази добавка изисква Windows 10 версия 1511 (компилация 10586)
-или по-нова и NVDA 2016.4 или по-нова. За най-добри резултати, използвайте
-добавката с Последната стабилна версия на Windows (компилация 15063) и
-най-новата стабилна версия на NVDA. Също така, след промяна на настройките
-за обновяване на добавката, се уверете че сте запазили настройките на NVDA.
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+and NVDA 2017.1 or later. For best results, use the add-on with latest
+stable build (build 15063) and latest stable version of NVDA. Also, after
+changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Общи
 

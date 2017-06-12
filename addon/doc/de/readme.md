@@ -27,7 +27,7 @@ welche inbegriffen sind):
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
 
 Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
-and NVDA 2016.4 or later. For best results, use the add-on with latest
+and NVDA 2017.1 or later. For best results, use the add-on with latest
 stable build (build 15063) and latest stable version of NVDA. Also, after
 changing update settings for the add-on, be sure to save NVDA settings.
 
