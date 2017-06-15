@@ -30,9 +30,9 @@ addonHandler.initTranslation()
 # Add-on config database
 confspec = {
 	"autoUpdateCheck": "boolean(default=true)",
-	"updateChannel": "string(default=stable)",
+	"updateChannel": "string(default=dev)",
 	"updateCheckTime": "integer(default=0)",
-	"updateCheckTimeInterval": "integer(min=0, max=30, default=7)",
+	"updateCheckTimeInterval": "integer(min=0, max=30, default=1)",
 }
 config.conf.spec["wintenApps"] = confspec
 
