@@ -15,8 +15,12 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_nameChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
+			# Notifications such as file download prmopt.
 			if obj.role == controlTypes.ROLE_STATICTEXT and obj.parent.UIAElement.cachedClassName == "NotificationBar":
 				ui.message(obj.name)
+			# Accessibility message alerts.
+			elif obj.role == controlTypes.ROLE_ALERT and obj.UIAElement.cachedAutomationID == "a11y-announcements-message":
+				ui.message(obj.firstChild.name)
 		nextHandler()
 
 	event_UIA_liveRegionChanged = event_nameChange
