@@ -51,8 +51,6 @@ class AppModule(appModuleHandler.AppModule):
 
 	# Past responses from Cortana (cached to prevent repetition, initially an empty string).
 	CortanaResponseCache = ""
-	# Change Cortana's greeting line based on build.
-	greetingLine = "GreetingLine1" if sys.getwindowsversion().build > 10586 else "GreetingLine2"
 
 	def event_nameChange(self, obj, nextHandler):
 		# NVDA, can you act as a mouthpiece for Cortana?
@@ -61,7 +59,7 @@ class AppModule(appModuleHandler.AppModule):
 			# There are two Cortana response lines. Usually line 2 is more reliable.
 			# However, Redstone seems to favor line 1 better.
 			# A specific automation ID is used for reminders and others.
-			if element.cachedAutomationID in ("SpeechContentLabel", "WeSaidTextBlock", self.greetingLine):
+			if element.cachedAutomationID in ("SpeechContentLabel", "WeSaidTextBlock", "GreetingLine1"):
 				ui.message(obj.name)
 				self.CortanaResponseCache = obj.name
 		nextHandler()
