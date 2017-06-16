@@ -35,6 +35,10 @@ msgstr "Стара версия на Windows"
 msgid "No more weather data for this item."
 msgstr "Няма повече синоптични данни за този елемент."
 
+#. Translators: the description for the activateLongDescription script on browseMode documents.
+msgid "Shows the message details."
+msgstr ""
+
 #. Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 msgid "Typing stopped"
 msgstr "Писането спря"

@@ -37,8 +37,6 @@ NVDA.
 
 * En menús de contexto para os mosaicos do Menú Inicio, os submenús
   recoñécense apropriadamente.
-* Ao minimizar windows (Windows+M), xa non se anuncia "panel" (perceptible
-  se se usan compilacións Insider Preview).
 * Agora recoñécense certos diálogos como proprios diálogos. Esto inclúe o
   diálogo Insider Preview (settings app) e o diálogo de novo estilo do UAC
   na compilación 14328 e anteriores para o NVDA 2016.2.1 e anteriores.
@@ -50,16 +48,17 @@ NVDA.
   posición do obxecto" no diálogo Presentación de Obxectos.
 * En certos menús de contexto (coma no Edge), a información de posición
   (ex.: 1 de 2) xa non se anuncia.
-* Recoñécense os seguintes eventos UIA: Controller for, live region changed
-  (Nanexados por evento de cambio de nome).
+* The following UIA events are recognized: Controller for, live region
+  changed, system alert.
 * Engadida a capacidade de procurar as actualizacións do complemento
   (automática ou manual) a través do novo diálogo Windows 10 App Essentials
   que se atopa no menú Preferencias do NVDA. Por defecto, procuraranse as
   actualizacións para as versións estable e de desenvolvementeo
   automáticamente semanal ou diáriamente, respectivamente.
-* Capacidade para seguir eventos que cheguen dende aplicacións Universal
-  Windows Platform (UWP) se o NVDA se está a executar co rexistro de
-  depuración habilitado (2017.1 ou posterior).
+* Ability to track events coming from Universal Windows Platform (UWP) apps
+  if NVDA is run with debug logging enabled.
+* Initial support for floating Emoji input panel in build 16215 or later
+  (for best results, use Windows OneCore speech synthesizer).
 
 ## Alarmas e reloxo
 
@@ -69,7 +68,7 @@ NVDA.
 
 ## Calculadora
 
-* Cando se prema INTRO, NVDA anuncia os resultados do cálculo.
+* When ENTER or Escape is pressed, NVDA announces calculation results.
 
 ## calendario
 
@@ -104,7 +103,8 @@ NVDA.
 
 ## Microsoft Edge
 
-* Agora anúncianse notificacións como a descarga de ficheiros.
+* Notifications such as file downloads and various webpage alerts are now
+  announced.
 * Na actualización Creators, NVDA xa non anunciará "WebRuntime Content View"
   cando vaia a outro sitio.
 
@@ -142,6 +142,11 @@ NVDA.
   preview liberada en novembro do 2016.
 * NVDA xa non anuncia "Mensaxe Skype" cando se revisen mensaxes para a
   maioría dos casos.
+* Various issues when using Skype with braille displays fixed, including
+  inability to review message history items in braille.
+* From message history list, pressing NVDA+D on a message item will now
+  allow NVDA to announce detailed information about a message such as
+  channel type, sent date and time and so on.
 
 ## Tenda
 

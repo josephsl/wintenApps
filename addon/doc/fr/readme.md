@@ -38,8 +38,6 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 
 * Dans les menus contextuels pour les tuiles sous-menus du Menu Démarrer
   sont correctement reconnus.
-* Quand on minimise les fenêtres (Windows+M), "volet" n'est plus annoncé
-  (notable si on utilise les préversions Insider).
 * Certaines boîtes de dialogue sont maintenant reconnues comme des boîtes de
   dialogue propres. Ceci incluent le dialogue Insider Preview (settings app)
   et le dialogue nouveau style UAC dans la build 14328 et version ultérieur
@@ -53,17 +51,18 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
   l'objet dans une liste" dans la boîte de dialogue Présentation des Objets.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
-* Les événements UIA suivants sont reconnus : Controller pour, live region
-  changed (handled par name change event).
+* The following UIA events are recognized: Controller for, live region
+  changed, system alert.
 * Ajout de la possibilité de vérifier les mises à jour du module
   complémentaire(automatiques ou manuelles) via la nouvelle boîte de
   dialogue Windows 10 App Essentials qui se trouve dans le menu Préférences
   de NVDA. Par défaut, les versions stables et de développement vérifieront
   automatiquement les nouvelles mises à jour sur une base hebdomadaire ou
   quotidienne, respectivement.
-* Possibilité de suivre les événements provenant des apps Universal Windows
-  Platform (UWP) si NVDA est exécuté avec la journalisation de débogage
-  activée (2017.1 ou ultérieure).
+* Ability to track events coming from Universal Windows Platform (UWP) apps
+  if NVDA is run with debug logging enabled.
+* Initial support for floating Emoji input panel in build 16215 or later
+  (for best results, use Windows OneCore speech synthesizer).
 
 ## Alarmes et horloge
 
@@ -75,7 +74,7 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 
 ## Calculatrice
 
-* Lorsque vous appuyez sur entrée, NVDA annonce les résultats du calcul.
+* When ENTER or Escape is pressed, NVDA announces calculation results.
 
 ## calendrier
 
@@ -113,8 +112,8 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 
 ## Microsoft Edge
 
-* Notifications telles que les téléchargements de fichiers sont maintenant
-  annoncées.
+* Notifications such as file downloads and various webpage alerts are now
+  announced.
 * Dans Creators Update NVDA n'annoncera plus"WebRuntime Content View" en
   allant vers un autre site.
 
@@ -153,6 +152,11 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
   2016 sont annoncées.
 * NVDA n'annoncera plus "Message Skype"lors de la révision des messages pour
   la majorité des cas.
+* Various issues when using Skype with braille displays fixed, including
+  inability to review message history items in braille.
+* From message history list, pressing NVDA+D on a message item will now
+  allow NVDA to announce detailed information about a message such as
+  channel type, sent date and time and so on.
 
 ## Store
 

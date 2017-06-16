@@ -34,8 +34,6 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 * В контекстных меню для плиток главного меню, правильно распознаются
   подменю.
-* When minimizing windows (Windows+M), "pane" is no longer announced
-  (noticeable if using Insider Preview builds).
 * Certain dialogs are now recognized as proper dialogs. This include Insider
   Preview dialog (settings app) and new-style UAC dialog in build 14328 and
   later for NvDA 2016.2.1 or earlier.
@@ -48,13 +46,15 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * In certain context menus (such as in Edge), position information (e.g. 1
   of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, live region
-  changed (handled by name change event).
+  changed, system alert.
 * Added ability to check for add-on updates (automatic or manual) via the
   new Windows 10 App Essentials dialog found in NvDA Preferences menu. By
   default, stable and development versions will check for new updates
   automatically on a weekly or daily basis, respectively.
 * Ability to track events coming from Universal Windows Platform (UWP) apps
-  if NVDA is run with debug logging enabled (2017.1 or later).
+  if NVDA is run with debug logging enabled.
+* Initial support for floating Emoji input panel in build 16215 or later
+  (for best results, use Windows OneCore speech synthesizer).
 
 ## Будильники и часы
 
@@ -64,7 +64,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Калькулятор
 
-* Когда нажимаете ENTER, NVDA сообщает результаты расчёта.
+* When ENTER or Escape is pressed, NVDA announces calculation results.
 
 ## календарь
 
@@ -97,7 +97,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Microsoft Edge
 
-* Теперь объявляются уведомления, такие как загрузка файлов.
+* Notifications such as file downloads and various webpage alerts are now
+  announced.
 * In Creators Update, NVDA will no longer announce "WebRuntime Content View"
   when going to another site.
 
@@ -133,6 +134,11 @@ changing update settings for the add-on, be sure to save NVDA settings.
   announced.
 * NVDA will no longer announce "Skype Message" when reviewing messages for
   majority of cases.
+* Various issues when using Skype with braille displays fixed, including
+  inability to review message history items in braille.
+* From message history list, pressing NVDA+D on a message item will now
+  allow NVDA to announce detailed information about a message such as
+  channel type, sent date and time and so on.
 
 ## Магазин
 
