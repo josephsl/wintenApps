@@ -23,19 +23,19 @@ The following app modules or support modules for some apps are included (see eac
 * Weather.
 * Miscellaneous modules for controls such as Start Menu tiles.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NVDA 2016.4 or later. For best results, use the add-on with latest stable build (build 15063) and latest stable version of NVDA. Also, after changing update settings for the add-on, be sure to save NVDA settings.
+Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NVDA 2017.1 or later. For best results, use the add-on with latest stable build (build 15063) and latest stable version of NVDA. Also, after changing update settings for the add-on, be sure to save NVDA settings.
 
 ## General
 
 * In context menus for Start Menu tiles, submenus are properly recognized.
-* When minimizing windows (Windows+M), "pane" is no longer announced (noticeable if using Insider Preview builds).
 * Certain dialogs are now recognized as proper dialogs. This include Insider Preview dialog (settings app) and new-style UAC dialog in build 14328 and later for NvDA 2016.2.1 or earlier.
 * Appearance/close of suggestions for certain search fields (notably Settings and Store apps) is announced via sounds and braille. This also includes Start menu search box.
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation dialog.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
-* The following UIA events are recognized: Controller for, live region changed (handled by name change event).
+* The following UIA events are recognized: Controller for, live region changed, system alert.
 * Added ability to check for add-on updates (automatic or manual) via the new Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
-* Ability to track events coming from Universal Windows Platform (UWP) apps if NVDA is run with debug logging enabled (2017.1 or later).
+* Ability to track events coming from Universal Windows Platform (UWP) apps if NVDA is run with debug logging enabled.
+* Initial support for floating Emoji input panel in build 16215 or later (for best results, use Windows OneCore speech synthesizer).
 
 ## Alarms and clock
 
@@ -71,7 +71,7 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 
 ## Microsoft Edge
 
-* Notifications such as file downloads are now announced.
+* Notifications such as file downloads and various webpage alerts are now announced.
 * In Creators Update, NVDA will no longer announce "WebRuntime Content View" when going to another site.
 
 ## People
