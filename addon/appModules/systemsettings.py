@@ -95,8 +95,6 @@ class AppModule(appModuleHandler.AppModule):
 
 	# And because announcing progress bar values via live region change is anoying...
 	def event_liveRegionChange(self, obj, nextHandler):
-		import tones
-		tones.beep(400, 50)
 		nextHandler()
 
 	def event_UIA_controllerFor(self, obj, nextHandler):
