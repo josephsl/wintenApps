@@ -71,6 +71,8 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_nameChange(self, obj, nextHandler):
 		# For now, all name change events will result in items being announced.
+		if hasattr(obj, "event_liveRegionChange"):
+			return
 		if isinstance(obj, UIA) and obj.name != self._nameChangeCache:
 			automationID = obj.UIAElement.cachedAutomationID
 			try:
@@ -89,12 +91,13 @@ class AppModule(appModuleHandler.AppModule):
 		nextHandler()
 
 	# Live region changed event is fired for property changes.
-	# In NVDA 2017.3, this is part of Core, so also catch the new liveRegionChange event.
 	event_UIA_liveRegionChanged = event_nameChange
-	try:
-		event_liveRegionChange = event_nameChange
-	except:
-		pass
+
+	# And because announcing progress bar values via live region change is anoying...
+	def event_liveRegionChange(self, obj, nextHandler):
+		import tones
+		tones.beep(400, 50)
+		nextHandler()
 
 	def event_UIA_controllerFor(self, obj, nextHandler):
 		self._nameChangeCache = ""
