@@ -24,3 +24,8 @@ class AppModule(appModuleHandler.AppModule):
 		nextHandler()
 
 	event_UIA_liveRegionChanged = event_nameChange
+	# Live region change is part of NVDA 2017.3, so try catching this as well.
+	try:
+		event_liveRegionChange = event_nameChange
+	except:
+		pass

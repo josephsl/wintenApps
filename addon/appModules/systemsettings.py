@@ -89,7 +89,12 @@ class AppModule(appModuleHandler.AppModule):
 		nextHandler()
 
 	# Live region changed event is fired for property changes.
+	# In NVDA 2017.3, this is part of Core, so also catch the new liveRegionChange event.
 	event_UIA_liveRegionChanged = event_nameChange
+	try:
+		event_liveRegionChange = event_nameChange
+	except:
+		pass
 
 	def event_UIA_controllerFor(self, obj, nextHandler):
 		self._nameChangeCache = ""
