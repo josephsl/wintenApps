@@ -58,7 +58,7 @@ class AppModule(appModuleHandler.AppModule):
 				obj.name = ", ".join(nameList)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		# These are no longer needed with nVDA 2017.3.
+		# These are no longer needed with NVDA 2017.3.
 		if "reportAutoSuggestionsWithSound" not in config.conf["presentation"] and isinstance(obj, UIA):
 			if obj.role == controlTypes.ROLE_COMBOBOX and obj.UIAElement.getCurrentPropertyValue(UIAHandler.UIA_IsValuePatternAvailablePropertyId):
 				clsList.insert(0, ComboBoxWithValuePattern)
@@ -83,9 +83,14 @@ class AppModule(appModuleHandler.AppModule):
 				# Do not announce "result not found" error unless have to.
 				or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")
 				# But announce individual update progress in build 16215 and later.
-				or ("ApplicableUpdate" in automationID and automationID.endswith("_DescriptionTextBlock"))):
-					self._nameChangeCache = obj.name
-					ui.message(obj.name)
+				or ("ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock"))):
+					# Until the spacing problem is fixed for update label...
+					if "ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock"):
+						self._nameChangeCache = " ".join([obj.parent.name, obj.name])
+						ui.message(" ".join([obj.parent.name, obj.name]))
+					else:
+						self._nameChangeCache = obj.name
+						ui.message(name)
 			except AttributeError:
 				pass
 		nextHandler()
@@ -95,7 +100,27 @@ class AppModule(appModuleHandler.AppModule):
 
 	# And because announcing progress bar values via live region change is anoying...
 	def event_liveRegionChange(self, obj, nextHandler):
-		nextHandler()
+		if isinstance(obj, UIA) and obj.name != self._nameChangeCache:
+			automationID = obj.UIAElement.cachedAutomationID
+			try:
+				# Don't repeat the fact that update download/installation is in progress if progress bar beep is on.
+				if ((automationID == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock" and obj.previous.value <= "0")
+				# For search progress bar, do not repeat it.
+				or (automationID == "ProgressBar")
+				# Do not announce "result not found" error unless have to.
+				or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")
+				# But announce individual update progress in build 16215 and later.
+				or ("ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock"))):
+					self._nameChangeCache = obj.name
+					# Until the spacing problem is fixed for update label...
+					if "ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock"):
+						ui.message(" ".join([obj.parent.name, obj.name]))
+					else:
+						ui.message(obj.name)
+					# And no, never allow double-speaking (an ugly hack).
+					return
+			except AttributeError:
+				pass
 
 	def event_UIA_controllerFor(self, obj, nextHandler):
 		self._nameChangeCache = ""
