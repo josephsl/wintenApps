@@ -180,13 +180,17 @@ class FloatingSuggestionsEmojiItem(UIA):
 class FloatingSuggestionsEmojiCategory(UIA):
 
 	def event_UIA_elementSelected(self):
-		# When this is fired, the first emoji from this category is selected but not nanounced, thus move the navigator object to that item.
+		# When this is fired, the first emoji from this category is selected but not announced, thus move the navigator object to that item.
 		speech.cancelSpeech()
 		emoji = self.parent.previous.firstChild
-		api.setNavigatorObject(emoji)
-		emoji.reportFocus()
-		# Based on work on NvDA core ticket 6414.
-		braille.handler.message(braille.getBrailleTextForProperties(name=emoji.name, role=emoji.role, positionInfo=emoji.positionInfo))
+		# In build 16226 and later, one can filter emojis by typing descriptions, and by default, no filtering is applied, hence emoji is none.
+		if emoji is not None:
+			api.setNavigatorObject(emoji)
+			emoji.reportFocus()
+			# Based on work on NvDA core ticket 6414.
+			braille.handler.message(braille.getBrailleTextForProperties(name=emoji.name, role=emoji.role, positionInfo=emoji.positionInfo))
+		else:
+			ui.message("No emoji")
 
 
 # Contacts search field in People app and other places.
