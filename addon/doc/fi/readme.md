@@ -35,8 +35,6 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
 ## Yleistä
 
 * Alavalikot tunnistetaan oikein Käynnistä-valikon tiilien pikavalikoissa.
-* Ikkunoita pienennettäessä (Windows+M) ei enää sanota "ruutu"
-  (havaittavissa Insider-esiversioita käytettäessä).
 * Tietyt valintaikkunat tunnistetaan nyt oikeiksi
   valintaikkunoiksi. Tällaisia ovat esim. Insider-esiversioiden
   valintaikkuna (Asetukset-sovelluksessa) sekä uudentyylinen Käyttäjätilien
@@ -51,14 +49,17 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
 * Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, aktiivinen alue
-  muuttunut (nimenmuutostapahtuman käsittelemänä).
+  muuttunut, järjestelmän ilmoitus.
 * Lisätty lisäosan päivitysmahdollisuus (automaattinen tai manuaalinen)
   NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App Essentials
   -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat oletuksena
   automaattisen päivitystarkistuksen viikoittain tai päivittäin.
 * Mahdollisuus Universal Windows Platform (UWP) -sovelluksista tulevien
   tapahtumien seuraamiseen, mikäli NVDA:ta käytetään
-  virheenkorjaus-lokitasolla (2017.1 tai uudempi).
+  virheenkorjaus-lokitasolla.
+* Alustava tuki koontiversion 16215 tai uudemman kelluvalle emojien
+  syöttöpaneelille (käytä parhaan tuloksen saamiseksi Windows OneCore
+  -puhesyntetisaattoria).
 
 ## Hälytykset ja kello
 
@@ -69,7 +70,7 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
 
 ## Laskin
 
-* NVDA ilmoittaa laskutoimituksen tuloksen Enter-näppäintä painettaessa.
+* NVDA ilmoittaa laskutoimituksen tuloksen Enteriä tai Esciä painettaessa.
 
 ## Kalenteri
 
@@ -103,7 +104,8 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
 
 ## Microsoft Edge
 
-* Ilmoitukset, kuten tiedostojen lataukset, luetaan.
+* Ilmoitukset, kuten tiedostojen lataukset ja useat verkkosivujen
+  ilmoitukset, luetaan.
 * NVDA ei enää sano Windowsin Creators Update -versiossa "WebRuntime Content
   View" siirryttäessä toiselle sivustolle.
 
@@ -138,6 +140,12 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
   yhdistelmäruutujen selitteet puhutaan.
 * NVDA ei enää sano "Skype-viesti" useimmissa tapauksissa viestejä
   tarkasteltaessa.
+* Korjattu useita ongelmia, joita ilmeni käytettäessä Skypeä pistenäytön
+  kanssa, mukaan lukien kyvyttömyys lukea viestihistorian kohteita
+  pistekirjoituksella.
+* NVDA kertoo nyt viestin tarkat tiedot, kuten kanavatyypin ja
+  lähetyspäivämäärän sekä -kellonajan jne., painettaessa NVDA+D
+  viestihistorialuettelon kohteen kohdalla.
 
 ## Kauppa
 

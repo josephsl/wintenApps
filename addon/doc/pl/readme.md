@@ -35,8 +35,6 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 
 * W meni kontekstowym kafelek meni start, meni rozwijane są prawidłowo
   rozpoznawane.
-* Przy minimalizowaniu okien, (Windows+M), "Okno" więcej nie jest wymawiane
-  (zauważalne przy używaniu kompilacji insider preview).
 * Większość okien dialogowych teraz jest rospoznawana jako właściwie
   dialogi. Te dialogi stanowią na przykład: okno dialogowe insider preview
   (aplikacja ustawienia) i nowe stylizowane okno dialogowe kontroli kont
@@ -49,8 +47,8 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
   obiektu" w oknie dialogowym "prezentacja obiektu".
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) więcej nie jest odczytywana.
-* Następne zdarzenia UIA są rospoznawane: Controller for, live region
-  changed (handled by name change event).
+* Następujące zdarzenia UIA są rospoznawane: Controller for, live region
+  changed, system alert.
 * Dodana możliwość sprawdzania aktualizacji dodatku (automatycznie lub
   ręcznie) poprzez nowe okno dialogowe Windows 10 App Essentials, które
   można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
@@ -59,6 +57,9 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 * Możliwość śledzenia zdarzeń z aplikacji ujednoliconej platformy Windows
   (UWP) jeżeli NVDA jest uruchomione w trybie debugowania (2017.1 lub
   nowsze).
+* Wsparcie stępne dla pływającego panelu wprowadzania Emoji w kompilacji
+  16215 lub nowszej (dla lepszych wyników trzeba używać syntezatora mowy
+  OneCore, czyli Microsoft sapi mobile).
 
 ## Alarmy i zegar
 
@@ -68,7 +69,7 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 
 ## Kalkulator
 
-* Kiedy enter jest wciśnięty, NVDA wymawia wynik obliczenia.
+* Kiedy enter albo escape jest wciśnięty, NVDA wymawia wynik obliczenia.
 
 ## Kalendarz
 
@@ -101,7 +102,8 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 
 ## Microsoft Edge
 
-* Powiadomienia, takie jak pobierania plików są oznajmiane.
+* Powiadomienia, takie jak pobierania plików i różne ostrzeżenia na stronach
+  webowychsą oznajmiane.
 * W aktualizacji twórczej, NVDA więcej nie będzie wymawiać "WebRuntime
   Content View" kiedy przechodzimy na inną stronę webową.
 
@@ -138,6 +140,11 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
   2016 są wypowiadane.
 * NVDA dla większości sytuacji nie będzie wypowiadał "Skype Message" przy
   przeglądaniu wiadomości.
+* Różne błędy przy używaniu Skype za pomocą linijek brajlowskich są teraz
+  poprawione, włączając w to niemożliwość czytania wiadomości za pomocą
+  brajla.
+* Z listy historii wiadomości, wciskając NVDA+D teraz wypowiada typ kanału,
+  datę wiadomości i tak dalej.
 
 ## Sklep
 

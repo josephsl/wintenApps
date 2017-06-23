@@ -36,9 +36,6 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 
 * În meniurile contextuale ale tile-urilor din cadrul Start Meniu,
   submeniurile sunt recunoscute corect.
-* La minimizarea ferestrelor (Windows+M), „panou” nu mai este anunțat (de
-  remarcat pentru utilizatorii build-urilor din cadrul programului de
-  insider).
 * Anumite dialoguri sunt acum recunoscute ca dialoguri
   corespunzătoare. Aceasta include dialogul de examinare al insiderului (în
   aplicația Setări) și un nou stil în dialogul UAC în build 14328 și mai nou
@@ -52,7 +49,7 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.g. 1 din 2) nu mai este anunțată.
 * Următoarele evenimente UIA sunt recunoscute: Controler pentru, schimbarea
-  regiunii în care locuiți (tratarea evenimentului schimbării numelui).
+  regiunii în care locuiți, alertă sistem.
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
@@ -60,7 +57,10 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
   zilnic.
 * Abilitatea de a urmări evenimentele care provin din platforma universală
   Windows (UWP) și din aplicații, în cazul în care NVDA rulează cu
-  diagnosticarea activată (2017.1 sau mai nou).
+  diagnosticarea activată.
+* Suport inițial pentru panoul de intrare floating Mmoji în build-ul 16215
+  sau mai nou (pentru rezultate foarte bune, utilizați sintetizatorul
+  Windows OneCore).
 
 ## Alarme și ceas
 
@@ -71,7 +71,7 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 
 ## Calculator
 
-* Când Enterul este apăsat, NVDA anunță rezultatele calculului.
+* Când se apasă Enter sau Escape, NVDA anunță rezultatele calculului.
 
 ## calendar
 
@@ -106,7 +106,8 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 
 ## Microsoft Edge
 
-* Notificări, cum ar fi descărcări de fișiere, sunt acum anunțate.
+* Notificările, cum ar fi descărcări de fișiere și diferite alerte ale
+  paginilor web sunt acum anunțate.
 * În Creators Update, NVDA nu va mai anunța "WebRuntime Content View" atunci
   când se merge pe un alt site.
 
@@ -143,6 +144,12 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
   noiembrie 2016, sunt anunțate.
 * NVDA nu mai anunță „Mesaj Skype” la examinarea mesajelor pentru
   majoritatea cazurilor.
+* Diferite probleme la utilizarea Skype-ului cu afișaje braille au fost
+  rezolvate, incluzând incapacitatea de a examina elementele istoricului
+  mesajelor în braille.
+* Din lista istoricului mesajelor, apăsarea NVDA+D pe un element de mesaj
+  nu-i va permite NVDA-ului să anunțe informații detaliate despre un mesaj,
+  cum ar fi tip de canal, data și ora trimiterii și așa mai departe.
 
 ## Magazin
 

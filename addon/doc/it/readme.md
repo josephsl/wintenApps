@@ -34,8 +34,6 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 * Nei menu di contesto per le mattonelle del menu avvio, vengono
   riconosciuti in maniera corretta i sottomenu.
-* Quando vengono ridotte a icona tutte le finestre (Windows+M), non verrà
-  più annunciata la parola "riquadro".
 * Molte finestre di dialogo vengono gestite correttamente, soprattutto
   quelle inerenti il feedback su Windows Insider e le impostazioni, nonché i
   nuovi controlli UAC presenti dalla build 14328 e successive per NVDA
@@ -49,16 +47,17 @@ changing update settings for the add-on, be sure to save NVDA settings.
   dell'oggetto" nella finestra presentazioni oggetti di NVDA.
 * In alcuni menu di contesto, come in Edge, le informazioni sulla posizione
   come 1 su 2 non vengono più annunciate.
-* Vengono riconosciuti e gestiti i seguenti eventi UIA: Controller for, live
-  region changed (handled by name change event).
+* The following UIA events are recognized: Controller for, live region
+  changed, system alert.
 * Aggiunta la possibilità di controllare automaticamente o manualmente la
   presenza di aggiornamenti di questo componente aggiuntivo mediante la
   finestra di dialogo Windows10 Essentials presente al menu preferenze di
   NVDA. Di default le versioni stabili eseguiranno un controllo settimanale,
   mentre quelle in sviluppo giornaliero.
-* Capacità di tenere traccia di eventi proveniente dalle app Universal
-  Windows Platform (UWP), se NVDA è in esecuzione con il debug del log
-  attivato. (dalla 2017.1 in su).
+* Ability to track events coming from Universal Windows Platform (UWP) apps
+  if NVDA is run with debug logging enabled.
+* Initial support for floating Emoji input panel in build 16215 or later
+  (for best results, use Windows OneCore speech synthesizer).
 
 ## Allarmi e sveglia
 
@@ -68,7 +67,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Calcolatrice
 
-* Quando viene premuto invio, NVDA annuncia il risultato del calcolo.
+* When ENTER or Escape is pressed, NVDA announces calculation results.
 
 ## calendario
 
@@ -106,7 +105,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Microsoft Edge
 
-* Vengono annunciate correttamente le notifiche dei download dei file.
+* Notifications such as file downloads and various webpage alerts are now
+  announced.
 * Nell'aggiornamento Creators, NVDA non annuncerà più "WebRuntime Content
   View" quando si passa ad un altro sito web.
 
@@ -143,6 +143,11 @@ changing update settings for the add-on, be sure to save NVDA settings.
   novembre 2016
 * Nella maggior parte dei casi, NVDA non leggerà più i messaggi Skype di
   continuo quando se ne sta controllando uno
+* Various issues when using Skype with braille displays fixed, including
+  inability to review message history items in braille.
+* From message history list, pressing NVDA+D on a message item will now
+  allow NVDA to announce detailed information about a message such as
+  channel type, sent date and time and so on.
 
 ## Store
 

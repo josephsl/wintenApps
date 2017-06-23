@@ -35,8 +35,6 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 * U kontekstnim izbornicima za pločice početnog izbornika, Podizbornici se
   prepoznaju ispravno.
-* Prilikom minimiziranja prozora (Windows+M), "ploha" se više ne izgovara
-  (vidljivo ako se koriste testne inačice).
 * Većina dijaloških okvir sada se prepoznaje kao pravi dijaloški okviri. Ovo
   ukljućuje dijaloški okvir insider preview (aplikacija postavke) to
   ukljućuje i novi dijaloški okvir kontrole korisničkog računa u buildu
@@ -49,14 +47,15 @@ changing update settings for the add-on, be sure to save NVDA settings.
   prezentacija objekt.
 * U većini kontekstnih izbornika (kao što je to u Edgeu), informacije o
   poziciji (NPR. 1 od 2) se više ne izgovara.
-* Slijedeći UIA događaji se izgovaraju: Controller for, live region changed
-  (handled by name change event).
+* The following UIA events are recognized: Controller for, live region
+  changed, system alert.
 * Dodana mogućnost provjere nadogradnje dodatka (ručno ili automatski) preko
   novog win 10 app Essentials u izborniku postavki. Podrazumijevano,
   stabilne i razvojne inačice se provjeravaju na danjoj ili tjednoj bazi.
-* Mogućnost praćenja događaja koji dolaze iz  Univerzalnih Windows Platform
-  (UWP) aplikacija ako je NVDA sa postavljenim načinom zapisa na debug
-  (2017.1 ili noviji).
+* Ability to track events coming from Universal Windows Platform (UWP) apps
+  if NVDA is run with debug logging enabled.
+* Initial support for floating Emoji input panel in build 16215 or later
+  (for best results, use Windows OneCore speech synthesizer).
 
 ## Alarm i sat
 
@@ -66,7 +65,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Kalkulator
 
-* Kada je pritisnuta tipka enter, NVDA izgovara rezultate izračuna.
+* When ENTER or Escape is pressed, NVDA announces calculation results.
 
 ## Kalendar
 
@@ -100,7 +99,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Microsoft Edge
 
-* Obavijesti kao što su to preuzimanja datoteka sada se čitaju.
+* Notifications such as file downloads and various webpage alerts are now
+  announced.
 * U nadogradnji za tvorce, NVDA više neće izgovarati "WebRuntime Content
   View" prilikom prebacivanja na drugi prikaz.
 
@@ -138,6 +138,11 @@ changing update settings for the add-on, be sure to save NVDA settings.
   izgovaraju.
 * NVDA više neće izgovarati "skype message" prilikom pregleda poruka u
   većini slučajeva.
+* Various issues when using Skype with braille displays fixed, including
+  inability to review message history items in braille.
+* From message history list, pressing NVDA+D on a message item will now
+  allow NVDA to announce detailed information about a message such as
+  channel type, sent date and time and so on.
 
 ## Trgovina
 
