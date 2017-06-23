@@ -140,11 +140,11 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
   2016 są wypowiadane.
 * NVDA dla większości sytuacji nie będzie wypowiadał "Skype Message" przy
   przeglądaniu wiadomości.
-* Various issues when using Skype with braille displays fixed, including
-  inability to review message history items in braille.
-* From message history list, pressing NVDA+D on a message item will now
-  allow NVDA to announce detailed information about a message such as
-  channel type, sent date and time and so on.
+* Różne błędy przy używaniu Skype za pomocą linijek brajlowskich są teraz
+  poprawione, włączając w to niemożliwość czytania wiadomości za pomocą
+  brajla.
+* Z listy historii wiadomości, wciskając NVDA+D teraz wypowiada typ kanału,
+  datę wiadomości i tak dalej.
 
 ## Sklep
 

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2017-03-03 13:11+0100\n"
+"PO-Revision-Date: 2017-06-16 14:33+0100\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: \n"
 "Language: hr\n"
@@ -37,7 +37,7 @@ msgstr "Nema više vremenskih podataka za ovu stavku"
 
 #. Translators: the description for the activateLongDescription script on browseMode documents.
 msgid "Shows the message details."
-msgstr ""
+msgstr "Prikazuje detelje o poruci"
 
 #. Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 msgid "Typing stopped"

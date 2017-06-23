@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2017-03-03 16:22+0200\n"
+"PO-Revision-Date: 2017-06-17 09:00+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -37,7 +37,7 @@ msgstr "Ei enempää säätietoja tälle kohteelle."
 
 #. Translators: the description for the activateLongDescription script on browseMode documents.
 msgid "Shows the message details."
-msgstr ""
+msgstr "Näyttää viestin tiedot."
 
 #. Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 msgid "Typing stopped"

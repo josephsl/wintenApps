@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-05-05 22:05+1000\n"
-"PO-Revision-Date: 2017-05-20 20:53+0100\n"
+"PO-Revision-Date: 2017-06-16 14:34+0100\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: pl <LL@li.org>\n"
 "Language: pl\n"
@@ -37,7 +37,7 @@ msgstr "Nie ma więcej danych pogodowych dla tego elementu."
 
 #. Translators: the description for the activateLongDescription script on browseMode documents.
 msgid "Shows the message details."
-msgstr ""
+msgstr "Wyświetla szczegóły wiadomości."
 
 #. Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 msgid "Typing stopped"

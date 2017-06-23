@@ -51,17 +51,19 @@ configuración de NVDA.
   de posición del objeto" en el diálogo Presentación de Objetos.
 * En ciertos menús de contexto (tales como en Edge), la información de
   posición (ej.: 1 de 2) ya no se anuncia.
-* The following UIA events are recognized: Controller for, live region
+* Se reconocen los siguientes eventos UIA:  Controller for, live region
   changed, system alert.
 * Añadida la capacidad de buscar actualizaciones del complemento (automática
   o manual) a través del nuevo diálogo Windows 10 App Essentials que se
   encuentra en el menú Preferencias de NVDA. Por defecto, se buscarán las
   actualizaciones para las versiones estable y de desarrollo automáticamente
   semanal o diáriamente, respectivamente.
-* Ability to track events coming from Universal Windows Platform (UWP) apps
-  if NVDA is run with debug logging enabled.
-* Initial support for floating Emoji input panel in build 16215 or later
-  (for best results, use Windows OneCore speech synthesizer).
+* Capacidad para seguir eventos que lleguen desde aplicaciones Universal
+  Windows Platform (UWP) si NVDA se está ejecutando con el registro de
+  depuración habilitado.
+* Soporte inicial para el panel flotante de entrada de Emoji en la
+  compilación 16215 o posterior (para unos mejores resultados, utiliza el
+  sintetizador de voz Windows OneCore).
 
 ## Alarmas y reloj
 
@@ -71,7 +73,7 @@ configuración de NVDA.
 
 ## Calculadora
 
-* When ENTER or Escape is pressed, NVDA announces calculation results.
+* Cuando se pulse INTRO o Escape, NVDA anuncia los resultados del cálculo.
 
 ## calendario
 
@@ -107,8 +109,8 @@ configuración de NVDA.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are now
-  announced.
+* Ahora se anuncian notificaciones tales como descargas de ficheros y varias
+  alertas de página web.
 * En la actualización Creators, NVDA ya no anunciará "WebRuntime Content
   View" cuando vaya a otro sitio.
 
@@ -146,11 +148,13 @@ configuración de NVDA.
   Skype preview liberada en Noviembre de 2016.
 * NVDA ya no anuncia "Mensaje Skype" cuando se revisen mensajes para la
   mayoría de los casos.
-* Various issues when using Skype with braille displays fixed, including
-  inability to review message history items in braille.
-* From message history list, pressing NVDA+D on a message item will now
-  allow NVDA to announce detailed information about a message such as
-  channel type, sent date and time and so on.
+* Corregidos varios problemas al utilizar Skype con pantallas braille,
+  incluyendo la incapacidad para revisar los elementos del historial de
+  mensajes en braille.
+* Desde la lista del historial de mensajes, pulsando NVDA+D sobre un
+  elemento de mensaje ahora permitirá a NVDA anunciar información detallada
+  acerca de un mensaje tal como tipo de canal, fecha y hora de envío y
+  similar.
 
 ## Tienda
 

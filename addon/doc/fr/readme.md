@@ -51,7 +51,7 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
   l'objet dans une liste" dans la boîte de dialogue Présentation des Objets.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
-* The following UIA events are recognized: Controller for, live region
+* Les événements UIA suivants sont reconnus : Controller pour, live region
   changed, system alert.
 * Ajout de la possibilité de vérifier les mises à jour du module
   complémentaire(automatiques ou manuelles) via la nouvelle boîte de
@@ -59,10 +59,12 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
   de NVDA. Par défaut, les versions stables et de développement vérifieront
   automatiquement les nouvelles mises à jour sur une base hebdomadaire ou
   quotidienne, respectivement.
-* Ability to track events coming from Universal Windows Platform (UWP) apps
-  if NVDA is run with debug logging enabled.
-* Initial support for floating Emoji input panel in build 16215 or later
-  (for best results, use Windows OneCore speech synthesizer).
+* Possibilité de suivre les événements provenant des apps Universal Windows
+  Platform (UWP) si NVDA est exécuté avec la journalisation de débogage
+  activée.
+* Première prise en charge pour les Emoji flottants du panneau de saisie
+  dans la build 16215 ou ultérieure (pour obtenir les meilleurs résultats,
+  utiliser le Windows OneCore speech synthesizer).
 
 ## Alarmes et horloge
 
@@ -74,7 +76,8 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 
 ## Calculatrice
 
-* When ENTER or Escape is pressed, NVDA announces calculation results.
+* Lorsque vous appuyez sur Entrée ou Échap, NVDA annonce les résultats du
+  calcul.
 
 ## calendrier
 
@@ -112,8 +115,8 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are now
-  announced.
+* Notifications telles que les téléchargements de fichiers et les
+  différentes alertes de la page Web sont maintenant annoncées.
 * Dans Creators Update NVDA n'annoncera plus"WebRuntime Content View" en
   allant vers un autre site.
 
@@ -152,11 +155,12 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
   2016 sont annoncées.
 * NVDA n'annoncera plus "Message Skype"lors de la révision des messages pour
   la majorité des cas.
-* Various issues when using Skype with braille displays fixed, including
-  inability to review message history items in braille.
-* From message history list, pressing NVDA+D on a message item will now
-  allow NVDA to announce detailed information about a message such as
-  channel type, sent date and time and so on.
+* Différents problèmes lors de l'utilisation de Skype avec des terminaux
+  braille ont été corrigés, y compris l'impossibilité de réviser les
+  éléments de l'historique des messages en braille.
+* Dans la liste d'historique des messages, appuyer sur NVDA+D sur un élément
+  de message permettra à NVDA d'annoncer des informations détaillées sur un
+  message tel que le type de canal, la date et l'heure envoyées, etc.
 
 ## Store
 
