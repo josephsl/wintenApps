@@ -36,7 +36,6 @@ except ImportError:
 # Extra UIA constants
 UIA_SystemAlertEventId = 20023
 UIA_LiveRegionChangedEventId = 20024
-UIA_ControllerForPropertyId = 30104
 
 # UIA COM constants
 TreeScope_Subtree = 7
@@ -242,9 +241,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #20: don't even think about proceeding in secure screens (especially add-on updates).
 		if globalVars.appArgs.secure: return
 		# Listen for additional events (to be removed once NVDA Core supports them.
-		if UIA_ControllerForPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
-			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIA_ControllerForPropertyId] = "UIA_controllerFor"
-			UIAHandler.handler.clientObject.AddPropertyChangedEventHandler(UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler,[UIA_ControllerForPropertyId])
 		if UIA_LiveRegionChangedEventId not in UIAHandler.UIAEventIdsToNVDAEventNames:
 			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_LiveRegionChangedEventId] = "UIA_liveRegionChanged"
 			UIAHandler.handler.clientObject.addAutomationEventHandler(UIA_LiveRegionChangedEventId,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
