@@ -9,8 +9,8 @@ import globalPluginHandler
 import controlTypes
 import UIAHandler
 import ui
-from NVDAObjects.UIA import UIA
-from NVDAObjects.behaviors import Dialog
+from NVDAObjects.UIA import UIA, SearchField
+from NVDAObjects.behaviors import Dialog, EditableTextWithSuggestions
 import api
 import speech
 import braille
@@ -24,14 +24,6 @@ from logHandler import log
 import w10config
 import addonHandler
 addonHandler.initTranslation()
-
-# As long as NVDA Core ticket 6241 is incubating...
-try:
-	from NVDAObjects.UIA import SearchField as CoreSearchField
-	from NVDAObjects.behaviors import EditableTextWithSuggestions
-	searchFieldIncorporated = True
-except ImportError:
-	searchFieldIncorporated = False
 
 # Extra UIA constants
 UIA_SystemAlertEventId = 20023
@@ -66,39 +58,27 @@ class LoopingSelectorList(UIA):
 			loopingValue = loopingValue.next
 		return None
 
+
 # General UIA controller for edit field.
-# Used nod as a base class for controls such as Mail's composition window, search fields and such.
-class UIAEditableTextWithSuggestions(UIA):
+# Used as a base class for controls such as Mail's composition window, search fields and such.
+class UIAEditableTextWithSuggestions(EditableTextWithSuggestions, UIA):
 
 	def event_UIA_controllerFor(self):
-		# Only useful if suggestions appear and disappear.
 		# Obtain controller for property directly instead of relying on focused control.
 		if len(self.controllerFor)>0:
 			self.event_suggestionsOpened()
 		else:
 			self.event_suggestionsClosed()
 
-	# The following events emulate routines found in Core as of May 2017.
-
-	def event_suggestionsOpened(self):
-		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestionsOpened.wav"))
-		# Translators: Announced in braille when suggestions appear.
-		braille.handler.message(_("suggestions"))
-
-	def event_suggestionsClosed(self):
-		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestionsClosed.wav"))
-
-
 # Search fields.
-# Some of them raise controller for event, an event fired if another UI element depends on this control.
-# Core-based blueprint found in I6241 branch.
-class SearchField(UIAEditableTextWithSuggestions):
+# Unlike the Core implementation, this class announces suggestion count, to be incorporated into NVDA later.
+class SearchField(SearchField):
 
 	def event_suggestionsOpened(self):
 		super(SearchField, self).event_suggestionsOpened()
 		# Announce number of items found (except in Start search box where the suggestions are selected as user types).
 		# Oddly, Edge's address omnibar returns 0 for suggestion count when there are clearly suggestions (implementation differences).
-		# Because inaccurate count could be announced (when users type, suggestion count changes), thus announce if position info reporting is enabled.
+		# Because inaccurate count could be announced (when users type, suggestion count changes), thus announce this if position info reporting is enabled.
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
 			if self.UIAElement.cachedAutomationID == "TextBox" or self.UIAElement.cachedAutomationID == "SearchTextBox" and self.appModule.appName != "searchui":
 				# Item count must be the last one spoken.
@@ -120,51 +100,7 @@ class SearchField(UIAEditableTextWithSuggestions):
 		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestionsClosed.wav"))
 
 
-try:
-	class SearchFieldEx(CoreSearchField):
-
-		def event_suggestionsOpened(self):
-			super(SearchFieldEx, self).event_suggestionsOpened()
-			# Announce number of items found (except in Start search box where the suggestions are selected as user types).
-			# Oddly, Edge's address omnibar returns 0 for suggestion count when there are clearly suggestions (implementation differences).
-			# Because inaccurate count could be announced (when users type, suggestion count changes), thus announce if position info reporting is enabled.
-			if config.conf["presentation"]["reportObjectPositionInformation"]:
-				if self.UIAElement.cachedAutomationID == "TextBox" or self.UIAElement.cachedAutomationID == "SearchTextBox" and self.appModule.appName != "searchui":
-					# Item count must be the last one spoken.
-					suggestionsCount = self.controllerFor[0].childCount
-					suggestionsMessage = "1 suggestion" if suggestionsCount == 1 else "%s suggestions"%suggestionsCount
-					queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
-
-		def event_suggestionsClosed(self):
-			# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
-			if self.UIAElement.cachedAutomationID == "addressEditBox" and self != api.getFocusObject():
-				return
-			# Manually locate live region until NVDA Core implements this.
-			obj = self
-			while obj is not None:
-				if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "Popup":
-					ui.message(obj.description)
-					return
-				obj = obj.next
-			super(SearchFieldEx, self).event_suggestionsClosed()
-except NameError:
-	pass
-
-
-# General suggestions item handler
-# A testbed for NVDA Core ticket 6241.
-class SuggestionsListItem(UIA):
-
-	def event_UIA_elementSelected(self):
-		focusControllerFor=api.getFocusObject().controllerFor
-		if len(focusControllerFor)>0 and focusControllerFor[0].appModule is self.appModule and self.name:
-			speech.cancelSpeech()
-			api.setNavigatorObject(self)
-			self.reportFocus()
-			# Based on work on NvDA core ticket 6414.
-			braille.handler.message(braille.getBrailleTextForProperties(name=self.name, role=self.role, positionInfo=self.positionInfo))
-
-# A version for floating suggestion items such as Emoji panel in build 16215 and later.
+# Floating suggestion items such as Emoji panel in build 16215 and later.
 class FloatingSuggestionsEmojiItem(UIA):
 
 	def event_UIA_elementSelected(self):
@@ -282,7 +218,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Also take care of Edge address omnibar and Start search box.
 			# This is no longer necessary in NVDA 2017.3 (incubating as of May 2017).
 			elif obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
-				clsList.insert(0, SearchFieldEx if searchFieldIncorporated else SearchField)
+				clsList.insert(0, SearchField)
 			# A dedicated version for Mail app's address/mention suggestions.
 			elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
 				clsList.insert(0, UIAEditableTextWithSuggestions)
@@ -290,11 +226,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# No longer needed in NVDA 2017.3 as the Core will include this.
 			# A floating version (such as Emoji panel) will be checked as well (build 16215).
 			elif obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, UIA):
-				# Regular in-process suggestions list.
-				if obj.parent.UIAElement.cachedAutomationID.lower() == "suggestionslist": #and not "reportAutoSuggestionsWithSound" in config.conf["presentation"]:
-					clsList.insert(0, SuggestionsListItem)
 				# Floating emoji palen categories.
-				elif obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_ExpressionFullViewGroupsList":
+				if obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_ExpressionFullViewGroupsList":
 					clsList.insert(0, FloatingSuggestionsEmojiCategory)
 				# Floating emoji panel items.
 				elif obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_ExpressionFullViewItemsGrid":
