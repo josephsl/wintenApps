@@ -14,8 +14,9 @@ import ui
 class AppModule(appModuleHandler.AppModule):
 
 	def event_nameChange(self, obj, nextHandler):
-		if isinstance(obj, UIA):
-			# Notifications such as file download prmopt.
+		# Some objects do raise live region change event as well as name change.
+		if isinstance(obj, UIA) and not hasattr(obj, "event_liveRegionChange"):
+			# Notifications such as file download prompt.
 			if obj.role == controlTypes.ROLE_STATICTEXT and obj.parent.UIAElement.cachedClassName == "NotificationBar":
 				ui.message(obj.name)
 			# Accessibility message alerts.
@@ -25,7 +26,11 @@ class AppModule(appModuleHandler.AppModule):
 
 	event_UIA_liveRegionChanged = event_nameChange
 	# Live region change is part of NVDA 2017.3, so try catching this as well.
-	try:
-		event_liveRegionChange = event_nameChange
-	except:
-		pass
+	def event_liveRegionChange(self, obj, nextHandler):
+		if isinstance(obj, UIA):
+			# Accessibility message alerts.
+			# Return immediately after doing the following, otherwise double spekaing results.
+			if obj.role == controlTypes.ROLE_ALERT and obj.UIAElement.cachedAutomationID == "a11y-announcements-message":
+				ui.message(obj.firstChild.name)
+				return
+		nextHandler()
