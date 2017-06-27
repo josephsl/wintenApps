@@ -62,7 +62,10 @@ def autoUpdateCheck():
 
 # Borrowed ideas from NVDA Core.
 def checkForAddonUpdate():
+	import versionInfo
 	updateURL = channels[config.conf["wintenApps"]["updateChannel"]]
+	if config.conf["wintenApps"]["updateChannel"] == "dev" and versionInfo.updateVersionType != "stable":
+		updateURL = "http://www.josephsl.net/files/nvdaaddons/getupdate.php?file=w10-try"
 	try:
 		res = urllib.urlopen(updateURL)
 		res.close()
