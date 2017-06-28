@@ -23,7 +23,7 @@ The following app modules or support modules for some apps are included (see eac
 * Weather.
 * Miscellaneous modules for controls such as Start Menu tiles.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NVDA 2017.1 or later. For best results, use the add-on with latest stable build (build 15063) and latest stable version of NVDA. Also, after changing update settings for the add-on, be sure to save NVDA settings.
+Note: this add-on requires Windows 10 Version 1607 (build 14393) or later and NVDA 2017.1 or later. For best results, use the add-on with latest stable build (build 15063) and latest stable version of NVDA. Also, after changing update settings for the add-on, be sure to save NVDA settings.
 
 ## General
 
@@ -32,10 +32,11 @@ Note: this add-on requires Windows 10 Version 1511 (build 10586) or later and NV
 * Appearance/close of suggestions for certain search fields (notably Settings and Store apps) is announced via sounds and braille. This also includes Start menu search box.
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation dialog.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
-* The following UIA events are recognized: Controller for, live region changed, system alert.
+* The following UIA events are recognized: Controller for, live region change, system alert.
 * Added ability to check for add-on updates (automatic or manual) via the new Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
 * Ability to track events coming from Universal Windows Platform (UWP) apps if NVDA is run with debug logging enabled.
-* Initial support for floating Emoji input panel in build 16215 or later (for best results, use Windows OneCore speech synthesizer).
+* Initial support for floating Emoji input panel in build 16215 or later (for best experience when reading emojis, use Windows OneCore speech synthesizer).
+* In some apps, live region text is announced. This includes alerts in Edge and others. Note that this may result in double-speaking in some cases.
 
 ## Alarms and clock
 
