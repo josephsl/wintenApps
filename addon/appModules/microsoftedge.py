@@ -1,6 +1,6 @@
 # MicrosoftEdge.py
 # Part of Windows 10 App Essentials collection
-# Copyright 2016 Joseph Lee, released under GPL
+# Copyright 2016-2017 Joseph Lee, released under GPL
 
 # Core Edge support provided by NvDA Core (NVDAObjects/UIA package)
 # Provides additional enhancements.
@@ -29,8 +29,9 @@ class AppModule(appModuleHandler.AppModule):
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
 			# Accessibility message alerts.
-			# Return immediately after doing the following, otherwise double spekaing results.
+			# Return immediately after doing the following, otherwise double speaking results.
 			if obj.role == controlTypes.ROLE_ALERT and obj.UIAElement.cachedAutomationID == "a11y-announcements-message":
-				ui.message(obj.firstChild.name)
+				# Mick Curran says use last child in case a series of live texts are part of this control.
+				ui.message(obj.lastChild.name)
 				return
 		nextHandler()

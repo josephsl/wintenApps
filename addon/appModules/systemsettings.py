@@ -90,7 +90,7 @@ class AppModule(appModuleHandler.AppModule):
 						ui.message(" ".join([obj.parent.name, obj.name]))
 					else:
 						self._nameChangeCache = obj.name
-						ui.message(name)
+						ui.message(obj.name)
 			except AttributeError:
 				pass
 		nextHandler()

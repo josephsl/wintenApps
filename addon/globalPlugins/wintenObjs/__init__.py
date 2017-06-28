@@ -276,7 +276,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_liveRegionChanged(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "liveRegionChanged")
+		self.uiaDebugLogging(obj, "liveRegionChange")
 		nextHandler()
 
 	# In NvDA 2017.3, live region change is officially part of Core, so let that event also log debugging information.
