@@ -50,11 +50,16 @@ class AppModule(appModuleHandler.AppModule):
 			elif obj.UIAElement.cachedAutomationID.endswith("GroupTitleTextBlock"):
 				obj.role = controlTypes.ROLE_GROUPING
 			# From Redstone 1 onwards, update history shows status rather than the title.
+			# In build 16232, the title is shown but not the status, so include this for sake of backward compatibility.
 			elif obj.role == controlTypes.ROLE_LINK and obj.UIAElement.cachedAutomationID.startswith("HistoryEvent") and obj.name != obj.previous.name:
-				nameList = [obj.previous.name, obj.name]
-				# But in build 16215 and later, the actual update title is next to the update success status text, so obj.previous.previous must be consulted.
-				if sys.getwindowsversion().build >= 16215:
-					nameList.insert(0, obj.previous.previous.name)
+				nameList = [obj.name]
+				build = sys.getwindowsversion().build
+				# For builds between 14393 and 16226.
+				if 14393 <= build < 16232:
+					nameList.insert(0, obj.previous.name)
+				# Add the status text in 16232 and later.
+				elif sys.getwindowsversion().build >= 16232:
+					nameList.append(obj.next.name)
 				obj.name = ", ".join(nameList)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
