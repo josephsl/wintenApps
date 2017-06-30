@@ -26,8 +26,8 @@ privire la ceea ce este inclus):
 * Meteo.
 * Diverse module de control precum tile-urile din meniul start.
 
-Notă: acest supliment necesită Windows 10 versiunea 1511 (build 10586) sau
-mai nou și NVDA 2016.4 sau mai nou. Pentru rezultate foarte bune, folosiți-l
+Notă: acest supliment necesită Windows 10 versiunea 1607 (build 14393) sau
+mai nou și NVDA 2017.1 sau mai nou. Pentru rezultate foarte bune, folosiți-l
 cu ultimul build stabil (build 15063) și cea mai recentă versiune stabilă a
 NVDA-ului. De asemenea, după modificarea setărilor de actualizare pentru
 supliment, asigurați-vă că salvați setările NVDA-ului.
@@ -49,7 +49,7 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.g. 1 din 2) nu mai este anunțată.
 * Următoarele evenimente UIA sunt recunoscute: Controler pentru, schimbarea
-  regiunii în care locuiți, alertă sistem.
+  regiunii în care locuiți, alertă de sistem.
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
@@ -58,9 +58,12 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * Abilitatea de a urmări evenimentele care provin din platforma universală
   Windows (UWP) și din aplicații, în cazul în care NVDA rulează cu
   diagnosticarea activată.
-* Suport inițial pentru panoul de intrare floating Mmoji în build-ul 16215
-  sau mai nou (pentru rezultate foarte bune, utilizați sintetizatorul
-  Windows OneCore).
+* Suport inițial pentru panoul de intrare floating moji în build-ul 16215
+  sau mai nou (pentru o experiență foarte bună în citirea mojiurilor,
+  utilizați sintetizatorul Windows OneCore).
+* În unele aplicații, textul regiunii în care locuiți este anunțat. Aceasta
+  include alerte în Edge și altele. Rețineți faptul că asta poate rezulta o
+  dublă vorbire în unele cazuri.
 
 ## Alarme și ceas
 

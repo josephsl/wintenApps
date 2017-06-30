@@ -25,7 +25,7 @@ si veda la relativa sezione per ulteriori informazioni:
 * Meteo
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
 and NVDA 2017.1 or later. For best results, use the add-on with latest
 stable build (build 15063) and latest stable version of NVDA. Also, after
 changing update settings for the add-on, be sure to save NVDA settings.
@@ -48,7 +48,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * In alcuni menu di contesto, come in Edge, le informazioni sulla posizione
   come 1 su 2 non vengono più annunciate.
 * The following UIA events are recognized: Controller for, live region
-  changed, system alert.
+  change, system alert.
 * Aggiunta la possibilità di controllare automaticamente o manualmente la
   presenza di aggiornamenti di questo componente aggiuntivo mediante la
   finestra di dialogo Windows10 Essentials presente al menu preferenze di
@@ -57,7 +57,10 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * Ability to track events coming from Universal Windows Platform (UWP) apps
   if NVDA is run with debug logging enabled.
 * Initial support for floating Emoji input panel in build 16215 or later
-  (for best results, use Windows OneCore speech synthesizer).
+  (for best experience when reading emojis, use Windows OneCore speech
+  synthesizer).
+* In some apps, live region text is announced. This includes alerts in Edge
+  and others. Note that this may result in double-speaking in some cases.
 
 ## Allarmi e sveglia
 

@@ -25,7 +25,7 @@ Windows 10, а также исправлений для некоторых ти�
 * Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
 and NVDA 2017.1 or later. For best results, use the add-on with latest
 stable build (build 15063) and latest stable version of NVDA. Also, after
 changing update settings for the add-on, be sure to save NVDA settings.
@@ -46,7 +46,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * In certain context menus (such as in Edge), position information (e.g. 1
   of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, live region
-  changed, system alert.
+  change, system alert.
 * Added ability to check for add-on updates (automatic or manual) via the
   new Windows 10 App Essentials dialog found in NvDA Preferences menu. By
   default, stable and development versions will check for new updates
@@ -54,7 +54,10 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * Ability to track events coming from Universal Windows Platform (UWP) apps
   if NVDA is run with debug logging enabled.
 * Initial support for floating Emoji input panel in build 16215 or later
-  (for best results, use Windows OneCore speech synthesizer).
+  (for best experience when reading emojis, use Windows OneCore speech
+  synthesizer).
+* In some apps, live region text is announced. This includes alerts in Edge
+  and others. Note that this may result in double-speaking in some cases.
 
 ## Будильники и часы
 

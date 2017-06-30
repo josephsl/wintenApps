@@ -27,12 +27,10 @@ est inclus) :
 * Météo.
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
-Note: ce module complémentaire nécessite Windows 10 Version 1511 (build
-10586) ou version ultérieure et NVDA 2017.1 ou version ultérieure. Pour de
-meilleurs résultats, utilisez le module complémentaire avec la dernière
-build stable (build 15063) et la dernière version stable de NVDA. De plus,
-après avoir modifié les paramètres de mise à jour pour le module
-complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
+Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
+and NVDA 2017.1 or later. For best results, use the add-on with latest
+stable build (build 15063) and latest stable version of NVDA. Also, after
+changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Générale
 
@@ -51,8 +49,8 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
   l'objet dans une liste" dans la boîte de dialogue Présentation des Objets.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
-* Les événements UIA suivants sont reconnus : Controller pour, live region
-  changed, system alert.
+* The following UIA events are recognized: Controller for, live region
+  change, system alert.
 * Ajout de la possibilité de vérifier les mises à jour du module
   complémentaire(automatiques ou manuelles) via la nouvelle boîte de
   dialogue Windows 10 App Essentials qui se trouve dans le menu Préférences
@@ -62,9 +60,11 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 * Possibilité de suivre les événements provenant des apps Universal Windows
   Platform (UWP) si NVDA est exécuté avec la journalisation de débogage
   activée.
-* Première prise en charge pour les Emoji flottants du panneau de saisie
-  dans la build 16215 ou ultérieure (pour obtenir les meilleurs résultats,
-  utiliser le Windows OneCore speech synthesizer).
+* Initial support for floating Emoji input panel in build 16215 or later
+  (for best experience when reading emojis, use Windows OneCore speech
+  synthesizer).
+* In some apps, live region text is announced. This includes alerts in Edge
+  and others. Note that this may result in double-speaking in some cases.
 
 ## Alarmes et horloge
 

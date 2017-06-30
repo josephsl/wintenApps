@@ -27,12 +27,10 @@ qué se incluye):
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Nota: este complemento requiere Windows 10 Versión 1511 (build 10586) o
-posterior y NVDA 2017.1 o posterior. Para unos mejores resultados, utiliza
-el complemento con la compilación estable más reciente (build 15063) y
-versión estable más reciente de NVDA. También, después de cambiar las
-opciones de actualización para el complemento, asegúrate de guardar la
-configuración de NVDA.
+Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
+and NVDA 2017.1 or later. For best results, use the add-on with latest
+stable build (build 15063) and latest stable version of NVDA. Also, after
+changing update settings for the add-on, be sure to save NVDA settings.
 
 ## General
 
@@ -51,8 +49,8 @@ configuración de NVDA.
   de posición del objeto" en el diálogo Presentación de Objetos.
 * En ciertos menús de contexto (tales como en Edge), la información de
   posición (ej.: 1 de 2) ya no se anuncia.
-* Se reconocen los siguientes eventos UIA:  Controller for, live region
-  changed, system alert.
+* The following UIA events are recognized: Controller for, live region
+  change, system alert.
 * Añadida la capacidad de buscar actualizaciones del complemento (automática
   o manual) a través del nuevo diálogo Windows 10 App Essentials que se
   encuentra en el menú Preferencias de NVDA. Por defecto, se buscarán las
@@ -61,9 +59,11 @@ configuración de NVDA.
 * Capacidad para seguir eventos que lleguen desde aplicaciones Universal
   Windows Platform (UWP) si NVDA se está ejecutando con el registro de
   depuración habilitado.
-* Soporte inicial para el panel flotante de entrada de Emoji en la
-  compilación 16215 o posterior (para unos mejores resultados, utiliza el
-  sintetizador de voz Windows OneCore).
+* Initial support for floating Emoji input panel in build 16215 or later
+  (for best experience when reading emojis, use Windows OneCore speech
+  synthesizer).
+* In some apps, live region text is announced. This includes alerts in Edge
+  and others. Note that this may result in double-speaking in some cases.
 
 ## Alarmas y reloj
 
