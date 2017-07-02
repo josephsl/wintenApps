@@ -3,7 +3,7 @@
 
 # Add-on configuration and updates.
 # Because the add-on employs continuous delivery model, it is beneficial to provide update facility.
-# Base config section was inspired by Read Feeds (Noelia Martinez).
+# Base config section was inspired by Clip Contents Designer (Noelia Martinez).
 # Overall update check routine comes from StationPlaylist Studio add-on (Joseph Lee).)
 
 import os
@@ -96,7 +96,9 @@ def addonUpdateCheck(autoCheck=False):
 			wx.CallAfter(progressDialog.done)
 			progressDialog = None
 			# Translators: Error text shown when add-on update check fails.
-			wx.CallAfter(gui.messageBox, _("Error checking for update."), _("Windows 10 App Essentials update"), wx.ICON_ERROR)
+			wx.CallAfter(gui.messageBox, _("Error checking for update."),
+				# Translators: Title of the dialog shown when add-on update check fails.
+				_("Windows 10 App Essentials update"), wx.ICON_ERROR)
 		return
 	if not autoCheck:
 		wx.CallAfter(progressDialog.done)
@@ -104,7 +106,9 @@ def addonUpdateCheck(autoCheck=False):
 	if info is None:
 		if not autoCheck:
 			# Translators: Presented when no add-on update is available.
-			wx.CallAfter(gui.messageBox, _("No add-on update available."), _("Windows 10 App Essentials update"))
+			wx.CallAfter(gui.messageBox, _("No add-on update available."),
+				# Translators: Title of the dialog presented when no add-on update is available.
+				_("Windows 10 App Essentials update"))
 			return
 	else:
 		# Translators: Text shown if an add-on update is available.
@@ -227,6 +231,7 @@ try:
 			gui.messageBox(
 				# Translators: A message indicating that an error occurred while downloading an update to NVDA.
 				_("Error downloading add-on update."),
+				# Translators: The title of a dialog indicating that an error occurred while downloading an update to NVDA.
 				_("Error"),
 				wx.OK | wx.ICON_ERROR)
 
