@@ -28,7 +28,7 @@ class MailItemRow(RowWithFakeNavigation, UIA):
 
 class AppModule(AppModule):
 
-	def chooseNVDAObjectOverlayClasses(self,obj,clsList):
+	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if WordDocument in clsList:
 			clsList.insert(0,MailWordDocument)
 		elif isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "MailItem":
