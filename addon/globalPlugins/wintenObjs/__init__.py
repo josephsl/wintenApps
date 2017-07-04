@@ -26,7 +26,6 @@ import addonHandler
 addonHandler.initTranslation()
 
 # Extra UIA constants
-UIA_SystemAlertEventId = 20023
 UIA_LiveRegionChangedEventId = 20024
 
 # UIA COM constants
@@ -180,9 +179,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if UIA_LiveRegionChangedEventId not in UIAHandler.UIAEventIdsToNVDAEventNames:
 			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_LiveRegionChangedEventId] = "UIA_liveRegionChanged"
 			UIAHandler.handler.clientObject.addAutomationEventHandler(UIA_LiveRegionChangedEventId,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
-		if UIA_SystemAlertEventId not in UIAHandler.UIAEventIdsToNVDAEventNames:
-			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_SystemAlertEventId] = "UIA_systemAlert"
-			UIAHandler.handler.clientObject.addAutomationEventHandler(UIA_SystemAlertEventId,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
