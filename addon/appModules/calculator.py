@@ -17,8 +17,7 @@ class CalculatorResult(UIA):
 	def event_nameChange(self):
 		if not self.appModule.shouldAnnounceResult:
 			return
-		else:
-			self.appModule.shouldAnnounceResult = False
+		self.appModule.shouldAnnounceResult = False
 
 
 class AppModule(appModuleHandler.AppModule):
