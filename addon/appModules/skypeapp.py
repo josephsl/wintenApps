@@ -10,6 +10,7 @@ import re
 import appModuleHandler
 import ui
 from NVDAObjects.UIA import UIA
+from nvdaBuiltin.appModules.skype import SCRCAT_SKYPE
 import api
 import controlTypes
 import addonHandler
@@ -22,6 +23,7 @@ RE_MESSAGE = re.compile(r"\AFrom (?P<from>.*), Skype (?P<body>.*), sent on (?P<t
 class SkypeMessage(UIA):
 	"""Message history item in Skype universal app."""
 
+	scriptCategory = SCRCAT_SKYPE # Borrowed from NVDA's core
 	_message = ""
 
 	def reportFocus(self):
@@ -41,11 +43,10 @@ class SkypeMessage(UIA):
 			return message
 		else:
 			return self.name
-		
 
 	def script_showMessageLongDesc(self, gesture):
 		ui.message(self._message)
-	# Translators: the description for the activateLongDescription script on browseMode documents.
+	# Translators: the description for the showMessageLongDesc script on Skype for Windows 10.
 	script_showMessageLongDesc.__doc__=_("Shows the message details.")
 
 	__gestures={
