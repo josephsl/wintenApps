@@ -30,27 +30,29 @@ RE_PARENT_LISTS = re.compile("|".join([
 ]))
 
 class WeatherForecastItem(NVDAObject):
+
 	def initOverlayClass(self):
 		self.curLine = -1 #Start out reading the first thing.
 		self.lines = self.name.split("\r\n")
-	
+
 	def script_nextLine(self, gesture):
 		if self.curLine < len(self.lines)-1:
 			self.curLine += 1
 			ui.message(self.lines[self.curLine])
 		else:
+			# Translators: Message presented when no more weather data is available for the current item.
 			ui.message(_("No more weather data for this item."))
 			wx.Bell()
-	
+
 	def script_previousLine(self, gesture):
 		if self.curLine > 0:
 			self.curLine -=1
 			ui.message(self.lines[self.curLine])
 		else:
+			# Translators: Message presented when no more weather data is available for the current item.
 			ui.message(_("No more weather data for this item."))
 			wx.Bell()
 
-	
 	__gestures = {
 		"kb:downarrow" : "nextLine",
 		"kb:uparrow" : "previousLine",
