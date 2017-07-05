@@ -63,7 +63,6 @@ class LoopingSelectorList(UIA):
 		while loopingValue:
 			if 4 in loopingValue.states:
 				return loopingValue.name
-				break
 			loopingValue = loopingValue.next
 		return None
 
@@ -190,7 +189,8 @@ class FloatingSuggestionsEmojiCategory(UIA):
 			# Based on work on NvDA core ticket 6414.
 			braille.handler.message(braille.getBrailleTextForProperties(name=emoji.name, role=emoji.role, positionInfo=emoji.positionInfo))
 		else:
-			ui.message("No emoji")
+			# Translators: Message presented when no emoji is found.
+			ui.message(_("No emoji"))
 
 
 # Contacts search field in People app and other places.
@@ -252,7 +252,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_SystemAlertEventId] = "UIA_systemAlert"
 			UIAHandler.handler.clientObject.addAutomationEventHandler(UIA_SystemAlertEventId,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
-		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
+		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY,
+			# Translators: The name of a menu item.
+			_("Windows 10 App Essentials..."),
+			""))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
 		if w10config.canUpdate and config.conf["wintenApps"]["autoUpdateCheck"]:
 			# But not when NVDA itself is updating.
@@ -297,7 +300,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				# Regular in-process suggestions list.
 				if obj.parent.UIAElement.cachedAutomationID.lower() == "suggestionslist": #and not "reportAutoSuggestionsWithSound" in config.conf["presentation"]:
 					clsList.insert(0, SuggestionsListItem)
-				# Floating emoji palen categories.
+				# Floating emoji panel categories.
 				elif obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_ExpressionFullViewGroupsList":
 					clsList.insert(0, FloatingSuggestionsEmojiCategory)
 				# Floating emoji panel items.
@@ -323,9 +326,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if not event:
 				event = "no event specified"
 			if event != "controllerFor":
-				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s"%(obj.name, event, obj.appModule, automationID, className))
+				log.debug("W10: UIA object name: {0}, event: {1}, app module: {2}, automation Id: {3},
+					class name: {4}".format(obj.name, event, obj.appModule, automationID, className))
 			else:
-				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s, controller for count: %s"%(obj.name, event, obj.appModule, automationID, className, len(obj.controllerFor)))
+				log.debug("W10: UIA object name: {0}, event: {1}, app module: {2}, automation Id: {3}, class name: {4},
+					controller for count: {5}".format(obj.name, event, obj.appModule, automationID, className, len(obj.controllerFor)))
 
 	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
