@@ -6,7 +6,6 @@
 
 # Extended to let NVDA cooperate with Cortana.
 
-import sys
 import appModuleHandler
 import controlTypes
 import api
@@ -50,16 +49,16 @@ class AppModule(appModuleHandler.AppModule):
 				pass
 
 	# Past responses from Cortana (cached to prevent repetition, initially an empty string).
-	CortanaResponseCache = ""
+	cortanaResponseCache = ""
 
 	def event_nameChange(self, obj, nextHandler):
 		# NVDA, can you act as a mouthpiece for Cortana?
-		if isinstance(obj, UIA) and isinstance(obj.next, UIA) and obj.next.UIAElement.cachedAutomationID != "SpeechButton" and obj.name != self.CortanaResponseCache:
+		if isinstance(obj, UIA) and isinstance(obj.next, UIA) and obj.next.UIAElement.cachedAutomationID != "SpeechButton" and obj.name != self.cortanaResponseCache:
 			element = obj.UIAElement
 			# There are two Cortana response lines. Usually line 2 is more reliable.
 			# However, Redstone seems to favor line 1 better.
 			# A specific automation ID is used for reminders and others.
 			if element.cachedAutomationID in ("SpeechContentLabel", "WeSaidTextBlock", "GreetingLine1"):
 				ui.message(obj.name)
-				self.CortanaResponseCache = obj.name
+				self.cortanaResponseCache = obj.name
 		nextHandler()
