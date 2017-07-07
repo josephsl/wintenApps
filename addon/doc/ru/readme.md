@@ -14,21 +14,22 @@ Windows 10, а также исправлений для некоторых ти�
 * Календарь
 * Калькулятор (modern).
 * Cortana
-* Groove Music
+* Музыка Groove
 * Почта
 * Карты
 * Microsoft Edge
-* People
+* Люди
 * Настройки (настройки системы, Windows+I)
 * Skype (universal app)
 * Магазин
 * Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
 
-Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
-and NVDA 2017.1 or later. For best results, use the add-on with latest
-stable build (build 15063) and latest stable version of NVDA. Also, after
-changing update settings for the add-on, be sure to save NVDA settings.
+Примечание: Это дополнение требует Windows 10 Версии 1607 (сборки 14393) или
+позднее и NVDA 2017.1 или позднее. Для наилучших результатов используйте
+дополнение с последней стабильной сборкой (сборка 15063) и последней
+стабильной версией NVDA. Кроме того, после изменения настроек обновления для
+дополнения, обязательно сохраните настройки программы NVDA.
 
 ## Общие
 
@@ -67,7 +68,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Калькулятор
 
-* When ENTER or Escape is pressed, NVDA announces calculation results.
+* Когда нажмёте ENTER или Escape, NVDA сообщает результаты расчёта.
 
 ## календарь
 
@@ -81,7 +82,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * NVDA will be silent when you talk to Cortana via voice.
 * NVDA will now announce reminder confirmation after you set one.
 
-## Groove Music
+## Музыка Groove
 
 * Appearance of suggestions when searching for tracks is now detected.
 
@@ -100,12 +101,12 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are now
-  announced.
+* Теперь объявляются уведомления, такие как загрузка файлов и различные
+  предупреждения веб-страниц.
 * In Creators Update, NVDA will no longer announce "WebRuntime Content View"
   when going to another site.
 
-## People
+## Люди
 
 * When searching for contacts, a sound will play if there are search
   results.

@@ -26,10 +26,12 @@ se inclúe):
 * O Tempo
 * Módulos misceláneos para controis como mosaicos do Menú Inicio.
 
-Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
-and NVDA 2017.1 or later. For best results, use the add-on with latest
-stable build (build 15063) and latest stable version of NVDA. Also, after
-changing update settings for the add-on, be sure to save NVDA settings.
+Nota: este complemento require do Windows 10 Versión 1607 (build 14393) ou
+posterior e do NVDA 2017.1 ou posterior. Para uns mellores resultados, usa o
+complemento coa compilación estable máis recente (build 15063) e versión
+estable máis recente do NVDA. Tamén, despois de cambiar as opcións de
+actualización para o complemento, asegúrate de gardar a configuración do
+NVDA.
 
 ## Xeral
 
@@ -46,8 +48,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
   posición do obxecto" no diálogo Presentación de Obxectos.
 * En certos menús de contexto (coma no Edge), a información de posición
   (ex.: 1 de 2) xa non se anuncia.
-* The following UIA events are recognized: Controller for, live region
-  change, system alert.
+* Recoñécense os seguintes eventos UIA: Controller for, live region changed,
+  system alert.
 * Engadida a capacidade de procurar as actualizacións do complemento
   (automática ou manual) a través do novo diálogo Windows 10 App Essentials
   que se atopa no menú Preferencias do NVDA. Por defecto, procuraranse as
@@ -56,11 +58,12 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * Capacidade para seguir eventos que cheguen dende aplicacións Universal
   Windows Platform (UWP) se o NVDA se está a executar co rexistro de
   depuración habilitado.
-* Initial support for floating Emoji input panel in build 16215 or later
-  (for best experience when reading emojis, use Windows OneCore speech
-  synthesizer).
-* In some apps, live region text is announced. This includes alerts in Edge
-  and others. Note that this may result in double-speaking in some cases.
+* Soporte inicial para o panel flotante de entrada de Emoji na compilación
+  16215 ou posterior (para uns mellores resultados, usa o sintetizador de
+  voz Windows OneCore).
+* Nalgunhas aplicacións, anúnciase o texto en rexións vivas. Esto inclúe
+  alertas en Edge e outros. Ten en centa que esto poderá causar unha fala
+  por duplicado nalgúns casos.
 
 ## Alarmas e reloxo
 

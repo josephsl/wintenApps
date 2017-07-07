@@ -37,9 +37,9 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * În meniurile contextuale ale tile-urilor din cadrul Start Meniu,
   submeniurile sunt recunoscute corect.
 * Anumite dialoguri sunt acum recunoscute ca dialoguri
-  corespunzătoare. Aceasta include dialogul de examinare al insiderului (în
-  aplicația Setări) și un nou stil în dialogul UAC în build 14328 și mai nou
-  pentru NvDA 2016.2.1 sau mai vechi.
+  corespunzătoare. Aceasta include dialogul Insider Preview (în aplicația
+  Setări) și un nou stil în dialogul UAC în build 14328 și mai nou pentru
+  NvDA 2016.2.1 sau mai vechi.
 * Aspectul/aproape de sugestii pentru anumite câmpuri de căutare (în special
   în aplicațiile Setări și Magazin) este anunțat prin sunete și braille. De
   asemenea, acesta include caseta de căutare a meniului Start.
@@ -140,9 +140,10 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
   istoricului chatului recent și pentru deplasarea obiectului navigator la
   intrările chatului (la fel ca Skype pentru Desktop).
 * Puteți apăsa Alt+rândul cu numere pentru a localiza și a vă deplasa la
-  conversații (1), lista de contacte (2), boți (3) și câmpul de editare dacă
-  e vizibil (4). Rețineți că aceste comenzi vor funcționa corespunzător dacă
-  actualizarea Skype-ului lansată în martie 2017 este instalată.
+  conversații (1), lista de contacte (2), boți (3) și câmpul de editare al
+  chatului dacă e vizibil (4). Rețineți că aceste comenzi vor funcționa
+  corespunzător dacă actualizarea Skype-ului lansată în martie 2017 este
+  instalată.
 * Etichetele Casetelor combinate pentru aplicația Skype preview, lansată în
   noiembrie 2016, sunt anunțate.
 * NVDA nu mai anunță „Mesaj Skype” la examinarea mesajelor pentru
