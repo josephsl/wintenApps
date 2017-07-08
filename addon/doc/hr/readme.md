@@ -26,7 +26,7 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Dodatni moduli za dijelove sustava kao što su to izbornik start i
   pripadajuće mu ikonice
 
-Note: this add-on requires Windows 10 Version 1511 (build 10586) or later
+Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
 and NVDA 2017.1 or later. For best results, use the add-on with latest
 stable build (build 15063) and latest stable version of NVDA. Also, after
 changing update settings for the add-on, be sure to save NVDA settings.
@@ -48,14 +48,17 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * U većini kontekstnih izbornika (kao što je to u Edgeu), informacije o
   poziciji (NPR. 1 od 2) se više ne izgovara.
 * The following UIA events are recognized: Controller for, live region
-  changed, system alert.
+  change, system alert.
 * Dodana mogućnost provjere nadogradnje dodatka (ručno ili automatski) preko
   novog win 10 app Essentials u izborniku postavki. Podrazumijevano,
   stabilne i razvojne inačice se provjeravaju na danjoj ili tjednoj bazi.
 * Ability to track events coming from Universal Windows Platform (UWP) apps
   if NVDA is run with debug logging enabled.
 * Initial support for floating Emoji input panel in build 16215 or later
-  (for best results, use Windows OneCore speech synthesizer).
+  (for best experience when reading emojis, use Windows OneCore speech
+  synthesizer).
+* In some apps, live region text is announced. This includes alerts in Edge
+  and others. Note that this may result in double-speaking in some cases.
 
 ## Alarm i sat
 

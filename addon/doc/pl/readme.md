@@ -25,7 +25,7 @@ każdej aplikacji co jest wspierane):
 * Pogoda.
 * Różne moduły dla takich kontrolek, jak kafelki menu start.
 
-Uwaga: Ten dodatek wymaga Windows 10 Wersję 1511 (kompilację 10586) lub
+Uwaga: Ten dodatek wymaga Windows 10 Wersję 1607 (kompilację 14393) lub
 nowszą i NVDA 2016.4 lub nowszą. Dla lepszych wyników, trzeba będzie używać
 dodatek z najnowszą stabilną kompilacją (kompilacja 15063) i ostatnią
 stabilną wersję NVDA. Także, po zmianie ustawień aktualizacji dodatku,
@@ -48,7 +48,7 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) więcej nie jest odczytywana.
 * Następujące zdarzenia UIA są rospoznawane: Controller for, live region
-  changed, system alert.
+  change, system alert.
 * Dodana możliwość sprawdzania aktualizacji dodatku (automatycznie lub
   ręcznie) poprzez nowe okno dialogowe Windows 10 App Essentials, które
   można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
@@ -60,6 +60,9 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 * Wsparcie stępne dla pływającego panelu wprowadzania Emoji w kompilacji
   16215 lub nowszej (dla lepszych wyników trzeba używać syntezatora mowy
   OneCore, czyli Microsoft sapi mobile).
+* W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. W tym są
+  włączone powiadomienia w Microsoft Edge i innych. Proszę mieć na uwadze,
+  że to może skutkować podwójne wymawianie w niektórych przypadkach.
 
 ## Alarmy i zegar
 

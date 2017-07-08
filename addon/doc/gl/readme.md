@@ -26,7 +26,7 @@ se inclúe):
 * O Tempo
 * Módulos misceláneos para controis como mosaicos do Menú Inicio.
 
-Nota: este complemento require do Windows 10 Versión 1511 (build 10586) ou
+Nota: este complemento require do Windows 10 Versión 1607 (build 14393) ou
 posterior e do NVDA 2017.1 ou posterior. Para uns mellores resultados, usa o
 complemento coa compilación estable máis recente (build 15063) e versión
 estable máis recente do NVDA. Tamén, despois de cambiar as opcións de
@@ -61,6 +61,9 @@ NVDA.
 * Soporte inicial para o panel flotante de entrada de Emoji na compilación
   16215 ou posterior (para uns mellores resultados, usa o sintetizador de
   voz Windows OneCore).
+* Nalgunhas aplicacións, anúnciase o texto en rexións vivas. Esto inclúe
+  alertas en Edge e outros. Ten en centa que esto poderá causar unha fala
+  por duplicado nalgúns casos.
 
 ## Alarmas e reloxo
 

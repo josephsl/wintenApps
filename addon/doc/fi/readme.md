@@ -26,8 +26,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sekalaisia moduuleita sellaisille säätimille kuin Käynnistä-valikon
   tiilet.
 
-Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1511 (koontiversio
-10586) tai uudempaa ja NVDA 2017.1:tä tai uudempaa. Käytä parhaan
+Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1607 (koontiversio
+14393) tai uudempaa ja NVDA 2017.1:tä tai uudempaa. Käytä parhaan
 käyttökokemuksen varmistamiseksi viimeisintä vakaata koontiversiota (15063)
 sekä uusinta vakaata NVDA:n versiota. Varmista myös, että tallennat NVDA:n
 asetukset muutettuasi lisäosan päivitysasetuksia.
@@ -48,8 +48,8 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
   -asetuksella Objektien lukuasetukset -valintaikkunasta.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
-* Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, aktiivinen alue
-  muuttunut, järjestelmän ilmoitus.
+* Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, aktiivisen alueen
+  muutos, järjestelmän ilmoitus.
 * Lisätty lisäosan päivitysmahdollisuus (automaattinen tai manuaalinen)
   NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App Essentials
   -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat oletuksena
@@ -57,9 +57,12 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
 * Mahdollisuus Universal Windows Platform (UWP) -sovelluksista tulevien
   tapahtumien seuraamiseen, mikäli NVDA:ta käytetään
   virheenkorjaus-lokitasolla.
-* Alustava tuki koontiversion 16215 tai uudemman kelluvalle emojien
-  syöttöpaneelille (käytä parhaan tuloksen saamiseksi Windows OneCore
+* Alustava tuki koontiversion 16215 tai uudemman kelluvalle
+  emojinsyöttöpaneelille (käytä parhaan tuloksen saamiseksi Windows OneCore
   -puhesyntetisaattoria).
+* Joidenkin sovellusten Aktiivisen alueen teksti luetaan. Näitä ovat
+  mm. Edgen ja muiden ilmoitukset. Huomaa, että tämä saattaa johtaa
+  joissakin tapauksissa ilmoitusten kahdesti puhumiseen.
 
 ## Hälytykset ja kello
 
