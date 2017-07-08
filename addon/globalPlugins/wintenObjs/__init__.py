@@ -96,7 +96,7 @@ class SearchField(SearchField):
 				ui.message(obj.description)
 				return
 			obj = obj.next
-		nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestionsClosed.wav"))
+		nvwave.playWaveFile(r"waves\suggestionsClosed.wav")
 
 
 # Floating suggestion items such as Emoji panel in build 16215 and later.
@@ -140,7 +140,7 @@ class QueryInputTextBox(UIA):
 		global _playSuggestionsSounds
 		if len(self.value) and self.simpleNext.firstChild.role == controlTypes.ROLE_LISTITEM:
 			if not _playSuggestionsSounds:
-				nvwave.playWaveFile(os.path.join(os.path.dirname(__file__), "suggestionsOpened.wav"))
+				nvwave.playWaveFile(r"waves\suggestionsOpened.wav")
 				braille.handler.message(_("suggestions"))
 				_playSuggestionsSounds = True
 		elif len(self.value) == 0:
