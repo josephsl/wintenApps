@@ -27,7 +27,7 @@ qué se incluye):
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Nota: este complemento requiere Windows 10 Versión 1511 (build 10586) o
+Nota: este complemento requiere Windows 10 Versión 1607 (build 14393) o
 posterior y NVDA 2017.1 o posterior. Para unos mejores resultados, utiliza
 el complemento con la compilación estable más reciente (build 15063) y
 versión estable más reciente de NVDA. También, después de cambiar las
@@ -64,6 +64,9 @@ configuración de NVDA.
 * Soporte inicial para el panel flotante de entrada de Emoji en la
   compilación 16215 o posterior (para unos mejores resultados, utiliza el
   sintetizador de voz Windows OneCore).
+* En algunas aplicaciones, se anuncia el texto en regiones vivas. Esto
+  incluye alertas en Edge y otros. Ten en cuenta que esto podrá causar una
+  verbalización por duplicado en algunos casos.
 
 ## Alarmas y reloj
 

@@ -26,8 +26,8 @@ privire la ceea ce este inclus):
 * Meteo.
 * Diverse module de control precum tile-urile din meniul start.
 
-Notă: acest supliment necesită Windows 10 versiunea 1511 (build 10586) sau
-mai nou și NVDA 2016.4 sau mai nou. Pentru rezultate foarte bune, folosiți-l
+Notă: acest supliment necesită Windows 10 versiunea 1607 (build 14393) sau
+mai nou și NVDA 2017.1 sau mai nou. Pentru rezultate foarte bune, folosiți-l
 cu ultimul build stabil (build 15063) și cea mai recentă versiune stabilă a
 NVDA-ului. De asemenea, după modificarea setărilor de actualizare pentru
 supliment, asigurați-vă că salvați setările NVDA-ului.
@@ -37,9 +37,9 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * În meniurile contextuale ale tile-urilor din cadrul Start Meniu,
   submeniurile sunt recunoscute corect.
 * Anumite dialoguri sunt acum recunoscute ca dialoguri
-  corespunzătoare. Aceasta include dialogul de examinare al insiderului (în
-  aplicația Setări) și un nou stil în dialogul UAC în build 14328 și mai nou
-  pentru NvDA 2016.2.1 sau mai vechi.
+  corespunzătoare. Aceasta include dialogul Insider Preview (în aplicația
+  Setări) și un nou stil în dialogul UAC în build 14328 și mai nou pentru
+  NvDA 2016.2.1 sau mai vechi.
 * Aspectul/aproape de sugestii pentru anumite câmpuri de căutare (în special
   în aplicațiile Setări și Magazin) este anunțat prin sunete și braille. De
   asemenea, acesta include caseta de căutare a meniului Start.
@@ -49,7 +49,7 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.g. 1 din 2) nu mai este anunțată.
 * Următoarele evenimente UIA sunt recunoscute: Controler pentru, schimbarea
-  regiunii în care locuiți, alertă sistem.
+  regiunii în care locuiți, alertă de sistem.
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
@@ -58,9 +58,12 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * Abilitatea de a urmări evenimentele care provin din platforma universală
   Windows (UWP) și din aplicații, în cazul în care NVDA rulează cu
   diagnosticarea activată.
-* Suport inițial pentru panoul de intrare floating Mmoji în build-ul 16215
-  sau mai nou (pentru rezultate foarte bune, utilizați sintetizatorul
-  Windows OneCore).
+* Suport inițial pentru panoul de intrare floating moji în build-ul 16215
+  sau mai nou (pentru o experiență foarte bună în citirea mojiurilor,
+  utilizați sintetizatorul Windows OneCore).
+* În unele aplicații, textul regiunii în care locuiți este anunțat. Aceasta
+  include alerte în Edge și altele. Rețineți faptul că asta poate rezulta o
+  dublă vorbire în unele cazuri.
 
 ## Alarme și ceas
 
@@ -137,9 +140,10 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
   istoricului chatului recent și pentru deplasarea obiectului navigator la
   intrările chatului (la fel ca Skype pentru Desktop).
 * Puteți apăsa Alt+rândul cu numere pentru a localiza și a vă deplasa la
-  conversații (1), lista de contacte (2), boți (3) și câmpul de editare dacă
-  e vizibil (4). Rețineți că aceste comenzi vor funcționa corespunzător dacă
-  actualizarea Skype-ului lansată în martie 2017 este instalată.
+  conversații (1), lista de contacte (2), boți (3) și câmpul de editare al
+  chatului dacă e vizibil (4). Rețineți că aceste comenzi vor funcționa
+  corespunzător dacă actualizarea Skype-ului lansată în martie 2017 este
+  instalată.
 * Etichetele Casetelor combinate pentru aplicația Skype preview, lansată în
   noiembrie 2016, sunt anunțate.
 * NVDA nu mai anunță „Mesaj Skype” la examinarea mesajelor pentru

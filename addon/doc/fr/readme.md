@@ -27,8 +27,8 @@ est inclus) :
 * Météo.
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
-Note: ce module complémentaire nécessite Windows 10 Version 1511 (build
-10586) ou version ultérieure et NVDA 2017.1 ou version ultérieure. Pour de
+Note: ce module complémentaire nécessite Windows 10 Version 1607 (build
+14393) ou version ultérieure et NVDA 2017.1 ou version ultérieure. Pour de
 meilleurs résultats, utilisez le module complémentaire avec la dernière
 build stable (build 15063) et la dernière version stable de NVDA. De plus,
 après avoir modifié les paramètres de mise à jour pour le module
@@ -51,8 +51,8 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
   l'objet dans une liste" dans la boîte de dialogue Présentation des Objets.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
-* Les événements UIA suivants sont reconnus : Controller pour, live region
-  changed, system alert.
+* Les événements UIA suivants sont reconnus : Contrôleur pour changement de
+  région en direct, alerte système.
 * Ajout de la possibilité de vérifier les mises à jour du module
   complémentaire(automatiques ou manuelles) via la nouvelle boîte de
   dialogue Windows 10 App Essentials qui se trouve dans le menu Préférences
@@ -63,8 +63,11 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
   Platform (UWP) si NVDA est exécuté avec la journalisation de débogage
   activée.
 * Première prise en charge pour les Emoji flottants du panneau de saisie
-  dans la build 16215 ou ultérieure (pour obtenir les meilleurs résultats,
-  utiliser le Windows OneCore speech synthesizer).
+  dans la build 16215 ou ultérieure (pour une meilleure expérience lors de
+  la lecture d'emojis,, utiliser le synthétiseur vocal Windows OneCore).
+* Dans certaines apps, le texte de la région en direct est annoncé. Cela
+  inclut les alertes dans Edge et autres. Notez que cela peut entraîner une
+  double verbalisation dans certains cas.
 
 ## Alarmes et horloge
 
