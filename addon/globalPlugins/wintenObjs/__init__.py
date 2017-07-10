@@ -9,7 +9,7 @@ import globalPluginHandler
 import controlTypes
 import UIAHandler
 import ui
-from NVDAObjects.UIA import UIA, SearchField
+from NVDAObjects.UIA import UIA, SearchField, Toast_win10
 from NVDAObjects.behaviors import Dialog, EditableTextWithSuggestions
 import api
 import speech
@@ -252,7 +252,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "systemAlert")
 		nextHandler()
 
+	toastMessage1703 = ""
+
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Specifically in order to debug multiple toast announcements.
 		self.uiaDebugLogging(obj, "windowOpen")
+		if isinstance(obj, Toast_win10) and obj.name == self.toastMessage1703:
+			return
+		self.toastMessage1703 = obj.name
 		nextHandler()
