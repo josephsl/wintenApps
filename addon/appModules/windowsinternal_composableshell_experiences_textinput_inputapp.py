@@ -13,23 +13,20 @@ import api
 import speech
 import braille
 import ui
-from NVDAObjects.UIA import UIA
 
 class AppModule(appModuleHandler.AppModule):
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
 		# #7273: When this is fired on categories, the first emoji from the new category is selected but not announced.
-		# Therefore, move the navigator object to that item.
-		if isinstance(obj.parent, UIA):
-			parentAutomationId = obj.parent.UIAElement.cachedAutomationId
-			speech.cancelSpeech()
-			if parentAutomationId == "TEMPLATE_PART_ExpressionFullViewGroupsList":
-				obj = obj.parent.previous.firstChild
-			if obj is not None:
-				api.setNavigatorObject(obj)
-				obj.reportFocus()
-				braille.handler.message(braille.getBrailleTextForProperties(name=obj.name, role=obj.role, positionInfo=obj.positionInfo))
-			else:
-				# Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
-				ui.message(_("No emoji"))
+		# Therefore, move the navigator object to that item if possible.
+		speech.cancelSpeech()
+		if obj.UIAElement.cachedClassName == "ListViewItem":
+			obj = obj.parent.previous.firstChild
+		if obj is not None:
+			api.setNavigatorObject(obj)
+			obj.reportFocus()
+			braille.handler.message(braille.getBrailleTextForProperties(name=obj.name, role=obj.role, positionInfo=obj.positionInfo))
+		else:
+			# Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
+			ui.message(_("No emoji"))
 		nextHandler()

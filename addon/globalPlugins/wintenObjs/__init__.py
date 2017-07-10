@@ -251,3 +251,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_UIA_systemAlert(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "systemAlert")
 		nextHandler()
+
+	def event_UIA_window_windowOpen(self, obj, nextHandler):
+		# Specifically in order to debug multiple toast announcements.
+		self.uiaDebugLogging(obj, "windowOpen")
+		nextHandler()
