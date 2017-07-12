@@ -329,12 +329,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "systemAlert")
 		nextHandler()
 
-	toastMessage1703 = ""
+	_lastToastTimestamp = None
+	_lastToastRuntimeID = None
 
-	def event_UIA_window_windowOpen(self, obj, nextHandler):
+	def event_UIA_window_windowOpen(self):
 		# Specifically in order to debug multiple toast announcements.
+		# The last toast consultant is incubating in NVDA 2017.3.
 		self.uiaDebugLogging(obj, "windowOpen")
-		if isinstance(obj, Toast_win10) and obj.name == self.toastMessage1703:
-			return
-		self.toastMessage1703 = obj.name
+		import sys
+		import time
+		if isinstance(obj, Toast_win10) and sys.getwindowsversion().build >= 15063 and not hasattr(obj, "_lastToastTimestamp"):
+			toastTimestamp = time.time()
+			toastRuntimeID = self.UIAElement.getRuntimeID()
+			if toastRuntimeID == self._lastToastRuntimeID and toastTimestamp-self._lastToastTimestamp < 1.0:
+				return
+			self._lastToastTimestamp = toastTimestamp
+			self._lastToastRuntimeID = toastRuntimeID
 		nextHandler()
