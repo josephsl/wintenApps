@@ -73,6 +73,9 @@ class UIAEditableTextWithSuggestions(EditableTextWithSuggestions, UIA):
 # Unlike the Core implementation, this class announces suggestion count, to be incorporated into NVDA later.
 class SearchField(SearchField):
 
+	def initOverlayClass(self):
+		self.announceNewLineText = self.appModule.appName != "searchui"
+
 	def event_suggestionsOpened(self):
 		super(SearchField, self).event_suggestionsOpened()
 		# Announce number of items found (except in Start search box where the suggestions are selected as user types).
