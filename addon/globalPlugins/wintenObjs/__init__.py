@@ -95,6 +95,9 @@ class UIAEditableTextWithSuggestions(UIA):
 # Core-based blueprint found in I6241 branch.
 class SearchField(UIAEditableTextWithSuggestions):
 
+	def initOverlayClass(self):
+		self.announceNewLineText = self.appModule.appName != "searchui"
+
 	def event_suggestionsOpened(self):
 		super(SearchField, self).event_suggestionsOpened()
 		# Announce number of items found (except in Start search box where the suggestions are selected as user types).
@@ -123,6 +126,9 @@ class SearchField(UIAEditableTextWithSuggestions):
 
 try:
 	class SearchFieldEx(CoreSearchField):
+
+		def initOverlayClass(self):
+			self.announceNewLineText = self.appModule.appName != "searchui"
 
 		def event_suggestionsOpened(self):
 			super(SearchFieldEx, self).event_suggestionsOpened()
