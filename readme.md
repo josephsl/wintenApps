@@ -12,6 +12,7 @@ The following app modules or support modules for some apps are included (see eac
 * Calendar
 * Calculator (modern).
 * Cortana
+* Game Bar
 * Groove Music
 * Mail
 * Maps
@@ -32,11 +33,12 @@ Note: this add-on requires Windows 10 Version 1607 (build 14393) or later and NV
 * Appearance/close of suggestions for certain search fields (notably Settings and Store apps) is announced via sounds and braille. This also includes Start menu search box.
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation dialog.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
-* The following UIA events are recognized: Controller for, live region change, system alert.
+* The following UIA events are recognized: Controller for, live region change, system alert, element selected, window opened.
 * Added ability to check for add-on updates (automatic or manual) via the new Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
 * Ability to track events coming from Universal Windows Platform (UWP) apps if NVDA is run with debug logging enabled.
 * Initial support for floating Emoji input panel in build 16215 or later (for best experience when reading emojis, use Windows OneCore speech synthesizer).
 * In some apps, live region text is announced. This includes alerts in Edge and others. Note that this may result in double-speaking in some cases.
+* Toasts are no longer announced multiple times in Creators Update and later.
 
 ## Alarms and clock
 
@@ -55,6 +57,10 @@ Note: this add-on requires Windows 10 Version 1607 (build 14393) or later and NV
 * Textual responses from Cortana are announced in most situations (if it doesn't, reopen Start menu and try searching again).
 * NVDA will be silent when you talk to Cortana via voice.
 * NVDA will now announce reminder confirmation after you set one.
+
+## Game Bar
+
+* NVDA will announce appearance of Game Bar window. Due to technical limitations, NVDA cannot interact fully with Game Bar.
 
 ## Groove Music
 
