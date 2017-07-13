@@ -30,6 +30,19 @@ class AppModule(appModuleHandler.AppModule):
 			if obj.UIAElement.cachedAutomationID == "CalculatorResults":
 				clsList.insert(0, CalculatorResult)
 
+	def event_UIA_liveRegionChanged(self, obj, nextHandler):
+		# Unfortunately, the control that fires this has no automation ID yet says it is a generic te4xt block.
+		# This may mean anything can be announced, so try to filter them later.
+		if not self.shouldAnnounceResult:
+			return
+		self.shouldAnnounceResult = False
+		nextHandler()
+
+	try:
+		event_liveRegionChange = event_UIA_liveRegionChanged
+	except:
+		pass
+
 	def script_calculatorResult(self, gesture):
 		gesture.send()
 		# In redstone, calculator result keeps firing name change, so tell it to do so if and only if enter has been pressed.
