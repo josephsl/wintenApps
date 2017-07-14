@@ -15,6 +15,7 @@ se inclúe):
 * Calendario
 * Calculadora (modern).
 * Cortana
+* Game Bar
 * Groove Music
 * Correo
 * Mapas
@@ -48,8 +49,8 @@ NVDA.
   posición do obxecto" no diálogo Presentación de Obxectos.
 * En certos menús de contexto (coma no Edge), a información de posición
   (ex.: 1 de 2) xa non se anuncia.
-* Recoñécense os seguintes eventos UIA: Controller for, live region changed,
-  system alert.
+* The following UIA events are recognized: Controller for, live region
+  change, system alert, element selected, window opened.
 * Engadida a capacidade de procurar as actualizacións do complemento
   (automática ou manual) a través do novo diálogo Windows 10 App Essentials
   que se atopa no menú Preferencias do NVDA. Por defecto, procuraranse as
@@ -64,6 +65,8 @@ NVDA.
 * Nalgunhas aplicacións, anúnciase o texto en rexións vivas. Esto inclúe
   alertas en Edge e outros. Ten en centa que esto poderá causar unha fala
   por duplicado nalgúns casos.
+* Toasts are no longer announced multiple times in Creators Update and
+  later.
 
 ## Alarmas e reloxo
 
@@ -87,6 +90,11 @@ NVDA.
 * NVDA silenciarase cando lle fales ao Cortana a través da voz.
 * NVDA agora anunciará a confirmación de lembrarse despois de que axustes
   unha.
+
+## Game Bar
+
+* NVDA will announce appearance of Game Bar window. Due to technical
+  limitations, NVDA cannot interact fully with Game Bar.
 
 ## Groove Music
 

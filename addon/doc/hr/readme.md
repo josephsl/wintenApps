@@ -14,6 +14,7 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Kalendar
 * kalkulator (moderan).
 * Cortana
+* Game Bar
 * Groove Music
 * Pošta
 * Karte
@@ -48,7 +49,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * U većini kontekstnih izbornika (kao što je to u Edgeu), informacije o
   poziciji (NPR. 1 od 2) se više ne izgovara.
 * The following UIA events are recognized: Controller for, live region
-  change, system alert.
+  change, system alert, element selected, window opened.
 * Dodana mogućnost provjere nadogradnje dodatka (ručno ili automatski) preko
   novog win 10 app Essentials u izborniku postavki. Podrazumijevano,
   stabilne i razvojne inačice se provjeravaju na danjoj ili tjednoj bazi.
@@ -59,6 +60,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
   synthesizer).
 * In some apps, live region text is announced. This includes alerts in Edge
   and others. Note that this may result in double-speaking in some cases.
+* Toasts are no longer announced multiple times in Creators Update and
+  later.
 
 ## Alarm i sat
 
@@ -81,6 +84,11 @@ changing update settings for the add-on, be sure to save NVDA settings.
   slučaj, ponovno otvorite izbornik start.
 * NVDA će biti tih kada pričate sa Cortanom.
 * NVDA će izgovarati potvrdu termina ako ga postavite.
+
+## Game Bar
+
+* NVDA will announce appearance of Game Bar window. Due to technical
+  limitations, NVDA cannot interact fully with Game Bar.
 
 ## Groove Music
 
