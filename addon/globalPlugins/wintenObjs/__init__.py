@@ -9,7 +9,7 @@ import globalPluginHandler
 import controlTypes
 import UIAHandler
 import ui
-from NVDAObjects.UIA import UIA, SearchField, Toast_win10
+from NVDAObjects.UIA import UIA, SearchField
 from NVDAObjects.behaviors import Dialog, EditableTextWithSuggestions
 import api
 import speech
@@ -254,20 +254,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "systemAlert")
 		nextHandler()
 
-	_lastToastTimestamp = None
-	_lastToastRuntimeID = None
-
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Specifically in order to debug multiple toast announcements.
-		# The last toast consultant is incubating in NVDA 2017.3.
 		self.uiaDebugLogging(obj, "windowOpen")
-		import sys
-		import time
-		if isinstance(obj, Toast_win10) and sys.getwindowsversion().build >= 15063 and not hasattr(obj, "_lastToastTimestamp"):
-			toastTimestamp = time.time()
-			toastRuntimeID = obj.UIAElement.getRuntimeID()
-			if toastRuntimeID == self._lastToastRuntimeID and toastTimestamp-self._lastToastTimestamp < 1.0:
-				return
-			self._lastToastTimestamp = toastTimestamp
-			self._lastToastRuntimeID = toastRuntimeID
 		nextHandler()
