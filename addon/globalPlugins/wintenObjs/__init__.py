@@ -73,9 +73,6 @@ class UIAEditableTextWithSuggestions(EditableTextWithSuggestions, UIA):
 # Unlike the Core implementation, this class announces suggestion count, to be incorporated into NVDA later.
 class SearchField(SearchField):
 
-	def initOverlayClass(self):
-		self.announceNewLineText = self.appModule.appName != "searchui"
-
 	def event_suggestionsOpened(self):
 		super(SearchField, self).event_suggestionsOpened()
 		# Announce number of items found (except in Start search box where the suggestions are selected as user types).
@@ -188,7 +185,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Also take care of Edge address omnibar and Start search box.
 			# This is no longer necessary in NVDA 2017.3 (incubating as of May 2017).
 			elif obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
-				clsList.insert(0, SearchField)
+				# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcmenet problem.
+				if obj.UIAElement.cachedAutomationID == "SearchTextBox" and obj.appModule.appName != "searchui":
+					clsList.insert(0, SearchField)
 			# A dedicated version for Mail app's address/mention suggestions.
 			elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
 				clsList.insert(0, UIAEditableTextWithSuggestions)

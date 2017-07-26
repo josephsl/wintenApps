@@ -6,15 +6,13 @@
 
 # Extended to let NVDA cooperate with Cortana.
 
-import appModuleHandler
+from nvdaBuiltin.appModules.searchui import *
 import controlTypes
 import api
 import speech
 import ui
 import config
-from NVDAObjects.UIA import UIA
 from NVDAObjects.UIA.edge import EdgeList
-from NVDAObjects.IAccessible import IAccessible, ContentGenericClient
 
 # Windows 10 Search UI suggestion list item
 class SuggestionListItem(UIA):
@@ -35,18 +33,21 @@ class SuggestionListItem(UIA):
 		super(SuggestionListItem, self).reportFocus()
 
 
-class AppModule(appModuleHandler.AppModule):
+class AppModule(AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self,obj,clsList):
-		if isinstance(obj,UIA) and isinstance(obj.parent,EdgeList):
-			clsList.insert(0,SuggestionListItem)
-		elif isinstance(obj,IAccessible):
+		if isinstance(obj,IAccessible):
 			try:
 				# #5288: Never use ContentGenericClient, as this uses displayModel
 				# which will freeze if the process is suspended.
 				clsList.remove(ContentGenericClient)
 			except ValueError:
 				pass
+		elif isinstance(obj,UIA):
+			if isinstance(obj.parent,EdgeList):
+				clsList.insert(0,SuggestionListItem)
+			elif obj.UIAElement.cachedAutomationID == "SearchTextBox":
+				clsList.insert(0, StartMenuSearchField)
 
 	# Past responses from Cortana (cached to prevent repetition, initially an empty string).
 	cortanaResponseCache = ""
