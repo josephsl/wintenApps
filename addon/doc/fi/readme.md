@@ -14,6 +14,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Kalenteri
 * Laskin (moderni)
 * Cortana
+* Pelipalkki
 * Groove Music
 * Sähköposti
 * Kartat
@@ -49,7 +50,7 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
 * Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, aktiivisen alueen
-  muutos, järjestelmän ilmoitus.
+  muutos, järjestelmän ilmoitus, elementti valittu, ikkuna avattu.
 * Lisätty lisäosan päivitysmahdollisuus (automaattinen tai manuaalinen)
   NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App Essentials
   -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat oletuksena
@@ -63,6 +64,8 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
 * Joidenkin sovellusten Aktiivisen alueen teksti luetaan. Näitä ovat
   mm. Edgen ja muiden ilmoitukset. Huomaa, että tämä saattaa johtaa
   joissakin tapauksissa ilmoitusten kahdesti puhumiseen.
+* Ilmoitusruutuja ei enää puhuta moneen kertaan Creators-päivityksessä ja
+  uudemmissa.
 
 ## Hälytykset ja kello
 
@@ -87,6 +90,11 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
   toistamiseen).
 * NVDA on hiljaa puhuessasi Cortanalle mikrofonin välityksellä.
 * NVDA puhuu nyt vahvistuksen muistutusta lisättäessä.
+
+## Pelipalkki
+
+* NVDA ilmoittaa pelipalkki-ikkunan ilmestymisestä. Teknisistä rajoituksista
+  johtuen NVDA ei voi olla täysin vuorovaikutuksessa pelipalkin kanssa.
 
 ## Groove Music
 

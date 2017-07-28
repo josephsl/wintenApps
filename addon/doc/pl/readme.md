@@ -14,6 +14,7 @@ każdej aplikacji co jest wspierane):
 * Kalendarz
 * Kalkulator (nowoczesny).
 * Cortana
+* Game Bar
 * Muzyka Groowe
 * Poczta
 * Mapy
@@ -47,8 +48,8 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
   obiektu" w oknie dialogowym "prezentacja obiektu".
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) więcej nie jest odczytywana.
-* Następujące zdarzenia UIA są rospoznawane: Controller for, live region
-  change, system alert.
+* The following UIA events are recognized: Controller for, live region
+  change, system alert, element selected, window opened.
 * Dodana możliwość sprawdzania aktualizacji dodatku (automatycznie lub
   ręcznie) poprzez nowe okno dialogowe Windows 10 App Essentials, które
   można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
@@ -63,6 +64,8 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 * W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. W tym są
   włączone powiadomienia w Microsoft Edge i innych. Proszę mieć na uwadze,
   że to może skutkować podwójne wymawianie w niektórych przypadkach.
+* Toasts are no longer announced multiple times in Creators Update and
+  later.
 
 ## Alarmy i zegar
 
@@ -85,6 +88,11 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
   są, ponownie otwórz meni start, i spróbuj ponownie).
 * NVDA będzie przyciszony, gdy mówisz do Cortany.
 * NVDA teraz wymawia potwierdzenie przypomnienia po jego ustawieniu.
+
+## Game Bar
+
+* NVDA will announce appearance of Game Bar window. Due to technical
+  limitations, NVDA cannot interact fully with Game Bar.
 
 ## Muzyka Groowe
 
