@@ -95,6 +95,9 @@ class UIAEditableTextWithSuggestions(UIA):
 # Core-based blueprint found in I6241 branch.
 class SearchField(UIAEditableTextWithSuggestions):
 
+	def initOverlayClass(self):
+		self.announceNewLineText = self.appModule.appName != "searchui"
+
 	def event_suggestionsOpened(self):
 		super(SearchField, self).event_suggestionsOpened()
 		# Announce number of items found (except in Start search box where the suggestions are selected as user types).
@@ -123,6 +126,9 @@ class SearchField(UIAEditableTextWithSuggestions):
 
 try:
 	class SearchFieldEx(CoreSearchField):
+
+		def initOverlayClass(self):
+			self.announceNewLineText = self.appModule.appName != "searchui"
 
 		def event_suggestionsOpened(self):
 			super(SearchFieldEx, self).event_suggestionsOpened()
@@ -329,12 +335,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "systemAlert")
 		nextHandler()
 
-	toastMessage1703 = ""
+	_lastToastTimestamp = None
+	_lastToastRuntimeID = None
 
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Specifically in order to debug multiple toast announcements.
+		# The last toast consultant is incubating in NVDA 2017.3.
 		self.uiaDebugLogging(obj, "windowOpen")
-		if isinstance(obj, Toast_win10) and obj.name == self.toastMessage1703:
-			return
-		self.toastMessage1703 = obj.name
+		import sys
+		import time
+		if isinstance(obj, Toast_win10) and sys.getwindowsversion().build >= 15063 and not hasattr(obj, "_lastToastTimestamp"):
+			toastTimestamp = time.time()
+			toastRuntimeID = obj.UIAElement.getRuntimeID()
+			if toastRuntimeID == self._lastToastRuntimeID and toastTimestamp-self._lastToastTimestamp < 1.0:
+				return
+			self._lastToastTimestamp = toastTimestamp
+			self._lastToastRuntimeID = toastRuntimeID
 		nextHandler()
