@@ -264,7 +264,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Also take care of Edge address omnibar and Start search box.
 			# This is no longer necessary in NVDA 2017.3 (incubating as of May 2017).
 			elif obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
-				clsList.insert(0, SearchFieldEx if searchFieldIncorporated else SearchField)
+				# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcmenet problem.
+				if obj.UIAElement.cachedAutomationID == "SearchTextBox" and obj.appModule.appName != "searchui":
+					clsList.insert(0, SearchFieldEx if searchFieldIncorporated else SearchField)
 			# A dedicated version for Mail app's address/mention suggestions.
 			elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
 				clsList.insert(0, UIAEditableTextWithSuggestions)
