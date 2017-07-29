@@ -15,6 +15,7 @@ privire la ceea ce este inclus):
 * Calendar
 * Calculator (modern).
 * Cortana
+* Bara de jocuri
 * Muzică Groove
 * Mail
 * Hărți
@@ -49,7 +50,8 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.g. 1 din 2) nu mai este anunțată.
 * Următoarele evenimente UIA sunt recunoscute: Controler pentru, schimbarea
-  regiunii în care locuiți, alertă de sistem.
+  regiunii în care locuiți, alertă de sistem, element selectat, fereastră
+  deschisă.
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
@@ -64,6 +66,8 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * În unele aplicații, textul regiunii în care locuiți este anunțat. Aceasta
   include alerte în Edge și altele. Rețineți faptul că asta poate rezulta o
   dublă vorbire în unele cazuri.
+* Toast-urile nu mai sunt anunțate de multe ori în Creators Update și mai
+  nou.
 
 ## Alarme și ceas
 
@@ -88,6 +92,11 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
   nou).
 * NVDA va fi silențios atunci când vorbiți cu Cortana prin voce.
 * NVDA va anunța o confirmare memento după ce ați setat unul.
+
+## Bara de jocuri
+
+* NVDA va anunța aspectul barei de jocuri. Datorită limitărilor tehnice,
+  NVDA nu poate interacționa pe deplin cu bara de jocuri.
 
 ## Muzică Groove
 

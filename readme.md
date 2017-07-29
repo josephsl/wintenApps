@@ -37,7 +37,7 @@ Note: this add-on requires Windows 10 Version 1607 (build 14393) or later and NV
 * Added ability to check for add-on updates (automatic or manual) via the new Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
 * Ability to track events coming from Universal Windows Platform (UWP) apps if NVDA is run with debug logging enabled.
 * Initial support for floating Emoji input panel in build 16215 or later (for best experience when reading emojis, use Windows OneCore speech synthesizer).
-* In some apps, live region text is announced. This includes alerts in Edge and others. Note that this may result in double-speaking in some cases.
+* In some apps, live region text is announced. This includes alerts in Edge, results in Calculator and others. Note that this may result in double-speaking in some cases.
 * Toasts are no longer announced multiple times in Creators Update and later.
 
 ## Alarms and clock
@@ -47,6 +47,7 @@ Note: this add-on requires Windows 10 Version 1607 (build 14393) or later and NV
 ## Calculator
 
 * When ENTER or Escape is pressed, NVDA announces calculation results.
+* For calculations such as unit converter and currency converter, NVDA will announce results as soon as calculations are entered.
 
 ## calendar
 

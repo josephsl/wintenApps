@@ -15,6 +15,7 @@ welche inbegriffen sind):
 * Kalender
 * Rechner (modern)
 * Cortana
+* Game Bar
 * Groove Music
 * Mail
 * Maps
@@ -46,7 +47,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * In certain context menus (such as in Edge), position information (e.g. 1
   of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, live region
-  change, system alert.
+  change, system alert, element selected, window opened.
 * Added ability to check for add-on updates (automatic or manual) via the
   new Windows 10 App Essentials dialog found in NvDA Preferences menu. By
   default, stable and development versions will check for new updates
@@ -58,6 +59,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
   synthesizer).
 * In some apps, live region text is announced. This includes alerts in Edge
   and others. Note that this may result in double-speaking in some cases.
+* Toasts are no longer announced multiple times in Creators Update and
+  later.
 
 ## Wecker und Uhr
 
@@ -81,6 +84,11 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * NVDA verstummt bei der Verwendung von Cortana, so dass die Stimmen nicht
   mehr sich in die Quere kommen.
 * NVDA will now announce reminder confirmation after you set one.
+
+## Game Bar
+
+* NVDA will announce appearance of Game Bar window. Due to technical
+  limitations, NVDA cannot interact fully with Game Bar.
 
 ## Groove Music
 

@@ -16,6 +16,7 @@ est inclus) :
 * Calendrier
 * Calculatrice (modern).
 * Cortana
+* Game Bar
 * Groove Music
 * Courrier
 * Cartes
@@ -52,7 +53,7 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
 * Les événements UIA suivants sont reconnus : Contrôleur pour changement de
-  région en direct, alerte système.
+  région en direct, alerte système, élément sélectionné, fenêtre ouverte.
 * Ajout de la possibilité de vérifier les mises à jour du module
   complémentaire(automatiques ou manuelles) via la nouvelle boîte de
   dialogue Windows 10 App Essentials qui se trouve dans le menu Préférences
@@ -68,6 +69,8 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 * Dans certaines apps, le texte de la région en direct est annoncé. Cela
   inclut les alertes dans Edge et autres. Notez que cela peut entraîner une
   double verbalisation dans certains cas.
+* Les toasts ne sont plus annoncés plusieurs fois dans Creators Update et
+  supérieur.
 
 ## Alarmes et horloge
 
@@ -95,6 +98,12 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 * NVDA sera silencieux quand vous vous adresserez vocalement à Cortana.
 * NVDA annoncera maintenant un rappel de confirmation après que vous
   définissez une.
+
+## Game Bar
+
+* NVDA annoncera l'apparition de la fenêtre Game Bar. En raison de
+  limitations techniques, NVDA ne peut pas interagir entièrement avec Game
+  Bar.
 
 ## Groove Music
 

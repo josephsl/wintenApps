@@ -14,6 +14,7 @@ Windows 10, а также исправлений для некоторых ти�
 * Календарь
 * Калькулятор (modern).
 * Cortana
+* Game Bar
 * Музыка Groove
 * Почта
 * Карты
@@ -47,7 +48,7 @@ Windows 10, а также исправлений для некоторых ти�
 * In certain context menus (such as in Edge), position information (e.g. 1
   of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, live region
-  change, system alert.
+  change, system alert, element selected, window opened.
 * Added ability to check for add-on updates (automatic or manual) via the
   new Windows 10 App Essentials dialog found in NvDA Preferences menu. By
   default, stable and development versions will check for new updates
@@ -59,6 +60,8 @@ Windows 10, а также исправлений для некоторых ти�
   synthesizer).
 * In some apps, live region text is announced. This includes alerts in Edge
   and others. Note that this may result in double-speaking in some cases.
+* Toasts are no longer announced multiple times in Creators Update and
+  later.
 
 ## Будильники и часы
 
@@ -81,6 +84,11 @@ Windows 10, а также исправлений для некоторых ти�
   doesn't, reopen Start menu and try searching again).
 * NVDA will be silent when you talk to Cortana via voice.
 * NVDA will now announce reminder confirmation after you set one.
+
+## Game Bar
+
+* NVDA will announce appearance of Game Bar window. Due to technical
+  limitations, NVDA cannot interact fully with Game Bar.
 
 ## Музыка Groove
 
