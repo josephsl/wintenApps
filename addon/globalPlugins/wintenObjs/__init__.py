@@ -21,7 +21,7 @@ import config
 import queueHandler
 import globalVars
 from logHandler import log
-import w10config
+from . import w10config
 import addonHandler
 addonHandler.initTranslation()
 

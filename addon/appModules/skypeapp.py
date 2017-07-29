@@ -29,7 +29,7 @@ class SkypeMessage(UIA):
 	def reportFocus(self):
 		# Skype message/channel info and other extraneous text should not be announced.
 		# Credit: Derek Riemer
-		# But save the old name just in cse it needs to be referred back to.
+		# But save the old name just in case it needs to be referred back to.
 		self._message = self.name
 		self.name = self.getShortenedMessage()
 		super(SkypeMessage, self).reportFocus()
@@ -58,9 +58,9 @@ class AppModule(appModuleHandler.AppModule):
 
 	def __init__(self, *args, **kwargs):
 		super(AppModule, self).__init__(*args, **kwargs)
-		for pos in xrange(10):
+		for pos in range(10):
 			self.bindGesture("kb:control+nvda+%s"%pos, "readMessage")
-		for pos in xrange(1, 5):
+		for pos in range(1, 5):
 			self.bindGesture("kb:alt+%s"%pos, "moveToArea")
 
 	def event_NVDAObject_init(self, obj):
