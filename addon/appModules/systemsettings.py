@@ -37,8 +37,13 @@ class AppModule(appModuleHandler.AppModule):
 				if 14393 <= build < 16232:
 					nameList.insert(0, obj.previous.name)
 				# Add the status text in 16232 and later.
+				# But since 16251, a "what's new" link has been added for feature updates, so consult two previous objects.
 				elif sys.getwindowsversion().build >= 16232:
-					nameList.append(obj.next.name)
+					if obj.next.UIAElement.cachedAutomationID == "SystemSettings_MusUpdate_HistoryCategoryQuality_ToggleButton":
+						nameList.insert(0, obj.previous.name)
+						nameList.insert(0, obj.previous.previous.name)
+					else:
+						nameList.append(obj.next.name)
 				obj.name = ", ".join(nameList)
 
 	# Live region changed event is treated as a name change for now.
