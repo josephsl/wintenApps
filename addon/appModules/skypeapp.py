@@ -124,7 +124,10 @@ class AppModule(appModuleHandler.AppModule):
 		try:
 			message = chatHistory.getChild(0-pos)
 			api.setNavigatorObject(message)
-			ui.message(message.getShortenedMessage())
+			if hasattr(message, "getShortenedMessage"):
+				ui.message(message.getShortenedMessage())
+			else:
+				ui.message(message.name)
 			return
 		except IndexError:
 			return
