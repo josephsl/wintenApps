@@ -76,7 +76,7 @@ class AppModule(appModuleHandler.AppModule):
 			if uiaElement.cachedAutomationID == "Message" and uiaElement.cachedClassName == "ListViewItem":
 				clsList.insert(0, SkypeMessage)
 
-	# Locate various elements, as this is one of the best ways to do this in Skype Preview.
+	# Locate various elements, as this is one of the best ways to do this in Skype UWP.
 	# The best criteria is automation ID (class names are quite generic).
 	def locateElement(self, automationID):
 		# Foreground isn't reliable.
@@ -85,7 +85,7 @@ class AppModule(appModuleHandler.AppModule):
 			screenContent = fg.getChild(1)
 		else:
 			screenContent = fg.getChild(2)
-		# Thanks to My Peple in Redstone 3, screen content so far could actually be the title bar, and the actual foreground window is next door.
+		# Thanks to My Peple in Fall Creators Update, screen content so far could actually be the title bar, and the actual foreground window is next door.
 		# In other words, Skype window is embedded inside My People window.
 		if screenContent.UIAElement.cachedAutomationID == "TitleBar":
 			# The following traversal path may change in future builds.
@@ -105,7 +105,7 @@ class AppModule(appModuleHandler.AppModule):
 			if uiElement.cachedClassName == "TextBlock" and obj.next is not None:
 				# Announce typing indicator (same as Skype for Desktop).
 				nextElement = obj.next.UIAElement
-				# Make sure to catch all possible UI placement changes between Skype Preview releases.
+				# Make sure to catch all possible UI placement changes between Skype UWP releases.
 				if nextElement.cachedAutomationID in ("ChatEditBox", "ChatTranslationSettings"):
 					# Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 					ui.message(obj.name if obj.name != "" else _("Typing stopped"))
