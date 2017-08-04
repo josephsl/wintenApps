@@ -61,9 +61,9 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 * Wsparcie stępne dla pływającego panelu wprowadzania Emoji w kompilacji
   16215 lub nowszej (dla lepszych wyników trzeba używać syntezatora mowy
   OneCore, czyli Microsoft sapi mobile).
-* W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. W tym są
-  włączone powiadomienia w Microsoft Edge i innych. Proszę mieć na uwadze,
-  że to może skutkować podwójne wymawianie w niektórych przypadkach.
+* In some apps, live region text is announced. This includes alerts in Edge,
+  results in Calculator and others. Note that this may result in
+  double-speaking in some cases.
 * Toasts are no longer announced multiple times in Creators Update and
   later.
 
@@ -76,6 +76,8 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 ## Kalkulator
 
 * Kiedy enter albo escape jest wciśnięty, NVDA wymawia wynik obliczenia.
+* For calculations such as unit converter and currency converter, NVDA will
+  announce results as soon as calculations are entered.
 
 ## Kalendarz
 

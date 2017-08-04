@@ -58,8 +58,9 @@ Windows 10, а также исправлений для некоторых ти�
 * Initial support for floating Emoji input panel in build 16215 or later
   (for best experience when reading emojis, use Windows OneCore speech
   synthesizer).
-* In some apps, live region text is announced. This includes alerts in Edge
-  and others. Note that this may result in double-speaking in some cases.
+* In some apps, live region text is announced. This includes alerts in Edge,
+  results in Calculator and others. Note that this may result in
+  double-speaking in some cases.
 * Toasts are no longer announced multiple times in Creators Update and
   later.
 
@@ -72,6 +73,8 @@ Windows 10, а также исправлений для некоторых ти�
 ## Калькулятор
 
 * Когда нажмёте ENTER или Escape, NVDA сообщает результаты расчёта.
+* For calculations such as unit converter and currency converter, NVDA will
+  announce results as soon as calculations are entered.
 
 ## календарь
 

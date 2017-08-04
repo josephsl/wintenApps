@@ -15,7 +15,7 @@ privire la ceea ce este inclus):
 * Calendar
 * Calculator (modern).
 * Cortana
-* Bara de jocuri
+* Bară de jocuri
 * Muzică Groove
 * Mail
 * Hărți
@@ -64,8 +64,8 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
   sau mai nou (pentru o experiență foarte bună în citirea mojiurilor,
   utilizați sintetizatorul Windows OneCore).
 * În unele aplicații, textul regiunii în care locuiți este anunțat. Aceasta
-  include alerte în Edge și altele. Rețineți faptul că asta poate rezulta o
-  dublă vorbire în unele cazuri.
+  include alertele din Edge, rezultatele din Calculator și altele. Rețineți
+  faptul că asta poate rezulta o dublă vorbire în unele cazuri.
 * Toast-urile nu mai sunt anunțate de multe ori în Creators Update și mai
   nou.
 
@@ -79,6 +79,8 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 ## Calculator
 
 * Când se apasă Enter sau Escape, NVDA anunță rezultatele calculului.
+* Pentru calcule precum convertorul de unitate și convertorul valutar, NVDA
+  va anunța rezultatele de îndată ce vor fi introduse calculele.
 
 ## calendar
 
@@ -93,7 +95,7 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * NVDA va fi silențios atunci când vorbiți cu Cortana prin voce.
 * NVDA va anunța o confirmare memento după ce ați setat unul.
 
-## Bara de jocuri
+## Bară de jocuri
 
 * NVDA va anunța aspectul barei de jocuri. Datorită limitărilor tehnice,
   NVDA nu poate interacționa pe deplin cu bara de jocuri.
