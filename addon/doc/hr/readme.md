@@ -14,12 +14,12 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Kalendar
 * kalkulator (moderan).
 * Cortana
-* Game Bar
+* Traka za igrice
 * Groove Music
 * Pošta
 * Karte
 * Microsoft Edge
-* People
+* Osobe
 * Postavke (postavke sustava, Windows+I)
 * Skype (univerzalna aplikacija)
 * Trgovina
@@ -27,10 +27,11 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Dodatni moduli za dijelove sustava kao što su to izbornik start i
   pripadajuće mu ikonice
 
-Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
-and NVDA 2017.1 or later. For best results, use the add-on with latest
-stable build (build 15063) and latest stable version of NVDA. Also, after
-changing update settings for the add-on, be sure to save NVDA settings.
+Upozorenje: ovaj dodatak zahtjeva Windows 10 Verziju 1511 (podverziju 10586)
+ili noviju i NVDA 2016.4 ili noviji. Za najbolje rezultate, koristite
+dodatak sa zadnjom stabilnom inačicom (podverzija 15063) i zadnju stabilnu
+inačicu nvda. Također, prilikom spremanja postavki za nadogradnju dodatka,
+budite sigurni da ste spremili postavke za NVDA.
 
 ## Općenito
 
@@ -48,20 +49,21 @@ changing update settings for the add-on, be sure to save NVDA settings.
   prezentacija objekt.
 * U većini kontekstnih izbornika (kao što je to u Edgeu), informacije o
   poziciji (NPR. 1 od 2) se više ne izgovara.
-* The following UIA events are recognized: Controller for, live region
-  change, system alert, element selected, window opened.
+* Slijedeći UIA događaji se izgovaraju: Controller for, live region changed
+  (handled by name change event).
 * Dodana mogućnost provjere nadogradnje dodatka (ručno ili automatski) preko
   novog win 10 app Essentials u izborniku postavki. Podrazumijevano,
   stabilne i razvojne inačice se provjeravaju na danjoj ili tjednoj bazi.
-* Ability to track events coming from Universal Windows Platform (UWP) apps
-  if NVDA is run with debug logging enabled.
-* Initial support for floating Emoji input panel in build 16215 or later
-  (for best experience when reading emojis, use Windows OneCore speech
-  synthesizer).
-* In some apps, live region text is announced. This includes alerts in Edge
-  and others. Note that this may result in double-speaking in some cases.
-* Toasts are no longer announced multiple times in Creators Update and
-  later.
+* Mogućnost praćenja događaja koji dolaze iz  Univerzalnih Windows Platform
+  (UWP) aplikacija ako je NVDA sa postavljenim načinom zapisa na debug
+  (2017.1 ili noviji).
+* Inicijalna podrška za područje unosa Emoji znakova u verziji 16215 ili
+  novijoj (za najbolje iskustvo pri čitanju emoji znakova, koristeći Windows
+  OneCore govornu sintezu 
+* U nekim aplikacijama, NVDA odmah pročita live region text. To uključuje
+  upozorenja u programu Edge, rezultate u kalkulatoru i drugo. Napominjem da
+  u nekim slučajevima dolazi do ponavljanja.
+* Obavijesti se više ne ponavljaju u verziji Creators update I novijim. 
 
 ## Alarm i sat
 
@@ -71,7 +73,9 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Kalkulator
 
-* When ENTER or Escape is pressed, NVDA announces calculation results.
+* Kada je pritisnuta tipka enter, NVDA izgovara rezultate izračuna.
+* Za izračune kao što su pretvaranje jedinica i pretvaranje valuta, NVDA će
+  izvijestiti o rezultatima čim se isti pojave. 
 
 ## Kalendar
 
@@ -85,10 +89,10 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * NVDA će biti tih kada pričate sa Cortanom.
 * NVDA će izgovarati potvrdu termina ako ga postavite.
 
-## Game Bar
+## Traka za igrice
 
-* NVDA will announce appearance of Game Bar window. Due to technical
-  limitations, NVDA cannot interact fully with Game Bar.
+* NVDA će opisati izgled prozora trake za igrice. Zbog tehničkih
+  nedostataka, NVDA ne može u potpunosti komunicirati s trakom za igrice.
 
 ## Groove Music
 
@@ -98,8 +102,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 * Prilikom pregleda stavaka u popisu poruka, sada možete koristiti prečice
   za navigaciju po tablicama kako biste pregledali zaglavlja poruke.
-* When writing a message, appearance of at mention suggestions are indicated
-  by sounds.
+* Tijekom pisanja poruke, ako spominjete neku osobu, pojavljene sugestije
+  bit će popraćene zvukovima. 
 
 ## Karte
 
@@ -110,15 +114,14 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are now
-  announced.
+* Obavijesti kao što su to preuzimanja datoteka sada se čitaju.
 * U nadogradnji za tvorce, NVDA više neće izgovarati "WebRuntime Content
   View" prilikom prebacivanja na drugi prikaz.
 
-## People
+## Osobe
 
-* When searching for contacts, a sound will play if there are search
-  results.
+* Tijekom pretraživanja kontakata, začut ćete zvuk ako postoje rezultati
+  pretrage. 
 
 ## Postavke
 
@@ -149,11 +152,11 @@ changing update settings for the add-on, be sure to save NVDA settings.
   izgovaraju.
 * NVDA više neće izgovarati "skype message" prilikom pregleda poruka u
   većini slučajeva.
-* Various issues when using Skype with braille displays fixed, including
-  inability to review message history items in braille.
-* From message history list, pressing NVDA+D on a message item will now
-  allow NVDA to announce detailed information about a message such as
-  channel type, sent date and time and so on.
+* Riješeni su različiti problemi pri korištenju Skypea sa brajičnim recima,
+  uključujući nemogućnost pregledavanja povijesti poruka na brajici. 
+* Ako pritisnete NVDA + D na određenoj poruci u povijesti razgovora, NVDA će
+  pročitati detaljne informacije o poruci, kao što su datum I vrijeme slanja
+  poruke itd. 
 
 ## Trgovina
 

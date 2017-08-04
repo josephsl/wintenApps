@@ -10,14 +10,14 @@ msgstr ""
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
 "PO-Revision-Date: 2017-07-27 17:52-0700\n"
 "Last-Translator: Jožef Gregorc <jozko.gregorc@gmail.com>\n"
+"Language-Team: \n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.9\n"
-"Language-Team: \n"
 
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on)..
+#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
@@ -32,10 +32,11 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "Stara različica Oken"
 
+#. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "Ni več vremenskih podatkov za to postavko."
 
-#. Translators: the description for the activateLongDescription script on browseMode documents.
+#. Translators: the description for the showMessageLongDesc script on Skype for Windows 10.
 msgid "Shows the message details."
 msgstr ""
 
@@ -51,6 +52,10 @@ msgstr "Zgodovina klepeta se ni našla"
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "Sporoča in premika pregledno utripalko na zadnje sporočilo"
 
+#. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
+msgid "No emoji"
+msgstr ""
+
 #. Translators: Announced in braille when suggestions appear.
 msgid "suggestions"
 msgstr "predlogi"
@@ -65,6 +70,8 @@ msgstr "Windows 10 Osnove Aplikacijam nastavitve dodatka"
 msgid "Error checking for update."
 msgstr "Napaka pri preverjanju za posodobitev."
 
+#. Translators: Title of the dialog shown when add-on update check fails.
+#. Translators: Title of the dialog presented when no add-on update is available.
 #. Translators: Title of the add-on update check dialog.
 msgid "Windows 10 App Essentials update"
 msgstr "Windows 10 Osnove Aplikacijam posodobitve"
@@ -123,6 +130,7 @@ msgstr "Povezovanje"
 msgid "Error downloading add-on update."
 msgstr "Napaka med prenosom posodobitve dodatka."
 
+#. Translators: The title of a dialog indicating that an error occurred while downloading an update to NVDA.
 #. Translators: The title of a dialog presented when an error occurs.
 msgid "Error"
 msgstr "Napaka"

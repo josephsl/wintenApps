@@ -60,8 +60,9 @@ changing update settings for the add-on, be sure to save NVDA settings.
 * Initial support for floating Emoji input panel in build 16215 or later
   (for best experience when reading emojis, use Windows OneCore speech
   synthesizer).
-* In some apps, live region text is announced. This includes alerts in Edge
-  and others. Note that this may result in double-speaking in some cases.
+* In some apps, live region text is announced. This includes alerts in Edge,
+  results in Calculator and others. Note that this may result in
+  double-speaking in some cases.
 * Toasts are no longer announced multiple times in Creators Update and
   later.
 
@@ -74,6 +75,8 @@ changing update settings for the add-on, be sure to save NVDA settings.
 ## Calcolatrice
 
 * When ENTER or Escape is pressed, NVDA announces calculation results.
+* For calculations such as unit converter and currency converter, NVDA will
+  announce results as soon as calculations are entered.
 
 ## calendario
 

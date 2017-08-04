@@ -67,8 +67,9 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
   dans la build 16215 ou ultérieure (pour une meilleure expérience lors de
   la lecture d'emojis,, utiliser le synthétiseur vocal Windows OneCore).
 * Dans certaines apps, le texte de la région en direct est annoncé. Cela
-  inclut les alertes dans Edge et autres. Notez que cela peut entraîner une
-  double verbalisation dans certains cas.
+  inclut les alertes dans Edge, résultats dans la calculatrice et
+  autres. Notez que cela peut entraîner une double verbalisation dans
+  certains cas.
 * Les toasts ne sont plus annoncés plusieurs fois dans Creators Update et
   supérieur.
 
@@ -84,6 +85,8 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 
 * Lorsque vous appuyez sur Entrée ou Échap, NVDA annonce les résultats du
   calcul.
+* Pour les calculs tels que le convertisseur d'unités et le convertisseur de
+  devises, NVDA annoncera les résultats dès que les calculs seront entrés.
 
 ## calendrier
 

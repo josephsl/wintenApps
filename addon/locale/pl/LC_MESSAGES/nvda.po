@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-05-05 22:05+1000\n"
-"PO-Revision-Date: 2017-06-16 14:34+0100\n"
+"PO-Revision-Date: 2017-07-29 16:05+0100\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: pl <LL@li.org>\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
 
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on)..
+#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
@@ -32,10 +32,11 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "Stara wersja systemu windows"
 
+#. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "Nie ma więcej danych pogodowych dla tego elementu."
 
-#. Translators: the description for the activateLongDescription script on browseMode documents.
+#. Translators: the description for the showMessageLongDesc script on Skype for Windows 10.
 msgid "Shows the message details."
 msgstr "Wyświetla szczegóły wiadomości."
 
@@ -45,11 +46,15 @@ msgstr "Pisanie przerwane"
 
 #. Translators: Presented when message history isn't found in Skype Preview app.
 msgid "Chat history not found"
-msgstr "Nieodnaleziono historii rozmowy"
+msgstr "Nieodnaleziono historii rozmów"
 
 #. Translators: Input help mode message for a command in Skype Preview app.
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "Wymawia wiadomość i przenosi na nią kursor przeglądu"
+
+#. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
+msgid "No emoji"
+msgstr ""
 
 #. Translators: Announced in braille when suggestions appear.
 msgid "suggestions"
@@ -65,6 +70,8 @@ msgstr "Ustawienia dodatku Windows 10 app essentials"
 msgid "Error checking for update."
 msgstr "Błąd sprawdzania aktualizacji."
 
+#. Translators: Title of the dialog shown when add-on update check fails.
+#. Translators: Title of the dialog presented when no add-on update is available.
 #. Translators: Title of the add-on update check dialog.
 msgid "Windows 10 App Essentials update"
 msgstr "Windows 10 App Essentials aktualizacja"
@@ -122,6 +129,7 @@ msgstr "łączenie"
 msgid "Error downloading add-on update."
 msgstr "Błąd pobierania dodatku."
 
+#. Translators: The title of a dialog indicating that an error occurred while downloading an update to NVDA.
 #. Translators: The title of a dialog presented when an error occurs.
 msgid "Error"
 msgstr "Błąd"

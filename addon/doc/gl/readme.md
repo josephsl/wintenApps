@@ -63,8 +63,8 @@ NVDA.
   16215 ou posterior (para uns mellores resultados, usa o sintetizador de
   voz Windows OneCore).
 * Nalgunhas aplicacións, anúnciase o texto en rexións vivas. Esto inclúe
-  alertas en Edge e outros. Ten en centa que esto poderá causar unha fala
-  por duplicado nalgúns casos.
+  alertas en Edge, na calculadora e noutros. Ten en conta que esto poderá
+  causar unha fala por duplicado nalgúns casos.
 * Toasts xa non se anuncian moitas veces na Actualización Creators e
   posterior.
 
@@ -77,6 +77,8 @@ NVDA.
 ## Calculadora
 
 * Cando se prema INTRO ou Escape, NVDA anuncia os resultados do cálculo.
+* Para cálculos coma conversión de unidades e conversión de moneda, o NVDA
+  anunciará os resultados tan pronto coma os cálculos se introduzan.
 
 ## calendario
 
