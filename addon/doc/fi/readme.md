@@ -62,8 +62,9 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
   emojinsyöttöpaneelille (käytä parhaan tuloksen saamiseksi Windows OneCore
   -puhesyntetisaattoria).
 * Joidenkin sovellusten Aktiivisen alueen teksti luetaan. Näitä ovat
-  mm. Edgen ja muiden ilmoitukset. Huomaa, että tämä saattaa johtaa
-  joissakin tapauksissa ilmoitusten kahdesti puhumiseen.
+  mm. Edgen ilmoitukset ja laskutoimitusten tulokset Laskimessa. Huomaa,
+  että tämä saattaa johtaa joissakin tapauksissa ilmoitusten kahdesti
+  puhumiseen.
 * Ilmoitusruutuja ei enää puhuta moneen kertaan Creators-päivityksessä ja
   uudemmissa.
 
@@ -77,6 +78,8 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
 ## Laskin
 
 * NVDA ilmoittaa laskutoimituksen tuloksen Enteriä tai Esciä painettaessa.
+* NVDA puhuu laskutoimitusten tulokset (esim. yksikkö- ja
+  valuuttamuuntimessa) heti laskukaavoja syötettäessä.
 
 ## Kalenteri
 

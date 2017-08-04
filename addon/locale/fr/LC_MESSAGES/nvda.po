@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.9\n"
 
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on)..
+#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
@@ -32,10 +32,11 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "Ancienne version de Windows"
 
+#. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "Aucune donnée météo supplémentaire pour cet élément."
 
-#. Translators: the description for the activateLongDescription script on browseMode documents.
+#. Translators: the description for the showMessageLongDesc script on Skype for Windows 10.
 msgid "Shows the message details."
 msgstr "Afficher les détails du message."
 
@@ -51,6 +52,10 @@ msgstr "Historique de discussion non trouvé"
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "Annoncer un message récent et y déplacer le curseur de revue"
 
+#. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
+msgid "No emoji"
+msgstr ""
+
 #. Translators: Announced in braille when suggestions appear.
 msgid "suggestions"
 msgstr "suggestions"
@@ -65,6 +70,8 @@ msgstr "Paramètres  du module complémentaire Windows 10 App Essentials"
 msgid "Error checking for update."
 msgstr "Erreur durant la recherche de mise à jour."
 
+#. Translators: Title of the dialog shown when add-on update check fails.
+#. Translators: Title of the dialog presented when no add-on update is available.
 #. Translators: Title of the add-on update check dialog.
 msgid "Windows 10 App Essentials update"
 msgstr "Mise à jour Windows 10 App Essentials"
@@ -125,6 +132,7 @@ msgid "Error downloading add-on update."
 msgstr ""
 "Erreurs durant le téléchargement de la mise à jour du module complémentaire."
 
+#. Translators: The title of a dialog indicating that an error occurred while downloading an update to NVDA.
 #. Translators: The title of a dialog presented when an error occurs.
 msgid "Error"
 msgstr "Erreur"

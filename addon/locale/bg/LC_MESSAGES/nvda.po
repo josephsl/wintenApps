@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.9\n"
 
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on)..
+#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
@@ -32,10 +32,11 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "Стара версия на Windows"
 
+#. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "Няма повече синоптични данни за този елемент."
 
-#. Translators: the description for the activateLongDescription script on browseMode documents.
+#. Translators: the description for the showMessageLongDesc script on Skype for Windows 10.
 msgid "Shows the message details."
 msgstr "Показва подробните данни за съобщението."
 
@@ -51,6 +52,10 @@ msgstr "Съдържанието на дискусията не бе намер�
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "Докладва и премества курсора за преглед до скорошно съобщение"
 
+#. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
+msgid "No emoji"
+msgstr ""
+
 #. Translators: Announced in braille when suggestions appear.
 msgid "suggestions"
 msgstr "предложения"
@@ -65,6 +70,8 @@ msgstr "Настройки на добавката Базов пакет за п
 msgid "Error checking for update."
 msgstr "Грешка при проверката за обновления."
 
+#. Translators: Title of the dialog shown when add-on update check fails.
+#. Translators: Title of the dialog presented when no add-on update is available.
 #. Translators: Title of the add-on update check dialog.
 msgid "Windows 10 App Essentials update"
 msgstr "Обновяване на Базов пакет за приложения в Windows 10"
@@ -124,6 +131,7 @@ msgstr "Свързване"
 msgid "Error downloading add-on update."
 msgstr "Грешка при сваляне на обновлението за добавката."
 
+#. Translators: The title of a dialog indicating that an error occurred while downloading an update to NVDA.
 #. Translators: The title of a dialog presented when an error occurs.
 msgid "Error"
 msgstr "Грешка"

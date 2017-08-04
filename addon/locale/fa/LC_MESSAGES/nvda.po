@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
 
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on)..
+#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
@@ -32,10 +32,11 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "نگارشِ قدیمیِ ویندوز"
 
+#. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "اطلاعاتِ آب و هوا برای این مورد موجود نیست."
 
-#. Translators: the description for the activateLongDescription script on browseMode documents.
+#. Translators: the description for the showMessageLongDesc script on Skype for Windows 10.
 msgid "Shows the message details."
 msgstr ""
 
@@ -51,6 +52,10 @@ msgstr "سابقه‌ی گپ پیدا نشد."
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "آخرین پیام را میخوانَد و مکان‌نمای بازبینی را روی آخرین پیام میبَرَد."
 
+#. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
+msgid "No emoji"
+msgstr ""
+
 #. Translators: Announced in braille when suggestions appear.
 msgid "suggestions"
 msgstr "پیشنهادها"
@@ -65,6 +70,8 @@ msgstr "تنظیماتِ افزونه‌ی نیازمندی‌های حیاتی�
 msgid "Error checking for update."
 msgstr "خطا هنگامِ بررسیِ به‌روزرسانی."
 
+#. Translators: Title of the dialog shown when add-on update check fails.
+#. Translators: Title of the dialog presented when no add-on update is available.
 #. Translators: Title of the add-on update check dialog.
 msgid "Windows 10 App Essentials update"
 msgstr "به‌روزرسانیِ نیازمندی‌های حیاتیِ برنامک‌های ویندوزِ ۱۰"
@@ -123,6 +130,7 @@ msgstr "در حالِ برقراریِ ارتباط"
 msgid "Error downloading add-on update."
 msgstr "خطا هنگامِ بارگیریِ به‌روزرسانیِ افزونه."
 
+#. Translators: The title of a dialog indicating that an error occurred while downloading an update to NVDA.
 #. Translators: The title of a dialog presented when an error occurs.
 msgid "Error"
 msgstr "خطا"
