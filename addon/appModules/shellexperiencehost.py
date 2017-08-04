@@ -50,6 +50,7 @@ class AppModule(appModuleHandler.AppModule):
 			focus = api.getFocusObject()
 			if isinstance(focus, UIA):
 				automationID = focus.UIAElement.cachedAutomationID
+				notificationList = focus
 				if automationID == "ExpandCollapseButton":
 					notificationList = focus.previous
 				elif automationID.startswith("Microsoft.QuickAction"):
