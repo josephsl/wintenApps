@@ -8,7 +8,11 @@
 
 import os
 import threading
-import urllib
+# Python 3 calls for using urllib.request instead, which is functionally equivalent to urllib2.
+try:
+	from urllib.request import urlopen
+except ImportError:
+	from urllib import urlopen
 import tempfile
 import ctypes
 import ssl
@@ -68,13 +72,13 @@ def checkForAddonUpdate():
 	#if config.conf["wintenApps"]["updateChannel"] == "dev" and versionInfo.updateVersionType != "stable":
 		#updateURL = "http://www.josephsl.net/files/nvdaaddons/getupdate.php?file=w10-try"
 	try:
-		res = urllib.urlopen(updateURL)
+		res = urlopen(updateURL)
 		res.close()
 	except IOError as e:
 		# SSL issue (seen in NVDA Core earlier than 2014.1).
 		if isinstance(e.strerror, ssl.SSLError) and e.strerror.reason == "CERTIFICATE_VERIFY_FAILED":
 			_updateWindowsRootCertificates()
-			res = urllib.urlopen(updateURL)
+			res = urlopen(updateURL)
 		else:
 			raise
 	if res.code != 200:
@@ -294,7 +298,7 @@ def _updateWindowsRootCertificates():
 	crypt = ctypes.windll.crypt32
 	# Get the server certificate.
 	sslCont = ssl._create_unverified_context()
-	u = urllib.urlopen("https://addons.nvda-project.org", context=sslCont)
+	u = urlopen("https://addons.nvda-project.org", context=sslCont)
 	cert = u.fp._sock.getpeercert(True)
 	u.close()
 	# Convert to a form usable by Windows.
