@@ -6,7 +6,6 @@
 
 import appModuleHandler
 import api
-import winVersion
 import controlTypes
 from NVDAObjects.UIA import UIA
 import queueHandler
