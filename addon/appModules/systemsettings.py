@@ -50,36 +50,6 @@ class AppModule(appModuleHandler.AppModule):
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache = ""
 
-	def event_nameChange(self, obj, nextHandler):
-		# For now, all name change events will result in items being announced.
-		if hasattr(obj, "event_liveRegionChange"):
-			return
-		if isinstance(obj, UIA) and obj.name != self._nameChangeCache:
-			automationID = obj.UIAElement.cachedAutomationID
-			try:
-				# Don't repeat the fact that update download/installation is in progress if progress bar beep is on.
-				if ((automationID == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock" and obj.previous.value <= "0")
-				# For search progress bar, do not repeat it.
-				or (automationID == "ProgressBar")
-				# Do not announce "result not found" error unless have to.
-				or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")
-				# But announce individual update progress in build 16215 and later.
-				or ("ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock"))):
-					# Until the spacing problem is fixed for update label...
-					if "ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock"):
-						self._nameChangeCache = " ".join([obj.parent.name, obj.name])
-						ui.message(" ".join([obj.parent.name, obj.name]))
-					else:
-						self._nameChangeCache = obj.name
-						ui.message(obj.name)
-			except AttributeError:
-				pass
-		nextHandler()
-
-	# Live region changed event is fired for property changes.
-	event_UIA_liveRegionChanged = event_nameChange
-
-	# And because announcing progress bar values via live region change is anoying...
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA) and obj.name != self._nameChangeCache:
 			automationID = obj.UIAElement.cachedAutomationID

@@ -34,22 +34,6 @@ class AppModule(appModuleHandler.AppModule):
 	# just like Settings app, have a cache of download progress text handy.
 	_appInstallProgress = ""
 
-	def event_nameChange(self, obj, nextHandler):
-		# Store raises live region change, so make sure to prevent double-speaking.
-		if hasattr(obj, "event_liveRegionChange"):
-			return
-		if isinstance(obj, NVDAObjects.UIA.UIA) and obj.UIAElement.cachedAutomationID == "_progressText":
-			if obj.name != self._appInstallProgress:
-				self._appInstallProgress = obj.name
-				# Don't forget to announce product title.
-				productTitle = obj.parent.previous
-				# Since March 2017 update, it is no longer the product name, but a progress button.
-				if productTitle and productTitle.role == controlTypes.ROLE_BUTTON:
-					productTitle = productTitle.parent.previous
-				if productTitle and productTitle.UIAElement.cachedAutomationID == "_productTitle":
-					ui.message(" ".join([productTitle.name, obj.name]))
-		nextHandler()
-
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, NVDAObjects.UIA.UIA) and obj.UIAElement.cachedAutomationID == "_progressText":
 			if obj.name != self._appInstallProgress:

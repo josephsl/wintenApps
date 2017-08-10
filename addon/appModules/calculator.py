@@ -36,16 +36,11 @@ class AppModule(appModuleHandler.AppModule):
 		self.shouldAnnounceResult = False
 		nextHandler()
 
-	def event_UIA_liveRegionChanged(self, obj, nextHandler):
+	def event_liveRegionChange(self, obj, nextHandler):
 		# Unfortunately, the control that fires this has no automation ID yet says it is a generic te4xt block.
 		# This may mean anything can be announced, so try to filter them.
 		if shouldLiveRegionChangeProceed(obj):
 			nextHandler()
-
-	try:
-		event_liveRegionChange = event_UIA_liveRegionChanged
-	except:
-		pass
 
 	def script_calculatorResult(self, gesture):
 		# To prevent double focus announcement, check where we are.

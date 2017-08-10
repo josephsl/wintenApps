@@ -26,7 +26,7 @@ import addonHandler
 addonHandler.initTranslation()
 
 # Extra UIA constants
-UIA_LiveRegionChangedEventId = 20024
+# None at this time.
 
 # UIA COM constants
 TreeScope_Subtree = 7
@@ -146,10 +146,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super(GlobalPlugin, self).__init__()
 		# #20: don't even think about proceeding in secure screens (especially add-on updates).
 		if globalVars.appArgs.secure: return
-		# Listen for additional events (to be removed once NVDA Core supports them.
-		if UIA_LiveRegionChangedEventId not in UIAHandler.UIAEventIdsToNVDAEventNames:
-			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_LiveRegionChangedEventId] = "UIA_liveRegionChanged"
-			UIAHandler.handler.clientObject.addAutomationEventHandler(UIA_LiveRegionChangedEventId,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
@@ -236,15 +232,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "controllerFor")
 		nextHandler()
 
-	def event_UIA_liveRegionChanged(self, obj, nextHandler):
+	def event_liveRegionChange(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "liveRegionChange")
 		nextHandler()
-
-	# In NvDA 2017.3, live region change is officially part of Core, so let that event also log debugging information.
-	try:
-		event_liveRegionChange = event_UIA_liveRegionChanged
-	except:
-		pass
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "elementSelected")
