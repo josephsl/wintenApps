@@ -54,7 +54,9 @@ class AppModule(appModuleHandler.AppModule):
 				if automationID == "ExpandCollapseButton":
 					notificationList = focus.previous
 				elif automationID.startswith("Microsoft.QuickAction"):
-					notificationList = focus.parent.parent.parent.previous.previous
+					possibleGridView = focus.parent.parent
+					if isinstance(possibleGridView, UIA) and possibleGridView.UIAElement.cachedAutomationID == "QuickActionsGridView":
+						notificationList = focus.parent.parent.parent.previous.previous
 				if isinstance(notificationList, UIA) and notificationList.UIAElement.cachedAutomationID == "MainListView" and notificationList.childCount == 0:
 					if automationID == "ExpandCollapseButton":
 						focus.simpleNext.setFocus()
