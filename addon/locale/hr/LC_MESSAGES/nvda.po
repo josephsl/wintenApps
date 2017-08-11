@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2017-07-27 17:47-0700\n"
+"PO-Revision-Date: 2017-08-04 14:13+0100\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: \n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -54,7 +54,7 @@ msgstr "Izgovara zadnju poruku i premještava pregledni kursor na nju."
 
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
-msgstr ""
+msgstr "Nema emoji"
 
 #. Translators: Announced in braille when suggestions appear.
 msgid "suggestions"

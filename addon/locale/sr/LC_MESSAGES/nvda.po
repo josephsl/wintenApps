@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.03\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-03-03 22:05+1000\n"
-"PO-Revision-Date: 2017-06-16 23:09+0100\n"
-"Last-Translator: Nikola Jovic <wwenikola123@gmail.com>\n"
+"PO-Revision-Date: 2017-08-04 20:02+0100\n"
+"Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -54,7 +54,7 @@ msgstr "Prijavljuje i pomera pregledni kursor na poruku"
 
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
-msgstr ""
+msgstr "Nema Emotikona"
 
 #. Translators: Announced in braille when suggestions appear.
 msgid "suggestions"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-05-05 22:05+1000\n"
-"PO-Revision-Date: 2017-07-29 16:05+0100\n"
+"PO-Revision-Date: 2017-08-04 14:13+0100\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: pl <LL@li.org>\n"
 "Language: pl\n"
@@ -54,7 +54,7 @@ msgstr "Wymawia wiadomość i przenosi na nią kursor przeglądu"
 
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
-msgstr ""
+msgstr "Nie ma emoji"
 
 #. Translators: Announced in braille when suggestions appear.
 msgid "suggestions"
