@@ -33,17 +33,20 @@ dodatak sa zadnjom stabilnom inačicom (podverzija 15063) i zadnju stabilnu
 inačicu nvda. Također, prilikom spremanja postavki za nadogradnju dodatka,
 budite sigurni da ste spremili postavke za NVDA.
 
+Important note about NVDA 2017.3: due to backwards incompatible changes in
+NVDA 2017.3, add-on version 17.09 and later will not work on NVDA versions
+earlier than 2017.3.
+
 ## Općenito
 
 * U kontekstnim izbornicima za pločice početnog izbornika, Podizbornici se
   prepoznaju ispravno.
-* Većina dijaloških okvir sada se prepoznaje kao pravi dijaloški okviri. Ovo
-  ukljućuje dijaloški okvir insider preview (aplikacija postavke) to
-  ukljućuje i novi dijaloški okvir kontrole korisničkog računa u buildu
-  14328 i noviji za NVDA 2016.2.1 i ranije.
-* Izgled/zatvaranje prijedloga za većinu uređivačkih polja (vidljivo u
-  Postavkama i Trgovini) se izgovara putem zvuka i brajice.. to također
-  ukljućuje polje pretrage u izborniku start.
+* Certain dialogs are now recognized as proper dialogs. These include
+  Insider Preview dialog (settings app) and new-style UAC dialog in build
+  14328 and later for NvDA 2016.2.1 or earlier.
+* Appearance/close of suggestions for certain search fields (notably
+  Settings and Store apps) is announced via sounds and braille. This also
+  includes Start menu search box. This is now part of NVDA as of 2017.3.
 * NVDA može čitati broj prijedloga prilikom pretrage u većini slučajeva. Ova
   opcija se kontrolira u "izgovori poziciju objekta" u dijaloškom okviru
   prezentacija objekt.
@@ -57,13 +60,14 @@ budite sigurni da ste spremili postavke za NVDA.
 * Mogućnost praćenja događaja koji dolaze iz  Univerzalnih Windows Platform
   (UWP) aplikacija ako je NVDA sa postavljenim načinom zapisa na debug
   (2017.1 ili noviji).
-* Inicijalna podrška za područje unosa Emoji znakova u verziji 16215 ili
-  novijoj (za najbolje iskustvo pri čitanju emoji znakova, koristeći Windows
-  OneCore govornu sintezu 
-* U nekim aplikacijama, NVDA odmah pročita live region text. To uključuje
-  upozorenja u programu Edge, rezultate u kalkulatoru i drugo. Napominjem da
-  u nekim slučajevima dolazi do ponavljanja.
-* Obavijesti se više ne ponavljaju u verziji Creators update I novijim. 
+* Support for floating Emoji input panel in Fall Creators Update (for best
+  experience when reading emojis, use Windows OneCore speech synthesizer).
+* In some apps, live region text is announced. This includes alerts in Edge,
+  results in Calculator and others. Note that this may result in
+  double-speaking in some cases. Most of the scenarios are now part of NVDA
+  2017.3.
+* Toasts are no longer announced multiple times in Creators Update and
+  later. This fix is included in NVDA 2017.3.
 
 ## Alarm i sat
 
@@ -114,9 +118,8 @@ budite sigurni da ste spremili postavke za NVDA.
 
 ## Microsoft Edge
 
-* Obavijesti kao što su to preuzimanja datoteka sada se čitaju.
-* U nadogradnji za tvorce, NVDA više neće izgovarati "WebRuntime Content
-  View" prilikom prebacivanja na drugi prikaz.
+* Notifications such as file downloads and various webpage alerts are now
+  announced. Most of these scenarios are now part of NVDA 2017.3.
 
 ## Osobe
 
@@ -125,17 +128,17 @@ budite sigurni da ste spremili postavke za NVDA.
 
 ## Postavke
 
-* Većina informacija poput Windows Update trake napredovanja  izgovaraju se
-  automatski.
+* Certain information such as Windows Update progress is now reported
+  automatically. NVDA itself will handle majority of cases in 2017.3.
 * Vrijednosti trake napredovanja i druge informacije više se ne izgovaraju
   duplo.
-* Ako je potrebno duže vremena traženja postavki, NVDA će izgovoriti
-  "traženje" i stanje rezultata pretrage kao što je to na primjer
-  nemogučnost pronalaska dane opcije.
+* If it takes a while to search for settings, NVDA will announce "searching"
+  and search result status such as if a setting cannot be found. This is now
+  done from NVDA in 2017.3.
 * Prupe postavaka se prepoznaju prilikom korištenja objektne navigacije za
   kretanje po elementima.
-* Za većinu odabirnih okvira, NVDA više neće neuspjevati prepoznavati lznaku
-  i-ili promjenu vrijednosti.
+* For some combo boxes, NVDA will no longer fail to recognize labels and/or
+  announce value changes. Value change fix is included in NVDA 2017.3.
 
 ## Skype
 
@@ -162,9 +165,11 @@ budite sigurni da ste spremili postavke za NVDA.
 
 * poslije provjere nadogradnji aplikacija, aplikacije na popisu koje se
   trebaju nadograditi su pravilno označene.
-* Sada se izgovaraju prijedlozi pretrage.
-* Prilikom preuzimanja sadržaja kao što su to aplikacije i filmovi, NVDA će
-  izgovarati naziv proizvoda i traku napredovanja.
+* Appearance of search suggestions are now announced. This is now part of
+  NVDA 2017.3.
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress. A basic fix is now part of NVDA
+  2017.3.
 
 ## Prognoza
 

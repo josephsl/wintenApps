@@ -31,17 +31,20 @@ and NVDA 2017.1 or later. For best results, use the add-on with latest
 stable build (build 15063) and latest stable version of NVDA. Also, after
 changing update settings for the add-on, be sure to save NVDA settings.
 
+Important note about NVDA 2017.3: due to backwards incompatible changes in
+NVDA 2017.3, add-on version 17.09 and later will not work on NVDA versions
+earlier than 2017.3.
+
 ## Generale
 
 * Nei menu di contesto per le mattonelle del menu avvio, vengono
   riconosciuti in maniera corretta i sottomenu.
-* Molte finestre di dialogo vengono gestite correttamente, soprattutto
-  quelle inerenti il feedback su Windows Insider e le impostazioni, nonché i
-  nuovi controlli UAC presenti dalla build 14328 e successive per NVDA
-  2016.2.1 in poi
-* Viene annunciata la comparsa di suggerimenti nei risultati di ricerca,
-  soprattutto nelle impostazioni e nello store, attraverso sia suoni che
-  braille. In questo è compresa anche la finestra di ricerca del menu avvio.
+* Certain dialogs are now recognized as proper dialogs. These include
+  Insider Preview dialog (settings app) and new-style UAC dialog in build
+  14328 and later for NvDA 2016.2.1 or earlier.
+* Appearance/close of suggestions for certain search fields (notably
+  Settings and Store apps) is announced via sounds and braille. This also
+  includes Start menu search box. This is now part of NVDA as of 2017.3.
 * NVDA può annunciare il numero dei suggerimenti quando si esegue una
   ricerca, almeno nella maggior parte dei casi. Questa funzione è
   controllata dall'opzione "leggi le informazioni sulla posizione
@@ -57,14 +60,14 @@ changing update settings for the add-on, be sure to save NVDA settings.
   mentre quelle in sviluppo giornaliero.
 * Ability to track events coming from Universal Windows Platform (UWP) apps
   if NVDA is run with debug logging enabled.
-* Initial support for floating Emoji input panel in build 16215 or later
-  (for best experience when reading emojis, use Windows OneCore speech
-  synthesizer).
+* Support for floating Emoji input panel in Fall Creators Update (for best
+  experience when reading emojis, use Windows OneCore speech synthesizer).
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
-  double-speaking in some cases.
+  double-speaking in some cases. Most of the scenarios are now part of NVDA
+  2017.3.
 * Toasts are no longer announced multiple times in Creators Update and
-  later.
+  later. This fix is included in NVDA 2017.3.
 
 ## Allarmi e sveglia
 
@@ -120,9 +123,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
 ## Microsoft Edge
 
 * Notifications such as file downloads and various webpage alerts are now
-  announced.
-* Nell'aggiornamento Creators, NVDA non annuncerà più "WebRuntime Content
-  View" quando si passa ad un altro sito web.
+  announced. Most of these scenarios are now part of NVDA 2017.3.
 
 ## Persone
 
@@ -131,16 +132,17 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Impostazioni
 
-* Vengono annunciate automaticamente le informazioni di avanzamento delle
-  operazioni di Windows Update.
+* Certain information such as Windows Update progress is now reported
+  automatically. NVDA itself will handle majority of cases in 2017.3.
 * Le informazioni delle barre di avanzamento non vengono più lette due
   volte.
-* Se la ricerca di un'impostazione richiede troppo tempo, NVDA si comporterà
-  come se non ci siano risultati da visualizzare.
+* If it takes a while to search for settings, NVDA will announce "searching"
+  and search result status such as if a setting cannot be found. This is now
+  done from NVDA in 2017.3.
 * Il gruppo impostazioni viene riconosciuto quando ci si sposta tra i
   controlli usando la navigazione ad oggetti.
-* Per alcune caselle combinate, NVDA non commetterà più errori nel
-  riconoscere le etichette o annunciare i cambiamenti dei valori.
+* For some combo boxes, NVDA will no longer fail to recognize labels and/or
+  announce value changes. Value change fix is included in NVDA 2017.3.
 
 ## Skype
 
@@ -167,9 +169,11 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 * Dopo aver controllato la presenza di aggiornamenti di app, i nomi delle
   app nell'elenco degli aggiornamenti viene correttamente etichettato.
-* viene annunciata la comparsa  dei suggerimenti di ricerca
-* Mentre si scaricano contenuti quali app o film, NVDA ne leggerà il nome e
-  l'avanzamento del download.
+* Appearance of search suggestions are now announced. This is now part of
+  NVDA 2017.3.
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress. A basic fix is now part of NVDA
+  2017.3.
 
 ## Meteo
 

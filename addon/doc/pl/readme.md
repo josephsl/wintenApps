@@ -14,7 +14,7 @@ każdej aplikacji co jest wspierane):
 * Kalendarz
 * Kalkulator (nowoczesny).
 * Cortana
-* Game Bar
+* Pasek gry
 * Muzyka Groowe
 * Poczta
 * Mapy
@@ -32,6 +32,10 @@ dodatek z najnowszą stabilną kompilacją (kompilacja 15063) i ostatnią
 stabilną wersję NVDA. Także, po zmianie ustawień aktualizacji dodatku,
 trzeba się upewnić, czy konfiguracja jest zachowana.
 
+Ważna informacja dotycząca NVDA 2017.3: ze względu wstecznie niezgodnych
+zmian  w NVDA 2017.3, wersja dodatku 17.09 i nowsze, nie będą działały z
+wersjami starszymi niż 2017.3.
+
 ## Ogólne
 
 * W meni kontekstowym kafelek meni start, meni rozwijane są prawidłowo
@@ -42,7 +46,8 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
   użytkownika w kompilacji i nowszych dla NvDA 2016.2.1 i starsze.
 * pojawianie się/zamykanie podpowiedzi dla niektórych pól wyszukiwania
   (zauważalne w aplikacjach Ustawienia i Sklep) są wymawiane i wyświetlane
-  na monitorze brajlowskim. To również dotyczy pola edycyjnego w meni start.
+  na monitorze brajlowskim. To również dotyczy pola edycyjnego w meni
+  start. To usprawnienie jest częścią NVDA 2017.3.
 * NVDA może ogłaszać liczbę wypowiedzi przy wyszukiwaniu w wielu
   przypadkach. Ta opcja jest kontrolowana przez opcję "odczytuj położenie
   obiektu" w oknie dialogowym "prezentacja obiektu".
@@ -61,11 +66,12 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 * Wsparcie stępne dla pływającego panelu wprowadzania Emoji w kompilacji
   16215 lub nowszej (dla lepszych wyników trzeba używać syntezatora mowy
   OneCore, czyli Microsoft sapi mobile).
-* In some apps, live region text is announced. This includes alerts in Edge,
-  results in Calculator and others. Note that this may result in
-  double-speaking in some cases.
-* Toasts are no longer announced multiple times in Creators Update and
-  later.
+* W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. W tym są
+  włączone powiadomienia w Microsoft Edge i innych. Proszę mieć na uwadze,
+  że to może skutkować podwójne wymawianie w niektórych
+  przypadkach. Niektóre takie zdarzenia są imvlementowane w NVDa 20ag.c.
+* Powiadomienia nie są wymawiane wiele razy w aktualizacji dla twórców i
+  nowszych aktualizacjach. To usprawnienie jest teraz częścią NVDA 2017.3. 
 
 ## Alarmy i zegar
 
@@ -76,8 +82,8 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 ## Kalkulator
 
 * Kiedy enter albo escape jest wciśnięty, NVDA wymawia wynik obliczenia.
-* For calculations such as unit converter and currency converter, NVDA will
-  announce results as soon as calculations are entered.
+* Dla wyliczeń, takich jak przetwarzanie jednostek lub waluty, NVDA
+  automatycznie będzie wymawiało wyniki obliczenia
 
 ## Kalendarz
 
@@ -91,10 +97,10 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 * NVDA będzie przyciszony, gdy mówisz do Cortany.
 * NVDA teraz wymawia potwierdzenie przypomnienia po jego ustawieniu.
 
-## Game Bar
+## Pasek gry
 
-* NVDA will announce appearance of Game Bar window. Due to technical
-  limitations, NVDA cannot interact fully with Game Bar.
+* NVDA będzie powiadamiał o istnieniu paska do gier w danym momencie,
+  interakcja z przyczyn technicznych z tą kontrolą nie jest możliwa.
 
 ## Muzyka Groowe
 
@@ -116,9 +122,7 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 ## Microsoft Edge
 
 * Powiadomienia, takie jak pobierania plików i różne ostrzeżenia na stronach
-  webowychsą oznajmiane.
-* W aktualizacji twórczej, NVDA więcej nie będzie wymawiać "WebRuntime
-  Content View" kiedy przechodzimy na inną stronę webową.
+  webowychsą oznajmiane. Niektóre takie scenariusze są częścią NVDA 2017.3.
 
 ## Osoby
 
@@ -128,15 +132,18 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 ## Ustawienia
 
 * Większość informacji, tak jak pasek stanu w Windows update, będzie
-  wypowiadany automatycznie.
+  wypowiadany automatycznie. Większość tych informacji będzie wypowiadana
+  przez NVDA 2017.3
 * Wartości paska postępu i inne informacje, nie są wypowiadane
   automatycznie.
 * Jeżeli wyszukiwanie ustawień trwa dłużej niż zwykle, NVDA będzie wymawiał
-  "wyszukiwanie", oraz wynik wyszukiwania, jeżeli istnieje.
+  "wyszukiwanie", oraz wynik wyszukiwania, jeżeli istnieje. To usprawnienie
+  jest teraz częścią NVDA 2017.3.
 * Grupy ustawień są rpspoznawane przy użyciu nawigacji obiektowej aby było
   można poruszać się pomięcy kontrolkami.
 * Dla niektórych pól kombi, NVDA będzie wykrywał nazwę oraz wypowiadał
-  zmiany wartości.
+  zmiany wartości. Poprawka zmiany wartości jest wprowadzona w wersji NVDA
+  2017.3.
 
 ## Skype
 
@@ -163,9 +170,11 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 
 * Po sprawdzaniu aktualizacji aplikacji, nazyw aplikacji w liście aplikacji
   do zaktualizowania są poprawnie oznaczone.
-* Istnienie podpowiedzi wyszukiwania teraz jest oznajmiane.
+* Istnienie podpowiedzi wyszukiwania teraz jest oznajmiane. To usprawnienie
+  jest teraz częścią NVDA 2017.3
 * Przy pobieraniu zawartości, takiej jak apliakacje i muzyka, NVDA wymówi
-  nazwę produktu i pasek postępu.
+  nazwę produktu i pasek postępu. Podstawowa poprawka jest teraz częscią
+  NVDA 2017.3.
 
 ## Pogoda
 

@@ -35,6 +35,11 @@ build stable (build 15063) et la dernière version stable de NVDA. De plus,
 après avoir modifié les paramètres de mise à jour pour le module
 complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 
+Note importante concernant NVDA 2017.3 : en raison de modifications
+incompatibles en arrière dans NVDA 2017.3, le module complémentaire version
+17.09 et ultérieure ne fonctionnera pas sur les versions NVDA antérieures à
+2017.3.
+
 ## Générale
 
 * Dans les menus contextuels pour les tuiles sous-menus du Menu Démarrer
@@ -46,7 +51,7 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 * L'apparition/fermeture des suggestions pour certains champs de recherche
   (notamment Settings et Store app) est annoncé En passant par des sons
   et/ou le braille. Cela inclut également la zone de recherche du menu
-  Démarrer.
+  Démarrer. Cela fait maintenant partie de NVDA à partir de la 2017.3.
 * NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
   majorité des cas. Cette option est contrôlée par "Annoncer le rang de
   l'objet dans une liste" dans la boîte de dialogue Présentation des Objets.
@@ -63,15 +68,16 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 * Possibilité de suivre les événements provenant des apps Universal Windows
   Platform (UWP) si NVDA est exécuté avec la journalisation de débogage
   activée.
-* Première prise en charge pour les Emoji flottants du panneau de saisie
-  dans la build 16215 ou ultérieure (pour une meilleure expérience lors de
-  la lecture d'emojis,, utiliser le synthétiseur vocal Windows OneCore).
-* Dans certaines apps, le texte de la région en direct est annoncé. Cela
-  inclut les alertes dans Edge, résultats dans la calculatrice et
-  autres. Notez que cela peut entraîner une double verbalisation dans
-  certains cas.
+* Prise en charge pour les Emoji flottants du panneau de saisie dans Fall
+  Creators Update (pour une meilleure expérience lors de la lecture
+  d'emojis,, utiliser le synthétiseur vocal Windows OneCore).
+* Dans certaines applications, le texte de la région en direct est
+  annoncé. Cela inclut les alertes dans Edge, résultats dans la calculatrice
+  et autres. Notez que cela peut entraîner une double verbalisation dans
+  certains cas. La plupart des scénarios font maintenant partie de NVDA
+  2017.3.
 * Les toasts ne sont plus annoncés plusieurs fois dans Creators Update et
-  supérieur.
+  supérieur. Ce correctif est inclus dans NVDA 2017.3.
 
 ## Alarmes et horloge
 
@@ -131,9 +137,8 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 ## Microsoft Edge
 
 * Notifications telles que les téléchargements de fichiers et les
-  différentes alertes de la page Web sont maintenant annoncées.
-* Dans Creators Update NVDA n'annoncera plus"WebRuntime Content View" en
-  allant vers un autre site.
+  différentes alertes de la page Web sont maintenant annoncées. La plupart
+  de ces scénarios font maintenant partie de NVDA 2017.3.
 
 ## Personnes
 
@@ -143,16 +148,19 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 ## Paramètres
 
 * Certaines informations telles que l'avancement de la Mise à jour de
-  Windows est maintenant signalé automatiquement.
+  Windows est maintenant signalé automatiquement. NVDA elle-même traitera la
+  majorité des cas dans la 2017.3.
 * Les valeurs de la barre de progression et d'autres informations ne sont
   plus annoncés deux fois.
 * Si il faut du temps pour rechercher des paramètres, NVDA annoncera
   "recherch en cours" et l'état du résultat de la recherche tel comme si un
-  paramètre est introuvable.
+  paramètre est introuvable. Ceci est maintenant fait à partir de NVDA dans
+  la 2017.3.
 * Les groupes de paramètres sont reconnus lorsque vous utilisez la
   navigation par objet pour naviguer entre les commandes.
 * Pour certaines zones de liste déroulantes, NVDA ne manquera plus de
-  reconnaître les étiquettes et/ou d'annoncer les changements de valeur.
+  reconnaître les étiquettes et/ou d'annoncer les changements de
+  valeur. Correction de changement de valeur est inclus dans NVDA 2017.3.
 
 ## Skype
 
@@ -182,9 +190,11 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 * Après vérification des mises à jour d'applications, le nom des
   applications dans la liste des applications à mettre à jour sera
   correctement étiqueté.
-* L'apparition des suggestions de recherche est maintenant annoncée.
+* L'apparition des suggestions de recherche est maintenant annoncée. Cela
+  fait maintenant partie de NVDA 2017.3.
 * Lors du téléchargement de contenus tels que des applications et des films,
-  NVDA annoncera le nom du produit et la progression du téléchargement.
+  NVDA annoncera le nom du produit et la progression du téléchargement. Une
+  solution de base fait désormais partie de NVDA 2017.3.
 
 ## Météo
 
