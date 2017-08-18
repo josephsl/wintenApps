@@ -32,15 +32,19 @@ and NVDA 2017.1 or later. For best results, use the add-on with latest
 stable build (build 15063) and latest stable version of NVDA. Also, after
 changing update settings for the add-on, be sure to save NVDA settings.
 
+Important note about NVDA 2017.3: due to backwards incompatible changes in
+NVDA 2017.3, add-on version 17.09 and later will not work on NVDA versions
+earlier than 2017.3.
+
 ## Allgemein
 
 * Im Kontextmenü von Kacheln werden untermenüs korrekt erkannt
-* Certain dialogs are now recognized as proper dialogs. This include Insider
-  Preview dialog (settings app) and new-style UAC dialog in build 14328 and
-  later for NvDA 2016.2.1 or earlier.
+* Certain dialogs are now recognized as proper dialogs. These include
+  Insider Preview dialog (settings app) and new-style UAC dialog in build
+  14328 and later for NvDA 2016.2.1 or earlier.
 * Appearance/close of suggestions for certain search fields (notably
   Settings and Store apps) is announced via sounds and braille. This also
-  includes Start menu search box.
+  includes Start menu search box. This is now part of NVDA as of 2017.3.
 * NVDA can announce suggestion count when performing a search in majority of
   cases. This option is controlled by "Report object position information"
   in Object presentation dialog.
@@ -54,14 +58,14 @@ changing update settings for the add-on, be sure to save NVDA settings.
   automatically on a weekly or daily basis, respectively.
 * Ability to track events coming from Universal Windows Platform (UWP) apps
   if NVDA is run with debug logging enabled.
-* Initial support for floating Emoji input panel in build 16215 or later
-  (for best experience when reading emojis, use Windows OneCore speech
-  synthesizer).
+* Support for floating Emoji input panel in Fall Creators Update (for best
+  experience when reading emojis, use Windows OneCore speech synthesizer).
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
-  double-speaking in some cases.
+  double-speaking in some cases. Most of the scenarios are now part of NVDA
+  2017.3.
 * Toasts are no longer announced multiple times in Creators Update and
-  later.
+  later. This fix is included in NVDA 2017.3.
 
 ## Wecker und Uhr
 
@@ -113,9 +117,7 @@ changing update settings for the add-on, be sure to save NVDA settings.
 ## Microsoft Edge
 
 * Notifications such as file downloads and various webpage alerts are now
-  announced.
-* In Creators Update, NVDA will no longer announce "WebRuntime Content View"
-  when going to another site.
+  announced. Most of these scenarios are now part of NVDA 2017.3.
 
 ## Kontakte
 
@@ -123,15 +125,16 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 ## Einstellungen
 
-* Bestimmte Informationen wie der Fortschritt bei Windows Updates werden nun
-  automatisch angesagt.
+* Certain information such as Windows Update progress is now reported
+  automatically. NVDA itself will handle majority of cases in 2017.3.
 * Progress bar values and other information are no longer announced twice.
 * If it takes a while to search for settings, NVDA will announce "searching"
-  and search result status such as if a setting cannot be found.
+  and search result status such as if a setting cannot be found. This is now
+  done from NVDA in 2017.3.
 * Settings groups are recognized when using object navigation to navigate
   between controls.
 * For some combo boxes, NVDA will no longer fail to recognize labels and/or
-  announce value changes.
+  announce value changes. Value change fix is included in NVDA 2017.3.
 
 ## Skype
 
@@ -157,9 +160,11 @@ changing update settings for the add-on, be sure to save NVDA settings.
 
 * After checking for app updates, app names in list of apps to be updated
   are correctly labeled.
-* Appearance of search suggestions are now announced.
-* Beim Download von Inhalten wie zum Beispiel Apps und Filme sagt NVDA nun
-  den Namen und den Download-Fortschritt an.
+* Appearance of search suggestions are now announced. This is now part of
+  NVDA 2017.3.
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress. A basic fix is now part of NVDA
+  2017.3.
 
 ## Wetter
 

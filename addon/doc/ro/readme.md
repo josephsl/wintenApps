@@ -33,17 +33,23 @@ cu ultimul build stabil (build 15063) și cea mai recentă versiune stabilă a
 NVDA-ului. De asemenea, după modificarea setărilor de actualizare pentru
 supliment, asigurați-vă că salvați setările NVDA-ului.
 
+Notă importantă despre NVDA 2017.3: Datorită modificărilor incompatibile din
+această versiune de NVDA, atât versiunea 17.09 a suplimentului cât și
+celelalte versiuni mai noi ale acestuia nu vor funcționa pe versiunile NVDA
+mai vechi decât 2017.3.
+
 ## General
 
 * În meniurile contextuale ale tile-urilor din cadrul Start Meniu,
   submeniurile sunt recunoscute corect.
 * Anumite dialoguri sunt acum recunoscute ca dialoguri
-  corespunzătoare. Aceasta include dialogul Insider Preview (în aplicația
+  corespunzătoare. Acestea includ dialogul Insider Preview (în aplicația
   Setări) și un nou stil în dialogul UAC în build 14328 și mai nou pentru
   NvDA 2016.2.1 sau mai vechi.
 * Aspectul/aproape de sugestii pentru anumite câmpuri de căutare (în special
   în aplicațiile Setări și Magazin) este anunțat prin sunete și braille. De
-  asemenea, acesta include caseta de căutare a meniului Start.
+  asemenea, acesta include caseta de căutare a meniului Start. Acum, acesta
+  face parte din NVDA 2017.3.
 * NVDA poate anunța numărul de sugestii la efectuarea unei căutări în
   majoritatea cazurilor. Această opțiune este controlată de „informația
   poziției obiectului în dialogul prezentării obiectului.
@@ -60,14 +66,15 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 * Abilitatea de a urmări evenimentele care provin din platforma universală
   Windows (UWP) și din aplicații, în cazul în care NVDA rulează cu
   diagnosticarea activată.
-* Suport inițial pentru panoul de intrare floating moji în build-ul 16215
-  sau mai nou (pentru o experiență foarte bună în citirea mojiurilor,
-  utilizați sintetizatorul Windows OneCore).
-* În unele aplicații, textul regiunii în care locuiți este anunțat. Aceasta
-  include alertele din Edge, rezultatele din Calculator și altele. Rețineți
-  faptul că asta poate rezulta o dublă vorbire în unele cazuri.
+* Suport pentru panoul de intrare floating moji în build-ul 16215 sau mai
+  nou (pentru o experiență foarte bună în citirea mojiurilor, utilizați
+  sintetizatorul Windows OneCore).
+* În unele aplicații, textul regiunii live este anunțat. Aceasta include
+  alertele din Edge, rezultatele din Calculator și altele. Rețineți faptul
+  că asta poate rezulta o dublă vorbire în unele cazuri. Majoritatea
+  scenariilor fac parte acum din NVDA 2017.3.
 * Toast-urile nu mai sunt anunțate de multe ori în Creators Update și mai
-  nou.
+  nou. Această rezolvare este inclusă în NVDA 2017.3.
 
 ## Alarme și ceas
 
@@ -120,10 +127,9 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 
 ## Microsoft Edge
 
-* Notificările, cum ar fi descărcări de fișiere și diferite alerte ale
-  paginilor web sunt acum anunțate.
-* În Creators Update, NVDA nu va mai anunța "WebRuntime Content View" atunci
-  când se merge pe un alt site.
+* Sunt anunțate notificări, cum ar fi descărcări de fișiere și diverse
+  alerte de pe paginile web. Cele mai multe dintre aceste scenarii fac parte
+  acum din NVDA 2017.3.
 
 ## Persoane
 
@@ -132,16 +138,18 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 
 ## Setări
 
-* Anumite informații, cum ar fi o actualizare Windows în curs de descărcare
-  și/sau instalare esunt raportate automat.
+* Anumite informații, cum ar fi progresul Windows Update, sunt acum
+  raportate automat. NVDA se va ocupa în majoritatea cazurilor din 2017.3.
 * Valorile barei de progres și alte informații nu mai sunt anunțate de două
   ori.
 * Dacă durează ceva timp să căutați în setări, NVDA va anunța „se caută” și
-  starea rezultatului căutării, cum ar fi dacă o setare nu poate fi găsită.
+  starea rezultatului căutării, cum ar fi dacă o setare nu poate fi
+  găsită. Acest lucru este făcut de NVDA începând cu versiunea 2017.3.
 * Grupurile de setări sunt recunoscute la utilizarea navigării obiectului
   pentru a naviga printre controale.
 * Pentru unele casete combinate, NVDA nu va mai eșua la recunoașterea
-  etichetelor și/sau anunțarea schimbărilor valorii.
+  etichetelor și/sau anunțarea schimbărilor valorii. Rezolvarea modificării
+  valorii este inclusă în NVDA 2017.3.
 
 ## Skype
 
@@ -170,9 +178,11 @@ supliment, asigurați-vă că salvați setările NVDA-ului.
 
 * După căutarea actualizărilor aplicației, nume de aplicații în lista
   aplicațiilor care urmează să fie actualizate sunt etichetate corect.
-* Aspectele sugestiilor de căutare sunt acum anunțate.
+* Aspectele sugestiilor de căutare sunt acum anunțate. Această
+  caracteristică face parte acum din NVDA 2017.3.
 * La descărcarea conținutului, cum ar fi aplicații și filme, NVDA va anunța
-  numele produsului și descărcarea în curs.
+  numele produsului și progresul descărcării. O soluție de bază face parte
+  acum din NVDA 2017.3.
 
 ## Meteo
 

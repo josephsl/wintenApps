@@ -21,7 +21,7 @@ Windows 10, а также исправлений для некоторых ти�
 * Microsoft Edge
 * Люди
 * Настройки (настройки системы, Windows+I)
-* Skype (universal app)
+* Skype (универсальное приложение)
 * Магазин
 * Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
@@ -32,16 +32,20 @@ Windows 10, а также исправлений для некоторых ти�
 стабильной версией NVDA. Кроме того, после изменения настроек обновления для
 дополнения, обязательно сохраните настройки программы NVDA.
 
+Важное Примечание о NVDA 2017.3: из-за обратно несовместимых изменений в
+NVDA 2017.3, дополнение версии 17.09 и младше не будет работать в версиях
+NVDA старше 2017.3.
+
 ## Общие
 
 * В контекстных меню для плиток главного меню, правильно распознаются
   подменю.
-* Certain dialogs are now recognized as proper dialogs. This include Insider
-  Preview dialog (settings app) and new-style UAC dialog in build 14328 and
-  later for NvDA 2016.2.1 or earlier.
+* Certain dialogs are now recognized as proper dialogs. These include
+  Insider Preview dialog (settings app) and new-style UAC dialog in build
+  14328 and later for NvDA 2016.2.1 or earlier.
 * Appearance/close of suggestions for certain search fields (notably
   Settings and Store apps) is announced via sounds and braille. This also
-  includes Start menu search box.
+  includes Start menu search box. This is now part of NVDA as of 2017.3.
 * NVDA can announce suggestion count when performing a search in majority of
   cases. This option is controlled by "Report object position information"
   in Object presentation dialog.
@@ -49,20 +53,21 @@ Windows 10, а также исправлений для некоторых ти�
   of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, live region
   change, system alert, element selected, window opened.
-* Added ability to check for add-on updates (automatic or manual) via the
-  new Windows 10 App Essentials dialog found in NvDA Preferences menu. By
-  default, stable and development versions will check for new updates
-  automatically on a weekly or daily basis, respectively.
+* Добавлена возможность  проверки обновления дополнения (автоматически или
+  вручную) при помощи диалога Windows 10 App Essentials, который находится в
+  меню параметров NVDA. По умолчанию, стабильная и разрабатываемая версии
+  будут автоматически проверять наличие новых обновлений на еженедельной или
+  ежедневной основе, соответственно.
 * Ability to track events coming from Universal Windows Platform (UWP) apps
   if NVDA is run with debug logging enabled.
-* Initial support for floating Emoji input panel in build 16215 or later
-  (for best experience when reading emojis, use Windows OneCore speech
-  synthesizer).
+* Support for floating Emoji input panel in Fall Creators Update (for best
+  experience when reading emojis, use Windows OneCore speech synthesizer).
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
-  double-speaking in some cases.
+  double-speaking in some cases. Most of the scenarios are now part of NVDA
+  2017.3.
 * Toasts are no longer announced multiple times in Creators Update and
-  later.
+  later. This fix is included in NVDA 2017.3.
 
 ## Будильники и часы
 
@@ -95,45 +100,47 @@ Windows 10, а также исправлений для некоторых ти�
 
 ## Музыка Groove
 
-* Appearance of suggestions when searching for tracks is now detected.
+* Определяется появление предложения при поиске дорожек.
 
 ## Почта
 
-* When reviewing items in messages list, you can now use table navigation
-  commands to review message headers.
+* При просмотре элементов в списке Сообщений, теперь вы можете использовать
+  команды табличной навигации для просмотра заголовков Сообщений.
 * When writing a message, appearance of at mention suggestions are indicated
   by sounds.
 
 ## Карты
 
-* NVDA plays location beep for map locations.
+* NVDA проигрывает сигнал расположения для положения на карте.
 * When using street side view and if "use keyboard" option is enabled, NVDA
   will announce street addresses as you use arrow keys to navigate the map.
 
 ## Microsoft Edge
 
 * Теперь объявляются уведомления, такие как загрузка файлов и различные
-  предупреждения веб-страниц.
-* In Creators Update, NVDA will no longer announce "WebRuntime Content View"
-  when going to another site.
+  предупреждения веб-страниц. Большинство этих сценариев сейчас входит в
+  nvda 2017.3.
 
 ## Люди
 
-* When searching for contacts, a sound will play if there are search
-  results.
+* При поиске контактов, будет воспроизводиться звук при наличии результатов
+  поиска.
 
 ## Настройки
 
 * Теперь автоматически сообщается определённая информация, такая, как
-  индикатор обновления Windows.
+  индикатор обновления Windows. Большинство случаев будет обрабатывать NVDA
+  2017.3.
 * Значения индикатора выполнения и другая информация теперь не объявляются
   дважды.
 * If it takes a while to search for settings, NVDA will announce "searching"
-  and search result status such as if a setting cannot be found.
-* Settings groups are recognized when using object navigation to navigate
-  between controls.
-* For some combo boxes, NVDA will no longer fail to recognize labels and/or
-  announce value changes.
+  and search result status such as if a setting cannot be found. This is now
+  done from NVDA in 2017.3.
+* Группы настроек распознаются при использовании навигации объектов для
+  перемещения между элементами управления.
+* Для некоторых полей комбинированных списков, NVDA больше не будет
+  оставлять нераспознанными метки и/или уведомления об изменении
+  значения. Исправление изменения значения включено в NVDA 2017.3.
 
 ## Skype
 
@@ -149,8 +156,8 @@ Windows 10, а также исправлений для некоторых ти�
   announced.
 * NVDA will no longer announce "Skype Message" when reviewing messages for
   majority of cases.
-* Various issues when using Skype with braille displays fixed, including
-  inability to review message history items in braille.
+* Исправлены различные проблемы при использовании Skype с брайлем, в том
+  числе невозможность просмотра элементов истории сообщений шрифтом брайля.
 * From message history list, pressing NVDA+D on a message item will now
   allow NVDA to announce detailed information about a message such as
   channel type, sent date and time and so on.
@@ -159,9 +166,10 @@ Windows 10, а также исправлений для некоторых ти�
 
 * После проверки обновлений для приложений, обновлённые названия приложений
   в списке приложений будут правильно помечены.
-* Объявляются Появление поисковых подсказок.
+* Объявляются Появление поисковых подсказок. Теперь это часть NVDA 2017.3.
 * При загрузке содержимого, такого как приложения и фильмы, NVDA будет
-  сообщать Наименование продукта и прогресс загрузки.
+  сообщать Наименование продукта и прогресс загрузки. Основа этого
+  исправления теперь является частью NVDA 2017.3.
 
 ## Погода
 

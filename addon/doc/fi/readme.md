@@ -33,17 +33,22 @@ käyttökokemuksen varmistamiseksi viimeisintä vakaata koontiversiota (15063)
 sekä uusinta vakaata NVDA:n versiota. Varmista myös, että tallennat NVDA:n
 asetukset muutettuasi lisäosan päivitysasetuksia.
 
+Tärkeä huomautus: Koska NVDA 2017.3:een on tehty muutoksia, jotka eivät ole
+taaksepäin yhteensopivia, lisäosan versio 17.09 ja sitä uudemmat eivät toimi
+NVDA:n 2017.3:a vanhemmissa versioissa.
+
 ## Yleistä
 
 * Alavalikot tunnistetaan oikein Käynnistä-valikon tiilien pikavalikoissa.
-* Tietyt valintaikkunat tunnistetaan nyt oikeiksi
+* Tietyt valintaikkunat tunnistetaan nyt asianmukaisesti
   valintaikkunoiksi. Tällaisia ovat esim. Insider-esiversioiden
   valintaikkuna (Asetukset-sovelluksessa) sekä uudentyylinen Käyttäjätilien
   valvonnan valintaikkuna koontiversiossa 14328 ja uudemmissa NVDA
-  2016.2.1:ssä tai vanhemmassa.
+  2016.2.1:tä tai vanhempaa käytettäessä.
 * Tiettyjen hakukenttien ehdotusten ilmestyminen/sulkeutuminen (varsinkin
   Asetukset- ja Kauppa-sovelluksissa) ilmaistaan nyt äänimerkeillä ja
-  pistekirjoituksella. Tämä koskee myös Käynnistä-valikon hakukenttää.
+  pistekirjoituksella. Tämä koskee myös Käynnistä-valikon hakukenttää. Nämä
+  muutokset sisältyvät NVDA:han versiosta 2017.3 alkaen.
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
   -asetuksella Objektien lukuasetukset -valintaikkunasta.
@@ -58,15 +63,15 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
 * Mahdollisuus Universal Windows Platform (UWP) -sovelluksista tulevien
   tapahtumien seuraamiseen, mikäli NVDA:ta käytetään
   virheenkorjaus-lokitasolla.
-* Alustava tuki koontiversion 16215 tai uudemman kelluvalle
-  emojinsyöttöpaneelille (käytä parhaan tuloksen saamiseksi Windows OneCore
-  -puhesyntetisaattoria).
+* Tuki Fall Creators -päivityksen kelluvalle emojiensyöttöruudulle (käytä
+  parhaan kokemuksen saamiseksi Windows OneCore -syntetisaattoria).
 * Joidenkin sovellusten Aktiivisen alueen teksti luetaan. Näitä ovat
-  mm. Edgen ilmoitukset ja laskutoimitusten tulokset Laskimessa. Huomaa,
-  että tämä saattaa johtaa joissakin tapauksissa ilmoitusten kahdesti
-  puhumiseen.
-* Ilmoitusruutuja ei enää puhuta moneen kertaan Creators-päivityksessä ja
-  uudemmissa.
+  mm. Edgen ilmoitukset ja laskutoimitusten tulokset Laskimessa sekä
+  muut. Huomaa, että tämä saattaa johtaa joissakin tapauksissa ilmoitusten
+  kahdesti puhumiseen. Suurin osa näistä muutoksista sisältyy NVDA
+  2017.3:een.
+* Ilmoitusruutuja ei puhuta enää moneen kertaan Creators-päivityksessä ja
+  uudemmissa. Tämä korjaus sisältyy NVDA 2017.3:een.
 
 ## Hälytykset ja kello
 
@@ -119,9 +124,8 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
 ## Microsoft Edge
 
 * Ilmoitukset, kuten tiedostojen lataukset ja useat verkkosivujen
-  ilmoitukset, luetaan.
-* NVDA ei enää sano Windowsin Creators Update -versiossa "WebRuntime Content
-  View" siirryttäessä toiselle sivustolle.
+  ilmoitukset, luetaan. Suurin osa näistä muutoksista sisältyy NVDA
+  2017.3:een.
 
 ## Ihmiset
 
@@ -130,14 +134,17 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
 ## Asetukset
 
 * Määrätyt tiedot, kuten Windows Updaten päivitysten asennuksen edistyminen,
-  puhutaan nyt automaattisesti.
+  puhutaan nyt automaattisesti. NVDA 2017.3 käsittelee itse useimmat näistä
+  tapauksista.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
 * Mikäli asetusten etsiminen kestää jonkin aikaa, NVDA ilmoittaa "etsitään"
-  sekä hakutulosten tilan, kuten sen, jos asetusta ei löydy.
+  sekä hakutulosten tilan, kuten sen, jos asetusta ei löydy. Tämä muutos
+  sisältyy NVDA 2017.3:een.
 * Asetusryhmät tunnistetaan säätimien välillä liikuttaessa
   objektinavigointia käyttäen.
 * NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen selitteiden
-  tunnistamisessa ja/tai arvomuutosten ilmoittamisessa.
+  tunnistamisessa ja/tai arvomuutosten ilmoittamisessa. Arvomuutosten
+  korjaus sisältyy NVDA 2017.3:een.
 
 ## Skype
 
@@ -165,9 +172,11 @@ asetukset muutettuasi lisäosan päivitysasetuksia.
 
 * Sovellusten nimet näytetään oikein päivitettävien sovellusten luettelossa
   päivitystarkistuksen jälkeen.
-* Hakutulosehdotusten ilmestyminen ilmoitetaan.
+* Hakutulosehdotusten ilmestyminen ilmoitetaan. Tämä sisältyy NVDA
+  2017.3:een.
 * NVDA ilmoittaa tuotteen nimen ja latauksen edistymisen sisältöä, kuten
-  sovelluksia ja elokuvia, ladattaessa.
+  sovelluksia ja elokuvia, ladattaessa. Peruskorjaus sisältyy NVDA
+  2017.3:een.
 
 ## Sää
 

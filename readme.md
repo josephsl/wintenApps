@@ -35,7 +35,7 @@ Important note about NVDA 2017.3: due to backwards incompatible changes in NVDA 
 * Appearance/close of suggestions for certain search fields (notably Settings and Store apps) is announced via sounds and braille. This also includes Start menu search box. This is now part of NVDA as of 2017.3.
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation dialog.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
-* The following UIA events are recognized: Controller for, live region change, system alert, element selected, window opened.
+* The following UIA events are recognized: Controller for, live region change, system alert, element selected, window opened. With NVDA set to run with debug logging enabled, these events will be tracked.
 * Added ability to check for add-on updates (automatic or manual) via the new Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
 * Ability to track events coming from Universal Windows Platform (UWP) apps if NVDA is run with debug logging enabled.
 * Support for floating Emoji input panel in Fall Creators Update (for best experience when reading emojis, use Windows OneCore speech synthesizer).
