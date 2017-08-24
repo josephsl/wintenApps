@@ -43,10 +43,11 @@ class AppModule(appModuleHandler.AppModule):
 
 	# Until fixed in Fall Creators Update stable build...
 	def script_tab(self, gesture):
-		# In build 162xx, pressing TAB while Action Center is empty gives no feedback whatsoever.
+		# In builds 16232 to 16257, pressing TAB while Action Center is empty gives no feedback whatsoever.
+		# This fix won't ship until it is made available to slow ring Insiders.
 		gesture.send()
 		import sys, api
-		if sys.getwindowsversion().build > 15063:
+		if 15063 < sys.getwindowsversion().build < 16273:
 			focus = api.getFocusObject()
 			if isinstance(focus, UIA):
 				automationID = focus.UIAElement.cachedAutomationID
