@@ -56,7 +56,6 @@ msgstr "Докладва и премества курсора за прегле�
 msgid "No emoji"
 msgstr "Няма намерени емоджи"
 
-#. Translators: Announced in braille when suggestions appear.
 msgid "suggestions"
 msgstr "предложения"
 
@@ -108,6 +107,20 @@ msgstr "&Канал за обновление на добавката:"
 #. Translators: The label of a button to check for add-on updates.
 msgid "Check for add-on &update"
 msgstr "Проверка за &обновления на добавката"
+
+#. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
+msgid ""
+"You are about to switch to development updates channel. Although updates "
+"from this channel brings exciting features, it also comes with updates that "
+"might be unstable at times and should be used for testing and sending "
+"feedback to the add-on developer. If you prefer to use stable rleases, "
+"please answer no and switch to stable update channel. Are you sure you wish "
+"to switch to the development update channel?"
+msgstr ""
+
+#. Translators: The title of the channel switch confirmation dialog.
+msgid "Switching to unstable channel"
+msgstr ""
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"
