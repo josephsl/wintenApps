@@ -13,7 +13,6 @@ The following app modules or support modules for some apps are included (see eac
 * Calculator (modern).
 * Cortana
 * Game Bar
-* Groove Music
 * Mail
 * Maps
 * Microsoft Edge
@@ -24,7 +23,7 @@ The following app modules or support modules for some apps are included (see eac
 * Weather.
 * Miscellaneous modules for controls such as Start Menu tiles.
 
-Note: this add-on requires Windows 10 Version 1607 (build 14393) or later and NVDA 2017.1 or later. For best results, use the add-on with latest stable build (build 15063) and latest stable version of NVDA. Also, after changing update settings for the add-on, be sure to save NVDA settings..
+Note: this add-on requires Windows 10 Version 1607 (build 14393) or later and NVDA 2017.3 or later. For best results, use the add-on with latest stable build (build 15063) and latest stable version of NVDA. Also, after changing update settings for the add-on, be sure to save NVDA settings.
 
 Important note about NVDA 2017.3: due to backwards incompatible changes in NVDA 2017.3, add-on version 17.09 and later will not work on NVDA versions earlier than 2017.3.
 
@@ -64,10 +63,6 @@ Important note about NVDA 2017.3: due to backwards incompatible changes in NVDA 
 ## Game Bar
 
 * NVDA will announce appearance of Game Bar window. Due to technical limitations, NVDA cannot interact fully with Game Bar.
-
-## Groove Music
-
-* Appearance of suggestions when searching for tracks is now detected.
 
 ## Mail
 
