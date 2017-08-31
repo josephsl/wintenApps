@@ -182,7 +182,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# This is no longer necessary in NVDA 2017.3 (incubating as of May 2017).
 			elif obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
 				# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcmenet problem.
-				if obj.UIAElement.cachedAutomationID == "SearchTextBox" and obj.appModule.appName != "searchui":
+				if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox") and obj.appModule.appName != "searchui":
 					clsList.insert(0, SearchField)
 			# A dedicated version for Mail app's address/mention suggestions.
 			elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
