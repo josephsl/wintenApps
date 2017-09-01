@@ -40,31 +40,3 @@ class AppModule(appModuleHandler.AppModule):
 		if isinstance(obj, UIA):
 			if obj.name == "" and obj.UIAElement.cachedAutomationID == "TextBoxPinEntry":
 				obj.name = obj.previous.name
-
-	# Until fixed in Fall Creators Update stable build...
-	def script_tab(self, gesture):
-		# In builds 16232 to 16257, pressing TAB while Action Center is empty gives no feedback whatsoever.
-		# This fix won't ship until it is made available to slow ring Insiders.
-		gesture.send()
-		import sys, api
-		if 15063 < sys.getwindowsversion().build < 16273:
-			focus = api.getFocusObject()
-			if isinstance(focus, UIA):
-				automationID = focus.UIAElement.cachedAutomationID
-				notificationList = focus
-				if automationID == "ExpandCollapseButton":
-					notificationList = focus.previous
-				elif automationID.startswith("Microsoft.QuickAction"):
-					possibleGridView = focus.parent.parent
-					if isinstance(possibleGridView, UIA) and possibleGridView.UIAElement.cachedAutomationID == "QuickActionsGridView":
-						notificationList = focus.parent.parent.parent.previous.previous
-				if isinstance(notificationList, UIA) and notificationList.UIAElement.cachedAutomationID == "MainListView" and notificationList.childCount == 0:
-					if automationID == "ExpandCollapseButton":
-						focus.simpleNext.setFocus()
-					elif automationID.startswith("Microsoft.QuickAction"):
-						focus.parent.parent.parent.previous.setFocus()
-
-	__gestures={
-		"kb:tab":"tab",
-		"kb:shift+tab":"tab",
-	}
