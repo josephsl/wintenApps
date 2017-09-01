@@ -40,7 +40,7 @@ confspec = {
 }
 config.conf.spec["wintenApps"] = confspec
 
-_addonDir = unicode(os.path.join(os.path.dirname(__file__), "..", ".."))
+_addonDir = unicode(os.path.join(os.path.dirname(__file__), "..", ".."), "mbcs")
 addonVersion = addonHandler.Addon(unicode(_addonDir)).manifest['version']
 addonUpdateCheckInterval = 86400
 
