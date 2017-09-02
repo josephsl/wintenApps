@@ -165,7 +165,7 @@ class WinTenAppsConfigDialog(wx.Dialog):
 		if currentUpdateChannel == "stable" and newUpdateChannel == "dev":
 			if gui.messageBox(
 				# Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-				_("You are about to switch to development updates channel. Although updates from this channel brings exciting features, it also comes with updates that might be unstable at times and should be used for testing and sending feedback to the add-on developer. If you prefer to use stable rleases, please answer no and switch to stable update channel. Are you sure you wish to switch to the development update channel?"),
+				_("You are about to switch to development updates channel. Although updates from this channel brings exciting features, it also comes with updates that might be unstable at times and should be used for testing and sending feedback to the add-on developer. If you prefer to use stable releases, please answer no and switch to stable update channel. Are you sure you wish to switch to the development update channel?"),
 				# Translators: The title of the channel switch confirmation dialog.
 				_("Switching to unstable channel"),
 				wx.YES_NO | wx.NO_DEFAULT | wx.ICON_QUESTION, self
