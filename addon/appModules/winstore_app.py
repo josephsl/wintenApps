@@ -42,7 +42,9 @@ class AppModule(appModuleHandler.AppModule):
 				productTitle = obj.parent.previous
 				# Since March 2017 update, it is no longer the product name, but a progress button.
 				if productTitle and productTitle.role == controlTypes.ROLE_BUTTON:
-					productTitle = productTitle.parent.previous
+					# But since September 2017 update, the title is next door.
+					possibleProductTitle = productTitle.parent.previous
+					productTitle = productTitle.previous if possibleProductTitle is None else productTitle.parent.previous
 				if productTitle and isinstance(productTitle, NVDAObjects.UIA.UIA) and productTitle.UIAElement.cachedAutomationID == "_productTitle":
 					ui.message(" ".join([productTitle.name, obj.name]))
 			return
