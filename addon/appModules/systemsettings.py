@@ -33,12 +33,12 @@ class AppModule(appModuleHandler.AppModule):
 			elif obj.role == controlTypes.ROLE_LINK and obj.UIAElement.cachedAutomationID.startswith("HistoryEvent") and obj.name != obj.previous.name:
 				nameList = [obj.name]
 				build = sys.getwindowsversion().build
-				# For builds between 14393 and 16226.
-				if 14393 <= build < 16232:
+				# For 1607 and 1703.
+				if build in (14393, 15063):
 					nameList.insert(0, obj.previous.name)
-				# Add the status text in 16232 and later.
+				# Add the status text in 1709 and later.
 				# But since 16251, a "what's new" link has been added for feature updates, so consult two previous objects.
-				elif sys.getwindowsversion().build >= 16232:
+				elif sys.getwindowsversion().build >= 16251:
 					if obj.next.UIAElement.cachedAutomationID == "SystemSettings_MusUpdate_HistoryCategoryQuality_ToggleButton":
 						nameList.insert(0, obj.previous.name)
 						nameList.insert(0, obj.previous.previous.name)
@@ -46,7 +46,6 @@ class AppModule(appModuleHandler.AppModule):
 						nameList.append(obj.next.name)
 				obj.name = ", ".join(nameList)
 
-	# Live region changed event is treated as a name change for now.
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache = ""
 
