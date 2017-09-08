@@ -16,7 +16,6 @@ qué se incluye):
 * Calculadora (modern).
 * Cortana
 * Barra de juegos
-* Groove Music
 * Correo
 * Mapas
 * Microsoft Edge
@@ -29,7 +28,7 @@ qué se incluye):
   Inicio.
 
 Nota: este complemento requiere Windows 10 Versión 1607 (build 14393) o
-posterior y NVDA 2017.1 o posterior. Para unos mejores resultados, utiliza
+posterior y NVDA 2017.3 o posterior. Para unos mejores resultados, utiliza
 el complemento con la compilación estable más reciente (build 15063) y
 versión estable más reciente de NVDA. También, después de cambiar las
 opciones de actualización para el complemento, asegúrate de guardar la
@@ -57,7 +56,9 @@ posteriores no funcionarán en las versiones de NVDA anteriores a 2017.3.
 * En ciertos menús de contexto (tales como en Edge), la información de
   posición (ej.: 1 de 2) ya no se anuncia.
 * Se reconocen los siguientes eventos UIA:  Controller for, live region
-  changed, system alert, element selected, window opened.
+  changed, system alert, element selected, window opened. Con NVDA
+  configurado para ejecutarse con el registro de depuración habilitado,
+  estos eventos se seguirán.
 * Añadida la capacidad de buscar actualizaciones del complemento (automática
   o manual) a través del nuevo diálogo Windows 10 App Essentials que se
   encuentra en el menú Preferencias de NVDA. Por defecto, se buscarán las
@@ -106,11 +107,6 @@ posteriores no funcionarán en las versiones de NVDA anteriores a 2017.3.
 * NVDA anunciará la aparición de la ventana Barra de Juegos. Debido a
   limitaciones técnicas, NVDA no puede interactuar completamente con la
   Barra de Juegos.
-
-## Groove Music
-
-* Ahora se detecta la aparición de sugerencias cuando se detecta búsqueda de
-  pistas .
 
 ## Correo
 

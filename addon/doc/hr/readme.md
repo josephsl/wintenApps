@@ -15,7 +15,6 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * kalkulator (moderan).
 * Cortana
 * Traka za igrice
-* Groove Music
 * Pošta
 * Karte
 * Microsoft Edge
@@ -27,11 +26,10 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Dodatni moduli za dijelove sustava kao što su to izbornik start i
   pripadajuće mu ikonice
 
-Upozorenje: ovaj dodatak zahtjeva Windows 10 Verziju 1511 (podverziju 10586)
-ili noviju i NVDA 2016.4 ili noviji. Za najbolje rezultate, koristite
-dodatak sa zadnjom stabilnom inačicom (podverzija 15063) i zadnju stabilnu
-inačicu nvda. Također, prilikom spremanja postavki za nadogradnju dodatka,
-budite sigurni da ste spremili postavke za NVDA.
+Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
+and NVDA 2017.3 or later. For best results, use the add-on with latest
+stable build (build 15063) and latest stable version of NVDA. Also, after
+changing update settings for the add-on, be sure to save NVDA settings.
 
 Important note about NVDA 2017.3: due to backwards incompatible changes in
 NVDA 2017.3, add-on version 17.09 and later will not work on NVDA versions
@@ -52,8 +50,9 @@ earlier than 2017.3.
   prezentacija objekt.
 * U većini kontekstnih izbornika (kao što je to u Edgeu), informacije o
   poziciji (NPR. 1 od 2) se više ne izgovara.
-* Slijedeći UIA događaji se izgovaraju: Controller for, live region changed
-  (handled by name change event).
+* The following UIA events are recognized: Controller for, live region
+  change, system alert, element selected, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked.
 * Dodana mogućnost provjere nadogradnje dodatka (ručno ili automatski) preko
   novog win 10 app Essentials u izborniku postavki. Podrazumijevano,
   stabilne i razvojne inačice se provjeravaju na danjoj ili tjednoj bazi.
@@ -97,10 +96,6 @@ earlier than 2017.3.
 
 * NVDA će opisati izgled prozora trake za igrice. Zbog tehničkih
   nedostataka, NVDA ne može u potpunosti komunicirati s trakom za igrice.
-
-## Groove Music
-
-* Prisutstvo prijedloga se izgovara prilikom traženja muzičkih numera.
 
 ## Pošta
 

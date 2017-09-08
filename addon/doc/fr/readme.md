@@ -17,7 +17,6 @@ est inclus) :
 * Calculatrice (modern).
 * Cortana
 * Game Bar
-* Groove Music
 * Courrier
 * Cartes
 * Microsoft Edge
@@ -29,7 +28,7 @@ est inclus) :
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
 Note: ce module complémentaire nécessite Windows 10 Version 1607 (build
-14393) ou version ultérieure et NVDA 2017.1 ou version ultérieure. Pour de
+14393) ou version ultérieure et NVDA 2017.3 ou version ultérieure. Pour de
 meilleurs résultats, utilisez le module complémentaire avec la dernière
 build stable (build 15063) et la dernière version stable de NVDA. De plus,
 après avoir modifié les paramètres de mise à jour pour le module
@@ -58,7 +57,9 @@ incompatibles en arrière dans NVDA 2017.3, le module complémentaire version
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
 * Les événements UIA suivants sont reconnus : Contrôleur pour changement de
-  région en direct, alerte système, élément sélectionné, fenêtre ouverte.
+  région en direct, alerte système, élément sélectionné, fenêtre
+  ouverte. Avec NVDA configuré pour être exécuté avec le journal activé en
+  mode débogage ces événements seront suivis.
 * Ajout de la possibilité de vérifier les mises à jour du module
   complémentaire(automatiques ou manuelles) via la nouvelle boîte de
   dialogue Windows 10 App Essentials qui se trouve dans le menu Préférences
@@ -113,11 +114,6 @@ incompatibles en arrière dans NVDA 2017.3, le module complémentaire version
 * NVDA annoncera l'apparition de la fenêtre Game Bar. En raison de
   limitations techniques, NVDA ne peut pas interagir entièrement avec Game
   Bar.
-
-## Groove Music
-
-* L'apparition de suggestions lors de la recherche de pistes est maintenant
-  détectée.
 
 ## Courrier
 

@@ -16,7 +16,6 @@ welche inbegriffen sind):
 * Rechner (modern)
 * Cortana
 * Game Bar
-* Groove Music
 * Mail
 * Maps
 * Microsoft Edge
@@ -28,7 +27,7 @@ welche inbegriffen sind):
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
 
 Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
-and NVDA 2017.1 or later. For best results, use the add-on with latest
+and NVDA 2017.3 or later. For best results, use the add-on with latest
 stable build (build 15063) and latest stable version of NVDA. Also, after
 changing update settings for the add-on, be sure to save NVDA settings.
 
@@ -51,7 +50,8 @@ earlier than 2017.3.
 * In certain context menus (such as in Edge), position information (e.g. 1
   of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, live region
-  change, system alert, element selected, window opened.
+  change, system alert, element selected, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked.
 * Added ability to check for add-on updates (automatic or manual) via the
   new Windows 10 App Essentials dialog found in NvDA Preferences menu. By
   default, stable and development versions will check for new updates
@@ -96,10 +96,6 @@ earlier than 2017.3.
 
 * NVDA will announce appearance of Game Bar window. Due to technical
   limitations, NVDA cannot interact fully with Game Bar.
-
-## Groove Music
-
-* Appearance of suggestions when searching for tracks is now detected.
 
 ## Mail
 
