@@ -16,7 +16,6 @@ privire la ceea ce este inclus):
 * Calculator (modern).
 * Cortana
 * Bară de jocuri
-* Muzică Groove
 * Mail
 * Hărți
 * Microsoft Edge
@@ -28,7 +27,7 @@ privire la ceea ce este inclus):
 * Diverse module de control precum tile-urile din meniul start.
 
 Notă: acest supliment necesită Windows 10 versiunea 1607 (build 14393) sau
-mai nou și NVDA 2017.1 sau mai nou. Pentru rezultate foarte bune, folosiți-l
+mai nou și NVDA 2017.3 sau mai nou. Pentru rezultate foarte bune, folosiți-l
 cu ultimul build stabil (build 15063) și cea mai recentă versiune stabilă a
 NVDA-ului. De asemenea, după modificarea setărilor de actualizare pentru
 supliment, asigurați-vă că salvați setările NVDA-ului.
@@ -57,7 +56,8 @@ mai vechi decât 2017.3.
   (e.g. 1 din 2) nu mai este anunțată.
 * Următoarele evenimente UIA sunt recunoscute: Controler pentru, schimbarea
   regiunii în care locuiți, alertă de sistem, element selectat, fereastră
-  deschisă.
+  deschisă. Cu NVDA-ul setat să ruleze cu diagnosticarea activată, aceste
+  evenimente vor fi urmărite.
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
@@ -106,10 +106,6 @@ mai vechi decât 2017.3.
 
 * NVDA va anunța aspectul barei de jocuri. Datorită limitărilor tehnice,
   NVDA nu poate interacționa pe deplin cu bara de jocuri.
-
-## Muzică Groove
-
-* Aspectul sugestiilor la căutarea pieselor este acum detectat.
 
 ## Mail
 

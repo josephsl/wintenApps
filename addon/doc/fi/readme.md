@@ -15,7 +15,6 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Laskin (moderni)
 * Cortana
 * Pelipalkki
-* Groove Music
 * Sähköposti
 * Kartat
 * Microsoft Edge
@@ -28,10 +27,10 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
   tiilet.
 
 Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1607 (koontiversio
-14393) tai uudempaa ja NVDA 2017.1:tä tai uudempaa. Käytä parhaan
+14393) tai uudempaa ja NVDA 2017.3:a tai uudempaa. Käytä parhaan
 käyttökokemuksen varmistamiseksi viimeisintä vakaata koontiversiota (15063)
-sekä uusinta vakaata NVDA:n versiota. Varmista myös, että tallennat NVDA:n
-asetukset muutettuasi lisäosan päivitysasetuksia.
+sekä uusinta NVDA:ta. Varmista myös, että tallennat NVDA:n asetukset
+muutettuasi lisäosan päivitysasetuksia.
 
 Tärkeä huomautus: Koska NVDA 2017.3:een on tehty muutoksia, jotka eivät ole
 taaksepäin yhteensopivia, lisäosan versio 17.09 ja sitä uudemmat eivät toimi
@@ -55,7 +54,9 @@ NVDA:n 2017.3:a vanhemmissa versioissa.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
 * Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, aktiivisen alueen
-  muutos, järjestelmän ilmoitus, elementti valittu, ikkuna avattu.
+  muutos, järjestelmän ilmoitus, elementti valittu, ikkuna avattu. Näitä
+  tapahtumia seurataan, kun NVDA:n lokitasoksi on määritetty
+  "virheenkorjaus".
 * Lisätty lisäosan päivitysmahdollisuus (automaattinen tai manuaalinen)
   NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App Essentials
   -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat oletuksena
@@ -103,10 +104,6 @@ NVDA:n 2017.3:a vanhemmissa versioissa.
 
 * NVDA ilmoittaa pelipalkki-ikkunan ilmestymisestä. Teknisistä rajoituksista
   johtuen NVDA ei voi olla täysin vuorovaikutuksessa pelipalkin kanssa.
-
-## Groove Music
-
-* Ehdotusten ilmestyminen havaitaan nyt kappaleita etsittäessä.
 
 ## Sähköposti
 
