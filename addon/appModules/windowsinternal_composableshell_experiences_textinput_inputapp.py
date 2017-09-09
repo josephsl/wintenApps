@@ -19,9 +19,13 @@ class AppModule(appModuleHandler.AppModule):
 	def event_UIA_elementSelected(self, obj, nextHandler):
 		# #7273: When this is fired on categories, the first emoji from the new category is selected but not announced.
 		# Therefore, move the navigator object to that item if possible.
+		# However, in recent builds, name change event is also fired.
+		# For consistent experience, report the new category first by traversing through controls.
 		speech.cancelSpeech()
 		if obj.UIAElement.cachedClassName == "ListViewItem":
-			obj = obj.parent.previous.firstChild
+			obj = obj.parent.previous
+			ui.message(obj.name)
+			obj = obj.firstChild
 		if obj is not None:
 			api.setNavigatorObject(obj)
 			obj.reportFocus()
