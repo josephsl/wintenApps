@@ -15,7 +15,6 @@ każdej aplikacji co jest wspierane):
 * Kalkulator (nowoczesny).
 * Cortana
 * Pasek gry
-* Muzyka Groowe
 * Poczta
 * Mapy
 * Microsoft Edge
@@ -27,7 +26,7 @@ każdej aplikacji co jest wspierane):
 * Różne moduły dla takich kontrolek, jak kafelki menu start.
 
 Uwaga: Ten dodatek wymaga Windows 10 Wersję 1607 (kompilację 14393) lub
-nowszą i NVDA 2016.4 lub nowszą. Dla lepszych wyników, trzeba będzie używać
+nowszą i NVDA 2017.3 lub nowszą. Dla lepszych wyników, trzeba będzie używać
 dodatek z najnowszą stabilną kompilacją (kompilacja 15063) i ostatnią
 stabilną wersję NVDA. Także, po zmianie ustawień aktualizacji dodatku,
 trzeba się upewnić, czy konfiguracja jest zachowana.
@@ -53,8 +52,9 @@ wersjami starszymi niż 2017.3.
   obiektu" w oknie dialogowym "prezentacja obiektu".
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) więcej nie jest odczytywana.
-* The following UIA events are recognized: Controller for, live region
-  change, system alert, element selected, window opened.
+* Następujące zdarzenia UIA są rospoznane: Controller for, live region
+  change, system alert, element selected, window opened. Z NVDA ustawioną na
+  tryb debugowania, te zdarzenia będą śledzone.
 * Dodana możliwość sprawdzania aktualizacji dodatku (automatycznie lub
   ręcznie) poprzez nowe okno dialogowe Windows 10 App Essentials, które
   można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
@@ -101,10 +101,6 @@ wersjami starszymi niż 2017.3.
 
 * NVDA będzie powiadamiał o istnieniu paska do gier w danym momencie,
   interakcja z przyczyn technicznych z tą kontrolą nie jest możliwa.
-
-## Muzyka Groowe
-
-* Przy szukaniu utworów, wyświetlanie podpowiedzi jest wykrywalne.
 
 ## Poczta
 

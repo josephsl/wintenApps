@@ -15,7 +15,6 @@ si veda la relativa sezione per ulteriori informazioni:
 * Calcolatrice (moderna).
 * Cortana
 * Game Bar
-* Groove Music
 * Posta
 * Mappe
 * Microsoft Edge
@@ -27,7 +26,7 @@ si veda la relativa sezione per ulteriori informazioni:
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
 Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
-and NVDA 2017.1 or later. For best results, use the add-on with latest
+and NVDA 2017.3 or later. For best results, use the add-on with latest
 stable build (build 15063) and latest stable version of NVDA. Also, after
 changing update settings for the add-on, be sure to save NVDA settings.
 
@@ -52,7 +51,8 @@ earlier than 2017.3.
 * In alcuni menu di contesto, come in Edge, le informazioni sulla posizione
   come 1 su 2 non vengono più annunciate.
 * The following UIA events are recognized: Controller for, live region
-  change, system alert, element selected, window opened.
+  change, system alert, element selected, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked.
 * Aggiunta la possibilità di controllare automaticamente o manualmente la
   presenza di aggiornamenti di questo componente aggiuntivo mediante la
   finestra di dialogo Windows10 Essentials presente al menu preferenze di
@@ -99,11 +99,6 @@ earlier than 2017.3.
 
 * NVDA will announce appearance of Game Bar window. Due to technical
   limitations, NVDA cannot interact fully with Game Bar.
-
-## Groove Music
-
-* Viene annunciata la comparsa di suggerimenti mentre si stanno cercando
-  elementi all'interno delle tracce
 
 ## Posta
 
