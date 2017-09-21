@@ -40,7 +40,7 @@ class AppModule(appModuleHandler.AppModule):
 				# But since 16251, a "what's new" link has been added for feature updates, so consult two previous objects.
 				elif build >= 16251:
 					automationID = obj.UIAElement.cachedAutomationID
-					eventID = automationID[:automationID.find("_")]
+					eventID = automationID.split("_")[0]
 					possibleFeatureUpdateText = obj.previous.previous
 					# This automation ID may change in a future Windows 10 release.
 					if possibleFeatureUpdateText.UIAElement.cachedAutomationID == "_".join([eventID, "TitleTextBlock"]):
