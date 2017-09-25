@@ -37,7 +37,7 @@ Important note about NVDA 2017.3: due to backwards incompatible changes in NVDA 
 * The following UIA events are recognized: Controller for, live region change, system alert, element selected, window opened. With NVDA set to run with debug logging enabled, these events will be tracked.
 * Added ability to check for add-on updates (automatic or manual) via the new Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
 * Ability to track events coming from Universal Windows Platform (UWP) apps if NVDA is run with debug logging enabled.
-* Support for floating Emoji input panel in Fall Creators Update (for best experience when reading emojis, use Windows OneCore speech synthesizer).
+* Support for floating Emoji input panel in Version 1709 (Fall Creators Update). For best experience when reading emojis, use Windows OneCore speech synthesizer.
 * In some apps, live region text is announced. This includes alerts in Edge, results in Calculator and others. Note that this may result in double-speaking in some cases. Most of the scenarios are now part of NVDA 2017.3.
 * Toasts are no longer announced multiple times in Creators Update and later. This fix is included in NVDA 2017.3.
 
