@@ -97,9 +97,14 @@ class AppModule(appModuleHandler.AppModule):
 				return element
 		return None
 
+	# Name change cache (yet again)
+	# In some cases, Skype message fires name change, and a related element fires live region changed event.
+	_skypeMessageCache = None
+
 	def event_nameChange(self, obj, nextHandler):
 		if isinstance(obj, SkypeMessage):
 			ui.message(obj.getShortenedMessage())
+			self._skypeMessageCache = obj.name
 		elif isinstance(obj, UIA):
 			uiElement = obj.UIAElement
 			if uiElement.cachedClassName == "TextBlock" and obj.next is not None:
@@ -109,6 +114,15 @@ class AppModule(appModuleHandler.AppModule):
 				if nextElement.cachedAutomationID in ("ChatEditBox", "ChatTranslationSettings"):
 					# Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 					ui.message(obj.name if obj.name != "" else _("Typing stopped"))
+		nextHandler()
+
+	# The live region changed event for messages has no automation ID whatsoever.
+	# Unfortunately, Skype message fires name change, so be sure to perform one or the other.
+	def event_liveRegionChange(self, obj, nextHandler):
+		if isinstance(obj, UIA):
+			uiaElement = obj.UIAElement
+			if uiaElement.cachedAutomationID == "" and uiaElement.cachedClassName == "TextBlock" and obj.name == self._skypeMessageCache:
+				return
 		nextHandler()
 
 	def script_readMessage(self, gesture):
