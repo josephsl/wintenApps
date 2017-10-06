@@ -20,6 +20,18 @@ addonHandler.initTranslation()
 # Therefore, resort to this regular expression.
 RE_MESSAGE = re.compile(r"\AFrom (?P<from>.*), Skype (?P<body>.*), sent on (?P<time>.*?)(?: Edited by .* at .*?)?(?: Not delivered|New)?\Z", re.M|re.S)
 
+# In recent Skype releases, live region change event is used to announce new messages.
+# Shorten messages in that case as well.
+def getShortenedMessage(message):
+	# Just like Desktop client, messages are quite verbose.
+	m = RE_MESSAGE.match(message)
+	if m:
+		messageBody = m.group("body")
+		shortenedMessage = "%s, %s" % (m.group("from"), messageBody[messageBody.find(", ")+2:])
+		return shortenedMessage
+	else:
+		return message
+
 class SkypeMessage(UIA):
 	"""Message history item in Skype universal app."""
 
@@ -35,14 +47,7 @@ class SkypeMessage(UIA):
 		super(SkypeMessage, self).reportFocus()
 
 	def getShortenedMessage(self):
-		# Just like Desktop client, messages are quite verbose.
-		m = RE_MESSAGE.match(self.name)
-		if m:
-			messageBody = m.group("body")
-			message = "%s, %s" % (m.group("from"), messageBody[messageBody.find(", ")+2:])
-			return message
-		else:
-			return self.name
+		return getShortenedMessage(self.name)
 
 	def script_showMessageLongDesc(self, gesture):
 		ui.message(self._message)
@@ -102,8 +107,8 @@ class AppModule(appModuleHandler.AppModule):
 	_skypeMessageCache = None
 
 	def event_nameChange(self, obj, nextHandler):
+		# In recent versions, live region change event is used instead.
 		if isinstance(obj, SkypeMessage):
-			ui.message(obj.getShortenedMessage())
 			self._skypeMessageCache = obj.name
 		elif isinstance(obj, UIA):
 			uiElement = obj.UIAElement
@@ -121,7 +126,9 @@ class AppModule(appModuleHandler.AppModule):
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
 			uiaElement = obj.UIAElement
-			if uiaElement.cachedAutomationID == "" and uiaElement.cachedClassName == "TextBlock" and obj.name == self._skypeMessageCache:
+			if uiaElement.cachedAutomationID == "" and uiaElement.cachedClassName == "TextBlock" and obj.name != self._skypeMessageCache:
+				ui.message(getShortenedMessage(obj.name))
+				self._skypeMessageCache = obj.name
 				return
 		nextHandler()
 
