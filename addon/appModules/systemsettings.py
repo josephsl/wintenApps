@@ -38,7 +38,7 @@ class AppModule(appModuleHandler.AppModule):
 					nameList.insert(0, obj.previous.name)
 				# Add the status text in 1709 and later.
 				# But since 16251, a "what's new" link has been added for feature updates, so consult two previous objects.
-				elif build >= 16251:
+				elif build >= 16299:
 					automationID = obj.UIAElement.cachedAutomationID
 					eventID = automationID.split("_")[0]
 					possibleFeatureUpdateText = obj.previous.previous
