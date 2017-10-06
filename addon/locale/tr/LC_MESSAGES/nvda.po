@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-08-05 22:05+1000\n"
-"PO-Revision-Date: 2017-09-27 15:16+0300\n"
+"PO-Revision-Date: 2017-10-01 18:55+0300\n"
 "Last-Translator: Juan C. Buño <oprisniki@gmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
@@ -110,7 +110,6 @@ msgid "Check for add-on &update"
 msgstr "Eklenti g&üncellemesi için kontrol et"
 
 #. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-#, fuzzy
 msgid ""
 "You are about to switch to development updates channel. Although updates "
 "from this channel brings exciting features, it also comes with updates that "
