@@ -107,10 +107,8 @@ class AppModule(appModuleHandler.AppModule):
 	_skypeMessageCache = None
 
 	def event_nameChange(self, obj, nextHandler):
-		# In recent versions, live region change event is used instead.
-		if isinstance(obj, SkypeMessage):
-			self._skypeMessageCache = obj.name
-		elif isinstance(obj, UIA):
+		# In recent versions, live region change event is used instead, so don't announce messages with this method.
+		if isinstance(obj, UIA):
 			uiElement = obj.UIAElement
 			if uiElement.cachedClassName == "TextBlock" and obj.next is not None:
 				# Announce typing indicator (same as Skype for Desktop).
@@ -126,7 +124,7 @@ class AppModule(appModuleHandler.AppModule):
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
 			uiaElement = obj.UIAElement
-			if uiaElement.cachedAutomationID == "" and uiaElement.cachedClassName == "TextBlock" and obj.name != self._skypeMessageCache:
+			if not uiaElement.cachedAutomationID and uiaElement.cachedClassName == "TextBlock" and obj.name != self._skypeMessageCache:
 				ui.message(getShortenedMessage(obj.name))
 				self._skypeMessageCache = obj.name
 				return
