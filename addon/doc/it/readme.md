@@ -14,7 +14,7 @@ si veda la relativa sezione per ulteriori informazioni:
 * Calendario
 * Calcolatrice (moderna).
 * Cortana
-* Game Bar
+* Barra dei giochi
 * Posta
 * Mappe
 * Microsoft Edge
@@ -27,12 +27,13 @@ si veda la relativa sezione per ulteriori informazioni:
 
 Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
 and NVDA 2017.3 or later. For best results, use the add-on with latest
-stable build (build 15063) and latest stable version of NVDA. Also, after
-changing update settings for the add-on, be sure to save NVDA settings.
+Windows 10 stable build (build 16299) and latest stable version of
+NVDA. Also, after changing update settings for the add-on, be sure to save
+NVDA settings.
 
-Important note about NVDA 2017.3: due to backwards incompatible changes in
-NVDA 2017.3, add-on version 17.09 and later will not work on NVDA versions
-earlier than 2017.3.
+Nota importante su NVDA 2017.3: a causa di problemi di compatibilità e di
+nuove specifiche introdotte da questa versione di NVDA, questo componente
+aggiuntivo richiede NVDA 2017.3 o superiore.
 
 ## Generale
 
@@ -41,9 +42,10 @@ earlier than 2017.3.
 * Certain dialogs are now recognized as proper dialogs. These include
   Insider Preview dialog (settings app) and new-style UAC dialog in build
   14328 and later for NvDA 2016.2.1 or earlier.
-* Appearance/close of suggestions for certain search fields (notably
-  Settings and Store apps) is announced via sounds and braille. This also
-  includes Start menu search box. This is now part of NVDA as of 2017.3.
+* Viene annunciata la comparsa di suggerimenti nei risultati di ricerca,
+  soprattutto nelle impostazioni e nello store, attraverso sia suoni che
+  braille. In questo è compresa anche la finestra di ricerca del menu
+  avvio. Funzione ora già inclusa in NVDA 2017.3.
 * NVDA può annunciare il numero dei suggerimenti quando si esegue una
   ricerca, almeno nella maggior parte dei casi. Questa funzione è
   controllata dall'opzione "leggi le informazioni sulla posizione
@@ -58,13 +60,16 @@ earlier than 2017.3.
   finestra di dialogo Windows10 Essentials presente al menu preferenze di
   NVDA. Di default le versioni stabili eseguiranno un controllo settimanale,
   mentre quelle in sviluppo giornaliero.
-* Ability to track events coming from Universal Windows Platform (UWP) apps
-  if NVDA is run with debug logging enabled.
-* Support for floating Emoji input panel in Fall Creators Update (for best
-  experience when reading emojis, use Windows OneCore speech synthesizer).
-* In some apps, live region text is announced. This includes alerts in Edge,
-  results in Calculator and others. Note that this may result in
-  double-speaking in some cases. Most of the scenarios are now part of NVDA
+* Capacità di tenere traccia di eventi proveniente dalle app Universal
+  Windows Platform (UWP), se NVDA è in esecuzione con il debug del log
+  attivato.
+* Supporto per l'immissione di emoji animate (Fall creators Update). Per
+  ottenere i migliori risultati si consiglia di servirsi delle voci OneCore,
+  ossia quelle già presenti in Windows10.
+* In alcune app, viene letto il testo che appare nelle regioni live. Ciò
+  include notifiche in Edge,  i risultati nella calcolatrice ed altro. Si
+  noti che talvolta potrebbe accadere che venga annunciato due volte lo
+  stesso elemento. Queste funzioni sono per lo più già integrate in NVDA
   2017.3.
 * Toasts are no longer announced multiple times in Creators Update and
   later. This fix is included in NVDA 2017.3.
@@ -77,7 +82,7 @@ earlier than 2017.3.
 
 ## Calcolatrice
 
-* When ENTER or Escape is pressed, NVDA announces calculation results.
+* Quando viene premuto invio o Esc, NVDA annuncia il risultato del calcolo.
 * For calculations such as unit converter and currency converter, NVDA will
   announce results as soon as calculations are entered.
 
@@ -95,7 +100,7 @@ earlier than 2017.3.
 * NVDA rimarrà in silenzio mentre si parla a Cortana  con la voce.
 * NVDA annuncerà la conferma di un promemoria quando ne viene inserito uno.
 
-## Game Bar
+## Barra dei giochi
 
 * NVDA will announce appearance of Game Bar window. Due to technical
   limitations, NVDA cannot interact fully with Game Bar.
@@ -117,8 +122,8 @@ earlier than 2017.3.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are now
-  announced. Most of these scenarios are now part of NVDA 2017.3.
+* Vengono annunciate correttamente le notifiche dei download dei file. Con
+  NVDA 2017.3 questa funzione è quasi del tutto integrata.
 
 ## Persone
 
@@ -127,17 +132,19 @@ earlier than 2017.3.
 
 ## Impostazioni
 
-* Certain information such as Windows Update progress is now reported
-  automatically. NVDA itself will handle majority of cases in 2017.3.
+* Vengono annunciate automaticamente le informazioni di avanzamento delle
+  operazioni di Windows Update. Con NVDA 2017.3 questa funzione è quasi del
+  tutto integrata.
 * Le informazioni delle barre di avanzamento non vengono più lette due
   volte.
-* If it takes a while to search for settings, NVDA will announce "searching"
-  and search result status such as if a setting cannot be found. This is now
-  done from NVDA in 2017.3.
+* Se la ricerca di un'impostazione richiede troppo tempo, NVDA si comporterà
+  come se non ci siano risultati da visualizzare. Funzione già integrata in
+  NVDA 2017.3.
 * Il gruppo impostazioni viene riconosciuto quando ci si sposta tra i
   controlli usando la navigazione ad oggetti.
-* For some combo boxes, NVDA will no longer fail to recognize labels and/or
-  announce value changes. Value change fix is included in NVDA 2017.3.
+* Per alcune caselle combinate, NVDA non commetterà più errori nel
+  riconoscere le etichette o annunciare i cambiamenti dei valori. Questa
+  funzione è già presente in NVDA 2017.3.
 
 ## Skype
 
@@ -164,10 +171,10 @@ earlier than 2017.3.
 
 * Dopo aver controllato la presenza di aggiornamenti di app, i nomi delle
   app nell'elenco degli aggiornamenti viene correttamente etichettato.
-* Appearance of search suggestions are now announced. This is now part of
-  NVDA 2017.3.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress. A basic fix is now part of NVDA
+* viene annunciata la comparsa  dei suggerimenti di ricerca Questa funzione
+  è già presente in NVDA 2017.3.
+* Mentre si scaricano contenuti quali app o film, NVDA ne leggerà il nome e
+  l'avanzamento del download. Questa miglioria è già presente in NVDA
   2017.3.
 
 ## Meteo

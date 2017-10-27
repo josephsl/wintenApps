@@ -27,7 +27,7 @@ każdej aplikacji co jest wspierane):
 
 Uwaga: Ten dodatek wymaga Windows 10 Wersję 1607 (kompilację 14393) lub
 nowszą i NVDA 2017.3 lub nowszą. Dla lepszych wyników, trzeba będzie używać
-dodatek z najnowszą stabilną kompilacją (kompilacja 15063) i ostatnią
+dodatek z najnowszą stabilną kompilacją (kompilacja 16299) i ostatnią
 stabilną wersję NVDA. Także, po zmianie ustawień aktualizacji dodatku,
 trzeba się upewnić, czy konfiguracja jest zachowana.
 
@@ -63,9 +63,9 @@ wersjami starszymi niż 2017.3.
 * Możliwość śledzenia zdarzeń z aplikacji ujednoliconej platformy Windows
   (UWP) jeżeli NVDA jest uruchomione w trybie debugowania (2017.1 lub
   nowsze).
-* Wsparcie stępne dla pływającego panelu wprowadzania Emoji w kompilacji
-  16215 lub nowszej (dla lepszych wyników trzeba używać syntezatora mowy
-  OneCore, czyli Microsoft sapi mobile).
+* Wsparcie dla pływającego panelu wprowadzania Emoji w kompilacji 16215 lub
+  nowszej (dla lepszych wyników trzeba używać syntezatora mowy OneCore,
+  czyli Microsoft sapi mobile).
 * W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. W tym są
   włączone powiadomienia w Microsoft Edge i innych. Proszę mieć na uwadze,
   że to może skutkować podwójne wymawianie w niektórych

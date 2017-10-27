@@ -25,11 +25,11 @@ Windows 10, а также исправлений для некоторых ти�
 * Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
 
-Примечание: Это дополнение требует Windows 10 Версии 1607 (сборки 14393) или
-позднее и NVDA 2017.3 или позднее. Для наилучших результатов используйте
-дополнение с последней стабильной сборкой (сборка 15063) и последней
-стабильной версией NVDA. Кроме того, после изменения настроек обновления для
-дополнения, обязательно сохраните настройки программы NVDA.
+Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
+and NVDA 2017.3 or later. For best results, use the add-on with latest
+Windows 10 stable build (build 16299) and latest stable version of
+NVDA. Also, after changing update settings for the add-on, be sure to save
+NVDA settings.
 
 Важное Примечание о NVDA 2017.3: из-за обратно несовместимых изменений в
 NVDA 2017.3, дополнение версии 17.09 и младше не будет работать в версиях
@@ -60,8 +60,9 @@ NVDA старше 2017.3.
   ежедневной основе, соответственно.
 * Ability to track events coming from Universal Windows Platform (UWP) apps
   if NVDA is run with debug logging enabled.
-* Support for floating Emoji input panel in Fall Creators Update (for best
-  experience when reading emojis, use Windows OneCore speech synthesizer).
+* Support for floating Emoji input panel in Version 1709 (Fall Creators
+  Update). For best experience when reading emojis, use Windows OneCore
+  speech synthesizer.
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
   double-speaking in some cases. Most of the scenarios are now part of NVDA
