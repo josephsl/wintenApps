@@ -28,9 +28,9 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1607 (koontiversio
 14393) tai uudempaa ja NVDA 2017.3:a tai uudempaa. Käytä parhaan
-käyttökokemuksen varmistamiseksi viimeisintä vakaata koontiversiota (15063)
-sekä uusinta NVDA:ta. Varmista myös, että tallennat NVDA:n asetukset
-muutettuasi lisäosan päivitysasetuksia.
+käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata
+koontiversiota (16299) sekä uusinta NVDA:ta. Varmista myös, että tallennat
+NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 
 Tärkeä huomautus: Koska NVDA 2017.3:een on tehty muutoksia, jotka eivät ole
 taaksepäin yhteensopivia, lisäosan versio 17.09 ja sitä uudemmat eivät toimi
@@ -64,8 +64,9 @@ NVDA:n 2017.3:a vanhemmissa versioissa.
 * Mahdollisuus Universal Windows Platform (UWP) -sovelluksista tulevien
   tapahtumien seuraamiseen, mikäli NVDA:ta käytetään
   virheenkorjaus-lokitasolla.
-* Tuki Fall Creators -päivityksen kelluvalle emojiensyöttöruudulle (käytä
-  parhaan kokemuksen saamiseksi Windows OneCore -syntetisaattoria).
+* Tuki version 1709 (Fall Creators -päivitys) kelluvalle
+  emojinsyöttöruudulle. Käytä parhaan kokemuksen saamiseksi Windows OneCore
+  -syntetisaattoria.
 * Joidenkin sovellusten Aktiivisen alueen teksti luetaan. Näitä ovat
   mm. Edgen ilmoitukset ja laskutoimitusten tulokset Laskimessa sekä
   muut. Huomaa, että tämä saattaa johtaa joissakin tapauksissa ilmoitusten

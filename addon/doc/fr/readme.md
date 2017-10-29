@@ -27,12 +27,11 @@ est inclus) :
 * Météo.
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
-Note: ce module complémentaire nécessite Windows 10 Version 1607 (build
-14393) ou version ultérieure et NVDA 2017.3 ou version ultérieure. Pour de
-meilleurs résultats, utilisez le module complémentaire avec la dernière
-build stable (build 15063) et la dernière version stable de NVDA. De plus,
-après avoir modifié les paramètres de mise à jour pour le module
-complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
+Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
+and NVDA 2017.3 or later. For best results, use the add-on with latest
+Windows 10 stable build (build 16299) and latest stable version of
+NVDA. Also, after changing update settings for the add-on, be sure to save
+NVDA settings.
 
 Note importante concernant NVDA 2017.3 : en raison de modifications
 incompatibles en arrière dans NVDA 2017.3, le module complémentaire version
@@ -69,9 +68,9 @@ incompatibles en arrière dans NVDA 2017.3, le module complémentaire version
 * Possibilité de suivre les événements provenant des apps Universal Windows
   Platform (UWP) si NVDA est exécuté avec la journalisation de débogage
   activée.
-* Prise en charge pour les Emoji flottants du panneau de saisie dans Fall
-  Creators Update (pour une meilleure expérience lors de la lecture
-  d'emojis,, utiliser le synthétiseur vocal Windows OneCore).
+* Support for floating Emoji input panel in Version 1709 (Fall Creators
+  Update). For best experience when reading emojis, use Windows OneCore
+  speech synthesizer.
 * Dans certaines applications, le texte de la région en direct est
   annoncé. Cela inclut les alertes dans Edge, résultats dans la calculatrice
   et autres. Notez que cela peut entraîner une double verbalisation dans

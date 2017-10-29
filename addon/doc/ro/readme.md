@@ -26,11 +26,12 @@ privire la ceea ce este inclus):
 * Meteo.
 * Diverse module de control precum tile-urile din meniul start.
 
-Notă: acest supliment necesită Windows 10 versiunea 1607 (build 14393) sau
-mai nou și NVDA 2017.3 sau mai nou. Pentru rezultate foarte bune, folosiți-l
-cu ultimul build stabil (build 15063) și cea mai recentă versiune stabilă a
-NVDA-ului. De asemenea, după modificarea setărilor de actualizare pentru
-supliment, asigurați-vă că salvați setările NVDA-ului.
+Notă: acest supliment necesită Windows 10 versiunea 1607 )compilarea 14393)
+sau mai nou și NVDA 2017.3 sau mai nou. Pentru cele mai bune rezultate,
+folosiți-l cu ultima compilare stabilă ( compilarea 16299) și cea mai
+recentă versiune stabilă a NVDA-ului. De asemenea, după modificarea
+setărilor de actualizare pentru supliment, asigurați-vă că salvați setările
+NVDA-ului.
 
 Notă importantă despre NVDA 2017.3: Datorită modificărilor incompatibile din
 această versiune de NVDA, atât versiunea 17.09 a suplimentului cât și
@@ -43,8 +44,8 @@ mai vechi decât 2017.3.
   submeniurile sunt recunoscute corect.
 * Anumite dialoguri sunt acum recunoscute ca dialoguri
   corespunzătoare. Acestea includ dialogul Insider Preview (în aplicația
-  Setări) și un nou stil în dialogul UAC în build 14328 și mai nou pentru
-  NvDA 2016.2.1 sau mai vechi.
+  Setări) și un nou stil în dialogul UAC în compilarea 14328 și mai nouă
+  pentru NvDA 2016.2.1 sau mai vechi.
 * Aspectul/aproape de sugestii pentru anumite câmpuri de căutare (în special
   în aplicațiile Setări și Magazin) este anunțat prin sunete și braille. De
   asemenea, acesta include caseta de căutare a meniului Start. Acum, acesta
@@ -53,11 +54,11 @@ mai vechi decât 2017.3.
   majoritatea cazurilor. Această opțiune este controlată de „informația
   poziției obiectului în dialogul prezentării obiectului.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
-  (e.g. 1 din 2) nu mai este anunțată.
+  (e.x. 1 din 2) nu mai este anunțată.
 * Următoarele evenimente UIA sunt recunoscute: Controler pentru, schimbarea
-  regiunii în care locuiți, alertă de sistem, element selectat, fereastră
-  deschisă. Cu NVDA-ul setat să ruleze cu diagnosticarea activată, aceste
-  evenimente vor fi urmărite.
+  regiunii live, alertă de sistem, element selectat, fereastră deschisă. Cu
+  NVDA-ul setat să ruleze cu diagnosticarea activată, aceste evenimente vor
+  fi urmărite.
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
@@ -66,9 +67,9 @@ mai vechi decât 2017.3.
 * Abilitatea de a urmări evenimentele care provin din platforma universală
   Windows (UWP) și din aplicații, în cazul în care NVDA rulează cu
   diagnosticarea activată.
-* Suport pentru panoul de intrare floating moji în build-ul 16215 sau mai
-  nou (pentru o experiență foarte bună în citirea mojiurilor, utilizați
-  sintetizatorul Windows OneCore).
+* Suport pentru panoul de intrare floating moji în versiunea 1709 (Fall
+  Creators Update). Pentru cea mai bună experiență la citirea moji-urilor,
+  folosiți sintetizatorul Windows OneCore.
 * În unele aplicații, textul regiunii live este anunțat. Aceasta include
   alertele din Edge, rezultatele din Calculator și altele. Rețineți faptul
   că asta poate rezulta o dublă vorbire în unele cazuri. Majoritatea
