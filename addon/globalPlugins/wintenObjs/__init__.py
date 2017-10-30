@@ -147,7 +147,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #20: don't even think about proceeding in secure screens (especially add-on updates).
 		if globalVars.appArgs.secure: return
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
-		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
+		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("&Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
 		if w10config.canUpdate and config.conf["wintenApps"]["autoUpdateCheck"]:
 			# But not when NVDA itself is updating.
