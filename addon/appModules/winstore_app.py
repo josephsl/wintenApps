@@ -12,9 +12,15 @@ from NVDAObjects.UIA import UIA
 class AppModule(appModuleHandler.AppModule):
 
 	def event_NVDAObject_init(self, obj):
-		# Extraneous information announced when going through apps to be updated/installed, so use a grandchild's name.
-		if isinstance(obj, UIA) and obj.role == controlTypes.ROLE_LISTITEM and obj.firstChild and obj.firstChild.UIAElement.cachedAutomationID == "InstallControl":
-			obj.name = obj.firstChild.firstChild.name
+		# Workarounds for vairous lists.
+		if isinstance(obj, UIA) and obj.role == controlTypes.ROLE_LISTITEM and obj.firstChild:
+			childElement = obj.firstChild.UIAElement
+			# Extraneous information announced when going through apps to be updated/installed, so use a grandchild's name.
+			if childElement.cachedAutomationID == "InstallControl":
+				obj.name = obj.firstChild.firstChild.name
+			# Navigation menu items with generic class name as the label (seen in certain variants of 11710 release).
+			elif childElement.cachedClassName == "AppBarButton" and obj.parent.UIAElement.cachedAutomationID == "MenuItemsHost":
+				obj.name = obj.firstChild.name
 
 	# just like Settings app, have a cache of download progress text handy.
 	_appInstallProgress = ""
