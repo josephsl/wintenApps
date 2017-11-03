@@ -58,7 +58,8 @@ msgstr "keine Emoji-Symbole"
 msgid "suggestions"
 msgstr "Vorschläge"
 
-msgid "Windows 10 App Essentials..."
+#, fuzzy
+msgid "&Windows 10 App Essentials..."
 msgstr "Wichtige Windows 10-App Essentials"
 
 msgid "Windows 10 App Essentials add-on settings"
