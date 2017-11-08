@@ -26,11 +26,12 @@ se inclúe):
 * O Tempo
 * Módulos misceláneos para controis como mosaicos do Menú Inicio.
 
-Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
-and NVDA 2017.3 or later. For best results, use the add-on with latest
-Windows 10 stable build (build 16299) and latest stable version of
-NVDA. Also, after changing update settings for the add-on, be sure to save
-NVDA settings.
+Nota: este complemento require do Windows 10 Versión 1607 (build 14393) ou
+posterior e do NVDA 2017.3 ou posterior. Para uns mellores resultados, usa o
+complemento coa compilación estable máis recente (build 16299) e versión
+estable máis recente do NVDA. Tamén, despois de cambiar as opcións de
+actualización para o complemento, asegúrate de gardar a configuración do
+NVDA.
 
 Nota importante sobre o NVDA 2017.3: debido a cambios incompatibles cara
 atrás no NVDA 2017.3, a versión do complemento 17.09 e versións posteriores
@@ -63,9 +64,9 @@ non funcionarán nas versións do NVDA anteriores á a 2017.3.
 * Capacidade para seguir eventos que cheguen dende aplicacións Universal
   Windows Platform (UWP) se o NVDA se está a executar co rexistro de
   depuración habilitado.
-* Support for floating Emoji input panel in Version 1709 (Fall Creators
-  Update). For best experience when reading emojis, use Windows OneCore
-  speech synthesizer.
+* Soporte para o panel flotante de entrada de Emoji na actualización 1709
+  Fall Creators  (para uns mellores resultados lendo emojis, usa o
+  sintetizador de voz Windows OneCore).
 * Nalgunhas aplicacións, anúnciase o texto en rexións vivas. Esto inclúe
   alertas en Edge, na calculadora e noutros. Ten en conta que esto poderá
   causar unha fala por duplicado nalgúns casos. A maioría dos escenarios son

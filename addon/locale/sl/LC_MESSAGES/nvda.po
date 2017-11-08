@@ -59,7 +59,8 @@ msgstr "Ni emojev"
 msgid "suggestions"
 msgstr "predlogi"
 
-msgid "Windows 10 App Essentials..."
+#, fuzzy
+msgid "&Windows 10 App Essentials..."
 msgstr "Windows 10 Osnove Aplikacijam..."
 
 msgid "Windows 10 App Essentials add-on settings"
@@ -113,7 +114,7 @@ msgid ""
 "You are about to switch to development updates channel. Although updates "
 "from this channel brings exciting features, it also comes with updates that "
 "might be unstable at times and should be used for testing and sending "
-"feedback to the add-on developer. If you prefer to use stable rleases, "
+"feedback to the add-on developer. If you prefer to use stable releases, "
 "please answer no and switch to stable update channel. Are you sure you wish "
 "to switch to the development update channel?"
 msgstr ""

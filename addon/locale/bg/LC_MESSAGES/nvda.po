@@ -59,7 +59,8 @@ msgstr "Няма намерени емоджи"
 msgid "suggestions"
 msgstr "предложения"
 
-msgid "Windows 10 App Essentials..."
+#, fuzzy
+msgid "&Windows 10 App Essentials..."
 msgstr "Базов пакет за приложения в Windows 10..."
 
 msgid "Windows 10 App Essentials add-on settings"

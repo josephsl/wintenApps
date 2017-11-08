@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.08\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-08-05 22:05+1000\n"
-"PO-Revision-Date: 2017-09-25 10:59+0200\n"
+"PO-Revision-Date: 2017-10-24 11:02+0200\n"
 "Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -59,7 +59,8 @@ msgstr "Nessuna emoji"
 msgid "suggestions"
 msgstr "Suggerimenti"
 
-msgid "Windows 10 App Essentials..."
+#, fuzzy
+msgid "&Windows 10 App Essentials..."
 msgstr "Windows 10 App Essentials..."
 
 msgid "Windows 10 App Essentials add-on settings"
@@ -111,7 +112,6 @@ msgid "Check for add-on &update"
 msgstr "Controlla aggiornamenti componente aggi&untivo"
 
 #. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-#, fuzzy
 msgid ""
 "You are about to switch to development updates channel. Although updates "
 "from this channel brings exciting features, it also comes with updates that "

@@ -62,7 +62,8 @@ msgstr "emoji yok"
 msgid "suggestions"
 msgstr "öneriler"
 
-msgid "Windows 10 App Essentials..."
+#, fuzzy
+msgid "&Windows 10 App Essentials..."
 msgstr "Windows 10 temel uygulamalar"
 
 msgid "Windows 10 App Essentials add-on settings"

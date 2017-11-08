@@ -28,8 +28,9 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 
 Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
 and NVDA 2017.3 or later. For best results, use the add-on with latest
-stable build (build 15063) and latest stable version of NVDA. Also, after
-changing update settings for the add-on, be sure to save NVDA settings.
+Windows 10 stable build (build 16299) and latest stable version of
+NVDA. Also, after changing update settings for the add-on, be sure to save
+NVDA settings.
 
 Important note about NVDA 2017.3: due to backwards incompatible changes in
 NVDA 2017.3, add-on version 17.09 and later will not work on NVDA versions
@@ -59,8 +60,9 @@ earlier than 2017.3.
 * Mogućnost praćenja događaja koji dolaze iz  Univerzalnih Windows Platform
   (UWP) aplikacija ako je NVDA sa postavljenim načinom zapisa na debug
   (2017.1 ili noviji).
-* Support for floating Emoji input panel in Fall Creators Update (for best
-  experience when reading emojis, use Windows OneCore speech synthesizer).
+* Support for floating Emoji input panel in Version 1709 (Fall Creators
+  Update). For best experience when reading emojis, use Windows OneCore
+  speech synthesizer.
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
   double-speaking in some cases. Most of the scenarios are now part of NVDA
