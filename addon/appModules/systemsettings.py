@@ -9,6 +9,7 @@ import appModuleHandler
 import ui
 import controlTypes
 from NVDAObjects.UIA import UIA
+from NVDAObjects.behaviors import ProgressBar
 
 class AppModule(appModuleHandler.AppModule):
 
@@ -49,6 +50,14 @@ class AppModule(appModuleHandler.AppModule):
 					else:
 						nameList.append(obj.next.name)
 				obj.name = ", ".join(nameList)
+
+	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+		# In build 17035, Settings/System/Sound has been added, but has an anoying volume progress bar.
+		if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "ProgressBar" and isinstance(obj.next, UIA) and obj.next.UIAElement.cachedAutomationID == "SystemSettings_Audio_Output_VolumeValue_Slider":
+			try:
+				clsList.remove(ProgressBar)
+			except ValueError:
+				pass
 
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache = ""
