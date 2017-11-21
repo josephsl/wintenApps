@@ -7,7 +7,6 @@
 import os
 import globalPluginHandler
 import controlTypes
-import UIAHandler
 import ui
 from NVDAObjects.UIA import UIA, SearchField
 from NVDAObjects.behaviors import Dialog, EditableTextWithSuggestions
@@ -29,7 +28,7 @@ addonHandler.initTranslation()
 # None at this time.
 
 # UIA COM constants
-TreeScope_Subtree = 7
+# None at this time.
 
 # We know the following elements are dialogs.
 wintenDialogs=("Shell_Dialog", "Popup", "Shell_Flyout")
