@@ -88,13 +88,6 @@ class SearchField(SearchField):
 		# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
 		if self.UIAElement.cachedAutomationID == "addressEditBox" and self != api.getFocusObject():
 			return
-		# Manually locate live region until NVDA Core implements this.
-		obj = self
-		while obj is not None:
-			if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "Popup":
-				ui.message(obj.description)
-				return
-			obj = obj.next
 		nvwave.playWaveFile(r"waves\suggestionsClosed.wav")
 
 # Contacts search field in People app and other places.
@@ -102,34 +95,16 @@ class SearchField(SearchField):
 _playSuggestionsSounds = False
 
 # For UIA search fields that does not raise any controller for at all.
-# Until EditableTextWithsuggestions becomes available in 2017.3, have two identical classes handy.
-# The "Ex" class is for newer style with suggestions events.
-class QueryInputTextBox(UIA):
+class QueryInputTextBox(EditableTextWithSuggestions, UIA):
 
 	def event_valueChange(self):
 		global _playSuggestionsSounds
 		if len(self.value) and self.simpleNext.firstChild.role == controlTypes.ROLE_LISTITEM:
 			if not _playSuggestionsSounds:
-				nvwave.playWaveFile(r"waves\suggestionsOpened.wav")
-				braille.handler.message(_("suggestions"))
+				super(QueryInputTextBox, self).event_suggestionsOpened()
 				_playSuggestionsSounds = True
 		elif len(self.value) == 0:
 			_playSuggestionsSounds = False
-
-
-try:
-	class QueryInputTextBoxEx(EditableTextWithSuggestions, UIA):
-
-		def event_valueChange(self):
-			global _playSuggestionsSounds
-			if len(self.value) and self.simpleNext.firstChild.role == controlTypes.ROLE_LISTITEM:
-				if not _playSuggestionsSounds:
-					super(QueryInputTextBoxEx, self).event_suggestionsOpened()
-					_playSuggestionsSounds = True
-			elif len(self.value) == 0:
-				_playSuggestionsSounds = False
-except NameError:
-	pass
 
 
 # Some context menu items expose position info, which is quite anoying.
@@ -180,17 +155,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Also take care of Edge address omnibar and Start search box.
 			# This is no longer necessary in NVDA 2017.3 (incubating as of May 2017).
 			elif obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
-				# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcmenet problem.
+				# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcement problem.
 				if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox") and obj.appModule.appName != "searchui":
 					clsList.insert(0, SearchField)
 			# A dedicated version for Mail app's address/mention suggestions.
 			elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
 				clsList.insert(0, UIAEditableTextWithSuggestions)
-			# Suggestions themselves.
-			# No longer needed in NVDA 2017.3 as the Core will include this.
 			# Some search fields does not raise controller for but suggestions are next to them.
 			elif obj.UIAElement.cachedAutomationID == "QueryInputTextBox":
-				clsList.insert(0, QueryInputTextBoxEx)
+				clsList.insert(0, QueryInputTextBox)
 			# Menu items should never expose position info (seen in various context menus such as in Edge).
 			elif obj.UIAElement.cachedClassName == "MenuFlyoutItem":
 				clsList.insert(0, MenuItemNoPosInfo)
