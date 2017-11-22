@@ -12,7 +12,7 @@ import queueHandler
 import ui
 
 # Filter live region change elements to avoid repeated announcements.
-# A dedicated function is provded to react to future Calculator changes.
+# A dedicated function is provided to react to future Calculator changes.
 def shouldLiveRegionChangeProceed(obj):
 	automationID = obj.UIAElement.cachedAutomationID
 	if automationID == "DateDiffAllUnitsResultLabel":
@@ -37,7 +37,7 @@ class AppModule(appModuleHandler.AppModule):
 		nextHandler()
 
 	def event_liveRegionChange(self, obj, nextHandler):
-		# Unfortunately, the control that fires this has no automation ID yet says it is a generic te4xt block.
+		# Unfortunately, the control that fires this has no automation ID yet says it is a generic text block.
 		# This may mean anything can be announced, so try to filter them.
 		if shouldLiveRegionChangeProceed(obj):
 			nextHandler()

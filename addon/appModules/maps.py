@@ -58,7 +58,7 @@ class AppModule(appModuleHandler.AppModule):
 			if obj.parent.UIAElement.cachedAutomationID == "MapControl" and obj.name != self.liveText:
 				self.liveText = obj.name
 				ui.message(obj.name)
-		# And no, never call nextHandler.
+		# And no, never call next handler.
 
 	def event_appModule_loseFocus(self):
 		self.liveText= ""
