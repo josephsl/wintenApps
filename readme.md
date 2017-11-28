@@ -25,21 +25,17 @@ The following app modules or support modules for some apps are included (see eac
 
 Note: this add-on requires Windows 10 Version 1607 (build 14393) or later and NVDA 2017.3 or later. For best results, use the add-on with latest Windows 10 stable build (build 16299) and latest stable version of NVDA. Also, after changing update settings for the add-on, be sure to save NVDA settings.
 
-Important note about NVDA 2017.3: due to backwards incompatible changes in NVDA 2017.3, add-on version 17.09 and later will not work on NVDA versions earlier than 2017.3.
-
 ## General
 
 * In context menus for Start Menu tiles, submenus are properly recognized.
 * Certain dialogs are now recognized as proper dialogs. These include Insider Preview dialog (settings app) and new-style UAC dialog in build 14328 and later for NvDA 2016.2.1 or earlier.
-* Appearance/close of suggestions for certain search fields (notably Settings and Store apps) is announced via sounds and braille. This also includes Start menu search box. This is now part of NVDA as of 2017.3.
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation dialog.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, live region change, system alert, element selected, window opened. With NVDA set to run with debug logging enabled, these events will be tracked.
 * Added ability to check for add-on updates (automatic or manual) via the new Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
-* Ability to track events coming from Universal Windows Platform (UWP) apps if NVDA is run with debug logging enabled.
 * Support for floating Emoji input panel in Version 1709 (Fall Creators Update). For best experience when reading emojis, use Windows OneCore speech synthesizer.
+* Support for hardware keyboard input suggestions in build 17040 and later.
 * In some apps, live region text is announced. This includes alerts in Edge, results in Calculator and others. Note that this may result in double-speaking in some cases. Most of the scenarios are now part of NVDA 2017.3.
-* Toasts are no longer announced multiple times in Creators Update and later. This fix is included in NVDA 2017.3.
 
 ## Alarms and clock
 
@@ -89,6 +85,7 @@ Important note about NVDA 2017.3: due to backwards incompatible changes in NVDA 
 * If it takes a while to search for settings, NVDA will announce "searching" and search result status such as if a setting cannot be found. This is now done from NVDA in 2017.3.
 * Settings groups are recognized when using object navigation to navigate between controls.
 * For some combo boxes, NVDA will no longer fail to recognize labels and/or announce value changes. Value change fix is included in NVDA 2017.3.
+* Audio Volume progress bar beeps are no longer heard in build 17035 and later.
 
 ## Skype
 
