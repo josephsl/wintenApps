@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2017-05-08 01:29+0330\n"
+"PO-Revision-Date: 2017-11-10 12:48+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@freelists.org>\n"
 "Language: fa\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
+"X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,9,-1,-1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -38,7 +39,7 @@ msgstr "اطلاعاتِ آب و هوا برای این مورد موجود نی
 
 #. Translators: the description for the showMessageLongDesc script on Skype for Windows 10.
 msgid "Shows the message details."
-msgstr ""
+msgstr "جزئیاتِ پیام را نشان میدهد."
 
 #. Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 msgid "Typing stopped"
@@ -54,14 +55,13 @@ msgstr "آخرین پیام را میخوانَد و مکان‌نمای باز�
 
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
-msgstr ""
+msgstr "شکلک نیست"
 
 msgid "suggestions"
 msgstr "پیشنهادها"
 
-#, fuzzy
 msgid "&Windows 10 App Essentials..."
-msgstr "نیازمندی‌های حیاتیِ برنامک‌های ویندوزِ ۱۰..."
+msgstr "نیازمندی‌های حیاتیِ برنامک‌های &ویندوزِ ۱۰..."
 
 msgid "Windows 10 App Essentials add-on settings"
 msgstr "تنظیماتِ افزونه‌ی نیازمندی‌های حیاتیِ برنامک‌های ویندوزِ ۱۰"
