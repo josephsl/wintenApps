@@ -15,76 +15,71 @@ welche inbegriffen sind):
 * Kalender
 * Rechner (modern)
 * Cortana
-* Game Bar
+* Spieleleiste
 * Mail
-* Maps
+* Karten
 * Microsoft Edge
 * Kontakte
-* Settings (system settings, Windows+I)
+* Einstellungen (Systemeinstellungen, Windows+I)
 * Skype (universal app)
 * Store
 * Wetter
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
 
-Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
-and NVDA 2017.3 or later. For best results, use the add-on with latest
-Windows 10 stable build (build 16299) and latest stable version of
-NVDA. Also, after changing update settings for the add-on, be sure to save
-NVDA settings.
-
-Important note about NVDA 2017.3: due to backwards incompatible changes in
-NVDA 2017.3, add-on version 17.09 and later will not work on NVDA versions
-earlier than 2017.3.
+Hinweis: Diese Erweiterung benötigt Windows 10 Version 1607 (Build 14393)
+oder höher und NVDA 2017.3 oder höher. Um beste Ergebnisse zu erzielen,
+verwenden Sie die Erweiterung mit dem neuesten stabilen Build von Windows 10
+(Build 16299) und der neuesten stabilen Version von NVDA. Nachdem Sie die
+Aktualisierungseinstellungen für die Erweiterung geändert haben, sollten Sie
+auch die NVDA-Einstellungen speichern.
 
 ## Allgemein
 
 * Im Kontextmenü von Kacheln werden untermenüs korrekt erkannt
-* Certain dialogs are now recognized as proper dialogs. These include
-  Insider Preview dialog (settings app) and new-style UAC dialog in build
-  14328 and later for NvDA 2016.2.1 or earlier.
-* Appearance/close of suggestions for certain search fields (notably
-  Settings and Store apps) is announced via sounds and braille. This also
-  includes Start menu search box. This is now part of NVDA as of 2017.3.
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation dialog.
-* In certain context menus (such as in Edge), position information (e.g. 1
-  of 2) is no longer announced.
-* The following UIA events are recognized: Controller for, live region
-  change, system alert, element selected, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked.
-* Added ability to check for add-on updates (automatic or manual) via the
-  new Windows 10 App Essentials dialog found in NvDA Preferences menu. By
-  default, stable and development versions will check for new updates
-  automatically on a weekly or daily basis, respectively.
-* Ability to track events coming from Universal Windows Platform (UWP) apps
-  if NVDA is run with debug logging enabled.
-* Support for floating Emoji input panel in Version 1709 (Fall Creators
-  Update). For best experience when reading emojis, use Windows OneCore
-  speech synthesizer.
-* In some apps, live region text is announced. This includes alerts in Edge,
-  results in Calculator and others. Note that this may result in
-  double-speaking in some cases. Most of the scenarios are now part of NVDA
-  2017.3.
-* Toasts are no longer announced multiple times in Creators Update and
-  later. This fix is included in NVDA 2017.3.
+* Bestimmte Dialoge werden nun als richtige Dialogfelder erkannt. Dazu
+  gehören das Dialogfeld"Insider-Vorschau" (Einstellungsanwendung) und der
+  neue UAC-Dialog in Build 14328 und höher für NvDA 2016.2 oder früher.
+* NVDA kann die Anzahl der Vorschläge bei der Suche in den meisten Fällen
+  bekannt geben. Diese Option wird gesteuert durch Meldung von
+  Objektpositionsdaten im Dialog der Objektpräsentation.
+* In bestimmten Kontextmenüs (z.B. in Edge) werden Positionsinformationen
+  (z.B. 1 von 2) nicht mehr angesagt.
+* Folgende UIA-Ereignisse werden erkannt: Controller für Live-Region Change,
+  Systemalarm, Element ausgewählt, Fenster geöffnet. Wenn NVDA so
+  eingestellt ist, dass es mit aktiviertem Debug-Logging läuft, werden diese
+  Ereignisse verfolgt.
+* Möglichkeit hinzugefügt, über den neuen Windows 10 App Essentials Dialog
+  im NVDA-Einstellungsmenü nach Aktualisierungen für diese Erweiterung
+  (automatisch oder manuell) zu suchen. Standardmäßig werden stabile- und
+  Entwicklerversionen wöchentlich bzw. täglich automatisch nach neuen
+  Updates suchen.
+* Unterstützung für das schwebende Emoji-Eingabefeld in der Windowsversion
+  1709 (Fall Creators Update). Für beste Erfahrungen beim Lesen von Emojis
+  verwenden Sie Windows-OneCore-Sprachausgaben.
+* Support for hardware keyboard input suggestions in build 17040 and later.
+* In einigen Apps wird Live-Region-Text angekündigt. Dazu gehören Meldungen
+  in Edge, Ergebnisse im Windowsrechner und andere. Beachten Sie, dass dies
+  in manchen Fällen zu einer doppelten Aussprache führen kann, da die
+  meisten Szenarien nun Bestandteil von NVDA ab 2017.3 sind.
 
 ## Wecker und Uhr
 
-* Time picker values are now announced, noticeable when moving focus to
-  picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates.
+* Die Werte für den Zeitbalken werden nun angezeigt. Dies macht sich beim
+  Verschieben des Fokus auf die Balkensteuerung bemerkbar. Es betrifft auch
+  das Steuerelement fuer die Festlegung des Neustarts nach einer erfolgreich
+  abgeschlossenen Aktualisierung.
 
 ## Rechner
 
-* When ENTER or Escape is pressed, NVDA announces calculation results.
-* For calculations such as unit converter and currency converter, NVDA will
-  announce results as soon as calculations are entered.
+* NVDA sagt die Rechenergebnisse beim Drücken der Eingabe- oder Escape-Taste
+  an.
+* Für Berechnungen wie im Einheitenumrechner und Währungsumrechner gibt NVDA
+  die Ergebnisse bekannt, sobald die Berechnungen eingegeben wurden.
 
-## calendar
+## Kalender
 
-* NVDA no longer announces "edit" or "read-only" in message body and other
-  fields.
+* NVDA verkündet nicht mehr "bearbeiten" oder"schreibgeschützt" im
+  Nachrichtentext und in anderen Feldern.
 
 ## Cortana
 
@@ -92,30 +87,34 @@ earlier than 2017.3.
   (falls nicht, öffnen Sie das StartMenü und starten Sie die Suche erneut).
 * NVDA verstummt bei der Verwendung von Cortana, so dass die Stimmen nicht
   mehr sich in die Quere kommen.
-* NVDA will now announce reminder confirmation after you set one.
+* NVDA wird nun eine Erinnerungsbestätigung ankündigen, nachdem Sie eine
+  eingestellt haben.
 
-## Game Bar
+## Spieleleiste
 
-* NVDA will announce appearance of Game Bar window. Due to technical
-  limitations, NVDA cannot interact fully with Game Bar.
+* NVDA wird das Erscheinen des Fensters mit der Spieleleiste
+  ankündigen. Aufgrund technischer Einschränkungen kann NVDA nicht
+  vollständig mit der Spieleleiste interagieren.
 
 ## Mail
 
-* When reviewing items in messages list, you can now use table navigation
-  commands to review message headers.
-* When writing a message, appearance of at mention suggestions are indicated
-  by sounds.
+* Beim Navigieren durch Elemente in der Nachrichtenliste können Sie nun
+  Tabellen-Navigationsbefehle verwenden, um Nachrichtenköpfe zu überprüfen.
+* Wenn Sie eine Nachricht schreiben, wird das Erscheinen von Vorschlägen
+  durch Töne angezeigt.
 
-## Maps
+## Karten
 
-* NVDA plays location beep for map locations.
-* When using street side view and if "use keyboard" option is enabled, NVDA
-  will announce street addresses as you use arrow keys to navigate the map.
+* NVDA spielt einen Ortungston für Kartenstandorte ab.
+* Wenn Sie die Straßenseitenansicht verwenden und die Option"Tastatur
+  verwenden" aktiviert ist, wird NVDA Straßenadressen ankündigen, während
+  Sie mit den Pfeiltasten durch die Karte navigieren.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are now
-  announced. Most of these scenarios are now part of NVDA 2017.3.
+* Benachrichtigungen wie Datei-Downloads und verschiedene
+  Website-Benachrichtigungen werden nun angesagt. Die meisten dieser
+  Szenarien sind nun Bestandteil von NVDA 2017.3.
 
 ## Kontakte
 
@@ -123,57 +122,68 @@ earlier than 2017.3.
 
 ## Einstellungen
 
-* Certain information such as Windows Update progress is now reported
-  automatically. NVDA itself will handle majority of cases in 2017.3.
-* Progress bar values and other information are no longer announced twice.
-* If it takes a while to search for settings, NVDA will announce "searching"
-  and search result status such as if a setting cannot be found. This is now
-  done from NVDA in 2017.3.
-* Settings groups are recognized when using object navigation to navigate
-  between controls.
-* For some combo boxes, NVDA will no longer fail to recognize labels and/or
-  announce value changes. Value change fix is included in NVDA 2017.3.
+* Bestimmte Informationen, wie z.B. der Fortschritt von Windows Update,
+  werden nun automatisch gemeldet. Die meisten Fälle sind standardmäßig in
+  NVDA 2017.3 integriert.
+* Werte in Fortschrittsbalken und andere Informationen werden nicht mehr
+  zweimal angesagt.
+* Wenn die Suche nach Einstellungen zu lange dauert, wird NVDA den Status
+  der Suche und des Suchergebnisses ankündigen, z.B. wenn eine Einstellung
+  nicht gefunden werden kann. Dies ist nun auch bestandteil von NVDA ab
+  2017.3.
+* Einstellungsgruppen werden erkannt, wenn Objektnavigation zur Navigation
+  zwischen Controllern angewendet wird.
+* Bei einigen Ausklapplisten wird NVDA nun die Beschriftung erkennen
+  und/oder Wertänderungen ankündigen. Diese Funktion ist in NVDA ab 2017.3
+  enthalten.
+* Audio Volume progress bar beeps are no longer heard in build 17035 and
+  later.
 
 ## Skype
 
-* Typing indicator text is announced just like Skype for Desktop client.
-* Partial return of Control+NvDA+number row commands to read recent chat
-  history and to move navigator object to chat entries just like Skype for
-  Desktop.
-* You can now press Alt+number row to locate and move to conversations (1),
-  contacts list (2), bots (3) and chat edit field if visible (4). Note that
-  these commands will work properly if Skype update released in March 2017
-  is installed.
-* Combo box labels for Skype preview app released in November 2016 are
-  announced.
-* NVDA will no longer announce "Skype Message" when reviewing messages for
-  majority of cases.
-* Various issues when using Skype with braille displays fixed, including
-  inability to review message history items in braille.
-* From message history list, pressing NVDA+D on a message item will now
-  allow NVDA to announce detailed information about a message such as
-  channel type, sent date and time and so on.
+* Die Eingabe des Indikatortextes wird wie bei Skype für Desktop-Client
+  angekündigt.
+* Teilweise Rückgabe von Control+NVDA+Zahlen aus der Zahlenreihe zum Lesen
+  des letzten Chatverlaufs und zum Verschieben des Navigator-Objekts in
+  Chat-Einträgen wie bei Skype für Desktop.
+* Sie können nun die Alt+Zahlen aus der Zahlenreihe  drücken, um Gespräche
+  (1), Kontaktliste (2), Bots (3) und Chat-Eingabefeld zu suchen und zu
+  verschieben, falls sichtbar (4). Beachten Sie, dass diese Befehle
+  ordnungsgemäß funktionieren, wenn das im März 2017 veröffentlichte
+  Skype-Update installiert ist.
+* Die Beschriftungen für Ausklapplisten für die Skype-Vorschau-App, welche
+  in November 2016 veröffentlich wurde, werden angekündigt.
+* NVDA wird in den meisten Fällen nicht mehr "Skype-Nachricht" ankündigen,
+  wenn durch die Nachrichten navigiert wird.
+* Verschiedene Probleme bei der Verwendung von Skype mit Braillezeilen
+  wurden behoben, einschließlich der fehlenden Fähigkeit,
+  Nachrichtenprotokolle in Braille-Schrift darzustellen.
+* Wenn Sie in der Liste des Nachrichtenverlaufs auf einem Nachrichteneintrag
+  NVDA+D drücken, kann NVDA nun detaillierte Informationen zu einer
+  Nachricht wie z.B. Kanaltyp, Sendedatum, Uhrzeit usw. ankündigen.
 
 ## Store
 
-* After checking for app updates, app names in list of apps to be updated
-  are correctly labeled.
-* Appearance of search suggestions are now announced. This is now part of
-  NVDA 2017.3.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress. A basic fix is now part of NVDA
-  2017.3.
+* Nach der Suche nach App-Aktualisierungen werden die App-Namen in der Liste
+  der zu aktualisierenden Apps korrekt beschriftet.
+* Das Erscheinen von Suchvorschlägen wird nun angekündigt. Dies ist nun Teil
+  von NVDA 2017.3.
+* Beim Herunterladen von Inhalten wie Apps und Filmen wird NVDA den
+  Produktnamen und den Fortschritt des Downloads bekannt geben. Ein
+  grundlegender Fix ist jetzt Bestandteil von NVDA 2017.3.
 
 ## Wetter
 
-* Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by
-  Derek Riemer).
-* when reading a forecast, use the left and right arrows to move between
-  items. Use the up and down arrows to read the individual items. For
-  example, pressing the right arrow might report "Monday: 79 degrees, partly
-  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
-  again will read the next item (Like the temperature). This currently works
-  for daily and hourly forecasts.
+* Registerkarten wie"Prognose" und"Karten" werden als richtige
+  Registerkarten erkannt (Patch von Derek Riemer).
+* Wenn Sie eine Prognose lesen, können Sie mit den Pfeiltasten nach links
+  und rechts zwischen den Elementen wechseln. Verwenden Sie die Aufwärts-
+  und Abwärtspfeile, um die einzelnen Teile eines Elements zu lesen. Zum
+  Beispiel könnte ein Druck auf den Pfeil nach rechts den Bericht "Montag:
+  33 Grad, teilweise bewölkt, ..." anzeigen. Wenn man den Pfeil nach unten
+  drückt, heißt es"Montag", dann wird ein erneuter Druck auf den Pfeil den
+  nächsten Punkt anzeigen (wie z.B. die Temperatur). Dies funktioniert
+  derzeit für Tages- und Stundenvorhersagen.
 
 [[!tag dev stable]]
 

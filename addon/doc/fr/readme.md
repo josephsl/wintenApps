@@ -34,11 +34,6 @@ build stable (build 16299) et la dernière version stable de NVDA. De plus,
 après avoir modifié les paramètres de mise à jour pour le module
 complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 
-Note importante concernant NVDA 2017.3 : en raison de modifications
-incompatibles en arrière dans NVDA 2017.3, le module complémentaire version
-17.09 et ultérieure ne fonctionnera pas sur les versions NVDA antérieures à
-2017.3.
-
 ## Générale
 
 * Dans les menus contextuels pour les tuiles sous-menus du Menu Démarrer
@@ -47,10 +42,6 @@ incompatibles en arrière dans NVDA 2017.3, le module complémentaire version
   dialogue propres. Ceci incluent le dialogue Insider Preview (settings app)
   et le dialogue nouveau style UAC dans la build 14328 et version ultérieur
   pour NVDA 2016.2.1 ou version antérieure.
-* L'apparition/fermeture des suggestions pour certains champs de recherche
-  (notamment Settings et Store app) est annoncé En passant par des sons
-  et/ou le braille. Cela inclut également la zone de recherche du menu
-  Démarrer. Cela fait maintenant partie de NVDA à partir de la 2017.3.
 * NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
   majorité des cas. Cette option est contrôlée par "Annoncer le rang de
   l'objet dans une liste" dans la boîte de dialogue Présentation des Objets.
@@ -66,19 +57,15 @@ incompatibles en arrière dans NVDA 2017.3, le module complémentaire version
   de NVDA. Par défaut, les versions stables et de développement vérifieront
   automatiquement les nouvelles mises à jour sur une base hebdomadaire ou
   quotidienne, respectivement.
-* Possibilité de suivre les événements provenant des apps Universal Windows
-  Platform (UWP) si NVDA est exécuté avec la journalisation de débogage
-  activée.
 * Prise en charge pour les Emoji flottants du panneau de saisie dans la
   Version 1709 (Fall Creators Update). Pour une meilleure expérience lors de
   la lecture d'emojis,, utiliser le synthétiseur vocal Windows OneCore.
+* Support for hardware keyboard input suggestions in build 17040 and later.
 * Dans certaines applications, le texte de la région en direct est
   annoncé. Cela inclut les alertes dans Edge, résultats dans la calculatrice
   et autres. Notez que cela peut entraîner une double verbalisation dans
   certains cas. La plupart des scénarios font maintenant partie de NVDA
   2017.3.
-* Les toasts ne sont plus annoncés plusieurs fois dans Creators Update et
-  supérieur. Ce correctif est inclus dans NVDA 2017.3.
 
 ## Alarmes et horloge
 
@@ -157,6 +144,8 @@ incompatibles en arrière dans NVDA 2017.3, le module complémentaire version
 * Pour certaines zones de liste déroulantes, NVDA ne manquera plus de
   reconnaître les étiquettes et/ou d'annoncer les changements de
   valeur. Correction de changement de valeur est inclus dans NVDA 2017.3.
+* Audio Volume progress bar beeps are no longer heard in build 17035 and
+  later.
 
 ## Skype
 

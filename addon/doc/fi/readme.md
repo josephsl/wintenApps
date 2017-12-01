@@ -32,10 +32,6 @@ käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata
 koontiversiota (16299) sekä uusinta NVDA:ta. Varmista myös, että tallennat
 NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 
-Tärkeä huomautus: Koska NVDA 2017.3:een on tehty muutoksia, jotka eivät ole
-taaksepäin yhteensopivia, lisäosan versio 17.09 ja sitä uudemmat eivät toimi
-NVDA:n 2017.3:a vanhemmissa versioissa.
-
 ## Yleistä
 
 * Alavalikot tunnistetaan oikein Käynnistä-valikon tiilien pikavalikoissa.
@@ -44,10 +40,6 @@ NVDA:n 2017.3:a vanhemmissa versioissa.
   valintaikkuna (Asetukset-sovelluksessa) sekä uudentyylinen Käyttäjätilien
   valvonnan valintaikkuna koontiversiossa 14328 ja uudemmissa NVDA
   2016.2.1:tä tai vanhempaa käytettäessä.
-* Tiettyjen hakukenttien ehdotusten ilmestyminen/sulkeutuminen (varsinkin
-  Asetukset- ja Kauppa-sovelluksissa) ilmaistaan nyt äänimerkeillä ja
-  pistekirjoituksella. Tämä koskee myös Käynnistä-valikon hakukenttää. Nämä
-  muutokset sisältyvät NVDA:han versiosta 2017.3 alkaen.
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
   -asetuksella Objektien lukuasetukset -valintaikkunasta.
@@ -61,19 +53,16 @@ NVDA:n 2017.3:a vanhemmissa versioissa.
   NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App Essentials
   -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat oletuksena
   automaattisen päivitystarkistuksen viikoittain tai päivittäin.
-* Mahdollisuus Universal Windows Platform (UWP) -sovelluksista tulevien
-  tapahtumien seuraamiseen, mikäli NVDA:ta käytetään
-  virheenkorjaus-lokitasolla.
 * Tuki version 1709 (Fall Creators -päivitys) kelluvalle
   emojinsyöttöruudulle. Käytä parhaan kokemuksen saamiseksi Windows OneCore
   -syntetisaattoria.
+* Tuki fyysisen näppäimistösyötteen ehdotuksille koontiversiossa 17040 ja
+  uudemmissa.
 * Joidenkin sovellusten Aktiivisen alueen teksti luetaan. Näitä ovat
   mm. Edgen ilmoitukset ja laskutoimitusten tulokset Laskimessa sekä
   muut. Huomaa, että tämä saattaa johtaa joissakin tapauksissa ilmoitusten
   kahdesti puhumiseen. Suurin osa näistä muutoksista sisältyy NVDA
   2017.3:een.
-* Ilmoitusruutuja ei puhuta enää moneen kertaan Creators-päivityksessä ja
-  uudemmissa. Tämä korjaus sisältyy NVDA 2017.3:een.
 
 ## Hälytykset ja kello
 
@@ -143,6 +132,8 @@ NVDA:n 2017.3:a vanhemmissa versioissa.
 * NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen selitteiden
   tunnistamisessa ja/tai arvomuutosten ilmoittamisessa. Arvomuutosten
   korjaus sisältyy NVDA 2017.3:een.
+* Edistymispalkkien äänimerkkejä ei enää kuulu muutettaessa
+  äänenvoimakkuutta koontiversiossa 17035 ja uudemmissa.
 
 ## Skype
 

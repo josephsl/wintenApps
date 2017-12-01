@@ -31,10 +31,6 @@ Windows 10 stable build (build 16299) and latest stable version of
 NVDA. Also, after changing update settings for the add-on, be sure to save
 NVDA settings.
 
-Nota importante su NVDA 2017.3: a causa di problemi di compatibilità e di
-nuove specifiche introdotte da questa versione di NVDA, questo componente
-aggiuntivo richiede NVDA 2017.3 o superiore.
-
 ## Generale
 
 * Nei menu di contesto per le mattonelle del menu avvio, vengono
@@ -42,10 +38,6 @@ aggiuntivo richiede NVDA 2017.3 o superiore.
 * Certain dialogs are now recognized as proper dialogs. These include
   Insider Preview dialog (settings app) and new-style UAC dialog in build
   14328 and later for NvDA 2016.2.1 or earlier.
-* Viene annunciata la comparsa di suggerimenti nei risultati di ricerca,
-  soprattutto nelle impostazioni e nello store, attraverso sia suoni che
-  braille. In questo è compresa anche la finestra di ricerca del menu
-  avvio. Funzione ora già inclusa in NVDA 2017.3.
 * NVDA può annunciare il numero dei suggerimenti quando si esegue una
   ricerca, almeno nella maggior parte dei casi. Questa funzione è
   controllata dall'opzione "leggi le informazioni sulla posizione
@@ -60,19 +52,15 @@ aggiuntivo richiede NVDA 2017.3 o superiore.
   finestra di dialogo Windows10 Essentials presente al menu preferenze di
   NVDA. Di default le versioni stabili eseguiranno un controllo settimanale,
   mentre quelle in sviluppo giornaliero.
-* Capacità di tenere traccia di eventi proveniente dalle app Universal
-  Windows Platform (UWP), se NVDA è in esecuzione con il debug del log
-  attivato.
 * Supporto per l'immissione di emoji animate (Fall creators Update). Per
   ottenere i migliori risultati si consiglia di servirsi delle voci OneCore,
   ossia quelle già presenti in Windows10.
+* Support for hardware keyboard input suggestions in build 17040 and later.
 * In alcune app, viene letto il testo che appare nelle regioni live. Ciò
   include notifiche in Edge,  i risultati nella calcolatrice ed altro. Si
   noti che talvolta potrebbe accadere che venga annunciato due volte lo
   stesso elemento. Queste funzioni sono per lo più già integrate in NVDA
   2017.3.
-* Toasts are no longer announced multiple times in Creators Update and
-  later. This fix is included in NVDA 2017.3.
 
 ## Allarmi e sveglia
 
@@ -145,6 +133,8 @@ aggiuntivo richiede NVDA 2017.3 o superiore.
 * Per alcune caselle combinate, NVDA non commetterà più errori nel
   riconoscere le etichette o annunciare i cambiamenti dei valori. Questa
   funzione è già presente in NVDA 2017.3.
+* Audio Volume progress bar beeps are no longer heard in build 17035 and
+  later.
 
 ## Skype
 

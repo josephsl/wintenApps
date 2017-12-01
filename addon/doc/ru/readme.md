@@ -31,10 +31,6 @@ Windows 10 stable build (build 16299) and latest stable version of
 NVDA. Also, after changing update settings for the add-on, be sure to save
 NVDA settings.
 
-Важное Примечание о NVDA 2017.3: из-за обратно несовместимых изменений в
-NVDA 2017.3, дополнение версии 17.09 и младше не будет работать в версиях
-NVDA старше 2017.3.
-
 ## Общие
 
 * В контекстных меню для плиток главного меню, правильно распознаются
@@ -42,9 +38,6 @@ NVDA старше 2017.3.
 * Certain dialogs are now recognized as proper dialogs. These include
   Insider Preview dialog (settings app) and new-style UAC dialog in build
   14328 and later for NvDA 2016.2.1 or earlier.
-* Appearance/close of suggestions for certain search fields (notably
-  Settings and Store apps) is announced via sounds and braille. This also
-  includes Start menu search box. This is now part of NVDA as of 2017.3.
 * NVDA can announce suggestion count when performing a search in majority of
   cases. This option is controlled by "Report object position information"
   in Object presentation dialog.
@@ -58,17 +51,14 @@ NVDA старше 2017.3.
   меню параметров NVDA. По умолчанию, стабильная и разрабатываемая версии
   будут автоматически проверять наличие новых обновлений на еженедельной или
   ежедневной основе, соответственно.
-* Ability to track events coming from Universal Windows Platform (UWP) apps
-  if NVDA is run with debug logging enabled.
 * Support for floating Emoji input panel in Version 1709 (Fall Creators
   Update). For best experience when reading emojis, use Windows OneCore
   speech synthesizer.
+* Support for hardware keyboard input suggestions in build 17040 and later.
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
   double-speaking in some cases. Most of the scenarios are now part of NVDA
   2017.3.
-* Toasts are no longer announced multiple times in Creators Update and
-  later. This fix is included in NVDA 2017.3.
 
 ## Будильники и часы
 
@@ -138,6 +128,8 @@ NVDA старше 2017.3.
 * Для некоторых полей комбинированных списков, NVDA больше не будет
   оставлять нераспознанными метки и/или уведомления об изменении
   значения. Исправление изменения значения включено в NVDA 2017.3.
+* Audio Volume progress bar beeps are no longer heard in build 17035 and
+  later.
 
 ## Skype
 

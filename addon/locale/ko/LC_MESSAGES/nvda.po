@@ -55,9 +55,6 @@ msgstr ""
 msgid "No emoji"
 msgstr ""
 
-msgid "suggestions"
-msgstr ""
-
 #, fuzzy
 msgid "&Windows 10 App Essentials..."
 msgstr "Windows 10 App Essentials..."

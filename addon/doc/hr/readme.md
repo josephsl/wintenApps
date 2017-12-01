@@ -32,10 +32,6 @@ Windows 10 stable build (build 16299) and latest stable version of
 NVDA. Also, after changing update settings for the add-on, be sure to save
 NVDA settings.
 
-Important note about NVDA 2017.3: due to backwards incompatible changes in
-NVDA 2017.3, add-on version 17.09 and later will not work on NVDA versions
-earlier than 2017.3.
-
 ## Općenito
 
 * U kontekstnim izbornicima za pločice početnog izbornika, Podizbornici se
@@ -43,9 +39,6 @@ earlier than 2017.3.
 * Certain dialogs are now recognized as proper dialogs. These include
   Insider Preview dialog (settings app) and new-style UAC dialog in build
   14328 and later for NvDA 2016.2.1 or earlier.
-* Appearance/close of suggestions for certain search fields (notably
-  Settings and Store apps) is announced via sounds and braille. This also
-  includes Start menu search box. This is now part of NVDA as of 2017.3.
 * NVDA može čitati broj prijedloga prilikom pretrage u većini slučajeva. Ova
   opcija se kontrolira u "izgovori poziciju objekta" u dijaloškom okviru
   prezentacija objekt.
@@ -57,18 +50,14 @@ earlier than 2017.3.
 * Dodana mogućnost provjere nadogradnje dodatka (ručno ili automatski) preko
   novog win 10 app Essentials u izborniku postavki. Podrazumijevano,
   stabilne i razvojne inačice se provjeravaju na danjoj ili tjednoj bazi.
-* Mogućnost praćenja događaja koji dolaze iz  Univerzalnih Windows Platform
-  (UWP) aplikacija ako je NVDA sa postavljenim načinom zapisa na debug
-  (2017.1 ili noviji).
 * Support for floating Emoji input panel in Version 1709 (Fall Creators
   Update). For best experience when reading emojis, use Windows OneCore
   speech synthesizer.
+* Support for hardware keyboard input suggestions in build 17040 and later.
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
   double-speaking in some cases. Most of the scenarios are now part of NVDA
   2017.3.
-* Toasts are no longer announced multiple times in Creators Update and
-  later. This fix is included in NVDA 2017.3.
 
 ## Alarm i sat
 
@@ -136,6 +125,8 @@ earlier than 2017.3.
   kretanje po elementima.
 * For some combo boxes, NVDA will no longer fail to recognize labels and/or
   announce value changes. Value change fix is included in NVDA 2017.3.
+* Audio Volume progress bar beeps are no longer heard in build 17035 and
+  later.
 
 ## Skype
 

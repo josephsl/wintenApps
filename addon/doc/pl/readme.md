@@ -31,10 +31,6 @@ dodatek z najnowszą stabilną kompilacją (kompilacja 16299) i ostatnią
 stabilną wersję NVDA. Także, po zmianie ustawień aktualizacji dodatku,
 trzeba się upewnić, czy konfiguracja jest zachowana.
 
-Ważna informacja dotycząca NVDA 2017.3: ze względu wstecznie niezgodnych
-zmian  w NVDA 2017.3, wersja dodatku 17.09 i nowsze, nie będą działały z
-wersjami starszymi niż 2017.3.
-
 ## Ogólne
 
 * W meni kontekstowym kafelek meni start, meni rozwijane są prawidłowo
@@ -43,10 +39,6 @@ wersjami starszymi niż 2017.3.
   dialogi. Te dialogi stanowią na przykład: okno dialogowe insider preview
   (aplikacja ustawienia) i nowe stylizowane okno dialogowe kontroli kont
   użytkownika w kompilacji i nowszych dla NvDA 2016.2.1 i starsze.
-* pojawianie się/zamykanie podpowiedzi dla niektórych pól wyszukiwania
-  (zauważalne w aplikacjach Ustawienia i Sklep) są wymawiane i wyświetlane
-  na monitorze brajlowskim. To również dotyczy pola edycyjnego w meni
-  start. To usprawnienie jest częścią NVDA 2017.3.
 * NVDA może ogłaszać liczbę wypowiedzi przy wyszukiwaniu w wielu
   przypadkach. Ta opcja jest kontrolowana przez opcję "odczytuj położenie
   obiektu" w oknie dialogowym "prezentacja obiektu".
@@ -60,18 +52,14 @@ wersjami starszymi niż 2017.3.
   można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
   rozwojowe będą sprawdzane pod kątem nowych aktualizacji codziennie lub
   tygodniowo.
-* Możliwość śledzenia zdarzeń z aplikacji ujednoliconej platformy Windows
-  (UWP) jeżeli NVDA jest uruchomione w trybie debugowania (2017.1 lub
-  nowsze).
 * Wsparcie dla pływającego panelu wprowadzania Emoji w kompilacji 16215 lub
   nowszej (dla lepszych wyników trzeba używać syntezatora mowy OneCore,
   czyli Microsoft sapi mobile).
+* Support for hardware keyboard input suggestions in build 17040 and later.
 * W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. W tym są
   włączone powiadomienia w Microsoft Edge i innych. Proszę mieć na uwadze,
   że to może skutkować podwójne wymawianie w niektórych
   przypadkach. Niektóre takie zdarzenia są imvlementowane w NVDa 20ag.c.
-* Powiadomienia nie są wymawiane wiele razy w aktualizacji dla twórców i
-  nowszych aktualizacjach. To usprawnienie jest teraz częścią NVDA 2017.3. 
 
 ## Alarmy i zegar
 
@@ -140,6 +128,8 @@ wersjami starszymi niż 2017.3.
 * Dla niektórych pól kombi, NVDA będzie wykrywał nazwę oraz wypowiadał
   zmiany wartości. Poprawka zmiany wartości jest wprowadzona w wersji NVDA
   2017.3.
+* Audio Volume progress bar beeps are no longer heard in build 17035 and
+  later.
 
 ## Skype
 

@@ -33,11 +33,6 @@ recentă versiune stabilă a NVDA-ului. De asemenea, după modificarea
 setărilor de actualizare pentru supliment, asigurați-vă că salvați setările
 NVDA-ului.
 
-Notă importantă despre NVDA 2017.3: Datorită modificărilor incompatibile din
-această versiune de NVDA, atât versiunea 17.09 a suplimentului cât și
-celelalte versiuni mai noi ale acestuia nu vor funcționa pe versiunile NVDA
-mai vechi decât 2017.3.
-
 ## General
 
 * În meniurile contextuale ale tile-urilor din cadrul Start Meniu,
@@ -46,10 +41,6 @@ mai vechi decât 2017.3.
   corespunzătoare. Acestea includ dialogul Insider Preview (în aplicația
   Setări) și un nou stil în dialogul UAC în compilarea 14328 și mai nouă
   pentru NvDA 2016.2.1 sau mai vechi.
-* Aspectul/aproape de sugestii pentru anumite câmpuri de căutare (în special
-  în aplicațiile Setări și Magazin) este anunțat prin sunete și braille. De
-  asemenea, acesta include caseta de căutare a meniului Start. Acum, acesta
-  face parte din NVDA 2017.3.
 * NVDA poate anunța numărul de sugestii la efectuarea unei căutări în
   majoritatea cazurilor. Această opțiune este controlată de „informația
   poziției obiectului în dialogul prezentării obiectului.
@@ -64,18 +55,15 @@ mai vechi decât 2017.3.
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
   și cea în dezvoltare vor căuta noi actualizări automat săptămânal sau
   zilnic.
-* Abilitatea de a urmări evenimentele care provin din platforma universală
-  Windows (UWP) și din aplicații, în cazul în care NVDA rulează cu
-  diagnosticarea activată.
 * Suport pentru panoul de intrare floating moji în versiunea 1709 (Fall
   Creators Update). Pentru cea mai bună experiență la citirea moji-urilor,
   folosiți sintetizatorul Windows OneCore.
+* Suport pentru sugestiile de intrare a tastaturii hardware în compilarea
+  17040 sau mai nouă.
 * În unele aplicații, textul regiunii live este anunțat. Aceasta include
   alertele din Edge, rezultatele din Calculator și altele. Rețineți faptul
   că asta poate rezulta o dublă vorbire în unele cazuri. Majoritatea
   scenariilor fac parte acum din NVDA 2017.3.
-* Toast-urile nu mai sunt anunțate de multe ori în Creators Update și mai
-  nou. Această rezolvare este inclusă în NVDA 2017.3.
 
 ## Alarme și ceas
 
@@ -147,6 +135,8 @@ mai vechi decât 2017.3.
 * Pentru unele casete combinate, NVDA nu va mai eșua la recunoașterea
   etichetelor și/sau anunțarea schimbărilor valorii. Rezolvarea modificării
   valorii este inclusă în NVDA 2017.3.
+* Bipurile barei de progres a volumului audio nu mai sunt auzite în
+  compilarea 17035 sau mai nouă.
 
 ## Skype
 

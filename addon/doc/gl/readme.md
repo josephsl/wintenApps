@@ -33,10 +33,6 @@ estable máis recente do NVDA. Tamén, despois de cambiar as opcións de
 actualización para o complemento, asegúrate de gardar a configuración do
 NVDA.
 
-Nota importante sobre o NVDA 2017.3: debido a cambios incompatibles cara
-atrás no NVDA 2017.3, a versión do complemento 17.09 e versións posteriores
-non funcionarán nas versións do NVDA anteriores á a 2017.3.
-
 ## Xeral
 
 * En menús de contexto para os mosaicos do Menú Inicio, os submenús
@@ -44,10 +40,6 @@ non funcionarán nas versións do NVDA anteriores á a 2017.3.
 * Agora recoñécense certos diálogos como proprios diálogos. Esto inclúe o
   diálogo Insider Preview (settings app) e o diálogo de novo estilo do UAC
   na compilación 14328 e anteriores para o NVDA 2016.2.1 e anteriores.
-* A apariencia ou peche de suxerencias para certos campos de procura (en
-  particular os aplikcativos Configuración e tenda) anúnciase a través de
-  sons e/ou de braille. Esto tamén inclúe a Caixa de procura do menú
-  Inicio.Esto agora é parte do NVDA dende 2017.3.
 * NVDA pode anunciar conta de suxerencias cando se realiza unha procura na
   maioría dos casos. Esta opción contrólase por "Anunciar información de
   posición do obxecto" no diálogo Presentación de Obxectos.
@@ -61,18 +53,15 @@ non funcionarán nas versións do NVDA anteriores á a 2017.3.
   que se atopa no menú Preferencias do NVDA. Por defecto, procuraranse as
   actualizacións para as versións estable e de desenvolvementeo
   automáticamente semanal ou diáriamente, respectivamente.
-* Capacidade para seguir eventos que cheguen dende aplicacións Universal
-  Windows Platform (UWP) se o NVDA se está a executar co rexistro de
-  depuración habilitado.
 * Soporte para o panel flotante de entrada de Emoji na actualización 1709
   Fall Creators  (para uns mellores resultados lendo emojis, usa o
   sintetizador de voz Windows OneCore).
+* Soporte para suxerencias de entrada de teclado hardware na compilación
+  17040 e posterior.
 * Nalgunhas aplicacións, anúnciase o texto en rexións vivas. Esto inclúe
   alertas en Edge, na calculadora e noutros. Ten en conta que esto poderá
   causar unha fala por duplicado nalgúns casos. A maioría dos escenarios son
   agora parte do NVDA 2017.3.
-* Os Toasts xa non se anuncian moitas veces na Actualización Creators e
-  posterior. Este arranxo incluíuse no NVDA 2017.3.
 
 ## Alarmas e reloxo
 
@@ -144,6 +133,8 @@ non funcionarán nas versións do NVDA anteriores á a 2017.3.
 * Para algunhas caixas combinadas, NVDA xa non fallará ao recoñecer
   etiquetas e/ou ao anunciar cambios de valores. O arranxo do cambio de
   valor inclúese no NVDA 2017.3.
+* Os pitidos da barra de progreso do volume de audio xa non se escoitan na
+  compilación 17035 e posterior.
 
 ## Skype
 
