@@ -7,8 +7,5 @@
 # A substitute app module for newer versions of Edge included in build 14379 and later.
 
 # NVDA Core issue 6948: NVDA Core includes an app module for this app with web content view announcement workaround (Redstone 2).
-try:
-	from nvdaBuiltin.appModules.microsoftedgecp import *
-except ImportError:
-	pass
+from nvdaBuiltin.appModules.microsoftedgecp import *
 from microsoftedge import *
