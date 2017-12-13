@@ -60,7 +60,8 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 * Prise en charge pour les Emoji flottants du panneau de saisie dans la
   Version 1709 (Fall Creators Update). Pour une meilleure expérience lors de
   la lecture d'emojis,, utiliser le synthétiseur vocal Windows OneCore.
-* Support for hardware keyboard input suggestions in build 17040 and later.
+* Prise en charge des suggestions de saisie au clavier matériel dans la
+  build 17040 et ultérieure.
 * Dans certaines applications, le texte de la région en direct est
   annoncé. Cela inclut les alertes dans Edge, résultats dans la calculatrice
   et autres. Notez que cela peut entraîner une double verbalisation dans
@@ -144,8 +145,8 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 * Pour certaines zones de liste déroulantes, NVDA ne manquera plus de
   reconnaître les étiquettes et/ou d'annoncer les changements de
   valeur. Correction de changement de valeur est inclus dans NVDA 2017.3.
-* Audio Volume progress bar beeps are no longer heard in build 17035 and
-  later.
+* Les bips de la barre de progression du volume audio ne sont plus audibles
+  dans la build 17035 et ultérieure.
 
 ## Skype
 

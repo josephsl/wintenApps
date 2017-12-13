@@ -56,7 +56,8 @@ auch die NVDA-Einstellungen speichern.
 * Unterstützung für das schwebende Emoji-Eingabefeld in der Windowsversion
   1709 (Fall Creators Update). Für beste Erfahrungen beim Lesen von Emojis
   verwenden Sie Windows-OneCore-Sprachausgaben.
-* Support for hardware keyboard input suggestions in build 17040 and later.
+* Unterstützung für Eingabevorschläge bei Hardware-Tastaturen (gilt für
+  Windowsversionen ab Build 17040)
 * In einigen Apps wird Live-Region-Text angekündigt. Dazu gehören Meldungen
   in Edge, Ergebnisse im Windowsrechner und andere. Beachten Sie, dass dies
   in manchen Fällen zu einer doppelten Aussprache führen kann, da die
@@ -136,8 +137,8 @@ auch die NVDA-Einstellungen speichern.
 * Bei einigen Ausklapplisten wird NVDA nun die Beschriftung erkennen
   und/oder Wertänderungen ankündigen. Diese Funktion ist in NVDA ab 2017.3
   enthalten.
-* Audio Volume progress bar beeps are no longer heard in build 17035 and
-  later.
+* Fortschrittsbalken in Lautstärkereglern werden nicht mehr ausgegeben (gilt
+  für Windowsversionen ab Build 17035)
 
 ## Skype
 
