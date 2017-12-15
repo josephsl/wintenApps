@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2017-08-08 09:33+0400\n"
+"PO-Revision-Date: 2017-12-10 18:31+0400\n"
 "Last-Translator: Ruslan Kolodyazhni <eye0@rambler.ru>\n"
 "Language-Team: Translators <LL@li.org>\n"
 "Language: ru\n"
@@ -59,9 +59,8 @@ msgstr "Нет эмодзи"
 msgid "suggestions"
 msgstr "предложения"
 
-#, fuzzy
 msgid "&Windows 10 App Essentials..."
-msgstr "Windows 10 App Essentials..."
+msgstr "&Windows 10 App Essentials..."
 
 msgid "Windows 10 App Essentials add-on settings"
 msgstr "Настройки дополнения Windows 10 App Essentials"
@@ -116,10 +115,17 @@ msgid ""
 "please answer no and switch to stable update channel. Are you sure you wish "
 "to switch to the development update channel?"
 msgstr ""
+"Вы собираетесь переключиться на канал обновлений для разработки. Хотя "
+"обновления из этого канала приносят интересные возможности, он также "
+"предоставляет не очень стабильные обновления, которые используются для "
+"тестирования и отправки отзывов разработчику. Если вы предпочитаете "
+"использовать стабильные версии, пожалуйста, ответьте нет и перейдите на "
+"стабильный канал обновлений. Вы действительно хотите переключить канал "
+"обновлений?"
 
 #. Translators: The title of the channel switch confirmation dialog.
 msgid "Switching to unstable channel"
-msgstr ""
+msgstr "Переключение на нестабильный канал"
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"

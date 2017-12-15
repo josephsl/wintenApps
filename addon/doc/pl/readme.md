@@ -18,6 +18,8 @@ każdej aplikacji co jest wspierane):
 * Poczta
 * Mapy
 * Microsoft Edge
+* Modern keyboard (emoji panel/hardware input suggestions in Version 1709
+  and later)
 * Osoby
 * Ustawienia (Ustawienia systemowe, Windows+I)
 * Skype (aplikacja uniwersalna)
@@ -52,10 +54,6 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
   można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
   rozwojowe będą sprawdzane pod kątem nowych aktualizacji codziennie lub
   tygodniowo.
-* Wsparcie dla pływającego panelu wprowadzania Emoji w kompilacji 16215 lub
-  nowszej (dla lepszych wyników trzeba używać syntezatora mowy OneCore,
-  czyli Microsoft sapi mobile).
-* Support for hardware keyboard input suggestions in build 17040 and later.
 * W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. W tym są
   włączone powiadomienia w Microsoft Edge i innych. Proszę mieć na uwadze,
   że to może skutkować podwójne wymawianie w niektórych
@@ -107,6 +105,13 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 
 * Powiadomienia, takie jak pobierania plików i różne ostrzeżenia na stronach
   webowychsą oznajmiane. Niektóre takie scenariusze są częścią NVDA 2017.3.
+
+## Modern keyboard
+
+* Wsparcie dla pływającego panelu wprowadzania Emoji w kompilacji 16215 lub
+  nowszej (dla lepszych wyników trzeba używać syntezatora mowy OneCore,
+  czyli Microsoft sapi mobile).
+* Support for hardware keyboard input suggestions in build 17040 and later.
 
 ## Osoby
 
