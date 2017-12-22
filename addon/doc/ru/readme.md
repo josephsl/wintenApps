@@ -18,6 +18,8 @@ Windows 10, а также исправлений для некоторых ти�
 * Почта
 * Карты
 * Microsoft Edge
+* Modern keyboard (emoji panel/hardware input suggestions in Version 1709
+  and later)
 * Люди
 * Настройки (настройки системы, Windows+I)
 * Skype (универсальное приложение)
@@ -25,11 +27,11 @@ Windows 10, а также исправлений для некоторых ти�
 * Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
 
-Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
-and NVDA 2017.3 or later. For best results, use the add-on with latest
-Windows 10 stable build (build 16299) and latest stable version of
-NVDA. Also, after changing update settings for the add-on, be sure to save
-NVDA settings.
+Примечание: Это дополнение требует Windows 10 Версии 1607 (сборки 14393) или
+позднее и NVDA 2017.3 или позднее. Для наилучших результатов используйте
+дополнение с последней стабильной сборкой (сборка 16299) и последней
+стабильной версией NVDA. Кроме того, после изменения настроек обновления для
+дополнения, обязательно сохраните настройки программы NVDA.
 
 ## Общие
 
@@ -51,10 +53,6 @@ NVDA settings.
   меню параметров NVDA. По умолчанию, стабильная и разрабатываемая версии
   будут автоматически проверять наличие новых обновлений на еженедельной или
   ежедневной основе, соответственно.
-* Support for floating Emoji input panel in Version 1709 (Fall Creators
-  Update). For best experience when reading emojis, use Windows OneCore
-  speech synthesizer.
-* Support for hardware keyboard input suggestions in build 17040 and later.
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
   double-speaking in some cases. Most of the scenarios are now part of NVDA
@@ -107,6 +105,13 @@ NVDA settings.
 * Теперь объявляются уведомления, такие как загрузка файлов и различные
   предупреждения веб-страниц. Большинство этих сценариев сейчас входит в
   nvda 2017.3.
+
+## Modern keyboard
+
+* Support for floating Emoji input panel in Version 1709 (Fall Creators
+  Update). For best experience when reading emojis, use Windows OneCore
+  speech synthesizer.
+* Support for hardware keyboard input suggestions in build 17040 and later.
 
 ## Люди
 

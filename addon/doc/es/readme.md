@@ -19,6 +19,8 @@ qué se incluye):
 * Correo
 * Mapas
 * Microsoft Edge
+* Modern keyboard (emoji panel/hardware input suggestions in Version 1709
+  and later)
 * Gente
 * Opciones (opciones de sistema, Windows+I)
 * Skype (aplicación universal)
@@ -56,11 +58,6 @@ configuración de NVDA.
   encuentra en el menú Preferencias de NVDA. Por defecto, se buscarán las
   actualizaciones para las versiones estable y de desarrollo automáticamente
   semanal o diáriamente, respectivamente.
-* Soporte para el panel flotante de entrada de Emoji en la actualización
-  1709 (Fall Creators) (para unos mejores resultados, leyendo emojis utiliza
-  el sintetizador de voz Windows OneCore).
-* Soporte para sugerencias de entrada de teclado hardware en la compilación
-  17040 y posterior.
 * En algunas aplicaciones, se anuncia el texto en regiones vivas. Esto
   incluye alertas en Edge, resultados en la calculadora y otros. Ten en
   cuenta que esto podrá causar una verbalización por duplicado en algunos
@@ -116,6 +113,14 @@ configuración de NVDA.
 * Ahora se anuncian notificaciones tales como descargas de ficheros y varias
   alertas de página web. La mayoría de estos escenarios forman parte de NVDA
   2017.3
+
+## Modern keyboard
+
+* Soporte para el panel flotante de entrada de Emoji en la actualización
+  1709 (Fall Creators) (para unos mejores resultados, leyendo emojis utiliza
+  el sintetizador de voz Windows OneCore).
+* Soporte para sugerencias de entrada de teclado hardware en la compilación
+  17040 y posterior.
 
 ## Gente
 

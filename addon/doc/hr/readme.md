@@ -18,6 +18,8 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Pošta
 * Karte
 * Microsoft Edge
+* Modern keyboard (emoji panel/hardware input suggestions in Version 1709
+  and later)
 * Osobe
 * Postavke (postavke sustava, Windows+I)
 * Skype (univerzalna aplikacija)
@@ -50,10 +52,6 @@ NVDA settings.
 * Dodana mogućnost provjere nadogradnje dodatka (ručno ili automatski) preko
   novog win 10 app Essentials u izborniku postavki. Podrazumijevano,
   stabilne i razvojne inačice se provjeravaju na danjoj ili tjednoj bazi.
-* Support for floating Emoji input panel in Version 1709 (Fall Creators
-  Update). For best experience when reading emojis, use Windows OneCore
-  speech synthesizer.
-* Support for hardware keyboard input suggestions in build 17040 and later.
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
   double-speaking in some cases. Most of the scenarios are now part of NVDA
@@ -106,6 +104,13 @@ NVDA settings.
 
 * Notifications such as file downloads and various webpage alerts are now
   announced. Most of these scenarios are now part of NVDA 2017.3.
+
+## Modern keyboard
+
+* Support for floating Emoji input panel in Version 1709 (Fall Creators
+  Update). For best experience when reading emojis, use Windows OneCore
+  speech synthesizer.
+* Support for hardware keyboard input suggestions in build 17040 and later.
 
 ## Osobe
 

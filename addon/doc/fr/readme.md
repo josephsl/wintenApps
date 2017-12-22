@@ -20,6 +20,8 @@ est inclus) :
 * Courrier
 * Cartes
 * Microsoft Edge
+* Clavier moderne (panneau des emoji/suggestions de saisie matérielle dans
+  la Version 1709 et ultérieure)
 * Personnes
 * Paramètres (paramètres système, Windows+I)
 * Skype (universal app)
@@ -57,11 +59,6 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
   de NVDA. Par défaut, les versions stables et de développement vérifieront
   automatiquement les nouvelles mises à jour sur une base hebdomadaire ou
   quotidienne, respectivement.
-* Prise en charge pour les Emoji flottants du panneau de saisie dans la
-  Version 1709 (Fall Creators Update). Pour une meilleure expérience lors de
-  la lecture d'emojis,, utiliser le synthétiseur vocal Windows OneCore.
-* Prise en charge des suggestions de saisie au clavier matériel dans la
-  build 17040 et ultérieure.
 * Dans certaines applications, le texte de la région en direct est
   annoncé. Cela inclut les alertes dans Edge, résultats dans la calculatrice
   et autres. Notez que cela peut entraîner une double verbalisation dans
@@ -123,6 +120,14 @@ complémentaire, n'oubliez pas de sauvegarder la configuration de NVDA.
 * Notifications telles que les téléchargements de fichiers et les
   différentes alertes de la page Web sont maintenant annoncées. La plupart
   de ces scénarios font maintenant partie de NVDA 2017.3.
+
+## Clavier moderne
+
+* Prise en charge pour les Emoji flottants du panneau de saisie dans la
+  Version 1709 (Fall Creators Update). Pour une meilleure expérience lors de
+  la lecture d'emojis,, utiliser le synthétiseur vocal Windows OneCore.
+* Prise en charge des suggestions de saisie au clavier matériel dans la
+  build 17040 et ultérieure.
 
 ## Personnes
 

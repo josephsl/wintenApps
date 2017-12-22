@@ -19,6 +19,8 @@ welche inbegriffen sind):
 * Mail
 * Karten
 * Microsoft Edge
+* Modern keyboard (emoji panel/hardware input suggestions in Version 1709
+  and later)
 * Kontakte
 * Einstellungen (Systemeinstellungen, Windows+I)
 * Skype (universal app)
@@ -53,11 +55,6 @@ auch die NVDA-Einstellungen speichern.
   (automatisch oder manuell) zu suchen. Standardmäßig werden stabile- und
   Entwicklerversionen wöchentlich bzw. täglich automatisch nach neuen
   Updates suchen.
-* Unterstützung für das schwebende Emoji-Eingabefeld in der Windowsversion
-  1709 (Fall Creators Update). Für beste Erfahrungen beim Lesen von Emojis
-  verwenden Sie Windows-OneCore-Sprachausgaben.
-* Unterstützung für Eingabevorschläge bei Hardware-Tastaturen (gilt für
-  Windowsversionen ab Build 17040)
 * In einigen Apps wird Live-Region-Text angekündigt. Dazu gehören Meldungen
   in Edge, Ergebnisse im Windowsrechner und andere. Beachten Sie, dass dies
   in manchen Fällen zu einer doppelten Aussprache führen kann, da die
@@ -116,6 +113,14 @@ auch die NVDA-Einstellungen speichern.
 * Benachrichtigungen wie Datei-Downloads und verschiedene
   Website-Benachrichtigungen werden nun angesagt. Die meisten dieser
   Szenarien sind nun Bestandteil von NVDA 2017.3.
+
+## Modern keyboard
+
+* Unterstützung für das schwebende Emoji-Eingabefeld in der Windowsversion
+  1709 (Fall Creators Update). Für beste Erfahrungen beim Lesen von Emojis
+  verwenden Sie Windows-OneCore-Sprachausgaben.
+* Unterstützung für Eingabevorschläge bei Hardware-Tastaturen (gilt für
+  Windowsversionen ab Build 17040)
 
 ## Kontakte
 

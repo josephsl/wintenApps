@@ -19,6 +19,8 @@ privire la ceea ce este inclus):
 * Mail
 * Hărți
 * Microsoft Edge
+* Modern keyboard (emoji panel/hardware input suggestions in Version 1709
+  and later)
 * Persoane
 * Setări (setări de sistem, Windows+I)
 * Skype (aplicație universală)
@@ -55,11 +57,6 @@ NVDA-ului.
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
   și cea în dezvoltare vor căuta noi actualizări automat săptămânal sau
   zilnic.
-* Suport pentru panoul de intrare floating moji în versiunea 1709 (Fall
-  Creators Update). Pentru cea mai bună experiență la citirea moji-urilor,
-  folosiți sintetizatorul Windows OneCore.
-* Suport pentru sugestiile de intrare a tastaturii hardware în compilarea
-  17040 sau mai nouă.
 * În unele aplicații, textul regiunii live este anunțat. Aceasta include
   alertele din Edge, rezultatele din Calculator și altele. Rețineți faptul
   că asta poate rezulta o dublă vorbire în unele cazuri. Majoritatea
@@ -115,6 +112,14 @@ NVDA-ului.
 * Sunt anunțate notificări, cum ar fi descărcări de fișiere și diverse
   alerte de pe paginile web. Cele mai multe dintre aceste scenarii fac parte
   acum din NVDA 2017.3.
+
+## Modern keyboard
+
+* Suport pentru panoul de intrare floating moji în versiunea 1709 (Fall
+  Creators Update). Pentru cea mai bună experiență la citirea moji-urilor,
+  folosiți sintetizatorul Windows OneCore.
+* Suport pentru sugestiile de intrare a tastaturii hardware în compilarea
+  17040 sau mai nouă.
 
 ## Persoane
 

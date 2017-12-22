@@ -18,6 +18,8 @@ si veda la relativa sezione per ulteriori informazioni:
 * Posta
 * Mappe
 * Microsoft Edge
+* Modern keyboard (emoji panel/hardware input suggestions in Version 1709
+  and later)
 * Persone
 * Impostazioni (Impostazioni Windows, Windows+i)
 * Skype (universal app)
@@ -52,10 +54,6 @@ NVDA settings.
   finestra di dialogo Windows10 Essentials presente al menu preferenze di
   NVDA. Di default le versioni stabili eseguiranno un controllo settimanale,
   mentre quelle in sviluppo giornaliero.
-* Supporto per l'immissione di emoji animate (Fall creators Update). Per
-  ottenere i migliori risultati si consiglia di servirsi delle voci OneCore,
-  ossia quelle già presenti in Windows10.
-* Support for hardware keyboard input suggestions in build 17040 and later.
 * In alcune app, viene letto il testo che appare nelle regioni live. Ciò
   include notifiche in Edge,  i risultati nella calcolatrice ed altro. Si
   noti che talvolta potrebbe accadere che venga annunciato due volte lo
@@ -112,6 +110,13 @@ NVDA settings.
 
 * Vengono annunciate correttamente le notifiche dei download dei file. Con
   NVDA 2017.3 questa funzione è quasi del tutto integrata.
+
+## Modern keyboard
+
+* Supporto per l'immissione di emoji animate (Fall creators Update). Per
+  ottenere i migliori risultati si consiglia di servirsi delle voci OneCore,
+  ossia quelle già presenti in Windows10.
+* Support for hardware keyboard input suggestions in build 17040 and later.
 
 ## Persone
 
