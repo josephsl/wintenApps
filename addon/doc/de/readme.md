@@ -4,12 +4,11 @@
 * [Stabile Version][1] herunterladen
 * [Entwicklerversion][2] herunterladen
 
-Diese Erweiterung ist ein Paket von App-Modulen für diverse Windows 10 Apps
-sowie Korrekturen in einigen Windows 10 Steuerung.
+Diese Erweiterung bringt ein Paket von App-Modulen für diverse Windows 10
+Apps sowie Korrekturen in einigen Windows 10 Steuerungen mit.
 
-Die folgenden App-Module oder unterstützte Module für einige Apps sind
-inbegriffen (siehen Sie in jeden App-Bereich für Details, um zu sehen,
-welche inbegriffen sind):
+Die folgenden App-Module oder unterstützten Module für Windows-10-Apps sind
+inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 
 * Wecker und Uhr
 * Kalender
@@ -19,8 +18,8 @@ welche inbegriffen sind):
 * Mail
 * Karten
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions in Version 1709
-  and later)
+* Unterstützung für Eingabevorschläge für Emoticons bei modernen virtuellen
+  Tastaturen mit Emoticon-Eingabe, (gilt für Windowsversionen ab Build 1709)
 * Kontakte
 * Einstellungen (Systemeinstellungen, Windows+I)
 * Skype (universal app)
@@ -37,10 +36,10 @@ auch die NVDA-Einstellungen speichern.
 
 ## Allgemein
 
-* Im Kontextmenü von Kacheln werden untermenüs korrekt erkannt
+* Untermenüs werden im Kontextmenü von Kacheln korrekt erkannt
 * Bestimmte Dialoge werden nun als richtige Dialogfelder erkannt. Dazu
   gehören das Dialogfeld"Insider-Vorschau" (Einstellungsanwendung) und der
-  neue UAC-Dialog in Build 14328 und höher für NvDA 2016.2 oder früher.
+  neue UAC-Dialog in Build 14328 und höher für NvDA 2016.2 oder älter.
 * NVDA kann die Anzahl der Vorschläge bei der Suche in den meisten Fällen
   bekannt geben. Diese Option wird gesteuert durch Meldung von
   Objektpositionsdaten im Dialog der Objektpräsentation.
@@ -49,7 +48,7 @@ auch die NVDA-Einstellungen speichern.
 * Folgende UIA-Ereignisse werden erkannt: Controller für Live-Region Change,
   Systemalarm, Element ausgewählt, Fenster geöffnet. Wenn NVDA so
   eingestellt ist, dass es mit aktiviertem Debug-Logging läuft, werden diese
-  Ereignisse verfolgt.
+  Ereignisse protokolliert.
 * Möglichkeit hinzugefügt, über den neuen Windows 10 App Essentials Dialog
   im NVDA-Einstellungsmenü nach Aktualisierungen für diese Erweiterung
   (automatisch oder manuell) zu suchen. Standardmäßig werden stabile- und
@@ -64,7 +63,7 @@ auch die NVDA-Einstellungen speichern.
 
 * Die Werte für den Zeitbalken werden nun angezeigt. Dies macht sich beim
   Verschieben des Fokus auf die Balkensteuerung bemerkbar. Es betrifft auch
-  das Steuerelement fuer die Festlegung des Neustarts nach einer erfolgreich
+  das Steuerelement für die Festlegung des Neustarts nach einer erfolgreich
   abgeschlossenen Aktualisierung.
 
 ## Rechner
@@ -76,28 +75,29 @@ auch die NVDA-Einstellungen speichern.
 
 ## Kalender
 
-* NVDA verkündet nicht mehr "bearbeiten" oder"schreibgeschützt" im
-  Nachrichtentext und in anderen Feldern.
+* NVDA sagt nicht mehr "bearbeiten" oder"schreibgeschützt" im
+  Nachrichtentext und in anderen Feldern an.
 
 ## Cortana
 
-* Textuelle Antworten von Cortana werden in den meisten Fällen angezeigt
-  (falls nicht, öffnen Sie das StartMenü und starten Sie die Suche erneut).
+* Textuelle Antworten von Cortana werden in den meisten Fällen
+  angezeigt. Falls nicht, öffnen Sie das StartMenü und starten Sie die Suche
+  erneut.
 * NVDA verstummt bei der Verwendung von Cortana, so dass die Stimmen nicht
   mehr sich in die Quere kommen.
-* NVDA wird nun eine Erinnerungsbestätigung ankündigen, nachdem Sie eine
+* NVDA wird nun eine Erinnerungsbestätigung anzeigen, nachdem Sie eine
   eingestellt haben.
 
 ## Spieleleiste
 
 * NVDA wird das Erscheinen des Fensters mit der Spieleleiste
-  ankündigen. Aufgrund technischer Einschränkungen kann NVDA nicht
-  vollständig mit der Spieleleiste interagieren.
+  ansagen. Aufgrund technischer Einschränkungen kann NVDA nicht vollständig
+  mit der Spieleleiste interagieren.
 
 ## Mail
 
 * Beim Navigieren durch Elemente in der Nachrichtenliste können Sie nun
-  Tabellen-Navigationsbefehle verwenden, um Nachrichtenköpfe zu überprüfen.
+  Tabellen-Navigationsbefehle verwenden, um Betreffzeilen zu überprüfen.
 * Wenn Sie eine Nachricht schreiben, wird das Erscheinen von Vorschlägen
   durch Töne angezeigt.
 
@@ -112,9 +112,9 @@ auch die NVDA-Einstellungen speichern.
 
 * Benachrichtigungen wie Datei-Downloads und verschiedene
   Website-Benachrichtigungen werden nun angesagt. Die meisten dieser
-  Szenarien sind nun Bestandteil von NVDA 2017.3.
+  Szenarien sind auch Bestandteil von NVDA 2017.3.
 
-## Modern keyboard
+## moderne viertuelle Tastaturen
 
 * Unterstützung für das schwebende Emoji-Eingabefeld in der Windowsversion
   1709 (Fall Creators Update). Für beste Erfahrungen beim Lesen von Emojis
@@ -124,7 +124,8 @@ auch die NVDA-Einstellungen speichern.
 
 ## Kontakte
 
-* Wenn nach Kontakten gesucht wird, ertönt bei Erfolg ein Signalton.
+* Wenn die Suche nach Kontakten erfolgreich war, wird ein Signalton
+  abgespielt.
 
 ## Einstellungen
 
@@ -134,7 +135,7 @@ auch die NVDA-Einstellungen speichern.
 * Werte in Fortschrittsbalken und andere Informationen werden nicht mehr
   zweimal angesagt.
 * Wenn die Suche nach Einstellungen zu lange dauert, wird NVDA den Status
-  der Suche und des Suchergebnisses ankündigen, z.B. wenn eine Einstellung
+  der Suche und des Suchergebnisses ansagen, z.B. wenn eine Einstellung
   nicht gefunden werden kann. Dies ist nun auch bestandteil von NVDA ab
   2017.3.
 * Einstellungsgruppen werden erkannt, wenn Objektnavigation zur Navigation
@@ -142,31 +143,31 @@ auch die NVDA-Einstellungen speichern.
 * Bei einigen Ausklapplisten wird NVDA nun die Beschriftung erkennen
   und/oder Wertänderungen ankündigen. Diese Funktion ist in NVDA ab 2017.3
   enthalten.
-* Fortschrittsbalken in Lautstärkereglern werden nicht mehr ausgegeben (gilt
-  für Windowsversionen ab Build 17035)
+* Fortschrittsbalken in Lautstärke-Reglern werden nicht mehr ausgegeben
+  (gilt für Windowsversionen ab Build 17035)
 
 ## Skype
 
 * Die Eingabe des Indikatortextes wird wie bei Skype für Desktop-Client
   angekündigt.
-* Teilweise Rückgabe von Control+NVDA+Zahlen aus der Zahlenreihe zum Lesen
-  des letzten Chatverlaufs und zum Verschieben des Navigator-Objekts in
-  Chat-Einträgen wie bei Skype für Desktop.
+* STRG+NVDA+Zahlen aus der Zahlenreihe zum Lesen des letzten Chatverlaufs
+  und zum Verschieben des Navigator-Objekts in Chat-Einträgen wie bei Skype
+  für Desktop.
 * Sie können nun die Alt+Zahlen aus der Zahlenreihe  drücken, um Gespräche
   (1), Kontaktliste (2), Bots (3) und Chat-Eingabefeld zu suchen und zu
   verschieben, falls sichtbar (4). Beachten Sie, dass diese Befehle
   ordnungsgemäß funktionieren, wenn das im März 2017 veröffentlichte
   Skype-Update installiert ist.
 * Die Beschriftungen für Ausklapplisten für die Skype-Vorschau-App, welche
-  in November 2016 veröffentlich wurde, werden angekündigt.
-* NVDA wird in den meisten Fällen nicht mehr "Skype-Nachricht" ankündigen,
-  wenn durch die Nachrichten navigiert wird.
+  in November 2016 veröffentlich wurde, werden erkannt.
+* NVDA wird beim Navigieren durch die Nachrichteneinträge in den meisten
+  Fällen nicht mehr "Skype-Nachricht" ansagen.
 * Verschiedene Probleme bei der Verwendung von Skype mit Braillezeilen
-  wurden behoben, einschließlich der fehlenden Fähigkeit,
-  Nachrichtenprotokolle in Braille-Schrift darzustellen.
+  wurden behoben, einschließlich Darstellungsprobleme von
+  Nachrichtenprotokollen in Braille.
 * Wenn Sie in der Liste des Nachrichtenverlaufs auf einem Nachrichteneintrag
   NVDA+D drücken, kann NVDA nun detaillierte Informationen zu einer
-  Nachricht wie z.B. Kanaltyp, Sendedatum, Uhrzeit usw. ankündigen.
+  Nachricht wie z.B. Kanaltyp, Versanddatum, Uhrzeit usw. ansagen.
 
 ## Store
 
@@ -182,9 +183,9 @@ auch die NVDA-Einstellungen speichern.
 
 * Registerkarten wie"Prognose" und"Karten" werden als richtige
   Registerkarten erkannt (Patch von Derek Riemer).
-* Wenn Sie eine Prognose lesen, können Sie mit den Pfeiltasten nach links
-  und rechts zwischen den Elementen wechseln. Verwenden Sie die Aufwärts-
-  und Abwärtspfeile, um die einzelnen Teile eines Elements zu lesen. Zum
+* Beim Lesen einer Prognose können Sie mit den Pfeiltasten nach links und
+  rechts zwischen den Elementen wechseln. Verwenden Sie die Aufwärts- und
+  Abwärtspfeile, um die einzelnen Teile eines Elements zu lesen. Zum
   Beispiel könnte ein Druck auf den Pfeil nach rechts den Bericht "Montag:
   33 Grad, teilweise bewölkt, ..." anzeigen. Wenn man den Pfeil nach unten
   drückt, heißt es"Montag", dann wird ein erneuter Druck auf den Pfeil den

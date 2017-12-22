@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-05-05 22:05+1000\n"
-"PO-Revision-Date: 2017-06-02 13:52+0900\n"
+"PO-Revision-Date: 2017-12-21 20:08-0800\n"
 "Last-Translator: Dong hui Park <hi@aheu.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.8.9\n"
+"Language-Team: \n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -55,9 +55,8 @@ msgstr ""
 msgid "No emoji"
 msgstr ""
 
-#, fuzzy
 msgid "&Windows 10 App Essentials..."
-msgstr "Windows 10 App Essentials..."
+msgstr "Windows 10 App Essentials... (&W)"
 
 msgid "Windows 10 App Essentials add-on settings"
 msgstr "Windows 10 App Essentials 추가 기능 설명"
