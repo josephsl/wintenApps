@@ -1,6 +1,6 @@
 # Windows 10 Settings
 # Part of Windows 10 App Essentials collection
-# Copyright 2016-2017 Joseph Lee, released under GPL
+# Copyright 2016-2018 Joseph Lee, released under GPL
 
 # Several hacks related to Settings app.
 

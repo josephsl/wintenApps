@@ -1,5 +1,5 @@
 # Windows 10 add-on update and config facility
-# Copyright 2017 Joseph Lee, released under GPL.
+# Copyright 2017-2018 Joseph Lee, released under GPL.
 
 # Add-on configuration and updates.
 # Because the add-on employs continuous delivery model, it is beneficial to provide update facility.

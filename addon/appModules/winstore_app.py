@@ -1,8 +1,8 @@
-# Windows 10 Store
+# Microsoft Store
 # Part of Windows 10 App Essentials collection
 # Copyright 2016-2017 Joseph Lee, released under GPL
 
-# Enhancements to support Windows Store.
+# Enhancements to support Microsoft Store (formerly Windows Store).
 
 import appModuleHandler
 import ui
