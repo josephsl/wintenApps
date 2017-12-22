@@ -31,8 +31,10 @@ class AppModule(appModuleHandler.AppModule):
 			# If dealing with keyboard entry suggestions (build 17040 and later), return immediately.
 			candidate = obj.parent.previous
 			if candidate is None:
-				ui.message(obj.name)
-				nextHandler()
+				# No need for this on build 17063/hardware input suggestion as focus event takes care of it.
+				# Keep this here as a comment until Version 1803 is released.
+				#ui.message(obj.name)
+				#nextHandler()
 				return
 			ui.message(candidate.name)
 			obj = candidate.firstChild
