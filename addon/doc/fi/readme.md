@@ -18,8 +18,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sähköposti
 * Kartat
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions in Version 1709
-  and later)
+* Moderni näppäimistö (emojiruudun/fyysisen näppäimistösyötteen ehdotukset
+  versiossa 1709 ja uudemmissa)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Skype (universaali sovellus)
@@ -111,7 +111,7 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   ilmoitukset, luetaan. Suurin osa näistä muutoksista sisältyy NVDA
   2017.3:een.
 
-## Modern keyboard
+## Moderni näppäimistö
 
 * Tuki version 1709 (Fall Creators -päivitys) kelluvalle
   emojinsyöttöruudulle. Käytä parhaan kokemuksen saamiseksi Windows OneCore

@@ -19,8 +19,8 @@ se inclúe):
 * Correo
 * Mapas
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions in Version 1709
-  and later)
+* Teclado Moderno (suxerencias de panel emoji /entrada hardware na Versión
+  1709 e posterior)
 * Xente
 * Opcións (opcións do sistema, Windows+I)
 * Skype (aplicación universal)
@@ -110,7 +110,7 @@ NVDA.
   alertas de páxina web. A maioría de estos escenarios forman parte do NVDA
   2017.3
 
-## Modern keyboard
+## Teclado Moderno
 
 * Soporte para o panel flotante de entrada de Emoji na actualización 1709
   Fall Creators  (para uns mellores resultados lendo emojis, usa o

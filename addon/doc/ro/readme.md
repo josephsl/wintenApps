@@ -19,8 +19,8 @@ privire la ceea ce este inclus):
 * Mail
 * Hărți
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions in Version 1709
-  and later)
+* Tastatură modernă (sugestii de intrare a panoului/hardware emoji în
+  versiunea 1709 și mai nouă)
 * Persoane
 * Setări (setări de sistem, Windows+I)
 * Skype (aplicație universală)
@@ -113,9 +113,9 @@ NVDA-ului.
   alerte de pe paginile web. Cele mai multe dintre aceste scenarii fac parte
   acum din NVDA 2017.3.
 
-## Modern keyboard
+## Tastatură modernă
 
-* Suport pentru panoul de intrare floating moji în versiunea 1709 (Fall
+* Suport pentru panoul de intrare floating Emoji în versiunea 1709 (Fall
   Creators Update). Pentru cea mai bună experiență la citirea moji-urilor,
   folosiți sintetizatorul Windows OneCore.
 * Suport pentru sugestiile de intrare a tastaturii hardware în compilarea
