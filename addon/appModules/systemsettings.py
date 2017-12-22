@@ -62,18 +62,25 @@ class AppModule(appModuleHandler.AppModule):
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache = ""
 
+	def announceLiveRegion(self, obj, automationID):
+		# Announce update status no matter what it is.
+		# This is more relevant in build 17063 and later where a subtitle has been added.
+		if "MusUpdate_UpdateStatus" in automationID:
+			# Don't repeat the fact that update download/installation is in progress if progress bar beep is on.
+			return False if automationID == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock" and obj.previous.value > "0" else True
+		else:
+			# For search progress bar, do not repeat it.
+			return ((automationID == "ProgressBar")
+			# Do not announce "result not found" error unless have to.
+			or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")
+			# But announce individual update progress in build 16215 and later.
+			or ("ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock")))
+
 	def event_liveRegionChange(self, obj, nextHandler):
-		if isinstance(obj, UIA) and obj.name != self._nameChangeCache:
+		if isinstance(obj, UIA) and obj.name and obj.name != self._nameChangeCache:
 			automationID = obj.UIAElement.cachedAutomationID
 			try:
-				# Don't repeat the fact that update download/installation is in progress if progress bar beep is on.
-				if ((automationID == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock" and obj.previous.value <= "0")
-				# For search progress bar, do not repeat it.
-				or (automationID == "ProgressBar")
-				# Do not announce "result not found" error unless have to.
-				or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")
-				# But announce individual update progress in build 16215 and later.
-				or ("ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock"))):
+				if self.announceLiveRegion(obj, automationID):
 					self._nameChangeCache = obj.name
 					# Until the spacing problem is fixed for update label...
 					if "ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock"):
