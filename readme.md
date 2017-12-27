@@ -4,7 +4,7 @@
 * Download [stable version][1]
 * Download [development version][2]
 
-This add-on is a collection of app modules for various Windows 10 apps, as well as fixes for certain windows 10 controls.
+This add-on is a collection of app modules for various Windows 10 apps, as well as enhancements and fixes for certain windows 10 controls.
 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
@@ -29,12 +29,12 @@ Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NV
 ## General
 
 * In context menus for Start Menu tiles, submenus are properly recognized.
-* Certain dialogs are now recognized as proper dialogs. These include Insider Preview dialog (settings app) and new-style UAC dialog in build 14328 and later for NvDA 2016.2.1 or earlier.
+* Certain dialogs are now recognized as proper dialogs, including Insider Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation dialog.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, live region change, system alert, element selected, window opened. With NVDA set to run with debug logging enabled, these events will be tracked.
-* Added ability to check for add-on updates (automatic or manual) via the new Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
-* In some apps, live region text is announced. This includes alerts in Edge, results in Calculator and others. Note that this may result in double-speaking in some cases. Most of the scenarios are now part of NVDA 2017.3.
+* Added ability to check for add-on updates (automatic or manual) via Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
+* In some apps, live region text is announced. This includes alerts in Edge, results in Calculator and others. Note that this may result in double-speaking in some cases.
 
 ## Alarms and clock
 
@@ -52,7 +52,7 @@ Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NV
 ## Cortana
 
 * Textual responses from Cortana are announced in most situations (if it doesn't, reopen Start menu and try searching again).
-* NVDA will be silent when you talk to Cortana via voice.
+* NVDA will be silent when talking to Cortana via voice.
 * NVDA will now announce reminder confirmation after you set one.
 
 ## Game Bar
@@ -71,7 +71,7 @@ Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NV
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are now announced. Most of these scenarios are now part of NVDA 2017.3.
+* Notifications such as file downloads and various webpage alerts are announced.
 
 ## Modern keyboard
 
@@ -84,11 +84,10 @@ Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NV
 
 ## Settings
 
-* Certain information such as Windows Update progress is now reported automatically. NVDA itself will handle majority of cases in 2017.3.
+* Certain information such as Windows Update progress is reported automatically.
 * Progress bar values and other information are no longer announced twice.
-* If it takes a while to search for settings, NVDA will announce "searching" and search result status such as if a setting cannot be found. This is now done from NVDA in 2017.3.
 * Settings groups are recognized when using object navigation to navigate between controls.
-* For some combo boxes, NVDA will no longer fail to recognize labels and/or announce value changes. Value change fix is included in NVDA 2017.3.
+* For some combo boxes, NVDA will no longer fail to recognize labels and/or announce value changes.
 * Audio Volume progress bar beeps are no longer heard in build 17035 and later.
 
 ## Skype
@@ -104,8 +103,7 @@ Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NV
 ## Store
 
 * After checking for app updates, app names in list of apps to be updated are correctly labeled.
-* Appearance of search suggestions are now announced. This is now part of NVDA 2017.3.
-* When downloading content such as apps and movies, NVDA will announce product name and download progress. A basic fix is now part of NVDA 2017.3.
+* When downloading content such as apps and movies, NVDA will announce product name and download progress.
 
 ## Weather
 
