@@ -29,8 +29,14 @@ def shouldLiveRegionChangeProceed(obj):
 class AppModule(appModuleHandler.AppModule):
 
 	shouldAnnounceResult = False
+	# Again, name change says the same thing multiple times for some items.
+	resultsCache = ""
 
 	def event_nameChange(self, obj, nextHandler):
+		# No, announce value changes immediately except for calculator results.
+		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID != "CalculatorResults" and obj.name != self.resultsCache:
+			ui.message(obj.name)
+			self.resultsCache = obj.name
 		if not self.shouldAnnounceResult:
 			return
 		self.shouldAnnounceResult = False
