@@ -4,8 +4,8 @@
 * Загрузить [стабильную версию][1]
 * Загрузить [разрабатываемую версию][2]
 
-Это дополнение представляет собой сборник модулей для различных приложений
-Windows 10, а также исправлений для некоторых типов управления Windows 10.
+This add-on is a collection of app modules for various Windows 10 apps, as
+well as enhancements and fixes for certain windows 10 controls.
 
 Включены следующие модули поддержки или модули для некоторых приложений
 (смотрите каждый раздел приложения для подробной информации):
@@ -27,19 +27,18 @@ Windows 10, а также исправлений для некоторых ти�
 * Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
 
-Примечание: Это дополнение требует Windows 10 Версии 1607 (сборки 14393) или
-позднее и NVDA 2017.3 или позднее. Для наилучших результатов используйте
-дополнение с последней стабильной сборкой (сборка 16299) и последней
-стабильной версией NVDA. Кроме того, после изменения настроек обновления для
-дополнения, обязательно сохраните настройки программы NVDA.
+Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
+and NVDA 2017.3 or later. For best results, use the add-on with latest
+Windows 10 stable build (build 16299) and latest stable version of
+NVDA. Also, after changing update settings for the add-on, be sure to save
+NVDA settings.
 
 ## Общие
 
 * В контекстных меню для плиток главного меню, правильно распознаются
   подменю.
-* Certain dialogs are now recognized as proper dialogs. These include
-  Insider Preview dialog (settings app) and new-style UAC dialog in build
-  14328 and later for NvDA 2016.2.1 or earlier.
+* Certain dialogs are now recognized as proper dialogs, including Insider
+  Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of
   cases. This option is controlled by "Report object position information"
   in Object presentation dialog.
@@ -48,15 +47,13 @@ Windows 10, а также исправлений для некоторых ти�
 * The following UIA events are recognized: Controller for, live region
   change, system alert, element selected, window opened. With NVDA set to
   run with debug logging enabled, these events will be tracked.
-* Добавлена возможность  проверки обновления дополнения (автоматически или
-  вручную) при помощи диалога Windows 10 App Essentials, который находится в
-  меню параметров NVDA. По умолчанию, стабильная и разрабатываемая версии
-  будут автоматически проверять наличие новых обновлений на еженедельной или
-  ежедневной основе, соответственно.
+* Added ability to check for add-on updates (automatic or manual) via
+  Windows 10 App Essentials dialog found in NvDA Preferences menu. By
+  default, stable and development versions will check for new updates
+  automatically on a weekly or daily basis, respectively.
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
-  double-speaking in some cases. Most of the scenarios are now part of NVDA
-  2017.3.
+  double-speaking in some cases.
 
 ## Будильники и часы
 
@@ -79,7 +76,7 @@ Windows 10, а также исправлений для некоторых ти�
 
 * Textual responses from Cortana are announced in most situations (if it
   doesn't, reopen Start menu and try searching again).
-* NVDA will be silent when you talk to Cortana via voice.
+* NVDA will be silent when talking to Cortana via voice.
 * NVDA will now announce reminder confirmation after you set one.
 
 ## Game Bar
@@ -102,9 +99,8 @@ Windows 10, а также исправлений для некоторых ти�
 
 ## Microsoft Edge
 
-* Теперь объявляются уведомления, такие как загрузка файлов и различные
-  предупреждения веб-страниц. Большинство этих сценариев сейчас входит в
-  nvda 2017.3.
+* Notifications such as file downloads and various webpage alerts are
+  announced.
 
 ## Modern keyboard
 
@@ -120,19 +116,14 @@ Windows 10, а также исправлений для некоторых ти�
 
 ## Настройки
 
-* Теперь автоматически сообщается определённая информация, такая, как
-  индикатор обновления Windows. Большинство случаев будет обрабатывать NVDA
-  2017.3.
+* Certain information such as Windows Update progress is reported
+  automatically.
 * Значения индикатора выполнения и другая информация теперь не объявляются
   дважды.
-* If it takes a while to search for settings, NVDA will announce "searching"
-  and search result status such as if a setting cannot be found. This is now
-  done from NVDA in 2017.3.
 * Группы настроек распознаются при использовании навигации объектов для
   перемещения между элементами управления.
-* Для некоторых полей комбинированных списков, NVDA больше не будет
-  оставлять нераспознанными метки и/или уведомления об изменении
-  значения. Исправление изменения значения включено в NVDA 2017.3.
+* For some combo boxes, NVDA will no longer fail to recognize labels and/or
+  announce value changes.
 * Audio Volume progress bar beeps are no longer heard in build 17035 and
   later.
 
@@ -160,10 +151,8 @@ Windows 10, а также исправлений для некоторых ти�
 
 * После проверки обновлений для приложений, обновлённые названия приложений
   в списке приложений будут правильно помечены.
-* Объявляются Появление поисковых подсказок. Теперь это часть NVDA 2017.3.
-* При загрузке содержимого, такого как приложения и фильмы, NVDA будет
-  сообщать Наименование продукта и прогресс загрузки. Основа этого
-  исправления теперь является частью NVDA 2017.3.
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress.
 
 ## Погода
 

@@ -4,8 +4,8 @@
 * Preuzmi [stabilnu inačicu][1]
 * Preuzmi [razvojnu inačicu][2]
 
-Ovaj NVDA dodatak je kolekcija različitih skripti za razne Windows 10
-aplikacije.
+This add-on is a collection of app modules for various Windows 10 apps, as
+well as enhancements and fixes for certain windows 10 controls.
 
 Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 što je uključeno):
@@ -28,7 +28,7 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 * Dodatni moduli za dijelove sustava kao što su to izbornik start i
   pripadajuće mu ikonice
 
-Note: this add-on requires Windows 10 Version 1607 (build 14393) or later
+Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
 and NVDA 2017.3 or later. For best results, use the add-on with latest
 Windows 10 stable build (build 16299) and latest stable version of
 NVDA. Also, after changing update settings for the add-on, be sure to save
@@ -38,9 +38,8 @@ NVDA settings.
 
 * U kontekstnim izbornicima za pločice početnog izbornika, Podizbornici se
   prepoznaju ispravno.
-* Certain dialogs are now recognized as proper dialogs. These include
-  Insider Preview dialog (settings app) and new-style UAC dialog in build
-  14328 and later for NvDA 2016.2.1 or earlier.
+* Certain dialogs are now recognized as proper dialogs, including Insider
+  Preview dialog (settings app).
 * NVDA može čitati broj prijedloga prilikom pretrage u većini slučajeva. Ova
   opcija se kontrolira u "izgovori poziciju objekta" u dijaloškom okviru
   prezentacija objekt.
@@ -49,13 +48,13 @@ NVDA settings.
 * The following UIA events are recognized: Controller for, live region
   change, system alert, element selected, window opened. With NVDA set to
   run with debug logging enabled, these events will be tracked.
-* Dodana mogućnost provjere nadogradnje dodatka (ručno ili automatski) preko
-  novog win 10 app Essentials u izborniku postavki. Podrazumijevano,
-  stabilne i razvojne inačice se provjeravaju na danjoj ili tjednoj bazi.
+* Added ability to check for add-on updates (automatic or manual) via
+  Windows 10 App Essentials dialog found in NvDA Preferences menu. By
+  default, stable and development versions will check for new updates
+  automatically on a weekly or daily basis, respectively.
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
-  double-speaking in some cases. Most of the scenarios are now part of NVDA
-  2017.3.
+  double-speaking in some cases.
 
 ## Alarm i sat
 
@@ -78,7 +77,7 @@ NVDA settings.
 
 * U većini slučajeva tekstualni odgovori Cortane se čitaju, ako to nije
   slučaj, ponovno otvorite izbornik start.
-* NVDA će biti tih kada pričate sa Cortanom.
+* NVDA will be silent when talking to Cortana via voice.
 * NVDA će izgovarati potvrdu termina ako ga postavite.
 
 ## Traka za igrice
@@ -102,8 +101,8 @@ NVDA settings.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are now
-  announced. Most of these scenarios are now part of NVDA 2017.3.
+* Notifications such as file downloads and various webpage alerts are
+  announced.
 
 ## Modern keyboard
 
@@ -119,17 +118,14 @@ NVDA settings.
 
 ## Postavke
 
-* Certain information such as Windows Update progress is now reported
-  automatically. NVDA itself will handle majority of cases in 2017.3.
+* Certain information such as Windows Update progress is reported
+  automatically.
 * Vrijednosti trake napredovanja i druge informacije više se ne izgovaraju
   duplo.
-* If it takes a while to search for settings, NVDA will announce "searching"
-  and search result status such as if a setting cannot be found. This is now
-  done from NVDA in 2017.3.
 * Prupe postavaka se prepoznaju prilikom korištenja objektne navigacije za
   kretanje po elementima.
 * For some combo boxes, NVDA will no longer fail to recognize labels and/or
-  announce value changes. Value change fix is included in NVDA 2017.3.
+  announce value changes.
 * Audio Volume progress bar beeps are no longer heard in build 17035 and
   later.
 
@@ -158,11 +154,8 @@ NVDA settings.
 
 * poslije provjere nadogradnji aplikacija, aplikacije na popisu koje se
   trebaju nadograditi su pravilno označene.
-* Appearance of search suggestions are now announced. This is now part of
-  NVDA 2017.3.
 * When downloading content such as apps and movies, NVDA will announce
-  product name and download progress. A basic fix is now part of NVDA
-  2017.3.
+  product name and download progress.
 
 ## Prognoza
 

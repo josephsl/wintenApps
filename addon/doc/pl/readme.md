@@ -4,8 +4,8 @@
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
 
-Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, a też i
-poprawek dla niektórych kontrolek w Windowsie 10.
+This add-on is a collection of app modules for various Windows 10 apps, as
+well as enhancements and fixes for certain windows 10 controls.
 
 Następujące moduły wspierające aplikacji są dołączone (sprawdź rozdział
 każdej aplikacji co jest wspierane):
@@ -27,20 +27,18 @@ każdej aplikacji co jest wspierane):
 * Pogoda.
 * Różne moduły dla takich kontrolek, jak kafelki menu start.
 
-Uwaga: Ten dodatek wymaga Windows 10 Wersję 1607 (kompilację 14393) lub
-nowszą i NVDA 2017.3 lub nowszą. Dla lepszych wyników, trzeba będzie używać
-dodatek z najnowszą stabilną kompilacją (kompilacja 16299) i ostatnią
-stabilną wersję NVDA. Także, po zmianie ustawień aktualizacji dodatku,
-trzeba się upewnić, czy konfiguracja jest zachowana.
+Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
+and NVDA 2017.3 or later. For best results, use the add-on with latest
+Windows 10 stable build (build 16299) and latest stable version of
+NVDA. Also, after changing update settings for the add-on, be sure to save
+NVDA settings.
 
 ## Ogólne
 
 * W meni kontekstowym kafelek meni start, meni rozwijane są prawidłowo
   rozpoznawane.
-* Większość okien dialogowych teraz jest rospoznawana jako właściwie
-  dialogi. Te dialogi stanowią na przykład: okno dialogowe insider preview
-  (aplikacja ustawienia) i nowe stylizowane okno dialogowe kontroli kont
-  użytkownika w kompilacji i nowszych dla NvDA 2016.2.1 i starsze.
+* Certain dialogs are now recognized as proper dialogs, including Insider
+  Preview dialog (settings app).
 * NVDA może ogłaszać liczbę wypowiedzi przy wyszukiwaniu w wielu
   przypadkach. Ta opcja jest kontrolowana przez opcję "odczytuj położenie
   obiektu" w oknie dialogowym "prezentacja obiektu".
@@ -49,15 +47,13 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 * Następujące zdarzenia UIA są rospoznane: Controller for, live region
   change, system alert, element selected, window opened. Z NVDA ustawioną na
   tryb debugowania, te zdarzenia będą śledzone.
-* Dodana możliwość sprawdzania aktualizacji dodatku (automatycznie lub
-  ręcznie) poprzez nowe okno dialogowe Windows 10 App Essentials, które
-  można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
-  rozwojowe będą sprawdzane pod kątem nowych aktualizacji codziennie lub
-  tygodniowo.
-* W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. W tym są
-  włączone powiadomienia w Microsoft Edge i innych. Proszę mieć na uwadze,
-  że to może skutkować podwójne wymawianie w niektórych
-  przypadkach. Niektóre takie zdarzenia są imvlementowane w NVDa 20ag.c.
+* Added ability to check for add-on updates (automatic or manual) via
+  Windows 10 App Essentials dialog found in NvDA Preferences menu. By
+  default, stable and development versions will check for new updates
+  automatically on a weekly or daily basis, respectively.
+* In some apps, live region text is announced. This includes alerts in Edge,
+  results in Calculator and others. Note that this may result in
+  double-speaking in some cases.
 
 ## Alarmy i zegar
 
@@ -80,7 +76,7 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 
 * Zwroty tekstowe Cortany są wypowiadane w większości sytuacjach (jeżeli nie
   są, ponownie otwórz meni start, i spróbuj ponownie).
-* NVDA będzie przyciszony, gdy mówisz do Cortany.
+* NVDA will be silent when talking to Cortana via voice.
 * NVDA teraz wymawia potwierdzenie przypomnienia po jego ustawieniu.
 
 ## Pasek gry
@@ -103,8 +99,8 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 
 ## Microsoft Edge
 
-* Powiadomienia, takie jak pobierania plików i różne ostrzeżenia na stronach
-  webowychsą oznajmiane. Niektóre takie scenariusze są częścią NVDA 2017.3.
+* Notifications such as file downloads and various webpage alerts are
+  announced.
 
 ## Modern keyboard
 
@@ -120,19 +116,14 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 
 ## Ustawienia
 
-* Większość informacji, tak jak pasek stanu w Windows update, będzie
-  wypowiadany automatycznie. Większość tych informacji będzie wypowiadana
-  przez NVDA 2017.3
+* Certain information such as Windows Update progress is reported
+  automatically.
 * Wartości paska postępu i inne informacje, nie są wypowiadane
   automatycznie.
-* Jeżeli wyszukiwanie ustawień trwa dłużej niż zwykle, NVDA będzie wymawiał
-  "wyszukiwanie", oraz wynik wyszukiwania, jeżeli istnieje. To usprawnienie
-  jest teraz częścią NVDA 2017.3.
 * Grupy ustawień są rpspoznawane przy użyciu nawigacji obiektowej aby było
   można poruszać się pomięcy kontrolkami.
-* Dla niektórych pól kombi, NVDA będzie wykrywał nazwę oraz wypowiadał
-  zmiany wartości. Poprawka zmiany wartości jest wprowadzona w wersji NVDA
-  2017.3.
+* For some combo boxes, NVDA will no longer fail to recognize labels and/or
+  announce value changes.
 * Audio Volume progress bar beeps are no longer heard in build 17035 and
   later.
 
@@ -161,11 +152,8 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 
 * Po sprawdzaniu aktualizacji aplikacji, nazyw aplikacji w liście aplikacji
   do zaktualizowania są poprawnie oznaczone.
-* Istnienie podpowiedzi wyszukiwania teraz jest oznajmiane. To usprawnienie
-  jest teraz częścią NVDA 2017.3
-* Przy pobieraniu zawartości, takiej jak apliakacje i muzyka, NVDA wymówi
-  nazwę produktu i pasek postępu. Podstawowa poprawka jest teraz częscią
-  NVDA 2017.3.
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress.
 
 ## Pogoda
 

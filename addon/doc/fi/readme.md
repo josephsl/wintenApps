@@ -5,7 +5,8 @@
 * Lataa [kehitysversio][2]
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
-tuleville sovelluksille sekä korjauksia tietyille säätimille.
+tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
+säätimille.
 
 Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
@@ -28,8 +29,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sekalaisia moduuleita sellaisille säätimille kuin Käynnistä-valikon
   tiilet.
 
-Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1607 (koontiversio
-14393) tai uudempaa ja NVDA 2017.3:a tai uudempaa. Käytä parhaan
+Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1703 (koontiversio
+15063) tai uudempaa ja NVDA 2017.3:a tai uudempaa. Käytä parhaan
 käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata
 koontiversiota (16299) sekä uusinta NVDA:ta. Varmista myös, että tallennat
 NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
@@ -37,11 +38,8 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 ## Yleistä
 
 * Alavalikot tunnistetaan oikein Käynnistä-valikon tiilien pikavalikoissa.
-* Tietyt valintaikkunat tunnistetaan nyt asianmukaisesti
-  valintaikkunoiksi. Tällaisia ovat esim. Insider-esiversioiden
-  valintaikkuna (Asetukset-sovelluksessa) sekä uudentyylinen Käyttäjätilien
-  valvonnan valintaikkuna koontiversiossa 14328 ja uudemmissa NVDA
-  2016.2.1:tä tai vanhempaa käytettäessä.
+* Tietyt valintaikkunat tunnistetaan nyt asianmukaisesti valintaikkunoiksi,
+  mukaan lukien Insider-esiversion valintaikkuna (Asetukset-sovellus).
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
   -asetuksella Objektien lukuasetukset -valintaikkunasta.
@@ -51,15 +49,14 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   muutos, järjestelmän ilmoitus, elementti valittu, ikkuna avattu. Näitä
   tapahtumia seurataan, kun NVDA:n lokitasoksi on määritetty
   "virheenkorjaus".
-* Lisätty lisäosan päivitysmahdollisuus (automaattinen tai manuaalinen)
-  NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App Essentials
-  -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat oletuksena
-  automaattisen päivitystarkistuksen viikoittain tai päivittäin.
+* Lisätty mahdollisuus päivitysten tarkistamiseen (automaattinen tai
+  manuaalinen) NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App
+  Essentials -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat
+  oletuksena automaattisen päivitystarkistuksen viikoittain tai päivittäin.
 * Joidenkin sovellusten Aktiivisen alueen teksti luetaan. Näitä ovat
   mm. Edgen ilmoitukset ja laskutoimitusten tulokset Laskimessa sekä
   muut. Huomaa, että tämä saattaa johtaa joissakin tapauksissa ilmoitusten
-  kahdesti puhumiseen. Suurin osa näistä muutoksista sisältyy NVDA
-  2017.3:een.
+  kahdesti puhumiseen.
 
 ## Hälytykset ja kello
 
@@ -84,7 +81,7 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 * Cortanan tekstimuotoiset vastaukset puhutaan useimmissa tilanteissa
   (mikäli näin ei ole, avaa Käynnistä-valikko uudelleen ja yritä hakua
   toistamiseen).
-* NVDA on hiljaa puhuessasi Cortanalle mikrofonin välityksellä.
+* NVDA on hiljaa puhuttaessa Cortanalle mikrofonin välityksellä.
 * NVDA puhuu nyt vahvistuksen muistutusta lisättäessä.
 
 ## Pelipalkki
@@ -107,9 +104,8 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 
 ## Microsoft Edge
 
-* Ilmoitukset, kuten tiedostojen lataukset ja useat verkkosivujen
-  ilmoitukset, luetaan. Suurin osa näistä muutoksista sisältyy NVDA
-  2017.3:een.
+* Ilmoitukset, kuten tiedostojen lataukset ja verkkosivujen näyttämät,
+  luetaan.
 
 ## Moderni näppäimistö
 
@@ -126,17 +122,12 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 ## Asetukset
 
 * Määrätyt tiedot, kuten Windows Updaten päivitysten asennuksen edistyminen,
-  puhutaan nyt automaattisesti. NVDA 2017.3 käsittelee itse useimmat näistä
-  tapauksista.
+  puhutaan nyt automaattisesti.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
-* Mikäli asetusten etsiminen kestää jonkin aikaa, NVDA ilmoittaa "etsitään"
-  sekä hakutulosten tilan, kuten sen, jos asetusta ei löydy. Tämä muutos
-  sisältyy NVDA 2017.3:een.
 * Asetusryhmät tunnistetaan säätimien välillä liikuttaessa
   objektinavigointia käyttäen.
 * NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen selitteiden
-  tunnistamisessa ja/tai arvomuutosten ilmoittamisessa. Arvomuutosten
-  korjaus sisältyy NVDA 2017.3:een.
+  tunnistamisessa ja/tai arvomuutosten ilmoittamisessa.
 * Edistymispalkkien äänimerkkejä ei enää kuulu muutettaessa
   äänenvoimakkuutta koontiversiossa 17035 ja uudemmissa.
 
@@ -166,11 +157,8 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 
 * Sovellusten nimet näytetään oikein päivitettävien sovellusten luettelossa
   päivitystarkistuksen jälkeen.
-* Hakutulosehdotusten ilmestyminen ilmoitetaan. Tämä sisältyy NVDA
-  2017.3:een.
 * NVDA ilmoittaa tuotteen nimen ja latauksen edistymisen sisältöä, kuten
-  sovelluksia ja elokuvia, ladattaessa. Peruskorjaus sisältyy NVDA
-  2017.3:een.
+  sovelluksia ja elokuvia ladattaessa.
 
 ## Sää
 
