@@ -4,8 +4,9 @@
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
 
-This add-on is a collection of app modules for various Windows 10 apps, as
-well as enhancements and fixes for certain windows 10 controls.
+Este complemento es una colección de app modules para varias aplicaciones de
+Windows 10, así como Mejoras y correcciones para ciertos controles de
+windows 10.
 
 Se incluyen Los siguientes app modules o el apoyo para módulos para algunas
 aplicaciones (consulta cada sección para la aplicación para detalles sobre
@@ -29,18 +30,19 @@ qué se incluye):
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
-and NVDA 2017.3 or later. For best results, use the add-on with latest
-Windows 10 stable build (build 16299) and latest stable version of
-NVDA. Also, after changing update settings for the add-on, be sure to save
-NVDA settings.
+Nota: este complemento requiere Windows 10 Versión 1703 (build 15063) o
+posterior y NVDA 2017.3 o posterior. Para unos mejores resultados, utiliza
+el complemento con la compilación estable más reciente (build 16299) y la
+versión estable más reciente de NVDA. También, después de cambiar las
+opciones de actualización para el complemento, asegúrate de guardar la
+configuración de NVDA.
 
 ## General
 
 * En menús de contexto para los mosaicos del Menú Inicio, los submenús ahora
   se reconocen apropiadamente.
-* Certain dialogs are now recognized as proper dialogs, including Insider
-  Preview dialog (settings app).
+* Ahora se reconocen ciertos diálogos como diálogos apropiadamente. Esto
+  incluye el diálogo Insider Preview (aplicación de configuración).
 * NVDA puede anunciar cuenta de sugerencias cuando se realiza una búsqueda
   en la mayoría de casos. Esta opción se controla por "Anunciar información
   de posición del objeto" en el diálogo Presentación de Objetos.
@@ -50,13 +52,15 @@ NVDA settings.
   changed, system alert, element selected, window opened. Con NVDA
   configurado para ejecutarse con el registro de depuración habilitado,
   estos eventos se seguirán.
-* Added ability to check for add-on updates (automatic or manual) via
-  Windows 10 App Essentials dialog found in NvDA Preferences menu. By
-  default, stable and development versions will check for new updates
-  automatically on a weekly or daily basis, respectively.
-* In some apps, live region text is announced. This includes alerts in Edge,
-  results in Calculator and others. Note that this may result in
-  double-speaking in some cases.
+* Añadida la capacidad de buscar actualizaciones del complemento (automática
+  o manual) a través del diálogo Windows 10 App Essentials que se encuentra
+  en el menú Preferencias de NVDA. Por defecto, se buscarán las
+  actualizaciones para las versiones estable y de desarrollo automáticamente
+  semanal o diáriamente, respectivamente.
+* En algunas aplicaciones, se anuncia el texto en regiones vivas. Esto
+  incluye alertas en Edge, resultados en la calculadora y otros. Ten en
+  cuenta que esto podrá causar una verbalización por duplicado en algunos
+  casos.
 
 ## Alarmas y reloj
 
@@ -80,7 +84,7 @@ NVDA settings.
 * Las respuestas textuales de Cortana se anuncian en la mayoría de las
   situaciones (si no se reabre el menú Inicio y  se trata de buscar de
   nuevo).
-* NVDA will be silent when talking to Cortana via voice.
+* NVDA se silenciará cuando hables a Cortana a través de la voz.
 * NVDA ahora anunciará confirmación de recuerdo después de configurarla.
 
 ## Barra de juegos
@@ -105,8 +109,8 @@ NVDA settings.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are
-  announced.
+* Ahora se anuncian notificaciones tales como descargas de ficheros y varias
+  alertas de página web.
 
 ## Teclado Moderno
 
@@ -123,14 +127,14 @@ NVDA settings.
 
 ## Opciones
 
-* Certain information such as Windows Update progress is reported
-  automatically.
+* Cierta información tal como el progreso de la Actualización de Windows
+  ahora se anuncia automáticamente. 
 * Los valores de la barra de progreso y otra información ya no se anuncian
   dos veces.
 * Los grupos de opciones se reconocen cuando se utilice la navegación de
   objetos para navegar entre controles.
-* For some combo boxes, NVDA will no longer fail to recognize labels and/or
-  announce value changes.
+* Para algunos cuadros combinados, NVDA ya no fallará al reconocer etiquetas
+  y/o al anunciar cambios de valores. 
 * Los pitidos de la barra de progreso de volumen de audio ya no se oyen en
   la compilación 17035 y posterior.
 
@@ -162,8 +166,8 @@ NVDA settings.
 * Después de buscar actualizaciones de aplicaciones, los nombres de las
   aplicaciones en la lista de aplicaciones etiquetadas se actualizan
   correctamente.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* Cuando se cargue contenido tal como aplicaciones y películas, NVDA
+  anunciará el nombre del producto y el progreso de la descarga.
 
 ## El Tiempo
 

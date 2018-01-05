@@ -4,8 +4,9 @@
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
 
-This add-on is a collection of app modules for various Windows 10 apps, as
-well as enhancements and fixes for certain windows 10 controls.
+Ce module complémentaire est une collection d'app modules pour diverses apps
+de Windows 10, ainsi que des améliorations et des correctifs pour certains
+contrôles de windows 10.
 
 Les suivantes app modules ou la prise en charge des modules pour certaines
 apps sont inclus (voir chaque section app pour plus de détails sur ce qui
@@ -28,18 +29,21 @@ est inclus) :
 * Météo.
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
-Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
-and NVDA 2017.3 or later. For best results, use the add-on with latest
-Windows 10 stable build (build 16299) and latest stable version of
-NVDA. Also, after changing update settings for the add-on, be sure to save
-NVDA settings.
+Note: ce module complémentaire nécessite Windows 10 Version 1703 build
+15063) ou version ultérieure et NVDA 2017.3 ou version ultérieure. Pour de
+meilleurs résultats, utilisez le module complémentaire avec la dernière
+build stable de Windows 10 (build 16299) et la dernière version stable de
+NVDA. De plus, après avoir modifié les paramètres de mise à jour pour le
+module complémentaire, n'oubliez pas de sauvegarder la configuration de
+NVDA.
 
 ## Générale
 
 * Dans les menus contextuels pour les tuiles sous-menus du Menu Démarrer
   sont correctement reconnus.
-* Certain dialogs are now recognized as proper dialogs, including Insider
-  Preview dialog (settings app).
+* Certaines boîtes de dialogue sont maintenant reconnues comme des boîtes de
+  dialogue propres. Ceci incluent le dialogue Insider Preview (settings
+  app).
 * NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
   majorité des cas. Cette option est contrôlée par "Annoncer le rang de
   l'objet dans une liste" dans la boîte de dialogue Présentation des Objets.
@@ -49,13 +53,16 @@ NVDA settings.
   région en direct, alerte système, élément sélectionné, fenêtre
   ouverte. Avec NVDA configuré pour être exécuté avec le journal activé en
   mode débogage ces événements seront suivis.
-* Added ability to check for add-on updates (automatic or manual) via
-  Windows 10 App Essentials dialog found in NvDA Preferences menu. By
-  default, stable and development versions will check for new updates
-  automatically on a weekly or daily basis, respectively.
-* In some apps, live region text is announced. This includes alerts in Edge,
-  results in Calculator and others. Note that this may result in
-  double-speaking in some cases.
+* Ajout de la possibilité de vérifier les mises à jour du module
+  complémentaire(automatiques ou manuelles) via le dialogue Windows 10 App
+  Essentials qui se trouve dans le menu Préférences de NVDA. Par défaut, les
+  versions stables et de développement vérifieront automatiquement les
+  nouvelles mises à jour sur une base hebdomadaire ou quotidienne,
+  respectivement.
+* Dans certaines applications, le texte de la région en direct est
+  annoncé. Cela inclut les alertes dans Edge, résultats dans la calculatrice
+  et autres. Notez que cela peut entraîner une double verbalisation dans
+  certains cas.
 
 ## Alarmes et horloge
 
@@ -82,7 +89,8 @@ NVDA settings.
 * Les réponses textuelles de Cortana sont annoncées dans la plupart des
   situations (si ce n'est pas le cas, réouvrez le menu Démarrer et réessayez
   la recherche).
-* NVDA will be silent when talking to Cortana via voice.
+* NVDA sera silencieux quand vous vous adresserez vocalement à Cortana via
+  la voix.
 * NVDA annoncera maintenant un rappel de confirmation après que vous
   définissez une.
 
@@ -109,8 +117,8 @@ NVDA settings.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are
-  announced.
+* Notifications telles que les téléchargements de fichiers et les
+  différentes alertes de la page Web sont maintenant annoncées.
 
 ## Clavier moderne
 
@@ -127,14 +135,14 @@ NVDA settings.
 
 ## Paramètres
 
-* Certain information such as Windows Update progress is reported
-  automatically.
+* Certaines informations telles que l'avancement de la Mise à jour de
+  Windows est maintenant signalé automatiquement.
 * Les valeurs de la barre de progression et d'autres informations ne sont
   plus annoncés deux fois.
 * Les groupes de paramètres sont reconnus lorsque vous utilisez la
   navigation par objet pour naviguer entre les commandes.
-* For some combo boxes, NVDA will no longer fail to recognize labels and/or
-  announce value changes.
+* Pour certaines zones de liste déroulantes, NVDA ne manquera plus de
+  reconnaître les étiquettes et/ou d'annoncer les changements de valeur.
 * Les bips de la barre de progression du volume audio ne sont plus audibles
   dans la build 17035 et ultérieure.
 
@@ -166,8 +174,8 @@ NVDA settings.
 * Après vérification des mises à jour d'applications, le nom des
   applications dans la liste des applications à mettre à jour sera
   correctement étiqueté.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* Lors du téléchargement de contenus tels que des applications et des films,
+  NVDA annoncera le nom du produit et la progression du téléchargement.
 
 ## Météo
 

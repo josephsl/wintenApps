@@ -1,11 +1,11 @@
-# Windows 10 App Essentials #
+# Windows 10 Anwendungsergänzungen #
 
 * Autors: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version][1] herunterladen
 * [Entwicklerversion][2] herunterladen
 
-This add-on is a collection of app modules for various Windows 10 apps, as
-well as enhancements and fixes for certain windows 10 controls.
+Diese Erweiterung bringt ein Paket von Anwendungsmodulen für diverse Windows
+10 Apps sowie Korrekturen in einigen Windows 10 Elementen mit.
 
 Die folgenden App-Module oder unterstützten Module für Windows-10-Apps sind
 inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
@@ -27,17 +27,18 @@ inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 * Wetter
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
 
-Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
-and NVDA 2017.3 or later. For best results, use the add-on with latest
-Windows 10 stable build (build 16299) and latest stable version of
-NVDA. Also, after changing update settings for the add-on, be sure to save
-NVDA settings.
+Hinweis: Diese Erweiterung benötigt Windows 10 Version 1703 (build 15063)
+oder höher und NVDA 2017.3 oder höher. Um beste Ergebnisse zu erzielen,
+verwenden Sie die Erweiterung mit dem neuesten stabilen Build von Windows 10
+(Build 16299) und der neuesten stabilen Version von NVDA. Nachdem Sie die
+Aktualisierungseinstellungen für die Erweiterung geändert haben, sollten Sie
+auch die NVDA-Einstellungen speichern.
 
 ## Allgemein
 
 * Untermenüs werden im Kontextmenü von Kacheln korrekt erkannt
-* Certain dialogs are now recognized as proper dialogs, including Insider
-  Preview dialog (settings app).
+* Bestimmte Dialoge werden nun als richtige Dialogfelder erkannt. Dazu
+  gehören das Dialogfeld"Insider-Vorschau" (Einstellungsanwendung).
 * NVDA kann die Anzahl der Vorschläge bei der Suche in den meisten Fällen
   bekannt geben. Diese Option wird gesteuert durch Meldung von
   Objektpositionsdaten im Dialog der Objektpräsentation.
@@ -47,13 +48,15 @@ NVDA settings.
   Systemalarm, Element ausgewählt, Fenster geöffnet. Wenn NVDA so
   eingestellt ist, dass es mit aktiviertem Debug-Logging läuft, werden diese
   Ereignisse protokolliert.
-* Added ability to check for add-on updates (automatic or manual) via
-  Windows 10 App Essentials dialog found in NvDA Preferences menu. By
-  default, stable and development versions will check for new updates
-  automatically on a weekly or daily basis, respectively.
-* In some apps, live region text is announced. This includes alerts in Edge,
-  results in Calculator and others. Note that this may result in
-  double-speaking in some cases.
+* Möglichkeit hinzugefügt, über den neuen Windows 10 App Essentials Dialog
+  im NVDA-Einstellungsmenü nach Aktualisierungen für diese Erweiterung
+  (automatisch oder manuell) zu suchen. Standardmäßig werden stabile- und
+  Entwicklerversionen wöchentlich bzw. täglich automatisch nach neuen
+  Updates suchen.
+* In einigen Apps wird Live-Region-Text angekündigt. Dazu gehören Meldungen
+  in Edge, Ergebnisse im Windowsrechner und andere. Beachten Sie, dass dies
+  in manchen Fällen zu einer doppelten Aussprache führen kann, da die
+  meisten Szenarien nun Bestandteil von NVDA ab 2017.3 sind.
 
 ## Wecker und Uhr
 
@@ -79,7 +82,8 @@ NVDA settings.
 * Textuelle Antworten von Cortana werden in den meisten Fällen
   angezeigt. Falls nicht, öffnen Sie das StartMenü und starten Sie die Suche
   erneut.
-* NVDA will be silent when talking to Cortana via voice.
+* NVDA verstummt bei der Verwendung von Cortana, so dass die Stimmen nicht
+  mehr sich in die Quere kommen.
 * NVDA wird nun eine Erinnerungsbestätigung anzeigen, nachdem Sie eine
   eingestellt haben.
 
@@ -105,10 +109,10 @@ NVDA settings.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are
-  announced.
+* Benachrichtigungen wie Datei-Downloads und verschiedene
+  Website-Benachrichtigungen werden nun angesagt. 
 
-## moderne viertuelle Tastaturen
+## moderne virtuelle Tastaturen
 
 * Unterstützung für das schwebende Emoji-Eingabefeld in der Windowsversion
   1709 (Fall Creators Update). Für beste Erfahrungen beim Lesen von Emojis
@@ -123,14 +127,14 @@ NVDA settings.
 
 ## Einstellungen
 
-* Certain information such as Windows Update progress is reported
-  automatically.
+* Bestimmte Informationen, wie z.B. der Fortschritt von Windows Update,
+  werden nun automatisch gemeldet.
 * Werte in Fortschrittsbalken und andere Informationen werden nicht mehr
   zweimal angesagt.
 * Einstellungsgruppen werden erkannt, wenn Objektnavigation zur Navigation
   zwischen Controllern angewendet wird.
-* For some combo boxes, NVDA will no longer fail to recognize labels and/or
-  announce value changes.
+* Bei einigen Ausklapplisten wird NVDA nun die Beschriftung erkennen
+  und/oder Wertänderungen ankündigen.
 * Fortschrittsbalken in Lautstärke-Reglern werden nicht mehr ausgegeben
   (gilt für Windowsversionen ab Build 17035)
 
@@ -161,8 +165,8 @@ NVDA settings.
 
 * Nach der Suche nach App-Aktualisierungen werden die App-Namen in der Liste
   der zu aktualisierenden Apps korrekt beschriftet.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* Beim Herunterladen von Inhalten wie Apps und Filmen wird NVDA den
+  Produktnamen und den Fortschritt des Downloads bekannt geben.
 
 ## Wetter
 
