@@ -302,8 +302,8 @@ try:
 					pass
 				if closeAfter:
 					wx.CallLater(1, addonGui.AddonsDialog(gui.mainFrame).Close)
-except NameError:
-	pass
+except:
+	log.debugWarning("Error downloading Windows 10 App Essentials update", exc_info=True)
 
 # Borrowed from NVDA Core (the only difference is the URL and where structures are coming from).
 def _updateWindowsRootCertificates():
