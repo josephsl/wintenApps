@@ -12,7 +12,6 @@ import ui
 from NVDAObjects.UIA import UIA
 from nvdaBuiltin.appModules.skype import SCRCAT_SKYPE
 import api
-import controlTypes
 import addonHandler
 addonHandler.initTranslation()
 
@@ -35,12 +34,12 @@ def getShortenedMessage(message):
 class SkypeMessage(UIA):
 	"""Message history item in Skype universal app."""
 
-	scriptCategory = SCRCAT_SKYPE # Borrowed from NVDA's core
+	# Borrowed from NVDA Core
+	scriptCategory = SCRCAT_SKYPE
 	_message = ""
 
 	def reportFocus(self):
-		# Skype message/channel info and other extraneous text should not be announced.
-		# Credit: Derek Riemer
+		# Skype message/channel info and other extraneous text should not be announced (Credit: Derek Riemer).
 		# But save the old name just in case it needs to be referred back to.
 		self._message = self.name
 		self.name = self.getShortenedMessage()
@@ -63,17 +62,9 @@ class AppModule(appModuleHandler.AppModule):
 
 	def __init__(self, *args, **kwargs):
 		super(AppModule, self).__init__(*args, **kwargs)
+		# Used "range" function due to Python 3 compatibility.
 		for pos in range(10):
 			self.bindGesture("kb:control+nvda+%s"%pos, "readMessage")
-		for pos in range(1, 5):
-			self.bindGesture("kb:alt+%s"%pos, "moveToArea")
-
-	def event_NVDAObject_init(self, obj):
-		if isinstance(obj, UIA):
-			# Skype Preview 11.9 includes audio/video config combo boxes but they are not labeled correctly.
-			# Thankfully the label is right next door.
-			if obj.role == controlTypes.ROLE_COMBOBOX and obj.name == "" and obj.UIAElement.cachedAutomationID.startswith("AudioVideoDevices"):
-				obj.name = obj.previous.name
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
@@ -117,6 +108,9 @@ class AppModule(appModuleHandler.AppModule):
 				if nextElement.cachedAutomationID in ("ChatEditBox", "ChatTranslationSettings"):
 					# Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 					ui.message(obj.name if obj.name != "" else _("Typing stopped"))
+			elif uiElement.cachedAutomationID == "Message" and uiElement.cachedClassName == "ListViewItem" and obj.name != self._skypeMessageCache:
+				ui.message(getShortenedMessage(obj.name))
+				self._skypeMessageCache = obj.name
 		nextHandler()
 
 	# The live region changed event for messages has no automation ID whatsoever.
@@ -153,25 +147,14 @@ class AppModule(appModuleHandler.AppModule):
 	# Translators: Input help mode message for a command in Skype Preview app.
 	script_readMessage.__doc__ = _("Reports and moves the review cursor to a recent message")
 
-	# Various utility scripts to move to various parts of Skype Preview.
-	# Tuple below holds UIA automation ID for the element and errors if the element is not found.
-	moveTo = (
-	(None, None),
-	("ConversationHistoryPanel", "Conversation history not found"),
-	("ContactList", "Contacts list not found"),
-	(" BotList", "Skype bots list not found"),
-	("ChatEditBox", "Chat edit field not found"),
-	)
+	def script_moveToChatEditField(self, gesture):
+		element = self.locateElement("ChatEditBox")
+		if element is not None:
+			element.setFocus()
+		else:
+			# Translators: presented when chat edit box is not found.
+			ui.message(_("Chat edit field not found"))
 
-	def script_moveToArea(self, gesture):
-		area = int(gesture.displayName.split("+")[-1])
-		# However, since March 2017, areas received keyboard shortcuts, such as Alt+2 for contacts list.
-		if self.productVersion >= "11.13.133.0" and area < 4:
-			gesture.send()
-			return
-		element = self.locateElement(self.moveTo[area][0])
-		if element is None:
-			ui.message(self.moveTo[area][1])
-			return
-		element.setFocus()
-		return
+	__gestures={
+		"kb:alt+4":"moveToChatEditField",
+	}
