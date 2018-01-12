@@ -48,13 +48,15 @@ NVDA settings.
 * The following UIA events are recognized: Controller for, live region
   change, system alert, element selected, window opened. With NVDA set to
   run with debug logging enabled, these events will be tracked.
-* Added ability to check for add-on updates (automatic or manual) via
-  Windows 10 App Essentials dialog found in NvDA Preferences menu. By
-  default, stable and development versions will check for new updates
-  automatically on a weekly or daily basis, respectively.
-* In some apps, live region text is announced. This includes alerts in Edge,
-  results in Calculator and others. Note that this may result in
-  double-speaking in some cases.
+* Aggiunta la possibilità di controllare automaticamente o manualmente la
+  presenza di aggiornamenti di questo componente aggiuntivo mediante la
+  finestra di dialogo Windows10 Essentials presente al menu preferenze di
+  NVDA. Di default le versioni stabili eseguiranno un controllo settimanale,
+  mentre quelle in sviluppo giornaliero.
+* In alcune app, viene letto il testo che appare nelle regioni live. Ciò
+  include notifiche in Edge,  i risultati nella calcolatrice ed altro. Si
+  noti che talvolta potrebbe accadere che venga annunciato due volte lo
+  stesso elemento.
 
 ## Allarmi e sveglia
 
@@ -79,7 +81,7 @@ NVDA settings.
 * Le risposte di tipo testuale di Cortana vengono lette nella maggior parte
   dei casi, se non dovesse funzionare riaprire il menu avvio e ripetere la
   ricerca.
-* NVDA will be silent when talking to Cortana via voice.
+* NVDA rimarrà in silenzio mentre si parla a Cortana  con la voce.
 * NVDA annuncerà la conferma di un promemoria quando ne viene inserito uno.
 
 ## Barra dei giochi
@@ -104,8 +106,7 @@ NVDA settings.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are
-  announced.
+* Vengono annunciate correttamente le notifiche dei download dei file.
 
 ## Modern keyboard
 
@@ -121,14 +122,14 @@ NVDA settings.
 
 ## Impostazioni
 
-* Certain information such as Windows Update progress is reported
-  automatically.
+* Vengono annunciate automaticamente le informazioni di avanzamento delle
+  operazioni di Windows Update.
 * Le informazioni delle barre di avanzamento non vengono più lette due
   volte.
 * Il gruppo impostazioni viene riconosciuto quando ci si sposta tra i
   controlli usando la navigazione ad oggetti.
-* For some combo boxes, NVDA will no longer fail to recognize labels and/or
-  announce value changes.
+* Per alcune caselle combinate, NVDA non commetterà più errori nel
+  riconoscere le etichette o annunciare i cambiamenti dei valori.
 * Audio Volume progress bar beeps are no longer heard in build 17035 and
   later.
 
@@ -157,8 +158,8 @@ NVDA settings.
 
 * Dopo aver controllato la presenza di aggiornamenti di app, i nomi delle
   app nell'elenco degli aggiornamenti viene correttamente etichettato.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* Mentre si scaricano contenuti quali app o film, NVDA ne leggerà il nome e
+  l'avanzamento del download.
 
 ## Meteo
 

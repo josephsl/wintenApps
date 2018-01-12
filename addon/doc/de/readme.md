@@ -1,4 +1,4 @@
-# Windows 10 Anwendungsergänzungen #
+# Ergänzungen für Windows 10 Apps #
 
 * Autors: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version][1] herunterladen
@@ -38,7 +38,8 @@ auch die NVDA-Einstellungen speichern.
 
 * Untermenüs werden im Kontextmenü von Kacheln korrekt erkannt
 * Bestimmte Dialoge werden nun als richtige Dialogfelder erkannt. Dazu
-  gehören das Dialogfeld"Insider-Vorschau" (Einstellungsanwendung).
+  gehören das Dialogfeld"Insider-Vorschau" in der App für
+  Windowseinstellungen.
 * NVDA kann die Anzahl der Vorschläge bei der Suche in den meisten Fällen
   bekannt geben. Diese Option wird gesteuert durch Meldung von
   Objektpositionsdaten im Dialog der Objektpräsentation.
@@ -48,7 +49,7 @@ auch die NVDA-Einstellungen speichern.
   Systemalarm, Element ausgewählt, Fenster geöffnet. Wenn NVDA so
   eingestellt ist, dass es mit aktiviertem Debug-Logging läuft, werden diese
   Ereignisse protokolliert.
-* Möglichkeit hinzugefügt, über den neuen Windows 10 App Essentials Dialog
+* Möglichkeit hinzugefügt, über den neuen Dialog Windows 10 App Essentials
   im NVDA-Einstellungsmenü nach Aktualisierungen für diese Erweiterung
   (automatisch oder manuell) zu suchen. Standardmäßig werden stabile- und
   Entwicklerversionen wöchentlich bzw. täglich automatisch nach neuen
@@ -82,8 +83,8 @@ auch die NVDA-Einstellungen speichern.
 * Textuelle Antworten von Cortana werden in den meisten Fällen
   angezeigt. Falls nicht, öffnen Sie das StartMenü und starten Sie die Suche
   erneut.
-* NVDA verstummt bei der Verwendung von Cortana, so dass die Stimmen nicht
-  mehr sich in die Quere kommen.
+* NVDA verstummt bei der Verwendung von Cortana, so dass sich die Stimmen
+  nicht mehr in die Quere kommen.
 * NVDA wird nun eine Erinnerungsbestätigung anzeigen, nachdem Sie eine
   eingestellt haben.
 
@@ -132,7 +133,7 @@ auch die NVDA-Einstellungen speichern.
 * Werte in Fortschrittsbalken und andere Informationen werden nicht mehr
   zweimal angesagt.
 * Einstellungsgruppen werden erkannt, wenn Objektnavigation zur Navigation
-  zwischen Controllern angewendet wird.
+  zwischen Elementen angewendet wird.
 * Bei einigen Ausklapplisten wird NVDA nun die Beschriftung erkennen
   und/oder Wertänderungen ankündigen.
 * Fortschrittsbalken in Lautstärke-Reglern werden nicht mehr ausgegeben
