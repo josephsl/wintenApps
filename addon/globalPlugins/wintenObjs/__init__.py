@@ -25,10 +25,10 @@ import addonHandler
 addonHandler.initTranslation()
 
 # Extra UIA constants
-# None at this time.
+UIA_NotificationEventId = 20035 # Introduced in Version 1709.
 
 # UIA COM constants
-# None at this time.
+TreeScope_Subtree = 7
 
 # We know the following elements are dialogs.
 wintenDialogs=("Shell_Dialog", "Popup", "Shell_Flyout")
@@ -120,6 +120,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super(GlobalPlugin, self).__init__()
 		# #20: don't even think about proceeding in secure screens (especially add-on updates).
 		if globalVars.appArgs.secure: return
+		# Listen for additional events (to be removed once NVDA Core supports them.
+		import UIAHandler
+		if UIA_NotificationEventId not in UIAHandler.UIAEventIdsToNVDAEventNames:
+			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_NotificationEventId] = "alert"
+			UIAHandler.handler.clientObject.addAutomationEventHandler(UIA_NotificationEventId,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("&Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
@@ -219,4 +224,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Specifically in order to debug multiple toast announcements.
 		self.uiaDebugLogging(obj, "windowOpen")
+		nextHandler()
+
+	def alert(self, obj, nextHandler):
+		# Introduced in Version 1709, to be treated as alert event.
+		self.uiaDebugLogging(obj, "uiaNotification")
 		nextHandler()
