@@ -123,7 +123,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Listen for additional events (to be removed once NVDA Core supports them.
 		import UIAHandler
 		if UIA_NotificationEventId not in UIAHandler.UIAEventIdsToNVDAEventNames:
-			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_NotificationEventId] = "alert"
+			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_NotificationEventId] = "UIA_notification"
 			UIAHandler.handler.clientObject.addAutomationEventHandler(UIA_NotificationEventId,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("&Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
@@ -226,7 +226,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "windowOpen")
 		nextHandler()
 
-	def alert(self, obj, nextHandler):
+	def event_UIA_notification(self, obj, nextHandler):
 		# Introduced in Version 1709, to be treated as alert event.
-		self.uiaDebugLogging(obj, "uiaNotification")
+		self.uiaDebugLogging(obj, "notification")
 		nextHandler()
