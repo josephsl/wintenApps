@@ -30,12 +30,7 @@ class AppModule(appModuleHandler.AppModule):
 			# The difference between emoji panel and suggestions list is absence of categories/emoji separation.
 			# If dealing with keyboard entry suggestions (build 17040 and later), return immediately.
 			candidate = obj.parent.previous
-			if candidate is None:
-				# No need for this on build 17063/hardware input suggestion as focus event takes care of it.
-				# Keep this here as a comment until Version 1803 is released.
-				#ui.message(obj.name)
-				#nextHandler()
-				return
+			if candidate is None: return
 			ui.message(candidate.name)
 			obj = candidate.firstChild
 		if obj is not None:
@@ -45,4 +40,11 @@ class AppModule(appModuleHandler.AppModule):
 		else:
 			# Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 			ui.message(_("No emoji"))
+		nextHandler()
+
+	def event_UIA_window_windowOpen(self, obj, nextHandler):
+		# Make sure to announce most recently used emoji first in post-1709 builds.
+		# Fake the announcement by locating 'most recently used" category and calling selected event on this.
+		if obj.childCount == 3:
+			self.event_UIA_elementSelected(obj.lastChild.firstChild, nextHandler)
 		nextHandler()
