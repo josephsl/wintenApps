@@ -1,111 +1,109 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the wintenApps package.
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: wintenApps 17.02\n"
+"Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2017-02-03 22:05+1000\n"
-"PO-Revision-Date: 2018-01-21 10:21+0100\n"
-"Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
+"POT-Creation-Date: 2016-07-09 05:48+1000\n"
+"PO-Revision-Date: 2018-01-09 13:24+0100\n"
+"Last-Translator: Adriani Botez <adriani.botez@gmail.com>\n"
 "Language-Team: \n"
-"Language: da\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Du bruger en ældre version af Windows. Dette tilføjelsesprogram kræver "
-"{minSupportedVersion} eller nyere. Er du sikker på, at du vil installere "
-"dette tilføjelsesprogram alligevel?"
+"Sie verwenden noch eine ältere Windows-Version. Diese Erweiterung benötigt "
+"mindestens {minSupportedVersion}. Möchten Sie wirklich fortfahren?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
-msgstr "Gammel version af Windows"
+msgstr "Alte Windows-Version"
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
-msgstr "Ikke flere vejrdata for dette emne."
+msgstr "Keine weiteren Wetterdaten für diesen Eintrag verfügbar"
 
 #. Translators: the description for the showMessageLongDesc script on Skype for Windows 10.
 msgid "Shows the message details."
-msgstr "Viser beskeddetaljer."
+msgstr "Zeigt die Details der Benachrichtigungen an."
 
 #. Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 msgid "Typing stopped"
-msgstr "Indtastning stopet"
+msgstr "Tippen angehalten"
 
 #. Translators: Presented when message history isn't found in Skype Preview app.
 msgid "Chat history not found"
-msgstr "Chatoversigt ikke fundet"
+msgstr "Chatverlauf nicht gefunden"
 
 #. Translators: Input help mode message for a command in Skype Preview app.
 msgid "Reports and moves the review cursor to a recent message"
-msgstr "Annoncerer og flytter læsemarkøren til en af de seneste meddelelser."
+msgstr "Fokussiert die neueste Nachricht und liest sie vor."
 
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
-msgstr "Ingen emoji"
+msgstr "keine Emoji-Symbole"
 
 msgid "suggestions"
-msgstr "Forslag"
+msgstr "Vorschläge"
 
 msgid "&Windows 10 App Essentials..."
-msgstr "&Windows 10 App Essentials..."
+msgstr "&Windows 10-Apps"
 
 msgid "Windows 10 App Essentials add-on settings"
-msgstr "Indstillinger for tilføjelsesprogrammet Windows 10 App Essentials"
+msgstr "Einstellungen der Erweiterung Windows 10-App Essentials"
 
 #. Translators: Error text shown when add-on update check fails.
 msgid "Error checking for update."
-msgstr "Fejl under søgning efter opdateringer."
+msgstr "Fehler beim Suchen nach Updates."
 
 #. Translators: Title of the dialog shown when add-on update check fails.
 #. Translators: Title of the dialog presented when no add-on update is available.
 #. Translators: Title of the add-on update check dialog.
 msgid "Windows 10 App Essentials update"
-msgstr "Opdatering af Windows 10 App Essentials"
+msgstr "Update der Windows 10-App Essentials"
 
 #. Translators: Presented when no add-on update is available.
 msgid "No add-on update available."
-msgstr "Ingen opdatering tilgængelig."
+msgstr "Keine Updates der Erweiterung verfügbar."
 
 #. Translators: Text shown if an add-on update is available.
-#, python-brace-format
 msgid ""
 "Windows 10 App Essentials {newVersion} is available. Would you like to "
 "update?"
 msgstr ""
-"Windows 10 App Essentials {newVersion} er tilgængelig. Vil du opdatere?"
+"Eine {newVersion} der Erweiterung für die Windows 10 App Essentials ist "
+"verfügbar. Möchten Sie das Update jetzt durchführen?"
 
 #. Translators: The title of a dialog to configure advanced WinTenApps add-on options such as update checking.
 msgid "Windows 10 App Essentials settings"
-msgstr "Indstillinger for Windows 10 App Essentials"
+msgstr "Einstellungen der Windows 10-App Essentials"
 
 #. Translators: A checkbox to toggle automatic add-on updates.
 msgid "Automatically check for add-on &updates"
-msgstr "Søg automatisk efter &opdateringer til tilføjelsesprogrammet"
+msgstr "A&utomatisch nach Updates der Erweiterung suchen"
 
 #. Translators: The label for a setting in WinTenApps add-on settings to select automatic update interval in days.
 msgid "Update &interval in days"
-msgstr "Opdaterings&interval i dage"
+msgstr "Update-&Häufigkeit (in Tage)"
 
 #. Translators: The label for a combo box to select update channel.
 msgid "&Add-on update channel:"
-msgstr "K&anal til opdatering af tilføjelsesprogram"
+msgstr "Update-&Kanal der Erweiterung:"
 
 #. Translators: The label of a button to check for add-on updates.
 msgid "Check for add-on &update"
-msgstr "Søg efter &opdatering til tilføjelsesprogram"
+msgstr "Nach &Updates der Erweiterung suchen"
 
 #. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
 msgid ""
@@ -116,42 +114,41 @@ msgid ""
 "please answer no and switch to stable update channel. Are you sure you wish "
 "to switch to the development update channel?"
 msgstr ""
-"Du er ved at skifte til udviklingsopdateringskanalen. Selvom opdateringer "
-"fra denne kanal bringer spændende funktioner, kommer den også med "
-"opdateringer, som måske er ustabile til tider og bør bruges til at teste og "
-"sende feedback til udvikleren af tilføjelsespakken. Hvis du foretrækker at "
-"bruge stabile versioner af denne pakke, så svar venligst nej og skift til "
-"den stabile opdateringskanal. Er du sikker på, at du ønsker at skifte til "
-"udviklingsopdateringskanalen?"
+"Sie sind dabei den Update-Kanal zu wechseln, in denen ausschließlich "
+"Versionen von den Entwicklern mit neuen Features bereit gestellt werden. "
+"Diese Versionen können instabil sein und dienen lediglich zu Testzwecken und "
+"zum Feedback senden. Wenn Sie den sicheren und stabilen Update-Kanal "
+"bevorzugen, beantworten Sie die Frage mit \"Nein\". Möchten Sie trotzdem den "
+"Update-Kanal wechseln?"
 
 #. Translators: The title of the channel switch confirmation dialog.
 msgid "Switching to unstable channel"
-msgstr "Skifter til ustabil kanal"
+msgstr "Wechsel in den Test-Kanal."
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"
-msgstr "Søg efter opdateringer"
+msgstr "Überprüfung auf Updates der Erweiterung"
 
 #. Translators: The message displayed while checking for newer version of WinTenApps add-on.
 msgid "Checking for new version of Windows 10 App Essentials add-on..."
-msgstr "Søger efter ny version af Windows 10 App Essentials..."
+msgstr "Auf Updates der Erweiterung wird gesucht..."
 
 #. Translators: The title of the dialog displayed while downloading add-on update.
 msgid "Downloading Add-on Update"
-msgstr "Henter opdatering til tilføjelsespakke"
+msgstr "Die Aktualisierung der Erweiterung wird heruntergeladen"
 
 #. Translators: The progress message indicating that a connection is being established.
 msgid "Connecting"
-msgstr "Forbinder"
+msgstr "Verbindung wird hergestellt"
 
 #. Translators: A message indicating that an error occurred while downloading an update to NVDA.
 msgid "Error downloading add-on update."
-msgstr "Fejl under hentning af opdatering til tilføjelsesprogrammet."
+msgstr "Fehler beim Herunterladen der Aktualisierung"
 
 #. Translators: The title of a dialog indicating that an error occurred while downloading an update to NVDA.
 #. Translators: The title of a dialog presented when an error occurs.
 msgid "Error"
-msgstr "Fejl"
+msgstr "Fehler"
 
 #. Translators: The message displayed when an error occurs when opening an add-on package for adding.
 #, python-format
@@ -159,28 +156,28 @@ msgid ""
 "Failed to open add-on package file at %s - missing file or invalid file "
 "format"
 msgstr ""
-"Kunne ikke åbne tilføjelsespakkefilen på destinationen %s - manglende fil "
-"eller ugyldigt filformat"
+"Die Erweiterung %s konnte nicht geöffnet werden. Die Datei ist "
+"möglicherweise beschädigt oder nicht vorhanden."
 
 #. Translators: The title of the dialog presented while an Addon is being updated.
 msgid "Updating Add-on"
-msgstr "Opdaterer tilføjelsespakke"
+msgstr "Die Erweiterung wird aktualisiert."
 
 #. Translators: The message displayed while an addon is being updated.
 msgid "Please wait while the add-on is being updated."
-msgstr "Vent venligst mens tilføjelsespakken opdateres."
+msgstr "Bitte warten Sie, während die Erweiterung aktualisiert wird."
 
 #. Translators: The message displayed when an error occurs when installing an add-on package.
 #, python-format
 msgid "Failed to update add-on  from %s"
-msgstr "Fejl under opdatering af tilføjelsespakken til %s"
+msgstr "die Erweiterung %s konnte nicht aktualisiert werden."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Windows 10 App Essentials"
-msgstr "Windows 10 App Essentials"
+msgstr "Windows 10-Apps"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
-msgstr "En samling af programmoduler til forskellige Windows 10 apps"
+msgstr "Eine Sammlung von Anwendungsmodulen für diverse Windows 10-Apps."
