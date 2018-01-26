@@ -96,7 +96,7 @@ def addonUpdateCheck(autoCheck=False):
 	try:
 		info = checkForAddonUpdate()
 	except:
-		log.debugWarning("Error checking for update", exc_info=True)
+		log.error("Error checking for update", exc_info=True)
 		if not autoCheck:
 			wx.CallAfter(progressDialog.done)
 			progressDialog = None
