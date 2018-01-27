@@ -32,7 +32,7 @@ Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NV
 * Certain dialogs are now recognized as proper dialogs, including Insider Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation dialog.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
-* The following UIA events are recognized: Controller for, live region change, system alert, element selected, window opened. With NVDA set to run with debug logging enabled, these events will be tracked.
+* The following UIA events are recognized: Controller for, element selected, live region change, notification, system alert, window opened. With NVDA set to run with debug logging enabled, these events will be tracked.
 * Added ability to check for add-on updates (automatic or manual) via Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
 * In some apps, live region text is announced. This includes alerts in Edge, results in Calculator and others. Note that this may result in double-speaking in some cases.
 
@@ -77,6 +77,7 @@ Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NV
 
 * Support for floating Emoji input panel in Version 1709 (Fall Creators Update). For best experience when reading emojis, use Windows OneCore speech synthesizer.
 * Support for hardware keyboard input suggestions in build 17040 and later.
+* In post-1709 builds, NVDA will announce the first selected emoji when emoji panel opens.
 
 ## People
 
