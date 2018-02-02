@@ -55,12 +55,14 @@ msgstr "Sohbet geçmişi bulunamadı"
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "Son mesajı okur ve inceleme imlecini mesaja taşır"
 
+#. Translators: presented when chat edit box is not found.
+#, fuzzy
+msgid "Chat edit field not found"
+msgstr "Sohbet geçmişi bulunamadı"
+
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
 msgstr "emoji yok"
-
-msgid "suggestions"
-msgstr "öneriler"
 
 msgid "&Windows 10 App Essentials..."
 msgstr "&Windows 10 temel uygulamalar"
@@ -187,3 +189,6 @@ msgstr "Windows 10 Temel Uygulamalar"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "çeşitli Windows 10 uygulamaları için Uygulama modül  koleksiyonu "
+
+#~ msgid "suggestions"
+#~ msgstr "öneriler"

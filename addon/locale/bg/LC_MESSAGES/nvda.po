@@ -52,12 +52,14 @@ msgstr "Съдържанието на дискусията не бе намер�
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "Докладва и премества курсора за преглед до скорошно съобщение"
 
+#. Translators: presented when chat edit box is not found.
+#, fuzzy
+msgid "Chat edit field not found"
+msgstr "Съдържанието на дискусията не бе намерено"
+
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
 msgstr "Няма намерени емоджи"
-
-msgid "suggestions"
-msgstr "предложения"
 
 msgid "&Windows 10 App Essentials..."
 msgstr "Базов пакет &за приложения в Windows 10..."
@@ -187,3 +189,6 @@ msgstr "Базов пакет за приложения в Windows 10"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Колекция от спомагателни модули за разни приложения в Windows 10."
+
+#~ msgid "suggestions"
+#~ msgstr "предложения"

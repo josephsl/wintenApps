@@ -18,6 +18,7 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
+#, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
@@ -51,12 +52,14 @@ msgstr "Zgodovina klepeta se ni našla"
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "Sporoča in premika pregledno utripalko na zadnje sporočilo"
 
+#. Translators: presented when chat edit box is not found.
+#, fuzzy
+msgid "Chat edit field not found"
+msgstr "Zgodovina klepeta se ni našla"
+
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
 msgstr "Ni emojev"
-
-msgid "suggestions"
-msgstr "predlogi"
 
 msgid "&Windows 10 App Essentials..."
 msgstr "&Windows 10 Osnove Aplikacijam..."
@@ -79,6 +82,7 @@ msgid "No add-on update available."
 msgstr "Nobena posodobitev dodatka ni na voljo."
 
 #. Translators: Text shown if an add-on update is available.
+#, python-brace-format
 msgid ""
 "Windows 10 App Essentials {newVersion} is available. Would you like to "
 "update?"
@@ -184,3 +188,6 @@ msgstr "Windows 10 Osnove Aplikacijam"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Zbirka aplikacijskih modulov za več Windows 10 aplikacij"
+
+#~ msgid "suggestions"
+#~ msgstr "predlogi"

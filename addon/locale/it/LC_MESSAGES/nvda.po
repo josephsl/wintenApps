@@ -52,12 +52,14 @@ msgstr "Cronologia chat non trovata"
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "Legge e sposta il cursore di controllo su un messaggio recente"
 
+#. Translators: presented when chat edit box is not found.
+#, fuzzy
+msgid "Chat edit field not found"
+msgstr "Cronologia chat non trovata"
+
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
 msgstr "Nessuna emoji"
-
-msgid "suggestions"
-msgstr "Suggerimenti"
 
 msgid "&Windows 10 App Essentials..."
 msgstr "&Windows 10 App Essentials..."
@@ -188,3 +190,6 @@ msgstr "Windows 10 App Essentials"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Una collezione di app module per numerose app presenti in Windows10"
+
+#~ msgid "suggestions"
+#~ msgstr "Suggerimenti"

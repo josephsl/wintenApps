@@ -52,12 +52,14 @@ msgstr "Istoricul chatului nu a fost găsit"
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "Raportează și mută examinarea cursorului la un mesaj recent."
 
+#. Translators: presented when chat edit box is not found.
+#, fuzzy
+msgid "Chat edit field not found"
+msgstr "Istoricul chatului nu a fost găsit"
+
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
 msgstr "Fără Moji"
-
-msgid "suggestions"
-msgstr "sugestii"
 
 msgid "&Windows 10 App Essentials..."
 msgstr "&Windows 10 App Essentials..."
@@ -185,3 +187,6 @@ msgstr "Windows 10 App Essentials"
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr ""
 "O colecție a modulelor de aplicații pentru diferite aplicații din Windows 10"
+
+#~ msgid "suggestions"
+#~ msgstr "sugestii"

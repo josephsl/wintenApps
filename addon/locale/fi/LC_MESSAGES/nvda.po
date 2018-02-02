@@ -52,12 +52,14 @@ msgstr "Keskusteluhistoriaa ei löydy"
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "Lukee viimeisimmän viestin ja siirtää tarkastelukohdistimen siihen."
 
+#. Translators: presented when chat edit box is not found.
+#, fuzzy
+msgid "Chat edit field not found"
+msgstr "Keskusteluhistoriaa ei löydy"
+
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
 msgstr "Ei emojia"
-
-msgid "suggestions"
-msgstr "ehdotukset"
 
 msgid "&Windows 10 App Essentials..."
 msgstr "&Windows 10 App Essentials..."
@@ -184,3 +186,6 @@ msgstr "Windows 10 App Essentials"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Kokoelma sovellusmoduuleja Windows 10:n mukana tuleville sovelluksille"
+
+#~ msgid "suggestions"
+#~ msgstr "ehdotukset"

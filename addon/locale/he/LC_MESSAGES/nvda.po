@@ -52,12 +52,14 @@ msgstr "לא נמצא היסטורית שיחה"
 msgid "Reports and moves the review cursor to a recent message"
 msgstr "מדווח ומעביר את הסמן לפריט האחרון"
 
+#. Translators: presented when chat edit box is not found.
+#, fuzzy
+msgid "Chat edit field not found"
+msgstr "לא נמצא היסטורית שיחה"
+
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
 msgstr "אין רגשונים"
-
-msgid "suggestions"
-msgstr "הצעות"
 
 msgid "&Windows 10 App Essentials..."
 msgstr "חבילת תוספים בסיסית לחלונות 10..."
@@ -174,3 +176,6 @@ msgstr "חבילת תוספים בסיסית לחלונות 10Windows 10 App Ess
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "מקבץ תוספים עבור שימוש נוח יותר בחלונות 10"
+
+#~ msgid "suggestions"
+#~ msgstr "הצעות"
