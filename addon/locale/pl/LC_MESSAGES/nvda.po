@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-05-05 22:05+1000\n"
-"PO-Revision-Date: 2017-12-20 04:10+0100\n"
+"PO-Revision-Date: 2018-02-02 15:04+0100\n"
 "Last-Translator: Patryk <patric3031@wp.pl>\n"
 "Language-Team: pl <LL@li.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -53,9 +53,8 @@ msgid "Reports and moves the review cursor to a recent message"
 msgstr "odczytuje wiadomość i przenosi do niej kursor przeglądu"
 
 #. Translators: presented when chat edit box is not found.
-#, fuzzy
 msgid "Chat edit field not found"
-msgstr "Nieodnaleziono historii czatu"
+msgstr "nie znaleziono pola edycji czatu"
 
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"

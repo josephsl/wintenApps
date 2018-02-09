@@ -19,7 +19,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sähköposti
 * Kartat
 * Microsoft Edge
-* Moderni näppäimistö (emojiruudun/fyysisen näppäimistösyötteen ehdotukset
+* Moderni näppäimistö (emojipaneelin/fyysisen näppäimistösyötteen ehdotukset
   versiossa 1709 ja uudemmissa)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
@@ -45,10 +45,10 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   -asetuksella Objektien lukuasetukset -valintaikkunasta.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
-* Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, aktiivisen alueen
-  muutos, järjestelmän ilmoitus, elementti valittu, ikkuna avattu. Näitä
-  tapahtumia seurataan, kun NVDA:n lokitasoksi on määritetty
-  "virheenkorjaus".
+* Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, elementti
+  valittu, aktiivisen alueen muutos, ilmoitus, järjestelmän ilmoitus,
+  ikkuna avattu. Näitä tapahtumia seurataan, kun NVDA:n lokitasoksi on
+  määritetty "virheenkorjaus".
 * Lisätty mahdollisuus päivitysten tarkistamiseen (automaattinen tai
   manuaalinen) NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App
   Essentials -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat
@@ -110,10 +110,12 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 ## Moderni näppäimistö
 
 * Tuki version 1709 (Fall Creators -päivitys) kelluvalle
-  emojinsyöttöruudulle. Käytä parhaan kokemuksen saamiseksi Windows OneCore
-  -syntetisaattoria.
+  emojinsyöttöpaneelille. Käytä parhaan kokemuksen saamiseksi Windows
+  OneCore -syntetisaattoria.
 * Tuki fyysisen näppäimistösyötteen ehdotuksille koontiversiossa 17040 ja
   uudemmissa.
+* NVDA ilmoittaa 1709:ää uudemmissa koontiversioissa ensimmäisen valitun
+  emojin, kun emojipaneeli avautuu.
 
 ## Ihmiset
 

@@ -45,9 +45,9 @@ NVDA settings.
   dell'oggetto" nella finestra presentazioni oggetti di NVDA.
 * In alcuni menu di contesto, come in Edge, le informazioni sulla posizione
   come 1 su 2 non vengono più annunciate.
-* The following UIA events are recognized: Controller for, live region
-  change, system alert, element selected, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked.
+* The following UIA events are recognized: Controller for, element selected,
+  live region change, notification, system alert, window opened. With NVDA
+  set to run with debug logging enabled, these events will be tracked.
 * Aggiunta la possibilità di controllare automaticamente o manualmente la
   presenza di aggiornamenti di questo componente aggiuntivo mediante la
   finestra di dialogo Windows10 Essentials presente al menu preferenze di
@@ -114,6 +114,8 @@ NVDA settings.
   ottenere i migliori risultati si consiglia di servirsi delle voci OneCore,
   ossia quelle già presenti in Windows10.
 * Support for hardware keyboard input suggestions in build 17040 and later.
+* In post-1709 builds, NVDA will announce the first selected emoji when
+  emoji panel opens.
 
 ## Persone
 

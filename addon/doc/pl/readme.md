@@ -4,8 +4,8 @@
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
 
-This add-on is a collection of app modules for various Windows 10 apps, as
-well as enhancements and fixes for certain windows 10 controls.
+Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, a też i
+poprawek dla niektórych kontrolek w Windowsie 10.
 
 Następujące moduły wspierające aplikacji są dołączone (sprawdź rozdział
 każdej aplikacji co jest wspierane):
@@ -18,8 +18,8 @@ każdej aplikacji co jest wspierane):
 * Poczta
 * Mapy
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions in Version 1709
-  and later)
+* nowoczesna klawiatura (panel emoji/sprzętowe podpowiedzi wejścia w wersji
+  1709 i nowsze)
 * Osoby
 * Ustawienia (Ustawienia systemowe, Windows+I)
 * Skype (aplikacja uniwersalna)
@@ -27,33 +27,36 @@ każdej aplikacji co jest wspierane):
 * Pogoda.
 * Różne moduły dla takich kontrolek, jak kafelki menu start.
 
-Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
-and NVDA 2017.3 or later. For best results, use the add-on with latest
-Windows 10 stable build (build 16299) and latest stable version of
-NVDA. Also, after changing update settings for the add-on, be sure to save
-NVDA settings.
+Uwaga: Ten dodatek wymaga Windows 10 Wersję 1703 (kompilację 15063) lub
+nowszą i NVDA 2017.3 lub nowszą. Dla lepszych wyników, trzeba będzie używać
+dodatek z najnowszą stabilną kompilacją (kompilacja 16299) i ostatnią
+stabilną wersję NVDA. Także, po zmianie ustawień aktualizacji dodatku,
+trzeba się upewnić, czy konfiguracja jest zachowana.
 
 ## Ogólne
 
 * W meni kontekstowym kafelek meni start, meni rozwijane są prawidłowo
   rozpoznawane.
-* Certain dialogs are now recognized as proper dialogs, including Insider
-  Preview dialog (settings app).
+* Większość okien dialogowych teraz są rozpoznawalne jako prawdziwe okna
+  dialogowe, włączając w to okna dialogowe w wersjach testowych (settings
+  app).
 * NVDA może ogłaszać liczbę wypowiedzi przy wyszukiwaniu w wielu
   przypadkach. Ta opcja jest kontrolowana przez opcję "odczytuj położenie
   obiektu" w oknie dialogowym "prezentacja obiektu".
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) więcej nie jest odczytywana.
-* Następujące zdarzenia UIA są rospoznane: Controller for, live region
-  change, system alert, element selected, window opened. Z NVDA ustawioną na
-  tryb debugowania, te zdarzenia będą śledzone.
-* Added ability to check for add-on updates (automatic or manual) via
-  Windows 10 App Essentials dialog found in NvDA Preferences menu. By
-  default, stable and development versions will check for new updates
-  automatically on a weekly or daily basis, respectively.
-* In some apps, live region text is announced. This includes alerts in Edge,
-  results in Calculator and others. Note that this may result in
-  double-speaking in some cases.
+* Następujące zdarzenia UIA są rospoznawalne: Controller for, element
+  selected, live region change, notification, system alert, window
+  opened. Te zdarzenia będą śledzone, gdy NVDA jest włączone w trybie
+  debugowania.
+* Dodana możliwość sprawdzania aktualizacji dodatku (automatycznie lub
+  ręcznie) poprzez nowe okno dialogowe Windows 10 App Essentials, które
+  można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
+  rozwojowe będą sprawdzane pod kątem nowych aktualizacji codziennie lub
+  tygodniowo.
+* W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. W tym są
+  włączone powiadomienia w Microsoft Edge i innych. Proszę mieć na uwadze,
+  że to może skutkować podwójne wymawianie w niektórych przypadkach.
 
 ## Alarmy i zegar
 
@@ -76,7 +79,7 @@ NVDA settings.
 
 * Zwroty tekstowe Cortany są wypowiadane w większości sytuacjach (jeżeli nie
   są, ponownie otwórz meni start, i spróbuj ponownie).
-* NVDA will be silent when talking to Cortana via voice.
+* NVDA będzie przyciszony, gdy mówisz do Cortany.
 * NVDA teraz wymawia potwierdzenie przypomnienia po jego ustawieniu.
 
 ## Pasek gry
@@ -99,15 +102,17 @@ NVDA settings.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are
-  announced.
+* Powiadomienia, takie jak pobierania plików i różne ostrzeżenia na stronach
+  webowychsą oznajmiane.
 
-## Modern keyboard
+## Klawiatura nowoczesna
 
 * Wsparcie dla pływającego panelu wprowadzania Emoji w kompilacji 16215 lub
   nowszej (dla lepszych wyników trzeba używać syntezatora mowy OneCore,
   czyli Microsoft sapi mobile).
-* Support for hardware keyboard input suggestions in build 17040 and later.
+* Wsparcie dla podpowiedzi wejścia w kompilacji 17040 i nowszych.
+* W kompilacjach po kompilacji 1709, NVDA będzie oznajmiać pierwszy wybrany
+  emoji, przy oznajmianiu panelu emoji.
 
 ## Osoby
 
@@ -116,16 +121,17 @@ NVDA settings.
 
 ## Ustawienia
 
-* Certain information such as Windows Update progress is reported
-  automatically.
+* Większość informacji, takich jak pasek stanu w Windows update, będzie
+  wypowiadany automatycznie.
 * Wartości paska postępu i inne informacje, nie są wypowiadane
   automatycznie.
 * Grupy ustawień są rpspoznawane przy użyciu nawigacji obiektowej aby było
   można poruszać się pomięcy kontrolkami.
-* For some combo boxes, NVDA will no longer fail to recognize labels and/or
-  announce value changes.
-* Audio Volume progress bar beeps are no longer heard in build 17035 and
-  later.
+* Dla niektórych pól kombi, NVDA będzie wykrywał nazwę oraz wypowiadał
+  zmiany wartości. Poprawka zmiany wartości jest wprowadzona w wersji NVDA
+  2017.3.
+* Dzwięki paska postępu głośności nie są więcej słyszane w kompilacji 17035
+  i nowszych.
 
 ## Skype
 
@@ -152,8 +158,8 @@ NVDA settings.
 
 * Po sprawdzaniu aktualizacji aplikacji, nazyw aplikacji w liście aplikacji
   do zaktualizowania są poprawnie oznaczone.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* Przy pobieraniu zawartości, takiej jak aplikacje i muzyka, NVDA wymówi
+  nazwę produktu i pasek postępu.
 
 ## Pogoda
 

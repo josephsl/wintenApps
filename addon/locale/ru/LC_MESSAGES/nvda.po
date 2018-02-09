@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2017-12-10 18:31+0400\n"
+"PO-Revision-Date: 2018-02-03 09:39+0400\n"
 "Last-Translator: Ruslan Kolodyazhni <eye0@rambler.ru>\n"
 "Language-Team: Translators <LL@li.org>\n"
 "Language: ru\n"
@@ -53,9 +53,8 @@ msgid "Reports and moves the review cursor to a recent message"
 msgstr "Зачитывает и перемещает навигатор к последнему сообщению"
 
 #. Translators: presented when chat edit box is not found.
-#, fuzzy
 msgid "Chat edit field not found"
-msgstr "История чата не найдена"
+msgstr "Поле редактирования чата не найдено"
 
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"

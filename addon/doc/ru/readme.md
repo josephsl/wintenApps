@@ -4,8 +4,8 @@
 * Загрузить [стабильную версию][1]
 * Загрузить [разрабатываемую версию][2]
 
-This add-on is a collection of app modules for various Windows 10 apps, as
-well as enhancements and fixes for certain windows 10 controls.
+Это дополнение представляет собой сборник модулей для различных приложений
+Windows 10, а также исправлений для некоторых типов управления Windows 10.
 
 Включены следующие модули поддержки или модули для некоторых приложений
 (смотрите каждый раздел приложения для подробной информации):
@@ -27,11 +27,11 @@ well as enhancements and fixes for certain windows 10 controls.
 * Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
 
-Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
-and NVDA 2017.3 or later. For best results, use the add-on with latest
-Windows 10 stable build (build 16299) and latest stable version of
-NVDA. Also, after changing update settings for the add-on, be sure to save
-NVDA settings.
+Примечание: Это дополнение требует Windows 10 Версии 1703 (сборки 15063) или
+позднее и NVDA 2017.3 или позднее. Для наилучших результатов используйте
+дополнение с последней стабильной сборкой (сборка 16299) и последней
+стабильной версией NVDA. Кроме того, после изменения настроек обновления для
+дополнения, обязательно сохраните настройки программы NVDA.
 
 ## Общие
 
@@ -44,13 +44,14 @@ NVDA settings.
   in Object presentation dialog.
 * In certain context menus (such as in Edge), position information (e.g. 1
   of 2) is no longer announced.
-* The following UIA events are recognized: Controller for, live region
-  change, system alert, element selected, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked.
-* Added ability to check for add-on updates (automatic or manual) via
-  Windows 10 App Essentials dialog found in NvDA Preferences menu. By
-  default, stable and development versions will check for new updates
-  automatically on a weekly or daily basis, respectively.
+* The following UIA events are recognized: Controller for, element selected,
+  live region change, notification, system alert, window opened. With NVDA
+  set to run with debug logging enabled, these events will be tracked.
+* Добавлена возможность  проверки обновления дополнения (автоматически или
+  вручную) при помощи диалога Windows 10 App Essentials, который находится в
+  меню параметров NVDA. По умолчанию, стабильная и разрабатываемая версии
+  будут автоматически проверять наличие новых обновлений на еженедельной или
+  ежедневной основе, соответственно.
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
   double-speaking in some cases.
@@ -99,8 +100,8 @@ NVDA settings.
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are
-  announced.
+* Теперь объявляются уведомления, такие как загрузка файлов и различные
+  предупреждения веб-страниц.
 
 ## Modern keyboard
 
@@ -108,6 +109,8 @@ NVDA settings.
   Update). For best experience when reading emojis, use Windows OneCore
   speech synthesizer.
 * Support for hardware keyboard input suggestions in build 17040 and later.
+* In post-1709 builds, NVDA will announce the first selected emoji when
+  emoji panel opens.
 
 ## Люди
 
@@ -116,14 +119,14 @@ NVDA settings.
 
 ## Настройки
 
-* Certain information such as Windows Update progress is reported
-  automatically.
+* Теперь автоматически сообщается определённая информация, такая, как
+  индикатор обновления Windows.
 * Значения индикатора выполнения и другая информация теперь не объявляются
   дважды.
 * Группы настроек распознаются при использовании навигации объектов для
   перемещения между элементами управления.
-* For some combo boxes, NVDA will no longer fail to recognize labels and/or
-  announce value changes.
+* Для некоторых полей комбинированных списков, NVDA больше не будет
+  оставлять нераспознанными метки и/или уведомления об изменении значения.
 * Audio Volume progress bar beeps are no longer heard in build 17035 and
   later.
 
@@ -151,8 +154,8 @@ NVDA settings.
 
 * После проверки обновлений для приложений, обновлённые названия приложений
   в списке приложений будут правильно помечены.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* При загрузке содержимого, такого как приложения и фильмы, NVDA будет
+  сообщать Наименование продукта и прогресс загрузки.
 
 ## Погода
 

@@ -45,9 +45,9 @@ NVDA settings.
   prezentacija objekt.
 * U većini kontekstnih izbornika (kao što je to u Edgeu), informacije o
   poziciji (NPR. 1 od 2) se više ne izgovara.
-* The following UIA events are recognized: Controller for, live region
-  change, system alert, element selected, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked.
+* The following UIA events are recognized: Controller for, element selected,
+  live region change, notification, system alert, window opened. With NVDA
+  set to run with debug logging enabled, these events will be tracked.
 * Added ability to check for add-on updates (automatic or manual) via
   Windows 10 App Essentials dialog found in NvDA Preferences menu. By
   default, stable and development versions will check for new updates
@@ -110,6 +110,8 @@ NVDA settings.
   Update). For best experience when reading emojis, use Windows OneCore
   speech synthesizer.
 * Support for hardware keyboard input suggestions in build 17040 and later.
+* In post-1709 builds, NVDA will announce the first selected emoji when
+  emoji panel opens.
 
 ## Osobe
 

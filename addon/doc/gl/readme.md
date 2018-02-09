@@ -47,9 +47,9 @@ NVDA.
   posición do obxecto" no diálogo Presentación de Obxectos.
 * En certos menús de contexto (coma no Edge), a información de posición
   (ex.: 1 de 2) xa non se anuncia.
-* Recoñécense os seguintes eventos UIA: Controller for, live region changed,
-  system alert, element selected, window opened. Co NVDA configurado para
-  executarse co rexistro de depuración habilitado, estos eventos seguiranse.
+* The following UIA events are recognized: Controller for, element selected,
+  live region change, notification, system alert, window opened. With NVDA
+  set to run with debug logging enabled, these events will be tracked.
 * Engadida a capacidade de procurar as actualizacións do complemento
   (automática ou manual) a través do diálogo Windows 10 App Essentials que
   se atopa no menú Preferencias do NVDA. Por defecto, procuraranse as
@@ -115,6 +115,8 @@ NVDA.
   sintetizador de voz Windows OneCore).
 * Soporte para suxerencias de entrada de teclado hardware na compilación
   17040 e posterior.
+* In post-1709 builds, NVDA will announce the first selected emoji when
+  emoji panel opens.
 
 ## Xente
 

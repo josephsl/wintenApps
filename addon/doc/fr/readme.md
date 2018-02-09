@@ -49,10 +49,10 @@ NVDA.
   l'objet dans une liste" dans la boîte de dialogue Présentation des Objets.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
-* Les événements UIA suivants sont reconnus : Contrôleur pour changement de
-  région en direct, alerte système, élément sélectionné, fenêtre
-  ouverte. Avec NVDA configuré pour être exécuté avec le journal activé en
-  mode débogage ces événements seront suivis.
+* Les événements UIA suivants sont reconnus : Contrôleur pour l'élément
+  sélectionné, changement de région en direct, notification, alerte système,
+  fenêtre ouverte. Avec NVDA configuré pour être exécuté avec le journal
+  activé en mode débogage ces événements seront suivis.
 * Ajout de la possibilité de vérifier les mises à jour du module
   complémentaire(automatiques ou manuelles) via le dialogue Windows 10 App
   Essentials qui se trouve dans le menu Préférences de NVDA. Par défaut, les
@@ -127,6 +127,8 @@ NVDA.
   la lecture d'emojis,, utiliser le synthétiseur vocal Windows OneCore.
 * Prise en charge des suggestions de saisie au clavier matériel dans la
   build 17040 et ultérieure.
+* Dans les builds post-1709, NVDA annoncera le premier emoji sélectionné
+  lors de l'ouverture du panneau emoji.
 
 ## Personnes
 
