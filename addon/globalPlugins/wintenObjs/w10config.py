@@ -218,7 +218,11 @@ try:
 			@param fileHash: The SHA-1 hash of the file as a hex string.
 			@type fileHash: basestring
 			"""
-			super(W10UpdateDownloader, self).__init__(urls, fileHash)
+			# In recent NVDA next snapshots (February 2018), update downloader was changed to take in update info dictionary.
+			try:
+				super(W10UpdateDownloader, self).__init__(urls, fileHash)
+			except:
+				pass
 			self.urls = urls
 			self.destPath = tempfile.mktemp(prefix="wintenApps_update-", suffix=".nvda-addon")
 			self.fileHash = fileHash
