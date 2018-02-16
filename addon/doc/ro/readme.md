@@ -48,9 +48,10 @@ NVDA-ului.
   poziției obiectului în dialogul prezentării obiectului.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
-* The following UIA events are recognized: Controller for, element selected,
-  live region change, notification, system alert, window opened. With NVDA
-  set to run with debug logging enabled, these events will be tracked.
+* Următoarele evenimente UIA sunt recunoscute: Controler pentru, element
+  selectat, schimbarea regiunii live, alertă de sistem, element selectat,
+  fereastră deschisă. Cu NVDA-ul setat să ruleze cu diagnosticarea activată,
+  aceste evenimente vor fi urmărite.
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă

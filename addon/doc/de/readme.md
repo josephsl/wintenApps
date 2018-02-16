@@ -45,9 +45,10 @@ auch die NVDA-Einstellungen speichern.
   Objektpositionsdaten im Dialog der Objektpräsentation.
 * In bestimmten Kontextmenüs (z.B. in Edge) werden Positionsinformationen
   (z.B. 1 von 2) nicht mehr angesagt.
-* The following UIA events are recognized: Controller for, element selected,
-  live region change, notification, system alert, window opened. With NVDA
-  set to run with debug logging enabled, these events will be tracked.
+* Folgende UIA-Ereignisse werden erkannt: Controller für wechsel der
+  Live-Region, Systembenachrichtigung, Element ausgewählt, Fenster
+  geöffnet. Wenn NVDA so eingestellt ist, dass es mit aktivierter
+  Debug-Protokolierungsstufe läuft, werden diese Ereignisse aufgezeichnet.
 * Möglichkeit hinzugefügt, über den neuen Dialog Windows 10 App Essentials
   im NVDA-Einstellungsmenü nach Aktualisierungen für diese Erweiterung
   (automatisch oder manuell) zu suchen. Standardmäßig werden stabile- und
@@ -119,8 +120,8 @@ auch die NVDA-Einstellungen speichern.
   verwenden Sie Windows-OneCore-Sprachausgaben.
 * Unterstützung für Eingabevorschläge bei Hardware-Tastaturen (gilt für
   Windowsversionen ab Build 17040)
-* In post-1709 builds, NVDA will announce the first selected emoji when
-  emoji panel opens.
+* NVDA wird nun im Emoji-Fenster das erste ausgewählte Emoji ansagen. Dies
+  gilt für Windows-Builds ab Build 1709.
 
 ## Kontakte
 

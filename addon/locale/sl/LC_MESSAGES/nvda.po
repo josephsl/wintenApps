@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2017-11-11 17:32+0100\n"
+"PO-Revision-Date: 2018-02-09 21:00+0100\n"
 "Last-Translator: Jožef Gregorc <jozko.gregorc@gmail.com>\n"
 "Language-Team: \n"
 "Language: sl\n"
@@ -18,7 +18,6 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
@@ -53,9 +52,8 @@ msgid "Reports and moves the review cursor to a recent message"
 msgstr "Sporoča in premika pregledno utripalko na zadnje sporočilo"
 
 #. Translators: presented when chat edit box is not found.
-#, fuzzy
 msgid "Chat edit field not found"
-msgstr "Zgodovina klepeta se ni našla"
+msgstr "Polje za urejanje klepeta se ni našlo"
 
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
@@ -82,7 +80,6 @@ msgid "No add-on update available."
 msgstr "Nobena posodobitev dodatka ni na voljo."
 
 #. Translators: Text shown if an add-on update is available.
-#, python-brace-format
 msgid ""
 "Windows 10 App Essentials {newVersion} is available. Would you like to "
 "update?"
