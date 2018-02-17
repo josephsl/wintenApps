@@ -191,11 +191,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s"%(obj.name, event, obj.appModule, automationID, className))
 			else:
 				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s, controller for count: %s"%(obj.name, event, obj.appModule, automationID, className, len(obj.controllerFor)))
-			# Announce notifications and a tone for debugging purposes.
-			if event == "notification":
-				import tones
-				tones.beep(500, 100)
-				ui.message(obj.name)
 
 	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
@@ -236,4 +231,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_UIA_notification(self, obj, nextHandler):
 		# Introduced in Version 1709, to be treated as a notification event.
 		self.uiaDebugLogging(obj, "notification")
+		# Announce notifications and a tone for debugging purposes.
+		import tones
+		tones.beep(500, 100)
+		ui.message(obj.name)
 		nextHandler()
