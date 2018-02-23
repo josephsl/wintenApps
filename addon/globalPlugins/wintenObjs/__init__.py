@@ -243,6 +243,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_UIA_notification(self, obj, nextHandler):
 		# Introduced in Version 1709, to be treated as a notification event.
 		self.uiaDebugLogging(obj, "notification")
-		# Announce notifications and a tone for debugging purposes.
-		#ui.message(obj.name)
 		nextHandler()
