@@ -120,11 +120,23 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super(GlobalPlugin, self).__init__()
 		# #20: don't even think about proceeding in secure screens (especially add-on updates).
 		if globalVars.appArgs.secure: return
-		# Listen for additional events (to be removed once NVDA Core supports them.
 		import UIAHandler
+		# Hack: add extra events and such via an extended UIAHandler class.
+		import _UIAHandlerEx
+		# Also check builds too (UIA 5 is part of build 16299 and later).
+		import sys
+		handler = UIAHandler.handler
+		if sys.getwindowsversion().build >= 16299 and handler.clientObject.__class__.__mro__[1].__name__ < "IUIAutomation5":
+			log.debug("W10: Version 1709 or later but older UIA interface is in use, upgrading to latest interface for this session via handler object replacement")
+			UIAHandler.terminate()
+			try:
+				UIAHandler.handler=_UIAHandlerEx.UIAHandler()
+			except:
+				UIAHandler.handler=None
+		# Add notification handler manually via attributes dictionary mutation.
+		# Listen for additional events (to be removed once NVDA Core supports them.
 		if UIA_NotificationEventId not in UIAHandler.UIAEventIdsToNVDAEventNames:
 			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_NotificationEventId] = "UIA_notification"
-			UIAHandler.handler.clientObject.addAutomationEventHandler(UIA_NotificationEventId,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 		# #40: skip over the rest if appx is in effect.
 		if hasattr(config, "isAppX") and config.isAppX: return
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
@@ -232,7 +244,5 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Introduced in Version 1709, to be treated as a notification event.
 		self.uiaDebugLogging(obj, "notification")
 		# Announce notifications and a tone for debugging purposes.
-		import tones
-		tones.beep(500, 100)
-		ui.message(obj.name)
+		#ui.message(obj.name)
 		nextHandler()
