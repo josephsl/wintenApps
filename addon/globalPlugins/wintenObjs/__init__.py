@@ -130,7 +130,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			log.debug("W10: Version 1709 or later but older UIA interface is in use, upgrading to latest interface for this session via handler object replacement")
 			UIAHandler.terminate()
 			try:
-				UIAHandler.handler=_UIAHandlerEx.UIAHandler()
+				UIAHandler.handler=_UIAHandlerEx.UIAHandlerEx()
 			except:
 				UIAHandler.handler=None
 		# Add notification handler manually via attributes dictionary mutation.
