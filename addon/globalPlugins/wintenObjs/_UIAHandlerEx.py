@@ -56,10 +56,9 @@ class UIAHandlerEx(UIAHandler):
 		self.clientObject.RemoveAllEventHandlers()
 
 	def IUIAutomationNotificationEventHandler_HandleNotificationEvent(self,sender,NotificationKind,NotificationProcessing,displayString,activityId):
-		import ui, tones
-		# For debugging purposes.
-		tones.beep(500, 100)
-		from logHandler import log
-		log.debug("W10: UIA notification: sender: %s, notification kind: %s, notification processing: %s, display string: %s, activity ID: %s"%(sender,NotificationKind,NotificationProcessing,displayString,activityId))
-		ui.message(displayString)
-
+		if not self.MTAThreadInitEvent.isSet():
+			# UIAHandler hasn't finished initialising yet, so just ignore this event.
+			return
+		import NVDAObjects.UIA
+		obj=NVDAObjects.UIA.UIA(UIAElement=sender)
+		eventHandler.queueEvent("UIA_notification",obj, sender=sender, NotificationKind=NotificationKind, NotificationProcessing=NotificationProcessing, displayString=displayString, activityId=activityId)

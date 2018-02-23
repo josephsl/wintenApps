@@ -133,10 +133,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				UIAHandler.handler=_UIAHandlerEx.UIAHandlerEx()
 			except:
 				UIAHandler.handler=None
-		# Add notification handler manually via attributes dictionary mutation.
-		# Listen for additional events (to be removed once NVDA Core supports them.
-		if UIA_NotificationEventId not in UIAHandler.UIAEventIdsToNVDAEventNames:
-			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_NotificationEventId] = "UIA_notification"
 		# #40: skip over the rest if appx is in effect.
 		if hasattr(config, "isAppX") and config.isAppX: return
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
@@ -240,7 +236,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "windowOpen")
 		nextHandler()
 
-	def event_UIA_notification(self, obj, nextHandler):
+	def event_UIA_notification(self, obj, nextHandler, sender=None, NotificationKind=None, NotificationProcessing=None, displayString=None, activityId=None):
 		# Introduced in Version 1709, to be treated as a notification event.
 		self.uiaDebugLogging(obj, "notification")
+		if isinstance(obj, UIA) and globalVars.appArgs.debugLogging:
+			log.debug("W10: UIA notification: sender: %s, notification kind: %s, notification processing: %s, display string: %s, activity ID: %s"%(sender,NotificationKind,NotificationProcessing,displayString,activityId))
+			import tones
+			# For debugging purposes.
+			tones.beep(500, 100)
+		ui.message(displayString)
 		nextHandler()
