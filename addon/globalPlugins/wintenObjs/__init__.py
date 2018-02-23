@@ -126,7 +126,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			UIAHandler.UIAEventIdsToNVDAEventNames[UIA_NotificationEventId] = "UIA_notification"
 			UIAHandler.handler.clientObject.addAutomationEventHandler(UIA_NotificationEventId,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 		# #40: skip over the rest if appx is in effect.
-		if config.isAppX: return
+		if hasattr(config, "isAppX") and config.isAppX: return
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("&Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
