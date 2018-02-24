@@ -5,6 +5,7 @@
 #See the file COPYING for more details.
 
 # Extended to add additional events and such.
+
 from UIAHandler import *
 
 class UIAHandlerEx(UIAHandler):
@@ -61,4 +62,4 @@ class UIAHandlerEx(UIAHandler):
 			return
 		import NVDAObjects.UIA
 		obj=NVDAObjects.UIA.UIA(UIAElement=sender)
-		eventHandler.queueEvent("UIA_notification",obj, sender=sender, NotificationKind=NotificationKind, NotificationProcessing=NotificationProcessing, displayString=displayString, activityId=activityId)
+		eventHandler.queueEvent("UIA_notification",obj, sender=sender, notificationKind=NotificationKind, notificationProcessing=NotificationProcessing, displayString=displayString, activityId=activityId)
