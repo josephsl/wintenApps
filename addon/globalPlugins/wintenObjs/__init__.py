@@ -25,7 +25,7 @@ import addonHandler
 addonHandler.initTranslation()
 
 # Extra UIA constants
-UIA_NotificationEventId = 20035 # Introduced in Version 1709.
+# None for now
 
 # UIA COM constants
 TreeScope_Subtree = 7
@@ -120,21 +120,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super(GlobalPlugin, self).__init__()
 		# #20: don't even think about proceeding in secure screens (especially add-on updates).
 		if globalVars.appArgs.secure: return
+		# #40: skip over the rest if appx is in effect.
+		if hasattr(config, "isAppX") and config.isAppX: return
+		# Add extra things for UIA support if required.
 		import UIAHandler
-		# Hack: add extra events and such via an extended UIAHandler class.
-		import _UIAHandlerEx
-		# Also check builds too (UIA 5 is part of build 16299 and later).
+		# Check Windows 10 build (UIA 5 is part of build 16299 and later).
 		import sys
 		handler = UIAHandler.handler
 		if sys.getwindowsversion().build >= 16299 and handler.clientObject.__class__.__mro__[1].__name__ < "IUIAutomation5":
 			log.debug("W10: Version 1709 or later but older UIA interface is in use, upgrading to latest interface for this session via handler object replacement")
 			UIAHandler.terminate()
+			# Hack: add extra events and such via an extended UIAHandler class.
+			import _UIAHandlerEx
 			try:
 				UIAHandler.handler=_UIAHandlerEx.UIAHandlerEx()
 			except:
 				UIAHandler.handler=None
-		# #40: skip over the rest if appx is in effect.
-		if hasattr(config, "isAppX") and config.isAppX: return
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("&Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
