@@ -19,11 +19,11 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("""A collection of app modules for various Windows 10 apps"""),
 	# version
-	"addon_version" : "18.02",
+	"addon_version" : "18.03",
 	# Author(s)
 	"addon_author" : u"Joseph Lee <joseph.lee22590@gmail.com>, Derek Riemer <driemer.riemer@gmail.com> and others",
 	# URL for the add-on documentation support
-	"addon_url" : "http://addons.nvda-project.org/",
+	"addon_url" : "https://addons.nvda-project.org/",
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
 }
