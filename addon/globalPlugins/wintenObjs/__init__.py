@@ -128,14 +128,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		import sys
 		handler = UIAHandler.handler
 		if sys.getwindowsversion().build >= 16299 and handler.clientObject.__class__.__mro__[1].__name__ < "IUIAutomation5":
-			log.debug("W10: Version 1709 or later but older UIA interface is in use, upgrading to latest interface for this session via handler object replacement")
-			UIAHandler.terminate()
-			# Hack: add extra events and such via an extended UIAHandler class.
-			import _UIAHandlerEx
-			try:
-				UIAHandler.handler=_UIAHandlerEx.UIAHandlerEx()
-			except:
-				UIAHandler.handler=None
+			log.debug("W10: Version 1709 or later but older UIA interface is in use, attempting to upgrade to latest interface for this session via handler object replacement")
+			if hasattr(UIAHandler, "IUIAutomation5"):
+				UIAHandler.terminate()
+				# Hack: add extra events and such via an extended UIAHandler class.
+				import _UIAHandlerEx
+				try:
+					UIAHandler.handler=_UIAHandlerEx.UIAHandlerEx()
+				except:
+					UIAHandler.handler=None
+			else:
+				log.debug("W10: IUIAutomation5 not found, falling back to IUIAutomation3")
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("&Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
