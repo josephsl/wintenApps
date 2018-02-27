@@ -34,3 +34,10 @@ class AppModule(appModuleHandler.AppModule):
 					ui.message(" ".join([productTitle.name, obj.name]))
 			return
 		nextHandler()
+
+	def event_nameChange(self, obj, nextHandler):
+		# Live region change event is not fired in Store version 11802, so manually clal this event.
+		if self.productVersion >= "11802.1000.106.0":
+			import eventHandler
+			eventHandler.queueEvent("liveRegionChange", obj)
+		nextHandler()
