@@ -240,11 +240,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "windowOpen")
 		nextHandler()
 
-	def event_UIA_notification(self, obj, nextHandler, sender=None, notificationKind=None, notificationProcessing=None, displayString=None, activityId=None):
+	def event_UIA_notification(self, obj, nextHandler, notificationKind=None, notificationProcessing=None, displayString=None, activityId=None):
 		# Introduced in Version 1709, to be treated as a notification event.
 		self.uiaDebugLogging(obj, "notification")
 		if isinstance(obj, UIA) and globalVars.appArgs.debugLogging:
-			log.debug("W10: UIA notification: sender: %s, notification kind: %s, notification processing: %s, display string: %s, activity ID: %s"%(sender,notificationKind,notificationProcessing,displayString,activityId))
+			log.debug("W10: UIA notification: sender: %s, notification kind: %s, notification processing: %s, display string: %s, activity ID: %s"%(obj.UIAElement,notificationKind,notificationProcessing,displayString,activityId))
 			import tones
 			# For debugging purposes.
 			tones.beep(500, 100)
