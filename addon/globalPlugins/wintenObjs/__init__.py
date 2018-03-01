@@ -121,22 +121,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #20: don't even think about proceeding in secure screens (especially add-on updates).
 		if globalVars.appArgs.secure: return
 		# #40: skip over the rest if appx is in effect.
-		if hasattr(config, "isAppX") and config.isAppX: return
-		# Add extra things for UIA support if required.
-		import UIAHandler
-		# UIA 5 is part of build 16299 and later.
-		if not isinstance(UIAHandler.handler.clientObject, UIAHandler.IUIAutomation5):
-			log.debug("W10: older UIA interface is in use, attempting to upgrade to latest interface for this session via handler object replacement")
-			if hasattr(UIAHandler, "IUIAutomation5"):
-				UIAHandler.terminate()
-				# Hack: add extra events and such via an extended UIAHandler class.
-				from . import _UIAHandlerEx
-				try:
-					UIAHandler.handler=_UIAHandlerEx.UIAHandlerEx()
-				except:
-					UIAHandler.handler=None
-			else:
-				log.debug("W10: IUIAutomation5 not found, falling back to IUIAutomation3")
+		if config.isAppX: return
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("&Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
