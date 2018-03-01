@@ -127,7 +127,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Check Windows 10 build (UIA 5 is part of build 16299 and later).
 		import sys
 		handler = UIAHandler.handler
-		if sys.getwindowsversion().build >= 16299 and handler.clientObject.__class__.__mro__[1].__name__ < "IUIAutomation5":
+		if sys.getwindowsversion().build >= 16299 and not isinstance(handler.clientObject, UIAHandler.IUIAutomation5):
 			log.debug("W10: Version 1709 or later but older UIA interface is in use, attempting to upgrade to latest interface for this session via handler object replacement")
 			if hasattr(UIAHandler, "IUIAutomation5"):
 				UIAHandler.terminate()
