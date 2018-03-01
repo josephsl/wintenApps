@@ -124,15 +124,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if hasattr(config, "isAppX") and config.isAppX: return
 		# Add extra things for UIA support if required.
 		import UIAHandler
-		# Check Windows 10 build (UIA 5 is part of build 16299 and later).
-		import sys
-		handler = UIAHandler.handler
-		if sys.getwindowsversion().build >= 16299 and not isinstance(handler.clientObject, UIAHandler.IUIAutomation5):
-			log.debug("W10: Version 1709 or later but older UIA interface is in use, attempting to upgrade to latest interface for this session via handler object replacement")
+		# UIA 5 is part of build 16299 and later.
+		if not isinstance(UIAHandler.handler.clientObject, UIAHandler.IUIAutomation5):
+			log.debug("W10: older UIA interface is in use, attempting to upgrade to latest interface for this session via handler object replacement")
 			if hasattr(UIAHandler, "IUIAutomation5"):
 				UIAHandler.terminate()
 				# Hack: add extra events and such via an extended UIAHandler class.
-				import _UIAHandlerEx
+				from . import _UIAHandlerEx
 				try:
 					UIAHandler.handler=_UIAHandlerEx.UIAHandlerEx()
 				except:

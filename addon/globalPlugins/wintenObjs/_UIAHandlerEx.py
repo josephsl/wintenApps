@@ -24,10 +24,13 @@ class UIAHandlerEx(UIAHandler):
 			except (COMError,WindowsError,NameError):
 				self.clientObject=CoCreateInstance(CUIAutomation._reg_clsid_,interface=IUIAutomation,clsctx=CLSCTX_INPROC_SERVER)
 			if isUIA8:
-				try:
-					self.clientObject=self.clientObject.QueryInterface(IUIAutomation5)
-				except COMError:
-					self.clientObject=self.clientObject.QueryInterface(IUIAutomation4)
+				# #8009: use appropriate interface based on highest supported interface.
+				for interface in (IUIAutomation5, IUIAutomation4, IUIAutomation3, IUIAutomation2):
+					try:
+						self.clientObject=self.clientObject.QueryInterface(interface)
+						break
+					except COMError:
+						pass
 			log.info("UIAutomation: %s"%self.clientObject.__class__.__mro__[1].__name__)
 			self.windowTreeWalker=self.clientObject.createTreeWalker(self.clientObject.CreateNotCondition(self.clientObject.CreatePropertyCondition(UIA_NativeWindowHandlePropertyId,0)))
 			self.windowCacheRequest=self.clientObject.CreateCacheRequest()
@@ -48,7 +51,9 @@ class UIAHandlerEx(UIAHandler):
 			self.clientObject.AddPropertyChangedEventHandler(self.rootElement,TreeScope_Subtree,self.baseCacheRequest,self,UIAPropertyIdsToNVDAEventNames.keys())
 			for x in UIAEventIdsToNVDAEventNames.iterkeys():  
 				self.clientObject.addAutomationEventHandler(x,self.rootElement,TreeScope_Subtree,self.baseCacheRequest,self)
-			self.clientObject.AddNotificationEventHandler(self.rootElement,TreeScope_Subtree,self.baseCacheRequest,self)
+			# #7984: add support for notification event (IUIAutomation5, part of Windows 10 build 16299 and later).
+			if isinstance(self.clientObject, IUIAutomation5):
+				self.clientObject.AddNotificationEventHandler(self.rootElement,TreeScope_Subtree,self.baseCacheRequest,self)
 		except Exception as e:
 			self.MTAThreadInitException=e
 		finally:
