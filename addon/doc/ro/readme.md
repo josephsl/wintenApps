@@ -49,9 +49,10 @@ NVDA-ului.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
 * Următoarele evenimente UIA sunt recunoscute: Controler pentru, element
-  selectat, schimbarea regiunii live, alertă de sistem, element selectat,
-  fereastră deschisă. Cu NVDA-ul setat să ruleze cu diagnosticarea activată,
-  aceste evenimente vor fi urmărite.
+  selectat, schimbarea regiunii live, alertă de sistem, fereastră
+  deschisă. Cu NVDA-ul setat să ruleze cu diagnosticarea activată, aceste
+  evenimente vor fi urmărite, iar pentru evenimentul notificării UIA, se va
+  auzi un ton de diagnosticare.
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
@@ -60,6 +61,10 @@ NVDA-ului.
 * În unele aplicații, textul regiunii live este anunțat. Aceasta include
   alertele din Edge, rezultatele din Calculator și altele. Rețineți faptul
   că asta poate rezulta o dublă vorbire în unele cazuri.
+* Sunt anunțate Notificările versiunilor mai noi ale aplicațiilor din
+  Windows 10 versiunea 1709 (compilare 16299) și ma nouă. Datorită
+  limitărilor tehnice, această caracteristică funcționează corespunzător cu
+  NVDA 2018.1 și mai nou.
 
 ## Alarme și ceas
 

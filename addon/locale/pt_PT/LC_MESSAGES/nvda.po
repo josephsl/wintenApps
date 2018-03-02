@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.10.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-10-14 22:05+1000\n"
-"PO-Revision-Date: 2017-12-06 11:31+0000\n"
+"PO-Revision-Date: 2018-02-03 10:37+0000\n"
 "Last-Translator: Ângelo Miguel Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; "
 "rui.fontes@tiflotecnia.com>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 2.0.1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
@@ -55,9 +55,8 @@ msgid "Reports and moves the review cursor to a recent message"
 msgstr "Anuncia e move o cursor de revisão para uma mensagem recente"
 
 #. Translators: presented when chat edit box is not found.
-#, fuzzy
 msgid "Chat edit field not found"
-msgstr "Histórico de conversação não encontrado"
+msgstr "Campo de edição de conversação não encontrado"
 
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
@@ -81,7 +80,7 @@ msgstr "Actualização do Windows 10 App Essentials"
 
 #. Translators: Presented when no add-on update is available.
 msgid "No add-on update available."
-msgstr "Sem actualização disponível..."
+msgstr "Sem actualização disponível"
 
 #. Translators: Text shown if an add-on update is available.
 #, python-brace-format
@@ -130,7 +129,7 @@ msgstr ""
 
 #. Translators: The title of the channel switch confirmation dialog.
 msgid "Switching to unstable channel"
-msgstr "A mudar para canal instável..."
+msgstr "A mudar para canal instável"
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"

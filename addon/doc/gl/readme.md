@@ -47,10 +47,10 @@ NVDA.
   posición do obxecto" no diálogo Presentación de Obxectos.
 * En certos menús de contexto (coma no Edge), a información de posición
   (ex.: 1 de 2) xa non se anuncia.
-* Recoñécense os seguintes eventos UIA: Controller for, element selected,
-  live region change, notification, system alert, window opened. Co NVDA
-  configurado para executarse co rexistro de depuración habilitado, estos
-  eventos seguiranse.
+* The following UIA events are recognized: Controller for, element selected,
+  live region change, notification, system alert, window opened. With NVDA
+  set to run with debug logging enabled, these events will be tracked, and
+  for UIA notification event, a debug tone will be heard.
 * Engadida a capacidade de procurar as actualizacións do complemento
   (automática ou manual) a través do diálogo Windows 10 App Essentials que
   se atopa no menú Preferencias do NVDA. Por defecto, procuraranse as
@@ -59,6 +59,9 @@ NVDA.
 * Nalgunhas aplicacións, anúnciase o texto en rexións vivas. Esto inclúe
   alertas en Edge, na calculadora e noutros. Ten en conta que esto poderá
   causar unha fala por duplicado nalgúns casos.
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced. Due to technical limitations, this feature
+  works properly with NVDA 2018.1 and later.
 
 ## Alarmas e reloxo
 
@@ -114,8 +117,8 @@ NVDA.
 * Soporte para o panel flotante de entrada de Emoji na actualización 1709
   Fall Creators  (para uns mellores resultados lendo emojis, usa o
   sintetizador de voz Windows OneCore).
-* Soporte para suxerencias de entrada de teclado hardware na compilación
-  17040 e posterior.
+* Support for hardware keyboard input suggestions in Version 1803 build
+  17040 and later.
 * Nas versións posteriores á 1709, o NVDA anunciará o primeiro emoji
   selecionado cando se abra o panel de emoji.
 
@@ -134,8 +137,8 @@ NVDA.
   navegar entre controis.
 * Para algunhas caixas combinadas, NVDA xa non fallará ao recoñecer
   etiquetas e/ou ao anunciar cambios de valores. 
-* Os pitidos da barra de progreso do volume de audio xa non se escoitan na
-  compilación 17035 e posterior.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 build
+  17035 and later.
 
 ## Skype
 

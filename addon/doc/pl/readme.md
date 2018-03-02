@@ -45,10 +45,10 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
   obiektu" w oknie dialogowym "prezentacja obiektu".
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) więcej nie jest odczytywana.
-* Następujące zdarzenia UIA są rospoznawalne: Controller for, element
-  selected, live region change, notification, system alert, window
-  opened. Te zdarzenia będą śledzone, gdy NVDA jest włączone w trybie
-  debugowania.
+* The following UIA events are recognized: Controller for, element selected,
+  live region change, notification, system alert, window opened. With NVDA
+  set to run with debug logging enabled, these events will be tracked, and
+  for UIA notification event, a debug tone will be heard.
 * Dodana możliwość sprawdzania aktualizacji dodatku (automatycznie lub
   ręcznie) poprzez nowe okno dialogowe Windows 10 App Essentials, które
   można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
@@ -57,6 +57,9 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 * W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. W tym są
   włączone powiadomienia w Microsoft Edge i innych. Proszę mieć na uwadze,
   że to może skutkować podwójne wymawianie w niektórych przypadkach.
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced. Due to technical limitations, this feature
+  works properly with NVDA 2018.1 and later.
 
 ## Alarmy i zegar
 
@@ -110,7 +113,8 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 * Wsparcie dla pływającego panelu wprowadzania Emoji w kompilacji 16215 lub
   nowszej (dla lepszych wyników trzeba używać syntezatora mowy OneCore,
   czyli Microsoft sapi mobile).
-* Wsparcie dla podpowiedzi wejścia w kompilacji 17040 i nowszych.
+* Support for hardware keyboard input suggestions in Version 1803 build
+  17040 and later.
 * W kompilacjach po kompilacji 1709, NVDA będzie oznajmiać pierwszy wybrany
   emoji, przy oznajmianiu panelu emoji.
 
@@ -130,8 +134,8 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 * Dla niektórych pól kombi, NVDA będzie wykrywał nazwę oraz wypowiadał
   zmiany wartości. Poprawka zmiany wartości jest wprowadzona w wersji NVDA
   2017.3.
-* Dzwięki paska postępu głośności nie są więcej słyszane w kompilacji 17035
-  i nowszych.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 build
+  17035 and later.
 
 ## Skype
 

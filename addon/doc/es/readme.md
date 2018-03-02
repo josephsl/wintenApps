@@ -48,10 +48,10 @@ configuración de NVDA.
   de posición del objeto" en el diálogo Presentación de Objetos.
 * En ciertos menús de contexto (tales como en Edge), la información de
   posición (ej.: 1 de 2) ya no se anuncia.
-* Se reconocen los siguientes eventos UIA:  Controller for, element
-  selected, live region change, notification, system alert, window
-  opened. Con NVDA configurado para ejecutarse con el registro de depuración
-  habilitado, estos eventos se seguirán.
+* The following UIA events are recognized: Controller for, element selected,
+  live region change, notification, system alert, window opened. With NVDA
+  set to run with debug logging enabled, these events will be tracked, and
+  for UIA notification event, a debug tone will be heard.
 * Añadida la capacidad de buscar actualizaciones del complemento (automática
   o manual) a través del diálogo Windows 10 App Essentials que se encuentra
   en el menú Preferencias de NVDA. Por defecto, se buscarán las
@@ -61,6 +61,9 @@ configuración de NVDA.
   incluye alertas en Edge, resultados en la calculadora y otros. Ten en
   cuenta que esto podrá causar una verbalización por duplicado en algunos
   casos.
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced. Due to technical limitations, this feature
+  works properly with NVDA 2018.1 and later.
 
 ## Alarmas y reloj
 
@@ -117,8 +120,8 @@ configuración de NVDA.
 * Soporte para el panel flotante de entrada de Emoji en la actualización
   1709 (Fall Creators) (para unos mejores resultados, leyendo emojis utiliza
   el sintetizador de voz Windows OneCore).
-* Soporte para sugerencias de entrada de teclado hardware en la compilación
-  17040 y posterior.
+* Support for hardware keyboard input suggestions in Version 1803 build
+  17040 and later.
 * En las versiones posteriores a 1709, NVDA anunciará el primer emoji
   seleccionado cuando se abra el panel de emoji.
 
@@ -137,8 +140,8 @@ configuración de NVDA.
   objetos para navegar entre controles.
 * Para algunos cuadros combinados, NVDA ya no fallará al reconocer etiquetas
   y/o al anunciar cambios de valores. 
-* Los pitidos de la barra de progreso de volumen de audio ya no se oyen en
-  la compilación 17035 y posterior.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 build
+  17035 and later.
 
 ## Skype
 
