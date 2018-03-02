@@ -47,7 +47,8 @@ NVDA settings.
   come 1 su 2 non vengono più annunciate.
 * The following UIA events are recognized: Controller for, element selected,
   live region change, notification, system alert, window opened. With NVDA
-  set to run with debug logging enabled, these events will be tracked.
+  set to run with debug logging enabled, these events will be tracked, and
+  for UIA notification event, a debug tone will be heard.
 * Aggiunta la possibilità di controllare automaticamente o manualmente la
   presenza di aggiornamenti di questo componente aggiuntivo mediante la
   finestra di dialogo Windows10 Essentials presente al menu preferenze di
@@ -57,6 +58,9 @@ NVDA settings.
   include notifiche in Edge,  i risultati nella calcolatrice ed altro. Si
   noti che talvolta potrebbe accadere che venga annunciato due volte lo
   stesso elemento.
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced. Due to technical limitations, this feature
+  works properly with NVDA 2018.1 and later.
 
 ## Allarmi e sveglia
 
@@ -113,7 +117,8 @@ NVDA settings.
 * Supporto per l'immissione di emoji animate (Fall creators Update). Per
   ottenere i migliori risultati si consiglia di servirsi delle voci OneCore,
   ossia quelle già presenti in Windows10.
-* Support for hardware keyboard input suggestions in build 17040 and later.
+* Support for hardware keyboard input suggestions in Version 1803 build
+  17040 and later.
 * In post-1709 builds, NVDA will announce the first selected emoji when
   emoji panel opens.
 
@@ -132,8 +137,8 @@ NVDA settings.
   controlli usando la navigazione ad oggetti.
 * Per alcune caselle combinate, NVDA non commetterà più errori nel
   riconoscere le etichette o annunciare i cambiamenti dei valori.
-* Audio Volume progress bar beeps are no longer heard in build 17035 and
-  later.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 build
+  17035 and later.
 
 ## Skype
 

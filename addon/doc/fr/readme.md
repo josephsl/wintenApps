@@ -49,10 +49,11 @@ NVDA.
   l'objet dans une liste" dans la boîte de dialogue Présentation des Objets.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
-* Les événements UIA suivants sont reconnus : Contrôleur pour l'élément
+* Les événements UIA suivants sont reconnus : Contrôleur pour, élément
   sélectionné, changement de région en direct, notification, alerte système,
   fenêtre ouverte. Avec NVDA configuré pour être exécuté avec le journal
-  activé en mode débogage ces événements seront suivis.
+  activé en mode débogage ces événements seront suivis et pour l'événement
+  de notification UIA, une tonalité de débogage sera entendue.
 * Ajout de la possibilité de vérifier les mises à jour du module
   complémentaire(automatiques ou manuelles) via le dialogue Windows 10 App
   Essentials qui se trouve dans le menu Préférences de NVDA. Par défaut, les
@@ -63,6 +64,9 @@ NVDA.
   annoncé. Cela inclut les alertes dans Edge, résultats dans la calculatrice
   et autres. Notez que cela peut entraîner une double verbalisation dans
   certains cas.
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced. Due to technical limitations, this feature
+  works properly with NVDA 2018.1 and later.
 
 ## Alarmes et horloge
 
@@ -126,7 +130,7 @@ NVDA.
   Version 1709 (Fall Creators Update). Pour une meilleure expérience lors de
   la lecture d'emojis,, utiliser le synthétiseur vocal Windows OneCore.
 * Prise en charge des suggestions de saisie au clavier matériel dans la
-  build 17040 et ultérieure.
+  Version 1803 build 17040 et ultérieure.
 * Dans les builds post-1709, NVDA annoncera le premier emoji sélectionné
   lors de l'ouverture du panneau emoji.
 
@@ -146,7 +150,7 @@ NVDA.
 * Pour certaines zones de liste déroulantes, NVDA ne manquera plus de
   reconnaître les étiquettes et/ou d'annoncer les changements de valeur.
 * Les bips de la barre de progression du volume audio ne sont plus audibles
-  dans la build 17035 et ultérieure.
+  dans la Version 1803 build 17035 et ultérieure.
 
 ## Skype
 
