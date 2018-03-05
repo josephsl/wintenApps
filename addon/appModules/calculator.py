@@ -48,6 +48,9 @@ class AppModule(appModuleHandler.AppModule):
 		if shouldLiveRegionChangeProceed(obj):
 			nextHandler()
 
+	def event_UIA_notification(self, obj, nextHandler, **kwargs):
+		return
+
 	def script_calculatorResult(self, gesture):
 		# To prevent double focus announcement, check where we are.
 		focus = api.getFocusObject()
