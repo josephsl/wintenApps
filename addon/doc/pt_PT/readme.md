@@ -48,7 +48,8 @@ NVDA settings.
   posição (por exemplo, 1 de 2) deixaram de ser anunciadas.
 * The following UIA events are recognized: Controller for, element selected,
   live region change, notification, system alert, window opened. With NVDA
-  set to run with debug logging enabled, these events will be tracked.
+  set to run with debug logging enabled, these events will be tracked, and
+  for UIA notification event, a debug tone will be heard.
 * Adicionada a capacidade de verificar actualizações adicionais (automáticas
   ou manuais) através da caixa de diálogo do Windows 10 aplicações
   essenciais encontrada no menu de preferências do NVDA. Por defeito, as
@@ -57,6 +58,9 @@ NVDA settings.
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
   double-speaking in some cases.
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced. Due to technical limitations, this feature
+  works properly with NVDA 2018.1 and later.
 
 ## Alertas e relógio
 
@@ -114,15 +118,15 @@ NVDA settings.
 * Suporte para o painel flutuante de entrada Emoji na Versão 1709
   (Actualização do Fall Creators). Para obter a melhor experiência ao ler
   emojis, use o sintetizador próprio do Windows.
-* Suporte para sugestões de entrada de teclado de hardware na compilação
-  17040 e posterior.
+* Support for hardware keyboard input suggestions in Version 1803 build
+  17040 and later.
 * Ao procurar contactos, será reproduzido um som, se houver resultados da
   procura.
 
 ## Pessoas.
 
-* When searching for contacts, a sound will play if there are search
-  results.
+* Ao procurar contactos, um som será reproduzido se houver resultados de
+  pesquisa.
 
 ## Configurações
 
@@ -134,8 +138,8 @@ NVDA settings.
   objectos para navegar entre controlos.
 * Para algumas caixas combinadas, o NVDA não falhará ao reconhecer os
   rótulos e / ou anunciar mudanças de valor.
-* Os toques da barra de progresso do volume de áudio deixaram de ser ouvidos
-  na compilação 17035 e posterior.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 build
+  17035 and later.
 
 ## Skype
 

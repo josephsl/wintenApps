@@ -47,8 +47,9 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   (kuten Edgessä).
 * Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, elementti
   valittu, aktiivisen alueen muutos, ilmoitus, järjestelmän ilmoitus,
-  ikkuna avattu. Näitä tapahtumia seurataan, kun NVDA:n lokitasoksi on
-  määritetty "virheenkorjaus".
+  ikkuna avattu. Näitä tapahtumia seurataan ja UIA-ilmoitustapahtuma
+  ilmaistaan virheäänellä, kun NVDA:n lokitasoksi on määritetty
+  "virheenkorjaus".
 * Lisätty mahdollisuus päivitysten tarkistamiseen (automaattinen tai
   manuaalinen) NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App
   Essentials -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat
@@ -57,6 +58,10 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   mm. Edgen ilmoitukset ja laskutoimitusten tulokset Laskimessa sekä
   muut. Huomaa, että tämä saattaa johtaa joissakin tapauksissa ilmoitusten
   kahdesti puhumiseen.
+* Uusien sovellusversioiden ilmoitukset puhutaan Windows 10:n Fall Creators
+  -päivityksessä (koontiversio 16299) ja uudemmissa. Teknisten rajoitusten
+  vuoksi tämä ominaisuus toimii asianmukaisesti vain NVDA 2018.1:ssä tai
+  uudemmissa.
 
 ## Hälytykset ja kello
 
@@ -112,8 +117,8 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 * Tuki version 1709 (Fall Creators -päivitys) kelluvalle
   emojinsyöttöpaneelille. Käytä parhaan kokemuksen saamiseksi Windows
   OneCore -syntetisaattoria.
-* Tuki fyysisen näppäimistösyötteen ehdotuksille koontiversiossa 17040 ja
-  uudemmissa.
+* Tuki fyysisen näppäimistösyötteen ehdotuksille versiossa 1803
+  (koontiversio 17040) ja uudemmissa.
 * NVDA ilmoittaa 1709:ää uudemmissa koontiversioissa ensimmäisen valitun
   emojin, kun emojipaneeli avautuu.
 
@@ -131,7 +136,7 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 * NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen selitteiden
   tunnistamisessa ja/tai arvomuutosten ilmoittamisessa.
 * Edistymispalkkien äänimerkkejä ei enää kuulu muutettaessa
-  äänenvoimakkuutta koontiversiossa 17035 ja uudemmissa.
+  äänenvoimakkuutta versiossa 1803 (koontiversio 17035) ja uudemmissa.
 
 ## Skype
 

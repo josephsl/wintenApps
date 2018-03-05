@@ -46,7 +46,8 @@ Windows 10, а также исправлений для некоторых ти�
   of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, element selected,
   live region change, notification, system alert, window opened. With NVDA
-  set to run with debug logging enabled, these events will be tracked.
+  set to run with debug logging enabled, these events will be tracked, and
+  for UIA notification event, a debug tone will be heard.
 * Добавлена возможность  проверки обновления дополнения (автоматически или
   вручную) при помощи диалога Windows 10 App Essentials, который находится в
   меню параметров NVDA. По умолчанию, стабильная и разрабатываемая версии
@@ -55,6 +56,9 @@ Windows 10, а также исправлений для некоторых ти�
 * In some apps, live region text is announced. This includes alerts in Edge,
   results in Calculator and others. Note that this may result in
   double-speaking in some cases.
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced. Due to technical limitations, this feature
+  works properly with NVDA 2018.1 and later.
 
 ## Будильники и часы
 
@@ -108,7 +112,8 @@ Windows 10, а также исправлений для некоторых ти�
 * Support for floating Emoji input panel in Version 1709 (Fall Creators
   Update). For best experience when reading emojis, use Windows OneCore
   speech synthesizer.
-* Support for hardware keyboard input suggestions in build 17040 and later.
+* Support for hardware keyboard input suggestions in Version 1803 build
+  17040 and later.
 * In post-1709 builds, NVDA will announce the first selected emoji when
   emoji panel opens.
 
@@ -127,8 +132,8 @@ Windows 10, а также исправлений для некоторых ти�
   перемещения между элементами управления.
 * Для некоторых полей комбинированных списков, NVDA больше не будет
   оставлять нераспознанными метки и/или уведомления об изменении значения.
-* Audio Volume progress bar beeps are no longer heard in build 17035 and
-  later.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 build
+  17035 and later.
 
 ## Skype
 

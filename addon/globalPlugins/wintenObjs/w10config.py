@@ -69,8 +69,8 @@ def checkForAddonUpdate():
 	import versionInfo
 	updateURL = channels[config.conf["wintenApps"]["updateChannel"]]
 	# Commenting this out will effectively turn off pilot builds.
-	#if config.conf["wintenApps"]["updateChannel"] == "dev" and versionInfo.updateVersionType != "stable":
-		#updateURL = "http://www.josephsl.net/files/nvdaaddons/getupdate.php?file=w10-try"
+	if config.conf["wintenApps"]["updateChannel"] == "dev" and versionInfo.updateVersionType == "snapshot:next":
+		updateURL = "http://www.josephsl.net/files/nvdaaddons/getupdate.php?file=w10-try"
 	try:
 		res = urlopen(updateURL)
 		res.close()
