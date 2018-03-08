@@ -125,7 +125,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Add extra things for UIA support if required.
 		import UIAHandler
 		# UIA 5 is part of build 16299 and later.
-		if not isinstance(UIAHandler.handler.clientObject, UIAHandler.IUIAutomation5):
+		# #42: and is also part of 2018.1 and later.
+		if hasattr(UIAHandler, "IUIAutomation5") and not isinstance(UIAHandler.handler.clientObject, UIAHandler.IUIAutomation5):
 			log.debug("W10: older UIA interface is in use, attempting to upgrade to latest interface for this session via handler object replacement")
 			if hasattr(UIAHandler, "IUIAutomation5"):
 				UIAHandler.terminate()
