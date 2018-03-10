@@ -125,7 +125,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Add extra things for UIA support if required.
 		import UIAHandler
 		# UIA 5 is part of build 16299 and later.
-		# #42: and is also part of 2018.1 and later.
+		# #42: and is also part of NVDA 2018.1 and later.
 		if hasattr(UIAHandler, "IUIAutomation5") and not isinstance(UIAHandler.handler.clientObject, UIAHandler.IUIAutomation5):
 			log.debug("W10: older UIA interface is in use, attempting to upgrade to latest interface for this session via handler object replacement")
 			if hasattr(UIAHandler, "IUIAutomation5"):
@@ -250,6 +250,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Some apps still fire both live region change and notification events, including Calculator.
 		if isinstance(obj, UIA) and not hasattr(obj, "event_UIA_notification"):
 			# As long as this add-on supports Version 1703, keep a notification blacklist handy.
-			if obj.appModule.appName not in ("calculator",):
+			# Also, do not announce notifications from background apps.
+			if obj.appModule.appName not in ("calculator",) or obj.appModule == api.getFocusObject().appModule:
 				ui.message(displayString)
 		nextHandler()
