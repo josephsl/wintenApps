@@ -231,13 +231,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			import tones
 			# For debugging purposes.
 			tones.beep(500, 100)
-<<<<<<< HEAD
-=======
-		# Some apps still fire both live region change and notification events, including Calculator.
-		if isinstance(obj, UIA) and not hasattr(obj, "event_UIA_notification"):
-			# As long as this add-on supports Version 1703, keep a notification blacklist handy.
-			# Also, do not announce notifications from background apps.
-			if obj.appModule.appName not in ("calculator",) or obj.appModule == api.getFocusObject().appModule:
-				ui.message(displayString)
->>>>>>> master
+		# Do not announce notifications from background apps.
+		if obj.appModule != api.getFocusObject().appModule: return
 		nextHandler()
