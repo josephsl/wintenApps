@@ -66,10 +66,13 @@ def autoUpdateCheck():
 
 # Borrowed ideas from NVDA Core.
 def checkForAddonUpdate():
-	import versionInfo
 	updateURL = channels[config.conf["wintenApps"]["updateChannel"]]
 	# Commenting this out will effectively turn off pilot builds.
-	if config.conf["wintenApps"]["updateChannel"] == "dev" and versionInfo.updateVersionType == "snapshot:next":
+	# Check if pilot build is supported.
+	def _pilotBuild():
+		import versionInfo, winVersion
+		return config.conf["wintenApps"]["updateChannel"] == "dev" and versionInfo.updateVersionType == "snapshot:next" and winVersion.winVersion.build >= 16299
+	if _pilotBuild():
 		updateURL = "http://www.josephsl.net/files/nvdaaddons/getupdate.php?file=w10-try"
 	try:
 		res = urlopen(updateURL)
