@@ -251,6 +251,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if isinstance(obj, UIA) and not hasattr(obj, "event_UIA_notification"):
 			# As long as this add-on supports Version 1703, keep a notification blacklist handy.
 			# Also, do not announce notifications from background apps.
-			if obj.appModule.appName not in ("calculator",) or obj.appModule == api.getFocusObject().appModule:
+			if obj.appModule.appName in ("calculator",): return
+			if obj.appModule == api.getFocusObject().appModule:
 				ui.message(displayString)
 		nextHandler()
