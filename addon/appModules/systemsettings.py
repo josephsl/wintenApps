@@ -59,6 +59,7 @@ class AppModule(appModuleHandler.AppModule):
 				clsList.remove(ProgressBar)
 			except ValueError:
 				pass
+
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache = ""
 
