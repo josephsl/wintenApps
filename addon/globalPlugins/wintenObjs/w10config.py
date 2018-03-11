@@ -62,7 +62,7 @@ def autoUpdateCheck():
 	else:
 		global updateChecker
 		updateChecker = wx.PyTimer(autoUpdateCheck)
-		updateChecker.Start(whenToCheck-currentTime, True)
+		updateChecker.Start((whenToCheck-currentTime) * 1000, True)
 
 # Borrowed ideas from NVDA Core.
 def checkForAddonUpdate():
@@ -185,7 +185,7 @@ class WinTenAppsConfigDialog(wx.Dialog):
 			updateChecker = wx.PyTimer(autoUpdateCheck)
 			currentTime = time.time()
 			whenToCheck = currentTime+(self.updateInterval.Value * addonUpdateCheckInterval)
-			updateChecker.Start(whenToCheck-currentTime, True)
+			updateChecker.Start((whenToCheck-currentTime) * 1000, True)
 		config.conf["wintenApps"]["updateChannel"] = ("dev", "stable")[self.channels.GetSelection()]
 		self.Destroy()
 
