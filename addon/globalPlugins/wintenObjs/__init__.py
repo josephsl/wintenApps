@@ -231,6 +231,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			import tones
 			# For debugging purposes.
 			tones.beep(500, 100)
-		# Do not announce notifications from background apps.
-		if obj.appModule != api.getFocusObject().appModule: return
 		nextHandler()
