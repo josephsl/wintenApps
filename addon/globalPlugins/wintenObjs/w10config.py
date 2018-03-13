@@ -54,15 +54,22 @@ updateChecker = None
 # To avoid freezes, a background thread will run after the global plugin constructor calls wx.CallAfter.
 def autoUpdateCheck():
 	currentTime = time.time()
-	whenToCheck = config.conf["wintenApps"]["updateCheckTime"]
+	whenToCheck = config.conf["wintenApps"]["updateCheckTime"] + (config.conf["wintenApps"]["updateCheckTimeInterval"] * addonUpdateCheckInterval)
 	if currentTime >= whenToCheck:
 		t = threading.Thread(target=addonUpdateCheck, kwargs={"autoCheck":True})
 		t.daemon = True
 		t.start()
-	else:
-		global updateChecker
-		updateChecker = wx.PyTimer(autoUpdateCheck)
-		updateChecker.Start(whenToCheck-currentTime, True)
+	else: startAutoUpdateCheck(interval=divmod((whenToCheck-currentTime), addonUpdateCheckInterval)[-1])
+
+# Start or restart auto update checker.
+def startAutoUpdateCheck(interval=None):
+	# Don't do anything if told to check for update whenever NVDA starts.
+	if not config.conf["wintenApps"]["updateCheckTimeInterval"]: return
+	global updateChecker
+	if updateChecker is not None:
+		wx.CallAfter(updateChecker.Stop)
+	updateChecker = wx.PyTimer(autoUpdateCheck)
+	wx.CallAfter(updateChecker.Start, (addonUpdateCheckInterval if interval is None else interval) * 1000, True)
 
 # Borrowed ideas from NVDA Core.
 def checkForAddonUpdate():
@@ -95,7 +102,7 @@ def checkForAddonUpdate():
 progressDialog = None
 def addonUpdateCheck(autoCheck=False):
 	global progressDialog
-	config.conf["wintenApps"]["updateCheckTime"] = int(time.time()) + config.conf["wintenApps"]["updateCheckTimeInterval"] * addonUpdateCheckInterval
+	config.conf["wintenApps"]["updateCheckTime"] = int(time.time())
 	try:
 		info = checkForAddonUpdate()
 	except:
@@ -107,6 +114,7 @@ def addonUpdateCheck(autoCheck=False):
 			wx.CallAfter(gui.messageBox, _("Error checking for update."),
 				# Translators: Title of the dialog shown when add-on update check fails.
 				_("Windows 10 App Essentials update"), wx.ICON_ERROR)
+		else: startAutoUpdateCheck()
 		return
 	if not autoCheck:
 		wx.CallAfter(progressDialog.done)
@@ -118,7 +126,9 @@ def addonUpdateCheck(autoCheck=False):
 				# Translators: Title of the dialog presented when no add-on update is available.
 				_("Windows 10 App Essentials update"))
 			return
+		else: startAutoUpdateCheck()
 	else:
+		if autoCheck: startAutoUpdateCheck()
 		# Translators: Text shown if an add-on update is available.
 		checkMessage = _("Windows 10 App Essentials {newVersion} is available. Would you like to update?").format(newVersion = info["newVersion"])
 		# Translators: Title of the add-on update check dialog.
@@ -183,9 +193,7 @@ class WinTenAppsConfigDialog(wx.Dialog):
 			updateChecker = None
 		else:
 			updateChecker = wx.PyTimer(autoUpdateCheck)
-			currentTime = time.time()
-			whenToCheck = currentTime+(self.updateInterval.Value * addonUpdateCheckInterval)
-			updateChecker.Start(whenToCheck-currentTime, True)
+			updateChecker.Start(addonUpdateCheckInterval * 1000, True)
 		config.conf["wintenApps"]["updateChannel"] = ("dev", "stable")[self.channels.GetSelection()]
 		self.Destroy()
 
