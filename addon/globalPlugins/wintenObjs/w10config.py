@@ -54,7 +54,7 @@ updateChecker = None
 # To avoid freezes, a background thread will run after the global plugin constructor calls wx.CallAfter.
 def autoUpdateCheck():
 	currentTime = time.time()
-	whenToCheck = config.conf["wintenApps"]["updateCheckTime"]
+	whenToCheck = config.conf["wintenApps"]["updateCheckTime"] + (config.conf["wintenApps"]["updateCheckTimeInterval"] * addonUpdateCheckInterval)
 	if currentTime >= whenToCheck:
 		t = threading.Thread(target=addonUpdateCheck, kwargs={"autoCheck":True})
 		t.daemon = True
@@ -102,7 +102,7 @@ def checkForAddonUpdate():
 progressDialog = None
 def addonUpdateCheck(autoCheck=False):
 	global progressDialog
-	config.conf["wintenApps"]["updateCheckTime"] = int(time.time()) + config.conf["wintenApps"]["updateCheckTimeInterval"] * addonUpdateCheckInterval
+	config.conf["wintenApps"]["updateCheckTime"] = int(time.time())
 	try:
 		info = checkForAddonUpdate()
 	except:
@@ -193,9 +193,7 @@ class WinTenAppsConfigDialog(wx.Dialog):
 			updateChecker = None
 		else:
 			updateChecker = wx.PyTimer(autoUpdateCheck)
-			currentTime = time.time()
-			whenToCheck = currentTime+(self.updateInterval.Value * addonUpdateCheckInterval)
-			updateChecker.Start((whenToCheck-currentTime) * 1000, True)
+			updateChecker.Start(addonUpdateCheckInterval * 1000, True)
 		config.conf["wintenApps"]["updateChannel"] = ("dev", "stable")[self.channels.GetSelection()]
 		self.Destroy()
 
