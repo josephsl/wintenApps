@@ -35,7 +35,9 @@ class AppModule(appModuleHandler.AppModule):
 	def event_nameChange(self, obj, nextHandler):
 		# No, announce value changes immediately except for calculator results.
 		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID != "CalculatorResults" and obj.name != self.resultsCache:
-			ui.message(obj.name)
+			# For unit conversion, UIA notification event presents much better messages.
+			if obj.UIAElement.cachedAutomationID not in ("Value1", "Value2"):
+				ui.message(obj.name)
 			self.resultsCache = obj.name
 		if not self.shouldAnnounceResult:
 			return
@@ -49,7 +51,8 @@ class AppModule(appModuleHandler.AppModule):
 			nextHandler()
 
 	def event_UIA_notification(self, obj, nextHandler, **kwargs):
-		return
+		if obj.previous.UIAElement.cachedAutomationID == "numberPad":
+			nextHandler()
 
 	def script_calculatorResult(self, gesture):
 		# To prevent double focus announcement, check where we are.
