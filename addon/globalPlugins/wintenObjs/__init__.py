@@ -25,7 +25,16 @@ import addonHandler
 addonHandler.initTranslation()
 
 # Extra UIA constants
-# None for now
+UIA_Drag_DragStartEventId = 20026
+UIA_Drag_DragCancelEventId = 20027
+UIA_Drag_DragCompleteEventId = 20028
+
+# For convenience.
+W10Events = {
+	UIA_Drag_DragStartEventId: "UIA_dragStart",
+	UIA_Drag_DragCancelEventId: "UIA_dragCancel",
+	UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
+}
 
 # UIA COM constants
 TreeScope_Subtree = 7
@@ -138,6 +147,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					UIAHandler.handler=None
 			else:
 				log.debug("W10: IUIAutomation5 not found, falling back to IUIAutomation3")
+		# Add a series of events instead of doing it one at a time.
+		log.debug("W10: adding additional events")
+		for event, name in W10Events.items():
+			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
+				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
+				UIAHandler.handler.clientObject.addAutomationEventHandler(event,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("&Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
@@ -255,4 +270,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if obj.appModule.appName in ("calculator",) or activityId in ("CategoryChangedContext",): return
 			if obj.appModule == api.getFocusObject().appModule:
 				ui.message(displayString)
+		nextHandler()
+
+	def event_UIA_dragStart(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "dragStart")
+		nextHandler()
+
+	def event_UIA_dragCancel(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "dragCancel")
+		nextHandler()
+
+	def event_UIA_dragComplete(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "dragComplete")
 		nextHandler()
