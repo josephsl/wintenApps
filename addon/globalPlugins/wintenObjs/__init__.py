@@ -283,3 +283,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_UIA_dragComplete(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dragComplete")
 		nextHandler()
+
+	def event_UIA_toolTipOpened(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "tooltipOpened")
+		ui.message(obj.name)
