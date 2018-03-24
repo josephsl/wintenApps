@@ -286,4 +286,5 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "tooltipOpened")
-		ui.message(obj.name)
+		# Only XAML tooltips will be announced at this time.
+		if obj.UIAElement.cachedFrameworkID == "XAML": ui.message(obj.name)
