@@ -205,18 +205,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def uiaDebugLogging(self, obj, event=None):
 		if isinstance(obj, UIA) and globalVars.appArgs.debugLogging:
 			element = obj.UIAElement
-			if not obj.name:
-				obj.name = "unavailable"
+			name = obj.name
+			if not name: name = "unavailable"
 			automationID = element.cachedAutomationID
 			if not automationID: automationID = "unavailable"
 			className = element.cachedClassName
 			if not className: className = "unavailable"
 			if not event:
 				event = "no event specified"
-			if event != "controllerFor":
-				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s"%(obj.name, event, obj.appModule, automationID, className))
-			else:
+			if event == "controllerFor":
 				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s, controller for count: %s"%(obj.name, event, obj.appModule, automationID, className, len(obj.controllerFor)))
+			elif event == "tooltipOpened":
+				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s, framework Id: %s"%(name, event, obj.appModule, automationID, className, element.cachedFrameworkId))
+			else:
+				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s"%(obj.name, event, obj.appModule, automationID, className))
 
 	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
