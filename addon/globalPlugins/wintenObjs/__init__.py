@@ -9,7 +9,7 @@ import globalPluginHandler
 import controlTypes
 import ui
 from NVDAObjects.UIA import UIA, SearchField
-from NVDAObjects.behaviors import Dialog, EditableTextWithSuggestions
+from NVDAObjects.behaviors import Dialog, EditableTextWithSuggestions, ToolTip
 import api
 import speech
 import braille
@@ -123,6 +123,12 @@ class MenuItemNoPosInfo(UIA):
 		return {}
 
 
+# For tool tips from universal apps and Edge.
+class UWPToolTip(ToolTip, UIA):
+
+	event_UIA_toolTipOpened=ToolTip.event_show
+
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
@@ -200,6 +206,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Menu items should never expose position info (seen in various context menus such as in Edge).
 			elif obj.UIAElement.cachedClassName == "MenuFlyoutItem":
 				clsList.insert(0, MenuItemNoPosInfo)
+			# #44: Recognize UWP tool tips.
+			elif obj.UIAElement.cachedClassName == "ToolTip" and obj.UIAElement.cachedFrameworkID == "XAML":
+				clsList.insert(0, UWPToolTip)
 
 	# Record UIA property info about an object if debug logging is enabled.
 	def uiaDebugLogging(self, obj, event=None):
@@ -288,5 +297,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "tooltipOpened")
-		# Only XAML tooltips will be announced at this time.
-		if obj.UIAElement.cachedFrameworkID == "XAML": ui.message(obj.name)
+		nextHandler()
