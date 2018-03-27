@@ -16,6 +16,7 @@ privire la ceea ce este inclus):
 * Calendar
 * Calculator (modern).
 * Cortana
+* Feedback Hub
 * Bară de jocuri
 * Mail
 * Hărți
@@ -48,11 +49,11 @@ NVDA-ului.
   poziției obiectului în dialogul prezentării obiectului.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
-* Următoarele evenimente UIA sunt recunoscute: Controler pentru, element
-  selectat, schimbarea regiunii live, alertă de sistem, fereastră
-  deschisă. Cu NVDA-ul setat să ruleze cu diagnosticarea activată, aceste
-  evenimente vor fi urmărite, iar pentru evenimentul notificării UIA, se va
-  auzi un ton de diagnosticare.
+* The following UIA events are recognized: Controller for, drag start, drag
+  cancel, drag complete, element selected, live region change, notification,
+  system alert, window opened. With NVDA set to run with debug logging
+  enabled, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard.
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
@@ -91,6 +92,11 @@ NVDA-ului.
   nou).
 * NVDA va fi silențios atunci când vorbiți cu Cortana prin voce.
 * NVDA va anunța o confirmare memento după ce ați setat unul.
+
+## Feedback Hub
+
+* For newer app releases, NVDA will no longer announce feedback categories
+  twice.
 
 ## Bară de jocuri
 
