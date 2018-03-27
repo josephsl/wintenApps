@@ -1,6 +1,6 @@
 # Microsoft Store
 # Part of Windows 10 App Essentials collection
-# Copyright 2016-2017 Joseph Lee, released under GPL
+# Copyright 2016-2018 Joseph Lee, released under GPL
 
 # Enhancements to support Microsoft Store (formerly Windows Store).
 
@@ -36,8 +36,11 @@ class AppModule(appModuleHandler.AppModule):
 		nextHandler()
 
 	def event_nameChange(self, obj, nextHandler):
-		# Live region change event is not fired in Store version 11802, so manually clal this event.
-		if self.productVersion >= "11802.1000.106.0":
-			import eventHandler
-			eventHandler.queueEvent("liveRegionChange", obj)
+		# Live region change event is not fired in Store version 11801, so manually call this event.
+		# It turns out name change event will suffice.
+		if self.productVersion >= "11801.1000.106.0":
+			if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "InstallControl":
+				if obj.name != self._appInstallProgress:
+					self._appInstallProgress = obj.name
+					ui.message(obj.name)
 		nextHandler()
