@@ -137,6 +137,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if globalVars.appArgs.secure: return
 		# #40: skip over the rest if appx is in effect.
 		if config.isAppX: return
+		import UIAHandler
 		# Add a series of events instead of doing it one at a time.
 		log.debug("W10: adding additional events")
 		for event, name in W10Events.items():
