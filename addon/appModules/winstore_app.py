@@ -40,7 +40,9 @@ class AppModule(appModuleHandler.AppModule):
 		# It turns out name change event will suffice.
 		if self.productVersion >= "11801.1000.106.0":
 			if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "InstallControl":
-				if obj.name != self._appInstallProgress:
-					self._appInstallProgress = obj.name
-					ui.message(obj.name)
+				# Install control comes with an anoying name, so look at its children.
+				progressText = " ".join([obj.firstChild.name, obj.simpleFirstChild.name])
+				if progressText != self._appInstallProgress:
+					self._appInstallProgress = progressText
+					ui.message(progressText)
 		nextHandler()
