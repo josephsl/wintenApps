@@ -48,9 +48,10 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   (kuten Edgessä).
 * Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, vetämisen
   aloitus, vetämisen peruutus, vetäminen suoritettu, elementti valittu,
-  aktiivisen alueen muutos, ilmoitus, järjestelmän ilmoitus,  ikkuna
-  avattu. Näitä tapahtumia seurataan ja UIA-ilmoitustapahtuma ilmaistaan
-  virheäänellä, kun NVDA:n lokitasoksi on määritetty "virheenkorjaus".
+  aktiivisen alueen muutos, ilmoitus, järjestelmän ilmoitus, työkaluvihje
+  avattu, ikkuna avattu. Näitä tapahtumia seurataan ja UIA-ilmoitustapahtuma
+  ilmaistaan virheäänellä, kun NVDA:n lokitasoksi on määritetty
+  "virheenkorjaus".
 * Lisätty mahdollisuus päivitysten tarkistamiseen (automaattinen tai
   manuaalinen) NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App
   Essentials -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat
@@ -63,6 +64,8 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   -päivityksessä (koontiversio 16299) ja uudemmissa. Teknisten rajoitusten
   vuoksi tämä ominaisuus toimii asianmukaisesti vain NVDA 2018.1:ssä tai
   uudemmissa.
+* Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
+  ilmoitetaan.
 
 ## Hälytykset ja kello
 
