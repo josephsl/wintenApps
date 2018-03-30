@@ -48,9 +48,9 @@ NVDA settings.
   come 1 su 2 non vengono più annunciate.
 * The following UIA events are recognized: Controller for, drag start, drag
   cancel, drag complete, element selected, live region change, notification,
-  system alert, window opened. With NVDA set to run with debug logging
-  enabled, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard.
+  system alert, tooltip opened, window opened. With NVDA set to run with
+  debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard.
 * Aggiunta la possibilità di controllare automaticamente o manualmente la
   presenza di aggiornamenti di questo componente aggiuntivo mediante la
   finestra di dialogo Windows10 Essentials presente al menu preferenze di
@@ -63,6 +63,8 @@ NVDA settings.
 * Notifications from newer app releases on Windows 10 Version 1709 (build
   16299) and later are announced. Due to technical limitations, this feature
   works properly with NVDA 2018.1 and later.
+* Tooltips from Edge and universal apps are recognized and will be
+  announced.
 
 ## Allarmi e sveglia
 

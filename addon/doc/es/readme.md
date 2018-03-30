@@ -16,7 +16,7 @@ qué se incluye):
 * Calendario
 * Calculadora (modern).
 * Cortana
-* Feedback Hub
+* Centro de opiniones
 * Barra de juegos
 * Correo
 * Mapas
@@ -49,11 +49,12 @@ configuración de NVDA.
   de posición del objeto" en el diálogo Presentación de Objetos.
 * En ciertos menús de contexto (tales como en Edge), la información de
   posición (ej.: 1 de 2) ya no se anuncia.
-* The following UIA events are recognized: Controller for, drag start, drag
+* Se reconocen los siguientes eventos UIA: Controller for, drag start, drag
   cancel, drag complete, element selected, live region change, notification,
-  system alert, window opened. With NVDA set to run with debug logging
-  enabled, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard.
+  system alert, tooltip opened, window opened. Con NVDA configurado para
+  ejecutarse con el registro de depuración habilitado, estos eventos se
+  seguirán, y se oirá un tono de depuración para el elemento UIA
+  notification
 * Añadida la capacidad de buscar actualizaciones del complemento (automática
   o manual) a través del diálogo Windows 10 App Essentials que se encuentra
   en el menú Preferencias de NVDA. Por defecto, se buscarán las
@@ -67,6 +68,8 @@ configuración de NVDA.
   1709 (compilación 16299) en adelante se anuncian correctamente. Debido a
   limitaciones técnicas, esta característica funciona sólo con NVDA 2018.1 y
   posteriores.
+* Se reconocerán y anunciarán los consejos para Edge y para aplicaciones
+  universales.
 
 ## Alarmas y reloj
 
@@ -93,10 +96,10 @@ configuración de NVDA.
 * NVDA se silenciará cuando hables a Cortana a través de la voz.
 * NVDA ahora anunciará confirmación de recuerdo después de configurarla.
 
-## Feedback Hub
+## Centro de opiniones
 
-* For newer app releases, NVDA will no longer announce feedback categories
-  twice.
+* En nuevas versiones de la app, NVDA no anunciará las categorías de los
+  comentarios dos veces.
 
 ## Barra de juegos
 

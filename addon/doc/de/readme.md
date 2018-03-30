@@ -48,9 +48,9 @@ auch die NVDA-Einstellungen speichern.
   (z.B. 1 von 2) nicht mehr angesagt.
 * The following UIA events are recognized: Controller for, drag start, drag
   cancel, drag complete, element selected, live region change, notification,
-  system alert, window opened. With NVDA set to run with debug logging
-  enabled, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard.
+  system alert, tooltip opened, window opened. With NVDA set to run with
+  debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard.
 * Möglichkeit hinzugefügt, über den neuen Dialog Windows 10 App Essentials
   im NVDA-Einstellungsmenü nach Aktualisierungen für diese Erweiterung
   (automatisch oder manuell) zu suchen. Standardmäßig werden stabile- und
@@ -63,6 +63,8 @@ auch die NVDA-Einstellungen speichern.
 * Benachrichtigungen für neuere Windows 10 App-Versionen werden nun
   ausgesprochen. Gilt für Version 1709 (Build 16299 und höher). Aufgrund
   technischer Limitationen funktioniert das nur ab NVDA 2017.1.
+* Tooltips from Edge and universal apps are recognized and will be
+  announced.
 
 ## Wecker und Uhr
 
@@ -95,8 +97,8 @@ auch die NVDA-Einstellungen speichern.
 
 ## Feedback Hub
 
-* For newer app releases, NVDA will no longer announce feedback categories
-  twice.
+* Feedback-Kathegorien werden in neueren App-Versionen nicht mehr zweimal
+  angesagt.
 
 ## Spieleleiste
 
