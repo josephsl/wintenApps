@@ -2,7 +2,6 @@
 # Copyright 2015-2018 Joseph Lee, released under GPL.
 
 # Adds handlers for various UIA controls found in Windows 10.
-# Since May 2017, suggestions sounds are based on wave files produced by NV Access (copyright 2017).
 
 import os
 import globalPluginHandler
@@ -100,7 +99,7 @@ class SearchField(SearchField):
 		nvwave.playWaveFile(r"waves\suggestionsClosed.wav")
 
 # Contacts search field in People app and other places.
-# An ugly hack to prevent suggestion founds from repeating.
+# An ugly hack to prevent suggestion sounds from repeating.
 _playSuggestionsSounds = False
 
 # For UIA search fields that does not raise any controller for at all.
