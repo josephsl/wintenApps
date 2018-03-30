@@ -207,7 +207,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				clsList.insert(0, MenuItemNoPosInfo)
 			# #44: Recognize XAML/UWP tool tips.
 			elif obj.UIAElement.cachedClassName == "ToolTip" and obj.UIAElement.cachedFrameworkID == "XAML":
-				clsList.insert(0, XAMLToolTip)
+				# Just in case XAML tool tip support is part of NVDA...
+				import NVDAObjects.UIA
+				if not hasattr(NVDAObjects.UIA, "XAMLToolTip"):
+					clsList.insert(0, XAMLToolTip)
 
 	# Record UIA property info about an object if debug logging is enabled.
 	def uiaDebugLogging(self, obj, event=None):
