@@ -124,7 +124,7 @@ class MenuItemNoPosInfo(UIA):
 
 
 # For tool tips from universal apps and Edge.
-class UWPToolTip(ToolTip, UIA):
+class XAMLToolTip(ToolTip, UIA):
 
 	event_UIA_toolTipOpened=ToolTip.event_show
 
@@ -206,9 +206,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Menu items should never expose position info (seen in various context menus such as in Edge).
 			elif obj.UIAElement.cachedClassName == "MenuFlyoutItem":
 				clsList.insert(0, MenuItemNoPosInfo)
-			# #44: Recognize UWP tool tips.
+			# #44: Recognize XAML/UWP tool tips.
 			elif obj.UIAElement.cachedClassName == "ToolTip" and obj.UIAElement.cachedFrameworkID == "XAML":
-				clsList.insert(0, UWPToolTip)
+				clsList.insert(0, XAMLToolTip)
 
 	# Record UIA property info about an object if debug logging is enabled.
 	def uiaDebugLogging(self, obj, event=None):
