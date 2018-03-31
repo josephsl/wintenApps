@@ -16,6 +16,7 @@ est inclus) :
 * Calendrier
 * Calculatrice (modern).
 * Cortana
+* Hub de commentaires
 * Game Bar
 * Courrier
 * Cartes
@@ -49,11 +50,13 @@ NVDA.
   l'objet dans une liste" dans la boîte de dialogue Présentation des Objets.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
-* Les événements UIA suivants sont reconnus : Contrôleur pour, élément
+* Les événements UIA suivants sont reconnus : Contrôleur pour, début de
+  déplacement, annulation de déplacement, déplacement complet, élément
   sélectionné, changement de région en direct, notification, alerte système,
-  fenêtre ouverte. Avec NVDA configuré pour être exécuté avec le journal
-  activé en mode débogage ces événements seront suivis et pour l'événement
-  de notification UIA, une tonalité de débogage sera entendue.
+  suggestion ouverte, fenêtre ouverte. Avec NVDA configuré pour être exécuté
+  avec le journal activé en mode débogage ces événements seront suivis et
+  pour l'événement de notification UIA, une tonalité de débogage sera
+  entendue.
 * Ajout de la possibilité de vérifier les mises à jour du module
   complémentaire(automatiques ou manuelles) via le dialogue Windows 10 App
   Essentials qui se trouve dans le menu Préférences de NVDA. Par défaut, les
@@ -64,9 +67,12 @@ NVDA.
   annoncé. Cela inclut les alertes dans Edge, résultats dans la calculatrice
   et autres. Notez que cela peut entraîner une double verbalisation dans
   certains cas.
-* Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced. Due to technical limitations, this feature
-  works properly with NVDA 2018.1 and later.
+* Les notifications des versions plus récentes des applications sur Windows
+  10 version 1709 (build 16299) et ultérieures sont annoncées. En raison de
+  limitations techniques, cette fonctionnalité fonctionne correctement avec
+  NVDA 2018.1 et versions ultérieures.
+* Les suggestions pour Edge et pour les applications universelles sont
+  reconnues et seront annoncées.
 
 ## Alarmes et horloge
 
@@ -97,6 +103,11 @@ NVDA.
   la voix.
 * NVDA annoncera maintenant un rappel de confirmation après que vous
   définissez une.
+
+## Hub de commentaires
+
+* Pour les nouvelles versions des applications, NVDA n'annonce plus deux
+  fois les catégories de commentaires.
 
 ## Game Bar
 
@@ -177,7 +188,7 @@ NVDA.
 
 ## Store
 
-* Après vérification des mises à jour d'applications, le nom des
+* Après vérification des mises à jour des applications, le nom des
   applications dans la liste des applications à mettre à jour sera
   correctement étiqueté.
 * Lors du téléchargement de contenus tels que des applications et des films,

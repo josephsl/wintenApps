@@ -1,6 +1,6 @@
 # Windows 10 App Essentials #
 
-* Autori: Joseph Lee, Derek Riemer și alți utilizatori Windows 10 
+* Autori: Joseph Lee, Derek Riemer și alți utilizatori Windows 10
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
 
@@ -16,6 +16,7 @@ privire la ceea ce este inclus):
 * Calendar
 * Calculator (modern).
 * Cortana
+* Centrul de Feedback
 * Bară de jocuri
 * Mail
 * Hărți
@@ -48,11 +49,11 @@ NVDA-ului.
   poziției obiectului în dialogul prezentării obiectului.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
-* Următoarele evenimente UIA sunt recunoscute: Controler pentru, element
-  selectat, schimbarea regiunii live, alertă de sistem, fereastră
-  deschisă. Cu NVDA-ul setat să ruleze cu diagnosticarea activată, aceste
-  evenimente vor fi urmărite, iar pentru evenimentul notificării UIA, se va
-  auzi un ton de diagnosticare.
+* The following UIA events are recognized: Controller for, drag start, drag
+  cancel, drag complete, element selected, live region change, notification,
+  system alert, tooltip opened, window opened. With NVDA set to run with
+  debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard.
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
@@ -65,10 +66,12 @@ NVDA-ului.
   Windows 10 versiunea 1709 (compilare 16299) și ma nouă. Datorită
   limitărilor tehnice, această caracteristică funcționează corespunzător cu
   NVDA 2018.1 și mai nou.
+* Tooltips from Edge and universal apps are recognized and will be
+  announced.
 
 ## Alarme și ceas
 
-* valorile selectorului de dată sunt acum anunțate, de observat atunci când
+* Valorile selectorului de dată sunt acum anunțate, de observat atunci când
   focalizarea se deplasează la selectorul de comenzi. De asemenea, aceasta
   afectează comanda utilizată pentru a selecta când să repornească pentru
   finalizarea actualizărilor Windows.
@@ -91,6 +94,11 @@ NVDA-ului.
   nou).
 * NVDA va fi silențios atunci când vorbiți cu Cortana prin voce.
 * NVDA va anunța o confirmare memento după ce ați setat unul.
+
+## Centrul de Feedback
+
+* Pentru versiunile mai noi de aplicații, NVDA nu va mai anunța categoriile
+  de feedback de două ori.
 
 ## Bară de jocuri
 

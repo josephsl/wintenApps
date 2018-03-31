@@ -15,6 +15,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Kalenteri
 * Laskin (moderni)
 * Cortana
+* Palautekeskus
 * Pelipalkki
 * Sähköposti
 * Kartat
@@ -45,9 +46,10 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   -asetuksella Objektien lukuasetukset -valintaikkunasta.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
-* Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, elementti
-  valittu, aktiivisen alueen muutos, ilmoitus, järjestelmän ilmoitus,
-  ikkuna avattu. Näitä tapahtumia seurataan ja UIA-ilmoitustapahtuma
+* Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, vetämisen
+  aloitus, vetämisen peruutus, vetäminen suoritettu, elementti valittu,
+  aktiivisen alueen muutos, ilmoitus, järjestelmän ilmoitus, työkaluvihje
+  avattu, ikkuna avattu. Näitä tapahtumia seurataan ja UIA-ilmoitustapahtuma
   ilmaistaan virheäänellä, kun NVDA:n lokitasoksi on määritetty
   "virheenkorjaus".
 * Lisätty mahdollisuus päivitysten tarkistamiseen (automaattinen tai
@@ -62,6 +64,8 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   -päivityksessä (koontiversio 16299) ja uudemmissa. Teknisten rajoitusten
   vuoksi tämä ominaisuus toimii asianmukaisesti vain NVDA 2018.1:ssä tai
   uudemmissa.
+* Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
+  ilmoitetaan.
 
 ## Hälytykset ja kello
 
@@ -88,6 +92,11 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   toistamiseen).
 * NVDA on hiljaa puhuttaessa Cortanalle mikrofonin välityksellä.
 * NVDA puhuu nyt vahvistuksen muistutusta lisättäessä.
+
+## Palautekeskus
+
+* NVDA ei enää puhu palauteluokkia kahdesti sovelluksen uudemmissa
+  versioissa.
 
 ## Pelipalkki
 

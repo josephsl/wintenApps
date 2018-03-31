@@ -2,7 +2,7 @@
 #Copyright (C) 2015 NV Access Limited
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
-# Extended by Joseph Lee (copyright 2016, released under GPL)
+# Extended by Joseph Lee (copyright 2016-2018, released under GPL)
 
 # Extended to let NVDA cooperate with Cortana.
 
@@ -20,8 +20,12 @@ class SuggestionListItem(UIA):
 	role=controlTypes.ROLE_LISTITEM
 
 	def event_UIA_elementSelected(self):
+		# Build 17600 series introduces Sets, a way to grup apps into tabs.
+		# #45: unfortunately, the start page for this (an embedded searchui process inside Edge) says controller for list is empty when in fact it isn't.
+		# Thankfully, it is easy to spot them: if a link is next to results list, then this is the embedded searchui results list.
 		focusControllerFor=api.getFocusObject().controllerFor
-		if len(focusControllerFor)>0 and focusControllerFor[0].appModule is self.appModule and self.name:
+		announceSuggestions = ((len(focusControllerFor)>0 and focusControllerFor[0].appModule is self.appModule and self.name) or self.parent.next is not None)
+		if announceSuggestions:
 			speech.cancelSpeech()
 			api.setNavigatorObject(self)
 			self.reportFocus()

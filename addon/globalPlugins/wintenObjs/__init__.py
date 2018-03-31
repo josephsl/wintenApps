@@ -2,14 +2,13 @@
 # Copyright 2015-2018 Joseph Lee, released under GPL.
 
 # Adds handlers for various UIA controls found in Windows 10.
-# Since May 2017, suggestions sounds are based on wave files produced by NV Access (copyright 2017).
 
 import os
 import globalPluginHandler
 import controlTypes
 import ui
 from NVDAObjects.UIA import UIA, SearchField
-from NVDAObjects.behaviors import Dialog, EditableTextWithSuggestions
+from NVDAObjects.behaviors import Dialog, EditableTextWithSuggestions, ToolTip
 import api
 import speech
 import braille
@@ -25,7 +24,16 @@ import addonHandler
 addonHandler.initTranslation()
 
 # Extra UIA constants
-# None for now
+UIA_Drag_DragStartEventId = 20026
+UIA_Drag_DragCancelEventId = 20027
+UIA_Drag_DragCompleteEventId = 20028
+
+# For convenience.
+W10Events = {
+	UIA_Drag_DragStartEventId: "UIA_dragStart",
+	UIA_Drag_DragCancelEventId: "UIA_dragCancel",
+	UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
+}
 
 # UIA COM constants
 TreeScope_Subtree = 7
@@ -91,7 +99,7 @@ class SearchField(SearchField):
 		nvwave.playWaveFile(r"waves\suggestionsClosed.wav")
 
 # Contacts search field in People app and other places.
-# An ugly hack to prevent suggestion founds from repeating.
+# An ugly hack to prevent suggestion sounds from repeating.
 _playSuggestionsSounds = False
 
 # For UIA search fields that does not raise any controller for at all.
@@ -112,6 +120,12 @@ class MenuItemNoPosInfo(UIA):
 
 	def _get_positionInfo(self):
 		return {}
+
+
+# For tool tips from universal apps and Edge.
+class XAMLToolTip(ToolTip, UIA):
+
+	event_UIA_toolTipOpened=ToolTip.event_show
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
@@ -138,6 +152,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					UIAHandler.handler=None
 			else:
 				log.debug("W10: IUIAutomation5 not found, falling back to IUIAutomation3")
+		# Add a series of events instead of doing it one at a time.
+		log.debug("W10: adding additional events")
+		for event, name in W10Events.items():
+			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
+				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
+				UIAHandler.handler.clientObject.addAutomationEventHandler(event,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("&Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
@@ -185,23 +205,31 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Menu items should never expose position info (seen in various context menus such as in Edge).
 			elif obj.UIAElement.cachedClassName == "MenuFlyoutItem":
 				clsList.insert(0, MenuItemNoPosInfo)
+			# #44: Recognize XAML/UWP tool tips.
+			elif obj.UIAElement.cachedClassName == "ToolTip" and obj.UIAElement.cachedFrameworkID == "XAML":
+				# Just in case XAML tool tip support is part of NVDA...
+				import NVDAObjects.UIA
+				if not hasattr(NVDAObjects.UIA, "XAMLToolTip"):
+					clsList.insert(0, XAMLToolTip)
 
 	# Record UIA property info about an object if debug logging is enabled.
 	def uiaDebugLogging(self, obj, event=None):
 		if isinstance(obj, UIA) and globalVars.appArgs.debugLogging:
 			element = obj.UIAElement
-			if not obj.name:
-				obj.name = "unavailable"
+			name = obj.name
+			if not name: name = "unavailable"
 			automationID = element.cachedAutomationID
 			if not automationID: automationID = "unavailable"
 			className = element.cachedClassName
 			if not className: className = "unavailable"
 			if not event:
 				event = "no event specified"
-			if event != "controllerFor":
-				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s"%(obj.name, event, obj.appModule, automationID, className))
-			else:
+			if event == "controllerFor":
 				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s, controller for count: %s"%(obj.name, event, obj.appModule, automationID, className, len(obj.controllerFor)))
+			elif event == "tooltipOpened":
+				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s, framework Id: %s"%(name, event, obj.appModule, automationID, className, element.cachedFrameworkId))
+			else:
+				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s"%(obj.name, event, obj.appModule, automationID, className))
 
 	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
@@ -255,4 +283,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if obj.appModule.appName in ("calculator",) or activityId in ("CategoryChangedContext",): return
 			if obj.appModule == api.getFocusObject().appModule:
 				ui.message(displayString)
+		nextHandler()
+
+	def event_UIA_dragStart(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "dragStart")
+		nextHandler()
+
+	def event_UIA_dragCancel(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "dragCancel")
+		nextHandler()
+
+	def event_UIA_dragComplete(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "dragComplete")
+		nextHandler()
+
+	def event_UIA_toolTipOpened(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "tooltipOpened")
 		nextHandler()

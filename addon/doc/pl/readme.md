@@ -14,6 +14,7 @@ każdej aplikacji co jest wspierane):
 * Kalendarz
 * Kalkulator (nowoczesny).
 * Cortana
+* Feedback Hub
 * Pasek gry
 * Poczta
 * Mapy
@@ -45,10 +46,11 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
   obiektu" w oknie dialogowym "prezentacja obiektu".
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) więcej nie jest odczytywana.
-* The following UIA events are recognized: Controller for, element selected,
-  live region change, notification, system alert, window opened. With NVDA
-  set to run with debug logging enabled, these events will be tracked, and
-  for UIA notification event, a debug tone will be heard.
+* The following UIA events are recognized: Controller for, drag start, drag
+  cancel, drag complete, element selected, live region change, notification,
+  system alert, tooltip opened, window opened. With NVDA set to run with
+  debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard.
 * Dodana możliwość sprawdzania aktualizacji dodatku (automatycznie lub
   ręcznie) poprzez nowe okno dialogowe Windows 10 App Essentials, które
   można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
@@ -60,6 +62,8 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 * Notifications from newer app releases on Windows 10 Version 1709 (build
   16299) and later are announced. Due to technical limitations, this feature
   works properly with NVDA 2018.1 and later.
+* Tooltips from Edge and universal apps are recognized and will be
+  announced.
 
 ## Alarmy i zegar
 
@@ -84,6 +88,11 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
   są, ponownie otwórz meni start, i spróbuj ponownie).
 * NVDA będzie przyciszony, gdy mówisz do Cortany.
 * NVDA teraz wymawia potwierdzenie przypomnienia po jego ustawieniu.
+
+## Feedback Hub
+
+* For newer app releases, NVDA will no longer announce feedback categories
+  twice.
 
 ## Pasek gry
 

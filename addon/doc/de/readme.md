@@ -14,6 +14,7 @@ inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 * Kalender
 * Rechner (modern)
 * Cortana
+* Feedback Hub
 * Spieleleiste
 * Mail
 * Karten
@@ -45,12 +46,11 @@ auch die NVDA-Einstellungen speichern.
   Objektpositionsdaten im Dialog der Objektpräsentation.
 * In bestimmten Kontextmenüs (z.B. in Edge) werden Positionsinformationen
   (z.B. 1 von 2) nicht mehr angesagt.
-* Folgende UIA-Ereignisse werden erkannt: Controller für wechsel der
-  Live-Region, App-Benachrichtigungen, Systembenachrichtigung, Element
-  ausgewählt, Fenster geöffnet. Wenn NVDA so eingestellt ist, dass es mit
-  aktivierter Debug-Protokolierungsstufe läuft, werden diese Ereignisse
-  aufgezeichnet. Für das UIA-Ereignis App-Benachrichtigungen wird ein
-  Protokollierungston abgespielt.
+* The following UIA events are recognized: Controller for, drag start, drag
+  cancel, drag complete, element selected, live region change, notification,
+  system alert, tooltip opened, window opened. With NVDA set to run with
+  debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard.
 * Möglichkeit hinzugefügt, über den neuen Dialog Windows 10 App Essentials
   im NVDA-Einstellungsmenü nach Aktualisierungen für diese Erweiterung
   (automatisch oder manuell) zu suchen. Standardmäßig werden stabile- und
@@ -63,6 +63,8 @@ auch die NVDA-Einstellungen speichern.
 * Benachrichtigungen für neuere Windows 10 App-Versionen werden nun
   ausgesprochen. Gilt für Version 1709 (Build 16299 und höher). Aufgrund
   technischer Limitationen funktioniert das nur ab NVDA 2017.1.
+* Tooltips from Edge and universal apps are recognized and will be
+  announced.
 
 ## Wecker und Uhr
 
@@ -92,6 +94,11 @@ auch die NVDA-Einstellungen speichern.
   nicht mehr in die Quere kommen.
 * NVDA wird nun eine Erinnerungsbestätigung anzeigen, nachdem Sie eine
   eingestellt haben.
+
+## Feedback Hub
+
+* Feedback-Kathegorien werden in neueren App-Versionen nicht mehr zweimal
+  angesagt.
 
 ## Spieleleiste
 
