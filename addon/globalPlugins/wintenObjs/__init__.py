@@ -236,6 +236,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Non-English locales does not fire item selected event for looping selector unless navigator is first set to it.
 		if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "CustomLoopingSelector":
 			api.setNavigatorObject(obj.simpleFirstChild)
+		# #46: do not announce "unknown" objects from app launcher (quick link menu is affected by this).
+		if obj.windowClassName in ("LauncherTipWnd", "ApplicationManager_DesktopShellWindow"): return
 		nextHandler()
 
 	def event_nameChange(self, obj, nextHandler):
