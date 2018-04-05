@@ -19,26 +19,9 @@ class AppModule(appModuleHandler.AppModule):
 	# just like Settings app, have a cache of download progress text handy.
 	_appInstallProgress = ""
 
-	def event_liveRegionChange(self, obj, nextHandler):
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "_progressText":
-			if obj.name != self._appInstallProgress:
-				self._appInstallProgress = obj.name
-				# Don't forget to announce product title.
-				productTitle = obj.parent.previous
-				# Since March 2017 update, it is no longer the product name, but a progress button.
-				if productTitle and productTitle.role == controlTypes.ROLE_BUTTON:
-					# But since September 2017 update, the title is next door.
-					possibleProductTitle = productTitle.parent.previous
-					productTitle = productTitle.previous if possibleProductTitle is None else productTitle.parent.previous
-				if productTitle and isinstance(productTitle, UIA) and productTitle.UIAElement.cachedAutomationID == "_productTitle":
-					ui.message(" ".join([productTitle.name, obj.name]))
-			return
-		nextHandler()
-
 	def event_nameChange(self, obj, nextHandler):
-		# Live region change event is not fired in Store version 11801, so manually call this event.
-		# It turns out name change event will suffice.
-		if self.productVersion >= "11801.1000.106.0":
+		# It turns out name change event will suffice from January 2018 release onwards.
+		if self.productVersion >= "11801":
 			if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "InstallControl":
 				# Install control comes with an anoying name, so look at its children.
 				progressText = " ".join([obj.firstChild.name, obj.simpleFirstChild.name])
