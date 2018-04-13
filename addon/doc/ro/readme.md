@@ -49,11 +49,12 @@ NVDA-ului.
   poziției obiectului în dialogul prezentării obiectului.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
-* The following UIA events are recognized: Controller for, drag start, drag
-  cancel, drag complete, element selected, live region change, notification,
-  system alert, tooltip opened, window opened. With NVDA set to run with
-  debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard.
+* Următoarele evenimente UIA sunt recunoscute: Controler pentru, început
+  tragere, tragere finalizată, element selectat, schimbarea regiunii active,
+  notificare, alertă de sistem, indiciu deschis, fereastră deschisă. Cu
+  NVDA-ul setat să ruleze cu diagnosticarea activată, aceste evenimente vor
+  fi urmărite, iar pentru evenimentul de tip notificare UIA, se va auzi un
+  ton de diagnosticare.
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
@@ -66,8 +67,8 @@ NVDA-ului.
   Windows 10 versiunea 1709 (compilare 16299) și ma nouă. Datorită
   limitărilor tehnice, această caracteristică funcționează corespunzător cu
   NVDA 2018.1 și mai nou.
-* Tooltips from Edge and universal apps are recognized and will be
-  announced.
+* Indiciile din Edge și alte aplicații universale sunt recunoscute și vor fi
+  anunțate.
 
 ## Alarme și ceas
 
