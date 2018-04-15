@@ -123,7 +123,7 @@ class MenuItemNoPosInfo(UIA):
 
 
 # For tool tips from universal apps and Edge.
-class XAMLToolTip(ToolTip, UIA):
+class ToolTip(ToolTip, UIA):
 
 	event_UIA_toolTipOpened=ToolTip.event_show
 
@@ -209,8 +209,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif obj.UIAElement.cachedClassName == "ToolTip" and obj.UIAElement.cachedFrameworkID == "XAML":
 				# Just in case XAML tool tip support is part of NVDA...
 				import NVDAObjects.UIA
-				if not hasattr(NVDAObjects.UIA, "XAMLToolTip"):
-					clsList.insert(0, XAMLToolTip)
+				if not hasattr(NVDAObjects.UIA, "ToolTip"):
+					clsList.insert(0, ToolTip)
 
 	# Record UIA property info about an object if debug logging is enabled.
 	def uiaDebugLogging(self, obj, event=None):
