@@ -23,16 +23,16 @@ class AppModule(appModuleHandler.AppModule):
 		# However, in recent builds, name change event is also fired.
 		# For consistent experience, report the new category first by traversing through controls.
 		speech.cancelSpeech()
-		# And no, if running on build 17040 and if this is typing suggestion, do not announce candidate window changes, as it is duplicate announcement and is anoying.
-		if obj.UIAElement.cachedAutomationID == "IME_Candidate_Window": return
+		# #8189: do not announce candidates list itself (not items), as this is repeated each time hardware keyboard suggestions are selected.
+		if obj.UIAElement.cachedAutomationID == "CandidateList": return
 		candidate = obj
 		if obj.UIAElement.cachedClassName == "ListViewItem":
 			# The difference between emoji panel and suggestions list is absence of categories/emoji separation.
-			# If dealing with keyboard entry suggestions (build 17040 and later), return immediately.
 			candidate = obj.parent.previous
-			if candidate is None: return
-			ui.message(candidate.name)
-			obj = candidate.firstChild
+			if candidate is not None:
+				# Emoji categories list.
+				ui.message(candidate.name)
+				obj = candidate.firstChild
 		if obj is not None:
 			api.setNavigatorObject(obj)
 			obj.reportFocus()
