@@ -49,7 +49,7 @@ class AppModule(appModuleHandler.AppModule):
 		if obj.childCount == 3:
 			self.event_UIA_elementSelected(obj.lastChild.firstChild, nextHandler)
 		# Handle hardware keyboard suggestions.
-		# This is a dynamic list, so don't do it unless told to announce dynamic content changes.
-		elif obj.childCount == 1 and config.conf["presentation"]["reportDynamicContentChanges"]:
+		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
+		elif obj.childCount == 1 and config.conf["inputComposition"]["autoReportAllCandidates"]:
 			self.event_UIA_elementSelected(obj.firstChild.firstChild.firstChild, nextHandler)
 		nextHandler()
