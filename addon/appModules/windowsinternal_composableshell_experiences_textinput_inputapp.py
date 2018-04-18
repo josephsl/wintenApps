@@ -14,6 +14,7 @@ import api
 import speech
 import braille
 import ui
+import config
 
 class AppModule(appModuleHandler.AppModule):
 
@@ -23,7 +24,7 @@ class AppModule(appModuleHandler.AppModule):
 		# However, in recent builds, name change event is also fired.
 		# For consistent experience, report the new category first by traversing through controls.
 		speech.cancelSpeech()
-		# #8189: do not announce candidates list itself (not items), as this is repeated each time hardware keyboard suggestions are selected.
+		# #8189: do not announce candidates list itself (not items), as this is repeated each time candidate items are selected.
 		if obj.UIAElement.cachedAutomationID == "CandidateList": return
 		candidate = obj
 		if obj.UIAElement.cachedClassName == "ListViewItem":
@@ -47,4 +48,8 @@ class AppModule(appModuleHandler.AppModule):
 		# Fake the announcement by locating 'most recently used" category and calling selected event on this.
 		if obj.childCount == 3:
 			self.event_UIA_elementSelected(obj.lastChild.firstChild, nextHandler)
+		# Handle hardware keyboard suggestions.
+		# This is a dynamic list, so don't do it unless told to announce dynamic content changes.
+		elif obj.childCount == 1 and config.conf["presentation"]["reportDynamicContentChanges"]:
+			self.event_UIA_elementSelected(obj.firstChild.firstChild.firstChild, nextHandler)
 		nextHandler()
