@@ -32,9 +32,9 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1703 (koontiversio
 15063) tai uudempaa ja NVDA 2017.3:a tai uudempaa. Käytä parhaan
-käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata
-koontiversiota (16299) sekä uusinta NVDA:ta. Varmista myös, että tallennat
-NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
+käyttökokemuksen varmistamiseksi Windows 10:n viimeisimpiä vakaita versioita
+(koontiversio 16299 tai 17134) sekä uusinta NVDA:ta. Varmista myös, että
+tallennat NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 
 ## Yleistä
 
@@ -60,12 +60,20 @@ NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   mm. Edgen ilmoitukset ja laskutoimitusten tulokset Laskimessa sekä
   muut. Huomaa, että tämä saattaa johtaa joissakin tapauksissa ilmoitusten
   kahdesti puhumiseen.
-* Uusien sovellusversioiden ilmoitukset puhutaan Windows 10:n Fall Creators
-  -päivityksessä (koontiversio 16299) ja uudemmissa. Teknisten rajoitusten
-  vuoksi tämä ominaisuus toimii asianmukaisesti vain NVDA 2018.1:ssä tai
-  uudemmissa.
+* Uusien sovellusversioiden ilmoitukset puhutaan Windows 10:n versiossa 1709
+  (koontiversio 16299) ja uudemmissa. Teknisten rajoitusten vuoksi tämä
+  ominaisuus toimii asianmukaisesti vain NVDA 2018.1:ssä tai
+  uudemmissa. NVDA 2018.2 tulee sisältämään tämän toiminnallisuuden
+  sisäänrakennettuna.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
   ilmoitetaan.
+* NVDA ei enää ilmoita "tuntematon" pikalinkkivalikkoa (Windows+X)
+  avattaessa. Tämä korjaus tulee sisältymään NVDA 2018.2:een.
+* Kun koontiversiossa 17627 ja uudemmissa avataan uusi Sets-välilehti
+  (Ctrl+Windows+T), NVDA ilmoittaa hakutulokset etsittäessä kohteita
+  upotetussa Cortana-IKKUNASSA.
+* NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2)
+  avattaessa, suljettaessa tai vaihdettaessa virtuaalityöpöytien välillä.
 
 ## Hälytykset ja kello
 
