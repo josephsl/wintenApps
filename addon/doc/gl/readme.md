@@ -30,12 +30,11 @@ se inclúe):
 * O Tempo
 * Módulos misceláneos para controis como mosaicos do Menú Inicio.
 
-Nota: este complemento require do Windows 10 Versión 1703 (build 15063) ou
-posterior e do NVDA 2017.3 ou posterior. Para uns mellores resultados, usa o
-complemento coa compilación estable máis recente (build 16299) e versión
-estable máis recente do NVDA. Tamén, despois de cambiar as opcións de
-actualización para o complemento, asegúrate de gardar a configuración do
-NVDA.
+Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
+and NVDA 2017.3 or later. For best results, use the add-on with latest
+Windows 10 stable releases (build 16299 or 17134) and latest stable version
+of NVDA. Also, after changing update settings for the add-on, be sure to
+save NVDA settings.
 
 ## Xeral
 
@@ -61,12 +60,19 @@ NVDA.
 * Nalgunhas aplicacións, anúnciase o texto en rexións vivas. Esto inclúe
   alertas en Edge, na calculadora e noutros. Ten en conta que esto poderá
   causar unha fala por duplicado nalgúns casos.
-* As notificacións de novas versións de apps en Windows 10 versión 1709
-  (compilación 16299) en adiante lense correctamente. Por mor de limitacións
-  técnicas, esta característica só funciona correctamente en NVDA 2018.1 e
-  posteriores.
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced. Due to technical limitations, this feature
+  works properly with NVDA 2018.1 and later, and will be part of NVDA with
+  2018.2 release.
 * recoñeceranse e anunciaranse os consellos para o Edge e para as
   aplicacións universais.
+* NVDA will no longer announce "unknown" when opening quick link menu
+  (Windows+X). This fix will be part of NVDA 2018.2.
+* In build 17627 and later, when opening a new Sets tab (Control+Windows+T),
+  NVDA will announce search results when searching for items in the embedded
+  Cortana window.
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop ID (desktop 2, for example).
 
 ## Alarmas e reloxo
 

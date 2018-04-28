@@ -25,7 +25,7 @@ The following app modules or support modules for some apps are included (see eac
 * Weather.
 * Miscellaneous modules for controls such as Start Menu tiles.
 
-Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NVDA 2017.3 or later. For best results, use the add-on with latest Windows 10 stable build (build 16299) and latest stable version of NVDA. Also, after changing update settings for the add-on, be sure to save NVDA settings.
+Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NVDA 2017.3 or later. For best results, use the add-on with latest Windows 10 stable releases (build 16299 or 17134) and latest stable version of NVDA. Also, after changing update settings for the add-on, be sure to save NVDA settings.
 
 ## General
 
@@ -36,8 +36,11 @@ Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NV
 * The following UIA events are recognized: Controller for, drag start, drag cancel, drag complete, element selected, live region change, notification, system alert, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard.
 * Added ability to check for add-on updates (automatic or manual) via Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
 * In some apps, live region text is announced. This includes alerts in Edge, results in Calculator and others. Note that this may result in double-speaking in some cases.
-* Notifications from newer app releases on Windows 10 Version 1709 (build 16299) and later are announced. Due to technical limitations, this feature works properly with NVDA 2018.1 and later.
+* Notifications from newer app releases on Windows 10 Version 1709 (build 16299) and later are announced. Due to technical limitations, this feature works properly with NVDA 2018.1 and later, and will be part of NVDA with 2018.2 release.
 * Tooltips from Edge and universal apps are recognized and will be announced.
+* NVDA will no longer announce "unknown" when opening quick link menu (Windows+X). This fix will be part of NVDA 2018.2.
+* In build 17627 and later, when opening a new Sets tab (Control+Windows+T), NVDA will announce search results when searching for items in the embedded Cortana window.
+* When opening, closing, or switching between virtual desktops, NVDA will announce current desktop ID (desktop 2, for example).
 
 ## Alarms and clock
 

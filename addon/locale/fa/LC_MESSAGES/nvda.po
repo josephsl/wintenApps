@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2017-11-10 12:48+0330\n"
+"PO-Revision-Date: 2018-03-31 04:20+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@freelists.org>\n"
 "Language: fa\n"
@@ -54,9 +54,8 @@ msgid "Reports and moves the review cursor to a recent message"
 msgstr "آخرین پیام را میخوانَد و مکان‌نمای بازبینی را روی آخرین پیام میبَرَد."
 
 #. Translators: presented when chat edit box is not found.
-#, fuzzy
 msgid "Chat edit field not found"
-msgstr "سابقه‌ی گپ پیدا نشد."
+msgstr "کادرِ ویرایشِ گپ پیدا نشد."
 
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
@@ -120,10 +119,18 @@ msgid ""
 "please answer no and switch to stable update channel. Are you sure you wish "
 "to switch to the development update channel?"
 msgstr ""
+"گویا میخواهید به کانالِ به‌روزرسانی‌های در حالِ توسعه منتقل شوید. هرچند "
+"روزآمدهایی که از این کانال دریافت خواهید کرد، امکاناتِ هیجان‌انگیزی با خود "
+"به‌همراه می‌آورند، ممکن است زمانی که آن‌ها را دریافت میکنید همراه با "
+"ناپایداری‌هایی نیز باشند. بهتر است از این کانال تنها زمانی به‌روزرسانی دریافت "
+"کنید که قصدتان آزمودنِ افزونه و ارسالِ بازخورد به توسعه‌دهنده‌ی آن باشد. چنانچه "
+"ترجیح میدهید روزآمدهای پایدار را دریافت کنید، به پرسش پاسخ منفی بدهید و به "
+"کانالِ روزآمدهای پایدار برگردید. آیا میخواهید به کانال به‌روزرسانی‌های درحالِ "
+"توسعه منتقل شوید؟"
 
 #. Translators: The title of the channel switch confirmation dialog.
 msgid "Switching to unstable channel"
-msgstr ""
+msgstr "رفتن به کانالِ ناپایدار"
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"

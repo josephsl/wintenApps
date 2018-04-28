@@ -16,7 +16,7 @@ detalhes sobre o que está incluído):
 * Calendário.
 * Calculadora (moderna).
 * Cortana
-* Feedback Hub
+* Central de comentários
 * Barra de jogos.
 * Correio.
 * Mapas.
@@ -32,9 +32,9 @@ detalhes sobre o que está incluído):
 
 Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
 and NVDA 2017.3 or later. For best results, use the add-on with latest
-Windows 10 stable build (build 16299) and latest stable version of
-NVDA. Also, after changing update settings for the add-on, be sure to save
-NVDA settings.
+Windows 10 stable releases (build 16299 or 17134) and latest stable version
+of NVDA. Also, after changing update settings for the add-on, be sure to
+save NVDA settings.
 
 ## Geral
 
@@ -47,24 +47,33 @@ NVDA settings.
   posição do objeto" na caixa de diálogo de apresentação do objeto.
 * Em determinados menus de contexto (como no Edge), as informações de
   posição (por exemplo, 1 de 2) deixaram de ser anunciadas.
-* The following UIA events are recognized: Controller for, drag start, drag
-  cancel, drag complete, element selected, live region change, notification,
-  system alert, tooltip opened, window opened. With NVDA set to run with
-  debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard.
+* Os seguintes eventos UIA são reconhecidos: Controlador para, arrastar para
+  início, arrastar para cancelamento, arrastar para completo, elemento
+  seleccionado, alterar região, notificação, alerta do sistema, barra de
+  ferramentas aberta, janela aberta. Com o NVDA configurado para ser
+  executado com o log de depuração ativado, esses eventos serão rastreados
+  e, para o evento de notificação do UIA, um tom de depuração será ouvido.
 * Adicionada a capacidade de verificar actualizações adicionais (automáticas
   ou manuais) através da caixa de diálogo do Windows 10 aplicações
   essenciais encontrada no menu de preferências do NVDA. Por defeito, as
   versões estáveis e de desenvolvimento verificarão novas actualizações
   semanalmente ou diariamente, conforme determinado.
-* In some apps, live region text is announced. This includes alerts in Edge,
-  results in Calculator and others. Note that this may result in
-  double-speaking in some cases.
+* Em algumas aplicações, o texto da região é anunciado. Isto inclui alertas
+  no Edge, resultados na Calculadora e outros. Observe que isso pode
+  resultar em fala dupla em alguns casos.
 * Notifications from newer app releases on Windows 10 Version 1709 (build
   16299) and later are announced. Due to technical limitations, this feature
-  works properly with NVDA 2018.1 and later.
-* Tooltips from Edge and universal apps are recognized and will be
-  announced.
+  works properly with NVDA 2018.1 and later, and will be part of NVDA with
+  2018.2 release.
+* As dicas de ferramentas do Edge e aplicativos universais são reconhecidas
+  e serão anunciadas.
+* NVDA will no longer announce "unknown" when opening quick link menu
+  (Windows+X). This fix will be part of NVDA 2018.2.
+* In build 17627 and later, when opening a new Sets tab (Control+Windows+T),
+  NVDA will announce search results when searching for items in the embedded
+  Cortana window.
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop ID (desktop 2, for example).
 
 ## Alertas e relógio
 
@@ -92,10 +101,10 @@ NVDA settings.
 * O NVDA ficará em silêncio ao falar com Cortana via voz.
 * O NVDA agora anunciará confirmação de lembrete depois de o ter definido.
 
-## Feedback Hub
+## Central de comentários
 
-* For newer app releases, NVDA will no longer announce feedback categories
-  twice.
+* Para os lançamentos mais recentes de aplicativos, o NVDA deixará de os
+  anunciar duas vezes.
 
 ## Barra de jogos.
 
@@ -127,8 +136,8 @@ NVDA settings.
 * Suporte para o painel flutuante de entrada Emoji na Versão 1709
   (Actualização do Fall Creators). Para obter a melhor experiência ao ler
   emojis, use o sintetizador próprio do Windows.
-* Support for hardware keyboard input suggestions in Version 1803 build
-  17040 and later.
+* Suporte para sugestões de entrada de teclado de hardware a partir da
+  compilação 17040 e posteriores.
 * Ao procurar contactos, será reproduzido um som, se houver resultados da
   procura.
 
@@ -147,8 +156,8 @@ NVDA settings.
   objectos para navegar entre controlos.
 * Para algumas caixas combinadas, o NVDA não falhará ao reconhecer os
   rótulos e / ou anunciar mudanças de valor.
-* Audio Volume progress bar beeps are no longer heard in Version 1803 build
-  17035 and later.
+* Os toques da barra de progresso do volume de áudio deixaram de ser ouvidos
+  a partir da compilação 17035 e posteriores.
 
 ## Skype
 
@@ -184,12 +193,13 @@ NVDA settings.
 
 * Separadores como "previsão" e "mapas" são reconhecidos como separadores
   adequados (patch de Derek Riemer).
-* when reading a forecast, use the left and right arrows to move between
-  items. Use the up and down arrows to read the individual items. For
-  example, pressing the right arrow might report "Monday: 79 degrees, partly
-  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
-  again will read the next item (Like the temperature). This currently works
-  for daily and hourly forecasts.
+* Ao ler uma previsão, use as setas para a esquerda e para a direita para se
+  mover entre os itens. Use as setas para cima e para baixo para ler os
+  itens individuais. Por exemplo, pressionar a seta para a direita pode
+  indicar "Segunda-feira: 79 graus, parcialmente nublado ...", pressionando
+  a seta para baixo, "segunda-feira". Depois, pressionando-a novamente, o
+  próximo item será lido (como a temperatura). Isto, atualmente, funciona
+  para previsões diárias e horárias.
 
 [[!tag dev stable]]
 
