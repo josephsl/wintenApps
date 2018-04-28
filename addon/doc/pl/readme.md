@@ -14,7 +14,7 @@ każdej aplikacji co jest wspierane):
 * Kalendarz
 * Kalkulator (nowoczesny).
 * Cortana
-* Feedback Hub
+* Centrum opinii
 * Pasek gry
 * Poczta
 * Mapy
@@ -28,11 +28,11 @@ każdej aplikacji co jest wspierane):
 * Pogoda.
 * Różne moduły dla takich kontrolek, jak kafelki menu start.
 
-Uwaga: Ten dodatek wymaga Windows 10 Wersję 1703 (kompilację 15063) lub
-nowszą i NVDA 2017.3 lub nowszą. Dla lepszych wyników, trzeba będzie używać
-dodatek z najnowszą stabilną kompilacją (kompilacja 16299) i ostatnią
-stabilną wersję NVDA. Także, po zmianie ustawień aktualizacji dodatku,
-trzeba się upewnić, czy konfiguracja jest zachowana.
+Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
+and NVDA 2017.3 or later. For best results, use the add-on with latest
+Windows 10 stable releases (build 16299 or 17134) and latest stable version
+of NVDA. Also, after changing update settings for the add-on, be sure to
+save NVDA settings.
 
 ## Ogólne
 
@@ -61,9 +61,17 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
   że to może skutkować podwójne wymawianie w niektórych przypadkach.
 * Notifications from newer app releases on Windows 10 Version 1709 (build
   16299) and later are announced. Due to technical limitations, this feature
-  works properly with NVDA 2018.1 and later.
-* Tooltips from Edge and universal apps are recognized and will be
-  announced.
+  works properly with NVDA 2018.1 and later, and will be part of NVDA with
+  2018.2 release.
+* Opisy obiektów w Edge i innych aplikacjach UWP są rozpoznawane  i będą
+  czytane automatycznie.
+* NVDA will no longer announce "unknown" when opening quick link menu
+  (Windows+X). This fix will be part of NVDA 2018.2.
+* In build 17627 and later, when opening a new Sets tab (Control+Windows+T),
+  NVDA will announce search results when searching for items in the embedded
+  Cortana window.
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop ID (desktop 2, for example).
 
 ## Alarmy i zegar
 
@@ -89,7 +97,7 @@ trzeba się upewnić, czy konfiguracja jest zachowana.
 * NVDA będzie przyciszony, gdy mówisz do Cortany.
 * NVDA teraz wymawia potwierdzenie przypomnienia po jego ustawieniu.
 
-## Feedback Hub
+## Centrum opinii
 
 * For newer app releases, NVDA will no longer announce feedback categories
   twice.

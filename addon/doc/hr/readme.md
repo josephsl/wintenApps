@@ -31,9 +31,9 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 
 Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
 and NVDA 2017.3 or later. For best results, use the add-on with latest
-Windows 10 stable build (build 16299) and latest stable version of
-NVDA. Also, after changing update settings for the add-on, be sure to save
-NVDA settings.
+Windows 10 stable releases (build 16299 or 17134) and latest stable version
+of NVDA. Also, after changing update settings for the add-on, be sure to
+save NVDA settings.
 
 ## Općenito
 
@@ -60,9 +60,17 @@ NVDA settings.
   double-speaking in some cases.
 * Notifications from newer app releases on Windows 10 Version 1709 (build
   16299) and later are announced. Due to technical limitations, this feature
-  works properly with NVDA 2018.1 and later.
+  works properly with NVDA 2018.1 and later, and will be part of NVDA with
+  2018.2 release.
 * Tooltips from Edge and universal apps are recognized and will be
   announced.
+* NVDA will no longer announce "unknown" when opening quick link menu
+  (Windows+X). This fix will be part of NVDA 2018.2.
+* In build 17627 and later, when opening a new Sets tab (Control+Windows+T),
+  NVDA will announce search results when searching for items in the embedded
+  Cortana window.
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop ID (desktop 2, for example).
 
 ## Alarm i sat
 

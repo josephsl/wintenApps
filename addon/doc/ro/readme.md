@@ -30,12 +30,11 @@ privire la ceea ce este inclus):
 * Meteo.
 * Diverse module de control precum tile-urile din meniul start.
 
-Notă: acest supliment necesită Windows 10 versiunea 1703 )compilarea 15063)
-sau mai nou și NVDA 2017.3 sau mai nou. Pentru cele mai bune rezultate,
-folosiți-l cu ultima compilare stabilă ( compilarea 16299) și cea mai
-recentă versiune stabilă a NVDA-ului. De asemenea, după modificarea
-setărilor de actualizare pentru supliment, asigurați-vă că salvați setările
-NVDA-ului.
+Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
+and NVDA 2017.3 or later. For best results, use the add-on with latest
+Windows 10 stable releases (build 16299 or 17134) and latest stable version
+of NVDA. Also, after changing update settings for the add-on, be sure to
+save NVDA settings.
 
 ## General
 
@@ -63,12 +62,19 @@ NVDA-ului.
 * În unele aplicații, textul regiunii live este anunțat. Aceasta include
   alertele din Edge, rezultatele din Calculator și altele. Rețineți faptul
   că asta poate rezulta o dublă vorbire în unele cazuri.
-* Sunt anunțate Notificările versiunilor mai noi ale aplicațiilor din
-  Windows 10 versiunea 1709 (compilare 16299) și ma nouă. Datorită
-  limitărilor tehnice, această caracteristică funcționează corespunzător cu
-  NVDA 2018.1 și mai nou.
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced. Due to technical limitations, this feature
+  works properly with NVDA 2018.1 and later, and will be part of NVDA with
+  2018.2 release.
 * Indiciile din Edge și alte aplicații universale sunt recunoscute și vor fi
   anunțate.
+* NVDA will no longer announce "unknown" when opening quick link menu
+  (Windows+X). This fix will be part of NVDA 2018.2.
+* In build 17627 and later, when opening a new Sets tab (Control+Windows+T),
+  NVDA will announce search results when searching for items in the embedded
+  Cortana window.
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop ID (desktop 2, for example).
 
 ## Alarme și ceas
 
