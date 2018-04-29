@@ -51,5 +51,9 @@ class AppModule(appModuleHandler.AppModule):
 		# Handle hardware keyboard suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
 		elif obj.childCount == 1 and config.conf["inputComposition"]["autoReportAllCandidates"]:
-			self.event_UIA_elementSelected(obj.firstChild.firstChild.firstChild, nextHandler)
+			try:
+				self.event_UIA_elementSelected(obj.firstChild.firstChild.firstChild, nextHandler)
+			except AttributeError:
+				# Because this is dictation window.
+				pass
 		nextHandler()
