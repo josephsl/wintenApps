@@ -30,11 +30,13 @@ est inclus) :
 * Météo.
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
-Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
-and NVDA 2017.3 or later. For best results, use the add-on with latest
-Windows 10 stable releases (build 16299 or 17134) and latest stable version
-of NVDA. Also, after changing update settings for the add-on, be sure to
-save NVDA settings.
+Note: ce module complémentaire nécessite Windows 10 Version 1703 build
+15063) ou version ultérieure et NVDA 2017.3 ou version ultérieure. Pour de
+meilleurs résultats, utilisez le module complémentaire avec la dernière
+build stable de Windows 10 (build 16299 ou 17134) et la dernière version
+stable de NVDA. De plus, après avoir modifié les paramètres de mise à jour
+pour le module complémentaire, n'oubliez pas de sauvegarder la configuration
+de NVDA.
 
 ## Générale
 
@@ -65,19 +67,21 @@ save NVDA settings.
   annoncé. Cela inclut les alertes dans Edge, résultats dans la calculatrice
   et autres. Notez que cela peut entraîner une double verbalisation dans
   certains cas.
-* Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced. Due to technical limitations, this feature
-  works properly with NVDA 2018.1 and later, and will be part of NVDA with
-  2018.2 release.
+* Les notifications des versions plus récentes des applications sur Windows
+  10 version 1709 (build 16299) et ultérieures sont annoncées. En raison de
+  limitations techniques, cette fonctionnalité fonctionne correctement avec
+  NVDA 2018.1 et versions ultérieures et fera partie de NVDA avec la version
+  2018.2.
 * Les suggestions pour Edge et pour les applications universelles sont
   reconnues et seront annoncées.
-* NVDA will no longer announce "unknown" when opening quick link menu
-  (Windows+X). This fix will be part of NVDA 2018.2.
-* In build 17627 and later, when opening a new Sets tab (Control+Windows+T),
-  NVDA will announce search results when searching for items in the embedded
-  Cortana window.
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce current desktop ID (desktop 2, for example).
+* NVDA n'annonce plus "inconnu" lors de l'ouverture du menu Lien rapide
+  (Windows+X). Ce correctif fera partie de NVDA 2018.2.
+* Dans la build 17627 et les versions ultérieures, lors de l'ouverture d'un
+  nouvel onglet Sets (Contrôle+Windows+T), NVDA annonce les résultats de
+  recherche lors de la recherche d'éléments dans la fenêtre Cortana
+  intégrée.
+* Lors de l'ouverture, de la fermeture ou le basculement entre les bureaux
+  virtuels, NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
 
 ## Alarmes et horloge
 
