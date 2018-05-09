@@ -15,6 +15,7 @@ import speech
 import braille
 import ui
 import config
+import winVersion
 
 class AppModule(appModuleHandler.AppModule):
 
@@ -23,12 +24,13 @@ class AppModule(appModuleHandler.AppModule):
 		# Therefore, move the navigator object to that item if possible.
 		# However, in recent builds, name change event is also fired.
 		# For consistent experience, report the new category first by traversing through controls.
-		speech.cancelSpeech()
 		# #8189: do not announce candidates list itself (not items), as this is repeated each time candidate items are selected.
 		if obj.UIAElement.cachedAutomationID == "CandidateList": return
+		speech.cancelSpeech()
 		candidate = obj
-		if obj.UIAElement.cachedClassName == "ListViewItem":
+		if obj.UIAElement.cachedClassName == "ListViewItem" and obj.parent.UIAElement.cachedAutomationID != "TEMPLATE_PART_ClipboardItemsList":
 			# The difference between emoji panel and suggestions list is absence of categories/emoji separation.
+			# Turns out automation ID for the container is different, observed in build 17666 when opening clipboard copy history.
 			candidate = obj.parent.previous
 			if candidate is not None:
 				# Emoji categories list.
@@ -46,14 +48,34 @@ class AppModule(appModuleHandler.AppModule):
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Make sure to announce most recently used emoji first in post-1709 builds.
 		# Fake the announcement by locating 'most recently used" category and calling selected event on this.
-		if obj.childCount == 3:
+		# However, in build 17666 and later, child count is the same for both emoji panel and hardware keyboard candidates list.
+		if winVersion.winVersion.build < 17666 and obj.childCount == 3:
 			self.event_UIA_elementSelected(obj.lastChild.firstChild, nextHandler)
 		# Handle hardware keyboard suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
-		elif obj.childCount == 1 and config.conf["inputComposition"]["autoReportAllCandidates"]:
-			try:
-				self.event_UIA_elementSelected(obj.firstChild.firstChild.firstChild, nextHandler)
-			except AttributeError:
-				# Because this is dictation window.
-				pass
+		# This is also the case for emoji panel in build 17666 and later.
+		elif obj.childCount == 1:
+			childAutomationID = obj.firstChild.UIAElement.cachedAutomationID
+			if childAutomationID == "CandidateWindowControl" and config.conf["inputComposition"]["autoReportAllCandidates"]:
+				try:
+					self.event_UIA_elementSelected(obj.firstChild.firstChild.firstChild, nextHandler)
+				except AttributeError:
+					# Because this is dictation window.
+					pass
+			# Emoji panel in build 17666 and later (unless this changes).
+			elif childAutomationID == "TEMPLATE_PART_ExpressionGroupedFullView":
+				self._emojiPanelOpened = True
+				self.event_UIA_elementSelected(obj.firstChild.firstChild.next.next.firstChild.firstChild, nextHandler)
+		nextHandler()
+
+	# Argh, name change event is fired right after emoji panel opens in build 17666 and later.
+	_emojiPanelOpened = False
+
+	def event_nameChange(self, obj, nextHandler):
+		# The word "blank" is kept announced, so suppress this on build 17666 and later.
+		if winVersion.winVersion.build >= 17666:
+			if not self._emojiPanelOpened: speech.cancelSpeech()
+			self._emojiPanelOpened = False
+		if obj.UIAElement.cachedAutomationID != "TEMPLATE_PART_ExpressionFullViewItemsGrid":
+			ui.message(obj.name)
 		nextHandler()
