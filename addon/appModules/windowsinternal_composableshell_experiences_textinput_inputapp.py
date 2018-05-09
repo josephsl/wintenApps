@@ -28,7 +28,7 @@ class AppModule(appModuleHandler.AppModule):
 		if obj.UIAElement.cachedAutomationID == "CandidateList": return
 		speech.cancelSpeech()
 		candidate = obj
-		if obj.UIAElement.cachedClassName == "ListViewItem":
+		if obj.UIAElement.cachedClassName == "ListViewItem" and obj.parent.UIAElement.cachedAutomationID != "TEMPLATE_PART_ClipboardItemsList":
 			# The difference between emoji panel and suggestions list is absence of categories/emoji separation.
 			# Turns out automation ID for the container is different, observed in build 17666 when opening clipboard copy history.
 			candidate = obj.parent.previous
@@ -53,10 +53,17 @@ class AppModule(appModuleHandler.AppModule):
 			self.event_UIA_elementSelected(obj.lastChild.firstChild, nextHandler)
 		# Handle hardware keyboard suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
-		elif obj.childCount == 1 and config.conf["inputComposition"]["autoReportAllCandidates"]:
-			try:
-				self.event_UIA_elementSelected(obj.firstChild.firstChild.firstChild, nextHandler)
-			except AttributeError:
-				# Because this is dictation window.
-				pass
+		# This is also the case for emoji panel in build 17666 and later.
+		elif obj.childCount == 1:
+			childAutomationID = obj.firstChild.UIAElement.cachedAutomationID
+			if childAutomationID == "CandidateWindowControl" and config.conf["inputComposition"]["autoReportAllCandidates"]:
+				try:
+					self.event_UIA_elementSelected(obj.firstChild.firstChild.firstChild, nextHandler)
+				except AttributeError:
+					# Because this is dictation window.
+					pass
+			# Emoji panel in build 17666 and later (unless this changes).
+			elif childAutomationID == "TEMPLATE_PART_ExpressionGroupedFullView":
+				self.event_UIA_elementSelected(obj.firstChild.firstChild.next.next.firstChild.firstChild, nextHandler)
+
 		nextHandler()
