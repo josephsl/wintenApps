@@ -64,6 +64,18 @@ class AppModule(appModuleHandler.AppModule):
 					pass
 			# Emoji panel in build 17666 and later (unless this changes).
 			elif childAutomationID == "TEMPLATE_PART_ExpressionGroupedFullView":
+				self._emojiPanelOpened = True
 				self.event_UIA_elementSelected(obj.firstChild.firstChild.next.next.firstChild.firstChild, nextHandler)
+		nextHandler()
 
+	# Argh, name change event is fired right after emoji panel opens in build 17666 and later.
+	_emojiPanelOpened = False
+
+	def event_nameChange(self, obj, nextHandler):
+		# The word "blank" is kept announced, so suppress this on build 17666 and later.
+		if winVersion.winVersion.build >= 17666:
+			if not self._emojiPanelOpened: speech.cancelSpeech()
+			self._emojiPanelOpened = False
+		if obj.UIAElement.cachedAutomationID != "TEMPLATE_PART_ExpressionFullViewItemsGrid":
+			ui.message(obj.name)
 		nextHandler()
