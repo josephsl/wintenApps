@@ -18,4 +18,4 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, **kwargs):
 		ui.message(displayString)
-		nextHandler(displayString=displayString, **kwargs)
+		nextHandler()
