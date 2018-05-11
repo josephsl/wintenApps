@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2018-05-03 14:20+0800\n"
+"PO-Revision-Date: 2018-05-06 18:06+0800\n"
 "Language-Team: NVDA Simplified Chinese Team\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -130,7 +130,7 @@ msgstr "插件更新检查"
 
 #. Translators: The message displayed while checking for newer version of WinTenApps add-on.
 msgid "Checking for new version of Windows 10 App Essentials add-on..."
-msgstr "检查新版本的Windows 10 App Essentials插件..."
+msgstr "检查新版本的Windows 10 应用增强插件..."
 
 #. Translators: The title of the dialog displayed while downloading add-on update.
 msgid "Downloading Add-on Update"
