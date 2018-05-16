@@ -37,6 +37,16 @@ class SuggestionListItem(UIA):
 		super(SuggestionListItem, self).reportFocus()
 
 
+class ContextMenuItem(UIA):
+
+	role=controlTypes.ROLE_LISTITEM
+
+	def event_UIA_elementSelected(self):
+		speech.cancelSpeech()
+		api.setNavigatorObject(self)
+		self.reportFocus()
+
+
 class AppModule(AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self,obj,clsList):
@@ -49,7 +59,8 @@ class AppModule(AppModule):
 				pass
 		elif isinstance(obj,UIA):
 			if isinstance(obj.parent,EdgeList):
-				clsList.insert(0,SuggestionListItem)
+				# #48: differentiate between search results and context menu items.
+				clsList.insert(0,ContextMenuItem if obj.parent.UIAElement.cachedAutomationID == "contextMenu" else SuggestionListItem)
 			elif obj.UIAElement.cachedAutomationID == "SearchTextBox":
 				clsList.insert(0, StartMenuSearchField)
 
