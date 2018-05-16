@@ -20,7 +20,7 @@ class SuggestionListItem(UIA):
 	role=controlTypes.ROLE_LISTITEM
 
 	def event_UIA_elementSelected(self):
-		# Build 17600 series introduces Sets, a way to grup apps into tabs.
+		# Build 17600 series introduces Sets, a way to group apps into tabs.
 		# #45: unfortunately, the start page for this (an embedded searchui process inside Edge) says controller for list is empty when in fact it isn't.
 		# Thankfully, it is easy to spot them: if a link is next to results list, then this is the embedded searchui results list.
 		focusControllerFor=api.getFocusObject().controllerFor
