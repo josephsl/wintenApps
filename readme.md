@@ -31,7 +31,7 @@ Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NV
 
 * In context menus for Start Menu tiles, submenus are properly recognized.
 * Certain dialogs are now recognized as proper dialogs, including Insider Preview dialog (settings app).
-* NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation dialog.
+* NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation dialog/panel.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, drag start, drag cancel, drag complete, element selected, live region change, notification, system alert, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard.
 * Added ability to check for add-on updates (automatic or manual) via Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
