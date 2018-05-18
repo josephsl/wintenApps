@@ -25,7 +25,7 @@ The following app modules or support modules for some apps are included (see eac
 * Weather.
 * Miscellaneous modules for controls such as Start Menu tiles.
 
-Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NVDA 2017.3 or later. For best results, use the add-on with latest Windows 10 stable releases (build 16299 or 17134) and latest stable version of NVDA. Also, after changing update settings for the add-on, be sure to save NVDA settings.
+Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NVDA 2018.1 or later. For best results, use the add-on with latest Windows 10 stable releases (build 16299 or 17134) and latest stable version of NVDA. Also, after changing update settings for the add-on, be sure to save NVDA settings.
 
 ## General
 
@@ -40,6 +40,7 @@ Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NV
 * Tooltips from Edge and universal apps are recognized and will be announced.
 * NVDA will no longer announce "unknown" when opening quick link menu (Windows+X). This fix will be part of NVDA 2018.2.
 * In build 17627 and later, when opening a new Sets tab (Control+Windows+T), NVDA will announce search results when searching for items in the embedded Cortana window.
+* When switching between Sets tabs, NvDA will announce name and position of the tab you are switching to.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop ID (desktop 2, for example).
 
 ## Alarms and clock
@@ -85,8 +86,8 @@ Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NV
 
 ## Modern keyboard
 
-* Support for floating Emoji input panel in Version 1709 (Fall Creators Update). For best experience when reading emojis, use Windows OneCore speech synthesizer.
-* Support for hardware keyboard input suggestions in Version 1803 build 17040 and later.
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including the redesigned panel in build 17661 and later. For best experience when reading emojis, use Windows OneCore speech synthesizer.
+* Support for hardware keyboard input suggestions in Version 1803 (April 2018 Update) and later.
 * In post-1709 builds, NVDA will announce the first selected emoji when emoji panel opens.
 
 ## People
@@ -99,7 +100,7 @@ Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NV
 * Progress bar values and other information are no longer announced twice.
 * Settings groups are recognized when using object navigation to navigate between controls.
 * For some combo boxes, NVDA will no longer fail to recognize labels and/or announce value changes.
-* Audio Volume progress bar beeps are no longer heard in Version 1803 build 17035 and later.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and later.
 
 ## Skype
 
