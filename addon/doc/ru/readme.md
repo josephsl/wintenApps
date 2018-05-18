@@ -29,7 +29,7 @@ Windows 10, а также исправлений для некоторых ти�
 * Разные модули для типов управления, таких, как плитки главного меню.
 
 Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
-and NVDA 2017.3 or later. For best results, use the add-on with latest
+and NVDA 2018.1 or later. For best results, use the add-on with latest
 Windows 10 stable releases (build 16299 or 17134) and latest stable version
 of NVDA. Also, after changing update settings for the add-on, be sure to
 save NVDA settings.
@@ -42,7 +42,7 @@ save NVDA settings.
   Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of
   cases. This option is controlled by "Report object position information"
-  in Object presentation dialog.
+  in Object presentation dialog/panel.
 * In certain context menus (such as in Edge), position information (e.g. 1
   of 2) is no longer announced.
 * The following UIA events are recognized: Controller for, drag start, drag
@@ -69,6 +69,8 @@ save NVDA settings.
 * In build 17627 and later, when opening a new Sets tab (Control+Windows+T),
   NVDA will announce search results when searching for items in the embedded
   Cortana window.
+* When switching between Sets tabs, NvDA will announce name and position of
+  the tab you are switching to.
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce current desktop ID (desktop 2, for example).
 
@@ -126,11 +128,11 @@ save NVDA settings.
 
 ## Modern keyboard
 
-* Support for floating Emoji input panel in Version 1709 (Fall Creators
-  Update). For best experience when reading emojis, use Windows OneCore
-  speech synthesizer.
-* Support for hardware keyboard input suggestions in Version 1803 build
-  17040 and later.
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
+  later, including the redesigned panel in build 17661 and later. For best
+  experience when reading emojis, use Windows OneCore speech synthesizer.
+* Support for hardware keyboard input suggestions in Version 1803 (April
+  2018 Update) and later.
 * In post-1709 builds, NVDA will announce the first selected emoji when
   emoji panel opens.
 
@@ -149,8 +151,8 @@ save NVDA settings.
   перемещения между элементами управления.
 * Для некоторых полей комбинированных списков, NVDA больше не будет
   оставлять нераспознанными метки и/или уведомления об изменении значения.
-* Audio Volume progress bar beeps are no longer heard in Version 1803 build
-  17035 and later.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and
+  later.
 
 ## Skype
 

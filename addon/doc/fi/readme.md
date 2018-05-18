@@ -31,7 +31,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
   tiilet.
 
 Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1703 (koontiversio
-15063) tai uudempaa ja NVDA 2017.3:a tai uudempaa. Käytä parhaan
+15063) tai uudempaa ja NVDA 2018.1:tä tai uudempaa. Käytä parhaan
 käyttökokemuksen varmistamiseksi Windows 10:n viimeisimpiä vakaita versioita
 (koontiversio 16299 tai 17134) sekä uusinta NVDA:ta. Varmista myös, että
 tallennat NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
@@ -43,7 +43,7 @@ tallennat NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   mukaan lukien Insider-esiversion valintaikkuna (Asetukset-sovellus).
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
-  -asetuksella Objektien lukuasetukset -valintaikkunasta.
+  -asetuksella Objektien lukuasetukset -valintaikkunasta/paneelista.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
 * Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, vetämisen
@@ -72,6 +72,8 @@ tallennat NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 * Kun koontiversiossa 17627 ja uudemmissa avataan uusi Sets-välilehti
   (Ctrl+Windows+T), NVDA ilmoittaa hakutulokset etsittäessä kohteita
   upotetussa Cortana-IKKUNASSA.
+* NVDA ilmoittaa Sets-välilehteä vaihdettaessa sen välilehden nimen ja
+  sijainnin, johon olet siirtymässä.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2)
   avattaessa, suljettaessa tai vaihdettaessa virtuaalityöpöytien välillä.
 
@@ -131,11 +133,12 @@ tallennat NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 
 ## Moderni näppäimistö
 
-* Tuki version 1709 (Fall Creators -päivitys) kelluvalle
-  emojinsyöttöpaneelille. Käytä parhaan kokemuksen saamiseksi Windows
+* Tuki version 1709 (Fall Creators -päivitys) ja uudempien kelluvalle
+  emojinsyöttöpaneelille, mukaan lukien koontiversion 17661 ja uudempien
+  uudelleensuunniteltu paneeli. Käytä parhaan kokemuksen saamiseksi Windows
   OneCore -syntetisaattoria.
-* Tuki fyysisen näppäimistösyötteen ehdotuksille versiossa 1803
-  (koontiversio 17040) ja uudemmissa.
+* Tuki fyysisen näppäimistösyötteen ehdotuksille versiossa 1803 (April 2018
+  -päivitys) ja uudemmissa.
 * NVDA ilmoittaa 1709:ää uudemmissa koontiversioissa ensimmäisen valitun
   emojin, kun emojipaneeli avautuu.
 
@@ -153,7 +156,7 @@ tallennat NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
 * NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen selitteiden
   tunnistamisessa ja/tai arvomuutosten ilmoittamisessa.
 * Edistymispalkkien äänimerkkejä ei enää kuulu muutettaessa
-  äänenvoimakkuutta versiossa 1803 (koontiversio 17035) ja uudemmissa.
+  äänenvoimakkuutta versiossa 1803 ja uudemmissa.
 
 ## Skype
 
