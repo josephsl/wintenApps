@@ -73,9 +73,9 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_nameChange(self, obj, nextHandler):
 		# The word "blank" is kept announced, so suppress this on build 17666 and later.
-		if winVersion.winVersion.build >= 17666:
+		if winVersion.winVersion.build >= 17672:
 			# In build 17672 and later, return immediatley when element selected event on clipboard item was fired just prior to this.
-			if obj.UIAElement.cachedAutomationID == "TEMPLATE_PART_ClipboardItemIndex": return
+			if obj.UIAElement.cachedAutomationID == "TEMPLATE_PART_ClipboardItemIndex" or obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_ClipboardItemsList": return
 			if not self._emojiPanelOpened or obj.UIAElement.cachedAutomationID != "TEMPLATE_PART_ClipboardItemIndex": speech.cancelSpeech()
 			self._emojiPanelOpened = False
 		if obj.UIAElement.cachedAutomationID not in ("TEMPLATE_PART_ExpressionFullViewItemsGrid", "TEMPLATE_PART_ClipboardItemIndex"):
