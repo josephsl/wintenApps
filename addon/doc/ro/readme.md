@@ -30,12 +30,11 @@ privire la ceea ce este inclus):
 * Meteo.
 * Diverse module de control precum tile-urile din meniul start.
 
-Notă: acest supliment necesită Windows 10 versiunea 1703 )compilarea 15063)
-sau mai nouă și NVDA 2017.3 sau mai nou. Pentru cele mai bune rezultate,
-folosiți-l cu ultima compilare stabilă ( compilarea 16299 sau 17134) și cea
-mai recentă versiune stabilă a NVDA-ului. De asemenea, după modificarea
-setărilor de actualizare pentru supliment, asigurați-vă că salvați setările
-NVDA-ului.
+Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
+and NVDA 2018.1 or later. For best results, use the add-on with latest
+Windows 10 stable releases (build 16299 or 17134) and latest stable version
+of NVDA. Also, after changing update settings for the add-on, be sure to
+save NVDA settings.
 
 ## General
 
@@ -44,9 +43,9 @@ NVDA-ului.
 * Anumite dialoguri sunt acum recunoscute ca dialoguri
   corespunzătoare. Acestea includ dialogul Insider Preview (aplicația
   setări).
-* NVDA poate anunța numărul de sugestii la efectuarea unei căutări în
-  majoritatea cazurilor. Această opțiune este controlată de „informația
-  poziției obiectului în dialogul prezentării obiectului.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases. This option is controlled by "Report object position information"
+  in Object presentation dialog/panel.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
 * Următoarele evenimente UIA sunt recunoscute: Controler pentru, început
@@ -74,6 +73,8 @@ NVDA-ului.
 * În compilarea 17627 și mai nouă, la deschiderea unei noi file Sets
   (Control+Windows+T), NVDA va anunța rezultatele căutării atunci când se
   caută elemente în fereastra Cortana încorporată.
+* When switching between Sets tabs, NvDA will announce name and position of
+  the tab you are switching to.
 * La deschiderea, închiderea sau comutarea între spațiile de lucru virtuale,
   NVDA va anunța ID-ul spațiului de lucru curent (spațiu de lucru 2).
 
@@ -134,11 +135,11 @@ NVDA-ului.
 
 ## Tastatură modernă
 
-* Suport pentru panoul de intrare floating Emoji în versiunea 1709 (Fall
-  Creators Update). Pentru cea mai bună experiență la citirea moji-urilor,
-  folosiți sintetizatorul Windows OneCore.
-* Suport pentru sugestiile de intrare a tastaturii hardware în compilarea
-  17040 sau mai nouă.
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
+  later, including the redesigned panel in build 17661 and later. For best
+  experience when reading emojis, use Windows OneCore speech synthesizer.
+* Support for hardware keyboard input suggestions in Version 1803 (April
+  2018 Update) and later.
 * În post-1709 builds, NVDA va anunța primul emoji selectat când se deschide
   panoul emoji.
 
@@ -157,8 +158,8 @@ NVDA-ului.
   pentru a naviga printre controale.
 * Pentru unele casete combinate, NVDA nu va mai eșua la recunoașterea
   etichetelor și/sau anunțarea schimbărilor valorii.
-* Bipurile barei de progres a volumului audio nu mai sunt auzite în
-  compilarea 17035 sau mai nouă.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and
+  later.
 
 ## Skype
 
