@@ -17,7 +17,7 @@ The following app modules or support modules for some apps are included (see eac
 * Mail
 * Maps
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions in Version 1709 and later)
+* Modern keyboard (emoji panel/hardware input suggestions/cloud clipboard items in Version 1709 and later)
 * People
 * Settings (system settings, Windows+I)
 * Skype (universal app)
@@ -89,6 +89,7 @@ Note: this add-on requires Windows 10 Version 1703 (build 15063) or later and NV
 * Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including the redesigned panel in build 17661 and later. For best experience when reading emojis, use Windows OneCore speech synthesizer.
 * Support for hardware keyboard input suggestions in Version 1803 (April 2018 Update) and later.
 * In post-1709 builds, NVDA will announce the first selected emoji when emoji panel opens.
+* Support for announcing cloud clipboard items in build 17666 (Redstone 5) and later.
 
 ## People
 
