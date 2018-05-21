@@ -31,7 +31,7 @@ detalhes sobre o que está incluído):
 * Módulos diversos para controlos, como ecrãs do menu Iniciar.
 
 Nota: este extra requer o Windows 10 Versão 1703 (build 15063) ou posterior
-e o NVDA 2017.3 ou posterior. Para obter melhores resultados, use o extra
+e o NVDA 2018.1 ou posterior. Para obter melhores resultados, use o extra
 com a última versão estável do Windows 10 (build 16299) e a última versão
 estável do NVDA. Além disso, após alterar as configurações de actualização
 do extra, certifique-se de guardar as configurações do NVDA. 
@@ -42,7 +42,7 @@ do extra, certifique-se de guardar as configurações do NVDA.
   devidamente reconhecidos.
 * Certos diálogos agora são reconhecidos como diálogos adequados, incluindo
   a caixa de diálogo Insider Preview (aplicativo de configurações).
-* O NVDA pode anunciar a contagem de sugestões ao realizar uma pesquisa na
+* O NVDA pode anunciar a contagem de sugestões, ao realizar uma pesquisa na
   maioria dos casos. Esta opção é controlada por "fornecer informações de
   posição do objeto" na caixa de diálogo de apresentação do objeto.
 * Em determinados menus de contexto (como no Edge), as informações de
@@ -72,6 +72,8 @@ do extra, certifique-se de guardar as configurações do NVDA.
 * Na versão 17627 e posteriores, ao abrir uma nova guia Conjuntos (Control +
   Windows + T), o NVDA anunciará os resultados da pesquisa ao pesquisar
   itens na janela Cortana incorporada.
+* Ao alternar entre os separadores, o NVDA anunciará o nome e a posição do
+  separador para o qual se está a deslocar.
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
   anunciará a ID atual da área de trabalho (área de trabalho 2, por
   exemplo).
@@ -134,11 +136,12 @@ do extra, certifique-se de guardar as configurações do NVDA.
 
 ## Teclado moderno
 
-* Suporte para o painel flutuante de entrada Emoji na Versão 1709
-  (Actualização do Fall Creators). Para obter a melhor experiência ao ler
-  emojis, use o sintetizador próprio do Windows.
-* Suporte para sugestões de entrada de teclado de hardware a partir da
-  compilação 17040 e posteriores.
+* Suporte para o painel de entrada do Emoji na versão 1709 (Actualização
+  "Fall Creators ") e posterior, incluindo o painel reprojetado na
+  compilação 17661 e posterior. Para obter uma melhor experiência ao ler
+  emojis, use o sintetizador de fala do Windows OneCore.
+* Suporte para sugestões de entrada de teclado de hardware na versão 1803
+  (actualização de abril de 2018) e posterior.
 * Ao procurar contactos, será reproduzido um som, se houver resultados da
   procura.
 
@@ -157,8 +160,8 @@ do extra, certifique-se de guardar as configurações do NVDA.
   objectos para navegar entre controlos.
 * Para algumas caixas combinadas, o NVDA não falhará ao reconhecer os
   rótulos e / ou anunciar mudanças de valor.
-* Os toques da barra de progresso do volume de áudio deixaram de ser ouvidos
-  a partir da compilação 17035 e posteriores.
+* Os sinais sonoros da barra de progresso do volume de áudio deixaram de ser
+  ouvidos, a partir da versão 1803 e posteriores.
 
 ## Skype
 

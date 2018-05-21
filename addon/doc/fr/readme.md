@@ -30,13 +30,11 @@ est inclus) :
 * Météo.
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
 
-Note: ce module complémentaire nécessite Windows 10 Version 1703 build
-15063) ou version ultérieure et NVDA 2017.3 ou version ultérieure. Pour de
-meilleurs résultats, utilisez le module complémentaire avec la dernière
-build stable de Windows 10 (build 16299 ou 17134) et la dernière version
-stable de NVDA. De plus, après avoir modifié les paramètres de mise à jour
-pour le module complémentaire, n'oubliez pas de sauvegarder la configuration
-de NVDA.
+Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
+and NVDA 2018.1 or later. For best results, use the add-on with latest
+Windows 10 stable releases (build 16299 or 17134) and latest stable version
+of NVDA. Also, after changing update settings for the add-on, be sure to
+save NVDA settings.
 
 ## Générale
 
@@ -45,9 +43,9 @@ de NVDA.
 * Certaines boîtes de dialogue sont maintenant reconnues comme des boîtes de
   dialogue propres. Ceci incluent le dialogue Insider Preview (settings
   app).
-* NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
-  majorité des cas. Cette option est contrôlée par "Annoncer le rang de
-  l'objet dans une liste" dans la boîte de dialogue Présentation des Objets.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases. This option is controlled by "Report object position information"
+  in Object presentation dialog/panel.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
 * Les événements UIA suivants sont reconnus : Contrôleur pour, début de
@@ -80,6 +78,8 @@ de NVDA.
   nouvel onglet Sets (Contrôle+Windows+T), NVDA annonce les résultats de
   recherche lors de la recherche d'éléments dans la fenêtre Cortana
   intégrée.
+* When switching between Sets tabs, NvDA will announce name and position of
+  the tab you are switching to.
 * Lors de l'ouverture, de la fermeture ou le basculement entre les bureaux
   virtuels, NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
 
@@ -146,11 +146,11 @@ de NVDA.
 
 ## Clavier moderne
 
-* Prise en charge pour les Emoji flottants du panneau de saisie dans la
-  Version 1709 (Fall Creators Update). Pour une meilleure expérience lors de
-  la lecture d'emojis,, utiliser le synthétiseur vocal Windows OneCore.
-* Prise en charge des suggestions de saisie au clavier matériel dans la
-  Version 1803 build 17040 et ultérieure.
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
+  later, including the redesigned panel in build 17661 and later. For best
+  experience when reading emojis, use Windows OneCore speech synthesizer.
+* Support for hardware keyboard input suggestions in Version 1803 (April
+  2018 Update) and later.
 * Dans les builds post-1709, NVDA annoncera le premier emoji sélectionné
   lors de l'ouverture du panneau emoji.
 
@@ -169,8 +169,8 @@ de NVDA.
   navigation par objet pour naviguer entre les commandes.
 * Pour certaines zones de liste déroulantes, NVDA ne manquera plus de
   reconnaître les étiquettes et/ou d'annoncer les changements de valeur.
-* Les bips de la barre de progression du volume audio ne sont plus audibles
-  dans la Version 1803 build 17035 et ultérieure.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and
+  later.
 
 ## Skype
 
