@@ -51,7 +51,8 @@ class AppModule(appModuleHandler.AppModule):
 			nextHandler()
 
 	def event_UIA_notification(self, obj, nextHandler, **kwargs):
-		if obj.previous.UIAElement.cachedAutomationID == "numberPad":
+		# From May 2018 onwards, unit converter uses a different automation iD.
+		if obj.previous.UIAElement.cachedAutomationID in ("numberPad", "UnitConverterRootGrid"):
 			nextHandler()
 
 	def script_calculatorResult(self, gesture):
