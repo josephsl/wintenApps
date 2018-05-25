@@ -4,8 +4,8 @@
 * Download [versione stabile][1]
 * Download [versione in sviluppo][2]
 
-This add-on is a collection of app modules for various Windows 10 apps, as
-well as enhancements and fixes for certain windows 10 controls.
+Questo componente aggiuntivo è un insieme di app module per numerose app
+Windows10, e consente anche di risolvere anomalie con alcuni controlli.
 
 Segue l'elenco di tutti gli appmodule contenuti nel componente aggiuntivo,
 si veda la relativa sezione per ulteriori informazioni:
@@ -28,18 +28,19 @@ si veda la relativa sezione per ulteriori informazioni:
 * Meteo
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
-Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
-and NVDA 2018.1 or later. For best results, use the add-on with latest
-Windows 10 stable releases (build 16299 or 17134) and latest stable version
-of NVDA. Also, after changing update settings for the add-on, be sure to
-save NVDA settings.
+Nota: questo addon richiede Windows 10 Versione 1703 (build 15063) o
+successive e NVDA 2017.3 o successive. Per le migliori prestazioni,
+utilizzare il componente con l'ultima versione stabile di Windows10 (build
+16299) e ultima versione stabile di NVDA. Inoltre, dopo aver modificato le
+impostazioni di aggiornamento dell'addon, assicurarsi di salvare la
+configurazione di NVDA.
 
 ## Generale
 
 * Nei menu di contesto per le mattonelle del menu avvio, vengono
   riconosciuti in maniera corretta i sottomenu.
-* Certain dialogs are now recognized as proper dialogs, including Insider
-  Preview dialog (settings app).
+* Molte finestre di dialogo vengono gestite correttamente, soprattutto
+  quelle inerenti il feedback su Windows Insider.
 * NVDA can announce suggestion count when performing a search in majority of
   cases. This option is controlled by "Report object position information"
   in Object presentation dialog/panel.
