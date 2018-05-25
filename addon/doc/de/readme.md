@@ -28,11 +28,12 @@ inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 * Wetter
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
 
-Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
-and NVDA 2018.1 or later. For best results, use the add-on with latest
-Windows 10 stable releases (build 16299 or 17134) and latest stable version
-of NVDA. Also, after changing update settings for the add-on, be sure to
-save NVDA settings.
+Hinweis: Diese Erweiterung benötigt Windows 10 Version 1703 (build 15063)
+oder höher und NVDA 2018.1 oder höher. Um beste Ergebnisse zu erzielen,
+verwenden Sie die Erweiterung mit dem neuesten stabilen Build von Windows 10
+(Build 16299 oder 17134) und der neuesten stabilen Version von NVDA. Nachdem
+Sie die Aktualisierungseinstellungen für die Erweiterung geändert haben,
+sollten Sie auch die NVDA-Einstellungen speichern.
 
 ## Allgemein
 
@@ -40,9 +41,9 @@ save NVDA settings.
 * Bestimmte Dialoge werden nun als richtige Dialogfelder erkannt. Dazu
   gehören das Dialogfeld"Insider-Vorschau" in der App für
   Windowseinstellungen.
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation dialog/panel.
+* NVDA kann die Anzahl der Vorschläge bei der Suche in den meisten Fällen
+  bekannt geben. Diese Option wird gesteuert durch Meldung von
+  Objektpositionsdaten im Dialog der Objektpräsentation.
 * In bestimmten Kontextmenüs (z.B. in Edge) werden Positionsinformationen
   (z.B. 1 von 2) nicht mehr angesagt.
 * Folgende UIA-Ereignisse werden erkannt: Controller für, wechsel der
@@ -72,8 +73,8 @@ save NVDA settings.
 * In Build 17627 und später, beim Öffnen einer neuen Registerkarte
   (Control+Windows+T), gibt NVDA die Suchergebnisse bei der Suche nach
   Elementen im eingebetteten Cortana-Fenster bekannt.
-* When switching between Sets tabs, NvDA will announce name and position of
-  the tab you are switching to.
+* NVDA meldet nun auch die Position und die Zahl x von x der Registerkarte
+  in Windows Sets, wenn zwischen Registerkarten navigiert wird.
 * Beim Öffnen, Schließen oder Wechseln zwischen virtuellen Desktops gibt
   NVDA die aktuelle Desktop-ID (z.B. Desktop 2) bekannt.
 
@@ -138,11 +139,12 @@ save NVDA settings.
 
 ## moderne virtuelle Tastaturen
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
-  later, including the redesigned panel in build 17661 and later. For best
-  experience when reading emojis, use Windows OneCore speech synthesizer.
-* Support for hardware keyboard input suggestions in Version 1803 (April
-  2018 Update) and later.
+* Unterstützung für die Emoji-Tastatur in der Windowsversion 1709 (Fall
+  Creators Update), einschließlich der neuen Version im Windows Build
+  17661. Für beste Erfahrungen beim Lesen von Emojis verwenden Sie
+  Windows-OneCore-Sprachausgaben.
+* Unterstützung für Eingabevorschläge bei Hardware-Tastaturen (gilt für
+  Windowsversionen ab Build 1803)
 * NVDA wird nun im Emoji-Fenster das erste ausgewählte Emoji ansagen. Dies
   gilt für Windows-Builds ab Build 1709.
 
@@ -161,8 +163,8 @@ save NVDA settings.
   zwischen Elementen angewendet wird.
 * Bei einigen Ausklapplisten wird NVDA nun die Beschriftung erkennen
   und/oder Wertänderungen ankündigen.
-* Audio Volume progress bar beeps are no longer heard in Version 1803 and
-  later.
+* Lautstärke-Fortschrittsbalken werden nicht mehr ausgegeben (gilt für
+  Windowsversionen ab Build 1803)
 
 ## Skype
 
