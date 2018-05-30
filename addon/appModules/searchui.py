@@ -47,6 +47,17 @@ class ContextMenuItem(UIA):
 		self.reportFocus()
 
 
+# Specific to Sets search field in order to get around controller for event confusion.
+class SetsSearchField(StartMenuSearchField):
+
+	def event_suggestionsClosed(self):
+		# Until this problem is fixed, treat Sets search field with contempt and transform this into a suggestions open event.
+		if self.appModule != api.getForegroundObject().appModule:
+			super(SetsSearchField, self).event_suggestionsOpened()
+			return
+		super(SetsSearchField, self).event_suggestionsOpened()
+
+
 class AppModule(AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self,obj,clsList):
@@ -62,7 +73,9 @@ class AppModule(AppModule):
 				# #48: differentiate between search results and context menu items.
 				clsList.insert(0,ContextMenuItem if obj.parent.UIAElement.cachedAutomationID == "contextMenu" else SuggestionListItem)
 			elif obj.UIAElement.cachedAutomationID == "SearchTextBox":
-				clsList.insert(0, StartMenuSearchField)
+				# Special handler for differentiating between regular and Sets Cortana boxes.
+				# Fortunately for now, embedded Sets Cortana box has no siblings.
+				clsList.insert(0, StartMenuSearchField if obj.previous is not None else SetsSearchField)
 
 	# Past responses from Cortana (cached to prevent repetition, initially an empty string).
 	cortanaResponseCache = ""
