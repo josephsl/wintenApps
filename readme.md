@@ -27,7 +27,7 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 Version 1703 (build 15063) or later and NVDA 2018.1 or later. For best results, use the add-on with latest Windows 10 stable releases (build 16299 or 17134) and latest stable version of NVDA.
+* This add-on requires Windows 10 Version 1709 (build 16299) or later and NVDA 2018.2 or later. For best results, use the add-on with latest Windows 10 stable release (build 17134) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 
 ## General
