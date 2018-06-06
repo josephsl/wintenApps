@@ -78,7 +78,7 @@ def checkForAddonUpdate():
 	# Check if pilot build is supported.
 	def _pilotBuild():
 		import versionInfo, winVersion
-		return config.conf["wintenApps"]["updateChannel"] == "dev" and "snapshot:" in versionInfo.updateVersionType and winVersion.winVersion.build >= 16299
+		return config.conf["wintenApps"]["updateChannel"] == "dev" and versionInfo.updateVersionType != "stable" and winVersion.winVersion.build >= 16299
 	if _pilotBuild():
 		updateURL = "http://www.josephsl.net/files/nvdaaddons/getupdate.php?file=w10-try"
 	try:
