@@ -135,29 +135,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #20: don't even think about proceeding in secure screens (especially add-on updates).
 		if globalVars.appArgs.secure: return
 		# #40: skip over the rest if appx is in effect.
-		if hasattr(config, "isAppX") and config.isAppX: return
-		# Add extra things for UIA support if required.
+		if config.isAppX: return
 		import UIAHandler
-		# UIA 5 is part of build 16299 and later.
-		# #42: and is also part of NVDA 2018.1 and later.
-		if hasattr(UIAHandler, "IUIAutomation5") and not isinstance(UIAHandler.handler.clientObject, UIAHandler.IUIAutomation5):
-			log.debug("W10: older UIA interface is in use, attempting to upgrade to latest interface for this session via handler object replacement")
-			if hasattr(UIAHandler, "IUIAutomation5"):
-				UIAHandler.terminate()
-				# Hack: add extra events and such via an extended UIAHandler class.
-				from . import _UIAHandlerEx
-				try:
-					UIAHandler.handler=_UIAHandlerEx.UIAHandlerEx()
-				except:
-					UIAHandler.handler=None
-			else:
-				log.debug("W10: IUIAutomation5 not found, falling back to IUIAutomation3")
 		# Add a series of events instead of doing it one at a time.
 		log.debug("W10: adding additional events")
 		for event, name in W10Events.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
 				UIAHandler.handler.clientObject.addAutomationEventHandler(event,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
+				log.debug("W10: added event ID %s, assigned to %s"%(event, name))
 		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
 		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("&Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
@@ -236,8 +222,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Non-English locales does not fire item selected event for looping selector unless navigator is first set to it.
 		if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "CustomLoopingSelector":
 			api.setNavigatorObject(obj.simpleFirstChild)
-		# #46: do not announce "unknown" objects from app launcher (quick link menu is affected by this).
-		if obj.windowClassName in ("LauncherTipWnd", "ApplicationManager_DesktopShellWindow"): return
 		nextHandler()
 
 	def event_nameChange(self, obj, nextHandler):
@@ -283,14 +267,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			import tones
 			# For debugging purposes.
 			tones.beep(500, 100)
-		# Some apps still fire both live region change and notification events, including Calculator.
-		if isinstance(obj, UIA) and not hasattr(obj, "event_UIA_notification"):
-			# As long as this add-on supports Version 1703, keep a notification blacklist handy.
-			# Also, do not announce notifications from background apps.
-			# Work around anoying notifications from Feedback Hub whenever category is selected.
-			if obj.appModule.appName in ("calculator",) or activityId in ("CategoryChangedContext",): return
-			if obj.appModule == api.getFocusObject().appModule:
-				ui.message(displayString)
 		nextHandler()
 
 	def event_UIA_dragStart(self, obj, nextHandler):
