@@ -31,11 +31,12 @@ qué se incluye):
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
-and NVDA 2018.1 or later. For best results, use the add-on with latest
-Windows 10 stable releases (build 16299 or 17134) and latest stable version
-of NVDA. Also, after changing update settings for the add-on, be sure to
-save NVDA settings.
+Nota: este complemento requiere Windows 10 Versión 1703 (build 15063) o
+posterior y NVDA 2018.1 o posterior. Para unos mejores resultados, utiliza
+el complemento con la compilación estable más reciente (build 16299 o 17134)
+y la versión estable más reciente de NVDA. También, después de cambiar las
+opciones de actualización para el complemento, asegúrate de guardar la
+configuración de NVDA.
 
 ## General
 
@@ -43,9 +44,9 @@ save NVDA settings.
   se reconocen apropiadamente.
 * Ahora se reconocen ciertos diálogos como diálogos apropiadamente. Esto
   incluye el diálogo Insider Preview (aplicación de configuración).
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation dialog/panel.
+* NVDA puede anunciar cuenta de sugerencias cuando se realiza una búsqueda
+  en la mayoría de casos. Esta opción se controla por "Anunciar información
+  de posición del objeto" en el diálogo/panel Presentación de Objetos.
 * En ciertos menús de contexto (tales como en Edge), la información de
   posición (ej.: 1 de 2) ya no se anuncia.
 * Se reconocen los siguientes eventos UIA: Controller for, drag start, drag
@@ -63,21 +64,21 @@ save NVDA settings.
   incluye alertas en Edge, resultados en la calculadora y otros. Ten en
   cuenta que esto podrá causar una verbalización por duplicado en algunos
   casos.
-* Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced. Due to technical limitations, this feature
-  works properly with NVDA 2018.1 and later, and will be part of NVDA with
-  2018.2 release.
+* Las notificaciones de versiones de apps recientes en Windows 10 versión
+  1709 (compilación 16299) en adelante se anuncian correctamente. Debido a
+  limitaciones técnicas, esta característica funciona sólo con NVDA 2018.1 y
+  posteriores, y formará parte de la versión 2018.2.
 * Se reconocerán y anunciarán los consejos para Edge y para aplicaciones
   universales.
-* NVDA will no longer announce "unknown" when opening quick link menu
-  (Windows+X). This fix will be part of NVDA 2018.2.
-* In build 17627 and later, when opening a new Sets tab (Control+Windows+T),
-  NVDA will announce search results when searching for items in the embedded
-  Cortana window.
-* When switching between Sets tabs, NvDA will announce name and position of
-  the tab you are switching to.
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce current desktop ID (desktop 2, for example).
+* NVDA ya no anunciará "Desconocido" al abrir el Menú de acceso rápido
+  (Windows+X). Esta mejora formará parte de NVDA 2018.2.
+* En la compilación 17627 y posteriores, cuando se abra una nueva pestaña de
+  Conjuntos (ctrl+windows+T), NVDA anunciará los resultados de búsqueda
+  cuando se busque en la ventana incrustada de Cortana.
+* Al saltar entre pestañas de Conjuntos, NVDA anunciará nombre y posición de
+  la pestaña hacia la cual se está conmutando.
+* al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
+  ID del escritorio actual (escritorio 2, por ejemplo).
 
 ## Alarmas y reloj
 
@@ -136,11 +137,12 @@ save NVDA settings.
 
 ## Teclado Moderno
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
-  later, including the redesigned panel in build 17661 and later. For best
-  experience when reading emojis, use Windows OneCore speech synthesizer.
-* Support for hardware keyboard input suggestions in Version 1803 (April
-  2018 Update) and later.
+* Soporte para el panel flotante de entrada de Emoji en la actualización
+  1709 (Fall Creators) o posterior, incluyendo el panel rediseñado en la
+  compilación 17661 y posterior. Para unos mejores resultados, leyendo
+  emojis utiliza el sintetizador de voz Windows OneCore.
+* Soporte para sugerencias de entrada de teclado hardware en la versión 1803
+  (actualización de Abril de 2018).
 * En las versiones posteriores a 1709, NVDA anunciará el primer emoji
   seleccionado cuando se abra el panel de emoji.
 
@@ -159,8 +161,8 @@ save NVDA settings.
   objetos para navegar entre controles.
 * Para algunos cuadros combinados, NVDA ya no fallará al reconocer etiquetas
   y/o al anunciar cambios de valores. 
-* Audio Volume progress bar beeps are no longer heard in Version 1803 and
-  later.
+* Los pitidos de la barra de progreso de volumen de audio ya no se oyen en
+  la versión 1803 y posterior.
 
 ## Skype
 
