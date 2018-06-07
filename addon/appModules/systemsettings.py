@@ -4,7 +4,6 @@
 
 # Several hacks related to Settings app.
 
-import sys
 import appModuleHandler
 import ui
 import controlTypes
@@ -33,22 +32,17 @@ class AppModule(appModuleHandler.AppModule):
 			# In build 16232, the title is shown but not the status, so include this for sake of backward compatibility.
 			elif obj.role == controlTypes.ROLE_LINK and obj.UIAElement.cachedAutomationID.startswith("HistoryEvent") and obj.name != obj.previous.name:
 				nameList = [obj.name]
-				build = sys.getwindowsversion().build
-				# For 1703.
-				if build == 15063:
-					nameList.insert(0, obj.previous.name)
 				# Add the status text in 1709 and later.
 				# But since 16251, a "what's new" link has been added for feature updates, so consult two previous objects.
-				elif build >= 16299:
-					automationID = obj.UIAElement.cachedAutomationID
-					eventID = automationID.split("_")[0]
-					possibleFeatureUpdateText = obj.previous.previous
-					# This automation ID may change in a future Windows 10 release.
-					if possibleFeatureUpdateText.UIAElement.cachedAutomationID == "_".join([eventID, "TitleTextBlock"]):
-						nameList.insert(0, obj.previous.name)
-						nameList.insert(0, possibleFeatureUpdateText.name)
-					else:
-						nameList.append(obj.next.name)
+				automationID = obj.UIAElement.cachedAutomationID
+				eventID = automationID.split("_")[0]
+				possibleFeatureUpdateText = obj.previous.previous
+				# This automation ID may change in a future Windows 10 release.
+				if possibleFeatureUpdateText.UIAElement.cachedAutomationID == "_".join([eventID, "TitleTextBlock"]):
+					nameList.insert(0, obj.previous.name)
+					nameList.insert(0, possibleFeatureUpdateText.name)
+				else:
+					nameList.append(obj.next.name)
 				obj.name = ", ".join(nameList)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
