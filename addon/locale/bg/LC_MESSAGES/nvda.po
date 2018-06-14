@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2018-02-02 14:31+0200\n"
+"PO-Revision-Date: 2018-06-03 20:40+0200\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
 "Language-Team: \n"
 "Language: bg\n"
@@ -107,7 +107,7 @@ msgstr "&Канал за обновление на добавката:"
 
 #. Translators: The label of a button to check for add-on updates.
 msgid "Check for add-on &update"
-msgstr "Проверка за &обновления на добавката"
+msgstr "Провери за &обновления на добавката"
 
 #. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
 msgid ""
