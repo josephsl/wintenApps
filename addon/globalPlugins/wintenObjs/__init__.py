@@ -27,6 +27,8 @@ addonHandler.initTranslation()
 UIA_Drag_DragStartEventId = 20026
 UIA_Drag_DragCancelEventId = 20027
 UIA_Drag_DragCompleteEventId = 20028
+# RS5/IUIAutomation6
+UIA_IsDialogPropertyId = 30174 # Let NVDA and others detect a dialog element and read element content.
 
 # For convenience.
 W10Events = {
@@ -164,6 +166,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
+			# Testing IUIAutomation6's dialog property.
+			try:
+				if obj._getUIACacheablePropertyValue(UIA_IsDialogPropertyId):
+					import tones
+					tones.beep(200, 50)
+			except ComError:
+				pass
 			# NVDA Core ticket 5231: Announce values in time pickers.
 			if obj.role==controlTypes.ROLE_LISTITEM and "LoopingSelectorItem" in obj.UIAElement.cachedClassName:
 				clsList.append(LoopingSelectorItem)
