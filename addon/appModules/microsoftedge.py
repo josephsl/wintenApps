@@ -1,6 +1,6 @@
 # MicrosoftEdge.py
 # Part of Windows 10 App Essentials collection
-# Copyright 2016-2017 Joseph Lee, released under GPL
+# Copyright 2016-2018 Joseph Lee, released under GPL
 
 # Core Edge support provided by NvDA Core (NVDAObjects/UIA package)
 # Provides additional enhancements.
@@ -28,3 +28,8 @@ class AppModule(appModuleHandler.AppModule):
 				# Mick Curran says use last child in case a series of live texts are part of this control.
 				ui.message(obj.lastChild.name)
 		nextHandler()
+
+	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
+		# Even though content process is focused, notifications are fired by main Edge process.
+		# The base object will simply ignore this, so notifications must be announced here and no more.
+		ui.message(displayString)
