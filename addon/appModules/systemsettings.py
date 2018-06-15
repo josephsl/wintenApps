@@ -4,6 +4,7 @@
 
 # Several hacks related to Settings app.
 
+import sys
 import appModuleHandler
 import ui
 import controlTypes
@@ -26,7 +27,8 @@ class AppModule(appModuleHandler.AppModule):
 				except AttributeError:
 					obj.name = obj.parent.previous.name
 			# Recognize groups of controls for contextual output (more prominent in Redstone 2).
-			elif obj.UIAElement.cachedAutomationID.endswith("GroupTitleTextBlock"):
+			# No longer necessary in Version 1803 and later because it is now a heading.
+			elif obj.UIAElement.cachedAutomationID.endswith("GroupTitleTextBlock") and sys.getwindowsversion().build < 17134:
 				obj.role = controlTypes.ROLE_GROUPING
 			# From Redstone 1 onwards, update history shows status rather than the title.
 			# In build 16232, the title is shown but not the status, so include this for sake of backward compatibility.
