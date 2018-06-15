@@ -27,6 +27,8 @@ addonHandler.initTranslation()
 UIA_Drag_DragStartEventId = 20026
 UIA_Drag_DragCancelEventId = 20027
 UIA_Drag_DragCompleteEventId = 20028
+# RS4/IUIAutomationElement8.
+UIA_HeadingLevelPropertyId = 30173
 # RS5/IUIAutomation6
 UIA_IsDialogPropertyId = 30174 # Let NVDA and others detect a dialog element and read element content.
 
@@ -130,6 +132,12 @@ class ToolTip(ToolTip, UIA):
 	event_UIA_toolTipOpened=ToolTip.event_show
 
 
+class XAMLHeading(UIA):
+
+	def _get_role(self):
+		return self._getUIACacheablePropertyValue(30173) - 80010
+
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
@@ -206,6 +214,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				import NVDAObjects.UIA
 				if not hasattr(NVDAObjects.UIA, "ToolTip"):
 					clsList.insert(0, ToolTip)
+			# Recognize headings as reported by XAML (build 17134 and later).
+			try:
+				if obj._getUIACacheablePropertyValue(30173) > 80050:
+					clsList.insert(0, XAMLHeading)
+			except COMError:
+				pass
 
 	# Record UIA property info about an object if debug logging is enabled.
 	def uiaDebugLogging(self, obj, event=None):
