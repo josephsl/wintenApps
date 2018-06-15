@@ -39,7 +39,7 @@ W10Events = {
 TreeScope_Subtree = 7
 
 # We know the following elements are dialogs.
-wintenDialogs=("Shell_Dialog", "Popup", "Shell_Flyout")
+wintenDialogs=("Shell_Dialog", "Popup", "Shell_Flyout", "Shell_SystemDialog")
 
 # Looping selectors are used in apps such as Alarms and Clock and Windows Update to select time values.
 class LoopingSelectorItem(UIA):
