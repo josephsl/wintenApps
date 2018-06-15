@@ -20,8 +20,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sähköposti
 * Kartat
 * Microsoft Edge
-* Moderni näppäimistö (emojipaneelin/fyysisen näppäimistösyötteen ehdotukset
-  versiossa 1709 ja uudemmissa)
+* Moderni näppäimistö (emojipaneeli/fyysisen näppäimistösyötteen
+  ehdotukset/pilvileikepöydän kohteet versiossa 1709 ja uudemmissa)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Skype (universaali sovellus)
@@ -30,11 +30,13 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sekalaisia moduuleita sellaisille säätimille kuin Käynnistä-valikon
   tiilet.
 
-Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1703 (koontiversio
-15063) tai uudempaa ja NVDA 2018.1:tä tai uudempaa. Käytä parhaan
-käyttökokemuksen varmistamiseksi Windows 10:n viimeisimpiä vakaita versioita
-(koontiversio 16299 tai 17134) sekä uusinta NVDA:ta. Varmista myös, että
-tallennat NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
+Huomautuksia:
+
+* Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1703 (koontiversio
+  15063) tai uudempaa ja NVDA 2018.2:ta tai uudempaa. Käytä parhaan
+  käyttökokemuksen varmistamiseksi Windows 10:n viimeisimpiä vakaita
+  versioita (koontiversio 16299 tai 17134) sekä uusinta NVDA:ta.
+* Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 
 ## Yleistä
 
@@ -61,14 +63,14 @@ tallennat NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   muut. Huomaa, että tämä saattaa johtaa joissakin tapauksissa ilmoitusten
   kahdesti puhumiseen.
 * Uusien sovellusversioiden ilmoitukset puhutaan Windows 10:n versiossa 1709
-  (koontiversio 16299) ja uudemmissa. Teknisten rajoitusten vuoksi tämä
+  (koontiversio 16299) ja uudemmissa. Teknisten rajoitusten vuoksi
   ominaisuus toimii asianmukaisesti vain NVDA 2018.1:ssä tai
-  uudemmissa. NVDA 2018.2 tulee sisältämään tämän toiminnallisuuden
+  uudemmissa. NVDA 2018.2 sisältää tämän toiminnallisuuden
   sisäänrakennettuna.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
   ilmoitetaan.
 * NVDA ei enää ilmoita "tuntematon" pikalinkkivalikkoa (Windows+X)
-  avattaessa. Tämä korjaus tulee sisältymään NVDA 2018.2:een.
+  avattaessa. Tämä korjaus sisältyy NVDA 2018.2:een.
 * Kun koontiversiossa 17627 ja uudemmissa avataan uusi Sets-välilehti
   (Ctrl+Windows+T), NVDA ilmoittaa hakutulokset etsittäessä kohteita
   upotetussa Cortana-IKKUNASSA.
@@ -141,6 +143,8 @@ tallennat NVDA:n asetukset muutettuasi lisäosan päivitysasetuksia.
   -päivitys) ja uudemmissa.
 * NVDA ilmoittaa 1709:ää uudemmissa koontiversioissa ensimmäisen valitun
   emojin, kun emojipaneeli avautuu.
+* Tuki pilvileikepöydän kohteiden ilmoittamiselle koontiversiossa 17666
+  (Redstone 5) ja uudemmissa.
 
 ## Ihmiset
 
