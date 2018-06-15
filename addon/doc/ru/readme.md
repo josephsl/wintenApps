@@ -19,8 +19,8 @@ Windows 10, а также исправлений для некоторых ти�
 * Почта
 * Карты
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions in Version 1709
-  and later)
+* Modern keyboard (emoji panel/hardware input suggestions/cloud clipboard
+  items in Version 1709 and later)
 * Люди
 * Настройки (настройки системы, Windows+I)
 * Skype (универсальное приложение)
@@ -28,11 +28,13 @@ Windows 10, а также исправлений для некоторых ти�
 * Погода.
 * Разные модули для типов управления, таких, как плитки главного меню.
 
-Note: this add-on requires Windows 10 Version 1703 (build 15063) or later
-and NVDA 2018.1 or later. For best results, use the add-on with latest
-Windows 10 stable releases (build 16299 or 17134) and latest stable version
-of NVDA. Also, after changing update settings for the add-on, be sure to
-save NVDA settings.
+Notes:
+
+* This add-on requires Windows 10 Version 1703 (build 15063) or later and
+  NVDA 2018.2 or later. For best results, use the add-on with latest Windows
+  10 stable releases (build 16299 or 17134) and latest stable version of
+  NVDA.
+* Some add-on features are or will be part of NVDA screen reader.
 
 ## Общие
 
@@ -60,12 +62,12 @@ save NVDA settings.
   double-speaking in some cases.
 * Notifications from newer app releases on Windows 10 Version 1709 (build
   16299) and later are announced. Due to technical limitations, this feature
-  works properly with NVDA 2018.1 and later, and will be part of NVDA with
-  2018.2 release.
+  works properly with NVDA 2018.1 and later, and is part of NVDA with 2018.2
+  release.
 * Tooltips from Edge and universal apps are recognized and will be
   announced.
 * NVDA will no longer announce "unknown" when opening quick link menu
-  (Windows+X). This fix will be part of NVDA 2018.2.
+  (Windows+X). This fix is part of NVDA 2018.2.
 * In build 17627 and later, when opening a new Sets tab (Control+Windows+T),
   NVDA will announce search results when searching for items in the embedded
   Cortana window.
@@ -135,6 +137,8 @@ save NVDA settings.
   2018 Update) and later.
 * In post-1709 builds, NVDA will announce the first selected emoji when
   emoji panel opens.
+* Support for announcing cloud clipboard items in build 17666 (Redstone 5)
+  and later.
 
 ## Люди
 

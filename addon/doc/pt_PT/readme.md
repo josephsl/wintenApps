@@ -22,7 +22,7 @@ detalhes sobre o que está incluído):
 * Mapas.
 * Microsoft Edge
 * Teclado moderno (sugestões de entrada do painel de emoji / hardware na
-  Versão 1709 e posterior)
+  Versão 1709 e posterior) 
 * Pessoas.
 * Configurações (configurações do sistema, Windows + I)
 * Skype (aplicação universal).
@@ -30,11 +30,15 @@ detalhes sobre o que está incluído):
 * Meteorologia.
 * Módulos diversos para controlos, como ecrãs do menu Iniciar.
 
-Nota: este extra requer o Windows 10 Versão 1703 (build 15063) ou posterior
-e o NVDA 2018.1 ou posterior. Para obter melhores resultados, use o extra
-com a última versão estável do Windows 10 (build 16299) e a última versão
-estável do NVDA. Além disso, após alterar as configurações de actualização
-do extra, certifique-se de guardar as configurações do NVDA. 
+Notas:
+
+* Nota: este extra requer o Windows 10 Versão 1703 (build 15063) ou
+  posterior e o NVDA 2018.2 ou posterior. Para obter melhores resultados,
+  use o extra com a última versão estável do Windows 10 (build 16299) e a
+  última versão estável do NVDA. Além disso, após alterar as configurações
+  de actualização do extra, certifique-se de guardar as configurações do
+  NVDA. 
+* Alguns recursos adicionais são ou farão parte do leitor de tela do NVDA.
 
 ## Geral
 
@@ -63,11 +67,11 @@ do extra, certifique-se de guardar as configurações do NVDA.
   resultar em fala dupla em alguns casos.
 * As notificações de versões mais recentes de aplicativos no Windows 10
   Versão 1709 (build 16299) e posteriores são anunciadas. Devido a
-  limitações técnicas, este recurso funciona melhor com o NVDA 2018.1 e
-  posterior.
+  limitações técnicas, esse recurso funciona corretamente com o NVDA 2018.1
+  e posterior e faz parte do NVDA com a versão 2018.2.
 * As dicas de ferramentas do Edge e aplicativos universais são reconhecidas
   e serão anunciadas.
-* O NVDA não anunciará mais "desconhecido" ao abrir o menu de links rápidos
+* O NVDA não anunciará mais "desconhecido", ao abrir o menu de links rápidos
   (Windows + X). Esta correção fará parte do NVDA 2018.2.
 * Na versão 17627 e posteriores, ao abrir uma nova guia Conjuntos (Control +
   Windows + T), o NVDA anunciará os resultados da pesquisa ao pesquisar
@@ -144,6 +148,8 @@ do extra, certifique-se de guardar as configurações do NVDA.
   (actualização de abril de 2018) e posterior.
 * Ao procurar contactos, será reproduzido um som, se houver resultados da
   procura.
+* Suporte para anunciar itens da área de transferência em nuvem no build
+  17666 (Redstone 5) e posterior.
 
 ## Pessoas.
 

@@ -21,8 +21,8 @@ qué se incluye):
 * Correo
 * Mapas
 * Microsoft Edge
-* Teclado Moderno (sugerencias de panel emoji /entrada hardware en la
-  Versión 1709 y posterior)
+* Modern keyboard (emoji panel/hardware input suggestions/cloud clipboard
+  items in Version 1709 and later)
 * Gente
 * Opciones (opciones de sistema, Windows+I)
 * Skype (aplicación universal)
@@ -31,12 +31,13 @@ qué se incluye):
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Nota: este complemento requiere Windows 10 Versión 1703 (build 15063) o
-posterior y NVDA 2018.1 o posterior. Para unos mejores resultados, utiliza
-el complemento con la compilación estable más reciente (build 16299 o 17134)
-y la versión estable más reciente de NVDA. También, después de cambiar las
-opciones de actualización para el complemento, asegúrate de guardar la
-configuración de NVDA.
+Notes:
+
+* This add-on requires Windows 10 Version 1703 (build 15063) or later and
+  NVDA 2018.2 or later. For best results, use the add-on with latest Windows
+  10 stable releases (build 16299 or 17134) and latest stable version of
+  NVDA.
+* Some add-on features are or will be part of NVDA screen reader.
 
 ## General
 
@@ -64,14 +65,14 @@ configuración de NVDA.
   incluye alertas en Edge, resultados en la calculadora y otros. Ten en
   cuenta que esto podrá causar una verbalización por duplicado en algunos
   casos.
-* Las notificaciones de versiones de apps recientes en Windows 10 versión
-  1709 (compilación 16299) en adelante se anuncian correctamente. Debido a
-  limitaciones técnicas, esta característica funciona sólo con NVDA 2018.1 y
-  posteriores, y formará parte de la versión 2018.2.
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced. Due to technical limitations, this feature
+  works properly with NVDA 2018.1 and later, and is part of NVDA with 2018.2
+  release.
 * Se reconocerán y anunciarán los consejos para Edge y para aplicaciones
   universales.
-* NVDA ya no anunciará "Desconocido" al abrir el Menú de acceso rápido
-  (Windows+X). Esta mejora formará parte de NVDA 2018.2.
+* NVDA will no longer announce "unknown" when opening quick link menu
+  (Windows+X). This fix is part of NVDA 2018.2.
 * En la compilación 17627 y posteriores, cuando se abra una nueva pestaña de
   Conjuntos (ctrl+windows+T), NVDA anunciará los resultados de búsqueda
   cuando se busque en la ventana incrustada de Cortana.
@@ -145,6 +146,8 @@ configuración de NVDA.
   (actualización de Abril de 2018).
 * En las versiones posteriores a 1709, NVDA anunciará el primer emoji
   seleccionado cuando se abra el panel de emoji.
+* Support for announcing cloud clipboard items in build 17666 (Redstone 5)
+  and later.
 
 ## Gente
 
