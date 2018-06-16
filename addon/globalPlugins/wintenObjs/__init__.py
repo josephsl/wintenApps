@@ -191,12 +191,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					tones.beep(200, 50)
 			except:
 				pass
-			if obj.UIAElement.cachedClassName in wintenDialogs:
+			# For build 17134 and earlier.
+			if not isDialog and obj.UIAElement.cachedClassName in wintenDialogs:
 				# But some are not dialogs despite what UIA says (for example, search popup in Store).
 				if obj.UIAElement.cachedAutomationID != "SearchPopUp":
 					isDialog = True
 			if isDialog and Dialog not in clsList:
-				print clsList
 				clsList.insert(0, Dialog)
 			# Search field that does raise controller for event.
 			# Also take care of Edge address omnibar and Start search box.
