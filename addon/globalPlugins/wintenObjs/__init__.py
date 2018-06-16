@@ -179,7 +179,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if obj._getUIACacheablePropertyValue(UIA_IsDialogPropertyId):
 					import tones
 					tones.beep(200, 50)
-			except ComError:
+			except:
 				pass
 			# NVDA Core ticket 5231: Announce values in time pickers.
 			if obj.role==controlTypes.ROLE_LISTITEM and "LoopingSelectorItem" in obj.UIAElement.cachedClassName:
@@ -218,7 +218,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			try:
 				if obj._getUIACacheablePropertyValue(30173) > 80050:
 					clsList.insert(0, XAMLHeading)
-			except COMError:
+			except:
 				pass
 
 	# Record UIA property info about an object if debug logging is enabled.
