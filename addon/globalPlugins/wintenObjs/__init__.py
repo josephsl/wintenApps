@@ -29,7 +29,7 @@ UIA_Drag_DragCancelEventId = 20027
 UIA_Drag_DragCompleteEventId = 20028
 # RS4/IUIAutomationElement8
 UIA_HeadingLevelPropertyId = 30173
-# RS5/IUIAutomationElement8
+# RS5/IUIAutomationElement9
 UIA_IsDialogPropertyId = 30174 # Let NVDA and others detect a dialog element and read element content.
 
 # For convenience.
@@ -197,6 +197,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if obj.UIAElement.cachedAutomationID != "SearchPopUp":
 					isDialog = True
 			if isDialog and Dialog not in clsList:
+				self.uiaDebugLogging(obj, "isDialog")
 				clsList.insert(0, Dialog)
 			# Search field that does raise controller for event.
 			# Also take care of Edge address omnibar and Start search box.
