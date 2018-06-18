@@ -45,6 +45,7 @@ Notes:
 * In build 17627 and later, when opening a new Sets tab (Control+Windows+T), NVDA will announce search results when searching for items in the embedded Cortana window.
 * When switching between Sets tabs, NvDA will announce name and position of the tab you are switching to.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop ID (desktop 2, for example).
+* NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
 
 ## Alarms and clock
 
