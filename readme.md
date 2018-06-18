@@ -27,7 +27,7 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 Version 1703 (build 15063) or later and NVDA 2018.1 or later. For best results, use the add-on with latest Windows 10 stable releases (build 16299 or 17134) and latest stable version of NVDA.
+* This add-on requires Windows 10 Version 1703 (build 15063) or later and NVDA 2018.2 or later. For best results, use the add-on with latest Windows 10 stable releases (build 16299 or 17134) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 
 ## General
@@ -45,6 +45,7 @@ Notes:
 * In build 17627 and later, when opening a new Sets tab (Control+Windows+T), NVDA will announce search results when searching for items in the embedded Cortana window.
 * When switching between Sets tabs, NvDA will announce name and position of the tab you are switching to.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop ID (desktop 2, for example).
+* NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
 
 ## Alarms and clock
 
