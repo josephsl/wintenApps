@@ -196,8 +196,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				# But some are not dialogs despite what UIA says (for example, search popup in Store).
 				if obj.UIAElement.cachedAutomationID != "SearchPopUp":
 					isDialog = True
-			if isDialog and Dialog not in clsList:
+			if isDialog:
 				self.uiaDebugLogging(obj, "isDialog")
+			if isDialog and Dialog not in clsList:
 				clsList.insert(0, Dialog)
 			# Search field that does raise controller for event.
 			# Also take care of Edge address omnibar and Start search box.
