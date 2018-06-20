@@ -27,6 +27,8 @@ addonHandler.initTranslation()
 UIA_Drag_DragStartEventId = 20026
 UIA_Drag_DragCancelEventId = 20027
 UIA_Drag_DragCompleteEventId = 20028
+# RS5/IUIAutomation6
+UIA_ActiveTextPositionChangedEventId = 20036
 # RS4/IUIAutomationElement8
 UIA_HeadingLevelPropertyId = 30173
 # RS5/IUIAutomationElement9
@@ -147,8 +149,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #40: skip over the rest if appx is in effect.
 		if config.isAppX: return
 		import UIAHandler
+		import sys
 		# Add a series of events instead of doing it one at a time.
+		# Some events are only available in a specific build range.
 		log.debug("W10: adding additional events")
+		if sys.getwindowsversion().build >= 17692:
+			log.debug("W10: adding additional events for RS5")
+			W10Events[UIA_ActiveTextPositionChangedEventId] = "UIA_activeTextPositionChanged"
 		for event, name in W10Events.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
@@ -314,4 +321,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "tooltipOpened")
+		nextHandler()
+
+	def event_UIA_activeTextPositionChanged(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "activeTextPositionChanged")
+		import tones
+		# For debugging purposes.
+		tones.beep(250, 100)
 		nextHandler()
