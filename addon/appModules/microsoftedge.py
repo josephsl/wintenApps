@@ -1,14 +1,12 @@
 # MicrosoftEdge.py
-#A part of NonVisual Desktop Access (NVDA)
-#This file is covered by the GNU General Public License.
-#See the file COPYING for more details.
+# Part of Windows 10 App Essentials collection
 # Copyright 2016-2018 Joseph Lee, released under GPL
-# Additional: copyright (C) 2018 NV Access Limited, Joseph Lee
 
 # Core Edge support provided by NvDA Core (NVDAObjects/UIA package)
 # Provides additional enhancements.
 
 import appModuleHandler
+import api
 from NVDAObjects.UIA import UIA
 import controlTypes
 import ui
@@ -33,6 +31,7 @@ class AppModule(appModuleHandler.AppModule):
 		nextHandler()
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
-		# NVDA Core issue 8423: even though content process is focused, notifications are fired by main Edge process.
+		# Even though content process is focused, notifications are fired by main Edge process.
 		# The base object will simply ignore this, so notifications must be announced here and no more.
-		ui.message(displayString)
+		if api.getFocusObject().appModule.appName.startswith("microsoftedge"):
+			ui.message(displayString)
