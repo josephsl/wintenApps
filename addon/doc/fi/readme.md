@@ -78,6 +78,8 @@ Huomautuksia:
   sijainnin, johon olet siirtymässä.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2)
   avattaessa, suljettaessa tai vaihdettaessa virtuaalityöpöytien välillä.
+* NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
+  suuntaa vaihdettaessa.
 
 ## Hälytykset ja kello
 

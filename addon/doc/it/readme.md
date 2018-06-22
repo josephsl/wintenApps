@@ -19,8 +19,8 @@ si veda la relativa sezione per ulteriori informazioni:
 * Posta
 * Mappe
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions/cloud clipboard
-  items in Version 1709 and later)
+* Tastiera moderna (suggerimenti di immissione per tastiere
+  hardware/pannello emoji in Versione 1709 e successive)
 * Persone
 * Impostazioni (Impostazioni Windows, Windows+i)
 * Skype (universal app)
@@ -28,13 +28,14 @@ si veda la relativa sezione per ulteriori informazioni:
 * Meteo
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
-Notes:
+Note:
 
-* This add-on requires Windows 10 Version 1703 (build 15063) or later and
-  NVDA 2018.2 or later. For best results, use the add-on with latest Windows
-  10 stable releases (build 16299 or 17134) and latest stable version of
-  NVDA.
-* Some add-on features are or will be part of NVDA screen reader.
+* Nota: questo addon richiede Windows 10 Versione 1703 (build 15063) o
+  successive e NVDA 2018.2 o successive. Per le migliori prestazioni,
+  utilizzare il componente con l'ultima versione stabile di Windows10 (build
+  16299o 17134) e ultima versione stabile di NVDA. 
+* Alcune caratteristiche di questo componente aggiuntivo sono o diventeranno
+  parte di NVDA
 
 ## Generale
 
@@ -63,22 +64,24 @@ Notes:
   include notifiche in Edge,  i risultati nella calcolatrice ed altro. Si
   noti che talvolta potrebbe accadere che venga annunciato due volte lo
   stesso elemento.
-* Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced. Due to technical limitations, this feature
-  works properly with NVDA 2018.1 and later, and is part of NVDA with 2018.2
-  release.
+* Vengono annunciate le notifiche di nuove app realizzate a partire da
+  Windows 10 versione 1709 (build 16299). A causa di alcune limitazione
+  tecniche, questa caratteristica funziona soltanto a partire da NVDA 2018.1
+  e successive, è attualmente poi parte di NVDA 2018.2.
 * Vengono riconosciuti e annunciati i suggerimenti di Microsoft Edge e app
   universali.
-* NVDA will no longer announce "unknown" when opening quick link menu
-  (Windows+X). This fix is part of NVDA 2018.2.
+* NVDA non annuncerà più "sconosciuto" premendo Windows-x, per aprire il
+  menu rapido. Questa funzione è parte integrante di NVDA 2018.2.
 * A partire dalla build 17627  e successive, quando si apre un nuovo set di
   schede (CTRL-Shift-T), NVDA leggerà i risultati di ricerca della finestra
   integrata di Cortana, se presenti.
-* When switching between Sets tabs, NvDA will announce name and position of
-  the tab you are switching to.
+* Quando si passa tra una scheda e un'altra, NVDA leggerà il nome e la
+  posizione della scheda in cui ci si trova.
 * Quando si passa ad un desktop virtuale successivo, o viene chiuso o ne
   viene aperto uno, NVDA annuncerà il numero del desktop, ad esempio
   Desktop2, Desktop3, etc.
+* NVDA non leggerà più le dimensioni del testo del menu avvio quando si
+  cambia la risoluzione dello schermo o orientamento.
 
 ## Allarmi e sveglia
 
@@ -89,8 +92,8 @@ Notes:
 ## Calcolatrice
 
 * Quando viene premuto invio o Esc, NVDA annuncia il risultato del calcolo.
-* For calculations such as unit converter and currency converter, NVDA will
-  announce results as soon as calculations are entered.
+* Per i calcoli quali conversioni di unità di misura o valuta, NVDA leggerà
+  il risultato non appena verranno inseriti i dati
 
 ## calendario
 
@@ -108,8 +111,8 @@ Notes:
 
 ## Centro Feedback
 
-* For newer app releases, NVDA will no longer announce feedback categories
-  twice.
+* Per le release di nuove app, NVDA non annuncerà più due volte la categoria
+  feedback.
 
 ## Barra dei giochi
 
@@ -142,12 +145,12 @@ Notes:
   comprese build 17661 e successive aventi pannelli con nuovi design). Per
   ottenere i migliori risultati si consiglia di servirsi delle voci OneCore,
   ossia quelle già presenti in Windows10.
-* Support for hardware keyboard input suggestions in Version 1803 (April
-  2018 Update) and later.
-* In post-1709 builds, NVDA will announce the first selected emoji when
-  emoji panel opens.
-* Support for announcing cloud clipboard items in build 17666 (Redstone 5)
-  and later.
+* Supporto per i suggerimenti di immissione in tastiere hardware nella
+  Versione 1803 (aggiornamento Aprile 2018) e successive
+* Nelle build successive alla 1709, NVDA leggerà la prima emoji selezionata
+  quando si apre il pannello Emoji.
+* Supporto per la lettura di appunti cloud nella build 17666 (Redstone 5) e
+  successive.
 
 ## Persone
 
@@ -164,8 +167,8 @@ Notes:
   controlli usando la navigazione ad oggetti.
 * Per alcune caselle combinate, NVDA non commetterà più errori nel
   riconoscere le etichette o annunciare i cambiamenti dei valori.
-* Audio Volume progress bar beeps are no longer heard in Version 1803 and
-  later.
+* Non vengono più riprodotti beep per le barre di avanzamento del controllo
+  volume dalla versioni 1803 e successive.
 
 ## Skype
 
@@ -182,8 +185,8 @@ Notes:
   novembre 2016
 * Nella maggior parte dei casi, NVDA non leggerà più i messaggi Skype di
   continuo quando se ne sta controllando uno
-* Various issues when using Skype with braille displays fixed, including
-  inability to review message history items in braille.
+* Sistemati molti problemi inerenti la consultazione dei messaggi in Skype
+  con Display Braille.
 * Dall'elenco cronologia messaggi, è possibile premere NVDA+d in un
   qualsiasi elemento per fare in modo che NVDA legga alcuni dettagli del
   messaggio, come il tipo di canale, ora e data di invio, etc.

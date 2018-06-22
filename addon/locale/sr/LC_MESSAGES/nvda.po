@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.03\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-03-03 22:05+1000\n"
-"PO-Revision-Date: 2017-09-21 17:54+0100\n"
-"Last-Translator: Nikola Jovic <wwenikola123@gmail.com>\n"
+"PO-Revision-Date: 2018-06-16 16:46+0100\n"
+"Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -53,17 +53,15 @@ msgid "Reports and moves the review cursor to a recent message"
 msgstr "Prijavljuje i pomera pregledni kursor na poruku"
 
 #. Translators: presented when chat edit box is not found.
-#, fuzzy
 msgid "Chat edit field not found"
-msgstr "Istorija ćaskanja nije pronađena"
+msgstr "Polje za unos poruke nije pronađeno"
 
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
 msgstr "Nema Emotikona"
 
-#, fuzzy
 msgid "&Windows 10 App Essentials..."
-msgstr "Windows 10 App Essentials..."
+msgstr "&Windows 10 App Essentials..."
 
 msgid "Windows 10 App Essentials add-on settings"
 msgstr "Podešavanja dodatka Windows 10 App Essentials "

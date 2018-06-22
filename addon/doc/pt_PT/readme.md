@@ -81,6 +81,8 @@ Notas:
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
   anunciará a ID atual da área de trabalho (área de trabalho 2, por
   exemplo).
+* O NVDA deixará de anunciar o tamanho do texto do menu Iniciar quando
+  alterar as resoluções ou a orientação do ecrã.
 
 ## Alertas e relógio
 

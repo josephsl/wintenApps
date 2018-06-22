@@ -19,8 +19,8 @@ inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 * Mail
 * Karten
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions/cloud clipboard
-  items in Version 1709 and later)
+* Moderne Tastatur (Emoji-Panel / Hardware-Eingabevorschläge /
+  Cloud-Zwischenablage ab Version 1709)
 * Kontakte
 * Einstellungen (Systemeinstellungen, Windows+I)
 * Skype (universal app)
@@ -28,13 +28,13 @@ inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 * Wetter
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche
 
-Notes:
+Hinweise:
 
-* This add-on requires Windows 10 Version 1703 (build 15063) or later and
-  NVDA 2018.2 or later. For best results, use the add-on with latest Windows
-  10 stable releases (build 16299 or 17134) and latest stable version of
-  NVDA.
-* Some add-on features are or will be part of NVDA screen reader.
+* Diese Erweiterung benötigt Windows 10 Version 1703 (Build 15063) oder
+  höher und NVDA 2018.2 oder höher. Für beste Ergebnisse verwenden Sie die
+  Erweiterung mit den neuesten stabilen Versionen von Windows 10 (Build
+  16299 oder 17134) und der neuesten stabilen Version von NVDA.
+* Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 
 ## Allgemein
 
@@ -63,13 +63,13 @@ Notes:
   in Edge, Ergebnisse im Windowsrechner und andere. Beachten Sie, dass dies
   in manchen Fällen zu einer doppelten Aussprache führen kann, da die
   meisten Szenarien nun Bestandteil von NVDA ab 2017.3 sind.
-* Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced. Due to technical limitations, this feature
-  works properly with NVDA 2018.1 and later, and is part of NVDA with 2018.2
-  release.
+* Benachrichtigungen von neueren App-Releases auf Windows 10 Version 1709
+  (Build 16299) und höher werden angekündigt. Aufgrund technischer
+  Einschränkungen funktioniert diese Funktion ordnungsgemäß mit NVDA 2018.1
+  und höher und ist Teil von NVDA mit Version 2018.2.
 * Tooltips von Edge und Universal Apps werden erkannt und angekündigt.
-* NVDA will no longer announce "unknown" when opening quick link menu
-  (Windows+X). This fix is part of NVDA 2018.2.
+* NVDA meldet nicht mehr "Unbekannt" beim Öffnen des Quick-Link-Menüs
+  (Windows+X). Dieser Fix ist Teil von NVDA 2018.2.
 * In Build 17627 und später, beim Öffnen einer neuen Registerkarte
   (Control+Windows+T), gibt NVDA die Suchergebnisse bei der Suche nach
   Elementen im eingebetteten Cortana-Fenster bekannt.
@@ -77,6 +77,8 @@ Notes:
   in Windows Sets, wenn zwischen Registerkarten navigiert wird.
 * Beim Öffnen, Schließen oder Wechseln zwischen virtuellen Desktops gibt
   NVDA die aktuelle Desktop-ID (z.B. Desktop 2) bekannt.
+* NVDA sagt den Text für die Größe des Startmenüs nicht mehr an, wenn die
+  Bildschirmauflösung oder Ausrichtung geändert wird.
 
 ## Wecker und Uhr
 
@@ -147,8 +149,8 @@ Notes:
   Windowsversionen ab Build 1803)
 * NVDA wird nun im Emoji-Fenster das erste ausgewählte Emoji ansagen. Dies
   gilt für Windows-Builds ab Build 1709.
-* Support for announcing cloud clipboard items in build 17666 (Redstone 5)
-  and later.
+* Unterstützung für die Ankündigung von Cloud-Clipboard-Elementen in Build
+  17666 (Redstone 5) und höher.
 
 ## Kontakte
 

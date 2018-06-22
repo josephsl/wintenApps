@@ -75,6 +75,8 @@ Notes:
   the tab you are switching to.
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce current desktop ID (desktop 2, for example).
+* NVDA will no longer announce Start menu size text when changing screen
+  resolutions or orientation.
 
 ## Alarm i sat
 
