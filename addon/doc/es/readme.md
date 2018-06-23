@@ -80,6 +80,8 @@ Notes:
   la pestaña hacia la cual se está conmutando.
 * al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
   ID del escritorio actual (escritorio 2, por ejemplo).
+* NVDA will no longer announce Start menu size text when changing screen
+  resolutions or orientation.
 
 ## Alarmas y reloj
 

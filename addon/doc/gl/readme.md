@@ -77,6 +77,8 @@ Notes:
   da lapela cara á cal se conmutou.
 * Cando se abran, pechen ou se conmute entre escritorios virtuales, NVDA
   anunciará o ID do escritorio actual (escritorio 2, por exemplo).
+* NVDA will no longer announce Start menu size text when changing screen
+  resolutions or orientation.
 
 ## Alarmas e reloxo
 

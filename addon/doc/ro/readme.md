@@ -79,6 +79,8 @@ Notes:
   între etichete.
 * La deschiderea, închiderea sau comutarea între spațiile de lucru virtuale,
   NVDA va anunța ID-ul spațiului de lucru curent (spațiu de lucru 2).
+* NVDA will no longer announce Start menu size text when changing screen
+  resolutions or orientation.
 
 ## Alarme și ceas
 

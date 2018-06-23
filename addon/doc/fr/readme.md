@@ -21,8 +21,9 @@ est inclus) :
 * Courrier
 * Cartes
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions/cloud clipboard
-  items in Version 1709 and later)
+* Clavier moderne (panneau des emoji/suggestions de saisie
+  matérielle/éléments de presse-papiers du cloud dans la Version 1709 et
+  ultérieure)
 * Personnes
 * Paramètres (paramètres système, Windows+I)
 * Skype (universal app)
@@ -32,11 +33,15 @@ est inclus) :
 
 Notes:
 
-* This add-on requires Windows 10 Version 1703 (build 15063) or later and
-  NVDA 2018.2 or later. For best results, use the add-on with latest Windows
-  10 stable releases (build 16299 or 17134) and latest stable version of
-  NVDA.
-* Some add-on features are or will be part of NVDA screen reader.
+* Note: ce module complémentaire nécessite Windows 10 Version 1703 build
+  15063) ou version ultérieure et NVDA 2018.2 ou version ultérieure. Pour de
+  meilleurs résultats, utilisez le module complémentaire avec la dernière
+  build stable de Windows 10 (build 16299 ou 17134) et la dernière version
+  stable de NVDA. De plus, après avoir modifié les paramètres de mise à jour
+  pour le module complémentaire, n'oubliez pas de sauvegarder la
+  configuration de NVDA.
+* Certaines fonctionnalités du module complémentaire font ou feront partie
+  du lecteur d'écran NVDA.
 
 ## Générale
 
@@ -68,14 +73,15 @@ Notes:
   annoncé. Cela inclut les alertes dans Edge, résultats dans la calculatrice
   et autres. Notez que cela peut entraîner une double verbalisation dans
   certains cas.
-* Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced. Due to technical limitations, this feature
-  works properly with NVDA 2018.1 and later, and is part of NVDA with 2018.2
-  release.
+* Les notifications des versions plus récentes des applications sur Windows
+  10 version 1709 (build 16299) et ultérieures sont annoncées. En raison de
+  limitations techniques, cette fonctionnalité fonctionne correctement avec
+  NVDA 2018.1 et versions ultérieures, et fait partie de NVDA avec la
+  version 2018.2.
 * Les suggestions pour Edge et pour les applications universelles sont
   reconnues et seront annoncées.
-* NVDA will no longer announce "unknown" when opening quick link menu
-  (Windows+X). This fix is part of NVDA 2018.2.
+* NVDA n'annonce plus "inconnu" lors de l'ouverture du menu Lien rapide
+  (Windows+X). Ce correctif fait partie de NVDA 2018.2.
 * Dans la build 17627 et les versions ultérieures, lors de l'ouverture d'un
   nouvel onglet Sets (Contrôle+Windows+T), NVDA annonce les résultats de
   recherche lors de la recherche d'éléments dans la fenêtre Cortana
@@ -84,6 +90,8 @@ Notes:
   position de l'onglet sur lequel vous basculez.
 * Lors de l'ouverture, de la fermeture ou le basculement entre les bureaux
   virtuels, NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
+* NVDA n'annoncera plus le texte de la taille du menu Démarrer lorsque vous
+  changez la résolution ou l'orientation de l'écran.
 
 ## Alarmes et horloge
 
@@ -157,8 +165,8 @@ Notes:
   Version 1803 ((Mise à jour d'avril 2018) et ultérieure.
 * Dans les builds post-1709, NVDA annoncera le premier emoji sélectionné
   lors de l'ouverture du panneau emoji.
-* Support for announcing cloud clipboard items in build 17666 (Redstone 5)
-  and later.
+* Prise en charge de l'annonce des éléments du presse-papiers du cloud dans
+  la build 17666 (Redstone 5) et versions ultérieures.
 
 ## Personnes
 
