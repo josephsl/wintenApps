@@ -72,7 +72,9 @@ class AppModule(appModuleHandler.AppModule):
 			# Do not announce "result not found" error unless have to.
 			or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")
 			# But announce individual update progress in build 16215 and later.
-			or ("ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock")))
+			or ("ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock"))
+			# Don't forget update error text.
+			or (automationID == "SystemSettings_MusUpdate_UpdateError_DescriptionTextBlock"))
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA) and obj.name and obj.name != self._nameChangeCache:
