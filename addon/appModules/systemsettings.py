@@ -74,7 +74,7 @@ class AppModule(appModuleHandler.AppModule):
 			# But announce individual update progress in build 16215 and later.
 			or ("ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock"))
 			# Don't forget update error text.
-			or (automationID == "SystemSettings_MusUpdate_UpdateError_DescriptionTextBlock"))
+			or (automationID in ("SystemSettings_MusUpdate_UpdateError_DescriptionTextBlock", "SystemSettings_MusUpdate_PayloadErrorDetails_HolisticErrorDescriptionTextBlock")))
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA) and obj.name and obj.name != self._nameChangeCache:
