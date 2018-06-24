@@ -72,6 +72,9 @@ class AppModule(appModuleHandler.AppModule):
 	_emojiPanelOpened = False
 
 	def event_nameChange(self, obj, nextHandler):
+		# #49: reported by a user: on some systems, touch keyboard keys keeps firing name change event.
+		if obj.UIAElement.cachedClassName == "CRootKey":
+			return
 		# The word "blank" is kept announced, so suppress this on build 17666 and later.
 		if winVersion.winVersion.build >= 17672:
 			# In build 17672 and later, return immediatley when element selected event on clipboard item was fired just prior to this.
