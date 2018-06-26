@@ -19,7 +19,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("""A collection of app modules for various Windows 10 apps"""),
 	# version
-	"addon_version" : "18.06",
+	"addon_version" : "18.07",
 	# Author(s)
 	"addon_author" : u"Joseph Lee <joseph.lee22590@gmail.com>, Derek Riemer <driemer.riemer@gmail.com> and others",
 	# URL for the add-on documentation support
