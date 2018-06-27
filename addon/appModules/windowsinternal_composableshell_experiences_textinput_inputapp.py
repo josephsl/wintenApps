@@ -76,7 +76,8 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_nameChange(self, obj, nextHandler):
 		# #49: reported by a user: on some systems, touch keyboard keys keeps firing name change event.
-		if obj.UIAElement.cachedClassName == "CRootKey":
+		# Argh, in build 17704, whenever skin toines are selected, name change is fired by emoji entries (GridViewItem).
+		if obj.UIAElement.cachedClassName in ("CRootKey", "GridViewItem"):
 			return
 		# The word "blank" is kept announced, so suppress this on build 17666 and later.
 		if winVersion.winVersion.build >= 17672:
