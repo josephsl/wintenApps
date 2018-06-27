@@ -25,7 +25,10 @@ class AppModule(appModuleHandler.AppModule):
 		# However, in recent builds, name change event is also fired.
 		# For consistent experience, report the new category first by traversing through controls.
 		# #8189: do not announce candidates list itself (not items), as this is repeated each time candidate items are selected.
-		if obj.UIAElement.cachedAutomationID == "CandidateList": return
+		if (obj.UIAElement.cachedAutomationID == "CandidateList"
+			# In build 17704, name change event will announce selected emoji entry.
+			or (winVersion.winVersion.build >= 17704 and obj.UIAElement.cachedClassName == "GridViewItem")):
+			return
 		speech.cancelSpeech()
 		candidate = obj
 		if obj.UIAElement.cachedClassName == "ListViewItem" and obj.parent.UIAElement.cachedAutomationID != "TEMPLATE_PART_ClipboardItemsList":
