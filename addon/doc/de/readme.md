@@ -30,30 +30,37 @@ inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 
 Hinweise:
 
-* Diese Erweiterung benötigt Windows 10 Version 1703 (Build 15063) oder
-  höher und NVDA 2018.2 oder höher. Für beste Ergebnisse verwenden Sie die
-  Erweiterung mit den neuesten stabilen Versionen von Windows 10 (Build
-  16299 oder 17134) und der neuesten stabilen Version von NVDA.
+* Diese Erweiterung benötigt Windows 10 Version 1709 (Build 16299) oder
+  neuer und NVDA 2018.2 oder höher.
+  Am besten, Sie benutzen die Erweiterung mit der neuesten Windows 10
+  Version (Build 17134) und der akutellsten Version von NVDA.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
+* Für Einträge, die unten nicht aufgeführt sind, können Sie davon ausgehen,
+  dass diese Funktionen Teil von NVDA selbst sind und nicht mehr anwendbar
+  sind, da die Erweiterung alte Windows 10-Versionen nicht unterstützt oder
+  Änderungen an Anwendungen vorgenommen wurden, die Einträge nicht mehr
+  anwendbar machen.
+
+Eine Liste aller Änderungen in den einzlnen Versionen der Erweiterung finden
+Sie im Dokument [Changelogs der Erweiterungen][3].
 
 ## Allgemein
 
 * Untermenüs werden im Kontextmenü von Kacheln korrekt erkannt
-* Bestimmte Dialoge werden nun als richtige Dialogfelder erkannt. Dazu
-  gehören das Dialogfeld"Insider-Vorschau" in der App für
-  Windowseinstellungen.
+* Bestimmte Dialoge werden nun als richtige Dialoge erkannt und als solche
+  gemeldet, einschließlich des Insider-Vorschau-Dialogs (in den
+  Windows-Einstellungen).
 * NVDA kann die Anzahl der Vorschläge bei der Suche in den meisten Fällen
   bekannt geben. Diese Option wird gesteuert durch Meldung von
   Objektpositionsdaten im Dialog der Objektpräsentation.
 * In bestimmten Kontextmenüs (z.B. in Edge) werden Positionsinformationen
   (z.B. 1 von 2) nicht mehr angesagt.
-* Folgende UIA-Ereignisse werden erkannt: Controller für, wechsel der
-  Live-Region, App-Benachrichtigungen, Systembenachrichtigung, Element
-  ausgewählt, Fenster geöffnet, Tooltip geöffnet, ziehen des Elements
-  gestartet, ziehen abbgebrochen, ziehen beendet. Wenn NVDA so eingestellt
-  ist, dass es mit aktivierter Debug-Protokolierungsstufe läuft, werden
-  diese Ereignisse aufgezeichnet. Für das UIA-Ereignis
-  App-Benachrichtigungen wird ein Protokollierungston abgespielt.
+* Folgende UIA-Ereignisse werden erkannt: Aktive Änderungen der Textposition
+  (Redstone 5), Controller für Drag Start, Drag Cancel, Drag Complete,
+  Element ausgewählt, Live Region Change, Benachrichtigung, Systemalarm,
+  Tooltip geöffnet, Fenster geöffnet. Wenn NVDA so eingestellt ist, dass es
+  mit aktiviertem Debug-Logging läuft, werden diese Ereignisse verfolgt, und
+  für UIA-Benachrichtigungsereignisse wird ein Debug-Ton ausgegeben.
 * Möglichkeit hinzugefügt, über den neuen Dialog Windows 10 App Essentials
   im NVDA-Einstellungsmenü nach Aktualisierungen für diese Erweiterung
   (automatisch oder manuell) zu suchen. Standardmäßig werden stabile- und
@@ -64,12 +71,8 @@ Hinweise:
   in manchen Fällen zu einer doppelten Aussprache führen kann, da die
   meisten Szenarien nun Bestandteil von NVDA ab 2017.3 sind.
 * Benachrichtigungen von neueren App-Releases auf Windows 10 Version 1709
-  (Build 16299) und höher werden angekündigt. Aufgrund technischer
-  Einschränkungen funktioniert diese Funktion ordnungsgemäß mit NVDA 2018.1
-  und höher und ist Teil von NVDA mit Version 2018.2.
+  (Build 16299) und neuer werden mitgeteilt.
 * Tooltips von Edge und Universal Apps werden erkannt und angekündigt.
-* NVDA meldet nicht mehr "Unbekannt" beim Öffnen des Quick-Link-Menüs
-  (Windows+X). Dieser Fix ist Teil von NVDA 2018.2.
 * In Build 17627 und später, beim Öffnen einer neuen Registerkarte
   (Control+Windows+T), gibt NVDA die Suchergebnisse bei der Suche nach
   Elementen im eingebetteten Cortana-Fenster bekannt.
@@ -136,8 +139,9 @@ Hinweise:
 
 ## Microsoft Edge
 
-* Benachrichtigungen wie Datei-Downloads und verschiedene
-  Website-Benachrichtigungen werden nun angesagt. 
+* Benachrichtigungen wie Datei-Downloads und verschiedene Webseiten-Alarme
+  sowie die Verfügbarkeit der Leseansicht (ab Version 1709) werden
+  mitgeteilt.
 
 ## moderne virtuelle Tastaturen
 
@@ -151,6 +155,12 @@ Hinweise:
   gilt für Windows-Builds ab Build 1709.
 * Unterstützung für die Ankündigung von Cloud-Clipboard-Elementen in Build
   17666 (Redstone 5) und höher.
+* Unnötige Ausführlichkeit bei der Arbeit mit der modernen Tastatur und
+  deren Funktionen reduziert. Dazu gehört, dass die "Microsoft Kandidat UI"
+  beim Öffnen von Hardware-Tastatur-Eingabevorschlägen nicht mehr
+  angekündigt wird, und dass es still bleibt, wenn bestimmte
+  Berührungstasten auf manchen Systemen ein Namensänderungsereignis
+  auslösen.
 
 ## Kontakte
 
@@ -169,29 +179,25 @@ Hinweise:
   und/oder Wertänderungen ankündigen.
 * Lautstärke-Fortschrittsbalken werden nicht mehr ausgegeben (gilt für
   Windowsversionen ab Build 1803)
+* Weitere Meldungen über den Status von Windows Update werden angezeigt,
+  insbesondere wenn im Windows Update Fehler auftreten.
 
 ## Skype
 
 * Die Eingabe des Indikatortextes wird wie bei Skype für Desktop-Client
   angekündigt.
-* STRG+NVDA+Zahlen aus der Zahlenreihe zum Lesen des letzten Chatverlaufs
-  und zum Verschieben des Navigator-Objekts in Chat-Einträgen wie bei Skype
-  für Desktop.
-* Sie können nun die Alt+Zahlen aus der Zahlenreihe  drücken, um Gespräche
-  (1), Kontaktliste (2), Bots (3) und Chat-Eingabefeld zu suchen und zu
-  verschieben, falls sichtbar (4). Beachten Sie, dass diese Befehle
-  ordnungsgemäß funktionieren, wenn das im März 2017 veröffentlichte
-  Skype-Update installiert ist.
-* Die Beschriftungen für Ausklapplisten für die Skype-Vorschau-App, welche
-  in November 2016 veröffentlich wurde, werden erkannt.
+* Strg+NVDA+1 bis 9, zum Lesen der letzten Chat-Meldungen und zum Ziehen des
+  Navigator-Objects zum Chat-Eintrag in Skype für Desktop (auch verfügbar in
+  Skype UWP).
+* Sie können Alt+1 bis 9 drücken, um Gespräche (1), Kontaktliste (2), Bots
+  (3) und Chat-Eingabefeld zu finden und zu verschieben, falls sichtbar
+  (4). Beachten Sie dabei, dass diese Befehle nur dann funktionieren, wenn
+  Sie das im März 2017 veröffentlichte Skype-Update installiert haben.
 * NVDA wird beim Navigieren durch die Nachrichteneinträge in den meisten
   Fällen nicht mehr "Skype-Nachricht" ansagen.
-* Verschiedene Probleme bei der Verwendung von Skype mit Braillezeilen
-  wurden behoben, einschließlich Darstellungsprobleme von
-  Nachrichtenprotokollen in Braille.
-* Wenn Sie in der Liste des Nachrichtenverlaufs auf einem Nachrichteneintrag
-  NVDA+D drücken, kann NVDA nun detaillierte Informationen zu einer
-  Nachricht wie z.B. Kanaltyp, Versanddatum, Uhrzeit usw. ansagen.
+* Durch Drücken von NVDA+D auf einem Nachrichtenelement kann NVDA
+  detaillierte Informationen über eine Nachricht wie zum Beispiel Chat-ARt,
+  gesendetes Datum und Uhrzeit, etc. anzeigen.
 
 ## Store
 
@@ -218,3 +224,5 @@ Hinweise:
 [1]: https://addons.nvda-project.org/files/get.php?file=w10
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+
+[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog

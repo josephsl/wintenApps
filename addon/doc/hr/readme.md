@@ -31,28 +31,35 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 
 Notes:
 
-* This add-on requires Windows 10 Version 1703 (build 15063) or later and
+* This add-on requires Windows 10 Version 1709 (build 16299) or later and
   NVDA 2018.2 or later. For best results, use the add-on with latest Windows
-  10 stable releases (build 16299 or 17134) and latest stable version of
-  NVDA.
+  10 stable release (build 17134) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support old Windows 10
+  releases, or changes were made to apps that makes entries no longer
+  applicable.
+
+For a list of changes made between each add-on releases, refer to
+[changelogs for add-on releases][3] document.
 
 ## Općenito
 
 * U kontekstnim izbornicima za pločice početnog izbornika, Podizbornici se
   prepoznaju ispravno.
-* Certain dialogs are now recognized as proper dialogs, including Insider
-  Preview dialog (settings app).
+* Certain dialogs are now recognized as proper dialogs and reported as such,
+  including Insider Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of
   cases. This option is controlled by "Report object position information"
   in Object presentation dialog/panel.
 * U većini kontekstnih izbornika (kao što je to u Edgeu), informacije o
   poziciji (NPR. 1 od 2) se više ne izgovara.
-* The following UIA events are recognized: Controller for, drag start, drag
-  cancel, drag complete, element selected, live region change, notification,
-  system alert, tooltip opened, window opened. With NVDA set to run with
-  debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard.
+* The following UIA events are recognized: active text position change
+  (Redstone 5), controller for, drag start, drag cancel, drag complete,
+  element selected, live region change, notification, system alert, tooltip
+  opened, window opened. With NVDA set to run with debug logging enabled,
+  these events will be tracked, and for UIA notification event, a debug tone
+  will be heard.
 * Added ability to check for add-on updates (automatic or manual) via
   Windows 10 App Essentials dialog found in NvDA Preferences menu. By
   default, stable and development versions will check for new updates
@@ -61,13 +68,9 @@ Notes:
   results in Calculator and others. Note that this may result in
   double-speaking in some cases.
 * Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced. Due to technical limitations, this feature
-  works properly with NVDA 2018.1 and later, and is part of NVDA with 2018.2
-  release.
+  16299) and later are announced.
 * Tooltips from Edge and universal apps are recognized and will be
   announced.
-* NVDA will no longer announce "unknown" when opening quick link menu
-  (Windows+X). This fix is part of NVDA 2018.2.
 * In build 17627 and later, when opening a new Sets tab (Control+Windows+T),
   NVDA will announce search results when searching for items in the embedded
   Cortana window.
@@ -128,7 +131,8 @@ Notes:
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts are
+* Notifications such as file downloads and various webpage alerts, as well
+  as availability of Reading View (if using Version 1709 and later) are
   announced.
 
 ## Modern keyboard
@@ -142,6 +146,10 @@ Notes:
   emoji panel opens.
 * Support for announcing cloud clipboard items in build 17666 (Redstone 5)
   and later.
+* Reduced unnecessary verbosity when working with modern keyboard and its
+  features. These include no longer announcing "Microsoft Candidate UI" when
+  opening hardware keyboard input suggestions and staying silent when
+  certain touch keyboard keys raise name change event on some systems.
 
 ## Osobe
 
@@ -160,27 +168,25 @@ Notes:
   announce value changes.
 * Audio Volume progress bar beeps are no longer heard in Version 1803 and
   later.
+* More messages about Windows Update status are announced, especially if
+  Windows Update encounters errors.
 
 ## Skype
 
 * Obavijest prilikom pisanja teksta je je izgovarana kao u skzpeu za radnu
   površinu.
-* Djelomičan povratak prečaca  Control+NvDA+gornji numerički red za čitanje
-  zadnje povijesti poruka i za premještanje objekta navigatora na popis
-  poruka kao i u skypeu za radnu površinu.
-* Sada možete pritisnuti Alt+brojčani red kako biste locirali i prebacivali
-  se između razgovora (1), popis kontakata (2), botova (3) i i polja za upis
-  poruke u čavrljanju, ako je vidljivo (4). Imajte na umu, da će ovi prečaci
-  raditi samo sa instaliranim ažuriranjem izdanom u ožujku 2017.
-* oznake odabirnih okvira za Skype preview app objavljenu u studenom 2016 se
-  izgovaraju.
+* Control+NvDA+number row commands, used to read recent chat history and to
+  move navigator object to chat entries in Skype for Desktop, is also
+  available in Skype UWP.
+* You can press Alt+number row to locate and move to conversations (1),
+  contacts list (2), bots (3) and chat edit field if visible (4). Note that
+  these commands will work properly if Skype update released in March 2017
+  is installed.
 * NVDA više neće izgovarati "skype message" prilikom pregleda poruka u
   većini slučajeva.
-* Riješeni su različiti problemi pri korištenju Skypea sa brajičnim recima,
-  uključujući nemogućnost pregledavanja povijesti poruka na brajici. 
-* Ako pritisnete NVDA + D na određenoj poruci u povijesti razgovora, NVDA će
-  pročitati detaljne informacije o poruci, kao što su datum I vrijeme slanja
-  poruke itd. 
+* From message history list, pressing NVDA+D on a message item will allow
+  NVDA to announce detailed information about a message such as channel
+  type, sent date and time and so on.
 
 ## Trgovina
 
@@ -206,3 +212,5 @@ Notes:
 [1]: https://addons.nvda-project.org/files/get.php?file=w10
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+
+[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog

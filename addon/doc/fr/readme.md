@@ -33,36 +33,43 @@ est inclus) :
 
 Notes:
 
-* Note: ce module complémentaire nécessite Windows 10 Version 1703 build
-  15063) ou version ultérieure et NVDA 2018.2 ou version ultérieure. Pour de
+* Ce module complémentaire nécessite Windows 10 Version 1709 (build 16299)
+  ou version ultérieure et NVDA 2018.2 ou version ultérieure. Pour de
   meilleurs résultats, utilisez le module complémentaire avec la dernière
-  build stable de Windows 10 (build 16299 ou 17134) et la dernière version
-  stable de NVDA. De plus, après avoir modifié les paramètres de mise à jour
-  pour le module complémentaire, n'oubliez pas de sauvegarder la
-  configuration de NVDA.
+  version stable de Windows 10 (build 17134) et la dernière version stable
+  de NVDA.
 * Certaines fonctionnalités du module complémentaire font ou feront partie
   du lecteur d'écran NVDA.
+* Pour les entrées non répertoriées ci-dessous, vous pouvez supposer que les
+  fonctionnalités font partie de NVDA. Elles ne sont plus applicables car le
+  module complémentaire ne prend pas en charge les anciennes versions de
+  Windows 10 ou des modifications ont été apportées aux applications pour
+  que les entrées ne soient plus applicables.
+
+Pour obtenir la liste des changements effectuées entre chaque version du
+module complémentaire, reportez-vous au document [changelogs pour les
+versions du module complémentaire][3].
 
 ## Générale
 
 * Dans les menus contextuels pour les tuiles sous-menus du Menu Démarrer
   sont correctement reconnus.
 * Certaines boîtes de dialogue sont maintenant reconnues comme des boîtes de
-  dialogue propres. Ceci incluent le dialogue Insider Preview (settings
-  app).
+  dialogue propres et signalées comme telles, y compris le dialogue Insider
+  Preview (settings app).
 * NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
   majorité des cas. Cette option est contrôlée par "Annoncer le rang de
   l'objet dans une liste" dans la boîte de dialogue Présentation des
   Objets/panneau.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
-* Les événements UIA suivants sont reconnus : Contrôleur pour, début de
-  déplacement, annulation de déplacement, déplacement complet, élément
-  sélectionné, changement de région en direct, notification, alerte système,
-  suggestion ouverte, fenêtre ouverte. Avec NVDA configuré pour être exécuté
-  avec le journal activé en mode débogage ces événements seront suivis et
-  pour l'événement de notification UIA, une tonalité de débogage sera
-  entendue.
+* Les événements UIA suivants sont reconnus : changement de position du
+  texte actif (Redstone 5), contrôleur pour, début de déplacement,
+  annulation de déplacement, déplacement complet, élément sélectionné,
+  changement de région en direct, notification, alerte système, suggestion
+  ouverte, fenêtre ouverte. Avec NVDA configuré pour être exécuté avec le
+  journal activé en mode débogage ces événements seront suivis et pour
+  l'événement de notification UIA, une tonalité de débogage sera entendue.
 * Ajout de la possibilité de vérifier les mises à jour du module
   complémentaire(automatiques ou manuelles) via le dialogue Windows 10 App
   Essentials qui se trouve dans le menu Préférences de NVDA. Par défaut, les
@@ -74,14 +81,9 @@ Notes:
   et autres. Notez que cela peut entraîner une double verbalisation dans
   certains cas.
 * Les notifications des versions plus récentes des applications sur Windows
-  10 version 1709 (build 16299) et ultérieures sont annoncées. En raison de
-  limitations techniques, cette fonctionnalité fonctionne correctement avec
-  NVDA 2018.1 et versions ultérieures, et fait partie de NVDA avec la
-  version 2018.2.
+  10 version 1709 (build 16299) et ultérieures sont annoncées.
 * Les suggestions pour Edge et pour les applications universelles sont
   reconnues et seront annoncées.
-* NVDA n'annonce plus "inconnu" lors de l'ouverture du menu Lien rapide
-  (Windows+X). Ce correctif fait partie de NVDA 2018.2.
 * Dans la build 17627 et les versions ultérieures, lors de l'ouverture d'un
   nouvel onglet Sets (Contrôle+Windows+T), NVDA annonce les résultats de
   recherche lors de la recherche d'éléments dans la fenêtre Cortana
@@ -151,8 +153,10 @@ Notes:
 
 ## Microsoft Edge
 
-* Notifications telles que les téléchargements de fichiers et les
-  différentes alertes de la page Web sont maintenant annoncées.
+* Les notifications telles que les téléchargements de fichiers et les
+  différentes alertes de la page Web, ainsi que la disponibilité de Reading
+  View (si vous utilisez la version 1709 et les versions ultérieures) sont
+  annoncées.
 
 ## Clavier moderne
 
@@ -167,6 +171,12 @@ Notes:
   lors de l'ouverture du panneau emoji.
 * Prise en charge de l'annonce des éléments du presse-papiers du cloud dans
   la build 17666 (Redstone 5) et versions ultérieures.
+* Réduit la verbosité inutile lorsque vous travaillez avec le clavier
+  moderne et ses fonctionnalités. Il ne s'agit plus d'annoncer "Microsoft
+  Candidate UI" lors de l'ouverture des suggestions de saisie au clavier
+  matériel et de rester silencieux lorsque certaines touches du clavier
+  tactile déclenchent un événement de changement de nom sur certains
+  systèmes.
 
 ## Personnes
 
@@ -185,29 +195,27 @@ Notes:
   reconnaître les étiquettes et/ou d'annoncer les changements de valeur.
 * Les bips de la barre de progression du volume audio ne sont plus audibles
   dans la Version 1803 et ultérieure.
+* Plus de messages sur l'état de Windows Update sont annoncés, surtout si
+  Windows Update rencontre des erreurs.
 
 ## Skype
 
 * L'indicateur de frappe de texte est annoncé exactement comme pour le Skype
   for Desktop client.
-* Retour partiel de Contrôle+NVDA+commandes numéro de ligne pour lire
-  l'historique de conversation récente et pour déplacer l'objet navigator
-  aux entrées de conversation tout comme Skype for Desktop.
+* Contrôle+NVDA+commandes numéro de ligne pour lire l'historique de
+  conversation récente et pour déplacer l'objet navigator aux entrées de
+  conversation tout comme Skype for Desktop, sont également disponibles dans
+  Skype UWP.
 * Vous pouvez maintenant appuyer sur Alt+numéro de ligne pour localiser et
   se déplacer à la conversations (1), liste des contacts (2), bots (3) et la
   zone d'édition de la conversation si visible (4). Notez que ces commandes
-  fonctionneront correctement si la mise à jour de Skype mise à jour en mars
+  fonctionneront correctement si la mise à jour de Skype publiée en mars
   2017 est installée.
-* Étiquettes de liste déroulante pour Skype preview app publié en Novembre
-  2016 sont annoncées.
 * NVDA n'annoncera plus "Message Skype"lors de la révision des messages pour
   la majorité des cas.
-* Différents problèmes lors de l'utilisation de Skype avec des terminaux
-  braille ont été corrigés, y compris l'impossibilité de réviser les
-  éléments de l'historique des messages en braille.
-* Dans la liste d'historique des messages, appuyer sur NVDA+D sur un élément
-  de message permettra à NVDA d'annoncer des informations détaillées sur un
-  message tel que le type de canal, la date et l'heure envoyées, etc.
+* Dans la liste de l'historique des messages, appuyer sur NVDA+D sur un
+  élément de message permettra à NVDA d'annoncer des informations détaillées
+  sur un message tel que le type de canal, la date et l'heure d'envoi, etc.
 
 ## Store
 
@@ -235,3 +243,5 @@ Notes:
 [1]: https://addons.nvda-project.org/files/get.php?file=w10
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+
+[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog

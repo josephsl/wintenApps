@@ -38,25 +38,34 @@
 
 笔记:
 
-* 此插件需要Windows 10版本1703（版本15063）或以上版本以及NVDA 2018.2或以上版本。
-  为获得最佳效果，请使用最新的Windows 10稳定版本（内部版本16299或17134）和最新的NVDA正式版。
+* This add-on requires Windows 10 Version 1709 (build 16299) or later and
+  NVDA 2018.2 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17134) and latest stable version of NVDA.
 * 一些插件功能可能将成为NVDA屏幕阅读器的一部分。
+* 对于未在下面列出的条目，您可以假定功能是NVDA的一部分，不再适用，因为附加组件不支持旧版本的Windows
+  10，或者对应用程序进行了更改，使条目不再适用。
+
+有关每个附加发行版之间所做的更改的列表，请参阅[更新日志的附加发布] [3]文档。
 
 ## 常规设置
 
 * 在开始菜单瓷贴控件的上下文菜单中，子菜单被正确识别。
-* 现在某些对话框被视为正确的对话框，包括内幕预览对话框（设置应用程序）。
+* Certain dialogs are now recognized as proper dialogs and reported as such,
+  including Insider Preview dialog (settings app).
 * NVDA可以在大多数情况下执行搜索时朗读建议计数。 此选项由对象查看对话框/面板中的“读出对象位置信息”控制。
 * 在某些上下文菜单中（例如在Edge中），位置信息（例如，1、2）不再被朗读。
-* 以下UIA事件被识别：控制器用于，拖动开始，拖动取消，拖动完成，元素选择，实时区域更改，通知，系统警报，工具提示打开，窗口打开。
-  将NVDA设置为启用调试日志记录时，将跟踪这些事件，并且对于UIA通知事件，将听到调试提示音。
+* The following UIA events are recognized: active text position change
+  (Redstone 5), controller for, drag start, drag cancel, drag complete,
+  element selected, live region change, notification, system alert, tooltip
+  opened, window opened. With NVDA set to run with debug logging enabled,
+  these events will be tracked, and for UIA notification event, a debug tone
+  will be heard.
 * 增加可通过NVDA选项菜单中的Windows 10 应用增强对话框的检查插件更新（自动或手动）的功能。
   默认情况下，稳定版和开发版将分别按每周或每天自动检查新更新。
 * 在某些应用程序中，活动区域文本被朗读。 这包括Edge中的警报，Calculator中的结果等。 请注意，在某些情况下，这可能导致重复朗读。
-* Windows 10版本1709（内部版本16299）及以上版本的新版应用程序通知将可朗读。 由于技术限制，此功能可与NVDA
-  2018.1及以上版本正常配合使用，并且成为NVDA 2018.2正式版的一部分。
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced.
 * 来自Edge和通用应用程序的工具提示已被识别并将被朗读。
-* 打开快速链接菜单（Windows + X）时，NVDA不会再朗读“未知”。 此修复程序成为NVDA 2018.2正式版的一部分。
 * 在build 17627及以上版本中，当打开一个新的设置选项卡（Control + Windows +
   T）时，NVDA将在嵌入式Cortana窗口中搜索项目时读出搜索结果。
 * 在设置选项卡之间切换时，NVDA会读出您要切换到选项卡的名称和位置。
@@ -102,7 +111,9 @@
 
 ## 斯巴达浏览器
 
-* 通知（如文件下载和各种网页警报）可朗读。
+* Notifications such as file downloads and various webpage alerts, as well
+  as availability of Reading View (if using Version 1709 and later) are
+  announced.
 
 ## 系统键盘
 
@@ -112,6 +123,8 @@
 * 支持版本1803（2018年4月更新）及更高版本中的硬件键盘输入建议。
 * 在1709后的版本中，当表情符号面板打开时，NVDA会读出第一个选定的表情符号。
 * 支持在17666版本（Redstone 5）及更高版本中朗读云端剪贴板项目。
+* 使用现代键盘及其功能时减少不必要的冗长。这些包括在打开硬件键盘输入建议时不再公布“Microsoft Candidate
+  UI”，并且某些触摸键盘键在某些系统上引发名称更改事件时不再保持沉默。
 
 ## {longName} ({name})
 版本: {version}
@@ -134,17 +147,22 @@
 * 当使用对象导航在控件之间导航时，可以识别设置组。
 * 对于某些组合框，NVDA将不再无法识别标签/读出更改值。
 * 在版本1803和更高版本中不再听到音量进度条蜂鸣声。
+* 有关Windows Update状态的更多消息将会公布，特别是如果Windows Update遇到错误的时候。
 
 ## Skype
 
 * 打字上屏文本朗读，就像Skype的桌面客户端。
-* 部分返回Control + NvDA +数字行命令以读取最近的聊天记录并将导航器对象移至聊天条目，就像Skype 桌面版一样。
-* 您现在可以按Alt +数字行定位并移动到会话（1），联系人列表（2），机器人（3）和聊天编辑字段（如果可见）（4）。
-  请注意，如果安装了2017年3月发布的Skype更新，这些命令将正常工作。
-* 2016年11月发布的预览应用程序的组合框标签已可朗读。
+* Control+NvDA+number row commands, used to read recent chat history and to
+  move navigator object to chat entries in Skype for Desktop, is also
+  available in Skype UWP.
+* You can press Alt+number row to locate and move to conversations (1),
+  contacts list (2), bots (3) and chat edit field if visible (4). Note that
+  these commands will work properly if Skype update released in March 2017
+  is installed.
 * NVDA在浏览多数案件的讯息时将不再读出“Skype讯息”。
-* 使用盲文点字显示与Skype时遇到的各种问题已修复，包括无法使用盲文查看留言历史记录项目。
-* 从消息历史记录列表中，按NVDA + D消息项目现在将允许NVDA读出有关消息的详细信息，例如通道类型，发送日期和时间等。
+* From message history list, pressing NVDA+D on a message item will allow
+  NVDA to announce detailed information about a message such as channel
+  type, sent date and time and so on.
 
 ## 商店
 
@@ -164,3 +182,5 @@
 [1]: https://addons.nvda-project.org/files/get.php?file=w10
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+
+[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
