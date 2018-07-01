@@ -21,8 +21,8 @@ qué se incluye):
 * Correo
 * Mapas
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions/cloud clipboard
-  items in Version 1709 and later)
+* Teclado Moderno (sugerencias de panel emoji /entrada hardware en la
+  Versión 1709 y posterior)
 * Gente
 * Opciones (opciones de sistema, Windows+I)
 * Skype (aplicación universal)
@@ -31,31 +31,38 @@ qué se incluye):
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
 
-Notes:
+Notas:
 
-* This add-on requires Windows 10 Version 1703 (build 15063) or later and
+* This add-on requires Windows 10 Version 1709 (build 16299) or later and
   NVDA 2018.2 or later. For best results, use the add-on with latest Windows
-  10 stable releases (build 16299 or 17134) and latest stable version of
-  NVDA.
-* Some add-on features are or will be part of NVDA screen reader.
+  10 stable release (build 17134) and latest stable version of NVDA.
+* Algunas de las características del complemento son o serán parte del
+  lector de pantalla NVDA.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support old Windows 10
+  releases, or changes were made to apps that makes entries no longer
+  applicable.
+
+For a list of changes made between each add-on releases, refer to
+[changelogs for add-on releases][3] document.
 
 ## General
 
 * En menús de contexto para los mosaicos del Menú Inicio, los submenús ahora
   se reconocen apropiadamente.
-* Ahora se reconocen ciertos diálogos como diálogos apropiadamente. Esto
-  incluye el diálogo Insider Preview (aplicación de configuración).
+* Certain dialogs are now recognized as proper dialogs and reported as such,
+  including Insider Preview dialog (settings app).
 * NVDA puede anunciar cuenta de sugerencias cuando se realiza una búsqueda
   en la mayoría de casos. Esta opción se controla por "Anunciar información
   de posición del objeto" en el diálogo/panel Presentación de Objetos.
 * En ciertos menús de contexto (tales como en Edge), la información de
   posición (ej.: 1 de 2) ya no se anuncia.
-* Se reconocen los siguientes eventos UIA: Controller for, drag start, drag
-  cancel, drag complete, element selected, live region change, notification,
-  system alert, tooltip opened, window opened. Con NVDA configurado para
-  ejecutarse con el registro de depuración habilitado, estos eventos se
-  seguirán, y se oirá un tono de depuración para el elemento UIA
-  notification
+* The following UIA events are recognized: active text position change
+  (Redstone 5), controller for, drag start, drag cancel, drag complete,
+  element selected, live region change, notification, system alert, tooltip
+  opened, window opened. With NVDA set to run with debug logging enabled,
+  these events will be tracked, and for UIA notification event, a debug tone
+  will be heard.
 * Añadida la capacidad de buscar actualizaciones del complemento (automática
   o manual) a través del diálogo Windows 10 App Essentials que se encuentra
   en el menú Preferencias de NVDA. Por defecto, se buscarán las
@@ -66,13 +73,9 @@ Notes:
   cuenta que esto podrá causar una verbalización por duplicado en algunos
   casos.
 * Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced. Due to technical limitations, this feature
-  works properly with NVDA 2018.1 and later, and is part of NVDA with 2018.2
-  release.
+  16299) and later are announced.
 * Se reconocerán y anunciarán los consejos para Edge y para aplicaciones
   universales.
-* NVDA will no longer announce "unknown" when opening quick link menu
-  (Windows+X). This fix is part of NVDA 2018.2.
 * En la compilación 17627 y posteriores, cuando se abra una nueva pestaña de
   Conjuntos (ctrl+windows+T), NVDA anunciará los resultados de búsqueda
   cuando se busque en la ventana incrustada de Cortana.
@@ -80,8 +83,8 @@ Notes:
   la pestaña hacia la cual se está conmutando.
 * al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
   ID del escritorio actual (escritorio 2, por ejemplo).
-* NVDA will no longer announce Start menu size text when changing screen
-  resolutions or orientation.
+* NVDA ya no anuncia Menú Inicio tamaño de texto al cambiar la resolución de
+  pantalla o la orientación.
 
 ## Alarmas y reloj
 
@@ -135,8 +138,9 @@ Notes:
 
 ## Microsoft Edge
 
-* Ahora se anuncian notificaciones tales como descargas de ficheros y varias
-  alertas de página web.
+* Notifications such as file downloads and various webpage alerts, as well
+  as availability of Reading View (if using Version 1709 and later) are
+  announced.
 
 ## Teclado Moderno
 
@@ -148,8 +152,12 @@ Notes:
   (actualización de Abril de 2018).
 * En las versiones posteriores a 1709, NVDA anunciará el primer emoji
   seleccionado cuando se abra el panel de emoji.
-* Support for announcing cloud clipboard items in build 17666 (Redstone 5)
-  and later.
+* Soporte para el anunciado de elementos del cloud clipboard en la
+  compilación 17666 (Redstone 5) y posterior.
+* Reduced unnecessary verbosity when working with modern keyboard and its
+  features. These include no longer announcing "Microsoft Candidate UI" when
+  opening hardware keyboard input suggestions and staying silent when
+  certain touch keyboard keys raise name change event on some systems.
 
 ## Gente
 
@@ -168,29 +176,25 @@ Notes:
   y/o al anunciar cambios de valores. 
 * Los pitidos de la barra de progreso de volumen de audio ya no se oyen en
   la versión 1803 y posterior.
+* More messages about Windows Update status are announced, especially if
+  Windows Update encounters errors.
 
 ## Skype
 
 * Al teclear el indicador de texto se anuncia sólo como cliente Skype para
   Escritorio.
-* Retorno parcial de las órdenes Control+NVDA+fila de números para leer el
-  historial de chats recientes y para mover el navegador de objetos a las
-  entradas de chat como en Skype para Escritorio.
-* Ahora puedes pulsar Alt+fila de números para localizar y mover a
-  conversaciones (1), lista de contactos (2), bots (3) y campo de edición de
-  chat (4). Ten en cuenta que estas órdenes funcionarán apropiadamente si
-  está instalada la actualización de Skype liberada en Marzo de 2017.
-* Se anuncian las etiquetas de los cuadros combinados para la aplicación
-  Skype preview liberada en Noviembre de 2016.
+* Control+NvDA+number row commands, used to read recent chat history and to
+  move navigator object to chat entries in Skype for Desktop, is also
+  available in Skype UWP.
+* You can press Alt+number row to locate and move to conversations (1),
+  contacts list (2), bots (3) and chat edit field if visible (4). Note that
+  these commands will work properly if Skype update released in March 2017
+  is installed.
 * NVDA ya no anuncia "Mensaje Skype" cuando se revisen mensajes para la
   mayoría de los casos.
-* Corregidos varios problemas al utilizar Skype con pantallas braille,
-  incluyendo la incapacidad para revisar los elementos del historial de
-  mensajes en braille.
-* Desde la lista del historial de mensajes, pulsando NVDA+D sobre un
-  elemento de mensaje ahora permitirá a NVDA anunciar información detallada
-  acerca de un mensaje tal como tipo de canal, fecha y hora de envío y
-  similar.
+* From message history list, pressing NVDA+D on a message item will allow
+  NVDA to announce detailed information about a message such as channel
+  type, sent date and time and so on.
 
 ## Tienda
 
@@ -217,3 +221,5 @@ Notes:
 [1]: https://addons.nvda-project.org/files/get.php?file=w10
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+
+[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog

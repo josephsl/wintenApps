@@ -32,28 +32,36 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1703 (koontiversio
-  15063) tai uudempaa ja NVDA 2018.2:ta tai uudempaa. Käytä parhaan
-  käyttökokemuksen varmistamiseksi Windows 10:n viimeisimpiä vakaita
-  versioita (koontiversio 16299 tai 17134) sekä uusinta NVDA:ta.
+* Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1709 (koontiversio
+  16299) tai uudempaa ja NVDA 2018.2:ta tai uudempaa. Käytä parhaan
+  käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata versiota
+  (koontiversio 17134) sekä uusinta NVDA:ta.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
+* Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
+  sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
+  Windows 10 -versioita tai eivät ole enää käytettävissä sovelluksiin
+  tehtyjen muutosten vuoksi.
+
+Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
+[lisäosajulkaisujen muutoslokeista.][3]
 
 ## Yleistä
 
 * Alavalikot tunnistetaan oikein Käynnistä-valikon tiilien pikavalikoissa.
-* Tietyt valintaikkunat tunnistetaan nyt asianmukaisesti valintaikkunoiksi,
-  mukaan lukien Insider-esiversion valintaikkuna (Asetukset-sovellus).
+* Tietyt valintaikkunat tunnistetaan ja puhutaan nyt asianmukaisesti
+  valintaikkunoina, mukaan lukien Insider-esiversion valintaikkuna
+  (Asetukset-sovellus).
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
   -asetuksella Objektien lukuasetukset -valintaikkunasta/paneelista.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
-* Seuraavat UIA-tapahtumat tunnistetaan: Ohjain kohteelle, vetämisen
-  aloitus, vetämisen peruutus, vetäminen suoritettu, elementti valittu,
-  aktiivisen alueen muutos, ilmoitus, järjestelmän ilmoitus, työkaluvihje
-  avattu, ikkuna avattu. Näitä tapahtumia seurataan ja UIA-ilmoitustapahtuma
-  ilmaistaan virheäänellä, kun NVDA:n lokitasoksi on määritetty
-  "virheenkorjaus".
+* Seuraavat UIA-tapahtumat tunnistetaan: sijainnin muutos aktiivisessa
+  tekstissä (Redstone 5), ohjain kohteelle, vetämisen aloitus, vetämisen
+  peruutus, vetäminen suoritettu, elementti valittu, aktiivisen alueen
+  muutos, ilmoitus, järjestelmän ilmoitus, työkaluvihje avattu, ikkuna
+  avattu. Näitä tapahtumia seurataan ja UIA-ilmoitustapahtuma ilmaistaan
+  virheäänellä, kun NVDA:n lokitasoksi on määritetty "virheenkorjaus".
 * Lisätty mahdollisuus päivitysten tarkistamiseen (automaattinen tai
   manuaalinen) NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App
   Essentials -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat
@@ -63,14 +71,9 @@ Huomautuksia:
   muut. Huomaa, että tämä saattaa johtaa joissakin tapauksissa ilmoitusten
   kahdesti puhumiseen.
 * Uusien sovellusversioiden ilmoitukset puhutaan Windows 10:n versiossa 1709
-  (koontiversio 16299) ja uudemmissa. Teknisten rajoitusten vuoksi
-  ominaisuus toimii asianmukaisesti vain NVDA 2018.1:ssä tai
-  uudemmissa. NVDA 2018.2 sisältää tämän toiminnallisuuden
-  sisäänrakennettuna.
+  (koontiversio 16299) ja uudemmissa.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
   ilmoitetaan.
-* NVDA ei enää ilmoita "tuntematon" pikalinkkivalikkoa (Windows+X)
-  avattaessa. Tämä korjaus sisältyy NVDA 2018.2:een.
 * Kun koontiversiossa 17627 ja uudemmissa avataan uusi Sets-välilehti
   (Ctrl+Windows+T), NVDA ilmoittaa hakutulokset etsittäessä kohteita
   upotetussa Cortana-IKKUNASSA.
@@ -132,8 +135,8 @@ Huomautuksia:
 
 ## Microsoft Edge
 
-* Ilmoitukset, kuten tiedostojen lataukset ja verkkosivujen näyttämät,
-  luetaan.
+* Ilmoitukset, kuten tiedostojen lataukset ja verkkosivujen näyttämät, sekä
+  lukunäkymän saatavuus (mikäli käytetään versiota 1709) puhutaan.
 
 ## Moderni näppäimistö
 
@@ -147,6 +150,11 @@ Huomautuksia:
   emojin, kun emojipaneeli avautuu.
 * Tuki pilvileikepöydän kohteiden ilmoittamiselle koontiversiossa 17666
   (Redstone 5) ja uudemmissa.
+* Puheliaisuutta vähennetty modernia näppäimistöä ja sen ominaisuuksia
+  käytettäessä. Fyysisen näppäimistön syöttöehdotuksia avattaessa ei enää
+  sanota "Microsoft Candidate UI" sekä ollaan hiljaa tilanteessa, jossa
+  tietyt kosketusnäppäimistön näppäimet aiheuttavat joissakin järjestelmissä
+  muuttuneen nimitapahtuman.
 
 ## Ihmiset
 
@@ -163,28 +171,25 @@ Huomautuksia:
   tunnistamisessa ja/tai arvomuutosten ilmoittamisessa.
 * Edistymispalkkien äänimerkkejä ei enää kuulu muutettaessa
   äänenvoimakkuutta versiossa 1803 ja uudemmissa.
+* Windows Updaten tilailmoituksia puhutaan enemmän etenkin virheitä
+  havaittaessa.
 
 ## Skype
 
 * Kirjoitusilmaisimen teksti puhutaan kuten Skypen työpöytäversiossa.
-* Osittainen Control+NVDA+numero-komentojen paluu tuoreen
-  keskusteluhistorian lukemiseen sekä navigointiobjektin siirtämiseen
-  keskustelukohteisiin kuten Skypen työpöytäversiossa.
+* Ctrl+NVDA+numero-komennot, joita käytetään uusimman keskusteluhistorian
+  lukemiseen sekä navigointiobjektin siirtämiseen keskustelukohteisiin
+  Skypen työpöytäversiossa, ovat käytettävissä myös Skypen UWP-versiossa.
 * Voit nyt painaa Alt+numerorivin numeroita etsiäksesi kontaktiluettelon
   (1), keskustelut (2), botit (3) ja keskustelumuokkauskentän, mikäli se on
   näkyvissä (4) sekä siirtyäksesi niihin. Huomaa, että nämä komennot
-  toimivat oikein, jos maaliskuussa 2017 julkistettu Skype-päivitys on
+  toimivat oikein vain, jos maaliskuussa 2017 julkistettu Skype-päivitys on
   asennettu.
-* Marraskuussa 2016 julkaistun Skype-sovelluksen esiversion
-  yhdistelmäruutujen selitteet puhutaan.
 * NVDA ei enää sano "Skype-viesti" useimmissa tapauksissa viestejä
   tarkasteltaessa.
-* Korjattu useita ongelmia, joita ilmeni käytettäessä Skypeä pistenäytön
-  kanssa, mukaan lukien kyvyttömyys lukea viestihistorian kohteita
-  pistekirjoituksella.
 * NVDA kertoo nyt viestin tarkat tiedot, kuten kanavatyypin ja
-  lähetyspäivämäärän sekä -kellonajan jne., painettaessa NVDA+D
-  viestihistorialuettelon kohteen kohdalla.
+  lähetyspäivämäärän sekä -kellonajan jne., kun sen kohdalla
+  viestihistorialuettelossa painetaan NVDA+D.
 
 ## Kauppa
 
@@ -210,3 +215,5 @@ Huomautuksia:
 [1]: https://addons.nvda-project.org/files/get.php?file=w10
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+
+[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
