@@ -41,7 +41,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: active text position change, controller for, drag start, drag cancel, drag complete, element selected, live region change, notification, system alert, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard.
 * Added ability to check for add-on updates (automatic or manual) via Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
-* In some apps, live region text is announced. This includes alerts in Edge, results in Calculator and others. Note that this may result in double-speaking in some cases.
+* In some apps, live region text is announced. This includes alerts in Edge (including elements marked with aria-role=alert), results in Calculator and others. Note that this may result in double-speaking in some cases.
 * Notifications from newer app releases on Windows 10 Version 1709 (build 16299) and later are announced.
 * Tooltips from Edge and universal apps are recognized and will be announced.
 * With Sets turned on (builds 17627 through 17692 for some insiders), when opening a new Sets tab (Control+Windows+T), NVDA will announce search results when searching for items in the embedded Cortana window.
