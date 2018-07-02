@@ -283,10 +283,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_liveRegionChange(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "liveRegionChange")
 		if isinstance(obj, UIA):
-			# #50: certain aria-alert messages.
+			# #50 (NVDA Core issue 8466): certain aria-alert messages.
 			if obj.role == controlTypes.ROLE_ALERT:
-				if obj.name == "" and obj.childCount > 0:
-					obj.name = " ".join([alert.name for alert in obj.children])
+				if obj.name == "" and obj.treeInterceptor is not None:
+					obj.name = obj.treeInterceptor.makeTextInfo(obj).text
 		nextHandler()
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
