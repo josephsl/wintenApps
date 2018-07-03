@@ -57,6 +57,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 * When ENTER or Escape is pressed, NVDA announces calculation results.
 * For calculations such as unit converter and currency converter, NVDA will announce results as soon as calculations are entered.
+* NVDA will no longer announce "heading level" for calculator results.
 
 ## calendar
 
