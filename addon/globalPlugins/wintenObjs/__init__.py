@@ -239,21 +239,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Record UIA property info about an object if debug logging is enabled.
 	def uiaDebugLogging(self, obj, event=None):
 		if isinstance(obj, UIA) and globalVars.appArgs.debugLogging:
-			element = obj.UIAElement
-			name = obj.name
-			if not name: name = "unavailable"
-			automationID = element.cachedAutomationID
-			if not automationID: automationID = "unavailable"
-			className = element.cachedClassName
-			if not className: className = "unavailable"
+			info = ["object: %s"%repr(obj)]
+			info.append("name: %s"%obj.name)
 			if not event:
 				event = "no event specified"
+			info.append("event: %s"%event)
+			info.append("app module: %s"%obj.appModule)
+			element = obj.UIAElement
+			info.append("automation Id: %s"%element.cachedAutomationID)
+			info.append("class name: %s"%element.cachedClassName)
 			if event == "controllerFor":
-				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s, controller for count: %s"%(obj.name, event, obj.appModule, automationID, className, len(obj.controllerFor)))
+				info.append("controller for count: %s"%len(obj.controllerFor))
 			elif event == "tooltipOpened":
-				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s, framework Id: %s"%(name, event, obj.appModule, automationID, className, element.cachedFrameworkId))
-			else:
-				log.debug("W10: UIA object name: %s, event: %s, app module: %s, automation Id: %s, class name: %s"%(obj.name, event, obj.appModule, automationID, className))
+				info.append("framework Id: %s"%element.cachedFrameworkId)
+			log.debug(u"W10: UIA {debuginfo}".format(debuginfo = ", ".join(info)))
 
 	# Focus announcement hacks.
 	def event_gainFocus(self, obj, nextHandler):
