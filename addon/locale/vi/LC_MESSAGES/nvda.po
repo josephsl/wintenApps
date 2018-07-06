@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the wintenApps package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: wintenApps 16.07\n"
+"Project-Id-Version: wintenApps 17.02\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2018-07-04 09:45+0200\n"
-"Language: hu\n"
+"POT-Creation-Date: 2017-02-03 22:05+1000\n"
+"PO-Revision-Date: 2018-07-06 15:02+0700\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.8\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"X-Generator: Poedit 2.0.5\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -24,61 +24,60 @@ msgid ""
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Nem támogatott Windows verziót használ. A bővítmény futásához "
-"{minSupportedVersion} vagy újabb verzió szükséges. Ennek ellenére telepíti a "
-"bővítményt?"
+"Bạn đang dùng một phiên bản Windows cũ hơn. Add-on yêu cầu "
+"{minSupportedVersion} trở lên. Bạn có muốn cài đặt add-on này không?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
-msgstr "Nem támogatott Windows verzió"
+msgstr "Phiên bản Windows cũ"
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
-msgstr "Nincs több időjárási adat ehhez az elemhez."
+msgstr "không còn thông tin thời tiết nào cho thành phần này."
 
 #. Translators: the description for the showMessageLongDesc script on Skype for Windows 10.
 msgid "Shows the message details."
-msgstr "Megmutatja az üzenet részleteit"
+msgstr "Hiện các thông điệp chi tiết."
 
 #. Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
 msgid "Typing stopped"
-msgstr "Már nem ír"
+msgstr "Đã dừng gõ"
 
 #. Translators: Presented when message history isn't found in Skype Preview app.
 msgid "Chat history not found"
-msgstr "Az üzenetváltás előzményei nem találhatók."
+msgstr "Không tìm thấy lịch sử trò chuyện"
 
 #. Translators: Input help mode message for a command in Skype Preview app.
 msgid "Reports and moves the review cursor to a recent message"
-msgstr "Bemondja a legutóbbi üzenetet és az áttekintő kurzort oda helyezi"
+msgstr "Thông báo và chuyển con trỏ duyệt đến một tin nhắn gần đây"
 
 #. Translators: presented when chat edit box is not found.
 msgid "Chat edit field not found"
-msgstr "Az üzenet beviteli mező nem található."
+msgstr "Không tìm thấy trường nhập liệu trò chuyện"
 
 #. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 msgid "No emoji"
-msgstr "Nincs emodzsi"
+msgstr "Không có biểu tượng cảm xúc"
 
 msgid "&Windows 10 App Essentials..."
-msgstr "&Windows 10 Alkalmazássegítő..."
+msgstr "&Windows 10 App Essentials..."
 
 msgid "Windows 10 App Essentials add-on settings"
-msgstr "Windows 10 Alkalmazássegítő bővítmény beállításai"
+msgstr "Thiết lập cho Windows 10 App Essentials add-on"
 
 #. Translators: Error text shown when add-on update check fails.
 msgid "Error checking for update."
-msgstr "Hiba történt a frissítés keresése közben."
+msgstr "Lỗi kiểm tra cập nhật"
 
 #. Translators: Title of the dialog shown when add-on update check fails.
 #. Translators: Title of the dialog presented when no add-on update is available.
 #. Translators: Title of the add-on update check dialog.
 msgid "Windows 10 App Essentials update"
-msgstr "Windows 10 Alkalmazássegítő frissítése"
+msgstr "Cập nhật Windows 10 App Essentials"
 
 #. Translators: Presented when no add-on update is available.
 msgid "No add-on update available."
-msgstr "nem érhető el frissítés."
+msgstr "Không có bản cập nhật add-on nào."
 
 #. Translators: Text shown if an add-on update is available.
 #, python-brace-format
@@ -86,28 +85,27 @@ msgid ""
 "Windows 10 App Essentials {newVersion} is available. Would you like to "
 "update?"
 msgstr ""
-"A Windows 10 Alkalmazássegítő {newVersion} verziója elérhető. Szeretné "
-"frissíteni a bővítményt?"
+"Đã có Windows 10 App Essentials {newVersion}. Bạn có muốn cập nhật không?"
 
 #. Translators: The title of a dialog to configure advanced WinTenApps add-on options such as update checking.
 msgid "Windows 10 App Essentials settings"
-msgstr "Windows 10 Alkalmazássegítő beállítások"
+msgstr "Thiết lập cho Windows 10 App Essentials"
 
 #. Translators: A checkbox to toggle automatic add-on updates.
 msgid "Automatically check for add-on &updates"
-msgstr "Frissítések &automatikus ellenőrzése"
+msgstr "Tự động &Kiểm tra cập nhật add-on"
 
 #. Translators: The label for a setting in WinTenApps add-on settings to select automatic update interval in days.
 msgid "Update &interval in days"
-msgstr "A frissítés &gyakorisága napokban"
+msgstr "&Cập nhật theo khoản thời gian"
 
 #. Translators: The label for a combo box to select update channel.
 msgid "&Add-on update channel:"
-msgstr "Frissítési &csatorna"
+msgstr "&Kênh cập nhật Add-on:"
 
 #. Translators: The label of a button to check for add-on updates.
 msgid "Check for add-on &update"
-msgstr "&Frissítés keresése"
+msgstr "Kiểm tra &cập nhật add-on"
 
 #. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
 msgid ""
@@ -118,42 +116,35 @@ msgid ""
 "please answer no and switch to stable update channel. Are you sure you wish "
 "to switch to the development update channel?"
 msgstr ""
-"A fejlesztői verzió frissítési csatornájára készül váltani. Erről a "
-"csatornáról megkaphatja a legújabb frissítéseket, viszont ezek a funkciók "
-"még kiforratlanok. A fejlesztői verzió a legújabb fejlesztések tesztelésére "
-"és visszajelzések küldésére szolgál. Ha ön a bővítmény stabil verzióit "
-"szeretné használni, válassza a Nem gombot, és ne változtassa meg a "
-"frissítések forrását. Biztos benne, hogy megváltoztatja a firssítés "
-"csatornáját a fejlesztői verzió csatornájára?"
 
 #. Translators: The title of the channel switch confirmation dialog.
 msgid "Switching to unstable channel"
-msgstr "Fejlesztői frissítési csatornára váltás"
+msgstr "Đang chuyển sang kênh unstable"
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"
-msgstr "Frissítés keresése"
+msgstr "Kiểm tra cập nhật Add-on"
 
 #. Translators: The message displayed while checking for newer version of WinTenApps add-on.
 msgid "Checking for new version of Windows 10 App Essentials add-on..."
-msgstr "A Windows 10 App Essentials bővítmény új verziójának keresése..."
+msgstr "Đang kiẻm tra phiên bản mới của Windows 10 App Essentials add-on..."
 
 #. Translators: The title of the dialog displayed while downloading add-on update.
 msgid "Downloading Add-on Update"
-msgstr "Frissítés letöltése"
+msgstr "Đang tải cập nhật Add-on"
 
 #. Translators: The progress message indicating that a connection is being established.
 msgid "Connecting"
-msgstr "Kapcsolódás"
+msgstr "Đang kết nối"
 
 #. Translators: A message indicating that an error occurred while downloading an update to NVDA.
 msgid "Error downloading add-on update."
-msgstr "Hiba történt a bővítmény frissítésének letöltése közben."
+msgstr "Lỗi tải bản cập nhật Add-on"
 
 #. Translators: The title of a dialog indicating that an error occurred while downloading an update to NVDA.
 #. Translators: The title of a dialog presented when an error occurs.
 msgid "Error"
-msgstr "Hiba"
+msgstr "Lỗi"
 
 #. Translators: The message displayed when an error occurs when opening an add-on package for adding.
 #, python-format
@@ -161,30 +152,27 @@ msgid ""
 "Failed to open add-on package file at %s - missing file or invalid file "
 "format"
 msgstr ""
-"Nem lehet megnyitni a bővítmény telepítőcsomagját a %s helyen. Hiányzik a "
-"fájl, vagy nem megfelelő formátumú."
+"Lỗi khi mở gói add-on tại %s - thiếu tập tin hoặc tập tin định dạng sai"
 
 #. Translators: The title of the dialog presented while an Addon is being updated.
 msgid "Updating Add-on"
-msgstr "A bővítmény frissítése"
+msgstr "Đang cập nhật Add-on"
 
 #. Translators: The message displayed while an addon is being updated.
 msgid "Please wait while the add-on is being updated."
-msgstr "Kérem várjon, amíg a bővítmény frissül."
+msgstr "Vui lòng đợi khi add-on đang cập nhật."
 
 #. Translators: The message displayed when an error occurs when installing an add-on package.
 #, python-format
 msgid "Failed to update add-on  from %s"
-msgstr "A %s csomagból nem lehet telepíteni a bővítményt."
+msgstr "Lỗi cập nhật Add-on từ %s"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Windows 10 App Essentials"
-msgstr "Windows 10 Alkalmazássegítő"
+msgstr "Windows 10 App Essentials"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
-msgstr ""
-"Akadálymentes elérést elősegítő modulok gyűjteménye különböző Windows 10 "
-"alkalmazásokhoz."
+msgstr "Tập hợp các module cho nhiều ứng dụng của Windows 10"

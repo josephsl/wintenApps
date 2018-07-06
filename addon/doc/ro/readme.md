@@ -21,8 +21,8 @@ privire la ceea ce este inclus):
 * Mail
 * Hărți
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions/cloud clipboard
-  items in Version 1709 and later)
+* Tastatură modernă (sugestii de intrare a panoului/hardware emoji/elemente
+  ale planșetei cloud în versiunea 1709 și mai nouă)
 * Persoane
 * Setări (setări de sistem, Windows+I)
 * Skype (aplicație universală)
@@ -30,37 +30,42 @@ privire la ceea ce este inclus):
 * Meteo.
 * Diverse module de control precum tile-urile din meniul start.
 
-Notes:
+Note:
 
-* This add-on requires Windows 10 Version 1709 (build 16299) or later and
-  NVDA 2018.2 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17134) and latest stable version of NVDA.
-* Some add-on features are or will be part of NVDA screen reader.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support old Windows 10
-  releases, or changes were made to apps that makes entries no longer
-  applicable.
+* Acest supliment necesită Windows 10 versiunea 1709 )compilarea 16299) sau
+  mai nouă și NVDA 2018.2 sau mai nou. Pentru cele mai bune rezultate,
+  folosiți-l cu ultima compilare stabilă ( compilarea17134) și cea mai
+  recentă versiune stabilă a NVDA-ului.
+* Unele caracteristici ale suplimentului fac sau vor face parte din
+  cititorul de ecran NVDA.
+* Pentru intrările care nu sunt listate mai jos, puteți presupune că
+  funcționalitățile fac parte din NVDA și nu mai sunt aplicabile, întrucât
+  suplimentul nu mai suportă versiunile vechi de Windows 10, sau că au fost
+  efectuate modificări la aplicații, care fac ca intrările să nu mai fie
+  aplicabile.
 
-For a list of changes made between each add-on releases, refer to
-[changelogs for add-on releases][3] document.
+Pentru o listă a modificărilor efectuate la fiecare versiune a
+suplimentului, consultați documentul [jurnalelor de modificări pentru
+versiunile suplimentului][3].
 
 ## General
 
 * În meniurile contextuale ale tile-urilor din cadrul Start Meniu,
   submeniurile sunt recunoscute corect.
-* Certain dialogs are now recognized as proper dialogs and reported as such,
-  including Insider Preview dialog (settings app).
+* Anumite dialoguri sunt acum recunoscute ca dialoguri corespunzătoare și
+  sunt raportate ca atare. Acestea includ dialogul Insider Preview
+  (aplicația setări).
 * NVDA poate anunța numărul de sugestii la efectuarea unei căutări în
   majoritatea cazurilor. Această opțiune este controlată de „informația
   poziției obiectului în dialogul prezentării obiectului.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
-* The following UIA events are recognized: active text position change
-  (Redstone 5), controller for, drag start, drag cancel, drag complete,
-  element selected, live region change, notification, system alert, tooltip
-  opened, window opened. With NVDA set to run with debug logging enabled,
-  these events will be tracked, and for UIA notification event, a debug tone
-  will be heard.
+* Următoarele evenimente UIA sunt recunoscute: schimbarea poziției textului
+  activ (Redstone 5), controler pentru, început tragere, tragere finalizată,
+  element selectat, schimbarea regiunii active, notificare, alertă de
+  sistem, indiciu deschis, fereastră deschisă. Cu NVDA-ul setat să ruleze cu
+  diagnosticarea activată, aceste evenimente vor fi urmărite, iar pentru
+  evenimentul de tip notificare UIA, se va auzi un ton de diagnosticare.
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
   (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
   în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
@@ -69,8 +74,8 @@ For a list of changes made between each add-on releases, refer to
 * În unele aplicații, textul regiunii live este anunțat. Aceasta include
   alertele din Edge, rezultatele din Calculator și altele. Rețineți faptul
   că asta poate rezulta o dublă vorbire în unele cazuri.
-* Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced.
+* Sunt anunțate Notificările versiunilor mai noi ale aplicațiilor din
+  Windows 10 versiunea 1709 (compilare 16299) și mai nouă.
 * Indiciile din Edge și alte aplicații universale sunt recunoscute și vor fi
   anunțate.
 * În compilarea 17627 și mai nouă, la deschiderea unei noi file Sets
@@ -80,8 +85,8 @@ For a list of changes made between each add-on releases, refer to
   între etichete.
 * La deschiderea, închiderea sau comutarea între spațiile de lucru virtuale,
   NVDA va anunța ID-ul spațiului de lucru curent (spațiu de lucru 2).
-* NVDA will no longer announce Start menu size text when changing screen
-  resolutions or orientation.
+* NVDA nu mai anunță „dimensiune text start meniu” la schimbarea rezoluției
+  ecranului sau a orientării.
 
 ## Alarme și ceas
 
@@ -135,9 +140,9 @@ For a list of changes made between each add-on releases, refer to
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts, as well
-  as availability of Reading View (if using Version 1709 and later) are
-  announced.
+* Notificările precum descărcări de fișiere și diverse alerte de pe paginile
+  web, dar și disponibilitatea funcției Reading view (dacă se utilizează
+  versiunea 1709 și mai nouă) sunt anunțate.
 
 ## Tastatură modernă
 
@@ -147,14 +152,15 @@ For a list of changes made between each add-on releases, refer to
   OneCore.
 * Suport pentru sugestiile de intrare a tastaturii hardware în compilarea
   1803 sau mai nouă.
-* În post-1709 builds, NVDA va anunța primul emoji selectat când se deschide
-  panoul emoji.
-* Support for announcing cloud clipboard items in build 17666 (Redstone 5)
-  and later.
-* Reduced unnecessary verbosity when working with modern keyboard and its
-  features. These include no longer announcing "Microsoft Candidate UI" when
-  opening hardware keyboard input suggestions and staying silent when
-  certain touch keyboard keys raise name change event on some systems.
+* În compilările post-1709, NVDA va anunța primul emoji selectat când se
+  deschide panoul emoji.
+* Suport pentru anunțarea elementelor planșetei cloud în compilarea 17666
+  (Redstone 5) și mai nouă.
+* S-a redus verbozitatea inutilă la lucrul cu tastatura modernă și
+  caracteristicile sale. Acestea includ neanunțarea "Microsoft Candidate UI"
+  la deschiderea sugestiilor de introducere a tastaturii hardware și starea
+  în modul silențios atunci când anumite taste ale tastaturii tactile
+  generează un eveniment de schimbare a numelui pe unele sisteme.
 
 ## Persoane
 
@@ -173,25 +179,27 @@ For a list of changes made between each add-on releases, refer to
   etichetelor și/sau anunțarea schimbărilor valorii.
 * Bipurile barei de progres a volumului audio nu mai sunt auzite în
   compilarea 1803 sau mai nouă.
-* More messages about Windows Update status are announced, especially if
-  Windows Update encounters errors.
+* Sunt anunțate mai multe mesaje în legătură cu stadiul actualizărilor
+  Windows, mai exact atunci când Windows Update întâmpină erori.
 
 ## Skype
 
 * Textul indicatorului de scriere este anunțat la fel ca Skype pentru
   Desktop.
-* Control+NvDA+number row commands, used to read recent chat history and to
-  move navigator object to chat entries in Skype for Desktop, is also
-  available in Skype UWP.
-* You can press Alt+number row to locate and move to conversations (1),
-  contacts list (2), bots (3) and chat edit field if visible (4). Note that
-  these commands will work properly if Skype update released in March 2017
-  is installed.
+* Comenzile Control+NvDA+1, 2, 3, 4, 5, 6, 7, 8, 9 și 0, utilizate în Skype
+  pentru Desktop la citirea istoricului conversației recente și pentru
+  deplasarea obiectului navigator la intrările conversației, sunt
+  disponibile și în Skype UWP.
+* Puteți apăsa Alt+rândul cu numere pentru a localiza și a vă deplasa la
+  conversații (1), lista de contacte (2), boți (3) și câmpul de editare al
+  chatului dacă e vizibil (4). Rețineți că aceste comenzi vor funcționa
+  corespunzător dacă actualizarea Skype-ului lansată în martie 2017 este
+  instalată.
 * NVDA nu mai anunță „Mesaj Skype” la examinarea mesajelor pentru
   majoritatea cazurilor.
-* From message history list, pressing NVDA+D on a message item will allow
-  NVDA to announce detailed information about a message such as channel
-  type, sent date and time and so on.
+* Din lista istoricului mesajelor, apăsarea NVDA+D pe un element de mesaj îi
+  va permite NVDA-ului să anunțe informații detaliate despre un mesaj, cum
+  ar fi tip de canal, data și ora trimiterii și așa mai departe.
 
 ## Magazin
 
