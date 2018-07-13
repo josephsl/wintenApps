@@ -30,6 +30,9 @@ class AppModule(appModuleHandler.AppModule):
 			or (winVersion.winVersion.build >= 17704 and obj.UIAElement.cachedClassName == "GridViewItem")):
 			return
 		speech.cancelSpeech()
+		# Sometimes clipboard candidates list gets selected, so ask NvDA to descend one more level.
+		if obj.UIAElement.cachedAutomationID == "TEMPLATE_PART_ClipboardItemsList":
+			obj = obj.firstChild
 		candidate = obj
 		if obj.UIAElement.cachedClassName == "ListViewItem" and obj.parent.UIAElement.cachedAutomationID != "TEMPLATE_PART_ClipboardItemsList":
 			# The difference between emoji panel and suggestions list is absence of categories/emoji separation.
@@ -77,7 +80,8 @@ class AppModule(appModuleHandler.AppModule):
 	def event_nameChange(self, obj, nextHandler):
 		# #49: reported by a user: on some systems, touch keyboard keys keeps firing name change event.
 		# Argh, in build 17704, whenever skin tones are selected, name change is fired by emoji entries (GridViewItem).
-		if obj.UIAElement.cachedClassName in ("CRootKey", "GridViewItem"):
+		if ((obj.UIAElement.cachedClassName in ("CRootKey", "GridViewItem"))
+		or (obj.UIAElement.cachedAutomationID == "TEMPLATE_PART_ClipboardItemsList")):
 			return
 		# The word "blank" is kept announced, so suppress this on build 17666 and later.
 		if winVersion.winVersion.build >= 17672:
