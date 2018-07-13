@@ -19,16 +19,16 @@ import winVersion
 
 class AppModule(appModuleHandler.AppModule):
 
+	# Cache the most recenlty selected item.
+	_recentlySelected = None
+
 	def event_UIA_elementSelected(self, obj, nextHandler):
 		# #7273: When this is fired on categories, the first emoji from the new category is selected but not announced.
 		# Therefore, move the navigator object to that item if possible.
 		# However, in recent builds, name change event is also fired.
 		# For consistent experience, report the new category first by traversing through controls.
 		# #8189: do not announce candidates list itself (not items), as this is repeated each time candidate items are selected.
-		if (obj.UIAElement.cachedAutomationID == "CandidateList"
-			# In build 17704, name change event will announce selected emoji entry.
-			or (winVersion.winVersion.build >= 17704 and obj.UIAElement.cachedClassName == "GridViewItem")):
-			return
+		if obj.UIAElement.cachedAutomationID == "CandidateList": return
 		speech.cancelSpeech()
 		# Sometimes clipboard candidates list gets selected, so ask NvDA to descend one more level.
 		if obj.UIAElement.cachedAutomationID == "TEMPLATE_PART_ClipboardItemsList":
@@ -46,6 +46,8 @@ class AppModule(appModuleHandler.AppModule):
 			api.setNavigatorObject(obj)
 			obj.reportFocus()
 			braille.handler.message(braille.getBrailleTextForProperties(name=obj.name, role=obj.role, positionInfo=obj.positionInfo))
+			# Cache selected item.
+			self._recentlySelected = obj.name
 		else:
 			# Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 			ui.message(_("No emoji"))
@@ -81,7 +83,9 @@ class AppModule(appModuleHandler.AppModule):
 		# #49: reported by a user: on some systems, touch keyboard keys keeps firing name change event.
 		# Argh, in build 17704, whenever skin tones are selected, name change is fired by emoji entries (GridViewItem).
 		if ((obj.UIAElement.cachedClassName in ("CRootKey", "GridViewItem"))
-		or (obj.UIAElement.cachedAutomationID == "TEMPLATE_PART_ClipboardItemsList")):
+		or (obj.UIAElement.cachedAutomationID == "TEMPLATE_PART_ClipboardItemsList")
+		# And no, emoji entries should not be announced here.
+		or (self._recentlySelected is not None and obj.name.startswith(self._recentlySelected))):
 			return
 		# The word "blank" is kept announced, so suppress this on build 17666 and later.
 		if winVersion.winVersion.build >= 17672:
