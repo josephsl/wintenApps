@@ -85,7 +85,7 @@ class AppModule(appModuleHandler.AppModule):
 		if ((obj.UIAElement.cachedClassName in ("CRootKey", "GridViewItem"))
 		or (obj.UIAElement.cachedAutomationID == "TEMPLATE_PART_ClipboardItemsList")
 		# And no, emoji entries should not be announced here.
-		or (self._recentlySelected is not None and obj.name.startswith(self._recentlySelected))):
+		or (self._recentlySelected is not None and self._recentlySelected in obj.name)):
 			return
 		# The word "blank" is kept announced, so suppress this on build 17666 and later.
 		if winVersion.winVersion.build >= 17672:
