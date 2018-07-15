@@ -99,13 +99,14 @@ class SearchField(SearchField):
 _playSuggestionsSounds = False
 
 # For UIA search fields that does not raise any controller for at all.
-class QueryInputTextBox(EditableTextWithSuggestions, UIA):
+# For these, value change event should be tracked.
+class SearchFieldWithNoControllerFor(EditableTextWithSuggestions, UIA):
 
 	def event_valueChange(self):
 		global _playSuggestionsSounds
 		if len(self.value) and self.simpleNext.firstChild.role == controlTypes.ROLE_LISTITEM:
 			if not _playSuggestionsSounds:
-				super(QueryInputTextBox, self).event_suggestionsOpened()
+				super(SearchFieldWithNoControllerFor, self).event_suggestionsOpened()
 				_playSuggestionsSounds = True
 		elif len(self.value) == 0:
 			_playSuggestionsSounds = False
@@ -206,9 +207,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# A dedicated version for Mail app's address/mention suggestions.
 			elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
 				clsList.insert(0, UIAEditableTextWithSuggestions)
-			# Some search fields does not raise controller for but suggestions are next to them.
-			elif obj.UIAElement.cachedAutomationID == "QueryInputTextBox":
-				clsList.insert(0, QueryInputTextBox)
 			# Menu items should never expose position info (seen in various context menus such as in Edge).
 			elif obj.UIAElement.cachedClassName == "MenuFlyoutItem":
 				clsList.insert(0, MenuItemNoPosInfo)
