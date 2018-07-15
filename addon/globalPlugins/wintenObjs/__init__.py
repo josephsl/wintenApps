@@ -198,7 +198,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				return
 			# Search field that does raise controller for event.
 			# Also take care of Edge address omnibar and Start search box.
-			# This is no longer necessary in NVDA 2017.3 (incubating as of May 2017).
+			# Although basic functionality is included in NVDA 2017.3, added enhancements such as announcing suggestion count.
 			if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
 				# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcement problem.
 				if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox") and obj.appModule.appName != "searchui":
