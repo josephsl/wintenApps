@@ -207,6 +207,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# A dedicated version for Mail app's address/mention suggestions.
 			elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
 				clsList.insert(0, UIAEditableTextWithSuggestions)
+			# Some search fields does not raise controller for but suggestions are next to them.
+			elif obj.UIAElement.cachedAutomationID == "QueryInputTextBox":
+				clsList.insert(0, SearchFieldWithNoControllerFor)
 			# Menu items should never expose position info (seen in various context menus such as in Edge).
 			elif obj.UIAElement.cachedClassName == "MenuFlyoutItem":
 				clsList.insert(0, MenuItemNoPosInfo)
