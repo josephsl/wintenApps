@@ -174,6 +174,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# NVDA Core ticket 5231: Announce values in time pickers, especially when focus moves to looping selector list.
 			if obj.role==controlTypes.ROLE_LIST and "LoopingSelector" in obj.UIAElement.cachedClassName:
 				clsList.insert(0, LoopingSelectorList)
+				return
 			# Windows that are really dialogs.
 			# NVDA Core issue 8405: in build 17682 and later, IsDialog property has been added, making comparisons easier.
 			# However, don't forget that many users are still using old Windows 10 releases.
@@ -194,10 +195,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				self.uiaDebugLogging(obj, "isDialog")
 			if isDialog and Dialog not in clsList:
 				clsList.insert(0, Dialog)
+				return
 			# Search field that does raise controller for event.
 			# Also take care of Edge address omnibar and Start search box.
 			# This is no longer necessary in NVDA 2017.3 (incubating as of May 2017).
-			elif obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
+			if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
 				# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcement problem.
 				if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox") and obj.appModule.appName != "searchui":
 					clsList.insert(0, SearchField)
