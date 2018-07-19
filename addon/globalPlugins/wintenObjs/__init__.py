@@ -140,9 +140,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
 		log.debug("W10: adding additional events")
 		# Checking presence of IUIAutomation6 will be removed later in 2018.
-		if hasattr(UIAHandler, "IUIAutomation6") and isinstance(UIAHandler.handler.clientObject, UIAHandler.IUIAutomation6):
+		if isinstance(UIAHandler.handler.clientObject, UIAHandler.IUIAutomation6):
 			log.debug("W10: adding additional events for RS5/IUIAutomation6")
 			W10Events[UIAHandler.UIA_ActiveTextPositionChangedEventId] = "UIA_activeTextPositionChanged"
+			# Also, set connection recovery behavior and event coalescing options.
+			UIAHandler.handler.clientObject.ConnectionRecoveryBehavior = 1
+			UIAHandler.handler.clientObject.CoalesceEvents = 1
 		for event, name in W10Events.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
