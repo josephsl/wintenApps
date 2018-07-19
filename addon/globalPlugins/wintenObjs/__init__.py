@@ -24,8 +24,6 @@ addonHandler.initTranslation()
 UIA_Drag_DragStartEventId = 20026
 UIA_Drag_DragCancelEventId = 20027
 UIA_Drag_DragCompleteEventId = 20028
-# RS5/IUIAutomation6
-UIA_ActiveTextPositionChangedEventId = 20036
 # RS4/IUIAutomationElement8
 UIA_HeadingLevelPropertyId = 30173
 # RS5/IUIAutomationElement9
