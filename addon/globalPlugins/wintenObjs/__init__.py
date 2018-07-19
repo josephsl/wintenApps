@@ -137,13 +137,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #40: skip over the rest if appx is in effect.
 		if config.isAppX: return
 		import UIAHandler
-		import sys
 		# Add a series of events instead of doing it one at a time.
-		# Some events are only available in a specific build range.
+		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
 		log.debug("W10: adding additional events")
-		if sys.getwindowsversion().build >= 17692:
-			log.debug("W10: adding additional events for RS5")
-			W10Events[UIA_ActiveTextPositionChangedEventId] = "UIA_activeTextPositionChanged"
+		# Checking presence of IUIAutomation6 will be removed later in 2018.
+		if hasattr(UIAHandler, "IUIAutomation6") and isinstance(UIAHandler.handler.clientObject, UIAHandler.IUIAutomation6):
+			log.debug("W10: adding additional events for RS5/IUIAutomation6")
+			W10Events[UIAHandler.UIA_ActiveTextPositionChangedEventId] = "UIA_activeTextPositionChanged"
 		for event, name in W10Events.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
