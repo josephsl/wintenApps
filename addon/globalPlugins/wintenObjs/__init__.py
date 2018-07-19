@@ -6,7 +6,7 @@
 import globalPluginHandler
 import controlTypes
 import ui
-from NVDAObjects.UIA import UIA, SearchField, Dialog
+from NVDAObjects.UIA import UIA, SearchField
 from NVDAObjects.behaviors import EditableTextWithSuggestions, ToolTip
 import api
 import nvwave
@@ -24,10 +24,6 @@ addonHandler.initTranslation()
 UIA_Drag_DragStartEventId = 20026
 UIA_Drag_DragCancelEventId = 20027
 UIA_Drag_DragCompleteEventId = 20028
-# RS4/IUIAutomationElement8
-UIA_HeadingLevelPropertyId = 30173
-# RS5/IUIAutomationElement9
-UIA_IsDialogPropertyId = 30174 # Let NVDA and others detect a dialog element and read element content.
 
 # For convenience.
 W10Events = {
@@ -38,9 +34,6 @@ W10Events = {
 
 # UIA COM constants
 TreeScope_Subtree = 7
-
-# We know the following elements are dialogs.
-wintenDialogs=("Shell_Dialog", "Popup", "Shell_Flyout", "Shell_SystemDialog")
 
 # Looping selector lists.
 # Announce selected value if told to do so.
@@ -181,27 +174,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# NVDA Core ticket 5231: Announce values in time pickers, especially when focus moves to looping selector list.
 			if obj.role==controlTypes.ROLE_LIST and "LoopingSelector" in obj.UIAElement.cachedClassName:
 				clsList.insert(0, LoopingSelectorList)
-				return
-			# Windows that are really dialogs.
-			# NVDA Core issue 8405: in build 17682 and later, IsDialog property has been added, making comparisons easier.
-			# However, don't forget that many users are still using old Windows 10 releases.
-			isDialog = False
-			try:
-				if obj._getUIACacheablePropertyValue(UIA_IsDialogPropertyId):
-					isDialog = True
-					import tones
-					tones.beep(200, 50)
-			except:
-				pass
-			# For build 17134 and earlier.
-			if not isDialog and obj.UIAElement.cachedClassName in wintenDialogs:
-				# But some are not dialogs despite what UIA says (for example, search popup in Store).
-				if obj.UIAElement.cachedAutomationID != "SearchPopUp":
-					isDialog = True
-			if isDialog:
-				self.uiaDebugLogging(obj, "isDialog")
-			if isDialog and Dialog not in clsList:
-				clsList.insert(0, Dialog)
 				return
 			# Search field that does raise controller for event.
 			# Also take care of Edge address omnibar and Start search box.
