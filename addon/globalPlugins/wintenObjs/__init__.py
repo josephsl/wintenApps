@@ -3,15 +3,12 @@
 
 # Adds handlers for various UIA controls found in Windows 10.
 
-import os
 import globalPluginHandler
 import controlTypes
 import ui
 from NVDAObjects.UIA import UIA, SearchField, Dialog
 from NVDAObjects.behaviors import EditableTextWithSuggestions, ToolTip
 import api
-import speech
-import braille
 import nvwave
 import gui
 import wx
