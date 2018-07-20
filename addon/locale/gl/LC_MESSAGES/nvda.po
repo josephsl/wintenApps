@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2018-02-12 11:40+0100\n"
+"PO-Revision-Date: 2018-07-19 07:25-0700\n"
 "Last-Translator: Juan C. BuÃ±o <oprisniki@gmail.com>\n"
 "Language-Team: add-ons galician translation team <oprisniki@gmail.com>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.11\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -186,6 +186,3 @@ msgstr "Windows 10 App Essentials"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Unha coleción de app modules para varias aplicación de Windows 10"
-
-#~ msgid "suggestions"
-#~ msgstr "suxerencias"

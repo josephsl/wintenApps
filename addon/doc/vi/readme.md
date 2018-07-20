@@ -1,8 +1,8 @@
 # Windows 10 App Essentials #
 
 * Tác giả: Joseph Lee, Derek Riemer và những người dùng Windows 10 khác
-* Tải về [phiên bản stable][1]
-* Tải về [phiên bản development][2]
+* Tải về [phiên bản chính thức][1]
+* Tải về [phiên bản thử nghiệm][2]
 
 Add-on này là một bộ sưu tập các modules cho nhiều ứng dụng của Windows 10,
 đồng thời là các cải tiến và sửa lỗi cho một số điều khiển trong windows 10.
