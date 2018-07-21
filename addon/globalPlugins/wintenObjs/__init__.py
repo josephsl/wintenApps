@@ -158,8 +158,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def terminate(self):
 		super(GlobalPlugin, self).terminate()
 		try:
-			self.prefsMenu.RemoveItem(self.w10Settings)
-		except (RuntimeError, AttributeError, wx.PyDeadObjectError):
+			if wx.version.startswith("4"):
+				self.prefsMenu.Remove(self.w10Settings)
+			else:
+				self.prefsMenu.RemoveItem(self.w10Settings)
+		except: #(RuntimeError, AttributeError, wx.PyDeadObjectError):
 			pass
 		if w10config.updateChecker and w10config.updateChecker.IsRunning():
 			w10config.updateChecker.Stop()
