@@ -158,7 +158,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def terminate(self):
 		super(GlobalPlugin, self).terminate()
 		try:
-			if wx.version.startswith("4"):
+			if wx.version().startswith("4"):
 				self.prefsMenu.Remove(self.w10Settings)
 			else:
 				self.prefsMenu.RemoveItem(self.w10Settings)
