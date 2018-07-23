@@ -143,9 +143,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if isinstance(UIAHandler.handler.clientObject, UIAHandler.IUIAutomation6):
 			log.debug("W10: adding additional events for RS5/IUIAutomation6")
 			W10Events[UIAHandler.UIA_ActiveTextPositionChangedEventId] = "UIA_activeTextPositionChanged"
-			# Also, set connection recovery behavior and event coalescing options.
-			UIAHandler.handler.clientObject.ConnectionRecoveryBehavior = 1
-			UIAHandler.handler.clientObject.CoalesceEvents = 1
 		for event, name in W10Events.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
