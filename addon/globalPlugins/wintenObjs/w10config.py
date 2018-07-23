@@ -77,8 +77,8 @@ def checkForAddonUpdate():
 	# Commenting this out will effectively turn off pilot builds.
 	# Check if pilot build is supported.
 	def _pilotBuild():
-		import versionInfo, winVersion
-		return config.conf["wintenApps"]["updateChannel"] == "dev" and versionInfo.updateVersionType == "snapshot:alpha" and winVersion.winVersion.build >= 16299
+		import winVersion, UIAHandler
+		return config.conf["wintenApps"]["updateChannel"] == "dev" and hasattr(UIAHandler, "IUIAutomation6") and winVersion.winVersion.build >= 16299
 	if _pilotBuild():
 		updateURL = "https://www.josephsl.net/files/nvdaaddons/getupdate.php?file=w10-try"
 	try:
