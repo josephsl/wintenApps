@@ -282,6 +282,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_systemAlert(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "systemAlert")
+		# NVDA Core issue 8557: for some alerts, text is scattered across its children, so take care of this too.
+		if isinstance(obj, UIA):
+			if obj.role == controlTypes.ROLE_ALERT:
+				if obj.name == "" and obj.treeInterceptor is not None:
+					obj.name = obj.treeInterceptor.makeTextInfo(obj).text
 		nextHandler()
 
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
