@@ -308,9 +308,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "notification")
 		if isinstance(obj, UIA) and globalVars.appArgs.debugLogging:
 			log.debug("W10: UIA notification: sender: %s, notification kind: %s, notification processing: %s, display string: %s, activity ID: %s"%(obj.UIAElement,notificationKind,notificationProcessing,displayString,activityId))
-			import tones
-			# For debugging purposes.
-			tones.beep(500, 100)
+			# Play a debug tone if and only if notifications come from somewhere other than the active app.
+			if obj.appModule != api.getFocusObject().appModule:
+				import tones
+				# For debugging purposes.
+				tones.beep(500, 100)
 		nextHandler()
 
 	def event_UIA_dragStart(self, obj, nextHandler):
