@@ -110,6 +110,14 @@ class SearchFieldWithNoControllerFor(EditableTextWithSuggestions, UIA):
 # Some context menu items expose position info, which is quite anoying.
 class MenuItemNoPosInfo(UIA):
 
+	def _get_states(self):
+		# Borrowed from NVDA Core issue 5178 code (fixed provided by the same author).
+		states = super(MenuItemNoPosInfo, self).states
+		# Add proper state for submenus.
+		if self.UIAElement.cachedClassName == "MenuFlyoutSubItem":
+			states.add(controlTypes.STATE_HASPOPUP)
+		return states
+
 	def _get_positionInfo(self):
 		return {}
 
@@ -209,7 +217,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif obj.UIAElement.cachedAutomationID == "QueryInputTextBox":
 				clsList.insert(0, SearchFieldWithNoControllerFor)
 			# Menu items should never expose position info (seen in various context menus such as in Edge).
-			elif obj.UIAElement.cachedClassName == "MenuFlyoutItem":
+			# Also take care of recognizing submenus across apps.
+			elif obj.UIAElement.cachedClassName in ("MenuFlyoutItem", "MenuFlyoutSubItem"):
 				clsList.insert(0, MenuItemNoPosInfo)
 			# #44: Recognize XAML/UWP tool tips.
 			elif obj.UIAElement.cachedClassName == "ToolTip" and obj.UIAElement.cachedFrameworkID == "XAML":
