@@ -75,7 +75,8 @@ class AppModule(AppModule):
 			elif obj.UIAElement.cachedAutomationID == "SearchTextBox":
 				# Special handler for differentiating between regular and Sets Cortana boxes.
 				# Fortunately for now, embedded Sets Cortana box has no siblings.
-				clsList.insert(0, StartMenuSearchField if obj.previous is not None else SetsSearchField)
+				# Turn this off in build 17728 and later as this causes suggestions open sound to be heard when Start menu is closed.
+				clsList.insert(0, StartMenuSearchField) #if obj.previous is not None else SetsSearchField)
 
 	# Past responses from Cortana (cached to prevent repetition, initially an empty string).
 	cortanaResponseCache = ""

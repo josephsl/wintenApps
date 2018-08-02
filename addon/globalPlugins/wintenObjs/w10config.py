@@ -31,6 +31,9 @@ from logHandler import log
 import addonHandler
 addonHandler.initTranslation()
 
+# Double-check update flag.
+canUpdate = not hasattr(addonHandler, "checkForAddonUpdate")
+
 # Add-on config database
 confspec = {
 	"autoUpdateCheck": "boolean(default=true)",
