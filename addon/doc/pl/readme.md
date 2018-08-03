@@ -30,45 +30,50 @@ każdej aplikacji co jest wspierane):
 
 Uwagi:
 
-* This add-on requires Windows 10 Version 1709 (build 16299) or later and
-  NVDA 2018.2 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17134) and latest stable version of NVDA.
+* Uwaga: Ten dodatek wymaga Windows 10 Wersję 1709 (kompilację 16299) lub
+  nowszą i NVDA 2018.2 lub nowszą. Dla lepszych wyników, trzeba będzie
+  używać dodatek z najnowszą stabilną kompilacją (kompilacja 17134) i
+  ostatnią stabilną wersję NVDA. 
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support old Windows 10
-  releases, or changes were made to apps that makes entries no longer
-  applicable.
+* Dla wpisów nie podanych poniżej, można wnioskować, że staowią część
+  funkcji NVDA, czyli jest to niezastosowalne dla tego, że dodatek nie
+  wspiera starsze wydania systemu, lub aplikacje są zmienione w taki sposób,
+  że te wpisy są unieważnione.
 
-For a list of changes made between each add-on releases, refer to
-[changelogs for add-on releases][3] document.
+Dla listy zmian pomiędzy każdej wersji, prosimy przeczytać [listę zmian dla
+wersji dodatku][3].
 
 ## Ogólne
 
-* W meni kontekstowym kafelek meni start, meni rozwijane są prawidłowo
-  rozpoznawane.
-* Certain dialogs are now recognized as proper dialogs and reported as such,
-  including Insider Preview dialog (settings app).
+* Elementy meni rozwijanego są prawidłowo rospoznawane w różnych
+  aplikacjach, włączając w to meni kontekstowe dla kafelków meni start a
+  także meni aplikacji dla Microsoft edge (Redstone 5).
+* Większość okien dialogowych teraz są rozpoznawalne jako prawdziwe okna
+  dialogowe, włączając w to okna dialogowe w wersjach testowych (settings
+  app).
 * NVDA może ogłaszać liczbę wypowiedzi przy wyszukiwaniu w wielu
   przypadkach. Ta opcja jest kontrolowana przez opcję "odczytuj położenie
   obiektu" w panelu "prezentacja obiektu".
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) więcej nie jest odczytywana.
-* The following UIA events are recognized: active text position change
-  (Redstone 5), controller for, drag start, drag cancel, drag complete,
-  element selected, live region change, notification, system alert, tooltip
-  opened, window opened. With NVDA set to run with debug logging enabled,
-  these events will be tracked, and for UIA notification event, a debug tone
-  will be heard.
+* Następujące zdarzenia UIA są rozpoznawane: active text position change,
+  controller for, drag start, drag cancel, drag complete, element selected,
+  live region change, notification, system alert, tooltip opened, window
+  opened. Gdy w NVDA jest włączony tryb debugowania, te zdarzenia będą
+  śledzone, natomiast, dla UIA zdarzenia UIA notification event, dźwięk
+  debugowania będzie odtwarzany jeżeli powiadomienie przykodzi z innej
+  aplikacji niż ta aktywna.
 * Dodana możliwość sprawdzania aktualizacji dodatku (automatycznie lub
   ręcznie) poprzez nowe okno dialogowe Windows 10 App Essentials, które
   można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
   rozwojowe będą sprawdzane pod kątem nowych aktualizacji codziennie lub
   tygodniowo.
 * W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. W tym są
-  włączone powiadomienia w Microsoft Edge i innych. Proszę mieć na uwadze,
-  że to może skutkować podwójne wymawianie w niektórych przypadkach.
-* Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced.
+  włączone powiadomienia w Microsoft Edge, kalkulatorze. Proszę mieć na
+  uwadze, że to może skutkować podwójnym wymawianiem w niektórych
+  przypadkach.
+* Powiadomienia z nowych wersji aplikacji w Windows 10 wersji 1709
+  (kompilacja 16299) i nowszych są wymawiane.
 * Opisy obiektów w Edge i innych aplikacjach UWP są rozpoznawane  i będą
   czytane automatycznie.
 * w kompilacji 17627 i nowszych, gdy nowa karta sets jest otwierana
@@ -91,6 +96,7 @@ For a list of changes made between each add-on releases, refer to
 * Kiedy enter albo escape jest wciśnięty, NVDA wymawia wynik obliczenia.
 * Dla wyliczeń, takich jak przetwarzanie jednostek lub waluty, NVDA
   automatycznie będzie wymawiało wyniki obliczenia
+* NVDA nie będzie więcej wymawiało "nagłówek" dla wyników kalkulatora.
 
 ## Kalendarz
 
@@ -111,8 +117,8 @@ For a list of changes made between each add-on releases, refer to
 
 ## Pasek gry
 
-* NVDA będzie powiadamiał o istnieniu paska do gier w danym momencie,
-  interakcja z przyczyn technicznych z tą kontrolą nie jest możliwa.
+* NVDA będzie powiadamiał o istnieniu paska do gier Z przyczyn technicznych,
+  interakcja z tą kontrolką możliw jest tylko aczynając od wersji 17723.
 
 ## Poczta
 
@@ -129,9 +135,9 @@ For a list of changes made between each add-on releases, refer to
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts, as well
-  as availability of Reading View (if using Version 1709 and later) are
-  announced.
+* Powiadomienia, takie jak pobierania plików i różne ostrzeżenia na stronach
+  webowych są oznajmiane. także oznajmiane jest dostępność trybu czytania (
+  wersja 1709
 
 ## Klawiatura nowoczesna
 
@@ -144,10 +150,12 @@ For a list of changes made between each add-on releases, refer to
   emoji, przy oznajmianiu panelu emoji.
 * Wsparcie dla oznajmiania elementów schowka w chmurze w kompilacji 17666
   (Redstone 5) i nowszych.
-* Reduced unnecessary verbosity when working with modern keyboard and its
-  features. These include no longer announcing "Microsoft Candidate UI" when
-  opening hardware keyboard input suggestions and staying silent when
-  certain touch keyboard keys raise name change event on some systems.
+* Zmniejszona niechciana gadatliwośc przy działaniach związanych z
+  współczesną klawiaturą i jej funkcjami. W tym jest włączone bezpodstawne
+  wymawianie "Microsoft Candidate UI" gdy otwiera się klawiatura sprzętowa
+  podpowiedzi wpisywania i pozostawianie cichym przy tym, jak niektóre
+  klawisze na klawiaturze wywołują zdarzenie zmiany nazwy na niektórych
+  systemach.
 
 ## Osoby
 
@@ -167,24 +175,24 @@ For a list of changes made between each add-on releases, refer to
   2017.3.
 * Dzwięki paska postępu głośności nie są więcej słyszane w kompilacji 1803 i
   nowszych.
-* More messages about Windows Update status are announced, especially if
-  Windows Update encounters errors.
+* Więcej komunikatów o stanie Windows Update są wypowiadane, najważniejsze,
+  gdy Windows update zobaczy błąd.
 
 ## Skype
 
 * Powiadomienie o pisaniu będzie wypowiadane, tak jak i w Skype dla pulpitu.
-* Control+NvDA+number row commands, used to read recent chat history and to
-  move navigator object to chat entries in Skype for Desktop, is also
-  available in Skype UWP.
-* You can press Alt+number row to locate and move to conversations (1),
-  contacts list (2), bots (3) and chat edit field if visible (4). Note that
-  these commands will work properly if Skype update released in March 2017
-  is installed.
+* Control+NvDA+komendy rzędu cyfr, używane do odczytywania wiadomości w
+  czacie skypea a także do przemieszczania obiektu nawitaora do nich są
+  także dostępne w skype dla UWP.
+* Teraz można nacisnąć Alt+rząd cyfrowy aby móc znaleźć i przemieszczać się
+  między  czatami (1), kontaktami (2), botami (3) i polem do wpisywania
+  wiadomości jeżeli jest widoczne (4). Uwaga, te skróty będą poprawnie
+  działać, jeżeli aktualizacja skypea wydana w marcu 2017 jest
+  zainstalowana.
 * NVDA dla większości sytuacji nie będzie wypowiadał "Skype Message" przy
   przeglądaniu wiadomości.
-* From message history list, pressing NVDA+D on a message item will allow
-  NVDA to announce detailed information about a message such as channel
-  type, sent date and time and so on.
+* Z listy historii wiadomości, wciskając NVDA+D teraz wypowiada typ kanału,
+  datę wiadomości i tak dalej.
 
 ## Sklep
 

@@ -45,8 +45,8 @@ For a list of changes made between each add-on releases, refer to
 
 ## Općenito
 
-* U kontekstnim izbornicima za pločice početnog izbornika, Podizbornici se
-  prepoznaju ispravno.
+* Submenu items are properly recognized in various apps, including context
+  menu for Start menu tiles and microsoft Edge's app menu (Redstone 5).
 * Certain dialogs are now recognized as proper dialogs and reported as such,
   including Insider Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of
@@ -54,28 +54,28 @@ For a list of changes made between each add-on releases, refer to
   in Object presentation dialog/panel.
 * U većini kontekstnih izbornika (kao što je to u Edgeu), informacije o
   poziciji (NPR. 1 od 2) se više ne izgovara.
-* The following UIA events are recognized: active text position change
-  (Redstone 5), controller for, drag start, drag cancel, drag complete,
-  element selected, live region change, notification, system alert, tooltip
-  opened, window opened. With NVDA set to run with debug logging enabled,
-  these events will be tracked, and for UIA notification event, a debug tone
-  will be heard.
+* The following UIA events are recognized: active text position change,
+  controller for, drag start, drag cancel, drag complete, element selected,
+  live region change, notification, system alert, tooltip opened, window
+  opened. With NVDA set to run with debug logging enabled, these events will
+  be tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active app.
 * Added ability to check for add-on updates (automatic or manual) via
   Windows 10 App Essentials dialog found in NvDA Preferences menu. By
   default, stable and development versions will check for new updates
   automatically on a weekly or daily basis, respectively.
-* In some apps, live region text is announced. This includes alerts in Edge,
-  results in Calculator and others. Note that this may result in
-  double-speaking in some cases.
+* In some apps, live region text is announced. This includes alerts in Edge
+  (including elements marked with aria-role=alert), results in Calculator
+  and others. Note that this may result in double-speaking in some cases.
 * Notifications from newer app releases on Windows 10 Version 1709 (build
   16299) and later are announced.
 * Tooltips from Edge and universal apps are recognized and will be
   announced.
-* In build 17627 and later, when opening a new Sets tab (Control+Windows+T),
-  NVDA will announce search results when searching for items in the embedded
-  Cortana window.
-* When switching between Sets tabs, NvDA will announce name and position of
-  the tab you are switching to.
+* With Sets turned on (builds 17627 through 17692 for some insiders), when
+  opening a new Sets tab (Control+Windows+T), NVDA will announce search
+  results when searching for items in the embedded Cortana window.
+* With Sets turned on, when switching between Sets tabs, NvDA will announce
+  name and position of the tab you are switching to.
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce current desktop ID (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen
@@ -92,6 +92,7 @@ For a list of changes made between each add-on releases, refer to
 * Kada je pritisnuta tipka enter, NVDA izgovara rezultate izračuna.
 * Za izračune kao što su pretvaranje jedinica i pretvaranje valuta, NVDA će
   izvijestiti o rezultatima čim se isti pojave. 
+* NVDA will no longer announce "heading level" for calculator results.
 
 ## Kalendar
 
@@ -112,8 +113,9 @@ For a list of changes made between each add-on releases, refer to
 
 ## Traka za igrice
 
-* NVDA će opisati izgled prozora trake za igrice. Zbog tehničkih
-  nedostataka, NVDA ne može u potpunosti komunicirati s trakom za igrice.
+* NVDA will announce appearance of Game Bar window. Due to technical
+  limitations, NVDA cannot interact fully with Game Bar prior to build
+  17723.
 
 ## Pošta
 
@@ -153,8 +155,8 @@ For a list of changes made between each add-on releases, refer to
 
 ## Osobe
 
-* Tijekom pretraživanja kontakata, začut ćete zvuk ako postoje rezultati
-  pretrage. 
+* When searching for contacts, first suggestion will be announced,
+  particularly if using recent app releases.
 
 ## Postavke
 

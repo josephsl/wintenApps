@@ -49,26 +49,30 @@
 
 ## 常规设置
 
-* 在开始菜单瓷贴控件的上下文菜单中，子菜单被正确识别。
+* 现在子菜单项在各种应用程序中都可以正确识别，包括“开始”菜单磁贴的上下文菜单和Microsoft Edge的应用程序菜单（Redstone 5）。
 * Certain dialogs are now recognized as proper dialogs and reported as such,
   including Insider Preview dialog (settings app).
 * NVDA可以在大多数情况下执行搜索时朗读建议计数。 此选项由对象查看对话框/面板中的“读出对象位置信息”控制。
 * 在某些上下文菜单中（例如在Edge中），位置信息（例如，1、2）不再被朗读。
-* The following UIA events are recognized: active text position change
-  (Redstone 5), controller for, drag start, drag cancel, drag complete,
-  element selected, live region change, notification, system alert, tooltip
-  opened, window opened. With NVDA set to run with debug logging enabled,
-  these events will be tracked, and for UIA notification event, a debug tone
-  will be heard.
+* The following UIA events are recognized: active text position change,
+  controller for, drag start, drag cancel, drag complete, element selected,
+  live region change, notification, system alert, tooltip opened, window
+  opened. With NVDA set to run with debug logging enabled, these events will
+  be tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active app.
 * 增加可通过NVDA选项菜单中的Windows 10 应用增强对话框的检查插件更新（自动或手动）的功能。
   默认情况下，稳定版和开发版将分别按每周或每天自动检查新更新。
-* 在某些应用程序中，活动区域文本被朗读。 这包括Edge中的警报，Calculator中的结果等。 请注意，在某些情况下，这可能导致重复朗读。
+* In some apps, live region text is announced. This includes alerts in Edge
+  (including elements marked with aria-role=alert), results in Calculator
+  and others. Note that this may result in double-speaking in some cases.
 * Notifications from newer app releases on Windows 10 Version 1709 (build
   16299) and later are announced.
 * 来自Edge和通用应用程序的工具提示已被识别并将被朗读。
-* 在build 17627及以上版本中，当打开一个新的设置选项卡（Control + Windows +
-  T）时，NVDA将在嵌入式Cortana窗口中搜索项目时读出搜索结果。
-* 在设置选项卡之间切换时，NVDA会读出您要切换到选项卡的名称和位置。
+* With Sets turned on (builds 17627 through 17692 for some insiders), when
+  opening a new Sets tab (Control+Windows+T), NVDA will announce search
+  results when searching for items in the embedded Cortana window.
+* With Sets turned on, when switching between Sets tabs, NvDA will announce
+  name and position of the tab you are switching to.
 * 在虚拟桌面之间打开，关闭或切换时，NVDA会读出当前的桌面ID（例如，桌面2）。
 * 在更改屏幕分辨率或方向时，NVDA将不再公布“开始”菜单大小文本。
 
@@ -80,6 +84,7 @@
 
 * 按下ENTER或Escape后，NVDA会读出计算结果。
 * 对于计算，如单位换算，汇率转换器，NVDA将在输入计算后立即读出结果。
+* NVDA will no longer announce "heading level" for calculator results.
 
 ## 日历
 
@@ -97,7 +102,9 @@
 
 ## 游戏栏
 
-* NVDA将读出Game Bar窗口状态。 由于技术限制，NVDA无法与Game Bar完全互动。
+* NVDA will announce appearance of Game Bar window. Due to technical
+  limitations, NVDA cannot interact fully with Game Bar prior to build
+  17723.
 
 ## 邮件
 
@@ -138,7 +145,8 @@
 {name} 是由非赢利组织“NV Access”开发的一个用于协助视障用户的免费且开放源代码的解决方案。
 若您觉的 NVDA 很实用，并希望他可以继续发展，请赞助“NV Access”。您可以通过选择位于 NVDA 主菜单的“捐赠”菜单打开捐赠页面
 
-* 搜索联系人时，如果有搜索结果，则会播放提示音。
+* When searching for contacts, first suggestion will be announced,
+  particularly if using recent app releases.
 
 ## 设置
 

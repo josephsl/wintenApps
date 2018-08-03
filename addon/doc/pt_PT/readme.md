@@ -47,8 +47,9 @@ consulte o documento [changelogs for releases, release][3].
 
 ## Geral
 
-* Nos menus de contexto para os ecrãs do menu Iniciar, os submenus são
-  devidamente reconhecidos.
+* Os itens do submenu são reconhecidos correctamente em vários aplicativos,
+  incluindo o menu de contexto para os menus do menu Iniciar e o menu de
+  aplicativos do Microsoft Edge (Redstone 5).
 * Certos diálogos agora são reconhecidos como diálogos adequados, incluindo
   a caixa de diálogo Insider Preview (aplicativo de configurações).
 * O NVDA pode anunciar a contagem de sugestões, ao realizar uma pesquisa na
@@ -56,29 +57,33 @@ consulte o documento [changelogs for releases, release][3].
   posição do objeto" na caixa de diálogo de apresentação do objeto.
 * Em determinados menus de contexto (como no Edge), as informações de
   posição (por exemplo, 1 de 2) deixaram de ser anunciadas.
-* Os seguintes eventos UIA são reconhecidos: Controlador para, arrastar para
-  início, arrastar para cancelamento, arrastar para completo, elemento
-  seleccionado, alterar região, notificação, alerta do sistema, barra de
-  ferramentas aberta, janela aberta. Com o NVDA configurado para ser
-  executado com o log de depuração ativado, esses eventos serão rastreados
-  e, para o evento de notificação do UIA, um tom de depuração será ouvido. 
+* Os seguintes eventos UIA são reconhecidos: alteração da posição do texto
+  activo, controlador para, arrastar início, arrastar cancelamento, arrastar
+  completo, elemento selecionado, alterar região ao vivo, notificação,
+  alerta do sistema, tooltip aberta, janela aberta. Com o NVDA configurado
+  para ser executado com o log de depuração activado, esses eventos serão
+  rastreados e, para o evento de notificação UIA, um beep de depuração será
+  ouvido se as notificações vierem de algum lugar diferente do aplicativo
+  actualmente activo.
 * Adicionada a capacidade de verificar actualizações adicionais (automáticas
   ou manuais) através da caixa de diálogo do Windows 10 aplicações
   essenciais encontrada no menu de preferências do NVDA. Por defeito, as
   versões estáveis e de desenvolvimento verificarão novas actualizações
   semanalmente ou diariamente, conforme determinado.
-* Em algumas aplicações, o texto da região é anunciado. Isto inclui alertas
-  no Edge, resultados na Calculadora e outros. Observe que isso pode
+* Em algumas aplicações, o texto da localização é anunciado. Isto inclui
+  alertas no Edge, resultados na Calculadora e outros. Observe que isso pode
   resultar em fala dupla em alguns casos.
 * As notificações de versões mais recentes de aplicativos no Windows 10
   Versão 1709 (build 16299) e posteriores são anunciadas.
 * As dicas de ferramentas do Edge e aplicativos universais são reconhecidas
   e serão anunciadas.
-* Na versão 17627 e posteriores, ao abrir uma nova guia Conjuntos (Control +
+* Com as definições activadas (compilações  17627 a 17692 para algumas
+  aplicações internas), ao abrir uma nova guia de definições (Controle +
   Windows + T), o NVDA anunciará os resultados da pesquisa ao pesquisar
-  itens na janela Cortana incorporada.
-* Ao alternar entre os separadores, o NVDA anunciará o nome e a posição do
-  separador para o qual se está a deslocar.
+  itens na janela da Cortana incorporada.
+* Com as definições activadas, ao alternar entre os separadores de
+  definições, o NVDA anunciará o nome e a posição do separador para o qual
+  está a deslocar-se.
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
   anunciará a ID atual da área de trabalho (área de trabalho 2, por
   exemplo).
@@ -98,6 +103,8 @@ consulte o documento [changelogs for releases, release][3].
   resultados do cálculo.
 * Para cálculos como conversor de unidades e conversor de moeda, o NVDA
   anunciará os resultados assim que os cálculos forem inseridos.
+* O NVDA não anunciará mais "nível de cabeçalho" para os resultados da
+  calculadora.
 
 ## Calendário
 
@@ -119,8 +126,8 @@ consulte o documento [changelogs for releases, release][3].
 ## Barra de jogos.
 
 * O NVDA anunciará a aparência da janela da barra de jogos. Devido a
-  limitações técnicas, o NVDA não pode interagir completamente com a barra
-  de jogos.
+  limitações técnicas, o NVDA não pode interagir totalmente com a barra de
+  jogos antes da compilação 17723.
 
 ## Correio.
 
@@ -162,8 +169,8 @@ consulte o documento [changelogs for releases, release][3].
 
 ## Pessoas.
 
-* Ao procurar contactos, um som será reproduzido se houver resultados de
-  pesquisa.
+* Ao procurar contactos, a primeira sugestão será anunciada, principalmente
+  se usar os aplicativos mais recentes.
 
 ## Configurações
 

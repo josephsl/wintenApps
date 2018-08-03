@@ -7,7 +7,7 @@
 Add-on này là một bộ sưu tập các modules cho nhiều ứng dụng của Windows 10,
 đồng thời là các cải tiến và sửa lỗi cho một số điều khiển trong windows 10.
 
-Các module cho các ứng dụng sau đây đã đơc5 tích hợp (xem phần thông tin chi
+Các module cho các ứng dụng sau đây đã được tích hợp (xem phần thông tin chi
 tiết của mỗi ứng dụng để biết thêm chi tiết):
 
 * Alarms and Clock.
@@ -22,8 +22,8 @@ tiết của mỗi ứng dụng để biết thêm chi tiết):
 * Bàn phím hiện đại (bản biểu tượng cảm xúc / gợi ý thiết bị đầu vào / các
   thành phần bộ nhớ tạm đám mây trong phiên bản 1709 trở lên)
 * People
-* Settings (system settings, Windows+I)
-* Skype (universal app)
+* Thiết lập (thiết lập hệ thống, Windows+I)
+* Skype (ứng dụng universal)
 * Store
 * Weather.
 * Các module tổng hợp cho các điều khiển như Start Menu tiles.
@@ -32,12 +32,12 @@ Lưu ý:
 
 * Add-on này yêu cầu Windows 10 phiên bản 1709 (build 16299) trở lên và NVDA
   2018.2 trở lên. Tốt nhất, là dùng add-on với bản Windows 10 mới nhất
-  (build 17134) và stable bản mới nhất của NVDA.
+  (build 17134) và bản chính thức mới nhất của NVDA.
 * Vài tính năng của add-on đã hoặc sẽ là một phần tính năng của trình đọc
   màn hình NVDA.
 * Với những thành phần không được liệt kê bên dưới, bạn có thể xem như các
   tính năng đó đã là một phần của NVDA, không phải áp dụng như add-on không
-  hỗ trợ Windows 10 phiên bản cũ or các thay đổi của các ứng dụng làm cho
+  hỗ trợ Windows 10 phiên bản cũ hay các thay đổi của các ứng dụng làm cho
   chúng không còn tác dụng.
 
 Để biết các thay đổi giữa các lần phát hành của add-on, xem phần [changelogs
@@ -45,8 +45,9 @@ for add-on releases][3] .
 
 ## Chung
 
-* Trong trình đơn ngữ cảnh của Start Menu tiles, các trình đơn con đã được
-  nhận diện chính xác.
+* Thành phần có trình đơn con đã được nhận dạng chính xác trong nhiều ứng
+  dụng, bao gồm trình đơn ngữ cảnh của Start menu tiles và microsoft Edge
+  (Redstone 5).
 * Một số hộp thoại giờ đã được nhận diện đúng thuộc tính và thông báo chính
   xác, bao gồm hộp thoại Insider Preview (ứng dụng settings).
 * NVDA có thể thông báo số gợi ý đếm được khi thực hiện tìm kiếm trong một
@@ -54,29 +55,29 @@ for add-on releases][3] .
   trí đối tượng" trong hộp thoại trình bày đối tượng.
 * Trong một số trình đơn ngữ cảnh (như của Edge), thông tin vị trí (như 1
   trên 2) không còn được đọc nữa.
-* Các sự kiện UIA sau đây đã được nhận dạng: active text position change
-  (Redstone 5), controller for, drag start, drag cancel, drag complete,
-  element selected, live region change, notification, system alert, tooltip
-  opened, window opened. Với NVDA được thiết lập để chạy với chế độ bản ghi
-  dò lỗi được bật, các sự kiện này sẽ được theo dõi, và cho thông báo sự
-  kiện UIA, bạn sẽ nghe âm báo gỡ lỗi.
+* Các sự kiện UIA sau đã được nhận dạng: active text position change,
+  controller for, drag start, drag cancel, drag complete, element selected,
+  live region change, notification, system alert, tooltip opened, window
+  opened. Khi NVDA được thiết lập chạy với bản ghi dò lỗi, những sự kiện này
+  sẽ được theo dõi, và với sự kiện thông báo UIA, một âm báo lỗi sẽ được
+  phát lên nếu các thông báo đến từ một nơi khác với ứng dụng đang chạy.
 * Thêm khả năng kiểm tra cập nhật add-on (tự động hoặc thủ công) thông qua
   hộp thoại Windows 10 App Essentials được tìm thấy trong trình đơn tùy chọn
-  của NvDA . Mặc định, các phiên bản stable và development sẽ được tự động
-  kiểm tra cập nhật hàng ngày hoặc hàng tuần.
-* Trong một số ứng dụng, live region text đã được thông báo. Bao gồm các
-  thông báo trong Edge, các kết quả trong Calculator và các thông tin
-  khác. Lưu ý rằng các kết quả này có thể được đọc hai lần trong vài trường
-  hợp.
+  của NvDA . Mặc định, các phiên bản chính thức và thử nghiệm sẽ được tự
+  động kiểm tra cập nhật hàng ngày hoặc hàng tuần.
+* Trong một số ứng dụng, live region text đã được thông báo, bao gồm các
+  thông báo trong Edge (bao gôm các thành phần được đánh dấu thuộc tính
+  aria-role=alert), các kết quả trong Calculator và các thông tin khác. Lưu
+  ý rằng các kết quả này có thể được đọc hai lần trong vài trường hợp.
 * Thông báo từ các ứng dụng mới phát hành trên Windows 10 phiên bản 1709
   (build 16299) trở lên đã được đọc.
 * Thông báo trên đối tượng từ Edge và các ứng dụng tương tự đã được nhận
   dạng và sẽ được thông báo.
-* Trong build 17627 trở lên, khi mở một bộ tab mới (Control+Windows+T), NVDA
-  sẽ thông báo kết quả tìm kiếm khi tìm các thành phần trong cửa sổ Cortana
-  đã được nhún vào.
-* Khi chuyển giữa các bộ tab, NvDA sẽ thông báo tên và vị trí của tab bạn
-  đang chuyển đến.
+* Khi bật set (build 17627 đến 17692 với vài người), khi mở một bộ tab mới
+  (Control+Windows+T), NVDA sẽ thông báo kết quả tìm kiếm khi tìm các thành
+  phần trong cửa sổ Cortana đã được nhún vào.
+* Nếu bật setts, khi chuyển giữa các bộ tab, NvDA sẽ thông báo tên và vị trí
+  của tab bạn đang chuyển đến.
 * Khi mở, đóng, hay chuyển giữa desktop ảo, NVDA sẽ thông báo desktop ID
   hiện tại (desktop 2 chẳng hạn).
 * NVDA sẽ không thông báo kích thước văn bản của Start menu khi thay đổi độ
@@ -84,16 +85,17 @@ for add-on releases][3] .
 
 ## Alarms and clock
 
-* giá trị của bộ chọn thời gian giờ đã được đọc, đặc biệt là khi chuyển con
-  trỏ đến điều khiển để chọn. điều này cũng có tác dụng với điều khiển đã
-  dùng để chọn thời gian khởi động lại máy để hoàn tất việc cài đặt cập nhật
-  Windows.
+* Giá trị của bộ chọn thời gian (Time picker) giờ đã được đọc, đặc biệt là
+  khi chuyển con trỏ đến điều khiển để chọn. điều này cũng có tác dụng với
+  điều khiển đã dùng để chọn thời gian khởi động lại máy để hoàn tất việc
+  cài đặt cập nhật.
 
 ## Calculator
 
 * Khi bấm ENTER hay Escape, NVDA sẽ thông báo kết quả tính toán.
 * Với các phép tính như chuyển đổi đơn vị và tiền tệ, NVDA sẽ thông báo ngay
   khi phép tính được nhập.
+* NVDA không còn đọc "tiêu đề cấp" cho kết quả tính toán.
 
 ## calendar
 
@@ -114,7 +116,8 @@ for add-on releases][3] .
 ## Game Bar
 
 * NVDA sẽ thông báo sự xuất hiện của cửa sổ Game Bar. vì giới hạn kĩ thuật,
-  NVDA không thể tương tác hoàn toàn với Game Bar.
+  NVDA không thể tương tác hoàn toàn với Game Bar trong các phiên bản trước
+  build 17723.
 
 ## Mail
 
@@ -154,7 +157,8 @@ for add-on releases][3] .
 
 ## People
 
-* Khi tìm kiếm danh bạ, âm thanh sẽ được phát lên khi tìm thấy kết quả.
+* Khi tìm kiếm danh bạ, gợi ý đầu tiên sẽ được thông báo, đặc biệt là với
+  các bản phát hành mới của ứng dụng.
 
 ## Thiết lập
 
@@ -196,9 +200,9 @@ for add-on releases][3] .
 
 ## Weather
 
-* Các tab như "dự báo" và "bản đồ" đã được nhận dạng chính xác (vá lỗi bởi
+* Các thẻ như "dự báo" và "bản đồ" đã được nhận dạng chính xác (vá lỗi bởi
   Derek Riemer).
-* Khi đọc một dự báo, dùng mũi tên trái phải để chuyển giữa các thành
+* khi đọc một dự báo, dùng mũi tên trái phải để chuyển giữa các thành
   phần. Dùng mũi tên lên xuống để đọc từng thành phần. Ví dụ, Bấm mũi tên
   phải có thể thông báo "Thứ hai: 26 độ, có mây, ..." Bấm mũi tên xuống sẽ
   đọc "Thứ hai" và bấm lần nữa sẽ đọc thành phần tiếp theo (nhiệt độ chẳng
