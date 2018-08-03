@@ -28,7 +28,7 @@ privire la ceea ce este inclus):
 * Skype (aplicație universală)
 * Magazin
 * Meteo.
-* Diverse module de control precum tile-urile din meniul start.
+* Diverse module de control precum comenzile din meniul start.
 
 Note:
 
@@ -50,8 +50,9 @@ versiunile suplimentului][3].
 
 ## General
 
-* În meniurile contextuale ale tile-urilor din cadrul Start Meniu,
-  submeniurile sunt recunoscute corect.
+* Elementele de submeniu sunt recunoscute corespunzător în diverse
+  aplicații, incluzând meniul context pentru comenzile din meniul Start și
+  meniul de aplicație al Microsoft Edge (Redstone 5).
 * Anumite dialoguri sunt acum recunoscute ca dialoguri corespunzătoare și
   sunt raportate ca atare. Acestea includ dialogul Insider Preview
   (aplicația setări).
@@ -61,9 +62,9 @@ versiunile suplimentului][3].
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
 * Următoarele evenimente UIA sunt recunoscute: schimbarea poziției textului
-  activ (Redstone 5), controler pentru, început tragere, tragere finalizată,
-  element selectat, schimbarea regiunii active, notificare, alertă de
-  sistem, indiciu deschis, fereastră deschisă. Cu NVDA-ul setat să ruleze cu
+  activ, controler pentru, început de tragere, tragere finalizată, element
+  selectat, schimbarea regiunii active, notificare, alertă de sistem,
+  indiciu deschis, fereastră deschisă. Cu NVDA-ul setat să ruleze cu
   diagnosticarea activată, aceste evenimente vor fi urmărite, iar pentru
   evenimentul de tip notificare UIA, se va auzi un ton de diagnosticare.
 * A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
@@ -72,17 +73,19 @@ versiunile suplimentului][3].
   și cea în dezvoltare vor căuta noi actualizări automat săptămânal sau
   zilnic.
 * În unele aplicații, textul regiunii live este anunțat. Aceasta include
-  alertele din Edge, rezultatele din Calculator și altele. Rețineți faptul
-  că asta poate rezulta o dublă vorbire în unele cazuri.
+  alertele din Edge (incluzând elementele marcate cu aria-role=alert),
+  rezultatele din Calculator și altele. Rețineți faptul că asta poate
+  rezulta o dublă vorbire în unele cazuri.
 * Sunt anunțate Notificările versiunilor mai noi ale aplicațiilor din
   Windows 10 versiunea 1709 (compilare 16299) și mai nouă.
 * Indiciile din Edge și alte aplicații universale sunt recunoscute și vor fi
   anunțate.
-* În compilarea 17627 și mai nouă, la deschiderea unei noi file Sets
-  (Control+Windows+T), NVDA va anunța rezultatele căutării atunci când se
-  caută elemente în fereastra Cortana încorporată.
-* NVDA anunță acum poziția și numărul etichetei set în timpul navigării
-  între etichete.
+* Cu Sets pornit (de la compilarea 17627 până la compilarea 17692 pentru
+  unii insideri), la deschiderea unei noi file Sets (Control+Windows+T),
+  NVDA va anunța rezultatele căutării atunci când se caută elemente în
+  fereastra încorporată a Cortanei.
+* Cu Sets pornit, la comutarea între filele Sets, NVDA va anunța numele și
+  poziția filei la care vă comutați.
 * La deschiderea, închiderea sau comutarea între spațiile de lucru virtuale,
   NVDA va anunța ID-ul spațiului de lucru curent (spațiu de lucru 2).
 * NVDA nu mai anunță „dimensiune text start meniu” la schimbarea rezoluției
@@ -100,6 +103,7 @@ versiunile suplimentului][3].
 * Când se apasă Enter sau Escape, NVDA anunță rezultatele calculului.
 * Pentru calcule precum convertorul de unitate și convertorul valutar, NVDA
   va anunța rezultatele de îndată ce vor fi introduse calculele.
+* NVDA nu va mai anunța „rubrică nivel” pentru rezultatele calculatorului.
 
 ## calendar
 
@@ -122,7 +126,8 @@ versiunile suplimentului][3].
 ## Bară de jocuri
 
 * NVDA va anunța aspectul barei de jocuri. Datorită limitărilor tehnice,
-  NVDA nu poate interacționa pe deplin cu bara de jocuri.
+  NVDA nu poate interacționa pe deplin cu bara de jocuri într-o compilare
+  mai veche decât 17723.
 
 ## Mail
 
@@ -164,8 +169,8 @@ versiunile suplimentului][3].
 
 ## Persoane
 
-* La căutarea contactelor, un sunet se va reda dacă există rezultate de
-  căutare.
+* La căutarea de contacte, va fi anunțată prima sugestie, în particular dacă
+  se folosesc versiuni recente ale aplicației.
 
 ## Setări
 

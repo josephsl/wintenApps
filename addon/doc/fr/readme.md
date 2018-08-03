@@ -52,8 +52,9 @@ versions du module complémentaire][3].
 
 ## Générale
 
-* Dans les menus contextuels pour les tuiles sous-menus du Menu Démarrer
-  sont correctement reconnus.
+* Les éléments de sous-menu sont correctement reconnus dans diverses
+  applications, y compris le menu contextuel pour les tuiles du Menu
+  Démarrer et le menu de l'application de Microsoft Edge (Redstone 5).
 * Certaines boîtes de dialogue sont maintenant reconnues comme des boîtes de
   dialogue propres et signalées comme telles, y compris le dialogue Insider
   Preview (settings app).
@@ -64,12 +65,14 @@ versions du module complémentaire][3].
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
 * Les événements UIA suivants sont reconnus : changement de position du
-  texte actif (Redstone 5), contrôleur pour, début de déplacement,
-  annulation de déplacement, déplacement complet, élément sélectionné,
-  changement de région en direct, notification, alerte système, suggestion
-  ouverte, fenêtre ouverte. Avec NVDA configuré pour être exécuté avec le
-  journal activé en mode débogage ces événements seront suivis et pour
-  l'événement de notification UIA, une tonalité de débogage sera entendue.
+  texte actif, contrôleur pour, début de déplacement, annulation de
+  déplacement, déplacement complet, élément sélectionné, changement de
+  région en direct, notification, alerte système, suggestion ouverte,
+  fenêtre ouverte. Avec NVDA configuré pour être exécuté avec le journal
+  activé en mode débogage ces événements seront suivis et pour l'événement
+  de notification UIA, une tonalité de débogage sera entendue si les
+  notifications proviennent d'un endroit autre que l'application
+  actuellement active.
 * Ajout de la possibilité de vérifier les mises à jour du module
   complémentaire(automatiques ou manuelles) via le dialogue Windows 10 App
   Essentials qui se trouve dans le menu Préférences de NVDA. Par défaut, les
@@ -77,19 +80,20 @@ versions du module complémentaire][3].
   nouvelles mises à jour sur une base hebdomadaire ou quotidienne,
   respectivement.
 * Dans certaines applications, le texte de la région en direct est
-  annoncé. Cela inclut les alertes dans Edge, résultats dans la calculatrice
-  et autres. Notez que cela peut entraîner une double verbalisation dans
-  certains cas.
+  annoncé. Cela inclut les alertes dans Edge (y compris les éléments marqués
+  avec aria-role=alert), résultats dans la calculatrice et autres. Notez que
+  cela peut entraîner une double verbalisation dans certains cas.
 * Les notifications des versions plus récentes des applications sur Windows
   10 version 1709 (build 16299) et ultérieures sont annoncées.
 * Les suggestions pour Edge et pour les applications universelles sont
   reconnues et seront annoncées.
-* Dans la build 17627 et les versions ultérieures, lors de l'ouverture d'un
-  nouvel onglet Sets (Contrôle+Windows+T), NVDA annonce les résultats de
-  recherche lors de la recherche d'éléments dans la fenêtre Cortana
-  intégrée.
-* Lorsque vous basculez entre les onglets Sets NVDA annoncera le nom et la
-  position de l'onglet sur lequel vous basculez.
+* Lorsque les Sets  sont activés, (build 17627 jusqu'à 17692 pour certains
+  insiders), lors de l'ouverture d'un nouvel onglet Sets
+  (Contrôle+Windows+T), NVDA annonce les résultats de recherche lors de la
+  recherche d'éléments dans la fenêtre Cortana intégrée.
+* Lorsque les Sets  sont activés, lorsque vous basculez entre les onglets
+  Sets NVDA annoncera le nom et la position de l'onglet sur lequel vous
+  basculez.
 * Lors de l'ouverture, de la fermeture ou le basculement entre les bureaux
   virtuels, NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
 * NVDA n'annoncera plus le texte de la taille du menu Démarrer lorsque vous
@@ -109,6 +113,8 @@ versions du module complémentaire][3].
   calcul.
 * Pour les calculs tels que le convertisseur d'unités et le convertisseur de
   devises, NVDA annoncera les résultats dès que les calculs seront entrés.
+* NVDA n'annoncera plus le "titre niveau" pour les résultats de la
+  calculatrice.
 
 ## calendrier
 
@@ -134,7 +140,7 @@ versions du module complémentaire][3].
 
 * NVDA annoncera l'apparition de la fenêtre Game Bar. En raison de
   limitations techniques, NVDA ne peut pas interagir entièrement avec Game
-  Bar.
+  Bar antérieur à la build 17723.
 
 ## Courrier
 
@@ -180,8 +186,8 @@ versions du module complémentaire][3].
 
 ## Personnes
 
-* Lors de la recherche de contacts, un son sera joué s'il existe des
-  résultats de recherche.
+* Lors de la recherche de contacts, la première suggestion sera annoncée, en
+  particulier si vous utilisez une version récente d'application.
 
 ## Paramètres
 
