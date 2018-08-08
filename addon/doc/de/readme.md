@@ -46,7 +46,9 @@ Sie im Dokument [Changelogs der Erweiterungen][3].
 
 ## Allgemein
 
-* Untermenüs werden im Kontextmenü von Kacheln korrekt erkannt
+* Untermenüs werden in verschiedenen Anwendungen richtig erkannt,
+  einschließlich des Kontextmenüs für Startmenükacheln und des
+  Anwendungsmenüs von Microsoft Edge (Redstone 5).
 * Bestimmte Dialoge werden nun als richtige Dialoge erkannt und als solche
   gemeldet, einschließlich des Insider-Vorschau-Dialogs (in den
   Windows-Einstellungen).
@@ -55,29 +57,33 @@ Sie im Dokument [Changelogs der Erweiterungen][3].
   Objektpositionsdaten im Dialog der Objektpräsentation.
 * In bestimmten Kontextmenüs (z.B. in Edge) werden Positionsinformationen
   (z.B. 1 von 2) nicht mehr angesagt.
-* Folgende UIA-Ereignisse werden erkannt: Aktive Änderungen der Textposition
-  (Redstone 5), Controller für Drag Start, Drag Cancel, Drag Complete,
-  Element ausgewählt, Live Region Change, Benachrichtigung, Systemalarm,
-  Tooltip geöffnet, Fenster geöffnet. Wenn NVDA so eingestellt ist, dass es
-  mit aktiviertem Debug-Logging läuft, werden diese Ereignisse verfolgt, und
-  für UIA-Benachrichtigungsereignisse wird ein Debug-Ton ausgegeben.
+* Folgende UIA-Ereignisse werden erkannt: aktive Textpositionsänderung,
+  Controller für, Drag Start, Drag Cancel, Drag Complete, Element
+  ausgewählt, Live Region Change, Benachrichtigung, Systemalarm, Tooltip
+  geöffnet, Fenster geöffnet. Wenn NVDA so eingestellt ist, dass es mit
+  aktiviertem Debug-Logging läuft, werden diese Ereignisse verfolgt, und für
+  UIA-Benachrichtigungsereignisse wird ein Debug-Ton ausgegeben, wenn
+  Benachrichtigungen von einem anderen Ort als der aktuell aktiven Anwendung
+  kommen.
 * Möglichkeit hinzugefügt, über den neuen Dialog Windows 10 App Essentials
   im NVDA-Einstellungsmenü nach Aktualisierungen für diese Erweiterung
   (automatisch oder manuell) zu suchen. Standardmäßig werden stabile- und
   Entwicklerversionen wöchentlich bzw. täglich automatisch nach neuen
   Updates suchen.
-* In einigen Apps wird Live-Region-Text angekündigt. Dazu gehören Meldungen
-  in Edge, Ergebnisse im Windowsrechner und andere. Beachten Sie, dass dies
-  in manchen Fällen zu einer doppelten Aussprache führen kann, da die
-  meisten Szenarien nun Bestandteil von NVDA ab 2017.3 sind.
+* In einigen Apps wird der Live-Text der Region angekündigt. Dazu gehören
+  Alerts in Edge (einschließlich der mit aria-role=alert markierten
+  Elemente), Ergebnisse in Calculator und re. Beachten Sie, dass dies in
+  manchen Fällen zu doppelten Ansagen führen kann.
 * Benachrichtigungen von neueren App-Releases auf Windows 10 Version 1709
   (Build 16299) und neuer werden mitgeteilt.
 * Tooltips von Edge und Universal Apps werden erkannt und angekündigt.
-* In Build 17627 und später, beim Öffnen einer neuen Registerkarte
-  (Control+Windows+T), gibt NVDA die Suchergebnisse bei der Suche nach
-  Elementen im eingebetteten Cortana-Fenster bekannt.
-* NVDA meldet nun auch die Position und die Zahl x von x der Registerkarte
-  in Windows Sets, wenn zwischen Registerkarten navigiert wird.
+* Bei eingeschalteten Sets (Builds 17627 bis 17692 für einige Insider) gibt
+  NVDA beim Öffnen einer neuen Registerkarte Sets (Control+Windows+T) die
+  Suchergebnisse bei der Suche nach Artikeln im eingebetteten
+  Cortana-Fenster bekannt.
+* Wenn Sets eingeschaltet sind, wird NVDA beim Umschalten zwischen den
+  Sets-Registerkarten den Namen und die Position der Registerkarte, zu der
+  Sie wechseln, bekannt geben.
 * Beim Öffnen, Schließen oder Wechseln zwischen virtuellen Desktops gibt
   NVDA die aktuelle Desktop-ID (z.B. Desktop 2) bekannt.
 * NVDA sagt den Text für die Größe des Startmenüs nicht mehr an, wenn die
@@ -96,6 +102,8 @@ Sie im Dokument [Changelogs der Erweiterungen][3].
   an.
 * Für Berechnungen wie im Einheitenumrechner und Währungsumrechner gibt NVDA
   die Ergebnisse bekannt, sobald die Berechnungen eingegeben wurden.
+* NVDA wird nicht mehr "Überschriften" für Berechnungsergebnisse bekannt
+  geben.
 
 ## Kalender
 
@@ -119,9 +127,9 @@ Sie im Dokument [Changelogs der Erweiterungen][3].
 
 ## Spieleleiste
 
-* NVDA wird das Erscheinen des Fensters mit der Spieleleiste
-  ansagen. Aufgrund technischer Einschränkungen kann NVDA nicht vollständig
-  mit der Spieleleiste interagieren.
+* NVDA wird das Erscheinen der Spieleleiste ankündigen. Auf Grund
+  technischer Einschränkungen kann NVDA vor dem Build 17723 nicht
+  vollständig mit der Spieleleiste interagieren.
 
 ## Mail
 
@@ -164,8 +172,8 @@ Sie im Dokument [Changelogs der Erweiterungen][3].
 
 ## Kontakte
 
-* Wenn die Suche nach Kontakten erfolgreich war, wird ein Signalton
-  abgespielt.
+* Bei der Suche nach Kontakten wird der erste Vorschlag angekündigt,
+  insbesondere bei Verwendung aktueller App-Veröffentlichungen.
 
 ## Einstellungen
 

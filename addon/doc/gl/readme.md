@@ -47,8 +47,8 @@ For a list of changes made between each add-on releases, refer to
 
 ## Xeral
 
-* En menús de contexto para os mosaicos do Menú Inicio, os submenús
-  recoñécense apropriadamente.
+* Submenu items are properly recognized in various apps, including context
+  menu for Start menu tiles and microsoft Edge's app menu (Redstone 5).
 * Certain dialogs are now recognized as proper dialogs and reported as such,
   including Insider Preview dialog (settings app).
 * NVDA pode anunciar conta de suxerencias cando se realiza unha procura na
@@ -56,29 +56,29 @@ For a list of changes made between each add-on releases, refer to
   posición do obxecto" no diálogo/panel Presentación de Obxectos.
 * En certos menús de contexto (coma no Edge), a información de posición
   (ex.: 1 de 2) xa non se anuncia.
-* The following UIA events are recognized: active text position change
-  (Redstone 5), controller for, drag start, drag cancel, drag complete,
-  element selected, live region change, notification, system alert, tooltip
-  opened, window opened. With NVDA set to run with debug logging enabled,
-  these events will be tracked, and for UIA notification event, a debug tone
-  will be heard.
+* The following UIA events are recognized: active text position change,
+  controller for, drag start, drag cancel, drag complete, element selected,
+  live region change, notification, system alert, tooltip opened, window
+  opened. With NVDA set to run with debug logging enabled, these events will
+  be tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active app.
 * Engadida a capacidade de procurar as actualizacións do complemento
   (automática ou manual) a través do diálogo Windows 10 App Essentials que
   se atopa no menú Preferencias do NVDA. Por defecto, procuraranse as
   actualizacións para as versións estable e de desenvolvementeo
   automáticamente semanal ou diáriamente, respectivamente.
-* Nalgunhas aplicacións, anúnciase o texto en rexións vivas. Esto inclúe
-  alertas en Edge, na calculadora e noutros. Ten en conta que esto poderá
-  causar unha fala por duplicado nalgúns casos.
+* In some apps, live region text is announced. This includes alerts in Edge
+  (including elements marked with aria-role=alert), results in Calculator
+  and others. Note that this may result in double-speaking in some cases.
 * Notifications from newer app releases on Windows 10 Version 1709 (build
   16299) and later are announced.
 * recoñeceranse e anunciaranse os consellos para o Edge e para as
   aplicacións universais.
-* Na compilación 17627 e posterior, cando se abra unha nova lapela de
-  conxuntos (ctrl+windows+T), NVDA anunciará os resultados da busca cando se
-  procuren elementos na ventá incrustada de Cortana.
-* Cando se cambie de lapela de Conxuntos, NVDA anunciará o nome e a posición
-  da lapela cara á cal se conmutou.
+* With Sets turned on (builds 17627 through 17692 for some insiders), when
+  opening a new Sets tab (Control+Windows+T), NVDA will announce search
+  results when searching for items in the embedded Cortana window.
+* With Sets turned on, when switching between Sets tabs, NvDA will announce
+  name and position of the tab you are switching to.
 * Cando se abran, pechen ou se conmute entre escritorios virtuales, NVDA
   anunciará o ID do escritorio actual (escritorio 2, por exemplo).
 * NVDA xa non anuncia Menú Inicio tamaño de texto ao cambiar a resolución de
@@ -95,6 +95,7 @@ For a list of changes made between each add-on releases, refer to
 * Cando se prema INTRO ou Escape, NVDA anuncia os resultados do cálculo.
 * Para cálculos coma conversión de unidades e conversión de moneda, o NVDA
   anunciará os resultados tan pronto coma os cálculos se introduzan.
+* NVDA will no longer announce "heading level" for calculator results.
 
 ## calendario
 
@@ -116,8 +117,9 @@ For a list of changes made between each add-on releases, refer to
 
 ## Barra de Xogos
 
-* NVDA anunciará a aparición da ventá Barra de Xogos. Debido a limitacións
-  técnicas, o NVDA non pode interactuar compretamente coa Barra de Xogos.
+* NVDA will announce appearance of Game Bar window. Due to technical
+  limitations, NVDA cannot interact fully with Game Bar prior to build
+  17723.
 
 ## Correo
 
@@ -158,8 +160,8 @@ For a list of changes made between each add-on releases, refer to
 
 ## Xente
 
-* Cando se procuren contactos, reproducirase un son se hai resultados da
-  busca.
+* When searching for contacts, first suggestion will be announced,
+  particularly if using recent app releases.
 
 ## Opcións
 

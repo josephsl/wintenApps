@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.02\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-02-03 22:05+1000\n"
-"PO-Revision-Date: 2018-07-19 18:31+0700\n"
+"PO-Revision-Date: 2018-07-30 15:14+0700\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: Cuong Dang Manh <dangmanhcuong@gmail.com>\n"
 "Language-Team: \n"
-"X-Generator: Poedit 2.0.9\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -97,7 +97,7 @@ msgstr "Tự động &Kiểm tra cập nhật add-on"
 
 #. Translators: The label for a setting in WinTenApps add-on settings to select automatic update interval in days.
 msgid "Update &interval in days"
-msgstr "&Cập nhật theo thời gian biểu"
+msgstr "&Cập nhật theo ngày"
 
 #. Translators: The label for a combo box to select update channel.
 msgid "&Add-on update channel:"

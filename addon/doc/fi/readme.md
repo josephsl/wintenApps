@@ -47,7 +47,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
-* Alavalikot tunnistetaan oikein Käynnistä-valikon tiilien pikavalikoissa.
+* Alavalikot tunnistetaan asianmukaisesti useissa sovelluksissa, mukaan
+  lukien Käynnistä-valikon ruutujen tilannekohtaiset valikot ja microsoft
+  Edgen sovellusvalikko (Redstone 5).
 * Tietyt valintaikkunat tunnistetaan ja puhutaan nyt asianmukaisesti
   valintaikkunoina, mukaan lukien Insider-esiversion valintaikkuna
   (Asetukset-sovellus).
@@ -57,28 +59,30 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
 * Seuraavat UIA-tapahtumat tunnistetaan: sijainnin muutos aktiivisessa
-  tekstissä (Redstone 5), ohjain kohteelle, vetämisen aloitus, vetämisen
-  peruutus, vetäminen suoritettu, elementti valittu, aktiivisen alueen
-  muutos, ilmoitus, järjestelmän ilmoitus, työkaluvihje avattu, ikkuna
-  avattu. Näitä tapahtumia seurataan ja UIA-ilmoitustapahtuma ilmaistaan
-  virheäänellä, kun NVDA:n lokitasoksi on määritetty "virheenkorjaus".
+  tekstissä, ohjain kohteelle, vetämisen aloitus, vetämisen peruutus,
+  vetäminen suoritettu, elementti valittu, aktiivisen alueen muutos,
+  ilmoitus, järjestelmän ilmoitus, työkaluvihje avattu, ikkuna avattu. Näitä
+  tapahtumia seurataan ja UIA-ilmoitustapahtuma ilmaistaan virheäänellä, kun
+  NVDA:n lokitasoksi on määritetty "virheenkorjaus".
 * Lisätty mahdollisuus päivitysten tarkistamiseen (automaattinen tai
   manuaalinen) NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App
   Essentials -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat
   oletuksena automaattisen päivitystarkistuksen viikoittain tai päivittäin.
 * Joidenkin sovellusten Aktiivisen alueen teksti luetaan. Näitä ovat
-  mm. Edgen ilmoitukset ja laskutoimitusten tulokset Laskimessa sekä
-  muut. Huomaa, että tämä saattaa johtaa joissakin tapauksissa ilmoitusten
-  kahdesti puhumiseen.
+  mm. Edgen ilmoitukset (mukaan lukien elementit, jotka on merkitty
+  aria-role=alert-ominaisuudella) ja laskutoimitusten tulokset Laskimessa
+  sekä muut. Huomaa, että tämä saattaa johtaa joissakin tapauksissa
+  ilmoitusten kahdesti puhumiseen.
 * Uusien sovellusversioiden ilmoitukset puhutaan Windows 10:n versiossa 1709
   (koontiversio 16299) ja uudemmissa.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
   ilmoitetaan.
-* Kun koontiversiossa 17627 ja uudemmissa avataan uusi Sets-välilehti
-  (Ctrl+Windows+T), NVDA ilmoittaa hakutulokset etsittäessä kohteita
-  upotetussa Cortana-IKKUNASSA.
-* NVDA ilmoittaa Sets-välilehteä vaihdettaessa sen välilehden nimen ja
-  sijainnin, johon olet siirtymässä.
+* Kun Sets on otettu käyttöön (koontiversiot 17627-17692 joillakin Windows
+  Insider -ohjelmaan liittyneillä), NVDA ilmoittaa uutta välilehteä
+  avattaessa (Ctrl+Win+T) hakutulokset etsittäessä kohteita upotetussa
+  Cortana-IKKUNASSA.
+* Kun Sets on otettu käyttöön, NVDA ilmoittaa välilehteä vaihdettaessa sen
+  nimen ja sijainnin, johon olet siirtymässä.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2)
   avattaessa, suljettaessa tai vaihdettaessa virtuaalityöpöytien välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
@@ -96,6 +100,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA ilmoittaa laskutoimituksen tuloksen Enteriä tai Esciä painettaessa.
 * NVDA puhuu laskutoimitusten tulokset (esim. yksikkö- ja
   valuuttamuuntimessa) heti laskukaavoja syötettäessä.
+* NVDA ei enää sano "otsikkotaso" tarkasteltaessa laskutoimitusten tuloksia
+  laskimessa.
 
 ## Kalenteri
 
@@ -118,7 +124,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Pelipalkki
 
 * NVDA ilmoittaa pelipalkki-ikkunan ilmestymisestä. Teknisistä rajoituksista
-  johtuen NVDA ei voi olla täysin vuorovaikutuksessa pelipalkin kanssa.
+  johtuen NVDA ei voi olla täysin vuorovaikutuksessa pelipalkin kanssa ennen
+  koontiversiota 17723.
 
 ## Sähköposti
 
@@ -158,7 +165,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Ihmiset
 
-* Kontakteja etsittäessä toistetaan ääni, mikäli hakutuloksia on.
+* Ensimmäinen ehdotus puhutaan kontakteja etsittäessä, erityisesti uusimpia
+  sovellusversioita käytettäessä.
 
 ## Asetukset
 
