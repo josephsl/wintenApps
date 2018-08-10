@@ -95,7 +95,8 @@ For a list of changes made between each add-on releases, refer to
 * Quando viene premuto invio o Esc, NVDA annuncia il risultato del calcolo.
 * Per i calcoli quali conversioni di unità di misura o valuta, NVDA leggerà
   il risultato non appena verranno inseriti i dati
-* NVDA will no longer announce "heading level" for calculator results.
+* NVDA non annuncerà più il livello di intestazione per i risultati dei
+  calcoli.
 
 ## calendario
 
@@ -118,9 +119,9 @@ For a list of changes made between each add-on releases, refer to
 
 ## Barra dei giochi
 
-* NVDA will announce appearance of Game Bar window. Due to technical
-  limitations, NVDA cannot interact fully with Game Bar prior to build
-  17723.
+* NVDA annuncerà la comparsa della barra dei giochi. Purtroppo a causa di
+  limitazioni tecniche, l'interazione con la GameBar non è possibile in
+  maniera completa fino alla versione 17723.
 
 ## Posta
 
@@ -139,9 +140,9 @@ For a list of changes made between each add-on releases, refer to
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts, as well
-  as availability of Reading View (if using Version 1709 and later) are
-  announced.
+* Vengono annunciate correttamente le notifiche dei download dei file, degli
+  avvisi delle pagine web e se è disponibile la modalità lettura (dalla
+  versione 1709 in poi)
 
 ## Tastiera moderna
 
@@ -162,8 +163,8 @@ For a list of changes made between each add-on releases, refer to
 
 ## Persone
 
-* When searching for contacts, first suggestion will be announced,
-  particularly if using recent app releases.
+* Durante la ricerca di contatti, verrà letto il primo suggerimento, in
+  particolare se si utilizza le ultime versioni delle app.
 
 ## Impostazioni
 
@@ -184,18 +185,19 @@ For a list of changes made between each add-on releases, refer to
 
 * Viene annunciato quando un utente sta scrivendo, così come accade in Skype
   per desktop.
-* Control+NvDA+number row commands, used to read recent chat history and to
-  move navigator object to chat entries in Skype for Desktop, is also
-  available in Skype UWP.
-* You can press Alt+number row to locate and move to conversations (1),
-  contacts list (2), bots (3) and chat edit field if visible (4). Note that
-  these commands will work properly if Skype update released in March 2017
-  is installed.
+* Control+NVDA+fila dei numeri, utilizzato per leggere la cronologia delle
+  chat recenti e per spostare il navigatore ad oggetti nelle varie voci
+  della chat in Skype per Desktop, ora è anche disponibile in Skype UWP.
+* è possibile premere il tasto alt in combinazione con i numeri per
+  spostarsi tra conversazioni (1), elenco contatti  (2), bots (3) e campo
+  editazione della chat se visibile (4). Si noti che questi comandi
+  funzioneranno a dovere se è stato installato l'aggiornamento di Skype di
+  marzo 2017.
 * Nella maggior parte dei casi, NVDA non leggerà più i messaggi Skype di
   continuo quando se ne sta controllando uno
-* From message history list, pressing NVDA+D on a message item will allow
-  NVDA to announce detailed information about a message such as channel
-  type, sent date and time and so on.
+* Dall'elenco cronologia messaggi, è possibile premere NVDA+d in un
+  qualsiasi elemento per fare in modo che NVDA legga alcuni dettagli del
+  messaggio, come il tipo di canale, ora e data di invio, etc.
 
 ## Store
 
