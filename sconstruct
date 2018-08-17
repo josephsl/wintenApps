@@ -51,19 +51,21 @@ def mdTool(env):
 	)
 	env['BUILDERS']['markdown']=mdBuilder
 
+vars = Variables()
+vars.Add("version", "The version of this build", buildVars.addon_info["addon_version"])
+vars.Add(BoolVariable("dev", "Whether this is a daily development version", False))
 
-env = Environment(ENV=os.environ, tools=['gettexttool', mdTool])
+env = Environment(variables=vars, ENV=os.environ, tools=['gettexttool', mdTool])
 env.Append(**buildVars.addon_info)
-AddOption("", "--dev", default=False)
-AddOption("", "--av")
 
-if GetOption("av") is not None:
-	env["addon_version"] = GetOption("av")
-elif GetOption("dev"):
+if env["dev"]:
 	import datetime
 	buildDate = datetime.datetime.now()
 	year, month, day = str(buildDate.year), str(buildDate.month), str(buildDate.day)
 	env["addon_version"] = "".join([year, month.zfill(2), day.zfill(2), "-dev"])
+elif env["version"] is not None:
+	env["addon_version"] = env["version"]
+
 
 addonFile = env.File("${addon_name}-${addon_version}.nvda-addon")
 
