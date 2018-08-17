@@ -46,8 +46,9 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Generelt
 
-* Submenu items are properly recognized in various apps, including context
-  menu for Start menu tiles and microsoft Edge's app menu (Redstone 5).
+* Undermenupunkter er korrekt genkendt i forskellige apps, herunder
+  kontekstmenu til Start-menufliser og Microsoft Edge-appmenuen (Redstone
+  5).
 * Visse dialogbokse er nu anerkendt som ordentlige dialoger og rapporteret
   som sådan, herunder Insider Preview dialog (indstillinger app).
 * NVDA kan annoncere nummeret af forslag, når du udfører en søgning i de
@@ -55,29 +56,31 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   objektets placering" i objektet præsentation dialog/panel.
 * I visse kontekstmenuer (f.eks. i Microsoft Edge), er positionssoplysninger
   (f.eks. 1 af 2) ikke længere annonceret.
-* The following UIA events are recognized: active text position change,
+* De følgende UIA begivenheder er anerkendt: active text position change,
   controller for, drag start, drag cancel, drag complete, element selected,
   live region change, notification, system alert, tooltip opened, window
-  opened. With NVDA set to run with debug logging enabled, these events will
-  be tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active app.
+  opened. Med NVDA indstillet til at køre med logføring aktiveret, spores
+  disse begivenheder, og for UIA notification event, en fejltone vil blive
+  hørt, hvis notifikationer kommer fra en anden app en den aktuelle.
 * Tilføjet mulighed for at søge efter tilføjelse opdateringer (automatisk
   eller manuel) via dialogboksen Windows 10 App Essentials fundet i
   NvDA-menuen under Præferencer. Som standard, vil stabil og
   udviklingsversioner kontrollere for nye opdateringer automatisk på et
   ugentligt eller dagligt tidspunkt.
-* In some apps, live region text is announced. This includes alerts in Edge
-  (including elements marked with aria-role=alert), results in Calculator
-  and others. Note that this may result in double-speaking in some cases.
+* I nogle apps, vil live region tekst blive annonceret. Dette omfatter
+  advarsler i Edge, (herunder elementer markeret med aria-role=alert)
+  resultater i Lommeregner m.fl. Bemærk, at dette kan betyde, at nogle
+  beskeder gentages i nogle tilfæld.
 * Meddelelser fra nyere app-udgivelser o Windows 10 Version 1709 (build
   16299) og senere bliver annonceret.
 * Værktøjstips fra Edge og universale apps er genkendte og vil blive
   annonceret.
-* With Sets turned on (builds 17627 through 17692 for some insiders), when
-  opening a new Sets tab (Control+Windows+T), NVDA will announce search
-  results when searching for items in the embedded Cortana window.
-* With Sets turned on, when switching between Sets tabs, NvDA will announce
-  name and position of the tab you are switching to.
+* Med Sæt slået til (builds 17627 til 17692 for nogle Insiders) og senere,
+  når du åbner en nyt fane i Sæt (CTRL + Windows + T), vil NVDA annoncerer
+  søgeresultater, når du søger efter elementer i det integrerede Cortana
+  vindue.
+* Når Sæt er slået til og du skifter mellem faner, annoncerer NvDA navn og
+  position på fanen, du skifter til.
 * Når åbning, lukning, eller Skift mellem virtuelle skrivebord forekommer,
   vil NVDA annoncere nuværende desktop ID (skrivebord 2, for eksempel).
 * NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
@@ -95,7 +98,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * Når enter eller Esc trykkes, vil NVDA nu annoncerer resultatet
 * For beregninger som enhedsberegninger og valutaberegninger, vil NVDA
   annoncere resultater så snart beregningerne er indtastet.
-* NVDA will no longer announce "heading level" for calculator results.
+* NVDA vil ikke længere meddele "Overskriftsniveau", når resultater i
+  Lommeregner annonceres.
 
 ## kalender
 
@@ -116,8 +120,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Spillinje
 
-* NVDA will announce appearance of Game Bar window. Due to technical
-  limitations, NVDA cannot interact fully with Game Bar prior to build
+* NVDA vil annoncere udseende af vinduet Spillinje. På grund af tekniske
+  begrænsninger, kan NVDA ikke fuldt interagere med Spillinje før build
   17723.
 
 ## Mail
@@ -160,8 +164,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Personer
 
-* When searching for contacts, first suggestion will be announced,
-  particularly if using recent app releases.
+* Når du søger efter kontakter, vil forslag blive annoncerede, særligt hvis
+  du kører de seneste app-udgivelser.
 
 ## indstillinger
 
