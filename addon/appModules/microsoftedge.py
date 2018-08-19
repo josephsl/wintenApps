@@ -11,7 +11,6 @@ from NVDAObjects.UIA import UIA
 import controlTypes
 import ui
 
-
 class AppModule(appModuleHandler.AppModule):
 
 	def event_liveRegionChange(self, obj, nextHandler):

@@ -43,8 +43,6 @@ confspec = {
 }
 config.conf.spec["wintenApps"] = confspec
 
-_addonDir = unicode(os.path.join(os.path.dirname(__file__), "..", ".."), "mbcs")
-addonVersion = addonHandler.Addon(unicode(_addonDir)).manifest['version']
 addonUpdateCheckInterval = 86400
 
 channels={
@@ -96,8 +94,12 @@ def checkForAddonUpdate():
 			raise
 	if res.code != 200:
 		raise RuntimeError("Checking for update failed with code %d" % res.code)
-	# Build emulated add-on update dictionary if there is indeed a new verison.
+	# Build emulated add-on update dictionary if there is indeed a new version.
 	version = re.search("wintenApps-(?P<version>.*).nvda-addon", res.url).groupdict()["version"]
+	try:
+		addonVersion = addonHandler.Addon(unicode(os.path.join(os.path.dirname(__file__), "..", ".."), "mbcs")).manifest['version']
+	except:
+		addonVersion = addonHandler.Addon(os.path.join(os.path.dirname(__file__), "..", "..")).manifest['version']
 	if addonVersion != version:
 		return {"curVersion": addonVersion, "newVersion": version, "path": res.url}
 	return None

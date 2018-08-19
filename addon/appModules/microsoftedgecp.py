@@ -8,4 +8,4 @@
 
 # NVDA Core issue 6948: NVDA Core includes an app module for this app with web content view announcement workaround (Redstone 2).
 from nvdaBuiltin.appModules.microsoftedgecp import *
-from microsoftedge import *
+from .microsoftedge import *
