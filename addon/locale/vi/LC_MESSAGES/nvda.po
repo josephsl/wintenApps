@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.02\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-02-03 22:05+1000\n"
-"PO-Revision-Date: 2018-07-30 15:14+0700\n"
+"PO-Revision-Date: 2018-08-23 23:31+0700\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Last-Translator: Cuong Dang Manh <dangmanhcuong@gmail.com>\n"
 "Language-Team: \n"
 "X-Generator: Poedit 2.1.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -24,8 +25,8 @@ msgid ""
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Bạn đang dùng một phiên bản Windows cũ hơn. Add-on yêu cầu "
-"{minSupportedVersion} trở lên. Bạn có muốn cài đặt add-on này không?"
+"Bạn đang dùng một phiên bản Windows cũ. Add-on yêu cầu {minSupportedVersion} "
+"trở lên. Bạn có muốn cài đặt add-on này không?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
