@@ -28,6 +28,8 @@ addon_info = {
 	"addon_docFileName" : "readme.html",
 	# Minimum NVDA version supported
 	"addon_minimumNVDAVersion" : "2018.2",
+	# Add-on update channel (default is stable)
+	"addon_updateChannel" : None,
 }
 
 
