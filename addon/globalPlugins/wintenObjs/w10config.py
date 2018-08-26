@@ -158,10 +158,10 @@ class WinTenAppsConfigDialog(wx.Dialog):
 		# Translators: The label for a setting in WinTenApps add-on settings to select automatic update interval in days.
 		self.updateInterval=w10Helper.addLabeledControl(_("Update &interval in days"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=30, initial=config.conf["wintenApps"]["updateCheckTimeInterval"])
 		# Translators: The label for a combo box to select update channel.
-		labelText = _("&Add-on update channel:")
-		self.channels=w10Helper.addLabeledControl(labelText, wx.Choice, choices=["development", "stable"])
-		self.updateChannels = ("dev", "stable")
-		self.channels.SetSelection(self.updateChannels.index(config.conf["wintenApps"]["updateChannel"]))
+		#labelText = _("&Add-on update channel:")
+		#self.channels=w10Helper.addLabeledControl(labelText, wx.Choice, choices=["development", "stable"])
+		#self.updateChannels = ("dev", "stable")
+		#self.channels.SetSelection(self.updateChannels.index(config.conf["wintenApps"]["updateChannel"]))
 		if canUpdate:
 			# Translators: The label of a button to check for add-on updates.
 			updateCheckButton = w10Helper.addItem(wx.Button(self, label=_("Check for add-on &update")))
@@ -178,17 +178,17 @@ class WinTenAppsConfigDialog(wx.Dialog):
 
 	def onOk(self, evt):
 		# #39: Prompt if switching from stable to development channel.
-		currentUpdateChannel = config.conf["wintenApps"]["updateChannel"]
-		newUpdateChannel = ("dev", "stable")[self.channels.GetSelection()]
-		if currentUpdateChannel == "stable" and newUpdateChannel == "dev":
-			if gui.messageBox(
+		#currentUpdateChannel = config.conf["wintenApps"]["updateChannel"]
+		#newUpdateChannel = ("dev", "stable")[self.channels.GetSelection()]
+		#if currentUpdateChannel == "stable" and newUpdateChannel == "dev":
+			#if gui.messageBox(
 				# Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-				_("You are about to switch to development updates channel. Although updates from this channel brings exciting features, it also comes with updates that might be unstable at times and should be used for testing and sending feedback to the add-on developer. If you prefer to use stable releases, please answer no and switch to stable update channel. Are you sure you wish to switch to the development update channel?"),
+				#_("You are about to switch to development updates channel. Although updates from this channel brings exciting features, it also comes with updates that might be unstable at times and should be used for testing and sending feedback to the add-on developer. If you prefer to use stable releases, please answer no and switch to stable update channel. Are you sure you wish to switch to the development update channel?"),
 				# Translators: The title of the channel switch confirmation dialog.
-				_("Switching to unstable channel"),
-				wx.YES_NO | wx.NO_DEFAULT | wx.ICON_QUESTION, self
-			) == wx.NO:
-				return
+				#_("Switching to unstable channel"),
+				#wx.YES_NO | wx.NO_DEFAULT | wx.ICON_QUESTION, self
+			#) == wx.NO:
+				#return
 		global updateChecker
 		if updateChecker and updateChecker.IsRunning(): updateChecker.Stop()
 		config.conf["wintenApps"]["autoUpdateCheck"] = self.autoUpdateCheckbox.Value
@@ -199,7 +199,7 @@ class WinTenAppsConfigDialog(wx.Dialog):
 		else:
 			updateChecker = wx.PyTimer(autoUpdateCheck)
 			updateChecker.Start(addonUpdateCheckInterval * 1000, True)
-		config.conf["wintenApps"]["updateChannel"] = ("dev", "stable")[self.channels.GetSelection()]
+		#config.conf["wintenApps"]["updateChannel"] = ("dev", "stable")[self.channels.GetSelection()]
 		self.Destroy()
 
 	def onCancel(self, evt):
