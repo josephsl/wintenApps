@@ -40,12 +40,9 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation dialog/panel.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: active text position change, controller for, drag start, drag cancel, drag complete, element selected, live region change, notification, system alert, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app.
-* Added ability to check for add-on updates (automatic or manual) via Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively.
-* In some apps, live region text is announced. This includes alerts in Edge (including elements marked with aria-role=alert), results in Calculator and others. Note that this may result in double-speaking in some cases. This is now part of NVDA 2017.3 or later.
+* Added ability to check for add-on updates (automatic or manual) via Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively. This feature, along with ability to select update channels, will be disabled in the future when Add-on Updater and NVDA checks for add-on updates.
 * Notifications from newer app releases on Windows 10 Version 1709 (build 16299) and later are announced. NVDA 2018.2 and later supports this, with 2018.3 adding support for more notifications.
 * Tooltips from Edge and universal apps are recognized and will be announced.
-* With Sets turned on (builds 17627 through 17692 for some insiders), when opening a new Sets tab (Control+Windows+T), NVDA will announce search results when searching for items in the embedded Cortana window.
-* With Sets turned on, when switching between Sets tabs, NvDA will announce name and position of the tab you are switching to.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop ID (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
 
@@ -93,10 +90,12 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## Modern keyboard
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including the redesigned panel in build 17661 and later. For best experience when reading emojis, use Windows OneCore speech synthesizer.
+Note: all features below will be part of NVDA 2018.3.
+
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including the redesigned panel in Version 1809 (build 17661 and later). For best experience when reading emojis, use Windows OneCore speech synthesizer.
 * Support for hardware keyboard input suggestions in Version 1803 (April 2018 Update) and later.
 * In post-1709 builds, NVDA will announce the first selected emoji when emoji panel opens.
-* Support for announcing cloud clipboard items in build 17666 (Redstone 5) and later.
+* Support for announcing cloud clipboard items in Version 1809 (build 17666 and later).
 * Reduced unnecessary verbosity when working with modern keyboard and its features. These include no longer announcing "Microsoft Candidate UI" when opening hardware keyboard input suggestions and staying silent when certain touch keyboard keys raise name change event on some systems.
 
 ## People
