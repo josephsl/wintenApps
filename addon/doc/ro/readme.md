@@ -55,7 +55,7 @@ versiunile suplimentului][3].
   meniul de aplicație al Microsoft Edge (Redstone 5).
 * Anumite dialoguri sunt acum recunoscute ca dialoguri corespunzătoare și
   sunt raportate ca atare. Acestea includ dialogul Insider Preview
-  (aplicația setări).
+  (aplicația setări). Aceasta va face parte din NVDA 2018.3
 * NVDA poate anunța numărul de sugestii la efectuarea unei căutări în
   majoritatea cazurilor. Această opțiune este controlată de „informația
   poziției obiectului în dialogul prezentării obiectului.
@@ -75,9 +75,11 @@ versiunile suplimentului][3].
 * În unele aplicații, textul regiunii live este anunțat. Aceasta include
   alertele din Edge (incluzând elementele marcate cu aria-role=alert),
   rezultatele din Calculator și altele. Rețineți faptul că asta poate
-  rezulta o dublă vorbire în unele cazuri.
+  rezulta o dublă vorbire în unele cazuri. Acum face parte din NVDA 2017.3
+  sau mai nou.
 * Sunt anunțate Notificările versiunilor mai noi ale aplicațiilor din
-  Windows 10 versiunea 1709 (compilare 16299) și mai nouă.
+  Windows 10 versiunea 1709 (compilare 16299) și mai nouă. NVDA 2018.2
+  suportă asta, iar 2018.3 vine cu suport pentru mai multe notificări.
 * Indiciile din Edge și alte aplicații universale sunt recunoscute și vor fi
   anunțate.
 * Cu Sets pornit (de la compilarea 17627 până la compilarea 17692 pentru

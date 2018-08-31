@@ -48,9 +48,9 @@ wersji dodatku][3].
 * Elementy meni rozwijanego są prawidłowo rospoznawane w różnych
   aplikacjach, włączając w to meni kontekstowe dla kafelków meni start a
   także meni aplikacji dla Microsoft edge (Redstone 5).
-* Większość okien dialogowych teraz są rozpoznawalne jako prawdziwe okna
-  dialogowe, włączając w to okna dialogowe w wersjach testowych (settings
-  app).
+* Certain dialogs are now recognized as proper dialogs and reported as such,
+  including Insider Preview dialog (settings app). This will be part of NVDA
+  2018.3.
 * NVDA może ogłaszać liczbę wypowiedzi przy wyszukiwaniu w wielu
   przypadkach. Ta opcja jest kontrolowana przez opcję "odczytuj położenie
   obiektu" w panelu "prezentacja obiektu".
@@ -68,12 +68,13 @@ wersji dodatku][3].
   można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
   rozwojowe będą sprawdzane pod kątem nowych aktualizacji codziennie lub
   tygodniowo.
-* W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. W tym są
-  włączone powiadomienia w Microsoft Edge, kalkulatorze. Proszę mieć na
-  uwadze, że to może skutkować podwójnym wymawianiem w niektórych
-  przypadkach.
-* Powiadomienia z nowych wersji aplikacji w Windows 10 wersji 1709
-  (kompilacja 16299) i nowszych są wymawiane.
+* In some apps, live region text is announced. This includes alerts in Edge
+  (including elements marked with aria-role=alert), results in Calculator
+  and others. Note that this may result in double-speaking in some
+  cases. This is now part of NVDA 2017.3 or later.
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced. NVDA 2018.2 and later supports this, with
+  2018.3 adding support for more notifications.
 * Opisy obiektów w Edge i innych aplikacjach UWP są rozpoznawane  i będą
   czytane automatycznie.
 * w kompilacji 17627 i nowszych, gdy nowa karta sets jest otwierana

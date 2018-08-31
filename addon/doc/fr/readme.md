@@ -57,7 +57,7 @@ versions du module complémentaire][3].
   Démarrer et le menu de l'application de Microsoft Edge (Redstone 5).
 * Certaines boîtes de dialogue sont maintenant reconnues comme des boîtes de
   dialogue propres et signalées comme telles, y compris le dialogue Insider
-  Preview (settings app).
+  Preview (settings app). Cela fera partie de NVDA 2018.3.
 * NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
   majorité des cas. Cette option est contrôlée par "Annoncer le rang de
   l'objet dans une liste" dans la boîte de dialogue Présentation des
@@ -82,9 +82,12 @@ versions du module complémentaire][3].
 * Dans certaines applications, le texte de la région en direct est
   annoncé. Cela inclut les alertes dans Edge (y compris les éléments marqués
   avec aria-role=alert), résultats dans la calculatrice et autres. Notez que
-  cela peut entraîner une double verbalisation dans certains cas.
+  cela peut entraîner une double verbalisation dans certains cas. Cela fait
+  maintenant partie de NVDA 2017.3 ou version ultérieure.
 * Les notifications des versions plus récentes des applications sur Windows
-  10 version 1709 (build 16299) et ultérieures sont annoncées.
+  10 version 1709 (build 16299) et ultérieures sont annoncées. NVDA 2018.2
+  et les versions ultérieures prennent cela en charge, avec 2018.3 ajoutant
+  un support pour plus de notifications.
 * Les suggestions pour Edge et pour les applications universelles sont
   reconnues et seront annoncées.
 * Lorsque les Sets  sont activés, (build 17627 jusqu'à 17692 pour certains

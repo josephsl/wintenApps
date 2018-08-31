@@ -1,4 +1,4 @@
-# Ergänzungen für Windows 10 Apps #
+# Windows 10 App Essentials #
 
 * Autors: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version][1] herunterladen
@@ -70,10 +70,11 @@ Sie im Dokument [Changelogs der Erweiterungen][3].
   (automatisch oder manuell) zu suchen. Standardmäßig werden stabile- und
   Entwicklerversionen wöchentlich bzw. täglich automatisch nach neuen
   Updates suchen.
-* In einigen Apps wird der Live-Text der Region angekündigt. Dazu gehören
-  Alerts in Edge (einschließlich der mit aria-role=alert markierten
-  Elemente), Ergebnisse in Calculator und re. Beachten Sie, dass dies in
-  manchen Fällen zu doppelten Ansagen führen kann.
+* In einigen Apps wird der Live-Text der Region mitgeteilt. Dazu gehören
+  Benachrichtigungen in Microsoft Edge (einschließlich der mit
+  aria-role=alert markierten Elemente), Ergebnisse in Calculator und
+  re. Beachten Sie, dass dies in manchen Fällen zu doppelten Ansagen führen
+  kann.
 * Benachrichtigungen von neueren App-Releases auf Windows 10 Version 1709
   (Build 16299) und neuer werden mitgeteilt.
 * Tooltips von Edge und Universal Apps werden erkannt und angekündigt.

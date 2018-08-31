@@ -49,8 +49,9 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * Undermenupunkter er korrekt genkendt i forskellige apps, herunder
   kontekstmenu til Start-menufliser og Microsoft Edge-appmenuen (Redstone
   5).
-* Visse dialogbokse er nu anerkendt som ordentlige dialoger og rapporteret
-  som sådan, herunder Insider Preview dialog (indstillinger app).
+* Certain dialogs are now recognized as proper dialogs and reported as such,
+  including Insider Preview dialog (settings app). This will be part of NVDA
+  2018.3.
 * NVDA kan annoncere nummeret af forslag, når du udfører en søgning i de
   fleste tilfælde. Denne indstilling styres af "Oplys information om
   objektets placering" i objektet præsentation dialog/panel.
@@ -67,12 +68,13 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   NvDA-menuen under Præferencer. Som standard, vil stabil og
   udviklingsversioner kontrollere for nye opdateringer automatisk på et
   ugentligt eller dagligt tidspunkt.
-* I nogle apps, vil live region tekst blive annonceret. Dette omfatter
-  advarsler i Edge, (herunder elementer markeret med aria-role=alert)
-  resultater i Lommeregner m.fl. Bemærk, at dette kan betyde, at nogle
-  beskeder gentages i nogle tilfæld.
-* Meddelelser fra nyere app-udgivelser o Windows 10 Version 1709 (build
-  16299) og senere bliver annonceret.
+* In some apps, live region text is announced. This includes alerts in Edge
+  (including elements marked with aria-role=alert), results in Calculator
+  and others. Note that this may result in double-speaking in some
+  cases. This is now part of NVDA 2017.3 or later.
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced. NVDA 2018.2 and later supports this, with
+  2018.3 adding support for more notifications.
 * Værktøjstips fra Edge og universale apps er genkendte og vil blive
   annonceret.
 * Med Sæt slået til (builds 17627 til 17692 for nogle Insiders) og senere,
