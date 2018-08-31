@@ -54,7 +54,7 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   menú de aplicación de Microsoft Edge (Redstone 5).
 * Ahora se reconocen ciertos diálogos como diálogos apropiadamente y se
   anuncian como tales, como el diálogo Insider Preview (aplicación de
-  configuración).
+  configuración). Esta función formará parte de NVDA 2018.3.
 * NVDA puede anunciar cuenta de sugerencias cuando se realiza una búsqueda
   en la mayoría de casos. Esta opción se controla por "Anunciar información
   de posición del objeto" en el diálogo/panel Presentación de Objetos.
@@ -75,9 +75,12 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * En algunas aplicaciones, se anuncia el texto en regiones vivas. Esto
   incluye alertas en Edge (incluyendo elementos marcados con
   aria-role=alert), resultados en la calculadora y otros. Ten en cuenta que
-  esto podrá causar una verbalización por duplicado en algunos casos.
+  esto podrá causar una verbalización por duplicado en algunos casos. Esto
+  ya forma parte de NVDA 2018.3 y versiones posteriores.
 * Las notificaciones de versiones de apps recientes en Windows 10 versión
-  1709 (compilación 16299) en adelante se anuncian correctamente.
+  1709 (compilación 16299) en adelante se anuncian correctamente. NVDA
+  2018.2 y las versiones posteriores ya las soportan, y la versión 2018.3 da
+  soporte a más notificaciones.
 * Se reconocerán y anunciarán los consejos para Edge y para aplicaciones
   universales.
 * Con los conjuntos activados (compilaciones 17627 a 17692 para algunos

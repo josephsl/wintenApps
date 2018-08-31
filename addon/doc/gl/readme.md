@@ -50,7 +50,8 @@ For a list of changes made between each add-on releases, refer to
 * Submenu items are properly recognized in various apps, including context
   menu for Start menu tiles and microsoft Edge's app menu (Redstone 5).
 * Certain dialogs are now recognized as proper dialogs and reported as such,
-  including Insider Preview dialog (settings app).
+  including Insider Preview dialog (settings app). This will be part of NVDA
+  2018.3.
 * NVDA pode anunciar conta de suxerencias cando se realiza unha procura na
   maioría dos casos. Esta opción contrólase por "Anunciar información de
   posición do obxecto" no diálogo/panel Presentación de Obxectos.
@@ -69,9 +70,11 @@ For a list of changes made between each add-on releases, refer to
   automáticamente semanal ou diáriamente, respectivamente.
 * In some apps, live region text is announced. This includes alerts in Edge
   (including elements marked with aria-role=alert), results in Calculator
-  and others. Note that this may result in double-speaking in some cases.
+  and others. Note that this may result in double-speaking in some
+  cases. This is now part of NVDA 2017.3 or later.
 * Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced.
+  16299) and later are announced. NVDA 2018.2 and later supports this, with
+  2018.3 adding support for more notifications.
 * recoñeceranse e anunciaranse os consellos para o Edge e para as
   aplicacións universais.
 * With Sets turned on (builds 17627 through 17692 for some insiders), when

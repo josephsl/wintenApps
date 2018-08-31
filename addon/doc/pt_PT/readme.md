@@ -50,8 +50,9 @@ consulte o documento [changelogs for releases, release][3].
 * Os itens do submenu são reconhecidos correctamente em vários aplicativos,
   incluindo o menu de contexto para os menus do menu Iniciar e o menu de
   aplicativos do Microsoft Edge (Redstone 5).
-* Certos diálogos agora são reconhecidos como diálogos adequados, incluindo
-  a caixa de diálogo Insider Preview (aplicativo de configurações).
+* Certain dialogs are now recognized as proper dialogs and reported as such,
+  including Insider Preview dialog (settings app). This will be part of NVDA
+  2018.3.
 * O NVDA pode anunciar a contagem de sugestões, ao realizar uma pesquisa na
   maioria dos casos. Esta opção é controlada por "fornecer informações de
   posição do objeto" na caixa de diálogo de apresentação do objeto.
@@ -70,11 +71,13 @@ consulte o documento [changelogs for releases, release][3].
   essenciais encontrada no menu de preferências do NVDA. Por defeito, as
   versões estáveis e de desenvolvimento verificarão novas actualizações
   semanalmente ou diariamente, conforme determinado.
-* Em algumas aplicações, o texto da localização é anunciado. Isto inclui
-  alertas no Edge, resultados na Calculadora e outros. Observe que isso pode
-  resultar em fala dupla em alguns casos.
-* As notificações de versões mais recentes de aplicativos no Windows 10
-  Versão 1709 (build 16299) e posteriores são anunciadas.
+* In some apps, live region text is announced. This includes alerts in Edge
+  (including elements marked with aria-role=alert), results in Calculator
+  and others. Note that this may result in double-speaking in some
+  cases. This is now part of NVDA 2017.3 or later.
+* Notifications from newer app releases on Windows 10 Version 1709 (build
+  16299) and later are announced. NVDA 2018.2 and later supports this, with
+  2018.3 adding support for more notifications.
 * As dicas de ferramentas do Edge e aplicativos universais são reconhecidas
   e serão anunciadas.
 * Com as definições activadas (compilações  17627 a 17692 para algumas

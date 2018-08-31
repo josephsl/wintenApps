@@ -52,7 +52,7 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   Edgen sovellusvalikko (Redstone 5).
 * Tietyt valintaikkunat tunnistetaan ja puhutaan nyt asianmukaisesti
   valintaikkunoina, mukaan lukien Insider-esiversion valintaikkuna
-  (Asetukset-sovellus).
+  (Asetukset-sovellus). Tämä tulee sisältymään NVDA 2018.3:een.
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
   -asetuksella Objektien lukuasetukset -valintaikkunasta/paneelista.
@@ -72,9 +72,11 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   mm. Edgen ilmoitukset (mukaan lukien elementit, jotka on merkitty
   aria-role=alert-ominaisuudella) ja laskutoimitusten tulokset Laskimessa
   sekä muut. Huomaa, että tämä saattaa johtaa joissakin tapauksissa
-  ilmoitusten kahdesti puhumiseen.
+  ilmoitusten kahdesti puhumiseen. Tämä sisältyy NVDA 2017.3:een ja
+  uudempiin versioihin.
 * Uusien sovellusversioiden ilmoitukset puhutaan Windows 10:n versiossa 1709
-  (koontiversio 16299) ja uudemmissa.
+  (koontiversio 16299) ja uudemmissa. NVDA 2018.2 ja uudemmat tukevat tätä,
+  ja 2018.3 lisää tuen entistä useammille ilmoituksille.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
   ilmoitetaan.
 * Kun Sets on otettu käyttöön (koontiversiot 17627-17692 joillakin Windows
