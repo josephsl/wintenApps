@@ -6,6 +6,28 @@
 # Base config section was inspired by Clip Contents Designer (Noelia Martinez).
 # Overall update check routine comes from StationPlaylist Studio add-on (Joseph Lee).)
 
+try:
+	import updateCheck
+except RuntimeError:
+	raise RuntimeError("NVDA itself cannot check for updates")
+import globalVars
+if globalVars.appArgs.secure:
+	raise RuntimeError("NVDA in secure mode, cannot check for add-on update")
+import versionInfo
+if not versionInfo.updateVersionType:
+	raise RuntimeError("NVDA is running from source code, add-on update check is not supported")
+import config
+if config.isAppX:
+	raise RuntimeError("This is NVDA Windows Store edition")
+import addonHandler
+# Provided that NVDA issue 3208 is implemented.
+if hasattr(addonHandler, "checkForAddonUpdate"):
+	raise RuntimeError("NVDA itself will check for add-on updates")
+# Temporary: check of Add-on Updater add-on is running.
+#for addon in addonHandler.getAvailableAddons():
+	#if (addon.name, addon.isDisabled) == ("addonUpdater", False):
+		#raise RuntimeError("Another add-on update provider exists")
+
 import os
 import threading
 # Python 3 calls for using urllib.request instead, which is functionally equivalent to urllib2.

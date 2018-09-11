@@ -16,7 +16,11 @@ import config
 import queueHandler
 import globalVars
 from logHandler import log
-from . import w10config
+# Update support, but won't be used unless standalone add-on update mode is in effect.
+try:
+	from . import w10config
+except:
+	w10config = None
 import addonHandler
 addonHandler.initTranslation()
 
@@ -148,26 +152,29 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
 				UIAHandler.handler.clientObject.addAutomationEventHandler(event,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 				log.debug("W10: added event ID %s, assigned to %s"%(event, name))
-		self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
-		self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("&Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
-		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
-		if w10config.canUpdate and config.conf["wintenApps"]["autoUpdateCheck"]:
-			# But not when NVDA itself is updating.
-			if not (globalVars.appArgs.install and globalVars.appArgs.minimal):
-				wx.CallAfter(w10config.autoUpdateCheck)
+		# Only if standalone update mode is in use, as the only thing configurable via settings is add-on update facility.
+		if w10config is not None:
+			self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
+			self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("&Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
+			gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
+			if w10config.canUpdate and config.conf["wintenApps"]["autoUpdateCheck"]:
+				# But not when NVDA itself is updating.
+				if not (globalVars.appArgs.install and globalVars.appArgs.minimal):
+					wx.CallAfter(w10config.autoUpdateCheck)
 
 	def terminate(self):
 		super(GlobalPlugin, self).terminate()
-		try:
-			if wx.version().startswith("4"):
-				self.prefsMenu.Remove(self.w10Settings)
-			else:
-				self.prefsMenu.RemoveItem(self.w10Settings)
-		except: #(RuntimeError, AttributeError, wx.PyDeadObjectError):
-			pass
-		if w10config.updateChecker and w10config.updateChecker.IsRunning():
-			w10config.updateChecker.Stop()
-		w10config.updateChecker = None
+		if w10config is not None:
+			try:
+				if wx.version().startswith("4"):
+					self.prefsMenu.Remove(self.w10Settings)
+				else:
+					self.prefsMenu.RemoveItem(self.w10Settings)
+			except: #(RuntimeError, AttributeError, wx.PyDeadObjectError):
+				pass
+			if w10config.updateChecker and w10config.updateChecker.IsRunning():
+				w10config.updateChecker.Stop()
+			w10config.updateChecker = None
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
