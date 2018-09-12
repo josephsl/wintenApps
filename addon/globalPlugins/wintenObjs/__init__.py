@@ -6,7 +6,7 @@
 import globalPluginHandler
 import controlTypes
 import ui
-from NVDAObjects.UIA import UIA, SearchField
+from NVDAObjects.UIA import UIA, SearchField, Dialog
 from NVDAObjects.behaviors import EditableTextWithSuggestions, ToolTip
 import api
 import nvwave
@@ -181,6 +181,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# NVDA Core ticket 5231: Announce values in time pickers, especially when focus moves to looping selector list.
 			if obj.role==controlTypes.ROLE_LIST and "LoopingSelector" in obj.UIAElement.cachedClassName:
 				clsList.insert(0, LoopingSelectorList)
+				return
+			# Windows that are really dialogs.
+			# NVDA Core issue 8405: in build 17682 and later, IsDialog property has been added, making comparisons easier.
+			# However, don't forget that many users are still using old Windows 10 releases.
+			# The most notable case is app uninstall confirmation dialog from Start menu in build 17134 and earlier.
+			if obj.UIAElement.cachedClassName == "Popup" and Dialog not in clsList:
+				clsList.insert(0, Dialog)
 				return
 			# Search field that does raise controller for event.
 			# Also take care of Edge address omnibar and Start search box.
