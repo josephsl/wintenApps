@@ -30,9 +30,13 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_NVDAObject_init(self, obj):
 		# Remove heading designation from calculator results, as the output is confusing.
+		# Sometimes, this won't work because global plugin isn't loaded at that time.
 		import globalPlugins
-		if isinstance(obj, globalPlugins.wintenObjs.XAMLHeading):
-			obj.role = controlTypes.ROLE_STATICTEXT
+		try:
+			if isinstance(obj, globalPlugins.wintenObjs.XAMLHeading):
+				obj.role = controlTypes.ROLE_STATICTEXT
+		except AttributeError:
+			pass
 
 	shouldAnnounceResult = False
 	# Again, name change says the same thing multiple times for some items.
@@ -58,7 +62,12 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_UIA_notification(self, obj, nextHandler, **kwargs):
 		# From May 2018 onwards, unit converter uses a different automation iD.
-		if obj.previous.UIAElement.cachedAutomationID in ("numberPad", "UnitConverterRootGrid"):
+		# Changed significantly in July 2018 thanks to UI redesign, and as a result, attribute error is raised.
+		try:
+			shouldAnnounceNotification = obj.previous.UIAElement.cachedAutomationID in ("numberPad", "UnitConverterRootGrid")
+		except AttributeError:
+			shouldAnnounceNotification = api.getForegroundObject().children[1].lastChild.firstChild.UIAElement.cachedAutomationID != "CalculatorResults"
+		if shouldAnnounceNotification:
 			nextHandler()
 
 	def script_calculatorResult(self, gesture):
