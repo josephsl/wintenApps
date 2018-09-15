@@ -164,8 +164,7 @@
   例如，按向右箭头可能会报告“星期一：79度，部分阴天，...”，按向下箭头将会显示“星期一”。然后再次按下将读取下一项（如温度）。
   目前这适用于每日和每小时的预测。
 
-[[!tag dev 稳定]
-
+[[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=w10
 
