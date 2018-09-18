@@ -4,11 +4,11 @@
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
 
-Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, a też i
-poprawek dla niektórych kontrolek w Windowsie 10.
+Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
+również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
 
-Następujące moduły wspierające aplikacji są dołączone (sprawdź rozdział
-każdej aplikacji co jest wspierane):
+Dołączone są następujące moduły wspierające aplikacje (sprawdź rozdział
+każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 * Alarmy i zegar.
 * Kalendarz
@@ -30,32 +30,33 @@ każdej aplikacji co jest wspierane):
 
 Uwagi:
 
-* Uwaga: Ten dodatek wymaga Windows 10 Wersję 1709 (kompilację 16299) lub
-  nowszą i NVDA 2018.2 lub nowszą. Dla lepszych wyników, trzeba będzie
-  używać dodatek z najnowszą stabilną kompilacją (kompilacja 17134) i
-  ostatnią stabilną wersję NVDA. 
+* Uwaga! Ten dodatek wymaga Windowsa 10 Wersji 1709 (kompilacji 16299) lub
+  nowszej i NVDA 2018.2 lub nowszej. Aby uzyskiwać najlepsze wyniki, należy
+  używać dodatku z najnowszą stabilną kompilacją systemu (kompilacja 17134)
+  i najnowszą stabilną wersją NVDA. 
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
-* Dla wpisów nie podanych poniżej, można wnioskować, że staowią część
-  funkcji NVDA, czyli jest to niezastosowalne dla tego, że dodatek nie
-  wspiera starsze wydania systemu, lub aplikacje są zmienione w taki sposób,
+* Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
+  wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
+  wspiera starszych wydań systemu, lub aplikacje są zmienione w taki sposób,
   że te wpisy są unieważnione.
 
-Dla listy zmian pomiędzy każdej wersji, prosimy przeczytać [listę zmian dla
-wersji dodatku][3].
+Dla listy zmian pomiędzy kolejnymi wersjami, prosimy przeczytać [listę zmian
+dla wersji dodatku][3].
 
 ## Ogólne
 
-* Elementy meni rozwijanego są prawidłowo rospoznawane w różnych
-  aplikacjach, włączając w to meni kontekstowe dla kafelków meni start a
-  także meni aplikacji dla Microsoft edge (Redstone 5).
-* Certain dialogs are now recognized as proper dialogs and reported as such,
-  including Insider Preview dialog (settings app). This will be part of NVDA
-  2018.3.
-* NVDA może ogłaszać liczbę wypowiedzi przy wyszukiwaniu w wielu
-  przypadkach. Ta opcja jest kontrolowana przez opcję "odczytuj położenie
-  obiektu" w panelu "prezentacja obiektu".
-* W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
-  położeniu (NP. 1 z 2) więcej nie jest odczytywana.
+* Elementy menu rozwijanego są prawidłowo rozpoznawane w różnych
+  aplikacjach, włączając w to menu kontekstowe dla kafelków meni start, a
+  także menu aplikacji dla Microsoft Edge (Redstone 5).
+* Niektóre okna dialogowe są od teraz prawidłowo rozpoznawane i wymawiane
+  jako okna dialogowe. Są to np. okna dialogowe w wersjach testowych
+  (settings app). W NVDA 2018.3, będzie to już wbudowane w sam czytnik
+  ekranu.
+* W wielu przypadkach, NVDA może ogłaszać liczbę sugestii wyszukiwania. Ta
+  opcja jest kontrolowana przez opcję "odczytuj położenie obiektu" w panelu
+  "prezentacja obiektu".
+* W większości menu kontekstowych (tak jak w Microsoft Edge), informacja o
+  położeniu (NP. 1 z 2) nie jest już odczytywana.
 * Następujące zdarzenia UIA są rozpoznawane: active text position change,
   controller for, drag start, drag cancel, drag complete, element selected,
   live region change, notification, system alert, tooltip opened, window
@@ -68,13 +69,14 @@ wersji dodatku][3].
   można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
   rozwojowe będą sprawdzane pod kątem nowych aktualizacji codziennie lub
   tygodniowo.
-* In some apps, live region text is announced. This includes alerts in Edge
-  (including elements marked with aria-role=alert), results in Calculator
-  and others. Note that this may result in double-speaking in some
-  cases. This is now part of NVDA 2017.3 or later.
-* Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced. NVDA 2018.2 and later supports this, with
-  2018.3 adding support for more notifications.
+* W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. Są to
+  m.in. powiadomienia w Microsoft Edge (włącznie z elementami oznaczonymi
+  aria-role=aler), czy wyniki w kalkulatorze. Proszę mieć na uwadze, że w
+  niektórych przypadkach może to skutkować podwójnym wymawianiem. Jest to
+  wbudowane w NVDA 2017.3 i nowsze.
+* Powiadomienia z nowych wersji aplikacji w Windows 10 wersji 1709
+  (kompilacja 16299) i nowszych są wymawiane. NVDA wspiera to od wersji
+  2018.2. Ponadto, NVDA 2018.3 wspiera jeszcze więcej powiadomień.
 * Opisy obiektów w Edge i innych aplikacjach UWP są rozpoznawane  i będą
   czytane automatycznie.
 * w kompilacji 17627 i nowszych, gdy nowa karta sets jest otwierana
