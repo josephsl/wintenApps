@@ -100,6 +100,8 @@ def checkForAddonUpdate():
 		addonVersion = addonHandler.Addon(unicode(os.path.join(os.path.dirname(__file__), "..", ".."), "mbcs")).manifest['version']
 	except:
 		addonVersion = addonHandler.Addon(os.path.join(os.path.dirname(__file__), "..", "..")).manifest['version']
+	# If hosted on places other than add-ons server, an unexpected URL might be returned, so parse this further.
+	if "wintenApps" in version: version = version.split("wintenApps")[1][1:]
 	if addonVersion != version:
 		return {"curVersion": addonVersion, "newVersion": version, "path": res.url}
 	return None
