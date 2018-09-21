@@ -27,7 +27,7 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 Version 1709 (build 16299) or later and NVDA 2018.2 or later. For best results, use the add-on with latest Windows 10 stable release (build 17134) and latest stable version of NVDA.
+* This add-on requires Windows 10 Version 1709 (build 16299) or later and NVDA 2018.3 or later. For best results, use the add-on with latest Windows 10 stable release (build 17134) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to apps that makes entries no longer applicable.
 
@@ -35,12 +35,13 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## General
 
+* If Add-on Updater add-on is installed, that add-on will check for Windows 10 App Essentials updates.
+* Default update check interval has changed to weekly checks for both stable and development releases. This is applicable if the add-on itself checks for updates.
 * Submenu items are properly recognized in various apps, including context menu for Start menu tiles and microsoft Edge's app menu (Redstone 5).
-* Certain dialogs are now recognized as proper dialogs and reported as such, including Insider Preview dialog (settings app). This will be part of NVDA 2018.3.
+* Certain dialogs are now recognized as proper dialogs and reported as such, including Insider Preview dialog (settings app). This is now part of NVDA 2018.3.
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation dialog/panel.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: active text position change, controller for, drag start, drag cancel, drag complete, element selected, live region change, notification, system alert, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app.
-* Added ability to check for add-on updates (automatic or manual) via Windows 10 App Essentials dialog found in NvDA Preferences menu. By default, stable and development versions will check for new updates automatically on a weekly or daily basis, respectively. This feature, along with ability to select update channels, will be disabled in the future when Add-on Updater and NVDA checks for add-on updates.
 * Notifications from newer app releases on Windows 10 Version 1709 (build 16299) and later are announced. NVDA 2018.2 and later supports this, with 2018.3 adding support for more notifications.
 * Tooltips from Edge and universal apps are recognized and will be announced.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop ID (desktop 2, for example).
@@ -90,7 +91,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## Modern keyboard
 
-Note: all features below will be part of NVDA 2018.3.
+Note: all features below are now part of NVDA 2018.3.
 
 * Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including the redesigned panel in Version 1809 (build 17661 and later). For best experience when reading emojis, use Windows OneCore speech synthesizer.
 * Support for hardware keyboard input suggestions in Version 1803 (April 2018 Update) and later.

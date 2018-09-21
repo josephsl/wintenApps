@@ -19,7 +19,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("""A collection of app modules for various Windows 10 apps"""),
 	# version
-	"addon_version" : "18.09",
+	"addon_version" : "18.10",
 	# Author(s)
 	"addon_author" : u"Joseph Lee <joseph.lee22590@gmail.com>, Derek Riemer <driemer.riemer@gmail.com> and others",
 	# URL for the add-on documentation support
@@ -27,7 +27,7 @@ addon_info = {
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
 	# Minimum NVDA version supported
-	"addon_minimumNVDAVersion" : "2018.2",
+	"addon_minimumNVDAVersion" : "2018.3",
 	# Add-on update channel (default is stable)
 	"addon_updateChannel" : None,
 }
