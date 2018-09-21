@@ -6,6 +6,28 @@
 # Base config section was inspired by Clip Contents Designer (Noelia Martinez).
 # Overall update check routine comes from StationPlaylist Studio add-on (Joseph Lee).)
 
+try:
+	import updateCheck
+except RuntimeError:
+	raise RuntimeError("NVDA itself cannot check for updates")
+import globalVars
+if globalVars.appArgs.secure:
+	raise RuntimeError("NVDA in secure mode, cannot check for add-on update")
+import versionInfo
+if not versionInfo.updateVersionType:
+	raise RuntimeError("NVDA is running from source code, add-on update check is not supported")
+import config
+if config.isAppX:
+	raise RuntimeError("This is NVDA Windows Store edition")
+import addonHandler
+# Provided that NVDA issue 3208 is implemented.
+if hasattr(addonHandler, "checkForAddonUpdate"):
+	raise RuntimeError("NVDA itself will check for add-on updates")
+# Temporary: check of Add-on Updater add-on is running.
+for addon in addonHandler.getAvailableAddons():
+	if (addon.name, addon.isDisabled) == ("addonUpdater", False):
+		raise RuntimeError("Another add-on update provider exists")
+
 import os
 import threading
 # Python 3 calls for using urllib.request instead, which is functionally equivalent to urllib2.
@@ -37,9 +59,8 @@ canUpdate = not hasattr(addonHandler, "checkForAddonUpdate")
 # Add-on config database
 confspec = {
 	"autoUpdateCheck": "boolean(default=true)",
-	"updateChannel": "string(default=dev)",
 	"updateCheckTime": "integer(default=0)",
-	"updateCheckTimeInterval": "integer(min=0, max=30, default=1)",
+	"updateCheckTimeInterval": "integer(min=0, max=30, default=7)",
 }
 config.conf.spec["wintenApps"] = confspec
 
@@ -49,7 +70,6 @@ channels={
 	"stable":"https://addons.nvda-project.org/files/get.php?file=w10",
 	"dev":"https://addons.nvda-project.org/files/get.php?file=w10-dev",
 }
-
 
 updateChecker = None
 # To avoid freezes, a background thread will run after the global plugin constructor calls wx.CallAfter.
@@ -74,14 +94,11 @@ def startAutoUpdateCheck(interval=None):
 
 # Borrowed ideas from NVDA Core.
 def checkForAddonUpdate():
-	updateURL = channels[config.conf["wintenApps"]["updateChannel"]]
-	# Commenting this out will effectively turn off pilot builds.
-	# Check if pilot build is supported.
-	def _pilotBuild():
-		import winVersion, UIAHandler
-		return config.conf["wintenApps"]["updateChannel"] == "dev" and hasattr(UIAHandler, "IUIAutomation6") and winVersion.winVersion.build >= 16299
-	if _pilotBuild():
-		updateURL = "https://www.josephsl.net/files/nvdaaddons/getupdate.php?file=w10-try"
+	# 18.10: choose default channel/update URL combination based on which channel is currently installed.
+	w10AddonManifest = addonHandler.Addon(os.path.join(os.path.dirname(__file__), "..", "..")).manifest
+	devVersion = "-dev" in w10AddonManifest['version'] or w10AddonManifest.get("updateChannel") == "dev"
+	updateChannel = "dev" if devVersion else "stable"
+	updateURL = channels[updateChannel]
 	try:
 		res = urlopen(updateURL)
 		res.close()
@@ -159,11 +176,6 @@ class WinTenAppsConfigDialog(wx.Dialog):
 		self.autoUpdateCheckbox.SetValue(config.conf["wintenApps"]["autoUpdateCheck"])
 		# Translators: The label for a setting in WinTenApps add-on settings to select automatic update interval in days.
 		self.updateInterval=w10Helper.addLabeledControl(_("Update &interval in days"), gui.nvdaControls.SelectOnFocusSpinCtrl, min=0, max=30, initial=config.conf["wintenApps"]["updateCheckTimeInterval"])
-		# Translators: The label for a combo box to select update channel.
-		#labelText = _("&Add-on update channel:")
-		#self.channels=w10Helper.addLabeledControl(labelText, wx.Choice, choices=["development", "stable"])
-		#self.updateChannels = ("dev", "stable")
-		#self.channels.SetSelection(self.updateChannels.index(config.conf["wintenApps"]["updateChannel"]))
 		if canUpdate:
 			# Translators: The label of a button to check for add-on updates.
 			updateCheckButton = w10Helper.addItem(wx.Button(self, label=_("Check for add-on &update")))
@@ -179,18 +191,6 @@ class WinTenAppsConfigDialog(wx.Dialog):
 		self.Center(wx.BOTH | (wx.CENTER_ON_SCREEN if hasattr(wx, "CENTER_ON_SCREEN") else 2))
 
 	def onOk(self, evt):
-		# #39: Prompt if switching from stable to development channel.
-		#currentUpdateChannel = config.conf["wintenApps"]["updateChannel"]
-		#newUpdateChannel = ("dev", "stable")[self.channels.GetSelection()]
-		#if currentUpdateChannel == "stable" and newUpdateChannel == "dev":
-			#if gui.messageBox(
-				# Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-				#_("You are about to switch to development updates channel. Although updates from this channel brings exciting features, it also comes with updates that might be unstable at times and should be used for testing and sending feedback to the add-on developer. If you prefer to use stable releases, please answer no and switch to stable update channel. Are you sure you wish to switch to the development update channel?"),
-				# Translators: The title of the channel switch confirmation dialog.
-				#_("Switching to unstable channel"),
-				#wx.YES_NO | wx.NO_DEFAULT | wx.ICON_QUESTION, self
-			#) == wx.NO:
-				#return
 		global updateChecker
 		if updateChecker and updateChecker.IsRunning(): updateChecker.Stop()
 		config.conf["wintenApps"]["autoUpdateCheck"] = self.autoUpdateCheckbox.Value
@@ -201,7 +201,6 @@ class WinTenAppsConfigDialog(wx.Dialog):
 		else:
 			updateChecker = wx.PyTimer(autoUpdateCheck)
 			updateChecker.Start(addonUpdateCheckInterval * 1000, True)
-		#config.conf["wintenApps"]["updateChannel"] = ("dev", "stable")[self.channels.GetSelection()]
 		self.Destroy()
 
 	def onCancel(self, evt):
