@@ -59,7 +59,6 @@ canUpdate = not hasattr(addonHandler, "checkForAddonUpdate")
 # Add-on config database
 confspec = {
 	"autoUpdateCheck": "boolean(default=true)",
-	"updateChannel": "string(default=dev)",
 	"updateCheckTime": "integer(default=0)",
 	"updateCheckTimeInterval": "integer(min=0, max=30, default=1)",
 }
@@ -96,7 +95,11 @@ def startAutoUpdateCheck(interval=None):
 
 # Borrowed ideas from NVDA Core.
 def checkForAddonUpdate():
-	updateURL = channels[config.conf["wintenApps"]["updateChannel"]]
+	# 18.10: choose default channel/update URL combination based on which channel is currently installed.
+	w10AddonManifest = addonHandler.Addon(os.path.join(os.path.dirname(__file__), "..", "..")).manifest
+	devVersion = "-dev" in w10AddonManifest['version'] or w10AddonManifest.get("updateChannel") == "dev"
+	updateChannel = "dev" if devVersion else "stable"
+	updateURL = channels[updateChannel]
 	try:
 		res = urlopen(updateURL)
 		res.close()
