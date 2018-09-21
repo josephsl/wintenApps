@@ -60,7 +60,7 @@ canUpdate = not hasattr(addonHandler, "checkForAddonUpdate")
 confspec = {
 	"autoUpdateCheck": "boolean(default=true)",
 	"updateCheckTime": "integer(default=0)",
-	"updateCheckTimeInterval": "integer(min=0, max=30, default=1)",
+	"updateCheckTimeInterval": "integer(min=0, max=30, default=7)",
 }
 config.conf.spec["wintenApps"] = confspec
 
@@ -70,7 +70,6 @@ channels={
 	"stable":"https://addons.nvda-project.org/files/get.php?file=w10",
 	"dev":"https://addons.nvda-project.org/files/get.php?file=w10-dev",
 }
-
 
 updateChecker = None
 # To avoid freezes, a background thread will run after the global plugin constructor calls wx.CallAfter.
