@@ -63,8 +63,10 @@ class AppModule(appModuleHandler.AppModule):
 	def __init__(self, *args, **kwargs):
 		super(AppModule, self).__init__(*args, **kwargs)
 		# Used "range" function due to Python 3 compatibility.
-		for pos in range(10):
-			self.bindGesture("kb:control+nvda+%s"%pos, "readMessage")
+		# Unfortunatley, Skype 14 UWP does not expose chat history in a friendly way.
+		if self.productVersion.startswith("12."):
+			for pos in range(10):
+				self.bindGesture("kb:control+nvda+%s"%pos, "readMessage")
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
@@ -148,6 +150,10 @@ class AppModule(appModuleHandler.AppModule):
 	script_readMessage.__doc__ = _("Reports and moves the review cursor to a recent message")
 
 	def script_moveToChatEditField(self, gesture):
+		# Skype 14 UWP does not expose this info in a friendly way.
+		if self.productVersion.startswith("8."):
+			gesture.send()
+			return
 		element = self.locateElement("ChatEditBox")
 		if element is not None:
 			element.setFocus()
