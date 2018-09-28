@@ -26,7 +26,7 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 * Skype (aplikacja uniwersalna)
 * Sklep
 * Pogoda.
-* Różne moduły dla takich kontrolek, jak kafelki menu start.
+* Różne moduły dla takich kontrolek, jak kafelki meni start.
 
 Uwagi:
 
@@ -40,14 +40,14 @@ Uwagi:
   wspiera starszych wydań systemu, lub aplikacje są zmienione w taki sposób,
   że te wpisy są unieważnione.
 
-Dla listy zmian pomiędzy kolejnymi wersjami, prosimy przeczytać [listę zmian
-dla wersji dodatku][3].
+Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
+[listę zmian dla wersji dodatku][3].
 
 ## Ogólne
 
-* Elementy menu rozwijanego są prawidłowo rozpoznawane w różnych
-  aplikacjach, włączając w to menu kontekstowe dla kafelków meni start, a
-  także menu aplikacji dla Microsoft Edge (Redstone 5).
+* Elementy meni rozwijanego są prawidłowo rozpoznawane w różnych
+  aplikacjach, takich jak menu kontekstowe dla kafelków meni start, a także
+  menu aplikacji dla Microsoft Edge (Redstone 5).
 * Niektóre okna dialogowe są od teraz prawidłowo rozpoznawane i wymawiane
   jako okna dialogowe. Są to np. okna dialogowe w wersjach testowych
   (settings app). W NVDA 2018.3, będzie to już wbudowane w sam czytnik
@@ -55,20 +55,20 @@ dla wersji dodatku][3].
 * W wielu przypadkach, NVDA może ogłaszać liczbę sugestii wyszukiwania. Ta
   opcja jest kontrolowana przez opcję "odczytuj położenie obiektu" w panelu
   "prezentacja obiektu".
-* W większości menu kontekstowych (tak jak w Microsoft Edge), informacja o
+* W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) nie jest już odczytywana.
 * Następujące zdarzenia UIA są rozpoznawane: active text position change,
   controller for, drag start, drag cancel, drag complete, element selected,
   live region change, notification, system alert, tooltip opened, window
   opened. Gdy w NVDA jest włączony tryb debugowania, te zdarzenia będą
-  śledzone, natomiast, dla UIA zdarzenia UIA notification event, dźwięk
+  śledzone. Natomiast dla UIA, zdarzenia UIA notification event, dźwięk
   debugowania będzie odtwarzany jeżeli powiadomienie przykodzi z innej
   aplikacji niż ta aktywna.
-* Dodana możliwość sprawdzania aktualizacji dodatku (automatycznie lub
+* Dodano możliwość sprawdzania aktualizacji dodatku (automatycznie lub
   ręcznie) poprzez nowe okno dialogowe Windows 10 App Essentials, które
   można znaleźć w meni NvDA meni ustawienia. Domyślnie, wersje stabilne i
-  rozwojowe będą sprawdzane pod kątem nowych aktualizacji codziennie lub
-  tygodniowo.
+  rozwojowe będą sprawdzane pod kątem nowych aktualizacji codziennie lub co
+  tydzień.
 * W niektórych aplikacjach, tekst żywego regionu jest wypowiadany. Są to
   m.in. powiadomienia w Microsoft Edge (włącznie z elementami oznaczonymi
   aria-role=aler), czy wyniki w kalkulatorze. Proszę mieć na uwadze, że w
@@ -80,11 +80,12 @@ dla wersji dodatku][3].
 * Opisy obiektów w Edge i innych aplikacjach UWP są rozpoznawane  i będą
   czytane automatycznie.
 * w kompilacji 17627 i nowszych, gdy nowa karta sets jest otwierana
-  (Control+Windows+T), NVDA będzie oznajmiało wyniki cortany.
-* Przy przełączaniu pomiędzy kartami właściwości sets, NVDA będzie wymawiało
+  (Control+Windows+T), NVDA będzie oznajmiać wyniki cortany.
+* Przy przełączaniu pomiędzy kartami właściwości sets, NVDA będzie wymawiać
   nazwę i pozycję karty właściwości.
-* otwierając, zamykając lub przełączając się między wirtualnymi pulpitami,
-  NVDA będzie oznajmiało aktualny identyfikator (na przykład pulpit 2).
+* Podczas otwierania, zamykając lub przełączając się między wirtualnymi
+  pulpitami, NVDA będzie oznajmiało aktualny identyfikator (na przykład
+  pulpit 2).
 * NVDA nie będzie wypowiadało wielkość tekstu w meni start, gdy zmienia się
   rozdzielczość ekranu lub orientacja ekranu.
 
