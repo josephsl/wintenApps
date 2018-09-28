@@ -136,7 +136,7 @@ msgstr "Auf Updates der Erweiterung wird gesucht..."
 
 #. Translators: The title of the dialog displayed while downloading add-on update.
 msgid "Downloading Add-on Update"
-msgstr "Die Aktualisierung der Erweiterung wird heruntergeladen"
+msgstr "Die Update der Erweiterung wird heruntergeladen"
 
 #. Translators: The progress message indicating that a connection is being established.
 msgid "Connecting"
@@ -144,7 +144,7 @@ msgstr "Verbindung wird hergestellt"
 
 #. Translators: A message indicating that an error occurred while downloading an update to NVDA.
 msgid "Error downloading add-on update."
-msgstr "Fehler beim Herunterladen der Aktualisierung"
+msgstr "Fehler beim Herunterladen der Update"
 
 #. Translators: The title of a dialog indicating that an error occurred while downloading an update to NVDA.
 #. Translators: The title of a dialog presented when an error occurs.
