@@ -114,6 +114,8 @@ Note: all features below are now part of NVDA 2018.3.
 
 ## Skype
 
+Note: the below entries won't work properly in Skype 14 universal app.
+
 * Typing indicator text is announced just like Skype for Desktop client.
 * Control+NvDA+number row commands, used to read recent chat history and to move navigator object to chat entries in Skype for Desktop, is also available in Skype UWP.
 * You can press Alt+number row to locate and move to conversations (1), contacts list (2), bots (3) and chat edit field if visible (4). Note that these commands will work properly if Skype update released in March 2017 is installed.
