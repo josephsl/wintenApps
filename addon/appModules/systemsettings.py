@@ -68,7 +68,8 @@ class AppModule(appModuleHandler.AppModule):
 			return False if automationID == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock" and obj.previous.value > "0" else True
 		else:
 			# For search progress bar, do not repeat it.
-			return ((automationID == "ProgressBar")
+			# Same can be said about Storage/disk cleanup, but this is due to name change evnet.
+			return ((automationID in ("ProgressBar", "SystemSettings_StorageSense_TemporaryFiles_InstallationProgressBar"))
 			# Do not announce "result not found" error unless have to.
 			or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")
 			# But announce individual update progress in build 16215 and later.
@@ -91,6 +92,13 @@ class AppModule(appModuleHandler.AppModule):
 					return
 			except AttributeError:
 				pass
+
+	def event_nameChange(self, obj, nextHandler):
+		# Storage/disk cleanup progress bar raises name change event.
+		# Because "Purging:" is announced multiple times, coerce this to live region change event, which does handle this case.
+		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "SystemSettings_StorageSense_TemporaryFiles_InstallationProgressBar":
+			self.event_liveRegionChange(obj, nextHandler)
+		nextHandler()
 
 	def event_UIA_controllerFor(self, obj, nextHandler):
 		self._nameChangeCache = ""
