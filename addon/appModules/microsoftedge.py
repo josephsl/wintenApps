@@ -10,7 +10,7 @@ import api
 from NVDAObjects.UIA import UIA
 import controlTypes
 import ui
-from NVDAObjects.behaviors import EditableTextWithoutAutoSelectDetection
+from NVDAObjects.behaviors import EditableTextWithoutAutoSelectDetection, EditableTextWithAutoSelectDetection
 
 class AppModule(appModuleHandler.AppModule):
 
@@ -18,6 +18,7 @@ class AppModule(appModuleHandler.AppModule):
 		# Detect selection changes in address omnibar.
 		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "addressEditBox":
 			clsList.remove(EditableTextWithoutAutoSelectDetection)
+			clsList.insert(0, EditableTextWithAutoSelectDetection)
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
