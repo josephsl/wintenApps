@@ -152,6 +152,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
 				UIAHandler.handler.clientObject.addAutomationEventHandler(event,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 				log.debug("W10: added event ID %s, assigned to %s"%(event, name))
+		# Listen for additional property change events.
+		if UIAHandler.UIA_ItemStatusPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
+			log.debug("W10: adding item status property change event")
+			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIAHandler.UIA_ItemStatusPropertyId] = "UIA_itemStatus"
+			UIAHandler.handler.clientObject.AddPropertyChangedEventHandler(UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler,[UIAHandler.UIA_ItemStatusPropertyId])
 		# Only if standalone update mode is in use, as the only thing configurable via settings is add-on update facility.
 		if w10config is not None:
 			self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
@@ -235,6 +240,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				info.append("controller for count: %s"%len(obj.controllerFor))
 			elif event == "tooltipOpened":
 				info.append("framework Id: %s"%element.cachedFrameworkId)
+			elif event == "itemStatus":
+				info.append("item status: %s"%element.currentItemStatus)
 			log.debug(u"W10: UIA {debuginfo}".format(debuginfo = ", ".join(info)))
 
 	# Focus announcement hacks.
@@ -322,4 +329,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		import tones
 		# For debugging purposes.
 		tones.beep(250, 100)
+		nextHandler()
+
+	def event_UIA_itemStatus(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "itemStatus")
 		nextHandler()
