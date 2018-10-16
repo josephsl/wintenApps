@@ -25,9 +25,15 @@ class AppModule(AppModule):
 		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "FrameSizeAccessibilityField": return
 		nextHandler()
 
+	# Argh, somehow, item status property repeats when Action Center is opened more than once.
+	_itemStatusMessage = None
+
 	def event_UIA_itemStatus(self, obj, nextHandler):
 		if isinstance(obj, UIA):
 			if obj.UIAElement.cachedAutomationID.endswith(statusActions):
 				itemStatus = obj.UIAElement.currentItemStatus
-				if itemStatus: ui.message("{0}: {1}".format(obj.name, itemStatus))
+				# And no, I don't want to hear repetitions.
+				if itemStatus != self._itemStatusMessage:
+					ui.message("{0}: {1}".format(obj.name, itemStatus))
+					self._itemStatusMessage = itemStatus
 		nextHandler()
