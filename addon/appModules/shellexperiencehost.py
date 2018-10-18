@@ -8,10 +8,6 @@ from nvdaBuiltin.appModules.shellexperiencehost import *
 from NVDAObjects.UIA import UIA
 import controlTypes
 import ui
-import wx
-
-# NVDA Core issue 8845: there are "toggle buttons" that are not really toggle controls and exposes additional values via UIA.
-statusActions = ("Brightness", "QuietHours")
 
 class AppModule(AppModule):
 
@@ -19,6 +15,9 @@ class AppModule(AppModule):
 		if isinstance(obj, UIA):
 			if obj.name == "" and obj.UIAElement.cachedAutomationID == "TextBoxPinEntry":
 				obj.name = obj.previous.name
+			# NVDA Core issue 8845: Brightness button in Action Center is a button, not a toggle button.
+			if obj.UIAElement.cachedAutomationID == "Microsoft.QuickAction.Brightness":
+				obj.role = controlTypes.ROLE_BUTTON
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		# No, do not let Start menu size be announced.
@@ -30,10 +29,9 @@ class AppModule(AppModule):
 
 	def event_UIA_itemStatus(self, obj, nextHandler):
 		if isinstance(obj, UIA):
-			if obj.UIAElement.cachedAutomationID.endswith(statusActions):
-				itemStatus = obj.UIAElement.currentItemStatus
-				# And no, I don't want to hear repetitions.
-				if itemStatus != self._itemStatusMessage:
-					ui.message("{0}: {1}".format(obj.name, itemStatus))
-					self._itemStatusMessage = itemStatus
+			itemStatus = obj.UIAElement.currentItemStatus
+			# And no, I don't want to hear repetitions.
+			if itemStatus != self._itemStatusMessage:
+				ui.message("{0}: {1}".format(obj.name, itemStatus))
+				self._itemStatusMessage = itemStatus
 		nextHandler()
