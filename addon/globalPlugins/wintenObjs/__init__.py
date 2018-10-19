@@ -136,9 +136,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
 		# #20: don't even think about proceeding in secure screens (especially add-on updates).
-		if globalVars.appArgs.secure: return
 		# #40: skip over the rest if appx is in effect.
-		if config.isAppX: return
+		if globalVars.appArgs.secure or config.isAppX: return
 		import UIAHandler
 		# Add a series of events instead of doing it one at a time.
 		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
