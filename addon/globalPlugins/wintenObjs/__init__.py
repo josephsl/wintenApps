@@ -150,8 +150,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				UIAHandler.handler=_UIAHandlerEx.UIAHandlerEx()
 				log.debug("W10: UIA event performance fix applied successfully")
 			except:
-				UIAHandler.initialize():
+				UIAHandler.initialize()
 				log.debug("W10: could not apply UIA event performance fix")
+		else:
+			log.debug("W10: NVDA 2018.4 detected")
 		# Add a series of events instead of doing it one at a time.
 		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
 		log.debug("W10: adding additional events")
