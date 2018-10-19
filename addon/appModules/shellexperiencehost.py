@@ -18,6 +18,7 @@ class AppModule(AppModule):
 			# NVDA Core issue 8845: Brightness button in Action Center is a button, not a toggle button.
 			if obj.UIAElement.cachedAutomationID == "Microsoft.QuickAction.Brightness":
 				obj.role = controlTypes.ROLE_BUTTON
+				obj.states.discard(controlTypes.STATE_CHECKABLE)
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		# No, do not let Start menu size be announced.
