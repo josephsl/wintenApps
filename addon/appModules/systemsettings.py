@@ -46,6 +46,9 @@ class AppModule(appModuleHandler.AppModule):
 				else:
 					nameList.append(obj.next.name)
 				obj.name = ", ".join(nameList)
+			# Search indexer radio buttons in build 18267 has no label, but the simple first child does.
+			if obj.name == "" and obj.role == controlTypes.ROLE_RADIOBUTTON and not obj.UIAElement.cachedAutomationID:
+				obj.name = obj.simpleFirstChild.name
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# In build 17035, Settings/System/Sound has been added, but has an anoying volume progress bar.
