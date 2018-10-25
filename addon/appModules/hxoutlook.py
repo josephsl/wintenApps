@@ -10,6 +10,7 @@ from nvdaBuiltin.appModules.hxoutlook import *
 import api
 from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import RowWithFakeNavigation
+import ui
 
 class MailItemRow(RowWithFakeNavigation, UIA):
 
@@ -24,6 +25,11 @@ class MailItemRow(RowWithFakeNavigation, UIA):
 		self._moveToColumn(new)
 	script_moveToPreviousColumn.canPropagate = True
 	script_moveToPreviousColumn.__doc__ = RowWithFakeNavigation.script_moveToPreviousColumn.__doc__
+
+	def _moveToRow(self, row):
+		# Customized because there is no easy way to obtain column position info for this object yet.
+		# Therefore report that this is not supported yet.
+		ui.message(_("Cannot move between rows"))
 
 
 class AppModule(AppModule):

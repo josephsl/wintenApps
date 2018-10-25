@@ -136,10 +136,24 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
 		# #20: don't even think about proceeding in secure screens (especially add-on updates).
-		if globalVars.appArgs.secure: return
 		# #40: skip over the rest if appx is in effect.
-		if config.isAppX: return
+		if globalVars.appArgs.secure or config.isAppX: return
 		import UIAHandler
+		# #51 (NvDA 2018.3 only): attempt to backport WinEvent performance enhancements introduced in NVDA 2018.4-dev, to be removed in 2019.
+		# Because the add-on supports 2018.3 and later, only check for 2018.3 here.
+		import versionInfo
+		if (versionInfo.version_year, versionInfo.version_major) == (2018, 3):
+			log.debug("W10: NVDA 2018.3.x detected, attempting to apply UIA event performance fix from 2018.4")
+			UIAHandler.terminate()
+			from . import _UIAHandlerEx
+			try:
+				UIAHandler.handler=_UIAHandlerEx.UIAHandlerEx()
+				log.debug("W10: UIA event performance fix applied successfully")
+			except:
+				UIAHandler.initialize()
+				log.debug("W10: could not apply UIA event performance fix")
+		else:
+			log.debug("W10: NVDA 2018.4 detected")
 		# Add a series of events instead of doing it one at a time.
 		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
 		log.debug("W10: adding additional events")
@@ -152,6 +166,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
 				UIAHandler.handler.clientObject.addAutomationEventHandler(event,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 				log.debug("W10: added event ID %s, assigned to %s"%(event, name))
+		# Listen for additional property change events.
+		if UIAHandler.UIA_ItemStatusPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
+			log.debug("W10: adding item status property change event")
+			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIAHandler.UIA_ItemStatusPropertyId] = "UIA_itemStatus"
+			UIAHandler.handler.clientObject.AddPropertyChangedEventHandler(UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler,[UIAHandler.UIA_ItemStatusPropertyId])
 		# Only if standalone update mode is in use, as the only thing configurable via settings is add-on update facility.
 		if w10config is not None:
 			self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
@@ -235,6 +254,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				info.append("controller for count: %s"%len(obj.controllerFor))
 			elif event == "tooltipOpened":
 				info.append("framework Id: %s"%element.cachedFrameworkId)
+			elif event == "itemStatus":
+				info.append("item status: %s"%element.currentItemStatus)
 			log.debug(u"W10: UIA {debuginfo}".format(debuginfo = ", ".join(info)))
 
 	# Focus announcement hacks.
@@ -322,4 +343,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		import tones
 		# For debugging purposes.
 		tones.beep(250, 100)
+		nextHandler()
+
+	def event_UIA_itemStatus(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "itemStatus")
 		nextHandler()
