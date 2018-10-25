@@ -52,3 +52,34 @@ class AppModule(AppModule):
 			# Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
 			ui.message(_("No emoji"))
 		nextHandler()
+
+	def event_UIA_window_windowOpen(self, obj, nextHandler):
+		# Make sure to announce most recently used emoji first in post-1709 builds.
+		# Fake the announcement by locating 'most recently used" category and calling selected event on this.
+		# However, in build 17666 and later, child count is the same for both emoji panel and hardware keyboard candidates list.
+		# Thankfully first child automation ID's are different for each modern input technology.
+		# However this event is raised when the input panel closes.
+		if obj.firstChild is None:
+			return
+		childAutomationID = obj.firstChild.UIAElement.cachedAutomationID
+		# Emoji panel for build 16299 and 17134.
+		# This event is properly raised in build 17134.
+		if winVersion.winVersion.build <= 17134 and childAutomationID in ("TEMPLATE_PART_ExpressiveInputFullViewFuntionBarItemControl", "TEMPLATE_PART_ExpressiveInputFullViewFuntionBarCloseButton"):
+			self.event_UIA_elementSelected(obj.lastChild.firstChild, nextHandler)
+		# Handle hardware keyboard suggestions.
+		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
+		elif childAutomationID == "CandidateWindowControl" and config.conf["inputComposition"]["autoReportAllCandidates"]:
+			try:
+				self.event_UIA_elementSelected(obj.firstChild.firstChild.firstChild, nextHandler)
+			except AttributeError:
+				# Because this is dictation window.
+				pass
+		# Emoji panel in build 17666 and later (unless this changes).
+		elif childAutomationID == "TEMPLATE_PART_ExpressionGroupedFullView":
+			self._emojiPanelJustOpened = True
+			self.event_UIA_elementSelected(obj.firstChild.firstChild.next.next.firstChild.firstChild, nextHandler)
+		# Clipboard history.
+		# Move to clipboard list so element selected event can pick it up.
+		elif childAutomationID == "TEMPLATE_PART_ClipboardTitleBar":
+			self.event_UIA_elementSelected(obj.lastChild.previous, nextHandler)
+		nextHandler()
