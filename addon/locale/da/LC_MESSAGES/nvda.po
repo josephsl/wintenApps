@@ -32,6 +32,11 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "Gammel version af Windows"
 
+#. Customized because there is no easy way to obtain column position info for this object yet.
+#. Therefore report that this is not supported yet.
+msgid "Cannot move between rows"
+msgstr ""
+
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "Ikke flere vejrdata for dette emne."
@@ -100,34 +105,9 @@ msgstr "Søg automatisk efter &opdateringer til tilføjelsesprogrammet"
 msgid "Update &interval in days"
 msgstr "Opdaterings&interval i dage"
 
-#. Translators: The label for a combo box to select update channel.
-msgid "&Add-on update channel:"
-msgstr "K&anal til opdatering af tilføjelsesprogram"
-
 #. Translators: The label of a button to check for add-on updates.
 msgid "Check for add-on &update"
 msgstr "Søg efter &opdatering til tilføjelsesprogram"
-
-#. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-msgid ""
-"You are about to switch to development updates channel. Although updates "
-"from this channel brings exciting features, it also comes with updates that "
-"might be unstable at times and should be used for testing and sending "
-"feedback to the add-on developer. If you prefer to use stable releases, "
-"please answer no and switch to stable update channel. Are you sure you wish "
-"to switch to the development update channel?"
-msgstr ""
-"Du er ved at skifte til udviklingsopdateringskanalen. Selvom opdateringer "
-"fra denne kanal bringer spændende funktioner, kommer den også med "
-"opdateringer, som måske er ustabile til tider og bør bruges til at teste og "
-"sende feedback til udvikleren af tilføjelsespakken. Hvis du foretrækker at "
-"bruge stabile versioner af denne pakke, så svar venligst nej og skift til "
-"den stabile opdateringskanal. Er du sikker på, at du ønsker at skifte til "
-"udviklingsopdateringskanalen?"
-
-#. Translators: The title of the channel switch confirmation dialog.
-msgid "Switching to unstable channel"
-msgstr "Skifter til ustabil kanal"
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"
@@ -185,3 +165,25 @@ msgstr "Windows 10 App Essentials"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "En samling af programmoduler til forskellige Windows 10 apps"
+
+#~ msgid "&Add-on update channel:"
+#~ msgstr "K&anal til opdatering af tilføjelsesprogram"
+
+#~ msgid ""
+#~ "You are about to switch to development updates channel. Although updates "
+#~ "from this channel brings exciting features, it also comes with updates "
+#~ "that might be unstable at times and should be used for testing and "
+#~ "sending feedback to the add-on developer. If you prefer to use stable "
+#~ "releases, please answer no and switch to stable update channel. Are you "
+#~ "sure you wish to switch to the development update channel?"
+#~ msgstr ""
+#~ "Du er ved at skifte til udviklingsopdateringskanalen. Selvom opdateringer "
+#~ "fra denne kanal bringer spændende funktioner, kommer den også med "
+#~ "opdateringer, som måske er ustabile til tider og bør bruges til at teste "
+#~ "og sende feedback til udvikleren af tilføjelsespakken. Hvis du "
+#~ "foretrækker at bruge stabile versioner af denne pakke, så svar venligst "
+#~ "nej og skift til den stabile opdateringskanal. Er du sikker på, at du "
+#~ "ønsker at skifte til udviklingsopdateringskanalen?"
+
+#~ msgid "Switching to unstable channel"
+#~ msgstr "Skifter til ustabil kanal"

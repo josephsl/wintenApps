@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2018-07-19 07:20-0700\n"
+"PO-Revision-Date: 2018-10-26 16:58+0300\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
 "Language-Team: \n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.2\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -31,6 +31,11 @@ msgstr ""
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
 msgstr "Стара версия на Windows"
+
+#. Customized because there is no easy way to obtain column position info for this object yet.
+#. Therefore report that this is not supported yet.
+msgid "Cannot move between rows"
+msgstr "Не е възможно предвижване между редовете"
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
@@ -101,34 +106,9 @@ msgstr "Автоматично проверявай за &обновления �
 msgid "Update &interval in days"
 msgstr "&Периодичност на проверката за обновления (в дни)"
 
-#. Translators: The label for a combo box to select update channel.
-msgid "&Add-on update channel:"
-msgstr "&Канал за обновление на добавката:"
-
 #. Translators: The label of a button to check for add-on updates.
 msgid "Check for add-on &update"
 msgstr "Провери за &обновления на добавката"
-
-#. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-msgid ""
-"You are about to switch to development updates channel. Although updates "
-"from this channel brings exciting features, it also comes with updates that "
-"might be unstable at times and should be used for testing and sending "
-"feedback to the add-on developer. If you prefer to use stable releases, "
-"please answer no and switch to stable update channel. Are you sure you wish "
-"to switch to the development update channel?"
-msgstr ""
-"На път сте да преминете към тестовия канал за обновяване. Въпреки че "
-"обновленията от този канал предоставят интересни нови функции, може да се "
-"получат и обновления, част от които да са нестабилни и трябва да се "
-"използват само с цел тестване и изпращане на обратна връзка на разработчика "
-"на добавката. Ако предпочитате да използвате само стабилни версии, моля, "
-"отговорете с „Не“ и преминете към стабилен канал за обновяване. Наистина ли "
-"желаете да преминете към тестовия канал за обновяване?"
-
-#. Translators: The title of the channel switch confirmation dialog.
-msgid "Switching to unstable channel"
-msgstr "Преминаване към тестовия канал"
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"
@@ -188,3 +168,26 @@ msgstr "Базов пакет за приложения в Windows 10"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Колекция от спомагателни модули за разни приложения в Windows 10."
+
+#~ msgid "&Add-on update channel:"
+#~ msgstr "&Канал за обновление на добавката:"
+
+#~ msgid ""
+#~ "You are about to switch to development updates channel. Although updates "
+#~ "from this channel brings exciting features, it also comes with updates "
+#~ "that might be unstable at times and should be used for testing and "
+#~ "sending feedback to the add-on developer. If you prefer to use stable "
+#~ "releases, please answer no and switch to stable update channel. Are you "
+#~ "sure you wish to switch to the development update channel?"
+#~ msgstr ""
+#~ "На път сте да преминете към тестовия канал за обновяване. Въпреки че "
+#~ "обновленията от този канал предоставят интересни нови функции, може да се "
+#~ "получат и обновления, част от които да са нестабилни и трябва да се "
+#~ "използват само с цел тестване и изпращане на обратна връзка на "
+#~ "разработчика на добавката. Ако предпочитате да използвате само стабилни "
+#~ "версии, моля, отговорете с „Не“ и преминете към стабилен канал за "
+#~ "обновяване. Наистина ли желаете да преминете към тестовия канал за "
+#~ "обновяване?"
+
+#~ msgid "Switching to unstable channel"
+#~ msgstr "Преминаване към тестовия канал"

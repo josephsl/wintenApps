@@ -9,13 +9,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
 "PO-Revision-Date: 2018-08-26 07:22+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.4\n"
-"Last-Translator: \n"
-"Language-Team: \n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -31,6 +31,11 @@ msgstr ""
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
 msgstr "Nem támogatott Windows verzió"
+
+#. Customized because there is no easy way to obtain column position info for this object yet.
+#. Therefore report that this is not supported yet.
+msgid "Cannot move between rows"
+msgstr ""
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
@@ -101,34 +106,9 @@ msgstr "Frissítések &automatikus ellenőrzése"
 msgid "Update &interval in days"
 msgstr "A frissítés &gyakorisága napokban"
 
-#. Translators: The label for a combo box to select update channel.
-msgid "&Add-on update channel:"
-msgstr "Frissítési &csatorna"
-
 #. Translators: The label of a button to check for add-on updates.
 msgid "Check for add-on &update"
 msgstr "&Frissítés keresése"
-
-#. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-msgid ""
-"You are about to switch to development updates channel. Although updates "
-"from this channel brings exciting features, it also comes with updates that "
-"might be unstable at times and should be used for testing and sending "
-"feedback to the add-on developer. If you prefer to use stable releases, "
-"please answer no and switch to stable update channel. Are you sure you wish "
-"to switch to the development update channel?"
-msgstr ""
-"A fejlesztői verzió frissítési csatornájára készül váltani. Erről a "
-"csatornáról megkaphatja a legújabb frissítéseket, viszont ezek a funkciók "
-"még kiforratlanok. A fejlesztői verzió a legújabb fejlesztések tesztelésére "
-"és visszajelzések küldésére szolgál. Ha ön a bővítmény stabil verzióit "
-"szeretné használni, válassza a Nem gombot, és ne változtassa meg a "
-"frissítések forrását. Biztos benne, hogy megváltoztatja a frissítés "
-"csatornáját a fejlesztői verzió csatornájára?"
-
-#. Translators: The title of the channel switch confirmation dialog.
-msgid "Switching to unstable channel"
-msgstr "Fejlesztői frissítési csatornára váltás"
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"
@@ -188,3 +168,25 @@ msgid "A collection of app modules for various Windows 10 apps"
 msgstr ""
 "Akadálymentes elérést elősegítő modulok gyűjteménye különböző Windows 10 "
 "alkalmazásokhoz."
+
+#~ msgid "&Add-on update channel:"
+#~ msgstr "Frissítési &csatorna"
+
+#~ msgid ""
+#~ "You are about to switch to development updates channel. Although updates "
+#~ "from this channel brings exciting features, it also comes with updates "
+#~ "that might be unstable at times and should be used for testing and "
+#~ "sending feedback to the add-on developer. If you prefer to use stable "
+#~ "releases, please answer no and switch to stable update channel. Are you "
+#~ "sure you wish to switch to the development update channel?"
+#~ msgstr ""
+#~ "A fejlesztői verzió frissítési csatornájára készül váltani. Erről a "
+#~ "csatornáról megkaphatja a legújabb frissítéseket, viszont ezek a funkciók "
+#~ "még kiforratlanok. A fejlesztői verzió a legújabb fejlesztések "
+#~ "tesztelésére és visszajelzések küldésére szolgál. Ha ön a bővítmény "
+#~ "stabil verzióit szeretné használni, válassza a Nem gombot, és ne "
+#~ "változtassa meg a frissítések forrását. Biztos benne, hogy megváltoztatja "
+#~ "a frissítés csatornáját a fejlesztői verzió csatornájára?"
+
+#~ msgid "Switching to unstable channel"
+#~ msgstr "Fejlesztői frissítési csatornára váltás"

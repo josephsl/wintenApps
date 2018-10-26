@@ -31,6 +31,11 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "이전 윈도우 버전 사용 중"
 
+#. Customized because there is no easy way to obtain column position info for this object yet.
+#. Therefore report that this is not supported yet.
+msgid "Cannot move between rows"
+msgstr ""
+
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "일기 예보 정보 없음"
@@ -55,6 +60,10 @@ msgstr ""
 #, fuzzy
 msgid "Chat edit field not found"
 msgstr "이전 메시지 목록을 찾을 수 없음"
+
+#. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
+msgid "No emoji"
+msgstr ""
 
 msgid "&Windows 10 App Essentials..."
 msgstr "Windows 10 App Essentials... (&W)"

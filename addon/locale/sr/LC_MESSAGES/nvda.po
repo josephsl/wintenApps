@@ -10,12 +10,12 @@ msgstr ""
 "POT-Creation-Date: 2017-03-03 22:05+1000\n"
 "PO-Revision-Date: 2018-07-19 07:31-0700\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
+"Language-Team: \n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.9\n"
-"Language-Team: \n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -31,6 +31,11 @@ msgstr ""
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
 msgstr "Starija verzija Windowsa"
+
+#. Customized because there is no easy way to obtain column position info for this object yet.
+#. Therefore report that this is not supported yet.
+msgid "Cannot move between rows"
+msgstr ""
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
@@ -101,31 +106,9 @@ msgstr "&Automatska provera ažuriranja dodatka"
 msgid "Update &interval in days"
 msgstr "&Period provere ažuriranja u danima"
 
-#. Translators: The label for a combo box to select update channel.
-msgid "&Add-on update channel:"
-msgstr "&Kanal ažuriranja dodatka"
-
 #. Translators: The label of a button to check for add-on updates.
 msgid "Check for add-on &update"
 msgstr "&Proveri ažuriranja dodatka"
-
-#. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-msgid ""
-"You are about to switch to development updates channel. Although updates "
-"from this channel brings exciting features, it also comes with updates that "
-"might be unstable at times and should be used for testing and sending "
-"feedback to the add-on developer. If you prefer to use stable releases, "
-"please answer no and switch to stable update channel. Are you sure you wish "
-"to switch to the development update channel?"
-msgstr ""
-"Upravo se prebacujete na razvojni kanal dodatka. Iako uz ovaj kanal dolaze "
-"ažuriranja koja donose uzbudljive nove karakteristike, često je nestabilan "
-"budući da je osmišljen za pružanje informacija autoru dodatka. Da li ste "
-"sigurni da želite da pređete na razvojni kanal?"
-
-#. Translators: The title of the channel switch confirmation dialog.
-msgid "Switching to unstable channel"
-msgstr "Prebacivanje na nestabilan kanal"
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"
@@ -183,3 +166,22 @@ msgstr "Windows 10 App Essentials"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Kolekcija dodataka za razne Windows10 aplikacije"
+
+#~ msgid "&Add-on update channel:"
+#~ msgstr "&Kanal ažuriranja dodatka"
+
+#~ msgid ""
+#~ "You are about to switch to development updates channel. Although updates "
+#~ "from this channel brings exciting features, it also comes with updates "
+#~ "that might be unstable at times and should be used for testing and "
+#~ "sending feedback to the add-on developer. If you prefer to use stable "
+#~ "releases, please answer no and switch to stable update channel. Are you "
+#~ "sure you wish to switch to the development update channel?"
+#~ msgstr ""
+#~ "Upravo se prebacujete na razvojni kanal dodatka. Iako uz ovaj kanal "
+#~ "dolaze ažuriranja koja donose uzbudljive nove karakteristike, često je "
+#~ "nestabilan budući da je osmišljen za pružanje informacija autoru dodatka. "
+#~ "Da li ste sigurni da želite da pređete na razvojni kanal?"
+
+#~ msgid "Switching to unstable channel"
+#~ msgstr "Prebacivanje na nestabilan kanal"

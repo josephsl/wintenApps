@@ -35,6 +35,11 @@ msgstr ""
 msgid "Old Windows version"
 msgstr "Eski Windows sürümü"
 
+#. Customized because there is no easy way to obtain column position info for this object yet.
+#. Therefore report that this is not supported yet.
+msgid "Cannot move between rows"
+msgstr ""
+
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "Bu öğe için daha fazla hava raporu verisi yok"
@@ -102,33 +107,9 @@ msgstr "Güncellemeleri otomatik olarak denetle"
 msgid "Update &interval in days"
 msgstr "Gün c&insinden güncelleme denetleme aralığı"
 
-#. Translators: The label for a combo box to select update channel.
-msgid "&Add-on update channel:"
-msgstr "&Eklenti güncelleme kanalı"
-
 #. Translators: The label of a button to check for add-on updates.
 msgid "Check for add-on &update"
 msgstr "Eklenti g&üncellemesi için kontrol et"
-
-#. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-msgid ""
-"You are about to switch to development updates channel. Although updates "
-"from this channel brings exciting features, it also comes with updates that "
-"might be unstable at times and should be used for testing and sending "
-"feedback to the add-on developer. If you prefer to use stable releases, "
-"please answer no and switch to stable update channel. Are you sure you wish "
-"to switch to the development update channel?"
-msgstr ""
-"Geliştirici güncelleme kanalına geçiş yapmak üzeresiniz. Bu kanaldaki "
-"güncellemeler heyecan verici özellikler getiriyor olsa da, aynı zamanda kimi "
-"zaman kararsız çalışabilir. Dolayısıyla, deneme ve eklenti geliştiricisine "
-"geri bildirimde bulunmak için kullanılması önerilir. Kararlı sürümleri "
-"kullanmayı tercih ediyorsanız, lütfen hayır deyin ve kararlı kanala geçin. "
-"Geliştirici güncelleme kanalına geçmek istediğinizden emin misiniz?"
-
-#. Translators: The title of the channel switch confirmation dialog.
-msgid "Switching to unstable channel"
-msgstr "Kararsız kanala geçiliyor"
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"
@@ -188,3 +169,25 @@ msgstr "Windows 10 Temel Uygulamalar"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "çeşitli Windows 10 uygulamaları için Uygulama modül  koleksiyonu "
+
+#~ msgid "&Add-on update channel:"
+#~ msgstr "&Eklenti güncelleme kanalı"
+
+#~ msgid ""
+#~ "You are about to switch to development updates channel. Although updates "
+#~ "from this channel brings exciting features, it also comes with updates "
+#~ "that might be unstable at times and should be used for testing and "
+#~ "sending feedback to the add-on developer. If you prefer to use stable "
+#~ "releases, please answer no and switch to stable update channel. Are you "
+#~ "sure you wish to switch to the development update channel?"
+#~ msgstr ""
+#~ "Geliştirici güncelleme kanalına geçiş yapmak üzeresiniz. Bu kanaldaki "
+#~ "güncellemeler heyecan verici özellikler getiriyor olsa da, aynı zamanda "
+#~ "kimi zaman kararsız çalışabilir. Dolayısıyla, deneme ve eklenti "
+#~ "geliştiricisine geri bildirimde bulunmak için kullanılması önerilir. "
+#~ "Kararlı sürümleri kullanmayı tercih ediyorsanız, lütfen hayır deyin ve "
+#~ "kararlı kanala geçin. Geliştirici güncelleme kanalına geçmek "
+#~ "istediğinizden emin misiniz?"
+
+#~ msgid "Switching to unstable channel"
+#~ msgstr "Kararsız kanala geçiliyor"

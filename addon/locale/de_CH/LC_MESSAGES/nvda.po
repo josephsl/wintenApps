@@ -18,6 +18,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.9\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
+#, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
@@ -29,6 +30,11 @@ msgstr ""
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
 msgstr "Alte Windows-Version"
+
+#. Customized because there is no easy way to obtain column position info for this object yet.
+#. Therefore report that this is not supported yet.
+msgid "Cannot move between rows"
+msgstr ""
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
@@ -79,6 +85,7 @@ msgid "No add-on update available."
 msgstr "Keine Updates der Erweiterung verfügbar."
 
 #. Translators: Text shown if an add-on update is available.
+#, python-brace-format
 msgid ""
 "Windows 10 App Essentials {newVersion} is available. Would you like to "
 "update?"
@@ -98,33 +105,9 @@ msgstr "A&utomatisch nach Updates der Erweiterung suchen"
 msgid "Update &interval in days"
 msgstr "Update-&Häufigkeit (in Tage)"
 
-#. Translators: The label for a combo box to select update channel.
-msgid "&Add-on update channel:"
-msgstr "Update-&Kanal der Erweiterung:"
-
 #. Translators: The label of a button to check for add-on updates.
 msgid "Check for add-on &update"
 msgstr "Nach &Updates der Erweiterung suchen"
-
-#. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-msgid ""
-"You are about to switch to development updates channel. Although updates "
-"from this channel brings exciting features, it also comes with updates that "
-"might be unstable at times and should be used for testing and sending "
-"feedback to the add-on developer. If you prefer to use stable releases, "
-"please answer no and switch to stable update channel. Are you sure you wish "
-"to switch to the development update channel?"
-msgstr ""
-"Sie sind dabei den Update-Kanal zu wechseln, in denen ausschliesslich "
-"Versionen von den Entwicklern mit neuen Features bereit gestellt werden. "
-"Diese Versionen können instabil sein und dienen lediglich zu Testzwecken und "
-"zum Feedback senden. Wenn Sie den sicheren und stabilen Update-Kanal "
-"bevorzugen, beantworten Sie die Frage mit \"Nein\". Möchten Sie trotzdem den "
-"Update-Kanal wechseln?"
-
-#. Translators: The title of the channel switch confirmation dialog.
-msgid "Switching to unstable channel"
-msgstr "Wechsel in den Test-Kanal."
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"
@@ -182,3 +165,24 @@ msgstr "Windows 10-Apps"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Eine Sammlung von Anwendungsmodulen für diverse Windows 10-Apps."
+
+#~ msgid "&Add-on update channel:"
+#~ msgstr "Update-&Kanal der Erweiterung:"
+
+#~ msgid ""
+#~ "You are about to switch to development updates channel. Although updates "
+#~ "from this channel brings exciting features, it also comes with updates "
+#~ "that might be unstable at times and should be used for testing and "
+#~ "sending feedback to the add-on developer. If you prefer to use stable "
+#~ "releases, please answer no and switch to stable update channel. Are you "
+#~ "sure you wish to switch to the development update channel?"
+#~ msgstr ""
+#~ "Sie sind dabei den Update-Kanal zu wechseln, in denen ausschliesslich "
+#~ "Versionen von den Entwicklern mit neuen Features bereit gestellt werden. "
+#~ "Diese Versionen können instabil sein und dienen lediglich zu Testzwecken "
+#~ "und zum Feedback senden. Wenn Sie den sicheren und stabilen Update-Kanal "
+#~ "bevorzugen, beantworten Sie die Frage mit \"Nein\". Möchten Sie trotzdem "
+#~ "den Update-Kanal wechseln?"
+
+#~ msgid "Switching to unstable channel"
+#~ msgstr "Wechsel in den Test-Kanal."

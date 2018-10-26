@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: wintenApps\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-10-14 22:05+1000\n"
-"PO-Revision-Date: 2018-09-28 22:51-0300\n"
+"PO-Revision-Date: 2018-10-26 11:08-0300\n"
 "Last-Translator: Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>\n"
 "Language-Team: Equipe de tradução do NVDA para Português do Brasil "
 "<clever92000@yahoo.com.br>\n"
@@ -34,6 +34,11 @@ msgstr ""
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
 msgstr "Versão antiga do Windows"
+
+#. Customized because there is no easy way to obtain column position info for this object yet.
+#. Therefore report that this is not supported yet.
+msgid "Cannot move between rows"
+msgstr "Impossível mover-se entre linhas"
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
@@ -103,34 +108,9 @@ msgstr "Procurar automaticamente por atualizações"
 msgid "Update &interval in days"
 msgstr "&Intervalo de actualização em dias"
 
-#. Translators: The label for a combo box to select update channel.
-msgid "&Add-on update channel:"
-msgstr "C&anal de atualização do complemento:"
-
 #. Translators: The label of a button to check for add-on updates.
 msgid "Check for add-on &update"
 msgstr "Procurar por atualização do complemento"
-
-#. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-msgid ""
-"You are about to switch to development updates channel. Although updates "
-"from this channel brings exciting features, it also comes with updates that "
-"might be unstable at times and should be used for testing and sending "
-"feedback to the add-on developer. If you prefer to use stable releases, "
-"please answer no and switch to stable update channel. Are you sure you wish "
-"to switch to the development update channel?"
-msgstr ""
-"Está prestes a mudar para o canal de atualizações de desenvolvimento. Embora "
-"as atualizações deste canal ofereçam novos recursos interessantes, também "
-"vem com atualizações que podem ser instáveis às vezes e que devem ser usadas "
-"para testar e enviar feedback — retroalimentação — para o desenvolvedor do "
-"complemento. Se preferir usar versões estáveis, responda não e mude para o "
-"canal de atualização estável. Tem certeza de que deseja mudar para o canal "
-"de atualização de desenvolvimento?"
-
-#. Translators: The title of the channel switch confirmation dialog.
-msgid "Switching to unstable channel"
-msgstr "Mudando para canal instável"
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"
@@ -190,3 +170,25 @@ msgid "A collection of app modules for various Windows 10 apps"
 msgstr ""
 "Uma coleção de módulos de aplicativos — app modules — para vários "
 "aplicativos do Windows 10"
+
+#~ msgid "&Add-on update channel:"
+#~ msgstr "C&anal de atualização do complemento:"
+
+#~ msgid ""
+#~ "You are about to switch to development updates channel. Although updates "
+#~ "from this channel brings exciting features, it also comes with updates "
+#~ "that might be unstable at times and should be used for testing and "
+#~ "sending feedback to the add-on developer. If you prefer to use stable "
+#~ "releases, please answer no and switch to stable update channel. Are you "
+#~ "sure you wish to switch to the development update channel?"
+#~ msgstr ""
+#~ "Está prestes a mudar para o canal de atualizações de desenvolvimento. "
+#~ "Embora as atualizações deste canal ofereçam novos recursos interessantes, "
+#~ "também vem com atualizações que podem ser instáveis às vezes e que devem "
+#~ "ser usadas para testar e enviar feedback — retroalimentação — para o "
+#~ "desenvolvedor do complemento. Se preferir usar versões estáveis, responda "
+#~ "não e mude para o canal de atualização estável. Tem certeza de que deseja "
+#~ "mudar para o canal de atualização de desenvolvimento?"
+
+#~ msgid "Switching to unstable channel"
+#~ msgstr "Mudando para canal instável"

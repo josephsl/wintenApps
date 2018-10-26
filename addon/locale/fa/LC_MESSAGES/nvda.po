@@ -22,15 +22,21 @@ msgstr ""
 #, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
-"{minSupportedVersion} or later. Are you sure you wish to install this add-on anyway?"
+"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
+"anyway?"
 msgstr ""
 "شما دارید از یک نگارشِ قدیمیترِ ویندوز استفاده میکنید. این افزونه نیازمندِ "
-"{minSupportedVersion} یا بالاتر است. مطمئنید که در هر حال میخواهید این افزونه را نصب "
-"کنید؟"
+"{minSupportedVersion} یا بالاتر است. مطمئنید که در هر حال میخواهید این "
+"افزونه را نصب کنید؟"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
 msgstr "نگارشِ قدیمیِ ویندوز"
+
+#. Customized because there is no easy way to obtain column position info for this object yet.
+#. Therefore report that this is not supported yet.
+msgid "Cannot move between rows"
+msgstr ""
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
@@ -82,10 +88,12 @@ msgstr "به‌روزرسانی‌ای برای افزونه موجود نیست
 
 #. Translators: Text shown if an add-on update is available.
 #, python-brace-format
-msgid "Windows 10 App Essentials {newVersion} is available. Would you like to update?"
+msgid ""
+"Windows 10 App Essentials {newVersion} is available. Would you like to "
+"update?"
 msgstr ""
-"نیازمندی‌های حیاتیِ برنامک‌های ویندوزِ ۱۰ {newVersion} موجود است. میخواهید به‌روزرسانی "
-"کنید؟"
+"نیازمندی‌های حیاتیِ برنامک‌های ویندوزِ ۱۰ {newVersion} موجود است. میخواهید "
+"به‌روزرسانی کنید؟"
 
 #. Translators: The title of a dialog to configure advanced WinTenApps add-on options such as update checking.
 msgid "Windows 10 App Essentials settings"
@@ -99,34 +107,9 @@ msgstr "بررسیِ خودکار برای &به‌روزرسانیِ افزون
 msgid "Update &interval in days"
 msgstr "&فرجه‌های به‌روزرسانی در روز"
 
-#. Translators: The label for a combo box to select update channel.
-msgid "&Add-on update channel:"
-msgstr "کانالِ به‌روزرسانیِ &افزونه"
-
 #. Translators: The label of a button to check for add-on updates.
 msgid "Check for add-on &update"
 msgstr "بررسی برای &به‌روزرسانیِ افزونه"
-
-#. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-msgid ""
-"You are about to switch to development updates channel. Although updates from this "
-"channel brings exciting features, it also comes with updates that might be unstable "
-"at times and should be used for testing and sending feedback to the add-on "
-"developer. If you prefer to use stable releases, please answer no and switch to "
-"stable update channel. Are you sure you wish to switch to the development update "
-"channel?"
-msgstr ""
-"گویا میخواهید به کانالِ به‌روزرسانی‌های در حالِ توسعه منتقل شوید. هرچند روزآمدهایی که از "
-"این کانال دریافت خواهید کرد، امکاناتِ هیجان‌انگیزی با خود به‌همراه می‌آورند، ممکن است "
-"زمانی که آن‌ها را دریافت میکنید همراه با ناپایداری‌هایی نیز باشند. بهتر است از این "
-"کانال تنها زمانی به‌روزرسانی دریافت کنید که قصدتان آزمودنِ افزونه و ارسالِ بازخورد به "
-"توسعه‌دهنده‌ی آن باشد. چنانچه ترجیح میدهید روزآمدهای پایدار را دریافت کنید، به پرسش "
-"پاسخ منفی بدهید و به کانالِ روزآمدهای پایدار برگردید. آیا میخواهید به کانال "
-"به‌روزرسانی‌های درحالِ توسعه منتقل شوید؟"
-
-#. Translators: The title of the channel switch confirmation dialog.
-msgid "Switching to unstable channel"
-msgstr "رفتن به کانالِ ناپایدار"
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"
@@ -134,7 +117,8 @@ msgstr "بررسیِ به‌روزرسانیِ افزونه"
 
 #. Translators: The message displayed while checking for newer version of WinTenApps add-on.
 msgid "Checking for new version of Windows 10 App Essentials add-on..."
-msgstr "در حالِ بررسی برای نگارشِ جدیدِ افزونه‌ی نیازمندی‌های حیاتیِ برنامک‌های ویندوزِ ۱۰..."
+msgstr ""
+"در حالِ بررسی برای نگارشِ جدیدِ افزونه‌ی نیازمندی‌های حیاتیِ برنامک‌های ویندوزِ ۱۰..."
 
 #. Translators: The title of the dialog displayed while downloading add-on update.
 msgid "Downloading Add-on Update"
@@ -155,9 +139,12 @@ msgstr "خطا"
 
 #. Translators: The message displayed when an error occurs when opening an add-on package for adding.
 #, python-format
-msgid "Failed to open add-on package file at %s - missing file or invalid file format"
+msgid ""
+"Failed to open add-on package file at %s - missing file or invalid file "
+"format"
 msgstr ""
-"خطا هنگامِ باز کردنِ فایلِ بسته‌ی افزونه از %s. فایل ناقص است یا قالبِ فایل معتبر نیست."
+"خطا هنگامِ باز کردنِ فایلِ بسته‌ی افزونه از %s. فایل ناقص است یا قالبِ فایل معتبر "
+"نیست."
 
 #. Translators: The title of the dialog presented while an Addon is being updated.
 msgid "Updating Add-on"
@@ -181,3 +168,26 @@ msgstr "نیازمندی‌های حیاتیِ برنامک‌های ویندو�
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "مجموعه‌ای از ماژول‌ها برای پشتیبانی از برنامک‌های مختلفِ ویندوزِ ۱۰"
+
+#~ msgid "&Add-on update channel:"
+#~ msgstr "کانالِ به‌روزرسانیِ &افزونه"
+
+#~ msgid ""
+#~ "You are about to switch to development updates channel. Although updates "
+#~ "from this channel brings exciting features, it also comes with updates "
+#~ "that might be unstable at times and should be used for testing and "
+#~ "sending feedback to the add-on developer. If you prefer to use stable "
+#~ "releases, please answer no and switch to stable update channel. Are you "
+#~ "sure you wish to switch to the development update channel?"
+#~ msgstr ""
+#~ "گویا میخواهید به کانالِ به‌روزرسانی‌های در حالِ توسعه منتقل شوید. هرچند "
+#~ "روزآمدهایی که از این کانال دریافت خواهید کرد، امکاناتِ هیجان‌انگیزی با خود "
+#~ "به‌همراه می‌آورند، ممکن است زمانی که آن‌ها را دریافت میکنید همراه با "
+#~ "ناپایداری‌هایی نیز باشند. بهتر است از این کانال تنها زمانی به‌روزرسانی "
+#~ "دریافت کنید که قصدتان آزمودنِ افزونه و ارسالِ بازخورد به توسعه‌دهنده‌ی آن "
+#~ "باشد. چنانچه ترجیح میدهید روزآمدهای پایدار را دریافت کنید، به پرسش پاسخ "
+#~ "منفی بدهید و به کانالِ روزآمدهای پایدار برگردید. آیا میخواهید به کانال "
+#~ "به‌روزرسانی‌های درحالِ توسعه منتقل شوید؟"
+
+#~ msgid "Switching to unstable channel"
+#~ msgstr "رفتن به کانالِ ناپایدار"
