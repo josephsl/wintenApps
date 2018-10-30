@@ -139,6 +139,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #40: skip over the rest if appx is in effect.
 		if globalVars.appArgs.secure or config.isAppX: return
 		import UIAHandler
+		"""
 		# #51 (NvDA 2018.3 only): attempt to backport WinEvent performance enhancements introduced in NVDA 2018.4-dev, to be removed in 2019.
 		# Because the add-on supports 2018.3 and later, only check for 2018.3 here.
 		import versionInfo
@@ -153,7 +154,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				UIAHandler.initialize()
 				log.debug("W10: could not apply UIA event performance fix")
 		else:
-			log.debug("W10: NVDA 2018.4 detected")
+			log.debug("W10: NVDA 2018.4 detected")"""
 		# Add a series of events instead of doing it one at a time.
 		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
 		log.debug("W10: adding additional events")

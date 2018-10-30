@@ -43,7 +43,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation dialog/panel.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: active text position change, controller for, drag start, drag cancel, drag complete, element selected, item status, live region change, notification, system alert, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app.
-* Backported UIA performance enhancement fix from NVDA 2018.4 for users using earlier NVDA releases.
 * Notifications from newer app releases on Windows 10 Version 1709 (build 16299) and later are announced. NVDA 2018.2 and later supports this, with 2018.3 adding support for more notifications.
 * Tooltips from Edge and universal apps are recognized and will be announced.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop ID (desktop 2, for example).
