@@ -77,7 +77,11 @@ class AppModule(AppModule):
 		# Emoji panel in build 17666 and later (unless this changes).
 		elif childAutomationID == "TEMPLATE_PART_ExpressionGroupedFullView":
 			self._emojiPanelJustOpened = True
-			self.event_UIA_elementSelected(obj.firstChild.firstChild.next.next.firstChild.firstChild, nextHandler)
+			try:
+				self.event_UIA_elementSelected(obj.firstChild.children[-2].firstChild.firstChild, nextHandler)
+			except AttributeError:
+				# In build 18272's emoji panel, emoji list becomes empty in some situations.
+				pass
 		# Clipboard history.
 		# Move to clipboard list so element selected event can pick it up.
 		elif childAutomationID == "TEMPLATE_PART_ClipboardTitleBar":
