@@ -81,7 +81,7 @@ class AppModule(AppModule):
 		# Clipboard history.
 		# Move to clipboard list so element selected event can pick it up.
 		elif childAutomationID == "TEMPLATE_PART_ClipboardTitleBar":
-			self.event_UIA_elementSelected(obj.lastChild.previous, nextHandler)
+			self.event_UIA_elementSelected(obj.children[-2], nextHandler)
 		nextHandler()
 
 	def event_nameChange(self, obj, nextHandler):
