@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2017-05-05 22:05+1000\n"
-"PO-Revision-Date: 2018-07-19 07:28-0700\n"
+"PO-Revision-Date: 2018-10-27 09:28+0100\n"
 "Last-Translator: Patryk <patric3031@wp.pl>\n"
 "Language-Team: pl <LL@li.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -35,7 +35,7 @@ msgstr "Stara wersja systemu windows"
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
 msgid "Cannot move between rows"
-msgstr ""
+msgstr "Nie można przemieszczać się pomiędzy wierszami"
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."

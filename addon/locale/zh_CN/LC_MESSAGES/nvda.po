@@ -9,14 +9,14 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
 "PO-Revision-Date: 2018-05-06 18:06+0800\n"
+"Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
 "Language-Team: NVDA Simplified Chinese Team\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.7\n"
-"Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language: zh_CN\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -31,6 +31,11 @@ msgstr ""
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
 msgstr "旧版Windows"
+
+#. Customized because there is no easy way to obtain column position info for this object yet.
+#. Therefore report that this is not supported yet.
+msgid "Cannot move between rows"
+msgstr ""
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
@@ -99,30 +104,9 @@ msgstr "自动检查最新版本"
 msgid "Update &interval in days"
 msgstr "以天为单位更新和间隔"
 
-#. Translators: The label for a combo box to select update channel.
-msgid "&Add-on update channel:"
-msgstr "&插件更新通道:"
-
 #. Translators: The label of a button to check for add-on updates.
 msgid "Check for add-on &update"
 msgstr "检查插件更新"
-
-#. Translators: The confirmation prompt displayed when changing to development channel (with risks involved).
-msgid ""
-"You are about to switch to development updates channel. Although updates "
-"from this channel brings exciting features, it also comes with updates that "
-"might be unstable at times and should be used for testing and sending "
-"feedback to the add-on developer. If you prefer to use stable releases, "
-"please answer no and switch to stable update channel. Are you sure you wish "
-"to switch to the development update channel?"
-msgstr ""
-"您即将切换到开发更新通道。尽管来自此通道的更新带来了令人兴奋的功能，但它也附"
-"带了可能不稳定的更新，应该用于测试并向插件开发人员发送反馈。如果您更愿意使用"
-"稳定版本，请回答“否”并切换到稳定更新通道。你确定你想切换到开发更新通道吗？"
-
-#. Translators: The title of the channel switch confirmation dialog.
-msgid "Switching to unstable channel"
-msgstr "切换到开发通道"
 
 #. Translators: The title of the dialog presented while checking for add-on updates.
 msgid "Add-on update check"
@@ -179,5 +163,24 @@ msgstr "Windows 10 应用增强"
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "各种Windows 10应用程序的应用程序模块集合"
 
-msgid "suggestions"
-msgstr "建议"
+#~ msgid "&Add-on update channel:"
+#~ msgstr "&插件更新通道:"
+
+#~ msgid ""
+#~ "You are about to switch to development updates channel. Although updates "
+#~ "from this channel brings exciting features, it also comes with updates "
+#~ "that might be unstable at times and should be used for testing and "
+#~ "sending feedback to the add-on developer. If you prefer to use stable "
+#~ "releases, please answer no and switch to stable update channel. Are you "
+#~ "sure you wish to switch to the development update channel?"
+#~ msgstr ""
+#~ "您即将切换到开发更新通道。尽管来自此通道的更新带来了令人兴奋的功能，但它也"
+#~ "附带了可能不稳定的更新，应该用于测试并向插件开发人员发送反馈。如果您更愿意"
+#~ "使用稳定版本，请回答“否”并切换到稳定更新通道。你确定你想切换到开发更新通道"
+#~ "吗？"
+
+#~ msgid "Switching to unstable channel"
+#~ msgstr "切换到开发通道"
+
+#~ msgid "suggestions"
+#~ msgstr "建议"

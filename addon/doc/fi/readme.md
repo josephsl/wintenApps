@@ -11,6 +11,7 @@ säätimille.
 Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
+* Toimintokeskus
 * Hälytykset ja kello
 * Kalenteri
 * Laskin (moderni)
@@ -33,9 +34,10 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 Huomautuksia:
 
 * Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1709 (koontiversio
-  16299) tai uudempaa ja NVDA 2018.2:ta tai uudempaa. Käytä parhaan
+  16299) tai uudempaa ja NVDA 2018.3:ta tai uudempaa. Käytä parhaan
   käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata versiota
-  (koontiversio 17134) sekä uusinta NVDA:ta.
+  (koontiversio 17134) sekä uusinta NVDA:ta. Huomaa, että versiota 1809
+  (koontiversio 17763) ei ole toistaiseksi saatavilla Microsoftilta.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
@@ -47,12 +49,17 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
+* Jos Lisäosien päivittäjä -lisäosa on asennettuna, se tarkistaa Windows 10
+  App Essentialsin päivitykset.
+* Sekä vakaiden että kehitysversioiden päivitykset tarkistetaan nyt
+  oletusarvoisesti viikon välein. Tämä pitää paikkansa vain, mikäli käytössä
+  on lisäosan oma päivitystentarkistustoiminto.
 * Alavalikot tunnistetaan asianmukaisesti useissa sovelluksissa, mukaan
   lukien Käynnistä-valikon ruutujen tilannekohtaiset valikot ja microsoft
   Edgen sovellusvalikko (Redstone 5).
-* Tietyt valintaikkunat tunnistetaan ja puhutaan nyt asianmukaisesti
+* ½Tietyt valintaikkunat tunnistetaan ja puhutaan nyt asianmukaisesti
   valintaikkunoina, mukaan lukien Insider-esiversion valintaikkuna
-  (Asetukset-sovellus). Tämä tulee sisältymään NVDA 2018.3:een.
+  (Asetukset-sovellus). Tämä sisältyy nyt NVDA 2018.3:een.
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
   -asetuksella Objektien lukuasetukset -valintaikkunasta/paneelista.
@@ -60,35 +67,26 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   (kuten Edgessä).
 * Seuraavat UIA-tapahtumat tunnistetaan: sijainnin muutos aktiivisessa
   tekstissä, ohjain kohteelle, vetämisen aloitus, vetämisen peruutus,
-  vetäminen suoritettu, elementti valittu, aktiivisen alueen muutos,
-  ilmoitus, järjestelmän ilmoitus, työkaluvihje avattu, ikkuna avattu. Näitä
-  tapahtumia seurataan ja UIA-ilmoitustapahtuma ilmaistaan virheäänellä, kun
-  NVDA:n lokitasoksi on määritetty "virheenkorjaus".
-* Lisätty mahdollisuus päivitysten tarkistamiseen (automaattinen tai
-  manuaalinen) NVDA:n Asetukset-valikosta löytyvän uuden Windows 10 App
-  Essentials -valintaikkunan kautta. Vakaat ja kehitysversiot suorittavat
-  oletuksena automaattisen päivitystarkistuksen viikoittain tai päivittäin.
-* Joidenkin sovellusten Aktiivisen alueen teksti luetaan. Näitä ovat
-  mm. Edgen ilmoitukset (mukaan lukien elementit, jotka on merkitty
-  aria-role=alert-ominaisuudella) ja laskutoimitusten tulokset Laskimessa
-  sekä muut. Huomaa, että tämä saattaa johtaa joissakin tapauksissa
-  ilmoitusten kahdesti puhumiseen. Tämä sisältyy NVDA 2017.3:een ja
-  uudempiin versioihin.
+  vetäminen suoritettu, elementti valittu, kohteen tila, aktiivisen alueen
+  muutos, ilmoitus, järjestelmän ilmoitus, työkaluvihje avattu, ikkuna
+  avattu. Näitä tapahtumia seurataan, kun NVDA:n lokitasoksi on määritetty
+  "virheenkorjaus", ja UIA-ilmoitustapahtuma ilmaistaan virheäänellä, mikäli
+  ilmoitukset tulevat muualta kuin aktiivisesta sovelluksesta.
 * Uusien sovellusversioiden ilmoitukset puhutaan Windows 10:n versiossa 1709
   (koontiversio 16299) ja uudemmissa. NVDA 2018.2 ja uudemmat tukevat tätä,
   ja 2018.3 lisää tuen entistä useammille ilmoituksille.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
   ilmoitetaan.
-* Kun Sets on otettu käyttöön (koontiversiot 17627-17692 joillakin Windows
-  Insider -ohjelmaan liittyneillä), NVDA ilmoittaa uutta välilehteä
-  avattaessa (Ctrl+Win+T) hakutulokset etsittäessä kohteita upotetussa
-  Cortana-IKKUNASSA.
-* Kun Sets on otettu käyttöön, NVDA ilmoittaa välilehteä vaihdettaessa sen
-  nimen ja sijainnin, johon olet siirtymässä.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2)
   avattaessa, suljettaessa tai vaihdettaessa virtuaalityöpöytien välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
   suuntaa vaihdettaessa.
+
+## Toimintokeskus
+
+* Kirkkaus-pikatoiminto on nyt vipupainikkeen sijasta painike.
+* Useat tilojen, kuten Keskittymisavustajan ja kirkkauden, muutokset
+  ilmoitetaan.
 
 ## Hälytykset ja kello
 
@@ -132,7 +130,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Sähköposti
 
 * Voit nyt käyttää viestiluettelon kohteita tarkastellessasi
-  taulukkonavigointikomentoja viestiotsakkeiden lukemiseen.
+  taulukkonavigointikomentoja viestiotsakkeiden lukemiseen. Huomaa, että
+  rivien (viestien) välillä liikkumista ei tueta.
 * Ät-maininnan ehdotukset ilmaistaan äänimerkeillä viestiä kirjoitettaessa.
 
 ## Kartat
@@ -146,24 +145,35 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 * Ilmoitukset, kuten tiedostojen lataukset ja verkkosivujen näyttämät, sekä
   lukunäkymän saatavuus (mikäli käytetään versiota 1709) puhutaan.
+* Tekstin automaattista täydennystä seurataan ja siitä ilmoitetaan
+  osoitepalkissa.
 
 ## Moderni näppäimistö
 
+Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
+2018.3:een.
+
 * Tuki version 1709 (Fall Creators -päivitys) ja uudempien kelluvalle
-  emojinsyöttöpaneelille, mukaan lukien koontiversion 17661 ja uudempien
-  uudelleensuunniteltu paneeli. Käytä parhaan kokemuksen saamiseksi Windows
+  emojinsyöttöpaneelille, mukaan lukien version 1809 (koontiversio 17661 ja
+  uudemmat) uudelleensuunniteltu paneeli sekä versioon 19H1 (koontiversio
+  18262) tehdyt muutokset. Käytä parhaan kokemuksen saamiseksi Windows
   OneCore -syntetisaattoria.
 * Tuki fyysisen näppäimistösyötteen ehdotuksille versiossa 1803 (April 2018
   -päivitys) ja uudemmissa.
-* NVDA ilmoittaa 1709:ää uudemmissa koontiversioissa ensimmäisen valitun
-  emojin, kun emojipaneeli avautuu.
-* Tuki pilvileikepöydän kohteiden ilmoittamiselle koontiversiossa 17666
-  (Redstone 5) ja uudemmissa.
+* Kun emojipaneeli avautuu, NVDA ilmoittaa koontiversion 1709 jälkeisissä
+  versioissa ensimmäisen valittuna olevan emojin. Tämä on näkyvämpää
+  koontiversiossa 18262 ja uudemmissa, joissa emojipaneeli saattaa avautua
+  viimeksi selattuun kategoriaan, kuten näyttäessään ihonvärimuuntimen
+  Ihmiset-kategorian avauduttua.
+* Tuki pilvileikepöydän kohteiden ilmoittamiselle versiossa 1809
+  (koontiversio 17666 ja uudemmat).
 * Puheliaisuutta vähennetty modernia näppäimistöä ja sen ominaisuuksia
   käytettäessä. Fyysisen näppäimistön syöttöehdotuksia avattaessa ei enää
   sanota "Microsoft Candidate UI" sekä ollaan hiljaa tilanteessa, jossa
   tietyt kosketusnäppäimistön näppäimet aiheuttavat joissakin järjestelmissä
   muuttuneen nimitapahtuman.
+* NVDA ei enää toista virheääniä tai ole tekemättä mitään emojipaneelia
+  suljettaessa uudemmissa Insider-esiversioissa.
 
 ## Ihmiset
 
@@ -173,18 +183,23 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Asetukset
 
 * Määrätyt tiedot, kuten Windows Updaten päivitysten asennuksen edistyminen,
-  puhutaan nyt automaattisesti.
+  mukaan lukien Tallennusseurannan/Levynsiivouksen pienoisohjelma, puhutaan
+  nyt automaattisesti.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
 * Asetusryhmät tunnistetaan säätimien välillä liikuttaessa
   objektinavigointia käyttäen.
-* NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen selitteiden
-  tunnistamisessa ja/tai arvomuutosten ilmoittamisessa.
+* NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen ja
+  valintapainikkeiden selitteiden tunnistamisessa ja/tai arvomuutosten
+  ilmoittamisessa.
 * Edistymispalkkien äänimerkkejä ei enää kuulu muutettaessa
   äänenvoimakkuutta versiossa 1803 ja uudemmissa.
 * Windows Updaten tilailmoituksia puhutaan enemmän etenkin virheitä
   havaittaessa.
 
 ## Skype
+
+Huom: alla mainitut kohdat eivät toimi oikein Skype 14:n universaalissa
+sovelluksessa.
 
 * Kirjoitusilmaisimen teksti puhutaan kuten Skypen työpöytäversiossa.
 * Ctrl+NVDA+numero-komennot, joita käytetään uusimman keskusteluhistorian

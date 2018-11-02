@@ -12,6 +12,7 @@ Următoarele module de aplicații sau module de suport pentru unele aplicații
 sunt incluse (verificați fiecare secțiune a aplicației pentru detalii cu
 privire la ceea ce este inclus):
 
+* Action center
 * Alarme și ceas.
 * Calendar
 * Calculator (modern).
@@ -32,10 +33,11 @@ privire la ceea ce este inclus):
 
 Note:
 
-* Acest supliment necesită Windows 10 versiunea 1709 )compilarea 16299) sau
-  mai nouă și NVDA 2018.2 sau mai nou. Pentru cele mai bune rezultate,
-  folosiți-l cu ultima compilare stabilă ( compilarea17134) și cea mai
-  recentă versiune stabilă a NVDA-ului.
+* This add-on requires Windows 10 Version 1709 (build 16299) or later and
+  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17134) and latest stable version of NVDA. Note
+  that until further notice, Version 1809 (build 17763) is not available
+  from Microsoft.
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
 * Pentru intrările care nu sunt listate mai jos, puteți presupune că
@@ -50,48 +52,44 @@ versiunile suplimentului][3].
 
 ## General
 
+* If Add-on Updater add-on is installed, that add-on will check for Windows
+  10 App Essentials updates.
+* Default update check interval has changed to weekly checks for both stable
+  and development releases. This is applicable if the add-on itself checks
+  for updates.
 * Elementele de submeniu sunt recunoscute corespunzător în diverse
   aplicații, incluzând meniul context pentru comenzile din meniul Start și
   meniul de aplicație al Microsoft Edge (Redstone 5).
-* Anumite dialoguri sunt acum recunoscute ca dialoguri corespunzătoare și
-  sunt raportate ca atare. Acestea includ dialogul Insider Preview
-  (aplicația setări). Aceasta va face parte din NVDA 2018.3
+* Certain dialogs are now recognized as proper dialogs and reported as such,
+  including Insider Preview dialog (settings app). This is now part of NVDA
+  2018.3.
 * NVDA poate anunța numărul de sugestii la efectuarea unei căutări în
   majoritatea cazurilor. Această opțiune este controlată de „informația
   poziției obiectului în dialogul prezentării obiectului.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
-* Următoarele evenimente UIA sunt recunoscute: schimbarea poziției textului
-  activ, controler pentru, început de tragere, tragere finalizată, element
-  selectat, schimbarea regiunii active, notificare, alertă de sistem,
-  indiciu deschis, fereastră deschisă. Cu NVDA-ul setat să ruleze cu
-  diagnosticarea activată, aceste evenimente vor fi urmărite, iar pentru
-  evenimentul de tip notificare UIA, se va auzi un ton de diagnosticare.
-* A fost adăugată abilitatea pentru căutarea actualizărilor add-on-ului
-  (automat sau manual) printr-un  nou dialog Windows 10 App Essentials găsit
-  în meniul NVDA, submeniul Preferințe. În mod implicit, versiunea stabilă
-  și cea în dezvoltare vor căuta noi actualizări automat săptămânal sau
-  zilnic.
-* În unele aplicații, textul regiunii live este anunțat. Aceasta include
-  alertele din Edge (incluzând elementele marcate cu aria-role=alert),
-  rezultatele din Calculator și altele. Rețineți faptul că asta poate
-  rezulta o dublă vorbire în unele cazuri. Acum face parte din NVDA 2017.3
-  sau mai nou.
+* The following UIA events are recognized: active text position change,
+  controller for, drag start, drag cancel, drag complete, element selected,
+  item status, live region change, notification, system alert, tooltip
+  opened, window opened. With NVDA set to run with debug logging enabled,
+  these events will be tracked, and for UIA notification event, a debug tone
+  will be heard if notifications come from somewhere other than the
+  currently active app.
 * Sunt anunțate Notificările versiunilor mai noi ale aplicațiilor din
   Windows 10 versiunea 1709 (compilare 16299) și mai nouă. NVDA 2018.2
   suportă asta, iar 2018.3 vine cu suport pentru mai multe notificări.
 * Indiciile din Edge și alte aplicații universale sunt recunoscute și vor fi
   anunțate.
-* Cu Sets pornit (de la compilarea 17627 până la compilarea 17692 pentru
-  unii insideri), la deschiderea unei noi file Sets (Control+Windows+T),
-  NVDA va anunța rezultatele căutării atunci când se caută elemente în
-  fereastra încorporată a Cortanei.
-* Cu Sets pornit, la comutarea între filele Sets, NVDA va anunța numele și
-  poziția filei la care vă comutați.
 * La deschiderea, închiderea sau comutarea între spațiile de lucru virtuale,
   NVDA va anunța ID-ul spațiului de lucru curent (spațiu de lucru 2).
 * NVDA nu mai anunță „dimensiune text start meniu” la schimbarea rezoluției
   ecranului sau a orientării.
+
+## Action center
+
+* Brightness quick action is now a button instead of a toggle button.
+* Various status changes such as Focus Assist and Brightness will be
+  reported.
 
 ## Alarme și ceas
 
@@ -133,8 +131,9 @@ versiunile suplimentului][3].
 
 ## Mail
 
-* Când examinați elemente în lista de mesaje, puteți să folosiți comenzile
-  de navigare ale tabelului pentru a examina antetele mesajelor.
+* When reviewing items in messages list, you can now use table navigation
+  commands to review message headers. Note that navigating between rows
+  (messages) is not supported.
 * La scrierea unui mesaj, aspectele sugestiilor de menționare a arondului
   sunt indicate de sunete.
 
@@ -150,24 +149,31 @@ versiunile suplimentului][3].
 * Notificările precum descărcări de fișiere și diverse alerte de pe paginile
   web, dar și disponibilitatea funcției Reading view (dacă se utilizează
   versiunea 1709 și mai nouă) sunt anunțate.
+* Text auto-complete will be tracked and announced in address omnibar.
 
 ## Tastatură modernă
 
-* Suport pentru panoul de intrare floating Emoji în versiunea 1709 (Fall
-  Creators Update) și pentru panoul nou din compilarea 17661. Pentru cea mai
-  bună experiență la citirea moji-urilor, folosiți sintetizatorul Windows
-  OneCore.
+Note: most features below are now part of NVDA 2018.3.
+
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
+  later, including the redesigned panel in Version 1809 (build 17661 and
+  later) and changes made in 19H1 (build 18262). For best experience when
+  reading emojis, use Windows OneCore speech synthesizer.
 * Suport pentru sugestiile de intrare a tastaturii hardware în compilarea
   1803 sau mai nouă.
-* În compilările post-1709, NVDA va anunța primul emoji selectat când se
-  deschide panoul emoji.
-* Suport pentru anunțarea elementelor planșetei cloud în compilarea 17666
-  (Redstone 5) și mai nouă.
+* In post-1709 builds, NVDA will announce the first selected emoji when
+  emoji panel opens. This is more noticeable in build 18262 and later where
+  emoji panel may open to last browsed category, such as displaying skin
+  tone modifier when opened to People category.
+* Support for announcing cloud clipboard items in Version 1809 (build 17666
+  and later).
 * S-a redus verbozitatea inutilă la lucrul cu tastatura modernă și
   caracteristicile sale. Acestea includ neanunțarea "Microsoft Candidate UI"
   la deschiderea sugestiilor de introducere a tastaturii hardware și starea
   în modul silențios atunci când anumite taste ale tastaturii tactile
   generează un eveniment de schimbare a numelui pe unele sisteme.
+* NVDA will no longer play error tones or do nothing when closing emoji
+  panel in more recent Insider Preview builds.
 
 ## Persoane
 
@@ -176,20 +182,22 @@ versiunile suplimentului][3].
 
 ## Setări
 
-* Anumite informații, cum ar fi progresul Windows Update, sunt acum
-  raportate automat.
+* Certain information such as Windows Update progress is reported
+  automatically, including Storage sense/disk cleanup widget.
 * Valorile barei de progres și alte informații nu mai sunt anunțate de două
   ori.
 * Grupurile de setări sunt recunoscute la utilizarea navigării obiectului
   pentru a naviga printre controale.
-* Pentru unele casete combinate, NVDA nu va mai eșua la recunoașterea
-  etichetelor și/sau anunțarea schimbărilor valorii.
+* For some combo boxes and radio buttons, NVDA will no longer fail to
+  recognize labels and/or announce value changes.
 * Bipurile barei de progres a volumului audio nu mai sunt auzite în
   compilarea 1803 sau mai nouă.
 * Sunt anunțate mai multe mesaje în legătură cu stadiul actualizărilor
   Windows, mai exact atunci când Windows Update întâmpină erori.
 
 ## Skype
+
+Note: the below entries won't work properly in Skype 14 universal app.
 
 * Textul indicatorului de scriere este anunțat la fel ca Skype pentru
   Desktop.

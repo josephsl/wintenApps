@@ -12,6 +12,7 @@ Os seguintes módulos de aplicações ou módulos de suporte para algumas
 aplicações estão incluídos (consulte a secção de cada aplicação para obter
 detalhes sobre o que está incluído):
 
+* Centro de acção
 * Alertas e Relógio.
 * Calendário.
 * Calculadora (moderna).
@@ -32,10 +33,11 @@ detalhes sobre o que está incluído):
 
 Notas:
 
-* Este extra requer o Windows 10 Versão 1709 (build 16299) ou posterior e o
-  NVDA 2018.2 ou posterior. Para obter melhores resultados, use o
-  complemento com a versão estável mais recente do Windows 10 (compilação
-  17134) e a versão estável mais recente do NVDA.
+* Este extra requer o Windows 10 Versão 1709 (compilação 16299) ou posterior
+  e o NVDA 2018.3 ou posterior. Para obter melhores resultados, use o extra
+  com a versão estável mais recente do Windows 10 (compilação 17134) e a
+  versão estável mais recente do NVDA. Note que, até novo aviso, a versão
+  1809 (compilação 17763) não está disponível na Microsoft.
 * Alguns recursos adicionais são ou farão parte do leitor de tela do NVDA.
 * Para entradas não listadas abaixo, pode assumir que os recursos já fazem
   parte do NVDA, não mais aplicáveis, pois o complemento não suporta versões
@@ -47,10 +49,15 @@ consulte o documento [changelogs for releases, release][3].
 
 ## Geral
 
+* Se o extra Add-on Updater estiver instalado, verificará as actualizações
+  do Windows 10 App Essentials.
+* O intervalo padrão de verificação de actualizações foi alterado para
+  verificações semanais, para versões estáveis e de desenvolvimento. Isso
+  aplica-se for o próprio extra a verificar automaticamente as atualizações.
 * Os itens do submenu são reconhecidos correctamente em vários aplicativos,
   incluindo o menu de contexto para os menus do menu Iniciar e o menu de
   aplicativos do Microsoft Edge (Redstone 5).
-* Certos diálogos agora são reconhecidos como diálogos apropriados e
+* Certos diálogos, agora, são reconhecidos como diálogos apropriados e
   relatados como tal, incluindo a caixa de diálogo Insider Preview (app de
   configurações). Isso fará parte do NVDA 2018.3.
 * O NVDA pode anunciar a contagem de sugestões, ao realizar uma pesquisa na
@@ -58,40 +65,31 @@ consulte o documento [changelogs for releases, release][3].
   posição do objeto" na caixa de diálogo de apresentação do objeto.
 * Em determinados menus de contexto (como no Edge), as informações de
   posição (por exemplo, 1 de 2) deixaram de ser anunciadas.
-* Os seguintes eventos UIA são reconhecidos: alteração da posição do texto
-  activo, controlador para, arrastar início, arrastar cancelamento, arrastar
-  completo, elemento selecionado, alterar região ao vivo, notificação,
-  alerta do sistema, tooltip aberta, janela aberta. Com o NVDA configurado
-  para ser executado com o log de depuração activado, esses eventos serão
-  rastreados e, para o evento de notificação UIA, um beep de depuração será
-  ouvido se as notificações vierem de algum lugar diferente do aplicativo
-  actualmente activo.
-* Adicionada a capacidade de verificar actualizações adicionais (automáticas
-  ou manuais) através da caixa de diálogo do Windows 10 aplicações
-  essenciais encontrada no menu de preferências do NVDA. Por defeito, as
-  versões estáveis e de desenvolvimento verificarão novas actualizações
-  semanalmente ou diariamente, conforme determinado.
-* Em algumas aplicações, o texto da região ao vivo é anunciado. Isso inclui
-  alertas no Edge (incluindo elementos marcados com aria-role = alert),
-  resultados na Calculadora e outros. Observe que isto pode resultar em fala
-  dupla em alguns casos. Isso agora faz parte do NVDA 2017.3 ou posterior.
+* Os seguintes eventos UIA são, agora, reconhecidos: alteração da posição do
+  texto activo, controlador para, arrastar início, arrastar cancelamento,
+  arrastar completo, elemento selecionado, alterar região ao vivo,
+  notificação, alerta do sistema, tooltip aberta, janela aberta. Com o NVDA
+  configurado para ser executado com o log de depuração activado, esses
+  eventos serão rastreados e, para o evento de notificação UIA, um beep de
+  depuração será ouvido se as notificações vierem de algum lugar diferente
+  do aplicativo actualmente activo.
 * Notificações de versões mais recentes de aplicativos no Windows 10 Versão
   1709 (build 16299) e posteriores são anunciadas. O NVDA 2018.2 e posterior
   suportam isso, com 2018.3 adicionando suporte para mais notificações.
 * As dicas de ferramentas do Edge e aplicativos universais são reconhecidas
   e serão anunciadas.
-* Com as definições activadas (compilações  17627 a 17692 para algumas
-  aplicações internas), ao abrir uma nova guia de definições (Controle +
-  Windows + T), o NVDA anunciará os resultados da pesquisa ao pesquisar
-  itens na janela da Cortana incorporada.
-* Com as definições activadas, ao alternar entre os separadores de
-  definições, o NVDA anunciará o nome e a posição do separador para o qual
-  está a deslocar-se.
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
   anunciará a ID atual da área de trabalho (área de trabalho 2, por
   exemplo).
 * O NVDA deixará de anunciar o tamanho do texto do menu Iniciar quando
   alterar as resoluções ou a orientação do ecrã.
+
+## Centro de acção
+
+* A ação rápida do brilho agora é um botão em vez de um botão de
+  alternância.
+* Várias alterações de status, como Foco Assistido e Brilho, passam a ser
+  indicadas.
 
 ## Alertas e relógio
 
@@ -135,7 +133,8 @@ consulte o documento [changelogs for releases, release][3].
 ## Correio.
 
 * Ao rever itens na lista de mensagens, agora pode usar os comandos de
-  navegação da tabela para rever os respectivos cabeçalhos.
+  navegação da tabela para rever os respectivos cabeçalhos. Observe que a
+  navegação entre linhas (mensagens) não é suportada.
 * Ao escrever uma mensagem, a aparência das sugestões de menção é indicada
   pelos sons.
 
@@ -151,24 +150,33 @@ consulte o documento [changelogs for releases, release][3].
 * Notificações como downloads de ficheiros e vários alertas de páginas da
   Web, bem como a disponibilidade da Visualização de Leitura (se estiver a
   usar a Versão 1709 e posterior) são anunciadas.
+* O preenchimento automático de texto será rastreado e anunciado na barra de
+  endereço.
 
 ## Teclado moderno
 
+Nota: a maioria dos recursos seguintes, agora, fazem parte do NVDA 2018.3.
+
 * Suporte para o painel de entrada do Emoji na versão 1709 (Actualização
   "Fall Creators ") e posterior, incluindo o painel reprojetado na
-  compilação 17661 e posterior. Para obter uma melhor experiência ao ler
+  compilação 17661 e posterior. Para obter uma melhor experiência, ao ler
   emojis, use o sintetizador de fala do Windows OneCore.
 * Suporte para sugestões de entrada de teclado de hardware na versão 1803
   (actualização de abril de 2018) e posterior.
-* Ao procurar contactos, será reproduzido um som, se houver resultados da
-  procura.
-* Suporte para anunciar itens da área de transferência em nuvem no build
-  17666 (Redstone 5) e posterior.
+* Nas compilações posteriores à  1709, o NVDA anunciará o primeiro emoji
+  selecionado quando o painel de emojis for aberto. Isso é mais perceptível
+  na versão 18262 e posterior, onde o painel emoji pode ser aberto para a
+  última categoria navegada, como a exibição do modificador de tom de pele
+  quando aberto na categoria Pessoas.
+* Suporte para anunciar itens da área de transferência em nuvem na versão
+  1809 (compilação 17666 e posterior).
 * Redução dos detalhes desnecessários ao trabalhar com o teclado moderno e
   seus recursos. Estes incluem não mais anunciar "Microsoft Candidate UI" ao
   abrir sugestões de entrada de teclado de hardware e ficar em silêncio
   quando certas teclas do teclado de toque geram eventos de alteração de
   nome em alguns sistemas.
+* O NVDA não reproduzirá mais os tons de erro ou não fará nada ao fechar o
+  painel de emojis em versões mais recentes do Insider Preview.
 
 ## Pessoas.
 
@@ -178,19 +186,22 @@ consulte o documento [changelogs for releases, release][3].
 ## Configurações
 
 * Certas informações, como o progresso da actualização do Windows, são
-  faladas automaticamente.
+  faladas automaticamente, incluindo a armazenagem e a limpeza do disco.
 * Os valores da barra de progresso e outras informações já não são
   anunciados duas vezes.
 * Os grupos de configurações são reconhecidos ao usar a navegação por
   objectos para navegar entre controlos.
-* Para algumas caixas combinadas, o NVDA não falhará ao reconhecer os
-  rótulos e / ou anunciar mudanças de valor.
+* Para algumas caixas combinadas e botões de rádio, o NVDA não falhará ao
+  reconhecer os rótulos e / ou anunciar mudanças de valor.
 * Os sinais sonoros da barra de progresso do volume de áudio deixaram de ser
   ouvidos, a partir da versão 1803 e posteriores.
 * São anunciadas Mais mensagens sobre o status do Windows Update,
   especialmente se o Windows Update encontrar erros.
 
 ## Skype
+
+Nota: as entradas seguintes não funcionarão correctamente na aplicação
+universal do Skype 14.
 
 * O texto do indicador de escrita é anunciado exactamente como no cliente
   Skype para o Desktop.

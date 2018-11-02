@@ -1,8 +1,8 @@
 # Windows 10 App Essentials #
 
 * Autors: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
-* [Stabile Version][1] herunterladen
-* [Entwicklerversion][2] herunterladen
+* [Stabile Version herunterladen][1]
+* [Entwicklungsversion herunterladen][2]
 
 Diese Erweiterung bringt ein Paket von Anwendungsmodulen für diverse Windows
 10 Apps sowie Korrekturen in einigen Windows 10 Elementen mit.
@@ -10,6 +10,7 @@ Diese Erweiterung bringt ein Paket von Anwendungsmodulen für diverse Windows
 Die folgenden App-Module oder unterstützten Module für Windows-10-Apps sind
 inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 
+* Einstellungscenter für Benachrichtigungen und Aktionen
 * Wecker und Uhr
 * Kalender
 * Rechner (modern)
@@ -30,10 +31,11 @@ inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 
 Hinweise:
 
-* Diese Erweiterung benötigt Windows 10 Version 1709 (Build 16299) oder
-  neuer und NVDA 2018.2 oder höher.
-  Am besten, Sie benutzen die Erweiterung mit der neuesten Windows 10
-  Version (Build 17134) und der akutellsten Version von NVDA.
+* Diese Erweiterung erfordert Windows 10 Version 1709 (Build 16299) oder
+  höher und NVDA 2018.3 oder höher. Für beste Ergebnisse verwenden Sie das
+  Add-on mit der neuesten stabilen Version von Windows 10 (Build 17134) und
+  der neuesten stabilen Version von NVDA. Beachten Sie, dass die Version
+  1809 (Build 17763) bis auf weiteres nicht von Microsoft erhältlich ist.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Für Einträge, die unten nicht aufgeführt sind, können Sie davon ausgehen,
   dass diese Funktionen Teil von NVDA selbst sind und nicht mehr anwendbar
@@ -46,49 +48,45 @@ Sie im Dokument [Changelogs der Erweiterungen][3].
 
 ## Allgemein
 
+* Wenn die Erweiterung Zusatz-Updater installiert ist, wird diese
+  Erweiterung nach Updates für Windows 10 App Essentials suchen.
+* Das standardmäßige Prüfintervall für Aktualisierungen wurde auf
+  wöchentliche Prüfungen sowohl für stabile als auch für
+  Entwicklungsversionen geändert. Dies gilt, wenn die Erweiterung Windows 10
+  App Essentials selbst nach Updates sucht.
 * Untermenüs werden in verschiedenen Anwendungen richtig erkannt,
   einschließlich des Kontextmenüs für Startmenükacheln und des
   Anwendungsmenüs von Microsoft Edge (Redstone 5).
 * Bestimmte Dialoge werden nun als richtige Dialoge erkannt und als solche
   gemeldet, einschließlich des Insider-Vorschau-Dialogs (in den
-  Windows-Einstellungen).
+  Windows-Einstellungen). Diese Funktion ist nun auch Teil des NVDA selbst.
 * NVDA kann die Anzahl der Vorschläge bei der Suche in den meisten Fällen
   bekannt geben. Diese Option wird gesteuert durch Meldung von
   Objektpositionsdaten im Dialog der Objektpräsentation.
 * In bestimmten Kontextmenüs (z.B. in Edge) werden Positionsinformationen
   (z.B. 1 von 2) nicht mehr angesagt.
 * Folgende UIA-Ereignisse werden erkannt: aktive Textpositionsänderung,
-  Controller für, Drag Start, Drag Cancel, Drag Complete, Element
-  ausgewählt, Live Region Change, Benachrichtigung, Systemalarm, Tooltip
-  geöffnet, Fenster geöffnet. Wenn NVDA so eingestellt ist, dass es mit
-  aktiviertem Debug-Logging läuft, werden diese Ereignisse verfolgt, und für
-  UIA-Benachrichtigungsereignisse wird ein Debug-Ton ausgegeben, wenn
-  Benachrichtigungen von einem anderen Ort als der aktuell aktiven Anwendung
-  kommen.
-* Möglichkeit hinzugefügt, über den neuen Dialog Windows 10 App Essentials
-  im NVDA-Einstellungsmenü nach Aktualisierungen für diese Erweiterung
-  (automatisch oder manuell) zu suchen. Standardmäßig werden stabile- und
-  Entwicklerversionen wöchentlich bzw. täglich automatisch nach neuen
-  Updates suchen.
-* In einigen Apps wird der Live-Text der Region mitgeteilt. Dazu gehören
-  Benachrichtigungen in Microsoft Edge (einschließlich der mit
-  aria-role=alert markierten Elemente), Ergebnisse in Calculator und
-  re. Beachten Sie, dass dies in manchen Fällen zu doppelten Ansagen führen
-  kann.
+  Steuerelement für, Ziehen Starten, Ziehen Abbrechen, Ziehen erfolgt,
+  Element ausgewählt, Änderung der Live Region, Benachrichtigung,
+  Systemalarm, Tooltip geöffnet, Fenster geöffnet. Wenn NVDA mit
+  Debug-Protokollierungsstufe ausgeführt wird, werden diese Ereignisse
+  verfolgt. Für UIA-Benachrichtigungsereignisse wird ein Debug-Ton
+  ausgegeben, wenn Benachrichtigungen von einer anderen Anwendung als der
+  aktuell aktiven Anwendung kommen.
 * Benachrichtigungen von neueren App-Releases auf Windows 10 Version 1709
   (Build 16299) und neuer werden mitgeteilt.
 * Tooltips von Edge und Universal Apps werden erkannt und angekündigt.
-* Bei eingeschalteten Sets (Builds 17627 bis 17692 für einige Insider) gibt
-  NVDA beim Öffnen einer neuen Registerkarte Sets (Control+Windows+T) die
-  Suchergebnisse bei der Suche nach Artikeln im eingebetteten
-  Cortana-Fenster bekannt.
-* Wenn Sets eingeschaltet sind, wird NVDA beim Umschalten zwischen den
-  Sets-Registerkarten den Namen und die Position der Registerkarte, zu der
-  Sie wechseln, bekannt geben.
 * Beim Öffnen, Schließen oder Wechseln zwischen virtuellen Desktops gibt
   NVDA die aktuelle Desktop-ID (z.B. Desktop 2) bekannt.
 * NVDA sagt den Text für die Größe des Startmenüs nicht mehr an, wenn die
   Bildschirmauflösung oder Ausrichtung geändert wird.
+
+## Einstellungscenter für Benachrichtigungen und Aktionen
+
+* Die schnelle Aktion für Helligkeit ist nun eine Schaltfläche anstelle
+  einer Umschalttaste.
+* Verschiedene Statusänderungen wie Focus Assist und Helligkeit werden nun
+  angesagt.
 
 ## Wecker und Uhr
 
@@ -135,7 +133,8 @@ Sie im Dokument [Changelogs der Erweiterungen][3].
 ## Mail
 
 * Beim Navigieren durch Elemente in der Nachrichtenliste können Sie nun
-  Tabellen-Navigationsbefehle verwenden, um Betreffzeilen zu überprüfen.
+  Tabellen-Navigationsbefehle verwenden, um Betreffzeilen zu überprüfen. Die
+  Navigation zwischen Zeilen (Nachrichten) wird noch nicht unterstützt.
 * Wenn Sie eine Nachricht schreiben, wird das Erscheinen von Vorschlägen
   durch Töne angezeigt.
 
@@ -151,25 +150,35 @@ Sie im Dokument [Changelogs der Erweiterungen][3].
 * Benachrichtigungen wie Datei-Downloads und verschiedene Webseiten-Alarme
   sowie die Verfügbarkeit der Leseansicht (ab Version 1709) werden
   mitgeteilt.
+* Die automatische Vervollständigung beim Tippen wird verfolgt und in der
+  Adress-Omnibar ordnungsgemäß angesagt.
 
 ## moderne virtuelle Tastaturen
 
+Hinweis: Die meisten der unten aufgeführten Funktionen sind nun Teil von
+NVDA 2018.3.
+
 * Unterstützung für die Emoji-Tastatur in der Windowsversion 1709 (Fall
   Creators Update), einschließlich der neuen Version im Windows Build
-  17661. Für beste Erfahrungen beim Lesen von Emojis verwenden Sie
+  17661. Auch die Änderungen in 19H1 (Build18266) werden unterstützt. Für
+  beste Erfahrungen beim Lesen von Emojis verwenden Sie
   Windows-OneCore-Sprachausgaben.
 * Unterstützung für Eingabevorschläge bei Hardware-Tastaturen (gilt für
   Windowsversionen ab Build 1803)
-* NVDA wird nun im Emoji-Fenster das erste ausgewählte Emoji ansagen. Dies
-  gilt für Windows-Builds ab Build 1709.
-* Unterstützung für die Ankündigung von Cloud-Clipboard-Elementen in Build
-  17666 (Redstone 5) und höher.
+* In Builds nach 1709 wird NVDA das erste ausgewählte Emoji ankündigen, wenn
+  das Emoji-Panel geöffnet wird. Dies ist vor allem in Build 18262 und
+  später spürbar, wo das Emoji-Panel sich bei der zuletzt besuchten
+  Kategorie öffnen kann.
+* Unterstützung für die Ansage der Einträge in der Cloud-basierten
+  Zwischenablage in Build 17666 (Redstone 5) und höher.
 * Unnötige Ausführlichkeit bei der Arbeit mit der modernen Tastatur und
   deren Funktionen reduziert. Dazu gehört, dass die "Microsoft Kandidat UI"
   beim Öffnen von Hardware-Tastatur-Eingabevorschlägen nicht mehr
   angekündigt wird, und dass es still bleibt, wenn bestimmte
   Berührungstasten auf manchen Systemen ein Namensänderungsereignis
   auslösen.
+* NVDA bleibt aktiv und spielt keine Fehlertöne mehr ab, wenn das
+  Emoji-Panel in neueren Insider Preview-Builds geschlossen wird.
 
 ## Kontakte
 
@@ -178,20 +187,24 @@ Sie im Dokument [Changelogs der Erweiterungen][3].
 
 ## Einstellungen
 
-* Bestimmte Informationen, wie z.B. der Fortschritt von Windows Update,
-  werden nun automatisch gemeldet.
+* Bestimmte Informationen wie z.B. der Fortschritt von Windows Update,
+  Widget zur Bereinigung und Defragmentierung von Speicher und Festplatten
+  werden in echtzeit gemeldet.
 * Werte in Fortschrittsbalken und andere Informationen werden nicht mehr
   zweimal angesagt.
 * Einstellungsgruppen werden erkannt, wenn Objektnavigation zur Navigation
   zwischen Elementen angewendet wird.
-* Bei einigen Ausklapplisten wird NVDA nun die Beschriftung erkennen
-  und/oder Wertänderungen ankündigen.
+* Bei einigen Kombinationsfeldern und Kontrollfeldern wird NVDA nun die
+  Beschriftung erkennen und/oder Wertänderungen ankündigen.
 * Lautstärke-Fortschrittsbalken werden nicht mehr ausgegeben (gilt für
   Windowsversionen ab Build 1803)
 * Weitere Meldungen über den Status von Windows Update werden angezeigt,
   insbesondere wenn im Windows Update Fehler auftreten.
 
 ## Skype
+
+Hinweis: Die folgenden Einträge funktionieren in der universellen Skype 14
+App nicht ordnungsgemäß.
 
 * Die Eingabe des Indikatortextes wird wie bei Skype für Desktop-Client
   angekündigt.
