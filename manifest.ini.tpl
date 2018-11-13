@@ -6,4 +6,5 @@ url = {addon_url}
 version = {addon_version}
 docFileName = {addon_docFileName}
 minimumNVDAVersion = {addon_minimumNVDAVersion}
+minimumWindowsVersion = {addon_minimumWindowsVersion}
 updateChannel = {addon_updateChannel}
