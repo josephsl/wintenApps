@@ -119,6 +119,7 @@ Note: most features below are now part of NVDA 2018.3.
 * For some combo boxes and radio buttons, NVDA will no longer fail to recognize labels and/or announce value changes.
 * Audio Volume progress bar beeps are no longer heard in Version 1803 and later.
 * More messages about Windows Update status are announced, especially if Windows Update encounters errors.
+* NVDA will no longer appear to do nothing or play error tones if using object navigation commands under some circumstances.
 
 ## Skype
 
