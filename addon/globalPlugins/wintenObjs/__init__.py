@@ -206,7 +206,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# NVDA Core issue 8405: in build 17682 and later, IsDialog property has been added, making comparisons easier.
 			# However, don't forget that many users are still using old Windows 10 releases.
 			# The most notable case is app uninstall confirmation dialog from Start menu in build 17134 and earlier.
-			if obj.UIAElement.cachedClassName == "Popup" and Dialog not in clsList:
+			if obj.UIAElement.cachedClassName in ("Popup", "Shell_SystemDialog") and Dialog not in clsList:
 				clsList.insert(0, Dialog)
 				return
 			# Search field that does raise controller for event.
