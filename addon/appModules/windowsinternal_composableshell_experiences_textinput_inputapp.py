@@ -33,8 +33,7 @@ class AppModule(AppModule):
 		elif obj.parent.UIAElement.cachedAutomationID == "SkinTonePanelModifier_ListView":
 			obj = obj.parent.next
 		candidate = obj
-		parent = obj.parent
-		if obj.UIAElement.cachedClassName == "ListViewItem" and isinstance(parent, UIA) and parent.UIAElement.cachedAutomationID != "TEMPLATE_PART_ClipboardItemsList":
+		if obj and obj.UIAElement.cachedClassName == "ListViewItem" and obj.parent and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationID != "TEMPLATE_PART_ClipboardItemsList":
 			# The difference between emoji panel and suggestions list is absence of categories/emoji separation.
 			# Turns out automation ID for the container is different, observed in build 17666 when opening clipboard copy history.
 			candidate = obj.parent.previous
