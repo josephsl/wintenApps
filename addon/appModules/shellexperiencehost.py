@@ -31,6 +31,7 @@ class AppModule(AppModule):
 
 	def event_UIA_itemStatus(self, obj, nextHandler):
 		if isinstance(obj, UIA):
+			# Fetching cached item status causes a COM error to be logged.
 			itemStatus = obj.UIAElement.currentItemStatus
 			# And no, I don't want to hear repetitions.
 			if itemStatus != self._itemStatusMessage:
