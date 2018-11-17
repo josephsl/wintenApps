@@ -34,6 +34,6 @@ class AppModule(AppModule):
 			itemStatus = obj.UIAElement.currentItemStatus
 			# And no, I don't want to hear repetitions.
 			if itemStatus != self._itemStatusMessage:
-				ui.message("{0}: {1}".format(obj.name, itemStatus))
+				ui.message(": ".join([obj.name, itemStatus]))
 				self._itemStatusMessage = itemStatus
 		nextHandler()
