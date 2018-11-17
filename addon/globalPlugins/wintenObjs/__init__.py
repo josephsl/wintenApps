@@ -28,12 +28,14 @@ addonHandler.initTranslation()
 UIA_Drag_DragStartEventId = 20026
 UIA_Drag_DragCancelEventId = 20027
 UIA_Drag_DragCompleteEventId = 20028
+UIA_ActiveTextPositionChangedEventId] = 20036
 
 # For convenience.
 W10Events = {
 	UIA_Drag_DragStartEventId: "UIA_dragStart",
 	UIA_Drag_DragCancelEventId: "UIA_dragCancel",
 	UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
+	UIA_ActiveTextPositionChangedEventId: "UIA_activeTextPositionChanged"
 }
 
 # UIA COM constants
@@ -158,10 +160,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Add a series of events instead of doing it one at a time.
 		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
 		log.debug("W10: adding additional events")
-		# Checking presence of IUIAutomation6 will be removed later in 2018.
-		if isinstance(UIAHandler.handler.clientObject, UIAHandler.IUIAutomation6):
-			log.debug("W10: adding additional events for RS5/IUIAutomation6")
-			W10Events[UIAHandler.UIA_ActiveTextPositionChangedEventId] = "UIA_activeTextPositionChanged"
 		for event, name in W10Events.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
