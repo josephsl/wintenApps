@@ -28,7 +28,7 @@ addonHandler.initTranslation()
 UIA_Drag_DragStartEventId = 20026
 UIA_Drag_DragCancelEventId = 20027
 UIA_Drag_DragCompleteEventId = 20028
-UIA_ActiveTextPositionChangedEventId] = 20036
+UIA_ActiveTextPositionChangedEventId = 20036
 
 # For convenience.
 W10Events = {
