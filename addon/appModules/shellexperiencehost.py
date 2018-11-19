@@ -21,11 +21,6 @@ class AppModule(AppModule):
 				obj.role = controlTypes.ROLE_BUTTON
 				obj.states.discard(controlTypes.STATE_CHECKABLE)
 
-	def event_liveRegionChange(self, obj, nextHandler):
-		# No, do not let Start menu size be announced.
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "FrameSizeAccessibilityField": return
-		nextHandler()
-
 	# Argh, somehow, item status property repeats when Action Center is opened more than once.
 	_itemStatusMessage = None
 

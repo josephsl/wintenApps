@@ -285,6 +285,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_liveRegionChange(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "liveRegionChange")
 		if isinstance(obj, UIA):
+			# No, do not let Start menu size be announced.
+			# Moved from Shell Experience Host in 2018 as a different app hosts this control in build 18282.
+			if obj.UIAElement.cachedAutomationID == "FrameSizeAccessibilityField": return
 			# #50 (NVDA Core issue 8466): certain aria-alert messages.
 			if obj.role == controlTypes.ROLE_ALERT:
 				if not obj.name and obj.treeInterceptor is not None:
