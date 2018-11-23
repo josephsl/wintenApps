@@ -12,6 +12,7 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 # The add-on version of this module will extend the one that comes with NVDA Core (2018.3 and later).
 
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *
+from .skipTranslation import translate
 
 class AppModule(AppModule):
 
@@ -50,8 +51,8 @@ class AppModule(AppModule):
 			# Cache selected item.
 			self._recentlySelected = obj.name
 		else:
-			# Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
-			ui.message(_("No emoji"))
+			# Message included in NVDA Core
+			ui.message(translate("No emoji"))
 		nextHandler()
 
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
