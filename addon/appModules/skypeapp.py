@@ -14,6 +14,7 @@ from nvdaBuiltin.appModules.skype import SCRCAT_SKYPE
 import api
 import addonHandler
 addonHandler.initTranslation()
+from .skipTranslation import translate
 
 # #7126: Unfortunately, cherry-picking parts of message items via looking at their children isn't reliable due to odd UIA implementation.
 # Therefore, resort to this regular expression.
@@ -108,8 +109,8 @@ class AppModule(appModuleHandler.AppModule):
 				nextElement = obj.next.UIAElement
 				# Make sure to catch all possible UI placement changes between Skype UWP releases.
 				if nextElement.cachedAutomationID in ("ChatEditBox", "ChatTranslationSettings"):
-					# Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
-					ui.message(obj.name if obj.name != "" else _("Typing stopped"))
+					# Message included in NVDA Core
+					ui.message(obj.name if obj.name != "" else translate("Typing stopped"))
 			elif uiElement.cachedAutomationID == "Message" and uiElement.cachedClassName == "ListViewItem" and obj.name != self._skypeMessageCache:
 				ui.message(getShortenedMessage(obj.name))
 				self._skypeMessageCache = obj.name
@@ -146,8 +147,8 @@ class AppModule(appModuleHandler.AppModule):
 			return
 		except IndexError:
 			return
-	# Translators: Input help mode message for a command in Skype Preview app.
-	script_readMessage.__doc__ = _("Reports and moves the review cursor to a recent message")
+	# Message includedin NVDA Core
+	script_readMessage.__doc__ = translate("Reports and moves the review cursor to a recent message")
 
 	def script_moveToChatEditField(self, gesture):
 		# Skype 14 UWP does not expose this info in a friendly way.
