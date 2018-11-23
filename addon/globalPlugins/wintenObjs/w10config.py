@@ -52,6 +52,7 @@ except RuntimeError:
 from logHandler import log
 import addonHandler
 addonHandler.initTranslation()
+from .skipTranslation import translate
 
 # Double-check update flag.
 canUpdate = not hasattr(addonHandler, "checkForAddonUpdate")
@@ -269,8 +270,8 @@ try:
 			gui.messageBox(
 				# Translators: A message indicating that an error occurred while downloading an update to NVDA.
 				_("Error downloading add-on update."),
-				# Translators: The title of a dialog indicating that an error occurred while downloading an update to NVDA.
-				_("Error"),
+				# Message included in NVDA Core
+				translate("Error"),
 				wx.OK | wx.ICON_ERROR)
 
 		def _downloadSuccess(self):
@@ -283,10 +284,9 @@ try:
 					bundle=addonHandler.AddonBundle(self.destPath.decode("mbcs"))
 				except:
 					log.error("Error opening addon bundle from %s"%self.destPath,exc_info=True)
-					# Translators: The message displayed when an error occurs when opening an add-on package for adding. 
-					gui.messageBox(_("Failed to open add-on package file at %s - missing file or invalid file format")%self.destPath,
-						# Translators: The title of a dialog presented when an error occurs.
-						_("Error"),
+					# Message included in NVDA Core
+					gui.messageBox(translate("Failed to open add-on package file at %s - missing file or invalid file format")%self.destPath,
+						translate("Error"),
 						wx.OK | wx.ICON_ERROR)
 					return
 				bundleName=bundle.manifest['name']
@@ -308,8 +308,7 @@ try:
 					del progressDialog
 					# Translators: The message displayed when an error occurs when installing an add-on package.
 					gui.messageBox(_("Failed to update add-on  from %s")%self.destPath,
-						# Translators: The title of a dialog presented when an error occurs.
-						_("Error"),
+						translate("Error"),
 						wx.OK | wx.ICON_ERROR)
 					return
 				else:
