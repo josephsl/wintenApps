@@ -223,107 +223,104 @@ def onConfigDialog(evt):
 
 # Update downloader (credit: NV Access)
 # Customized for WinTenApps add-on.
-try:
-	class W10UpdateDownloader(updateCheck.UpdateDownloader):
-		"""Overrides NVDA Core's downloader.)
-		No hash checking for now, and URL's and temp file paths are different.
+class W10UpdateDownloader(updateCheck.UpdateDownloader):
+	"""Overrides NVDA Core's downloader.)
+	No hash checking for now, and URL's and temp file paths are different.
+	"""
+
+	def __init__(self, urls, fileHash=None):
+		"""Constructor.
+		@param urls: URLs to try for the update file.
+		@type urls: list of str
+		@param fileHash: The SHA-1 hash of the file as a hex string.
+		@type fileHash: basestring
 		"""
+		# In recent NVDA next snapshots (February 2018), update downloader was changed to take in update info dictionary.
+		try:
+			super(W10UpdateDownloader, self).__init__(urls, fileHash)
+		except:
+			pass
+		self.urls = urls
+		self.destPath = tempfile.mktemp(prefix="wintenApps_update-", suffix=".nvda-addon")
+		self.fileHash = fileHash
 
-		def __init__(self, urls, fileHash=None):
-			"""Constructor.
-			@param urls: URLs to try for the update file.
-			@type urls: list of str
-			@param fileHash: The SHA-1 hash of the file as a hex string.
-			@type fileHash: basestring
-			"""
-			# In recent NVDA next snapshots (February 2018), update downloader was changed to take in update info dictionary.
+	def start(self):
+		"""Start the download.
+		"""
+		self._shouldCancel = False
+		# Use a timer because timers aren't re-entrant.
+		self._guiExecTimer = wx.PyTimer(self._guiExecNotify)
+		gui.mainFrame.prePopup()
+		# Translators: The title of the dialog displayed while downloading add-on update.
+		self._progressDialog = wx.ProgressDialog(_("Downloading Add-on Update"),
+			# Translators: The progress message indicating that a connection is being established.
+			_("Connecting"),
+			# PD_AUTO_HIDE is required because ProgressDialog.Update blocks at 100%
+			# and waits for the user to press the Close button.
+			style=wx.PD_CAN_ABORT | wx.PD_ELAPSED_TIME | wx.PD_REMAINING_TIME | wx.PD_AUTO_HIDE,
+			parent=gui.mainFrame)
+		self._progressDialog.Raise()
+		t = threading.Thread(target=self._bg)
+		t.daemon = True
+		t.start()
+
+	def _error(self):
+		self._stopped()
+		gui.messageBox(
+			# Translators: A message indicating that an error occurred while downloading an update to NVDA.
+			_("Error downloading add-on update."),
+			# Message included in NVDA Core
+			translate("Error"),
+			wx.OK | wx.ICON_ERROR)
+
+	def _downloadSuccess(self):
+		self._stopped()
+		# Emulate add-on update (don't prompt to install).
+		from gui import addonGui
+		closeAfter = addonGui.AddonsDialog._instance is None
+		try:
 			try:
-				super(W10UpdateDownloader, self).__init__(urls, fileHash)
+				bundle=addonHandler.AddonBundle(self.destPath.decode("mbcs"))
 			except:
-				pass
-			self.urls = urls
-			self.destPath = tempfile.mktemp(prefix="wintenApps_update-", suffix=".nvda-addon")
-			self.fileHash = fileHash
-
-		def start(self):
-			"""Start the download.
-			"""
-			self._shouldCancel = False
-			# Use a timer because timers aren't re-entrant.
-			self._guiExecTimer = wx.PyTimer(self._guiExecNotify)
-			gui.mainFrame.prePopup()
-			# Translators: The title of the dialog displayed while downloading add-on update.
-			self._progressDialog = wx.ProgressDialog(_("Downloading Add-on Update"),
-				# Translators: The progress message indicating that a connection is being established.
-				_("Connecting"),
-				# PD_AUTO_HIDE is required because ProgressDialog.Update blocks at 100%
-				# and waits for the user to press the Close button.
-				style=wx.PD_CAN_ABORT | wx.PD_ELAPSED_TIME | wx.PD_REMAINING_TIME | wx.PD_AUTO_HIDE,
-				parent=gui.mainFrame)
-			self._progressDialog.Raise()
-			t = threading.Thread(target=self._bg)
-			t.daemon = True
-			t.start()
-
-		def _error(self):
-			self._stopped()
-			gui.messageBox(
-				# Translators: A message indicating that an error occurred while downloading an update to NVDA.
-				_("Error downloading add-on update."),
+				log.error("Error opening addon bundle from %s"%self.destPath,exc_info=True)
 				# Message included in NVDA Core
-				translate("Error"),
-				wx.OK | wx.ICON_ERROR)
-
-		def _downloadSuccess(self):
-			self._stopped()
-			# Emulate add-on update (don't prompt to install).
-			from gui import addonGui
-			closeAfter = addonGui.AddonsDialog._instance is None
+				gui.messageBox(translate("Failed to open add-on package file at %s - missing file or invalid file format")%self.destPath,
+					translate("Error"),
+					wx.OK | wx.ICON_ERROR)
+				return
+			bundleName=bundle.manifest['name']
+			for addon in addonHandler.getAvailableAddons():
+				if not addon.isPendingRemove and bundleName==addon.manifest['name']:
+					addon.requestRemove()
+					break
+			progressDialog = gui.IndeterminateProgressDialog(gui.mainFrame,
+			# Translators: The title of the dialog presented while an Addon is being updated.
+			_("Updating Add-on"),
+			# Translators: The message displayed while an addon is being updated.
+			_("Please wait while the add-on is being updated."))
 			try:
-				try:
-					bundle=addonHandler.AddonBundle(self.destPath.decode("mbcs"))
-				except:
-					log.error("Error opening addon bundle from %s"%self.destPath,exc_info=True)
-					# Message included in NVDA Core
-					gui.messageBox(translate("Failed to open add-on package file at %s - missing file or invalid file format")%self.destPath,
-						translate("Error"),
-						wx.OK | wx.ICON_ERROR)
-					return
-				bundleName=bundle.manifest['name']
-				for addon in addonHandler.getAvailableAddons():
-					if not addon.isPendingRemove and bundleName==addon.manifest['name']:
-						addon.requestRemove()
-						break
-				progressDialog = gui.IndeterminateProgressDialog(gui.mainFrame,
-				# Translators: The title of the dialog presented while an Addon is being updated.
-				_("Updating Add-on"),
-				# Translators: The message displayed while an addon is being updated.
-				_("Please wait while the add-on is being updated."))
-				try:
-					gui.ExecAndPump(addonHandler.installAddonBundle,bundle)
-				except:
-					log.error("Error installing  addon bundle from %s"%self.destPath,exc_info=True)
-					if not closeAfter: addonGui.AddonsDialog(gui.mainFrame).refreshAddonsList()
-					progressDialog.done()
-					del progressDialog
-					# Translators: The message displayed when an error occurs when installing an add-on package.
-					gui.messageBox(_("Failed to update add-on  from %s")%self.destPath,
-						translate("Error"),
-						wx.OK | wx.ICON_ERROR)
-					return
-				else:
-					if not closeAfter: addonGui.AddonsDialog(gui.mainFrame).refreshAddonsList(activeIndex=-1)
-					progressDialog.done()
-					del progressDialog
-			finally:
-				try:
-					os.remove(self.destPath)
-				except OSError:
-					pass
-				if closeAfter:
-					wx.CallLater(1, addonGui.AddonsDialog(gui.mainFrame).Close)
-except:
-	log.debugWarning("Error downloading Windows 10 App Essentials update", exc_info=True)
+				gui.ExecAndPump(addonHandler.installAddonBundle,bundle)
+			except:
+				log.error("Error installing  addon bundle from %s"%self.destPath,exc_info=True)
+				if not closeAfter: addonGui.AddonsDialog(gui.mainFrame).refreshAddonsList()
+				progressDialog.done()
+				del progressDialog
+				# Translators: The message displayed when an error occurs when installing an add-on package.
+				gui.messageBox(_("Failed to update add-on  from %s")%self.destPath,
+					translate("Error"),
+					wx.OK | wx.ICON_ERROR)
+				return
+			else:
+				if not closeAfter: addonGui.AddonsDialog(gui.mainFrame).refreshAddonsList(activeIndex=-1)
+				progressDialog.done()
+				del progressDialog
+		finally:
+			try:
+				os.remove(self.destPath)
+			except OSError:
+				pass
+			if closeAfter:
+				wx.CallLater(1, addonGui.AddonsDialog(gui.mainFrame).Close)
 
 # Borrowed from NVDA Core (the only difference is the URL and where structures are coming from).
 def _updateWindowsRootCertificates():
