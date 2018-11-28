@@ -23,6 +23,7 @@ except:
 	w10config = None
 import addonHandler
 addonHandler.initTranslation()
+import winVersion
 
 # Extra UIA constants
 UIA_Drag_DragStartEventId = 20026
@@ -137,6 +138,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
+		# Don't do anything unless this is Windows 10.
+		if winVersion.winVersion.major < 10: return
 		# #20: don't even think about proceeding in secure screens (especially add-on updates).
 		# #40: skip over the rest if appx is in effect.
 		if globalVars.appArgs.secure or config.isAppX: return
