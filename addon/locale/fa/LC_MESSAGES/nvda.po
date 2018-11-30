@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2018-07-19 07:24-0700\n"
+"PO-Revision-Date: 2018-11-27 20:50+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@freelists.org>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.6.10\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,9,-1,-1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
@@ -36,7 +36,7 @@ msgstr "نگارشِ قدیمیِ ویندوز"
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
 msgid "Cannot move between rows"
-msgstr ""
+msgstr "نمیتوانم بینِ سطرها حرکت کنم"
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
@@ -168,26 +168,3 @@ msgstr "نیازمندی‌های حیاتیِ برنامک‌های ویندو�
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "مجموعه‌ای از ماژول‌ها برای پشتیبانی از برنامک‌های مختلفِ ویندوزِ ۱۰"
-
-#~ msgid "&Add-on update channel:"
-#~ msgstr "کانالِ به‌روزرسانیِ &افزونه"
-
-#~ msgid ""
-#~ "You are about to switch to development updates channel. Although updates "
-#~ "from this channel brings exciting features, it also comes with updates "
-#~ "that might be unstable at times and should be used for testing and "
-#~ "sending feedback to the add-on developer. If you prefer to use stable "
-#~ "releases, please answer no and switch to stable update channel. Are you "
-#~ "sure you wish to switch to the development update channel?"
-#~ msgstr ""
-#~ "گویا میخواهید به کانالِ به‌روزرسانی‌های در حالِ توسعه منتقل شوید. هرچند "
-#~ "روزآمدهایی که از این کانال دریافت خواهید کرد، امکاناتِ هیجان‌انگیزی با خود "
-#~ "به‌همراه می‌آورند، ممکن است زمانی که آن‌ها را دریافت میکنید همراه با "
-#~ "ناپایداری‌هایی نیز باشند. بهتر است از این کانال تنها زمانی به‌روزرسانی "
-#~ "دریافت کنید که قصدتان آزمودنِ افزونه و ارسالِ بازخورد به توسعه‌دهنده‌ی آن "
-#~ "باشد. چنانچه ترجیح میدهید روزآمدهای پایدار را دریافت کنید، به پرسش پاسخ "
-#~ "منفی بدهید و به کانالِ روزآمدهای پایدار برگردید. آیا میخواهید به کانال "
-#~ "به‌روزرسانی‌های درحالِ توسعه منتقل شوید؟"
-
-#~ msgid "Switching to unstable channel"
-#~ msgstr "رفتن به کانالِ ناپایدار"

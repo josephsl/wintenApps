@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2018-05-06 18:06+0800\n"
+"PO-Revision-Date: 2018-11-26 08:44-0800\n"
 "Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
 "Language-Team: NVDA Simplified Chinese Team\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 1.8.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
@@ -26,7 +26,7 @@ msgid ""
 "anyway?"
 msgstr ""
 "您正在使用较旧版本的Windows。此插件需要{minSupportedVersion}或更高版本。无论"
-"如何，你确定要安装这个附加组件吗？"
+"如何，你确定要安装这个插件吗？"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
@@ -35,7 +35,7 @@ msgstr "旧版Windows"
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
 msgid "Cannot move between rows"
-msgstr ""
+msgstr "无法在行之间移动"
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
@@ -162,25 +162,3 @@ msgstr "Windows 10 应用增强"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "各种Windows 10应用程序的应用程序模块集合"
-
-#~ msgid "&Add-on update channel:"
-#~ msgstr "&插件更新通道:"
-
-#~ msgid ""
-#~ "You are about to switch to development updates channel. Although updates "
-#~ "from this channel brings exciting features, it also comes with updates "
-#~ "that might be unstable at times and should be used for testing and "
-#~ "sending feedback to the add-on developer. If you prefer to use stable "
-#~ "releases, please answer no and switch to stable update channel. Are you "
-#~ "sure you wish to switch to the development update channel?"
-#~ msgstr ""
-#~ "您即将切换到开发更新通道。尽管来自此通道的更新带来了令人兴奋的功能，但它也"
-#~ "附带了可能不稳定的更新，应该用于测试并向插件开发人员发送反馈。如果您更愿意"
-#~ "使用稳定版本，请回答“否”并切换到稳定更新通道。你确定你想切换到开发更新通道"
-#~ "吗？"
-
-#~ msgid "Switching to unstable channel"
-#~ msgstr "切换到开发通道"
-
-#~ msgid "suggestions"
-#~ msgstr "建议"
