@@ -34,10 +34,9 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 Huomautuksia:
 
 * Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1709 (koontiversio
-  16299) tai uudempaa ja NVDA 2018.3:ta tai uudempaa. Käytä parhaan
+  16299) tai uudempaa ja NVDA 2018.3:a tai uudempaa. Käytä parhaan
   käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata versiota
-  (koontiversio 17134) sekä uusinta NVDA:ta. Huomaa, että versiota 1809
-  (koontiversio 17763) ei ole toistaiseksi saatavilla Microsoftilta.
+  (koontiversio 17763) sekä uusinta NVDA:ta.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
@@ -49,11 +48,18 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
+* Sisäisiä muutoksia, jotka tekevät lisäosasta yhteensopivan tulevien
+  NVDA-versioiden kanssa.
 * Jos Lisäosien päivittäjä -lisäosa on asennettuna, se tarkistaa Windows 10
   App Essentialsin päivitykset.
 * Sekä vakaiden että kehitysversioiden päivitykset tarkistetaan nyt
   oletusarvoisesti viikon välein. Tämä pitää paikkansa vain, mikäli käytössä
   on lisäosan oma päivitystentarkistustoiminto.
+* Jos lisäosa on määritetty tarkistamaan päivityksensä ja mikäli uusi versio
+  vaatii päivitettäessä uudemman NVDA-version, siitä ilmoittava
+  virheilmoitus näytetään.
+* Pieniä muutoksia siihen, miten jotkin muun kuin englanninkieliset
+  ilmoitukset näytetään.
 * Alavalikot tunnistetaan asianmukaisesti useissa sovelluksissa, mukaan
   lukien Käynnistä-valikon ruutujen tilannekohtaiset valikot ja microsoft
   Edgen sovellusvalikko (Redstone 5).
@@ -174,6 +180,7 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
   muuttuneen nimitapahtuman.
 * NVDA ei enää toista virheääniä tai ole tekemättä mitään emojipaneelia
   suljettaessa uudemmissa Insider-esiversioissa.
+* NVDA ilmoittaa emojien hakutulokset, mikäli mahdollista.
 
 ## Ihmiset
 
@@ -195,6 +202,11 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
   äänenvoimakkuutta versiossa 1803 ja uudemmissa.
 * Windows Updaten tilailmoituksia puhutaan enemmän etenkin virheitä
   havaittaessa.
+* NVDA ei näytä enää tekevän mitään tai toista virheääniä, mikäli
+  objektinavigointikomentoja käytetään tietyissä tilanteissa.
+* Useilla koontiversioon 18282 lisätyillä linkeillä on nyt selitteet.
+* Windows Updaten muistutusvalintaikkuna tunnistetaan asianmukaisesti
+  valintaikkunaksi.
 
 ## Skype
 

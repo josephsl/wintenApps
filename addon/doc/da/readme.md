@@ -31,11 +31,9 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 Bemærkninger:
 
-* Denne tilføjelse kræver Windows 10 Version 1709 (build 16299) eller nyere
-  og NVDA 2018.3 eller nyere. For de bedste resultater skal du bruge
-  tilføjelsen med den nyeste Windows 10-stabile udgivelse (build 17134) og
-  den seneste stabile version af NVDA. Bemærk, at version 1809 (build 17763)
-  indtil videre ikke er tilgængelig fra Microsoft.
+* This add-on requires Windows 10 Version 1709 (build 16299) or later and
+  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
 * For emner, der ikke er anført nedenfor, kan du antage, at funktionerne er
@@ -48,11 +46,17 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Generelt
 
+* Internal changes to make the add-on compatible with future NVDA releases.
 * Hvis Add-on Updater-tilføjelse er installeret, kontrollerer denne
   tilføjelse for opdateringer af Windows 10 App Essentials.
 * Standard opdateringstjekintervallet er ændret til ugentlige tjek for både
   stabile og udviklingsmæssige versioner. Dette gælder, hvis selve
   tilføjelsen kontrollerer for opdateringer.
+* If the add-on is set up to check for updates, when updating the add-on, if
+  the new add-on release requires a newer version of NVDA, an error message
+  will be presented.
+* Small changes to how some messages are presented in languages other than
+  English.
 * Undermenupunkter er korrekt genkendt i forskellige apps, herunder
   kontekstmenu til Start-menufliser og Microsoft Edge-appmenuen (Redstone
   5).
@@ -172,6 +176,7 @@ Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
   event på nogle systemer.
 * NVDA vil ikke længere spille fejltoner eller gøre noget, når du lukker
   emoji-panelet i nyere Insider Preview-builds.
+* NVDA will announce search results for emojis if possible.
 
 ## Personer
 
@@ -192,6 +197,10 @@ Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
   1803 og nyere.
 * Flere meddelelser om Windows Update status er annonceret, især hvis
   Windows Update fejler.
+* NVDA will no longer appear to do nothing or play error tones if using
+  object navigation commands under some circumstances.
+* Various links added in build 18282 with no labels now have labels.
+* Windows Update reminder dialog is recognized as a proper dialog.
 
 ## Skype
 

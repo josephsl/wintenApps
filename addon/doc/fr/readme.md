@@ -37,9 +37,8 @@ Notes:
 * Ce module complémentaire nécessite Windows 10 Version 1709 (build 16299)
   ou version ultérieure et NVDA 2018.3 ou version ultérieure. Pour de
   meilleurs résultats, utilisez le module complémentaire avec la dernière
-  version stable de Windows 10 (build 17134) et la dernière version stable
-  de NVDA. Notez que, jusqu'à nouvel ordre, la version 1809 (build 17763)
-  n'est pas disponible auprès de Microsoft.
+  version stable de Windows 10 (build 17763) et la dernière version stable
+  de NVDA.
 * Certaines fonctionnalités du module complémentaire font ou feront partie
   du lecteur d'écran NVDA.
 * Pour les entrées non répertoriées ci-dessous, vous pouvez supposer que les
@@ -54,12 +53,20 @@ versions du module complémentaire][3].
 
 ## Générale
 
+* Changements internes afin de rendre le module complémentaire compatible
+  avec les futures versions de NVDA.
 * Si le  module complémentaire Add-on Updater est installé, ce module
   complémentaire vérifiera les mises à jour de Windows 10 App Essentials.
 * L'intervalle de vérification de mise à jour par défaut a été remplacé par
   des vérifications hebdomadaires pour les versions stable et de
   développement. Ceci est applicable si le module complémentaire vérifie
   lui-même les mises à jour.
+* Si le module complémentaire est configuré pour rechercher des mises à
+  jour, lors de la mise à jour du module complémentaire, si la nouvelle
+  version du module complémentaire nécessite une version plus récente de
+  NVDA, un message d'erreur s'affiche.
+* Petits changements dans la façon dont certains messages sont présentés
+  dans des langues autres que l'anglais.
 * Les éléments de sous-menu sont correctement reconnus dans diverses
   applications, y compris le menu contextuel pour les tuiles du Menu
   Démarrer et le menu de l'application de Microsoft Edge (Redstone 5).
@@ -196,6 +203,7 @@ NVDA 2018.3.
 * NVDA ne lira plus les tonalités d'erreur ou ne fera plus rien lors de la
   fermeture du panneau emoji dans les builds plus récentes de Insider
   Preview.
+* NVDA annoncera les résultats de la recherche pour les emojis, si possible.
 
 ## Personnes
 
@@ -218,6 +226,13 @@ NVDA 2018.3.
   dans la Version 1803 et ultérieure.
 * Plus de messages sur l'état de Windows Update sont annoncés, surtout si
   Windows Update rencontre des erreurs.
+* NVDA ne semblera plus rien faire et ne jouera pas des tonalités d'erreur
+  si des commandes pour la navigation par objet sont utilisées dans
+  certaines circonstances.
+* Divers liens ajoutés dans la build 18282 sans étiquettes ont maintenant
+  des étiquettes.
+* Le dialogue de rappel de Windows Update est reconnu comme un dialogue
+  propre.
 
 ## Skype
 

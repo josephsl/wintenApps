@@ -36,8 +36,7 @@ Notas:
 * Este extra requer o Windows 10 Versão 1709 (compilação 16299) ou posterior
   e o NVDA 2018.3 ou posterior. Para obter melhores resultados, use o extra
   com a versão estável mais recente do Windows 10 (compilação 17134) e a
-  versão estável mais recente do NVDA. Note que, até novo aviso, a versão
-  1809 (compilação 17763) não está disponível na Microsoft.
+  versão estável mais recente do NVDA. 
 * Alguns recursos adicionais são ou farão parte do leitor de tela do NVDA.
 * Para entradas não listadas abaixo, pode assumir que os recursos já fazem
   parte do NVDA, não mais aplicáveis, pois o complemento não suporta versões
@@ -49,11 +48,19 @@ consulte o documento [changelogs for releases, release][3].
 
 ## Geral
 
+* Mudanças internas para tornar o extra compatível com futuras versões do
+  NVDA.
 * Se o extra Add-on Updater estiver instalado, verificará as actualizações
   do Windows 10 App Essentials.
 * O intervalo padrão de verificação de actualizações foi alterado para
   verificações semanais, para versões estáveis e de desenvolvimento. Isso
   aplica-se for o próprio extra a verificar automaticamente as atualizações.
+* Se o extra estiver configurado para verificar se há novas actualizações,
+  ao actualizá-lo o omplemento, se a nova versão do complemento exigir uma
+  versão mais nova do NVDA, uma mensagem de erro será apresentada.
+* Se o extra estiver configurado para verificar se há actualizações, ao
+  atualizá-lo, se a nova versão do extra exigir uma versão mais nova do
+  NVDA, será apresentada uma mensagem de erro.
 * Os itens do submenu são reconhecidos correctamente em vários aplicativos,
   incluindo o menu de contexto para os menus do menu Iniciar e o menu de
   aplicativos do Microsoft Edge (Redstone 5).
@@ -177,6 +184,7 @@ Nota: a maioria dos recursos seguintes, agora, fazem parte do NVDA 2018.3.
   nome em alguns sistemas.
 * O NVDA não reproduzirá mais os tons de erro ou não fará nada ao fechar o
   painel de emojis em versões mais recentes do Insider Preview.
+* O NVDA anunciará resultados de pesquisa para emojis, se possível.
 
 ## Pessoas.
 
@@ -197,6 +205,12 @@ Nota: a maioria dos recursos seguintes, agora, fazem parte do NVDA 2018.3.
   ouvidos, a partir da versão 1803 e posteriores.
 * São anunciadas Mais mensagens sobre o status do Windows Update,
   especialmente se o Windows Update encontrar erros.
+* O NVDA não irá mais parecer não fazer nada ou tocar tons de erro se usar
+  comandos de navegação de objectos sob algumas circunstâncias.
+* Vários links adicionados na compilação 18282 sem rótulos agora têm
+  rótulos.
+* A caixa de diálogo de lembretes do Windows Update é reconhecida como um
+  diálogo apropriado.
 
 ## Skype
 

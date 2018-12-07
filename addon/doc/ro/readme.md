@@ -33,12 +33,9 @@ privire la ceea ce este inclus):
 
 Note:
 
-* Acest supliment necesită Windows 10 versiunea 1709 )compilarea 16299) sau
-  mai nouă și NVDA 2018.3 sau mai nou. Pentru cele mai bune rezultate,
-  folosiți-l cu ultima compilare stabilă ( compilarea17134) și cea mai
-  recentă versiune stabilă a NVDA-ului. Vă aducem la cunoștință faptul că
-  momentan, versiunea 1809 (compilarea 17763) nu este disponibilă, fiindcă
-  Microsoft nu a publicat-o încă.
+* This add-on requires Windows 10 Version 1709 (build 16299) or later and
+  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
 * Pentru intrările care nu sunt listate mai jos, puteți presupune că
@@ -53,12 +50,18 @@ versiunile suplimentului][3].
 
 ## General
 
+* Internal changes to make the add-on compatible with future NVDA releases.
 * Dacă suplimentul Add-on Updater este instalat, va căuta actualizări pentru
   Windows 10 App Essentials.
 * Intervalul implicit de căutare a actualizărilor a fost modificat la
   căutări săptămânale atât pentru versiunile stabile, cât și pentru cele în
   dezvoltare. Acesta este aplicabil dacă suplimentul însuși caută
   actualizări.
+* If the add-on is set up to check for updates, when updating the add-on, if
+  the new add-on release requires a newer version of NVDA, an error message
+  will be presented.
+* Small changes to how some messages are presented in languages other than
+  English.
 * Elementele de submeniu sunt recunoscute corespunzător în diverse
   aplicații, incluzând meniul context pentru comenzile din meniul Start și
   meniul de aplicație al Microsoft Edge (Redstone 5).
@@ -178,6 +181,7 @@ Notă: majoritatea caracteristicilor de mai jos nu fac parte din NVDA 2018.3.
   generează un eveniment de schimbare a numelui pe unele sisteme.
 * NVDA nu va mai reda tonuri de eroare sau nu va mai face nimic la
   închiderea panoului emoji în compilări mai recente Insider Preview.
+* NVDA will announce search results for emojis if possible.
 
 ## Persoane
 
@@ -199,6 +203,10 @@ Notă: majoritatea caracteristicilor de mai jos nu fac parte din NVDA 2018.3.
   compilarea 1803 sau mai nouă.
 * Sunt anunțate mai multe mesaje în legătură cu stadiul actualizărilor
   Windows, mai exact atunci când Windows Update întâmpină erori.
+* NVDA will no longer appear to do nothing or play error tones if using
+  object navigation commands under some circumstances.
+* Various links added in build 18282 with no labels now have labels.
+* Windows Update reminder dialog is recognized as a proper dialog.
 
 ## Skype
 

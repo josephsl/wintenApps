@@ -31,11 +31,9 @@ inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 
 Hinweise:
 
-* Diese Erweiterung erfordert Windows 10 Version 1709 (Build 16299) oder
-  höher und NVDA 2018.3 oder höher. Für beste Ergebnisse verwenden Sie das
-  Add-on mit der neuesten stabilen Version von Windows 10 (Build 17134) und
-  der neuesten stabilen Version von NVDA. Beachten Sie, dass die Version
-  1809 (Build 17763) bis auf weiteres nicht von Microsoft erhältlich ist.
+* This add-on requires Windows 10 Version 1709 (build 16299) or later and
+  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Für Einträge, die unten nicht aufgeführt sind, können Sie davon ausgehen,
   dass diese Funktionen Teil von NVDA selbst sind und nicht mehr anwendbar
@@ -48,12 +46,18 @@ Sie im Dokument [Changelogs der Erweiterungen][3].
 
 ## Allgemein
 
+* Internal changes to make the add-on compatible with future NVDA releases.
 * Wenn die Erweiterung Zusatz-Updater installiert ist, wird diese
   Erweiterung nach Updates für Windows 10 App Essentials suchen.
 * Das standardmäßige Prüfintervall für Aktualisierungen wurde auf
   wöchentliche Prüfungen sowohl für stabile als auch für
   Entwicklungsversionen geändert. Dies gilt, wenn die Erweiterung Windows 10
   App Essentials selbst nach Updates sucht.
+* If the add-on is set up to check for updates, when updating the add-on, if
+  the new add-on release requires a newer version of NVDA, an error message
+  will be presented.
+* Small changes to how some messages are presented in languages other than
+  English.
 * Untermenüs werden in verschiedenen Anwendungen richtig erkannt,
   einschließlich des Kontextmenüs für Startmenükacheln und des
   Anwendungsmenüs von Microsoft Edge (Redstone 5).
@@ -179,6 +183,7 @@ NVDA 2018.3.
   auslösen.
 * NVDA bleibt aktiv und spielt keine Fehlertöne mehr ab, wenn das
   Emoji-Panel in neueren Insider Preview-Builds geschlossen wird.
+* NVDA will announce search results for emojis if possible.
 
 ## Kontakte
 
@@ -200,6 +205,10 @@ NVDA 2018.3.
   Windowsversionen ab Build 1803)
 * Weitere Meldungen über den Status von Windows Update werden angezeigt,
   insbesondere wenn im Windows Update Fehler auftreten.
+* NVDA will no longer appear to do nothing or play error tones if using
+  object navigation commands under some circumstances.
+* Various links added in build 18282 with no labels now have labels.
+* Windows Update reminder dialog is recognized as a proper dialog.
 
 ## Skype
 

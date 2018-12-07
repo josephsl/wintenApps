@@ -34,8 +34,8 @@ se inclúe):
 Notas:
 
 * Este complemento require do Windows 10 Versión 1709 (build 16299) ou
-  posterior e do NVDA 2018.2 ou posterior. Para uns mellores resultados, usa
-  o complemento coa compilación estable máis recente (build 17134) e versión
+  posterior e do NVDA 2018.3 ou posterior. Para uns mellores resultados, usa
+  o complemento coa compilación estable máis recente (build 17763) e versión
   estable máis recente do NVDA.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
@@ -49,12 +49,19 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Xeral
 
+* Trocos internos para facer ó complemento compatible con versións futuras
+  do NVDA.
 * Se o complemento Actualizador de Complementos está instalado, ese
   complemento verificará as actualizacións do Windows 10 App Essentials.
 * O intervalo por defecto para verificar actualizacións cambiou a
   verificacións semanais tanto para versións estables e de
   desenvolvemento. Isto aplícase só se o propio complemento verifica as
   actualizacións.
+* Cando o complemento estea configurado para verificar actualizacións, ao
+  actualizar o complemento se a nova liberación require unha versión nova do
+  NVDA presentarase unha mensaxe de erro.
+* Pequenos cambios en como se presentan algunhas mensaxes en linguas
+  diferentes do inglés.
 * Os elementos de submenú recoñécense adecuadamente en varias apps,
   incluíndo elementos do menú de contexto nas tarxetas do menú inicio e o
   menú da aplicación Microsoft Edge (Restone 5).
@@ -171,6 +178,7 @@ Nota: A maioría das características a continuación son parte de NVDA 2018.3.
   de nome nalguns sistemas.
 * NVDA xa non reproducirá tons de erro ou aparentará non facer nada ao
   pechar o panel de Emojis nas compilacións Insider Preview máis recentes.
+* NVDA anunciará os resultados de busca de emojis de ser posible.
 
 ## Xente
 
@@ -192,6 +200,12 @@ Nota: A maioría das características a continuación son parte de NVDA 2018.3.
   versión 1803 e posterior.
 * Anúncianse máis mensaxes relativas ó estado de Windows Update,
   especialmente se Windows Update atopa erros.
+* NVDA xa non parecerá non facer nada ou non reproducirá tons de erro cando
+  se usen ordes de navegación de obxectos baixo certas circunstancias.
+* Varias ligazóns engadidas na compilación 18282 sen etiqueta agora están
+  etiquetadas.
+* O diálogo de recordatorio de actualización de Windows é recoñecido
+  axeitadamente como un diálogo.
 
 ## Skype
 

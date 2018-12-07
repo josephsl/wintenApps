@@ -33,9 +33,7 @@ Uwagi:
 
 * This add-on requires Windows 10 Version 1709 (build 16299) or later and
   NVDA 2018.3 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17134) and latest stable version of NVDA. Note
-  that until further notice, Version 1809 (build 17763) is not available
-  from Microsoft.
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
@@ -47,11 +45,17 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 
 ## Ogólne
 
+* Internal changes to make the add-on compatible with future NVDA releases.
 * If Add-on Updater add-on is installed, that add-on will check for Windows
   10 App Essentials updates.
 * Default update check interval has changed to weekly checks for both stable
   and development releases. This is applicable if the add-on itself checks
   for updates.
+* If the add-on is set up to check for updates, when updating the add-on, if
+  the new add-on release requires a newer version of NVDA, an error message
+  will be presented.
+* Small changes to how some messages are presented in languages other than
+  English.
 * Elementy meni rozwijanego są prawidłowo rozpoznawane w różnych
   aplikacjach, takich jak menu kontekstowe dla kafelków meni start, a także
   menu aplikacji dla Microsoft Edge (Redstone 5).
@@ -167,6 +171,7 @@ Note: most features below are now part of NVDA 2018.3.
   systemach.
 * NVDA will no longer play error tones or do nothing when closing emoji
   panel in more recent Insider Preview builds.
+* NVDA will announce search results for emojis if possible.
 
 ## Osoby
 
@@ -187,6 +192,10 @@ Note: most features below are now part of NVDA 2018.3.
   nowszych.
 * Więcej komunikatów o stanie Windows Update są wypowiadane, najważniejsze,
   gdy Windows update zobaczy błąd.
+* NVDA will no longer appear to do nothing or play error tones if using
+  object navigation commands under some circumstances.
+* Various links added in build 18282 with no labels now have labels.
+* Windows Update reminder dialog is recognized as a proper dialog.
 
 ## Skype
 
