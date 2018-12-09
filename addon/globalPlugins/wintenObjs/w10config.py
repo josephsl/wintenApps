@@ -38,6 +38,7 @@ except ImportError:
 import tempfile
 import ctypes
 import ssl
+import hashlib
 import time
 import re
 import config
@@ -272,6 +273,43 @@ class W10UpdateDownloader(updateCheck.UpdateDownloader):
 			# Message included in NVDA Core
 			translate("Error"),
 			wx.OK | wx.ICON_ERROR)
+
+	def _download(self, url):
+		remote = urlopen(url)
+		if remote.code != 200:
+			raise RuntimeError("Download failed with code %d" % remote.code)
+		# #2352: Some security scanners such as Eset NOD32 HTTP Scanner
+		# cause huge read delays while downloading.
+		# Therefore, set a higher timeout.
+		remote.fp._sock.settimeout(120)
+		size = int(remote.headers["content-length"])
+		local = open(self.destPath, "wb")
+		if self.fileHash:
+			hasher = hashlib.sha1()
+		self._guiExec(self._downloadReport, 0, size)
+		read = 0
+		chunk=8192
+		while True:
+			if self._shouldCancel:
+				return
+			if size -read <chunk:
+				chunk =size -read
+			block = remote.read(chunk)
+			if not block:
+				break
+			read += len(block)
+			if self._shouldCancel:
+				return
+			local.write(block)
+			if self.fileHash:
+				hasher.update(block)
+			self._guiExec(self._downloadReport, read, size)
+		if read < size:
+			raise RuntimeError("Content too short")
+		if self.fileHash and hasher.hexdigest() != self.fileHash:
+			raise RuntimeError("Content has incorrect file hash")
+		local.close()
+		self._guiExec(self._downloadReport, read, size)
 
 	def _downloadSuccess(self):
 		self._stopped()
