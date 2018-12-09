@@ -315,7 +315,8 @@ class W10UpdateDownloader(updateCheck.UpdateDownloader):
 		self._stopped()
 		# Emulate add-on update (don't prompt to install).
 		from gui import addonGui
-		closeAfter = addonGui.AddonsDialog._instance is None
+		# In NVDA 2019.1, add-ons manager object is always "alive" due to compatibility checks.
+		closeAfter = addonGui.AddonsDialog._instance is None or (versionInfo.version_year, versionInfo.version_major) >= (2019, 1)
 		try:
 			try:
 				bundle=addonHandler.AddonBundle(self.destPath.decode("mbcs"))
