@@ -36,8 +36,7 @@ class AppModule(appModuleHandler.AppModule):
 				nameList = [obj.name]
 				# Add the status text in 1709 and later.
 				# But since 16251, a "what's new" link has been added for feature updates, so consult two previous objects.
-				automationID = obj.UIAElement.cachedAutomationID
-				eventID = automationID.split("_")[0]
+				eventID = obj.UIAElement.cachedAutomationID.split("_")[0]
 				possibleFeatureUpdateText = obj.previous.previous
 				# This automation ID may change in a future Windows 10 release.
 				if possibleFeatureUpdateText.UIAElement.cachedAutomationID == "_".join([eventID, "TitleTextBlock"]):
