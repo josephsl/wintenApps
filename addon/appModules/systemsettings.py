@@ -72,7 +72,7 @@ class AppModule(appModuleHandler.AppModule):
 			return False if automationID == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock" and obj.previous.value > "0" else True
 		else:
 			# For search progress bar, do not repeat it.
-			# Same can be said about Storage/disk cleanup, but this is due to name change evnet.
+			# Same can be said about Storage/disk cleanup, but this is due to name change event.
 			return ((automationID in ("ProgressBar", "SystemSettings_StorageSense_TemporaryFiles_InstallationProgressBar"))
 			# Do not announce "result not found" error unless have to.
 			or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")
