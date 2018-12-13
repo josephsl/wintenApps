@@ -6,6 +6,9 @@
 # Base config section was inspired by Clip Contents Designer (Noelia Martinez).
 # Overall update check routine comes from StationPlaylist Studio add-on (Joseph Lee).)
 
+# 19.01: raise runtime error unconditionally as standalone update check is deprecated in favor of Add-on Updater/NvDA Core.
+# The only way to restore previous behavior is commenting out this line (valid until end of January 2019).
+raise RuntimeError("Standalone add-on update feature is no more")
 try:
 	import updateCheck
 except RuntimeError:
