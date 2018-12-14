@@ -3,6 +3,7 @@
 * Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
+* Zgodność z wersjami NVDA: 2018.3 do 2019.1
 
 Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
 również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
@@ -10,7 +11,7 @@ również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
 Dołączone są następujące moduły wspierające aplikacje (sprawdź rozdział
 każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
-* Action center
+* Centrum powiadomień
 * Alarmy i zegar.
 * Kalendarz
 * Kalkulator (nowoczesny).
@@ -45,17 +46,17 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 
 ## Ogólne
 
-* Internal changes to make the add-on compatible with future NVDA releases.
-* If Add-on Updater add-on is installed, that add-on will check for Windows
-  10 App Essentials updates.
-* Default update check interval has changed to weekly checks for both stable
-  and development releases. This is applicable if the add-on itself checks
-  for updates.
-* If the add-on is set up to check for updates, when updating the add-on, if
-  the new add-on release requires a newer version of NVDA, an error message
-  will be presented.
-* Small changes to how some messages are presented in languages other than
-  English.
+* Zmiany wewnętrzne czyniące dodatek zgodnym z przyszłymi wersjami NVDA.
+* Jeśli dodatek "Add-on Updater" jest zainstalowany, ten dodatek będzie
+  sprawdzał aktualizacje dadatku Win 10 app essentials.
+* Domyślny czas sprawdzania aktualizacji został zmieniony na aktualizacje
+  tygodniowe dla wersji stabilnych i rozwojowych. To jest stosowane, gdy
+  dodatek sam sprawdza aktualizacje.
+* Jeżeli dodatek jest ustawiony tak, aby sprawdzał aktualizacje, przy
+  aktualizacji, jeżeli dodatek wymaga nowszej wersji NVDA, komunikat o
+  błędzie będzie pokazany.
+* Drobne zmiany w pokazywanych wiadomościach w innych językach niż
+  angielski.
 * Elementy meni rozwijanego są prawidłowo rozpoznawane w różnych
   aplikacjach, takich jak menu kontekstowe dla kafelków meni start, a także
   menu aplikacji dla Microsoft Edge (Redstone 5).
@@ -85,11 +86,12 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * NVDA nie będzie wypowiadało wielkość tekstu w meni start, gdy zmienia się
   rozdzielczość ekranu lub orientacja ekranu.
 
-## Action center
+## Centrum powiadomień
 
-* Brightness quick action is now a button instead of a toggle button.
-* Various status changes such as Focus Assist and Brightness will be
-  reported.
+* Szybka akcja jasności została zmieniona z przycisku przełączającego na
+  przycisk zwykły.
+* Róźne zmiany stanu, takie jak asysta punktu uwagi i jasność będą
+  wymawiane.
 
 ## Alarmy i zegar
 
@@ -128,9 +130,9 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 
 ## Poczta
 
-* When reviewing items in messages list, you can now use table navigation
-  commands to review message headers. Note that navigating between rows
-  (messages) is not supported.
+* Przy wyświetlaniu elementów w listy wiadomości, teraz można użyć skrótów
+  dla nawigacji po tabelach, aby przeczytać nagłówki wiadomości. Miejcie na
+  uwadze, że nawigacja po kolumnach (wiadomościach) jest niewspierana.
 * Przy pisaniu wiadomości, istnienie podpowiedzi o wzmiankach teraz jest
   oznajmiane dzwiękami.
 
@@ -145,11 +147,11 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * Powiadomienia, takie jak pobierania plików i różne ostrzeżenia na stronach
   webowych są oznajmiane. także oznajmiane jest dostępność trybu czytania (
   wersja 1709
-* Text auto-complete will be tracked and announced in address omnibar.
+* Autouzupełnienie tekstu będzie śledzone i wymawiane w omnibarze.
 
 ## Klawiatura nowoczesna
 
-Note: most features below are now part of NVDA 2018.3.
+Uwaga: Większość funkcji tego dodatku jest teraz częścią NVDA 2018.3.
 
 * Support for Emoji input panel in Version 1709 (Fall Creators Update) and
   later, including the redesigned panel in Version 1809 (build 17661 and
@@ -159,19 +161,19 @@ Note: most features below are now part of NVDA 2018.3.
   aktualizacja) i nowszych.
 * In post-1709 builds, NVDA will announce the first selected emoji when
   emoji panel opens. This is more noticeable in build 18262 and later where
-  emoji panel may open to last browsed category, such as displaying skin
-  tone modifier when opened to People category.
-* Support for announcing cloud clipboard items in Version 1809 (build 17666
-  and later).
+  emoji panel may open to last browsed category, such as Wyświetlanie
+  modyfikatoru karnacji skóry gdy kategoria ludzie jest otwarta.
+* Wsparcie oznajmiania chmurowego schowka w wersji 1809 (kompilacja 17666 i
+  nowszych).
 * Zmniejszona niechciana gadatliwośc przy działaniach związanych z
   współczesną klawiaturą i jej funkcjami. W tym jest włączone bezpodstawne
   wymawianie "Microsoft Candidate UI" gdy otwiera się klawiatura sprzętowa
   podpowiedzi wpisywania i pozostawianie cichym przy tym, jak niektóre
   klawisze na klawiaturze wywołują zdarzenie zmiany nazwy na niektórych
   systemach.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent Insider Preview builds.
-* NVDA will announce search results for emojis if possible.
+* NVDA już nie będzie odtwarzało dźwięk błędu lub nie robiło nic w bardziej
+  aktualnych kompilacjach insider preview.
+* NVDA będzie oznajmiało wyniki wyszukiwania emoji jeżeli to możliwe.
 
 ## Osoby
 
@@ -180,14 +182,14 @@ Note: most features below are now part of NVDA 2018.3.
 
 ## Ustawienia
 
-* Certain information such as Windows Update progress is reported
-  automatically, including Storage sense/disk cleanup widget.
+* Większość informacji, takich jak pasek stanu w Windows update, będzie
+  wypowiadany automatycznie, włączając w to widget czujnika pamięci.
 * Wartości paska postępu i inne informacje, nie są wypowiadane
   automatycznie.
 * Grupy ustawień są rpspoznawane przy użyciu nawigacji obiektowej aby było
   można poruszać się pomięcy kontrolkami.
-* For some combo boxes and radio buttons, NVDA will no longer fail to
-  recognize labels and/or announce value changes.
+* Dla niektórych list rozwijanych i przycisków opcji, NVDA będzie wykrywał
+  nazwę oraz wypowiadał zmiany wartości. 
 * Dzwięki paska postępu głośności nie są więcej słyszane w kompilacji 1803 i
   nowszych.
 * Więcej komunikatów o stanie Windows Update są wypowiadane, najważniejsze,

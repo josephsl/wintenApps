@@ -3,6 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer și alți utilizatori Windows 10
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
+* NVDA compatibility: 2018.3 to 2019.1
 
 Acest supliment cuprinde o colecție de module pentru diverse aplicații din
 Windows 10, dar și rezolvări și îmbunătățiri pentru anumite controale din
@@ -33,9 +34,10 @@ privire la ceea ce este inclus):
 
 Note:
 
-* This add-on requires Windows 10 Version 1709 (build 16299) or later and
-  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17763) and latest stable version of NVDA.
+* Acest supliment necesită Windows 10 versiunea 1709 )compilarea 16299) sau
+  mai nouă și NVDA 2018.3 sau mai nou. Pentru cele mai bune rezultate,
+  folosiți-l cu ultima compilare stabilă ( compilarea 17763) și cea mai
+  recentă versiune stabilă a NVDA-ului.
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
 * Pentru intrările care nu sunt listate mai jos, puteți presupune că
@@ -50,18 +52,19 @@ versiunile suplimentului][3].
 
 ## General
 
-* Internal changes to make the add-on compatible with future NVDA releases.
+* Au fost făcute modificări interne care să facă acest supliment compatibil
+  cu viitoarele versiuni de NVDA.
 * Dacă suplimentul Add-on Updater este instalat, va căuta actualizări pentru
   Windows 10 App Essentials.
 * Intervalul implicit de căutare a actualizărilor a fost modificat la
   căutări săptămânale atât pentru versiunile stabile, cât și pentru cele în
   dezvoltare. Acesta este aplicabil dacă suplimentul însuși caută
   actualizări.
-* If the add-on is set up to check for updates, when updating the add-on, if
-  the new add-on release requires a newer version of NVDA, an error message
-  will be presented.
-* Small changes to how some messages are presented in languages other than
-  English.
+* Dacă suplimentul este setat să caute actualizări, la actualizare, dacă
+  versiunea nouă necesită o versiune mai nouă de NVDA, va apărea un mesaj de
+  eroare.
+* Mici modificări la modul în care unele mesaje sunt prezentate în alte
+  limbi decât engleză.
 * Elementele de submeniu sunt recunoscute corespunzător în diverse
   aplicații, incluzând meniul context pentru comenzile din meniul Start și
   meniul de aplicație al Microsoft Edge (Redstone 5).
@@ -181,7 +184,7 @@ Notă: majoritatea caracteristicilor de mai jos nu fac parte din NVDA 2018.3.
   generează un eveniment de schimbare a numelui pe unele sisteme.
 * NVDA nu va mai reda tonuri de eroare sau nu va mai face nimic la
   închiderea panoului emoji în compilări mai recente Insider Preview.
-* NVDA will announce search results for emojis if possible.
+* NVDA va anunța rezultatele căutării pentru emoji-uri dacă este posibil.
 
 ## Persoane
 
@@ -203,10 +206,11 @@ Notă: majoritatea caracteristicilor de mai jos nu fac parte din NVDA 2018.3.
   compilarea 1803 sau mai nouă.
 * Sunt anunțate mai multe mesaje în legătură cu stadiul actualizărilor
   Windows, mai exact atunci când Windows Update întâmpină erori.
-* NVDA will no longer appear to do nothing or play error tones if using
-  object navigation commands under some circumstances.
-* Various links added in build 18282 with no labels now have labels.
-* Windows Update reminder dialog is recognized as a proper dialog.
+* NVDA nu va mai fi nevoit să nu facă nimic sau să redea tonuri de eroare
+  dacă se utilizează comenzile de navigare ale obiectului în anumite
+  circumstanțe.
+* Au fost adăugate diverse link-uri în compilarea 18282 fără vreo etichetă.
+* Dialogul de tip memento al Windows Update este recunoscut așa cum trebuie.
 
 ## Skype
 

@@ -3,6 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu inačicu][1]
 * Preuzmi [razvojnu inačicu][2]
+* NVDA compatibility: 2018.3 to 2019.1
 
 This add-on is a collection of app modules for various Windows 10 apps, as
 well as enhancements and fixes for certain windows 10 controls.
