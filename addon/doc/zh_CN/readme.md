@@ -3,6 +3,7 @@
 * 作者: Joseph Lee, Derek Riemer and other Windows 10 users
 * 下载[稳定版][1]
 * 下载[开发板][2]
+* NVDA兼容版本: 2018.3至2019.1
 
 此附加组件用于各种Windows 10应用程序的模块集合，以及针对某些Windows 10控件的增强功能和修复程序。
 

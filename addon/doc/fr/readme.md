@@ -3,6 +3,7 @@
 * Auteurs: Joseph Lee, Derek Riemer et d’autres utilisateurs de Windows 10
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
+* Compatibilité NVDA: 2018.3 à 2019.1
 
 Ce module complémentaire est une collection d'app modules pour diverses apps
 de Windows 10, ainsi que des améliorations et des correctifs pour certains

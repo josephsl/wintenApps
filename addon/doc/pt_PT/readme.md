@@ -3,6 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixar [versão estável][1]
 * Baixar [versão de desenvolvimento][2]
+* Compatibilidade com NVDA: 2018.3 a 2019.1
 
 Este extra é uma colecção de módulos de aplicações para várias aplicações do
 Windows 10, bem como aprimoramentos e correcções para determinados
