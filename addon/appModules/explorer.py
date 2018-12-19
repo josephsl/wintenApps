@@ -22,9 +22,8 @@ class AppModule(AppModule):
 		return False
 
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
-		import tones
-		tones.beep(220, 200)
 		# Send UIA window open event to input app window.
-		if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "ApplicationFrameWindow" and obj.firstChild:
-			obj.firstChild.appModule.event_UIA_window_windowOpen(obj.firstChild, nextHandler)
+		inputPanelWindow = obj.firstChild
+		if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "ApplicationFrameWindow" and inputPanelWindow:
+			inputPanelWindow.appModule.event_UIA_window_windowOpen(inputPanelWindow, nextHandler)
 		nextHandler()
