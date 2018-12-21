@@ -218,11 +218,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if not hasattr(NVDAObjects.UIA, "ToolTip"):
 					clsList.insert(0, ToolTip)
 			# Recognize headings as reported by XAML (build 17134 and later).
-			try:
-				if obj._getUIACacheablePropertyValue(30173) > 80050:
-					clsList.insert(0, XAMLHeading)
-			except:
-				pass
+			elif obj._getUIACacheablePropertyValue(30173) > 80050:
+				clsList.insert(0, XAMLHeading)
 
 	# Record UIA property info about an object if debug logging is enabled.
 	def uiaDebugLogging(self, obj, event=None):
