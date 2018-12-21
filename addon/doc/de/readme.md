@@ -3,7 +3,7 @@
 * Autors: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version herunterladen][1]
 * [Entwicklungsversion herunterladen][2]
-* NVDA compatibility: 2018.3 to 2019.1
+* NVDA-Kompatibilität: 2018.3 bis 2019.1
 
 Diese Erweiterung bringt ein Paket von Anwendungsmodulen für diverse Windows
 10 Apps sowie Korrekturen in einigen Windows 10 Elementen mit.

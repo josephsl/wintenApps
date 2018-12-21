@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer și alți utilizatori Windows 10
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
-* NVDA compatibility: 2018.3 to 2019.1
+* Compatibilitate NVDA: 2018.3 - 2019.1
 
 Acest supliment cuprinde o colecție de module pentru diverse aplicații din
 Windows 10, dar și rezolvări și îmbunătățiri pentru anumite controale din
