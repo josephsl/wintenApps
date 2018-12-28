@@ -16,11 +16,6 @@ import config
 import queueHandler
 import globalVars
 from logHandler import log
-# Update support, but won't be used unless standalone add-on update mode is in effect.
-try:
-	from . import w10config
-except:
-	w10config = None
 import addonHandler
 addonHandler.initTranslation()
 import winVersion
@@ -140,7 +135,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super(GlobalPlugin, self).__init__()
 		# Don't do anything unless this is Windows 10.
 		if winVersion.winVersion.major < 10: return
-		# #20: don't even think about proceeding in secure screens (especially add-on updates).
+		# #20: don't even think about proceeding in secure screens.
 		# #40: skip over the rest if appx is in effect.
 		if globalVars.appArgs.secure or config.isAppX: return
 		import UIAHandler
@@ -157,29 +152,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			log.debug("W10: adding item status property change event")
 			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIAHandler.UIA_ItemStatusPropertyId] = "UIA_itemStatus"
 			UIAHandler.handler.clientObject.AddPropertyChangedEventHandler(UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler,[UIAHandler.UIA_ItemStatusPropertyId])
-		# Only if standalone update mode is in use, as the only thing configurable via settings is add-on update facility.
-		if w10config is not None:
-			self.prefsMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
-			self.w10Settings = self.prefsMenu.Append(wx.ID_ANY, _("&Windows 10 App Essentials..."), _("Windows 10 App Essentials add-on settings"))
-			gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, w10config.onConfigDialog, self.w10Settings)
-			if w10config.canUpdate and config.conf["wintenApps"]["autoUpdateCheck"]:
-				# But not when NVDA itself is updating.
-				if not (globalVars.appArgs.install and globalVars.appArgs.minimal):
-					wx.CallAfter(w10config.autoUpdateCheck)
-
-	def terminate(self):
-		super(GlobalPlugin, self).terminate()
-		if w10config is not None:
-			try:
-				if wx.version().startswith("4"):
-					self.prefsMenu.Remove(self.w10Settings)
-				else:
-					self.prefsMenu.RemoveItem(self.w10Settings)
-			except: #(RuntimeError, AttributeError, wx.PyDeadObjectError):
-				pass
-			if w10config.updateChecker and w10config.updateChecker.IsRunning():
-				w10config.updateChecker.Stop()
-			w10config.updateChecker = None
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
@@ -218,11 +190,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if not hasattr(NVDAObjects.UIA, "ToolTip"):
 					clsList.insert(0, ToolTip)
 			# Recognize headings as reported by XAML (build 17134 and later).
-			try:
-				if obj._getUIACacheablePropertyValue(30173) > 80050:
-					clsList.insert(0, XAMLHeading)
-			except:
-				pass
+			elif obj._getUIACacheablePropertyValue(30173) > 80050:
+				clsList.insert(0, XAMLHeading)
 
 	# Record UIA property info about an object if debug logging is enabled.
 	def uiaDebugLogging(self, obj, event=None):

@@ -15,7 +15,6 @@ The following app modules or support modules for some apps are included (see eac
 * Calculator (modern).
 * Cortana
 * Feedback Hub
-* Game Bar
 * Mail
 * Maps
 * Microsoft Edge
@@ -29,7 +28,7 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 Version 1709 (build 16299) or later and NVDA 2018.3 or later. For best results, use the add-on with latest Windows 10 stable release (build 17763) and latest stable version of NVDA.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and NVDA 2018.3 or later. For best results, use the add-on with latest Windows 10 stable release (build 17763) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to apps that makes entries no longer applicable.
 * Standalone update check from this add-on will be removed in version 19.02. For future add-on updates, please use Add-on Updater add-on.
@@ -82,10 +81,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 * For newer app releases, NVDA will no longer announce feedback categories twice.
 
-## Game Bar
-
-* NVDA will announce appearance of Game Bar window. Due to technical limitations, NVDA cannot interact fully with Game Bar prior to build 17723.
-
 ## Mail
 
 * When reviewing items in messages list, you can now use table navigation commands to review message headers. Note that navigating between rows (messages) is not supported.
@@ -121,7 +116,6 @@ Note: most features below are now part of NVDA 2018.3.
 
 * Certain information such as Windows Update progress is reported automatically, including Storage sense/disk cleanup widget.
 * Progress bar values and other information are no longer announced twice.
-* Settings groups are recognized when using object navigation to navigate between controls.
 * For some combo boxes and radio buttons, NVDA will no longer fail to recognize labels and/or announce value changes.
 * Audio Volume progress bar beeps are no longer heard in Version 1803 and later.
 * More messages about Windows Update status are announced, especially if Windows Update encounters errors.
