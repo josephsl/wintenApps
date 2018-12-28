@@ -32,6 +32,7 @@ Notes:
 * This add-on requires Windows 10 Version 1709 (build 16299) or later and NVDA 2018.3 or later. For best results, use the add-on with latest Windows 10 stable release (build 17763) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to apps that makes entries no longer applicable.
+* Standalone update check from this add-on will be removed in version 19.02. For future add-on updates, please use Add-on Updater add-on.
 
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][3] document.
 
@@ -104,13 +105,13 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 Note: most features below are now part of NVDA 2018.3.
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including the redesigned panel in Version 1809 (build 17661 and later) and changes made in 19H1 (build 18262). For best experience when reading emojis, use Windows OneCore speech synthesizer.
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including the redesigned panel in Version 1809 (build 17661 and later) and changes made in 19H1 (build 18262 and later, including kaomoji and symbols categories in build 18305). If using NVDA releases earlier than 2018.4, for best experience when reading emojis, use Windows OneCore speech synthesizer. If 2018.4 or later is in use, enable Unicode Consortium setting from NvDA's speech settings and set symbol level to "some" or higher.
 * Support for hardware keyboard input suggestions in Version 1803 (April 2018 Update) and later.
-* In post-1709 builds, NVDA will announce the first selected emoji when emoji panel opens. This is more noticeable in build 18262 and later where emoji panel may open to last browsed category, such as displaying skin tone modifier when opened to People category.
+* In post-1709 builds, NVDA will announce the first selected emoji when emoji panel opens. This is more noticeable in build 18262 and later where emoji panel may open to last browsed category, such as displaying skin tone modifiers when opened to People category.
 * Support for announcing cloud clipboard items in Version 1809 (build 17666 and later).
 * Reduced unnecessary verbosity when working with modern keyboard and its features. These include no longer announcing "Microsoft Candidate UI" when opening hardware keyboard input suggestions and staying silent when certain touch keyboard keys raise name change event on some systems.
-* NVDA will no longer play error tones or do nothing when closing emoji panel in more recent Insider Preview builds.
-* NVDA will announce search results for emojis if possible.
+* NVDA will no longer play error tones or do nothing when closing emoji panel in more recent 19H1 Insider Preview builds.
+* In Version 1809 (October 2018 Update) and later, NVDA will announce search results for emojis if possible.
 
 ## People
 
