@@ -37,20 +37,6 @@ W10Events = {
 # UIA COM constants
 TreeScope_Subtree = 7
 
-# Looping selector lists.
-# Announce selected value if told to do so.
-class LoopingSelectorList(UIA):
-
-	def _get_value(self):
-		loopingValue = self.simpleFirstChild
-		while loopingValue:
-			if 4 in loopingValue.states:
-				return loopingValue.name
-				break
-			loopingValue = loopingValue.next
-		return None
-
-
 # General UIA controller for edit field.
 # Used as a base class for controls such as Mail's composition window, search fields and such.
 class UIAEditableTextWithSuggestions(EditableTextWithSuggestions, UIA):
@@ -156,6 +142,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
 			# NVDA Core ticket 5231: Announce values in time pickers, especially when focus moves to looping selector list.
+			# Because they do not support value pattern (for ones handled by this add-on), treat them as combo boxes without value pattern.
 			if obj.role==controlTypes.ROLE_LIST and "LoopingSelector" in obj.UIAElement.cachedClassName:
 				clsList.insert(0, ComboBoxWithoutValuePattern)
 				return
