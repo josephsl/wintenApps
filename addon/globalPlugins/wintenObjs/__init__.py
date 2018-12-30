@@ -214,13 +214,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				info.append("item status: %s"%element.currentItemStatus)
 			log.debug(u"W10: UIA {debuginfo}".format(debuginfo = ", ".join(info)))
 
-	# Focus announcement hacks.
-	def event_gainFocus(self, obj, nextHandler):
-		# Non-English locales does not fire item selected event for looping selector unless navigator is first set to it.
-		if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "CustomLoopingSelector":
-			api.setNavigatorObject(obj.simpleFirstChild)
-		nextHandler()
-
 	def event_nameChange(self, obj, nextHandler):
 		# NVDA Core issue 5641: try catching virtual desktop switch event, which will result in name change for the desktop object.
 		# To be taken care of by NVDA Core, and for older releases, let the add-on handle it for a time.
