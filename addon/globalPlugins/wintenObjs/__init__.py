@@ -6,7 +6,7 @@
 import globalPluginHandler
 import controlTypes
 import ui
-from NVDAObjects.UIA import UIA, SearchField, Dialog
+from NVDAObjects.UIA import UIA, SearchField, Dialog, ComboBoxWithoutValuePattern
 from NVDAObjects.behaviors import EditableTextWithSuggestions, ToolTip
 import api
 import nvwave
@@ -157,7 +157,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if isinstance(obj, UIA):
 			# NVDA Core ticket 5231: Announce values in time pickers, especially when focus moves to looping selector list.
 			if obj.role==controlTypes.ROLE_LIST and "LoopingSelector" in obj.UIAElement.cachedClassName:
-				clsList.insert(0, LoopingSelectorList)
+				clsList.insert(0, ComboBoxWithoutValuePattern)
 				return
 			# Windows that are really dialogs.
 			# NVDA Core issue 8405: in build 17682 and later, IsDialog property has been added, making comparisons easier.
