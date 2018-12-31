@@ -142,8 +142,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
 			# NVDA Core ticket 5231: Announce values in time pickers, especially when focus moves to looping selector list.
-			# Because they do not support value pattern (for ones handled by this add-on), treat them as combo boxes without value pattern.
-			if obj.role==controlTypes.ROLE_LIST and "LoopingSelector" in obj.UIAElement.cachedClassName:
+			# Because they do not support value pattern (for ones handled by this add-on), treat them as combo boxes without value pattern if this isn't treated as such by NVDA already.
+			if obj.role==controlTypes.ROLE_LIST and "LoopingSelector" in obj.UIAElement.cachedClassName and not isinstance(obj, ComboBoxWithoutValuePattern):
 				clsList.insert(0, ComboBoxWithoutValuePattern)
 				return
 			# Windows that are really dialogs.
