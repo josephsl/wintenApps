@@ -1,18 +1,21 @@
 # MicrosoftEdge.py
-# Part of Windows 10 App Essentials collection
-# Copyright 2016-2018 Joseph Lee, released under GPL
+#A part of NonVisual Desktop Access (NVDA)
+#This file is covered by the GNU General Public License.
+#See the file COPYING for more details.
+#Copyright (C) 2018 NV Access Limited, Joseph Lee
 
-# Core Edge support provided by NvDA Core (NVDAObjects/UIA package)
+"""appModule for Microsoft Edge main process"""
+
+# Core Edge support provided by NvDA Core (NVDAObjects/UIA package and a dedicated app module for Edge main process)
 # Provides additional enhancements.
 
-import appModuleHandler
-import api
+from nvdaBuiltin.appModules.microsoftedge import *
 from NVDAObjects.UIA import UIA
 import controlTypes
 import ui
 from NVDAObjects.behaviors import EditableTextWithoutAutoSelectDetection, EditableTextWithAutoSelectDetection
 
-class AppModule(appModuleHandler.AppModule):
+class AppModule(AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Detect selection changes in address omnibar.
@@ -35,9 +38,3 @@ class AppModule(appModuleHandler.AppModule):
 				# Mick Curran says use last child in case a series of live texts are part of this control.
 				ui.message(obj.lastChild.name)
 		nextHandler()
-
-	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
-		# Even though content process is focused, notifications are fired by main Edge process.
-		# The base object will simply ignore this, so notifications must be announced here and no more.
-		if api.getFocusObject().appModule.appName.startswith("microsoftedge"):
-			ui.message(displayString)
