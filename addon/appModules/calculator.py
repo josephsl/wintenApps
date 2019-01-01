@@ -1,6 +1,6 @@
 # WinTenApps/calculator.py
 # Part of Windows 10 App Essentials collection
-# Copyright 2015-2018 Joseph Lee, released under GPL.
+# Copyright 2015-2019 Joseph Lee, released under GPL.
 
 # Provides enhanced support for modern Calculator, including announcing results.
 

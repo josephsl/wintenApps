@@ -1,6 +1,6 @@
 # WinTenApps/pilotshubapp.py
 # Part of Windows 10 App Essentials collection
-# Copyright 2018 Joseph Lee, released under GPL.
+# Copyright 2018-2019 Joseph Lee, released under GPL.
 
 # A collection of workarounds for Feedback Hub app.
 
