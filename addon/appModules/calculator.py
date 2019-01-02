@@ -10,6 +10,7 @@ import controlTypes
 from NVDAObjects.UIA import UIA
 import queueHandler
 import ui
+import scriptHandler
 
 # Filter live region change elements to avoid repeated announcements.
 # A dedicated function is provided to react to future Calculator changes.
@@ -70,6 +71,10 @@ class AppModule(appModuleHandler.AppModule):
 		if shouldAnnounceNotification:
 			nextHandler()
 
+	# A list of native commands to handle calculator result announcement.
+	_calculatorResultGestures=("kb:enter", "kb:numpadEnter", "kb:escape")
+
+	@scriptHandler.script(gestures=_calculatorResultGestures)
 	def script_calculatorResult(self, gesture):
 		# To prevent double focus announcement, check where we are.
 		focus = api.getFocusObject()
@@ -91,8 +96,5 @@ class AppModule(appModuleHandler.AppModule):
 					# And no, do not allow focus to move.
 					queueHandler.queueFunction(queueHandler.eventQueue, result.reportFocus)
 
-	__gestures={
-		"kb:enter":"calculatorResult",
-		"kb:numpadEnter":"calculatorResult",
-		"kb:escape":"calculatorResult"
-	}
+	# Without this, gesture binding fails even with script decorator deployed.
+	__gestures={}
