@@ -41,6 +41,8 @@ Bemærkninger:
   en del af NVDA, ikke længere gældende som tilføjelsesprogrammet ikke
   understøtter ældre Windows 10 udgivelser, eller ændringer til apps, der
   gør disse emner ugyldige.
+* Standalone update check from this add-on will be removed in version
+  19.02. For future add-on updates, please use Add-on Updater add-on.
 
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
@@ -157,17 +159,20 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
 
-* Støtte til Emoji inputpanelet i Version 1709 (Fall Creators Update) og
-  senere, herunder det redesignet panel i build version 1809 17661 og
-  senere, samt ændringer i 19H1 (build 18262). Du vil få den bedste
-  oplevelse, når du læser emojis, hvis du benytter talesyntesen Windows
-  OneCore.
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
+  later, including the redesigned panel in Version 1809 (build 17661 and
+  later) and changes made in 19H1 (build 18262 and later, including kaomoji
+  and symbols categories in build 18305). If using NVDA releases earlier
+  than 2018.4, for best experience when reading emojis, use Windows OneCore
+  speech synthesizer. If 2018.4 or later is in use, enable Unicode
+  Consortium setting from NvDA's speech settings and set symbol level to
+  "some" or higher.
 * Understøttelse af hardware tastatur input forslag i Version 1803 (April
   2018 opdatering) og senere.
-* I versioner af Windows 10 efter 1709 vil NVDA læse den første valgte
-  emoji, når emoji-panelet åbnes. Dette er mere mærkbart i version 18262 og
-  senere, hvor emoji-panelet åbner til den sidst gennemsete kategori, som
-  f.eks. Visning af hudtone, når den åbnes til Personer-kategorien.
+* In post-1709 builds, NVDA will announce the first selected emoji when
+  emoji panel opens. This is more noticeable in build 18262 and later where
+  emoji panel may open to last browsed category, such as displaying skin
+  tone modifiers when opened to People category.
 * Understøtter annoncering af Cloud Udklipsholder i version 1809 (build
   17666) og senere.
 * Reduceret unødvendige udtale, når du arbejder med det moderne tastatur og
@@ -175,9 +180,10 @@ Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
   kandidat UI", når du åbner hardware tastatur input forslag og NVDA
   forbliver tavse, når visse touch-tastaturkommandoer omfatter change name
   event på nogle systemer.
-* NVDA vil ikke længere spille fejltoner eller gøre noget, når du lukker
-  emoji-panelet i nyere Insider Preview-builds.
-* NVDA will announce search results for emojis if possible.
+* NVDA will no longer play error tones or do nothing when closing emoji
+  panel in more recent 19H1 Insider Preview builds.
+* In Version 1809 (October 2018 Update) and later, NVDA will announce search
+  results for emojis if possible.
 
 ## Personer
 

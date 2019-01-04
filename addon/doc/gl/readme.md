@@ -44,6 +44,9 @@ Notas:
   características forman parte do NVDA, que xa non aplican debido a que o
   complemento non soporta versións vellas de Windows ou que se fixeron
   cambios nas apps que fan que as entradas xa non sexan aplicables.
+* A verificación propia de actualizacións do complemento eliminarase na
+  versión 19.02. Para futuras actualizacións do complemento, por favor
+  utilice o complemento Add-on Updater.
 
 Para unha lista de trocos feitos entre cada versión do complemento, visita o
 documento [rexistros de trocos para publicacións de complementos][3].
@@ -161,8 +164,13 @@ Nota: A maioría das características a continuación son parte de NVDA 2018.3.
 
 * Soporte para o panel flotante de entrada de Emoji na actualización 1709
   Fall Creators en adiante, incluindo o panel redeseñado na compilación
-  17661. Para uns mellores resultados lendo emojis, usa o sintetizador de
-  voz Windows OneCore.
+  17661 e os trocos realizados en 19H1 (compilación 18262 e posterior,
+  incluíndo kaomoji e categorías de símbolos na compilación 18305). Se usas
+  versións de NVDA anteriores á 2018.4, utiliza o sintetizador de voz
+  Windows OneCore para a mellor experiencia lendo emojis. Se a versión en
+  uso é a 2018.4 ou posterior, habilita a opción do Unicode Consortium dende
+  as opcións de voz do NVDA e establece o nivel de símbolos en "Algunha" ou
+  máis alto.
 * Soporte para suxerencias de entrada de teclado hardware na versión 1803
   (actualización de abril de 2018) e posterior.
 * En compilacións post 1709, NVDA anunciará o primeiro emoji seleccionado
@@ -178,8 +186,10 @@ Nota: A maioría das características a continuación son parte de NVDA 2018.3.
   quede calado cando certas teclas do teclado táctil lancen o evento cambio
   de nome nalguns sistemas.
 * NVDA xa non reproducirá tons de erro ou aparentará non facer nada ao
-  pechar o panel de Emojis nas compilacións Insider Preview máis recentes.
-* NVDA anunciará os resultados de busca de emojis de ser posible.
+  pechar o panel de Emojis nas compilacións Insider Preview 19H1 máis
+  recentes.
+* Na versión 1809 (October 2018 Update) e posteriores, NVDA anunciará os
+  resultados de busca de emojis de ser posible.
 
 ## Xente
 
