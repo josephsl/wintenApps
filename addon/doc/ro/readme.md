@@ -45,6 +45,9 @@ Note:
   suplimentul nu mai suportă versiunile vechi de Windows 10, sau că au fost
   efectuate modificări la aplicații, care fac ca intrările să nu mai fie
   aplicabile.
+* Căutătorul de actualizări al acestui supliment va înceta să funcționeze
+  începând cu versiunea 19.02. Funcția acestuia va fi preluată de
+  suplimentul Add-on Updater.
 
 Pentru o listă a modificărilor efectuate la fiecare versiune a
 suplimentului, consultați documentul [jurnalelor de modificări pentru
@@ -166,15 +169,19 @@ Notă: majoritatea caracteristicilor de mai jos nu fac parte din NVDA 2018.3.
 
 * Suport pentru panoul de intrare floating Emoji în versiunea 1709 (Fall
   Creators Update) și pentru panoul nou din compilarea 17661 sau mai nouă,
-  și modificările făcute 19H1 (compilarea 18262). Pentru cea mai bună
-  experiență la citirea moji-urilor, folosiți sintetizatorul Windows
-  OneCore.
+  și modificările făcute 19H1 (compilarea 18262). Dacă folosiți versiuni mai
+  vechi decât 2018.4, pentru cea mai bună experiență la citirea
+  emoji-urilor, folosiți sintetizatorul Windows OneCore. Dacă versiunea
+  2018.4 sau mai nouă este în uz, activați setarea Unicode Consortium din
+  setările de vorbire ale NVDA și setați nivelul simbolurilor la „unele” sau
+  la „fără”.
 * Suport pentru sugestiile de intrare a tastaturii hardware în compilarea
   1803 sau mai nouă.
 * În compilările post-1709, NVDA va anunța primul emoji selectat când se
   deschide panoul emoji. Aceasta este mai observabilă în compilarea 18262 și
   mai nouă, în care panoul emoji se poate deschide la ultima categorie în
-  care s-a navigat.
+  care s-a navigat, cum ar fi redarea modificatoarelor tonurilor de sunat la
+  deschiderea categoriei Persoane.
 * Suport pentru anunțarea elementelor planșetei cloud în versiunea 1809
   (compilarea 17666 și mai nouă.
 * S-a redus verbozitatea inutilă la lucrul cu tastatura modernă și
@@ -183,8 +190,9 @@ Notă: majoritatea caracteristicilor de mai jos nu fac parte din NVDA 2018.3.
   în modul silențios atunci când anumite taste ale tastaturii tactile
   generează un eveniment de schimbare a numelui pe unele sisteme.
 * NVDA nu va mai reda tonuri de eroare sau nu va mai face nimic la
-  închiderea panoului emoji în compilări mai recente Insider Preview.
-* NVDA va anunța rezultatele căutării pentru emoji-uri dacă este posibil.
+  închiderea panoului emoji în compilări mai recente Insider Preview 19H1.
+* În versiunea 1809 (October 2018 Update) și mai nouă, NVDA va anunța
+  rezultatele căutării pentru emoji-uri dacă este posibil.
 
 ## Persoane
 

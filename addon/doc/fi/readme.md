@@ -29,8 +29,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Skype (universaali sovellus)
 * Kauppa
 * Sää
-* Sekalaisia moduuleita sellaisille säätimille kuin Käynnistä-valikon
-  tiilet.
+* Sekalaisia moduuleita säätimille, esim. Käynnistä-valikon ruuduille.
 
 Huomautuksia:
 
@@ -43,6 +42,9 @@ Huomautuksia:
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
   Windows 10 -versioita tai eivät ole enää käytettävissä sovelluksiin
   tehtyjen muutosten vuoksi.
+* Tässä lisäosassa ei ole enää sisäänrakennettua päivitystarkistusta
+  versiosta 19.02 alkaen. Päivityksiin tulee käyttää Lisäosien päivittäjä
+  -lisäosaa.
 
 Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 [lisäosajulkaisujen muutoslokeista.][3]
@@ -143,9 +145,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Kartat
 
-* NVDA soittaa äänimerkin karttasijainneille.
+* NVDA toistaa äänimerkin karttasijainneille.
 * NVDA ilmoittaa katuosoitteet käyttäessäsi nuolinäppäimiä kartalla
-  liikkumiseen oltaessa street side -näkymässä ja mikäli "use keyboard"
+  liikkumiseen oltaessa katunäkymässä ja mikäli "käytä näppäimistöä"
   -vaihtoehto on otettu käyttöön.
 
 ## Microsoft Edge
@@ -163,8 +165,12 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
 * Tuki version 1709 (Fall Creators -päivitys) ja uudempien kelluvalle
   emojinsyöttöpaneelille, mukaan lukien version 1809 (koontiversio 17661 ja
   uudemmat) uudelleensuunniteltu paneeli sekä versioon 19H1 (koontiversio
-  18262) tehdyt muutokset. Käytä parhaan kokemuksen saamiseksi Windows
-  OneCore -syntetisaattoria.
+  18262 ja uudemmat) tehdyt muutokset, mukaan lukien kaomoji sekä
+  koontiversion 18305 symbolikategoriat. Mikäli käytetään NVDA 2018.4:ää
+  vanhempia versioita, tulee parhaan kokemuksen saamiseksi käyttää Windows
+  OneCore -syntetisaattoria. Jos käytössä on versio 2018.4 tai uudempi,
+  tulee NVDA:n puheasetuksista ottaa käyttöön Unicode-konsortion datan
+  käyttäminen ja symbolitasoksi asetta "jotain" tai korkeampi.
 * Tuki fyysisen näppäimistösyötteen ehdotuksille versiossa 1803 (April 2018
   -päivitys) ja uudemmissa.
 * Kun emojipaneeli avautuu, NVDA ilmoittaa koontiversion 1709 jälkeisissä
@@ -179,9 +185,10 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
   sanota "Microsoft Candidate UI" sekä ollaan hiljaa tilanteessa, jossa
   tietyt kosketusnäppäimistön näppäimet aiheuttavat joissakin järjestelmissä
   muuttuneen nimitapahtuman.
-* NVDA ei enää toista virheääniä tai ole tekemättä mitään emojipaneelia
-  suljettaessa uudemmissa Insider-esiversioissa.
-* NVDA ilmoittaa emojien hakutulokset, mikäli mahdollista.
+* NVDA ei toista enää virheääniä tai ole tekemättä mitään emojipaneelia
+  suljettaessa uudemmissa 19H1-Insider-esiversioissa.
+* NVDA ilmoittaa versiossa 1809 (October 2018 -päivitys) ja uudemmissa
+  emojien hakutulokset, mikäli mahdollista.
 
 ## Ihmiset
 

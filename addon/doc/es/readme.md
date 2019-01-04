@@ -45,6 +45,9 @@ Notas:
   características son parte de NVDA, no se aplican porque el complemento no
   da soporte a versiones antiguas de Windows 10, o se han hecho cambios a
   las aplicaciones que permiten que ya no sea necesario aplicarlas.
+* La comprobación de actualización independiente de este complemento se
+  eliminará en la versión 19.02. Para futuras actualizaciones de
+  complementos, por favor utiliza el complemento Add-on Updater.
 
 Para ver una lista de cambios hechos entre cada actualización del
 complemento, consulta el documento [changelogs for add-on releases][3].
@@ -166,18 +169,23 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 Nota: la mayoría de las siguientes características ya son parte de NVDA
 2018.3.
 
-* Soporte para el panel flotante de entrada de Emoji en la versión 1709
-  (actualización Fall Creators) o posterior, incluyendo el panel rediseñado
-  en la versión 1809 (compilación 17661 y posteriores) y los cambios hechos
-  en la versión 19H1 (compilación 18262). Para unos mejores resultados
-  leyendo emojis, utiliza el sintetizador de voz Windows OneCore.
+* Soporte para el panel de entrada de Emoji en la versión 1709 (Fall
+  Creators Update) y posteriores, incluyendo el panel rediseñado en la
+  versión 1809 (versión 17661 y posteriores) y los cambios realizados en la
+  19H1 (versión 18262 y posteriores, incluyendo kaomoji y categorías de
+  símbolos en la versión 18305). Si utilizas versiones de NVDA anteriores a
+  2018.4, para obtener la mejor experiencia al leer emojis, utiliza el
+  sintetizador de voz Windows OneCore. Si se está utilizando 2018.4 o
+  posterior, habilita la configuración de Unicode Consortium a partir de la
+  configuración de voz de NVDA y establece el nivel de símbolos en "alguna"
+  o superior.
 * Soporte para sugerencias de entrada de teclado hardware en la versión 1803
   (actualización de Abril de 2018).
-* En compilaciones posteriores a la 1709, NVDA anunciará el primer emoji
-  seleccionado cuando el panel de emojis se abra. Esto es más observable en
-  la compilación 18262 y posteriores, donde el panel de emojis se abre en la
-  última categoría seleccionada, como por ejemplo modificador del tono de
-  piel al abrirse en la categoría personas.
+* En las versiones posteriores a 1709, NVDA anunciará el primer emoji
+  seleccionado cuando se abra el panel emoji. Esto se nota más en la versión
+  18262 y posteriores, donde el panel emoji puede abrirse hasta la última
+  categoría por la que se haya navegado, así como mostrar modificadores de
+  tono de piel cuando se abra en la categoría Personas.
 * Soporte para el anunciado de elementos del portapapeles en la nube en la
   versión 1809 (compilación 17666 y posterior).
 * Se ha reducido la verbalización de información innecesaria al trabajar con
@@ -186,9 +194,10 @@ Nota: la mayoría de las siguientes características ya son parte de NVDA
   hardware y permanecer en silencio cuando ciertas teclas del teclado táctil
   disparan un evento de cambio de nombre en algunos sistemas.
 * NVDA ya no reproducirá tonos de error o se quedará sin hacer nada al
-  cerrar el panel de emojis en las compilaciones más recientes de Insider
+  cerrar el panel de emojis en las versiones más recientes de 19H1 Insider
   Preview.
-* NVDA verbalizará los resultados de búsqueda para emojis si es posible.
+* En la Versión 1809 (October 2018 Update) y posteriores, NVDA verbalizará
+  los resultados de búsqueda para emojis si es posible.
 
 ## Gente
 

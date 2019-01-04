@@ -42,6 +42,8 @@ Hinweise:
   sind, da die Erweiterung alte Windows 10-Versionen nicht unterstützt oder
   Änderungen an Anwendungen vorgenommen wurden, die Einträge nicht mehr
   anwendbar machen.
+* Standalone update check from this add-on will be removed in version
+  19.02. For future add-on updates, please use Add-on Updater add-on.
 
 Eine Liste aller Änderungen in den einzlnen Versionen der Erweiterung finden
 Sie im Dokument [Changelogs der Erweiterungen][3].
@@ -166,17 +168,20 @@ Sie im Dokument [Changelogs der Erweiterungen][3].
 Hinweis: Die meisten der unten aufgeführten Funktionen sind nun Teil von
 NVDA 2018.3.
 
-* Unterstützung für die Emoji-Tastatur in der Windowsversion 1709 (Fall
-  Creators Update), einschließlich der neuen Version im Windows Build
-  17661. Auch die Änderungen in 19H1 (Build18266) werden unterstützt. Für
-  beste Erfahrungen beim Lesen von Emojis verwenden Sie
-  Windows-OneCore-Sprachausgaben.
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
+  later, including the redesigned panel in Version 1809 (build 17661 and
+  later) and changes made in 19H1 (build 18262 and later, including kaomoji
+  and symbols categories in build 18305). If using NVDA releases earlier
+  than 2018.4, for best experience when reading emojis, use Windows OneCore
+  speech synthesizer. If 2018.4 or later is in use, enable Unicode
+  Consortium setting from NvDA's speech settings and set symbol level to
+  "some" or higher.
 * Unterstützung für Eingabevorschläge bei Hardware-Tastaturen (gilt für
   Windowsversionen ab Build 1803)
-* In Builds nach 1709 wird NVDA das erste ausgewählte Emoji ankündigen, wenn
-  das Emoji-Panel geöffnet wird. Dies ist vor allem in Build 18262 und
-  später spürbar, wo das Emoji-Panel sich bei der zuletzt besuchten
-  Kategorie öffnen kann.
+* In post-1709 builds, NVDA will announce the first selected emoji when
+  emoji panel opens. This is more noticeable in build 18262 and later where
+  emoji panel may open to last browsed category, such as displaying skin
+  tone modifiers when opened to People category.
 * Unterstützung für die Ansage der Einträge in der Cloud-basierten
   Zwischenablage in Build 17666 (Redstone 5) und höher.
 * Unnötige Ausführlichkeit bei der Arbeit mit der modernen Tastatur und
@@ -185,9 +190,10 @@ NVDA 2018.3.
   angekündigt wird, und dass es still bleibt, wenn bestimmte
   Berührungstasten auf manchen Systemen ein Namensänderungsereignis
   auslösen.
-* NVDA bleibt aktiv und spielt keine Fehlertöne mehr ab, wenn das
-  Emoji-Panel in neueren Insider Preview-Builds geschlossen wird.
-* NVDA wird nach Möglichkeit Suchergebnisse für Emojis ansagen.
+* NVDA will no longer play error tones or do nothing when closing emoji
+  panel in more recent 19H1 Insider Preview builds.
+* In Version 1809 (October 2018 Update) and later, NVDA will announce search
+  results for emojis if possible.
 
 ## Kontakte
 

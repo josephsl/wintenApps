@@ -32,14 +32,18 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* This add-on requires Windows 10 Version 1709 (build 16299) or later and
-  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17763) and latest stable version of NVDA.
+* Uwaga! Ten dodatek wymaga Windowsa 10 Wersji 1709 (kompilacji 16299) lub
+  nowszej i NVDA 2018.3 lub nowszej. Aby uzyskać najlepsze wyniki, należy
+  używać dodatku z najnowszą stabilną kompilacją systemu (kompilacja 17134)
+  i najnowszą stabilną wersją NVDA. 
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
   wspiera starszych wydań systemu, lub aplikacje są zmienione w taki sposób,
   że te wpisy są unieważnione.
+* wbudowane sprawdzanie aktualizacji tego dodatku będzie usunięte w wersji
+  19.02. Aby aktualizować przyszłe wersje, prosimy używać dodatku Add-on
+  updater.
 
 Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 [listę zmian dla wersji dodatku][3].
@@ -60,21 +64,21 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * Elementy meni rozwijanego są prawidłowo rozpoznawane w różnych
   aplikacjach, takich jak menu kontekstowe dla kafelków meni start, a także
   menu aplikacji dla Microsoft Edge (Redstone 5).
-* Certain dialogs are now recognized as proper dialogs and reported as such,
-  including Insider Preview dialog (settings app). This is now part of NVDA
-  2018.3.
+* Niektóre okna dialogowe są od teraz prawidłowo rozpoznawane i wymawiane
+  jako okna dialogowe. Są to np. okna dialogowe w wersjach testowych
+  (settings app). Jest to już wbudowane w sam czytnik ekranu.
 * W wielu przypadkach, NVDA może ogłaszać liczbę sugestii wyszukiwania. Ta
   opcja jest kontrolowana przez opcję "odczytuj położenie obiektu" w panelu
   "prezentacja obiektu".
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) nie jest już odczytywana.
-* The following UIA events are recognized: active text position change,
+* Następujące zdarzenia UIA są rozpoznawane: active text position change,
   controller for, drag start, drag cancel, drag complete, element selected,
   item status, live region change, notification, system alert, tooltip
-  opened, window opened. With NVDA set to run with debug logging enabled,
-  these events will be tracked, and for UIA notification event, a debug tone
-  will be heard if notifications come from somewhere other than the
-  currently active app.
+  opened, window opened. Gdy w NVDA jest włączony tryb debugowania, te
+  zdarzenia będą śledzone. Natomiast dla UIA, zdarzenia UIA notification
+  event, dźwięk debugowania będzie odtwarzany jeżeli powiadomienie
+  przychodzi z innej aplikacji niż ta aktywna.
 * Powiadomienia z nowych wersji aplikacji w Windows 10 wersji 1709
   (kompilacja 16299) i nowszych są wymawiane. NVDA wspiera to od wersji
   2018.2. Ponadto, NVDA 2018.3 wspiera jeszcze więcej powiadomień.
@@ -153,16 +157,21 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 
 Uwaga: Większość funkcji tego dodatku jest teraz częścią NVDA 2018.3.
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
-  later, including the redesigned panel in Version 1809 (build 17661 and
-  later) and changes made in 19H1 (build 18262). For best experience when
-  reading emojis, use Windows OneCore speech synthesizer.
+* Wsparcie dla panelu wprowadzania emoji w wersji 1709 (zimowa aktualizacja
+  dla twórców) i nowsze, włączając w to przeprojektowany panel w wersji 1809
+  (kompilacja 17661 i nowsze) a także zmiany wprowadzone w wersji 19H1
+  (kompilacja 18262 i nowsze, włączając w to kaomoji i kategorie znaków w
+  kompilacji 18305). gdy wersja NVDA starsza niż 2018.4 jest używana, dla
+  lepszych wyników, trzeba będzie używać syntezator One core. Jeżeli jest
+  używana wersja NVDA 2018.4 lub nowsza,, włącz słownik danych unicode z
+  dialogu ustawień mowy i ustaw wymawianie symboli na "niektóre" lub wyższy
+  poziom.
 * wsparcie dla podpowiedzi sprzętowych w wersji 1803 (kwietniowa
   aktualizacja) i nowszych.
-* In post-1709 builds, NVDA will announce the first selected emoji when
-  emoji panel opens. This is more noticeable in build 18262 and later where
-  emoji panel may open to last browsed category, such as Wyświetlanie
-  modyfikatoru karnacji skóry gdy kategoria ludzie jest otwarta.
+* W kompilacjach po kompilacji 1709 ,  NVDA będzie wymawiało pierwszy
+  wybrany emoji na liście. To jest bardziej zauważalne w kompilacji 18262 i
+  nowszych gdzie panel może być otwarty w ostatniej kategorii, takiej jak
+  wyświetlanie karnacji skóry, gdy kategoria ludzie jest otwarta.
 * Wsparcie oznajmiania chmurowego schowka w wersji 1809 (kompilacja 17666 i
   nowszych).
 * Zmniejszona niechciana gadatliwośc przy działaniach związanych z
@@ -171,9 +180,10 @@ Uwaga: Większość funkcji tego dodatku jest teraz częścią NVDA 2018.3.
   podpowiedzi wpisywania i pozostawianie cichym przy tym, jak niektóre
   klawisze na klawiaturze wywołują zdarzenie zmiany nazwy na niektórych
   systemach.
-* NVDA już nie będzie odtwarzało dźwięk błędu lub nie robiło nic w bardziej
-  aktualnych kompilacjach insider preview.
-* NVDA będzie oznajmiało wyniki wyszukiwania emoji jeżeli to możliwe.
+* NVDA już nie będzie odtwarzało dźwięk błędu lub robiło nic, gdy panel
+  emoji jest zamykany w bardziej ostatnich kompilacjach 19H1.
+* W wersji 1809 i nowszych, NVDA będzie oznajmiało wyniki wyszukiwania emoji
+  jeżeli to możliwe.
 
 ## Osoby
 
@@ -194,14 +204,16 @@ Uwaga: Większość funkcji tego dodatku jest teraz częścią NVDA 2018.3.
   nowszych.
 * Więcej komunikatów o stanie Windows Update są wypowiadane, najważniejsze,
   gdy Windows update zobaczy błąd.
-* NVDA will no longer appear to do nothing or play error tones if using
-  object navigation commands under some circumstances.
-* Various links added in build 18282 with no labels now have labels.
-* Windows Update reminder dialog is recognized as a proper dialog.
+* W niektórych przypadkach, gdy używana jest nawigacja obiektowa, NVDA nie
+  będzie się zachowywał  sposób nijaki, albo nie będzie odtwarzał dźwięku
+  błedu.
+* róźne linki dodane w kompilacji 18282 bez etykietek, teraz je posiada
+* Okno dialogowe przypomnienia o aktualizacjach Windows, teraz jest
+  rozpoznawane jako poprawne okno dialogowe.
 
 ## Skype
 
-Note: the below entries won't work properly in Skype 14 universal app.
+Uwaga: Niektóre funkcje nie będą działać w Skype 14 aplikacji uniwersalnej.
 
 * Powiadomienie o pisaniu będzie wypowiadane, tak jak i w Skype dla pulpitu.
 * Control+NvDA+komendy rzędu cyfr, używane do odczytywania wiadomości w

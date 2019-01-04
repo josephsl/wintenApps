@@ -47,6 +47,10 @@ Notes:
   module complémentaire ne prend pas en charge les anciennes versions de
   Windows 10 ou des modifications ont été apportées aux applications pour
   que les entrées ne soient plus applicables.
+* La vérification de la mise à jour autonome de ce module complémentaire
+  sera supprimée dans la version 19.02. Pour les futures mises à jour du
+  module complémentaire, veuillez utiliser le module complémentaire Add-on
+  Updater.
 
 Pour obtenir la liste des changements effectuées entre chaque version du
 module complémentaire, reportez-vous au document [changelogs pour les
@@ -183,16 +187,20 @@ NVDA 2018.3.
 * Prise en charge pour les Emoji flottants du panneau de saisie dans la
   Version 1709 (Fall Creators Update) et ultérieure, y compris le panneau
   redessiné dans la version 1809  (build 17661 et ultérieure) et
-  modifications apportées au 19H1 (build 18262). Pour une meilleure
-  expérience lors de la lecture d'emojis,, utiliser le synthétiseur vocal
-  Windows OneCore.
+  modifications apportées au 19H1 (build 18262, y compris les catégories
+  kaomoji et symboles dans la build 18305). Si vous utilisez des versions de
+  NVDA antérieures à 2018.4, pour une meilleure expérience lors de la
+  lecture d'emojis,, utiliser le synthétiseur vocal Windows OneCore. Si vous
+  utilisez 2018.4 ou une version ultérieure, activez le paramètre Consortium
+  Unicode à partir des Paramètres Parole de NVDA et définissez le niveau de
+  ponctuations et symboles sur "quelques-uns" ou plus.
 * Prise en charge des suggestions de saisie au clavier matériel dans la
   Version 1803 ((Mise à jour d'avril 2018) et ultérieure.
 * Dans les builds postérieures à la 1709, NVDA annoncera le premier emoji
   sélectionné lors de l'ouverture du panneau emoji. Ceci est plus visible
   dans la build 18262 et ultérieures où le panneau emoji peut s'ouvrir
   jusqu'à la dernière catégorie consultée, tel que l'affichage du
-  modificateur skin tone lorsqu'il est ouvert dans la catégorie People.
+  modificateur skin tone lorsqu'il est ouvert dans la catégorie Personnes.
 * Prise en charge de l'annonce des éléments du presse-papiers du cloud dans
   la version 1809 (build 17666 et ultérieure).
 * Réduit la verbosité inutile lorsque vous travaillez avec le clavier
@@ -202,9 +210,10 @@ NVDA 2018.3.
   tactile déclenchent un événement de changement de nom sur certains
   systèmes.
 * NVDA ne lira plus les tonalités d'erreur ou ne fera plus rien lors de la
-  fermeture du panneau emoji dans les builds plus récentes de Insider
+  fermeture du panneau emoji dans les builds plus récentes 19H1 de Insider
   Preview.
-* NVDA annoncera les résultats de la recherche pour les emojis, si possible.
+* Dans la version 1809 (mise à jour d'octobre 2018) et ultérieure, NVDA
+  annoncera les résultats de la recherche pour les emojis, si possible.
 
 ## Personnes
 
