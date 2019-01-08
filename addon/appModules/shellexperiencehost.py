@@ -11,16 +11,16 @@ import ui
 
 class ActionCenterToggleButton(UIA):
 
-	def _get_value(self):
-		return self.UIAElement.currentItemStatus
-
-	def event_valueChange(self):
-		self.event_UIA_itemStatus()
-
 	# Somehow, item status property repeats when Action Center is opened more than once.
 	_itemStatusMessageCache = None
 
+	def _get_value(self):
+		return self.UIAElement.currentItemStatus
+
 	def event_UIA_itemStatus(self):
+		self.event_valueChange()
+
+	def event_valueChange(self):
 		# Do not repeat item status multiple times.
 		currentItemStatus = self.value
 		if currentItemStatus and currentItemStatus != self._itemStatusMessageCache:
