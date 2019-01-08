@@ -41,5 +41,12 @@ class AppModule(AppModule):
 				obj.states.discard(controlTypes.STATE_CHECKABLE)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		if isinstance(obj, UIA) and obj.role == controlTypes.ROLE_TOGGLEBUTTON and obj.UIAElement.cachedClassName == "ToggleButton":
+		if isinstance(obj, IAccessible):
+			try:
+				# #5288: Never use ContentGenericClient, as this uses displayModel
+				# which will freeze if the process is suspended.
+				clsList.remove(ContentGenericClient)
+			except ValueError:
+				pass
+		elif isinstance(obj, UIA) and obj.role == controlTypes.ROLE_TOGGLEBUTTON and obj.UIAElement.cachedClassName == "ToggleButton":
 			clsList.insert(0, ActionCenterToggleButton)
