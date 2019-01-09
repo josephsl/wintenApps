@@ -2,7 +2,7 @@
 #Copyright (C) 2015 NV Access Limited
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
-# Extended by Joseph Lee (copyright 2016-2018, released under GPL)
+# Extended by Joseph Lee (copyright 2016-2019, released under GPL)
 
 # Extended to let NVDA cooperate with Cortana.
 
@@ -73,12 +73,10 @@ class AppModule(AppModule):
 				# #48: differentiate between search results and context menu items.
 				clsList.insert(0,ContextMenuItem if obj.parent.UIAElement.cachedAutomationID == "contextMenu" else SuggestionListItem)
 			elif obj.UIAElement.cachedAutomationID == "SearchTextBox":
-				# Special handler for differentiating between regular and Sets Cortana boxes.
-				# Fortunately for now, embedded Sets Cortana box has no siblings.
-				# Turn this off in build 17728 and later as this causes suggestions open sound to be heard when Start menu is closed.
-				clsList.insert(0, StartMenuSearchField) #if obj.previous is not None else SetsSearchField)
+				clsList.insert(0, StartMenuSearchField)
 
 	# Past responses from Cortana (cached to prevent repetition, initially an empty string).
+	# No longer appicable in Version 1809 due to UI redesign.
 	cortanaResponseCache = ""
 
 	def event_nameChange(self, obj, nextHandler):
