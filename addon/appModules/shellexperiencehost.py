@@ -25,7 +25,7 @@ class ActionCenterToggleButton(UIA):
 		currentItemStatus = self.value
 		if currentItemStatus and currentItemStatus != self._itemStatusMessageCache:
 			ui.message(currentItemStatus)
-			self._itemStatusMessageCache = currentItemStatus
+		self._itemStatusMessageCache = currentItemStatus
 
 
 class AppModule(AppModule):
