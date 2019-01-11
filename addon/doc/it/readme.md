@@ -1,17 +1,17 @@
 # Windows 10 App Essentials #
 
 * Autori: Joseph Lee, Derek Riemer e altri utenti Windows 10.
-* Download [versione stabile][1]
-* Download [versione in sviluppo][2]
-* NVDA compatibility: 2018.3 to 2019.1
+* Scarica la [versione stabile][1]
+* Scarica la [versione in sviluppo][2]
+* Compatibilità con NVDA: dalla 2018.3 alla  2019.1
 
-Questo componente aggiuntivo è un insieme di app module per numerose app
-Windows10, e consente anche di risolvere anomalie con alcuni controlli.
+Questo componente aggiuntivo è un insieme di app module per numerose app di
+Windows10, che consente anche di risolvere anomalie con alcuni controlli.
 
-Segue l'elenco di tutti gli appmodule contenuti nel componente aggiuntivo,
-si veda la relativa sezione per ulteriori informazioni:
+Di seguito l'elenco di tutti gli appmodule contenuti nel componente
+aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 
-* Action center
+* Centro attività:
 * Allarmi e sveglia.
 * Calendario
 * Calcolatrice (moderna).
@@ -32,68 +32,75 @@ si veda la relativa sezione per ulteriori informazioni:
 
 Note:
 
-* This add-on requires Windows 10 Version 1709 (build 16299) or later and
-  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17763) and latest stable version of NVDA.
+* Nota: questo addon richiede Windows 10 Versione 1709(build 16299) o
+  successive, e NVDA 2018.3 o successive. Per migliori prestazioni,
+  utilizzare il componente con l'ultima versione stabile di Windows10 (build
+  17763) e l'ultima versione stabile di NVDA. 
 * Alcune caratteristiche di questo componente aggiuntivo sono o diventeranno
   parte di NVDA
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support old Windows 10
-  releases, or changes were made to apps that makes entries no longer
-  applicable.
-* Standalone update check from this add-on will be removed in version
-  19.02. For future add-on updates, please use Add-on Updater add-on.
+* Per le voci non elencate di seguito, si può supporre che son
+  caratteristiche già incluse in NVDA, che non sono applicabili dal
+  componente in quanto non supporta precedenti versioni di Windows, o che le
+  applicazioni son state modificate in modo che le caratteristiche del
+  componente non son più applicabili.
+* Il controllo dell'aggiornamento automatico direttamente dal componente
+  sarà rimosso nella versione 19.02. Per i futuri aggiornamenti automatici
+  si potrà usare il componente aggiuntivo addonsUpdate.
 
-For a list of changes made between each add-on releases, refer to
-[changelogs for add-on releases][3] document.
+Per un elenco delle modifiche riguardo le versioni rilasciate, fare
+riferimento al documento [changelogs for add-on releases][3].
 
 ## Generale
 
-* Internal changes to make the add-on compatible with future NVDA releases.
-* If Add-on Updater add-on is installed, that add-on will check for Windows
-  10 App Essentials updates.
-* Default update check interval has changed to weekly checks for both stable
-  and development releases. This is applicable if the add-on itself checks
-  for updates.
-* If the add-on is set up to check for updates, when updating the add-on, if
-  the new add-on release requires a newer version of NVDA, an error message
-  will be presented.
-* Small changes to how some messages are presented in languages other than
-  English.
-* Submenu items are properly recognized in various apps, including context
-  menu for Start menu tiles and microsoft Edge's app menu (Redstone 5).
-* Certain dialogs are now recognized as proper dialogs and reported as such,
-  including Insider Preview dialog (settings app). This is now part of NVDA
-  2018.3.
+* Modifiche interne per rendere il componente aggiuntivo  compatibile con le
+  future versioni di NVDA. 
+* Se il componente aggiuntivo Add-on Updater  è installato, questo
+  controllerà anche per gli aggiornamenti di winTenApps.
+* Il controllo periodico di aggiornamenti verrà eseguito ad intervalli
+  settimanali sia per le versioni stabili che in sviluppo. Questo si applica
+  quando il componente aggiuntivo controlla nuovi aggiornamenti
+  autonomamente.
+* Se si imposta il controllo automatico di nuovi aggiornamenti, quando il
+  componente aggiuntivo richiede una più recente versione di NVDA verrà
+  visualizzato un messaggio di errore.
+* Modifiche minori per i messaggi presentati in altre lingue diverse
+  dall'inglese. 
+* le Voci di sottomenu vengono correttamente riconosciute in varie
+  applicazioni, incluso il menu contestuale per la griglia del menu Start e
+  delle apps di Microsoft Edge (Redstone 5).
+* Molte finestre di dialogo vengono gestite correttamente, soprattutto
+  quelle inerenti il feedback su Windows Insider. Questo è stato incluso in
+  NVDA 2018.3.
 * NVDA può annunciare il numero dei suggerimenti quando si esegue una
   ricerca. Questa funzione è controllata dall'opzione "leggi le informazioni
   sulla posizione dell'oggetto" nella finestra presentazioni oggetti di
   NVDA.
 * In alcuni menu di contesto, come in Edge, le informazioni sulla posizione
   come 1 su 2 non vengono più annunciate.
-* The following UIA events are recognized: active text position change,
-  controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, tooltip
-  opened, window opened. With NVDA set to run with debug logging enabled,
-  these events will be tracked, and for UIA notification event, a debug tone
-  will be heard if notifications come from somewhere other than the
-  currently active app.
-* Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced. NVDA 2018.2 and later supports this, with
-  2018.3 adding support for more notifications.
-* Vengono riconosciuti e annunciati i suggerimenti di Microsoft Edge e app
-  universali.
+* Sono riconosciuti i seguenti eventi UIA: modulo di controllo, inizio
+  trascinamento, trascinamento annullato, trascinamento completato, elemento
+  selezionato, modifica regione live, notifica, avviso di sistema,
+  suggerimento aperto, finestra aperta. Quando NVDA è avviato con il log
+  impostato su debug, questi eventi saranno tracciati, e per gli eventi di
+  notifiche UIA, verrà emesso un segnale acustico.
+* Vengono annunciate le notifiche di app realizzate a partire da Windows 10
+  versione 1709 (build 16299) e successive. Questa caratteristica funziona
+  con NVDA 2018.2, in NVDA 2018.3 è stato aggiunto il supporto  per
+  ulteriori notifiche.
+* Vengono riconosciuti e annunciati i suggerimenti di Microsoft Edge e
+  universal-app.
 * Quando si passa ad un desktop virtuale successivo, o viene chiuso o ne
   viene aperto uno, NVDA annuncerà il numero del desktop, ad esempio
   Desktop2, Desktop3, etc.
 * NVDA non leggerà più le dimensioni del testo del menu avvio quando si
   cambia la risoluzione dello schermo o orientamento.
 
-## Action center
+## Centro attività:
 
-* Brightness quick action is now a button instead of a toggle button.
-* Various status changes such as Focus Assist and Brightness will be
-  reported.
+* Il pulsante per la Luminositàora funziona come un pulsante attivabile e
+  non come un pulsante ciclico.
+* Vari cambiamenti di stato come assistenza in primo piano e Luminosità
+  verranno segnalati. 
 
 ## Allarmi e sveglia
 
@@ -111,9 +118,8 @@ For a list of changes made between each add-on releases, refer to
 
 ## calendario
 
-* Insider Hub (centro di supporto in Anniversary Update): solo per quegli
-  utenti che usano una versione Insider di Windows, servendosi del centro
-  Feedback Insider per aggiornamenti.
+* Non verrà più letta la dicitura "Modificabile" e  "sola lettura" nel corpo
+  del messaggio o in altri campi editazione.
 
 ## Cortana
 
@@ -136,9 +142,9 @@ For a list of changes made between each add-on releases, refer to
 
 ## Posta
 
-* When reviewing items in messages list, you can now use table navigation
-  commands to review message headers. Note that navigating between rows
-  (messages) is not supported.
+* Quando si scorrono le voci nell'elenco messaggi, è possibile utilizzare i
+  comandi di navigazione tabella per controllare le intestazioni. Notare che
+  la navigazione tra le righe (messaggi) non è supportato.
 * Durante la composizione di un messaggio, verranno emessi segnali acustici
   nel caso ci siano dei suggerimenti per menzioni dopo la chiocciola
 
@@ -154,36 +160,43 @@ For a list of changes made between each add-on releases, refer to
 * Vengono annunciate correttamente le notifiche dei download dei file, degli
   avvisi delle pagine web e se è disponibile la modalità lettura (dalla
   versione 1709 in poi)
-* Text auto-complete will be tracked and announced in address omnibar.
+* Monitoraggio e lettura del completamento automatico del testo nelle barre
+  degli indirizzi.
 
 ## Tastiera moderna
 
-Note: most features below are now part of NVDA 2018.3.
+Nota: la maggior parte delle caratteristiche di seguito sono state incluse
+in NVDA 2018.3. 
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
-  later, including the redesigned panel in Version 1809 (build 17661 and
-  later) and changes made in 19H1 (build 18262 and later, including kaomoji
-  and symbols categories in build 18305). If using NVDA releases earlier
-  than 2018.4, for best experience when reading emojis, use Windows OneCore
-  speech synthesizer. If 2018.4 or later is in use, enable Unicode
-  Consortium setting from NvDA's speech settings and set symbol level to
-  "some" or higher.
+* Supporto per l'immissione di emoji nella versione 1709 (Fall creators
+  Update) e successive, compreso la nuova interfaccia  del pannello emoji
+  nella build 1809 (build 17661 e successive), con aggiornamenti per la 19h1
+  (build 18262 e successive, che includono i kaomoji e categorie per i
+  simboli nella build 18305).Se si usa una versione precedente a NVDA
+  2018.4, per una migliore lettura degli emoji è consigliato usare come
+  sintetizzatore vocale le OneCore. Se si usa NVDA 2018.4 o successive,
+  attivare la casella di controllo "Includi dati del consorzio Unicode"
+  dalle Impostazioni Voce di NVDA, ed impostare il livello di lettura
+  simboli/punteggiatura su "Cualcosa" o superiore.
 * Supporto per i suggerimenti di immissione in tastiere hardware nella
   Versione 1803 (aggiornamento Aprile 2018) e successive
-* In post-1709 builds, NVDA will announce the first selected emoji when
-  emoji panel opens. This is more noticeable in build 18262 and later where
-  emoji panel may open to last browsed category, such as displaying skin
-  tone modifiers when opened to People category.
-* Support for announcing cloud clipboard items in Version 1809 (build 17666
-  and later).
-* Reduced unnecessary verbosity when working with modern keyboard and its
-  features. These include no longer announcing "Microsoft Candidate UI" when
-  opening hardware keyboard input suggestions and staying silent when
-  certain touch keyboard keys raise name change event on some systems.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible.
+* Nella build di windows 10 1709, quando si apre il pannello degli emoji
+  verrà letto correttamente il primo emoji selezionato.Questo è più evidente
+  nella build 18262 e successive, dove il pannello degli emoji può aprirsi
+  sull'ultima categoria usata, come per esempio nella categoria Persone
+  verranno visualizzate le espressioni di umore.
+* Supporto per la lettura di appunti cloud nella versione 1809 (build 17666
+  e successive).
+* Ridotto la verbosità quando si utilizzano tastiere moderne con diverse
+  caratteristiche. Sono inclusi i lunghi annunci delle nuove interfaccie
+  Microsoft all'apertura dei suggerimenti dell'input delle tastiere, e in
+  alcuni sistemi non vengono più annunciati i cambiamenti del nome degli
+  eventi quando si preme un tasto nella tastiera.
+* NVDA non avviserà più con un suono di errore o altri messaggi quando si
+  chiude il pannello delle emoji nelle nuove anteprime Insider.
+* Nella  Versione 1809 (aggiornamento Windows di ottobre 2018 ) e
+  successive, NVDA annuncerà i risultati di ricerca per emojis quando
+  possibile.
 
 ## Persone
 
@@ -192,26 +205,30 @@ Note: most features below are now part of NVDA 2018.3.
 
 ## Impostazioni
 
-* Certain information such as Windows Update progress is reported
-  automatically, including Storage sense/disk cleanup widget.
+* Vengono annunciate automaticamente le informazioni di avanzamento delle
+  operazioni di Windows Update, incluse informazioni di archiviazione e
+  rimozione dal disco di widget.
 * Le informazioni delle barre di avanzamento non vengono più lette due
   volte.
 * Il gruppo impostazioni viene riconosciuto quando ci si sposta tra i
   controlli usando la navigazione ad oggetti.
-* For some combo boxes and radio buttons, NVDA will no longer fail to
-  recognize labels and/or announce value changes.
+* Per alcune caselle combinate o pulsanti radio, NVDA non commetterà più
+  errori nel riconoscere le etichette o nell'annunciare i cambiamenti dei
+  valori.
 * Non vengono più riprodotti beep per le barre di avanzamento del controllo
   volume dalla versioni 1803 e successive.
-* More messages about Windows Update status are announced, especially if
-  Windows Update encounters errors.
-* NVDA will no longer appear to do nothing or play error tones if using
-  object navigation commands under some circumstances.
-* Various links added in build 18282 with no labels now have labels.
-* Windows Update reminder dialog is recognized as a proper dialog.
+* Verranno annunciati diversi messaggi sull'aggiornamento di Windows 10, in
+  particolare quando Windows Update rileva errori. 
+* NVDA non riporterà più errori quando si usa  il navigatore ad oggetti in
+  alcune situazioni.
+* Etichettati vari link aggiunti nella buil 1809.
+* la finestra di notifica per nuovi aggiornamenti windows verrà ora
+  visualizzata  correttamente.
 
 ## Skype
 
-Note: the below entries won't work properly in Skype 14 universal app.
+Nota: le voci di seguito non funzionano correttamente in Skype 14
+Universal-app.
 
 * Viene annunciato quando un utente sta scrivendo, così come accade in Skype
   per desktop.
