@@ -57,6 +57,15 @@ class SetsSearchField(StartMenuSearchField):
 			return
 		super(SetsSearchField, self).event_suggestionsOpened()
 
+class StartMenuSearchField(StartMenuSearchField):
+
+	def event_UIA_controllerFor(self):
+		# In build 18317 and later, opening search box (Windows+S or Windows+Q) causes controller for event to be fired by a non-focused search field.
+		if len(self.controllerFor)>0:
+			self.event_suggestionsOpened()
+		else:
+			self.event_suggestionsClosed()
+
 
 class AppModule(AppModule):
 
