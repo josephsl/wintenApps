@@ -14,7 +14,7 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):
-			# Despite repeated feedback, there's at least one unlabeled toggle button in Settings app.
+			# Despite repeated feedback, there's at least one unlabeled item in Settings app.
 			# One particular case is Settings/Update/Developer Mode with USB/LAN discovery toggle button in Redstone (fixed in build 14986).
 			# Another case is with various combo boxes in Redstone 2 with no labels.
 			# Yet another case is Devices/Bluetooth lists.
