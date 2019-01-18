@@ -42,11 +42,13 @@ Hinweise:
   sind, da die Erweiterung alte Windows 10-Versionen nicht unterstützt oder
   Änderungen an Anwendungen vorgenommen wurden, die Einträge nicht mehr
   anwendbar machen.
-* Standalone update check from this add-on will be removed in version
-  19.02. For future add-on updates, please use Add-on Updater add-on.
+* Die eigenständige Update-Prüfung dieser Erweiterung wird mit der Version
+  19.02 entfernt. Für zukünftige Erweiterungsupdates verwenden Sie bitte die
+  Erweiterung Addon-Updater.
 
-Eine Liste aller Änderungen in den einzlnen Versionen der Erweiterung finden
-Sie im Dokument [Changelogs der Erweiterungen][3].
+Eine Liste aller Änderungen in den einzelnen Versionen der Erweiterung
+finden Sie im Dokument [Änderungsprotokolle  der veröffentlichten
+Versionen][3].
 
 ## Allgemein
 
