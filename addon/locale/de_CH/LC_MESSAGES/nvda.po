@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2016-07-09 05:48+1000\n"
-"PO-Revision-Date: 2018-11-26 08:26-0800\n"
+"POT-Creation-Date: 2019-01-11 08:02-0800\n"
+"PO-Revision-Date: 2019-01-11 08:02-0800\n"
 "Last-Translator: Adriani Botez <adriani.botez@gmail.com>\n"
 "Language-Team: \n"
 "Language: de_CH\n"
@@ -18,6 +18,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.9\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
+#: addon/installTasks.py:17
 #, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
@@ -28,140 +29,45 @@ msgstr ""
 "mindestens {minSupportedVersion}. Möchten Sie wirklich fortfahren?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
+#: addon/installTasks.py:19
 msgid "Old Windows version"
 msgstr "Alte Windows-Version"
 
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
+#: addon/appModules/hxoutlook.py:32
 msgid "Cannot move between rows"
 msgstr ""
 
 #. Translators: Message presented when no more weather data is available for the current item.
+#: addon/appModules/microsoft_msn_weather.py:44
+#: addon/appModules/microsoft_msn_weather.py:53
 msgid "No more weather data for this item."
 msgstr "Keine weiteren Wetterdaten für diesen Eintrag verfügbar"
 
 #. Translators: the description for the showMessageLongDesc script on Skype for Windows 10.
+#: addon/appModules/skypeapp.py:55
 msgid "Shows the message details."
 msgstr "Zeigt die Details der Benachrichtigungen an."
 
-#. Translators: Presented when someone stops typing in Skype app (same as Skype for Desktop).
-msgid "Typing stopped"
-msgstr "Tippen angehalten"
-
 #. Translators: Presented when message history isn't found in Skype Preview app.
+#: addon/appModules/skypeapp.py:136
 msgid "Chat history not found"
 msgstr "Chatverlauf nicht gefunden"
 
-#. Translators: Input help mode message for a command in Skype Preview app.
-msgid "Reports and moves the review cursor to a recent message"
-msgstr "Fokussiert die neueste Nachricht und liest sie vor."
-
 #. Translators: presented when chat edit box is not found.
+#: addon/appModules/skypeapp.py:163
 msgid "Chat edit field not found"
 msgstr "Chat-Eingabefeld nicht gefunden"
 
-#. Translators: presented when there is no emoji when searching for one in Windows 10 Fall Creators Update and later.
-msgid "No emoji"
-msgstr "keine Emoji-Symbole"
-
-msgid "&Windows 10 App Essentials..."
-msgstr "&Windows 10-Apps"
-
-msgid "Windows 10 App Essentials add-on settings"
-msgstr "Einstellungen der Erweiterung Windows 10-App Essentials"
-
-#. Translators: Error text shown when add-on update check fails.
-msgid "Error checking for update."
-msgstr "Fehler beim Suchen nach Updates."
-
-#. Translators: Title of the dialog shown when add-on update check fails.
-#. Translators: Title of the dialog presented when no add-on update is available.
-#. Translators: Title of the add-on update check dialog.
-msgid "Windows 10 App Essentials update"
-msgstr "Update der Windows 10-App Essentials"
-
-#. Translators: Presented when no add-on update is available.
-msgid "No add-on update available."
-msgstr "Keine Updates der Erweiterung verfügbar."
-
-#. Translators: Text shown if an add-on update is available.
-#, python-brace-format
-msgid ""
-"Windows 10 App Essentials {newVersion} is available. Would you like to "
-"update?"
-msgstr ""
-"Eine {newVersion} der Erweiterung für die Windows 10 App Essentials ist "
-"verfügbar. Möchten Sie das Update jetzt durchführen?"
-
-#. Translators: The title of a dialog to configure advanced WinTenApps add-on options such as update checking.
-msgid "Windows 10 App Essentials settings"
-msgstr "Einstellungen der Windows 10-App Essentials"
-
-#. Translators: A checkbox to toggle automatic add-on updates.
-msgid "Automatically check for add-on &updates"
-msgstr "A&utomatisch nach Updates der Erweiterung suchen"
-
-#. Translators: The label for a setting in WinTenApps add-on settings to select automatic update interval in days.
-msgid "Update &interval in days"
-msgstr "Update-&Häufigkeit (in Tage)"
-
-#. Translators: The label of a button to check for add-on updates.
-msgid "Check for add-on &update"
-msgstr "Nach &Updates der Erweiterung suchen"
-
-#. Translators: The title of the dialog presented while checking for add-on updates.
-msgid "Add-on update check"
-msgstr "Überprüfung auf Updates der Erweiterung"
-
-#. Translators: The message displayed while checking for newer version of WinTenApps add-on.
-msgid "Checking for new version of Windows 10 App Essentials add-on..."
-msgstr "Auf Updates der Erweiterung wird gesucht..."
-
-#. Translators: The title of the dialog displayed while downloading add-on update.
-msgid "Downloading Add-on Update"
-msgstr "Die Aktualisierung der Erweiterung wird heruntergeladen"
-
-#. Translators: The progress message indicating that a connection is being established.
-msgid "Connecting"
-msgstr "Verbindung wird hergestellt"
-
-#. Translators: A message indicating that an error occurred while downloading an update to NVDA.
-msgid "Error downloading add-on update."
-msgstr "Fehler beim Herunterladen der Aktualisierung"
-
-#. Translators: The title of a dialog indicating that an error occurred while downloading an update to NVDA.
-#. Translators: The title of a dialog presented when an error occurs.
-msgid "Error"
-msgstr "Fehler"
-
-#. Translators: The message displayed when an error occurs when opening an add-on package for adding.
-#, python-format
-msgid ""
-"Failed to open add-on package file at %s - missing file or invalid file "
-"format"
-msgstr ""
-"Die Erweiterung %s konnte nicht geöffnet werden. Die Datei ist "
-"möglicherweise beschädigt oder nicht vorhanden."
-
-#. Translators: The title of the dialog presented while an Addon is being updated.
-msgid "Updating Add-on"
-msgstr "Die Erweiterung wird aktualisiert."
-
-#. Translators: The message displayed while an addon is being updated.
-msgid "Please wait while the add-on is being updated."
-msgstr "Bitte warten Sie, während die Erweiterung aktualisiert wird."
-
-#. Translators: The message displayed when an error occurs when installing an add-on package.
-#, python-format
-msgid "Failed to update add-on  from %s"
-msgstr "die Erweiterung %s konnte nicht aktualisiert werden."
-
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
+#: buildVars.py:17
 msgid "Windows 10 App Essentials"
 msgstr "Windows 10-Apps"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:20
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Eine Sammlung von Anwendungsmodulen für diverse Windows 10-Apps."
