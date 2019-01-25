@@ -30,36 +30,32 @@ Notes:
 
 * This add-on requires Windows 10 Version 1803 (build 17134) or later and NVDA 2018.3 or later. For best results, use the add-on with latest Windows 10 stable release (build 17763) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
-* For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to apps that makes entries no longer applicable.
-* Standalone update check from this add-on will be removed in version 19.02. For future add-on updates, please use Add-on Updater add-on.
+* For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to Windows 10 and apps that makes entries no longer applicable.
+* Standalone update check from this add-on has been removed. For future add-on updates, please use Add-on Updater add-on.
 
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][3] document.
 
 ## General
 
 * Internal changes to make the add-on compatible with future NVDA releases.
-* If Add-on Updater add-on is installed, that add-on will check for Windows 10 App Essentials updates.
-* Default update check interval has changed to weekly checks for both stable and development releases. This is applicable if the add-on itself checks for updates.
-* If the add-on is set up to check for updates, when updating the add-on, if the new add-on release requires a newer version of NVDA, an error message will be presented.
 * Small changes to how some messages are presented in languages other than English.
 * Submenu items are properly recognized in various apps, including context menu for Start menu tiles and microsoft Edge's app menu (Redstone 5).
 * Certain dialogs are now recognized as proper dialogs and reported as such, including Insider Preview dialog (settings app). This is now part of NVDA 2018.3.
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation dialog/panel.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: active text position change, controller for, drag start, drag cancel, drag complete, element selected, item status, live region change, notification, system alert, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app.
-* Notifications from newer app releases on Windows 10 Version 1709 (build 16299) and later are announced. NVDA 2018.2 and later supports this, with 2018.3 adding support for more notifications.
 * Tooltips from Edge and universal apps are recognized and will be announced.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop ID (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
 
 ## Action center
 
-* Brightness quick action is now a button instead of a toggle button.
-* Various status changes such as Focus Assist and Brightness will be reported.
+* Brightness quick action is now a button instead of a toggle button. This will be part of NVDA 2019.1.
+* Various status changes such as Focus Assist and Brightness will be reported. This will be part of NVDA 2019.1.
 
 ## Alarms and clock
 
-* Time picker values are now announced, noticeable when moving focus to picker controls. This also affects the control used to select when to restart to finish installing Windows updates.
+* Time picker values are now announced, noticeable when moving focus to picker controls. This also affects the control used to select when to restart to finish installing Windows updates. This will be part of NVDA 2019.1.
 
 ## Calculator
 
@@ -93,8 +89,8 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts, as well as availability of Reading View (if using Version 1709 and later) are announced.
 * Text auto-complete will be tracked and announced in address omnibar.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full screen.
 
 ## Modern keyboard
 
@@ -120,7 +116,6 @@ Note: most features below are now part of NVDA 2018.3.
 * Audio Volume progress bar beeps are no longer heard in Version 1803 and later.
 * More messages about Windows Update status are announced, especially if Windows Update encounters errors.
 * NVDA will no longer appear to do nothing or play error tones if using object navigation commands under some circumstances.
-* Various links added in build 18282 with no labels now have labels.
 * Windows Update reminder dialog is recognized as a proper dialog.
 
 ## Skype
