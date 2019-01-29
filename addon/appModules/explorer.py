@@ -12,6 +12,7 @@ Provides workarounds for controls such as identifying Start button, notification
 
 from nvdaBuiltin.appModules.explorer import *
 import winVersion
+import ui
 
 class AppModule(AppModule):
 
@@ -27,3 +28,5 @@ class AppModule(AppModule):
 			inputPanelWindow = obj.firstChild
 			if inputPanelWindow and inputPanelWindow.appModule.appName == "windowsinternal_composableshell_experiences_textinput_inputapp":
 				eventHandler.executeEvent("UIA_window_windowOpen", inputPanelWindow)
+				return
+		nextHandler()
