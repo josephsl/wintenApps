@@ -30,3 +30,8 @@ class AppModule(AppModule):
 				eventHandler.executeEvent("UIA_window_windowOpen", inputPanelWindow)
 				return
 		nextHandler()
+
+	def event_UIA_notification(self, obj, nextHandler, displayString=None, **kwargs):
+		# In build 18323, volume and brightness changes are reported via this event.
+		# Similar to Microsoft Edge, other programs will be in use for majority of the time.
+		ui.message(displayString)
