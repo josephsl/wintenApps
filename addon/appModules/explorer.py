@@ -31,7 +31,17 @@ class AppModule(AppModule):
 				return
 		nextHandler()
 
+	# Handle notification event oddities in build 18323 and later.
+	_volumeSliderValueEvent = False
+
+	def event_valueChange(self, obj, nextHandler):
+		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "AudioSliderContainer":
+			self._volumeSliderValueEvent = True
+		nextHandler()
+
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, **kwargs):
 		# In build 18323, volume and brightness changes are reported via this event.
 		# Similar to Microsoft Edge, other programs will be in use for majority of the time.
-		ui.message(displayString)
+		if self._volumeSliderValueEvent:
+			ui.message(displayString)
+			self._volumeSliderValueEvent = False
