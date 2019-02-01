@@ -19,7 +19,6 @@ se inclúe):
 * Calculadora (modern).
 * Cortana
 * Centro de Opinións
-* Barra de Xogos
 * Correo
 * Mapas
 * Microsoft Edge
@@ -34,19 +33,17 @@ se inclúe):
 
 Notas:
 
-* Este complemento require do Windows 10 Versión 1709 (build 16299) ou
-  posterior e do NVDA 2018.3 ou posterior. Para uns mellores resultados, usa
-  o complemento coa compilación estable máis recente (build 17763) e versión
-  estable máis recente do NVDA.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
-* Para entradas non listadas a continuación, podes asumir que as
-  características forman parte do NVDA, que xa non aplican debido a que o
-  complemento non soporta versións vellas de Windows ou que se fixeron
-  cambios nas apps que fan que as entradas xa non sexan aplicables.
-* A verificación propia de actualizacións do complemento eliminarase na
-  versión 19.02. Para futuras actualizacións do complemento, por favor
-  utilice o complemento Add-on Updater.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support old Windows 10
+  releases, or changes were made to Windows 10 and apps that makes entries
+  no longer applicable.
+* Standalone update check from this add-on has been removed. For future
+  add-on updates, please use Add-on Updater add-on.
 
 Para unha lista de trocos feitos entre cada versión do complemento, visita o
 documento [rexistros de trocos para publicacións de complementos][3].
@@ -55,15 +52,6 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 * Trocos internos para facer ó complemento compatible con versións futuras
   do NVDA.
-* Se o complemento Actualizador de Complementos está instalado, ese
-  complemento verificará as actualizacións do Windows 10 App Essentials.
-* O intervalo por defecto para verificar actualizacións cambiou a
-  verificacións semanais tanto para versións estables e de
-  desenvolvemento. Isto aplícase só se o propio complemento verifica as
-  actualizacións.
-* Cando o complemento estea configurado para verificar actualizacións, ao
-  actualizar o complemento se a nova liberación require unha versión nova do
-  NVDA presentarase unha mensaxe de erro.
 * Pequenos cambios en como se presentan algunhas mensaxes en linguas
   diferentes do inglés.
 * Os elementos de submenú recoñécense adecuadamente en varias apps,
@@ -82,9 +70,6 @@ documento [rexistros de trocos para publicacións de complementos][3].
   executarse co rexistro de depuración habilitado, estos eventos seguiranse
   e, no caso do evento UIA notification oirase un ton se as notificacións
   veñen de calquera lugar que non sexa a app actualmente activa.
-* As notificacións de novas versións de apps en Windows 10 versión 1709
-  (compilación 16299) en adiante lense correctamente. NVDA 2018.2 e
-  posterior soporta isto, engadíndose máis notificacións para a 2018.3.
 * recoñeceranse e anunciaranse os consellos para o Edge e para as
   aplicacións universais.
 * Cando se abran, pechen ou se conmute entre escritorios virtuales, NVDA
@@ -94,14 +79,17 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Centro de accións
 
-* A acción rápida Brillo é agora un botón no canto dun botón conmutable.
-* Reportaranse varios cambios de estado como Asistencia ao Foco e Brillo.
+* Brightness quick action is now a button instead of a toggle button. This
+  will be part of NVDA 2019.1.
+* Various status changes such as Focus Assist and Brightness will be
+  reported. This will be part of NVDA 2019.1.
 
 ## Alarmas e reloxo
 
-* Agora anúncianse os valores do selector de hora. Esto tamén afecta ó
-  control usado para selecionar cando reiniciar para rematar a instalación
-  das actualizacións de Windows.
+* Time picker values are now announced, noticeable when moving focus to
+  picker controls. This also affects the control used to select when to
+  restart to finish installing Windows updates. This will be part of NVDA
+  2019.1.
 
 ## Calculadora
 
@@ -129,12 +117,6 @@ documento [rexistros de trocos para publicacións de complementos][3].
 * En novas versións da app, NVDA non lerá as categorías de comentarios dúas
   veces.
 
-## Barra de Xogos
-
-* NVDA anunciará a aparición da ventá Barra de Xogos. Debido a limitacións
-  técnicas, o NVDA non pode interactuar compretamente coa Barra de Xogos
-  antes da compilación 17723.
-
 ## Correo
 
 * Cando se revisan elementos na listaxe de mensaxes, agora podes usar ordes
@@ -152,11 +134,10 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Microsoft Edge
 
-* Agora anúncianse notificacións como descargas de ficheiros e varias
-  alertas de páxina web así como a dispoñibilidade da vista de lectura (se
-  se utiliza a versión 1709 e posterior).
 * Farase un seguimento do autocompletado de texto e anunciarase na omnibarra
   de direccións.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full
+  screen.
 
 ## Teclado Moderno
 
@@ -203,8 +184,6 @@ Nota: A maioría das características a continuación son parte de NVDA 2018.3.
   disco.
 * Os valores da barra de progreso e outra información xa non se anuncian
   dúas veces.
-* Os grupos de opcións recoñécense ao se usar a navegación de obxectos para
-  navegar entre controis.
 * Para algunhas caixas combinadas e botóns de opción, NVDA xa non fallará ao
   recoñecer etiquetas e/ou ao anunciar cambios de valores. 
 * Os pitidos da barra de progreso do volume de audio xa non se escoitan na
@@ -213,8 +192,6 @@ Nota: A maioría das características a continuación son parte de NVDA 2018.3.
   especialmente se Windows Update atopa erros.
 * NVDA xa non parecerá non facer nada ou non reproducirá tons de erro cando
   se usen ordes de navegación de obxectos baixo certas circunstancias.
-* Varias ligazóns engadidas na compilación 18282 sen etiqueta agora están
-  etiquetadas.
 * O diálogo de recordatorio de actualización de Windows é recoñecido
   axeitadamente como un diálogo.
 

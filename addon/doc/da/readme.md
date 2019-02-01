@@ -17,7 +17,6 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Lommeregner (moderne).
 * Cortana
 * Feedback Hub
-* Spillinje
 * Mail
 * Kort
 * Microsoft Edge
@@ -32,17 +31,17 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 Bemærkninger:
 
-* This add-on requires Windows 10 Version 1709 (build 16299) or later and
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
   NVDA 2018.3 or later. For best results, use the add-on with latest Windows
   10 stable release (build 17763) and latest stable version of NVDA.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
-* For emner, der ikke er anført nedenfor, kan du antage, at funktionerne er
-  en del af NVDA, ikke længere gældende som tilføjelsesprogrammet ikke
-  understøtter ældre Windows 10 udgivelser, eller ændringer til apps, der
-  gør disse emner ugyldige.
-* Standalone update check from this add-on will be removed in version
-  19.02. For future add-on updates, please use Add-on Updater add-on.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support old Windows 10
+  releases, or changes were made to Windows 10 and apps that makes entries
+  no longer applicable.
+* Standalone update check from this add-on has been removed. For future
+  add-on updates, please use Add-on Updater add-on.
 
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
@@ -50,14 +49,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 ## Generelt
 
 * Internal changes to make the add-on compatible with future NVDA releases.
-* Hvis Add-on Updater-tilføjelse er installeret, kontrollerer denne
-  tilføjelse for opdateringer af Windows 10 App Essentials.
-* Standard opdateringstjekintervallet er ændret til ugentlige tjek for både
-  stabile og udviklingsmæssige versioner. Dette gælder, hvis selve
-  tilføjelsen kontrollerer for opdateringer.
-* If the add-on is set up to check for updates, when updating the add-on, if
-  the new add-on release requires a newer version of NVDA, an error message
-  will be presented.
 * Small changes to how some messages are presented in languages other than
   English.
 * Undermenupunkter er korrekt genkendt i forskellige apps, herunder
@@ -77,9 +68,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   opened. Med NVDA indstillet til at køre med logføring aktiveret, spores
   disse begivenheder, og for UIA notification event, vil en fejltone blive
   hørt, hvis notifikationer kommer fra en anden app en den aktuelle.
-* Meddelelser fra nyere app-udgivelser i Windows 10 Version 1709 (build
-  16299) og senere bliver annonceret. NVDA 2018.2 understøtter dette, og
-  NVDA 2018.3 tilføjer flere meddelelser.
 * Værktøjstips fra Edge og universale apps er genkendte og vil blive
   annonceret.
 * Når åbning, lukning, eller Skift mellem virtuelle skrivebord forekommer,
@@ -89,16 +77,17 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Handlingscenter
 
-* Lysstyrke hurtig handling er nu en knap i stedet for en skiftknap.
-* Forskellige statusændringer som Fokushjælp og Lysstyrke vil blive
-  rapporteret.
+* Brightness quick action is now a button instead of a toggle button. This
+  will be part of NVDA 2019.1.
+* Various status changes such as Focus Assist and Brightness will be
+  reported. This will be part of NVDA 2019.1.
 
 ## Alarmer og ur
 
-* Tidvælgerværdier er nu annonceret, mærkbart, når du flytter fokus til
-  vælgekontroller. Dette påvirker også den kontrol, der bliver brugt til at
-  vælge, hvornår du vil genstart for at afslutte installationen af
-  Windows-opdateringer.
+* Time picker values are now announced, noticeable when moving focus to
+  picker controls. This also affects the control used to select when to
+  restart to finish installing Windows updates. This will be part of NVDA
+  2019.1.
 
 ## Lommeregner
 
@@ -125,12 +114,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * For nyere app-udgivelser, vil NVDA ikke længere meddele feedback
   kategorier to gange.
 
-## Spillinje
-
-* NVDA vil annoncere udseende af vinduet Spillinje. På grund af tekniske
-  begrænsninger, kan NVDA ikke fuldt interagere med Spillinje før build
-  17723.
-
 ## Mail
 
 * Når du gennemgår emner i meddelelseslisten, kan du nu bruge
@@ -149,11 +132,10 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Microsoft Edge
 
-* Meddelelser som fil-downloads og forskellige websideindberetninger, samt
-  tilgængeligheden af læsevisning er (hvis du bruger Version 1709 og senere)
-  annonceret.
 * Autofuldførelse af tekst vil blive sporet og annonceret i adressse
   omnibar.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full
+  screen.
 
 ## Moderne tastatur
 
@@ -196,8 +178,6 @@ Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
   automatisk, herunder ved brug af Storage sense/disk cleanup widget..
 * Værdier på behandlingslinjer og andre oplysninger er ikke længere
   annonceret to gange.
-* Indstillingsgrupper genkendes, når du bruger objektnavigation til at
-  navigere mellem kontrolelementer.
 * For nogle combo boxe, vil NVDA ikke længere undlade at rapportere
   etiketter- og- eller annoncere værdiændringer.
 * Bip for behandlingslinjer for lydstyrke høres nu ikke længere i version
@@ -206,7 +186,6 @@ Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
   Windows Update fejler.
 * NVDA will no longer appear to do nothing or play error tones if using
   object navigation commands under some circumstances.
-* Various links added in build 18282 with no labels now have labels.
 * Windows Update reminder dialog is recognized as a proper dialog.
 
 ## Skype

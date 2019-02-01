@@ -17,7 +17,6 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 * Calcolatrice (moderna).
 * Cortana
 * Centro Feedback
-* Barra dei giochi
 * Posta
 * Mappe
 * Microsoft Edge
@@ -32,7 +31,7 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 
 Note:
 
-* Nota: questo addon richiede Windows 10 Versione 1709(build 16299) o
+* Nota: questo addon richiede Windows 10 Versione 1803 (build 17134) o
   successive, e NVDA 2018.3 o successive. Per migliori prestazioni,
   utilizzare il componente con l'ultima versione stabile di Windows10 (build
   17763) e l'ultima versione stabile di NVDA. 
@@ -43,9 +42,9 @@ Note:
   componente in quanto non supporta precedenti versioni di Windows, o che le
   applicazioni son state modificate in modo che le caratteristiche del
   componente non son più applicabili.
-* Il controllo dell'aggiornamento automatico direttamente dal componente
-  sarà rimosso nella versione 19.02. Per i futuri aggiornamenti automatici
-  si potrà usare il componente aggiuntivo addonsUpdate.
+* Il controllo dell'aggiornamento automatico direttamente dal componente è
+  stato rimosso. Per i futuri aggiornamenti automatici si potrà usare il
+  componente aggiuntivo addonsUpdate.
 
 Per un elenco delle modifiche riguardo le versioni rilasciate, fare
 riferimento al documento [changelogs for add-on releases][3].
@@ -54,15 +53,6 @@ riferimento al documento [changelogs for add-on releases][3].
 
 * Modifiche interne per rendere il componente aggiuntivo  compatibile con le
   future versioni di NVDA. 
-* Se il componente aggiuntivo Add-on Updater  è installato, questo
-  controllerà anche per gli aggiornamenti di winTenApps.
-* Il controllo periodico di aggiornamenti verrà eseguito ad intervalli
-  settimanali sia per le versioni stabili che in sviluppo. Questo si applica
-  quando il componente aggiuntivo controlla nuovi aggiornamenti
-  autonomamente.
-* Se si imposta il controllo automatico di nuovi aggiornamenti, quando il
-  componente aggiuntivo richiede una più recente versione di NVDA verrà
-  visualizzato un messaggio di errore.
 * Modifiche minori per i messaggi presentati in altre lingue diverse
   dall'inglese. 
 * le Voci di sottomenu vengono correttamente riconosciute in varie
@@ -83,10 +73,6 @@ riferimento al documento [changelogs for add-on releases][3].
   suggerimento aperto, finestra aperta. Quando NVDA è avviato con il log
   impostato su debug, questi eventi saranno tracciati, e per gli eventi di
   notifiche UIA, verrà emesso un segnale acustico.
-* Vengono annunciate le notifiche di app realizzate a partire da Windows 10
-  versione 1709 (build 16299) e successive. Questa caratteristica funziona
-  con NVDA 2018.2, in NVDA 2018.3 è stato aggiunto il supporto  per
-  ulteriori notifiche.
 * Vengono riconosciuti e annunciati i suggerimenti di Microsoft Edge e
   universal-app.
 * Quando si passa ad un desktop virtuale successivo, o viene chiuso o ne
@@ -98,15 +84,17 @@ riferimento al documento [changelogs for add-on releases][3].
 ## Centro attività:
 
 * Il pulsante per la Luminositàora funziona come un pulsante attivabile e
-  non come un pulsante ciclico.
+  non come un pulsante ciclico. Questa caratteristica verrà inclusa in NVDA
+  2019.1.
 * Vari cambiamenti di stato come assistenza in primo piano e Luminosità
-  verranno segnalati. 
+  verranno segnalati. Queste caratteristiche verranno incluse in NVDA 2019.1
 
 ## Allarmi e sveglia
 
 * I valori per selezionare l'ora adesso vengono annunciati. Questo comprende
   anche la sezione inerente la scelta dell'orario sul quando riavviare per
-  terminare gli aggiornamenti di Windows Update
+  terminare gli aggiornamenti di Windows Update. Queste caratteristiche
+  verranno incluse in NVDA 2019.1.
 
 ## Calcolatrice
 
@@ -134,12 +122,6 @@ riferimento al documento [changelogs for add-on releases][3].
 * Per le release di nuove app, NVDA non annuncerà più due volte la categoria
   feedback.
 
-## Barra dei giochi
-
-* NVDA annuncerà la comparsa della barra dei giochi. Purtroppo a causa di
-  limitazioni tecniche, l'interazione con la GameBar non è possibile in
-  maniera completa fino alla versione 17723.
-
 ## Posta
 
 * Quando si scorrono le voci nell'elenco messaggi, è possibile utilizzare i
@@ -157,11 +139,10 @@ riferimento al documento [changelogs for add-on releases][3].
 
 ## Microsoft Edge
 
-* Vengono annunciate correttamente le notifiche dei download dei file, degli
-  avvisi delle pagine web e se è disponibile la modalità lettura (dalla
-  versione 1709 in poi)
 * Monitoraggio e lettura del completamento automatico del testo nelle barre
   degli indirizzi.
+* NVDA non riprodurrà più un suono di avviso quando si attiva o disattiva lo
+  schermo intero con F11.
 
 ## Tastiera moderna
 
@@ -210,8 +191,6 @@ in NVDA 2018.3.
   rimozione dal disco di widget.
 * Le informazioni delle barre di avanzamento non vengono più lette due
   volte.
-* Il gruppo impostazioni viene riconosciuto quando ci si sposta tra i
-  controlli usando la navigazione ad oggetti.
 * Per alcune caselle combinate o pulsanti radio, NVDA non commetterà più
   errori nel riconoscere le etichette o nell'annunciare i cambiamenti dei
   valori.
@@ -221,7 +200,6 @@ in NVDA 2018.3.
   particolare quando Windows Update rileva errori. 
 * NVDA non riporterà più errori quando si usa  il navigatore ad oggetti in
   alcune situazioni.
-* Etichettati vari link aggiunti nella buil 1809.
 * la finestra di notifica per nuovi aggiornamenti windows verrà ora
   visualizzata  correttamente.
 

@@ -19,7 +19,6 @@ detalhes sobre o que está incluído):
 * Calculadora (moderna).
 * Cortana
 * Central de comentários
-* Barra de jogos
 * Email
 * Mapas
 * Microsoft Edge
@@ -34,17 +33,16 @@ detalhes sobre o que está incluído):
 
 Notas:
 
-* Este complemento requer o Windows 10 Versão 1709 (compilação 16299) ou
-  posterior e o NVDA 2018.3 ou posterior. Para obter melhores resultados,
-  use o complemento com a versão estável mais recente do Windows 10
-  (compilação 17763) e a versão estável mais recente do NVDA.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Alguns recursos do complemento são ou farão parte do leitor de tela NVDA.
-* Para entradas não listadas abaixo, pode assumir que os recursos já fazem
-  parte do NVDA, não mais aplicáveis, pois o complemento não suporta versões
-  antigas do Windows 10 ou foram feitas alterações em aplicativos que tornam
-  as entradas inválidas.
-* Standalone update check from this add-on will be removed in version
-  19.02. For future add-on updates, please use Add-on Updater add-on.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support old Windows 10
+  releases, or changes were made to Windows 10 and apps that makes entries
+  no longer applicable.
+* Standalone update check from this add-on has been removed. For future
+  add-on updates, please use Add-on Updater add-on.
 
 Para obter uma lista de alterações feitas entre cada lançamento do
 complemento, consulte o documento [changelogs for add-on releases][3].
@@ -53,14 +51,6 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 * Mudanças internas para tornar o complemento compatível com futuras versões
   do NVDA.
-* Se o complemento Add-on Updater estiver instalado, esse complemento
-  verificará as atualizações do Windows 10 aplicativos essenciais.
-* O intervalo de verificação de atualização padrão foi alterado para
-  verificações semanais para versões estáveis e em desenvolvimento. Isso se
-  aplica se o próprio complemento verificar atualizações.
-* Se o complemento estiver configurado para verificar se há atualizações, ao
-  atualizar o complemento, se a nova versão do complemento exigir uma versão
-  mais nova do NVDA, uma mensagem de erro será apresentada.
 * Pequenas mudanças em como algumas mensagens são apresentadas em idiomas
   diferentes do inglês.
 * Os itens do submenu são reconhecidos corretamente em vários aplicativos,
@@ -82,9 +72,6 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   ativado, esses eventos serão rastreados e, para o evento de notificação
   UIA, um bipe de depuração será ouvido se as notificações vierem de algum
   lugar diferente do aplicativo atualmente ativo.
-* Notificações de versões mais recentes de aplicativos no Windows 10 Versão
-  1709 (build 16299) e posteriores são anunciadas. O NVDA 2018.2 e posterior
-  suportam isso, com 2018.3 adicionando suporte para mais notificações.
 * As dicas de ferramentas do Edge e aplicativos universais são reconhecidas
   e serão anunciadas.
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
@@ -95,17 +82,17 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 ## Central de Ações
 
-* A ação rápida do brilho agora é um botão em vez de um botão de
-  alternância.
-* Várias alterações de status, como Assistente de Foco e Brilho, serão
-  relatadas.
+* Brightness quick action is now a button instead of a toggle button. This
+  will be part of NVDA 2019.1.
+* Various status changes such as Focus Assist and Brightness will be
+  reported. This will be part of NVDA 2019.1.
 
 ## Alarmes e relógio
 
-* Os valores do selecionador de tempo são agora anunciados, perceptíveis ao
-  mover o foco para os controles do selecionador. Isso também afeta o
-  controle usado para selecionar quando reiniciar para concluir a instalação
-  das atualizações do Windows.
+* Time picker values are now announced, noticeable when moving focus to
+  picker controls. This also affects the control used to select when to
+  restart to finish installing Windows updates. This will be part of NVDA
+  2019.1.
 
 ## Calculadora
 
@@ -133,12 +120,6 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 * Para os lançamentos mais recentes de aplicativos, o NVDA deixará de os
   anunciar duas vezes.
 
-## Barra de jogos
-
-* O NVDA anunciará a aparência da janela da barra de jogos. Devido a
-  limitações técnicas, o NVDA não pode interagir totalmente com a barra de
-  jogos antes da compilação 17723.
-
 ## Email
 
 * Ao explorar itens na lista de mensagens, agora pode usar os comandos de
@@ -156,11 +137,10 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 ## Microsoft Edge
 
-* Notificações como downloads de ficheiros e vários alertas de páginas da
-  Web, bem como a disponibilidade da Visualização de Leitura (se estiver a
-  usar a Versão 1709 e posterior) são anunciadas.
 * O preenchimento automático de texto será rastreado e anunciado no endereço
   omnibar.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full
+  screen.
 
 ## Teclado moderno
 
@@ -204,8 +184,6 @@ Nota: a maioria dos recursos abaixo agora fazem parte do NVDA 2018.3.
   armazenamento.
 * Os valores da barra de progresso e outras informações já não são
   anunciados duas vezes.
-* Os grupos de configurações são reconhecidos ao usar a navegação por
-  objetos para navegar entre controles.
 * Para algumas caixas combinadas e botões de opção, o NVDA não falhará ao
   reconhecer os rótulos e / ou anunciar mudanças de valor.
 * Os sinais sonoros da barra de progresso do volume de áudio deixaram de ser
@@ -214,8 +192,6 @@ Nota: a maioria dos recursos abaixo agora fazem parte do NVDA 2018.3.
   especialmente se o Windows Update encontrar erros.
 * O NVDA não irá mais parecer não fazer nada ou tocar tons de erro se usar
   comandos de navegação de objetos sob algumas circunstâncias.
-* Vários links adicionados na compilação 18282 sem rótulos agora têm
-  rótulos.
 * A caixa de diálogo do lembrete do Windows Update é reconhecida como um
   diálogo apropriado.
 

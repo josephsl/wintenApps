@@ -19,7 +19,6 @@ est inclus) :
 * Calculatrice (modern).
 * Cortana
 * Hub de commentaires
-* Game Bar
 * Courrier
 * Cartes
 * Microsoft Edge
@@ -35,7 +34,7 @@ est inclus) :
 
 Notes:
 
-* Ce module complémentaire nécessite Windows 10 Version 1709 (build 16299)
+* Ce module complémentaire nécessite Windows 10 Version 1803 (build 17134)
   ou version ultérieure et NVDA 2018.3 ou version ultérieure. Pour de
   meilleurs résultats, utilisez le module complémentaire avec la dernière
   version stable de Windows 10 (build 17763) et la dernière version stable
@@ -43,14 +42,13 @@ Notes:
 * Certaines fonctionnalités du module complémentaire font ou feront partie
   du lecteur d'écran NVDA.
 * Pour les entrées non répertoriées ci-dessous, vous pouvez supposer que les
-  fonctionnalités font partie de NVDA. Elles ne sont plus applicables car le
-  module complémentaire ne prend pas en charge les anciennes versions de
-  Windows 10 ou des modifications ont été apportées aux applications pour
-  que les entrées ne soient plus applicables.
-* La vérification de la mise à jour autonome de ce module complémentaire
-  sera supprimée dans la version 19.02. Pour les futures mises à jour du
-  module complémentaire, veuillez utiliser le module complémentaire Add-on
-  Updater.
+  fonctionnalités font partie de NVDA, qu'elles ne sont plus applicables,
+  car le module complémentaire ne prend pas en charge les anciennes versions
+  de Windows 10 ou des modifications ont été apportées à Windows 10 et aux
+  applications pour que les entrées ne soient plus applicables.
+* La vérification de la mise à jour autonome de ce module complémentaire a
+  été supprimée. Pour les futures mises à jour du module complémentaire,
+  veuillez utiliser le module complémentaire Add-on Updater.
 
 Pour obtenir la liste des changements effectuées entre chaque version du
 module complémentaire, reportez-vous au document [changelogs pour les
@@ -60,16 +58,6 @@ versions du module complémentaire][3].
 
 * Changements internes afin de rendre le module complémentaire compatible
   avec les futures versions de NVDA.
-* Si le  module complémentaire Add-on Updater est installé, ce module
-  complémentaire vérifiera les mises à jour de Windows 10 App Essentials.
-* L'intervalle de vérification de mise à jour par défaut a été remplacé par
-  des vérifications hebdomadaires pour les versions stable et de
-  développement. Ceci est applicable si le module complémentaire vérifie
-  lui-même les mises à jour.
-* Si le module complémentaire est configuré pour rechercher des mises à
-  jour, lors de la mise à jour du module complémentaire, si la nouvelle
-  version du module complémentaire nécessite une version plus récente de
-  NVDA, un message d'erreur s'affiche.
 * Petits changements dans la façon dont certains messages sont présentés
   dans des langues autres que l'anglais.
 * Les éléments de sous-menu sont correctement reconnus dans diverses
@@ -93,10 +81,6 @@ versions du module complémentaire][3].
   l'événement de notification UIA, une tonalité de débogage sera entendue si
   les notifications proviennent d'un endroit autre que l'application
   actuellement active.
-* Les notifications des versions plus récentes des applications sur Windows
-  10 version 1709 (build 16299) et ultérieures sont annoncées. NVDA 2018.2
-  et les versions ultérieures prennent cela en charge, avec 2018.3 ajoutant
-  un support pour plus de notifications.
 * Les suggestions pour Edge et pour les applications universelles sont
   reconnues et seront annoncées.
 * Lors de l'ouverture, de la fermeture ou le basculement entre les bureaux
@@ -107,17 +91,17 @@ versions du module complémentaire][3].
 ## Action center
 
 * L'action rapide de luminosité est maintenant un bouton au lieu d'un bouton
-  à bascule.
+  à bascule. Cela fera partie de NVDA 2019.1.
 * Divers changements d'état, tels que l'Assistance du Focus et la
-  luminosité, seront signalés.
+  luminosité, seront signalés. Cela fera partie de NVDA 2019.1.
 
 ## Alarmes et horloge
 
 * Les valeurs du sélecteur de l'heure sont maintenant annoncées, elles sont
   perceptibles lors du déplacement du focus vers les commandes du
-  sélecteur. Ceci affecte également le contrôle utilisé pour sélectionner
-  lors de redémarrer pour terminer l'installation des mises à jour de
-  Windows.
+  sélecteur. Ceci affecte également le contrôle utilisé pour sélectionner le
+  moment du redémarrage pour terminer l'installation des mises à jour de
+  Windows. Cela fera partie de NVDA 2019.1.
 
 ## Calculatrice
 
@@ -148,12 +132,6 @@ versions du module complémentaire][3].
 * Pour les nouvelles versions des applications, NVDA n'annonce plus deux
   fois les catégories de commentaires.
 
-## Game Bar
-
-* NVDA annoncera l'apparition de la fenêtre Game Bar. En raison de
-  limitations techniques, NVDA ne peut pas interagir entièrement avec Game
-  Bar antérieur à la build 17723.
-
 ## Courrier
 
 * Lorsque vous examinez les éléments dans la liste des messages, vous pouvez
@@ -172,12 +150,10 @@ versions du module complémentaire][3].
 
 ## Microsoft Edge
 
-* Les notifications telles que les téléchargements de fichiers et les
-  différentes alertes de la page Web, ainsi que la disponibilité de Reading
-  View (si vous utilisez la version 1709 et les versions ultérieures) sont
-  annoncées.
 * Le texte à saisie automatique sera suivi et annoncé dans l'adresse
   omnibar.
+* NVDA ne jouera plus un son de suggestion lorsque vous appuyez sur F11 pour
+  basculer en plein écran.
 
 ## Clavier moderne
 
@@ -227,8 +203,6 @@ NVDA 2018.3.
   Détection de stockage / nettoyage de disque.
 * Les valeurs de la barre de progression et d'autres informations ne sont
   plus annoncés deux fois.
-* Les groupes de paramètres sont reconnus lorsque vous utilisez la
-  navigation par objet pour naviguer entre les commandes.
 * Pour certaines zones de liste déroulantes et boutons radio, NVDA ne
   manquera plus de reconnaître les étiquettes et/ou d'annoncer les
   changements de valeur.
@@ -239,8 +213,6 @@ NVDA 2018.3.
 * NVDA ne semblera plus rien faire et ne jouera pas des tonalités d'erreur
   si des commandes pour la navigation par objet sont utilisées dans
   certaines circonstances.
-* Divers liens ajoutés dans la build 18282 sans étiquettes ont maintenant
-  des étiquettes.
 * Le dialogue de rappel de Windows Update est reconnu comme un dialogue
   propre.
 

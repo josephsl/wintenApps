@@ -19,7 +19,6 @@ qué se incluye):
 * Calculadora (modern).
 * Cortana
 * Centro de opiniones
-* Barra de juegos
 * Correo
 * Mapas
 * Microsoft Edge
@@ -35,7 +34,7 @@ qué se incluye):
 
 Notas:
 
-* Este complemento requiere Windows 10 Versión 1709 (compilación 16299) o
+* Este complemento requiere Windows 10 Versión 1803 (compilación 17134) o
   posterior y NVDA 2018.3 o posterior. Para unos mejores resultados, utiliza
   el complemento con la compilación estable más reciente de Windows 10
   (compilación 17763) y la versión estable más reciente de NVDA.
@@ -45,9 +44,9 @@ Notas:
   características son parte de NVDA, no se aplican porque el complemento no
   da soporte a versiones antiguas de Windows 10, o se han hecho cambios a
   las aplicaciones que permiten que ya no sea necesario aplicarlas.
-* La comprobación de actualización independiente de este complemento se
-  eliminará en la versión 19.02. Para futuras actualizaciones de
-  complementos, por favor utiliza el complemento Add-on Updater.
+* La comprobación de actualización independiente de este complemento se ha
+  eliminado. Para futuras actualizaciones de complementos, por favor utiliza
+  el complemento Add-on Updater.
 
 Para ver una lista de cambios hechos entre cada actualización del
 complemento, consulta el documento [changelogs for add-on releases][3].
@@ -56,15 +55,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 * Cambios internos para hacer el complemento compatible con versiones
   futuras de NVDA.
-* Si el complemento Add-on Updater está instalado, dicho complemento buscará
-  las actualizaciones de Windows 10 App Essentials.
-* El intervalo por defecto de búsqueda de actualizaciones ha cambiado a
-  búsquedas semanales tanto en las versiones estables como las de
-  desarrollo. Esto también se aplica si es el propio complemento el que
-  busca actualizaciones.
-* Si el complemento se configura para buscar actualizaciones, al
-  actualizarlo, si la nueva versión del complemento necesita una versión más
-  reciente de NVDA, se mostrará un mensaje de error.
 * Pequeños cambios relacionados con la forma de mostrar los mensajes en
   idiomas distintos al inglés.
 * Se reconocen los elementos de los submenús en diversas aplicaciones,
@@ -85,10 +75,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   registro de depuración habilitado, estos eventos se seguirán, y se oirá un
   tono de depuración para el elemento UIA notification si las notificaciones
   vienen de un lugar distinto a la aplicación actual.
-* Las notificaciones de versiones de apps recientes en Windows 10 versión
-  1709 (compilación 16299) en adelante se anuncian correctamente. NVDA
-  2018.2 y las versiones posteriores ya las soportan, y la versión 2018.3 da
-  soporte a más notificaciones.
 * Se reconocerán y anunciarán los consejos para Edge y para aplicaciones
   universales.
 * Al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
@@ -99,15 +85,16 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 ## Centro de actividades
 
 * La acción rápida de brillo es ahora un botón en vez de un botón
-  conmutador.
+  conmutador. Esto formará parte de NVDA 2019.1.
 * Se anuncian diversos cambios de estado, como la ayuda al enfoque o el
-  brillo.
+  brillo. Esto formará parte de NVDA 2019.1.
 
 ## Alarmas y reloj
 
 * Ahora se anuncian los valores del selector de hora. Esto también afecta al
   control utilizado para seleccionar cuándo reiniciar para finalizar la
-  instalación de las actualizaciones de Windows.
+  instalación de las actualizaciones de Windows. Esta característica formará
+  parte de NVDA 2019.1.
 
 ## Calculadora
 
@@ -135,12 +122,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * En nuevas versiones de la app, NVDA no anunciará las categorías de los
   comentarios dos veces.
 
-## Barra de juegos
-
-* NVDA anunciará la aparición de la ventana Barra de Juegos. Debido a
-  limitaciones técnicas, NVDA no puede interactuar completamente con la
-  Barra de Juegos en compilaciones anteriores a la 17723.
-
 ## Correo
 
 * Cuando se revisan elementos en la lista de mensajes, ahora puedes utilizar
@@ -158,11 +139,10 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 ## Microsoft Edge
 
-* Ahora se anuncian notificaciones tales como descargas de ficheros,
-  diversas alertas de páginas web, así como la disponibilidad de la vista de
-  lectura (si se usa la versión 1709 o posterior).
 * Se seguirá y se anunciará el texto de autocompletado en la barra de
   direcciones omni.
+* NVDA ya no reproducirá el sonido de sugerencias de búsqueda al pulsar f11
+  para conmutar la pantalla completa.
 
 ## Teclado Moderno
 
@@ -211,8 +191,6 @@ Nota: la mayoría de las siguientes características ya son parte de NVDA
   limpieza de disco.
 * Los valores de la barra de progreso y otra información ya no se anuncian
   dos veces.
-* Los grupos de opciones se reconocen cuando se utilice la navegación de
-  objetos para navegar entre controles.
 * En algunos cuadros combinados y botones de opción, NVDA ya no fallará al
   reconocer etiquetas y/o al anunciar cambios de valores.
 * Los pitidos de la barra de progreso de volumen de audio ya no se oyen en
@@ -221,8 +199,6 @@ Nota: la mayoría de las siguientes características ya son parte de NVDA
   este encuentra errores.
 * NVDA ya no parecerá hacer nada o reproducir tonos de error si se usan
   órdenes de navegación por objetos en algunas circunstancias.
-* Varios enlaces añadidos en la compilación 18282 sin etiquetas ahora están
-  etiquetados.
 * El diálogo de recordatorio de Windows Update se reconoce correctamente
   como un diálogo.
 
