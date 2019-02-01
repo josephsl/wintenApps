@@ -17,7 +17,6 @@ inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 * Rechner (modern)
 * Cortana
 * Feedback Hub
-* Spieleleiste
 * Mail
 * Karten
 * Microsoft Edge
@@ -32,19 +31,16 @@ inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 
 Hinweise:
 
-* Diese Erweiterung erfordert Windows 10 Version 1709 (Build 16299) oder
-  höher und NVDA 2018.3 oder höher. Für beste Ergebnisse verwenden Sie die
-  Erweiterung mit der neuesten stabilen Version von Windows 10 (Build 17134)
-  und der neuesten stabilen Version von NVDA.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
-* Für Einträge, die unten nicht aufgeführt sind, können Sie davon ausgehen,
-  dass diese Funktionen Teil von NVDA selbst sind und nicht mehr anwendbar
-  sind, da die Erweiterung alte Windows 10-Versionen nicht unterstützt oder
-  Änderungen an Anwendungen vorgenommen wurden, die Einträge nicht mehr
-  anwendbar machen.
-* Die eigenständige Update-Prüfung dieser Erweiterung wird mit der Version
-  19.02 entfernt. Für zukünftige Erweiterungsupdates verwenden Sie bitte die
-  Erweiterung Addon-Updater.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support old Windows 10
+  releases, or changes were made to Windows 10 and apps that makes entries
+  no longer applicable.
+* Standalone update check from this add-on has been removed. For future
+  add-on updates, please use Add-on Updater add-on.
 
 Eine Liste aller Änderungen in den einzelnen Versionen der Erweiterung
 finden Sie im Dokument [Änderungsprotokolle  der veröffentlichten
@@ -54,16 +50,6 @@ Versionen][3].
 
 * Interne Änderungen, um die Erweiterung mit zukünftigen NVDA-Versionen
   kompatibel zu machen.
-* Wenn die Erweiterung Zusatz-Updater installiert ist, wird diese
-  Erweiterung nach Updates für Windows 10 App Essentials suchen.
-* Das standardmäßige Prüfintervall für Aktualisierungen wurde auf
-  wöchentliche Prüfungen sowohl für stabile als auch für
-  Entwicklungsversionen geändert. Dies gilt, wenn die Erweiterung Windows 10
-  App Essentials selbst nach Updates sucht.
-* Eine Fehlermeldung wird während der Aktualisierung dieser Erweiterung
-  ausgegeben, wenn die neue Erweiterungsversion eine neuere NVDA-Version
-  erfordert. Dies gilt auch dann, wenn die Erweiterung selbst nach
-  Aktualisierungen sucht.
 * Kleine Änderungen an der Darstellung einiger Benachrichtigungen in anderen
   Sprachen als Englisch.
 * Untermenüs werden in verschiedenen Anwendungen richtig erkannt,
@@ -85,8 +71,6 @@ Versionen][3].
   verfolgt. Für UIA-Benachrichtigungsereignisse wird ein Debug-Ton
   ausgegeben, wenn Benachrichtigungen von einer anderen Anwendung als der
   aktuell aktiven Anwendung kommen.
-* Benachrichtigungen von neueren App-Releases auf Windows 10 Version 1709
-  (Build 16299) und neuer werden mitgeteilt.
 * Tooltips von Edge und Universal Apps werden erkannt und angekündigt.
 * Beim Öffnen, Schließen oder Wechseln zwischen virtuellen Desktops gibt
   NVDA die aktuelle Desktop-ID (z.B. Desktop 2) bekannt.
@@ -95,17 +79,17 @@ Versionen][3].
 
 ## Einstellungscenter für Benachrichtigungen und Aktionen
 
-* Die schnelle Aktion für Helligkeit ist nun eine Schaltfläche anstelle
-  einer Umschalttaste.
-* Verschiedene Statusänderungen wie Focus Assist und Helligkeit werden nun
-  angesagt.
+* Brightness quick action is now a button instead of a toggle button. This
+  will be part of NVDA 2019.1.
+* Various status changes such as Focus Assist and Brightness will be
+  reported. This will be part of NVDA 2019.1.
 
 ## Wecker und Uhr
 
-* Die Werte für den Zeitbalken werden nun angezeigt. Dies macht sich beim
-  Verschieben des Fokus auf die Balkensteuerung bemerkbar. Es betrifft auch
-  das Steuerelement für die Festlegung des Neustarts nach einer erfolgreich
-  abgeschlossenen Aktualisierung.
+* Time picker values are now announced, noticeable when moving focus to
+  picker controls. This also affects the control used to select when to
+  restart to finish installing Windows updates. This will be part of NVDA
+  2019.1.
 
 ## Rechner
 
@@ -136,12 +120,6 @@ Versionen][3].
 * Feedback-Kathegorien werden in neueren App-Versionen nicht mehr zweimal
   angesagt.
 
-## Spieleleiste
-
-* NVDA wird das Erscheinen der Spieleleiste ankündigen. Auf Grund
-  technischer Einschränkungen kann NVDA vor dem Build 17723 nicht
-  vollständig mit der Spieleleiste interagieren.
-
 ## Mail
 
 * Beim Navigieren durch Elemente in der Nachrichtenliste können Sie nun
@@ -159,11 +137,10 @@ Versionen][3].
 
 ## Microsoft Edge
 
-* Benachrichtigungen wie Datei-Downloads und verschiedene Webseiten-Alarme
-  sowie die Verfügbarkeit der Leseansicht (ab Version 1709) werden
-  mitgeteilt.
 * Die automatische Vervollständigung beim Tippen wird verfolgt und in der
   Adress-Omnibar ordnungsgemäß angesagt.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full
+  screen.
 
 ## Moderne virtuelle Tastaturen
 
@@ -209,8 +186,6 @@ NVDA 2018.3.
   werden in echtzeit gemeldet.
 * Werte in Fortschrittsbalken und andere Informationen werden nicht mehr
   zweimal angesagt.
-* Einstellungsgruppen werden erkannt, wenn Objektnavigation zur Navigation
-  zwischen Elementen angewendet wird.
 * Bei einigen Kombinationsfeldern und Kontrollfeldern wird NVDA nun die
   Beschriftung erkennen und/oder Wertänderungen ankündigen.
 * Lautstärke-Fortschrittsbalken werden nicht mehr ausgegeben (gilt für
@@ -219,8 +194,6 @@ NVDA 2018.3.
   insbesondere wenn im Windows Update Fehler auftreten.
 * NVDA wird nun ordnungsgemäß reagieren und keine Fehlertöne mehr während
   der Objektnavigation abspielen.
-* Verschiedene neue Links, die im Build 18282 hinzugefügt wurden, haben
-  jetzt entsprechende Beschriftungen.
 * Das Erinnerungsdialogfeld von Windows Update wird als richtiger Dialog
   erkannt.
 

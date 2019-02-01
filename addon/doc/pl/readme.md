@@ -17,7 +17,6 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 * Kalkulator (nowoczesny).
 * Cortana
 * Centrum opinii
-* Pasek gry
 * Poczta
 * Mapy
 * Microsoft Edge
@@ -32,18 +31,16 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* Uwaga! Ten dodatek wymaga Windowsa 10 Wersji 1709 (kompilacji 16299) lub
-  nowszej i NVDA 2018.3 lub nowszej. Aby uzyskać najlepsze wyniki, należy
-  używać dodatku z najnowszą stabilną kompilacją systemu (kompilacja 17134)
-  i najnowszą stabilną wersją NVDA. 
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
-* Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
-  wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
-  wspiera starszych wydań systemu, lub aplikacje są zmienione w taki sposób,
-  że te wpisy są unieważnione.
-* wbudowane sprawdzanie aktualizacji tego dodatku będzie usunięte w wersji
-  19.02. Aby aktualizować przyszłe wersje, prosimy używać dodatku Add-on
-  updater.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support old Windows 10
+  releases, or changes were made to Windows 10 and apps that makes entries
+  no longer applicable.
+* Standalone update check from this add-on has been removed. For future
+  add-on updates, please use Add-on Updater add-on.
 
 Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 [listę zmian dla wersji dodatku][3].
@@ -51,14 +48,6 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 ## Ogólne
 
 * Zmiany wewnętrzne czyniące dodatek zgodnym z przyszłymi wersjami NVDA.
-* Jeśli dodatek "Add-on Updater" jest zainstalowany, ten dodatek będzie
-  sprawdzał aktualizacje dadatku Win 10 app essentials.
-* Domyślny czas sprawdzania aktualizacji został zmieniony na aktualizacje
-  tygodniowe dla wersji stabilnych i rozwojowych. To jest stosowane, gdy
-  dodatek sam sprawdza aktualizacje.
-* Jeżeli dodatek jest ustawiony tak, aby sprawdzał aktualizacje, przy
-  aktualizacji, jeżeli dodatek wymaga nowszej wersji NVDA, komunikat o
-  błędzie będzie pokazany.
 * Drobne zmiany w pokazywanych wiadomościach w innych językach niż
   angielski.
 * Elementy meni rozwijanego są prawidłowo rozpoznawane w różnych
@@ -79,9 +68,6 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   zdarzenia będą śledzone. Natomiast dla UIA, zdarzenia UIA notification
   event, dźwięk debugowania będzie odtwarzany jeżeli powiadomienie
   przychodzi z innej aplikacji niż ta aktywna.
-* Powiadomienia z nowych wersji aplikacji w Windows 10 wersji 1709
-  (kompilacja 16299) i nowszych są wymawiane. NVDA wspiera to od wersji
-  2018.2. Ponadto, NVDA 2018.3 wspiera jeszcze więcej powiadomień.
 * Opisy obiektów w Edge i innych aplikacjach UWP są rozpoznawane  i będą
   czytane automatycznie.
 * Podczas otwierania, zamykając lub przełączając się między wirtualnymi
@@ -92,16 +78,17 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 
 ## Centrum powiadomień
 
-* Szybka akcja jasności została zmieniona z przycisku przełączającego na
-  przycisk zwykły.
-* Róźne zmiany stanu, takie jak asysta punktu uwagi i jasność będą
-  wymawiane.
+* Brightness quick action is now a button instead of a toggle button. This
+  will be part of NVDA 2019.1.
+* Various status changes such as Focus Assist and Brightness will be
+  reported. This will be part of NVDA 2019.1.
 
 ## Alarmy i zegar
 
-* Teraz są wypowiadane kontrolki wypowiadania czasu, zauważalne przy
-  poruszaniu się po nich. To także dotyczy kontrolki wyboru czasu ponownego
-  uruchomienia po instalacji aktualizacji.
+* Time picker values are now announced, noticeable when moving focus to
+  picker controls. This also affects the control used to select when to
+  restart to finish installing Windows updates. This will be part of NVDA
+  2019.1.
 
 ## Kalkulator
 
@@ -127,11 +114,6 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * Dla nowych wyda aplikacji, NVDA więcej nie będzie oznajmiało kategorię
   informacji zwrotnych dwukrotnie.
 
-## Pasek gry
-
-* NVDA będzie powiadamiał o istnieniu paska do gier Z przyczyn technicznych,
-  interakcja z tą kontrolką możliw jest tylko aczynając od wersji 17723.
-
 ## Poczta
 
 * Przy wyświetlaniu elementów w listy wiadomości, teraz można użyć skrótów
@@ -148,10 +130,9 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 
 ## Microsoft Edge
 
-* Powiadomienia, takie jak pobierania plików i różne ostrzeżenia na stronach
-  webowych są oznajmiane. także oznajmiane jest dostępność trybu czytania (
-  wersja 1709
 * Autouzupełnienie tekstu będzie śledzone i wymawiane w omnibarze.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full
+  screen.
 
 ## Klawiatura nowoczesna
 
@@ -196,8 +177,6 @@ Uwaga: Większość funkcji tego dodatku jest teraz częścią NVDA 2018.3.
   wypowiadany automatycznie, włączając w to widget czujnika pamięci.
 * Wartości paska postępu i inne informacje, nie są wypowiadane
   automatycznie.
-* Grupy ustawień są rpspoznawane przy użyciu nawigacji obiektowej aby było
-  można poruszać się pomięcy kontrolkami.
 * Dla niektórych list rozwijanych i przycisków opcji, NVDA będzie wykrywał
   nazwę oraz wypowiadał zmiany wartości. 
 * Dzwięki paska postępu głośności nie są więcej słyszane w kompilacji 1803 i
@@ -207,7 +186,6 @@ Uwaga: Większość funkcji tego dodatku jest teraz częścią NVDA 2018.3.
 * W niektórych przypadkach, gdy używana jest nawigacja obiektowa, NVDA nie
   będzie się zachowywał  sposób nijaki, albo nie będzie odtwarzał dźwięku
   błedu.
-* róźne linki dodane w kompilacji 18282 bez etykietek, teraz je posiada
 * Okno dialogowe przypomnienia o aktualizacjach Windows, teraz jest
   rozpoznawane jako poprawne okno dialogowe.
 

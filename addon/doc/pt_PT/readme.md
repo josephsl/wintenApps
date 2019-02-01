@@ -19,7 +19,6 @@ detalhes sobre o que está incluído):
 * Calculadora (moderna).
 * Cortana
 * Central de comentários
-* Barra de jogos.
 * Correio.
 * Mapas.
 * Microsoft Edge
@@ -34,17 +33,17 @@ detalhes sobre o que está incluído):
 
 Notas:
 
-* Este extra requer o Windows 10 Versão 1709 (compilação 16299) ou posterior
+* Este extra requer o Windows 10 Versão 1803 (compilação 17134) ou posterior
   e o NVDA 2018.3 ou posterior. Para obter melhores resultados, use o extra
-  com a versão estável mais recente do Windows 10 (compilação 17134) e a
+  com a versão estável mais recente do Windows 10 (compilação 17763) e a
   versão estável mais recente do NVDA. 
 * Alguns recursos adicionais são ou farão parte do leitor de tela do NVDA.
-* Para entradas não listadas abaixo, pode assumir que os recursos já fazem
-  parte do NVDA, não mais aplicáveis, pois o complemento não suporta versões
-  antigas do Windows 10 ou foram feitas alterações em aplicativos que tornam
-  as entradas inválidas.
-* Standalone update check from this add-on will be removed in version
-  19.02. For future add-on updates, please use Add-on Updater add-on.
+* Para entradas não listadas abaixo, pode assumir que os recursos fazem já
+  parte do NVDA, não sendo mais aplicáveis, pois o complemento não suporta
+  versões antigas do Windows 10, ou foram feitas alterações no Windows 10 e
+  nos aplicativos que tornam as entradas desnecessárias.
+* A verificação de actualização autónoma deste extra foi removida. Para
+  futuras actualizações adicionais, use o extra actualizador de extras.
 
 Para obter uma lista de alterações feitas entre cada release do extra,
 consulte o documento [changelogs for releases, release][3].
@@ -53,14 +52,6 @@ consulte o documento [changelogs for releases, release][3].
 
 * Mudanças internas para tornar o extra compatível com futuras versões do
   NVDA.
-* Se o extra Add-on Updater estiver instalado, verificará as actualizações
-  do Windows 10 App Essentials.
-* O intervalo padrão de verificação de actualizações foi alterado para
-  verificações semanais, para versões estáveis e de desenvolvimento. Isso
-  aplica-se for o próprio extra a verificar automaticamente as atualizações.
-* Se o extra estiver configurado para verificar se há novas actualizações,
-  ao actualizá-lo o omplemento, se a nova versão do complemento exigir uma
-  versão mais nova do NVDA, uma mensagem de erro será apresentada.
 * Se o extra estiver configurado para verificar se há actualizações, ao
   atualizá-lo, se a nova versão do extra exigir uma versão mais nova do
   NVDA, será apresentada uma mensagem de erro.
@@ -83,9 +74,6 @@ consulte o documento [changelogs for releases, release][3].
   eventos serão rastreados e, para o evento de notificação UIA, um beep de
   depuração será ouvido se as notificações vierem de algum lugar diferente
   do aplicativo actualmente activo.
-* Notificações de versões mais recentes de aplicativos no Windows 10 Versão
-  1709 (build 16299) e posteriores são anunciadas. O NVDA 2018.2 e posterior
-  suportam isso, com 2018.3 adicionando suporte para mais notificações.
 * As dicas de ferramentas do Edge e aplicativos universais são reconhecidas
   e serão anunciadas.
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
@@ -97,16 +85,16 @@ consulte o documento [changelogs for releases, release][3].
 ## Centro de acção
 
 * A ação rápida do brilho agora é um botão em vez de um botão de
-  alternância.
+  alternância. Isto fará parte do NVDA 19.1.
 * Várias alterações de status, como Foco Assistido e Brilho, passam a ser
-  indicadas.
+  indicadas.  Isto fará parte do NVDA 19.1.
 
 ## Alertas e relógio
 
 * Os valores do Time Picker agora são anunciados, visíveis ao mover o foco
   para os controlos do selector. Isso também afecta o controlo usado para
   seleccionar quando reiniciar para concluir a instalação das actualizações
-  do Windows.
+  do Windows.  Isto fará parte do NVDA 19.1.
 
 ## Calculadora
 
@@ -134,12 +122,6 @@ consulte o documento [changelogs for releases, release][3].
 * Para os lançamentos mais recentes de aplicativos, o NVDA deixará de os
   anunciar duas vezes.
 
-## Barra de jogos.
-
-* O NVDA anunciará a aparência da janela da barra de jogos. Devido a
-  limitações técnicas, o NVDA não pode interagir totalmente com a barra de
-  jogos antes da compilação 17723.
-
 ## Correio.
 
 * Ao rever itens na lista de mensagens, agora pode usar os comandos de
@@ -157,30 +139,31 @@ consulte o documento [changelogs for releases, release][3].
 
 ## Microsoft Edge
 
-* Notificações como downloads de ficheiros e vários alertas de páginas da
-  Web, bem como a disponibilidade da Visualização de Leitura (se estiver a
-  usar a Versão 1709 e posterior) são anunciadas.
 * O preenchimento automático de texto será rastreado e anunciado na barra de
   endereço.
+* O NVDA não reproduzirá mais o som de sugestão ao pressionar F11 para
+  alternar para ecrã inteiro.
 
 ## Teclado moderno
 
 Nota: a maioria dos recursos seguintes, agora, fazem parte do NVDA 2018.3.
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
-  later, including the redesigned panel in Version 1809 (build 17661 and
-  later) and changes made in 19H1 (build 18262 and later, including kaomoji
-  and symbols categories in build 18305). If using NVDA releases earlier
-  than 2018.4, for best experience when reading emojis, use Windows OneCore
-  speech synthesizer. If 2018.4 or later is in use, enable Unicode
-  Consortium setting from NvDA's speech settings and set symbol level to
-  "some" or higher.
+* Suporte para o painel de entrada de Emoji na Versão 1709 (Actualização
+  Creators de Outono) e posterior, incluindo o painel reformulado na Versão
+  1809 (compilação 17661 e posterior) e alterações feitas em 19H1
+  (compilação 18262 e posteriores, incluindo categorias kaomoji e símbolos
+  na compilação 18305). Se estiver a usar versões do NVDA anteriores a
+  2018.4, para melhor experiência ao ler emojis, use o sintetizador de fala
+  do Windows OneCore. Se 2018.4 ou posterior estiver em uso, active a
+  configuração do Unicode Consortium nas configurações de voz do NVDA e
+  defina o nível de símbolo como "alguns" ou superior.
 * Suporte para sugestões de entrada de teclado de hardware na versão 1803
   (actualização de abril de 2018) e posterior.
-* In post-1709 builds, NVDA will announce the first selected emoji when
-  emoji panel opens. This is more noticeable in build 18262 and later where
-  emoji panel may open to last browsed category, such as displaying skin
-  tone modifiers when opened to People category.
+* Nas compilações posteriores à  1709, o NVDA anunciará o primeiro emoji
+  selecionado quando o painel de emojis for aberto. Isso é mais perceptível
+  na versão 18262 e posterior, onde o painel emoji pode ser aberto para a
+  última categoria navegada, como a exibição do modificador de tom de pele
+  quando aberto na categoria Pessoas.
 * Suporte para anunciar itens da área de transferência em nuvem na versão
   1809 (compilação 17666 e posterior).
 * Redução dos detalhes desnecessários ao trabalhar com o teclado moderno e
@@ -188,10 +171,10 @@ Nota: a maioria dos recursos seguintes, agora, fazem parte do NVDA 2018.3.
   abrir sugestões de entrada de teclado de hardware e ficar em silêncio
   quando certas teclas do teclado de toque geram eventos de alteração de
   nome em alguns sistemas.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible.
+* O NVDA não reproduzirá mais os tons de erro ou não fará nada ao fechar o
+  painel de emojis em compilações mais recentes do Insider Preview do 19H1.
+* Na versão 1809 (actualização de outubro de 2018) e posterior, o NVDA
+  anunciará resultados de pesquisa para emojis, se possível.
 
 ## Pessoas.
 
@@ -204,8 +187,6 @@ Nota: a maioria dos recursos seguintes, agora, fazem parte do NVDA 2018.3.
   faladas automaticamente, incluindo a armazenagem e a limpeza do disco.
 * Os valores da barra de progresso e outras informações já não são
   anunciados duas vezes.
-* Os grupos de configurações são reconhecidos ao usar a navegação por
-  objectos para navegar entre controlos.
 * Para algumas caixas combinadas e botões de rádio, o NVDA não falhará ao
   reconhecer os rótulos e / ou anunciar mudanças de valor.
 * Os sinais sonoros da barra de progresso do volume de áudio deixaram de ser
@@ -214,8 +195,6 @@ Nota: a maioria dos recursos seguintes, agora, fazem parte do NVDA 2018.3.
   especialmente se o Windows Update encontrar erros.
 * O NVDA não irá mais parecer não fazer nada ou tocar tons de erro se usar
   comandos de navegação de objectos sob algumas circunstâncias.
-* Vários links adicionados na compilação 18282 sem rótulos agora têm
-  rótulos.
 * A caixa de diálogo de lembretes do Windows Update é reconhecida como um
   diálogo apropriado.
 

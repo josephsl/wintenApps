@@ -19,7 +19,6 @@ privire la ceea ce este inclus):
 * Calculator (modern).
 * Cortana
 * Centrul de Feedback
-* Bară de jocuri
 * Mail
 * Hărți
 * Microsoft Edge
@@ -34,20 +33,17 @@ privire la ceea ce este inclus):
 
 Note:
 
-* Acest supliment necesită Windows 10 versiunea 1709 )compilarea 16299) sau
-  mai nouă și NVDA 2018.3 sau mai nou. Pentru cele mai bune rezultate,
-  folosiți-l cu ultima compilare stabilă ( compilarea 17763) și cea mai
-  recentă versiune stabilă a NVDA-ului.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
-* Pentru intrările care nu sunt listate mai jos, puteți presupune că
-  funcționalitățile fac parte din NVDA și nu mai sunt aplicabile, întrucât
-  suplimentul nu mai suportă versiunile vechi de Windows 10, sau că au fost
-  efectuate modificări la aplicații, care fac ca intrările să nu mai fie
-  aplicabile.
-* Căutătorul de actualizări al acestui supliment va înceta să funcționeze
-  începând cu versiunea 19.02. Funcția acestuia va fi preluată de
-  suplimentul Add-on Updater.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support old Windows 10
+  releases, or changes were made to Windows 10 and apps that makes entries
+  no longer applicable.
+* Standalone update check from this add-on has been removed. For future
+  add-on updates, please use Add-on Updater add-on.
 
 Pentru o listă a modificărilor efectuate la fiecare versiune a
 suplimentului, consultați documentul [jurnalelor de modificări pentru
@@ -57,15 +53,6 @@ versiunile suplimentului][3].
 
 * Au fost făcute modificări interne care să facă acest supliment compatibil
   cu viitoarele versiuni de NVDA.
-* Dacă suplimentul Add-on Updater este instalat, va căuta actualizări pentru
-  Windows 10 App Essentials.
-* Intervalul implicit de căutare a actualizărilor a fost modificat la
-  căutări săptămânale atât pentru versiunile stabile, cât și pentru cele în
-  dezvoltare. Acesta este aplicabil dacă suplimentul însuși caută
-  actualizări.
-* Dacă suplimentul este setat să caute actualizări, la actualizare, dacă
-  versiunea nouă necesită o versiune mai nouă de NVDA, va apărea un mesaj de
-  eroare.
 * Mici modificări la modul în care unele mesaje sunt prezentate în alte
   limbi decât engleză.
 * Elementele de submeniu sunt recunoscute corespunzător în diverse
@@ -86,9 +73,6 @@ versiunile suplimentului][3].
   diagnosticarea activată, aceste evenimente vor fi urmărite, iar pentru
   evenimentul de tip notificare UIA, se va auzi un ton de diagnosticare dacă
   notificările nu vin din aplicația curentă, ci de altundeva.
-* Sunt anunțate Notificările versiunilor mai noi ale aplicațiilor din
-  Windows 10 versiunea 1709 (compilare 16299) și mai nouă. NVDA 2018.2
-  suportă asta, iar 2018.3 vine cu suport pentru mai multe notificări.
 * Indiciile din Edge și alte aplicații universale sunt recunoscute și vor fi
   anunțate.
 * La deschiderea, închiderea sau comutarea între spațiile de lucru virtuale,
@@ -98,17 +82,17 @@ versiunile suplimentului][3].
 
 ## Centru de acțiuni
 
-* Acțiunea rapidă a luminozității este acum un buton, nu un buton de
-  activare.
-* Diverse modificări de stare precum asistarea focalizării și luminozitatea,
-  vor fi raportate.
+* Brightness quick action is now a button instead of a toggle button. This
+  will be part of NVDA 2019.1.
+* Various status changes such as Focus Assist and Brightness will be
+  reported. This will be part of NVDA 2019.1.
 
 ## Alarme și ceas
 
-* Valorile selectorului de dată sunt acum anunțate, de observat atunci când
-  focalizarea se deplasează la selectorul de comenzi. De asemenea, aceasta
-  afectează comanda utilizată pentru a selecta când să repornească pentru
-  finalizarea actualizărilor Windows.
+* Time picker values are now announced, noticeable when moving focus to
+  picker controls. This also affects the control used to select when to
+  restart to finish installing Windows updates. This will be part of NVDA
+  2019.1.
 
 ## Calculator
 
@@ -135,12 +119,6 @@ versiunile suplimentului][3].
 * Pentru versiunile mai noi de aplicații, NVDA nu va mai anunța categoriile
   de feedback de două ori.
 
-## Bară de jocuri
-
-* NVDA va anunța aspectul barei de jocuri. Datorită limitărilor tehnice,
-  NVDA nu poate interacționa pe deplin cu bara de jocuri într-o compilare
-  mai veche decât 17723.
-
 ## Mail
 
 * Când examinați elemente dinn lista de mesaje, puteți să folosiți comenzile
@@ -158,10 +136,9 @@ versiunile suplimentului][3].
 
 ## Microsoft Edge
 
-* Notificările precum descărcări de fișiere și diverse alerte de pe paginile
-  web, dar și disponibilitatea funcției Reading view (dacă se utilizează
-  versiunea 1709 și mai nouă) sunt anunțate.
 * Autocompletarea textului va fi urmărită și anunțată în omnibara de adrese.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full
+  screen.
 
 ## Tastatură modernă
 
@@ -206,8 +183,6 @@ Notă: majoritatea caracteristicilor de mai jos nu fac parte din NVDA 2018.3.
   disc.
 * Valorile barei de progres și alte informații nu mai sunt anunțate de două
   ori.
-* Grupurile de setări sunt recunoscute la utilizarea navigării obiectului
-  pentru a naviga printre controale.
 * Pentru unele casete combinate și butoane rotative, NVDA nu va mai eșua la
   recunoașterea etichetelor și/sau anunțarea schimbărilor valorii.
 * Bipurile barei de progres a volumului audio nu mai sunt auzite în
@@ -217,7 +192,6 @@ Notă: majoritatea caracteristicilor de mai jos nu fac parte din NVDA 2018.3.
 * NVDA nu va mai fi nevoit să nu facă nimic sau să redea tonuri de eroare
   dacă se utilizează comenzile de navigare ale obiectului în anumite
   circumstanțe.
-* Au fost adăugate diverse link-uri în compilarea 18282 fără vreo etichetă.
 * Dialogul de tip memento al Windows Update este recunoscut așa cum trebuie.
 
 ## Skype

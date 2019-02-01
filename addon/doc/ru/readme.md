@@ -3,6 +3,7 @@
 * Авторы: Joseph Lee, Derek Riemer и другие пользователи Windows 10
 * Загрузить [стабильную версию][1]
 * Загрузить [разрабатываемую версию][2]
+* NVDA compatibility: 2018.3 to 2019.1
 
 Это дополнение представляет собой сборник модулей для различных приложений
 Windows 10, а также исправлений для некоторых типов управления Windows 10.
@@ -16,7 +17,6 @@ Windows 10, а также исправлений для некоторых ти�
 * Калькулятор (modern).
 * Cortana
 * Feedback Hub
-* Game Bar
 * Почта
 * Карты
 * Microsoft Edge
@@ -31,27 +31,25 @@ Windows 10, а также исправлений для некоторых ти�
 
 Notes:
 
-* This add-on requires Windows 10 Version 1709 (build 16299) or later and
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
   NVDA 2018.3 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17134) and latest stable version of NVDA. Note
-  that until further notice, Version 1809 (build 17763) is not available
-  from Microsoft.
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of
   NVDA, no longer applicable as the add-on does not support old Windows 10
-  releases, or changes were made to apps that makes entries no longer
-  applicable.
+  releases, or changes were made to Windows 10 and apps that makes entries
+  no longer applicable.
+* Standalone update check from this add-on has been removed. For future
+  add-on updates, please use Add-on Updater add-on.
 
 For a list of changes made between each add-on releases, refer to
 [changelogs for add-on releases][3] document.
 
 ## Общие
 
-* If Add-on Updater add-on is installed, that add-on will check for Windows
-  10 App Essentials updates.
-* Default update check interval has changed to weekly checks for both stable
-  and development releases. This is applicable if the add-on itself checks
-  for updates.
+* Internal changes to make the add-on compatible with future NVDA releases.
+* Small changes to how some messages are presented in languages other than
+  English.
 * Submenu items are properly recognized in various apps, including context
   menu for Start menu tiles and microsoft Edge's app menu (Redstone 5).
 * Certain dialogs are now recognized as proper dialogs and reported as such,
@@ -69,9 +67,6 @@ For a list of changes made between each add-on releases, refer to
   these events will be tracked, and for UIA notification event, a debug tone
   will be heard if notifications come from somewhere other than the
   currently active app.
-* Notifications from newer app releases on Windows 10 Version 1709 (build
-  16299) and later are announced. NVDA 2018.2 and later supports this, with
-  2018.3 adding support for more notifications.
 * Tooltips from Edge and universal apps are recognized and will be
   announced.
 * When opening, closing, or switching between virtual desktops, NVDA will
@@ -81,15 +76,17 @@ For a list of changes made between each add-on releases, refer to
 
 ## Action center
 
-* Brightness quick action is now a button instead of a toggle button.
+* Brightness quick action is now a button instead of a toggle button. This
+  will be part of NVDA 2019.1.
 * Various status changes such as Focus Assist and Brightness will be
-  reported.
+  reported. This will be part of NVDA 2019.1.
 
 ## Будильники и часы
 
 * Time picker values are now announced, noticeable when moving focus to
   picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates.
+  restart to finish installing Windows updates. This will be part of NVDA
+  2019.1.
 
 ## Калькулятор
 
@@ -115,12 +112,6 @@ For a list of changes made between each add-on releases, refer to
 * For newer app releases, NVDA will no longer announce feedback categories
   twice.
 
-## Game Bar
-
-* NVDA will announce appearance of Game Bar window. Due to technical
-  limitations, NVDA cannot interact fully with Game Bar prior to build
-  17723.
-
 ## Почта
 
 * When reviewing items in messages list, you can now use table navigation
@@ -137,10 +128,9 @@ For a list of changes made between each add-on releases, refer to
 
 ## Microsoft Edge
 
-* Notifications such as file downloads and various webpage alerts, as well
-  as availability of Reading View (if using Version 1709 and later) are
-  announced.
 * Text auto-complete will be tracked and announced in address omnibar.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full
+  screen.
 
 ## Modern keyboard
 
@@ -148,14 +138,18 @@ Note: most features below are now part of NVDA 2018.3.
 
 * Support for Emoji input panel in Version 1709 (Fall Creators Update) and
   later, including the redesigned panel in Version 1809 (build 17661 and
-  later) and changes made in 19H1 (build 18262). For best experience when
-  reading emojis, use Windows OneCore speech synthesizer.
+  later) and changes made in 19H1 (build 18262 and later, including kaomoji
+  and symbols categories in build 18305). If using NVDA releases earlier
+  than 2018.4, for best experience when reading emojis, use Windows OneCore
+  speech synthesizer. If 2018.4 or later is in use, enable Unicode
+  Consortium setting from NvDA's speech settings and set symbol level to
+  "some" or higher.
 * Support for hardware keyboard input suggestions in Version 1803 (April
   2018 Update) and later.
 * In post-1709 builds, NVDA will announce the first selected emoji when
   emoji panel opens. This is more noticeable in build 18262 and later where
   emoji panel may open to last browsed category, such as displaying skin
-  tone modifier when opened to People category.
+  tone modifiers when opened to People category.
 * Support for announcing cloud clipboard items in Version 1809 (build 17666
   and later).
 * Reduced unnecessary verbosity when working with modern keyboard and its
@@ -163,7 +157,9 @@ Note: most features below are now part of NVDA 2018.3.
   opening hardware keyboard input suggestions and staying silent when
   certain touch keyboard keys raise name change event on some systems.
 * NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent Insider Preview builds.
+  panel in more recent 19H1 Insider Preview builds.
+* In Version 1809 (October 2018 Update) and later, NVDA will announce search
+  results for emojis if possible.
 
 ## Люди
 
@@ -176,14 +172,15 @@ Note: most features below are now part of NVDA 2018.3.
   automatically, including Storage sense/disk cleanup widget.
 * Значения индикатора выполнения и другая информация теперь не объявляются
   дважды.
-* Группы настроек распознаются при использовании навигации объектов для
-  перемещения между элементами управления.
 * For some combo boxes and radio buttons, NVDA will no longer fail to
   recognize labels and/or announce value changes.
 * Audio Volume progress bar beeps are no longer heard in Version 1803 and
   later.
 * More messages about Windows Update status are announced, especially if
   Windows Update encounters errors.
+* NVDA will no longer appear to do nothing or play error tones if using
+  object navigation commands under some circumstances.
+* Windows Update reminder dialog is recognized as a proper dialog.
 
 ## Skype
 

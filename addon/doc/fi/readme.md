@@ -18,7 +18,6 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Laskin (moderni)
 * Cortana
 * Palautekeskus
-* Pelipalkki
 * Sähköposti
 * Kartat
 * Microsoft Edge
@@ -33,17 +32,17 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1709 (koontiversio
-  16299) tai uudempaa ja NVDA 2018.3:a tai uudempaa. Käytä parhaan
+* Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1803 (koontiversio
+  17134) tai uudempaa ja NVDA 2018.3:a tai uudempaa. Käytä parhaan
   käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata versiota
-  (koontiversio 17763) sekä uusinta NVDA:ta.
+  (koontiversio 17763) sekä uusinta vakaata NVDA:n versiota.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
-  Windows 10 -versioita tai eivät ole enää käytettävissä sovelluksiin
-  tehtyjen muutosten vuoksi.
-* Tässä lisäosassa ei ole enää sisäänrakennettua päivitystarkistusta
-  versiosta 19.02 alkaen. Päivityksiin tulee käyttää Lisäosien päivittäjä
+  Windows 10 -versioita tai eivät ole enää käyttökelpoisia Windows 10:een ja
+  sovelluksiin tehtyjen muutosten vuoksi.
+* Tämän lisäosan sisäänrakennettu päivitystarkistustoiminto on
+  poistettu. Käytä päivitysten tarkistamiseen Lisäosien päivittäjä
   -lisäosaa.
 
 Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
@@ -53,14 +52,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 * Sisäisiä muutoksia, jotka tekevät lisäosasta yhteensopivan tulevien
   NVDA-versioiden kanssa.
-* Jos Lisäosien päivittäjä -lisäosa on asennettuna, se tarkistaa Windows 10
-  App Essentialsin päivitykset.
-* Sekä vakaiden että kehitysversioiden päivitykset tarkistetaan nyt
-  oletusarvoisesti viikon välein. Tämä pitää paikkansa vain, mikäli käytössä
-  on lisäosan oma päivitystentarkistustoiminto.
-* Jos lisäosa on määritetty tarkistamaan päivityksensä ja mikäli uusi versio
-  vaatii päivitettäessä uudemman NVDA-version, siitä ilmoittava
-  virheilmoitus näytetään.
 * Pieniä muutoksia siihen, miten jotkin muun kuin englanninkieliset
   ilmoitukset näytetään.
 * Alavalikot tunnistetaan asianmukaisesti useissa sovelluksissa, mukaan
@@ -81,9 +72,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   avattu. Näitä tapahtumia seurataan, kun NVDA:n lokitasoksi on määritetty
   "virheenkorjaus", ja UIA-ilmoitustapahtuma ilmaistaan virheäänellä, mikäli
   ilmoitukset tulevat muualta kuin aktiivisesta sovelluksesta.
-* Uusien sovellusversioiden ilmoitukset puhutaan Windows 10:n versiossa 1709
-  (koontiversio 16299) ja uudemmissa. NVDA 2018.2 ja uudemmat tukevat tätä,
-  ja 2018.3 lisää tuen entistä useammille ilmoituksille.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
   ilmoitetaan.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2)
@@ -93,16 +81,17 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Toimintokeskus
 
-* Kirkkaus-pikatoiminto on nyt vipupainikkeen sijasta painike.
+* Kirkkaus-pikatoiminto on nyt vipupainikkeen sijasta painike. Tämä tulee
+  sisältymään NVDA 2019.1:een.
 * Useat tilojen, kuten Keskittymisavustajan ja kirkkauden, muutokset
-  ilmoitetaan.
+  ilmoitetaan. Tämä tulee sisältymään NVDA 2019.1:een.
 
 ## Hälytykset ja kello
 
 * Ajanvalitsimen arvot puhutaan - havaittavissa siirrettäessä kohdistusta
   valitsimen säätimiin. Tämä vaikuttaa myös säätimeen, jolla valitaan,
   milloin Windows käynnistetään uudelleen päivitysten asentamisen
-  viimeistelemiseksi.
+  viimeistelemiseksi. Tämä tulee sisältymään NVDA 2019.1:een.
 
 ## Laskin
 
@@ -130,12 +119,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA ei enää puhu palauteluokkia kahdesti sovelluksen uudemmissa
   versioissa.
 
-## Pelipalkki
-
-* NVDA ilmoittaa pelipalkki-ikkunan ilmestymisestä. Teknisistä rajoituksista
-  johtuen NVDA ei voi olla täysin vuorovaikutuksessa pelipalkin kanssa ennen
-  koontiversiota 17723.
-
 ## Sähköposti
 
 * Voit nyt käyttää viestiluettelon kohteita tarkastellessasi
@@ -152,10 +135,10 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Microsoft Edge
 
-* Ilmoitukset, kuten tiedostojen lataukset ja verkkosivujen näyttämät, sekä
-  lukunäkymän saatavuus (mikäli käytetään versiota 1709) puhutaan.
 * Tekstin automaattista täydennystä seurataan ja siitä ilmoitetaan
   osoitepalkissa.
+* NVDA ei enää toista ehdotusten ääntä vaihdettaessa koko näytön tilaa
+  F11:tä painamalla.
 
 ## Moderni näppäimistö
 
@@ -201,8 +184,6 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
   mukaan lukien Tallennusseurannan/Levynsiivouksen pienoisohjelma, puhutaan
   nyt automaattisesti.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
-* Asetusryhmät tunnistetaan säätimien välillä liikuttaessa
-  objektinavigointia käyttäen.
 * NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen ja
   valintapainikkeiden selitteiden tunnistamisessa ja/tai arvomuutosten
   ilmoittamisessa.
@@ -212,7 +193,6 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
   havaittaessa.
 * NVDA ei näytä enää tekevän mitään tai toista virheääniä, mikäli
   objektinavigointikomentoja käytetään tietyissä tilanteissa.
-* Useilla koontiversioon 18282 lisätyillä linkeillä on nyt selitteet.
 * Windows Updaten muistutusvalintaikkuna tunnistetaan asianmukaisesti
   valintaikkunaksi.
 
