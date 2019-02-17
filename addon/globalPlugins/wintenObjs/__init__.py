@@ -140,6 +140,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			UIAHandler.handler.clientObject.AddPropertyChangedEventHandler(UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler,[UIAHandler.UIA_ItemStatusPropertyId])
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+		# Because this add-on might be turned on "accidentally" in earlier Windows releases...
+		if winVersion.winVersion.major < 10: return
 		if isinstance(obj, UIA):
 			# NVDA Core ticket 5231: Announce values in time pickers, especially when focus moves to looping selector list.
 			# Because they do not support value pattern (for ones handled by this add-on), treat them as combo boxes without value pattern if this isn't treated as such by NVDA already.
