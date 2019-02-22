@@ -33,17 +33,20 @@ privire la ceea ce este inclus):
 
 Note:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17763) and latest stable version of NVDA.
+* Acest supliment necesită Windows 10 versiunea 1803 )compilarea 17134) sau
+  mai nouă și NVDA 2018.3 sau mai nou. Pentru cele mai bune rezultate,
+  folosiți-l cu ultima compilare stabilă ( compilarea 17763) și cea mai
+  recentă versiune stabilă a NVDA-ului.
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support old Windows 10
-  releases, or changes were made to Windows 10 and apps that makes entries
-  no longer applicable.
-* Standalone update check from this add-on has been removed. For future
-  add-on updates, please use Add-on Updater add-on.
+* Pentru intrările care nu sunt listate mai jos, puteți presupune că
+  funcționalitățile fac parte din NVDA, nu mai sunt aplicabile, întrucât
+  suplimentul nu mai suportă versiunile vechi de Windows 10, sau că au fost
+  efectuate modificări la Windows 10 și la aplicații, care fac ca intrările
+  să nu mai fie aplicabile.
+* Căutătorul de actualizări al acestui supliment va înceta să funcționeze
+  începând cu versiunea 19.02. Funcția acestuia va fi preluată de
+  suplimentul Add-on Updater.
 
 Pentru o listă a modificărilor efectuate la fiecare versiune a
 suplimentului, consultați documentul [jurnalelor de modificări pentru
@@ -82,17 +85,17 @@ versiunile suplimentului][3].
 
 ## Centru de acțiuni
 
-* Brightness quick action is now a button instead of a toggle button. This
-  will be part of NVDA 2019.1.
-* Various status changes such as Focus Assist and Brightness will be
-  reported. This will be part of NVDA 2019.1.
+* Acțiunea rapidă a luminozității este acum un buton, nu un buton de
+  activare. Aceasta va face parte din NVDA 2019.1.
+* Diverse modificări de stare precum asistarea focalizării și luminozitatea,
+  vor fi raportate. Aceasta va face parte din NVDA 2019.1.
 
 ## Alarme și ceas
 
-* Time picker values are now announced, noticeable when moving focus to
-  picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates. This will be part of NVDA
-  2019.1.
+* Valorile selectorului de dată sunt acum anunțate, de observat atunci când
+  focalizarea se deplasează la selectorul de comenzi. De asemenea, aceasta
+  afectează comanda utilizată pentru a selecta când să repornească pentru
+  finalizarea actualizărilor Windows. Aceasta va face parte din NVDA 2019.1.
 
 ## Calculator
 
@@ -137,8 +140,8 @@ versiunile suplimentului][3].
 ## Microsoft Edge
 
 * Autocompletarea textului va fi urmărită și anunțată în omnibara de adrese.
-* NVDA will no longer play suggestion sound when pressing F11 to toggle full
-  screen.
+* NVDA nu va mai reda sunete de sugestie la apăsarea tastei F11 pentru
+  activarea/dezactivarea ecranului complet.
 
 ## Tastatură modernă
 

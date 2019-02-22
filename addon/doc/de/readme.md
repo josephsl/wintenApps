@@ -31,9 +31,10 @@ inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 
 Hinweise:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17763) and latest stable version of NVDA.
+* Diese Erweiterung erfordert Windows 10 Version 1803 (Build 17134) oder
+  neuer und NVDA 2018.3 oder neuer. Für beste Ergebnisse verwenden Sie die
+  Erweiterung mit der neuesten stabilen Version von Windows 10 (Build 17763)
+  und der neuesten stabilen Version von NVDA.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * For entries not listed below, you can assume that features are part of
   NVDA, no longer applicable as the add-on does not support old Windows 10
@@ -139,8 +140,8 @@ Versionen][3].
 
 * Die automatische Vervollständigung beim Tippen wird verfolgt und in der
   Adress-Omnibar ordnungsgemäß angesagt.
-* NVDA will no longer play suggestion sound when pressing F11 to toggle full
-  screen.
+* NVDA gibt keinen Vorschläge-Ton mehr wieder, wenn F11 für den
+  Vollbildmodus gedrückt wird.
 
 ## Moderne virtuelle Tastaturen
 
