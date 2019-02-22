@@ -73,7 +73,12 @@ class AppModule(appModuleHandler.AppModule):
 			# But announce individual update progress in build 16215 and later.
 			or ("ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock"))
 			# Don't forget update error text.
-			or (automationID in ("SystemSettings_MusUpdate_UpdateError_DescriptionTextBlock", "SystemSettings_MusUpdate_PayloadErrorDetails_HolisticErrorDescriptionTextBlock")))
+			or (automationID in ("SystemSettings_MusUpdate_UpdateError_DescriptionTextBlock", "SystemSettings_MusUpdate_PayloadErrorDetails_HolisticErrorDescriptionTextBlock"))
+			# Announce result text for Storage Sense/settings/cleanup.
+			or (automationID.startswith("SystemSettings_StorageSense_SmartPolicy_ExecuteNow"))
+			# Announce progress of Storage Sense/settings/cleanup operation.
+			# For this one, because automation ID isn't specified, look for cleanup button.
+			or (obj.previous.previous.UIAElement.cachedAutomationID == "SystemSettings_StorageSense_SmartPolicy_ExecuteNow_ApplyButton"))
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA) and obj.name and obj.name != self._nameChangeCache:
@@ -92,10 +97,13 @@ class AppModule(appModuleHandler.AppModule):
 				pass
 
 	def event_nameChange(self, obj, nextHandler):
-		# Storage/disk cleanup progress bar raises name change event.
-		# Because "Purging:" is announced multiple times, coerce this to live region change event, which does handle this case.
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "SystemSettings_StorageSense_TemporaryFiles_InstallationProgressBar":
-			self.event_liveRegionChange(obj, nextHandler)
+		if isinstance(obj, UIA):
+			# Storage/disk cleanup progress bar raises name change event.
+			# Because "Purging:" is announced multiple times, coerce this to live region change event, which does handle this case.
+			if (obj.UIAElement.cachedAutomationID == "SystemSettings_StorageSense_TemporaryFiles_InstallationProgressBar"
+			# Announce result text for Storage Sense/cleanup.
+			or obj.UIAElement.cachedAutomationID.startswith("SystemSettings_StorageSense_SmartPolicy_ExecuteNow")):
+				self.event_liveRegionChange(obj, nextHandler)
 		nextHandler()
 
 	def event_UIA_controllerFor(self, obj, nextHandler):
