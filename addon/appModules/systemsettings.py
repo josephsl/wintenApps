@@ -63,7 +63,7 @@ class AppModule(appModuleHandler.AppModule):
 		# This is more relevant in build 17063 and later where a subtitle has been added.
 		if "MusUpdate_UpdateStatus" in automationID:
 			# Don't repeat the fact that update download/installation is in progress if progress bar beep is on.
-			return False if automationID == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock" and obj.previous.value > "0" else True
+			return not (automationID == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock" and obj.previous.value > "0")
 		else:
 			# For search progress bar, do not repeat it.
 			# Same can be said about Storage/disk cleanup, but this is due to name change event.
