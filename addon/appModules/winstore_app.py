@@ -20,12 +20,10 @@ class AppModule(appModuleHandler.AppModule):
 	_appInstallProgress = ""
 
 	def event_nameChange(self, obj, nextHandler):
-		# It turns out name change event will suffice from January 2018 release onwards.
-		if self.productVersion >= "11801":
-			if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "InstallControl":
-				# Install control comes with an anoying name, so look at its children.
-				progressText = " ".join([obj.firstChild.name, obj.simpleFirstChild.name])
-				if progressText != self._appInstallProgress:
-					self._appInstallProgress = progressText
-					ui.message(progressText)
+		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "InstallControl":
+			# Install control comes with an anoying name, so look at its children.
+			progressText = " ".join([obj.firstChild.name, obj.simpleFirstChild.name])
+			if progressText != self._appInstallProgress:
+				self._appInstallProgress = progressText
+				ui.message(progressText)
 		nextHandler()
