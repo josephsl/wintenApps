@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2018.3 to 2019.1
+* NVDA-kompatibilitet: 2018.3 til 2019.1
 
 Denne tilføjelse er en samling af app-moduler til forskellige Windows 10
 apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.
@@ -31,35 +31,33 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 Bemærkninger:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17763) and latest stable version of NVDA.
+* Denne tilføjelse kræver Windows 10 Version 1803 (build 17134) eller senere
+  og NVDA 2018.3 eller nyere. For de bedste resultater skal du bruge
+  tilføjelsen med den nyeste Windows 10-stabile udgivelse (build 17763) og
+  den seneste stabile version af NVDA.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support old Windows 10
-  releases, or changes were made to Windows 10 and apps that makes entries
-  no longer applicable.
-* Standalone update check from this add-on has been removed. For future
-  add-on updates, please use Add-on Updater add-on.
+* For emner, der ikke er anført nedenfor, kan du antage, at funktionerne er
+  en del af NVDA, ikke længere gældende som tilføjelsesprogrammet ikke
+  understøtter ældre Windows 10 udgivelser, eller ændringer til apps, der
+  gør disse emner ugyldige.
 
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Generelt
 
-* Internal changes to make the add-on compatible with future NVDA releases.
-* Small changes to how some messages are presented in languages other than
-  English.
+* NVDA will no longer play error tones or do nothing if this add-on becomes
+  active from Windows 7 and 8.1.
 * Undermenupunkter er korrekt genkendt i forskellige apps, herunder
   kontekstmenu til Start-menufliser og Microsoft Edge-appmenuen (Redstone
   5).
-* Visse dialogbokse er nu anerkendt som ordentlige dialoger og rapporteret
-  som sådan, herunder Insider Preview dialog (indstillinger app). Denne
-  funktion er nu en del af NVDA 2018.3.
-* NVDA kan annoncere nummeret af forslag, når du udfører en søgning i de
-  fleste tilfælde. Denne indstilling styres af "Oplys information om
-  objektets placering" i objektet præsentation dialog/panel.
+* In addition to dialogs recognized by NVDA, more dialogs are now recognized
+  as proper dialogs and reported as such, including Insider Preview dialog
+  (settings app).
+* NVDA can announce suggestion count when performing a search in majority of
+  cases. This option is controlled by "Report object position information"
+  in Object presentation panel found in NVDA settings.
 * I visse kontekstmenuer (f.eks. i Microsoft Edge), er positionssoplysninger
   (f.eks. 1 af 2) ikke længere annonceret.
 * De følgende UIA begivenheder er anerkendt: active text position change,
@@ -74,20 +72,22 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   vil NVDA annoncere nuværende desktop ID (skrivebord 2, for eksempel).
 * NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
   du ændrer skærmopløsning eller orientering.
+* In build 18323 and later, NVDA will now announce audio volume and
+  brightness changes.
 
 ## Handlingscenter
 
-* Brightness quick action is now a button instead of a toggle button. This
-  will be part of NVDA 2019.1.
-* Various status changes such as Focus Assist and Brightness will be
-  reported. This will be part of NVDA 2019.1.
+* Den hurtige handling til at ændre lysstyrke er nu en knap i stedet for en
+  skiftknap.
+* Forskellige statusændringer som Fokushjælp og Lysstyrke vil blive
+  rapporteret. Denne forbedring vil være en del af NVDA 2019.1.
 
 ## Alarmer og ur
 
-* Time picker values are now announced, noticeable when moving focus to
-  picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates. This will be part of NVDA
-  2019.1.
+* Tidvælgerværdier er nu annonceret, mærkbart, når du flytter fokus til
+  vælgekontroller. Dette påvirker også den kontrol, der bliver brugt til at
+  vælge, hvornår du vil genstart for at afslutte installationen af
+  Windows-opdateringer. Denne forbedring vil være en del af NVDA 2019.1.
 
 ## Lommeregner
 
@@ -134,27 +134,27 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 * Autofuldførelse af tekst vil blive sporet og annonceret i adressse
   omnibar.
-* NVDA will no longer play suggestion sound when pressing F11 to toggle full
-  screen.
+* NVDA vil ikke længere afspille lyden for forslag, når du trykker på F11
+  for at ændre indstillingen for fuld skærm.
 
 ## Moderne tastatur
 
-Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
+Note: most features below are now part of NVDA 2018.3 or later.
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
-  later, including the redesigned panel in Version 1809 (build 17661 and
-  later) and changes made in 19H1 (build 18262 and later, including kaomoji
-  and symbols categories in build 18305). If using NVDA releases earlier
-  than 2018.4, for best experience when reading emojis, use Windows OneCore
-  speech synthesizer. If 2018.4 or later is in use, enable Unicode
-  Consortium setting from NvDA's speech settings and set symbol level to
-  "some" or higher.
+* Støtte til Emoji inputpanelet i Version 1709 (Fall Creators Update) og
+  senere, herunder det redesignet panel i build version 1809 17661 og
+  senere, samt ændringer i 19H1 (build 18262). Du vil få den bedste
+  oplevelse, når du læser emojis, hvis du benytter talesyntesen Windows
+  OneCore. Hvis du benytter 2018.4 eller senere, skal du aktivér
+  indstillingen der benytter Unicode Consortium data til emojis via NVDAs
+  taleindstillinger. Derefter skal tegnsætningsniveauet indstilles til
+  "nogle" eller højere.
 * Understøttelse af hardware tastatur input forslag i Version 1803 (April
   2018 opdatering) og senere.
-* In post-1709 builds, NVDA will announce the first selected emoji when
-  emoji panel opens. This is more noticeable in build 18262 and later where
-  emoji panel may open to last browsed category, such as displaying skin
-  tone modifiers when opened to People category.
+* I versioner af Windows 10 efter 1709 vil NVDA læse den første valgte
+  emoji, når emoji-panelet åbnes. Dette er mere mærkbart i version 18262 og
+  senere, hvor emoji-panelet åbner til den sidst gennemsete kategori, som
+  f.eks. Visning af hudtone, når den åbnes til Personer-kategorien.
 * Understøtter annoncering af Cloud Udklipsholder i version 1809 (build
   17666) og senere.
 * Reduceret unødvendige udtale, når du arbejder med det moderne tastatur og
@@ -163,9 +163,10 @@ Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
   forbliver tavse, når visse touch-tastaturkommandoer omfatter change name
   event på nogle systemer.
 * NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds.
+  panel in more recent 19H1 Insider Preview builds. This will be part of
+  NVDA 2019.1.
 * In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible.
+  results for emojis if possible. This will be part of NVDA 2019.1.
 
 ## Personer
 
@@ -184,9 +185,9 @@ Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
   1803 og nyere.
 * Flere meddelelser om Windows Update status er annonceret, især hvis
   Windows Update fejler.
-* NVDA will no longer appear to do nothing or play error tones if using
-  object navigation commands under some circumstances.
-* Windows Update reminder dialog is recognized as a proper dialog.
+* NVDA ser ikke længere ud til at gøre ingenting eller afspille fejltoner,
+  hvis du bruger objektnavigeringskommandoer under visse omstændigheder.
+* Dialogboksen Windows Update-påmindelse genkendes som en korrekt dialog.
 
 ## Skype
 

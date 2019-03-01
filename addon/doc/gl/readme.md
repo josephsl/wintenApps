@@ -33,35 +33,33 @@ se inclúe):
 
 Notas:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17763) and latest stable version of NVDA.
+* Este complemento require do Windows 10 Versión 1803 (build 17134) ou
+  posterior e do NVDA 2018.3 ou posterior. Para uns mellores resultados, usa
+  o complemento coa compilación estable máis recente (compilación 17763) e
+  versión estable máis recente do NVDA.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support old Windows 10
-  releases, or changes were made to Windows 10 and apps that makes entries
-  no longer applicable.
-* Standalone update check from this add-on has been removed. For future
-  add-on updates, please use Add-on Updater add-on.
+* Para entradas non listadas a continuación, podes asumir que as
+  características forman parte do NVDA, que xa non aplican debido a que o
+  complemento non soporta versións vellas de Windows, ou que se fixeron
+  cambios nas apps que fan que as entradas xa non sexan aplicables.
 
 Para unha lista de trocos feitos entre cada versión do complemento, visita o
 documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Xeral
 
-* Trocos internos para facer ó complemento compatible con versións futuras
-  do NVDA.
-* Pequenos cambios en como se presentan algunhas mensaxes en linguas
-  diferentes do inglés.
+* NVDA will no longer play error tones or do nothing if this add-on becomes
+  active from Windows 7 and 8.1.
 * Os elementos de submenú recoñécense adecuadamente en varias apps,
   incluíndo elementos do menú de contexto nas tarxetas do menú inicio e o
   menú da aplicación Microsoft Edge (Restone 5).
-* Agora recoñécense certos diálogos como proprios diálogos. Esto inclúe o
-  diálogo Insider Preview (settings app). Isto incluirase co NVDA 2018.3.
-* NVDA pode anunciar conta de suxerencias cando se realiza unha procura na
-  maioría dos casos. Esta opción contrólase por "Anunciar información de
-  posición do obxecto" no diálogo/panel Presentación de Obxectos.
+* In addition to dialogs recognized by NVDA, more dialogs are now recognized
+  as proper dialogs and reported as such, including Insider Preview dialog
+  (settings app).
+* NVDA can announce suggestion count when performing a search in majority of
+  cases. This option is controlled by "Report object position information"
+  in Object presentation panel found in NVDA settings.
 * En certos menús de contexto (coma no Edge), a información de posición
   (ex.: 1 de 2) xa non se anuncia.
 * Recoñécense os seguintes eventos UIA: Controller for, drag start, drag
@@ -76,20 +74,21 @@ documento [rexistros de trocos para publicacións de complementos][3].
   anunciará o ID do escritorio actual (escritorio 2, por exemplo).
 * NVDA xa non anuncia Menú Inicio tamaño de texto ao cambiar a resolución de
   pantalla ou a orientación.
+* In build 18323 and later, NVDA will now announce audio volume and
+  brightness changes.
 
 ## Centro de accións
 
-* Brightness quick action is now a button instead of a toggle button. This
-  will be part of NVDA 2019.1.
-* Various status changes such as Focus Assist and Brightness will be
-  reported. This will be part of NVDA 2019.1.
+* A acción rápida Brillo é agora un botón no canto dun botón
+  conmutable. Isto formará parte do NVDA 2019.1.
+* Reportaranse varios cambios de estado como Asistencia ao Foco e
+  Brillo. Isto formará parte do NVDA 2019.1.
 
 ## Alarmas e reloxo
 
-* Time picker values are now announced, noticeable when moving focus to
-  picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates. This will be part of NVDA
-  2019.1.
+* Agora anúncianse os valores do selector de hora. Esto tamén afecta ó
+  control usado para selecionar cando reiniciar para rematar a instalación
+  das actualizacións de Windows. Isto formará parte do NVDA 2019.1.
 
 ## Calculadora
 
@@ -136,12 +135,12 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 * Farase un seguimento do autocompletado de texto e anunciarase na omnibarra
   de direccións.
-* NVDA will no longer play suggestion sound when pressing F11 to toggle full
-  screen.
+* NVDA xa non reproducirá o son de suxestión ao premer F11 para alternar a
+  pantalla completa.
 
 ## Teclado Moderno
 
-Nota: A maioría das características a continuación son parte de NVDA 2018.3.
+Note: most features below are now part of NVDA 2018.3 or later.
 
 * Soporte para o panel flotante de entrada de Emoji na actualización 1709
   Fall Creators en adiante, incluindo o panel redeseñado na compilación
@@ -166,11 +165,11 @@ Nota: A maioría das características a continuación son parte de NVDA 2018.3.
   Candidate UI" ao abrir as suxestións de entrada hardware e que NVDA xa non
   quede calado cando certas teclas do teclado táctil lancen o evento cambio
   de nome nalguns sistemas.
-* NVDA xa non reproducirá tons de erro ou aparentará non facer nada ao
-  pechar o panel de Emojis nas compilacións Insider Preview 19H1 máis
-  recentes.
-* Na versión 1809 (October 2018 Update) e posteriores, NVDA anunciará os
-  resultados de busca de emojis de ser posible.
+* NVDA will no longer play error tones or do nothing when closing emoji
+  panel in more recent 19H1 Insider Preview builds. This will be part of
+  NVDA 2019.1.
+* In Version 1809 (October 2018 Update) and later, NVDA will announce search
+  results for emojis if possible. This will be part of NVDA 2019.1.
 
 ## Xente
 

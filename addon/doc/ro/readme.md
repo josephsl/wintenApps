@@ -44,9 +44,6 @@ Note:
   suplimentul nu mai suportă versiunile vechi de Windows 10, sau că au fost
   efectuate modificări la Windows 10 și la aplicații, care fac ca intrările
   să nu mai fie aplicabile.
-* Căutătorul de actualizări al acestui supliment va înceta să funcționeze
-  începând cu versiunea 19.02. Funcția acestuia va fi preluată de
-  suplimentul Add-on Updater.
 
 Pentru o listă a modificărilor efectuate la fiecare versiune a
 suplimentului, consultați documentul [jurnalelor de modificări pentru
@@ -54,19 +51,17 @@ versiunile suplimentului][3].
 
 ## General
 
-* Au fost făcute modificări interne care să facă acest supliment compatibil
-  cu viitoarele versiuni de NVDA.
-* Mici modificări la modul în care unele mesaje sunt prezentate în alte
-  limbi decât engleză.
+* NVDA will no longer play error tones or do nothing if this add-on becomes
+  active from Windows 7 and 8.1.
 * Elementele de submeniu sunt recunoscute corespunzător în diverse
   aplicații, incluzând meniul context pentru comenzile din meniul Start și
   meniul de aplicație al Microsoft Edge (Redstone 5).
-* Anumite dialoguri sunt acum recunoscute ca dialoguri corespunzătoare și
-  sunt raportate ca atare. Acestea includ dialogul Insider Preview
-  (aplicația setări). Aceasta face parte acum din NVDA 2018.3.
-* NVDA poate anunța numărul de sugestii la efectuarea unei căutări în
-  majoritatea cazurilor. Această opțiune este controlată de „informația
-  poziției obiectului în dialogul prezentării obiectului.
+* In addition to dialogs recognized by NVDA, more dialogs are now recognized
+  as proper dialogs and reported as such, including Insider Preview dialog
+  (settings app).
+* NVDA can announce suggestion count when performing a search in majority of
+  cases. This option is controlled by "Report object position information"
+  in Object presentation panel found in NVDA settings.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
 * Următoarele evenimente UIA sunt recunoscute: schimbarea poziției textului
@@ -82,6 +77,8 @@ versiunile suplimentului][3].
   NVDA va anunța ID-ul spațiului de lucru curent (spațiu de lucru 2).
 * NVDA nu mai anunță „dimensiune text start meniu” la schimbarea rezoluției
   ecranului sau a orientării.
+* In build 18323 and later, NVDA will now announce audio volume and
+  brightness changes.
 
 ## Centru de acțiuni
 
@@ -145,7 +142,7 @@ versiunile suplimentului][3].
 
 ## Tastatură modernă
 
-Notă: majoritatea caracteristicilor de mai jos nu fac parte din NVDA 2018.3.
+Note: most features below are now part of NVDA 2018.3 or later.
 
 * Suport pentru panoul de intrare floating Emoji în versiunea 1709 (Fall
   Creators Update) și pentru panoul nou din compilarea 17661 sau mai nouă,
@@ -169,10 +166,11 @@ Notă: majoritatea caracteristicilor de mai jos nu fac parte din NVDA 2018.3.
   la deschiderea sugestiilor de introducere a tastaturii hardware și starea
   în modul silențios atunci când anumite taste ale tastaturii tactile
   generează un eveniment de schimbare a numelui pe unele sisteme.
-* NVDA nu va mai reda tonuri de eroare sau nu va mai face nimic la
-  închiderea panoului emoji în compilări mai recente Insider Preview 19H1.
-* În versiunea 1809 (October 2018 Update) și mai nouă, NVDA va anunța
-  rezultatele căutării pentru emoji-uri dacă este posibil.
+* NVDA will no longer play error tones or do nothing when closing emoji
+  panel in more recent 19H1 Insider Preview builds. This will be part of
+  NVDA 2019.1.
+* In Version 1809 (October 2018 Update) and later, NVDA will announce search
+  results for emojis if possible. This will be part of NVDA 2019.1.
 
 ## Persoane
 
