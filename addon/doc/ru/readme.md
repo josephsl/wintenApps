@@ -39,25 +39,22 @@ Notes:
   NVDA, no longer applicable as the add-on does not support old Windows 10
   releases, or changes were made to Windows 10 and apps that makes entries
   no longer applicable.
-* Standalone update check from this add-on has been removed. For future
-  add-on updates, please use Add-on Updater add-on.
 
 For a list of changes made between each add-on releases, refer to
 [changelogs for add-on releases][3] document.
 
 ## Общие
 
-* Internal changes to make the add-on compatible with future NVDA releases.
-* Small changes to how some messages are presented in languages other than
-  English.
+* NVDA will no longer play error tones or do nothing if this add-on becomes
+  active from Windows 7 and 8.1.
 * Submenu items are properly recognized in various apps, including context
   menu for Start menu tiles and microsoft Edge's app menu (Redstone 5).
-* Certain dialogs are now recognized as proper dialogs and reported as such,
-  including Insider Preview dialog (settings app). This is now part of NVDA
-  2018.3.
+* In addition to dialogs recognized by NVDA, more dialogs are now recognized
+  as proper dialogs and reported as such, including Insider Preview dialog
+  (settings app).
 * NVDA can announce suggestion count when performing a search in majority of
   cases. This option is controlled by "Report object position information"
-  in Object presentation dialog/panel.
+  in Object presentation panel found in NVDA settings.
 * In certain context menus (such as in Edge), position information (e.g. 1
   of 2) is no longer announced.
 * The following UIA events are recognized: active text position change,
@@ -73,6 +70,8 @@ For a list of changes made between each add-on releases, refer to
   announce current desktop ID (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen
   resolutions or orientation.
+* In build 18323 and later, NVDA will now announce audio volume and
+  brightness changes.
 
 ## Action center
 
@@ -134,7 +133,7 @@ For a list of changes made between each add-on releases, refer to
 
 ## Modern keyboard
 
-Note: most features below are now part of NVDA 2018.3.
+Note: most features below are now part of NVDA 2018.3 or later.
 
 * Support for Emoji input panel in Version 1709 (Fall Creators Update) and
   later, including the redesigned panel in Version 1809 (build 17661 and
@@ -157,9 +156,10 @@ Note: most features below are now part of NVDA 2018.3.
   opening hardware keyboard input suggestions and staying silent when
   certain touch keyboard keys raise name change event on some systems.
 * NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds.
+  panel in more recent 19H1 Insider Preview builds. This will be part of
+  NVDA 2019.1.
 * In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible.
+  results for emojis if possible. This will be part of NVDA 2019.1.
 
 ## Люди
 
