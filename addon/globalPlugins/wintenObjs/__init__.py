@@ -109,6 +109,7 @@ class ToolTip(ToolTip, UIA):
 	event_UIA_toolTipOpened=ToolTip.event_show
 
 
+# Various XAML headings (Settings app, for example) introduced in Version 1803.
 class XAMLHeading(UIA):
 
 	def _get_role(self):
