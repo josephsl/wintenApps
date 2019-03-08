@@ -80,6 +80,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 * When reviewing items in messages list, you can now use table navigation commands to review message headers. Note that navigating between rows (messages) is not supported.
 * When writing a message, appearance of at mention suggestions are indicated by sounds.
+* NVDA will no longer do anything or play error tones after closing this app.
 
 ## Maps
 
