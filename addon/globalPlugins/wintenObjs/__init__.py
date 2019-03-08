@@ -15,10 +15,11 @@ import wx
 import config
 import queueHandler
 import globalVars
+import UIAHandler
 from logHandler import log
+import winVersion
 import addonHandler
 addonHandler.initTranslation()
-import winVersion
 
 # Extra UIA constants
 UIA_Drag_DragStartEventId = 20026
@@ -125,7 +126,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #20: don't even think about proceeding in secure screens.
 		# #40: skip over the rest if appx is in effect.
 		if globalVars.appArgs.secure or config.isAppX: return
-		import UIAHandler
 		# Add a series of events instead of doing it one at a time.
 		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
 		log.debug("W10: adding additional events")
