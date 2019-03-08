@@ -35,6 +35,9 @@ W10Events = {
 	UIA_ActiveTextPositionChangedEventId: "UIA_activeTextPositionChanged"
 }
 
+# Additional dialogs not recognized by NVDA itself.
+UIAAdditionalDialogClassNames = ["Popup"]
+
 # General UIA controller for edit field.
 # Used as a base class for controls such as Mail's composition window, search fields and such.
 class UIAEditableTextWithSuggestions(EditableTextWithSuggestions, UIA):
@@ -135,7 +138,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if UIAHandler.UIA_ItemStatusPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
 			log.debug("W10: adding item status property change event")
 			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIAHandler.UIA_ItemStatusPropertyId] = "UIA_itemStatus"
-			UIAHandler.handler.clientObject.AddPropertyChangedEventHandler(UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler,[UIAHandler.UIA_ItemStatusPropertyId])
+			UIAHandler.handler.clientObject.AddPropertyChangedEventHandler(UIAHandler.handler.rootElement,UIAHandler.TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler,[UIAHandler.UIA_ItemStatusPropertyId])
+		# Allow NVDA to recognize more dialogs, especially ones that are not advertising themselves as such.
+		for dialogClassName in UIAAdditionalDialogClassNames:
+			if dialogClassName not in UIAHandler.UIADialogClassNames:
+				log.debug("W10: adding class name %s to known dialog class names"%dialogClassName)
+				UIAHandler.UIADialogClassNames.append(dialogClassName)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Because this add-on might be turned on "accidentally" in earlier Windows releases...
@@ -150,7 +158,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# NVDA Core issue 8405: in build 17682 and later, IsDialog property has been added, making comparisons easier.
 			# However, don't forget that many users are still using old Windows 10 releases.
 			# The most notable case is app uninstall confirmation dialog from Start menu in build 17134 and earlier.
-			if obj.UIAElement.cachedClassName in ("Popup", "Shell_SystemDialog") and Dialog not in clsList:
+			# Some dialogs, although listed as a dialog thanks to UIA class name, does not advertise the proper role of dialog.
+			if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 				clsList.insert(0, Dialog)
 				return
 			# Search field that does raise controller for event.
