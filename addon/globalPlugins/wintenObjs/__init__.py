@@ -10,8 +10,6 @@ from NVDAObjects.UIA import UIA, SearchField, Dialog, ComboBoxWithoutValuePatter
 from NVDAObjects.behaviors import EditableTextWithSuggestions, ToolTip
 import api
 import nvwave
-import gui
-import wx
 import config
 import queueHandler
 import globalVars
@@ -214,7 +212,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# NVDA Core issue 5641: try catching virtual desktop switch event, which will result in name change for the desktop object.
 		# To be taken care of by NVDA Core, and for older releases, let the add-on handle it for a time.
 		if obj.windowClassName == "#32769":
-			import eventHandler
+			import wx, eventHandler
 			if not hasattr(eventHandler, "handlePossibleDesktopNameChange"):
 				wx.CallLater(500, ui.message, obj.name)
 		self.uiaDebugLogging(obj, "nameChange")
