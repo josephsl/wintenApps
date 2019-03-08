@@ -5,8 +5,8 @@
 * Télécharger [version de développement][2]
 * Compatibilité NVDA: 2018.3 à 2019.1
 
-Ce module complémentaire est une collection d'app modules pour diverses apps
-de Windows 10, ainsi que des améliorations et des correctifs pour certains
+Cette extension est une collection d'app modules pour diverses apps de
+Windows 10, ainsi que des améliorations et des correctifs pour certains
 contrôles de windows 10.
 
 Les suivantes app modules ou la prise en charge des modules pour certaines
@@ -34,27 +34,26 @@ est inclus) :
 
 Notes:
 
-* Ce module complémentaire nécessite Windows 10 Version 1803 (build 17134)
-  ou version ultérieure et NVDA 2018.3 ou version ultérieure. Pour de
-  meilleurs résultats, utilisez le module complémentaire avec la dernière
-  version stable de Windows 10 (build 17763) et la dernière version stable
-  de NVDA.
-* Certaines fonctionnalités du module complémentaire font ou feront partie
-  du lecteur d'écran NVDA.
+* Cette extension nécessite Windows 10 Version 1803 (build 17134) ou version
+  ultérieure et NVDA 2018.3 ou version ultérieure. Pour de meilleurs
+  résultats, utilisez l'extension avec la dernière version stable de Windows
+  10 (build 17763) et la dernière version stable de NVDA.
+* Certaines fonctionnalités de l'extension font ou feront partie du lecteur
+  d'écran NVDA.
 * Pour les entrées non répertoriées ci-dessous, vous pouvez supposer que les
   fonctionnalités font partie de NVDA, qu'elles ne sont plus applicables,
-  car le module complémentaire ne prend pas en charge les anciennes versions
-  de Windows 10 ou des modifications ont été apportées à Windows 10 et aux
-  applications pour que les entrées ne soient plus applicables.
+  car l'extension ne prend pas en charge les anciennes versions de Windows
+  10 ou des modifications ont été apportées à Windows 10 et aux applications
+  pour que les entrées ne soient plus applicables.
 
-Pour obtenir la liste des changements effectuées entre chaque version du
-module complémentaire, reportez-vous au document [changelogs pour les
-versions du module complémentaire][3].
+Pour obtenir la liste des changements effectuées entre chaque version de
+l'extension, reportez-vous au document [changelogs pour les versions de
+l'extension][3].
 
 ## Générale
 
-* NVDA will no longer play error tones or do nothing if this add-on becomes
-  active from Windows 7 and 8.1.
+* NVDA ne lira plus les tonalités d'erreur ou ne fera plus rien si cette
+  extension devient active sous Windows 7 et 8.1.
 * Les éléments de sous-menu sont correctement reconnus dans diverses
   applications, y compris le menu contextuel pour les tuiles du Menu
   Démarrer et le menu de l'application de Microsoft Edge (Redstone 5).

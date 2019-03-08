@@ -49,17 +49,17 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Xeral
 
-* NVDA will no longer play error tones or do nothing if this add-on becomes
-  active from Windows 7 and 8.1.
+* NVDA xa non reproducirá tons de erro ou aparentará non facer nada se este
+  complemento se activa en Windows 7 e 8.1.
 * Os elementos de submenú recoñécense adecuadamente en varias apps,
   incluíndo elementos do menú de contexto nas tarxetas do menú inicio e o
   menú da aplicación Microsoft Edge (Restone 5).
-* In addition to dialogs recognized by NVDA, more dialogs are now recognized
-  as proper dialogs and reported as such, including Insider Preview dialog
-  (settings app).
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation panel found in NVDA settings.
+* Agora recoñécense certos diálogos como proprios diálogos. Esto inclúe o
+  diálogo Insider Preview (settings app).
+* NVDA pode anunciar o número de suxestións cando se realiza unha procura na
+  maioría dos casos. Esta opción contrólase por "Anunciar información de
+  posición do obxecto" no panel Presentación de Obxectos ubicado nas opcións
+  do NVDA.
 * En certos menús de contexto (coma no Edge), a información de posición
   (ex.: 1 de 2) xa non se anuncia.
 * Recoñécense os seguintes eventos UIA: Controller for, drag start, drag
@@ -74,8 +74,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
   anunciará o ID do escritorio actual (escritorio 2, por exemplo).
 * NVDA xa non anuncia Menú Inicio tamaño de texto ao cambiar a resolución de
   pantalla ou a orientación.
-* In build 18323 and later, NVDA will now announce audio volume and
-  brightness changes.
+* Na compilación 18323 e posteriores, NVDA anunciará cambios no volume de
+  audio e no brillo.
 
 ## Centro de accións
 
@@ -140,7 +140,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Teclado Moderno
 
-Note: most features below are now part of NVDA 2018.3 or later.
+Nota: A maioría das características a continuación son parte de NVDA 2018.3
+ou posterior.
 
 * Soporte para o panel flotante de entrada de Emoji na actualización 1709
   Fall Creators en adiante, incluindo o panel redeseñado na compilación
@@ -165,11 +166,12 @@ Note: most features below are now part of NVDA 2018.3 or later.
   Candidate UI" ao abrir as suxestións de entrada hardware e que NVDA xa non
   quede calado cando certas teclas do teclado táctil lancen o evento cambio
   de nome nalguns sistemas.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This will be part of
-  NVDA 2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This will be part of NVDA 2019.1.
+* NVDA xa non reproducirá tons de erro ou aparentará non facer nada ao
+  pechar o panel de Emojis nas compilacións Insider Preview 19H1 máis
+  recentes. Isto formará parte de NVDA 2019.1.
+* Na versión 1809 (October 2018 Update) e posteriores, NVDA anunciará os
+  resultados de busca de emojis de ser posible. Isto formará parte de NVDA
+  2019.1.
 
 ## Xente
 

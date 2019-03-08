@@ -47,17 +47,17 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
-* NVDA will no longer play error tones or do nothing if this add-on becomes
-  active from Windows 7 and 8.1.
+* NVDA ei toista enää virheääniä tai tee mitään, mikäli tämä lisäosa
+  aktivoituu Windows 7:ssä ja 8.1:ssä.
 * Alavalikot tunnistetaan asianmukaisesti useissa sovelluksissa, mukaan
   lukien Käynnistä-valikon ruutujen tilannekohtaiset valikot ja microsoft
   Edgen sovellusvalikko (Redstone 5).
-* In addition to dialogs recognized by NVDA, more dialogs are now recognized
-  as proper dialogs and reported as such, including Insider Preview dialog
-  (settings app).
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation panel found in NVDA settings.
+* Entistä enemmän valintaikkunoita tunnistetaan ja ilmoitetaan nyt
+  asianmukaisesti valintaikkunoina, mukaan lukien Insider-esiversion
+  valintaikkuna (Asetukset-sovellus). Tämä sisältyy nyt NVDA 2018.3:een.
+* NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
+  suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
+  -asetuksella Objektien lukeminen -paneelista NVDA:n asetuksista.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
 * Seuraavat UIA-tapahtumat tunnistetaan: sijainnin muutos aktiivisessa
@@ -73,8 +73,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   avattaessa, suljettaessa tai vaihdettaessa virtuaalityöpöytien välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
   suuntaa vaihdettaessa.
-* In build 18323 and later, NVDA will now announce audio volume and
-  brightness changes.
+* NVDA ilmoittaa nyt äänenvoimakkuuden ja kirkkauden muutokset
+  koontiversiossa 18323 ja uudemmissa.
 
 ## Toimintokeskus
 
@@ -139,7 +139,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Moderni näppäimistö
 
-Note: most features below are now part of NVDA 2018.3 or later.
+Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
+2018.3:een tai uudempiin versioihin.
 
 * Tuki version 1709 (Fall Creators -päivitys) ja uudempien kelluvalle
   emojinsyöttöpaneelille, mukaan lukien version 1809 (koontiversio 17661 ja
@@ -164,11 +165,10 @@ Note: most features below are now part of NVDA 2018.3 or later.
   sanota "Microsoft Candidate UI" sekä ollaan hiljaa tilanteessa, jossa
   tietyt kosketusnäppäimistön näppäimet aiheuttavat joissakin järjestelmissä
   muuttuneen nimitapahtuman.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This will be part of
-  NVDA 2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This will be part of NVDA 2019.1.
+* NVDA ei toista enää virheääniä tai tee mitään emojipaneelia suljettaessa
+  uudemmissa 19H1-Insider-esiversioissa. Tämä sisältyy NVDA 2019.1:een.
+* NVDA ilmoittaa versiossa 1809 (October 2018 -päivitys) ja uudemmissa
+  emojien hakutulokset, mikäli mahdollista. Tämä sisältyy NVDA 2019.1:een.
 
 ## Ihmiset
 
