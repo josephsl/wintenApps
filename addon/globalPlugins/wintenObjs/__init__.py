@@ -35,9 +35,6 @@ W10Events = {
 	UIA_ActiveTextPositionChangedEventId: "UIA_activeTextPositionChanged"
 }
 
-# UIA COM constants
-TreeScope_Subtree = 7
-
 # General UIA controller for edit field.
 # Used as a base class for controls such as Mail's composition window, search fields and such.
 class UIAEditableTextWithSuggestions(EditableTextWithSuggestions, UIA):
@@ -132,7 +129,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		for event, name in W10Events.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
-				UIAHandler.handler.clientObject.addAutomationEventHandler(event,UIAHandler.handler.rootElement,TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
+				UIAHandler.handler.clientObject.addAutomationEventHandler(event,UIAHandler.handler.rootElement,UIAHandler.TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 				log.debug("W10: added event ID %s, assigned to %s"%(event, name))
 		# Listen for additional property change events.
 		if UIAHandler.UIA_ItemStatusPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
