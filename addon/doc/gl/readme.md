@@ -123,6 +123,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
   conta que a navegación entre fileiras(mensaxes) non se soporta.
 * Cando se escrebe unha mensaxe, a apariencia da mención de suxerencias
   indícase con sons.
+* NVDA xa non parecerá non facer nada ou non reproducirá tons de erro tras
+  pechar esta app.
 
 ## Mapas
 

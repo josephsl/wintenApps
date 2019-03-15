@@ -49,22 +49,16 @@
 
 ## 常规设置
 
-* NVDA will no longer play error tones or do nothing if this add-on becomes
-  active from Windows 7 and 8.1.
+* 如果此插件从Windows 7和8.1变为活动状态，NVDA将不再播放错误音或不执行任何操作。
 * 现在子菜单项在各种应用程序中都可以正确识别，包括“开始”菜单磁贴的上下文菜单和Microsoft Edge的应用程序菜单（Redstone 5）。
-* In addition to dialogs recognized by NVDA, more dialogs are now recognized
-  as proper dialogs and reported as such, including Insider Preview dialog
-  (settings app).
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation panel found in NVDA settings.
+* 某些对话框现在被识别为正确的对话框并按此朗读，包括“内幕预览”对话框（设置应用程序）。
+* 在大多数情况下，NVDA可以在执行搜索时朗读建议计数。此选项由NVDA设置中的对象显示面板中的“朗读对象位置信息”控制。
 * 在某些上下文菜单中（例如在Edge中），位置信息（例如，1、2）不再被朗读。
 * 现在识别以下UIA事件：活动文本位置更改，控制器，拖动开始，拖动取消，拖动完成，元素选择，项目状态，实时区域更改，通知，系统警报，工具提示打开，窗口打开。将NVDA设置为启用调试日志记录运行时，将跟踪这些事件，对于UIA通知事件，如果通知来自当前活动应用程序以外的某个位置，则会听到调试音。
 * 来自Edge和通用应用程序的工具提示已被识别并将被朗读。
 * 在虚拟桌面之间打开，关闭或切换时，NVDA会读出当前的桌面ID（例如，桌面2）。
 * 在更改屏幕分辨率或方向时，NVDA将不再公布“开始”菜单大小文本。
-* In build 18323 and later, NVDA will now announce audio volume and
-  brightness changes.
+* 在构建18323及更高版本中，NVDA现在将朗读音量和亮度更改。
 
 ## 活动中心
 
@@ -100,6 +94,7 @@
 
 * 现在查看消息列表中的项目时，您现在可以使用表格导航命令来查看消息标题。请注意，不支持在行（消息）之间导航。
 * 在编写信息时，在提建议的状态用声音提示。
+* 关闭此应用程序后，NVDA将不再执行任何操作或播放错误音。
 
 ## 地图
 
@@ -113,7 +108,7 @@
 
 ## 系统键盘
 
-Note: most features below are now part of NVDA 2018.3 or later.
+注意：以下大多数功能现在都是NVDA 2018.3或更高版本的一部分。
 
 * 现在支持版本1709（秋季创建者更新）及更高版本中的表情符号输入面板，包括版本1809（版本17661及更高版本）中的重新设计的面板以及19H1中的更改​​（构建18262及更高版本，包括构建18305中的kaomoji和符号类别）。如果使用早于2018.4的NVDA版本，为了获得阅读表情符号时的最佳体验，请使用Windows
   OneCore语音合成器。如果正在使用2018.4或更高版本，请从NvDA的语音设置启用Unicode
@@ -123,11 +118,9 @@ Note: most features below are now part of NVDA 2018.3 or later.
 * 支持在版本1809（版本17666及更高版本）中朗读云剪贴板项目。
 * 使用现代键盘及其功能时减少不必要的冗长。这些包括在打开硬件键盘输入建议时不再公布“Microsoft Candidate
   UI”，并且某些触摸键盘键在某些系统上引发名称更改事件时不再保持沉默。
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This will be part of
-  NVDA 2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This will be part of NVDA 2019.1.
+* 在最近的19H1 Insider Preview版本中关闭表情符号面板时，NVDA将不再播放错误音或不执行任何操作。这将是NVDA
+  2019.1的一部分。
+* 在版本1809（2018年10月更新）及更高版本中，如果可能，NVDA将朗读表情符号的搜索结果。这将是NVDA 2019.1的一部分。
 
 ## {longName} ({name})
 版本: {version}

@@ -122,6 +122,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   ikke understøttes.
 * Når du skriver en besked, vil @omtale forslag indikeres med lyd, når de
   vises.
+* NVDA will no longer do anything or play error tones after closing this
+  app.
 
 ## Kort
 

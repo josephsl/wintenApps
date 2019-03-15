@@ -126,6 +126,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   mensaje. Ten en cuenta que no está soportado navegar por filas (mensajes).
 * Cuando se escribe un mensaje, la apariencia de la mención de sugerencias
   se indica con sonidos.
+* NVDA ya no parecerá hacer nada o reproducir tonos de error después de
+  cerrar esta aplicación.
 
 ## Mapas
 

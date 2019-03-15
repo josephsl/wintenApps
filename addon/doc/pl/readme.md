@@ -120,6 +120,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   uwadze, że nawigacja po kolumnach (wiadomościach) jest niewspierana.
 * Przy pisaniu wiadomości, istnienie podpowiedzi o wzmiankach teraz jest
   oznajmiane dzwiękami.
+* NVDA will no longer do anything or play error tones after closing this
+  app.
 
 ## Mapy
 

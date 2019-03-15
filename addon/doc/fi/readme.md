@@ -122,6 +122,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   taulukkonavigointikomentoja viestiotsakkeiden lukemiseen. Huomaa, että
   rivien (viestien) välillä liikkumista ei tueta.
 * Ät-maininnan ehdotukset ilmaistaan äänimerkeillä viestiä kirjoitettaessa.
+* NVDA ei tee enää mitään tai toista virheääniä, kun tämä sovellus on
+  suljettu.
 
 ## Kartat
 
@@ -188,7 +190,7 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
   äänenvoimakkuutta versiossa 1803 ja uudemmissa.
 * Windows Updaten tilailmoituksia puhutaan enemmän etenkin virheitä
   havaittaessa.
-* NVDA ei näytä enää tekevän mitään tai toista virheääniä, mikäli
+* NVDA ei tee enää mitään tai toista virheääniä, mikäli
   objektinavigointikomentoja käytetään tietyissä tilanteissa.
 * Windows Updaten muistutusvalintaikkuna tunnistetaan asianmukaisesti
   valintaikkunaksi.

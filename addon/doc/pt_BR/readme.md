@@ -125,6 +125,8 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   navegação entre linhas (mensagens) não é suportada.
 * Ao escrever uma mensagem, a aparência das sugestões de menção é indicada
   pelos sons.
+* NVDA will no longer do anything or play error tones after closing this
+  app.
 
 ## Mapas
 

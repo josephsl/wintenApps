@@ -125,6 +125,8 @@ riferimento al documento [changelogs for add-on releases][3].
   la navigazione tra le righe (messaggi) non è supportato.
 * Durante la composizione di un messaggio, verranno emessi segnali acustici
   nel caso ci siano dei suggerimenti per menzioni dopo la chiocciola
+* NVDA will no longer do anything or play error tones after closing this
+  app.
 
 ## Mappe
 

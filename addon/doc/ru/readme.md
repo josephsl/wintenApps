@@ -118,6 +118,8 @@ For a list of changes made between each add-on releases, refer to
   (messages) is not supported.
 * When writing a message, appearance of at mention suggestions are indicated
   by sounds.
+* NVDA will no longer do anything or play error tones after closing this
+  app.
 
 ## Карты
 

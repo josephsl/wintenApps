@@ -119,6 +119,8 @@ For a list of changes made between each add-on releases, refer to
   (messages) is not supported.
 * Tijekom pisanja poruke, ako spominjete neku osobu, pojavljene sugestije
   bit će popraćene zvukovima. 
+* NVDA will no longer do anything or play error tones after closing this
+  app.
 
 ## Karte
 

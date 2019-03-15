@@ -126,6 +126,8 @@ versiunile suplimentului][3].
   navigarea printre rânduri (mesaje) nu este suportată.
 * La scrierea unui mesaj, aspectele sugestiilor de menționare a arondului
   sunt indicate de sunete.
+* NVDA will no longer do anything or play error tones after closing this
+  app.
 
 ## Hărți
 

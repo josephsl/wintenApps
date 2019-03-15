@@ -126,6 +126,8 @@ Versionen][3].
   Navigation zwischen Zeilen (Nachrichten) wird noch nicht unterstützt.
 * Wenn Sie eine Nachricht schreiben, wird das Erscheinen von Vorschlägen
   durch Töne angezeigt.
+* NVDA will no longer do anything or play error tones after closing this
+  app.
 
 ## Karten
 

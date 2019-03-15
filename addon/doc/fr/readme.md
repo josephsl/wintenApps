@@ -9,7 +9,7 @@ Cette extension est une collection d'app modules pour diverses apps de
 Windows 10, ainsi que des améliorations et des correctifs pour certains
 contrôles de windows 10.
 
-Les suivantes app modules ou la prise en charge des modules pour certaines
+Les app modules suivants ou la prise en charge des modules pour certaines
 apps sont inclus (voir chaque section app pour plus de détails sur ce qui
 est inclus) :
 
@@ -57,12 +57,12 @@ l'extension][3].
 * Les éléments de sous-menu sont correctement reconnus dans diverses
   applications, y compris le menu contextuel pour les tuiles du Menu
   Démarrer et le menu de l'application de Microsoft Edge (Redstone 5).
-* In addition to dialogs recognized by NVDA, more dialogs are now recognized
-  as proper dialogs and reported as such, including Insider Preview dialog
-  (settings app).
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation panel found in NVDA settings.
+* En plus des dialogues reconnus par NVDA, d'autres dialogues sont
+  maintenant reconus et annoncés comme tels, incluant le dialogue de Insider
+  Preview (app de paramètres).
+* NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
+  majorité des cas. Cette option est contrôlée par "Annoncer le rang de
+  l'objet dans une liste" dans le dialogue Présentation des Objets.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
 * Les événements UIA suivants sont reconnus : changement de position du
@@ -80,8 +80,8 @@ l'extension][3].
   virtuels, NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
 * NVDA n'annoncera plus le texte de la taille du menu Démarrer lorsque vous
   changez la résolution ou l'orientation de l'écran.
-* In build 18323 and later, NVDA will now announce audio volume and
-  brightness changes.
+* Dans la build 18323 et ultérieures, NVDA annoncera le volume audio et les
+  changements de brillance.
 
 ## Action center
 
@@ -135,6 +135,8 @@ l'extension][3].
   lignes (messages) n'est pas prise en charge.
 * Lors de l'écriture d'un message, l'apparence des suggestions de mention
   est indiquée par des sons.
+* NVDA ne produira plus de tonalités d'erreur ou autre à la fermeture de
+  cette application.
 
 ## Cartes
 
@@ -152,7 +154,8 @@ l'extension][3].
 
 ## Clavier moderne
 
-Note: most features below are now part of NVDA 2018.3 or later.
+Note: la plupart des fonctionnalités ci-dessous font maintenant partie de
+NVDA 2018.3 et ultérieurs.
 
 * Prise en charge pour les Emoji flottants du panneau de saisie dans la
   Version 1709 (Fall Creators Update) et ultérieure, y compris le panneau
@@ -179,11 +182,12 @@ Note: most features below are now part of NVDA 2018.3 or later.
   matériel et de rester silencieux lorsque certaines touches du clavier
   tactile déclenchent un événement de changement de nom sur certains
   systèmes.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This will be part of
-  NVDA 2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This will be part of NVDA 2019.1.
+* NVDA ne produira plus de tonalités d'erreur ou autre à la fermeture du
+  panneau d'emoji dans les builds les plus récentes de 19H1 Insider
+  Preview. Ceci fera partie de NVDA 2019.1.
+* Dans la version 1809 (mise à jour d'octobre 2018) et ultérieure, NVDA
+  annoncera les résultats de la recherche pour les emojis, si possible.
+  Ceci fera partie de NVDA 2019.1.
 
 ## Personnes
 
