@@ -19,6 +19,9 @@ import winVersion
 import addonHandler
 addonHandler.initTranslation()
 
+# #52: forget everything if the current release is not a supported version of Windows 10.
+W10AddonSupported = winVersion.winVersion[:3] >= (10, 0, 17134)
+
 # Extra UIA constants
 UIA_Drag_DragStartEventId = 20026
 UIA_Drag_DragCancelEventId = 20027
@@ -120,7 +123,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
 		# Don't do anything unless this is Windows 10.
-		if winVersion.winVersion.major < 10: return
+		# #52: and this is a supported build.
+		if not W10AddonSupported: return
 		# #20: don't even think about proceeding in secure screens.
 		# #40: skip over the rest if appx is in effect.
 		if globalVars.appArgs.secure or config.isAppX: return
@@ -144,8 +148,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				UIAHandler.UIADialogClassNames.append(dialogClassName)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		# Because this add-on might be turned on "accidentally" in earlier Windows releases...
-		if winVersion.winVersion.major < 10: return
+		# Because this add-on might be turned on "accidentally" in earlier Windows releases, including unsupported Windows 10 builds...
+		if not W10AddonSupported: return
 		if isinstance(obj, UIA):
 			# NVDA Core ticket 5231: Announce values in time pickers, especially when focus moves to looping selector list.
 			# Because they do not support value pattern (for ones handled by this add-on), treat them as combo boxes without value pattern if this isn't treated as such by NVDA already.
