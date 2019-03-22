@@ -47,17 +47,16 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Generelt
 
-* NVDA will no longer play error tones or do nothing if this add-on becomes
-  active from Windows 7 and 8.1.
+* NVDA vil ikke længere spille fejltoner eller gøre ingenting, hvis denne
+  tilføjelse bliver aktiv fra Windows 7 og 8.1.
 * Undermenupunkter er korrekt genkendt i forskellige apps, herunder
   kontekstmenu til Start-menufliser og Microsoft Edge-appmenuen (Redstone
   5).
-* In addition to dialogs recognized by NVDA, more dialogs are now recognized
-  as proper dialogs and reported as such, including Insider Preview dialog
-  (settings app).
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation panel found in NVDA settings.
+* Visse dialogbokse er nu anerkendt som ordentlige dialoger og rapporteret
+  som sådan, herunder Insider Preview dialog (indstillinger app).
+* NVDA kan annoncere nummeret af forslag, når du udfører en søgning i de
+  fleste tilfælde. Denne indstilling styres af "Oplys information om
+  objektets placering" i indstillingspanelet "Objektpræsentation".
 * I visse kontekstmenuer (f.eks. i Microsoft Edge), er positionssoplysninger
   (f.eks. 1 af 2) ikke længere annonceret.
 * De følgende UIA begivenheder er anerkendt: active text position change,
@@ -72,8 +71,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   vil NVDA annoncere nuværende desktop ID (skrivebord 2, for eksempel).
 * NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
   du ændrer skærmopløsning eller orientering.
-* In build 18323 and later, NVDA will now announce audio volume and
-  brightness changes.
+* NVDA vil nu annoncerer, når lydstyrken og lysstyrken ændres i build 18323
+  og nyere.
 
 ## Handlingscenter
 
@@ -122,8 +121,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   ikke understøttes.
 * Når du skriver en besked, vil @omtale forslag indikeres med lyd, når de
   vises.
-* NVDA will no longer do anything or play error tones after closing this
-  app.
+* NVDA vil ikke længere gøre noget eller spille fejltoner efter lukning af
+  denne app.
 
 ## Kort
 
@@ -141,7 +140,7 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Moderne tastatur
 
-Note: most features below are now part of NVDA 2018.3 or later.
+Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
 
 * Støtte til Emoji inputpanelet i Version 1709 (Fall Creators Update) og
   senere, herunder det redesignet panel i build version 1809 17661 og
@@ -164,11 +163,12 @@ Note: most features below are now part of NVDA 2018.3 or later.
   kandidat UI", når du åbner hardware tastatur input forslag og NVDA
   forbliver tavse, når visse touch-tastaturkommandoer omfatter change name
   event på nogle systemer.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This will be part of
-  NVDA 2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This will be part of NVDA 2019.1.
+* NVDA vil ikke længere spille fejltoner eller gøre ingenting, når du lukker
+  emoji-panelet i nyere 19H1 Insider Preview-builds. Denne funktionalitet
+  bliver en del af NVDA 2019.1.
+* I Version 1809 (october 2018 Update) og senere vil NVDA annoncere
+  søgeresultater for emojis hvis det er muligt. Denne funktionalitet vil
+  være en del af NVDA 2019.1.
 
 ## Personer
 
