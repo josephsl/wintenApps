@@ -41,6 +41,9 @@ class AppModule(appModuleHandler.AppModule):
 				else:
 					nameList.append(obj.next.name)
 				obj.name = ", ".join(nameList)
+			# In some cases, Active Directory-style name is the name of the window, so tell NVDA to use something more meaningful.
+			if obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
+				obj.name = obj.firstChild.name
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
