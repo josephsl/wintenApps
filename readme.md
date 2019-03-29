@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and other Windows 10 users
 * Download [stable version][1]
 * Download [development version][2]
-* NVDA compatibility: 2018.3 to 2019.1
+* NVDA compatibility: 2018.4 to 2019.1
 
 This add-on is a collection of app modules for various Windows 10 apps, as well as enhancements and fixes for certain windows 10 controls.
 
@@ -21,14 +21,13 @@ The following app modules or support modules for some apps are included (see eac
 * Modern keyboard (emoji panel/hardware input suggestions/cloud clipboard items in Version 1709 and later)
 * People
 * Settings (system settings, Windows+I)
-* Skype (universal app)
 * Store
 * Weather.
 * Miscellaneous modules for controls such as Start Menu tiles.
 
 Notes:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and NVDA 2018.3 or later. For best results, use the add-on with latest Windows 10 stable release (build 17763) and latest stable version of NVDA.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and NVDA 2018.4 or later. For best results, use the add-on with latest Windows 10 stable release (build 17763) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to Windows 10 and apps that makes entries no longer applicable.
 
@@ -36,7 +35,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## General
 
-* NVDA will no longer play error tones or do nothing if this add-on becomes active from Windows 7 and 8.1.
+* NVDA will no longer play error tones or do nothing if this add-on becomes active from Windows 7, Windows 8.1, and unsupported releases of Windows 10.
 * Submenu items are properly recognized in various apps, including context menu for Start menu tiles and microsoft Edge's app menu (Redstone 5).
 * In addition to dialogs recognized by NVDA, more dialogs are now recognized as proper dialogs and reported as such, including Insider Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation panel found in NVDA settings.
@@ -49,12 +48,12 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## Action center
 
-* Brightness quick action is now a button instead of a toggle button. This will be part of NVDA 2019.1.
-* Various status changes such as Focus Assist and Brightness will be reported. This will be part of NVDA 2019.1.
+* Brightness quick action is now a button instead of a toggle button. This is now part of NVDA 2019.1.
+* Various status changes such as Focus Assist and Brightness will be reported. This is now part of NVDA 2019.1.
 
 ## Alarms and clock
 
-* Time picker values are now announced, noticeable when moving focus to picker controls. This also affects the control used to select when to restart to finish installing Windows updates. This will be part of NVDA 2019.1.
+* Time picker values are now announced, noticeable when moving focus to picker controls. This also affects the control used to select when to restart to finish installing Windows updates. This is now part of NVDA 2019.1.
 
 ## Calculator
 
@@ -80,7 +79,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 * When reviewing items in messages list, you can now use table navigation commands to review message headers. Note that navigating between rows (messages) is not supported.
 * When writing a message, appearance of at mention suggestions are indicated by sounds.
-* NVDA will no longer do anything or play error tones after closing this app.
+* NVDA will no longer do anything or play error tones after closing this app. This is now part of NVDA 2019.1.
 
 ## Maps
 
@@ -117,16 +116,7 @@ Note: most features below are now part of NVDA 2018.3 or later.
 * More messages about Windows Update status are announced, especially if Windows Update encounters errors.
 * NVDA will no longer appear to do nothing or play error tones if using object navigation commands under some circumstances.
 * Windows Update reminder dialog is recognized as a proper dialog.
-
-## Skype
-
-Note: the below entries won't work properly in Skype 14 universal app.
-
-* Typing indicator text is announced just like Skype for Desktop client.
-* Control+NvDA+number row commands, used to read recent chat history and to move navigator object to chat entries in Skype for Desktop, is also available in Skype UWP.
-* You can press Alt+number row to locate and move to conversations (1), contacts list (2), bots (3) and chat edit field if visible (4). Note that these commands will work properly if Skype update released in March 2017 is installed.
-* NVDA will no longer announce "Skype Message" when reviewing messages for majority of cases.
-* From message history list, pressing NVDA+D on a message item will allow NVDA to announce detailed information about a message such as channel type, sent date and time and so on.
+* Odd control labels seen in certain Windows 10 installations has been corrected.
 
 ## Store
 
