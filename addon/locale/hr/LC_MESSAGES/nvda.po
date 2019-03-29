@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2019-01-11 08:06-0800\n"
-"PO-Revision-Date: 2019-01-11 08:06-0800\n"
+"PO-Revision-Date: 2019-03-24 10:57+0100\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: \n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #: addon/installTasks.py:17
@@ -25,9 +25,8 @@ msgid ""
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Koristite stariju inačicu Windows operativnog sustava. Ovaj dodatak "
-"zahtijeva {minSupportedVersion} ili noviju. Želite li ju svejedno "
-"instalirati_?"
+"Koristite stariju inačicu Windows operativnog sustava. Ovaj dodatak zahtjeva "
+"{minSupportedVersion} ili noviju. Želite li ju svejedno instalirati_?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 #: addon/installTasks.py:19

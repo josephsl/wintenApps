@@ -51,17 +51,18 @@ versiunile suplimentului][3].
 
 ## General
 
-* NVDA will no longer play error tones or do nothing if this add-on becomes
-  active from Windows 7 and 8.1.
+* NVDA nu va mai reda tonuri de eroare sau nu va mai face nimic dacă acest
+  supliment devine activ din Windows 7 și 8.1.
 * Elementele de submeniu sunt recunoscute corespunzător în diverse
   aplicații, incluzând meniul context pentru comenzile din meniul Start și
   meniul de aplicație al Microsoft Edge (Redstone 5).
-* In addition to dialogs recognized by NVDA, more dialogs are now recognized
-  as proper dialogs and reported as such, including Insider Preview dialog
-  (settings app).
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation panel found in NVDA settings.
+* Anumite dialoguri sunt acum recunoscute ca dialoguri corespunzătoare și
+  sunt raportate ca atare. Acestea includ dialogul Insider Preview
+  (aplicația setări).
+* NVDA poate anunța numărul de sugestii la efectuarea unei căutări în
+  majoritatea cazurilor. Această opțiune este controlată de „informația
+  poziției obiectului din dialogul prezentării obiectului, găsit în panoul
+  de setări NVDA.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
 * Următoarele evenimente UIA sunt recunoscute: schimbarea poziției textului
@@ -77,8 +78,8 @@ versiunile suplimentului][3].
   NVDA va anunța ID-ul spațiului de lucru curent (spațiu de lucru 2).
 * NVDA nu mai anunță „dimensiune text start meniu” la schimbarea rezoluției
   ecranului sau a orientării.
-* In build 18323 and later, NVDA will now announce audio volume and
-  brightness changes.
+* În compilarea 18323 și mai nouă, NVDA va anunța schimbările volumului
+  audio și ale luminozității.
 
 ## Centru de acțiuni
 
@@ -126,8 +127,8 @@ versiunile suplimentului][3].
   navigarea printre rânduri (mesaje) nu este suportată.
 * La scrierea unui mesaj, aspectele sugestiilor de menționare a arondului
   sunt indicate de sunete.
-* NVDA will no longer do anything or play error tones after closing this
-  app.
+* NVDA nu va mai face nimic și nu va mai reda tonuri de eroare dacă se
+  utilizează comenzile de navigare ale obiectului în anumite circumstanțe.
 
 ## Hărți
 
@@ -144,7 +145,7 @@ versiunile suplimentului][3].
 
 ## Tastatură modernă
 
-Note: most features below are now part of NVDA 2018.3 or later.
+Notă: majoritatea caracteristicilor de mai jos fac parte din NVDA 2018.3.
 
 * Suport pentru panoul de intrare floating Emoji în versiunea 1709 (Fall
   Creators Update) și pentru panoul nou din compilarea 17661 sau mai nouă,
@@ -168,11 +169,12 @@ Note: most features below are now part of NVDA 2018.3 or later.
   la deschiderea sugestiilor de introducere a tastaturii hardware și starea
   în modul silențios atunci când anumite taste ale tastaturii tactile
   generează un eveniment de schimbare a numelui pe unele sisteme.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This will be part of
-  NVDA 2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This will be part of NVDA 2019.1.
+* NVDA nu va mai reda tonuri de eroare sau nu va mai face nimic la
+  închiderea panoului emoji în compilări mai recente Insider Preview
+  19H1. Aceasta va face parte din NVDA 2019.1
+* În versiunea 1809 (October 2018 Update) și mai nouă, NVDA va anunța
+  rezultatele căutării pentru emoji-uri dacă este posibil. Aceasta va face
+  parte din NVDA 2019.1
 
 ## Persoane
 
