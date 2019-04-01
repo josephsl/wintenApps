@@ -1,8 +1,10 @@
-# WinTenApps/calculator.py
-# Part of Windows 10 App Essentials collection
-# Copyright 2015-2019 Joseph Lee, released under GPL.
+#appModules/calculator.py
+#A part of NonVisual Desktop Access (NVDA)
+#Copyright (C) 2015-2019 NV Access Limited, Joseph Lee
+#This file is covered by the GNU General Public License.
+#See the file COPYING for more details.
 
-# Provides enhanced support for modern Calculator, including announcing results.
+"""App module for Windows 10 Calculator"""
 
 import appModuleHandler
 import api
@@ -40,7 +42,7 @@ class AppModule(appModuleHandler.AppModule):
 			pass
 
 	shouldAnnounceResult = False
-	# Again, name change says the same thing multiple times for some items.
+	# Name change says the same thing multiple times for some items.
 	resultsCache = ""
 
 	def event_nameChange(self, obj, nextHandler):
