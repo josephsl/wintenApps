@@ -41,20 +41,20 @@ class AppModule(appModuleHandler.AppModule):
 		except AttributeError:
 			pass
 
-	shouldAnnounceResult = False
+	_shouldAnnounceResult = False
 	# Name change says the same thing multiple times for some items.
-	resultsCache = ""
+	_resultsCache = ""
 
 	def event_nameChange(self, obj, nextHandler):
 		# No, announce value changes immediately except for calculator results.
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID != "CalculatorResults" and obj.name != self.resultsCache:
+		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID != "CalculatorResults" and obj.name != self._resultsCache:
 			# For unit conversion, UIA notification event presents much better messages.
 			if obj.UIAElement.cachedAutomationID not in ("Value1", "Value2"):
 				ui.message(obj.name)
-			self.resultsCache = obj.name
-		if not self.shouldAnnounceResult:
+			self._resultsCache = obj.name
+		if not self._shouldAnnounceResult:
 			return
-		self.shouldAnnounceResult = False
+		self._shouldAnnounceResult = False
 		nextHandler()
 
 	def event_liveRegionChange(self, obj, nextHandler):
@@ -85,7 +85,7 @@ class AppModule(appModuleHandler.AppModule):
 			navMenu = True
 		gesture.send()
 		# In redstone, calculator result keeps firing name change, so tell it to do so if and only if enter has been pressed.
-		self.shouldAnnounceResult = True
+		self._shouldAnnounceResult = True
 		# Hack: only announce display text when an actual calculator button (usually equals button) is pressed.
 		# In redstone, pressing enter does not move focus to equals button.
 		if isinstance(focus, UIA):
