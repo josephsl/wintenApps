@@ -80,9 +80,6 @@ class AppModule(appModuleHandler.AppModule):
 	def script_calculatorResult(self, gesture):
 		# To prevent double focus announcement, check where we are.
 		focus = api.getFocusObject()
-		navMenu = False
-		if isinstance(focus, UIA) and isinstance(focus.parent.parent, UIA) and focus.parent.parent.UIAElement.cachedAutomationID == "FlyoutNav":
-			navMenu = True
 		gesture.send()
 		# In redstone, calculator result keeps firing name change, so tell it to do so if and only if enter has been pressed.
 		self._shouldAnnounceResult = True
@@ -91,12 +88,11 @@ class AppModule(appModuleHandler.AppModule):
 		if isinstance(focus, UIA):
 			if focus.UIAElement.cachedAutomationID == "CalculatorResults":
 				queueHandler.queueFunction(queueHandler.eventQueue, focus.reportFocus)
-			elif focus.UIAElement.cachedAutomationID != "NavButton":
-				# In newer releases, result is located on the same spot in the object hierarchy.
-				result = api.getForegroundObject().children[1].children[3]
-				if result.UIAElement.cachedAutomationID == "CalculatorResults" and not navMenu:
+			else:
+				resultsScreen = api.getForegroundObject().children[1].lastChild
+				if isinstance(resultsScreen, UIA) and resultsScreen.UIAElement.cachedClassName == "LandmarkTarget":
 					# And no, do not allow focus to move.
-					queueHandler.queueFunction(queueHandler.eventQueue, result.reportFocus)
+					queueHandler.queueFunction(queueHandler.eventQueue, resultsScreen.firstChild.reportFocus)
 
 	# Without this, gesture binding fails even with script decorator deployed.
 	__gestures={}
