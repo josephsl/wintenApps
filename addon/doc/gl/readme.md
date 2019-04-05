@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros usuarios do Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
-* Compatibilidade con NVDA: da 2018.3 á 2019.1
+* Compatibilidade con NVDA: da 2018.4 á 2019.1
 
 Este complemento é unha coleción de app modules para varias aplicacións de
 Windows 10, así coma melloras e correccións para certos controis de windows
@@ -26,15 +26,14 @@ se inclúe):
   1709 e posterior)
 * Xente
 * Opcións (opcións do sistema, Windows+I)
-* Skype (aplicación universal)
 * Tenda
 * O Tempo
 * Módulos misceláneos para controis como mosaicos do Menú Inicio.
 
 Notas:
 
-* Este complemento require do Windows 10 Versión 1803 (build 17134) ou
-  posterior e do NVDA 2018.3 ou posterior. Para uns mellores resultados, usa
+* Este complemento require do Windows 10 Versión 1803 (compilación 17134) ou
+  posterior e do NVDA 2018.4 ou posterior. Para uns mellores resultados, usa
   o complemento coa compilación estable máis recente (compilación 17763) e
   versión estable máis recente do NVDA.
 * Algunhas das características do complemento son ou serán parte do lector
@@ -50,7 +49,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
 ## Xeral
 
 * NVDA xa non reproducirá tons de erro ou aparentará non facer nada se este
-  complemento se activa en Windows 7 e 8.1.
+  complemento se activa en Windows 7, Windows 8.1 e versións sen soporte de
+  Windows 10.
 * Os elementos de submenú recoñécense adecuadamente en varias apps,
   incluíndo elementos do menú de contexto nas tarxetas do menú inicio e o
   menú da aplicación Microsoft Edge (Restone 5).
@@ -80,15 +80,15 @@ documento [rexistros de trocos para publicacións de complementos][3].
 ## Centro de accións
 
 * A acción rápida Brillo é agora un botón no canto dun botón
-  conmutable. Isto formará parte do NVDA 2019.1.
+  conmutable. Agora xa forma parte de NVDA 2019.1
 * Reportaranse varios cambios de estado como Asistencia ao Foco e
-  Brillo. Isto formará parte do NVDA 2019.1.
+  Brillo. Agora xa forma parte do NVDA 2019.1.
 
 ## Alarmas e reloxo
 
 * Agora anúncianse os valores do selector de hora. Esto tamén afecta ó
   control usado para selecionar cando reiniciar para rematar a instalación
-  das actualizacións de Windows. Isto formará parte do NVDA 2019.1.
+  das actualizacións de Windows. Agora xa forma parte do NVDA 2019.1.
 
 ## Calculadora
 
@@ -124,7 +124,7 @@ documento [rexistros de trocos para publicacións de complementos][3].
 * Cando se escrebe unha mensaxe, a apariencia da mención de suxerencias
   indícase con sons.
 * NVDA xa non parecerá non facer nada ou non reproducirá tons de erro tras
-  pechar esta app.
+  pechar esta app. agora xa forma parte de NVDA 2019.1.
 
 ## Mapas
 
@@ -197,28 +197,8 @@ ou posterior.
   se usen ordes de navegación de obxectos baixo certas circunstancias.
 * O diálogo de recordatorio de actualización de Windows é recoñecido
   axeitadamente como un diálogo.
-
-## Skype
-
-Nota: As entradas seguintes non funcionarán axeitadamente na app universal
-Skype 14.
-
-* Ao teclear o indicador de texto anúnciase só coma cliente Skype para
-  Escritorio.
-* O comando Control+NVDA+fila de números, para ler o histórico de chats
-  recentes e para mover o navegador de obxectos a entradas de chat en Skype
-  para Escritorio, está tamén dispoñible no Skype UWP.
-* Agora podes premer Alt+fila de números para localizar e mover a
-  conversacións (1), listaxe de contactos (2), bots (3) e campo de edición
-  do chat se está visible(4). Ten en conta que estas ordes funcionarán
-  apropriadamente se está instalada a actualización do Skype liberada en
-  Marzo do 2017.
-* NVDA xa non anuncia "Mensaxe Skype" cando se revisen mensaxes para a
-  maioría dos casos.
-* Dende a listaxe do historial de mensaxes, premendo NVDA+D sobre un
-  elemento de mensaxe agora permitirá ao NVDA anunciar información detallada
-  acerca dunha mensaxe como tipo de canle, data e hora de envío e
-  semellante.
+* Corrixiuse a disparidade en etiquetas de controis advertida en certas
+  instalacións de Windows.
 
 ## Tenda
 

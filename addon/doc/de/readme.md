@@ -3,7 +3,7 @@
 * Autors: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version herunterladen][1]
 * [Entwicklungsversion herunterladen][2]
-* NVDA-Kompatibilität: 2018.3 bis 2019.1
+* NVDA compatibility: 2018.4 to 2019.1
 
 Diese Erweiterung bringt ein Paket von Anwendungsmodulen für diverse Windows
 10 Apps sowie Korrekturen in einigen Windows 10 Elementen mit.
@@ -24,17 +24,15 @@ inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
   Cloud-Zwischenablage ab Version 1709)
 * Kontakte
 * Einstellungen (Systemeinstellungen, Windows+I)
-* Skype (universal app)
 * Store
 * Wetter.
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche.
 
 Hinweise:
 
-* Diese Erweiterung erfordert Windows 10 Version 1803 (Build 17134) oder
-  neuer und NVDA 2018.3 oder neuer. Für beste Ergebnisse verwenden Sie die
-  Erweiterung mit der neuesten stabilen Version von Windows 10 (Build 17763)
-  und der neuesten stabilen Version von NVDA.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * For entries not listed below, you can assume that features are part of
   NVDA, no longer applicable as the add-on does not support old Windows 10
@@ -48,7 +46,8 @@ Versionen][3].
 ## Allgemein
 
 * NVDA will no longer play error tones or do nothing if this add-on becomes
-  active from Windows 7 and 8.1.
+  active from Windows 7, Windows 8.1, and unsupported releases of Windows
+  10.
 * Untermenüs werden in verschiedenen Anwendungen richtig erkannt,
   einschließlich des Kontextmenüs für Startmenükacheln und des
   Anwendungsmenüs von Microsoft Edge (Redstone 5).
@@ -79,15 +78,15 @@ Versionen][3].
 ## Einstellungscenter für Benachrichtigungen und Aktionen
 
 * Brightness quick action is now a button instead of a toggle button. This
-  will be part of NVDA 2019.1.
+  is now part of NVDA 2019.1.
 * Various status changes such as Focus Assist and Brightness will be
-  reported. This will be part of NVDA 2019.1.
+  reported. This is now part of NVDA 2019.1.
 
 ## Wecker und Uhr
 
 * Time picker values are now announced, noticeable when moving focus to
   picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates. This will be part of NVDA
+  restart to finish installing Windows updates. This is now part of NVDA
   2019.1.
 
 ## Rechner
@@ -127,7 +126,7 @@ Versionen][3].
 * Wenn Sie eine Nachricht schreiben, wird das Erscheinen von Vorschlägen
   durch Töne angezeigt.
 * NVDA will no longer do anything or play error tones after closing this
-  app.
+  app. This is now part of NVDA 2019.1.
 
 ## Karten
 
@@ -197,26 +196,8 @@ Note: most features below are now part of NVDA 2018.3 or later.
   der Objektnavigation abspielen.
 * Das Erinnerungsdialogfeld von Windows Update wird als richtiger Dialog
   erkannt.
-
-## Skype
-
-Hinweis: Die folgenden Einträge funktionieren in der universellen Skype 14
-App nicht ordnungsgemäß.
-
-* Die Eingabe des Indikatortextes wird wie bei Skype für Desktop-Client
-  angekündigt.
-* Strg+NVDA+1 bis 9, zum Lesen der letzten Chat-Meldungen und zum Ziehen des
-  Navigator-Objects zum Chat-Eintrag in Skype für Desktop (auch verfügbar in
-  Skype UWP).
-* Sie können Alt+1 bis 9 drücken, um Gespräche (1), Kontaktliste (2), Bots
-  (3) und Chat-Eingabefeld zu finden und zu verschieben, falls sichtbar
-  (4). Beachten Sie dabei, dass diese Befehle nur dann funktionieren, wenn
-  Sie das im März 2017 veröffentlichte Skype-Update installiert haben.
-* NVDA wird beim Navigieren durch die Nachrichteneinträge in den meisten
-  Fällen nicht mehr "Skype-Nachricht" ansagen.
-* Durch Drücken von NVDA+D auf einem Nachrichtenelement kann NVDA
-  detaillierte Informationen über eine Nachricht wie zum Beispiel Chat-ARt,
-  gesendetes Datum und Uhrzeit, etc. anzeigen.
+* Odd control labels seen in certain Windows 10 installations has been
+  corrected.
 
 ## Store
 

@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* NVDA-yhteensopivuus: 2018.3-2019.1
+* NVDA compatibility: 2018.4 to 2019.1
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -25,17 +25,15 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
   ehdotukset/pilvileikepöydän kohteet versiossa 1709 ja uudemmissa)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
-* Skype (universaali sovellus)
 * Kauppa
 * Sää
 * Sekalaisia moduuleita säätimille, esim. Käynnistä-valikon ruuduille.
 
 Huomautuksia:
 
-* Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1803 (koontiversio
-  17134) tai uudempaa ja NVDA 2018.3:a tai uudempaa. Käytä parhaan
-  käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata versiota
-  (koontiversio 17763) sekä uusinta vakaata NVDA:n versiota.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
@@ -47,8 +45,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
-* NVDA ei toista enää virheääniä tai tee mitään, mikäli tämä lisäosa
-  aktivoituu Windows 7:ssä ja 8.1:ssä.
+* NVDA will no longer play error tones or do nothing if this add-on becomes
+  active from Windows 7, Windows 8.1, and unsupported releases of Windows
+  10.
 * Alavalikot tunnistetaan asianmukaisesti useissa sovelluksissa, mukaan
   lukien Käynnistä-valikon ruutujen tilannekohtaiset valikot ja microsoft
   Edgen sovellusvalikko (Redstone 5).
@@ -78,17 +77,17 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Toimintokeskus
 
-* Kirkkaus-pikatoiminto on nyt vipupainikkeen sijasta painike. Tämä tulee
-  sisältymään NVDA 2019.1:een.
-* Useat tilojen, kuten Keskittymisavustajan ja kirkkauden, muutokset
-  ilmoitetaan. Tämä tulee sisältymään NVDA 2019.1:een.
+* Brightness quick action is now a button instead of a toggle button. This
+  is now part of NVDA 2019.1.
+* Various status changes such as Focus Assist and Brightness will be
+  reported. This is now part of NVDA 2019.1.
 
 ## Hälytykset ja kello
 
-* Ajanvalitsimen arvot puhutaan - havaittavissa siirrettäessä kohdistusta
-  valitsimen säätimiin. Tämä vaikuttaa myös säätimeen, jolla valitaan,
-  milloin Windows käynnistetään uudelleen päivitysten asentamisen
-  viimeistelemiseksi. Tämä tulee sisältymään NVDA 2019.1:een.
+* Time picker values are now announced, noticeable when moving focus to
+  picker controls. This also affects the control used to select when to
+  restart to finish installing Windows updates. This is now part of NVDA
+  2019.1.
 
 ## Laskin
 
@@ -122,8 +121,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   taulukkonavigointikomentoja viestiotsakkeiden lukemiseen. Huomaa, että
   rivien (viestien) välillä liikkumista ei tueta.
 * Ät-maininnan ehdotukset ilmaistaan äänimerkeillä viestiä kirjoitettaessa.
-* NVDA ei tee enää mitään tai toista virheääniä, kun tämä sovellus on
-  suljettu.
+* NVDA will no longer do anything or play error tones after closing this
+  app. This is now part of NVDA 2019.1.
 
 ## Kartat
 
@@ -194,26 +193,8 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
   objektinavigointikomentoja käytetään tietyissä tilanteissa.
 * Windows Updaten muistutusvalintaikkuna tunnistetaan asianmukaisesti
   valintaikkunaksi.
-
-## Skype
-
-Huom: alla mainitut kohdat eivät toimi oikein Skype 14:n universaalissa
-sovelluksessa.
-
-* Kirjoitusilmaisimen teksti puhutaan kuten Skypen työpöytäversiossa.
-* Ctrl+NVDA+numero-komennot, joita käytetään uusimman keskusteluhistorian
-  lukemiseen sekä navigointiobjektin siirtämiseen keskustelukohteisiin
-  Skypen työpöytäversiossa, ovat käytettävissä myös Skypen UWP-versiossa.
-* Voit nyt painaa Alt+numerorivin numeroita etsiäksesi kontaktiluettelon
-  (1), keskustelut (2), botit (3) ja keskustelumuokkauskentän, mikäli se on
-  näkyvissä (4) sekä siirtyäksesi niihin. Huomaa, että nämä komennot
-  toimivat oikein vain, jos maaliskuussa 2017 julkistettu Skype-päivitys on
-  asennettu.
-* NVDA ei enää sano "Skype-viesti" useimmissa tapauksissa viestejä
-  tarkasteltaessa.
-* NVDA kertoo nyt viestin tarkat tiedot, kuten kanavatyypin ja
-  lähetyspäivämäärän sekä -kellonajan jne., kun sen kohdalla
-  viestihistorialuettelossa painetaan NVDA+D.
+* Odd control labels seen in certain Windows 10 installations has been
+  corrected.
 
 ## Kauppa
 

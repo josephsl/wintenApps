@@ -3,7 +3,7 @@
 * Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
-* Zgodność z wersjami NVDA: 2018.3 do 2019.1
+* Zgodność z wersjami NVDA: 2018.4 do 2019.1
 
 Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
 również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
@@ -24,29 +24,30 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
   sprzętowej/elementy schowka w chmurze w wersji 1709 i nowszych)
 * Osoby
 * Ustawienia (Ustawienia systemowe, Windows+I)
-* Skype (aplikacja uniwersalna)
 * Sklep
 * Pogoda.
 * Różne moduły dla takich kontrolek, jak kafelki meni start.
 
 Uwagi:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17763) and latest stable version of NVDA.
+* Uwaga! Ten dodatek wymaga Windowsa 10 Wersji 1803 (kompilacji 17134) lub
+  nowszej i NVDA 2018.4 lub nowszej. Aby uzyskać najlepsze wyniki, należy
+  używać dodatku z najnowszą stabilną kompilacją systemu (kompilacja 17763)
+  i najnowszą stabilną wersją NVDA. 
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support old Windows 10
-  releases, or changes were made to Windows 10 and apps that makes entries
-  no longer applicable.
+* Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
+  wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
+  wspiera starszych wydań systemu, lub aplikacje są zmienione w taki sposób,
+  że te wpisy są unieważnione.
 
 Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 [listę zmian dla wersji dodatku][3].
 
 ## Ogólne
 
-* NVDA will no longer play error tones or do nothing if this add-on becomes
-  active from Windows 7 and 8.1.
+* NVDA już nie będzie odtwarzało dźwięki błędu oraz robiło nic jeżeli ten
+  dodatek zostanie aktywowany w Windowsie 7, Windowsie 8.1, i niewspieranych
+  wersjach Windowsa 10.
 * Elementy meni rozwijanego są prawidłowo rozpoznawane w różnych
   aplikacjach, takich jak menu kontekstowe dla kafelków meni start, a także
   menu aplikacji dla Microsoft Edge (Redstone 5).
@@ -77,17 +78,16 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 
 ## Centrum powiadomień
 
-* Brightness quick action is now a button instead of a toggle button. This
-  will be part of NVDA 2019.1.
-* Various status changes such as Focus Assist and Brightness will be
-  reported. This will be part of NVDA 2019.1.
+* Szybka akcja jasności została zmieniona z przycisku przełączającego na
+  przycisk zwykły. Jest to teraz część NVDA 2019.1.
+* Róźne zmiany stanu, takie jak asysta punktu uwagi i jasność będą
+  wymawiane. Jest to teraz część  NVDA 2019.1.
 
 ## Alarmy i zegar
 
-* Time picker values are now announced, noticeable when moving focus to
-  picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates. This will be part of NVDA
-  2019.1.
+* Teraz są wypowiadane kontrolki wypowiadania czasu, zauważalne przy
+  poruszaniu się po nich. To także dotyczy kontrolki wyboru czasu ponownego
+  uruchomienia po instalacji aktualizacji. To jest teraz część NVDA 2019.1.
 
 ## Kalkulator
 
@@ -120,8 +120,9 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   uwadze, że nawigacja po kolumnach (wiadomościach) jest niewspierana.
 * Przy pisaniu wiadomości, istnienie podpowiedzi o wzmiankach teraz jest
   oznajmiane dzwiękami.
-* NVDA will no longer do anything or play error tones after closing this
-  app.
+* W niektórych przypadkach, gdy używana jest nawigacja obiektowa, NVDA nie
+  będzie się zachowywał  w sposób nijaki, albo nie będzie odtwarzał dźwięku
+  błedu. Jest to teraz część NVDA 2019.1.
 
 ## Mapy
 
@@ -137,7 +138,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 
 ## Klawiatura nowoczesna
 
-Note: most features below are now part of NVDA 2018.3 or later.
+Uwaga: Większość funkcji tego dodatku jest teraz częścią NVDA 2018.3 lub
+nowszej wersji.
 
 * Wsparcie dla panelu wprowadzania emoji w wersji 1709 (zimowa aktualizacja
   dla twórców) i nowsze, włączając w to przeprojektowany panel w wersji 1809
@@ -162,11 +164,11 @@ Note: most features below are now part of NVDA 2018.3 or later.
   podpowiedzi wpisywania i pozostawianie cichym przy tym, jak niektóre
   klawisze na klawiaturze wywołują zdarzenie zmiany nazwy na niektórych
   systemach.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This will be part of
-  NVDA 2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This will be part of NVDA 2019.1.
+* NVDA już nie będzie odtwarzało dźwięk błędu lub robiło nic, gdy panel
+  emoji jest zamykany w bardziej ostatnich kompilacjach 19H1. To jest część
+  NVDA 2019.1
+* W wersji 1809 i nowszych, NVDA będzie oznajmiało wyniki wyszukiwania emoji
+  jeżeli to możliwe. To jest część NVDA 2019.1
 
 ## Osoby
 
@@ -190,24 +192,8 @@ Note: most features below are now part of NVDA 2018.3 or later.
   błedu.
 * Okno dialogowe przypomnienia o aktualizacjach Windows, teraz jest
   rozpoznawane jako poprawne okno dialogowe.
-
-## Skype
-
-Uwaga: Niektóre funkcje nie będą działać w Skype 14 aplikacji uniwersalnej.
-
-* Powiadomienie o pisaniu będzie wypowiadane, tak jak i w Skype dla pulpitu.
-* Control+NvDA+komendy rzędu cyfr, używane do odczytywania wiadomości w
-  czacie skypea a także do przemieszczania obiektu nawitaora do nich są
-  także dostępne w skype dla UWP.
-* Teraz można nacisnąć Alt+rząd cyfrowy aby móc znaleźć i przemieszczać się
-  między  czatami (1), kontaktami (2), botami (3) i polem do wpisywania
-  wiadomości jeżeli jest widoczne (4). Uwaga, te skróty będą poprawnie
-  działać, jeżeli aktualizacja skypea wydana w marcu 2017 jest
-  zainstalowana.
-* NVDA dla większości sytuacji nie będzie wypowiadał "Skype Message" przy
-  przeglądaniu wiadomości.
-* Z listy historii wiadomości, wciskając NVDA+D teraz wypowiada typ kanału,
-  datę wiadomości i tak dalej.
+* Odd control labels seen in certain Windows 10 installations has been
+  corrected.
 
 ## Sklep
 
