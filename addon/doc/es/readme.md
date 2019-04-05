@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer y otros usuarios de Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
-* Compatibilidad con NVDA: de 2018.3 a 2019.1
+* Compatibilidad con NVDA: de 2018.4 a 2019.1
 
 Este complemento es una colección de app modules para varias aplicaciones de
 Windows 10, así como Mejoras y correcciones para ciertos controles de
@@ -26,7 +26,6 @@ qué se incluye):
   Versión 1709 y posterior)
 * Gente
 * Opciones (opciones de sistema, Windows+I)
-* Skype (aplicación universal)
 * Tienda
 * El Tiempo.
 * Módulos misceláneos para controles tales como los mosaicos del Menú
@@ -35,7 +34,7 @@ qué se incluye):
 Notas:
 
 * Este complemento requiere Windows 10 Versión 1803 (compilación 17134) o
-  posterior y NVDA 2018.3 o posterior. Para unos mejores resultados, utiliza
+  posterior y NVDA 2018.4 o posterior. Para unos mejores resultados, utiliza
   el complemento con la compilación estable más reciente de Windows 10
   (compilación 17763) y la versión estable más reciente de NVDA.
 * Algunas de las características del complemento son o serán parte del
@@ -51,7 +50,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 ## General
 
 * NVDA ya no reproducirá tonos de error o se quedará sin hacer nada si este
-  complemento se activa en Windows 7 u 8.1.
+  complemento se activa en Windows 7, Windows 8.1 y versiones sin soporte de
+  Windows 10.
 * Se reconocen los elementos de los submenús en diversas aplicaciones,
   incluyendo el menú de contexto para los elementos del menú Inicio y el
   menú de aplicación de Microsoft Edge (Redstone 5).
@@ -82,16 +82,16 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 ## Centro de actividades
 
 * La acción rápida de brillo es ahora un botón en vez de un botón
-  conmutador. Esto formará parte de NVDA 2019.1.
+  conmutador. Ahora ya forma parte de NVDA 2019.1.
 * Se anuncian diversos cambios de estado, como la ayuda al enfoque o el
-  brillo. Esto formará parte de NVDA 2019.1.
+  brillo. Ahora ya forma parte de NVDA 2019.1.
 
 ## Alarmas y reloj
 
 * Ahora se anuncian los valores del selector de hora. Esto también afecta al
   control utilizado para seleccionar cuándo reiniciar para finalizar la
-  instalación de las actualizaciones de Windows. Esta característica formará
-  parte de NVDA 2019.1.
+  instalación de las actualizaciones de Windows.Ahora ya  forma parte de
+  NVDA 2019.1.
 
 ## Calculadora
 
@@ -127,7 +127,7 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * Cuando se escribe un mensaje, la apariencia de la mención de sugerencias
   se indica con sonidos.
 * NVDA ya no parecerá hacer nada o reproducir tonos de error después de
-  cerrar esta aplicación.
+  cerrar esta aplicación. Ahora ya es parte de NVDA 2019.1.
 
 ## Mapas
 
@@ -201,28 +201,8 @@ Nota: la mayoría de las siguientes características ya son parte de NVDA
   órdenes de navegación por objetos en algunas circunstancias.
 * El diálogo de recordatorio de Windows Update se reconoce correctamente
   como un diálogo.
-
-## Skype
-
-Nota: las siguientes entradas no funcionarán adecuadamente en la aplicación
-universal Skype 14.
-
-* Al teclear el indicador de texto se anuncia sólo como cliente Skype para
-  Escritorio.
-* Las órdenes control+NVDA+fila de números, usadas para leer el historial
-  reciente del chat y mover el navegador de objetos a las entradas de chat
-  en Skype para escritorio, también están disponibles en Skype UWP.
-* Ahora puedes pulsar Alt+fila de números para localizar y mover a
-  conversaciones (1), lista de contactos (2), bots (3) y campo de edición de
-  chat si está visible (4). Ten en cuenta que estas órdenes funcionarán
-  apropiadamente si está instalada la actualización de Skype liberada en
-  Marzo de 2017.
-* NVDA ya no anuncia "Mensaje Skype" cuando se revisen mensajes para la
-  mayoría de los casos.
-* Desde la lista del historial de mensajes, pulsando NVDA+D sobre un
-  elemento de mensaje ahora permitirá a NVDA anunciar información detallada
-  acerca de un mensaje tal como tipo de canal, fecha y hora de envío y
-  similar.
+* Corregida disparidad en etiquetas de controles advertida en ciertas
+  instalaciones de Windows.
 
 ## Tienda
 

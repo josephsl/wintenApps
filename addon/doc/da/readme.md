@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA-kompatibilitet: 2018.3 til 2019.1
+* NVDA kompatibilitet: 2018.4 til 2019.1
 
 Denne tilføjelse er en samling af app-moduler til forskellige Windows 10
 apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.
@@ -24,7 +24,6 @@ hver appsektion for detaljer om, hvad der er inkluderet):
   udklipsholderen i version 1709 og nyere)
 * Personer
 * Indstillinger (systemindstillinger, Windows+I)
-* Skype (Universal App)
 * Store
 * Vejr
 * Diverse moduler til betjeninger som Start Menu-felter.
@@ -32,7 +31,7 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 Bemærkninger:
 
 * Denne tilføjelse kræver Windows 10 Version 1803 (build 17134) eller senere
-  og NVDA 2018.3 eller nyere. For de bedste resultater skal du bruge
+  og NVDA 2018.4 eller nyere. For de bedste resultater skal du bruge
   tilføjelsen med den nyeste Windows 10-stabile udgivelse (build 17763) og
   den seneste stabile version af NVDA.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
@@ -48,7 +47,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 ## Generelt
 
 * NVDA vil ikke længere spille fejltoner eller gøre ingenting, hvis denne
-  tilføjelse bliver aktiv fra Windows 7 og 8.1.
+  tilføjelse bliver aktiv fra Windows 7 og 8.1 og andre versioner af
+  Windows, der ikke understøttes.
 * Undermenupunkter er korrekt genkendt i forskellige apps, herunder
   kontekstmenu til Start-menufliser og Microsoft Edge-appmenuen (Redstone
   5).
@@ -77,16 +77,17 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 ## Handlingscenter
 
 * Den hurtige handling til at ændre lysstyrke er nu en knap i stedet for en
-  skiftknap.
+  skiftknap. Dette er nu en del af NVDA 2019.1.
 * Forskellige statusændringer som Fokushjælp og Lysstyrke vil blive
-  rapporteret. Denne forbedring vil være en del af NVDA 2019.1.
+  rapporteret. Denne forbedring vil være en del af NVDA 2019.1. Dette er nu
+  en del af NVDA 2019.1.
 
 ## Alarmer og ur
 
 * Tidvælgerværdier er nu annonceret, mærkbart, når du flytter fokus til
   vælgekontroller. Dette påvirker også den kontrol, der bliver brugt til at
   vælge, hvornår du vil genstart for at afslutte installationen af
-  Windows-opdateringer. Denne forbedring vil være en del af NVDA 2019.1.
+  Windows-opdateringer. Dette er nu en del af NVDA 2019.1.
 
 ## Lommeregner
 
@@ -122,7 +123,7 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * Når du skriver en besked, vil @omtale forslag indikeres med lyd, når de
   vises.
 * NVDA vil ikke længere gøre noget eller spille fejltoner efter lukning af
-  denne app.
+  denne app. Dette er nu en del af NVDA 2019.1.
 
 ## Kort
 
@@ -190,24 +191,8 @@ Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
 * NVDA ser ikke længere ud til at gøre ingenting eller afspille fejltoner,
   hvis du bruger objektnavigeringskommandoer under visse omstændigheder.
 * Dialogboksen Windows Update-påmindelse genkendes som en korrekt dialog.
-
-## Skype
-
-Bemærk: nedenstående funktioner  virker ikke korrekt i Skype 14 Universal
-App.
-
-* Indtastningsindikator annonceres nu igen, ligesom Skype for Desktop
-* Kommandoer til at læse seneste meddelelser (navnlig Ctrl+1 til 0,
-  understøttes nu i Skype for UWP.
-* Du kan trykke på Alt + nummer rækken til at finde og flytte til samtaler
-  (1), kontakter liste (2), bots (3) og chat-editfeltet hvis synlige
-  (4). Bemærk, at disse kommandoer vil fungere korrekt, hvis
-  Skype-opdateringen frigivet i marts 2017 er installeret.
-* NVDA vil ikke længere meddele "Skype besked", når du gennemgår meddelelser
-  i de fleste tilfælde.
-* Fra listen over beskeder, vil et tryk på NVDA+D på et meddelelseselement
-  tillade NVDA at annoncere detaljerede oplysninger om en besked såsom
-  kanaltype, sendte dato og tid, osv.
+* Bemærkelsesværdige kontroletiketter ses i visse Windowt 10 installationer
+  er blevet løst.
 
 ## Store
 

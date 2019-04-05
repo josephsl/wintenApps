@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer și alți utilizatori Windows 10
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
-* Compatibilitate NVDA: 2018.3 - 2019.1
+* NVDA compatibility: 2018.4 to 2019.1
 
 Acest supliment cuprinde o colecție de module pentru diverse aplicații din
 Windows 10, dar și rezolvări și îmbunătățiri pentru anumite controale din
@@ -26,17 +26,15 @@ privire la ceea ce este inclus):
   ale planșetei cloud în versiunea 1709 și mai nouă)
 * Persoane
 * Setări (setări de sistem, Windows+I)
-* Skype (aplicație universală)
 * Magazin
 * Meteo.
 * Diverse module de control precum comenzile din meniul start.
 
 Note:
 
-* Acest supliment necesită Windows 10 versiunea 1803 )compilarea 17134) sau
-  mai nouă și NVDA 2018.3 sau mai nou. Pentru cele mai bune rezultate,
-  folosiți-l cu ultima compilare stabilă ( compilarea 17763) și cea mai
-  recentă versiune stabilă a NVDA-ului.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
 * Pentru intrările care nu sunt listate mai jos, puteți presupune că
@@ -51,8 +49,9 @@ versiunile suplimentului][3].
 
 ## General
 
-* NVDA nu va mai reda tonuri de eroare sau nu va mai face nimic dacă acest
-  supliment devine activ din Windows 7 și 8.1.
+* NVDA will no longer play error tones or do nothing if this add-on becomes
+  active from Windows 7, Windows 8.1, and unsupported releases of Windows
+  10.
 * Elementele de submeniu sunt recunoscute corespunzător în diverse
   aplicații, incluzând meniul context pentru comenzile din meniul Start și
   meniul de aplicație al Microsoft Edge (Redstone 5).
@@ -83,17 +82,17 @@ versiunile suplimentului][3].
 
 ## Centru de acțiuni
 
-* Acțiunea rapidă a luminozității este acum un buton, nu un buton de
-  activare. Aceasta va face parte din NVDA 2019.1.
-* Diverse modificări de stare precum asistarea focalizării și luminozitatea,
-  vor fi raportate. Aceasta va face parte din NVDA 2019.1.
+* Brightness quick action is now a button instead of a toggle button. This
+  is now part of NVDA 2019.1.
+* Various status changes such as Focus Assist and Brightness will be
+  reported. This is now part of NVDA 2019.1.
 
 ## Alarme și ceas
 
-* Valorile selectorului de dată sunt acum anunțate, de observat atunci când
-  focalizarea se deplasează la selectorul de comenzi. De asemenea, aceasta
-  afectează comanda utilizată pentru a selecta când să repornească pentru
-  finalizarea actualizărilor Windows. Aceasta va face parte din NVDA 2019.1.
+* Time picker values are now announced, noticeable when moving focus to
+  picker controls. This also affects the control used to select when to
+  restart to finish installing Windows updates. This is now part of NVDA
+  2019.1.
 
 ## Calculator
 
@@ -127,8 +126,8 @@ versiunile suplimentului][3].
   navigarea printre rânduri (mesaje) nu este suportată.
 * La scrierea unui mesaj, aspectele sugestiilor de menționare a arondului
   sunt indicate de sunete.
-* NVDA nu va mai face nimic și nu va mai reda tonuri de eroare dacă se
-  utilizează comenzile de navigare ale obiectului în anumite circumstanțe.
+* NVDA will no longer do anything or play error tones after closing this
+  app. This is now part of NVDA 2019.1.
 
 ## Hărți
 
@@ -198,28 +197,8 @@ Notă: majoritatea caracteristicilor de mai jos fac parte din NVDA 2018.3.
   dacă se utilizează comenzile de navigare ale obiectului în anumite
   circumstanțe.
 * Dialogul de tip memento al Windows Update este recunoscut așa cum trebuie.
-
-## Skype
-
-Notă: intrările de mai jos nu vor funcționa așa cum trebuie în aplicația
-universală Skype 14.
-
-* Textul indicatorului de scriere este anunțat la fel ca Skype pentru
-  Desktop.
-* Comenzile Control+NvDA+1, 2, 3, 4, 5, 6, 7, 8, 9 și 0, utilizate în Skype
-  pentru Desktop la citirea istoricului conversației recente și pentru
-  deplasarea obiectului navigator la intrările conversației, sunt
-  disponibile și în Skype UWP.
-* Puteți apăsa Alt+rândul cu numere pentru a localiza și a vă deplasa la
-  conversații (1), lista de contacte (2), boți (3) și câmpul de editare al
-  chatului dacă e vizibil (4). Rețineți că aceste comenzi vor funcționa
-  corespunzător dacă actualizarea Skype-ului lansată în martie 2017 este
-  instalată.
-* NVDA nu mai anunță „Mesaj Skype” la examinarea mesajelor pentru
-  majoritatea cazurilor.
-* Din lista istoricului mesajelor, apăsarea NVDA+D pe un element de mesaj îi
-  va permite NVDA-ului să anunțe informații detaliate despre un mesaj, cum
-  ar fi tip de canal, data și ora trimiterii și așa mai departe.
+* Odd control labels seen in certain Windows 10 installations has been
+  corrected.
 
 ## Magazin
 

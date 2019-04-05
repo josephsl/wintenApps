@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixe a [versão estável][1]
 * Baixe a [versão em desenvolvimento][2]
-* NVDA compatibility: 2018.3 to 2019.1
+* NVDA compatibility: 2018.4 to 2019.1
 
 Este complemento é uma coleção de módulos de aplicativos — app modules —
 para vários aplicativos do Windows 10, bem como aprimoramentos e correções
@@ -26,7 +26,6 @@ detalhes sobre o que está incluído):
   área de transferência na nuvem na versão 1709 e posteriores)
 * Pessoas
 * Configurações (configurações do sistema, Windows+I)
-* Skype (aplicativo universal)
 * Loja — Store
 * Clima.
 * Módulos diversos para controles, como telas do menu Iniciar.
@@ -34,7 +33,7 @@ detalhes sobre o que está incluído):
 Notas:
 
 * This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.3 or later. For best results, use the add-on with latest Windows
+  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
   10 stable release (build 17763) and latest stable version of NVDA.
 * Alguns recursos do complemento são ou farão parte do leitor de tela NVDA.
 * For entries not listed below, you can assume that features are part of
@@ -48,7 +47,8 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 ## Geral
 
 * NVDA will no longer play error tones or do nothing if this add-on becomes
-  active from Windows 7 and 8.1.
+  active from Windows 7, Windows 8.1, and unsupported releases of Windows
+  10.
 * Os itens do submenu são reconhecidos corretamente em vários aplicativos,
   incluindo o menu de contexto para os menus do menu Iniciar e o menu de
   aplicativos do Microsoft Edge (Redstone 5).
@@ -81,15 +81,15 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 ## Central de Ações
 
 * Brightness quick action is now a button instead of a toggle button. This
-  will be part of NVDA 2019.1.
+  is now part of NVDA 2019.1.
 * Various status changes such as Focus Assist and Brightness will be
-  reported. This will be part of NVDA 2019.1.
+  reported. This is now part of NVDA 2019.1.
 
 ## Alarmes e relógio
 
 * Time picker values are now announced, noticeable when moving focus to
   picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates. This will be part of NVDA
+  restart to finish installing Windows updates. This is now part of NVDA
   2019.1.
 
 ## Calculadora
@@ -126,7 +126,7 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 * Ao escrever uma mensagem, a aparência das sugestões de menção é indicada
   pelos sons.
 * NVDA will no longer do anything or play error tones after closing this
-  app.
+  app. This is now part of NVDA 2019.1.
 
 ## Mapas
 
@@ -195,28 +195,8 @@ Note: most features below are now part of NVDA 2018.3 or later.
   comandos de navegação de objetos sob algumas circunstâncias.
 * A caixa de diálogo do lembrete do Windows Update é reconhecida como um
   diálogo apropriado.
-
-## Skype
-
-Nota: as entradas abaixo não funcionarão corretamente no aplicativo
-universal do Skype 14.
-
-* O texto do indicador de digitação é anunciado exatamente como no cliente
-  Skype para a Área de Trabalho.
-* Os comandos Control+NvDA+número de linha, usados para ler o histórico de
-  conversação recente e mover objetos do navegador para entradas de
-  conversação no Skype para a Área de Trabalho, também estão disponíveis no
-  Skype UWP.
-* Agora pode pressionar as teclas Alt+número para localizar e mover-se para
-  conversas (1), lista de contatos (2), bots (3) campo de edição da
-  conversação se estiver visível (4). Observe que esses comandos funcionarão
-  corretamente se a atualização do Skype lançada em março de 2017 estiver
-  instalada. 
-* O NVDA já não anunciará "Mensagem do Skype" ao explorar as mensagens na
-  maioria dos casos.
-* Na lista do histórico de mensagens, pressionar NVDA+D num item de mensagem
-  agora permitirá que o NVDA anuncie informações detalhadas sobre essa
-  mensagem, como tipo de canal, data e hora de envio e assim por diante. 
+* Odd control labels seen in certain Windows 10 installations has been
+  corrected.
 
 ## Loja — Store
 

@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer e altri utenti Windows 10.
 * Scarica la [versione stabile][1]
 * Scarica la [versione in sviluppo][2]
-* Compatibilità con NVDA: dalla 2018.3 alla  2019.1
+* NVDA compatibility: 2018.4 to 2019.1
 
 Questo componente aggiuntivo è un insieme di app module per numerose app di
 Windows10, che consente anche di risolvere anomalie con alcuni controlli.
@@ -24,17 +24,15 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
   hardware/pannello emoji in Versione 1709 e successive)
 * Persone
 * Impostazioni (Impostazioni Windows, Windows+i)
-* Skype (universal app)
 * Store
 * Meteo
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
 Note:
 
-* Nota: questo addon richiede Windows 10 Versione 1803 (build 17134) o
-  successive, e NVDA 2018.3 o successive. Per migliori prestazioni,
-  utilizzare il componente con l'ultima versione stabile di Windows10 (build
-  17763) e l'ultima versione stabile di NVDA. 
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 17763) and latest stable version of NVDA.
 * Alcune caratteristiche di questo componente aggiuntivo sono o diventeranno
   parte di NVDA
 * Per le voci non elencate di seguito, si può supporre che son
@@ -49,7 +47,8 @@ riferimento al documento [changelogs for add-on releases][3].
 ## Generale
 
 * NVDA will no longer play error tones or do nothing if this add-on becomes
-  active from Windows 7 and 8.1.
+  active from Windows 7, Windows 8.1, and unsupported releases of Windows
+  10.
 * le Voci di sottomenu vengono correttamente riconosciute in varie
   applicazioni, incluso il menu contestuale per la griglia del menu Start e
   delle apps di Microsoft Edge (Redstone 5).
@@ -79,18 +78,17 @@ riferimento al documento [changelogs for add-on releases][3].
 
 ## Centro attività:
 
-* Il pulsante per la Luminositàora funziona come un pulsante attivabile e
-  non come un pulsante ciclico. Questa caratteristica verrà inclusa in NVDA
-  2019.1.
-* Vari cambiamenti di stato come assistenza in primo piano e Luminosità
-  verranno segnalati. Queste caratteristiche verranno incluse in NVDA 2019.1
+* Brightness quick action is now a button instead of a toggle button. This
+  is now part of NVDA 2019.1.
+* Various status changes such as Focus Assist and Brightness will be
+  reported. This is now part of NVDA 2019.1.
 
 ## Allarmi e sveglia
 
-* I valori per selezionare l'ora adesso vengono annunciati. Questo comprende
-  anche la sezione inerente la scelta dell'orario sul quando riavviare per
-  terminare gli aggiornamenti di Windows Update. Queste caratteristiche
-  verranno incluse in NVDA 2019.1.
+* Time picker values are now announced, noticeable when moving focus to
+  picker controls. This also affects the control used to select when to
+  restart to finish installing Windows updates. This is now part of NVDA
+  2019.1.
 
 ## Calcolatrice
 
@@ -126,7 +124,7 @@ riferimento al documento [changelogs for add-on releases][3].
 * Durante la composizione di un messaggio, verranno emessi segnali acustici
   nel caso ci siano dei suggerimenti per menzioni dopo la chiocciola
 * NVDA will no longer do anything or play error tones after closing this
-  app.
+  app. This is now part of NVDA 2019.1.
 
 ## Mappe
 
@@ -199,27 +197,8 @@ Note: most features below are now part of NVDA 2018.3 or later.
   alcune situazioni.
 * la finestra di notifica per nuovi aggiornamenti windows verrà ora
   visualizzata  correttamente.
-
-## Skype
-
-Nota: le voci di seguito non funzionano correttamente in Skype 14
-Universal-app.
-
-* Viene annunciato quando un utente sta scrivendo, così come accade in Skype
-  per desktop.
-* Control+NVDA+fila dei numeri, utilizzato per leggere la cronologia delle
-  chat recenti e per spostare il navigatore ad oggetti nelle varie voci
-  della chat in Skype per Desktop, ora è anche disponibile in Skype UWP.
-* è possibile premere il tasto alt in combinazione con i numeri per
-  spostarsi tra conversazioni (1), elenco contatti  (2), bots (3) e campo
-  editazione della chat se visibile (4). Si noti che questi comandi
-  funzioneranno a dovere se è stato installato l'aggiornamento di Skype di
-  marzo 2017.
-* Nella maggior parte dei casi, NVDA non leggerà più i messaggi Skype di
-  continuo quando se ne sta controllando uno
-* Dall'elenco cronologia messaggi, è possibile premere NVDA+d in un
-  qualsiasi elemento per fare in modo che NVDA legga alcuni dettagli del
-  messaggio, come il tipo di canale, ora e data di invio, etc.
+* Odd control labels seen in certain Windows 10 installations has been
+  corrected.
 
 ## Store
 

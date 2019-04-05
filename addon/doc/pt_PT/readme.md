@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixar [versão estável][1]
 * Baixar [versão de desenvolvimento][2]
-* Compatibilidade com NVDA: 2018.3 a 2019.1
+* Compatibilidade com NVDA: 2018.4 a 2019.1
 
 Este extra é uma colecção de módulos de aplicações para várias aplicações do
 Windows 10, bem como aprimoramentos e correcções para determinados
@@ -26,7 +26,6 @@ detalhes sobre o que está incluído):
   Versão 1709 e posterior) 
 * Pessoas.
 * Configurações (configurações do sistema, Windows + I)
-* Skype (aplicação universal).
 * Loja.
 * Meteorologia.
 * Módulos diversos para controlos, como ecrãs do menu Iniciar.
@@ -34,7 +33,7 @@ detalhes sobre o que está incluído):
 Notas:
 
 * Este extra requer o Windows 10 Versão 1803 (compilação 17134) ou posterior
-  e o NVDA 2018.3 ou posterior. Para obter melhores resultados, use o extra
+  e o NVDA 2018.4 ou posterior. Para obter melhores resultados, use o extra
   com a versão estável mais recente do Windows 10 (compilação 17763) e a
   versão estável mais recente do NVDA. 
 * Alguns recursos adicionais são ou farão parte do leitor de tela do NVDA.
@@ -49,7 +48,8 @@ consulte o documento [changelogs for releases, release][3].
 ## Geral
 
 * O NVDA não reproduzirá mais os tons de erro ou não fará nada se este extra
-  ficar activo no Windows 7 e 8.1.
+  ficar activo no Windows 7 e 8.1 ou em versões não suportadas do windows
+  10.
 * Os itens do submenu são reconhecidos correctamente em vários aplicativos,
   incluindo o menu de contexto para os menus do menu Iniciar e o menu de
   aplicativos do Microsoft Edge (Redstone 5).
@@ -82,17 +82,17 @@ consulte o documento [changelogs for releases, release][3].
 
 ## Centro de acção
 
-* A ação rápida do brilho agora é um botão em vez de um botão de
-  alternância. Isto fará parte do NVDA 19.1.
+* A acção rápida do brilho agora é um botão em vez de um botão de
+  alternância. esta funcionalidade fará parte do NVDA 19.1.
 * Várias alterações de status, como Foco Assistido e Brilho, passam a ser
-  indicadas.  Isto fará parte do NVDA 19.1.
+  indicadas.  esta funcionalidade foi incluída no NVDA 19.1.
 
 ## Alertas e relógio
 
 * Os valores do Time Picker agora são anunciados, visíveis ao mover o foco
   para os controlos do selector. Isso também afecta o controlo usado para
   seleccionar quando reiniciar para concluir a instalação das actualizações
-  do Windows.  Isto fará parte do NVDA 19.1.
+  do Windows.  Agora está incluído no NVDA 19.1.
 
 ## Calculadora
 
@@ -128,7 +128,7 @@ consulte o documento [changelogs for releases, release][3].
 * Ao escrever uma mensagem, a aparência das sugestões de menção é indicada
   pelos sons.
 * O NVDA não fará mais nada ou reproduzirá tons de erro após fechar este
-  aplicativo.
+  aplicativo. Funcionalidade adicionada ao NVDA 19.1.
 
 ## Mapas.
 
@@ -200,27 +200,8 @@ posteriores.
   comandos de navegação de objectos sob algumas circunstâncias.
 * A caixa de diálogo de lembretes do Windows Update é reconhecida como um
   diálogo apropriado.
-
-## Skype
-
-Nota: as entradas seguintes não funcionarão correctamente na aplicação
-universal do Skype 14.
-
-* O texto do indicador de escrita é anunciado exactamente como no cliente
-  Skype para o Desktop.
-* Os comandos Control + NvDA + número de linha, usados para ler o histórico
-  de conversação recente e mover objectos do navegador para entradas de
-  conversação no Skype for Desktop, também estão disponíveis no Skype UWP.
-* Agora pode pressionar as teclas Alt+número para localizar e mover-se para
-  conversas (1), lista de contactos (2), bots (3) campo de edição da
-  conversação se estiver visível (4). Observe que esses comandos funcionarão
-  correctamente se a actualização do Skype lançada em março de 2017 estiver
-  instalada. 
-* O NVDA já não anunciará "Mensagem do Skype" ao revisar as mensagens para a
-  maioria dos casos.
-* Na lista do histórico de mensagens, pressionar NVDA+D num item de mensagem
-  agora permitirá que o NVDA anuncie informações detalhadas sobre essa
-  mensagem, como tipo de canal, data e hora de envio e assim por diante. 
+* Etiquetas de controlo ímpar, vistas em determinadas instalações do Windows
+  10, foram corrigidas.
 
 ## Loja.
 
