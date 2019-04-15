@@ -13,6 +13,7 @@ Provides workarounds for controls such as identifying Start button, notification
 from nvdaBuiltin.appModules.explorer import *
 import winVersion
 import ui
+import UIAHandler
 
 class AppModule(AppModule):
 
@@ -31,17 +32,10 @@ class AppModule(AppModule):
 				return
 		nextHandler()
 
-	# Handle notification event oddities in build 18323 and later.
-	_sliderValueEvent = False
-
-	def event_valueChange(self, obj, nextHandler):
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID in ("AudioSliderContainer", "BrightnessSliderContainer"):
-			self._sliderValueEvent = True
-		nextHandler()
-
-	def event_UIA_notification(self, obj, nextHandler, displayString=None, **kwargs):
+	def event_UIA_notification(self, obj, nextHandler, notificationProcessing=None, displayString=None, **kwargs):
 		# In build 18323, volume and brightness changes are reported via this event.
 		# Similar to Microsoft Edge, other programs will be in use for majority of the time.
-		if self._sliderValueEvent:
-			ui.message(displayString)
-			self._sliderValueEvent = False
+		if notificationProcessing in (UIAHandler.NotificationProcessing_ImportantMostRecent, UIAHandler.NotificationProcessing_MostRecent):
+			# Same as NVDA 2019.2 except allow this to happen while using other apps as well.
+			speech.cancelSpeech()
+		ui.message(displayString)
