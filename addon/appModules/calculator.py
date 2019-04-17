@@ -63,14 +63,15 @@ class AppModule(appModuleHandler.AppModule):
 		if shouldLiveRegionChangeProceed(obj):
 			nextHandler()
 
-	def event_UIA_notification(self, obj, nextHandler, **kwargs):
+	def event_UIA_notification(self, obj, nextHandler, activityId=None, **kwargs):
 		# From May 2018 onwards, unit converter uses a different automation iD.
 		# Changed significantly in July 2018 thanks to UI redesign, and as a result, attribute error is raised.
 		try:
 			shouldAnnounceNotification = obj.previous.UIAElement.cachedAutomationID in ("numberPad", "UnitConverterRootGrid")
 		except AttributeError:
 			shouldAnnounceNotification = api.getForegroundObject().children[1].lastChild.firstChild.UIAElement.cachedAutomationID != "CalculatorResults"
-		if shouldAnnounceNotification:
+		# Also, warn users if maximum digi count has been reached (a different activity ID than display updates).
+		if shouldAnnounceNotification or activityId == "MaxDigitsReached":
 			nextHandler()
 
 	# A list of native commands to handle calculator result announcement.
