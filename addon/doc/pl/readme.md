@@ -51,12 +51,12 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * Elementy meni rozwijanego są prawidłowo rozpoznawane w różnych
   aplikacjach, takich jak menu kontekstowe dla kafelków meni start, a także
   menu aplikacji dla Microsoft Edge (Redstone 5).
-* In addition to dialogs recognized by NVDA, more dialogs are now recognized
-  as proper dialogs and reported as such, including Insider Preview dialog
-  (settings app).
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation panel found in NVDA settings.
+* Niektóre okna dialogowe są od teraz prawidłowo rozpoznawane i wymawiane
+  jako okna dialogowe. Są to np. okna dialogowe w wersjach testowych
+  (settings app). Jest to już wbudowane w sam czytnik ekranu.
+* W większości przypadków, NVDA może ogłaszać liczbę sugestii
+  wyszukiwania. Ta funkcja jest kontrolowana przez opcję "odczytuj położenie
+  obiektu" dostępną w ustawieniach NVDA, w panelu "prezentacja obiektu".
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) nie jest już odczytywana.
 * Następujące zdarzenia UIA są rozpoznawane: active text position change,
@@ -73,8 +73,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   pulpit 2).
 * NVDA nie będzie wypowiadało wielkość tekstu w meni start, gdy zmienia się
   rozdzielczość ekranu lub orientacja ekranu.
-* In build 18323 and later, NVDA will now announce audio volume and
-  brightness changes.
+* W kompilacji 18323 i nowszych, NVDA będzie ogłaszać zmiany głośności
+  dźwięku i jasności ekranu.
 
 ## Centrum powiadomień
 
@@ -133,8 +133,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 ## Microsoft Edge
 
 * Autouzupełnienie tekstu będzie śledzone i wymawiane w omnibarze.
-* NVDA will no longer play suggestion sound when pressing F11 to toggle full
-  screen.
+* NVDA nie będzie już odtwarzać dźwięku podpowiedzi po naciśnięciu F11 aby
+  przełączyć pełny ekran.
 
 ## Klawiatura nowoczesna
 
@@ -192,8 +192,8 @@ nowszej wersji.
   błedu.
 * Okno dialogowe przypomnienia o aktualizacjach Windows, teraz jest
   rozpoznawane jako poprawne okno dialogowe.
-* Odd control labels seen in certain Windows 10 installations has been
-  corrected.
+* Nieparzyste kontrolki obecne w niektórych oknach instalacji Windows 10
+  zostały poprawione.
 
 ## Sklep
 

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2017-05-05 22:05+1000\n"
-"PO-Revision-Date: 2019-01-11 08:06-0800\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2019-04-14 15:18-0700\n"
 "Last-Translator: Dong hui Park <hi@aheu.org>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -39,18 +39,6 @@ msgstr "Cannot move between rows"
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "일기 예보 정보 없음"
-
-#. Translators: the description for the showMessageLongDesc script on Skype for Windows 10.
-msgid "Shows the message details."
-msgstr "Shows the message details."
-
-#. Translators: Presented when message history isn't found in Skype Preview app.
-msgid "Chat history not found"
-msgstr "이전 메시지 목록을 찾을 수 없음"
-
-#. Translators: presented when chat edit box is not found.
-msgid "Chat edit field not found"
-msgstr "Chat edit field not found"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
