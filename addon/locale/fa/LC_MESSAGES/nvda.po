@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2019-01-11 08:04-0800\n"
-"PO-Revision-Date: 2019-01-11 08:04-0800\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2019-04-14 15:10-0700\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@freelists.org>\n"
 "Language: fa\n"
@@ -19,7 +19,6 @@ msgstr ""
 "X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,9,-1,-1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
-#: addon/installTasks.py:17
 #, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
@@ -27,49 +26,28 @@ msgid ""
 "anyway?"
 msgstr ""
 "شما دارید از یک نگارشِ قدیمیترِ ویندوز استفاده میکنید. این افزونه نیازمندِ "
-"{minSupportedVersion} یا بالاتر است. مطمئنید که در هر حال میخواهید این افزونه را "
-"نصب کنید؟"
+"{minSupportedVersion} یا بالاتر است. مطمئنید که در هر حال میخواهید این "
+"افزونه را نصب کنید؟"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
-#: addon/installTasks.py:19
 msgid "Old Windows version"
 msgstr "نگارشِ قدیمیِ ویندوز"
 
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
-#: addon/appModules/hxoutlook.py:32
 msgid "Cannot move between rows"
 msgstr "نمیتوانم بینِ سطرها حرکت کنم"
 
 #. Translators: Message presented when no more weather data is available for the current item.
-#: addon/appModules/microsoft_msn_weather.py:44
-#: addon/appModules/microsoft_msn_weather.py:53
 msgid "No more weather data for this item."
 msgstr "اطلاعاتِ آب و هوا برای این مورد موجود نیست."
 
-#. Translators: the description for the showMessageLongDesc script on Skype for Windows 10.
-#: addon/appModules/skypeapp.py:55
-msgid "Shows the message details."
-msgstr "جزئیاتِ پیام را نشان میدهد."
-
-#. Translators: Presented when message history isn't found in Skype Preview app.
-#: addon/appModules/skypeapp.py:136
-msgid "Chat history not found"
-msgstr "سابقه‌ی گپ پیدا نشد."
-
-#. Translators: presented when chat edit box is not found.
-#: addon/appModules/skypeapp.py:163
-msgid "Chat edit field not found"
-msgstr "کادرِ ویرایشِ گپ پیدا نشد."
-
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-#: buildVars.py:17
 msgid "Windows 10 App Essentials"
 msgstr "نیازمندی‌های حیاتیِ برنامک‌های ویندوزِ ۱۰"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-#: buildVars.py:20
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "مجموعه‌ای از ماژول‌ها برای پشتیبانی از برنامک‌های مختلفِ ویندوزِ ۱۰"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.10\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-09-30 22:05+1000\n"
-"PO-Revision-Date: 2018-11-26 08:34-0800\n"
+"PO-Revision-Date: 2019-04-14 15:10-0700\n"
 "Last-Translator: Leonard de Ruijter <dev@systeemdenker.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -50,64 +50,3 @@ msgstr "Windows 10 App Essentials"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "A collectie app modules voor verschillende Windows 10 apps"
-
-#~ msgid "Chat history not found"
-#~ msgstr "Chatgeschiedenis niet gevonden"
-
-#, fuzzy
-#~ msgid "Chat edit field not found"
-#~ msgstr "Chatgeschiedenis niet gevonden"
-
-#, fuzzy
-#~ msgid "&Windows 10 App Essentials..."
-#~ msgstr "Windows 10 App Essentials"
-
-#, fuzzy
-#~ msgid "Windows 10 App Essentials add-on settings"
-#~ msgstr "Windows 10 App Essentials"
-
-#~ msgid "Error checking for update."
-#~ msgstr "Fout bij het controleren op update."
-
-#, fuzzy
-#~ msgid "Windows 10 App Essentials update"
-#~ msgstr "Windows 10 App Essentials"
-
-#~ msgid "No add-on update available."
-#~ msgstr "Geen add-on update beschikbaar."
-
-#~ msgid ""
-#~ "Windows 10 App Essentials {newVersion} is available. Would you like to "
-#~ "update?"
-#~ msgstr ""
-#~ "Windows 10 App Essentials {newVersion} is beschikbaar. Wilt u de update "
-#~ "uitvoeren?"
-
-#, fuzzy
-#~ msgid "Windows 10 App Essentials settings"
-#~ msgstr "Windows 10 App Essentials"
-
-#~ msgid "Automatically check for add-on &updates"
-#~ msgstr "Automatisch controleren op add-on updates"
-
-#~ msgid "Update &interval in days"
-#~ msgstr "Update-&interval in dagen"
-
-#~ msgid "Check for add-on &update"
-#~ msgstr "OP add-on &update controleren"
-
-#~ msgid "Add-on update check"
-#~ msgstr "Add-on updatecontrole"
-
-#~ msgid "Checking for new version of Windows 10 App Essentials add-on..."
-#~ msgstr ""
-#~ "Controleren op nieuwe versie van de Windows 10 App Essentials add-on..."
-
-#~ msgid "Downloading Add-on Update"
-#~ msgstr "Add-on update wordt gedownload"
-
-#~ msgid "Connecting"
-#~ msgstr "Verbinden"
-
-#~ msgid "Error downloading add-on update."
-#~ msgstr "Fout bij downloaden van add-on update."
