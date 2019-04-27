@@ -44,7 +44,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * Tooltips from Edge and universal apps are recognized and will be announced.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop ID (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
-* In build 18323 and later, NVDA will now announce audio volume and brightness changes.
+* In Version 1903, NVDA will announce volume and brightness changes immediately.
 
 ## Action center
 
@@ -60,6 +60,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * When ENTER or Escape is pressed, NVDA announces calculation results.
 * For calculations such as unit converter and currency converter, NVDA will announce results as soon as calculations are entered.
 * NVDA will no longer announce "heading level" for calculator results.
+* NVDA will notify if maximum digit count has been reached while entering expressions.
 
 ## calendar
 
