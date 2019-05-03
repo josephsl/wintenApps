@@ -77,8 +77,8 @@ consulte o documento [changelogs for releases, release][3].
   exemplo).
 * O NVDA deixará de anunciar o tamanho do texto do menu Iniciar quando
   alterar as resoluções ou a orientação do ecrã.
-* Na versão 18323 e posteriores, o NVDA anunciará alterações de volume de
-  áudio e brilho.
+* In Version 1903, NVDA will announce volume and brightness changes
+  immediately.
 
 ## Centro de acção
 
@@ -102,6 +102,8 @@ consulte o documento [changelogs for releases, release][3].
   anunciará os resultados assim que os cálculos forem inseridos.
 * O NVDA não anunciará mais "nível de cabeçalho" para os resultados da
   calculadora.
+* NVDA will notify if maximum digit count has been reached while entering
+  expressions.
 
 ## Calendário
 

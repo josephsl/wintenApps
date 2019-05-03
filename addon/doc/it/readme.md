@@ -73,8 +73,8 @@ riferimento al documento [changelogs for add-on releases][3].
   Desktop2, Desktop3, etc.
 * NVDA non leggerà più le dimensioni del testo del menu avvio quando si
   cambia la risoluzione dello schermo o orientamento.
-* In build 18323 and later, NVDA will now announce audio volume and
-  brightness changes.
+* In Version 1903, NVDA will announce volume and brightness changes
+  immediately.
 
 ## Centro attività:
 
@@ -97,6 +97,8 @@ riferimento al documento [changelogs for add-on releases][3].
   il risultato non appena verranno inseriti i dati
 * NVDA non annuncerà più il livello di intestazione per i risultati dei
   calcoli.
+* NVDA will notify if maximum digit count has been reached while entering
+  expressions.
 
 ## calendario
 

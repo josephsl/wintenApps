@@ -76,8 +76,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   ID del escritorio actual (escritorio 2, por ejemplo).
 * NVDA ya no anuncia Menú Inicio tamaño de texto al cambiar la resolución de
   pantalla o la orientación.
-* En la compilación 18323 y posteriores, NVDA ahora anunciará los cambios de
-  volumen del audio y brillo.
+* En la versión 1903, NVDA anunciará inmediatamente los cambios de brillo y
+  volumen.
 
 ## Centro de actividades
 
@@ -100,6 +100,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   NVDA anunciará los resultados tan pronto como los cálculos se introduzcan.
 * NVDA ya no anunciará "Encabezado nivel" en los resultados de la
   calculadora.
+* NVDA avisará si se alcanza la cantidad máxima de dígitos al introducir
+  expresiones.
 
 ## calendario
 

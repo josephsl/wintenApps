@@ -75,8 +75,8 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   exemplo).
 * O NVDA deixará de anunciar o tamanho do texto do menu Iniciar quando
   alterar as resoluções ou a orientação da tela.
-* In build 18323 and later, NVDA will now announce audio volume and
-  brightness changes.
+* In Version 1903, NVDA will announce volume and brightness changes
+  immediately.
 
 ## Central de Ações
 
@@ -100,6 +100,8 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   anunciará os resultados assim que os cálculos forem inseridos.
 * O NVDA não anunciará mais "nível de cabeçalho" para os resultados da
   calculadora.
+* NVDA will notify if maximum digit count has been reached while entering
+  expressions.
 
 ## Calendário
 

@@ -71,8 +71,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   vil NVDA annoncere nuværende desktop ID (skrivebord 2, for eksempel).
 * NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
   du ændrer skærmopløsning eller orientering.
-* NVDA vil nu annoncerer, når lydstyrken og lysstyrken ændres i build 18323
-  og nyere.
+* In Version 1903, NVDA will announce volume and brightness changes
+  immediately.
 
 ## Handlingscenter
 
@@ -96,6 +96,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   annoncere resultater så snart beregningerne er indtastet.
 * NVDA vil ikke længere meddele "Overskriftsniveau", når resultater i
   Lommeregner annonceres.
+* NVDA will notify if maximum digit count has been reached while entering
+  expressions.
 
 ## kalender
 

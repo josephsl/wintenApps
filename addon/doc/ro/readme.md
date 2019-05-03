@@ -77,8 +77,8 @@ versiunile suplimentului][3].
   NVDA va anunța ID-ul spațiului de lucru curent (spațiu de lucru 2).
 * NVDA nu mai anunță „dimensiune text start meniu” la schimbarea rezoluției
   ecranului sau a orientării.
-* În compilarea 18323 și mai nouă, NVDA va anunța schimbările volumului
-  audio și ale luminozității.
+* In Version 1903, NVDA will announce volume and brightness changes
+  immediately.
 
 ## Centru de acțiuni
 
@@ -100,6 +100,8 @@ versiunile suplimentului][3].
 * Pentru calcule precum convertorul de unitate și convertorul valutar, NVDA
   va anunța rezultatele de îndată ce vor fi introduse calculele.
 * NVDA nu va mai anunța „rubrică nivel” pentru rezultatele calculatorului.
+* NVDA will notify if maximum digit count has been reached while entering
+  expressions.
 
 ## calendar
 

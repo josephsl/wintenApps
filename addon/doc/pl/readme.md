@@ -73,8 +73,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   pulpit 2).
 * NVDA nie będzie wypowiadało wielkość tekstu w meni start, gdy zmienia się
   rozdzielczość ekranu lub orientacja ekranu.
-* W kompilacji 18323 i nowszych, NVDA będzie ogłaszać zmiany głośności
-  dźwięku i jasności ekranu.
+* In Version 1903, NVDA will announce volume and brightness changes
+  immediately.
 
 ## Centrum powiadomień
 
@@ -95,6 +95,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * Dla wyliczeń, takich jak przetwarzanie jednostek lub waluty, NVDA
   automatycznie będzie wymawiało wyniki obliczenia
 * NVDA nie będzie więcej wymawiało "nagłówek" dla wyników kalkulatora.
+* NVDA will notify if maximum digit count has been reached while entering
+  expressions.
 
 ## Kalendarz
 

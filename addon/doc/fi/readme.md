@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* NVDA-yhteensopivuus: 2018.4-2019.1
+* Yhteensopivuus: NVDA 2018.4-2019.1
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -73,8 +73,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   avattaessa, suljettaessa tai vaihdettaessa virtuaalityöpöytien välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
   suuntaa vaihdettaessa.
-* NVDA ilmoittaa nyt äänenvoimakkuuden ja kirkkauden muutokset
-  koontiversiossa 18323 ja uudemmissa.
+* NVDA ilmoittaa nyt välittömästi äänenvoimakkuuden ja kirkkauden muutokset
+  versiossa 1903.
 
 ## Toimintokeskus
 
@@ -97,6 +97,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   valuuttamuuntimessa) heti laskukaavoja syötettäessä.
 * NVDA ei enää sano "otsikkotaso" tarkasteltaessa laskutoimitusten tuloksia
   laskimessa.
+* NVDA ilmoittaa, jos lukujen enimmäismäärä saavutetaan ilmaisuja
+  kirjoitettaessa.
 
 ## Kalenteri
 

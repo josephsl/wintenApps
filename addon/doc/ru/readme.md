@@ -70,8 +70,8 @@ For a list of changes made between each add-on releases, refer to
   announce current desktop ID (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen
   resolutions or orientation.
-* In build 18323 and later, NVDA will now announce audio volume and
-  brightness changes.
+* In Version 1903, NVDA will announce volume and brightness changes
+  immediately.
 
 ## Action center
 
@@ -93,6 +93,8 @@ For a list of changes made between each add-on releases, refer to
 * For calculations such as unit converter and currency converter, NVDA will
   announce results as soon as calculations are entered.
 * NVDA will no longer announce "heading level" for calculator results.
+* NVDA will notify if maximum digit count has been reached while entering
+  expressions.
 
 ## календарь
 

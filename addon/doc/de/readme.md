@@ -72,8 +72,8 @@ Versionen][3].
   NVDA die aktuelle Desktop-ID (z.B. Desktop 2) bekannt.
 * NVDA sagt den Text für die Größe des Startmenüs nicht mehr an, wenn die
   Bildschirmauflösung oder Ausrichtung geändert wird.
-* In build 18323 and later, NVDA will now announce audio volume and
-  brightness changes.
+* In Version 1903, NVDA will announce volume and brightness changes
+  immediately.
 
 ## Einstellungscenter für Benachrichtigungen und Aktionen
 
@@ -97,6 +97,8 @@ Versionen][3].
   die Ergebnisse bekannt, sobald die Berechnungen eingegeben wurden.
 * NVDA wird nicht mehr "Überschriften" für Berechnungsergebnisse bekannt
   geben.
+* NVDA will notify if maximum digit count has been reached while entering
+  expressions.
 
 ## Kalender
 
