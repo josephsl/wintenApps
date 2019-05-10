@@ -74,8 +74,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
   anunciará o ID do escritorio actual (escritorio 2, por exemplo).
 * NVDA xa non anuncia Menú Inicio tamaño de texto ao cambiar a resolución de
   pantalla ou a orientación.
-* In Version 1903, NVDA will announce volume and brightness changes
-  immediately.
+* Na versión 1903, NVDA anunciará cambios no volume e o brillo
+  inmediatamente.
 
 ## Centro de accións
 
@@ -97,8 +97,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
   anunciará os resultados tan pronto coma os cálculos se introduzan.
 * NVDA xa non anunciará "Nivel de nivel de cabeceira" para os resltados da
   calculadora.
-* NVDA will notify if maximum digit count has been reached while entering
-  expressions.
+* NVDA notificará cando se chegue ao límite de díxitos introducindo
+  expresións.
 
 ## calendario
 
