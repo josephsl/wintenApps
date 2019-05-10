@@ -87,7 +87,9 @@ class AppModule(AppModule):
 		# Clipboard history.
 		# Move to clipboard list so element selected event can pick it up.
 		elif childAutomationID == "TEMPLATE_PART_ClipboardTitleBar":
-			self.event_UIA_elementSelected(obj.children[-2], nextHandler)
+			# Under some cases, clipboard tip text isn't shown on screen, causing clipboard history title to be announced instead of most recently copied item.
+			clipboardItemsIndex = -2 if obj.children[-2].UIAElement.cachedAutomationID != childAutomationID else -1
+			self.event_UIA_elementSelected(obj.children[clipboardItemsIndex], nextHandler)
 		nextHandler()
 
 	def event_nameChange(self, obj, nextHandler):
