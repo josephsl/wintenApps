@@ -60,7 +60,8 @@ class AppModule(appModuleHandler.AppModule):
 				except AttributeError:
 					pass
 			# In 18200 series and above, various Storage Sense option combo boxes have values but are not exposed as such, so treated it as combo box without value pattern.
-			elif winVersion.winVersion.build > 17763 and obj.role == controlTypes.ROLE_COMBOBOX and obj.UIAElement.cachedAutomationID.startswith("SystemSettings_StorageSense_SmartPolicy_"):
+			# Resolved in 18800 and above, which means Version 1903 (build 18362) will still carry this problem.
+			elif winVersion.winVersion.build == 18362 and obj.role == controlTypes.ROLE_COMBOBOX and obj.UIAElement.cachedAutomationID.startswith("SystemSettings_StorageSense_SmartPolicy_"):
 				clsList.insert(0, ComboBoxWithoutValuePattern)
 
 	# Sometimes, the same text is announced, so consult this cache.
