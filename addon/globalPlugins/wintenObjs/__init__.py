@@ -217,7 +217,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# To be taken care of by NVDA Core, and for older releases, let the add-on handle it for a time.
 		if obj.windowClassName == "#32769":
 			import wx, eventHandler
-			if not hasattr(eventHandler, "handlePossibleDesktopNameChange"):
+			# Even with desktop name change handler added, older Windows 10 releases won't support this properly.
+			if (not hasattr(eventHandler, "handlePossibleDesktopNameChange") or (hasattr(eventHandler, "handlePossibleDesktopNameChange") and winVersion.winVersion.build < 18362)):
 				wx.CallLater(500, ui.message, obj.name)
 		self.uiaDebugLogging(obj, "nameChange")
 		nextHandler()
