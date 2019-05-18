@@ -146,11 +146,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Because this add-on might be turned on "accidentally" in earlier Windows releases, including unsupported Windows 10 builds...
 		if not W10AddonSupported: return
 		if isinstance(obj, UIA):
-			# NVDA Core ticket 5231: Announce values in time pickers, especially when focus moves to looping selector list.
-			# Because they do not support value pattern (for ones handled by this add-on), treat them as combo boxes without value pattern if this isn't treated as such by NVDA already.
-			if obj.role==controlTypes.ROLE_LIST and "LoopingSelector" in obj.UIAElement.cachedClassName and not isinstance(obj, ComboBoxWithoutValuePattern):
-				clsList.insert(0, ComboBoxWithoutValuePattern)
-				return
 			# Windows that are really dialogs.
 			# NVDA Core issue 8405: in build 17682 and later, IsDialog property has been added, making comparisons easier.
 			# However, don't forget that many users are still using old Windows 10 releases.
