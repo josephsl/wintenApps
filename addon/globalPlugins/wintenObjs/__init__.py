@@ -136,11 +136,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
 				UIAHandler.handler.clientObject.addAutomationEventHandler(event,UIAHandler.handler.rootElement,UIAHandler.TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
 				log.debug("W10: added event ID %s, assigned to %s"%(event, name))
-		# Listen for additional property change events.
-		if UIAHandler.UIA_ItemStatusPropertyId not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
-			log.debug("W10: adding item status property change event")
-			UIAHandler.UIAPropertyIdsToNVDAEventNames[UIAHandler.UIA_ItemStatusPropertyId] = "UIA_itemStatus"
-			UIAHandler.handler.clientObject.AddPropertyChangedEventHandler(UIAHandler.handler.rootElement,UIAHandler.TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler,[UIAHandler.UIA_ItemStatusPropertyId])
 		# Allow NVDA to recognize more dialogs, especially ones that are not advertising themselves as such.
 		for dialogClassName in UIAAdditionalDialogClassNames:
 			if dialogClassName not in UIAHandler.UIADialogClassNames:
