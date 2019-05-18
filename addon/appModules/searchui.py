@@ -47,26 +47,6 @@ class ContextMenuItem(UIA):
 		self.reportFocus()
 
 
-# Specific to Sets search field in order to get around controller for event confusion.
-class SetsSearchField(StartMenuSearchField):
-
-	def event_suggestionsClosed(self):
-		# Until this problem is fixed, treat Sets search field with contempt and transform this into a suggestions open event.
-		if self.appModule != api.getForegroundObject().appModule:
-			super(SetsSearchField, self).event_suggestionsOpened()
-			return
-		super(SetsSearchField, self).event_suggestionsOpened()
-
-class StartMenuSearchField(StartMenuSearchField):
-
-	def event_UIA_controllerFor(self):
-		# In build 18317 and later, opening search box (Windows+S or Windows+Q) causes controller for event to be fired by a non-focused search field.
-		if len(self.controllerFor)>0:
-			self.event_suggestionsOpened()
-		else:
-			self.event_suggestionsClosed()
-
-
 class AppModule(AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self,obj,clsList):
