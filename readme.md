@@ -18,7 +18,7 @@ The following app modules or support modules for some apps are included (see eac
 * Mail
 * Maps
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions/cloud clipboard items in Version 1709 and later)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud clipboard items in Version 1709 and later)
 * People
 * Settings (system settings, Windows+I)
 * Store
@@ -101,8 +101,10 @@ Note: most features below are now part of NVDA 2018.3 or later.
 * In post-1709 builds, NVDA will announce the first selected emoji when emoji panel opens. This is more noticeable in build 18262 and later where emoji panel may open to last browsed category, such as displaying skin tone modifiers when opened to People category.
 * Support for announcing cloud clipboard items in Version 1809 (build 17666 and later).
 * Reduced unnecessary verbosity when working with modern keyboard and its features. These include no longer announcing "Microsoft Candidate UI" when opening hardware keyboard input suggestions and staying silent when certain touch keyboard keys raise name change event on some systems.
-* NVDA will no longer play error tones or do nothing when closing emoji panel in more recent 19H1 Insider Preview builds. This will be part of NVDA 2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search results for emojis if possible. This will be part of NVDA 2019.1.
+* NVDA will no longer play error tones or do nothing when closing emoji panel in more recent 19H1 Insider Preview builds. This is now part of NVDA 2019.1.
+* In Version 1809 (October 2018 Update) and later, NVDA will announce search results for emojis if possible. This is now part of NVDA 2019.1.
+* NVDA will no longer announce "clipboard" when there are items in the clipboard under some circumstances.
+* On some systems running Version 1903 (May 2019 Update), NVDA will no longer appear to do nothing when emoji panel opens.
 
 ## People
 
@@ -110,11 +112,10 @@ Note: most features below are now part of NVDA 2018.3 or later.
 
 ## Settings
 
-* Certain information such as Windows Update progress is reported automatically, including Storage sense/disk cleanup widget.
+* Certain information such as Windows Update progress is reported automatically, including Storage sense/disk cleanup widget and errors from Windows Update.
 * Progress bar values and other information are no longer announced twice.
 * For some combo boxes and radio buttons, NVDA will no longer fail to recognize labels and/or announce value changes.
 * Audio Volume progress bar beeps are no longer heard in Version 1803 and later.
-* More messages about Windows Update status are announced, especially if Windows Update encounters errors.
 * NVDA will no longer appear to do nothing or play error tones if using object navigation commands under some circumstances.
 * Windows Update reminder dialog is recognized as a proper dialog.
 * Odd control labels seen in certain Windows 10 installations has been corrected.
