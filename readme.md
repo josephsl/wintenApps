@@ -27,7 +27,7 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and NVDA 2018.4 or later. For best results, use the add-on with latest Windows 10 stable release (build 17763) and latest stable version of NVDA.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and NVDA 2018.4 or later. For best results, use the add-on with latest Windows 10 stable release (build 18362) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to Windows 10 and apps that makes entries no longer applicable.
 
@@ -42,9 +42,9 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: active text position change, controller for, drag start, drag cancel, drag complete, element selected, item status, live region change, notification, system alert, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app.
 * Tooltips from Edge and universal apps are recognized and will be announced.
-* When opening, closing, or switching between virtual desktops, NVDA will announce current desktop ID (desktop 2, for example).
+* When opening, closing, or switching between virtual desktops, NVDA will announce current desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
-* In Version 1903, NVDA will announce volume and brightness changes immediately.
+* In Version 1903 (May 2019 Update), NVDA will announce volume and brightness changes immediately.
 
 ## Action center
 
