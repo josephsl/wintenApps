@@ -22,9 +22,8 @@ est inclus) :
 * Courrier
 * Cartes
 * Microsoft Edge
-* Clavier moderne (panneau des emoji/suggestions de saisie
-  matérielle/éléments de presse-papiers du cloud dans la Version 1709 et
-  ultérieure)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard items in Version 1709 and later)
 * Personnes
 * Paramètres (paramètres système, Windows+I)
 * Store
@@ -33,10 +32,9 @@ est inclus) :
 
 Notes:
 
-* Cette extension nécessite Windows 10 Version 1803 (build 17134) ou version
-  ultérieure et NVDA 2018.4 ou version ultérieure. Pour de meilleurs
-  résultats, utilisez l'extension avec la dernière version stable de Windows
-  10 (build 17763) et la dernière version stable de NVDA.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 18362) and latest stable version of NVDA.
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
 * Pour les entrées non répertoriées ci-dessous, vous pouvez supposer que les
@@ -76,12 +74,12 @@ l'extension][3].
   actuellement active.
 * Les suggestions pour Edge et pour les applications universelles sont
   reconnues et seront annoncées.
-* Lors de l'ouverture, de la fermeture ou le basculement entre les bureaux
-  virtuels, NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop name (desktop 2, for example).
 * NVDA n'annoncera plus le texte de la taille du menu Démarrer lorsque vous
   changez la résolution ou l'orientation de l'écran.
-* Sous Windows 10 1903 (build 18362) et ultérieures, NVDA annoncera le
-  volume audio et les changements de brillance.
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately.
 
 ## Action center
 
@@ -186,12 +184,15 @@ NVDA 2018.3 et ultérieurs.
   matériel et de rester silencieux lorsque certaines touches du clavier
   tactile déclenchent un événement de changement de nom sur certains
   systèmes.
-* NVDA ne produira plus de tonalités d'erreur ou autre à la fermeture du
-  panneau d'emoji dans les builds les plus récentes de 19H1 Insider
-  Preview. Ceci fera partie de NVDA 2019.1.
-* Dans la version 1809 (mise à jour d'octobre 2018) et ultérieure, NVDA
-  annoncera les résultats de la recherche pour les emojis, si possible.
-  Ceci fera partie de NVDA 2019.1.
+* NVDA will no longer play error tones or do nothing when closing emoji
+  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
+  2019.1.
+* In Version 1809 (October 2018 Update) and later, NVDA will announce search
+  results for emojis if possible. This is now part of NVDA 2019.1.
+* NVDA will no longer announce "clipboard" when there are items in the
+  clipboard under some circumstances.
+* On some systems running Version 1903 (May 2019 Update), NVDA will no
+  longer appear to do nothing when emoji panel opens.
 
 ## Personnes
 
@@ -200,9 +201,9 @@ NVDA 2018.3 et ultérieurs.
 
 ## Paramètres
 
-* Certaines informations telles que l'avancement de la Mise à jour de
-  Windows est maintenant signalé automatiquement, y compris le widget
-  Détection de stockage / nettoyage de disque.
+* Certain information such as Windows Update progress is reported
+  automatically, including Storage sense/disk cleanup widget and errors from
+  Windows Update.
 * Les valeurs de la barre de progression et d'autres informations ne sont
   plus annoncés deux fois.
 * Pour certaines zones de liste déroulantes et boutons radio, NVDA ne
@@ -210,8 +211,6 @@ NVDA 2018.3 et ultérieurs.
   changements de valeur.
 * Les bips de la barre de progression du volume audio ne sont plus audibles
   dans la Version 1803 et ultérieure.
-* Plus de messages sur l'état de Windows Update sont annoncés, surtout si
-  Windows Update rencontre des erreurs.
 * NVDA ne semblera plus rien faire et ne jouera pas des tonalités d'erreur
   si des commandes pour la navigation par objet sont utilisées dans
   certaines circonstances.

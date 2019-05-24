@@ -20,8 +20,8 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 * Poczta
 * Mapy
 * Microsoft Edge
-* Nowoczesna klawiatura (panel emoji/podpowiedzi klawiatury
-  sprzętowej/elementy schowka w chmurze w wersji 1709 i nowszych)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard items in Version 1709 and later)
 * Osoby
 * Ustawienia (Ustawienia systemowe, Windows+I)
 * Sklep
@@ -30,10 +30,9 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* Uwaga! Ten dodatek wymaga Windowsa 10 Wersji 1803 (kompilacji 17134) lub
-  nowszej i NVDA 2018.4 lub nowszej. Aby uzyskać najlepsze wyniki, należy
-  używać dodatku z najnowszą stabilną kompilacją systemu (kompilacja 17763)
-  i najnowszą stabilną wersją NVDA. 
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 18362) and latest stable version of NVDA.
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
@@ -68,13 +67,12 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   przychodzi z innej aplikacji niż ta aktywna.
 * Opisy obiektów w Edge i innych aplikacjach UWP są rozpoznawane  i będą
   czytane automatycznie.
-* Podczas otwierania, zamykając lub przełączając się między wirtualnymi
-  pulpitami, NVDA będzie oznajmiało aktualny identyfikator (na przykład
-  pulpit 2).
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop name (desktop 2, for example).
 * NVDA nie będzie wypowiadało wielkość tekstu w meni start, gdy zmienia się
   rozdzielczość ekranu lub orientacja ekranu.
-* In Version 1903, NVDA will announce volume and brightness changes
-  immediately.
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately.
 
 ## Centrum powiadomień
 
@@ -166,11 +164,15 @@ nowszej wersji.
   podpowiedzi wpisywania i pozostawianie cichym przy tym, jak niektóre
   klawisze na klawiaturze wywołują zdarzenie zmiany nazwy na niektórych
   systemach.
-* NVDA już nie będzie odtwarzało dźwięk błędu lub robiło nic, gdy panel
-  emoji jest zamykany w bardziej ostatnich kompilacjach 19H1. To jest część
-  NVDA 2019.1
-* W wersji 1809 i nowszych, NVDA będzie oznajmiało wyniki wyszukiwania emoji
-  jeżeli to możliwe. To jest część NVDA 2019.1
+* NVDA will no longer play error tones or do nothing when closing emoji
+  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
+  2019.1.
+* In Version 1809 (October 2018 Update) and later, NVDA will announce search
+  results for emojis if possible. This is now part of NVDA 2019.1.
+* NVDA will no longer announce "clipboard" when there are items in the
+  clipboard under some circumstances.
+* On some systems running Version 1903 (May 2019 Update), NVDA will no
+  longer appear to do nothing when emoji panel opens.
 
 ## Osoby
 
@@ -179,16 +181,15 @@ nowszej wersji.
 
 ## Ustawienia
 
-* Większość informacji, takich jak pasek stanu w Windows update, będzie
-  wypowiadany automatycznie, włączając w to widget czujnika pamięci.
+* Certain information such as Windows Update progress is reported
+  automatically, including Storage sense/disk cleanup widget and errors from
+  Windows Update.
 * Wartości paska postępu i inne informacje, nie są wypowiadane
   automatycznie.
 * Dla niektórych list rozwijanych i przycisków opcji, NVDA będzie wykrywał
   nazwę oraz wypowiadał zmiany wartości. 
 * Dzwięki paska postępu głośności nie są więcej słyszane w kompilacji 1803 i
   nowszych.
-* Więcej komunikatów o stanie Windows Update są wypowiadane, najważniejsze,
-  gdy Windows update zobaczy błąd.
 * W niektórych przypadkach, gdy używana jest nawigacja obiektowa, NVDA nie
   będzie się zachowywał  sposób nijaki, albo nie będzie odtwarzał dźwięku
   błedu.

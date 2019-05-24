@@ -20,8 +20,8 @@ Windows 10, а также исправлений для некоторых ти�
 * Почта
 * Карты
 * Microsoft Edge
-* Modern keyboard (emoji panel/hardware input suggestions/cloud clipboard
-  items in Version 1709 and later)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard items in Version 1709 and later)
 * Люди
 * Настройки (настройки системы, Windows+I)
 * Магазин
@@ -32,7 +32,7 @@ Notes:
 
 * This add-on requires Windows 10 Version 1803 (build 17134) or later and
   NVDA 2018.4 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17763) and latest stable version of NVDA.
+  10 stable release (build 18362) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of
   NVDA, no longer applicable as the add-on does not support old Windows 10
@@ -67,11 +67,11 @@ For a list of changes made between each add-on releases, refer to
 * Tooltips from Edge and universal apps are recognized and will be
   announced.
 * When opening, closing, or switching between virtual desktops, NVDA will
-  announce current desktop ID (desktop 2, for example).
+  announce current desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen
   resolutions or orientation.
-* In Version 1903, NVDA will announce volume and brightness changes
-  immediately.
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately.
 
 ## Action center
 
@@ -160,10 +160,14 @@ Note: most features below are now part of NVDA 2018.3 or later.
   opening hardware keyboard input suggestions and staying silent when
   certain touch keyboard keys raise name change event on some systems.
 * NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This will be part of
-  NVDA 2019.1.
+  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
+  2019.1.
 * In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This will be part of NVDA 2019.1.
+  results for emojis if possible. This is now part of NVDA 2019.1.
+* NVDA will no longer announce "clipboard" when there are items in the
+  clipboard under some circumstances.
+* On some systems running Version 1903 (May 2019 Update), NVDA will no
+  longer appear to do nothing when emoji panel opens.
 
 ## Люди
 
@@ -173,15 +177,14 @@ Note: most features below are now part of NVDA 2018.3 or later.
 ## Настройки
 
 * Certain information such as Windows Update progress is reported
-  automatically, including Storage sense/disk cleanup widget.
+  automatically, including Storage sense/disk cleanup widget and errors from
+  Windows Update.
 * Значения индикатора выполнения и другая информация теперь не объявляются
   дважды.
 * For some combo boxes and radio buttons, NVDA will no longer fail to
   recognize labels and/or announce value changes.
 * Audio Volume progress bar beeps are no longer heard in Version 1803 and
   later.
-* More messages about Windows Update status are announced, especially if
-  Windows Update encounters errors.
 * NVDA will no longer appear to do nothing or play error tones if using
   object navigation commands under some circumstances.
 * Windows Update reminder dialog is recognized as a proper dialog.

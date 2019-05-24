@@ -21,8 +21,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sähköposti
 * Kartat
 * Microsoft Edge
-* Moderni näppäimistö (emojipaneeli/fyysisen näppäimistösyötteen
-  ehdotukset/pilvileikepöydän kohteet versiossa 1709 ja uudemmissa)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard items in Version 1709 and later)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Kauppa
@@ -31,10 +31,9 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1803 (koontiversio
-  17134) tai uudempaa ja NVDA 2018.4:a tai uudempaa. Käytä parhaan
-  käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata versiota
-  (koontiversio 17763) sekä uusinta vakaata NVDA:n versiota.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 18362) and latest stable version of NVDA.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
@@ -69,12 +68,12 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   ilmoitukset tulevat muualta kuin aktiivisesta sovelluksesta.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
   ilmoitetaan.
-* NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2)
-  avattaessa, suljettaessa tai vaihdettaessa virtuaalityöpöytien välillä.
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop name (desktop 2, for example).
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
   suuntaa vaihdettaessa.
-* NVDA ilmoittaa nyt välittömästi äänenvoimakkuuden ja kirkkauden muutokset
-  versiossa 1903.
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately.
 
 ## Toimintokeskus
 
@@ -169,10 +168,15 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
   sanota "Microsoft Candidate UI" sekä ollaan hiljaa tilanteessa, jossa
   tietyt kosketusnäppäimistön näppäimet aiheuttavat joissakin järjestelmissä
   muuttuneen nimitapahtuman.
-* NVDA ei toista enää virheääniä tai tee mitään emojipaneelia suljettaessa
-  uudemmissa 19H1-Insider-esiversioissa. Tämä sisältyy NVDA 2019.1:een.
-* NVDA ilmoittaa versiossa 1809 (October 2018 -päivitys) ja uudemmissa
-  emojien hakutulokset, mikäli mahdollista. Tämä sisältyy NVDA 2019.1:een.
+* NVDA will no longer play error tones or do nothing when closing emoji
+  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
+  2019.1.
+* In Version 1809 (October 2018 Update) and later, NVDA will announce search
+  results for emojis if possible. This is now part of NVDA 2019.1.
+* NVDA will no longer announce "clipboard" when there are items in the
+  clipboard under some circumstances.
+* On some systems running Version 1903 (May 2019 Update), NVDA will no
+  longer appear to do nothing when emoji panel opens.
 
 ## Ihmiset
 
@@ -181,17 +185,15 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
 
 ## Asetukset
 
-* Määrätyt tiedot, kuten Windows Updaten päivitysten asennuksen edistyminen,
-  mukaan lukien Tallennusseurannan/Levynsiivouksen pienoisohjelma, puhutaan
-  nyt automaattisesti.
+* Certain information such as Windows Update progress is reported
+  automatically, including Storage sense/disk cleanup widget and errors from
+  Windows Update.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
 * NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen ja
   valintapainikkeiden selitteiden tunnistamisessa ja/tai arvomuutosten
   ilmoittamisessa.
 * Edistymispalkkien äänimerkkejä ei enää kuulu muutettaessa
   äänenvoimakkuutta versiossa 1803 ja uudemmissa.
-* Windows Updaten tilailmoituksia puhutaan enemmän etenkin virheitä
-  havaittaessa.
 * NVDA ei tee enää mitään tai toista virheääniä, mikäli
   objektinavigointikomentoja käytetään tietyissä tilanteissa.
 * Windows Updaten muistutusvalintaikkuna tunnistetaan asianmukaisesti

@@ -2,8 +2,8 @@
 
 * Autors: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version herunterladen][1]
-* [Entwicklungsversion herunterladen][2]
-* NVDA compatibility: 2018.4 to 2019.1
+* [Entwicklerversion herunterladen][2]
+* NVDA-Kompatibilität: 2018.4 bis 2019.1
 
 Diese Erweiterung bringt ein Paket von Anwendungsmodulen für diverse Windows
 10 Apps sowie Korrekturen in einigen Windows 10 Elementen mit.
@@ -20,8 +20,8 @@ inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
 * Mail
 * Karten
 * Microsoft Edge
-* Moderne Tastatur (Emoji-Panel / Hardware-Eingabevorschläge /
-  Cloud-Zwischenablage ab Version 1709)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard items in Version 1709 and later)
 * Kontakte
 * Einstellungen (Systemeinstellungen, Windows+I)
 * Store
@@ -32,7 +32,7 @@ Hinweise:
 
 * This add-on requires Windows 10 Version 1803 (build 17134) or later and
   NVDA 2018.4 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17763) and latest stable version of NVDA.
+  10 stable release (build 18362) and latest stable version of NVDA.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * For entries not listed below, you can assume that features are part of
   NVDA, no longer applicable as the add-on does not support old Windows 10
@@ -45,9 +45,9 @@ Versionen][3].
 
 ## Allgemein
 
-* NVDA will no longer play error tones or do nothing if this add-on becomes
-  active from Windows 7, Windows 8.1, and unsupported releases of Windows
-  10.
+* NVDA wird keine Fehlertöne mehr abspielen oder nichts tun, wenn diese
+  Erweiterung unter Windows 7, Windows 8.1 und nicht unterstützten Versionen
+  von Windows 10 benutzt wird.
 * Untermenüs werden in verschiedenen Anwendungen richtig erkannt,
   einschließlich des Kontextmenüs für Startmenükacheln und des
   Anwendungsmenüs von Microsoft Edge (Redstone 5).
@@ -68,12 +68,12 @@ Versionen][3].
   ausgegeben, wenn Benachrichtigungen von einer anderen Anwendung als der
   aktuell aktiven Anwendung kommen.
 * Tooltips von Edge und Universal Apps werden erkannt und angekündigt.
-* Beim Öffnen, Schließen oder Wechseln zwischen virtuellen Desktops gibt
-  NVDA die aktuelle Desktop-ID (z.B. Desktop 2) bekannt.
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop name (desktop 2, for example).
 * NVDA sagt den Text für die Größe des Startmenüs nicht mehr an, wenn die
   Bildschirmauflösung oder Ausrichtung geändert wird.
-* In Version 1903, NVDA will announce volume and brightness changes
-  immediately.
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately.
 
 ## Einstellungscenter für Benachrichtigungen und Aktionen
 
@@ -146,7 +146,8 @@ Versionen][3].
 
 ## Moderne virtuelle Tastaturen
 
-Note: most features below are now part of NVDA 2018.3 or later.
+Hinweis: Die meisten unten aufgeführten Funktionen sind jetzt Teil von NVDA
+2018.3 oder neuer.
 
 * Support for Emoji input panel in Version 1709 (Fall Creators Update) and
   later, including the redesigned panel in Version 1809 (build 17661 and
@@ -171,10 +172,14 @@ Note: most features below are now part of NVDA 2018.3 or later.
   Berührungstasten auf manchen Systemen ein Namensänderungsereignis
   auslösen.
 * NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This will be part of
-  NVDA 2019.1.
+  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
+  2019.1.
 * In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This will be part of NVDA 2019.1.
+  results for emojis if possible. This is now part of NVDA 2019.1.
+* NVDA will no longer announce "clipboard" when there are items in the
+  clipboard under some circumstances.
+* On some systems running Version 1903 (May 2019 Update), NVDA will no
+  longer appear to do nothing when emoji panel opens.
 
 ## Kontakte
 
@@ -183,17 +188,15 @@ Note: most features below are now part of NVDA 2018.3 or later.
 
 ## Einstellungen
 
-* Bestimmte Informationen wie z.B. der Fortschritt von Windows Update,
-  Widget zur Bereinigung und Defragmentierung von Speicher und Festplatten
-  werden in echtzeit gemeldet.
+* Certain information such as Windows Update progress is reported
+  automatically, including Storage sense/disk cleanup widget and errors from
+  Windows Update.
 * Werte in Fortschrittsbalken und andere Informationen werden nicht mehr
   zweimal angesagt.
 * Bei einigen Kombinationsfeldern und Kontrollfeldern wird NVDA nun die
   Beschriftung erkennen und/oder Wertänderungen ankündigen.
 * Lautstärke-Fortschrittsbalken werden nicht mehr ausgegeben (gilt für
   Windowsversionen ab Build 1803)
-* Weitere Meldungen über den Status von Windows Update werden angezeigt,
-  insbesondere wenn im Windows Update Fehler auftreten.
 * NVDA wird nun ordnungsgemäß reagieren und keine Fehlertöne mehr während
   der Objektnavigation abspielen.
 * Das Erinnerungsdialogfeld von Windows Update wird als richtiger Dialog

@@ -20,8 +20,8 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 * Posta
 * Mappe
 * Microsoft Edge
-* Tastiera moderna (suggerimenti di immissione per tastiere
-  hardware/pannello emoji in Versione 1709 e successive)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard items in Version 1709 and later)
 * Persone
 * Impostazioni (Impostazioni Windows, Windows+i)
 * Store
@@ -32,7 +32,7 @@ Note:
 
 * This add-on requires Windows 10 Version 1803 (build 17134) or later and
   NVDA 2018.4 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17763) and latest stable version of NVDA.
+  10 stable release (build 18362) and latest stable version of NVDA.
 * Alcune caratteristiche di questo componente aggiuntivo sono o diventeranno
   parte di NVDA
 * Per le voci non elencate di seguito, si può supporre che son
@@ -68,13 +68,12 @@ riferimento al documento [changelogs for add-on releases][3].
   notifiche UIA, verrà emesso un segnale acustico.
 * Vengono riconosciuti e annunciati i suggerimenti di Microsoft Edge e
   universal-app.
-* Quando si passa ad un desktop virtuale successivo, o viene chiuso o ne
-  viene aperto uno, NVDA annuncerà il numero del desktop, ad esempio
-  Desktop2, Desktop3, etc.
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop name (desktop 2, for example).
 * NVDA non leggerà più le dimensioni del testo del menu avvio quando si
   cambia la risoluzione dello schermo o orientamento.
-* In Version 1903, NVDA will announce volume and brightness changes
-  immediately.
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately.
 
 ## Centro attività:
 
@@ -171,10 +170,14 @@ Note: most features below are now part of NVDA 2018.3 or later.
   alcuni sistemi non vengono più annunciati i cambiamenti del nome degli
   eventi quando si preme un tasto nella tastiera.
 * NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This will be part of
-  NVDA 2019.1.
+  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
+  2019.1.
 * In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This will be part of NVDA 2019.1.
+  results for emojis if possible. This is now part of NVDA 2019.1.
+* NVDA will no longer announce "clipboard" when there are items in the
+  clipboard under some circumstances.
+* On some systems running Version 1903 (May 2019 Update), NVDA will no
+  longer appear to do nothing when emoji panel opens.
 
 ## Persone
 
@@ -183,9 +186,9 @@ Note: most features below are now part of NVDA 2018.3 or later.
 
 ## Impostazioni
 
-* Vengono annunciate automaticamente le informazioni di avanzamento delle
-  operazioni di Windows Update, incluse informazioni di archiviazione e
-  rimozione dal disco di widget.
+* Certain information such as Windows Update progress is reported
+  automatically, including Storage sense/disk cleanup widget and errors from
+  Windows Update.
 * Le informazioni delle barre di avanzamento non vengono più lette due
   volte.
 * Per alcune caselle combinate o pulsanti radio, NVDA non commetterà più
@@ -193,8 +196,6 @@ Note: most features below are now part of NVDA 2018.3 or later.
   valori.
 * Non vengono più riprodotti beep per le barre di avanzamento del controllo
   volume dalla versioni 1803 e successive.
-* Verranno annunciati diversi messaggi sull'aggiornamento di Windows 10, in
-  particolare quando Windows Update rileva errori. 
 * NVDA non riporterà più errori quando si usa  il navigatore ad oggetti in
   alcune situazioni.
 * la finestra di notifica per nuovi aggiornamenti windows verrà ora

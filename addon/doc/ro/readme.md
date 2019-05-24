@@ -22,8 +22,8 @@ privire la ceea ce este inclus):
 * Mail
 * Hărți
 * Microsoft Edge
-* Tastatură modernă (sugestii de intrare a panoului/hardware emoji/elemente
-  ale planșetei cloud în versiunea 1709 și mai nouă)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard items in Version 1709 and later)
 * Persoane
 * Setări (setări de sistem, Windows+I)
 * Magazin
@@ -34,7 +34,7 @@ Note:
 
 * This add-on requires Windows 10 Version 1803 (build 17134) or later and
   NVDA 2018.4 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 17763) and latest stable version of NVDA.
+  10 stable release (build 18362) and latest stable version of NVDA.
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
 * Pentru intrările care nu sunt listate mai jos, puteți presupune că
@@ -73,12 +73,12 @@ versiunile suplimentului][3].
   notificările nu vin din aplicația curentă, ci de altundeva.
 * Indiciile din Edge și alte aplicații universale sunt recunoscute și vor fi
   anunțate.
-* La deschiderea, închiderea sau comutarea între spațiile de lucru virtuale,
-  NVDA va anunța ID-ul spațiului de lucru curent (spațiu de lucru 2).
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop name (desktop 2, for example).
 * NVDA nu mai anunță „dimensiune text start meniu” la schimbarea rezoluției
   ecranului sau a orientării.
-* In Version 1903, NVDA will announce volume and brightness changes
-  immediately.
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately.
 
 ## Centru de acțiuni
 
@@ -170,12 +170,15 @@ Notă: majoritatea caracteristicilor de mai jos fac parte din NVDA 2018.3.
   la deschiderea sugestiilor de introducere a tastaturii hardware și starea
   în modul silențios atunci când anumite taste ale tastaturii tactile
   generează un eveniment de schimbare a numelui pe unele sisteme.
-* NVDA nu va mai reda tonuri de eroare sau nu va mai face nimic la
-  închiderea panoului emoji în compilări mai recente Insider Preview
-  19H1. Aceasta va face parte din NVDA 2019.1
-* În versiunea 1809 (October 2018 Update) și mai nouă, NVDA va anunța
-  rezultatele căutării pentru emoji-uri dacă este posibil. Aceasta va face
-  parte din NVDA 2019.1
+* NVDA will no longer play error tones or do nothing when closing emoji
+  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
+  2019.1.
+* In Version 1809 (October 2018 Update) and later, NVDA will announce search
+  results for emojis if possible. This is now part of NVDA 2019.1.
+* NVDA will no longer announce "clipboard" when there are items in the
+  clipboard under some circumstances.
+* On some systems running Version 1903 (May 2019 Update), NVDA will no
+  longer appear to do nothing when emoji panel opens.
 
 ## Persoane
 
@@ -184,17 +187,15 @@ Notă: majoritatea caracteristicilor de mai jos fac parte din NVDA 2018.3.
 
 ## Setări
 
-* Anumite informații, cum ar fi progresul Windows Update, sunt acum
-  raportate automat, incluzând stocarea sensului sau widget-ul curățare
-  disc.
+* Certain information such as Windows Update progress is reported
+  automatically, including Storage sense/disk cleanup widget and errors from
+  Windows Update.
 * Valorile barei de progres și alte informații nu mai sunt anunțate de două
   ori.
 * Pentru unele casete combinate și butoane rotative, NVDA nu va mai eșua la
   recunoașterea etichetelor și/sau anunțarea schimbărilor valorii.
 * Bipurile barei de progres a volumului audio nu mai sunt auzite în
   compilarea 1803 sau mai nouă.
-* Sunt anunțate mai multe mesaje în legătură cu stadiul actualizărilor
-  Windows, mai exact atunci când Windows Update întâmpină erori.
 * NVDA nu va mai fi nevoit să nu facă nimic sau să redea tonuri de eroare
   dacă se utilizează comenzile de navigare ale obiectului în anumite
   circumstanțe.

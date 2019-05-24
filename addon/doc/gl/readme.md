@@ -22,8 +22,8 @@ se inclúe):
 * Correo
 * Mapas
 * Microsoft Edge
-* Teclado Moderno (suxerencias de panel emoji /entrada hardware na Versión
-  1709 e posterior)
+* Teclado Moderno (panel de emoji/ditado/suxestións de entrada por
+  hardware/elementos do portapapeis na nube na Versión 1709 e posterior)
 * Xente
 * Opcións (opcións do sistema, Windows+I)
 * Tenda
@@ -34,7 +34,7 @@ Notas:
 
 * Este complemento require do Windows 10 Versión 1803 (compilación 17134) ou
   posterior e do NVDA 2018.4 ou posterior. Para uns mellores resultados, usa
-  o complemento coa compilación estable máis recente (compilación 17763) e
+  o complemento coa compilación estable máis recente (compilación 18362) e
   versión estable máis recente do NVDA.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
@@ -71,11 +71,11 @@ documento [rexistros de trocos para publicacións de complementos][3].
 * recoñeceranse e anunciaranse os consellos para o Edge e para as
   aplicacións universais.
 * Cando se abran, pechen ou se conmute entre escritorios virtuales, NVDA
-  anunciará o ID do escritorio actual (escritorio 2, por exemplo).
+  anunciará o nome do escritorio actual (escritorio 2, por exemplo).
 * NVDA xa non anuncia Menú Inicio tamaño de texto ao cambiar a resolución de
   pantalla ou a orientación.
-* Na versión 1903, NVDA anunciará cambios no volume e o brillo
-  inmediatamente.
+* Na versión 1903 (May 2019 Update), NVDA anunciará cambios no volume e o
+  brillo inmediatamente.
 
 ## Centro de accións
 
@@ -171,11 +171,15 @@ ou posterior.
   quede calado cando certas teclas do teclado táctil lancen o evento cambio
   de nome nalguns sistemas.
 * NVDA xa non reproducirá tons de erro ou aparentará non facer nada ao
-  pechar o panel de Emojis nas compilacións Insider Preview 19H1 máis
-  recentes. Isto formará parte de NVDA 2019.1.
+  pechar o panel de emoji nas compilacións Insider Preview 19H1 máis
+  recentes. Agora isto forma parte de NVDA 2019.1.
 * Na versión 1809 (October 2018 Update) e posteriores, NVDA anunciará os
-  resultados de busca de emojis de ser posible. Isto formará parte de NVDA
-  2019.1.
+  resultados de busca de emojis de ser posible. agora isto forma parte de
+  NVDA 2019.1.
+* NVDA xa non anunciará "portapapeis" cando haxa elementos no portapapeis
+  baixo algunhas circunstancias.
+* Nalgúns sistemas coa versión 1903 (May 2019 Update), NVDA xa non
+  aparentará non facer nada cando se abra o panel de emoji.
 
 ## Xente
 
@@ -184,17 +188,15 @@ ou posterior.
 
 ## Opcións
 
-* Certa información como o progreso da Actualización de Windows agora é
-  anunciada automáticamente, incluíndo o widget de liberación de espazo en
-  disco.
+* Certa información como o progreso de Windows Update agora é anunciada
+  automaticamente, incluíndo o widget de Storage Sense/liberación de espazo
+  en disco e os erros de windows Update.
 * Os valores da barra de progreso e outra información xa non se anuncian
   dúas veces.
 * Para algunhas caixas combinadas e botóns de opción, NVDA xa non fallará ao
   recoñecer etiquetas e/ou ao anunciar cambios de valores. 
 * Os pitidos da barra de progreso do volume de audio xa non se escoitan na
   versión 1803 e posterior.
-* Anúncianse máis mensaxes relativas ó estado de Windows Update,
-  especialmente se Windows Update atopa erros.
 * NVDA xa non parecerá non facer nada ou non reproducirá tons de erro cando
   se usen ordes de navegación de obxectos baixo certas circunstancias.
 * O diálogo de recordatorio de actualización de Windows é recoñecido
