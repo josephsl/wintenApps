@@ -27,13 +27,15 @@ UIA_Drag_DragStartEventId = 20026
 UIA_Drag_DragCancelEventId = 20027
 UIA_Drag_DragCompleteEventId = 20028
 UIA_ActiveTextPositionChangedEventId = 20036
+UIA_Text_TextChangedEventId = 20015
 
 # For convenience.
 W10Events = {
 	UIA_Drag_DragStartEventId: "UIA_dragStart",
 	UIA_Drag_DragCancelEventId: "UIA_dragCancel",
 	UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
-	UIA_ActiveTextPositionChangedEventId: "UIA_activeTextPositionChanged"
+	UIA_ActiveTextPositionChangedEventId: "UIA_activeTextPositionChanged",
+	UIA_Text_TextChangedEventId: "textChange"
 }
 
 # Additional dialogs not recognized by NVDA itself.
@@ -298,4 +300,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_itemStatus(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "itemStatus")
+		nextHandler()
+
+	def event_textChange(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "textChange")
 		nextHandler()
