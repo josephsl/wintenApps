@@ -73,21 +73,13 @@ class AppModule(appModuleHandler.AppModule):
 		if "MusUpdate_UpdateStatus" in automationID:
 			# Don't repeat the fact that update download/installation is in progress if progress bar beep is on.
 			return not (automationID == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock" and obj.previous.value > "0")
-		else:
-			# For search progress bar, do not repeat it.
-			# Same can be said about Storage/disk cleanup, but this is due to name change event.
-			return ((automationID in ("ProgressBar", "SystemSettings_StorageSense_TemporaryFiles_InstallationProgressBar"))
-			# Do not announce "result not found" error unless have to.
-			or (automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID == "StatusTextPopup")
-			# But announce individual update progress in build 16215 and later.
-			or ("ApplicableUpdate" in automationID and automationID.endswith("_ContextDescriptionTextBlock"))
-			# Don't forget update error text.
-			or (automationID in ("SystemSettings_MusUpdate_UpdateError_DescriptionTextBlock", "SystemSettings_MusUpdate_PayloadErrorDetails_HolisticErrorDescriptionTextBlock"))
-			# Announce result text for Storage Sense/settings/cleanup.
-			or (automationID.startswith("SystemSettings_StorageSense_SmartPolicy_ExecuteNow"))
-			# Announce progress of Storage Sense/settings/cleanup operation.
-			# For this one, because automation ID isn't specified, look for cleanup button.
-			or (obj.previous.previous.UIAElement.cachedAutomationID == "SystemSettings_StorageSense_SmartPolicy_ExecuteNow_ApplyButton"))
+		# Except for specific cases, announce all live regions.
+		# Do not announce "result not found" error unless have to.
+		if ((automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID != "StatusTextPopup")
+		# Announce individual update progress in build 16215 and later preferably only once per update stage.
+		or ("ApplicableUpdate" in automationID and not automationID.endswith("_ContextDescriptionTextBlock"))):
+			return False
+		return True
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA) and obj.name and obj.name != self._nameChangeCache:
