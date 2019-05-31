@@ -21,8 +21,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sähköposti
 * Kartat
 * Microsoft Edge
-* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
-  clipboard items in Version 1709 and later)
+* Moderni näppäimistö (emojipaneeli/sanelu/fyysisen näppäimistösyötteen
+  ehdotukset/pilvileikepöydän kohteet versiossa 1709 ja uudemmissa)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Kauppa
@@ -31,9 +31,10 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18362) and latest stable version of NVDA.
+* Tämä lisäosa edellyttää Windows 10:n versiota 1803 (koontiversio 17134)
+  tai uudempaa ja NVDA 2018.4:ää tai uudempaa. Käytä parhaan
+  käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata versiota
+  (koontiversio 18362) sekä uusinta vakaata NVDA:n versiota.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
@@ -68,12 +69,12 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   ilmoitukset tulevat muualta kuin aktiivisesta sovelluksesta.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
   ilmoitetaan.
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce current desktop name (desktop 2, for example).
+* NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2) avattaessa
+  ja suljettaessa virtuaalityöpöytiä tai siirryttäessä niiden välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
   suuntaa vaihdettaessa.
-* In Version 1903 (May 2019 Update), NVDA will announce volume and
-  brightness changes immediately.
+* NVDA ilmoittaa välittömästi äänenvoimakkuuden ja kirkkauden muutokset
+  Windows 10:n versiossa 1903 (May 2019 -päivitys).
 
 ## Toimintokeskus
 
@@ -168,15 +169,15 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
   sanota "Microsoft Candidate UI" sekä ollaan hiljaa tilanteessa, jossa
   tietyt kosketusnäppäimistön näppäimet aiheuttavat joissakin järjestelmissä
   muuttuneen nimitapahtuman.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
-  2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This is now part of NVDA 2019.1.
-* NVDA will no longer announce "clipboard" when there are items in the
-  clipboard under some circumstances.
-* On some systems running Version 1903 (May 2019 Update), NVDA will no
-  longer appear to do nothing when emoji panel opens.
+* NVDA ei toista enää virheääniä tai tee mitään emojipaneelia suljettaessa
+  uudemmissa 19H1-Insider-esiversioissa. Tämä sisältyy NVDA 2019.1:een.
+* NVDA ilmoittaa versiossa 1809 (October 2018 -päivitys) ja uudemmissa
+  emojien hakutulokset, mikäli mahdollista. Tämä sisältyy NVDA 2019.1:een.
+* NVDA ei enää sano joissakin tilanteissa "leikepöytä", kun leikepöydällä on
+  kohteita.
+* Emojipaneelin avautuessa ei enää näytä siltä, että NVDA  ei tee mitään
+  joissakin järjestelmissä, joissa on asennettuna Windows 10:n versio 1903
+  (May 2019 -päivitys).
 
 ## Ihmiset
 
@@ -185,9 +186,9 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
 
 ## Asetukset
 
-* Certain information such as Windows Update progress is reported
-  automatically, including Storage sense/disk cleanup widget and errors from
-  Windows Update.
+* Määrätyt tiedot, kuten Windows Updaten päivitysten asennuksen edistyminen,
+  mukaan lukien Tallennusseurannan/Levynsiivouksen pienoisohjelma sekä
+  Windows Updaten virheet, puhutaan nyt automaattisesti.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
 * NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen ja
   valintapainikkeiden selitteiden tunnistamisessa ja/tai arvomuutosten

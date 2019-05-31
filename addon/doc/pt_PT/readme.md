@@ -22,8 +22,9 @@ detalhes sobre o que está incluído):
 * Correio.
 * Mapas.
 * Microsoft Edge
-* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
-  clipboard items in Version 1709 and later)
+* Teclado moderno (painel de emoji / ditado / sugestões de entrada de
+  hardware / itens da área de transferência na nuvem na versão 1709 e
+  posterior)
 * Pessoas.
 * Configurações (configurações do sistema, Windows + I)
 * Loja.
@@ -32,9 +33,10 @@ detalhes sobre o que está incluído):
 
 Notas:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18362) and latest stable version of NVDA.
+* Este extra requer o Windows 10 Versão 1803 (compilação 17134) ou posterior
+  e o NVDA 2018.4 ou posterior. Para obter melhores resultados, use o extra
+  com a versão estável mais recente do Windows 10 (compilação 18362) e a
+  versão estável mais recente do NVDA.
 * Alguns recursos adicionais são ou farão parte do leitor de tela do NVDA.
 * Para entradas não listadas abaixo, pode assumir que os recursos fazem já
   parte do NVDA, não sendo mais aplicáveis, pois o complemento não suporta
@@ -71,12 +73,12 @@ consulte o documento [changelogs for releases, release][3].
   do aplicativo actualmente activo.
 * As dicas de ferramentas do Edge e aplicativos universais são reconhecidas
   e serão anunciadas.
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce current desktop name (desktop 2, for example).
+* Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
+  anunciará o nome da área de trabalho (área de trabalho 2, por exemplo).
 * O NVDA deixará de anunciar o tamanho do texto do menu Iniciar quando
   alterar as resoluções ou a orientação do ecrã.
-* In Version 1903 (May 2019 Update), NVDA will announce volume and
-  brightness changes immediately.
+* Na versão 1903 (atualização de maio de 2019), o NVDA anunciará,
+  imediatamente,  alterações de volume e brilho.
 
 ## Centro de acção
 
@@ -100,8 +102,8 @@ consulte o documento [changelogs for releases, release][3].
   anunciará os resultados assim que os cálculos forem inseridos.
 * O NVDA não anunciará mais "nível de cabeçalho" para os resultados da
   calculadora.
-* NVDA will notify if maximum digit count has been reached while entering
-  expressions.
+* ao inserir expressões, o NVDA notificará se a contagem máxima de dígitos
+  foi atingida.
 
 ## Calendário
 
@@ -172,15 +174,16 @@ posteriores.
   abrir sugestões de entrada de teclado de hardware e ficar em silêncio
   quando certas teclas do teclado de toque geram eventos de alteração de
   nome em alguns sistemas.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
-  2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This is now part of NVDA 2019.1.
-* NVDA will no longer announce "clipboard" when there are items in the
-  clipboard under some circumstances.
-* On some systems running Version 1903 (May 2019 Update), NVDA will no
-  longer appear to do nothing when emoji panel opens.
+* O NVDA não reproduzirá mais os tons de erro ou não fará nada ao fechar o
+  painel de emojis em compilações mais recentes do Insider Preview do
+  19H1. Isto faz parte do NVDA 2019.1.
+* Na versão 1809 (actualização de outubro de 2018) e posteriores, o NVDA
+  anunciará resultados de pesquisa para emojis, se possível. Este recurso
+  faz parte do NVDA 2019.1.
+* O NVDA não anunciará mais "área de transferência" quando houver itens na
+  área de transferência em algumas circunstâncias.
+* Em alguns sistemas que executam a Versão 1903 (Actualização de maio de
+  2019), o NVDA não deixará de falar, quando o painel emoji for aberto.
 
 ## Pessoas.
 
@@ -189,9 +192,9 @@ posteriores.
 
 ## Configurações
 
-* Certain information such as Windows Update progress is reported
-  automatically, including Storage sense/disk cleanup widget and errors from
-  Windows Update.
+* Certas informações, como o progresso da actualização do Windows, são
+  relatadas automaticamente, incluindo sentido / disco de armazenamento e os
+  erros da actualização do Windows.
 * Os valores da barra de progresso e outras informações já não são
   anunciados duas vezes.
 * Para algumas caixas combinadas e botões de rádio, o NVDA não falhará ao
