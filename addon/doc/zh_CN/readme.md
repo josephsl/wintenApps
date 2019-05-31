@@ -18,7 +18,8 @@
 * 邮件
 * 地图
 * 斯巴达浏览器
-* 系统键盘（在版本1709及以上版本中的表情符号面板/硬件输入建议/云剪贴板的项目）
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard items in Version 1709 and later)
 * {longName} ({name})
   版本: {version}
   网址: {url}
@@ -38,8 +39,9 @@
 
 注意:
 
-* 此插件需要Windows 10版本1803（版本17134）或更高版本以及NVDA 2018.4或更高版本。为获得最佳体验，请使用最新Windows
-  10稳定版（build 17763）和最新稳定版的NVDA。
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 18362) and latest stable version of NVDA.
 * 一些插件功能可能将成为NVDA屏幕阅读器的一部分。
 * 对于未在下面列出的条目，您可以假定功能是NVDA的一部分，不再适用，因为插件不支持旧版本的Windows
   10，或者对应用程序进行了更改，使条目不再适用。
@@ -55,9 +57,11 @@
 * 在某些上下文菜单中（例如在Edge中），位置信息（例如，1、2）不再被朗读。
 * 现在识别以下UIA事件：活动文本位置更改，控制器，拖动开始，拖动取消，拖动完成，元素选择，项目状态，实时区域更改，通知，系统警报，工具提示打开，窗口打开。将NVDA设置为启用调试日志记录运行时，将跟踪这些事件，对于UIA通知事件，如果通知来自当前活动应用程序以外的某个位置，则会听到调试音。
 * 来自Edge和通用应用程序的工具提示已被识别并将被朗读。
-* 在虚拟桌面之间打开，关闭或切换时，NVDA会读出当前的桌面ID（例如，桌面2）。
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop name (desktop 2, for example).
 * 在更改屏幕分辨率或方向时，NVDA将不再公布“开始”菜单大小文本。
-* 在版本1903中，NVDA现在将朗读音量和亮度变化。
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately.
 
 ## 活动中心
 
@@ -118,9 +122,15 @@
 * 支持在版本1809（版本17666及更高版本）中朗读云剪贴板项目。
 * 使用现代键盘及其功能时减少不必要的冗长。这些包括在打开硬件键盘输入建议时不再公布“Microsoft Candidate
   UI”，并且某些触摸键盘键在某些系统上引发名称更改事件时不再保持沉默。
-* 在最近的19H1 Insider Preview版本中关闭表情符号面板时，NVDA将不再播放错误音或不执行任何操作。这将是NVDA
-  2019.1的一部分。
-* 在版本1809（2018年10月更新）及更高版本中，如果可能，NVDA将朗读表情符号的搜索结果。这将是NVDA 2019.1的一部分。
+* NVDA will no longer play error tones or do nothing when closing emoji
+  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
+  2019.1.
+* In Version 1809 (October 2018 Update) and later, NVDA will announce search
+  results for emojis if possible. This is now part of NVDA 2019.1.
+* NVDA will no longer announce "clipboard" when there are items in the
+  clipboard under some circumstances.
+* On some systems running Version 1903 (May 2019 Update), NVDA will no
+  longer appear to do nothing when emoji panel opens.
 
 ## {longName} ({name})
 版本: {version}
@@ -138,11 +148,12 @@
 
 ## 设置
 
-* 现在将自动报告某些信息，例如Windows Update进度，包括存储感知/磁盘清理小部件。
+* Certain information such as Windows Update progress is reported
+  automatically, including Storage sense/disk cleanup widget and errors from
+  Windows Update.
 * 进度栏值和其他信息不再重复朗读两次。
 * 对于某些组合框和单选按钮，NVDA将不再无法识别标签和/或读出更改值。
 * 在版本1803和更高版本中不再听到音量进度条蜂鸣声。
-* 有关Windows Update状态的更多消息将会公布，特别是如果Windows Update遇到错误的时候。
 * 如果在某些情况下使用对象导航命令，NVDA将不再显示任何内容或播放错误音。
 * Windows Update提醒对话框被识别为正确的对话框。
 * 在某些Windows10安装中看到的奇怪的控件标签已被更正。

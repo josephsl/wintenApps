@@ -20,8 +20,8 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Mail
 * Kort
 * Microsoft Edge
-* Moderne tastatur (emoji-panel, hardware-indtastningsforslag Cloud-emner i
-  udklipsholderen i version 1709 og nyere)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard items in Version 1709 and later)
 * Personer
 * Indstillinger (systemindstillinger, Windows+I)
 * Store
@@ -30,10 +30,9 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 Bemærkninger:
 
-* Denne tilføjelse kræver Windows 10 Version 1803 (build 17134) eller senere
-  og NVDA 2018.4 eller nyere. For de bedste resultater skal du bruge
-  tilføjelsen med den nyeste Windows 10-stabile udgivelse (build 17763) og
-  den seneste stabile version af NVDA.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and
+  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 18362) and latest stable version of NVDA.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
 * For emner, der ikke er anført nedenfor, kan du antage, at funktionerne er
@@ -67,12 +66,12 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   hørt, hvis notifikationer kommer fra en anden app en den aktuelle.
 * Værktøjstips fra Edge og universale apps er genkendte og vil blive
   annonceret.
-* Når åbning, lukning, eller Skift mellem virtuelle skrivebord forekommer,
-  vil NVDA annoncere nuværende desktop ID (skrivebord 2, for eksempel).
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop name (desktop 2, for example).
 * NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
   du ændrer skærmopløsning eller orientering.
-* In Version 1903, NVDA will announce volume and brightness changes
-  immediately.
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately.
 
 ## Handlingscenter
 
@@ -166,12 +165,15 @@ Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
   kandidat UI", når du åbner hardware tastatur input forslag og NVDA
   forbliver tavse, når visse touch-tastaturkommandoer omfatter change name
   event på nogle systemer.
-* NVDA vil ikke længere spille fejltoner eller gøre ingenting, når du lukker
-  emoji-panelet i nyere 19H1 Insider Preview-builds. Denne funktionalitet
-  bliver en del af NVDA 2019.1.
-* I Version 1809 (october 2018 Update) og senere vil NVDA annoncere
-  søgeresultater for emojis hvis det er muligt. Denne funktionalitet vil
-  være en del af NVDA 2019.1.
+* NVDA will no longer play error tones or do nothing when closing emoji
+  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
+  2019.1.
+* In Version 1809 (October 2018 Update) and later, NVDA will announce search
+  results for emojis if possible. This is now part of NVDA 2019.1.
+* NVDA will no longer announce "clipboard" when there are items in the
+  clipboard under some circumstances.
+* On some systems running Version 1903 (May 2019 Update), NVDA will no
+  longer appear to do nothing when emoji panel opens.
 
 ## Personer
 
@@ -180,16 +182,15 @@ Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
 
 ## indstillinger
 
-* Visse oplysninger såsom fremdskridt af Windows-opdateringer rapporteres
-  automatisk, herunder ved brug af Storage sense/disk cleanup widget..
+* Certain information such as Windows Update progress is reported
+  automatically, including Storage sense/disk cleanup widget and errors from
+  Windows Update.
 * Værdier på behandlingslinjer og andre oplysninger er ikke længere
   annonceret to gange.
 * For nogle combo boxe, vil NVDA ikke længere undlade at rapportere
   etiketter- og- eller annoncere værdiændringer.
 * Bip for behandlingslinjer for lydstyrke høres nu ikke længere i version
   1803 og nyere.
-* Flere meddelelser om Windows Update status er annonceret, især hvis
-  Windows Update fejler.
 * NVDA ser ikke længere ud til at gøre ingenting eller afspille fejltoner,
   hvis du bruger objektnavigeringskommandoer under visse omstændigheder.
 * Dialogboksen Windows Update-påmindelse genkendes som en korrekt dialog.

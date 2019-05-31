@@ -21,7 +21,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sähköposti
 * Kartat
 * Microsoft Edge
-* Moderni näppäimistö (emojipaneeli/fyysisen näppäimistösyötteen
+* Moderni näppäimistö (emojipaneeli/sanelu/fyysisen näppäimistösyötteen
   ehdotukset/pilvileikepöydän kohteet versiossa 1709 ja uudemmissa)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
@@ -31,10 +31,10 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Huom: Tämä lisäosa edellyttää Windows 10:n versiota 1803 (koontiversio
-  17134) tai uudempaa ja NVDA 2018.4:a tai uudempaa. Käytä parhaan
+* Tämä lisäosa edellyttää Windows 10:n versiota 1803 (koontiversio 17134)
+  tai uudempaa ja NVDA 2018.4:ää tai uudempaa. Käytä parhaan
   käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata versiota
-  (koontiversio 17763) sekä uusinta vakaata NVDA:n versiota.
+  (koontiversio 18362) sekä uusinta vakaata NVDA:n versiota.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
@@ -69,12 +69,12 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   ilmoitukset tulevat muualta kuin aktiivisesta sovelluksesta.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
   ilmoitetaan.
-* NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2)
-  avattaessa, suljettaessa tai vaihdettaessa virtuaalityöpöytien välillä.
+* NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2) avattaessa
+  ja suljettaessa virtuaalityöpöytiä tai siirryttäessä niiden välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
   suuntaa vaihdettaessa.
-* NVDA ilmoittaa nyt välittömästi äänenvoimakkuuden ja kirkkauden muutokset
-  versiossa 1903.
+* NVDA ilmoittaa välittömästi äänenvoimakkuuden ja kirkkauden muutokset
+  Windows 10:n versiossa 1903 (May 2019 -päivitys).
 
 ## Toimintokeskus
 
@@ -173,6 +173,11 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
   uudemmissa 19H1-Insider-esiversioissa. Tämä sisältyy NVDA 2019.1:een.
 * NVDA ilmoittaa versiossa 1809 (October 2018 -päivitys) ja uudemmissa
   emojien hakutulokset, mikäli mahdollista. Tämä sisältyy NVDA 2019.1:een.
+* NVDA ei enää sano joissakin tilanteissa "leikepöytä", kun leikepöydällä on
+  kohteita.
+* Emojipaneelin avautuessa ei enää näytä siltä, että NVDA  ei tee mitään
+  joissakin järjestelmissä, joissa on asennettuna Windows 10:n versio 1903
+  (May 2019 -päivitys).
 
 ## Ihmiset
 
@@ -182,16 +187,14 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
 ## Asetukset
 
 * Määrätyt tiedot, kuten Windows Updaten päivitysten asennuksen edistyminen,
-  mukaan lukien Tallennusseurannan/Levynsiivouksen pienoisohjelma, puhutaan
-  nyt automaattisesti.
+  mukaan lukien Tallennusseurannan/Levynsiivouksen pienoisohjelma sekä
+  Windows Updaten virheet, puhutaan nyt automaattisesti.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
 * NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen ja
   valintapainikkeiden selitteiden tunnistamisessa ja/tai arvomuutosten
   ilmoittamisessa.
 * Edistymispalkkien äänimerkkejä ei enää kuulu muutettaessa
   äänenvoimakkuutta versiossa 1803 ja uudemmissa.
-* Windows Updaten tilailmoituksia puhutaan enemmän etenkin virheitä
-  havaittaessa.
 * NVDA ei tee enää mitään tai toista virheääniä, mikäli
   objektinavigointikomentoja käytetään tietyissä tilanteissa.
 * Windows Updaten muistutusvalintaikkuna tunnistetaan asianmukaisesti
