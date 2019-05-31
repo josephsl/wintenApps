@@ -31,11 +31,3 @@ class AppModule(AppModule):
 				eventHandler.executeEvent("UIA_window_windowOpen", inputPanelWindow)
 				return
 		nextHandler()
-
-	def event_UIA_notification(self, obj, nextHandler, notificationProcessing=None, displayString=None, **kwargs):
-		# In build 18323, volume and brightness changes are reported via this event.
-		# Similar to Microsoft Edge, other programs will be in use for majority of the time.
-		if notificationProcessing in (UIAHandler.NotificationProcessing_ImportantMostRecent, UIAHandler.NotificationProcessing_MostRecent):
-			# Same as NVDA 2019.2 except allow this to happen while using other apps as well.
-			speech.cancelSpeech()
-		ui.message(displayString)
