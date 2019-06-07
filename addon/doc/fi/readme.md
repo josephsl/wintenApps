@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2018.4-2019.1
+* NVDA compatibility: 2018.4 to 2019.2
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -60,13 +60,13 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   -asetuksella Objektien lukeminen -paneelista NVDA:n asetuksista.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
-* Seuraavat UIA-tapahtumat tunnistetaan: sijainnin muutos aktiivisessa
-  tekstissä, ohjain kohteelle, vetämisen aloitus, vetämisen peruutus,
-  vetäminen suoritettu, elementti valittu, kohteen tila, aktiivisen alueen
-  muutos, ilmoitus, järjestelmän ilmoitus, työkaluvihje avattu, ikkuna
-  avattu. Näitä tapahtumia seurataan, kun NVDA:n lokitasoksi on määritetty
-  "virheenkorjaus", ja UIA-ilmoitustapahtuma ilmaistaan virheäänellä, mikäli
-  ilmoitukset tulevat muualta kuin aktiivisesta sovelluksesta.
+* The following UIA events are recognized: active text position change,
+  controller for, drag start, drag cancel, drag complete, element selected,
+  item status, live region change, notification, system alert, text change,
+  tooltip opened, window opened. With NVDA set to run with debug logging
+  enabled, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard if notifications come from somewhere other than
+  the currently active app.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
   ilmoitetaan.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2) avattaessa

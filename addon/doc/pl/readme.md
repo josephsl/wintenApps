@@ -3,7 +3,7 @@
 * Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
-* Zgodność z wersjami NVDA: 2018.4 do 2019.1
+* NVDA compatibility: 2018.4 to 2019.2
 
 Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
 również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
@@ -20,8 +20,8 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 * Poczta
 * Mapy
 * Microsoft Edge
-* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
-  clipboard items in Version 1709 and later)
+* Nowoczesna klawiatura (panel emoji/dyktowanie/podpowiedzi wpisywania
+  sprzętowego/elementy chmurowego schowka w wersji 1709  nowszych)
 * Osoby
 * Ustawienia (Ustawienia systemowe, Windows+I)
 * Sklep
@@ -30,9 +30,10 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18362) and latest stable version of NVDA.
+* Uwaga! Ten dodatek wymaga Windowsa 10 Wersji 1803 (kompilacji 17134) lub
+  nowszej i NVDA 2018.4 lub nowszej. Aby uzyskać najlepsze wyniki, należy
+  używać dodatku z najnowszą stabilną kompilacją systemu (kompilacja 18362)
+  i najnowszą stabilną wersją NVDA. 
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
@@ -60,19 +61,20 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   położeniu (NP. 1 z 2) nie jest już odczytywana.
 * Następujące zdarzenia UIA są rozpoznawane: active text position change,
   controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, tooltip
-  opened, window opened. Gdy w NVDA jest włączony tryb debugowania, te
-  zdarzenia będą śledzone. Natomiast dla UIA, zdarzenia UIA notification
-  event, dźwięk debugowania będzie odtwarzany jeżeli powiadomienie
-  przychodzi z innej aplikacji niż ta aktywna.
+  item status, live region change, notification, system alert, text change,
+  tooltip opened, window opened. Gdy NVDA jest uruchomiony z zapisywaniem
+  debugowania, te zdarzenia będą śledzone, i dla UIA notification event, a
+  dźwięk debugowania będzie odtwarzany jeżeli powiadomienia przychodzą z
+  innej niż aktualnie aktywnej aplikacji.
 * Opisy obiektów w Edge i innych aplikacjach UWP są rozpoznawane  i będą
   czytane automatycznie.
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce current desktop name (desktop 2, for example).
+* Podczas otwierania, zamykając lub przełączając się między wirtualnymi
+  pulpitami, NVDA będzie oznajmiała aktualny identyfikator (na przykład
+  pulpit 2).
 * NVDA nie będzie wypowiadało wielkość tekstu w meni start, gdy zmienia się
   rozdzielczość ekranu lub orientacja ekranu.
-* In Version 1903 (May 2019 Update), NVDA will announce volume and
-  brightness changes immediately.
+* W wersji 1903 (aktualizacji dla maja 2019), NVDA będzie ogłaszać zmiany
+  głośności dźwięku i jasności ekranu.
 
 ## Centrum powiadomień
 
@@ -93,8 +95,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * Dla wyliczeń, takich jak przetwarzanie jednostek lub waluty, NVDA
   automatycznie będzie wymawiało wyniki obliczenia
 * NVDA nie będzie więcej wymawiało "nagłówek" dla wyników kalkulatora.
-* NVDA will notify if maximum digit count has been reached while entering
-  expressions.
+* NVDA powiadomi, jeżeli ilość liczb osiągnie maksymalną wartość przy
+  wpisywaniu wyrażenia.
 
 ## Kalendarz
 
@@ -164,15 +166,15 @@ nowszej wersji.
   podpowiedzi wpisywania i pozostawianie cichym przy tym, jak niektóre
   klawisze na klawiaturze wywołują zdarzenie zmiany nazwy na niektórych
   systemach.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
-  2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This is now part of NVDA 2019.1.
-* NVDA will no longer announce "clipboard" when there are items in the
-  clipboard under some circumstances.
-* On some systems running Version 1903 (May 2019 Update), NVDA will no
-  longer appear to do nothing when emoji panel opens.
+* NVDA już nie będzie odtwarzało dźwięk błędu lub robiło nic, gdy panel
+  emoji jest zamykany w bardziej ostatnich kompilacjach 19H1. To jest część
+  NVDA 2019.1
+* W wersji 1809 (październikowa aktualizacja 2018), NVDA będzie oznajmiało
+  wyniki wyszukiwania emoji jeżeli to możliwe. To jest część NVDA 2019.1
+* NVDA już nie będzie wymawiała "showek" gdy istnieją w nim elementy.
+* Na niektórych komputerach na których jest uruchomiony Windows 10  1903
+  (Atualizacja z maju 2019), NVDA nie będzie wydawała efekt robienia nic gdy
+  panel emoji się otwiera.
 
 ## Osoby
 
@@ -181,9 +183,9 @@ nowszej wersji.
 
 ## Ustawienia
 
-* Certain information such as Windows Update progress is reported
-  automatically, including Storage sense/disk cleanup widget and errors from
-  Windows Update.
+* Większość informacji, takich jak pasek stanu w Windows update, będzie
+  wypowiadany automatycznie, włączając w to widget czujnika pamięci i błędy
+  z Windows update.
 * Wartości paska postępu i inne informacje, nie są wypowiadane
   automatycznie.
 * Dla niektórych list rozwijanych i przycisków opcji, NVDA będzie wykrywał

@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer și alți utilizatori Windows 10
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
-* NVDA compatibility: 2018.4 to 2019.1
+* NVDA compatibility: 2018.4 to 2019.2
 
 Acest supliment cuprinde o colecție de module pentru diverse aplicații din
 Windows 10, dar și rezolvări și îmbunătățiri pentru anumite controale din
@@ -64,13 +64,13 @@ versiunile suplimentului][3].
   de setări NVDA.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
-* Următoarele evenimente UIA sunt recunoscute: schimbarea poziției textului
-  activ, controler pentru, început de tragere, tragere finalizată, element
-  selectat, stare element, schimbare regiune activă, notificare, alertă de
-  sistem, indiciu deschis, fereastră deschisă. Cu NVDA-ul setat să ruleze cu
-  diagnosticarea activată, aceste evenimente vor fi urmărite, iar pentru
-  evenimentul de tip notificare UIA, se va auzi un ton de diagnosticare dacă
-  notificările nu vin din aplicația curentă, ci de altundeva.
+* The following UIA events are recognized: active text position change,
+  controller for, drag start, drag cancel, drag complete, element selected,
+  item status, live region change, notification, system alert, text change,
+  tooltip opened, window opened. With NVDA set to run with debug logging
+  enabled, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard if notifications come from somewhere other than
+  the currently active app.
 * Indiciile din Edge și alte aplicații universale sunt recunoscute și vor fi
   anunțate.
 * When opening, closing, or switching between virtual desktops, NVDA will

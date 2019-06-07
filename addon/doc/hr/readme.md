@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu inačicu][1]
 * Preuzmi [razvojnu inačicu][2]
-* NVDA compatibility: 2018.4 to 2019.1
+* NVDA compatibility: 2018.4 to 2019.2
 
 This add-on is a collection of app modules for various Windows 10 apps, as
 well as enhancements and fixes for certain windows 10 controls.
@@ -60,11 +60,11 @@ For a list of changes made between each add-on releases, refer to
   poziciji (NPR. 1 od 2) se više ne izgovara.
 * The following UIA events are recognized: active text position change,
   controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, tooltip
-  opened, window opened. With NVDA set to run with debug logging enabled,
-  these events will be tracked, and for UIA notification event, a debug tone
-  will be heard if notifications come from somewhere other than the
-  currently active app.
+  item status, live region change, notification, system alert, text change,
+  tooltip opened, window opened. With NVDA set to run with debug logging
+  enabled, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard if notifications come from somewhere other than
+  the currently active app.
 * Tooltips from Edge and universal apps are recognized and will be
   announced.
 * When opening, closing, or switching between virtual desktops, NVDA will

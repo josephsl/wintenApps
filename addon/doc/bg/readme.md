@@ -3,7 +3,7 @@
 * Автори: Joseph Lee, Derek Riemer и други потребители на Windows 10
 * Изтегляне на [стабилна версия][1]
 * Изтегляне на [тестова версия][2]
-* Съвместимост с NVDA: от 2018.4 до 2019.1
+* NVDA compatibility: 2018.4 to 2019.2
 
 Тази добавка е колекция от спомагателни модули за разни приложения в Windows
 10. Тя също така съдържа поправки и подобрения за разни контроли в
@@ -66,9 +66,9 @@
   информацията за позицията (например 1 от 2).
 * Разпознават се следните UIA събития: active text position change,
   controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, tooltip
-  opened, window opened. Когато е указано на NVDA да работи с включено
-  протоколиране за отстраняване на грешки, тези събития ще бъдат
+  item status, live region change, notification, system alert, text change,
+  tooltip opened, window opened. Когато е указано на NVDA да работи с
+  включено протоколиране за отстраняване на грешки, тези събития ще бъдат
   проследявани. А за събития за UIA известия, ще бъде възпроизвеждан и тон
   за отстраняване на грешки, ако известията идват от приложение, различно от
   текущо фокусираното.
