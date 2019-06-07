@@ -3,7 +3,7 @@
 * 作者: Joseph Lee, Derek Riemer and other Windows 10 users
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* 插件兼容的NVDA版本: 2018.4至2019.1
+* NVDA compatibility: 2018.4 to 2019.2
 
 此附加组件用于各种Windows 10应用程序的模块集合，以及针对某些Windows 10控件的增强功能和修复程序。
 
@@ -55,7 +55,13 @@
 * 某些对话框现在被识别为正确的对话框并按此朗读，包括“内幕预览”对话框（设置应用程序）。
 * 在大多数情况下，NVDA可以在执行搜索时朗读建议计数。此选项由NVDA设置中的对象显示面板中的“朗读对象位置信息”控制。
 * 在某些上下文菜单中（例如在Edge中），位置信息（例如，1、2）不再被朗读。
-* 现在识别以下UIA事件：活动文本位置更改，控制器，拖动开始，拖动取消，拖动完成，元素选择，项目状态，实时区域更改，通知，系统警报，工具提示打开，窗口打开。将NVDA设置为启用调试日志记录运行时，将跟踪这些事件，对于UIA通知事件，如果通知来自当前活动应用程序以外的某个位置，则会听到调试音。
+* The following UIA events are recognized: active text position change,
+  controller for, drag start, drag cancel, drag complete, element selected,
+  item status, live region change, notification, system alert, text change,
+  tooltip opened, window opened. With NVDA set to run with debug logging
+  enabled, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard if notifications come from somewhere other than
+  the currently active app.
 * 来自Edge和通用应用程序的工具提示已被识别并将被朗读。
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce current desktop name (desktop 2, for example).

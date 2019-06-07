@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer e altri utenti Windows 10.
 * Scarica la [versione stabile][1]
 * Scarica la [versione in sviluppo][2]
-* NVDA compatibility: 2018.4 to 2019.1
+* NVDA compatibility: 2018.4 to 2019.2
 
 Questo componente aggiuntivo è un insieme di app module per numerose app di
 Windows10, che consente anche di risolvere anomalie con alcuni controlli.
@@ -60,12 +60,13 @@ riferimento al documento [changelogs for add-on releases][3].
   in Object presentation panel found in NVDA settings.
 * In alcuni menu di contesto, come in Edge, le informazioni sulla posizione
   come 1 su 2 non vengono più annunciate.
-* Sono riconosciuti i seguenti eventi UIA: modulo di controllo, inizio
-  trascinamento, trascinamento annullato, trascinamento completato, elemento
-  selezionato, modifica regione live, notifica, avviso di sistema,
-  suggerimento aperto, finestra aperta. Quando NVDA è avviato con il log
-  impostato su debug, questi eventi saranno tracciati, e per gli eventi di
-  notifiche UIA, verrà emesso un segnale acustico.
+* The following UIA events are recognized: active text position change,
+  controller for, drag start, drag cancel, drag complete, element selected,
+  item status, live region change, notification, system alert, text change,
+  tooltip opened, window opened. With NVDA set to run with debug logging
+  enabled, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard if notifications come from somewhere other than
+  the currently active app.
 * Vengono riconosciuti e annunciati i suggerimenti di Microsoft Edge e
   universal-app.
 * When opening, closing, or switching between virtual desktops, NVDA will
