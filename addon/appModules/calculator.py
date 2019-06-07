@@ -46,8 +46,8 @@ class AppModule(appModuleHandler.AppModule):
 	_resultsCache = ""
 
 	def event_nameChange(self, obj, nextHandler):
-		# No, announce value changes immediately except for calculator results.
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID != "CalculatorResults" and obj.name != self._resultsCache:
+		# No, announce value changes immediately except for calculator results and expressions.
+		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID not in ("CalculatorResults", "CalculatorExpression") and obj.name != self._resultsCache:
 			# For unit conversion, UIA notification event presents much better messages.
 			if obj.UIAElement.cachedAutomationID not in ("Value1", "Value2"):
 				ui.message(obj.name)
@@ -69,7 +69,9 @@ class AppModule(appModuleHandler.AppModule):
 		try:
 			shouldAnnounceNotification = obj.previous.UIAElement.cachedAutomationID in ("numberPad", "UnitConverterRootGrid")
 		except AttributeError:
-			shouldAnnounceNotification = api.getForegroundObject().children[1].lastChild.firstChild.UIAElement.cachedAutomationID != "CalculatorResults"
+			# Another UI redesign in 2019, causing attribute error when changing categories.
+			resultElement = api.getForegroundObject().children[1].lastChild
+			shouldAnnounceNotification = resultElement and resultElement.firstChild and resultElement.firstChild.UIAElement.cachedAutomationID != "CalculatorResults"
 		# Also, warn users if maximum digi count has been reached (a different activity ID than display updates).
 		if shouldAnnounceNotification or activityId == "MaxDigitsReached":
 			nextHandler()

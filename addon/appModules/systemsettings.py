@@ -28,21 +28,26 @@ class AppModule(appModuleHandler.AppModule):
 					obj.name = obj.parent.previous.name
 			# From Redstone 1 onwards, update history shows status rather than the title.
 			# In build 16232, the title is shown but not the status, so include this for sake of backward compatibility.
-			elif obj.role == controlTypes.ROLE_LINK and obj.UIAElement.cachedAutomationID.startswith("HistoryEvent") and obj.name != obj.previous.name:
+			# In later revisions of build 17134 and later, feature update download link is provided and is initially called "download and install now", thus add the feature update title as well.
+			elif obj.role == controlTypes.ROLE_LINK:
 				nameList = [obj.name]
-				# Add the status text in 1709 and later.
-				# But since 16251, a "what's new" link has been added for feature updates, so consult two previous objects.
-				eventID = obj.UIAElement.cachedAutomationID.split("_")[0]
-				possibleFeatureUpdateText = obj.previous.previous
-				# This automation ID may change in a future Windows 10 release.
-				if possibleFeatureUpdateText.UIAElement.cachedAutomationID == "_".join([eventID, "TitleTextBlock"]):
-					nameList.insert(0, obj.previous.name)
-					nameList.insert(0, possibleFeatureUpdateText.name)
-				else:
-					nameList.append(obj.next.name)
+				if obj.UIAElement.cachedAutomationID.startswith("HistoryEvent") and obj.name != obj.previous.name:
+					# Add the status text in 1709 and later.
+					# But since 16251, a "what's new" link has been added for feature updates, so consult two previous objects.
+					eventID = obj.UIAElement.cachedAutomationID.split("_")[0]
+					possibleFeatureUpdateText = obj.previous.previous
+					# This automation ID may change in a future Windows 10 release.
+					if possibleFeatureUpdateText.UIAElement.cachedAutomationID == "_".join([eventID, "TitleTextBlock"]):
+						nameList.insert(0, obj.previous.name)
+						nameList.insert(0, possibleFeatureUpdateText.name)
+					else:
+						nameList.append(obj.next.name)
+				elif obj.UIAElement.cachedAutomationID == "SystemSettings_MusUpdate_SeekerUpdateUX_HyperlinkButton":
+					# Unconditionally locate the new feature update title, skipping the link description.
+					nameList.insert(0, obj.previous.previous.name)
 				obj.name = ", ".join(nameList)
 			# In some cases, Active Directory-style name is the name of the window, so tell NVDA to use something more meaningful.
-			if obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
+			elif obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
 				obj.name = obj.firstChild.name
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
