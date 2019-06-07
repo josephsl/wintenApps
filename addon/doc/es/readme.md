@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer y otros usuarios de Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
-* Compatibilidad con NVDA: de 2018.4 a 2019.1
+* Compatibilidad con NVDA: de 2018.4 a 2019.2
 
 Este complemento es una colección de app modules para varias aplicaciones de
 Windows 10, así como Mejoras y correcciones para ciertos controles de
@@ -65,10 +65,10 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   posición (ej.: 1 de 2) ya no se anuncia.
 * Se reconocen los siguientes eventos UIA: active text position change,
   Controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, tooltip
-  opened, window opened. Con NVDA configurado para ejecutarse con el
+  item status, live region change, notification, system alert, text change,
+  tooltip opened, window opened. Con NVDA configurado para ejecutarse con el
   registro de depuración habilitado, estos eventos se seguirán, y se oirá un
-  tono de depuración para el elemento UIA notification si las notificaciones
+  tono de depuración para el evento UIA notification si las notificaciones
   vienen de un lugar distinto a la aplicación actual.
 * Se reconocerán y anunciarán los consejos para Edge y para aplicaciones
   universales.

@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA kompatibilitet: 2018.4 til 2019.1
+* NVDA compatibility: 2018.4 to 2019.2
 
 Denne tilføjelse er en samling af app-moduler til forskellige Windows 10
 apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.
@@ -58,12 +58,13 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   objektets placering" i indstillingspanelet "Objektpræsentation".
 * I visse kontekstmenuer (f.eks. i Microsoft Edge), er positionssoplysninger
   (f.eks. 1 af 2) ikke længere annonceret.
-* De følgende UIA begivenheder er anerkendt: active text position change,
+* The following UIA events are recognized: active text position change,
   controller for, drag start, drag cancel, drag complete, element selected,
-  live region change, notification, system alert, tooltip opened, window
-  opened. Med NVDA indstillet til at køre med logføring aktiveret, spores
-  disse begivenheder, og for UIA notification event, vil en fejltone blive
-  hørt, hvis notifikationer kommer fra en anden app en den aktuelle.
+  item status, live region change, notification, system alert, text change,
+  tooltip opened, window opened. With NVDA set to run with debug logging
+  enabled, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard if notifications come from somewhere other than
+  the currently active app.
 * Værktøjstips fra Edge og universale apps er genkendte og vil blive
   annonceret.
 * When opening, closing, or switching between virtual desktops, NVDA will

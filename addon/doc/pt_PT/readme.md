@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixar [versão estável][1]
 * Baixar [versão de desenvolvimento][2]
-* Compatibilidade com NVDA: 2018.4 a 2019.1
+* NVDA compatibility: 2018.4 to 2019.2
 
 Este extra é uma colecção de módulos de aplicações para várias aplicações do
 Windows 10, bem como aprimoramentos e correcções para determinados
@@ -63,14 +63,13 @@ consulte o documento [changelogs for releases, release][3].
   que pode ser encontrado nas configurações do NVDA.
 * Em determinados menus de contexto (como no Edge), as informações de
   posição (por exemplo, 1 de 2) deixaram de ser anunciadas.
-* Os seguintes eventos UIA são, agora, reconhecidos: alteração da posição do
-  texto activo, controlador para, arrastar início, arrastar cancelamento,
-  arrastar completo, elemento selecionado, alterar região ao vivo,
-  notificação, alerta do sistema, tooltip aberta, janela aberta. Com o NVDA
-  configurado para ser executado com o log de depuração activado, esses
-  eventos serão rastreados e, para o evento de notificação UIA, um beep de
-  depuração será ouvido se as notificações vierem de algum lugar diferente
-  do aplicativo actualmente activo.
+* The following UIA events are recognized: active text position change,
+  controller for, drag start, drag cancel, drag complete, element selected,
+  item status, live region change, notification, system alert, text change,
+  tooltip opened, window opened. With NVDA set to run with debug logging
+  enabled, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard if notifications come from somewhere other than
+  the currently active app.
 * As dicas de ferramentas do Edge e aplicativos universais são reconhecidas
   e serão anunciadas.
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
