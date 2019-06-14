@@ -3,7 +3,7 @@
 * 作者: Joseph Lee, Derek Riemer and other Windows 10 users
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA compatibility: 2018.4 to 2019.2
+* NVDA兼容版本: 2018.4至2019.2
 
 此附加组件用于各种Windows 10应用程序的模块集合，以及针对某些Windows 10控件的增强功能和修复程序。
 
@@ -18,8 +18,7 @@
 * 邮件
 * 地图
 * 斯巴达浏览器
-* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
-  clipboard items in Version 1709 and later)
+* 系统键盘（版本1709及更高版本中的表情符号面板/听写/硬件输入建议/云剪贴板项目）
 * {longName} ({name})
   版本: {version}
   网址: {url}
@@ -39,9 +38,8 @@
 
 注意:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18362) and latest stable version of NVDA.
+* 此插件需要Windows 10版本1803（版本17134）或更高版本以及NVDA 2018.4或更高版本。为获得最佳效果，请使用最新Windows
+  10稳定版（build 18362）和最新稳定版NVDA的插件。
 * 一些插件功能可能将成为NVDA屏幕阅读器的一部分。
 * 对于未在下面列出的条目，您可以假定功能是NVDA的一部分，不再适用，因为插件不支持旧版本的Windows
   10，或者对应用程序进行了更改，使条目不再适用。
@@ -55,19 +53,11 @@
 * 某些对话框现在被识别为正确的对话框并按此朗读，包括“内幕预览”对话框（设置应用程序）。
 * 在大多数情况下，NVDA可以在执行搜索时朗读建议计数。此选项由NVDA设置中的对象显示面板中的“朗读对象位置信息”控制。
 * 在某些上下文菜单中（例如在Edge中），位置信息（例如，1、2）不再被朗读。
-* The following UIA events are recognized: active text position change,
-  controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, text change,
-  tooltip opened, window opened. With NVDA set to run with debug logging
-  enabled, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard if notifications come from somewhere other than
-  the currently active app.
+* 现在识别以下UIA事件：活动文本位置更改，控制器，拖动开始，拖动取消，拖动完成，元素选择，项目状态，实时区域更改，通知，系统警报，文本更改，工具提示打开，窗口打开。将NVDA设置为启用调试日志记录运行时，将跟踪这些事件，对于UIA通知事件，如果通知来自当前活动应用程序以外的某个位置，则会听到调试音。
 * 来自Edge和通用应用程序的工具提示已被识别并将被朗读。
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce current desktop name (desktop 2, for example).
+* 在虚拟桌面之间打开，关闭或切换时，NVDA将朗读当前桌面名称（例如，桌面2）。
 * 在更改屏幕分辨率或方向时，NVDA将不再公布“开始”菜单大小文本。
-* In Version 1903 (May 2019 Update), NVDA will announce volume and
-  brightness changes immediately.
+* 在版本1903（2019年5月更新）中，NVDA将朗读音量和亮度变化。
 
 ## 活动中心
 
@@ -128,15 +118,11 @@
 * 支持在版本1809（版本17666及更高版本）中朗读云剪贴板项目。
 * 使用现代键盘及其功能时减少不必要的冗长。这些包括在打开硬件键盘输入建议时不再公布“Microsoft Candidate
   UI”，并且某些触摸键盘键在某些系统上引发名称更改事件时不再保持沉默。
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
-  2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This is now part of NVDA 2019.1.
-* NVDA will no longer announce "clipboard" when there are items in the
-  clipboard under some circumstances.
-* On some systems running Version 1903 (May 2019 Update), NVDA will no
-  longer appear to do nothing when emoji panel opens.
+* 在最近的19H1 Insider Preview版本中关闭表情符号面板时，NVDA将不再播放错误音或不执行任何操作。这是NVDA
+  2019.1的一部分。
+* 在版本1809（2018年10月更新）及更高版本中，如果可能，NVDA将朗读表情符号的搜索结果。这是NVDA 2019.1的一部分。
+* 在某些情况下，当剪贴板中有项目时，NVDA将不再朗读“剪贴板”。
+* 在某些运行版本1903（2019年5月更新）的系统上，当表情符号面板打开时，NVDA将不再显示任何内容。
 
 ## {longName} ({name})
 版本: {version}
@@ -154,9 +140,7 @@
 
 ## 设置
 
-* Certain information such as Windows Update progress is reported
-  automatically, including Storage sense/disk cleanup widget and errors from
-  Windows Update.
+* 现在将自动报告某些信息，例如Windows Update进度，包括存储感知/磁盘清理小部件和Windows Update中的错误。
 * 进度栏值和其他信息不再重复朗读两次。
 * 对于某些组合框和单选按钮，NVDA将不再无法识别标签和/或读出更改值。
 * 在版本1803和更高版本中不再听到音量进度条蜂鸣声。
