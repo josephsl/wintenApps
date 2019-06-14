@@ -26,7 +26,6 @@ W10AddonSupported = winVersion.winVersion[:3] >= (10, 0, 17134)
 UIA_Drag_DragStartEventId = 20026
 UIA_Drag_DragCancelEventId = 20027
 UIA_Drag_DragCompleteEventId = 20028
-UIA_ActiveTextPositionChangedEventId = 20036
 UIA_Text_TextChangedEventId = 20015
 
 # For convenience.
@@ -34,7 +33,6 @@ W10Events = {
 	UIA_Drag_DragStartEventId: "UIA_dragStart",
 	UIA_Drag_DragCancelEventId: "UIA_dragCancel",
 	UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
-	UIA_ActiveTextPositionChangedEventId: "UIA_activeTextPositionChanged",
 	UIA_Text_TextChangedEventId: "textChange"
 }
 
@@ -289,13 +287,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "tooltipOpened")
-		nextHandler()
-
-	def event_UIA_activeTextPositionChanged(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "activeTextPositionChanged")
-		import tones
-		# For debugging purposes.
-		tones.beep(250, 100)
 		nextHandler()
 
 	def event_UIA_itemStatus(self, obj, nextHandler):
