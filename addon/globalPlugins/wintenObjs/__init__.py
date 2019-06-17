@@ -215,11 +215,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_nameChange(self, obj, nextHandler):
 		# NVDA Core issue 5641: try catching virtual desktop switch event, which will result in name change for the desktop object.
 		# To be taken care of by NVDA Core, and for older releases, let the add-on handle it for a time.
+		# This may degrade performance and/or cause NVDA to become verbose in situations other than virtual desktop switch, so exercise discretion.
 		if obj.windowClassName == "#32769":
-			import wx, eventHandler
-			# Even with desktop name change handler added, older Windows 10 releases won't support this properly.
-			if (not hasattr(eventHandler, "handlePossibleDesktopNameChange") or (hasattr(eventHandler, "handlePossibleDesktopNameChange") and winVersion.winVersion.build < 18362)):
-				wx.CallLater(500, ui.message, obj.name)
+			if globalVars.appArgs.debugLogging:
+				import tones
+				tones.beep(512, 50)
+				log.debug("W10: possible desktop name change from %s, app module: %s"%(obj,obj.appModule))
+			# CSRSS: Client/Server Runtime Subsystem (Windows subsystem process/desktop object)
+			if obj.appModule.appName == "csrss":
+				import wx, eventHandler
+				# Even with desktop name change handler added, older Windows 10 releases won't support this properly.
+				if (not hasattr(eventHandler, "handlePossibleDesktopNameChange") or (hasattr(eventHandler, "handlePossibleDesktopNameChange") and winVersion.winVersion.build < 18362)):
+					wx.CallLater(500, ui.message, obj.name)
 		self.uiaDebugLogging(obj, "nameChange")
 		nextHandler()
 
