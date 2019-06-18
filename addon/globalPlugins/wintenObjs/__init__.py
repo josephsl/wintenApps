@@ -192,9 +192,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif obj._getUIACacheablePropertyValue(30173) > 80050:
 				clsList.insert(0, XAMLHeading)
 
-	# Record UIA property info about an object if debug logging is enabled.
+	# Find out if log recording is possible.
+	# This will work if debug logging is on and/or tracing apps and/or events is specified.
+	def recordLog(self, obj, event):
+		return isinstance(obj, UIA) and globalVars.appArgs.debugLogging
+
+	# Record UIA property info about an object if told to do so.
 	def uiaDebugLogging(self, obj, event=None):
-		if isinstance(obj, UIA) and globalVars.appArgs.debugLogging:
+		if self.recordLog(obj, event):
 			info = ["object: %s"%repr(obj)]
 			info.append("name: %s"%obj.name)
 			if not event:
