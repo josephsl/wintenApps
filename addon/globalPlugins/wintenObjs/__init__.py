@@ -194,8 +194,24 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Find out if log recording is possible.
 	# This will work if debug logging is on and/or tracing apps and/or events is specified.
+	trackedEvents = set()
+	trackedApps = set()
+
 	def recordLog(self, obj, event):
-		return isinstance(obj, UIA) and globalVars.appArgs.debugLogging
+		if not isinstance(obj, UIA):
+			return False
+		eventsTracked = len(self.trackedEvents) > 0
+		appsTracked = len(self.trackedApps) > 0
+		# Log properties based on the following truth table/conditional statements.
+		if not eventsTracked and not appsTracked:
+			return globalVars.appArgs.debugLogging
+		elif eventsTracked and not appsTracked:
+			return event in self.trackedEvents
+		elif not eventsTracked and appsTracked:
+			return obj.appModule.appName in self.trackedApps
+		# Just in case an event/app combo is specified.
+		else:
+			return event in self.trackedEvents and obj.appModule.appName in self.trackedApps
 
 	# Record UIA property info about an object if told to do so.
 	def uiaDebugLogging(self, obj, event=None):
@@ -215,7 +231,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				info.append("framework Id: %s"%element.cachedFrameworkId)
 			elif event == "itemStatus":
 				info.append("item status: %s"%element.currentItemStatus)
-			log.debug(u"W10: UIA {debuginfo}".format(debuginfo = ", ".join(info)))
+			if globalVars.appArgs.debugLogging:
+				log.debug(u"W10: UIA {debuginfo}".format(debuginfo = ", ".join(info)))
+			else:
+				log.info(u"W10: UIA {debuginfo}".format(debuginfo = ", ".join(info)))
 
 	def event_nameChange(self, obj, nextHandler):
 		# NVDA Core issue 5641: try catching virtual desktop switch event, which will result in name change for the desktop object.
