@@ -11,8 +11,8 @@ The following app modules or support modules for some apps are included (see eac
 
 * Action center
 * Alarms and Clock.
-* Calendar
 * Calculator (modern).
+* Calendar
 * Cortana
 * Feedback Hub
 * Mail
