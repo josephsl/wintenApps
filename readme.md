@@ -9,8 +9,6 @@ This add-on is a collection of app modules for various Windows 10 apps, as well 
 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
-* Action center
-* Alarms and Clock.
 * Calculator (modern).
 * Calendar
 * Cortana
@@ -27,7 +25,7 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and NVDA 2018.4 or later. For best results, use the add-on with latest Windows 10 stable release (build 18362) and latest stable version of NVDA.
+* This add-on requires Windows 10 Version 1803 (build 17134) or later and NVDA 2019.1 or later. For best results, use the add-on with latest Windows 10 stable release (build 18362) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to Windows 10 and apps that makes entries no longer applicable.
 
@@ -46,15 +44,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
 * In Version 1903 (May 2019 Update), NVDA will announce volume and brightness changes immediately if focused on File Explorer. This is now part of NVDA 2019.2.
-
-## Action center
-
-* Brightness quick action is now a button instead of a toggle button. This is now part of NVDA 2019.1.
-* Various status changes such as Focus Assist and Brightness will be reported. This is now part of NVDA 2019.1.
-
-## Alarms and clock
-
-* Time picker values are now announced, noticeable when moving focus to picker controls. This also affects the control used to select when to restart to finish installing Windows updates. This is now part of NVDA 2019.1.
 
 ## Calculator
 
@@ -98,12 +87,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 Note: most features below are now part of NVDA 2018.3 or later.
 
 * Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including the redesigned panel in Version 1809 (build 17661 and later) and changes made in 19H1 (build 18262 and later, including kaomoji and symbols categories in build 18305). If using NVDA releases earlier than 2018.4, for best experience when reading emojis, use Windows OneCore speech synthesizer. If 2018.4 or later is in use, enable Unicode Consortium setting from NvDA's speech settings and set symbol level to "some" or higher.
-* Support for hardware keyboard input suggestions in Version 1803 (April 2018 Update) and later.
-* In post-1709 builds, NVDA will announce the first selected emoji when emoji panel opens. This is more noticeable in build 18262 and later where emoji panel may open to last browsed category, such as displaying skin tone modifiers when opened to People category.
-* Support for announcing cloud clipboard items in Version 1809 (build 17666 and later).
-* Reduced unnecessary verbosity when working with modern keyboard and its features. These include no longer announcing "Microsoft Candidate UI" when opening hardware keyboard input suggestions and staying silent when certain touch keyboard keys raise name change event on some systems.
-* NVDA will no longer play error tones or do nothing when closing emoji panel in more recent 19H1 Insider Preview builds. This is now part of NVDA 2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search results for emojis if possible. This is now part of NVDA 2019.1.
 * NVDA will no longer announce "clipboard" when there are items in the clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update), NVDA will no longer appear to do nothing when emoji panel opens.
 
