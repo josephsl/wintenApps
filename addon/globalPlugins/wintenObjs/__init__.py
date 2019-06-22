@@ -173,22 +173,27 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Because the add-on version deals with focus comparison, let all search fields go through this check, which resolves an issue where bogus controller for event is fired when Edge becomes full screen.
 			if obj.appModule.appName != "searchui":
 				clsList.insert(0, SearchField)
+				return
 		# A dedicated version for Mail app's address/mention suggestions.
 		elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
 			clsList.insert(0, UIAEditableTextWithSuggestions)
+			return
 		# Some search fields does not raise controller for but suggestions are next to them.
 		elif obj.UIAElement.cachedAutomationID == "QueryInputTextBox":
 			clsList.insert(0, SearchFieldWithNoControllerFor)
+			return
 		# Menu items should never expose position info (seen in various context menus such as in Edge).
 		# Also take care of recognizing submenus across apps.
 		elif obj.UIAElement.cachedClassName in ("MenuFlyoutItem", "MenuFlyoutSubItem"):
 			clsList.insert(0, MenuItemNoPosInfo)
+			return
 		# #44: Recognize XAML/UWP tool tips.
 		elif obj.UIAElement.cachedClassName == "ToolTip" and obj.UIAElement.cachedFrameworkID == "XAML":
 			# Just in case XAML tool tip support is part of NVDA...
 			import NVDAObjects.UIA
 			if not hasattr(NVDAObjects.UIA, "ToolTip"):
 				clsList.insert(0, ToolTip)
+				return
 		# Recognize headings as reported by XAML (build 17134 and later).
 		elif obj._getUIACacheablePropertyValue(30173) > 80050:
 			clsList.insert(0, XAMLHeading)
