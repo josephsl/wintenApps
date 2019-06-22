@@ -147,44 +147,50 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				UIAHandler.UIADialogClassNames.append(dialogClassName)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		# Because this add-on might be turned on "accidentally" in earlier Windows releases, including unsupported Windows 10 builds...
-		if not W10AddonSupported: return
-		if isinstance(obj, UIA):
-			# Windows that are really dialogs.
-			# NVDA Core issue 8405: in build 17682 and later, IsDialog property has been added, making comparisons easier.
-			# However, don't forget that many users are still using old Windows 10 releases.
-			# The most notable case is app uninstall confirmation dialog from Start menu in build 17134 and earlier.
-			# Some dialogs, although listed as a dialog thanks to UIA class name, does not advertise the proper role of dialog.
-			if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
-				clsList.insert(0, Dialog)
+		# There's no point looking at non-UIA objects.
+		# Also because this add-on might be turned on "accidentally" in earlier Windows releases, including unsupported Windows 10 builds...
+		if not (isinstance(obj, UIA) and W10AddonSupported):
+			return
+		# Windows that are really dialogs.
+		# NVDA Core issue 8405: in build 17682 and later, IsDialog property has been added, making comparisons easier.
+		# However, don't forget that many users are still using old Windows 10 releases.
+		# The most notable case is app uninstall confirmation dialog from Start menu in build 17134 and earlier.
+		# Some dialogs, although listed as a dialog thanks to UIA class name, does not advertise the proper role of dialog.
+		if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
+			clsList.insert(0, Dialog)
+			return
+		# Search field that does raise controller for event.
+		# Also take care of Edge address omnibar and Start search box.
+		# Although basic functionality is included in NVDA 2017.3, added enhancements such as announcing suggestion count.
+		if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
+			# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcement problem.
+			# Because the add-on version deals with focus comparison, let all search fields go through this check, which resolves an issue where bogus controller for event is fired when Edge becomes full screen.
+			if obj.appModule.appName != "searchui":
+				clsList.insert(0, SearchField)
 				return
-			# Search field that does raise controller for event.
-			# Also take care of Edge address omnibar and Start search box.
-			# Although basic functionality is included in NVDA 2017.3, added enhancements such as announcing suggestion count.
-			if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
-				# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcement problem.
-				# Because the add-on version deals with focus comparison, let all search fields go through this check, which resolves an issue where bogus controller for event is fired when Edge becomes full screen.
-				if obj.appModule.appName != "searchui":
-					clsList.insert(0, SearchField)
-			# A dedicated version for Mail app's address/mention suggestions.
-			elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
-				clsList.insert(0, UIAEditableTextWithSuggestions)
-			# Some search fields does not raise controller for but suggestions are next to them.
-			elif obj.UIAElement.cachedAutomationID == "QueryInputTextBox":
-				clsList.insert(0, SearchFieldWithNoControllerFor)
-			# Menu items should never expose position info (seen in various context menus such as in Edge).
-			# Also take care of recognizing submenus across apps.
-			elif obj.UIAElement.cachedClassName in ("MenuFlyoutItem", "MenuFlyoutSubItem"):
-				clsList.insert(0, MenuItemNoPosInfo)
-			# #44: Recognize XAML/UWP tool tips.
-			elif obj.UIAElement.cachedClassName == "ToolTip" and obj.UIAElement.cachedFrameworkID == "XAML":
-				# Just in case XAML tool tip support is part of NVDA...
-				import NVDAObjects.UIA
-				if not hasattr(NVDAObjects.UIA, "ToolTip"):
-					clsList.insert(0, ToolTip)
-			# Recognize headings as reported by XAML (build 17134 and later).
-			elif obj._getUIACacheablePropertyValue(30173) > 80050:
-				clsList.insert(0, XAMLHeading)
+		# A dedicated version for Mail app's address/mention suggestions.
+		elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
+			clsList.insert(0, UIAEditableTextWithSuggestions)
+			return
+		# Some search fields does not raise controller for but suggestions are next to them.
+		elif obj.UIAElement.cachedAutomationID == "QueryInputTextBox":
+			clsList.insert(0, SearchFieldWithNoControllerFor)
+			return
+		# Menu items should never expose position info (seen in various context menus such as in Edge).
+		# Also take care of recognizing submenus across apps.
+		elif obj.UIAElement.cachedClassName in ("MenuFlyoutItem", "MenuFlyoutSubItem"):
+			clsList.insert(0, MenuItemNoPosInfo)
+			return
+		# #44: Recognize XAML/UWP tool tips.
+		elif obj.UIAElement.cachedClassName == "ToolTip" and obj.UIAElement.cachedFrameworkID == "XAML":
+			# Just in case XAML tool tip support is part of NVDA...
+			import NVDAObjects.UIA
+			if not hasattr(NVDAObjects.UIA, "ToolTip"):
+				clsList.insert(0, ToolTip)
+				return
+		# Recognize headings as reported by XAML (build 17134 and later).
+		elif obj._getUIACacheablePropertyValue(30173) > 80050:
+			clsList.insert(0, XAMLHeading)
 
 	# Find out if log recording is possible.
 	# This will work if debug logging is on and/or tracing apps and/or events is specified.
