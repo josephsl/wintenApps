@@ -79,6 +79,7 @@ _playSuggestionsSounds = False
 
 # For UIA search fields that does not raise any controller for at all.
 # For these, value change event should be tracked.
+# Kept in 19.07 as a historical artifact.
 class SearchFieldWithNoControllerFor(EditableTextWithSuggestions, UIA):
 
 	def event_valueChange(self):
@@ -177,10 +178,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# A dedicated version for Mail app's address/mention suggestions.
 		elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
 			clsList.insert(0, UIAEditableTextWithSuggestions)
-			return
-		# Some search fields does not raise controller for but suggestions are next to them.
-		elif obj.UIAElement.cachedAutomationID == "QueryInputTextBox":
-			clsList.insert(0, SearchFieldWithNoControllerFor)
 			return
 		# Menu items should never expose position info (seen in various context menus such as in Edge).
 		# Also take care of recognizing submenus across apps.
