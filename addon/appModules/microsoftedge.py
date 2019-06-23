@@ -10,10 +10,21 @@
 # Provides additional enhancements.
 
 from nvdaBuiltin.appModules.microsoftedge import *
-from NVDAObjects.UIA import UIA
+from NVDAObjects.UIA import UIA, SearchField
 import controlTypes
 import ui
+import api
 from NVDAObjects.behaviors import EditableTextWithoutAutoSelectDetection, EditableTextWithAutoSelectDetection
+
+# Specifically designed to prevent odd controller for events from being fired when moving focus away from address omnibar.
+class EdgeAddressOmnibar(EditableTextWithAutoSelectDetection, SearchField, UIA):
+
+	def event_suggestionsClosed(self):
+		# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
+		if self != api.getFocusObject():
+			return
+		super(EdgeAddressOmnibar, self).event_suggestionsClosed()
+
 
 class AppModule(AppModule):
 
@@ -21,7 +32,7 @@ class AppModule(AppModule):
 		# Detect selection changes in address omnibar.
 		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "addressEditBox":
 			clsList.remove(EditableTextWithoutAutoSelectDetection)
-			clsList.insert(0, EditableTextWithAutoSelectDetection)
+			clsList.insert(0, EdgeAddressOmnibar)
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
