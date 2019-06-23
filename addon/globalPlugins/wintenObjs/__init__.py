@@ -68,6 +68,7 @@ class SearchField(SearchField):
 
 	def event_suggestionsClosed(self):
 		# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
+		# Kept in 19.07 to serve as a historical artifact.
 		if self.UIAElement.cachedAutomationID == "addressEditBox" and self != api.getFocusObject():
 			return
 		nvwave.playWaveFile(r"waves\suggestionsClosed.wav")
@@ -166,11 +167,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			clsList.insert(0, Dialog)
 			return
 		# Search field that does raise controller for event.
-		# Also take care of Edge address omnibar and Start search box.
 		# Although basic functionality is included in NVDA 2017.3, added enhancements such as announcing suggestion count.
-		if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox", "addressEditBox"):
+		if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox"):
 			# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcement problem.
-			# Because the add-on version deals with focus comparison, let all search fields go through this check, which resolves an issue where bogus controller for event is fired when Edge becomes full screen.
+			# Because the add-on version deals with focus comparison, let all search fields go through this check as much as possible except for specific apps.
 			if obj.appModule.appName != "searchui":
 				clsList.insert(0, SearchField)
 				return
