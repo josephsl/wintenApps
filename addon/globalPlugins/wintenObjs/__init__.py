@@ -70,31 +70,6 @@ class SearchField(SearchField):
 				suggestionsMessage = "1 suggestion" if suggestionsCount == 1 else "%s suggestions"%suggestionsCount
 				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
 
-	def event_suggestionsClosed(self):
-		# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
-		# Kept in 19.07 to serve as a historical artifact.
-		if self.UIAElement.cachedAutomationID == "addressEditBox" and self != api.getFocusObject():
-			return
-		nvwave.playWaveFile(r"waves\suggestionsClosed.wav")
-
-# Contacts search field in People app and other places.
-# An ugly hack to prevent suggestion sounds from repeating.
-_playSuggestionsSounds = False
-
-# For UIA search fields that does not raise any controller for at all.
-# For these, value change event should be tracked.
-# Kept in 19.07 as a historical artifact.
-class SearchFieldWithNoControllerFor(EditableTextWithSuggestions, UIA):
-
-	def event_valueChange(self):
-		global _playSuggestionsSounds
-		if len(self.value) and self.simpleNext.firstChild.role == controlTypes.ROLE_LISTITEM:
-			if not _playSuggestionsSounds:
-				super(SearchFieldWithNoControllerFor, self).event_suggestionsOpened()
-				_playSuggestionsSounds = True
-		elif len(self.value) == 0:
-			_playSuggestionsSounds = False
-
 
 # Some context menu items expose position info, which is quite anoying.
 class MenuItemNoPosInfo(UIA):
