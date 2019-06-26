@@ -22,10 +22,7 @@ addonHandler.initTranslation()
 
 # #52: forget everything if the current release is not a supported version of Windows 10.
 # NVDA 2019.2 includes a handy Windows 10 version check function.
-if hasattr(winVersion, "isWin10"):
-	W10AddonSupported = winVersion.isWin10(version=1809)
-else:
-	W10AddonSupported = winVersion.winVersion[:3] >= (10, 0, 17763)
+W10AddonSupported = winVersion.isWin10(version=1809)
 
 # Extra UIA constants
 UIA_Drag_DragStartEventId = 20026
@@ -275,7 +272,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if obj.appModule.appName == "csrss":
 				import wx, eventHandler
 				# Even with desktop name change handler added, older Windows 10 releases won't support this properly.
-				if (not hasattr(eventHandler, "handlePossibleDesktopNameChange") or (hasattr(eventHandler, "handlePossibleDesktopNameChange") and winVersion.winVersion.build < 18362)):
+				if (not hasattr(eventHandler, "handlePossibleDesktopNameChange") or (hasattr(eventHandler, "handlePossibleDesktopNameChange") and not winVersion.isWin10(version=1903))):
 					wx.CallLater(500, ui.message, obj.name)
 		self.uiaDebugLogging(obj, "nameChange")
 		nextHandler()
