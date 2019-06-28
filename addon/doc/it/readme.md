@@ -13,8 +13,8 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 
 * Centro attività:
 * Allarmi e sveglia.
-* Calendario
 * Calcolatrice (moderna).
+* Calendario
 * Cortana
 * Centro Feedback
 * Posta
@@ -60,13 +60,14 @@ riferimento al documento [changelogs for add-on releases][3].
   in Object presentation panel found in NVDA settings.
 * In alcuni menu di contesto, come in Edge, le informazioni sulla posizione
   come 1 su 2 non vengono più annunciate.
-* The following UIA events are recognized: active text position change,
-  controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, text change,
-  tooltip opened, window opened. With NVDA set to run with debug logging
-  enabled, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard if notifications come from somewhere other than
-  the currently active app.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, element selected, item status, live region change,
+  notification, system alert, text change, tooltip opened, window
+  opened. With NVDA set to run with debug logging enabled, these events will
+  be tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active app.
+* It is possible to tracke only specific events and/or events coming from
+  specific apps.
 * Vengono riconosciuti e annunciati i suggerimenti di Microsoft Edge e
   universal-app.
 * When opening, closing, or switching between virtual desktops, NVDA will
@@ -74,7 +75,8 @@ riferimento al documento [changelogs for add-on releases][3].
 * NVDA non leggerà più le dimensioni del testo del menu avvio quando si
   cambia la risoluzione dello schermo o orientamento.
 * In Version 1903 (May 2019 Update), NVDA will announce volume and
-  brightness changes immediately.
+  brightness changes immediately if focused on File Explorer. This is now
+  part of NVDA 2019.2.
 
 ## Centro attività:
 
@@ -203,6 +205,10 @@ Note: most features below are now part of NVDA 2018.3 or later.
   visualizzata  correttamente.
 * Odd control labels seen in certain Windows 10 installations has been
   corrected.
+* In more recent revisions of Version 1803 and later, due to changes to
+  Windows Update procedure for feature updates, a "download and install now"
+  link has been added. NVDA will now announce the title for the new update
+  if present.
 
 ## Store
 

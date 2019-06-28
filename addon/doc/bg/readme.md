@@ -15,8 +15,8 @@
 
 * Работен център
 * Аларми и часовник
-* Календар
 * Калкулатор (универсално приложение)
+* Календар
 * Cortana
 * Център за обратна връзка
 * Поща
@@ -64,14 +64,14 @@
   настройките на NVDA.
 * В някои контекстни менюта (например в Edge) вече не се съобщава
   информацията за позицията (например 1 от 2).
-* Разпознават се следните UIA събития: active text position change,
-  controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, text change,
-  tooltip opened, window opened. Когато е указано на NVDA да работи с
-  включено протоколиране за отстраняване на грешки, тези събития ще бъдат
-  проследявани. А за събития за UIA известия, ще бъде възпроизвеждан и тон
-  за отстраняване на грешки, ако известията идват от приложение, различно от
-  текущо фокусираното.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, element selected, item status, live region change,
+  notification, system alert, text change, tooltip opened, window
+  opened. With NVDA set to run with debug logging enabled, these events will
+  be tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active app.
+* It is possible to tracke only specific events and/or events coming from
+  specific apps.
 * Подсказките в Edge и другите универсални приложения биват разпознавани и
   ще бъдат съобщавани.
 * При отваряне, затваряне или превключване между виртуалните работни
@@ -79,8 +79,9 @@
   плот 2").
 * NVDA вече няма да съобщава размера на менюто "Старт" при промяна на
   разделителната способност или ориентацията на екрана.
-* Във версия 1903 (актуализацията за май 2019 г.) на Windows 10, NVDA ще
-  докладва незабавно промените в нивата на якостта и силата на звука.
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately if focused on File Explorer. This is now
+  part of NVDA 2019.2.
 
 ## Работен център
 
@@ -219,6 +220,10 @@
   разпознава като такъв.
 * Коригирани са неправилните етикети за контроли, които се забелязват в
   някои инсталации на Windows 10.
+* In more recent revisions of Version 1803 and later, due to changes to
+  Windows Update procedure for feature updates, a "download and install now"
+  link has been added. NVDA will now announce the title for the new update
+  if present.
 
 ## Магазин
 

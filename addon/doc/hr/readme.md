@@ -13,8 +13,8 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 
 * Action center
 * Alarmi i Sat
-* Kalendar
 * kalkulator (moderan).
+* Kalendar
 * Cortana
 * Feedback Hub
 * Pošta
@@ -58,13 +58,14 @@ For a list of changes made between each add-on releases, refer to
   in Object presentation panel found in NVDA settings.
 * U većini kontekstnih izbornika (kao što je to u Edgeu), informacije o
   poziciji (NPR. 1 od 2) se više ne izgovara.
-* The following UIA events are recognized: active text position change,
-  controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, text change,
-  tooltip opened, window opened. With NVDA set to run with debug logging
-  enabled, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard if notifications come from somewhere other than
-  the currently active app.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, element selected, item status, live region change,
+  notification, system alert, text change, tooltip opened, window
+  opened. With NVDA set to run with debug logging enabled, these events will
+  be tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active app.
+* It is possible to tracke only specific events and/or events coming from
+  specific apps.
 * Tooltips from Edge and universal apps are recognized and will be
   announced.
 * When opening, closing, or switching between virtual desktops, NVDA will
@@ -72,7 +73,8 @@ For a list of changes made between each add-on releases, refer to
 * NVDA will no longer announce Start menu size text when changing screen
   resolutions or orientation.
 * In Version 1903 (May 2019 Update), NVDA will announce volume and
-  brightness changes immediately.
+  brightness changes immediately if focused on File Explorer. This is now
+  part of NVDA 2019.2.
 
 ## Action center
 
@@ -192,6 +194,10 @@ Note: most features below are now part of NVDA 2018.3 or later.
 * Windows Update reminder dialog is recognized as a proper dialog.
 * Odd control labels seen in certain Windows 10 installations has been
   corrected.
+* In more recent revisions of Version 1803 and later, due to changes to
+  Windows Update procedure for feature updates, a "download and install now"
+  link has been added. NVDA will now announce the title for the new update
+  if present.
 
 ## Trgovina
 
