@@ -15,8 +15,8 @@ privire la ceea ce este inclus):
 
 * Centru de acțiuni
 * Alarme și Ceas.
-* Calendar
 * Calculator (modern).
+* Calendar
 * Cortana
 * Centrul de Feedback
 * Mail
@@ -64,13 +64,14 @@ versiunile suplimentului][3].
   de setări NVDA.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
-* The following UIA events are recognized: active text position change,
-  controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, text change,
-  tooltip opened, window opened. With NVDA set to run with debug logging
-  enabled, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard if notifications come from somewhere other than
-  the currently active app.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, element selected, item status, live region change,
+  notification, system alert, text change, tooltip opened, window
+  opened. With NVDA set to run with debug logging enabled, these events will
+  be tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active app.
+* It is possible to tracke only specific events and/or events coming from
+  specific apps.
 * Indiciile din Edge și alte aplicații universale sunt recunoscute și vor fi
   anunțate.
 * When opening, closing, or switching between virtual desktops, NVDA will
@@ -78,7 +79,8 @@ versiunile suplimentului][3].
 * NVDA nu mai anunță „dimensiune text start meniu” la schimbarea rezoluției
   ecranului sau a orientării.
 * In Version 1903 (May 2019 Update), NVDA will announce volume and
-  brightness changes immediately.
+  brightness changes immediately if focused on File Explorer. This is now
+  part of NVDA 2019.2.
 
 ## Centru de acțiuni
 
@@ -202,6 +204,10 @@ Notă: majoritatea caracteristicilor de mai jos fac parte din NVDA 2018.3.
 * Dialogul de tip memento al Windows Update este recunoscut așa cum trebuie.
 * Odd control labels seen in certain Windows 10 installations has been
   corrected.
+* In more recent revisions of Version 1803 and later, due to changes to
+  Windows Update procedure for feature updates, a "download and install now"
+  link has been added. NVDA will now announce the title for the new update
+  if present.
 
 ## Magazin
 

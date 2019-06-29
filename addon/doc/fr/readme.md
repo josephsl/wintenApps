@@ -15,8 +15,8 @@ est inclus) :
 
 * Action center
 * Alarmes et Horloge.
-* Calendrier
 * Calculatrice (modern).
+* Calendrier
 * Cortana
 * Hub de commentaires
 * Courrier
@@ -65,23 +65,23 @@ l'extension][3].
   l'objet dans une liste" dans le dialogue Présentation des Objets.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
-* Les événements UIA suivants sont reconnus : changement de position du
-  texte actif, contrôleur pour, début de déplacement, annulation de
-  déplacement, déplacement complet, élément sélectionné, état de l'élément,
-  changement de région en direct, notification, alerte système, suggestion
-  ouverte, fenêtre ouverte. Avec NVDA configuré pour être exécuté avec le
-  journal activé en mode débogage ces événements seront suivis et pour
-  l'événement de notification UIA, une tonalité de débogage sera entendue si
-  les notifications proviennent d'un endroit autre que l'application
-  actuellement active.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, element selected, item status, live region change,
+  notification, system alert, text change, tooltip opened, window
+  opened. With NVDA set to run with debug logging enabled, these events will
+  be tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active app.
+* It is possible to tracke only specific events and/or events coming from
+  specific apps.
 * Les suggestions pour Edge et pour les applications universelles sont
   reconnues et seront annoncées.
 * Lors de l'ouverture, de la fermeture ou du basculement entre les bureaux
   virtuels, NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
 * NVDA n'annoncera plus le texte de la taille du menu Démarrer lorsque vous
   changez la résolution ou l'orientation de l'écran.
-* Sous Windows 10 1903 (build 18362) et ultérieures, NVDA annoncera les
-  changements de volume audio et de luminosité immédiatement.
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately if focused on File Explorer. This is now
+  part of NVDA 2019.2.
 
 ## Action center
 
@@ -220,6 +220,10 @@ NVDA 2018.3 et ultérieurs.
 * Le dialogue de rappel de Windows Update est reconnu comme un dialogue
   propre.
 * Correction de quelques labels qui étaient incorrectes dans quelques cas
+* In more recent revisions of Version 1803 and later, due to changes to
+  Windows Update procedure for feature updates, a "download and install now"
+  link has been added. NVDA will now announce the title for the new update
+  if present.
 
 ## Store
 

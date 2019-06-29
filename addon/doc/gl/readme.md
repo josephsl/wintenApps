@@ -15,8 +15,8 @@ se inclúe):
 
 * Centro de accións
 * Alarmas e reloxo.
-* Calendario
 * Calculadora (modern).
+* Calendario
 * Cortana
 * Centro de Opinións
 * Correo
@@ -62,21 +62,23 @@ documento [rexistros de trocos para publicacións de complementos][3].
   do NVDA.
 * En certos menús de contexto (coma no Edge), a información de posición
   (ex.: 1 de 2) xa non se anuncia.
-* Recoñécense os seguintes eventos UIA: active text position change,
-  Controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, text change,
-  tooltip opened, window opened. Co NVDA configurado para executarse co
-  rexistro de depuración habilitado, estos eventos seguiranse e, no caso do
-  evento UIA notification oirase un ton se as notificacións veñen de
-  calquera lugar que non sexa a app actualmente activa.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, element selected, item status, live region change,
+  notification, system alert, text change, tooltip opened, window
+  opened. With NVDA set to run with debug logging enabled, these events will
+  be tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active app.
+* It is possible to tracke only specific events and/or events coming from
+  specific apps.
 * recoñeceranse e anunciaranse os consellos para o Edge e para as
   aplicacións universais.
 * Cando se abran, pechen ou se conmute entre escritorios virtuales, NVDA
   anunciará o nome do escritorio actual (escritorio 2, por exemplo).
 * NVDA xa non anuncia Menú Inicio tamaño de texto ao cambiar a resolución de
   pantalla ou a orientación.
-* Na versión 1903 (May 2019 Update), NVDA anunciará cambios no volume e o
-  brillo inmediatamente.
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately if focused on File Explorer. This is now
+  part of NVDA 2019.2.
 
 ## Centro de accións
 
@@ -204,6 +206,10 @@ ou posterior.
   axeitadamente como un diálogo.
 * Corrixiuse a disparidade en etiquetas de controis advertida en certas
   instalacións de Windows.
+* In more recent revisions of Version 1803 and later, due to changes to
+  Windows Update procedure for feature updates, a "download and install now"
+  link has been added. NVDA will now announce the title for the new update
+  if present.
 
 ## Tenda
 

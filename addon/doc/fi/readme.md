@@ -14,8 +14,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 * Toimintokeskus
 * Hälytykset ja kello
-* Kalenteri
 * Laskin (moderni)
+* Kalenteri
 * Cortana
 * Palautekeskus
 * Sähköposti
@@ -60,21 +60,23 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   -asetuksella Objektien lukeminen -paneelista NVDA:n asetuksista.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
-* The following UIA events are recognized: active text position change,
-  controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, text change,
-  tooltip opened, window opened. With NVDA set to run with debug logging
-  enabled, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard if notifications come from somewhere other than
-  the currently active app.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, element selected, item status, live region change,
+  notification, system alert, text change, tooltip opened, window
+  opened. With NVDA set to run with debug logging enabled, these events will
+  be tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active app.
+* It is possible to tracke only specific events and/or events coming from
+  specific apps.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
   ilmoitetaan.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2) avattaessa
   ja suljettaessa virtuaalityöpöytiä tai siirryttäessä niiden välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
   suuntaa vaihdettaessa.
-* NVDA ilmoittaa välittömästi äänenvoimakkuuden ja kirkkauden muutokset
-  Windows 10:n versiossa 1903 (May 2019 -päivitys).
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately if focused on File Explorer. This is now
+  part of NVDA 2019.2.
 
 ## Toimintokeskus
 
@@ -201,6 +203,10 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
   valintaikkunaksi.
 * Joissakin Windows-asennuksissa näkyvät erikoiset säädinten nimet on
   korjattu.
+* In more recent revisions of Version 1803 and later, due to changes to
+  Windows Update procedure for feature updates, a "download and install now"
+  link has been added. NVDA will now announce the title for the new update
+  if present.
 
 ## Kauppa
 

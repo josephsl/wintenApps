@@ -1,23 +1,24 @@
-# Windows 10 App Essentials #
+# Windows 10 Apps #
 
-* Autors: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
-* [Stabile Version herunterladen][1]
+* Autoren: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
+* Download [stable version][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA compatibility: 2018.4 to 2019.2
+* NVDA-Kompatibilität: 2018.4 bis 2019.2
 
-Diese Erweiterung bringt ein Paket von Anwendungsmodulen für diverse Windows
-10 Apps sowie Korrekturen in einigen Windows 10 Elementen mit.
+Diese Erweiterung bietet eine Sammlung von Anwendungsmodulen für
+verschiedene Windows 10 Anwendungen sowie Korrekturen in einigen Windows 10
+Elementen.
 
-Die folgenden App-Module oder unterstützten Module für Windows-10-Apps sind
-inbegriffen (siehe weiter unten jeden App-Bereich für mehr Details)
+Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
+Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 * Einstellungscenter für Benachrichtigungen und Aktionen
 * Wecker und Uhr.
-* Kalender
 * Rechner (modern)
+* Kalender
 * Cortana
 * Feedback Hub
-* Mail
+* E-Mail
 * Karten
 * Microsoft Edge
 * Moderne Tastatur (Emoji-Panel- / Diktat- / Hardware-Eingabevorschläge /
@@ -62,22 +63,25 @@ Versionen][3].
   den NVDA-Einstellungen gesteuert.
 * In bestimmten Kontextmenüs (z.B. in Edge) werden Positionsinformationen
   (z.B. 1 von 2) nicht mehr angesagt.
-* Folgende Ereignisse bei der Benutzeroberflächenautomatisierung werden
-  erkannt: aktive Textpositionsänderung, Steuerung für, Drag-Start,
-  Drag-Abbruch, Drag-Full, Element ausgewählt, Elementstatus,
-  Live-Regionsänderung, Benachrichtigung, Systemalarm, Textänderung, Tooltip
-  geöffnet, Fenster geöffnet. Wenn NVDA so eingestellt ist, dass es mit
-  aktiviertem Debug-Logging läuft, werden diese Ereignisse verfolgt und für
-  das Benachrichtigungs-Ereignis der Benutzeroberflächenautomatisierung wird
-  ein Debug-Ton ausgegeben, wenn Benachrichtigungen von einem anderen Ort
-  als der aktuell aktiven Anwendung kommen.
+* Die folgenden Ereignisse für die Benutzeroberflächenautomatisierung werden
+  erkannt: Steuerung für, Drag Start, Drag Cancel, Drag Complete, Element
+  ausgewählt, Elementstatus, Änderung der Live-Region, Benachrichtigung,
+  Systemalarm, Textänderung, Tooltipp geöffnet, Fenster geöffnet. Wenn NVDA
+  so eingestellt ist, dass es mit aktivierter Debug-Protokollierung läuft,
+  werden diese Ereignisse verfolgt und für das Benachrichtigungsereignis der
+  Benutzeroberflächenautomatisierung wird ein Debug-Ton ausgegeben, wenn
+  Benachrichtigungen von einem anderen Ort als der aktuell aktiven Anwendung
+  stammen.
+* Es ist möglich, nur bestimmte Ereignisse bzw. Ereignisse aus bestimmten
+  Anwendungen zu verfolgen.
 * Tooltips von Edge und Universal Apps werden erkannt und angekündigt.
 * Beim Öffnen, Schließen oder Umschalten virtueller Desktops meldet NVDA den
   aktuellen Desktop-Namen (z. B. Desktop 2).
 * NVDA sagt den Text für die Größe des Startmenüs nicht mehr an, wenn die
   Bildschirmauflösung oder Ausrichtung geändert wird.
 * In der Version 1903 (Mai 2019 Update) wird NVDA Änderungen bei der
-  Lautstärke und Helligkeit sofort zurückmelden.
+  Lautstärke und Helligkeit sofort zurückmelden. Dies ist nun eine Neuerung
+  in NVDA 2019.2
 
 ## Einstellungscenter für Benachrichtigungen und Aktionen
 
@@ -91,16 +95,16 @@ Versionen][3].
 * Die Werte für den Fortschrittsbalken werden nun angezeigt. Dies macht sich
   beim Verschieben des Fokus auf die Balkensteuerung bemerkbar. Es betrifft
   auch das Steuerelement für die Festlegung des Neustarts nach einer
-  erfolgreich abgeschlossenen Aktualisierung.
+  erfolgreich abgeschlossenen Aktualisierung. Ist jetzt teil von Version
+  2019.1
 
 ## Rechner
 
 * NVDA sagt die Rechenergebnisse beim Drücken der Eingabe- oder Escape-Taste
   an.
-* Für Berechnungen wie im Einheitenumrechner und Währungsumrechner gibt NVDA
-  die Ergebnisse bekannt, sobald die Berechnungen eingegeben wurden.
-* NVDA wird nicht mehr "Überschriften" für Berechnungsergebnisse bekannt
-  geben.
+* Für Berechnungen wie Umrechnungen von Einheiten und Währungen gibt NVDA
+  das Ergebnis Ergebnisse bekannt, sobald die Berechnung eingegeben wird.
+* NVDA nennt bei Berechnungsergebnissen nicht mehr "Überschriftebenen".
 * NVDA meldet, wenn die maximale Anzahl der Ziffern während der Eingabe von
   Ausdrücken erreicht wurde.
 
@@ -124,7 +128,7 @@ Versionen][3].
 * Feedback-Kathegorien werden in neueren App-Versionen nicht mehr zweimal
   angesagt.
 
-## Mail
+## E-Mail
 
 * Beim Navigieren durch Elemente in der Nachrichtenliste können Sie nun
   Tabellen-Navigationsbefehle verwenden, um Betreffzeilen zu überprüfen. Die
@@ -144,7 +148,7 @@ Versionen][3].
 ## Microsoft Edge
 
 * Die automatische Vervollständigung beim Tippen wird verfolgt und in der
-  Adress-Omnibar ordnungsgemäß angesagt.
+  Adresszeile ordnungsgemäß angesagt.
 * NVDA gibt keinen Vorschläge-Ton mehr wieder, wenn F11 für den
   Vollbildmodus gedrückt wird.
 
@@ -158,10 +162,10 @@ Hinweis: Die meisten unten aufgeführten Funktionen sind jetzt Teil von NVDA
   1809 (Build 17661 und später) und Änderungen in 19H1 (Build 18262 und
   später, einschließlich Kaomoji und Symbolkategorien in Build 18305). Wenn
   Sie NVDA-Versionen vor 2018.4 verwenden, verwenden Sie für ein optimales
-  Erlebnis beim Lesen von Emojis den Windows OneCore-Sprachausgabe. Wenn
+  Erlebnis beim Lesen von Emojis die Windows OneCore-Sprachausgabe. Wenn
   2018.4 oder höher verwendet wird, aktivieren Sie die
   Unicode-Konsortiumseinstellung aus den Spracheinstellungen von NVDA und
-  stellen Sie den Symbolstufe auf "Einige" oder höher ein.
+  stellen Sie die Symbolstufe auf "Einige" oder höher ein.
 * Unterstützung für Eingabevorschläge bei Hardware-Tastaturen (gilt für
   Windowsversionen ab Build 1803)
 * In Builds nach 1709 wird NVDA das erste ausgewählte Emoji ansagen, wenn
@@ -210,6 +214,10 @@ Hinweis: Die meisten unten aufgeführten Funktionen sind jetzt Teil von NVDA
   erkannt.
 * Unsaubere Kontrollbeschriftungen, die in bestimmten
   Windows-10-Installationen zu sehen sind, wurden korrigiert.
+* In neueren Revisionen der Version 1803 und später wurde aufgrund von
+  Änderungen am Windows Update-Verfahren für Feature-Updates ein Link "Jetzt
+  herunterladen und installieren" hinzugefügt. NVDA wird nun den Titel für
+  das neue Update bekannt geben, falls vorhanden.
 
 ## Store
 
@@ -222,7 +230,7 @@ Hinweis: Die meisten unten aufgeführten Funktionen sind jetzt Teil von NVDA
 
 * Registerkarten wie"Prognose" und"Karten" werden als richtige
   Registerkarten erkannt (Patch von Derek Riemer).
-* Beim Lesen einer Prognose können Sie mit den Pfeiltasten nach links und
+* Beim Lesen einer Vorhersage können Sie mit den Pfeiltasten nach links und
   rechts zwischen den Elementen wechseln. Verwenden Sie die Aufwärts- und
   Abwärtspfeile, um die einzelnen Teile eines Elements zu lesen. Zum
   Beispiel könnte ein Druck auf den Pfeil nach rechts den Bericht "Montag:

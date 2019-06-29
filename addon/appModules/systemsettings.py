@@ -44,6 +44,8 @@ class AppModule(appModuleHandler.AppModule):
 						nameList.append(obj.next.name)
 				elif obj.UIAElement.cachedAutomationID == "SystemSettings_MusUpdate_SeekerUpdateUX_HyperlinkButton":
 					# Unconditionally locate the new feature update title, skipping the link description.
+					# Note that for optional cumulative updates, the actual update title is next to this link, so one must fetch all of these.
+					nameList.insert(0, obj.previous.name)
 					nameList.insert(0, obj.previous.previous.name)
 				obj.name = ", ".join(nameList)
 			# In some cases, Active Directory-style name is the name of the window, so tell NVDA to use something more meaningful.

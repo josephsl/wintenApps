@@ -15,8 +15,8 @@ qué se incluye):
 
 * Centro de actividades
 * Reloj y alarmas.
-* Calendario
 * Calculadora (modern).
+* Calendario
 * Cortana
 * Centro de opiniones
 * Correo
@@ -63,13 +63,15 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   de posición del objeto" en el panel Presentación de Objetos.
 * En ciertos menús de contexto (tales como en Edge), la información de
   posición (ej.: 1 de 2) ya no se anuncia.
-* Se reconocen los siguientes eventos UIA: active text position change,
-  Controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, text change,
-  tooltip opened, window opened. Con NVDA configurado para ejecutarse con el
-  registro de depuración habilitado, estos eventos se seguirán, y se oirá un
-  tono de depuración para el evento UIA notification si las notificaciones
-  vienen de un lugar distinto a la aplicación actual.
+* Se reconocen los siguientes eventos UIA: Controller for, drag start, drag
+  cancel, drag complete, element selected, item status, live region change,
+  notification, system alert, text change, tooltip opened, window
+  opened. Con NVDA configurado para ejecutarse con el registro de depuración
+  habilitado, estos eventos se seguirán, y se oirá un tono de depuración
+  para el evento UIA notification si las notificaciones vienen de un lugar
+  distinto a la aplicación actual.
+* Es posible seguir sólo eventos específicos y/o eventos que vienen de
+  aplicaciones específicas.
 * Se reconocerán y anunciarán los consejos para Edge y para aplicaciones
   universales.
 * Al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
@@ -77,7 +79,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * NVDA ya no anuncia Menú Inicio tamaño de texto al cambiar la resolución de
   pantalla o la orientación.
 * En la versión 1903 (actualización de mayo de 2019), NVDA anunciará
-  inmediatamente los cambios de brillo y volumen.
+  inmediatamente los cambios de brillo y volumen si el foco está en el
+  explorador de archivos. Esto ahora forma parte de NVDA 2019.2.
 
 ## Centro de actividades
 
@@ -207,6 +210,11 @@ Nota: la mayoría de las siguientes características ya son parte de NVDA
   como un diálogo.
 * Corregida disparidad en etiquetas de controles advertida en ciertas
   instalaciones de Windows.
+* En revisiones más recientes de la versión 1803 y posterior, debido a los
+  cambios en el procedimiento de Windows Update para actualizaciones de
+  características, se ha añadido un enlace "Descargar e instalar
+  ahora". NVDA anunciará ahora el título de la nueva actualización si está
+  presente.
 
 ## Tienda
 

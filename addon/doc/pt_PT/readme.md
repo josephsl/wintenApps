@@ -15,8 +15,8 @@ detalhes sobre o que está incluído):
 
 * Centro de acção
 * Alertas e Relógio.
-* Calendário.
 * Calculadora (moderna).
+* Calendário.
 * Cortana
 * Central de comentários
 * Correio.
@@ -63,21 +63,23 @@ consulte o documento [changelogs for releases, release][3].
   que pode ser encontrado nas configurações do NVDA.
 * Em determinados menus de contexto (como no Edge), as informações de
   posição (por exemplo, 1 de 2) deixaram de ser anunciadas.
-* The following UIA events are recognized: active text position change,
-  controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, text change,
-  tooltip opened, window opened. With NVDA set to run with debug logging
-  enabled, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard if notifications come from somewhere other than
-  the currently active app.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, element selected, item status, live region change,
+  notification, system alert, text change, tooltip opened, window
+  opened. With NVDA set to run with debug logging enabled, these events will
+  be tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active app.
+* It is possible to tracke only specific events and/or events coming from
+  specific apps.
 * As dicas de ferramentas do Edge e aplicativos universais são reconhecidas
   e serão anunciadas.
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
   anunciará o nome da área de trabalho (área de trabalho 2, por exemplo).
 * O NVDA deixará de anunciar o tamanho do texto do menu Iniciar quando
   alterar as resoluções ou a orientação do ecrã.
-* Na versão 1903 (atualização de maio de 2019), o NVDA anunciará,
-  imediatamente,  alterações de volume e brilho.
+* In Version 1903 (May 2019 Update), NVDA will announce volume and
+  brightness changes immediately if focused on File Explorer. This is now
+  part of NVDA 2019.2.
 
 ## Centro de acção
 
@@ -206,6 +208,10 @@ posteriores.
   diálogo apropriado.
 * Etiquetas de controlo ímpar, vistas em determinadas instalações do Windows
   10, foram corrigidas.
+* In more recent revisions of Version 1803 and later, due to changes to
+  Windows Update procedure for feature updates, a "download and install now"
+  link has been added. NVDA will now announce the title for the new update
+  if present.
 
 ## Loja.
 
