@@ -51,10 +51,6 @@ class AppModule(appModuleHandler.AppModule):
 			# In some cases, Active Directory-style name is the name of the window, so tell NVDA to use something more meaningful.
 			elif obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
 				obj.name = obj.firstChild.name
-			# In build 18922, language overview section has been added, but the "overview list" items have XAML labels.
-			# Thankfully the labels can be retrieved by concatenating child labels.
-			elif obj.role == controlTypes.ROLE_LISTITEM and obj.parent.UIAElement.cachedAutomationID == "SettingsGroupLanguageSettingsOverview_ItemsControl":
-				obj.name = ": ".join([label.name for label in obj.children])
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):

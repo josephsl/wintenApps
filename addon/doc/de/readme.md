@@ -1,7 +1,7 @@
-# Windows 10 Apps #
+# Zugänglichkeitsverbesserungen für Windows 10 Apps #
 
 * Autoren: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
-* Download [stable version][1]
+* [Stabile Version][1] herunterladen
 * [Entwicklerversion herunterladen][2]
 * NVDA-Kompatibilität: 2018.4 bis 2019.2
 
