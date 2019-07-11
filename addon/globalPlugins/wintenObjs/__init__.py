@@ -20,7 +20,7 @@ import addonHandler
 addonHandler.initTranslation()
 
 # #52: forget everything if the current release is not a supported version of Windows 10.
-# NVDA 2019.3 includes a handy Windows 10 version check function.
+# NVDA 2019.2 includes a handy Windows 10 version check function.
 if hasattr(winVersion, "isWin10"):
 	W10AddonSupported = winVersion.isWin10(version=1809)
 else:
