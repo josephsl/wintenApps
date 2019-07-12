@@ -59,14 +59,15 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   obiektu" dostępną w ustawieniach NVDA, w panelu "prezentacja obiektu".
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) nie jest już odczytywana.
-* The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, element selected, item status, live region change,
-  notification, system alert, text change, tooltip opened, window
-  opened. With NVDA set to run with debug logging enabled, these events will
-  be tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active app.
-* It is possible to tracke only specific events and/or events coming from
-  specific apps.
+* Następujące zdarzenia UIA są rozpoznawane: active text position change,
+  controller for, drag start, drag cancel, drag complete, element selected,
+  item status, live region change, notification, system alert, text change,
+  tooltip opened, window opened. Gdy NVDA jest uruchomiony z zapisywaniem
+  debugowania, te zdarzenia będą śledzone, i dla UIA notification event, a
+  dźwięk debugowania będzie odtwarzany jeżeli powiadomienia przychodzą z
+  innej niż aktualnie aktywnej aplikacji.
+* Teraz jest możliwe śledzenie zdarzeń z określonych oraz specyficznych
+  aplikacji.
 * Opisy obiektów w Edge i innych aplikacjach UWP są rozpoznawane  i będą
   czytane automatycznie.
 * Podczas otwierania, zamykając lub przełączając się między wirtualnymi
@@ -74,9 +75,9 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   pulpit 2).
 * NVDA nie będzie wypowiadało wielkość tekstu w meni start, gdy zmienia się
   rozdzielczość ekranu lub orientacja ekranu.
-* In Version 1903 (May 2019 Update), NVDA will announce volume and
-  brightness changes immediately if focused on File Explorer. This is now
-  part of NVDA 2019.2.
+* W wersji 1903 (aktualizacji majowej 2019), NVDA będzie oznajmiał zmiany
+  głośności i jasności od razu, gdy jest się fokusowanyw na oknie
+  eksploratora windows. Jest to teraz część NVDA 2019.2.
 
 ## Centrum powiadomień
 
@@ -201,10 +202,10 @@ nowszej wersji.
   rozpoznawane jako poprawne okno dialogowe.
 * Nieparzyste kontrolki obecne w niektórych oknach instalacji Windows 10
   zostały poprawione.
-* In more recent revisions of Version 1803 and later, due to changes to
-  Windows Update procedure for feature updates, a "download and install now"
-  link has been added. NVDA will now announce the title for the new update
-  if present.
+* Wbardziej ostatnich aktualizacjach Windowsa  1803 i nowszych, z powodu
+  zmian procederów windows update dla aktualizacji funkcji, dodano przycisk
+  "pobierz i zainstaluj teraz". Jeżeli znaleziono aktualizację, NVDA będzie
+  oznajmiałą jej tytuł.
 
 ## Sklep
 
