@@ -31,7 +31,10 @@ class AppModule(AppModule):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Detect selection changes in address omnibar.
 		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "addressEditBox":
-			clsList.remove(EditableTextWithoutAutoSelectDetection)
+			try:
+				clsList.remove(EditableTextWithoutAutoSelectDetection)
+			except ValueError:
+				pass
 			clsList.insert(0, EdgeAddressOmnibar)
 
 	def event_liveRegionChange(self, obj, nextHandler):
