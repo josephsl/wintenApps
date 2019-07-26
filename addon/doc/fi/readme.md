@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* NVDA compatibility: 2018.4 to 2019.2
+* Yhteensopivuus: NVDA 2018.4-2019.2
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -60,23 +60,24 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   -asetuksella Objektien lukeminen -paneelista NVDA:n asetuksista.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
-* The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, element selected, item status, live region change,
-  notification, system alert, text change, tooltip opened, window
-  opened. With NVDA set to run with debug logging enabled, these events will
-  be tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active app.
-* It is possible to tracke only specific events and/or events coming from
-  specific apps.
+* Seuraavat UIA-tapahtumat tunnistetaan: ohjain kohteelle, vetämisen
+  aloitus, vetämisen peruutus, vetäminen suoritettu, elementti valittu,
+  kohteen tila, aktiivisen alueen muutos, ilmoitus, järjestelmän ilmoitus,
+  työkaluvihje avattu, ikkuna avattu. Näitä tapahtumia seurataan, kun NVDA:n
+  lokitasoksi on määritetty "virheenkorjaus", ja UIA-ilmoitustapahtuma
+  ilmaistaan virheäänellä, mikäli ilmoitukset tulevat muualta kuin
+  aktiivisesta sovelluksesta.
+* On mahdollista seurata vain tiettyjä tapahtumia ja/tai tietyistä
+  sovelluksista tulevia tapahtumia.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
   ilmoitetaan.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2) avattaessa
   ja suljettaessa virtuaalityöpöytiä tai siirryttäessä niiden välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
   suuntaa vaihdettaessa.
-* In Version 1903 (May 2019 Update), NVDA will announce volume and
-  brightness changes immediately if focused on File Explorer. This is now
-  part of NVDA 2019.2.
+* NVDA ilmoittaa välittömästi äänenvoimakkuuden ja kirkkauden muutokset
+  Windows 10:n versiossa 1903 (toukokuun 2019 päivitys), jos kohdistus on
+  resurssienhallinnassa. Tämä muutos sisältyy NVDA 2019.2:een.
 
 ## Toimintokeskus
 
@@ -203,10 +204,10 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
   valintaikkunaksi.
 * Joissakin Windows-asennuksissa näkyvät erikoiset säädinten nimet on
   korjattu.
-* In more recent revisions of Version 1803 and later, due to changes to
-  Windows Update procedure for feature updates, a "download and install now"
-  link has been added. NVDA will now announce the title for the new update
-  if present.
+* Windows Update -prosessiin ominaisuuspäivitysten osalta tehtyjen muutosten
+  vuoksi uudempiin 1803:n versioihin ja sitä tuoreempiin  on lisätty Lataa
+  ja asenna nyt -linkki. Jos uusi päivitys on saatavilla, NVDA puhuu nyt sen
+  nimen.
 
 ## Kauppa
 
