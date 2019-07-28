@@ -8,6 +8,8 @@ import gettext
 import os
 import os.path
 import zipfile
+import sys
+sys.dont_write_bytecode = True
 
 import buildVars
 
@@ -190,3 +192,4 @@ env.Depends(manifest, "buildVars.py")
 
 env.Depends(addon, manifest)
 env.Default(addon)
+env.Clean (addon, ['.sconsign.dblite', 'addon/doc/en/'])
