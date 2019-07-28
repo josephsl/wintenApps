@@ -79,3 +79,10 @@ class AppModule(AppModule):
 				ui.message(obj.name)
 				self.cortanaResponseCache = obj.name
 		nextHandler()
+
+	def event_liveRegionChange(self, obj, nextHandler):
+		# Build 18945 introduces (or re-introduces) modern search experience in File Explorer, and as part of this, suggestion count is part of a live region.
+		# Although it is geared for Narrator, it is applicable to other screen readers as well. The live region itself is a child of the one shown here.
+		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "suggestionCountForNarrator":
+			if obj.firstChild.name: ui.message(obj.firstChild.name)
+		nextHandler()
