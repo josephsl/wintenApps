@@ -6,7 +6,7 @@
 import globalPluginHandler
 import controlTypes
 import ui
-from NVDAObjects.UIA import UIA, SearchField, Dialog, ComboBoxWithoutValuePattern
+from NVDAObjects.UIA import UIA, SearchField, Dialog
 from NVDAObjects.behaviors import EditableTextWithSuggestions, ToolTip
 import api
 import nvwave
