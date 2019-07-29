@@ -40,7 +40,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: controller for, drag start, drag cancel, drag complete, element selected, item status, live region change, notification, system alert, text change, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app.
 * It is possible to tracke only specific events and/or events coming from specific apps.
-* Tooltips from Edge and universal apps are recognized and will be announced.
+* Tooltips from Edge and universal apps are recognized and will be announced. This will be part of NVDA 2019.3.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
 * In Version 1903 (May 2019 Update), NVDA will announce volume and brightness changes immediately if focused on File Explorer. This is now part of NVDA 2019.2.
@@ -61,6 +61,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * Textual responses from Cortana are announced in most situations (if it doesn't, reopen Start menu and try searching again).
 * NVDA will be silent when talking to Cortana via voice.
 * NVDA will now announce reminder confirmation after you set one.
+* In build 18945 and later, modern search experience in File Explorer powered by Cortana user interface is supported.
 
 ## Feedback Hub
 
