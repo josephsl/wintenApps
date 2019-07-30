@@ -14,21 +14,6 @@ import queueHandler
 import ui
 import scriptHandler
 
-# Filter live region change elements to avoid repeated announcements.
-# A dedicated function is provided to react to future Calculator changes.
-def shouldLiveRegionChangeProceed(obj):
-	automationID = obj.UIAElement.cachedAutomationID
-	if automationID == "DateDiffAllUnitsResultLabel":
-		return True
-	elif automationID == "":
-		prevAutomationID = obj.previous.UIAElement.cachedAutomationID
-		if prevAutomationID == "negateButton":
-			return False
-		elif prevAutomationID == "numberPad":
-			return api.getForegroundObject().children[1].children[3].UIAElement.cachedAutomationID != "CalculatorResults"
-	return False
-
-
 class AppModule(appModuleHandler.AppModule):
 
 	def event_NVDAObject_init(self, obj):
@@ -56,12 +41,6 @@ class AppModule(appModuleHandler.AppModule):
 			return
 		self._shouldAnnounceResult = False
 		nextHandler()
-
-	def event_liveRegionChange(self, obj, nextHandler):
-		# Unfortunately, the control that fires this has no automation ID yet says it is a generic text block.
-		# This may mean anything can be announced, so try to filter them.
-		if shouldLiveRegionChangeProceed(obj):
-			nextHandler()
 
 	def event_UIA_notification(self, obj, nextHandler, activityId=None, **kwargs):
 		# From May 2018 onwards, unit converter uses a different automation iD.
