@@ -1,9 +1,9 @@
 # Zugänglichkeitsverbesserungen für Windows 10 Apps #
 
 * Autoren: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
-* [Stabile Version][1] herunterladen
+* [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA-Kompatibilität: 2018.4 bis 2019.2
+* NVDA compatibility: 2019.1 to 2019.2
 
 Diese Erweiterung bietet eine Sammlung von Anwendungsmodulen für
 verschiedene Windows 10 Anwendungen sowie Korrekturen in einigen Windows 10
@@ -12,8 +12,6 @@ Elementen.
 Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
 Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
-* Einstellungscenter für Benachrichtigungen und Aktionen
-* Wecker und Uhr.
 * Rechner (modern)
 * Kalender
 * Cortana
@@ -31,10 +29,9 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* Diese Erweiterung erfordert Windows 10 Version 1803 (Build 17134) oder
-  höher und NVDA 2018.4 oder höher. Für beste Ergebnisse verwenden Sie die
-  Erweiterung mit der neuesten stabilen Version von Windows 10 (Build 18362)
-  und der neuesten stabilen Version von NVDA.
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and
+  NVDA 2019.1 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 18362) and latest stable version of NVDA.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Für Einträge, die im Folgenden nicht aufgeführt sind, können Sie davon
   ausgehen, dass Funktionen Teil von NVDA sind, die nicht mehr benötigt
@@ -74,7 +71,8 @@ Versionen][3].
   stammen.
 * Es ist möglich, nur bestimmte Ereignisse bzw. Ereignisse aus bestimmten
   Anwendungen zu verfolgen.
-* Tooltips von Edge und Universal Apps werden erkannt und angekündigt.
+* Tooltips from Edge and universal apps are recognized and will be
+  announced. This will be part of NVDA 2019.3.
 * Beim Öffnen, Schließen oder Umschalten virtueller Desktops meldet NVDA den
   aktuellen Desktop-Namen (z. B. Desktop 2).
 * NVDA sagt den Text für die Größe des Startmenüs nicht mehr an, wenn die
@@ -82,21 +80,6 @@ Versionen][3].
 * In der Version 1903 (Mai 2019 Update) wird NVDA Änderungen bei der
   Lautstärke und Helligkeit sofort zurückmelden. Dies ist nun eine Neuerung
   in NVDA 2019.2
-
-## Einstellungscenter für Benachrichtigungen und Aktionen
-
-* Die schnelle Aktion für Helligkeit ist nun eine Schaltfläche anstelle
-  einer Umschalttaste.
-* Verschiedene Änderungen im Status, wie die Fokus-Unterstützung und
-  Helligkeit, werden gemeldet. Diese ist nun Teil der NVDA 2019.1.
-
-## Wecker und Uhr
-
-* Die Werte für den Fortschrittsbalken werden nun angezeigt. Dies macht sich
-  beim Verschieben des Fokus auf die Balkensteuerung bemerkbar. Es betrifft
-  auch das Steuerelement für die Festlegung des Neustarts nach einer
-  erfolgreich abgeschlossenen Aktualisierung. Ist jetzt teil von Version
-  2019.1
 
 ## Rechner
 
@@ -122,6 +105,8 @@ Versionen][3].
   nicht mehr in die Quere kommen.
 * NVDA wird nun eine Erinnerungsbestätigung anzeigen, nachdem Sie eine
   eingestellt haben.
+* In build 18945 and later, modern search experience in File Explorer
+  powered by Cortana user interface is supported.
 
 ## Feedback Hub
 
@@ -135,8 +120,8 @@ Versionen][3].
   Navigation zwischen Zeilen (Nachrichten) wird noch nicht unterstützt.
 * Wenn Sie eine Nachricht schreiben, wird das Erscheinen von Vorschlägen
   durch Töne angezeigt.
-* NVDA wird nach dem Schließen dieser App nichts mehr unternehmen oder
-  Fehlertöne wiedergeben. Diese ist nun Teil der NVDA 2019.1.
+* NVDA will no longer do anything or play error tones after closing this
+  app. This is now part of NVDA 2019.2.
 
 ## Karten
 
@@ -166,27 +151,6 @@ Hinweis: Die meisten unten aufgeführten Funktionen sind jetzt Teil von NVDA
   2018.4 oder höher verwendet wird, aktivieren Sie die
   Unicode-Konsortiumseinstellung aus den Spracheinstellungen von NVDA und
   stellen Sie die Symbolstufe auf "Einige" oder höher ein.
-* Unterstützung für Eingabevorschläge bei Hardware-Tastaturen (gilt für
-  Windowsversionen ab Build 1803)
-* In Builds nach 1709 wird NVDA das erste ausgewählte Emoji ansagen, wenn
-  das Emoji-Panel geöffnet wird. Dies ist in Build 18262 und später
-  auffälliger, wo sich das Emoji-Panel für die zuletzt durchsuchte Kategorie
-  öffnen kann, wie z. B. die Anzeige von Hautton-Modifikatoren beim Öffnen
-  für die Kategorie Personen.
-* Unterstützung für die Ansage der Einträge in der Cloud-basierten
-  Zwischenablage in Build 17666 (Redstone 5) und höher.
-* Unnötige Ausführlichkeit bei der Arbeit mit der modernen Tastatur und
-  deren Funktionen reduziert. Dazu gehört, dass die "Microsoft Kandidat UI"
-  beim Öffnen von Hardware-Tastatur-Eingabevorschlägen nicht mehr
-  angekündigt wird, und dass es still bleibt, wenn bestimmte
-  Berührungstasten auf manchen Systemen ein Namensänderungsereignis
-  auslösen.
-* NVDA spielt keine Fehlertöne ab oder unternimmt nichts mehr, wenn es das
-  Emoji-Panel in neueren 19H1 Insider Preview-Builds schließt. Diese ist nun
-  Teil der NVDA 2019.1.
-* In der Version 1809 (Oktober 2018 Update) und neuer wird NVDA nach
-  Möglichkeit Suchergebnisse für Emojis mitteilen. Diese ist nun Teil der
-  NVDA 2019.1.
 * NVDA wird unter bestimmten Umständen keine "Zwischenablage" mehr
   ankündigen, wenn sich Elemente in der Zwischenablage befinden.
 * Auf einigen Systemen, auf denen die Version 1903 (Update vom Mai 2019)

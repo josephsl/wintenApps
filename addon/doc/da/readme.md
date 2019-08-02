@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2018.4 to 2019.2
+* NVDA compatibility: 2019.1 to 2019.2
 
 Denne tilføjelse er en samling af app-moduler til forskellige Windows 10
 apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.
@@ -11,8 +11,6 @@ apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.
 Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
 hver appsektion for detaljer om, hvad der er inkluderet):
 
-* Handlingscenter
-* Alarmer og ur.
 * Lommeregner (moderne).
 * Kalender
 * Cortana
@@ -30,8 +28,8 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 Bemærkninger:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and
+  NVDA 2019.1 or later. For best results, use the add-on with latest Windows
   10 stable release (build 18362) and latest stable version of NVDA.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
@@ -66,8 +64,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   notifications come from somewhere other than the currently active app.
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
-* Værktøjstips fra Edge og universale apps er genkendte og vil blive
-  annonceret.
+* Tooltips from Edge and universal apps are recognized and will be
+  announced. This will be part of NVDA 2019.3.
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce current desktop name (desktop 2, for example).
 * NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
@@ -75,21 +73,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * In Version 1903 (May 2019 Update), NVDA will announce volume and
   brightness changes immediately if focused on File Explorer. This is now
   part of NVDA 2019.2.
-
-## Handlingscenter
-
-* Den hurtige handling til at ændre lysstyrke er nu en knap i stedet for en
-  skiftknap. Dette er nu en del af NVDA 2019.1.
-* Forskellige statusændringer som Fokushjælp og Lysstyrke vil blive
-  rapporteret. Denne forbedring vil være en del af NVDA 2019.1. Dette er nu
-  en del af NVDA 2019.1.
-
-## Alarmer og ur
-
-* Tidvælgerværdier er nu annonceret, mærkbart, når du flytter fokus til
-  vælgekontroller. Dette påvirker også den kontrol, der bliver brugt til at
-  vælge, hvornår du vil genstart for at afslutte installationen af
-  Windows-opdateringer. Dette er nu en del af NVDA 2019.1.
 
 ## Lommeregner
 
@@ -112,6 +95,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   det ikke sker, åbne Start-menuen og prøv at udføre søgningen igen).
 * NVDA vil forblive tavs, når du taler til Cortana med stemmen.
 * NVDA vil nu meddele bekræftelsen, når du tilføjer en påmindelse
+* In build 18945 and later, modern search experience in File Explorer
+  powered by Cortana user interface is supported.
 
 ## Feedback Hub
 
@@ -126,8 +111,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   ikke understøttes.
 * Når du skriver en besked, vil @omtale forslag indikeres med lyd, når de
   vises.
-* NVDA vil ikke længere gøre noget eller spille fejltoner efter lukning af
-  denne app. Dette er nu en del af NVDA 2019.1.
+* NVDA will no longer do anything or play error tones after closing this
+  app. This is now part of NVDA 2019.2.
 
 ## Kort
 
@@ -155,24 +140,6 @@ Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3.
   indstillingen der benytter Unicode Consortium data til emojis via NVDAs
   taleindstillinger. Derefter skal tegnsætningsniveauet indstilles til
   "nogle" eller højere.
-* Understøttelse af hardware tastatur input forslag i Version 1803 (April
-  2018 opdatering) og senere.
-* I versioner af Windows 10 efter 1709 vil NVDA læse den første valgte
-  emoji, når emoji-panelet åbnes. Dette er mere mærkbart i version 18262 og
-  senere, hvor emoji-panelet åbner til den sidst gennemsete kategori, som
-  f.eks. Visning af hudtone, når den åbnes til Personer-kategorien.
-* Understøtter annoncering af Cloud Udklipsholder i version 1809 (build
-  17666) og senere.
-* Reduceret unødvendige udtale, når du arbejder med det moderne tastatur og
-  dens funktioner. Disse omfatter ikke længere annonceringer "Microsoft
-  kandidat UI", når du åbner hardware tastatur input forslag og NVDA
-  forbliver tavse, når visse touch-tastaturkommandoer omfatter change name
-  event på nogle systemer.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
-  2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This is now part of NVDA 2019.1.
 * NVDA will no longer announce "clipboard" when there are items in the
   clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update), NVDA will no

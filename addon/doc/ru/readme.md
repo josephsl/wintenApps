@@ -3,7 +3,7 @@
 * Авторы: Joseph Lee, Derek Riemer и другие пользователи Windows 10
 * Загрузить [стабильную версию][1]
 * Загрузить [разрабатываемую версию][2]
-* NVDA compatibility: 2018.4 to 2019.2
+* NVDA compatibility: 2019.1 to 2019.2
 
 Это дополнение представляет собой сборник модулей для различных приложений
 Windows 10, а также исправлений для некоторых типов управления Windows 10.
@@ -11,10 +11,8 @@ Windows 10, а также исправлений для некоторых ти�
 Включены следующие модули поддержки или модули для некоторых приложений
 (смотрите каждый раздел приложения для подробной информации):
 
-* Action center
-* Будильники и часы.
-* Календарь
 * Калькулятор (modern).
+* Календарь
 * Cortana
 * Feedback Hub
 * Почта
@@ -30,8 +28,8 @@ Windows 10, а также исправлений для некоторых ти�
 
 Notes:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and
+  NVDA 2019.1 or later. For best results, use the add-on with latest Windows
   10 stable release (build 18362) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of
@@ -57,35 +55,23 @@ For a list of changes made between each add-on releases, refer to
   in Object presentation panel found in NVDA settings.
 * In certain context menus (such as in Edge), position information (e.g. 1
   of 2) is no longer announced.
-* The following UIA events are recognized: active text position change,
-  controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, text change,
-  tooltip opened, window opened. With NVDA set to run with debug logging
-  enabled, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard if notifications come from somewhere other than
-  the currently active app.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, element selected, item status, live region change,
+  notification, system alert, text change, tooltip opened, window
+  opened. With NVDA set to run with debug logging enabled, these events will
+  be tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active app.
+* It is possible to tracke only specific events and/or events coming from
+  specific apps.
 * Tooltips from Edge and universal apps are recognized and will be
-  announced.
+  announced. This will be part of NVDA 2019.3.
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce current desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen
   resolutions or orientation.
 * In Version 1903 (May 2019 Update), NVDA will announce volume and
-  brightness changes immediately.
-
-## Action center
-
-* Brightness quick action is now a button instead of a toggle button. This
-  is now part of NVDA 2019.1.
-* Various status changes such as Focus Assist and Brightness will be
-  reported. This is now part of NVDA 2019.1.
-
-## Будильники и часы
-
-* Time picker values are now announced, noticeable when moving focus to
-  picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates. This is now part of NVDA
-  2019.1.
+  brightness changes immediately if focused on File Explorer. This is now
+  part of NVDA 2019.2.
 
 ## Калькулятор
 
@@ -107,6 +93,8 @@ For a list of changes made between each add-on releases, refer to
   doesn't, reopen Start menu and try searching again).
 * NVDA will be silent when talking to Cortana via voice.
 * NVDA will now announce reminder confirmation after you set one.
+* In build 18945 and later, modern search experience in File Explorer
+  powered by Cortana user interface is supported.
 
 ## Feedback Hub
 
@@ -121,7 +109,7 @@ For a list of changes made between each add-on releases, refer to
 * When writing a message, appearance of at mention suggestions are indicated
   by sounds.
 * NVDA will no longer do anything or play error tones after closing this
-  app. This is now part of NVDA 2019.1.
+  app. This is now part of NVDA 2019.2.
 
 ## Карты
 
@@ -147,23 +135,6 @@ Note: most features below are now part of NVDA 2018.3 or later.
   speech synthesizer. If 2018.4 or later is in use, enable Unicode
   Consortium setting from NvDA's speech settings and set symbol level to
   "some" or higher.
-* Support for hardware keyboard input suggestions in Version 1803 (April
-  2018 Update) and later.
-* In post-1709 builds, NVDA will announce the first selected emoji when
-  emoji panel opens. This is more noticeable in build 18262 and later where
-  emoji panel may open to last browsed category, such as displaying skin
-  tone modifiers when opened to People category.
-* Support for announcing cloud clipboard items in Version 1809 (build 17666
-  and later).
-* Reduced unnecessary verbosity when working with modern keyboard and its
-  features. These include no longer announcing "Microsoft Candidate UI" when
-  opening hardware keyboard input suggestions and staying silent when
-  certain touch keyboard keys raise name change event on some systems.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
-  2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This is now part of NVDA 2019.1.
 * NVDA will no longer announce "clipboard" when there are items in the
   clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update), NVDA will no
@@ -190,6 +161,10 @@ Note: most features below are now part of NVDA 2018.3 or later.
 * Windows Update reminder dialog is recognized as a proper dialog.
 * Odd control labels seen in certain Windows 10 installations has been
   corrected.
+* In more recent revisions of Version 1803 and later, due to changes to
+  Windows Update procedure for feature updates, a "download and install now"
+  link has been added. NVDA will now announce the title for the new update
+  if present.
 
 ## Магазин
 
