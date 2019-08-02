@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2018.4-2019.2
+* Yhteensopivuus: NVDA 2019.1-2019.2
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -12,8 +12,6 @@ säätimille.
 Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
-* Toimintokeskus
-* Hälytykset ja kello
 * Laskin (moderni)
 * Kalenteri
 * Cortana
@@ -31,8 +29,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Tämä lisäosa edellyttää Windows 10:n versiota 1803 (koontiversio 17134)
-  tai uudempaa ja NVDA 2018.4:ää tai uudempaa. Käytä parhaan
+* Tämä lisäosa edellyttää Windows 10:n versiota 1809 (koontiversio 17763)
+  tai uudempaa ja NVDA 2019.1:tä tai uudempaa. Käytä parhaan
   käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata versiota
   (koontiversio 18362) sekä uusinta vakaata NVDA:n versiota.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
@@ -70,7 +68,7 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * On mahdollista seurata vain tiettyjä tapahtumia ja/tai tietyistä
   sovelluksista tulevia tapahtumia.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
-  ilmoitetaan.
+  ilmoitetaan. Tämä sisältyy NVDA 2019.3:een.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2) avattaessa
   ja suljettaessa virtuaalityöpöytiä tai siirryttäessä niiden välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
@@ -78,20 +76,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA ilmoittaa välittömästi äänenvoimakkuuden ja kirkkauden muutokset
   Windows 10:n versiossa 1903 (toukokuun 2019 päivitys), jos kohdistus on
   resurssienhallinnassa. Tämä muutos sisältyy NVDA 2019.2:een.
-
-## Toimintokeskus
-
-* Kirkkaus-pikatoiminto on nyt vipupainikkeen sijasta painike. Tämä sisältyy
-  NVDA 2019.1:een.
-* Useat tilojen, kuten Keskittymisavustajan ja kirkkauden, muutokset
-  ilmoitetaan. Tämä sisältyy NVDA 2019.1:een.
-
-## Hälytykset ja kello
-
-* Ajanvalitsimen arvot puhutaan - havaittavissa siirrettäessä kohdistusta
-  valitsimen säätimiin. Tämä vaikuttaa myös säätimeen, jolla valitaan,
-  milloin Windows käynnistetään uudelleen päivitysten asentamisen
-  viimeistelemiseksi. Tämä tulee sisältyy NVDA 2019.1:een.
 
 ## Laskin
 
@@ -115,6 +99,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   toistamiseen).
 * NVDA on hiljaa puhuttaessa Cortanalle mikrofonin välityksellä.
 * NVDA puhuu nyt vahvistuksen muistutusta lisättäessä.
+* Resurssienhallinnan Cortanan käyttöliittymän voimalla toimivaa modernia
+  hakukokemusta tuetaan koontiversiossa 18945 ja uudemmissa.
 
 ## Palautekeskus
 
@@ -128,7 +114,7 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   rivien (viestien) välillä liikkumista ei tueta.
 * Ät-maininnan ehdotukset ilmaistaan äänimerkeillä viestiä kirjoitettaessa.
 * NVDA ei tee enää mitään tai toista virheääniä, kun tämä sovellus on
-  suljettu. Tämä sisältyy NVDA 2019.1:een.
+  suljettu. Sisältyy NVDA 2019.2:een.
 
 ## Kartat
 
@@ -158,24 +144,6 @@ Huom: suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA
   OneCore -syntetisaattoria. Jos käytössä on versio 2018.4 tai uudempi,
   tulee NVDA:n puheasetuksista ottaa käyttöön Unicode-konsortion datan
   käyttäminen ja symbolitasoksi asetta "jotain" tai korkeampi.
-* Tuki fyysisen näppäimistösyötteen ehdotuksille versiossa 1803 (April 2018
-  -päivitys) ja uudemmissa.
-* Kun emojipaneeli avautuu, NVDA ilmoittaa koontiversion 1709 jälkeisissä
-  versioissa ensimmäisen valittuna olevan emojin. Tämä on näkyvämpää
-  koontiversiossa 18262 ja uudemmissa, joissa emojipaneeli saattaa avautua
-  viimeksi selattuun kategoriaan, kuten näyttäessään ihonvärimuuntimen
-  Ihmiset-kategorian avauduttua.
-* Tuki pilvileikepöydän kohteiden ilmoittamiselle versiossa 1809
-  (koontiversio 17666 ja uudemmat).
-* Puheliaisuutta vähennetty modernia näppäimistöä ja sen ominaisuuksia
-  käytettäessä. Fyysisen näppäimistön syöttöehdotuksia avattaessa ei enää
-  sanota "Microsoft Candidate UI" sekä ollaan hiljaa tilanteessa, jossa
-  tietyt kosketusnäppäimistön näppäimet aiheuttavat joissakin järjestelmissä
-  muuttuneen nimitapahtuman.
-* NVDA ei toista enää virheääniä tai tee mitään emojipaneelia suljettaessa
-  uudemmissa 19H1-Insider-esiversioissa. Tämä sisältyy NVDA 2019.1:een.
-* NVDA ilmoittaa versiossa 1809 (October 2018 -päivitys) ja uudemmissa
-  emojien hakutulokset, mikäli mahdollista. Tämä sisältyy NVDA 2019.1:een.
 * NVDA ei enää sano joissakin tilanteissa "leikepöytä", kun leikepöydällä on
   kohteita.
 * Emojipaneelin avautuessa ei enää näytä siltä, että NVDA  ei tee mitään

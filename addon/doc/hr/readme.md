@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu inačicu][1]
 * Preuzmi [razvojnu inačicu][2]
-* NVDA compatibility: 2018.4 to 2019.2
+* NVDA compatibility: 2019.1 to 2019.2
 
 This add-on is a collection of app modules for various Windows 10 apps, as
 well as enhancements and fixes for certain windows 10 controls.
@@ -11,8 +11,6 @@ well as enhancements and fixes for certain windows 10 controls.
 Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 što je uključeno):
 
-* Action center
-* Alarmi i Sat
 * kalkulator (moderan).
 * Kalendar
 * Cortana
@@ -31,8 +29,8 @@ Slijedeće skripte su uključene (pogledajte svaku aplikaciju da biste vidjeli
 
 Notes:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and
+  NVDA 2019.1 or later. For best results, use the add-on with latest Windows
   10 stable release (build 18362) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of
@@ -67,7 +65,7 @@ For a list of changes made between each add-on releases, refer to
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
 * Tooltips from Edge and universal apps are recognized and will be
-  announced.
+  announced. This will be part of NVDA 2019.3.
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce current desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen
@@ -75,20 +73,6 @@ For a list of changes made between each add-on releases, refer to
 * In Version 1903 (May 2019 Update), NVDA will announce volume and
   brightness changes immediately if focused on File Explorer. This is now
   part of NVDA 2019.2.
-
-## Action center
-
-* Brightness quick action is now a button instead of a toggle button. This
-  is now part of NVDA 2019.1.
-* Various status changes such as Focus Assist and Brightness will be
-  reported. This is now part of NVDA 2019.1.
-
-## Alarm i sat
-
-* Time picker values are now announced, noticeable when moving focus to
-  picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates. This is now part of NVDA
-  2019.1.
 
 ## Kalkulator
 
@@ -110,6 +94,8 @@ For a list of changes made between each add-on releases, refer to
   slučaj, ponovno otvorite izbornik start.
 * NVDA will be silent when talking to Cortana via voice.
 * NVDA će izgovarati potvrdu termina ako ga postavite.
+* In build 18945 and later, modern search experience in File Explorer
+  powered by Cortana user interface is supported.
 
 ## Feedback Hub
 
@@ -124,7 +110,7 @@ For a list of changes made between each add-on releases, refer to
 * Tijekom pisanja poruke, ako spominjete neku osobu, pojavljene sugestije
   bit će popraćene zvukovima. 
 * NVDA will no longer do anything or play error tones after closing this
-  app. This is now part of NVDA 2019.1.
+  app. This is now part of NVDA 2019.2.
 
 ## Karte
 
@@ -151,23 +137,6 @@ Note: most features below are now part of NVDA 2018.3 or later.
   speech synthesizer. If 2018.4 or later is in use, enable Unicode
   Consortium setting from NvDA's speech settings and set symbol level to
   "some" or higher.
-* Support for hardware keyboard input suggestions in Version 1803 (April
-  2018 Update) and later.
-* In post-1709 builds, NVDA will announce the first selected emoji when
-  emoji panel opens. This is more noticeable in build 18262 and later where
-  emoji panel may open to last browsed category, such as displaying skin
-  tone modifiers when opened to People category.
-* Support for announcing cloud clipboard items in Version 1809 (build 17666
-  and later).
-* Reduced unnecessary verbosity when working with modern keyboard and its
-  features. These include no longer announcing "Microsoft Candidate UI" when
-  opening hardware keyboard input suggestions and staying silent when
-  certain touch keyboard keys raise name change event on some systems.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
-  2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This is now part of NVDA 2019.1.
 * NVDA will no longer announce "clipboard" when there are items in the
   clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update), NVDA will no

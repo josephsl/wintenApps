@@ -3,7 +3,7 @@
 * Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
-* Zgodność z wersjami NVDA: 2018.4 do 2019.2
+* NVDA compatibility: 2019.1 to 2019.2
 
 Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
 również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
@@ -11,8 +11,6 @@ również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
 Dołączone są następujące moduły wspierające aplikacje (sprawdź rozdział
 każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
-* Centrum powiadomień
-* Alarmy i zegar.
 * Kalkulator (nowoczesny).
 * Kalendarz
 * Cortana
@@ -30,10 +28,9 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* Uwaga! Ten dodatek wymaga Windowsa 10 Wersji 1803 (kompilacji 17134) lub
-  nowszej i NVDA 2018.4 lub nowszej. Aby uzyskać najlepsze wyniki, należy
-  używać dodatku z najnowszą stabilną kompilacją systemu (kompilacja 18362)
-  i najnowszą stabilną wersją NVDA. 
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and
+  NVDA 2019.1 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 18362) and latest stable version of NVDA.
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
@@ -68,8 +65,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   innej niż aktualnie aktywnej aplikacji.
 * Teraz jest możliwe śledzenie zdarzeń z określonych oraz specyficznych
   aplikacji.
-* Opisy obiektów w Edge i innych aplikacjach UWP są rozpoznawane  i będą
-  czytane automatycznie.
+* Tooltips from Edge and universal apps are recognized and will be
+  announced. This will be part of NVDA 2019.3.
 * Podczas otwierania, zamykając lub przełączając się między wirtualnymi
   pulpitami, NVDA będzie oznajmiała aktualny identyfikator (na przykład
   pulpit 2).
@@ -78,19 +75,6 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * W wersji 1903 (aktualizacji majowej 2019), NVDA będzie oznajmiał zmiany
   głośności i jasności od razu, gdy jest się fokusowanyw na oknie
   eksploratora windows. Jest to teraz część NVDA 2019.2.
-
-## Centrum powiadomień
-
-* Szybka akcja jasności została zmieniona z przycisku przełączającego na
-  przycisk zwykły. Jest to teraz część NVDA 2019.1.
-* Róźne zmiany stanu, takie jak asysta punktu uwagi i jasność będą
-  wymawiane. Jest to teraz część  NVDA 2019.1.
-
-## Alarmy i zegar
-
-* Teraz są wypowiadane kontrolki wypowiadania czasu, zauważalne przy
-  poruszaniu się po nich. To także dotyczy kontrolki wyboru czasu ponownego
-  uruchomienia po instalacji aktualizacji. To jest teraz część NVDA 2019.1.
 
 ## Kalkulator
 
@@ -112,6 +96,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   są, ponownie otwórz meni start, i spróbuj ponownie).
 * NVDA będzie przyciszony, gdy mówisz do Cortany.
 * NVDA teraz wymawia potwierdzenie przypomnienia po jego ustawieniu.
+* In build 18945 and later, modern search experience in File Explorer
+  powered by Cortana user interface is supported.
 
 ## Centrum opinii
 
@@ -125,9 +111,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   uwadze, że nawigacja po kolumnach (wiadomościach) jest niewspierana.
 * Przy pisaniu wiadomości, istnienie podpowiedzi o wzmiankach teraz jest
   oznajmiane dzwiękami.
-* W niektórych przypadkach, gdy używana jest nawigacja obiektowa, NVDA nie
-  będzie się zachowywał  w sposób nijaki, albo nie będzie odtwarzał dźwięku
-  błedu. Jest to teraz część NVDA 2019.1.
+* NVDA will no longer do anything or play error tones after closing this
+  app. This is now part of NVDA 2019.2.
 
 ## Mapy
 
@@ -155,25 +140,6 @@ nowszej wersji.
   używana wersja NVDA 2018.4 lub nowsza,, włącz słownik danych unicode z
   dialogu ustawień mowy i ustaw wymawianie symboli na "niektóre" lub wyższy
   poziom.
-* wsparcie dla podpowiedzi sprzętowych w wersji 1803 (kwietniowa
-  aktualizacja) i nowszych.
-* W kompilacjach po kompilacji 1709 ,  NVDA będzie wymawiało pierwszy
-  wybrany emoji na liście. To jest bardziej zauważalne w kompilacji 18262 i
-  nowszych gdzie panel może być otwarty w ostatniej kategorii, takiej jak
-  wyświetlanie karnacji skóry, gdy kategoria ludzie jest otwarta.
-* Wsparcie oznajmiania chmurowego schowka w wersji 1809 (kompilacja 17666 i
-  nowszych).
-* Zmniejszona niechciana gadatliwośc przy działaniach związanych z
-  współczesną klawiaturą i jej funkcjami. W tym jest włączone bezpodstawne
-  wymawianie "Microsoft Candidate UI" gdy otwiera się klawiatura sprzętowa
-  podpowiedzi wpisywania i pozostawianie cichym przy tym, jak niektóre
-  klawisze na klawiaturze wywołują zdarzenie zmiany nazwy na niektórych
-  systemach.
-* NVDA już nie będzie odtwarzało dźwięk błędu lub robiło nic, gdy panel
-  emoji jest zamykany w bardziej ostatnich kompilacjach 19H1. To jest część
-  NVDA 2019.1
-* W wersji 1809 (październikowa aktualizacja 2018), NVDA będzie oznajmiało
-  wyniki wyszukiwania emoji jeżeli to możliwe. To jest część NVDA 2019.1
 * NVDA już nie będzie wymawiała "showek" gdy istnieją w nim elementy.
 * Na niektórych komputerach na których jest uruchomiony Windows 10  1903
   (Atualizacja z maju 2019), NVDA nie będzie wydawała efekt robienia nic gdy

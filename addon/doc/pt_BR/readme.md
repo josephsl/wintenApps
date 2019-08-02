@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixe a [versão estável][1]
 * Baixe a [versão em desenvolvimento][2]
-* NVDA compatibility: 2018.4 to 2019.2
+* NVDA compatibility: 2019.1 to 2019.2
 
 Este complemento é uma coleção de módulos de aplicativos — app modules —
 para vários aplicativos do Windows 10, bem como aprimoramentos e correções
@@ -13,8 +13,6 @@ Os seguintes módulos de aplicativos ou módulos de suporte para alguns
 aplicativos estão incluídos (consulte a seção de cada aplicativo para obter
 detalhes sobre o que está incluído):
 
-* Central de Ações
-* Alarmes e Relógio.
 * Calculadora (moderna).
 * Calendário
 * Cortana
@@ -32,8 +30,8 @@ detalhes sobre o que está incluído):
 
 Notas:
 
-* This add-on requires Windows 10 Version 1803 (build 17134) or later and
-  NVDA 2018.4 or later. For best results, use the add-on with latest Windows
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and
+  NVDA 2019.1 or later. For best results, use the add-on with latest Windows
   10 stable release (build 18362) and latest stable version of NVDA.
 * Alguns recursos do complemento são ou farão parte do leitor de tela NVDA.
 * For entries not listed below, you can assume that features are part of
@@ -68,8 +66,8 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   notifications come from somewhere other than the currently active app.
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
-* As dicas de ferramentas do Edge e aplicativos universais são reconhecidas
-  e serão anunciadas.
+* Tooltips from Edge and universal apps are recognized and will be
+  announced. This will be part of NVDA 2019.3.
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce current desktop name (desktop 2, for example).
 * O NVDA deixará de anunciar o tamanho do texto do menu Iniciar quando
@@ -77,20 +75,6 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 * In Version 1903 (May 2019 Update), NVDA will announce volume and
   brightness changes immediately if focused on File Explorer. This is now
   part of NVDA 2019.2.
-
-## Central de Ações
-
-* Brightness quick action is now a button instead of a toggle button. This
-  is now part of NVDA 2019.1.
-* Various status changes such as Focus Assist and Brightness will be
-  reported. This is now part of NVDA 2019.1.
-
-## Alarmes e relógio
-
-* Time picker values are now announced, noticeable when moving focus to
-  picker controls. This also affects the control used to select when to
-  restart to finish installing Windows updates. This is now part of NVDA
-  2019.1.
 
 ## Calculadora
 
@@ -114,6 +98,8 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   (se não forem, reabra o menu Iniciar e tente procurar novamente).
 * O NVDA ficará em silêncio ao falar com Cortana via voz.
 * O NVDA agora anunciará confirmação de lembrete depois de o ter definido.
+* In build 18945 and later, modern search experience in File Explorer
+  powered by Cortana user interface is supported.
 
 ## Central de comentários
 
@@ -128,7 +114,7 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 * Ao escrever uma mensagem, a aparência das sugestões de menção é indicada
   pelos sons.
 * NVDA will no longer do anything or play error tones after closing this
-  app. This is now part of NVDA 2019.1.
+  app. This is now part of NVDA 2019.2.
 
 ## Mapas
 
@@ -156,24 +142,6 @@ Note: most features below are now part of NVDA 2018.3 or later.
   speech synthesizer. If 2018.4 or later is in use, enable Unicode
   Consortium setting from NvDA's speech settings and set symbol level to
   "some" or higher.
-* Suporte para sugestões de entrada de teclado de hardware na versão 1803
-  (atualização de abril de 2018) e posterior.
-* In post-1709 builds, NVDA will announce the first selected emoji when
-  emoji panel opens. This is more noticeable in build 18262 and later where
-  emoji panel may open to last browsed category, such as displaying skin
-  tone modifiers when opened to People category.
-* Suporte para anunciar itens da área de transferência em nuvem na versão
-  1809 (compilação 17666 e posterior).
-* Redução dos detalhes desnecessários ao trabalhar com o teclado moderno e
-  seus recursos. Estes incluem não mais anunciar "Microsoft Candidate UI" ao
-  abrir sugestões de entrada de teclado de hardware e ficar em silêncio
-  quando certas teclas do teclado virtual geram eventos de alteração de nome
-  em alguns sistemas.
-* NVDA will no longer play error tones or do nothing when closing emoji
-  panel in more recent 19H1 Insider Preview builds. This is now part of NVDA
-  2019.1.
-* In Version 1809 (October 2018 Update) and later, NVDA will announce search
-  results for emojis if possible. This is now part of NVDA 2019.1.
 * NVDA will no longer announce "clipboard" when there are items in the
   clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update), NVDA will no
