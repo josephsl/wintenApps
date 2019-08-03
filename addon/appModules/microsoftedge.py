@@ -2,7 +2,7 @@
 #A part of NonVisual Desktop Access (NVDA)
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
-#Copyright (C) 2018 NV Access Limited, Joseph Lee
+#Copyright (C) 2018-2019 NV Access Limited, Joseph Lee
 
 """appModule for Microsoft Edge main process"""
 
@@ -13,29 +13,20 @@ from nvdaBuiltin.appModules.microsoftedge import *
 from NVDAObjects.UIA import UIA, SearchField
 import controlTypes
 import ui
-import api
 from NVDAObjects.behaviors import EditableTextWithoutAutoSelectDetection, EditableTextWithAutoSelectDetection
-
-# Specifically designed to prevent odd controller for events from being fired when moving focus away from address omnibar.
-class EdgeAddressOmnibar(EditableTextWithAutoSelectDetection, SearchField, UIA):
-
-	def event_suggestionsClosed(self):
-		# Work around broken/odd controller for event implementation in Edge's address omnibar (don't even announce suggestion disappearance when focus moves).
-		if self != api.getFocusObject():
-			return
-		super(EdgeAddressOmnibar, self).event_suggestionsClosed()
-
 
 class AppModule(AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Detect selection changes in address omnibar.
+		# Also, due to controller for event issues (particularly suggestion sounds being heard when maximizing and restoring Edge window), remove search field capabilities.
 		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "addressEditBox":
 			try:
+				clsList.remove(SearchField)
 				clsList.remove(EditableTextWithoutAutoSelectDetection)
 			except ValueError:
 				pass
-			clsList.insert(0, EdgeAddressOmnibar)
+			clsList.insert(0, EditableTextWithAutoSelectDetection)
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
