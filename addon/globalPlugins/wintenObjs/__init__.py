@@ -8,7 +8,7 @@ import appModuleHandler
 import controlTypes
 import ui
 from NVDAObjects.UIA import UIA, SearchField, Dialog
-from NVDAObjects.behaviors import EditableTextWithSuggestions, ToolTip
+from NVDAObjects.behaviors import EditableTextWithSuggestions
 import api
 import nvwave
 import config
@@ -82,12 +82,6 @@ class MenuItemNoPosInfo(UIA):
 
 	def _get_positionInfo(self):
 		return {}
-
-
-# For tool tips from universal apps and Edge.
-class ToolTip(ToolTip, UIA):
-
-	event_UIA_toolTipOpened=ToolTip.event_show
 
 
 # Various XAML headings (Settings app, for example) introduced in Version 1803.
@@ -197,13 +191,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		elif obj.UIAElement.cachedClassName in ("MenuFlyoutItem", "MenuFlyoutSubItem"):
 			clsList.insert(0, MenuItemNoPosInfo)
 			return
-		# #44: Recognize XAML/UWP tool tips.
-		elif obj.UIAElement.cachedClassName == "ToolTip" and obj.UIAElement.cachedFrameworkID == "XAML":
-			# Just in case XAML tool tip support is part of NVDA...
-			import NVDAObjects.UIA
-			if not hasattr(NVDAObjects.UIA, "ToolTip"):
-				clsList.insert(0, ToolTip)
-				return
 		# Recognize headings as reported by XAML (build 17134 and later).
 		elif obj._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) > UIAHandler.HeadingLevel_None:
 			clsList.insert(0, XAMLHeading)
