@@ -32,7 +32,7 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_nameChange(self, obj, nextHandler):
 		# No, announce value changes immediately except for calculator results and expressions.
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID not in ("CalculatorResults", "CalculatorExpression") and obj.name != self._resultsCache:
+		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID not in ("CalculatorResults", "CalculatorExpression", "CalculatorAlwaysOnTopResults", "ExpressionContainer") and obj.name != self._resultsCache:
 			# For unit conversion, UIA notification event presents much better messages.
 			# For date calculation, live region change event is also fired for difference between dates.
 			if obj.UIAElement.cachedAutomationID not in ("Value1", "Value2", "DateDiffAllUnitsResultLabel"):
@@ -51,7 +51,10 @@ class AppModule(appModuleHandler.AppModule):
 		except AttributeError:
 			# Another UI redesign in 2019, causing attribute error when changing categories.
 			resultElement = api.getForegroundObject().children[1].lastChild
-			shouldAnnounceNotification = resultElement and resultElement.firstChild and resultElement.firstChild.UIAElement.cachedAutomationID != "CalculatorResults"
+			# Another redesign in 2019 due to introduction of "always on top" i.e. picture-in-picture mode.
+			if resultElement.UIAElement.cachedClassName != "LandmarkTarget":
+				resultElement = resultElement.parent.children[1]
+			shouldAnnounceNotification = resultElement and resultElement.firstChild and resultElement.firstChild.UIAElement.cachedAutomationID not in ("CalculatorResults", "CalculatorExpression", "CalculatorAlwaysOnTopResults")
 		# Also, warn users if maximum digit count has been reached (a different activity ID than display updates).
 		if shouldAnnounceNotification or activityId == "MaxDigitsReached":
 			nextHandler()
