@@ -272,6 +272,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Specifically in order to debug multiple toast announcements.
 		self.uiaDebugLogging(obj, "windowOpen")
+		# Log which modern keyboard header is active.
+		# Although this can be done from modern keyboard app module, that module is destined for NVDA Core, hence do it here.
+		if obj.appModule.appName == "windowsinternal_composableshell_experiences_textinput_inputapp" and obj.firstChild is not None and globalVars.appArgs.debugLogging:
+			log.debug("W10: automation ID for currently opened modern keyboard feature is %s"%obj.firstChild.UIAElement.cachedAutomationID)
 		nextHandler()
 
 	def event_UIA_notification(self, obj, nextHandler, notificationKind=None, notificationProcessing=None, displayString=None, activityId=None):
