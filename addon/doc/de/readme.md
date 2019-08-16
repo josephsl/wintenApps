@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA compatibility: 2019.1 to 2019.2
+* NVDA-Kompatibilität: 2019.1 bis 2019.2
 
 Diese Erweiterung bietet eine Sammlung von Anwendungsmodulen für
 verschiedene Windows 10 Anwendungen sowie Korrekturen in einigen Windows 10
@@ -29,9 +29,10 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* This add-on requires Windows 10 Version 1809 (build 17763) or later and
-  NVDA 2019.1 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18362) and latest stable version of NVDA.
+* Diese Erweiterung erfordert Windows 10 Version 1809 (Build 17763) oder
+  höher und NVDA 2019.1 oder höher. Für beste Ergebnisse verwenden Sie die
+  Erweiterung mit der neuesten stabilen Version von Windows 10 und der
+  neuesten stabilen Version von NVDA.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Für Einträge, die im Folgenden nicht aufgeführt sind, können Sie davon
   ausgehen, dass Funktionen Teil von NVDA sind, die nicht mehr benötigt
@@ -71,15 +72,15 @@ Versionen][3].
   stammen.
 * Es ist möglich, nur bestimmte Ereignisse bzw. Ereignisse aus bestimmten
   Anwendungen zu verfolgen.
-* Tooltips from Edge and universal apps are recognized and will be
-  announced. This will be part of NVDA 2019.3.
+* Tooltips von Edge und Universal Apps werden erkannt und angekündigt. Dies
+  wird in NVDA 2019.3 standardmäßig implementiert.
 * Beim Öffnen, Schließen oder Umschalten virtueller Desktops meldet NVDA den
   aktuellen Desktop-Namen (z. B. Desktop 2).
 * NVDA sagt den Text für die Größe des Startmenüs nicht mehr an, wenn die
   Bildschirmauflösung oder Ausrichtung geändert wird.
 * In der Version 1903 (Mai 2019 Update) wird NVDA Änderungen bei der
   Lautstärke und Helligkeit sofort zurückmelden. Dies ist nun eine Neuerung
-  in NVDA 2019.2
+  in NVDA 2019.2.
 
 ## Rechner
 
@@ -105,8 +106,8 @@ Versionen][3].
   nicht mehr in die Quere kommen.
 * NVDA wird nun eine Erinnerungsbestätigung anzeigen, nachdem Sie eine
   eingestellt haben.
-* In build 18945 and later, modern search experience in File Explorer
-  powered by Cortana user interface is supported.
+* Ab Windows 10 Build 18945 und neuer wird die moderne Suchfunktion der
+  Cortana-Benutzeroberfläche im Dateiexplorer unterstützt.
 
 ## Feedback Hub
 
@@ -120,8 +121,9 @@ Versionen][3].
   Navigation zwischen Zeilen (Nachrichten) wird noch nicht unterstützt.
 * Wenn Sie eine Nachricht schreiben, wird das Erscheinen von Vorschlägen
   durch Töne angezeigt.
-* NVDA will no longer do anything or play error tones after closing this
-  app. This is now part of NVDA 2019.2.
+* NVDA wird nach dem Schließen dieser App nicht mehr unklare Ereignisse
+  hervorrufen oder Fehlertöne wiedergeben. Dies ist nun in NVDA 2019.2
+  bereits standardmäßig enthalten.
 
 ## Karten
 
