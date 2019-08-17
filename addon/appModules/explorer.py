@@ -27,7 +27,8 @@ class AppModule(AppModule):
 		# Send UIA window open event to input app window.
 		if isinstance(obj, UIA) and obj.UIAElement.cachedClassName == "ApplicationFrameWindow":
 			inputPanelWindow = obj.firstChild
-			if inputPanelWindow and inputPanelWindow.appModule.appName == "windowsinternal_composableshell_experiences_textinput_inputapp":
+			# In build 18963, executable name for modern keyboard has changed, so support both executables.
+			if inputPanelWindow and inputPanelWindow.appModule.appName in ("windowsinternal_composableshell_experiences_textinput_inputapp", "textinputhost"):
 				eventHandler.executeEvent("UIA_window_windowOpen", inputPanelWindow)
 				return
 		nextHandler()
