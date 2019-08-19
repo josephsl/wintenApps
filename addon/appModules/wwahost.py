@@ -26,19 +26,3 @@ def getAppNameFromHost(processId):
 		raise LookupError
 	# Convert this into lowercase to make the file name consistent with other NVDA app modules.
 	return appModel.value.split("!")[-1].lower()
-
-class AppModule(AppModule):
-
-	def _setProductInfo(self):
-		# Default implementation is too generic - returns Windows version information.
-		# Therefore, probe package full name and parse the serialized representation of package info structure.
-		if not self.processHandle:
-			raise RuntimeError("processHandle is 0")
-		length = ctypes.c_uint()
-		buf = winKernel.kernel32.GetPackageFullName(self.processHandle, ctypes.byref(length), None)
-		packageFullName = ctypes.create_unicode_buffer(buf)
-		winKernel.kernel32.GetPackageFullName(self.processHandle, ctypes.byref(length), packageFullName)
-		packageInfo = packageFullName.value.split("_")
-		# Product name is of the form publisher.name.
-		self.productName = packageInfo[0]
-		self.productVersion = packageInfo[1]
