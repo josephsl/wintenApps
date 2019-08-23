@@ -76,6 +76,7 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA ilmoittaa välittömästi äänenvoimakkuuden ja kirkkauden muutokset
   Windows 10:n versiossa 1903 (toukokuun 2019 päivitys), jos kohdistus on
   resurssienhallinnassa. Tämä muutos sisältyy NVDA 2019.2:een.
+* App name and version for various universal apps are now shown correctly.
 
 ## Laskin
 
@@ -86,6 +87,7 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   laskimessa.
 * NVDA ilmoittaa, jos lukujen enimmäismäärä saavutetaan ilmaisuja
   kirjoitettaessa.
+* Added support for always on mode in future Calculator releases.
 
 ## Kalenteri
 
@@ -129,6 +131,7 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   osoitepalkissa.
 * NVDA ei enää toista ehdotusten ääntä vaihdettaessa koko näytön tilaa
   F11:tä painamalla.
+* Removed suggestions sound playback for address omnibar.
 
 ## Moderni näppäimistö
 

@@ -77,6 +77,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
   pantalla ou a orientación.
 * Na versión 1903 (May 2019 Update), NVDA anunciará cambios no volume e o
   brillo inmediatamente. Agora isto é parte de NVDA 2019.2.
+* O nome e a versión da app para varias apps universais amósanse aagora
+  correctamente.
 
 ## Calculadora
 
@@ -87,6 +89,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
   calculadora.
 * NVDA notificará cando se chegue ao límite de díxitos introducindo
   expresións.
+* Engadido soporte para o modo sempre acendida en versións futuras de
+  Calculadora.
 
 ## calendario
 
@@ -132,6 +136,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
   de direccións.
 * NVDA xa non reproducirá o son de suxestión ao premer F11 para alternar a
   pantalla completa.
+* Eliminada a reprodución do son de suxestión para a barra de busca
+  (omnibar).
 
 ## Teclado Moderno
 

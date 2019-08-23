@@ -3,7 +3,7 @@
 * Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
-* NVDA compatibility: 2019.1 to 2019.2
+* Zgodność z wersjami NVDA: 2019.1 do 2019.2
 
 Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
 również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
@@ -28,9 +28,10 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* This add-on requires Windows 10 Version 1809 (build 17763) or later and
-  NVDA 2019.1 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18362) and latest stable version of NVDA.
+* Uwaga! Ten dodatek wymaga Windowsa 10 Wersji 1809 (kompilacji 17763) lub
+  nowszej i NVDA 2019.1 lub nowszej. Aby uzyskać najlepsze wyniki, należy
+  używać dodatku z najnowszą stabilną kompilacją systemu (kompilacja 18362)
+  i najnowszą stabilną wersją NVDA. 
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
@@ -65,8 +66,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   innej niż aktualnie aktywnej aplikacji.
 * Teraz jest możliwe śledzenie zdarzeń z określonych oraz specyficznych
   aplikacji.
-* Tooltips from Edge and universal apps are recognized and will be
-  announced. This will be part of NVDA 2019.3.
+* Opisy obiektów w Edge i innych aplikacjach UWP są rozpoznawane  i będą
+  czytane automatycznie. To będzie częścią NVDA 2019.3.
 * Podczas otwierania, zamykając lub przełączając się między wirtualnymi
   pulpitami, NVDA będzie oznajmiała aktualny identyfikator (na przykład
   pulpit 2).
@@ -75,6 +76,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * W wersji 1903 (aktualizacji majowej 2019), NVDA będzie oznajmiał zmiany
   głośności i jasności od razu, gdy jest się fokusowanyw na oknie
   eksploratora windows. Jest to teraz część NVDA 2019.2.
+* Wersja i nazwa aplikacji teraz są wyświetlane poprawnie dla różnych
+  aplikacji współczesnych.
 
 ## Kalkulator
 
@@ -84,6 +87,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * NVDA nie będzie więcej wymawiało "nagłówek" dla wyników kalkulatora.
 * NVDA powiadomi, jeżeli ilość liczb osiągnie maksymalną wartość przy
   wpisywaniu wyrażenia.
+* Dodano wsparcie trybu  "zawsze włączony", dla przyszłych wersji
+  kalkulatora.
 
 ## Kalendarz
 
@@ -96,8 +101,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   są, ponownie otwórz meni start, i spróbuj ponownie).
 * NVDA będzie przyciszony, gdy mówisz do Cortany.
 * NVDA teraz wymawia potwierdzenie przypomnienia po jego ustawieniu.
-* In build 18945 and later, modern search experience in File Explorer
-  powered by Cortana user interface is supported.
+* w kompilacji 18945 i nowszych, wspierany jest nowy interfejs wyszukiwania
+  cortana w eksploratorze plików.
 
 ## Centrum opinii
 
@@ -111,8 +116,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   uwadze, że nawigacja po kolumnach (wiadomościach) jest niewspierana.
 * Przy pisaniu wiadomości, istnienie podpowiedzi o wzmiankach teraz jest
   oznajmiane dzwiękami.
-* NVDA will no longer do anything or play error tones after closing this
-  app. This is now part of NVDA 2019.2.
+* NVDA nie będzie robiło nic, lub odtwarzało dźwięk błędu, gdyy ta aplikacja
+  jest zamknięta. Ta funkcja jest teraz częścią NVDA 2019.2.
 
 ## Mapy
 
@@ -125,6 +130,7 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * Autouzupełnienie tekstu będzie śledzone i wymawiane w omnibarze.
 * NVDA nie będzie już odtwarzać dźwięku podpowiedzi po naciśnięciu F11 aby
   przełączyć pełny ekran.
+* Wyłączono odtwarzanie dźwięku dla pasku adresowego omnibar.
 
 ## Klawiatura nowoczesna
 

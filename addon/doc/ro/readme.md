@@ -79,6 +79,7 @@ versiunile suplimentului][3].
 * In Version 1903 (May 2019 Update), NVDA will announce volume and
   brightness changes immediately if focused on File Explorer. This is now
   part of NVDA 2019.2.
+* App name and version for various universal apps are now shown correctly.
 
 ## Calculator
 
@@ -88,6 +89,7 @@ versiunile suplimentului][3].
 * NVDA nu va mai anunța „rubrică nivel” pentru rezultatele calculatorului.
 * NVDA will notify if maximum digit count has been reached while entering
   expressions.
+* Added support for always on mode in future Calculator releases.
 
 ## calendar
 
@@ -131,6 +133,7 @@ versiunile suplimentului][3].
 * Autocompletarea textului va fi urmărită și anunțată în omnibara de adrese.
 * NVDA nu va mai reda sunete de sugestie la apăsarea tastei F11 pentru
   activarea/dezactivarea ecranului complet.
+* Removed suggestions sound playback for address omnibar.
 
 ## Tastatură modernă
 

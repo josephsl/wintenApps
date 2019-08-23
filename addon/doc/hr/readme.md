@@ -73,6 +73,7 @@ For a list of changes made between each add-on releases, refer to
 * In Version 1903 (May 2019 Update), NVDA will announce volume and
   brightness changes immediately if focused on File Explorer. This is now
   part of NVDA 2019.2.
+* App name and version for various universal apps are now shown correctly.
 
 ## Kalkulator
 
@@ -82,6 +83,7 @@ For a list of changes made between each add-on releases, refer to
 * NVDA will no longer announce "heading level" for calculator results.
 * NVDA will notify if maximum digit count has been reached while entering
   expressions.
+* Added support for always on mode in future Calculator releases.
 
 ## Kalendar
 
@@ -124,6 +126,7 @@ For a list of changes made between each add-on releases, refer to
 * Text auto-complete will be tracked and announced in address omnibar.
 * NVDA will no longer play suggestion sound when pressing F11 to toggle full
   screen.
+* Removed suggestions sound playback for address omnibar.
 
 ## Modern keyboard
 

@@ -75,6 +75,7 @@ riferimento al documento [changelogs for add-on releases][3].
 * In Version 1903 (May 2019 Update), NVDA will announce volume and
   brightness changes immediately if focused on File Explorer. This is now
   part of NVDA 2019.2.
+* App name and version for various universal apps are now shown correctly.
 
 ## Calcolatrice
 
@@ -85,6 +86,7 @@ riferimento al documento [changelogs for add-on releases][3].
   calcoli.
 * NVDA will notify if maximum digit count has been reached while entering
   expressions.
+* Added support for always on mode in future Calculator releases.
 
 ## calendario
 
@@ -129,6 +131,7 @@ riferimento al documento [changelogs for add-on releases][3].
   degli indirizzi.
 * NVDA non riprodurrà più un suono di avviso quando si attiva o disattiva lo
   schermo intero con F11.
+* Removed suggestions sound playback for address omnibar.
 
 ## Tastiera moderna
 

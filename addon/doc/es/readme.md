@@ -79,6 +79,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * En la versión 1903 (actualización de mayo de 2019), NVDA anunciará
   inmediatamente los cambios de brillo y volumen si el foco está en el
   explorador de archivos. Esto ahora forma parte de NVDA 2019.2.
+* Ahora se muestran correctamente el nombre y la versión de diversas
+  aplicaciones universales.
 
 ## Calculadora
 
@@ -89,6 +91,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   calculadora.
 * NVDA avisará si se alcanza la cantidad máxima de dígitos al introducir
   expresiones.
+* Se ha añadido soporte para el modo Siempre Encendido de versiones futuras
+  de la calculadora.
 
 ## calendario
 
@@ -134,6 +138,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   direcciones omni.
 * NVDA ya no reproducirá el sonido de sugerencias de búsqueda al pulsar f11
   para conmutar la pantalla completa.
+* Se ha eliminado la reproducción de sonidos de sugerencia en la barra de
+  direcciones.
 
 ## Teclado Moderno
 

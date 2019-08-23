@@ -73,6 +73,7 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * In Version 1903 (May 2019 Update), NVDA will announce volume and
   brightness changes immediately if focused on File Explorer. This is now
   part of NVDA 2019.2.
+* App name and version for various universal apps are now shown correctly.
 
 ## Lommeregner
 
@@ -83,6 +84,7 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   Lommeregner annonceres.
 * NVDA will notify if maximum digit count has been reached while entering
   expressions.
+* Added support for always on mode in future Calculator releases.
 
 ## kalender
 
@@ -127,6 +129,7 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   omnibar.
 * NVDA vil ikke længere afspille lyden for forslag, når du trykker på F11
   for at ændre indstillingen for fuld skærm.
+* Removed suggestions sound playback for address omnibar.
 
 ## Moderne tastatur
 
