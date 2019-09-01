@@ -172,9 +172,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			try: import winreg #Python 3
 			except: import _winreg as winreg #Python 2
 			currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, "Software\Microsoft\Windows NT\CurrentVersion")
-			ubr = winreg.QueryValueEx(currentVersion, "UBR")[0] #UBR = Update Build Revision
+			branch = winreg.QueryValueEx(currentVersion, "BuildBranch")[0]
 			winreg.CloseKey(currentVersion)
-			if ubr >= 10000:
+			if "19h2" in branch:
 				log.info("W10: Windows 10 Version 19H2 detected")
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
