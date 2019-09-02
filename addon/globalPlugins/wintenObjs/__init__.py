@@ -62,7 +62,7 @@ class SearchField(SearchField):
 		# Oddly, Edge's address omnibar returns 0 for suggestion count when there are clearly suggestions (implementation differences).
 		# Because inaccurate count could be announced (when users type, suggestion count changes), thus announce this if position info reporting is enabled.
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
-			if self.UIAElement.cachedAutomationID == "TextBox" or self.UIAElement.cachedAutomationID == "SearchTextBox" and self.appModule.appName != "searchui":
+			if self.UIAElement.cachedAutomationID == "TextBox" or self.UIAElement.cachedAutomationID == "SearchTextBox" and self.appModule.appName not in ("searchui", "searchapp"):
 				# Item count must be the last one spoken.
 				suggestionsCount = self.controllerFor[0].childCount
 				suggestionsMessage = "1 suggestion" if suggestionsCount == 1 else "%s suggestions"%suggestionsCount
@@ -192,7 +192,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox"):
 			# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcement problem.
 			# Because the add-on version deals with focus comparison, let all search fields go through this check as much as possible except for specific apps.
-			if obj.appModule.appName != "searchui":
+			if obj.appModule.appName not in ("searchui", "searchapp"):
 				clsList.insert(0, SearchField)
 				return
 		# A dedicated version for Mail app's address/mention suggestions.
