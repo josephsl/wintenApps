@@ -29,9 +29,10 @@ class AppModule(AppModule):
 		# This event is properly raised in build 17134.
 		if winVersion.winVersion.build <= 17134 and inputPanelAutomationID in ("TEMPLATE_PART_ExpressiveInputFullViewFuntionBarItemControl", "TEMPLATE_PART_ExpressiveInputFullViewFuntionBarCloseButton"):
 			self.event_UIA_elementSelected(obj.lastChild.firstChild, nextHandler)
-		# Handle hardware keyboard suggestions.
+		# Handle hardware keyboard and CJK IME suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
-		elif inputPanelAutomationID == "CandidateWindowControl" and config.conf["inputComposition"]["autoReportAllCandidates"]:
+		# In fact, in 20H1, this is the CJK IME candidates window.
+		elif inputPanelAutomationID in ("CandidateWindowControl", "IME_Candidate_Window") and config.conf["inputComposition"]["autoReportAllCandidates"]:
 			try:
 				self.event_UIA_elementSelected(inputPanel.firstChild.firstChild, nextHandler)
 			except AttributeError:
