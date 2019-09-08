@@ -55,3 +55,8 @@ class AppModule(AppModule):
 			clipboardItemsIndex = -2 if obj.children[-2].UIAElement.cachedAutomationID != inputPanelAutomationID else -1
 			self.event_UIA_elementSelected(obj.children[clipboardItemsIndex], nextHandler)
 		nextHandler()
+
+	def event_nameChange(self, obj, nextHandler):
+		# In build 18975, CJK IME candidates fire name change event.
+		if obj.UIAElement.cachedClassName == "ListViewItem": return
+		super(AppModule, self).event_nameChange(obj, nextHandler)
