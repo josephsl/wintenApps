@@ -112,7 +112,7 @@ def _setProductInfo(self):
 	from fileUtils import getFileVersionInfo
 	# Use an internal function for obtaining file name and version for the executable.
 	# This is needed in case immersive app package returns an error, dealing with a native app, or a converted desktop app.
-	def _executableFileInfo():
+	def _getExecutableFileInfo():
 		# Create the buffer to get the executable name
 		exeFileName = ctypes.create_unicode_buffer(ctypes.wintypes.MAX_PATH)
 		length = ctypes.wintypes.DWORD(ctypes.wintypes.MAX_PATH)
@@ -135,7 +135,7 @@ def _setProductInfo(self):
 		productInfo = packageFullName.value.split("_")
 	else:
 		# File Explorer and friends which are really native aps.
-		productInfo = _executableFileInfo()
+		productInfo = _getExecutableFileInfo()
 	self.productName = productInfo[0]
 	self.productVersion = productInfo[1]
 
