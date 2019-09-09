@@ -151,7 +151,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #40: skip over the rest if appx is in effect.
 		if globalVars.appArgs.secure or config.isAppX: return
 		# Patch base app module so correct product name and version canbe returned for immersive processes.
-		log.debug("W10: patching base app module to support obtaining product anme and version of hosted apps")
+		log.debug("W10: patching base app module to support obtaining product name and version of hosted apps")
 		appModuleHandler.AppModule._setProductInfo = _setProductInfo
 		# Add a series of events instead of doing it one at a time.
 		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
