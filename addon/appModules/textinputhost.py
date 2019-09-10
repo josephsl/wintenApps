@@ -7,4 +7,4 @@
 """App module for Windows 10 Modern Keyboard aka new touch keyboard panel.
 This is for 20H1 text input host window."""
 
-from . windowsinternal_composableshell_experiences_textinput_inputapp import *
+from .windowsinternal_composableshell_experiences_textinput_inputapp import *
