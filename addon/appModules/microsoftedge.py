@@ -13,7 +13,6 @@ from nvdaBuiltin.appModules.microsoftedge import *
 from NVDAObjects.UIA import UIA, SearchField
 import controlTypes
 import ui
-from NVDAObjects.behaviors import EditableTextWithoutAutoSelectDetection, EditableTextWithAutoSelectDetection
 
 class AppModule(AppModule):
 
@@ -23,10 +22,8 @@ class AppModule(AppModule):
 		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "addressEditBox":
 			try:
 				clsList.remove(SearchField)
-				clsList.remove(EditableTextWithoutAutoSelectDetection)
 			except ValueError:
 				pass
-			clsList.insert(0, EditableTextWithAutoSelectDetection)
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
