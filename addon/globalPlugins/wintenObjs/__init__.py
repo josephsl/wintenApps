@@ -4,7 +4,6 @@
 # Adds handlers for various UIA controls found in Windows 10.
 
 import globalPluginHandler
-import appModuleHandler
 import controlTypes
 import ui
 from NVDAObjects.UIA import UIA, SearchField, Dialog
@@ -92,46 +91,6 @@ class XAMLHeading(UIA):
 		return self._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) - 80010
 
 
-# Patch base app module class so the "real" product name and version can be returned.
-# This affects Calculator and many apps, as without this, it returns Windows version or nonsense.
-def _setProductInfo(self):
-	"""Set productName and productVersion attributes.
-	"""
-	# Sometimes (I.E. when NVDA starts) handle is 0, so stop if it is the case
-	if not self.processHandle:
-		raise RuntimeError("processHandle is 0")
-	import ctypes
-	from fileUtils import getFileVersionInfo
-	# Use an internal function for obtaining file name and version for the executable.
-	# This is needed in case immersive app package returns an error, dealing with a native app, or a converted desktop app.
-	def _getExecutableFileInfo():
-		# Create the buffer to get the executable name
-		exeFileName = ctypes.create_unicode_buffer(ctypes.wintypes.MAX_PATH)
-		length = ctypes.wintypes.DWORD(ctypes.wintypes.MAX_PATH)
-		if not ctypes.windll.Kernel32.QueryFullProcessImageNameW(self.processHandle, 0, exeFileName, ctypes.byref(length)):
-			raise ctypes.WinError()
-		fileName = exeFileName.value
-		fileinfo = getFileVersionInfo(fileName, "ProductName", "ProductVersion")
-		return (fileinfo["ProductName"], fileinfo["ProductVersion"])
-	# NVDA Core issue 10108: use different paths depending on whether this is an immersive process or not.
-	# No need to check for Windows version as this is Windows 10, which guarantees presence of user32.dll::IsImmersiveProcess function.
-	# Some apps such as File Explorer says it is an immersive process but error 15700 (no container) is returned, therefore resort to old behavior.
-	# Others such as Store version of Office are not truly hosted apps, yet returns an internal version number anyway.
-	# For immersive apps, default implementation is too generic - returns Windows version information.
-	# Therefore, probe package full name and parse the serialized representation of package info structure.
-	length = ctypes.c_uint()
-	buf = ctypes.windll.kernel32.GetPackageFullName(self.processHandle, ctypes.byref(length), None)
-	packageFullName = ctypes.create_unicode_buffer(buf)
-	if ctypes.windll.kernel32.GetPackageFullName(self.processHandle, ctypes.byref(length), packageFullName) == 0:
-		# Product name is of the form publisher.name for a hosted app.
-		productInfo = packageFullName.value.split("_")
-	else:
-		# File Explorer and friends which are really native aps.
-		productInfo = _getExecutableFileInfo()
-	self.productName = productInfo[0]
-	self.productVersion = productInfo[1]
-
-
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
@@ -142,11 +101,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #20: don't even think about proceeding in secure screens.
 		# #40: skip over the rest if appx is in effect.
 		if globalVars.appArgs.secure or config.isAppX: return
-		# Patch base app module so correct product name and version canbe returned for immersive processes.
-		# But only do this if this is 2019.2 or earlier.
-		if not hasattr(appModuleHandler.AppModule, "_getExecutableFileInfo"):
-			log.debug("W10: patching base app module to support obtaining product name and version of hosted apps")
-			appModuleHandler.AppModule._setProductInfo = _setProductInfo
 		# Add a series of events instead of doing it one at a time.
 		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
 		log.debug("W10: adding additional events")
