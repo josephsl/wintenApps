@@ -10,20 +10,11 @@
 # Provides additional enhancements.
 
 from nvdaBuiltin.appModules.microsoftedge import *
-from NVDAObjects.UIA import UIA, SearchField
+from NVDAObjects.UIA import UIA
 import controlTypes
 import ui
 
 class AppModule(AppModule):
-
-	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		# Detect selection changes in address omnibar.
-		# Also, due to controller for event issues (particularly suggestion sounds being heard when maximizing and restoring Edge window), remove search field capabilities.
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "addressEditBox":
-			try:
-				clsList.remove(SearchField)
-			except ValueError:
-				pass
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
