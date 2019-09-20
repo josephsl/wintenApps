@@ -81,7 +81,8 @@ Versionen][3].
 * In der Version 1903 (Mai 2019 Update) wird NVDA Änderungen bei der
   Lautstärke und Helligkeit sofort zurückmelden. Dies ist nun eine Neuerung
   in NVDA 2019.2.
-* App name and version for various universal apps are now shown correctly.
+* App-Name und -Version für verschiedene universelle Apps werden nun korrekt
+  angezeigt.
 
 ## Rechner
 
@@ -92,7 +93,8 @@ Versionen][3].
 * NVDA nennt bei Berechnungsergebnissen nicht mehr "Überschriftebenen".
 * NVDA meldet, wenn die maximale Anzahl der Ziffern während der Eingabe von
   Ausdrücken erreicht wurde.
-* Added support for always on mode in future Calculator releases.
+* Unterstützung für "immer-an"-Modus in zukünftigen Taschenrechner-Versionen
+  hinzugefügt.
 
 ## Kalender
 
@@ -140,7 +142,7 @@ Versionen][3].
   Adresszeile ordnungsgemäß angesagt.
 * NVDA gibt keinen Vorschläge-Ton mehr wieder, wenn F11 für den
   Vollbildmodus gedrückt wird.
-* Removed suggestions sound playback for address omnibar.
+* Vorschlags Ton  für kombinierte Adress-Leiste entfernt.
 
 ## Moderne virtuelle Tastaturen
 
