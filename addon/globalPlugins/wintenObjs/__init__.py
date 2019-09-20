@@ -174,7 +174,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# WinVersion tuple and Python 2 and 3 winreg module must be used for maximum compatibility.
 		try: import winreg #Python 3
 		except: import _winreg as winreg #Python 2
-		currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, "Software\Microsoft\Windows NT\CurrentVersion")
+		currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
 		branch = winreg.QueryValueEx(currentVersion, "BuildBranch")[0]
 		winreg.CloseKey(currentVersion)
 		if winVersion.winVersion.build == 18363 or "19h2" in branch:
