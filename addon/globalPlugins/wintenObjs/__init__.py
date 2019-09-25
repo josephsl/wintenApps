@@ -97,7 +97,8 @@ class ToolTip(ToolTip, UIA):
 class XAMLHeading(UIA):
 
 	def _get_role(self):
-		return self._getUIACacheablePropertyValue(30173) - 80010
+		# Heading levels are 8005x, control types heading levels are 4x, therefore the below object role formula.
+		return self._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) - 80010
 
 
 # Patch base app module class so the "real" product name and version can be returned.
@@ -218,7 +219,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				clsList.insert(0, ToolTip)
 				return
 		# Recognize headings as reported by XAML (build 17134 and later).
-		elif obj._getUIACacheablePropertyValue(30173) > 80050:
+		elif obj._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) > UIAHandler.HeadingLevel_None:
 			clsList.insert(0, XAMLHeading)
 
 	# Find out if log recording is possible.
