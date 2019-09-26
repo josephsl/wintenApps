@@ -169,17 +169,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if dialogClassName not in UIAHandler.UIADialogClassNames:
 				log.debug("W10: adding class name %s to known dialog class names"%dialogClassName)
 				UIAHandler.UIADialogClassNames.append(dialogClassName)
-		# Detect Windows 10 Version 1909 (build 18362.xxxxx/18363).
-		# The only difference between 1903 and 1909 is the enablement package, which updates Windows Registry to state build 18363.
-		# Other than this, crucial system files are left in build 18362.
-		# WinVersion tuple and Python 2 and 3 winreg module must be used for maximum compatibility.
-		try: import winreg #Python 3
-		except: import _winreg as winreg #Python 2
-		currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
-		branch = winreg.QueryValueEx(currentVersion, "BuildBranch")[0]
-		winreg.CloseKey(currentVersion)
-		if winVersion.winVersion.build == 18363 or "19h2" in branch:
-			log.info("W10: Windows 10 Version 19H2 detected")
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# There's no point looking at non-UIA objects.
