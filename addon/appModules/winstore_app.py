@@ -22,7 +22,11 @@ class AppModule(appModuleHandler.AppModule):
 	def event_nameChange(self, obj, nextHandler):
 		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "InstallControl":
 			# Install control comes with an anoying name, so look at its children.
-			progressText = " ".join([obj.firstChild.name, obj.simpleFirstChild.name])
+			# Sometimes one of its children disappears, causing attribute error to be thrown.
+			try:
+				progressText = " ".join([obj.firstChild.name, obj.simpleFirstChild.name])
+			except AttributeError:
+				progressText = ""
 			if progressText != self._appInstallProgress:
 				self._appInstallProgress = progressText
 				ui.message(progressText)
