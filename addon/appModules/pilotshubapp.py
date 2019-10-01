@@ -11,4 +11,4 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_UIA_notification(self, obj, nextHandler, activityId=None, **kwargs):
 		if activityId in ("CategoryChangedContext",): return
-		nextHandler(activityId=activityId, **kwargs)
+		nextHandler()

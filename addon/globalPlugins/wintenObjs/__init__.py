@@ -94,7 +94,8 @@ class ToolTip(ToolTip, UIA):
 class XAMLHeading(UIA):
 
 	def _get_role(self):
-		return self._getUIACacheablePropertyValue(30173) - 80010
+		# Heading levels are 8005x, control types heading levels are 4x, therefore the below object role formula.
+		return self._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) - 80010
 
 
 # Patch base app module class so the "real" product name and version can be returned.
@@ -165,17 +166,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if dialogClassName not in UIAHandler.UIADialogClassNames:
 				log.debug("W10: adding class name %s to known dialog class names"%dialogClassName)
 				UIAHandler.UIADialogClassNames.append(dialogClassName)
-		# Detect Windows 10 Version 1909 (build 18362.xxxxx/18363).
-		# The only difference between 1903 and 1909 is the enablement package, which updates Windows Registry to state build 18363.
-		# Other than this, crucial system files are left in build 18362.
-		# WinVersion tuple and Python 2 and 3 winreg module must be used for maximum compatibility.
-		try: import winreg #Python 3
-		except: import _winreg as winreg #Python 2
-		currentVersion = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"Software\Microsoft\Windows NT\CurrentVersion")
-		branch = winreg.QueryValueEx(currentVersion, "BuildBranch")[0]
-		winreg.CloseKey(currentVersion)
-		if winVersion.winVersion.build == 18363 or "19h2" in branch:
-			log.info("W10: Windows 10 Version 19H2 detected")
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# There's no point looking at non-UIA objects.
@@ -215,7 +205,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				clsList.insert(0, ToolTip)
 				return
 		# Recognize headings as reported by XAML (build 17134 and later).
-		elif obj._getUIACacheablePropertyValue(30173) > 80050:
+		elif obj._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) > UIAHandler.HeadingLevel_None:
 			clsList.insert(0, XAMLHeading)
 
 	# Find out if log recording is possible.
