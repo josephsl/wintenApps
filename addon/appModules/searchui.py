@@ -38,16 +38,6 @@ class SuggestionListItem(UIA):
 		super(SuggestionListItem, self).reportFocus()
 
 
-class ContextMenuItem(UIA):
-
-	role=controlTypes.ROLE_LISTITEM
-
-	def event_UIA_elementSelected(self):
-		speech.cancelSpeech()
-		api.setNavigatorObject(self)
-		self.reportFocus()
-
-
 # In build 18363 and later, File Explorer gains Cortana search field.
 # For Start menu and File Explorer, "suggestions" should not be brailled.
 # This is more so for File Explorer as a live region will announce suggestion count.
@@ -74,8 +64,7 @@ class AppModule(AppModule):
 				pass
 		elif isinstance(obj,UIA):
 			if isinstance(obj.parent,EdgeList):
-				# #48: differentiate between search results and context menu items.
-				clsList.insert(0,ContextMenuItem if obj.parent.UIAElement.cachedAutomationID == "contextMenu" else SuggestionListItem)
+				clsList.insert(0, SuggestionListItem)
 			elif obj.UIAElement.cachedAutomationID == "SearchTextBox":
 				clsList.insert(0, StartMenuSearchField)
 
