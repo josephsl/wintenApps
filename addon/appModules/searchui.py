@@ -15,26 +15,6 @@ import config
 import nvwave
 from NVDAObjects.UIA import SuggestionListItem
 
-# Windows 10 Search UI suggestion list item
-class SearchUISuggestionListItem(SuggestionListItem):
-
-	def event_UIA_elementSelected(self):
-		# Build 17600 series introduces Sets, a way to group apps into tabs.
-		# #45: unfortunately, the start page for this (an embedded searchui process inside Edge) says controller for list is empty when in fact it isn't.
-		# Thankfully, it is easy to spot them: if a link is next to results list, then this is the embedded searchui results list.
-		focusControllerFor=api.getFocusObject().controllerFor
-		announceSuggestions = ((len(focusControllerFor)>0 and focusControllerFor[0].appModule is self.appModule and self.name) or self.parent.next is not None)
-		if announceSuggestions:
-			speech.cancelSpeech()
-			api.setNavigatorObject(self)
-			self.reportFocus()
-
-	def reportFocus(self):
-		# #21: nullify description if it is the same as the item label.
-		if self.description == self.name and config.conf["presentation"]["reportObjectDescriptions"]:
-			self.description = None
-		super(SuggestionListItem, self).reportFocus()
-
 
 # In build 18363 and later, File Explorer gains Cortana search field.
 # For Start menu and File Explorer, "suggestions" should not be brailled.
@@ -63,7 +43,7 @@ class AppModule(AppModule):
 		elif isinstance(obj,UIA):
 			# Since 2019, some suggestion items are not exposed as a list item but are children of a search category.
 			if obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, SuggestionListItem):
-				clsList.insert(0, SearchUISuggestionListItem)
+				clsList.insert(0, SuggestionListItem)
 			elif obj.UIAElement.cachedAutomationID == "SearchTextBox":
 				clsList.insert(0, StartMenuSearchField)
 
