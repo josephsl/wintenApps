@@ -13,12 +13,10 @@ import speech
 import ui
 import config
 import nvwave
-from NVDAObjects.UIA.edge import EdgeList
+from NVDAObjects.UIA import SuggestionListItem
 
 # Windows 10 Search UI suggestion list item
-class SuggestionListItem(UIA):
-
-	role=controlTypes.ROLE_LISTITEM
+class SearchUISuggestionListItem(SuggestionListItem):
 
 	def event_UIA_elementSelected(self):
 		# Build 17600 series introduces Sets, a way to group apps into tabs.
@@ -63,8 +61,9 @@ class AppModule(AppModule):
 			except ValueError:
 				pass
 		elif isinstance(obj,UIA):
-			if isinstance(obj.parent,EdgeList):
-				clsList.insert(0, SuggestionListItem)
+			# Since 2019, some suggestion items are not exposed as a list item but are children of a search category.
+			if obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, SuggestionListItem):
+				clsList.insert(0, SearchUISuggestionListItem)
 			elif obj.UIAElement.cachedAutomationID == "SearchTextBox":
 				clsList.insert(0, StartMenuSearchField)
 
