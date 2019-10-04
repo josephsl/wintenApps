@@ -19,10 +19,7 @@ from NVDAObjects.UIA import SuggestionListItem
 # In build 18363 and later, File Explorer gains Cortana search field.
 # For Start menu and File Explorer, "suggestions" should not be brailled.
 # This is more so for File Explorer as a live region will announce suggestion count.
-class StartMenuSearchField(SearchField):
-
-	# #7370: do not announce text when start menu (searchui) closes.
-	announceNewLineText = False
+class StartMenuSearchField(StartMenuSearchField):
 
 	def event_suggestionsOpened(self):
 		# Do not announce "suggestions" in braille.
