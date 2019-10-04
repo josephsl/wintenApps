@@ -34,6 +34,13 @@ class StartMenuSearchField(StartMenuSearchField):
 
 class AppModule(AppModule):
 
+	def event_NVDAObject_init(self, obj):
+		if isinstance(obj, UIA):
+			# Build 18945 introduces (or re-introduces) modern search experience in File Explorer, and as part of this, suggestion count is part of a live region.
+			# Although it is geared for Narrator, it is applicable to other screen readers as well. The live region itself is a child of the one shown here.
+			if obj.UIAElement.cachedAutomationID == "suggestionCountForNarrator" and obj.firstChild is not None:
+				obj.name = obj.firstChild.name
+
 	def chooseNVDAObjectOverlayClasses(self,obj,clsList):
 		if isinstance(obj,IAccessible):
 			try:
@@ -63,11 +70,4 @@ class AppModule(AppModule):
 			if element.cachedAutomationID in ("SpeechContentLabel", "WeSaidTextBlock", "GreetingLine1"):
 				ui.message(obj.name)
 				self.cortanaResponseCache = obj.name
-		nextHandler()
-
-	def event_liveRegionChange(self, obj, nextHandler):
-		# Build 18945 introduces (or re-introduces) modern search experience in File Explorer, and as part of this, suggestion count is part of a live region.
-		# Although it is geared for Narrator, it is applicable to other screen readers as well. The live region itself is a child of the one shown here.
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "suggestionCountForNarrator":
-			if obj.firstChild.name: ui.message(obj.firstChild.name)
 		nextHandler()
