@@ -12,6 +12,7 @@ import api
 import speech
 import ui
 import config
+import nvwave
 from NVDAObjects.UIA.edge import EdgeList
 
 # Windows 10 Search UI suggestion list item
@@ -45,6 +46,20 @@ class ContextMenuItem(UIA):
 		speech.cancelSpeech()
 		api.setNavigatorObject(self)
 		self.reportFocus()
+
+
+# In build 18363 and later, File Explorer gains Cortana search field.
+# For Start menu and File Explorer, "suggestions" should not be brailled.
+# This is more so for File Explorer as a live region will announce suggestion count.
+class StartMenuSearchField(SearchField):
+
+	# #7370: do not announce text when start menu (searchui) closes.
+	announceNewLineText = False
+
+	def event_suggestionsOpened(self):
+		# Do not announce "suggestions" in braille.
+		if config.conf["presentation"]["reportAutoSuggestionsWithSound"]:
+			nvwave.playWaveFile(r"waves\suggestionsOpened.wav")
 
 
 class AppModule(AppModule):
