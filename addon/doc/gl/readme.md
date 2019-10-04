@@ -15,17 +15,17 @@ se inclúe):
 
 * Calculadora (modern).
 * Calendario
-* Cortana
+* Cortana (Classic e Conversations)
 * Centro de Opinións
 * Correo
 * Mapas
 * Microsoft Edge
+* Tenda Microsoft
 * Teclado Moderno (panel de emoji/ditado/suxestións de entrada por
   hardware/elementos do portapapeis na nube na Versión 1709 e posterior)
 * Xente
 * Opcións (opcións do sistema, Windows+I)
-* Tenda
-* O Tempo
+* O Tempo.
 * Módulos misceláneos para controis como mosaicos do Menú Inicio.
 
 Notas:
@@ -69,7 +69,7 @@ documento [rexistros de trocos para publicacións de complementos][3].
   actualmente activa.
 * É posible o seguimento só de eventos específicos e/ou de eventos provintes
   de aplicacións específicas.
-* recoñeceranse e anunciaranse os consellos para o Edge e para as
+* Recoñeceranse e anunciaranse os consellos para o Edge e para as
   aplicacións universais. Isto será parte de NVDA 2019.3.
 * Cando se abran, pechen ou se conmute entre escritorios virtuales, NVDA
   anunciará o nome do escritorio actual (escritorio 2, por exemplo).
@@ -77,12 +77,12 @@ documento [rexistros de trocos para publicacións de complementos][3].
   pantalla ou a orientación.
 * Na versión 1903 (May 2019 Update), NVDA anunciará cambios no volume e o
   brillo inmediatamente. Agora isto é parte de NVDA 2019.2.
-* O nome e a versión da app para varias apps universais amósanse aagora
-  correctamente.
+* O nome e a versión da app para varias apps da Tenda Microsoft (Microsoft
+  Store) amósanse aagora correctamente.
 
 ## Calculadora
 
-* Cando se prema INTRO ou Escape, NVDA anuncia os resultados do cálculo.
+* Cando se prema INTRO ou Escape, NVDA anunciará os resultados do cálculo.
 * Para cálculos coma conversión de unidades e conversión de moneda, o NVDA
   anunciará os resultados tan pronto coma os cálculos se introduzan.
 * NVDA xa non anunciará "Nivel de nivel de cabeceira" para os resltados da
@@ -99,11 +99,17 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Cortana
 
-* As respostas testuais de Cortana anúncianse na mayoría das situacións(se
-  non se reabre o menú inicio e téntase a procura de novo).
+A maioría dos elementos xa non aplican na versión 1903 e
+posteriores. Cortana Classic refírese á vella interface de Cortana, que
+estaba integrada no menú inicio.
+
+* As respostas testuais de Cortana, tanto (tanto na interface Classic como
+  Conversations) anúncianse na mayoría das situacións(se se está a usar
+  Cortana Classic, reabre o menú inicio e tenta procurar de novo se as
+  respostas non se anuncian).
 * NVDA silenciarase cando lle fales ao Cortana a través da voz.
-* NVDA agora anunciará a confirmación de lembrarse despois de que axustes
-  unha.
+* En Cortana Classic, NVDA agora anunciará a confirmación do recordatorio
+  despois de que poñas un.
 * Na compilación 18945 e posteriores, sopórtase a experiencia moderna de
   busca no explorador de arquivos proporcionada pola interface de usuario de
   Cortana.
@@ -132,31 +138,43 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Microsoft Edge
 
+Isto refírese ao Edge clásico basado en EdgeHTML.
+
 * Farase un seguimento do autocompletado de texto e anunciarase na omnibarra
-  de direccións.
+  de direccións. Isto formará parte de NVDA 2019.3.
 * NVDA xa non reproducirá o son de suxestión ao premer F11 para alternar a
-  pantalla completa.
+  pantalla completa. Isto formará parte de NVDA 2019.3.
 * Eliminada a reprodución do son de suxestión para a barra de busca
-  (omnibar).
+  (omnibar). Isto formará parte de NVDA 2019.3.
+
+## Tenda Microsoft
+
+* Despois de buscar actualizacións das aplicacións, os nomes das aplicacións
+  na lista de aplicacions actualizarán as etiquetas correctamente.
+* Cando se cargue contido como aplicacións e películas, NVDA anunciará o
+  nome do producto e o progreso da descarga.
 
 ## Teclado Moderno
 
-Nota: A maioría das características a continuación son parte de NVDA 2018.3
-ou posterior.
+A maioría das características a continuación son parte de NVDA 2018.3 ou
+posterior.
 
 * Soporte para o panel flotante de entrada de Emoji na actualización 1709
   Fall Creators en adiante, incluindo o panel redeseñado na compilación
   17661 e os trocos realizados en 19H1 (compilación 18262 e posterior,
-  incluíndo kaomoji e categorías de símbolos na compilación 18305). Se usas
-  versións de NVDA anteriores á 2018.4, utiliza o sintetizador de voz
-  Windows OneCore para a mellor experiencia lendo emojis. Se a versión en
-  uso é a 2018.4 ou posterior, habilita a opción do Unicode Consortium dende
-  as opcións de voz do NVDA e establece o nivel de símbolos en "Algunha" ou
-  máis alto.
+  incluíndo kaomoji e categorías de símbolos na compilación 18305). Isto
+  tamén aplica para a compilación 18963 e posteriores onde a app se
+  renomeou. Se usas versións de NVDA anteriores á 2018.4, utiliza o
+  sintetizador de voz Windows OneCore para a mellor experiencia lendo
+  emojis. Se a versión en uso é a 2018.4 ou posterior, habilita a opción do
+  Unicode Consortium dende as opcións de voz do NVDA e establece o nivel de
+  símbolos en "Algunha" ou máis alto.
 * NVDA xa non anunciará "portapapeis" cando haxa elementos no portapapeis
   baixo algunhas circunstancias.
 * Nalgúns sistemas coa versión 1903 (May 2019 Update), NVDA xa non
   aparentará non facer nada cando se abra o panel de emoji.
+* Engadido soporte para a interface de candidatos IME en chino, xaponés e
+  coreano (CJK) introducida na 20H1 compilación 18965 e posteriores.
 
 ## Xente
 
@@ -171,7 +189,7 @@ ou posterior.
 * Os valores da barra de progreso e outra información xa non se anuncian
   dúas veces.
 * Para algunhas caixas combinadas e botóns de opción, NVDA xa non fallará ao
-  recoñecer etiquetas e/ou ao anunciar cambios de valores. 
+  recoñecer etiquetas e/ou ao anunciar cambios de valores.
 * Os pitidos da barra de progreso do volume de audio xa non se escoitan na
   versión 1803 e posterior.
 * NVDA xa non parecerá non facer nada ou non reproducirá tons de erro cando
@@ -185,18 +203,11 @@ ou posterior.
   características, engadiuse unha ligazón "descargar e instalar agora". NVDA
   anunciará agora o título da nova actualización se está presente.
 
-## Tenda
-
-* Despois de buscar actualizacións das aplicacións, os nomes das aplicacións
-  na lista de aplicacions actualizarán as etiquetas correctamente.
-* Cando se cargue contido como aplicacións e películas, NVDA anunciará o
-  nome do producto e o progreso da descarga.
-
 ## O Tempo
 
 * As pestanas como "pronósticos" e "mapas" recoñécense coma pestanas en si
   (parche de Derek Riemer).
-* Cando se lea un pronóstico, usa as frechas esquerda e dereita para moverte
+* cando se lea un pronóstico, usa as frechas esquerda e dereita para moverte
   entre elementos. Usa as frechas arriba e abaixo para ler os elementos
   individuais. Por exemplo, premendo a frecha dereita anunciaría "luns: 79
   graos, parcialmente nublado, ..." premendo a frecha abaixo dirá "luns"
