@@ -14,16 +14,16 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 * Rechner (modern)
 * Kalender
-* Cortana
+* Cortana (Klassik und Unterhaltungen)
 * Feedback Hub
 * E-Mail
 * Karten
 * Microsoft Edge
+* Microsoft Store
 * Moderne Tastatur (Emoji-Panel- / Diktat- / Hardware-Eingabevorschläge /
   Cloud-Zwischenablage-Elemente in Version 1709 und höher)
 * Kontakte
 * Einstellungen (Systemeinstellungen, Windows+I)
-* Store
 * Wetter.
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche.
 
@@ -81,8 +81,8 @@ Versionen][3].
 * In der Version 1903 (Mai 2019 Update) wird NVDA Änderungen bei der
   Lautstärke und Helligkeit sofort zurückmelden. Dies ist nun eine Neuerung
   in NVDA 2019.2.
-* App-Name und -Version für verschiedene universelle Apps werden nun korrekt
-  angezeigt.
+* Anwendungsname und -Version für verschiedene universelle Apps werden nun
+  korrekt angezeigt. Dies wird Bestandteil von NVDA 2019.3.
 
 ## Rechner
 
@@ -102,6 +102,9 @@ Versionen][3].
   Nachrichtentext und in anderen Feldern an.
 
 ## Cortana
+
+Most items are no longer applicable on Version 1903 and later. Classic
+Cortana refers to older Cortana interface which was part of Start menu.
 
 * Textuelle Antworten von Cortana werden in den meisten Fällen
   angezeigt. Falls nicht, öffnen Sie das StartMenü und starten Sie die Suche
@@ -138,16 +141,26 @@ Versionen][3].
 
 ## Microsoft Edge
 
+Dies bezieht sich auf den klassischen Edge (HTML-basierter Microsoft Edge).
+
 * Die automatische Vervollständigung beim Tippen wird verfolgt und in der
-  Adresszeile ordnungsgemäß angesagt.
-* NVDA gibt keinen Vorschläge-Ton mehr wieder, wenn F11 für den
-  Vollbildmodus gedrückt wird.
-* Vorschlags Ton  für kombinierte Adress-Leiste entfernt.
+  Adresszeile ordnungsgemäß angesagt. Dies wird Bestandteil von NVDA 2019.3.
+* NVDA gibt keinen Vorschlags-Ton mehr wieder, wenn F11 für den
+  Vollbildmodus gedrückt wird. Dies wird Bestandteil von NVDA 2019.3.
+* Vorschlags Ton  für kombinierte Adress-Leiste entfernt. Dies wird
+  Bestandteil von NVDA 2019.3.
+
+## Microsoft Store
+
+* Nach der Suche nach App-Aktualisierungen werden die App-Namen in der Liste
+  der zu aktualisierenden Apps korrekt beschriftet.
+* Beim Herunterladen von Inhalten wie Apps und Filmen wird NVDA den
+  Produktnamen und den Fortschritt des Downloads bekannt geben.
 
 ## Moderne virtuelle Tastaturen
 
-Hinweis: Die meisten unten aufgeführten Funktionen sind jetzt Teil von NVDA
-2018.3 oder neuer.
+Die meisten unten aufgeführten Funktionen sind jetzt Teil von NVDA 2018.3
+oder neuer.
 
 * Unterstützung für das Emoji-Eingabefeld in Version 1709 (Fall Creators
   Update) und später, einschließlich des neu gestalteten Panels in Version
@@ -162,6 +175,8 @@ Hinweis: Die meisten unten aufgeführten Funktionen sind jetzt Teil von NVDA
   ankündigen, wenn sich Elemente in der Zwischenablage befinden.
 * Auf einigen Systemen, auf denen die Version 1903 (Update vom Mai 2019)
   läuft, wird NVDA beim Öffnen des Emoji-Panels nichts mehr zu tun haben.
+* Added support for modern Chinese, Japanese, and Korean (CJK) IME
+  candidates interface introduced in 20H1 build 18965 and later.
 
 ## Kontakte
 
@@ -189,13 +204,6 @@ Hinweis: Die meisten unten aufgeführten Funktionen sind jetzt Teil von NVDA
   Änderungen am Windows Update-Verfahren für Feature-Updates ein Link "Jetzt
   herunterladen und installieren" hinzugefügt. NVDA wird nun den Titel für
   das neue Update bekannt geben, falls vorhanden.
-
-## Store
-
-* Nach der Suche nach App-Aktualisierungen werden die App-Namen in der Liste
-  der zu aktualisierenden Apps korrekt beschriftet.
-* Beim Herunterladen von Inhalten wie Apps und Filmen wird NVDA den
-  Produktnamen und den Fortschritt des Downloads bekannt geben.
 
 ## Wetter
 

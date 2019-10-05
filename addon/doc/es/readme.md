@@ -15,16 +15,16 @@ qué se incluye):
 
 * Calculadora (modern).
 * Calendario
-* Cortana
+* Cortana (clásico y conversaciones)
 * Centro de opiniones
 * Correo
 * Mapas
 * Microsoft Edge
+* Microsoft Store
 * Teclado Moderno (panel emoji / dictado / sugerencias de entrada hardware /
   elementos del portapapeles en la nube en la Versión 1709 y posterior)
 * Gente
 * Opciones (opciones de sistema, Windows+I)
-* Tienda
 * El Tiempo.
 * Módulos misceláneos para controles tales como los mosaicos del Menú
   Inicio.
@@ -80,11 +80,11 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   inmediatamente los cambios de brillo y volumen si el foco está en el
   explorador de archivos. Esto ahora forma parte de NVDA 2019.2.
 * Ahora se muestran correctamente el nombre y la versión de diversas
-  aplicaciones universales.
+  aplicaciones de la Microsoft Store. Esto formará parte de NVDA 2019.3.
 
 ## Calculadora
 
-* Cuando se pulse INTRO o Escape, NVDA anuncia los resultados del cálculo.
+* Cuando se pulse INTRO o Escape, NVDA anunciará los resultados del cálculo.
 * Para cálculos tales como conversión de unidades y conversión de moneda,
   NVDA anunciará los resultados tan pronto como los cálculos se introduzcan.
 * NVDA ya no anunciará "Encabezado nivel" en los resultados de la
@@ -101,11 +101,17 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 ## Cortana
 
-* Las respuestas textuales de Cortana se anuncian en la mayoría de las
-  situaciones (si no se reabre el menú Inicio y  se trata de buscar de
-  nuevo).
+La mayoría de elementos ya no se aplican en la versión 1903 y
+posteriores. Cortana clásico hace referencia a la antigua interfaz de
+Cortana que formaba parte del menú Inicio.
+
+* Las respuestas textuales de Cortana (interfaz clásica y de conversaciones)
+  se anuncian en la mayoría de las situaciones (si utilizas Cortana clásico,
+  vuelve a abrir el menú Inicio e intenta buscar de nuevo cuando las
+  respuestas no se anuncien).
 * NVDA se silenciará cuando hables a Cortana a través de la voz.
-* NVDA ahora anunciará confirmación de recuerdo después de configurarla.
+* En Cortana clásico, NVDA anunciará confirmación de recuerdo después de que
+  configures una.
 * En la compilación 18945 y posteriores, se soporta la interfaz de usuario
   de la experiencia de búsqueda moderna proporcionada por Cortana en el
   explorador de Windows.
@@ -134,32 +140,46 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 ## Microsoft Edge
 
+Esto hace referencia al Microsoft Edge clásico basado en EdgeHTML.
+
 * Se seguirá y se anunciará el texto de autocompletado en la barra de
-  direcciones omni.
+  direcciones omni. Esto formará parte de NVDA 2019.3.
 * NVDA ya no reproducirá el sonido de sugerencias de búsqueda al pulsar f11
-  para conmutar la pantalla completa.
+  para conmutar la pantalla completa. Esto formará parte de NVDA 2019.3.
 * Se ha eliminado la reproducción de sonidos de sugerencia en la barra de
-  direcciones.
+  direcciones. Esto formará parte de NVDA 2019.3.
+
+## Microsoft Store
+
+* Después de buscar actualizaciones de aplicaciones, los nombres de las
+  aplicaciones en la lista de aplicaciones etiquetadas se actualizan
+  correctamente.
+* Cuando se cargue contenido tal como aplicaciones y películas, NVDA
+  anunciará el nombre del producto y el progreso de la descarga.
 
 ## Teclado Moderno
 
-Nota: la mayoría de las siguientes características ya son parte de NVDA
-2018.3 o posterior.
+La mayoría de las siguientes características ya son parte de NVDA 2018.3 o
+posterior.
 
 * Soporte para el panel de entrada de Emoji en la versión 1709 (Fall
   Creators Update) y posteriores, incluyendo el panel rediseñado en la
   versión 1809 (versión 17661 y posteriores) y los cambios realizados en la
   19H1 (versión 18262 y posteriores, incluyendo kaomoji y categorías de
-  símbolos en la versión 18305). Si utilizas versiones de NVDA anteriores a
-  2018.4, para obtener la mejor experiencia al leer emojis, utiliza el
-  sintetizador de voz Windows OneCore. Si se está utilizando 2018.4 o
-  posterior, habilita la configuración de Unicode Consortium a partir de la
-  configuración de voz de NVDA y establece el nivel de símbolos en "alguna"
-  o superior.
+  símbolos en la versión 18305). Esto también se aplica en la compilación
+  18963 y posteriores, a pesar de que se ha renombrado la aplicación. Si
+  utilizas versiones de NVDA anteriores a 2018.4, para obtener la mejor
+  experiencia al leer emojis, utiliza el sintetizador de voz Windows
+  OneCore. Si se está utilizando 2018.4 o posterior, habilita la
+  configuración de Unicode Consortium a partir de la configuración de voz de
+  NVDA y establece el nivel de símbolos en "alguna" o superior.
 * NVDA ya no dirá "portapapeles" cuando haya elementos en el portapapeles
   bajo algunas circunstancias.
 * En algunos sistemas que ejecutan la versión 1903 (actualización de mayo de
   2019), NVDA ya no parecerá hacer nada cuando el panel de emojis se abra.
+* Se ha añadido soporte para la interfaz de candidatos IME en chino moderno,
+  japonés y coreano (CJK) introducida en la versión 20H1 a partir de la
+  compilación 18965.
 
 ## Gente
 
@@ -188,14 +208,6 @@ Nota: la mayoría de las siguientes características ya son parte de NVDA
   características, se ha añadido un enlace "Descargar e instalar
   ahora". NVDA anunciará ahora el título de la nueva actualización si está
   presente.
-
-## Tienda
-
-* Después de buscar actualizaciones de aplicaciones, los nombres de las
-  aplicaciones en la lista de aplicaciones etiquetadas se actualizan
-  correctamente.
-* Cuando se cargue contenido tal como aplicaciones y películas, NVDA
-  anunciará el nombre del producto y el progreso de la descarga.
 
 ## El Tiempo
 

@@ -12,42 +12,34 @@ import api
 import speech
 import ui
 import config
-from NVDAObjects.UIA.edge import EdgeList
-
-# Windows 10 Search UI suggestion list item
-class SuggestionListItem(UIA):
-
-	role=controlTypes.ROLE_LISTITEM
-
-	def event_UIA_elementSelected(self):
-		# Build 17600 series introduces Sets, a way to group apps into tabs.
-		# #45: unfortunately, the start page for this (an embedded searchui process inside Edge) says controller for list is empty when in fact it isn't.
-		# Thankfully, it is easy to spot them: if a link is next to results list, then this is the embedded searchui results list.
-		focusControllerFor=api.getFocusObject().controllerFor
-		announceSuggestions = ((len(focusControllerFor)>0 and focusControllerFor[0].appModule is self.appModule and self.name) or self.parent.next is not None)
-		if announceSuggestions:
-			speech.cancelSpeech()
-			api.setNavigatorObject(self)
-			self.reportFocus()
-
-	def reportFocus(self):
-		# #21: nullify description if it is the same as the item label.
-		if self.description == self.name and config.conf["presentation"]["reportObjectDescriptions"]:
-			self.description = None
-		super(SuggestionListItem, self).reportFocus()
+import nvwave
+from NVDAObjects.UIA import SuggestionListItem
 
 
-class ContextMenuItem(UIA):
+# In build 18363 and later, File Explorer gains Cortana search field.
+# For Start menu and File Explorer, "suggestions" should not be brailled.
+# This is more so for File Explorer as a live region will announce suggestion count.
+class StartMenuSearchField(StartMenuSearchField):
 
-	role=controlTypes.ROLE_LISTITEM
+	def event_suggestionsOpened(self):
+		# Do not announce "suggestions" in braille.
+		if config.conf["presentation"]["reportAutoSuggestionsWithSound"]:
+			nvwave.playWaveFile(r"waves\suggestionsOpened.wav")
 
-	def event_UIA_elementSelected(self):
-		speech.cancelSpeech()
-		api.setNavigatorObject(self)
-		self.reportFocus()
+	__gestures = {
+		"kb:downArrow": None,
+		"kb:upArrow": None,
+	}
 
 
 class AppModule(AppModule):
+
+	def event_NVDAObject_init(self, obj):
+		if isinstance(obj, UIA):
+			# Build 18945 introduces (or re-introduces) modern search experience in File Explorer, and as part of this, suggestion count is part of a live region.
+			# Although it is geared for Narrator, it is applicable to other screen readers as well. The live region itself is a child of the one shown here.
+			if obj.UIAElement.cachedAutomationID == "suggestionCountForNarrator" and obj.firstChild is not None:
+				obj.name = obj.firstChild.name
 
 	def chooseNVDAObjectOverlayClasses(self,obj,clsList):
 		if isinstance(obj,IAccessible):
@@ -58,9 +50,9 @@ class AppModule(AppModule):
 			except ValueError:
 				pass
 		elif isinstance(obj,UIA):
-			if isinstance(obj.parent,EdgeList):
-				# #48: differentiate between search results and context menu items.
-				clsList.insert(0,ContextMenuItem if obj.parent.UIAElement.cachedAutomationID == "contextMenu" else SuggestionListItem)
+			# Since 2019, some suggestion items are not exposed as a list item but are children of a search category.
+			if obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, SuggestionListItem):
+				clsList.insert(0, SuggestionListItem)
 			elif obj.UIAElement.cachedAutomationID == "SearchTextBox":
 				clsList.insert(0, StartMenuSearchField)
 
@@ -78,11 +70,4 @@ class AppModule(AppModule):
 			if element.cachedAutomationID in ("SpeechContentLabel", "WeSaidTextBlock", "GreetingLine1"):
 				ui.message(obj.name)
 				self.cortanaResponseCache = obj.name
-		nextHandler()
-
-	def event_liveRegionChange(self, obj, nextHandler):
-		# Build 18945 introduces (or re-introduces) modern search experience in File Explorer, and as part of this, suggestion count is part of a live region.
-		# Although it is geared for Narrator, it is applicable to other screen readers as well. The live region itself is a child of the one shown here.
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "suggestionCountForNarrator":
-			if obj.firstChild.name: ui.message(obj.firstChild.name)
 		nextHandler()

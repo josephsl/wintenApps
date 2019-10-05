@@ -13,16 +13,16 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 
 * Calcolatrice (moderna).
 * Calendario
-* Cortana
+* Cortana (Classic and Conversations)
 * Centro Feedback
 * Posta
 * Mappe
 * Microsoft Edge
+* Microsoft Store
 * Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
   clipboard items in Version 1709 and later)
 * Persone
 * Impostazioni (Impostazioni Windows, Windows+i)
-* Store
 * Meteo
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
@@ -75,11 +75,12 @@ riferimento al documento [changelogs for add-on releases][3].
 * In Version 1903 (May 2019 Update), NVDA will announce volume and
   brightness changes immediately if focused on File Explorer. This is now
   part of NVDA 2019.2.
-* App name and version for various universal apps are now shown correctly.
+* App name and version for various Microsoft Store apps are now shown
+  correctly. This will be part of NVDA 2019.3.
 
 ## Calcolatrice
 
-* Quando viene premuto invio o Esc, NVDA annuncia il risultato del calcolo.
+* When ENTER or Escape is pressed, NVDA will announce calculation results.
 * Per i calcoli quali conversioni di unità di misura o valuta, NVDA leggerà
   il risultato non appena verranno inseriti i dati
 * NVDA non annuncerà più il livello di intestazione per i risultati dei
@@ -95,11 +96,15 @@ riferimento al documento [changelogs for add-on releases][3].
 
 ## Cortana
 
-* Le risposte di tipo testuale di Cortana vengono lette nella maggior parte
-  dei casi, se non dovesse funzionare riaprire il menu avvio e ripetere la
-  ricerca.
+Most items are no longer applicable on Version 1903 and later. Classic
+Cortana refers to older Cortana interface which was part of Start menu.
+
+* Textual responses from Cortana (both Classic and Conversations UI) are
+  announced in most situations (if using Classic Cortana, reopen Start menu
+  and try searching again if responses are not announced).
 * NVDA rimarrà in silenzio mentre si parla a Cortana  con la voce.
-* NVDA annuncerà la conferma di un promemoria quando ne viene inserito uno.
+* In Classic Cortana, NVDA will announce reminder confirmation after you set
+  one.
 * In build 18945 and later, modern search experience in File Explorer
   powered by Cortana user interface is supported.
 
@@ -127,30 +132,41 @@ riferimento al documento [changelogs for add-on releases][3].
 
 ## Microsoft Edge
 
-* Monitoraggio e lettura del completamento automatico del testo nelle barre
-  degli indirizzi.
-* NVDA non riprodurrà più un suono di avviso quando si attiva o disattiva lo
-  schermo intero con F11.
-* Removed suggestions sound playback for address omnibar.
+This refers to classic EdgeHTML-based Microsoft Edge.
+
+* Text auto-complete will be tracked and announced in address omnibar. This
+  will be part of NVDA 2019.3.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full
+  screen. This will be part of NVDA 2019.3.
+* Removed suggestions sound playback for address omnibar. This will be part
+  of NVDA 2019.3.
+
+## Microsoft Store
+
+* Dopo aver controllato la presenza di aggiornamenti di app, i nomi delle
+  app nell'elenco degli aggiornamenti viene correttamente etichettato.
+* Mentre si scaricano contenuti quali app o film, NVDA ne leggerà il nome e
+  l'avanzamento del download.
 
 ## Tastiera moderna
 
-Note: most features below are now part of NVDA 2018.3 or later.
+Most features below are now part of NVDA 2018.3 or later.
 
-* Supporto per l'immissione di emoji nella versione 1709 (Fall creators
-  Update) e successive, compreso la nuova interfaccia  del pannello emoji
-  nella build 1809 (build 17661 e successive), con aggiornamenti per la 19h1
-  (build 18262 e successive, che includono i kaomoji e categorie per i
-  simboli nella build 18305).Se si usa una versione precedente a NVDA
-  2018.4, per una migliore lettura degli emoji è consigliato usare come
-  sintetizzatore vocale le OneCore. Se si usa NVDA 2018.4 o successive,
-  attivare la casella di controllo "Includi dati del consorzio Unicode"
-  dalle Impostazioni Voce di NVDA, ed impostare il livello di lettura
-  simboli/punteggiatura su "Cualcosa" o superiore.
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
+  later, including the redesigned panel in Version 1809 (build 17661 and
+  later) and changes made in 19H1 (build 18262 and later, including kaomoji
+  and symbols categories in build 18305). This is also applicable in build
+  18963 and later as the app has been renamed. If using NVDA releases
+  earlier than 2018.4, for best experience when reading emojis, use Windows
+  OneCore speech synthesizer. If 2018.4 or later is in use, enable Unicode
+  Consortium setting from NvDA's speech settings and set symbol level to
+  "some" or higher.
 * NVDA will no longer announce "clipboard" when there are items in the
   clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update), NVDA will no
   longer appear to do nothing when emoji panel opens.
+* Added support for modern Chinese, Japanese, and Korean (CJK) IME
+  candidates interface introduced in 20H1 build 18965 and later.
 
 ## Persone
 
@@ -179,13 +195,6 @@ Note: most features below are now part of NVDA 2018.3 or later.
   Windows Update procedure for feature updates, a "download and install now"
   link has been added. NVDA will now announce the title for the new update
   if present.
-
-## Store
-
-* Dopo aver controllato la presenza di aggiornamenti di app, i nomi delle
-  app nell'elenco degli aggiornamenti viene correttamente etichettato.
-* Mentre si scaricano contenuti quali app o film, NVDA ne leggerà il nome e
-  l'avanzamento del download.
 
 ## Meteo
 
