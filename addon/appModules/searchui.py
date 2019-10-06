@@ -8,13 +8,10 @@
 
 from nvdaBuiltin.appModules.searchui import *
 import controlTypes
-import api
-import speech
 import ui
 import config
 import nvwave
 from NVDAObjects.UIA import SuggestionListItem
-
 
 # In build 18363 and later, File Explorer gains Cortana search field.
 # For Start menu and File Explorer, "suggestions" should not be brailled.
