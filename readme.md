@@ -45,7 +45,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * Tooltips from Edge and universal apps are recognized and will be announced. This will be part of NVDA 2019.3.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
-* In Version 1903 (May 2019 Update), NVDA will announce volume and brightness changes immediately if focused on File Explorer. This is now part of NVDA 2019.2.
+* In Version 1903 (May 2019 Update) and later, NVDA will announce volume and brightness changes immediately if focused on File Explorer. This is now part of NVDA 2019.2.
 * App name and version for various Microsoft Store apps are now shown correctly. This will be part of NVDA 2019.3.
 
 ## Calculator
@@ -103,7 +103,7 @@ Most features below are now part of NVDA 2018.3 or later.
 
 * Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including the redesigned panel in Version 1809 (build 17661 and later) and changes made in 19H1 (build 18262 and later, including kaomoji and symbols categories in build 18305). This is also applicable in build 18963 and later as the app has been renamed. If using NVDA releases earlier than 2018.4, for best experience when reading emojis, use Windows OneCore speech synthesizer. If 2018.4 or later is in use, enable Unicode Consortium setting from NvDA's speech settings and set symbol level to "some" or higher.
 * NVDA will no longer announce "clipboard" when there are items in the clipboard under some circumstances.
-* On some systems running Version 1903 (May 2019 Update), NVDA will no longer appear to do nothing when emoji panel opens.
+* On some systems running Version 1903 (May 2019 Update) and later, NVDA will no longer appear to do nothing when emoji panel opens.
 * Added support for modern Chinese, Japanese, and Korean (CJK) IME candidates interface introduced in 20H1 build 18965 and later.
 
 ## People
