@@ -128,9 +128,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not (isinstance(obj, UIA) and W10AddonSupported):
 			return
 		# Windows that are really dialogs.
-		# NVDA Core issue 8405: in build 17682 and later, IsDialog property has been added, making comparisons easier.
-		# However, don't forget that many users are still using old Windows 10 releases.
-		# The most notable case is app uninstall confirmation dialog from Start menu in build 17134 and earlier.
 		# Some dialogs, although listed as a dialog thanks to UIA class name, does not advertise the proper role of dialog.
 		if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
