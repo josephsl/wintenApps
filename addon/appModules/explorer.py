@@ -12,8 +12,6 @@ Provides workarounds for controls such as identifying Start button, notification
 
 from nvdaBuiltin.appModules.explorer import *
 import winVersion
-import ui
-import UIAHandler
 
 class AppModule(AppModule):
 
