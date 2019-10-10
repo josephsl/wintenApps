@@ -7,11 +7,9 @@
 # Extended to let NVDA cooperate with Cortana.
 
 from nvdaBuiltin.appModules.searchui import *
-import controlTypes
 import ui
 import config
 import nvwave
-from NVDAObjects.UIA import SuggestionListItem
 
 # In build 18363 and later, File Explorer gains Cortana search field.
 # For Start menu and File Explorer, "suggestions" should not be brailled.
@@ -37,21 +35,6 @@ class AppModule(AppModule):
 			# Although it is geared for Narrator, it is applicable to other screen readers as well. The live region itself is a child of the one shown here.
 			if obj.UIAElement.cachedAutomationID == "suggestionCountForNarrator" and obj.firstChild is not None:
 				obj.name = obj.firstChild.name
-
-	def chooseNVDAObjectOverlayClasses(self,obj,clsList):
-		if isinstance(obj,IAccessible):
-			try:
-				# #5288: Never use ContentGenericClient, as this uses displayModel
-				# which will freeze if the process is suspended.
-				clsList.remove(ContentGenericClient)
-			except ValueError:
-				pass
-		elif isinstance(obj,UIA):
-			# Since 2019, some suggestion items are not exposed as a list item but are children of a search category.
-			if obj.role == controlTypes.ROLE_LISTITEM and isinstance(obj.parent, SuggestionListItem):
-				clsList.insert(0, SuggestionListItem)
-			elif obj.UIAElement.cachedAutomationID == "SearchTextBox":
-				clsList.insert(0, StartMenuSearchField)
 
 	# Past responses from Cortana (cached to prevent repetition, initially an empty string).
 	# No longer appicable in Version 1809 due to UI redesign.
