@@ -11,12 +11,12 @@
 
 * 计算器（现代）。
 * 日历
-* Cortana (Classic and Conversations)
+* Cortana（经典和会话）
 * 反馈中心
 * 邮件
 * 地图
 * 斯巴达浏览器
-* Microsoft Store
+* 微软商店
 * 系统键盘（版本1709及更高版本中的表情符号面板/听写/硬件输入建议/云剪贴板项目）
 * {longName} ({name})
   版本: {version}
@@ -57,12 +57,11 @@
 * 在虚拟桌面之间打开，关闭或切换时，NVDA将朗读当前桌面名称（例如，桌面2）。
 * 在更改屏幕分辨率或方向时，NVDA将不再公布“开始”菜单大小文本。
 * 在版本1903（2019年5月更新）中，如果专注于文件资源管理器，NVDA将朗读音量和亮度变化。这是NVDA 2019.2的一部分。
-* App name and version for various Microsoft Store apps are now shown
-  correctly. This will be part of NVDA 2019.3.
+* 现在可以正确显示各种Microsoft Store应用程序的应用程序名称和版本。这将是NVDA 2019.3的一部分。
 
 ## 计算器
 
-* When ENTER or Escape is pressed, NVDA will announce calculation results.
+* 当按ENTER或Escape键时，NVDA将读出计算结果。
 * 对于计算，如单位换算，汇率转换器，NVDA将在输入计算后立即读出结果。
 * NVDA将不再朗读计算器结果的“标题级别”。
 * 如果在输入表达式时达到最大统计值，NVDA现在将读出。
@@ -74,15 +73,11 @@
 
 ## 小娜
 
-Most items are no longer applicable on Version 1903 and later. Classic
-Cortana refers to older Cortana interface which was part of Start menu.
+大多数项目不再适用于1903版和更高版本。经典Cortana指的是较旧的Cortana界面，它现在是“开始”菜单的一部分。
 
-* Textual responses from Cortana (both Classic and Conversations UI) are
-  announced in most situations (if using Classic Cortana, reopen Start menu
-  and try searching again if responses are not announced).
+* 现在，在大多数情况下，都会读出来自Cortana的文本回复（包括经典和会话用户界面）（如果使用经典Cortana，请重新打开“开始”菜单，如果未读出回复，请尝试再次搜索）。
 * 通过语音与Cortana交互时，NVDA将保持沉默。
-* In Classic Cortana, NVDA will announce reminder confirmation after you set
-  one.
+* 在经典 Cortana 中，NVDA 将在您设置提醒确认后宣布提醒确认。
 * 在构建18945及更高版本中，现在支持由Cortana用户界面的文件浏览器中的现代搜索界面。
 
 ## 反馈中心
@@ -102,37 +97,27 @@ Cortana refers to older Cortana interface which was part of Start menu.
 
 ## 斯巴达浏览器
 
-This refers to classic EdgeHTML-based Microsoft Edge.
+这指的是基于EdgeHTML的经典Microsoft Edge。
 
-* Text auto-complete will be tracked and announced in address omnibar. This
-  will be part of NVDA 2019.3.
-* NVDA will no longer play suggestion sound when pressing F11 to toggle full
-  screen. This will be part of NVDA 2019.3.
-* Removed suggestions sound playback for address omnibar. This will be part
-  of NVDA 2019.3.
+* 文本自动完成功能将在地址栏上进行跟踪并朗读。这将是NVDA 2019.3的一部分。
+* 按F11切换全屏时，NVDA将不再播放建议声音。这将是NVDA 2019.3的一部分。
+* 删除针对地址栏的建议声音回放。这将是NVDA 2019.3的一部分。
 
-## Microsoft Store
+## 微软商店
 
 * 检查应用程序更新后，应更新的应用程序列表中的应用程序名称将被正确标记。
 * 下载应用程序和电影等内容时，NVDA会读出产品名称和下载进度。
 
 ## 系统键盘
 
-Most features below are now part of NVDA 2018.3 or later.
+下面的大多数功能现在是NVDA 2018.3或更高版本的一部分。
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
-  later, including the redesigned panel in Version 1809 (build 17661 and
-  later) and changes made in 19H1 (build 18262 and later, including kaomoji
-  and symbols categories in build 18305). This is also applicable in build
-  18963 and later as the app has been renamed. If using NVDA releases
-  earlier than 2018.4, for best experience when reading emojis, use Windows
-  OneCore speech synthesizer. If 2018.4 or later is in use, enable Unicode
-  Consortium setting from NvDA's speech settings and set symbol level to
-  "some" or higher.
+* 现在支持版本1709（秋季创作者更新）及更高版本中的Emoji输入面板，包括版本1809（版本17661及更高版本）中重新设计的面板以及19H1（版本18262及更高版本，包括版本18305中的kaomoji和符号类别）的更改。这也适用于内部版本18963和更高版本，因为该应用已被重命名。如果使用早于2018.4的NVDA版本，则为获取阅读表情符号的最佳体验，请使用Windows
+  OneCore语音合成器。如果正在使用2018.4或更高版本，请从NvDA的语音设置中启用Unicode
+  Consortium设置，并将符号级别设置为“某些”或更高。
 * 在某些情况下，当剪贴板中有项目时，NVDA将不再朗读“剪贴板”。
 * 在某些运行版本1903（2019年5月更新）的系统上，当表情符号面板打开时，NVDA将不再显示任何内容。
-* Added support for modern Chinese, Japanese, and Korean (CJK) IME
-  candidates interface introduced in 20H1 build 18965 and later.
+* 增加了对20H1内部版本18965和更高版本中引入的现代中文，日文和韩文（CJK）IME的支持。
 
 ## {longName} ({name})
 版本: {version}
