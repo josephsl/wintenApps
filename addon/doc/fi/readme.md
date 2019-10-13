@@ -14,7 +14,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 * Laskin (moderni)
 * Kalenteri
-* Cortana (Classic and Conversations)
+* Cortana (perinteinen ja keskustelut)
 * Palautekeskus
 * Sähköposti
 * Kartat
@@ -76,12 +76,12 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA ilmoittaa välittömästi äänenvoimakkuuden ja kirkkauden muutokset
   Windows 10:n versiossa 1903 (toukokuun 2019 päivitys), jos kohdistus on
   resurssienhallinnassa. Tämä muutos sisältyy NVDA 2019.2:een.
-* App name and version for various Microsoft Store apps are now shown
-  correctly. This will be part of NVDA 2019.3.
+* Useiden Microsoft Store -sovellusten nimi ja versio näytetään nyt
+  asianmukaisesti. Tämä tulee sisältymään NVDA 2019.3:een.
 
 ## Laskin
 
-* When ENTER or Escape is pressed, NVDA will announce calculation results.
+* NVDA ilmoittaa laskutoimituksen tuloksen Enteriä tai Esciä painettaessa.
 * NVDA puhuu laskutoimitusten tulokset (esim. yksikkö- ja
   valuuttamuuntimessa) heti laskukaavoja syötettäessä.
 * NVDA ei enää sano "otsikkotaso" tarkasteltaessa laskutoimitusten tuloksia
@@ -98,15 +98,17 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Cortana
 
-Most items are no longer applicable on Version 1903 and later. Classic
-Cortana refers to older Cortana interface which was part of Start menu.
+Useimmat kohdat eivät enää koske versiota 1903 ja uudempia. Perinteinen
+Cortana viittaa vanhempaan Cortana-liittymään, joka oli osa
+Käynnistä-valikkoa.
 
-* Textual responses from Cortana (both Classic and Conversations UI) are
-  announced in most situations (if using Classic Cortana, reopen Start menu
-  and try searching again if responses are not announced).
+* Cortanan (sekä perinteisen että keskustelut-käyttöliittymän)
+  tekstimuotoiset vastaukset puhutaan useimmissa tapauksissa (mikäli käytät
+  perinteistä Cortanaa eikä vastauksia puhuta, avaa Käynnistä-valikko
+  uudelleen ja yritä hakua toistamiseen).
 * NVDA on hiljaa puhuttaessa Cortanalle mikrofonin välityksellä.
-* In Classic Cortana, NVDA will announce reminder confirmation after you set
-  one.
+* NVDA puhuu nyt vahvistuksen muistutusta lisättäessä perinteisessä
+  Cortanassa.
 * Resurssienhallinnan Cortanan käyttöliittymän voimalla toimivaa modernia
   hakukokemusta tuetaan koontiversiossa 18945 ja uudemmissa.
 
@@ -133,14 +135,14 @@ Cortana refers to older Cortana interface which was part of Start menu.
 
 ## Microsoft Edge
 
-This refers to classic EdgeHTML-based Microsoft Edge.
+Tämä viittaa perinteiseen EdgeHTML-pohjaiseen Microsoft Edgeen.
 
-* Text auto-complete will be tracked and announced in address omnibar. This
-  will be part of NVDA 2019.3.
-* NVDA will no longer play suggestion sound when pressing F11 to toggle full
-  screen. This will be part of NVDA 2019.3.
-* Removed suggestions sound playback for address omnibar. This will be part
-  of NVDA 2019.3.
+* Tekstin automaattista täydennystä seurataan ja siitä ilmoitetaan
+  osoitepalkissa. Tämä tulee sisältymään NVDA 2019.3:een.
+* NVDA ei enää toista ehdotusten ääntä vaihdettaessa koko näytön tilaa
+  F11:tä painamalla. Tämä tulee sisältymään NVDA 2019.3:een.
+* Ehdotusääntä ei enää toisteta osoitepalkissa. Tämä tulee sisältymään NVDA
+  2019.3:een.
 
 ## Microsoft Store
 
@@ -151,24 +153,28 @@ This refers to classic EdgeHTML-based Microsoft Edge.
 
 ## Moderni näppäimistö
 
-Most features below are now part of NVDA 2018.3 or later.
+Suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA 2018.3:een
+tai sitä uudempiin versioihin.
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
-  later, including the redesigned panel in Version 1809 (build 17661 and
-  later) and changes made in 19H1 (build 18262 and later, including kaomoji
-  and symbols categories in build 18305). This is also applicable in build
-  18963 and later as the app has been renamed. If using NVDA releases
-  earlier than 2018.4, for best experience when reading emojis, use Windows
-  OneCore speech synthesizer. If 2018.4 or later is in use, enable Unicode
-  Consortium setting from NvDA's speech settings and set symbol level to
-  "some" or higher.
+* Tuki version 1709 (Fall Creators -päivitys) ja uudempien kelluvalle
+  emojinsyöttöpaneelille, mukaan lukien version 1809 (koontiversio 17661 ja
+  uudemmat) uudelleensuunniteltu paneeli sekä versioon 19H1 (koontiversio
+  18262 ja uudemmat) tehdyt muutokset, mukaan lukien kaomoji sekä
+  koontiversion 18305 symbolikategoriat. Tämä koskee myös koontiversiota
+  18963 ja uudempia, sillä sovellus on nimetty uudelleen. Mikäli käytetään
+  NVDA 2018.4:ää vanhempia versioita, tulee parhaan kokemuksen saamiseksi
+  käyttää Windows OneCore -syntetisaattoria. Jos käytössä on versio 2018.4
+  tai uudempi, tulee NVDA:n puheasetuksista ottaa käyttöön
+  Unicode-konsortion datan käyttäminen ja symbolitasoksi asetta "jotain" tai
+  korkeampi.
 * NVDA ei enää sano joissakin tilanteissa "leikepöytä", kun leikepöydällä on
   kohteita.
 * Emojipaneelin avautuessa ei enää näytä siltä, että NVDA  ei tee mitään
   joissakin järjestelmissä, joissa on asennettuna Windows 10:n versio 1903
   (May 2019 -päivitys).
-* Added support for modern Chinese, Japanese, and Korean (CJK) IME
-  candidates interface introduced in 20H1 build 18965 and later.
+* Lisätty tuki modernille kiinan, japanin ja korean (CJK)
+  IME-ehdotusliittymälle, joka esiteltiin 20H1:n koontiversiossa 18965 ja
+  uudemmissa.
 
 ## Ihmiset
 
