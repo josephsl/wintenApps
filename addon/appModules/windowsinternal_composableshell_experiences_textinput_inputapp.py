@@ -83,7 +83,10 @@ class AppModule(AppModule):
 		elif inputPanelAutomationID == "TEMPLATE_PART_ExpressionGroupedFullView":
 			self._emojiPanelJustOpened = True
 			# On some systems, there is something else besides grouping controls, so another child control must be used.
-			emojisIndex = -3 if inputPanel.children[-2].UIAElement.cachedAutomationID != "TEMPLATE_PART_Items_GridView" else -2
+			if inputPanel.children[-2].UIAElement.cachedAutomationID != "TEMPLATE_PART_Items_GridView":
+				emojisIndex = -3
+			else:
+				emojisIndex = -2
 			try:
 				self.event_UIA_elementSelected(inputPanel.children[emojisIndex].firstChild.firstChild, nextHandler)
 			except AttributeError:
@@ -93,7 +96,10 @@ class AppModule(AppModule):
 		# Move to clipboard list so element selected event can pick it up.
 		elif inputPanelAutomationID == "TEMPLATE_PART_ClipboardTitleBar":
 			# Under some cases, clipboard tip text isn't shown on screen, causing clipboard history title to be announced instead of most recently copied item.
-			clipboardItemsIndex = -2 if obj.children[-2].UIAElement.cachedAutomationID != inputPanelAutomationID else -1
+			if obj.children[-2].UIAElement.cachedAutomationID != inputPanelAutomationID:
+				clipboardItemsIndex = -2
+			else:
+				clipboardItemsIndex = -1
 			self.event_UIA_elementSelected(obj.children[clipboardItemsIndex], nextHandler)
 		nextHandler()
 
