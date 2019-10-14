@@ -12,6 +12,7 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 # The add-on version of this module will extend the one that comes with NVDA Core (2018.3 and later).
 
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *
+import eventHandler
 
 class AppModule(AppModule):
 
@@ -56,6 +57,9 @@ class AppModule(AppModule):
 			skipTranslation.translate("No emoji")
 		nextHandler()
 
+	# Emoji panel for build 16299 and 17134.
+	_classicEmojiPanelAutomationID = ("TEMPLATE_PART_ExpressiveInputFullViewFuntionBarItemControl", "TEMPLATE_PART_ExpressiveInputFullViewFuntionBarCloseButton")
+
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Make sure to announce most recently used emoji first in post-1709 builds.
 		# Fake the announcement by locating 'most recently used" category and calling selected event on this.
@@ -68,14 +72,14 @@ class AppModule(AppModule):
 		inputPanelAutomationID = inputPanel.UIAElement.cachedAutomationID
 		# Emoji panel for build 16299 and 17134.
 		# This event is properly raised in build 17134.
-		if winVersion.winVersion.build <= 17134 and inputPanelAutomationID in ("TEMPLATE_PART_ExpressiveInputFullViewFuntionBarItemControl", "TEMPLATE_PART_ExpressiveInputFullViewFuntionBarCloseButton"):
-			self.event_UIA_elementSelected(obj.lastChild.firstChild, nextHandler)
+		if winVersion.winVersion.build <= 17134 and inputPanelAutomationID in self._classicEmojiPanelAutomationID:
+			eventHandler.executeEvent("UIA_elementSelected", obj.lastChild.firstChild)
 		# Handle hardware keyboard and CJK IME suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
 		# In fact, in 20H1, this is the CJK IME candidates window.
 		elif inputPanelAutomationID in ("CandidateWindowControl", "IME_Candidate_Window", "IME_Prediction_Window") and config.conf["inputComposition"]["autoReportAllCandidates"]:
 			try:
-				self.event_UIA_elementSelected(inputPanel.firstChild.firstChild, nextHandler)
+				eventHandler.executeEvent("UIA_elementSelected", inputPanel.firstChild.firstChild)
 			except AttributeError:
 				# Because this is dictation window.
 				pass
@@ -87,7 +91,7 @@ class AppModule(AppModule):
 			if emojisList.UIAElement.cachedAutomationID != "TEMPLATE_PART_Items_GridView":
 				emojisList = emojisList.previous
 			try:
-				self.event_UIA_elementSelected(emojisList.firstChild.firstChild, nextHandler)
+				eventHandler.executeEvent("UIA_elementSelected", emojisList.firstChild.firstChild)
 			except AttributeError:
 				# In build 18272's emoji panel, emoji list becomes empty in some situations.
 				pass
@@ -98,7 +102,7 @@ class AppModule(AppModule):
 			clipboardHistory = obj.children[-2]
 			if clipboardHistory.UIAElement.cachedAutomationID == inputPanelAutomationID:
 				clipboardHistory = clipboardHistory.next
-			self.event_UIA_elementSelected(clipboardHistory, nextHandler)
+			eventHandler.executeEvent("UIA_elementSelected", clipboardHistory)
 		nextHandler()
 
 	def event_nameChange(self, obj, nextHandler):
