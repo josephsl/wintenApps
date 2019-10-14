@@ -72,7 +72,7 @@ class AppModule(AppModule):
 		inputPanelAutomationID = inputPanel.UIAElement.cachedAutomationID
 		# Emoji panel for build 16299 and 17134.
 		# This event is properly raised in build 17134.
-		if winVersion.winVersion.build <= 17134 and inputPanelAutomationID in self._classicEmojiPanelAutomationID:
+		if not winVersion.isWin10(version=1809) and inputPanelAutomationID in self._classicEmojiPanelAutomationID:
 			eventHandler.executeEvent("UIA_elementSelected", obj.lastChild.firstChild)
 		# Handle hardware keyboard and CJK IME suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
