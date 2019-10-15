@@ -11,7 +11,6 @@ Provides workarounds for controls such as identifying Start button, notification
 # The add-on version of this module will extend the one that comes with NVDA Core.
 
 from nvdaBuiltin.appModules.explorer import *
-import winVersion
 
 class AppModule(AppModule):
 
