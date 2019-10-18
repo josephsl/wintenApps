@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and other Windows 10 users
 * Download [stable version][1]
 * Download [development version][2]
-* NVDA compatibility: 2019.1 to 2019.2
+* NVDA compatibility: 2019.2
 
 This add-on is a collection of app modules for various Windows 10 apps, as well as enhancements and fixes for certain windows 10 controls.
 
@@ -25,7 +25,7 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 Version 1809 (build 17763) or later and NVDA 2019.1 or later. For best results, use the add-on with latest Windows 10 stable release (build 18362) and latest stable version of NVDA.
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and NVDA 2019.2 or later. For best results, use the add-on with latest Windows 10 stable release (build 18362) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to Windows 10 and apps that makes entries no longer applicable.
 
@@ -38,7 +38,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * In addition to dialogs recognized by NVDA, more dialogs are now recognized as proper dialogs and reported as such, including Insider Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation panel found in NVDA settings.
 * NVDA will no longer announce "blank" when pressing up or down arrow to open all apps views in Start menu.
-* When searching in Start menu or File Explorer, NVDA will no longer announce search results twice when reviewing results, which also makes braille output more consistent when reviewing items.
+* When searching in Start menu or File Explorer in Version 1909 (November 2019 Update) and later, NVDA will no longer announce search results twice when reviewing results, which also makes braille output more consistent when reviewing items.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: controller for, drag start, drag cancel, drag complete, element selected, item status, live region change, notification, system alert, text change, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app.
 * It is possible to tracke only specific events and/or events coming from specific apps.
@@ -54,7 +54,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * For calculations such as unit converter and currency converter, NVDA will announce results as soon as calculations are entered.
 * NVDA will no longer announce "heading level" for calculator results.
 * NVDA will notify if maximum digit count has been reached while entering expressions.
-* Added support for always on mode in future Calculator releases.
+* Added support for always on mode in Calculator version 10.1908 and later.
 
 ## calendar
 
