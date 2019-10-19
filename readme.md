@@ -45,7 +45,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * Tooltips from Edge and universal apps are recognized and will be announced. This will be part of NVDA 2019.3.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
-* In Version 1903 (May 2019 Update) and later, NVDA will announce volume and brightness changes immediately if focused on File Explorer. This is now part of NVDA 2019.2.
 * App name and version for various Microsoft Store apps are now shown correctly. This will be part of NVDA 2019.3.
 
 ## Calculator
@@ -77,7 +76,6 @@ Most items are no longer applicable on Version 1903 and later. Classic Cortana r
 
 * When reviewing items in messages list, you can now use table navigation commands to review message headers. Note that navigating between rows (messages) is not supported.
 * When writing a message, appearance of at mention suggestions are indicated by sounds.
-* NVDA will no longer do anything or play error tones after closing this app. This is now part of NVDA 2019.2.
 
 ## Maps
 
