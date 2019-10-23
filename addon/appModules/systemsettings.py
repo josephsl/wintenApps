@@ -9,14 +9,13 @@
 # Originally copyright 2016-2019 Joseph Lee, released under GPL
 # Several hacks related to Settings app, some of which are part of NVDA Core.
 
-import appModuleHandler
+from nvdaBuiltin.appModules.systemsettings import *
 import ui
 import controlTypes
-from NVDAObjects.UIA import UIA, ComboBoxWithoutValuePattern
-from NVDAObjects.behaviors import ProgressBar
+from NVDAObjects.UIA import ComboBoxWithoutValuePattern
 import winVersion
 
-class AppModule(appModuleHandler.AppModule):
+class AppModule(AppModule):
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):
@@ -58,22 +57,12 @@ class AppModule(appModuleHandler.AppModule):
 				obj.name = obj.firstChild.name
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+		# Although there will be duplication below, call super method first.
+		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
 		if isinstance(obj, UIA):
-			# In build 17035, Settings/System/Sound has been added, but has an anoying volume progress bar.
-			# Still not fixed in build 17115, now the volume slider is another element.
-			if obj.UIAElement.cachedClassName == "ProgressBar" and isinstance(obj.next, UIA):
-				# Due to Storage Sense UI redesign in build 18277, the progress bar's sibling might not be a UIA object at all.
-				try:
-					if obj.next.UIAElement.cachedAutomationID.startswith("SystemSettings_Audio_Output_VolumeValue_") or obj.simplePrevious.UIAElement.cachedAutomationID.startswith("SystemSettings_Audio_Input_VolumeValue_"):
-						try:
-							clsList.remove(ProgressBar)
-						except ValueError:
-							pass
-				except AttributeError:
-					pass
 			# In 18200 series and above, various Storage Sense option combo boxes have values but are not exposed as such, so treated it as combo box without value pattern.
 			# Resolved in 18800 and above, which means Version 1903 (build 18362) and 1909 (build 18363) will still carry this problem.
-			elif winVersion.winVersion.build in (18362, 18363) and obj.role == controlTypes.ROLE_COMBOBOX and obj.UIAElement.cachedAutomationID.startswith("SystemSettings_StorageSense_SmartPolicy_"):
+			if winVersion.winVersion.build in (18362, 18363) and obj.role == controlTypes.ROLE_COMBOBOX and obj.UIAElement.cachedAutomationID.startswith("SystemSettings_StorageSense_SmartPolicy_"):
 				clsList.insert(0, ComboBoxWithoutValuePattern)
 
 	# Sometimes, the same text is announced, so consult this cache.
