@@ -1,8 +1,13 @@
-# Windows 10 Settings
-# Part of Windows 10 App Essentials collection
-# Copyright 2016-2019 Joseph Lee, released under GPL
+# appModules/systemsettings.py
+# A part of NonVisual Desktop Access (NVDA)
+# Copyright (C) 2019 NV Access Limited, Joseph Lee
+# This file is covered by the GNU General Public License.
+# See the file COPYING for more details.
 
-# Several hacks related to Settings app.
+"""App module for Windows 10 Settings app (aka Immersive Control Panel)."""
+
+# Originally copyright 2016-2019 Joseph Lee, released under GPL
+# Several hacks related to Settings app, some of which are part of NVDA Core.
 
 import appModuleHandler
 import ui
