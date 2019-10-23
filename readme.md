@@ -113,7 +113,7 @@ Most features below are now part of NVDA 2018.3 or later.
 * Certain information such as Windows Update progress is reported automatically, including Storage sense/disk cleanup widget and errors from Windows Update.
 * Progress bar values and other information are no longer announced twice.
 * For some combo boxes and radio buttons, NVDA will no longer fail to recognize labels and/or announce value changes.
-* Audio Volume progress bar beeps are no longer heard in Version 1803 and later.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and later. This will be part of NVDA 2019.3.
 * NVDA will no longer appear to do nothing or play error tones if using object navigation commands under some circumstances.
 * Windows Update reminder dialog is recognized as a proper dialog.
 * Odd control labels seen in certain Windows 10 installations has been corrected.
