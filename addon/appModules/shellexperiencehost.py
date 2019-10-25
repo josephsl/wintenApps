@@ -5,15 +5,3 @@
 # Borrowed directly from NVDA Core (2016-2018 Joseph Lee)
 
 from nvdaBuiltin.appModules.shellexperiencehost import *
-
-class AppModule(AppModule):
-
-	def event_NVDAObject_init(self, obj):
-		if isinstance(obj, UIA):
-			if obj.name == "" and obj.UIAElement.cachedAutomationID == "TextBoxPinEntry":
-				obj.name = obj.previous.name
-			# NVDA Core issue 8845: Brightness button in Action Center is a button, not a toggle button.
-			# Brightness control is now a slider in build 18277.
-			if obj.UIAElement.cachedAutomationID == "Microsoft.QuickAction.Brightness":
-				obj.role = controlTypes.ROLE_BUTTON
-				obj.states.discard(controlTypes.STATE_CHECKABLE)
