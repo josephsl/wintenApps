@@ -3,7 +3,7 @@
 * Auteurs: Joseph Lee, Derek Riemer et d’autres utilisateurs de Windows 10
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
-* NVDA compatibility: 2019.1 to 2019.2
+* NVDA compatibility: 2019.2
 
 Cette extension est une collection d'app modules pour diverses apps de
 Windows 10, ainsi que des améliorations et des correctifs pour certains
@@ -32,7 +32,7 @@ est inclus) :
 Notes:
 
 * This add-on requires Windows 10 Version 1809 (build 17763) or later and
-  NVDA 2019.1 or later. For best results, use the add-on with latest Windows
+  NVDA 2019.2 or later. For best results, use the add-on with latest Windows
   10 stable release (build 18362) and latest stable version of NVDA.
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
@@ -60,6 +60,12 @@ l'extension][3].
 * NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
   majorité des cas. Cette option est contrôlée par "Annoncer le rang de
   l'objet dans une liste" dans le dialogue Présentation des Objets.
+* NVDA will no longer announce "blank" when pressing up or down arrow to
+  open all apps views in Start menu.
+* When searching in Start menu or File Explorer in Version 1909 (November
+  2019 Update) and later, NVDA will no longer announce search results twice
+  when reviewing results, which also makes braille output more consistent
+  when reviewing items.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
 * The following UIA events are recognized: controller for, drag start, drag
@@ -76,9 +82,6 @@ l'extension][3].
   virtuels, NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
 * NVDA n'annoncera plus le texte de la taille du menu Démarrer lorsque vous
   changez la résolution ou l'orientation de l'écran.
-* In Version 1903 (May 2019 Update), NVDA will announce volume and
-  brightness changes immediately if focused on File Explorer. This is now
-  part of NVDA 2019.2.
 * App name and version for various Microsoft Store apps are now shown
   correctly. This will be part of NVDA 2019.3.
 
@@ -91,7 +94,7 @@ l'extension][3].
   calculatrice.
 * NVDA notifiera lorsque le nombre maximum de chiffres aura été atteint lors
   de la saisie d'expressions.
-* Added support for always on mode in future Calculator releases.
+* Added support for always on mode in Calculator version 10.1908 and later.
 
 ## calendrier
 
@@ -126,8 +129,6 @@ Cortana refers to older Cortana interface which was part of Start menu.
   lignes (messages) n'est pas prise en charge.
 * Lors de l'écriture d'un message, l'apparence des suggestions de mention
   est indiquée par des sons.
-* NVDA will no longer do anything or play error tones after closing this
-  app. This is now part of NVDA 2019.2.
 
 ## Cartes
 
@@ -170,8 +171,8 @@ Most features below are now part of NVDA 2018.3 or later.
   "some" or higher.
 * NVDA n'annoncera pous "presse-papiers" quand il y a des éléments dans le
   presse-papiers dans certaines circonstances.
-* Sur certains systèmes exécutant Windows Version 1903 (May 2019 Update),
-  NVDA ne paraîtra plus inactif quand le panneau d'emoji s'ouvre.
+* On some systems running Version 1903 (May 2019 Update) and later, NVDA
+  will no longer appear to do nothing when emoji panel opens.
 * Added support for modern Chinese, Japanese, and Korean (CJK) IME
   candidates interface introduced in 20H1 build 18965 and later.
 
@@ -190,8 +191,8 @@ Most features below are now part of NVDA 2018.3 or later.
 * Pour certaines zones de liste déroulantes et boutons radio, NVDA ne
   manquera plus de reconnaître les étiquettes et/ou d'annoncer les
   changements de valeur.
-* Les bips de la barre de progression du volume audio ne sont plus audibles
-  dans la Version 1803 et ultérieure.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and
+  later. This will be part of NVDA 2019.3.
 * NVDA ne semblera plus rien faire et ne jouera pas des tonalités d'erreur
   si des commandes pour la navigation par objet sont utilisées dans
   certaines circonstances.

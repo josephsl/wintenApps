@@ -3,7 +3,7 @@
 * Autory: Joseph Lee, Derek Riemer a ďalší používatelia Windowsu 10
 * Stiahnúť [stabilnú verziu][1]
 * Stiahnúť [vývojovú verziu][2]
-* NVDA kompatibilita: 2019.1 až  2019.2
+* NVDA compatibility: 2019.2
 
 Tento doplnok je zbierka aplikačných modulov pre rôzne aplikácie systému
 Windows 10, ako aj vylepšenia a opravy určitých ovládacích prvkov systému
@@ -29,10 +29,9 @@ aplikácie (podrobnosti o obsahu nájdete v každej časti aplikácie):
 
 Poznámky:
 
-* Tento doplnok vyžaduje systém Windows 10, verzia 1809 (build 17763) alebo
-  novší a NVDA 2019.1 alebo novší. Najlepšie výsledky dosiahnete, ak
-  použijete doplnok s najnovšou stabilnou verziou systému Windows 10 (build
-  18362) a najnovšou stabilnou verziou NVDA.
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and
+  NVDA 2019.2 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 18362) and latest stable version of NVDA.
 * Niektoré doplnkové funkcie sú alebo budú súčasťou čítačky obrazovky NVDA.
 * V prípade položiek, ktoré nie sú uvedené nižšie, môžete predpokladať, že
   funkcie sú súčasťou NVDA, ktoré už nie sú použiteľné, pretože doplnok
@@ -57,6 +56,12 @@ dokumente [changelogs for add-on release][3].
 * NVDA môže vo väčšine prípadov oznámiť počet návrhov pri vyhľadávaní. Táto
   voľba je riadená pomocou "Informácie o polohe objektu" v paneli
   Prezentácia objektu nájdené v nastaveniach NVDA.
+* NVDA will no longer announce "blank" when pressing up or down arrow to
+  open all apps views in Start menu.
+* When searching in Start menu or File Explorer in Version 1909 (November
+  2019 Update) and later, NVDA will no longer announce search results twice
+  when reviewing results, which also makes braille output more consistent
+  when reviewing items.
 * V určitých kontextových ponukách (napríklad v Edge) sa už informácie o
   polohe (napríklad 1 z 2) už neoznamujú.
 * Rozoznávajú sa nasledujúce udalosti UIA: radič, štart ťahania, zrušenie
@@ -75,9 +80,6 @@ dokumente [changelogs for add-on release][3].
   2).
 * NVDA už nebude oznamovať veľkosť textu ponuky Štart pri zmene rozlíšenia
   alebo orientácie obrazovky.
-* Vo verzii 1903 (aktualizácia z mája 2019) NVDA okamžite oznámi zmeny
-  objemu a jasu, ak sa zameria na Súbor Explorer. Toto je teraz súčasť NVDA
-  2019.2.
 * Názov a verzia aplikácie pre rôzne aplikácie Microsoft Obchod sa teraz
   zobrazujú správne. Toto bude súčasťou NVDA 2019.3.
 
@@ -88,7 +90,7 @@ dokumente [changelogs for add-on release][3].
   výsledky hneď po zadaní výpočtov.
 * NVDA už nebude oznamovať „úroveň nadpisu“ pre výsledky kalkulačky.
 * NVDA upozorní, ak sa pri zadávaní výrazu dosiahne maximálny počet číslic.
-* Pridaná podpora pre vždy zapnutý režim v budúcich vydaniach kalkulačky.
+* Added support for always on mode in Calculator version 10.1908 and later.
 
 ## Kalendár
 
@@ -120,8 +122,6 @@ Cortana označuje staršie rozhranie Cortana, ktoré bolo súčasťou ponuky
   navigácie v tabuľke na kontrolu hlavičiek správ. Upozorňujeme, že
   navigácia medzi riadkami (správami) nie je podporovaná.
 * Pri písaní správy je vzhľad zmienených návrhov oznamovaný zvukom.
-* Po ukončení tejto aplikácie NVDA už nebude nič robiť ani nebude prehrávať
-  chybové tóny. Toto je teraz súčasťou NVDA 2019.2.
 
 ## Mapy
 
@@ -164,8 +164,8 @@ novších.
   "some" or higher.
 * NVDA už za určitých okolností nebude oznamovať „schránku“, ak sú v
   schránke nejaké položky.
-* Na niektorých systémoch s verziou 1903 (aktualizácia z mája 2019) sa po
-  otvorení panelu emoji už NVDA nebude javiť nič nerobiť.
+* On some systems running Version 1903 (May 2019 Update) and later, NVDA
+  will no longer appear to do nothing when emoji panel opens.
 * Added support for modern Chinese, Japanese, and Korean (CJK) IME
   candidates interface introduced in 20H1 build 18965 and later.
 
@@ -182,8 +182,8 @@ novších.
 * Hodnoty indikátora priebehu a ďalšie informácie sa už neoznamujú dvakrát.
 * Pre niektoré rozbaľovacie zoznamy a prepínacie tlačidlá  nebude NVDA
   naďalej rozpoznávať štítky a / alebo oznamovať zmeny hodnoty.
-* Vo verzii 1803 a novšej sa už nezaznie zvukový signál na lište postupu
-  hlasitosti.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and
+  later. This will be part of NVDA 2019.3.
 * Ak sa za určitých okolností používajú príkazy navigácie objektov, NVDA už
   nebude robiť nič alebo nebude prehrávať chybové tóny.
 * Dialógové okno pripomenutia služby Windows Update sa považuje za správne

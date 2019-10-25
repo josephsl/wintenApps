@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2019.1 to 2019.2
+* NVDA compatibility: 2019.2
 
 Denne tilføjelse er en samling af app-moduler til forskellige Windows 10
 apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.
@@ -29,7 +29,7 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 Bemærkninger:
 
 * This add-on requires Windows 10 Version 1809 (build 17763) or later and
-  NVDA 2019.1 or later. For best results, use the add-on with latest Windows
+  NVDA 2019.2 or later. For best results, use the add-on with latest Windows
   10 stable release (build 18362) and latest stable version of NVDA.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
@@ -54,6 +54,12 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * NVDA kan annoncere nummeret af forslag, når du udfører en søgning i de
   fleste tilfælde. Denne indstilling styres af "Oplys information om
   objektets placering" i indstillingspanelet "Objektpræsentation".
+* NVDA will no longer announce "blank" when pressing up or down arrow to
+  open all apps views in Start menu.
+* When searching in Start menu or File Explorer in Version 1909 (November
+  2019 Update) and later, NVDA will no longer announce search results twice
+  when reviewing results, which also makes braille output more consistent
+  when reviewing items.
 * I visse kontekstmenuer (f.eks. i Microsoft Edge), er positionssoplysninger
   (f.eks. 1 af 2) ikke længere annonceret.
 * The following UIA events are recognized: controller for, drag start, drag
@@ -70,9 +76,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   announce current desktop name (desktop 2, for example).
 * NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
   du ændrer skærmopløsning eller orientering.
-* In Version 1903 (May 2019 Update), NVDA will announce volume and
-  brightness changes immediately if focused on File Explorer. This is now
-  part of NVDA 2019.2.
 * App name and version for various Microsoft Store apps are now shown
   correctly. This will be part of NVDA 2019.3.
 
@@ -85,7 +88,7 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   Lommeregner annonceres.
 * NVDA will notify if maximum digit count has been reached while entering
   expressions.
-* Added support for always on mode in future Calculator releases.
+* Added support for always on mode in Calculator version 10.1908 and later.
 
 ## kalender
 
@@ -119,8 +122,6 @@ Cortana refers to older Cortana interface which was part of Start menu.
   ikke understøttes.
 * Når du skriver en besked, vil @omtale forslag indikeres med lyd, når de
   vises.
-* NVDA will no longer do anything or play error tones after closing this
-  app. This is now part of NVDA 2019.2.
 
 ## Kort
 
@@ -162,8 +163,8 @@ Most features below are now part of NVDA 2018.3 or later.
   "some" or higher.
 * NVDA will no longer announce "clipboard" when there are items in the
   clipboard under some circumstances.
-* On some systems running Version 1903 (May 2019 Update), NVDA will no
-  longer appear to do nothing when emoji panel opens.
+* On some systems running Version 1903 (May 2019 Update) and later, NVDA
+  will no longer appear to do nothing when emoji panel opens.
 * Added support for modern Chinese, Japanese, and Korean (CJK) IME
   candidates interface introduced in 20H1 build 18965 and later.
 
@@ -181,8 +182,8 @@ Most features below are now part of NVDA 2018.3 or later.
   annonceret to gange.
 * For nogle combo boxe, vil NVDA ikke længere undlade at rapportere
   etiketter- og- eller annoncere værdiændringer.
-* Bip for behandlingslinjer for lydstyrke høres nu ikke længere i version
-  1803 og nyere.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and
+  later. This will be part of NVDA 2019.3.
 * NVDA ser ikke længere ud til at gøre ingenting eller afspille fejltoner,
   hvis du bruger objektnavigeringskommandoer under visse omstændigheder.
 * Dialogboksen Windows Update-påmindelse genkendes som en korrekt dialog.

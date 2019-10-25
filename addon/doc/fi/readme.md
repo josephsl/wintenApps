@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2019.1-2019.2
+* Yhteensopivuus: NVDA 2019.2
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -30,7 +30,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 Huomautuksia:
 
 * Tämä lisäosa edellyttää Windows 10:n versiota 1809 (koontiversio 17763)
-  tai uudempaa ja NVDA 2019.1:tä tai uudempaa. Käytä parhaan
+  tai uudempaa ja NVDA 2019.2:ta tai uudempaa. Käytä parhaan
   käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata versiota
   (koontiversio 18362) sekä uusinta vakaata NVDA:n versiota.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
@@ -56,6 +56,12 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
   -asetuksella Objektien lukeminen -paneelista NVDA:n asetuksista.
+* NVDA ei enää sano "tyhjä" painettaessa ylä- tai alanuolta kaikki
+  sovellukset -näkymän avaamiseksi Käynnistä-valikossa.
+* NVDA ei enää puhu hakutuloksia kahdesti niitä selattaessa, mikä lisäksi
+  tekee pistekirjoitustulosteesta yhdenmukaisempaa kohteita tarkasteltaessa
+  etsittäessä Käynnistä-valikossa tai Resurssienhallinnassa versiossa 1909
+  (November 2019 -päivitys) ja uudemmissa.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
 * Seuraavat UIA-tapahtumat tunnistetaan: ohjain kohteelle, vetämisen
@@ -73,9 +79,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   ja suljettaessa virtuaalityöpöytiä tai siirryttäessä niiden välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
   suuntaa vaihdettaessa.
-* NVDA ilmoittaa välittömästi äänenvoimakkuuden ja kirkkauden muutokset
-  Windows 10:n versiossa 1903 (toukokuun 2019 päivitys), jos kohdistus on
-  resurssienhallinnassa. Tämä muutos sisältyy NVDA 2019.2:een.
 * Useiden Microsoft Store -sovellusten nimi ja versio näytetään nyt
   asianmukaisesti. Tämä tulee sisältymään NVDA 2019.3:een.
 
@@ -88,7 +91,7 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   laskimessa.
 * NVDA ilmoittaa, jos lukujen enimmäismäärä saavutetaan ilmaisuja
   kirjoitettaessa.
-* Lisätty tuki tulevaisuudessa julkaistavan Laskin-sovelluksen aina käytössä
+* Lisätty tuki Laskin-sovelluksen version 10.1908 ja uudempien aina käytössä
   -tilalle.
 
 ## Kalenteri
@@ -123,8 +126,6 @@ Käynnistä-valikkoa.
   taulukkonavigointikomentoja viestiotsakkeiden lukemiseen. Huomaa, että
   rivien (viestien) välillä liikkumista ei tueta.
 * Ät-maininnan ehdotukset ilmaistaan äänimerkeillä viestiä kirjoitettaessa.
-* NVDA ei tee enää mitään tai toista virheääniä, kun tämä sovellus on
-  suljettu. Sisältyy NVDA 2019.2:een.
 
 ## Kartat
 
@@ -171,7 +172,7 @@ tai sitä uudempiin versioihin.
   kohteita.
 * Emojipaneelin avautuessa ei enää näytä siltä, että NVDA  ei tee mitään
   joissakin järjestelmissä, joissa on asennettuna Windows 10:n versio 1903
-  (May 2019 -päivitys).
+  (May 2019 -päivitys) tai uudempi.
 * Lisätty tuki modernille kiinan, japanin ja korean (CJK)
   IME-ehdotusliittymälle, joka esiteltiin 20H1:n koontiversiossa 18965 ja
   uudemmissa.
@@ -191,7 +192,8 @@ tai sitä uudempiin versioihin.
   valintapainikkeiden selitteiden tunnistamisessa ja/tai arvomuutosten
   ilmoittamisessa.
 * Edistymispalkkien äänimerkkejä ei enää kuulu muutettaessa
-  äänenvoimakkuutta versiossa 1803 ja uudemmissa.
+  äänenvoimakkuutta versiossa 1803 ja uudemmissa. Tämä sisältyy NVDA
+  2019.3:een.
 * NVDA ei tee enää mitään tai toista virheääniä, mikäli
   objektinavigointikomentoja käytetään tietyissä tilanteissa.
 * Windows Updaten muistutusvalintaikkuna tunnistetaan asianmukaisesti

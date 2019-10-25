@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer și alți utilizatori Windows 10
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
-* NVDA compatibility: 2019.1 to 2019.2
+* NVDA compatibility: 2019.2
 
 Acest supliment cuprinde o colecție de module pentru diverse aplicații din
 Windows 10, dar și rezolvări și îmbunătățiri pentru anumite controale din
@@ -31,7 +31,7 @@ privire la ceea ce este inclus):
 Note:
 
 * This add-on requires Windows 10 Version 1809 (build 17763) or later and
-  NVDA 2019.1 or later. For best results, use the add-on with latest Windows
+  NVDA 2019.2 or later. For best results, use the add-on with latest Windows
   10 stable release (build 18362) and latest stable version of NVDA.
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
@@ -60,6 +60,12 @@ versiunile suplimentului][3].
   majoritatea cazurilor. Această opțiune este controlată de „informația
   poziției obiectului din dialogul prezentării obiectului, găsit în panoul
   de setări NVDA.
+* NVDA will no longer announce "blank" when pressing up or down arrow to
+  open all apps views in Start menu.
+* When searching in Start menu or File Explorer in Version 1909 (November
+  2019 Update) and later, NVDA will no longer announce search results twice
+  when reviewing results, which also makes braille output more consistent
+  when reviewing items.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
 * The following UIA events are recognized: controller for, drag start, drag
@@ -76,9 +82,6 @@ versiunile suplimentului][3].
   announce current desktop name (desktop 2, for example).
 * NVDA nu mai anunță „dimensiune text start meniu” la schimbarea rezoluției
   ecranului sau a orientării.
-* In Version 1903 (May 2019 Update), NVDA will announce volume and
-  brightness changes immediately if focused on File Explorer. This is now
-  part of NVDA 2019.2.
 * App name and version for various Microsoft Store apps are now shown
   correctly. This will be part of NVDA 2019.3.
 
@@ -90,7 +93,7 @@ versiunile suplimentului][3].
 * NVDA nu va mai anunța „rubrică nivel” pentru rezultatele calculatorului.
 * NVDA will notify if maximum digit count has been reached while entering
   expressions.
-* Added support for always on mode in future Calculator releases.
+* Added support for always on mode in Calculator version 10.1908 and later.
 
 ## calendar
 
@@ -123,8 +126,6 @@ Cortana refers to older Cortana interface which was part of Start menu.
   navigarea printre rânduri (mesaje) nu este suportată.
 * La scrierea unui mesaj, aspectele sugestiilor de menționare a arondului
   sunt indicate de sunete.
-* NVDA will no longer do anything or play error tones after closing this
-  app. This is now part of NVDA 2019.2.
 
 ## Hărți
 
@@ -166,8 +167,8 @@ Most features below are now part of NVDA 2018.3 or later.
   "some" or higher.
 * NVDA will no longer announce "clipboard" when there are items in the
   clipboard under some circumstances.
-* On some systems running Version 1903 (May 2019 Update), NVDA will no
-  longer appear to do nothing when emoji panel opens.
+* On some systems running Version 1903 (May 2019 Update) and later, NVDA
+  will no longer appear to do nothing when emoji panel opens.
 * Added support for modern Chinese, Japanese, and Korean (CJK) IME
   candidates interface introduced in 20H1 build 18965 and later.
 
@@ -185,8 +186,8 @@ Most features below are now part of NVDA 2018.3 or later.
   ori.
 * Pentru unele casete combinate și butoane rotative, NVDA nu va mai eșua la
   recunoașterea etichetelor și/sau anunțarea schimbărilor valorii.
-* Bipurile barei de progres a volumului audio nu mai sunt auzite în
-  compilarea 1803 sau mai nouă.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and
+  later. This will be part of NVDA 2019.3.
 * NVDA nu va mai fi nevoit să nu facă nimic sau să redea tonuri de eroare
   dacă se utilizează comenzile de navigare ale obiectului în anumite
   circumstanțe.

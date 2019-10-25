@@ -3,7 +3,7 @@
 * Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
-* Zgodność z wersjami NVDA: 2019.1 do 2019.2
+* NVDA compatibility: 2019.2
 
 Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
 również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
@@ -28,10 +28,9 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* Uwaga! Ten dodatek wymaga Windowsa 10 Wersji 1809 (kompilacji 17763) lub
-  nowszej i NVDA 2019.1 lub nowszej. Aby uzyskać najlepsze wyniki, należy
-  używać dodatku z najnowszą stabilną kompilacją systemu (kompilacja 18362)
-  i najnowszą stabilną wersją NVDA. 
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and
+  NVDA 2019.2 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 18362) and latest stable version of NVDA.
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
@@ -55,6 +54,12 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * W większości przypadków, NVDA może ogłaszać liczbę sugestii
   wyszukiwania. Ta funkcja jest kontrolowana przez opcję "odczytuj położenie
   obiektu" dostępną w ustawieniach NVDA, w panelu "prezentacja obiektu".
+* NVDA will no longer announce "blank" when pressing up or down arrow to
+  open all apps views in Start menu.
+* When searching in Start menu or File Explorer in Version 1909 (November
+  2019 Update) and later, NVDA will no longer announce search results twice
+  when reviewing results, which also makes braille output more consistent
+  when reviewing items.
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) nie jest już odczytywana.
 * Następujące zdarzenia UIA są rozpoznawane: active text position change,
@@ -73,9 +78,6 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   pulpit 2).
 * NVDA nie będzie wypowiadało wielkość tekstu w meni start, gdy zmienia się
   rozdzielczość ekranu lub orientacja ekranu.
-* W wersji 1903 (aktualizacji majowej 2019), NVDA będzie oznajmiał zmiany
-  głośności i jasności od razu, gdy jest się fokusowanyw na oknie
-  eksploratora windows. Jest to teraz część NVDA 2019.2.
 * App name and version for various Microsoft Store apps are now shown
   correctly. This will be part of NVDA 2019.3.
 
@@ -87,8 +89,7 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * NVDA nie będzie więcej wymawiało "nagłówek" dla wyników kalkulatora.
 * NVDA powiadomi, jeżeli ilość liczb osiągnie maksymalną wartość przy
   wpisywaniu wyrażenia.
-* Dodano wsparcie trybu  "zawsze włączony", dla przyszłych wersji
-  kalkulatora.
+* Added support for always on mode in Calculator version 10.1908 and later.
 
 ## Kalendarz
 
@@ -121,8 +122,6 @@ Cortana refers to older Cortana interface which was part of Start menu.
   uwadze, że nawigacja po kolumnach (wiadomościach) jest niewspierana.
 * Przy pisaniu wiadomości, istnienie podpowiedzi o wzmiankach teraz jest
   oznajmiane dzwiękami.
-* NVDA nie będzie robiło nic, lub odtwarzało dźwięk błędu, gdyy ta aplikacja
-  jest zamknięta. Ta funkcja jest teraz częścią NVDA 2019.2.
 
 ## Mapy
 
@@ -162,9 +161,8 @@ Most features below are now part of NVDA 2018.3 or later.
   Consortium setting from NvDA's speech settings and set symbol level to
   "some" or higher.
 * NVDA już nie będzie wymawiała "showek" gdy istnieją w nim elementy.
-* Na niektórych komputerach na których jest uruchomiony Windows 10  1903
-  (Atualizacja z maju 2019), NVDA nie będzie wydawała efekt robienia nic gdy
-  panel emoji się otwiera.
+* On some systems running Version 1903 (May 2019 Update) and later, NVDA
+  will no longer appear to do nothing when emoji panel opens.
 * Added support for modern Chinese, Japanese, and Korean (CJK) IME
   candidates interface introduced in 20H1 build 18965 and later.
 
@@ -182,8 +180,8 @@ Most features below are now part of NVDA 2018.3 or later.
   automatycznie.
 * Dla niektórych list rozwijanych i przycisków opcji, NVDA będzie wykrywał
   nazwę oraz wypowiadał zmiany wartości. 
-* Dzwięki paska postępu głośności nie są więcej słyszane w kompilacji 1803 i
-  nowszych.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and
+  later. This will be part of NVDA 2019.3.
 * W niektórych przypadkach, gdy używana jest nawigacja obiektowa, NVDA nie
   będzie się zachowywał  sposób nijaki, albo nie będzie odtwarzał dźwięku
   błedu.
