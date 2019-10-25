@@ -19,21 +19,10 @@ class AppModule(AppModule):
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):
-			# Despite repeated feedback, there's at least one unlabeled item in Settings app.
-			# One particular case is Settings/Update/Developer Mode with USB/LAN discovery toggle button in Redstone (fixed in build 14986).
-			# Another case is with various combo boxes in Redstone 2 with no labels.
-			# Yet another case is Devices/Bluetooth lists.
-			if obj.name == "" and (obj.role in (controlTypes.ROLE_TOGGLEBUTTON, controlTypes.ROLE_COMBOBOX) and obj.UIAElement.cachedAutomationID
-				or obj.role == controlTypes.ROLE_LIST and obj.UIAElement.cachedAutomationID in ("SystemSettings_Devices_AudioDeviceList_ListView", "SystemSettings_Devices_OtherDeviceList_ListView")):
-				# But some combo boxes, such as Insider level combo box in Creators Update has the following problem.
-				try:
-					obj.name = obj.previous.name
-				except AttributeError:
-					obj.name = obj.parent.previous.name
 			# From Redstone 1 onwards, update history shows status rather than the title.
 			# In build 16232, the title is shown but not the status, so include this for sake of backward compatibility.
 			# In later revisions of build 17134 and later, feature update download link is provided and is initially called "download and install now", thus add the feature update title as well.
-			elif obj.role == controlTypes.ROLE_LINK:
+			if obj.role == controlTypes.ROLE_LINK:
 				nameList = [obj.name]
 				if obj.UIAElement.cachedAutomationID.startswith("HistoryEvent") and obj.name != obj.previous.name:
 					# Add the status text in 1709 and later.
