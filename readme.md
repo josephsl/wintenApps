@@ -34,7 +34,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## General
 
 * NVDA will no longer play error tones or do nothing if this add-on becomes active from Windows 7, Windows 8.1, and unsupported releases of Windows 10.
-* Submenu items are properly recognized in various apps, including context menu for Start menu tiles and microsoft Edge's app menu (Redstone 5).
+* Submenu items are properly recognized in various apps, including context menu for Start menu tiles and microsoft Edge's app menu in Version 1809 (October 2018 Update).
 * In addition to dialogs recognized by NVDA, more dialogs are now recognized as proper dialogs and reported as such, including Insider Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation panel found in NVDA settings.
 * NVDA will no longer announce "blank" when pressing up or down arrow to open all apps views in Start menu.
