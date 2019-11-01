@@ -48,9 +48,9 @@ consulte o documento [changelogs for releases, release][3].
 * O NVDA não reproduzirá mais os tons de erro ou não fará nada se este extra
   ficar activo no Windows 7 e 8.1 ou em versões não suportadas do windows
   10.
-* Os itens do submenu são reconhecidos correctamente em vários aplicativos,
-  incluindo o menu de contexto para os menus do menu Iniciar e o menu de
-  aplicativos do Microsoft Edge (Redstone 5).
+* Submenu items are properly recognized in various apps, including context
+  menu for Start menu tiles and microsoft Edge's app menu in Version 1809
+  (October 2018 Update).
 * Para além dos diálogos já reconhecidos pelo NVDA, mais diálogos são agora
   reconhecidos como diálogos apropriados e relatados como tal, incluindo o
   diálogo Insider Preview (app de configurações).

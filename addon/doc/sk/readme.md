@@ -47,9 +47,9 @@ dokumente [changelogs for add-on release][3].
 * NVDA už nebude prehrávať chybové tóny alebo nebude robiť nič, ak bude
   tento doplnok aktívny v systéme Windows 7, Windows 8.1 a nepodporovaných
   vydaniach systému Windows 10.
-* Položky podponuky sú správne rozpoznané v rôznych aplikáciách vrátane
-  kontextového menu pre dlaždice ponuky Štart a ponuky aplikácií spoločnosti
-  Microsoft od spoločnosti Microsoft (Redstone 5).
+* Submenu items are properly recognized in various apps, including context
+  menu for Start menu tiles and microsoft Edge's app menu in Version 1809
+  (October 2018 Update).
 * Okrem dialógov rozpoznaných programom NVDA je teraz viac dialógov
   rozpoznaných ako správne dialógy a ako také, sú hlásené vrátane dialógov
   Insider Preview (app settings).

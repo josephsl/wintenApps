@@ -46,9 +46,9 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * NVDA vil ikke længere spille fejltoner eller gøre ingenting, hvis denne
   tilføjelse bliver aktiv fra Windows 7 og 8.1 og andre versioner af
   Windows, der ikke understøttes.
-* Undermenupunkter er korrekt genkendt i forskellige apps, herunder
-  kontekstmenu til Start-menufliser og Microsoft Edge-appmenuen (Redstone
-  5).
+* Submenu items are properly recognized in various apps, including context
+  menu for Start menu tiles and microsoft Edge's app menu in Version 1809
+  (October 2018 Update).
 * Visse dialogbokse er nu anerkendt som ordentlige dialoger og rapporteret
   som sådan, herunder Insider Preview dialog (indstillinger app).
 * NVDA kan annoncere nummeret af forslag, når du udfører en søgning i de

@@ -45,9 +45,9 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * NVDA już nie będzie odtwarzało dźwięki błędu oraz robiło nic jeżeli ten
   dodatek zostanie aktywowany w Windowsie 7, Windowsie 8.1, i niewspieranych
   wersjach Windowsa 10.
-* Elementy meni rozwijanego są prawidłowo rozpoznawane w różnych
-  aplikacjach, takich jak menu kontekstowe dla kafelków meni start, a także
-  menu aplikacji dla Microsoft Edge (Redstone 5).
+* Submenu items are properly recognized in various apps, including context
+  menu for Start menu tiles and microsoft Edge's app menu in Version 1809
+  (October 2018 Update).
 * Niektóre okna dialogowe są od teraz prawidłowo rozpoznawane i wymawiane
   jako okna dialogowe. Są to np. okna dialogowe w wersjach testowych
   (settings app). Jest to już wbudowane w sam czytnik ekranu.

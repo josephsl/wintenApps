@@ -47,7 +47,9 @@
 ## 常规设置
 
 * 如果此插件在Windows 7和8.1或者是超过支持周期的旧版Windows10上面启用，NVDA将不再播放错误音效。
-* 现在子菜单项在各种应用程序中都可以正确识别，包括“开始”菜单磁贴的上下文菜单和Microsoft Edge的应用程序菜单（Redstone 5）。
+* Submenu items are properly recognized in various apps, including context
+  menu for Start menu tiles and microsoft Edge's app menu in Version 1809
+  (October 2018 Update).
 * 某些对话框现在被识别为正确的对话框并按此朗读，包括“内幕预览”对话框（设置应用程序）。
 * 在大多数情况下，NVDA可以在执行搜索时朗读建议计数。此选项由NVDA设置中的对象显示面板中的“朗读对象位置信息”控制。
 * 现在在开始菜单中按上或下光标打开所有应用程序视图时，NVDA将不再读出“空白”。

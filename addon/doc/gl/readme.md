@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros usuarios do Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
-* NVDA compatibility: 2019.2
+* Compatibilidade con NVDA: 2019.2
 
 Este complemento é unha coleción de app modules para varias aplicacións de
 Windows 10, así coma melloras e correccións para certos controis de windows
@@ -30,9 +30,10 @@ se inclúe):
 
 Notas:
 
-* This add-on requires Windows 10 Version 1809 (build 17763) or later and
-  NVDA 2019.2 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18362) and latest stable version of NVDA.
+* Este complemento require do Windows 10 Versión 1809 (compilación 17763) ou
+  posterior e do NVDA 2019.2 ou posterior. Para uns mellores resultados, usa
+  o complemento coa compilación estable máis recente (compilación 18362) e
+  versión estable máis recente do NVDA.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
 * Para entradas non listadas a continuación, podes asumir que as
@@ -50,19 +51,19 @@ documento [rexistros de trocos para publicacións de complementos][3].
   Windows 10.
 * Os elementos de submenú recoñécense adecuadamente en varias apps,
   incluíndo elementos do menú de contexto nas tarxetas do menú inicio e o
-  menú da aplicación Microsoft Edge (Restone 5).
+  menú da aplicación Microsoft Edge na versin 1809 (October 2018 Update).
 * Agora recoñécense certos diálogos como proprios diálogos. Esto inclúe o
   diálogo Insider Preview (settings app).
 * NVDA pode anunciar o número de suxestións cando se realiza unha procura na
   maioría dos casos. Esta opción contrólase por "Anunciar información de
   posición do obxecto" no panel Presentación de Obxectos ubicado nas opcións
   do NVDA.
-* NVDA will no longer announce "blank" when pressing up or down arrow to
-  open all apps views in Start menu.
-* When searching in Start menu or File Explorer in Version 1909 (November
-  2019 Update) and later, NVDA will no longer announce search results twice
-  when reviewing results, which also makes braille output more consistent
-  when reviewing items.
+* NVDA xa non anuncia "en branco" cando se prema frecha arriba ou abaixo
+  para abrir as vistas todas as apps no Menú inicio.
+* Ao buscar no menú inicio ou no explorador de arquivos na versión 1909
+  (November 2019 Update) e posteriores, NVDA xa non anunciará os resultados
+  de busca dúas veces ao revisalos, o que tamén fai a saída braille máis
+  consistente ao revisar elementos.
 * En certos menús de contexto (coma no Edge), a información de posición
   (ex.: 1 de 2) xa non se anuncia.
 * Recoñécense os seguintes eventos UIA: Controller for, drag start, drag
@@ -92,7 +93,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
   calculadora.
 * NVDA notificará cando se chegue ao límite de díxitos introducindo
   expresións.
-* Added support for always on mode in Calculator version 10.1908 and later.
+* Engadido soporte para o modo sempre acendida en Calculadora versión
+  10.1908 e posterior.
 
 ## calendario
 
@@ -171,8 +173,8 @@ posterior.
   símbolos en "Algunha" ou máis alto.
 * NVDA xa non anunciará "portapapeis" cando haxa elementos no portapapeis
   baixo algunhas circunstancias.
-* On some systems running Version 1903 (May 2019 Update) and later, NVDA
-  will no longer appear to do nothing when emoji panel opens.
+* Nalgúns sistemas coa versión 1903 (May 2019 Update), NVDA xa non
+  aparentará non facer nada cando se abra o panel de emoji.
 * Engadido soporte para a interface de candidatos IME en chino, xaponés e
   coreano (CJK) introducida na 20H1 compilación 18965 e posteriores.
 
@@ -190,8 +192,8 @@ posterior.
   dúas veces.
 * Para algunhas caixas combinadas e botóns de opción, NVDA xa non fallará ao
   recoñecer etiquetas e/ou ao anunciar cambios de valores.
-* Audio Volume progress bar beeps are no longer heard in Version 1803 and
-  later. This will be part of NVDA 2019.3.
+* Os pitidos da barra de progreso do volume de audio xa non se escoitan na
+  versión 1803 e posterior. Isto formará parte de NVDA 2019.3.
 * NVDA xa non parecerá non facer nada ou non reproducirá tons de erro cando
   se usen ordes de navegación de obxectos baixo certas circunstancias.
 * O diálogo de recordatorio de actualización de Windows é recoñecido

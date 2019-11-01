@@ -50,9 +50,9 @@ versiunile suplimentului][3].
 * NVDA will no longer play error tones or do nothing if this add-on becomes
   active from Windows 7, Windows 8.1, and unsupported releases of Windows
   10.
-* Elementele de submeniu sunt recunoscute corespunzător în diverse
-  aplicații, incluzând meniul context pentru comenzile din meniul Start și
-  meniul de aplicație al Microsoft Edge (Redstone 5).
+* Submenu items are properly recognized in various apps, including context
+  menu for Start menu tiles and microsoft Edge's app menu in Version 1809
+  (October 2018 Update).
 * Anumite dialoguri sunt acum recunoscute ca dialoguri corespunzătoare și
   sunt raportate ca atare. Acestea includ dialogul Insider Preview
   (aplicația setări).
