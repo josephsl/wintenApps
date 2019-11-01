@@ -48,9 +48,9 @@ Versionen][3].
 * NVDA wird keine Fehlertöne mehr abspielen oder nichts tun, wenn diese
   Erweiterung unter Windows 7, Windows 8.1 und nicht unterstützten Versionen
   von Windows 10 benutzt wird.
-* Untermenüs werden in verschiedenen Anwendungen richtig erkannt,
-  einschließlich des Kontextmenüs für Startmenükacheln und des
-  Anwendungsmenüs von Microsoft Edge (Redstone 5).
+* Submenu items are properly recognized in various apps, including context
+  menu for Start menu tiles and microsoft Edge's app menu in Version 1809
+  (October 2018 Update).
 * Zusätzlich zu den von der NVDA erkannten Dialogen werden nun mehr Dialoge
   als richtige Dialoge erkannt und als solche gemeldet, einschließlich des
   Dialogs Insider-Vorschau (Einstellungsanwendung).

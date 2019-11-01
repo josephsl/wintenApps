@@ -47,9 +47,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA ei toista enää virheääniä tai tee mitään, mikäli tämä lisäosa
   aktivoituu Windows 7:ssä, 8.1:ssä tai sellaisissa Windows 10:n versioissa,
   joita ei enää tueta.
-* Alavalikot tunnistetaan asianmukaisesti useissa sovelluksissa, mukaan
+* Alivalikot tunnistetaan asianmukaisesti useissa sovelluksissa, mukaan
   lukien Käynnistä-valikon ruutujen tilannekohtaiset valikot ja microsoft
-  Edgen sovellusvalikko (Redstone 5).
+  Edgen sovellusvalikko versiossa 1809 (October 2018 -päivitys).
 * Entistä enemmän valintaikkunoita tunnistetaan ja ilmoitetaan nyt
   asianmukaisesti valintaikkunoina, mukaan lukien Insider-esiversion
   valintaikkuna (Asetukset-sovellus). Tämä sisältyy nyt NVDA 2018.3:een.

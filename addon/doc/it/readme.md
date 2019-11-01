@@ -47,9 +47,9 @@ riferimento al documento [changelogs for add-on releases][3].
 * NVDA will no longer play error tones or do nothing if this add-on becomes
   active from Windows 7, Windows 8.1, and unsupported releases of Windows
   10.
-* le Voci di sottomenu vengono correttamente riconosciute in varie
-  applicazioni, incluso il menu contestuale per la griglia del menu Start e
-  delle apps di Microsoft Edge (Redstone 5).
+* Submenu items are properly recognized in various apps, including context
+  menu for Start menu tiles and microsoft Edge's app menu in Version 1809
+  (October 2018 Update).
 * In addition to dialogs recognized by NVDA, more dialogs are now recognized
   as proper dialogs and reported as such, including Insider Preview dialog
   (settings app).

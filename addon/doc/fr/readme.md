@@ -51,9 +51,9 @@ l'extension][3].
 * NVDA ne lira plus les sons d'erreur ou ne cesse plus de fonctionner si
   cette extension est utilisée sous Windows 7, windows 8.1 et des versions
   incompatibles de Windows 10.
-* Les éléments de sous-menu sont correctement reconnus dans diverses
-  applications, y compris le menu contextuel pour les tuiles du Menu
-  Démarrer et le menu de l'application de Microsoft Edge (Redstone 5).
+* Submenu items are properly recognized in various apps, including context
+  menu for Start menu tiles and microsoft Edge's app menu in Version 1809
+  (October 2018 Update).
 * En plus des dialogues reconnus par NVDA, d'autres dialogues sont
   maintenant reconus et annoncés comme tels, incluant le dialogue de Insider
   Preview (app de paramètres).
