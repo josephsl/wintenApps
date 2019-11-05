@@ -21,11 +21,6 @@ class StartMenuSearchField(StartMenuSearchField):
 		if config.conf["presentation"]["reportAutoSuggestionsWithSound"]:
 			nvwave.playWaveFile(r"waves\suggestionsOpened.wav")
 
-	__gestures = {
-		"kb:downArrow": None,
-		"kb:upArrow": None,
-	}
-
 
 class AppModule(AppModule):
 
