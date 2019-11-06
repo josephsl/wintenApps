@@ -37,8 +37,8 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * Submenu items are properly recognized in various apps, including context menu for Start menu tiles and microsoft Edge's app menu in Version 1809 (October 2018 Update).
 * In addition to dialogs recognized by NVDA, more dialogs are now recognized as proper dialogs and reported as such, including Insider Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation panel found in NVDA settings.
-* NVDA will no longer announce "blank" when pressing up or down arrow to open all apps views in Start menu.
-* When searching in Start menu or File Explorer in Version 1909 (November 2019 Update) and later, NVDA will no longer announce search results twice when reviewing results, which also makes braille output more consistent when reviewing items.
+* NVDA will no longer announce "blank" when pressing up or down arrow to open all apps views in Start menu. This will be part of NVDA 2019.3.
+* When searching in Start menu or File Explorer in Version 1909 (November 2019 Update) and later, instances of NVDA announcing search results twice when reviewing results are less noticeable, which also makes braille output more consistent when reviewing items.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: controller for, drag start, drag cancel, drag complete, element selected, item status, live region change, notification, system alert, text change, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app.
 * It is possible to tracke only specific events and/or events coming from specific apps.
@@ -66,7 +66,7 @@ Most items are no longer applicable on Version 1903 and later. Classic Cortana r
 * Textual responses from Cortana (both Classic and Conversations UI) are announced in most situations (if using Classic Cortana, reopen Start menu and try searching again if responses are not announced).
 * NVDA will be silent when talking to Cortana via voice.
 * In Classic Cortana, NVDA will announce reminder confirmation after you set one.
-* In build 18945 and later, modern search experience in File Explorer powered by Cortana user interface is supported.
+* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later, modern search experience in File Explorer powered by Windows Search user interface is supported.
 
 ## Feedback Hub
 
