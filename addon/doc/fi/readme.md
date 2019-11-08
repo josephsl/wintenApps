@@ -56,12 +56,12 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
   -asetuksella Objektien lukeminen -paneelista NVDA:n asetuksista.
-* NVDA ei enää sano "tyhjä" painettaessa ylä- tai alanuolta kaikki
-  sovellukset -näkymän avaamiseksi Käynnistä-valikossa.
-* NVDA ei enää puhu hakutuloksia kahdesti niitä selattaessa, mikä lisäksi
-  tekee pistekirjoitustulosteesta yhdenmukaisempaa kohteita tarkasteltaessa
-  etsittäessä Käynnistä-valikossa tai Resurssienhallinnassa versiossa 1909
-  (November 2019 -päivitys) ja uudemmissa.
+* NVDA will no longer announce "blank" when pressing up or down arrow to
+  open all apps views in Start menu. This will be part of NVDA 2019.3.
+* When searching in Start menu or File Explorer in Version 1909 (November
+  2019 Update) and later, instances of NVDA announcing search results twice
+  when reviewing results are less noticeable, which also makes braille
+  output more consistent when reviewing items.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
 * Seuraavat UIA-tapahtumat tunnistetaan: ohjain kohteelle, vetämisen
@@ -112,8 +112,9 @@ Käynnistä-valikkoa.
 * NVDA on hiljaa puhuttaessa Cortanalle mikrofonin välityksellä.
 * NVDA puhuu nyt vahvistuksen muistutusta lisättäessä perinteisessä
   Cortanassa.
-* Resurssienhallinnan Cortanan käyttöliittymän voimalla toimivaa modernia
-  hakukokemusta tuetaan koontiversiossa 18945 ja uudemmissa.
+* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later,
+  modern search experience in File Explorer powered by Windows Search user
+  interface is supported.
 
 ## Palautekeskus
 

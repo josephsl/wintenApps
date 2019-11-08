@@ -55,11 +55,11 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   wyszukiwania. Ta funkcja jest kontrolowana przez opcję "odczytuj położenie
   obiektu" dostępną w ustawieniach NVDA, w panelu "prezentacja obiektu".
 * NVDA will no longer announce "blank" when pressing up or down arrow to
-  open all apps views in Start menu.
+  open all apps views in Start menu. This will be part of NVDA 2019.3.
 * When searching in Start menu or File Explorer in Version 1909 (November
-  2019 Update) and later, NVDA will no longer announce search results twice
-  when reviewing results, which also makes braille output more consistent
-  when reviewing items.
+  2019 Update) and later, instances of NVDA announcing search results twice
+  when reviewing results are less noticeable, which also makes braille
+  output more consistent when reviewing items.
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) nie jest już odczytywana.
 * Następujące zdarzenia UIA są rozpoznawane: active text position change,
@@ -107,8 +107,9 @@ Cortana refers to older Cortana interface which was part of Start menu.
 * NVDA będzie przyciszony, gdy mówisz do Cortany.
 * In Classic Cortana, NVDA will announce reminder confirmation after you set
   one.
-* w kompilacji 18945 i nowszych, wspierany jest nowy interfejs wyszukiwania
-  cortana w eksploratorze plików.
+* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later,
+  modern search experience in File Explorer powered by Windows Search user
+  interface is supported.
 
 ## Centrum opinii
 

@@ -60,12 +60,12 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * NVDA puede anunciar cuenta de sugerencias cuando se realiza una búsqueda
   en la mayoría de casos. Esta opción se controla por "Anunciar información
   de posición del objeto" en el panel Presentación de Objetos.
-* NVDA ya no anunciará "en blanco" al pulsar las flechas arriba y abajo para
-  abrir las vistas de todas las aplicaciones del menú Inicio.
-* Al buscar en el menú Inicio o el explorador de archivos de la versión 1909
-  (actualización de noviembre de 2019) y posteriores, NVDA ya no anunciará
-  los resultados de búsqueda dos veces al revisarlos, lo que hace la salida
-  braille más consistente al revisar elementos.
+* NVDA will no longer announce "blank" when pressing up or down arrow to
+  open all apps views in Start menu. This will be part of NVDA 2019.3.
+* When searching in Start menu or File Explorer in Version 1909 (November
+  2019 Update) and later, instances of NVDA announcing search results twice
+  when reviewing results are less noticeable, which also makes braille
+  output more consistent when reviewing items.
 * En ciertos menús de contexto (tales como en Edge), la información de
   posición (ej.: 1 de 2) ya no se anuncia.
 * Se reconocen los siguientes eventos UIA: Controller for, drag start, drag
@@ -116,9 +116,9 @@ Cortana que formaba parte del menú Inicio.
 * NVDA se silenciará cuando hables a Cortana a través de la voz.
 * En Cortana clásico, NVDA anunciará confirmación de recuerdo después de que
   configures una.
-* En la compilación 18945 y posteriores, se soporta la interfaz de usuario
-  de la experiencia de búsqueda moderna proporcionada por Cortana en el
-  explorador de Windows.
+* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later,
+  modern search experience in File Explorer powered by Windows Search user
+  interface is supported.
 
 ## Centro de opiniones
 

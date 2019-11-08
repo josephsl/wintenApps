@@ -61,11 +61,11 @@ versiunile suplimentului][3].
   poziției obiectului din dialogul prezentării obiectului, găsit în panoul
   de setări NVDA.
 * NVDA will no longer announce "blank" when pressing up or down arrow to
-  open all apps views in Start menu.
+  open all apps views in Start menu. This will be part of NVDA 2019.3.
 * When searching in Start menu or File Explorer in Version 1909 (November
-  2019 Update) and later, NVDA will no longer announce search results twice
-  when reviewing results, which also makes braille output more consistent
-  when reviewing items.
+  2019 Update) and later, instances of NVDA announcing search results twice
+  when reviewing results are less noticeable, which also makes braille
+  output more consistent when reviewing items.
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
 * The following UIA events are recognized: controller for, drag start, drag
@@ -111,8 +111,9 @@ Cortana refers to older Cortana interface which was part of Start menu.
 * NVDA va fi silențios atunci când vorbiți cu Cortana prin voce.
 * In Classic Cortana, NVDA will announce reminder confirmation after you set
   one.
-* In build 18945 and later, modern search experience in File Explorer
-  powered by Cortana user interface is supported.
+* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later,
+  modern search experience in File Explorer powered by Windows Search user
+  interface is supported.
 
 ## Centrul de Feedback
 
