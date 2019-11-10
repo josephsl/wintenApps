@@ -340,6 +340,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_dragComplete(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dragComplete")
+		# Announce the new drop location.
+		api.getFocusObject().reportFocus()
 		nextHandler()
 
 	def event_UIA_dragEnter(self, obj, nextHandler):
