@@ -354,6 +354,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_dragDropped(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dragDropped")
+		# Announce the new drop location.
+		api.getFocusObject().reportFocus()
 		nextHandler()
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):
