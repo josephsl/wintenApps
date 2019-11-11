@@ -13,6 +13,7 @@ import api
 import nvwave
 import config
 import queueHandler
+import eventHandler
 import globalVars
 import UIAHandler
 from logHandler import log
@@ -340,8 +341,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_dragComplete(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dragComplete")
-		# Announce the new drop location.
-		api.getFocusObject().reportFocus()
+		# Announce the new drop location by faking a gain focus event.
+		eventHandler.executeEvent("gainFocus", api.getFocusObject())
 		nextHandler()
 
 	def event_UIA_dragEnter(self, obj, nextHandler):
@@ -354,8 +355,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_dragDropped(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dragDropped")
-		# Announce the new drop location.
-		api.getFocusObject().reportFocus()
+		# Announce the new drop location by faking a gain focus event.
+		eventHandler.executeEvent("gainFocus", api.getFocusObject())
 		nextHandler()
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):
