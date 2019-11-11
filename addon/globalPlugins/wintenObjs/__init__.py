@@ -12,6 +12,7 @@ import api
 import nvwave
 import config
 import queueHandler
+import eventHandler
 import globalVars
 import UIAHandler
 from logHandler import log
@@ -210,7 +211,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				log.debug("W10: possible desktop name change from %s, app module: %s"%(obj,obj.appModule))
 			# CSRSS: Client/Server Runtime Subsystem (Windows subsystem process/desktop object)
 			if obj.appModule.appName == "csrss":
-				import wx, eventHandler
+				import wx
 				# Even with desktop name change handler added, older Windows 10 releases won't support this properly.
 				if (not hasattr(eventHandler, "handlePossibleDesktopNameChange") or (hasattr(eventHandler, "handlePossibleDesktopNameChange") and not winVersion.isWin10(version=1903))):
 					wx.CallLater(500, ui.message, obj.name)
@@ -281,8 +282,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_dragComplete(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dragComplete")
-		# Announce the new drop location.
-		api.getFocusObject().reportFocus()
+		# Announce the new drop location by faking a gain focus event.
+		eventHandler.executeEvent("gainFocus", api.getFocusObject())
 		nextHandler()
 
 	def event_UIA_dragEnter(self, obj, nextHandler):
@@ -295,8 +296,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_dragDropped(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dragDropped")
-		# Announce the new drop location.
-		api.getFocusObject().reportFocus()
+		# Announce the new drop location by faking a gain focus event.
+		eventHandler.executeEvent("gainFocus", api.getFocusObject())
 		nextHandler()
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):
