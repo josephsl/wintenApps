@@ -27,6 +27,9 @@ W10AddonSupported = winVersion.isWin10(version=1809)
 UIA_Drag_DragStartEventId = 20026
 UIA_Drag_DragCancelEventId = 20027
 UIA_Drag_DragCompleteEventId = 20028
+UIA_DropTarget_DragEnterEventId = 20029
+UIA_DropTarget_DragLeaveEventId = 20030
+UIA_DropTarget_DroppedEventId = 20031
 UIA_Text_TextChangedEventId = 20015
 
 # For convenience.
@@ -34,6 +37,9 @@ W10Events = {
 	UIA_Drag_DragStartEventId: "UIA_dragStart",
 	UIA_Drag_DragCancelEventId: "UIA_dragCancel",
 	UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
+	UIA_DropTarget_DragEnterEventId: "UIA_dragEnter",
+	UIA_DropTarget_DragLeaveEventId: "UIA_dragLeave",
+	UIA_DropTarget_DroppedEventId: "UIA_dragDropped",
 	UIA_Text_TextChangedEventId: "textChange"
 }
 
@@ -275,6 +281,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_dragComplete(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dragComplete")
+		# Announce the new drop location.
+		api.getFocusObject().reportFocus()
+		nextHandler()
+
+	def event_UIA_dragEnter(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "dragEnter")
+		nextHandler()
+
+	def event_UIA_dragLeave(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "dragLeave")
+		nextHandler()
+
+	def event_UIA_dragDropped(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "dragDropped")
+		# Announce the new drop location.
+		api.getFocusObject().reportFocus()
 		nextHandler()
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):

@@ -57,11 +57,11 @@ dokumente [changelogs for add-on release][3].
   voľba je riadená pomocou "Informácie o polohe objektu" v paneli
   Prezentácia objektu nájdené v nastaveniach NVDA.
 * NVDA will no longer announce "blank" when pressing up or down arrow to
-  open all apps views in Start menu.
+  open all apps views in Start menu. This will be part of NVDA 2019.3.
 * When searching in Start menu or File Explorer in Version 1909 (November
-  2019 Update) and later, NVDA will no longer announce search results twice
-  when reviewing results, which also makes braille output more consistent
-  when reviewing items.
+  2019 Update) and later, instances of NVDA announcing search results twice
+  when reviewing results are less noticeable, which also makes braille
+  output more consistent when reviewing items.
 * V určitých kontextových ponukách (napríklad v Edge) sa už informácie o
   polohe (napríklad 1 z 2) už neoznamujú.
 * Rozoznávajú sa nasledujúce udalosti UIA: radič, štart ťahania, zrušenie
@@ -108,8 +108,9 @@ Cortana označuje staršie rozhranie Cortana, ktoré bolo súčasťou ponuky
   Štart a skúste znova hľadať, ak odpovede nie sú oznámené).
 * NVDA bude mlčať, keď bude hovoriť s Cortanou hlasom.
 * V Classic Cortana NVDA po nastavení nastaví upomienku.
-* V verzii build 18945 a novšej sú podporované moderné možnosti vyhľadávania
-  v aplikácii Prieskumník využívajúce používateľské rozhranie Cortana.
+* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later,
+  modern search experience in File Explorer powered by Windows Search user
+  interface is supported.
 
 ## Spätná väzba
 

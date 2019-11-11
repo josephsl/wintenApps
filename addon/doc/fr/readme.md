@@ -61,11 +61,11 @@ l'extension][3].
   majorité des cas. Cette option est contrôlée par "Annoncer le rang de
   l'objet dans une liste" dans le dialogue Présentation des Objets.
 * NVDA will no longer announce "blank" when pressing up or down arrow to
-  open all apps views in Start menu.
+  open all apps views in Start menu. This will be part of NVDA 2019.3.
 * When searching in Start menu or File Explorer in Version 1909 (November
-  2019 Update) and later, NVDA will no longer announce search results twice
-  when reviewing results, which also makes braille output more consistent
-  when reviewing items.
+  2019 Update) and later, instances of NVDA announcing search results twice
+  when reviewing results are less noticeable, which also makes braille
+  output more consistent when reviewing items.
 * Dans certains menus contextuels (comme dans Edge), les informations sur la
   position (par exemple 1 sur 2) n'est plus annoncé.
 * The following UIA events are recognized: controller for, drag start, drag
@@ -113,8 +113,9 @@ Cortana refers to older Cortana interface which was part of Start menu.
   la voix.
 * In Classic Cortana, NVDA will announce reminder confirmation after you set
   one.
-* In build 18945 and later, modern search experience in File Explorer
-  powered by Cortana user interface is supported.
+* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later,
+  modern search experience in File Explorer powered by Windows Search user
+  interface is supported.
 
 ## Hub de commentaires
 

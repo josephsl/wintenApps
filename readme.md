@@ -40,12 +40,13 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * NVDA will no longer announce "blank" when pressing up or down arrow to open all apps views in Start menu. This will be part of NVDA 2019.3.
 * When searching in Start menu or File Explorer in Version 1909 (November 2019 Update) and later, instances of NVDA announcing search results twice when reviewing results are less noticeable, which also makes braille output more consistent when reviewing items.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
-* The following UIA events are recognized: controller for, drag start, drag cancel, drag complete, element selected, item status, live region change, notification, system alert, text change, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app.
+* The following UIA events are recognized: controller for, drag start, drag cancel, drag complete, drag target enter, drag target leave, drag target dropped, element selected, item status, live region change, notification, system alert, text change, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app.
 * It is possible to tracke only specific events and/or events coming from specific apps.
 * Tooltips from Edge and universal apps are recognized and will be announced. This will be part of NVDA 2019.3.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
 * App name and version for various Microsoft Store apps are now shown correctly. This will be part of NVDA 2019.3.
+* When arranging Start menu tiles or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce information on dragged items or new positoin of the dragged item.
 
 ## Calculator
 

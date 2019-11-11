@@ -59,11 +59,11 @@ Versionen][3].
   "Objekt-Positionsinformationen mitteilen" im Objektpräsentationsfenster in
   den NVDA-Einstellungen gesteuert.
 * NVDA will no longer announce "blank" when pressing up or down arrow to
-  open all apps views in Start menu.
+  open all apps views in Start menu. This will be part of NVDA 2019.3.
 * When searching in Start menu or File Explorer in Version 1909 (November
-  2019 Update) and later, NVDA will no longer announce search results twice
-  when reviewing results, which also makes braille output more consistent
-  when reviewing items.
+  2019 Update) and later, instances of NVDA announcing search results twice
+  when reviewing results are less noticeable, which also makes braille
+  output more consistent when reviewing items.
 * In bestimmten Kontextmenüs (z.B. in Edge) werden Positionsinformationen
   (z.B. 1 von 2) nicht mehr angesagt.
 * Die folgenden Ereignisse für die Benutzeroberflächenautomatisierung werden
@@ -114,8 +114,9 @@ Cortana refers to older Cortana interface which was part of Start menu.
   nicht mehr in die Quere kommen.
 * NVDA wird nun eine Erinnerungsbestätigung anzeigen, nachdem Sie eine
   eingestellt haben.
-* Ab Windows 10 Build 18945 und neuer wird die moderne Suchfunktion der
-  Cortana-Benutzeroberfläche im Dateiexplorer unterstützt.
+* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later,
+  modern search experience in File Explorer powered by Windows Search user
+  interface is supported.
 
 ## Feedback Hub
 
