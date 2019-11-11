@@ -270,7 +270,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				log.debug("W10: possible desktop name change from %s, app module: %s"%(obj,obj.appModule))
 			# CSRSS: Client/Server Runtime Subsystem (Windows subsystem process/desktop object)
 			if obj.appModule.appName == "csrss":
-				import wx, eventHandler
+				import wx
 				# Even with desktop name change handler added, older Windows 10 releases won't support this properly.
 				if (not hasattr(eventHandler, "handlePossibleDesktopNameChange") or (hasattr(eventHandler, "handlePossibleDesktopNameChange") and not winVersion.isWin10(version=1903))):
 					wx.CallLater(500, ui.message, obj.name)
