@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and other Windows 10 users
 * Download [stable version][1]
 * Download [development version][2]
-* NVDA compatibility: 2019.2
+* NVDA compatibility: 2019.3 and beyond
 
 This add-on is a collection of app modules for various Windows 10 apps, as well as enhancements and fixes for certain windows 10 controls.
 
@@ -25,7 +25,7 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 Version 1809 (build 17763) or later and NVDA 2019.2 or later. For best results, use the add-on with latest Windows 10 stable release (build 18362) and latest stable version of NVDA.
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and NVDA 2019.3 or later. For best results, use the add-on with latest Windows 10 stable release (build 18362) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to Windows 10 and apps that makes entries no longer applicable.
 
@@ -37,15 +37,15 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * Submenu items are properly recognized in various apps, including context menu for Start menu tiles and microsoft Edge's app menu in Version 1809 (October 2018 Update).
 * In addition to dialogs recognized by NVDA, more dialogs are now recognized as proper dialogs and reported as such, including Insider Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation panel found in NVDA settings.
-* NVDA will no longer announce "blank" when pressing up or down arrow to open all apps views in Start menu. This will be part of NVDA 2019.3.
+* NVDA will no longer announce "blank" when pressing up or down arrow to open all apps views in Start menu. This is now part of NVDA 2019.3.
 * When searching in Start menu or File Explorer in Version 1909 (November 2019 Update) and later, instances of NVDA announcing search results twice when reviewing results are less noticeable, which also makes braille output more consistent when reviewing items.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: controller for, drag start, drag cancel, drag complete, drag target enter, drag target leave, drag target dropped, element selected, item status, live region change, notification, system alert, text change, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app.
 * It is possible to tracke only specific events and/or events coming from specific apps.
-* Tooltips from Edge and universal apps are recognized and will be announced. This will be part of NVDA 2019.3.
+* Tooltips from Edge and universal apps are recognized and will be announced. This is now part of NVDA 2019.3.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
-* App name and version for various Microsoft Store apps are now shown correctly. This will be part of NVDA 2019.3.
+* App name and version for various Microsoft Store apps are now shown correctly. This is now part of NVDA 2019.3.
 * When arranging Start menu tiles or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce information on dragged items or new position of the dragged item.
 
 ## Calculator
@@ -87,9 +87,9 @@ Most items are no longer applicable on Version 1903 and later. Classic Cortana r
 
 This refers to classic EdgeHTML-based Microsoft Edge.
 
-* Text auto-complete will be tracked and announced in address omnibar. This will be part of NVDA 2019.3.
-* NVDA will no longer play suggestion sound when pressing F11 to toggle full screen. This will be part of NVDA 2019.3.
-* Removed suggestions sound playback for address omnibar. This will be part of NVDA 2019.3.
+* Text auto-complete will be tracked and announced in address omnibar. This is now part of NVDA 2019.3.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full screen. This is now part of NVDA 2019.3.
+* Removed suggestions sound playback for address omnibar. This is now part of NVDA 2019.3.
 
 ## Microsoft Store
 
@@ -114,7 +114,7 @@ Most features below are now part of NVDA 2018.3 or later.
 * Certain information such as Windows Update progress is reported automatically, including Storage sense/disk cleanup widget and errors from Windows Update.
 * Progress bar values and other information are no longer announced twice.
 * For some combo boxes and radio buttons, NVDA will no longer fail to recognize labels and/or announce value changes.
-* Audio Volume progress bar beeps are no longer heard in Version 1803 and later. This will be part of NVDA 2019.3.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and later. This is now part of NVDA 2019.3.
 * NVDA will no longer appear to do nothing or play error tones if using object navigation commands under some circumstances.
 * Windows Update reminder dialog is recognized as a proper dialog.
 * Odd control labels seen in certain Windows 10 installations has been corrected.
