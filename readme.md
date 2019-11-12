@@ -56,7 +56,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * NVDA will notify if maximum digit count has been reached while entering expressions.
 * Added support for always on mode in Calculator version 10.1908 and later.
 
-## calendar
+## Calendar
 
 * NVDA no longer announces "edit" or "read-only" in message body and other fields.
 
@@ -123,7 +123,7 @@ Most features below are now part of NVDA 2018.3 or later.
 ## Weather
 
 * Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by Derek Riemer).
-* when reading a forecast, use the left and right arrows to move between items. Use the up and down arrows to read the individual items. For example, pressing the right arrow might report "Monday: 79 degrees, partly cloudy, ..." pressing the down arrow will say "Monday" Then pressing it again will read the next item (Like the temperature). This currently works for daily and hourly forecasts.
+* When reading a forecast, use the left and right arrows to move between items. Use the up and down arrows to read the individual items. For example, pressing the right arrow might report "Monday: 79 degrees, partly cloudy, ..." pressing the down arrow will say "Monday" Then pressing it again will read the next item (Like the temperature). This currently works for daily and hourly forecasts.
 
 [1]: https://addons.nvda-project.org/files/get.php?file=w10
 
