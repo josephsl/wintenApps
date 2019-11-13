@@ -14,17 +14,26 @@ import ui
 
 class MailItemRow(RowWithFakeNavigation, UIA):
 
+	# Since 2019, columns are exposed as regular children, not simple children, breaking the below two scripts.
+	def script_moveToNextColumn(self, gesture):
+		cur = api.getNavigatorObject()
+		if cur == self:
+			new = self.firstChild
+		elif cur.parent != self:
+			new = self
+		else:
+			new = cur.next
+		self._moveToColumn(new)
+
 	def script_moveToPreviousColumn(self, gesture):
 		cur = api.getNavigatorObject()
 		if cur == self:
 			new = None
-		elif cur.parent != self:
+		elif cur.parent != self or not cur.previous:
 			new = self
 		else:
 			new = cur.previous
 		self._moveToColumn(new)
-	script_moveToPreviousColumn.canPropagate = True
-	script_moveToPreviousColumn.__doc__ = RowWithFakeNavigation.script_moveToPreviousColumn.__doc__
 
 	def _moveToRow(self, row):
 		# Customized because there is no easy way to obtain column position info for this object yet.
