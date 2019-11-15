@@ -3,7 +3,7 @@
 * Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
-* NVDA compatibility: 2019.2
+* NVDA compatibility: 2019.2 to 2019.3
 
 Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
 również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
@@ -13,7 +13,7 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 * Kalkulator (nowoczesny).
 * Kalendarz
-* Cortana (Classic and Conversations)
+* Cortana (klasyczna i konwersacje)
 * Centrum opinii
 * Poczta
 * Mapy
@@ -30,7 +30,7 @@ Uwagi:
 
 * This add-on requires Windows 10 Version 1809 (build 17763) or later and
   NVDA 2019.2 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18362) and latest stable version of NVDA.
+  10 stable release (build 18363) and latest stable version of NVDA.
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
@@ -62,13 +62,13 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   output more consistent when reviewing items.
 * W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
   położeniu (NP. 1 z 2) nie jest już odczytywana.
-* Następujące zdarzenia UIA są rozpoznawane: active text position change,
-  controller for, drag start, drag cancel, drag complete, element selected,
-  item status, live region change, notification, system alert, text change,
-  tooltip opened, window opened. Gdy NVDA jest uruchomiony z zapisywaniem
-  debugowania, te zdarzenia będą śledzone, i dla UIA notification event, a
-  dźwięk debugowania będzie odtwarzany jeżeli powiadomienia przychodzą z
-  innej niż aktualnie aktywnej aplikacji.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, drag target enter, drag target leave, drag target
+  dropped, element selected, item status, live region change, notification,
+  system alert, text change, tooltip opened, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard if notifications come from
+  somewhere other than the currently active app.
 * Teraz jest możliwe śledzenie zdarzeń z określonych oraz specyficznych
   aplikacji.
 * Opisy obiektów w Edge i innych aplikacjach UWP są rozpoznawane  i będą
@@ -80,6 +80,9 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   rozdzielczość ekranu lub orientacja ekranu.
 * App name and version for various Microsoft Store apps are now shown
   correctly. This will be part of NVDA 2019.3.
+* When arranging Start menu tiles or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
+  new position of the dragged item.
 
 ## Kalkulator
 
@@ -199,13 +202,12 @@ Most features below are now part of NVDA 2018.3 or later.
 
 * Karty właściwości, takie jak "prognoza" i "mapy" są rospoznane jak
   prawidłowe karty właściwości (poprawił Derek Riemer).
-* Przy czytaniu pogody, użyj strzałek w lewo i w prawo aby się przemieszczać
-  pomiędzy elementami. Użyj strzałki w górę lub w dół, aby przeczytać
-  pojedynczy element. Na przykład, wciskając strzałke w prawo może wymówić
-  "Poniedziałek: 79 stopni, częściowo pochmurno, ..." wciskając strzałkę w
-  dół powie "Poniedziałek" wciskając ję jeszcze raz wypowie następujący
-  element (jak temperaturę). Teraz to działą dla prognozy pogody dzienniej i
-  godzinnej.
+* When reading a forecast, use the left and right arrows to move between
+  items. Use the up and down arrows to read the individual items. For
+  example, pressing the right arrow might report "Monday: 79 degrees, partly
+  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
+  again will read the next item (Like the temperature). This currently works
+  for daily and hourly forecasts.
 
 [[!tag dev stable]]
 

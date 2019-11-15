@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros usuarios do Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
-* Compatibilidade con NVDA: 2019.2
+* NVDA compatibility: 2019.2 to 2019.3
 
 Este complemento é unha coleción de app modules para varias aplicacións de
 Windows 10, así coma melloras e correccións para certos controis de windows
@@ -30,10 +30,9 @@ se inclúe):
 
 Notas:
 
-* Este complemento require do Windows 10 Versión 1809 (compilación 17763) ou
-  posterior e do NVDA 2019.2 ou posterior. Para uns mellores resultados, usa
-  o complemento coa compilación estable máis recente (compilación 18362) e
-  versión estable máis recente do NVDA.
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and
+  NVDA 2019.2 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 18363) and latest stable version of NVDA.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
 * Para entradas non listadas a continuación, podes asumir que as
@@ -66,13 +65,13 @@ documento [rexistros de trocos para publicacións de complementos][3].
   output more consistent when reviewing items.
 * En certos menús de contexto (coma no Edge), a información de posición
   (ex.: 1 de 2) xa non se anuncia.
-* Recoñécense os seguintes eventos UIA: Controller for, drag start, drag
-  cancel, drag complete, element selected, item status, live region change,
-  notification, system alert, text change, tooltip opened, window opened. Co
-  NVDA configurado para executarse co rexistro de depuración habilitado,
-  estos eventos seguiranse e, no caso do evento UIA notification oirase un
-  ton se as notificacións veñen de calquera lugar que non sexa a app
-  actualmente activa.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, drag target enter, drag target leave, drag target
+  dropped, element selected, item status, live region change, notification,
+  system alert, text change, tooltip opened, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard if notifications come from
+  somewhere other than the currently active app.
 * É posible o seguimento só de eventos específicos e/ou de eventos provintes
   de aplicacións específicas.
 * Recoñeceranse e anunciaranse os consellos para o Edge e para as
@@ -83,6 +82,9 @@ documento [rexistros de trocos para publicacións de complementos][3].
   pantalla ou a orientación.
 * O nome e a versión da app para varias apps da Tenda Microsoft (Microsoft
   Store) amósanse aagora correctamente.
+* When arranging Start menu tiles or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
+  new position of the dragged item.
 
 ## Calculadora
 
@@ -96,7 +98,7 @@ documento [rexistros de trocos para publicacións de complementos][3].
 * Engadido soporte para o modo sempre acendida en Calculadora versión
   10.1908 e posterior.
 
-## calendario
+## Calendario
 
 * NVDA xa non anuncia "editar" ou "só lectura" para asuntos da cita no
   Calendario e no contido do mensaxe no Correo.
@@ -209,13 +211,12 @@ posterior.
 
 * As pestanas como "pronósticos" e "mapas" recoñécense coma pestanas en si
   (parche de Derek Riemer).
-* cando se lea un pronóstico, usa as frechas esquerda e dereita para moverte
-  entre elementos. Usa as frechas arriba e abaixo para ler os elementos
-  individuais. Por exemplo, premendo a frecha dereita anunciaría "luns: 79
-  graos, parcialmente nublado, ..." premendo a frecha abaixo dirá "luns"
-  logo preméndoo de novo lerá o seguinte elemento (como a
-  temperatura). Actualmente esto traballa para pronósticos diarios e
-  horarios.
+* When reading a forecast, use the left and right arrows to move between
+  items. Use the up and down arrows to read the individual items. For
+  example, pressing the right arrow might report "Monday: 79 degrees, partly
+  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
+  again will read the next item (Like the temperature). This currently works
+  for daily and hourly forecasts.
 
 [[!tag dev stable]]
 
