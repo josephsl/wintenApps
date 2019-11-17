@@ -11,11 +11,10 @@ The following app modules or support modules for some apps are included (see eac
 
 * Calculator (modern).
 * Calendar
-* Cortana (Classic and Conversations)
+* Cortana (Conversations)
 * Feedback Hub
 * Mail
 * Maps
-* Microsoft Edge
 * Microsoft Store
 * Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud clipboard items in Version 1709 and later)
 * People
@@ -25,7 +24,7 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 Version 1809 (build 17763) or later and NVDA 2019.3 or later. For best results, use the add-on with latest Windows 10 stable release (build 18363) and latest stable version of NVDA.
+* This add-on requires Windows 10 Version 1903 (build 18362) or later and NVDA 2019.3 or later. For best results, use the add-on with latest Windows 10 stable release (build 18363) and latest stable version of NVDA.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to Windows 10 and apps that makes entries no longer applicable.
 
@@ -62,11 +61,10 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## Cortana
 
-Most items are no longer applicable on Version 1903 and later. Classic Cortana refers to older Cortana interface which was part of Start menu.
+Most items are no longer applicable on Version 1903 and later.
 
-* Textual responses from Cortana (both Classic and Conversations UI) are announced in most situations (if using Classic Cortana, reopen Start menu and try searching again if responses are not announced).
+* Textual responses from Cortana are announced in most situations.
 * NVDA will be silent when talking to Cortana via voice.
-* In Classic Cortana, NVDA will announce reminder confirmation after you set one.
 * In Version 1909 (November 2019 Update) and 20H1 build 18945 and later, modern search experience in File Explorer powered by Windows Search user interface is supported.
 
 ## Feedback Hub
@@ -82,14 +80,6 @@ Most items are no longer applicable on Version 1903 and later. Classic Cortana r
 
 * NVDA plays location beep for map locations.
 * When using street side view and if "use keyboard" option is enabled, NVDA will announce street addresses as you use arrow keys to navigate the map.
-
-## Microsoft Edge
-
-This refers to classic EdgeHTML-based Microsoft Edge.
-
-* Text auto-complete will be tracked and announced in address omnibar. This is now part of NVDA 2019.3.
-* NVDA will no longer play suggestion sound when pressing F11 to toggle full screen. This is now part of NVDA 2019.3.
-* Removed suggestions sound playback for address omnibar. This is now part of NVDA 2019.3.
 
 ## Microsoft Store
 
