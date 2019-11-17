@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixe a [versão estável][1]
 * Baixe a [versão em desenvolvimento][2]
-* NVDA compatibility: 2019.2
+* NVDA compatibility: 2019.2 to 2019.3
 
 Este complemento é uma coleção de módulos de aplicativos — app modules —
 para vários aplicativos do Windows 10, bem como aprimoramentos e correções
@@ -32,7 +32,7 @@ Notas:
 
 * This add-on requires Windows 10 Version 1809 (build 17763) or later and
   NVDA 2019.2 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18362) and latest stable version of NVDA.
+  10 stable release (build 18363) and latest stable version of NVDA.
 * Alguns recursos do complemento são ou farão parte do leitor de tela NVDA.
 * For entries not listed below, you can assume that features are part of
   NVDA, no longer applicable as the add-on does not support old Windows 10
@@ -65,11 +65,12 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 * Em determinados menus de contexto (como no Edge), as informações de
   posição (por exemplo, 1 de 2) deixaram de ser anunciadas.
 * The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, element selected, item status, live region change,
-  notification, system alert, text change, tooltip opened, window
-  opened. With NVDA set to run with debug logging enabled, these events will
-  be tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active app.
+  cancel, drag complete, drag target enter, drag target leave, drag target
+  dropped, element selected, item status, live region change, notification,
+  system alert, text change, tooltip opened, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard if notifications come from
+  somewhere other than the currently active app.
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
 * Tooltips from Edge and universal apps are recognized and will be
@@ -80,6 +81,9 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   alterar as resoluções ou a orientação da tela.
 * App name and version for various Microsoft Store apps are now shown
   correctly. This will be part of NVDA 2019.3.
+* When arranging Start menu tiles or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
+  new position of the dragged item.
 
 ## Calculadora
 
@@ -202,13 +206,12 @@ Most features below are now part of NVDA 2018.3 or later.
 
 * Abas como "previsão" e "mapas" são reconhecidas como guias adequadas
   (patch de Derek Riemer).
-* Ao ler uma previsão, use as setas para a esquerda e para a direita para se
-  mover entre os itens. Use as setas para cima e para baixo para ler os
-  itens individuais. Por exemplo, pressionar a seta para a direita pode
-  indicar "Segunda-feira: 79 graus, parcialmente nublado ...", pressionando
-  a seta para baixo, "segunda-feira". Depois, pressionando-a novamente, o
-  próximo item será lido (como a temperatura). Isto, atualmente, funciona
-  para previsões diárias e horárias.
+* When reading a forecast, use the left and right arrows to move between
+  items. Use the up and down arrows to read the individual items. For
+  example, pressing the right arrow might report "Monday: 79 degrees, partly
+  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
+  again will read the next item (Like the temperature). This currently works
+  for daily and hourly forecasts.
 
 [[!tag dev stable]]
 

@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA compatibility: 2019.2
+* NVDA compatibility: 2019.2 to 2019.3
 
 Diese Erweiterung bietet eine Sammlung von Anwendungsmodulen für
 verschiedene Windows 10 Anwendungen sowie Korrekturen in einigen Windows 10
@@ -31,7 +31,7 @@ Hinweise:
 
 * This add-on requires Windows 10 Version 1809 (build 17763) or later and
   NVDA 2019.2 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18362) and latest stable version of NVDA.
+  10 stable release (build 18363) and latest stable version of NVDA.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Für Einträge, die im Folgenden nicht aufgeführt sind, können Sie davon
   ausgehen, dass Funktionen Teil von NVDA sind, die nicht mehr benötigt
@@ -48,9 +48,9 @@ Versionen][3].
 * NVDA wird keine Fehlertöne mehr abspielen oder nichts tun, wenn diese
   Erweiterung unter Windows 7, Windows 8.1 und nicht unterstützten Versionen
   von Windows 10 benutzt wird.
-* Submenu items are properly recognized in various apps, including context
-  menu for Start menu tiles and microsoft Edge's app menu in Version 1809
-  (October 2018 Update).
+* Untermenü-Einträge werden in verschiedenen Anwendungen richtig erkannt,
+  darunter das Kontextmenü für die Kachel-Ansicht im Startmenü und das
+  App-Menü in Microsoft Edge in der Version 1809 (Update Oktober 2018).
 * Zusätzlich zu den von der NVDA erkannten Dialogen werden nun mehr Dialoge
   als richtige Dialoge erkannt und als solche gemeldet, einschließlich des
   Dialogs Insider-Vorschau (Einstellungsanwendung).
@@ -58,23 +58,23 @@ Versionen][3].
   Durchführung einer Suche bekannt geben. Diese Option wird durch
   "Objekt-Positionsinformationen mitteilen" im Objektpräsentationsfenster in
   den NVDA-Einstellungen gesteuert.
-* NVDA will no longer announce "blank" when pressing up or down arrow to
-  open all apps views in Start menu. This will be part of NVDA 2019.3.
-* When searching in Start menu or File Explorer in Version 1909 (November
-  2019 Update) and later, instances of NVDA announcing search results twice
-  when reviewing results are less noticeable, which also makes braille
-  output more consistent when reviewing items.
+* NVDA sagt nicht mehr "leer", wenn Sie die Pfeiltaste nach oben oder unten
+  drücken, um die Ansicht aller Apps im Startmenü zu öffnen. Dies wird Teil
+  der NVDA 2019.3 sein.
+* Bei der Suche im Startmenü oder im Datei-Explorer der Version 1909 (Update
+  November 2019) und neuer sind Fälle von NVDA, in denen Suchergebnisse bei
+  der Überprüfung von Ergebnissen zweimal angekündigt werden, weniger
+  auffällig, was auch die Brailleausgabe bei der Überprüfung von Elementen
+  einheitlicher macht.
 * In bestimmten Kontextmenüs (z.B. in Edge) werden Positionsinformationen
   (z.B. 1 von 2) nicht mehr angesagt.
-* Die folgenden Ereignisse für die Benutzeroberflächenautomatisierung werden
-  erkannt: Steuerung für, Drag Start, Drag Cancel, Drag Complete, Element
-  ausgewählt, Elementstatus, Änderung der Live-Region, Benachrichtigung,
-  Systemalarm, Textänderung, Tooltipp geöffnet, Fenster geöffnet. Wenn NVDA
-  so eingestellt ist, dass es mit aktivierter Debug-Protokollierung läuft,
-  werden diese Ereignisse verfolgt und für das Benachrichtigungsereignis der
-  Benutzeroberflächenautomatisierung wird ein Debug-Ton ausgegeben, wenn
-  Benachrichtigungen von einem anderen Ort als der aktuell aktiven Anwendung
-  stammen.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, drag target enter, drag target leave, drag target
+  dropped, element selected, item status, live region change, notification,
+  system alert, text change, tooltip opened, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard if notifications come from
+  somewhere other than the currently active app.
 * Es ist möglich, nur bestimmte Ereignisse bzw. Ereignisse aus bestimmten
   Anwendungen zu verfolgen.
 * Tooltips von Edge und Universal Apps werden erkannt und angekündigt. Dies
@@ -85,6 +85,9 @@ Versionen][3].
   Bildschirmauflösung oder Ausrichtung geändert wird.
 * Anwendungsname und -Version für verschiedene universelle Apps werden nun
   korrekt angezeigt. Dies wird Bestandteil von NVDA 2019.3.
+* When arranging Start menu tiles or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
+  new position of the dragged item.
 
 ## Rechner
 
@@ -95,7 +98,8 @@ Versionen][3].
 * NVDA nennt bei Berechnungsergebnissen nicht mehr "Überschriftebenen".
 * NVDA meldet, wenn die maximale Anzahl der Ziffern während der Eingabe von
   Ausdrücken erreicht wurde.
-* Added support for always on mode in Calculator version 10.1908 and later.
+* Unterstützung für den Always-On-Modus in Calculator Version 10.1908 und
+  neuer hinzugefügt.
 
 ## Kalender
 
@@ -104,8 +108,9 @@ Versionen][3].
 
 ## Cortana
 
-Most items are no longer applicable on Version 1903 and later. Classic
-Cortana refers to older Cortana interface which was part of Start menu.
+Die meisten Punkte sind ab der Version 1903 nicht mehr anwendbar. Classic
+Cortana bezieht sich auf eine ältere Cortana-Schnittstelle, die Teil des
+Startmenüs war.
 
 * Textuelle Antworten von Cortana werden in den meisten Fällen
   angezeigt. Falls nicht, öffnen Sie das StartMenü und starten Sie die Suche
@@ -114,9 +119,9 @@ Cortana refers to older Cortana interface which was part of Start menu.
   nicht mehr in die Quere kommen.
 * NVDA wird nun eine Erinnerungsbestätigung anzeigen, nachdem Sie eine
   eingestellt haben.
-* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later,
-  modern search experience in File Explorer powered by Windows Search user
-  interface is supported.
+* In Version 1909 (Update November 2019) und 20H1 Build 18945 und neuer wird
+  eine moderne Suchfunktion im Datei-Explorer mit der Windows-Suche
+  unterstützt.
 
 ## Feedback Hub
 
@@ -172,10 +177,12 @@ oder neuer.
   stellen Sie die Symbolstufe auf "Einige" oder höher ein.
 * NVDA wird unter bestimmten Umständen keine "Zwischenablage" mehr
   ankündigen, wenn sich Elemente in der Zwischenablage befinden.
-* On some systems running Version 1903 (May 2019 Update) and later, NVDA
-  will no longer appear to do nothing when emoji panel opens.
-* Added support for modern Chinese, Japanese, and Korean (CJK) IME
-  candidates interface introduced in 20H1 build 18965 and later.
+* Auf einigen Systemen, auf denen die Version 1903 (Update Mai 2019) und
+  neuer läuft, wird NVDA beim Öffnen des Emoji-Panels nichts mehr zu tun
+  haben.
+* Unterstützung für moderne chinesische, japanische und koreanische (CJK)
+  IME-Kandidatenschnittstellen hinzugefügt, die in der Version 20H1 ab Build
+  18965 eingeführt wurden.
 
 ## Kontakte
 
@@ -191,8 +198,8 @@ oder neuer.
   zweimal angesagt.
 * Bei einigen Kombinationsfeldern und Kontrollfeldern wird NVDA nun die
   Beschriftung erkennen und/oder Wertänderungen ankündigen.
-* Audio Volume progress bar beeps are no longer heard in Version 1803 and
-  later. This will be part of NVDA 2019.3.
+* Die Töne beim Fortschrittsbalken der Audio-Lautstärke sind in Version 1803
+  und neuer nicht mehr zu hören. Dies wird Teil der NVDA 2019.3 sein.
 * NVDA wird nun ordnungsgemäß reagieren und keine Fehlertöne mehr während
   der Objektnavigation abspielen.
 * Das Erinnerungsdialogfeld von Windows Update wird als richtiger Dialog
@@ -208,14 +215,12 @@ oder neuer.
 
 * Registerkarten wie"Prognose" und"Karten" werden als richtige
   Registerkarten erkannt (Patch von Derek Riemer).
-* Beim Lesen einer Vorhersage können Sie mit den Pfeiltasten nach links und
-  rechts zwischen den Elementen wechseln. Verwenden Sie die Aufwärts- und
-  Abwärtspfeile, um die einzelnen Teile eines Elements zu lesen. Zum
-  Beispiel könnte ein Druck auf den Pfeil nach rechts den Bericht "Montag:
-  33 Grad, teilweise bewölkt, ..." anzeigen. Wenn man den Pfeil nach unten
-  drückt, heißt es"Montag", dann wird ein erneuter Druck auf den Pfeil den
-  nächsten Punkt anzeigen (wie z.B. die Temperatur). Dies funktioniert
-  derzeit für Tages- und Stundenvorhersagen.
+* When reading a forecast, use the left and right arrows to move between
+  items. Use the up and down arrows to read the individual items. For
+  example, pressing the right arrow might report "Monday: 79 degrees, partly
+  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
+  again will read the next item (Like the temperature). This currently works
+  for daily and hourly forecasts.
 
 [[!tag dev stable]]
 

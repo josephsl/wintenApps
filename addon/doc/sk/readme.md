@@ -3,7 +3,7 @@
 * Autory: Joseph Lee, Derek Riemer a ďalší používatelia Windowsu 10
 * Stiahnúť [stabilnú verziu][1]
 * Stiahnúť [vývojovú verziu][2]
-* NVDA compatibility: 2019.2
+* NVDA compatibility: 2019.2 to 2019.3
 
 Tento doplnok je zbierka aplikačných modulov pre rôzne aplikácie systému
 Windows 10, ako aj vylepšenia a opravy určitých ovládacích prvkov systému
@@ -31,7 +31,7 @@ Poznámky:
 
 * This add-on requires Windows 10 Version 1809 (build 17763) or later and
   NVDA 2019.2 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18362) and latest stable version of NVDA.
+  10 stable release (build 18363) and latest stable version of NVDA.
 * Niektoré doplnkové funkcie sú alebo budú súčasťou čítačky obrazovky NVDA.
 * V prípade položiek, ktoré nie sú uvedené nižšie, môžete predpokladať, že
   funkcie sú súčasťou NVDA, ktoré už nie sú použiteľné, pretože doplnok
@@ -64,13 +64,13 @@ dokumente [changelogs for add-on release][3].
   output more consistent when reviewing items.
 * V určitých kontextových ponukách (napríklad v Edge) sa už informácie o
   polohe (napríklad 1 z 2) už neoznamujú.
-* Rozoznávajú sa nasledujúce udalosti UIA: radič, štart ťahania, zrušenie
-  ťahu, ťahanie dokončené, vybraný prvok, stav položky, zmena živej oblasti,
-  upozornenie, upozornenie systému, zmena textu, otvorený popis, otvorené
-  okno. Ak je NVDA nastavená na spustenie so zapnutým protokolovaním
-  ladenia, budú tieto udalosti sledované a v prípade notifikačnej udalosti
-  UIA sa ozve ladiaci tón, ak oznámenia prichádzajú z iných zdrojov, ako je
-  momentálne aktívna aplikácia.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, drag target enter, drag target leave, drag target
+  dropped, element selected, item status, live region change, notification,
+  system alert, text change, tooltip opened, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard if notifications come from
+  somewhere other than the currently active app.
 * Je možné sledovať iba konkrétne udalosti a / alebo udalosti pochádzajúce z
   konkrétnych aplikácií.
 * Popisy z Edge a univerzálnych aplikáciách sú uznávané a budú
@@ -82,6 +82,9 @@ dokumente [changelogs for add-on release][3].
   alebo orientácie obrazovky.
 * Názov a verzia aplikácie pre rôzne aplikácie Microsoft Obchod sa teraz
   zobrazujú správne. Toto bude súčasťou NVDA 2019.3.
+* When arranging Start menu tiles or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
+  new position of the dragged item.
 
 ## Kalkulačka
 
@@ -200,12 +203,12 @@ novších.
 
 * Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by
   Derek Riemer).
-* pri čítaní predpovede sa môžete medzi položkami pohybovať pomocou ľavej a
-  pravej šípky. Na čítanie jednotlivých položiek použite šípky nahor a
-  nadol. Napríklad pri stlačení pravej šípky sa môže zobraziť správa
-  „Pondelok: 79 stupňov, polojasno, ...“. Po stlačení šípky nadol sa zobrazí
-  „pondelok“. Po opätovnom stlačení sa načíta ďalšia položka (napríklad
-  teplota). V súčasnosti to funguje na denné a hodinové predpovede.
+* When reading a forecast, use the left and right arrows to move between
+  items. Use the up and down arrows to read the individual items. For
+  example, pressing the right arrow might report "Monday: 79 degrees, partly
+  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
+  again will read the next item (Like the temperature). This currently works
+  for daily and hourly forecasts.
 
 [[!tag dev stable]]
 

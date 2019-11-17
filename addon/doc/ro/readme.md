@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer și alți utilizatori Windows 10
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
-* NVDA compatibility: 2019.2
+* NVDA compatibility: 2019.2 to 2019.3
 
 Acest supliment cuprinde o colecție de module pentru diverse aplicații din
 Windows 10, dar și rezolvări și îmbunătățiri pentru anumite controale din
@@ -32,7 +32,7 @@ Note:
 
 * This add-on requires Windows 10 Version 1809 (build 17763) or later and
   NVDA 2019.2 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18362) and latest stable version of NVDA.
+  10 stable release (build 18363) and latest stable version of NVDA.
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
 * Pentru intrările care nu sunt listate mai jos, puteți presupune că
@@ -69,11 +69,12 @@ versiunile suplimentului][3].
 * În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
   (e.x. 1 din 2) nu mai este anunțată.
 * The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, element selected, item status, live region change,
-  notification, system alert, text change, tooltip opened, window
-  opened. With NVDA set to run with debug logging enabled, these events will
-  be tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active app.
+  cancel, drag complete, drag target enter, drag target leave, drag target
+  dropped, element selected, item status, live region change, notification,
+  system alert, text change, tooltip opened, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard if notifications come from
+  somewhere other than the currently active app.
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
 * Tooltips from Edge and universal apps are recognized and will be
@@ -84,6 +85,9 @@ versiunile suplimentului][3].
   ecranului sau a orientării.
 * App name and version for various Microsoft Store apps are now shown
   correctly. This will be part of NVDA 2019.3.
+* When arranging Start menu tiles or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
+  new position of the dragged item.
 
 ## Calculator
 
@@ -95,7 +99,7 @@ versiunile suplimentului][3].
   expressions.
 * Added support for always on mode in Calculator version 10.1908 and later.
 
-## calendar
+## Calendar
 
 * NVDA nu mai anunță „Editare” sau „doar citire” în corpul mesajului sau în
   alte câmpuri.
@@ -204,13 +208,12 @@ Most features below are now part of NVDA 2018.3 or later.
 
 * Etichete precum „vremea” și „hărțile” sunt recunoscute ca etichete
   adegvate (patch de Derek Riemer).
-* atunci când citiți o prognoză, utilizați săgețile stânga și  dreapta
-  pentru a vă deplasa între elemente. Utilizați săgețile sus și jos pentru a
-  citi articolele individuale. De exemplu, apăsând pe săgeata din dreapta
-  poate raporta un "luni: 79 de grade, parțial noros, ...", apăsând săgeata
-  în jos va spune "luni" Apoi, apăsând din nou va citi elementul următor (La
-  fel ca temperatura). Acest lucru funcționează în prezent pentru
-  previziunile zilnice și orare.
+* When reading a forecast, use the left and right arrows to move between
+  items. Use the up and down arrows to read the individual items. For
+  example, pressing the right arrow might report "Monday: 79 degrees, partly
+  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
+  again will read the next item (Like the temperature). This currently works
+  for daily and hourly forecasts.
 
 [[!tag dev stable]]
 

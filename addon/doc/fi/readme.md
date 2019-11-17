@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2019.2
+* NVDA compatibility: 2019.2 to 2019.3
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -29,10 +29,9 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Tämä lisäosa edellyttää Windows 10:n versiota 1809 (koontiversio 17763)
-  tai uudempaa ja NVDA 2019.2:ta tai uudempaa. Käytä parhaan
-  käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata versiota
-  (koontiversio 18362) sekä uusinta vakaata NVDA:n versiota.
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and
+  NVDA 2019.2 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 18363) and latest stable version of NVDA.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
@@ -56,21 +55,22 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
   -asetuksella Objektien lukeminen -paneelista NVDA:n asetuksista.
-* NVDA will no longer announce "blank" when pressing up or down arrow to
-  open all apps views in Start menu. This will be part of NVDA 2019.3.
-* When searching in Start menu or File Explorer in Version 1909 (November
-  2019 Update) and later, instances of NVDA announcing search results twice
-  when reviewing results are less noticeable, which also makes braille
-  output more consistent when reviewing items.
+* NVDA ei enää sano "tyhjä" painettaessa ylä- tai alanuolta kaikki
+  sovellukset -näkymän avaamiseksi Käynnistä-valikossa. Tämä sisältyy NVDA
+  2019.3:een.
+* NVDA puhuu nyt etsittäessä vähemmän hakutuloksia kahdesti
+  Käynnistä-valikossa tai Resurssienhallinnassa versiossa 1909 (November
+  2019 -päivitys) ja uudemmissa, mikä tekee lisäksi
+  pistekirjoitustulosteesta yhdenmukaisempaa kohteita tarkasteltaessa.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
-* Seuraavat UIA-tapahtumat tunnistetaan: ohjain kohteelle, vetämisen
-  aloitus, vetämisen peruutus, vetäminen suoritettu, elementti valittu,
-  kohteen tila, aktiivisen alueen muutos, ilmoitus, järjestelmän ilmoitus,
-  työkaluvihje avattu, ikkuna avattu. Näitä tapahtumia seurataan, kun NVDA:n
-  lokitasoksi on määritetty "virheenkorjaus", ja UIA-ilmoitustapahtuma
-  ilmaistaan virheäänellä, mikäli ilmoitukset tulevat muualta kuin
-  aktiivisesta sovelluksesta.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, drag target enter, drag target leave, drag target
+  dropped, element selected, item status, live region change, notification,
+  system alert, text change, tooltip opened, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard if notifications come from
+  somewhere other than the currently active app.
 * On mahdollista seurata vain tiettyjä tapahtumia ja/tai tietyistä
   sovelluksista tulevia tapahtumia.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
@@ -81,6 +81,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   suuntaa vaihdettaessa.
 * Useiden Microsoft Store -sovellusten nimi ja versio näytetään nyt
   asianmukaisesti. Tämä tulee sisältymään NVDA 2019.3:een.
+* When arranging Start menu tiles or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
+  new position of the dragged item.
 
 ## Laskin
 
@@ -112,9 +115,9 @@ Käynnistä-valikkoa.
 * NVDA on hiljaa puhuttaessa Cortanalle mikrofonin välityksellä.
 * NVDA puhuu nyt vahvistuksen muistutusta lisättäessä perinteisessä
   Cortanassa.
-* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later,
-  modern search experience in File Explorer powered by Windows Search user
-  interface is supported.
+* Windows-haun käyttöliittymän voimalla toimivaa Resurssienhallinnan
+  modernia hakukokemusta tuetaan versiossa 1909 (November 2019 -päivitys)
+  sekä 20H1:ssä (koontiversio 18945) ja uudemmissa.
 
 ## Palautekeskus
 
@@ -210,13 +213,12 @@ tai sitä uudempiin versioihin.
 
 * Sellaiset välilehdet kuten "ennuste" ja "kartat" tunnistetaan oikeiksi
   välilehdiksi (korjauksen tehnyt Derek Riemer).
-* Käytä ennustetta lukiessasi vasenta ja oikeaa nuolta kohteiden välillä
-  liikkumiseen. Käytä nuolta ylös ja alas yksittäisten kohteiden
-  lukemiseen. Esim.  oikeaa nuolta painettaessa saatetaan sanoa "Maanantai:
-  26,1 astetta, puolipilvistä, ...", ja nuolta alas painettaessa
-  "Maanantai". Uudelleen painaminen lukee seuraavan kohteen (kuten
-  lämpötilan). Toimii tällä hetkellä päivittäisiin ja tunnin välein
-  tehtäviin ennusteisiin.
+* When reading a forecast, use the left and right arrows to move between
+  items. Use the up and down arrows to read the individual items. For
+  example, pressing the right arrow might report "Monday: 79 degrees, partly
+  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
+  again will read the next item (Like the temperature). This currently works
+  for daily and hourly forecasts.
 
 [[!tag dev stable]]
 
