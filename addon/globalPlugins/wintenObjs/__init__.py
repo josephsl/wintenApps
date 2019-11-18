@@ -127,7 +127,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Also because this add-on might be turned on "accidentally" in earlier Windows releases, including unsupported Windows 10 builds...
 		if not (isinstance(obj, UIA) and W10AddonSupported):
 			return
-		# Somehow, search field finder causes COM error exception to be thrown, so put bulk of this method inside a try block.
+		# Somehow, search field finder raises COM error, so put the bulk of this method inside a try block.
 		try:
 			# Windows that are really dialogs.
 			# Some dialogs, although listed as a dialog thanks to UIA class name, does not advertise the proper role of dialog.
