@@ -127,34 +127,38 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Also because this add-on might be turned on "accidentally" in earlier Windows releases, including unsupported Windows 10 builds...
 		if not (isinstance(obj, UIA) and W10AddonSupported):
 			return
-		# Windows that are really dialogs.
-		# NVDA Core issue 8405: in build 17682 and later, IsDialog property has been added, making comparisons easier.
-		# However, don't forget that many users are still using old Windows 10 releases.
-		# The most notable case is app uninstall confirmation dialog from Start menu in build 17134 and earlier.
-		# Some dialogs, although listed as a dialog thanks to UIA class name, does not advertise the proper role of dialog.
-		if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
-			clsList.insert(0, Dialog)
-			return
-		# Search field that does raise controller for event.
-		# Although basic functionality is included in NVDA 2017.3, added enhancements such as announcing suggestion count.
-		if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox"):
-			# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcement problem.
-			# Because the add-on version deals with focus comparison, let all search fields go through this check as much as possible except for specific apps.
-			if obj.appModule.appName not in ("searchui", "searchapp"):
-				clsList.insert(0, SearchField)
+		# Somehow, search field finder raises COM error, so put the bulk of this method inside a try block.
+		try:
+			# Windows that are really dialogs.
+			# NVDA Core issue 8405: in build 17682 and later, IsDialog property has been added, making comparisons easier.
+			# However, don't forget that many users are still using old Windows 10 releases.
+			# The most notable case is app uninstall confirmation dialog from Start menu in build 17134 and earlier.
+			# Some dialogs, although listed as a dialog thanks to UIA class name, does not advertise the proper role of dialog.
+			if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
+				clsList.insert(0, Dialog)
 				return
-		# A dedicated version for Mail app's address/mention suggestions.
-		elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
-			clsList.insert(0, UIAEditableTextWithSuggestions)
-			return
-		# Menu items should never expose position info (seen in various context menus such as in Edge).
-		# Also take care of recognizing submenus across apps.
-		elif obj.UIAElement.cachedClassName in ("MenuFlyoutItem", "MenuFlyoutSubItem"):
-			clsList.insert(0, MenuItemNoPosInfo)
-			return
-		# Recognize headings as reported by XAML (build 17134 and later).
-		elif obj._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) > UIAHandler.HeadingLevel_None:
-			clsList.insert(0, XAMLHeading)
+			# Search field that does raise controller for event.
+			# Although basic functionality is included in NVDA 2017.3, added enhancements such as announcing suggestion count.
+			if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox"):
+				# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcement problem.
+				# Because the add-on version deals with focus comparison, let all search fields go through this check as much as possible except for specific apps.
+				if obj.appModule.appName not in ("searchui", "searchapp"):
+					clsList.insert(0, SearchField)
+					return
+			# A dedicated version for Mail app's address/mention suggestions.
+			elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
+				clsList.insert(0, UIAEditableTextWithSuggestions)
+				return
+			# Menu items should never expose position info (seen in various context menus such as in Edge).
+			# Also take care of recognizing submenus across apps.
+			elif obj.UIAElement.cachedClassName in ("MenuFlyoutItem", "MenuFlyoutSubItem"):
+				clsList.insert(0, MenuItemNoPosInfo)
+				return
+			# Recognize headings as reported by XAML (build 17134 and later).
+			elif obj._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) > UIAHandler.HeadingLevel_None:
+				clsList.insert(0, XAMLHeading)
+		except:
+			pass
 
 	# Find out if log recording is possible.
 	# This will work if debug logging is on and/or tracing apps and/or events is specified.
