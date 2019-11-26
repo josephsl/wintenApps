@@ -51,7 +51,8 @@ class AppModule(AppModule):
 		if isinstance(obj, UIA):
 			# In 18200 series and above, various Storage Sense option combo boxes have values but are not exposed as such, so treated it as combo box without value pattern.
 			# Resolved in 18800 and above, which means Version 1903 (build 18362) and 1909 (build 18363) will still carry this problem.
-			if winVersion.winVersion.build in (18362, 18363) and obj.role == controlTypes.ROLE_COMBOBOX and obj.UIAElement.cachedAutomationID.startswith("SystemSettings_StorageSense_SmartPolicy_"):
+			# Note that 1909 is still 18362 internally, so just check platform version tuple (Python 3.7 and later).
+			if winVersion.winVersion.platform_version == (10, 0, 18362) and obj.role == controlTypes.ROLE_COMBOBOX and obj.UIAElement.cachedAutomationID.startswith("SystemSettings_StorageSense_SmartPolicy_"):
 				clsList.insert(0, ComboBoxWithoutValuePattern)
 
 	# Sometimes, the same text is announced, so consult this cache.
