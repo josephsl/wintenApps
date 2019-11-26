@@ -12,7 +12,6 @@ The following app modules or support modules for some apps are included (see eac
 * Calculator (modern).
 * Calendar
 * Cortana (Conversations)
-* Feedback Hub
 * Mail
 * Maps
 * Microsoft Store
@@ -66,10 +65,6 @@ Most items are no longer applicable on Version 1903 and later.
 * Textual responses from Cortana are announced in most situations.
 * NVDA will be silent when talking to Cortana via voice.
 * In Version 1909 (November 2019 Update) and 20H1 build 18945 and later, modern search experience in File Explorer powered by Windows Search user interface is supported.
-
-## Feedback Hub
-
-* For newer app releases, NVDA will no longer announce feedback categories twice.
 
 ## Mail
 
