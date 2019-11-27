@@ -67,7 +67,7 @@ Most items are no longer applicable on Version 1903 and later. Classic Cortana r
 * Textual responses from Cortana (both Classic and Conversations UI) are announced in most situations (if using Classic Cortana, reopen Start menu and try searching again if responses are not announced).
 * NVDA will be silent when talking to Cortana via voice.
 * In Classic Cortana, NVDA will announce reminder confirmation after you set one.
-* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later, modern search experience in File Explorer powered by Windows Search user interface is supported.
+* In Version 1909 (November 2019 Update) and later, modern search experience in File Explorer powered by Windows Search user interface is supported.
 
 ## Feedback Hub
 
@@ -98,12 +98,10 @@ This refers to classic EdgeHTML-based Microsoft Edge.
 
 ## Modern keyboard
 
-Most features below are now part of NVDA 2018.3 or later.
-
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including the redesigned panel in Version 1809 (build 17661 and later) and changes made in 19H1 (build 18262 and later, including kaomoji and symbols categories in build 18305). This is also applicable in build 18963 and later as the app has been renamed. If using NVDA releases earlier than 2018.4, for best experience when reading emojis, use Windows OneCore speech synthesizer. If 2018.4 or later is in use, enable Unicode Consortium setting from NvDA's speech settings and set symbol level to "some" or higher.
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including redesigned panel in Version 1809 (build 17661 and later) and changes made in Version 1903 (build 18262 and later, including kaomoji and symbols categories in build 18305). This is also applicable in Version 2004 (build 18963 and later) as the app has been renamed. For best experience, enable Unicode Consortium setting from NvDA's speech settings and set symbol level to "some" or higher. All of these changes will be part of NVDA 2019.3.
 * NVDA will no longer announce "clipboard" when there are items in the clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update) and later, NVDA will no longer appear to do nothing when emoji panel opens.
-* Added support for modern Chinese, Japanese, and Korean (CJK) IME candidates interface introduced in 20H1 build 18965 and later.
+* Added support for modern Chinese, Japanese, and Korean (CJK) IME candidates interface introduced in Version 2004 (build 18965 and later).
 
 ## People
 
