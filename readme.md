@@ -15,7 +15,7 @@ The following app modules or support modules for some apps are included (see eac
 * Mail
 * Maps
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud clipboard items in Version 1709 and later)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud clipboard history/modern input method editors in Version 1709 and later)
 * People
 * Settings (system settings, Windows+I)
 * Weather.
@@ -64,7 +64,7 @@ Most items are no longer applicable on Version 1903 and later.
 
 * Textual responses from Cortana are announced in most situations.
 * NVDA will be silent when talking to Cortana via voice.
-* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later, modern search experience in File Explorer powered by Windows Search user interface is supported.
+* In Version 1909 (November 2019 Update) and later, modern search experience in File Explorer powered by Windows Search user interface is supported.
 
 ## Mail
 
@@ -83,12 +83,12 @@ Most items are no longer applicable on Version 1903 and later.
 
 ## Modern keyboard
 
-Most features below are now part of NVDA 2018.3 or later.
+This includes emoji panel, clipboard history, dictation, hardware input suggestions, and modern input method editors for certain languages. When viewing emojis, for best experience, enable Unicode Consortium setting from NvDA's speech settings and set symbol level to "some" or higher.
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including the redesigned panel in Version 1809 (build 17661 and later) and changes made in 19H1 (build 18262 and later, including kaomoji and symbols categories in build 18305). This is also applicable in build 18963 and later as the app has been renamed. If using NVDA releases earlier than 2018.4, for best experience when reading emojis, use Windows OneCore speech synthesizer. If 2018.4 or later is in use, enable Unicode Consortium setting from NvDA's speech settings and set symbol level to "some" or higher.
-* NVDA will no longer announce "clipboard" when there are items in the clipboard under some circumstances.
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including redesigned panel in Version 1809 (build 17661 and later) and changes made in Version 1903 (build 18262 and later, including kaomoji and symbols categories in build 18305). This is also applicable in Version 2004 (build 18963 and later) as the app has been renamed. All of these changes will be part of NVDA 2019.3.
+* When opening clipboard history, NVDA will no longer announce "clipboard" when there are items in the clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update) and later, NVDA will no longer appear to do nothing when emoji panel opens.
-* Added support for modern Chinese, Japanese, and Korean (CJK) IME candidates interface introduced in 20H1 build 18965 and later.
+* Added support for modern Chinese, Japanese, and Korean (CJK) IME candidates interface introduced in Version 2004 (build 18965 and later).
 
 ## People
 
