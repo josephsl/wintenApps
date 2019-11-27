@@ -32,18 +32,15 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## General
 
 * NVDA will no longer play error tones or do nothing if this add-on becomes active from Windows 7, Windows 8.1, and unsupported releases of Windows 10.
-* Submenu items are properly recognized in various apps, including context menu for Start menu tiles and microsoft Edge's app menu in Version 1809 (October 2018 Update).
+* Submenu items are properly recognized in various apps, including context menu for Start menu tiles.
 * In addition to dialogs recognized by NVDA, more dialogs are now recognized as proper dialogs and reported as such, including Insider Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation panel found in NVDA settings.
-* NVDA will no longer announce "blank" when pressing up or down arrow to open all apps views in Start menu. This is now part of NVDA 2019.3.
 * When searching in Start menu or File Explorer in Version 1909 (November 2019 Update) and later, instances of NVDA announcing search results twice when reviewing results are less noticeable, which also makes braille output more consistent when reviewing items.
 * In certain context menus (such as in Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: controller for, drag start, drag cancel, drag complete, drag target enter, drag target leave, drag target dropped, element selected, item status, live region change, notification, system alert, text change, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app.
 * It is possible to tracke only specific events and/or events coming from specific apps.
-* Tooltips from Edge and universal apps are recognized and will be announced. This is now part of NVDA 2019.3.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
-* App name and version for various Microsoft Store apps are now shown correctly. This is now part of NVDA 2019.3.
 * When arranging Start menu tiles or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce information on dragged items or new position of the dragged item.
 
 ## Calculator
@@ -85,7 +82,6 @@ Most items are no longer applicable on Version 1903 and later.
 
 This includes emoji panel, clipboard history, dictation, hardware input suggestions, and modern input method editors for certain languages. When viewing emojis, for best experience, enable Unicode Consortium setting from NvDA's speech settings and set symbol level to "some" or higher.
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and later, including redesigned panel in Version 1809 (build 17661 and later) and changes made in Version 1903 (build 18262 and later, including kaomoji and symbols categories in build 18305). This is also applicable in Version 2004 (build 18963 and later) as the app has been renamed. All of these changes are now part of NVDA 2019.3.
 * When opening clipboard history, NVDA will no longer announce "clipboard" when there are items in the clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update) and later, NVDA will no longer appear to do nothing when emoji panel opens.
 * Added support for modern Chinese, Japanese, and Korean (CJK) IME candidates interface introduced in Version 2004 (build 18965 and later).
@@ -99,7 +95,6 @@ This includes emoji panel, clipboard history, dictation, hardware input suggesti
 * Certain information such as Windows Update progress is reported automatically, including Storage sense/disk cleanup widget and errors from Windows Update.
 * Progress bar values and other information are no longer announced twice.
 * For some combo boxes and radio buttons, NVDA will no longer fail to recognize labels and/or announce value changes.
-* Audio Volume progress bar beeps are no longer heard in Version 1803 and later. This is now part of NVDA 2019.3.
 * NVDA will no longer appear to do nothing or play error tones if using object navigation commands under some circumstances.
 * Windows Update reminder dialog is recognized as a proper dialog.
 * Odd control labels seen in certain Windows 10 installations has been corrected.
