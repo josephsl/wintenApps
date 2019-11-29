@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* NVDA compatibility: 2019.2 to 2019.3
+* Yhteensopivuus: NVDA 2019.2-2019.3
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -29,9 +29,10 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* This add-on requires Windows 10 Version 1809 (build 17763) or later and
-  NVDA 2019.2 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18363) and latest stable version of NVDA.
+* Tämä lisäosa edellyttää Windows 10:n versiota 1809 (koontiversio 17763)
+  tai uudempaa ja NVDA 2019.2:ta tai uudempaa. Käytä parhaan
+  käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata versiota
+  (koontiversio 18363) sekä uusinta vakaata NVDA:n versiota.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
@@ -64,13 +65,14 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   pistekirjoitustulosteesta yhdenmukaisempaa kohteita tarkasteltaessa.
 * Sijaintitietoja (esim. 1 / 2) ei enää lueta tietyissä pikavalikoissa
   (kuten Edgessä).
-* The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, drag target enter, drag target leave, drag target
-  dropped, element selected, item status, live region change, notification,
-  system alert, text change, tooltip opened, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard if notifications come from
-  somewhere other than the currently active app.
+* Seuraavat UIA-tapahtumat tunnistetaan: ohjain kohteelle, vetämisen
+  aloitus, vetämisen peruutus, vetäminen suoritettu, vetämisen kohteeseen
+  siirtyminen, vetämisen kohteesta poistuminen, vetämisen kohde pudotettu,
+  elementti valittu, kohteen tila, aktiivisen alueen muutos, ilmoitus,
+  järjestelmän ilmoitus, työkaluvihje avattu, ikkuna avattu. Näitä
+  tapahtumia seurataan, kun NVDA:n lokitasoksi on määritetty
+  "virheenkorjaus", ja UIA-ilmoitustapahtuma ilmaistaan virheäänellä, mikäli
+  ilmoitukset tulevat muualta kuin aktiivisesta sovelluksesta.
 * On mahdollista seurata vain tiettyjä tapahtumia ja/tai tietyistä
   sovelluksista tulevia tapahtumia.
 * Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
@@ -81,9 +83,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   suuntaa vaihdettaessa.
 * Useiden Microsoft Store -sovellusten nimi ja versio näytetään nyt
   asianmukaisesti. Tämä tulee sisältymään NVDA 2019.3:een.
-* When arranging Start menu tiles or Action Center quick actions with
-  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
-  new position of the dragged item.
+* Kun Käynnistä-valikon ruutuja tai Toimintokeskuksen pikatoimintoja
+  järjestellään Alt+Vaihto+nuolinäppäimillä, NVDA puhuu raahattujen
+  kohteiden tiedot tai raahatun kohteen uuden sijainnin.
 
 ## Laskin
 
@@ -213,12 +215,13 @@ tai sitä uudempiin versioihin.
 
 * Sellaiset välilehdet kuten "ennuste" ja "kartat" tunnistetaan oikeiksi
   välilehdiksi (korjauksen tehnyt Derek Riemer).
-* When reading a forecast, use the left and right arrows to move between
-  items. Use the up and down arrows to read the individual items. For
-  example, pressing the right arrow might report "Monday: 79 degrees, partly
-  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
-  again will read the next item (Like the temperature). This currently works
-  for daily and hourly forecasts.
+* Käytä ennustetta lukiessasi vasenta ja oikeaa nuolta kohteiden välillä
+  liikkumiseen. Käytä nuolta ylös ja alas yksittäisten kohteiden
+  lukemiseen. Esim.  oikeaa nuolta painettaessa saatetaan sanoa "Maanantai:
+  26,1 astetta, puolipilvistä, ...", ja nuolta alas painettaessa
+  "Maanantai". Uudelleen painaminen lukee seuraavan kohteen (kuten
+  lämpötilan). Toimii tällä hetkellä päivittäisiin ja tunnin välein
+  tehtäviin ennusteisiin.
 
 [[!tag dev stable]]
 
