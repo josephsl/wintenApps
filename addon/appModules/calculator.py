@@ -23,7 +23,11 @@ noCalculatorEntryAnnouncements = [
 	# Results display with Calculator set to compact overlay i.e. always on top mode.
 	"CalculatorAlwaysOnTopResults",
 	# Calculator expressions with Calculator set to always on top mode.
-	"ExpressionContainer"
+	"ExpressionContainer",
+	# Date range selector.
+	"ContentPresenter",
+	# Briefly shown when closing date calculation calendar.
+	"Light Dismiss",
 ]
 
 
@@ -44,8 +48,12 @@ class AppModule(appModuleHandler.AppModule):
 	_resultsCache = ""
 
 	def event_nameChange(self, obj, nextHandler):
+		if not isinstance(obj, UIA): return
 		# No, announce value changes immediately except for calculator results and expressions.
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID not in noCalculatorEntryAnnouncements and obj.name != self._resultsCache:
+		if obj.UIAElement.cachedAutomationID in noCalculatorEntryAnnouncements or obj.UIAElement.cachedClassName== "LandmarkTarget":
+			self._shouldAnnounceResult = False
+		# For the rest:
+		elif obj.UIAElement.cachedAutomationID not in noCalculatorEntryAnnouncements and obj.name != self._resultsCache:
 			# For unit conversion, UIA notification event presents much better messages.
 			# For date calculation, live region change event is also fired for difference between dates.
 			if obj.UIAElement.cachedAutomationID not in ("Value1", "Value2", "DateDiffAllUnitsResultLabel"):
