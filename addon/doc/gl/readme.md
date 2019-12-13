@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros usuarios do Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
-* NVDA compatibility: 2019.2 to 2019.3
+* Compatibilidade con NVDA: da 2019.2 á 2019.3
 
 Este complemento é unha coleción de app modules para varias aplicacións de
 Windows 10, así coma melloras e correccións para certos controis de windows
@@ -30,9 +30,10 @@ se inclúe):
 
 Notas:
 
-* This add-on requires Windows 10 Version 1809 (build 17763) or later and
-  NVDA 2019.2 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18363) and latest stable version of NVDA.
+* Este complemento require do Windows 10 Versión 1809 (compilación 17763) ou
+  posterior e do NVDA 2019.2 ou posterior. Para uns mellores resultados, usa
+  o complemento coa compilación estable máis recente (compilación 18363) e
+  versión estable máis recente do NVDA.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
 * Para entradas non listadas a continuación, podes asumir que as
@@ -57,21 +58,23 @@ documento [rexistros de trocos para publicacións de complementos][3].
   maioría dos casos. Esta opción contrólase por "Anunciar información de
   posición do obxecto" no panel Presentación de Obxectos ubicado nas opcións
   do NVDA.
-* NVDA will no longer announce "blank" when pressing up or down arrow to
-  open all apps views in Start menu. This will be part of NVDA 2019.3.
-* When searching in Start menu or File Explorer in Version 1909 (November
-  2019 Update) and later, instances of NVDA announcing search results twice
-  when reviewing results are less noticeable, which also makes braille
-  output more consistent when reviewing items.
+* NVDA xa non anuncia "en branco" cando se prema frecha arriba ou abaixo
+  para abrir as vistas todas as apps no Menú inicio. Isto formará parte de
+  NVDA 2019.3.
+* Ao buscar no menú inicio ou no explorador de arquivos na versión 1909
+  (November 2019 Update) e posteriores, NVDA xa non anunciará os resultados
+  de busca dúas veces ao revisalos, o que tamén fai a saída braille máis
+  consistente ao revisar elementos.
 * En certos menús de contexto (coma no Edge), a información de posición
   (ex.: 1 de 2) xa non se anuncia.
-* The following UIA events are recognized: controller for, drag start, drag
+* Recoñécense os seguintes eventos UIA: Controller for, drag start, drag
   cancel, drag complete, drag target enter, drag target leave, drag target
   dropped, element selected, item status, live region change, notification,
-  system alert, text change, tooltip opened, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard if notifications come from
-  somewhere other than the currently active app.
+  system alert, text change, tooltip opened, window opened. Co NVDA
+  configurado para executarse co rexistro de depuración habilitado, estos
+  eventos seguiranse e, no caso do evento UIA notification oirase un ton se
+  as notificacións veñen de calquera lugar que non sexa a app actualmente
+  activa.
 * É posible o seguimento só de eventos específicos e/ou de eventos provintes
   de aplicacións específicas.
 * Recoñeceranse e anunciaranse os consellos para o Edge e para as
@@ -82,9 +85,9 @@ documento [rexistros de trocos para publicacións de complementos][3].
   pantalla ou a orientación.
 * O nome e a versión da app para varias apps da Tenda Microsoft (Microsoft
   Store) amósanse aagora correctamente.
-* When arranging Start menu tiles or Action Center quick actions with
-  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
-  new position of the dragged item.
+* Ao ordear as tarxetas do menú inicio ou as accións rápidas do centro de
+  accións con Alt+Shift+teclas de frechas, NVDA anunciará información sobre
+  os elementos arrastrados ou da nova posición dos mesmos.
 
 ## Calculadora
 
@@ -116,9 +119,9 @@ estaba integrada no menú inicio.
 * NVDA silenciarase cando lle fales ao Cortana a través da voz.
 * En Cortana Classic, NVDA agora anunciará a confirmación do recordatorio
   despois de que poñas un.
-* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later,
-  modern search experience in File Explorer powered by Windows Search user
-  interface is supported.
+* Na versión 1909 (November 2019 update) e na compilación 20H1 18945 e
+  posteriores, sopórtase a experiencia moderna de busca no explorador de
+  arquivos proporcionada pola interface de usuario de Windows.
 
 ## Centro de Opinións
 
@@ -211,12 +214,13 @@ posterior.
 
 * As pestanas como "pronósticos" e "mapas" recoñécense coma pestanas en si
   (parche de Derek Riemer).
-* When reading a forecast, use the left and right arrows to move between
-  items. Use the up and down arrows to read the individual items. For
-  example, pressing the right arrow might report "Monday: 79 degrees, partly
-  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
-  again will read the next item (Like the temperature). This currently works
-  for daily and hourly forecasts.
+* Cando se lea un pronóstico, usa as frechas esquerda e dereita para moverte
+  entre elementos. Usa as frechas arriba e abaixo para ler os elementos
+  individuais. Por exemplo, premendo a frecha dereita anunciaría "luns: 79
+  graos, parcialmente nublado, ..." premendo a frecha abaixo dirá "luns"
+  logo preméndoo de novo lerá o seguinte elemento (como a
+  temperatura). Actualmente esto traballa para pronósticos diarios e
+  horarios.
 
 [[!tag dev stable]]
 
