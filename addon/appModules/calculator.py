@@ -1,8 +1,8 @@
-#appModules/calculator.py
-#A part of NonVisual Desktop Access (NVDA)
-#Copyright (C) 2015-2019 NV Access Limited, Joseph Lee
-#This file is covered by the GNU General Public License.
-#See the file COPYING for more details.
+# appModules/calculator.py
+# A part of NonVisual Desktop Access (NVDA)
+# Copyright (C) 2015-2019 NV Access Limited, Joseph Lee
+# This file is covered by the GNU General Public License.
+# See the file COPYING for more details.
 
 """App module for Windows 10 Calculator"""
 
@@ -50,7 +50,7 @@ class AppModule(appModuleHandler.AppModule):
 	def event_nameChange(self, obj, nextHandler):
 		if not isinstance(obj, UIA): return
 		# No, announce value changes immediately except for calculator results and expressions.
-		if obj.UIAElement.cachedAutomationID in noCalculatorEntryAnnouncements or obj.UIAElement.cachedClassName== "LandmarkTarget":
+		if obj.UIAElement.cachedAutomationID in noCalculatorEntryAnnouncements or obj.UIAElement.cachedClassName == "LandmarkTarget":
 			self._shouldAnnounceResult = False
 		# For the rest:
 		elif obj.UIAElement.cachedAutomationID not in noCalculatorEntryAnnouncements and obj.name != self._resultsCache:
@@ -102,4 +102,4 @@ class AppModule(appModuleHandler.AppModule):
 					queueHandler.queueFunction(queueHandler.eventQueue, resultsScreen.firstChild.reportFocus)
 
 	# Without this, gesture binding fails even with script decorator deployed.
-	__gestures={}
+	__gestures = {}

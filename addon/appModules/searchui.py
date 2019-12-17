@@ -1,7 +1,7 @@
-#A part of NonVisual Desktop Access (NVDA)
-#Copyright (C) 2015 NV Access Limited
-#This file is covered by the GNU General Public License.
-#See the file COPYING for more details.
+# A part of NonVisual Desktop Access (NVDA)
+# Copyright (C) 2015 NV Access Limited
+# This file is covered by the GNU General Public License.
+# See the file COPYING for more details.
 # Extended by Joseph Lee (copyright 2016-2019, released under GPL)
 
 # Extended to let NVDA cooperate with Cortana.
