@@ -44,6 +44,10 @@ class AppModule(AppModule):
 			# In some cases, Active Directory-style name is the name of the window, so tell NVDA to use something more meaningful.
 			elif obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
 				obj.name = obj.firstChild.name
+			# Developer mode label in Version 2004 is wrong - it shows class name rather than the actual label.
+			# This is resolved in build 19536 and later.
+			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
+				obj.name = obj.previous.name
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Although there will be duplication below, call super method first.
