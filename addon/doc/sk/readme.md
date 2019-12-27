@@ -3,7 +3,8 @@
 * Autory: Joseph Lee, Derek Riemer a ďalší používatelia Windowsu 10
 * Stiahnúť [stabilnú verziu][1]
 * Stiahnúť [vývojovú verziu][2]
-* NVDA compatibility: 2019.2 to 2019.3
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][4] compatible with NVDA 2019.2.1 and earlier
 
 Tento doplnok je zbierka aplikačných modulov pre rôzne aplikácie systému
 Windows 10, ako aj vylepšenia a opravy určitých ovládacích prvkov systému
@@ -20,8 +21,8 @@ aplikácie (podrobnosti o obsahu nájdete v každej časti aplikácie):
 * Mapy
 * Microsoft Edge
 * Microsoft Obchod
-* Moderná klávesnica (panel emoji/diktát/návrhy hardvéru/položky cloudovej
-  schránky vo verzii 1709 a novšej)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard history/modern input method editors)
 * Ľudia
 * Nastavenia (systémové nastavenia, Win+I)
 * Počasie
@@ -30,7 +31,7 @@ aplikácie (podrobnosti o obsahu nájdete v každej časti aplikácie):
 Poznámky:
 
 * This add-on requires Windows 10 Version 1809 (build 17763) or later and
-  NVDA 2019.2 or later. For best results, use the add-on with latest Windows
+  NVDA 2019.3 or later. For best results, use the add-on with latest Windows
   10 stable release (build 18363) and latest stable version of NVDA.
 * Niektoré doplnkové funkcie sú alebo budú súčasťou čítačky obrazovky NVDA.
 * V prípade položiek, ktoré nie sú uvedené nižšie, môžete predpokladať, že
@@ -57,7 +58,7 @@ dokumente [changelogs for add-on release][3].
   voľba je riadená pomocou "Informácie o polohe objektu" v paneli
   Prezentácia objektu nájdené v nastaveniach NVDA.
 * NVDA will no longer announce "blank" when pressing up or down arrow to
-  open all apps views in Start menu. This will be part of NVDA 2019.3.
+  open all apps views in Start menu. This is now part of NVDA 2019.3.
 * When searching in Start menu or File Explorer in Version 1909 (November
   2019 Update) and later, instances of NVDA announcing search results twice
   when reviewing results are less noticeable, which also makes braille
@@ -73,15 +74,15 @@ dokumente [changelogs for add-on release][3].
   somewhere other than the currently active app.
 * Je možné sledovať iba konkrétne udalosti a / alebo udalosti pochádzajúce z
   konkrétnych aplikácií.
-* Popisy z Edge a univerzálnych aplikáciách sú uznávané a budú
-  oznámené. Toto bude súčasťou NVDA 2019.3.
+* Tooltips from Edge and universal apps are recognized and will be
+  announced. This is now part of NVDA 2019.3.
 * Pri otváraní, zatváraní alebo prepínaní medzi virtuálnymi pracovnými
   plochami NVDA oznámi aktuálny názov pracovnej plochy (napríklad desktop
   2).
 * NVDA už nebude oznamovať veľkosť textu ponuky Štart pri zmene rozlíšenia
   alebo orientácie obrazovky.
-* Názov a verzia aplikácie pre rôzne aplikácie Microsoft Obchod sa teraz
-  zobrazujú správne. Toto bude súčasťou NVDA 2019.3.
+* App name and version for various Microsoft Store apps are now shown
+  correctly. This is now part of NVDA 2019.3.
 * When arranging Start menu tiles or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce information on dragged items or
   new position of the dragged item.
@@ -111,9 +112,8 @@ Cortana označuje staršie rozhranie Cortana, ktoré bolo súčasťou ponuky
   Štart a skúste znova hľadať, ak odpovede nie sú oznámené).
 * NVDA bude mlčať, keď bude hovoriť s Cortanou hlasom.
 * V Classic Cortana NVDA po nastavení nastaví upomienku.
-* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later,
-  modern search experience in File Explorer powered by Windows Search user
-  interface is supported.
+* In Version 1909 (November 2019 Update) and later, modern search experience
+  in File Explorer powered by Windows Search user interface is supported.
 
 ## Spätná väzba
 
@@ -138,12 +138,12 @@ Cortana označuje staršie rozhranie Cortana, ktoré bolo súčasťou ponuky
 
 Toto sa týka klasickej EdgeHTML založenej aplikácie Microsoft Edge.
 
-* Automatické dopĺňanie textu bude sledované a oznámené na adrese
-  omnibar. Toto bude súčasťou NVDA 2019.3.
-* NVDA už nebude prehrávať zvuk návrhov, keď stlačíte F11 na prepnutie na
-  celú obrazovku. Toto bude súčasťou NVDA 2019.3.
-* Odstránené návrhy na prehrávanie zvuku pre adresu omnibar. Toto bude
-  súčasťou NVDA 2019.3.
+* Text auto-complete will be tracked and announced in address omnibar. This
+  is now part of NVDA 2019.3.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full
+  screen. This is now part of NVDA 2019.3.
+* Removed suggestions sound playback for address omnibar. This is now part
+  of NVDA 2019.3.
 
 ## Microsoft Obchod
 
@@ -154,24 +154,23 @@ Toto sa týka klasickej EdgeHTML založenej aplikácie Microsoft Edge.
 
 ## Moderná klávesnica
 
-Väčšina funkcií uvedených nižšie je teraz súčasťou NVDA 2018.3 alebo
-novších.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NvDA's speech settings and set symbol level to "some" or higher.
 
 * Support for Emoji input panel in Version 1709 (Fall Creators Update) and
-  later, including the redesigned panel in Version 1809 (build 17661 and
-  later) and changes made in 19H1 (build 18262 and later, including kaomoji
-  and symbols categories in build 18305). This is also applicable in build
-  18963 and later as the app has been renamed. If using NVDA releases
-  earlier than 2018.4, for best experience when reading emojis, use Windows
-  OneCore speech synthesizer. If 2018.4 or later is in use, enable Unicode
-  Consortium setting from NvDA's speech settings and set symbol level to
-  "some" or higher.
-* NVDA už za určitých okolností nebude oznamovať „schránku“, ak sú v
-  schránke nejaké položky.
+  later, including redesigned panel in Version 1809 (build 17661 and later)
+  and changes made in Version 1903 (build 18262 and later, including kaomoji
+  and symbols categories in build 18305). This is also applicable in Version
+  2004 (build 18963 and later) as the app has been renamed. All of these
+  changes are now part of NVDA 2019.3.
+* When opening clipboard history, NVDA will no longer announce "clipboard"
+  when there are items in the clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update) and later, NVDA
   will no longer appear to do nothing when emoji panel opens.
 * Added support for modern Chinese, Japanese, and Korean (CJK) IME
-  candidates interface introduced in 20H1 build 18965 and later.
+  candidates interface introduced in Version 2004 (build 18965 and later).
 
 ## Ľudia
 
@@ -187,7 +186,7 @@ novších.
 * Pre niektoré rozbaľovacie zoznamy a prepínacie tlačidlá  nebude NVDA
   naďalej rozpoznávať štítky a / alebo oznamovať zmeny hodnoty.
 * Audio Volume progress bar beeps are no longer heard in Version 1803 and
-  later. This will be part of NVDA 2019.3.
+  later. This is now part of NVDA 2019.3.
 * Ak sa za určitých okolností používajú príkazy navigácie objektov, NVDA už
   nebude robiť nič alebo nebude prehrávať chybové tóny.
 * Dialógové okno pripomenutia služby Windows Update sa považuje za správne
@@ -217,3 +216,5 @@ novších.
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+
+[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019
