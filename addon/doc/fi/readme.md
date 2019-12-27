@@ -3,7 +3,8 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2019.2-2019.3
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][4] compatible with NVDA 2019.2.1 and earlier
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -20,8 +21,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Kartat
 * Microsoft Edge
 * Microsoft Store
-* Moderni näppäimistö (emojipaneeli/sanelu/fyysisen näppäimistösyötteen
-  ehdotukset/pilvileikepöydän kohteet versiossa 1709 ja uudemmissa)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard history/modern input method editors)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Sää
@@ -29,10 +30,9 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Tämä lisäosa edellyttää Windows 10:n versiota 1809 (koontiversio 17763)
-  tai uudempaa ja NVDA 2019.2:ta tai uudempaa. Käytä parhaan
-  käyttökokemuksen varmistamiseksi Windows 10:n viimeisintä vakaata versiota
-  (koontiversio 18363) sekä uusinta vakaata NVDA:n versiota.
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and
+  NVDA 2019.3 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 18363) and latest stable version of NVDA.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
@@ -56,9 +56,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
   -asetuksella Objektien lukeminen -paneelista NVDA:n asetuksista.
-* NVDA ei enää sano "tyhjä" painettaessa ylä- tai alanuolta kaikki
-  sovellukset -näkymän avaamiseksi Käynnistä-valikossa. Tämä sisältyy NVDA
-  2019.3:een.
+* NVDA will no longer announce "blank" when pressing up or down arrow to
+  open all apps views in Start menu. This is now part of NVDA 2019.3.
 * NVDA puhuu nyt etsittäessä vähemmän hakutuloksia kahdesti
   Käynnistä-valikossa tai Resurssienhallinnassa versiossa 1909 (November
   2019 -päivitys) ja uudemmissa, mikä tekee lisäksi
@@ -75,14 +74,14 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   ilmoitukset tulevat muualta kuin aktiivisesta sovelluksesta.
 * On mahdollista seurata vain tiettyjä tapahtumia ja/tai tietyistä
   sovelluksista tulevia tapahtumia.
-* Edgen ja universaalien sovellusten työkaluvihjeet tunnistetaan ja
-  ilmoitetaan. Tämä sisältyy NVDA 2019.3:een.
+* Tooltips from Edge and universal apps are recognized and will be
+  announced. This is now part of NVDA 2019.3.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2) avattaessa
   ja suljettaessa virtuaalityöpöytiä tai siirryttäessä niiden välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
   suuntaa vaihdettaessa.
-* Useiden Microsoft Store -sovellusten nimi ja versio näytetään nyt
-  asianmukaisesti. Tämä tulee sisältymään NVDA 2019.3:een.
+* App name and version for various Microsoft Store apps are now shown
+  correctly. This is now part of NVDA 2019.3.
 * Kun Käynnistä-valikon ruutuja tai Toimintokeskuksen pikatoimintoja
   järjestellään Alt+Vaihto+nuolinäppäimillä, NVDA puhuu raahattujen
   kohteiden tiedot tai raahatun kohteen uuden sijainnin.
@@ -117,9 +116,8 @@ Käynnistä-valikkoa.
 * NVDA on hiljaa puhuttaessa Cortanalle mikrofonin välityksellä.
 * NVDA puhuu nyt vahvistuksen muistutusta lisättäessä perinteisessä
   Cortanassa.
-* Windows-haun käyttöliittymän voimalla toimivaa Resurssienhallinnan
-  modernia hakukokemusta tuetaan versiossa 1909 (November 2019 -päivitys)
-  sekä 20H1:ssä (koontiversio 18945) ja uudemmissa.
+* In Version 1909 (November 2019 Update) and later, modern search experience
+  in File Explorer powered by Windows Search user interface is supported.
 
 ## Palautekeskus
 
@@ -144,12 +142,12 @@ Käynnistä-valikkoa.
 
 Tämä viittaa perinteiseen EdgeHTML-pohjaiseen Microsoft Edgeen.
 
-* Tekstin automaattista täydennystä seurataan ja siitä ilmoitetaan
-  osoitepalkissa. Tämä tulee sisältymään NVDA 2019.3:een.
-* NVDA ei enää toista ehdotusten ääntä vaihdettaessa koko näytön tilaa
-  F11:tä painamalla. Tämä tulee sisältymään NVDA 2019.3:een.
-* Ehdotusääntä ei enää toisteta osoitepalkissa. Tämä tulee sisältymään NVDA
-  2019.3:een.
+* Text auto-complete will be tracked and announced in address omnibar. This
+  is now part of NVDA 2019.3.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full
+  screen. This is now part of NVDA 2019.3.
+* Removed suggestions sound playback for address omnibar. This is now part
+  of NVDA 2019.3.
 
 ## Microsoft Store
 
@@ -160,28 +158,24 @@ Tämä viittaa perinteiseen EdgeHTML-pohjaiseen Microsoft Edgeen.
 
 ## Moderni näppäimistö
 
-Suurin osa alla luetelluista ominaisuuksista sisältyy nyt NVDA 2018.3:een
-tai sitä uudempiin versioihin.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NvDA's speech settings and set symbol level to "some" or higher.
 
-* Tuki version 1709 (Fall Creators -päivitys) ja uudempien kelluvalle
-  emojinsyöttöpaneelille, mukaan lukien version 1809 (koontiversio 17661 ja
-  uudemmat) uudelleensuunniteltu paneeli sekä versioon 19H1 (koontiversio
-  18262 ja uudemmat) tehdyt muutokset, mukaan lukien kaomoji sekä
-  koontiversion 18305 symbolikategoriat. Tämä koskee myös koontiversiota
-  18963 ja uudempia, sillä sovellus on nimetty uudelleen. Mikäli käytetään
-  NVDA 2018.4:ää vanhempia versioita, tulee parhaan kokemuksen saamiseksi
-  käyttää Windows OneCore -syntetisaattoria. Jos käytössä on versio 2018.4
-  tai uudempi, tulee NVDA:n puheasetuksista ottaa käyttöön
-  Unicode-konsortion datan käyttäminen ja symbolitasoksi asetta "jotain" tai
-  korkeampi.
-* NVDA ei enää sano joissakin tilanteissa "leikepöytä", kun leikepöydällä on
-  kohteita.
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
+  later, including redesigned panel in Version 1809 (build 17661 and later)
+  and changes made in Version 1903 (build 18262 and later, including kaomoji
+  and symbols categories in build 18305). This is also applicable in Version
+  2004 (build 18963 and later) as the app has been renamed. All of these
+  changes are now part of NVDA 2019.3.
+* When opening clipboard history, NVDA will no longer announce "clipboard"
+  when there are items in the clipboard under some circumstances.
 * Emojipaneelin avautuessa ei enää näytä siltä, että NVDA  ei tee mitään
   joissakin järjestelmissä, joissa on asennettuna Windows 10:n versio 1903
   (May 2019 -päivitys) tai uudempi.
-* Lisätty tuki modernille kiinan, japanin ja korean (CJK)
-  IME-ehdotusliittymälle, joka esiteltiin 20H1:n koontiversiossa 18965 ja
-  uudemmissa.
+* Added support for modern Chinese, Japanese, and Korean (CJK) IME
+  candidates interface introduced in Version 2004 (build 18965 and later).
 
 ## Ihmiset
 
@@ -197,9 +191,8 @@ tai sitä uudempiin versioihin.
 * NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen ja
   valintapainikkeiden selitteiden tunnistamisessa ja/tai arvomuutosten
   ilmoittamisessa.
-* Edistymispalkkien äänimerkkejä ei enää kuulu muutettaessa
-  äänenvoimakkuutta versiossa 1803 ja uudemmissa. Tämä sisältyy NVDA
-  2019.3:een.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and
+  later. This is now part of NVDA 2019.3.
 * NVDA ei tee enää mitään tai toista virheääniä, mikäli
   objektinavigointikomentoja käytetään tietyissä tilanteissa.
 * Windows Updaten muistutusvalintaikkuna tunnistetaan asianmukaisesti
@@ -230,3 +223,5 @@ tai sitä uudempiin versioihin.
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+
+[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019

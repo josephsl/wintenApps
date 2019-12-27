@@ -3,7 +3,8 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2019.2 to 2019.3
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][4] compatible with NVDA 2019.2.1 and earlier
 
 Denne tilføjelse er en samling af app-moduler til forskellige Windows 10
 apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.
@@ -19,8 +20,8 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Kort
 * Microsoft Edge
 * Microsoft store
-* Moderne tastatur (Emoji-panel/Diktering/hardware input forslag/Cloud
-  Udklipsholder i version 1709 og senere)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard history/modern input method editors)
 * Personer
 * Indstillinger (systemindstillinger, Windows+I)
 * Vejr
@@ -29,7 +30,7 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 Bemærkninger:
 
 * This add-on requires Windows 10 Version 1809 (build 17763) or later and
-  NVDA 2019.2 or later. For best results, use the add-on with latest Windows
+  NVDA 2019.3 or later. For best results, use the add-on with latest Windows
   10 stable release (build 18363) and latest stable version of NVDA.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
@@ -55,7 +56,7 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   fleste tilfælde. Denne indstilling styres af "Oplys information om
   objektets placering" i indstillingspanelet "Objektpræsentation".
 * NVDA will no longer announce "blank" when pressing up or down arrow to
-  open all apps views in Start menu. This will be part of NVDA 2019.3.
+  open all apps views in Start menu. This is now part of NVDA 2019.3.
 * When searching in Start menu or File Explorer in Version 1909 (November
   2019 Update) and later, instances of NVDA announcing search results twice
   when reviewing results are less noticeable, which also makes braille
@@ -71,14 +72,14 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   somewhere other than the currently active app.
 * Det er muligt at overvåge specifikke hændelser og/eller hændelser, der
   kommer fra specifikke apps.
-* Værktøjstips fra Edge og universale apps er genkendte og vil blive
-  annonceret. Dette vil være en del af NVDA 2019.3.
+* Tooltips from Edge and universal apps are recognized and will be
+  announced. This is now part of NVDA 2019.3.
 * Når åbning, lukning, eller Skift mellem virtuelle skrivebord forekommer,
   vil NVDA annoncere nuværende desktop ID (f.eks. "Skrivebord 2").
 * NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
   du ændrer skærmopløsning eller orientering.
-* Appnavn og-version for forskellige Microsoft store-apps vises nu
-  korrekt. Dette vil være en del af NVDA 2019.3.
+* App name and version for various Microsoft Store apps are now shown
+  correctly. This is now part of NVDA 2019.3.
 * When arranging Start menu tiles or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce information on dragged items or
   new position of the dragged item.
@@ -113,9 +114,8 @@ del af start-menuen.
 * NVDA vil forblive tavs, når du taler til Cortana med stemmen.
 * I klassisk Cortana vil NVDA annoncere bekræftelse af påmindelse, når du
   har angivet en.
-* In Version 1909 (November 2019 Update) and 20H1 build 18945 and later,
-  modern search experience in File Explorer powered by Windows Search user
-  interface is supported.
+* In Version 1909 (November 2019 Update) and later, modern search experience
+  in File Explorer powered by Windows Search user interface is supported.
 
 ## Feedback Hub
 
@@ -142,13 +142,12 @@ del af start-menuen.
 
 Dette refererer til den klassiske EdgeHTML-baserede Microsoft Edge.
 
-* Autofuldførelse af tekst vil blive sporet og annonceret i adressse
-  omnibar. Dette vil være en del af NVDA 2019.3.
-* NVDA vil ikke længere afspille lyden for forslag, når du trykker på F11
-  for at ændre indstillingen for fuld skærm. Dette vil være en del af NVDA
-  2019.3.
-* Fjernede lyden for autoforslag for adresse Omnibar. Dette vil være en del
-  af NVDA 2019.3.
+* Text auto-complete will be tracked and announced in address omnibar. This
+  is now part of NVDA 2019.3.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full
+  screen. This is now part of NVDA 2019.3.
+* Removed suggestions sound playback for address omnibar. This is now part
+  of NVDA 2019.3.
 
 ## Microsoft store
 
@@ -159,23 +158,23 @@ Dette refererer til den klassiske EdgeHTML-baserede Microsoft Edge.
 
 ## Moderne tastatur
 
-Bemærk: De fleste funktioner nedenfor er nu en del af NVDA 2018.3 eller
-nyere.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NvDA's speech settings and set symbol level to "some" or higher.
 
-* Understøttelse for Emoji inputpanelet i Version 1709 (Fall Creators
-  Update) og senere, herunder det redesignet panel i build version 1809
-  17661 og senere, samt ændringer i 19H1 (build 18262). Du vil få den bedste
-  oplevelse, når du læser emojis, hvis du benytter talesyntesen Windows
-  OneCore. Hvis du benytter 2018.4 eller senere, skal du aktivér
-  indstillingen der benytter Unicode Consortium data til emojis via NVDAs
-  taleindstillinger. Derefter skal tegnsætningsniveauet indstilles til
-  "nogle" eller højere.
-* NVDA vil ikke længere annoncere "Udklipsholder", når der er elementer i
-  udklipsholderen under nogle omstændigheder.
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
+  later, including redesigned panel in Version 1809 (build 17661 and later)
+  and changes made in Version 1903 (build 18262 and later, including kaomoji
+  and symbols categories in build 18305). This is also applicable in Version
+  2004 (build 18963 and later) as the app has been renamed. All of these
+  changes are now part of NVDA 2019.3.
+* When opening clipboard history, NVDA will no longer announce "clipboard"
+  when there are items in the clipboard under some circumstances.
 * På nogle systemer, der kører version 1903 (May 2019 Update) og senere, vil
   NVDA ikke længere foretage sig ingenting, når Emoji panel åbnes.
-* Tilføjet understøttelse af moderne kinesisk, japansk og koreansk (CJK)
-  IME-kandidater interface introduceret i 20H1 Build 18965 og senere.
+* Added support for modern Chinese, Japanese, and Korean (CJK) IME
+  candidates interface introduced in Version 2004 (build 18965 and later).
 
 ## Personer
 
@@ -190,8 +189,8 @@ nyere.
   annonceret to gange.
 * For nogle combo boxe, vil NVDA ikke længere undlade at rapportere
   etiketter- og- eller annoncere værdiændringer.
-* Bip for behandlingslinjer for lydstyrke høres nu ikke længere i version
-  1803 og nyere. Dette vil være en del af NVDA 2019.3.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and
+  later. This is now part of NVDA 2019.3.
 * NVDA ser ikke længere ud til at gøre ingenting eller afspille fejltoner,
   hvis du bruger objektnavigeringskommandoer under visse omstændigheder.
 * Dialogboksen Windows Update-påmindelse genkendes som en korrekt dialog.
@@ -220,3 +219,5 @@ nyere.
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+
+[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019

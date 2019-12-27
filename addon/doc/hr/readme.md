@@ -3,7 +3,8 @@
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA kompatibilnost: 2019.2 do 2019.3
+* NVDA compatibility: 2019.3 and beyond
+* Download [older version][4] compatible with NVDA 2019.2.1 and earlier
 
 Ovaj NVDA dodatak je zbirka aplikacijskih modula za razne Windows 10
 aplikacije, kao i poboljšanja i ispravci određenih windows 10 kontrola.
@@ -19,8 +20,8 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 * Karte
 * Microsoft Edge
 * Microsoft Store
-* Moderna tipkovnica (emoji ploča, diktat, prijedlozi za ulazni hardver,
-  stavke međuspremnika u oblaku u verziji 1709 i novijoj)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard history/modern input method editors)
 * Osobe
 * Postavke (postavke sustava, Windows+I)
 * Prognoza
@@ -28,10 +29,9 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* Ovaj dodatak zahtjeva Windows 10 verziju 1809 (gradnja 17763) ili noviju i
-  NVDA 2019.2 ili noviju. Najbolje rezultate daje dodatak sa zadnjom
-  stabilnom verzijom Windows 10 (gradnja 18363) i zadnjom stabilnom verzijom
-  NVDA čitača.
+* This add-on requires Windows 10 Version 1809 (build 17763) or later and
+  NVDA 2019.3 or later. For best results, use the add-on with latest Windows
+  10 stable release (build 18363) and latest stable version of NVDA.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Za unose koji niže dolje nisu navedeni, može se pretpostaviti da su te
   funkcije dio NVDA čitača. Više nisu primjenjive jer dodatak ne podržava
@@ -55,9 +55,8 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 * U većini slučajeva NVDA može najaviti broj prijedloga prilikom
   pretrage. Ova opcija se kontrolira u „Izvijesti o informaciji o položaju
   objekta” u ploči „Prezentacija objekta”.
-* NVDA više neće najaviti „prazno” kad se pritisne strelica gore ili dolje,
-  kojima se otvaraju svi prikazi aplikacija u izborniku Start. Ovo će biti
-  ugrađeno u NVDA 2019.3.
+* NVDA will no longer announce "blank" when pressing up or down arrow to
+  open all apps views in Start menu. This is now part of NVDA 2019.3.
 * Prilikom pretraživanja u izborniku Start ili Exploreru datoteka u verziji
   1909 (nadogradnja studenog 2019.) i novijim, slučajevi gdje NVDA dvaput
   najavljuje rezultate pretrage prilikom pregledavanja rezultata su manje
@@ -75,15 +74,15 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   ako obavijesti dolaze odnekud drugdje od trenutačno aktivne aplikacije.
 * Moguće je pratiti samo određene događaje i-ili događaje koji dolaze iz
   određenih aplikacija.
-* Alatni savjeti za Edge i univerzalne aplikacije prepoznaju se i bit će
-  najavljene. To će biti dio NVDA 2019.3.
+* Tooltips from Edge and universal apps are recognized and will be
+  announced. This is now part of NVDA 2019.3.
 * Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
   površina, NVDA će najaviti trenutačno ime radne površine (na primjer,
   desktop 2).
 * NVDA više neće najaviti veličinu teksta izbornika Start, kad se mijenja
   rezolucija ili položaj ekrana.
-* Naziv i verzija za razne Microsoft Store aplikacije se sada ispravno
-  prikazuju. Ovo će biti dio NVDA 2019.3.
+* App name and version for various Microsoft Store apps are now shown
+  correctly. This is now part of NVDA 2019.3.
 * Kad se pločice izbornika Start ili brze radnje za Action Center
   raspoređuju s tipkama Alt+Shift+strelice, NVDA će najaviti podatke o
   povučenim stavkama ili o novom položaju povučene stavke.
@@ -116,9 +115,8 @@ Start.
   pretragu.
 * NVDA neće govoriti kad pričaš sa Cortanom.
 * U Classic Cortana će NVDA najaviti potvrdu termina, ako je postavljen.
-* U verziji 1909 (studeni 2019.) i verziji 20H1 gradnja 18945 i novijim
-  verzijama, podržano je moderno pretraživanja u Exploreru datoteka koje
-  pokreće korisničko sučelje Windows Search.
+* In Version 1909 (November 2019 Update) and later, modern search experience
+  in File Explorer powered by Windows Search user interface is supported.
 
 ## Feedback Hub
 
@@ -143,12 +141,12 @@ Start.
 
 Ovo se odnosi na klasični Microsoft Edge, baziran na EdgeHTML-u.
 
-* Automatsko dovršavanje teksta pratit će se i najaviti u višenamjenskoj
-  adresnoj traci. To će biti dio NVDA 2019.3.
-* NVDA više neće svirati zvuk za prijedloge kad se pritisne F11 za
-  uključivanje prikaza preko cijelog ekrana. To će biti dio NVDA 2019.3.
-* Uklonjeno je sviranje zvuka za prijedloge za višenamjensku adresnu
-  traku. To će biti dio NVDA 2019.3.
+* Text auto-complete will be tracked and announced in address omnibar. This
+  is now part of NVDA 2019.3.
+* NVDA will no longer play suggestion sound when pressing F11 to toggle full
+  screen. This is now part of NVDA 2019.3.
+* Removed suggestions sound playback for address omnibar. This is now part
+  of NVDA 2019.3.
 
 ## Microsoft Store
 
@@ -159,24 +157,24 @@ Ovo se odnosi na klasični Microsoft Edge, baziran na EdgeHTML-u.
 
 ## Moderna tipkovnica
 
-Većina dolje navedenih funkcija su dio NVDA 2018.3 ili novije verzije.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NvDA's speech settings and set symbol level to "some" or higher.
 
-* Podrška za ploču za unos Emojia u verziji 1709 (Fall Creators nadogradnja)
-  i novijoj verziji, uključujući redizajniranu ploču u verziji 1809 (gradnja
-  17661 i novije) i promjene izvršene u 19H1 (gradnja 18262 i novije
-  verzije, uključujući kategorije kaomoji i simboli u gradnji 18305). Ovo se
-  također primjenjuje u gradnji 18963. i novijima, jer je aplikacija
-  preimenovana. Ako se koriste NVDA izdanja ranija od 2018.4, za najbolje
-  čitanje emojija koristi govornu jedinicu Windows OneCore. Ako se koristi
-  2018.4 ili novija, uključi postavku Unicode konzorcija u NVDA postavkama i
-  postavi razinu simbola na „poneke” ili višu.
-* NVDA više neće objavljivati „međuspremnik” kad se u međuspremniku nalaze
-  stavke pod nekim okolnostima.
+* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
+  later, including redesigned panel in Version 1809 (build 17661 and later)
+  and changes made in Version 1903 (build 18262 and later, including kaomoji
+  and symbols categories in build 18305). This is also applicable in Version
+  2004 (build 18963 and later) as the app has been renamed. All of these
+  changes are now part of NVDA 2019.3.
+* When opening clipboard history, NVDA will no longer announce "clipboard"
+  when there are items in the clipboard under some circumstances.
 * Na nekim sustavima koji imaju verziju 1903 (nadogradnja svibnja 2019.) i
   noviju, NVDA više neće izgledati kao da ništa ne radi kad se otvori ploča
   s emojijima.
-* Dodana je podrška za sučelja suvremenih IME kandidata za kineski, japanski
-  i korejski (CJK), uvedena u 20H1 gradnji 18965 i novijim.
+* Added support for modern Chinese, Japanese, and Korean (CJK) IME
+  candidates interface introduced in Version 2004 (build 18965 and later).
 
 ## Osobe
 
@@ -191,8 +189,8 @@ Većina dolje navedenih funkcija su dio NVDA 2018.3 ili novije verzije.
   dvaput.
 * Za većinu odabirnih okvira i izbornih gumba, NVDA će uspjeti prepoznati
   oznaku i-ili najaviti promjene vrijednosti.
-* Zvučni signali trake napretka glasnoće zvuka se više ne čuju u verziji
-  1803 i novijom. To će biti dio NVDA 2019.3.
+* Audio Volume progress bar beeps are no longer heard in Version 1803 and
+  later. This is now part of NVDA 2019.3.
 * NVDA više neće izgledati kao da ništa ne radi ili svirati tonove za
   greške, ako se koriste naredbe navigacijskog objekta pod nekim
   okolnostima.
@@ -224,3 +222,5 @@ Većina dolje navedenih funkcija su dio NVDA 2018.3 ili novije verzije.
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+
+[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019
