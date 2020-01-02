@@ -115,11 +115,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
 				UIAHandler.handler.clientObject.addAutomationEventHandler(event,UIAHandler.handler.rootElement,UIAHandler.TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
-				log.debug("W10: added event ID %s, assigned to %s"%(event, name))
+				log.debug(f"W10: added event ID {event}, assigned to {name}")
 		# Allow NVDA to recognize more dialogs, especially ones that are not advertising themselves as such.
 		for dialogClassName in UIAAdditionalDialogClassNames:
 			if dialogClassName not in UIAHandler.UIADialogClassNames:
-				log.debug("W10: adding class name %s to known dialog class names"%dialogClassName)
+				log.debug(f"W10: adding class name {dialogClassName} to known dialog class names")
 				UIAHandler.UIADialogClassNames.append(dialogClassName)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
@@ -181,21 +181,21 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Record UIA property info about an object if told to do so.
 	def uiaDebugLogging(self, obj, event=None):
 		if self.recordLog(obj, event):
-			info = ["object: %s"%repr(obj)]
-			info.append("name: %s"%obj.name)
+			info = [f"object: {repr(obj)}"]
+			info.append(f"name: {obj.name}")
 			if not event:
 				event = "no event specified"
-			info.append("event: %s"%event)
-			info.append("app module: %s"%obj.appModule)
+			info.append(f"event: {event}")
+			info.append(f"app module: {obj.appModule}")
 			element = obj.UIAElement
-			info.append("automation Id: %s"%element.cachedAutomationID)
-			info.append("class name: %s"%element.cachedClassName)
+			info.append(f"automation Id: {element.cachedAutomationID}")
+			info.append(f"class name: {element.cachedClassName}")
 			if event == "controllerFor":
-				info.append("controller for count: %s"%len(obj.controllerFor))
+				info.append(f"controller for count: {len(obj.controllerFor)}")
 			elif event == "tooltipOpened":
-				info.append("framework Id: %s"%element.cachedFrameworkId)
+				info.append(f"framework Id: {element.cachedFrameworkId}")
 			elif event == "itemStatus":
-				info.append("item status: %s"%element.currentItemStatus)
+				info.append(f"item status: {element.currentItemStatus}")
 			if globalVars.appArgs.debugLogging:
 				log.debug(u"W10: UIA {debuginfo}".format(debuginfo = ", ".join(info)))
 			else:
@@ -209,7 +209,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if globalVars.appArgs.debugLogging:
 				import tones
 				tones.beep(512, 50)
-				log.debug("W10: possible desktop name change from %s, app module: %s"%(obj,obj.appModule))
+				log.debug(f"W10: possible desktop name change from {obj}, app module: {obj.appModule}")
 			# CSRSS: Client/Server Runtime Subsystem (Windows subsystem process/desktop object)
 			if obj.appModule.appName == "csrss":
 				import wx
@@ -258,14 +258,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Log which modern keyboard header is active.
 		# Although this can be done from modern keyboard app module, that module is destined for NVDA Core, hence do it here.
 		if obj.appModule.appName in ("windowsinternal_composableshell_experiences_textinput_inputapp", "textinputhost") and obj.firstChild is not None and globalVars.appArgs.debugLogging:
-			log.debug("W10: automation ID for currently opened modern keyboard feature is %s"%obj.firstChild.UIAElement.cachedAutomationID)
+			log.debug(f"W10: automation ID for currently opened modern keyboard feature is {obj.firstChild.UIAElement.cachedAutomationID}")
 		nextHandler()
 
 	def event_UIA_notification(self, obj, nextHandler, notificationKind=None, notificationProcessing=None, displayString=None, activityId=None):
 		# Introduced in Version 1709, to be treated as a notification event.
 		self.uiaDebugLogging(obj, "notification")
 		if isinstance(obj, UIA) and globalVars.appArgs.debugLogging:
-			log.debug("W10: UIA notification: sender: %s, notification kind: %s, notification processing: %s, display string: %s, activity ID: %s"%(obj.UIAElement,notificationKind,notificationProcessing,displayString,activityId))
+			log.debug(f"W10: UIA notification: sender: {obj.UIAElement}, notification kind: {notificationKind}, notification processing: {notificationProcessing}, display string: {displayString}, activity ID: {activityId}")
 			# Play a debug tone if and only if notifications come from somewhere other than the active app.
 			if obj.appModule != api.getFocusObject().appModule:
 				import tones
