@@ -1,6 +1,6 @@
 # Microsoft Store
 # Part of Windows 10 App Essentials collection
-# Copyright 2016-2019 Joseph Lee, released under GPL
+# Copyright 2016-2020 Joseph Lee, released under GPL
 
 # Enhancements to support Microsoft Store (formerly Windows Store).
 

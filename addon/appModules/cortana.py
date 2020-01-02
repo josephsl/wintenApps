@@ -1,6 +1,6 @@
 # Cortana Conversations (beta)
 # Part of Windows 10 App Essentials collection
-# Copyright 2019 Joseph Lee, released under GPL
+# Copyright 2019-2020 Joseph Lee, released under GPL
 
 # Various workarounds for Cortana Conversations (beta in build 18922 and later)
 

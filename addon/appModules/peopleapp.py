@@ -1,6 +1,6 @@
 # WinTenApps/peopleapp.py
 # Part of Windows 10 App Essentials collection
-# Copyright 2018-2019 Joseph Lee, released under GPL.
+# Copyright 2018-2020 Joseph Lee, released under GPL.
 
 # Various workarounds for People app (modern version of Outlook Contacts).
 

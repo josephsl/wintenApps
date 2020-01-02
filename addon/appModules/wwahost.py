@@ -6,7 +6,7 @@
 """App module host for Windows 8.x WinRT apps hosted by wwahost.exe.
 """
 
-# Extended in 2019 to add additoinal properties and fixes.
+# Extended in 2019 to add additional properties and fixes.
 
 from nvdaBuiltin.appModules.wwahost import *
 import ctypes
