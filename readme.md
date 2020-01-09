@@ -57,7 +57,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## Cortana
 
-Most items are no longer applicable on Version 1903 and later.
+Most items are no longer applicable on Version 1903 and later unless Cortana Conversations (Version 2004 and later) is in use.
 
 * Textual responses from Cortana are announced in most situations.
 * NVDA will be silent when talking to Cortana via voice.
