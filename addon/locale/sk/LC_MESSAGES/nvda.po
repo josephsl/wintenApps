@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 18.12\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2019-04-14 15:09-0700\n"
-"Last-Translator: Ján Kulik <johny.kulik452@gmail.com>\n"
+"PO-Revision-Date: 2020-01-07 17:58+0100\n"
+"Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
 "Language-Team: \n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.6.11\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
@@ -29,23 +29,24 @@ msgstr ""
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
-msgstr "Stará verzia systému windows"
+msgstr "Staršia verzia systému windows"
 
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
 msgid "Cannot move between rows"
-msgstr "Nemožno sa pohybovať medzi riadkami"
+msgstr "Nie je možné pohybovať sa medzi riadkami"
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
-msgstr "Žiadne dáta počasia pre Windows."
+msgstr "Nie sú dostupné ďalšie informácie o počasí pre túto lokalitu."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Windows 10 App Essentials"
-msgstr "Windows 10 App Essentials"
+msgstr "Vylepšenia prístupnosti pre Windows 10"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
-msgstr "Zbierka aplikácií modulov pre ďalšie aplikácie systému Windows 10."
+msgstr ""
+"Zbierka modulov, ktoré sprístupňujúf funkcie operačného systému Windows 10"
