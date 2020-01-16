@@ -75,21 +75,6 @@ class SearchField(SearchField):
 				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
 
 
-# Some context menu items expose position info, which is quite anoying.
-class MenuItemNoPosInfo(UIA):
-
-	def _get_states(self):
-		# Borrowed from NVDA Core issue 5178 code (fixed provided by the same author).
-		states = super(MenuItemNoPosInfo, self).states
-		# Add proper state for submenus.
-		if self.UIAElement.cachedClassName == "MenuFlyoutSubItem":
-			states.add(controlTypes.STATE_HASPOPUP)
-		return states
-
-	def _get_positionInfo(self):
-		return {}
-
-
 # Various XAML headings (Settings app, for example) introduced in Version 1803.
 class XAMLHeading(UIA):
 
@@ -145,11 +130,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# A dedicated version for Mail app's address/mention suggestions.
 			elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
 				clsList.insert(0, UIAEditableTextWithSuggestions)
-				return
-			# Menu items should never expose position info (seen in various context menus such as in Edge).
-			# Also take care of recognizing submenus across apps.
-			elif obj.UIAElement.cachedClassName in ("MenuFlyoutItem", "MenuFlyoutSubItem"):
-				clsList.insert(0, MenuItemNoPosInfo)
 				return
 			# Recognize headings as reported by XAML (build 17134 and later).
 			elif obj._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) > UIAHandler.HeadingLevel_None:
