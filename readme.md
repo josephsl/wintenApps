@@ -32,11 +32,9 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## General
 
 * NVDA will no longer play error tones or do nothing if this add-on becomes active from Windows 7, Windows 8.1, and unsupported releases of Windows 10.
-* Submenu items are properly recognized in various apps, including context menu for Start menu tiles.
 * In addition to dialogs recognized by NVDA, more dialogs are now recognized as proper dialogs and reported as such, including Insider Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation panel found in NVDA settings.
 * When searching in Start menu or File Explorer in Version 1909 (November 2019 Update) and later, instances of NVDA announcing search results twice when reviewing results are less noticeable, which also makes braille output more consistent when reviewing items.
-* In certain context menus (such as in classic (EdgeHTML-based) Edge), position information (e.g. 1 of 2) is no longer announced.
 * The following UIA events are recognized: controller for, drag start, drag cancel, drag complete, drag target enter, drag target leave, drag target dropped, element selected, item status, live region change, notification, system alert, text change, tooltip opened, window opened. With NVDA set to run with debug logging enabled, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app.
 * It is possible to tracke only specific events and/or events coming from specific apps.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop name (desktop 2, for example).
