@@ -14,11 +14,9 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 * Kalkulator (moderan).
 * Kalendar
-* Cortana (Classic i Conversations)
-* Feedback Hub
+* Cortana (Conversations)
 * Pošta
 * Karte
-* Microsoft Edge
 * Microsoft Store
 * Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
   clipboard history/modern input method editors)
@@ -29,9 +27,9 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* This add-on requires Windows 10 Version 1809 (build 17763) or later and
-  NVDA 2019.3 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18363) and latest stable version of NVDA.
+* This add-on requires Windows 10 Version 1903 (build 18362) or later. For
+  best results, use the add-on with latest Windows 10 stable release (build
+  18363).
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Za unose koji niže dolje nisu navedeni, može se pretpostaviti da su te
   funkcije dio NVDA čitača. Više nisu primjenjive jer dodatak ne podržava
@@ -46,24 +44,17 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 * NVDA više neće svirati tonove grešaka ili neće raditi ništa, ako se ovaj
   dodatak aktivira u sustavima Windows 7, Windows 8.1 i nepodržanim
   izdanjima sustava Windows 10.
-* Stavke podizbornika se pravilno prepoznaju u raznim aplikacijama,
-  uključujući kontekstni izbornik za pločice izbornika Start i izbornik
-  aplikacije Microsoft Edge verzije 1809 (nadogradnja u listopadu 2018.).
 * Većina dijaloških okvira se sada prepoznaju kao pravi dijaloški okviri i o
   njima se izvještava kao takvima, uključujući dijaloški okvir za Insider
   Preview (aplikacija za postavke).
 * U većini slučajeva NVDA može najaviti broj prijedloga prilikom
   pretrage. Ova opcija se kontrolira u „Izvijesti o informaciji o položaju
   objekta” u ploči „Prezentacija objekta”.
-* NVDA will no longer announce "blank" when pressing up or down arrow to
-  open all apps views in Start menu. This is now part of NVDA 2019.3.
 * Prilikom pretraživanja u izborniku Start ili Exploreru datoteka u verziji
   1909 (nadogradnja studenog 2019.) i novijim, slučajevi gdje NVDA dvaput
   najavljuje rezultate pretrage prilikom pregledavanja rezultata su manje
   uočljivi, čime i izlazna brajica postaje dosljednija prilikom
   pregledavanja stavki.
-* U većini kontekstnih izbornika (kao što je to u Edgeu), informacije o
-  poziciji (npr. 1 od 2) se više ne najavljuje.
 * Prepoznaju se sljedeći UIA događaji: kontroler za, početak povlačenja,
   prekid povlačenja, povlačenje dovršeno, povlačenje u cilj, povlačenje
   izvan cilja, povlačenje i ispuštanje u cilj, element odabran, stanje
@@ -74,15 +65,11 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   ako obavijesti dolaze odnekud drugdje od trenutačno aktivne aplikacije.
 * Moguće je pratiti samo određene događaje i-ili događaje koji dolaze iz
   određenih aplikacija.
-* Tooltips from Edge and universal apps are recognized and will be
-  announced. This is now part of NVDA 2019.3.
 * Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
   površina, NVDA će najaviti trenutačno ime radne površine (na primjer,
   desktop 2).
 * NVDA više neće najaviti veličinu teksta izbornika Start, kad se mijenja
   rezolucija ili položaj ekrana.
-* App name and version for various Microsoft Store apps are now shown
-  correctly. This is now part of NVDA 2019.3.
 * Kad se pločice izbornika Start ili brze radnje za Action Center
   raspoređuju s tipkama Alt+Shift+strelice, NVDA će najaviti podatke o
   povučenim stavkama ili o novom položaju povučene stavke.
@@ -106,22 +93,13 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 
 ## Cortana
 
-Većina stavki više nije primjenjiva u verzijama 1903 i novijim. Classic
-Cortana se odnosi na starije Cortanovo sučelje, koje je bilo dio izbornika
-Start.
+Most items are no longer applicable on Version 1903 and later unless Cortana
+Conversations (Version 2004 and later) is in use.
 
-* U većini slučajeva se tekstualni odgovori Cortane najavljuju (za oba
-  sučelja). Ako to nije slučaj, ponovo otvori izbornik Start i ponovi
-  pretragu.
+* Textual responses from Cortana are announced in most situations.
 * NVDA neće govoriti kad pričaš sa Cortanom.
-* U Classic Cortana će NVDA najaviti potvrdu termina, ako je postavljen.
 * In Version 1909 (November 2019 Update) and later, modern search experience
   in File Explorer powered by Windows Search user interface is supported.
-
-## Feedback Hub
-
-* Za novija izdanja aplikacija, NVDA više neće dvaput najaviti kategorije
-  povratnih informacija.
 
 ## Pošta
 
@@ -137,17 +115,6 @@ Start.
   omogućena, NVDA će izgovarati adrese i kućne brojeve prilikom kretanja
   strelicama po karti.
 
-## Microsoft Edge
-
-Ovo se odnosi na klasični Microsoft Edge, baziran na EdgeHTML-u.
-
-* Text auto-complete will be tracked and announced in address omnibar. This
-  is now part of NVDA 2019.3.
-* NVDA will no longer play suggestion sound when pressing F11 to toggle full
-  screen. This is now part of NVDA 2019.3.
-* Removed suggestions sound playback for address omnibar. This is now part
-  of NVDA 2019.3.
-
 ## Microsoft Store
 
 * Nakon provjere nadogradnji aplikacija, aplikacije na popisu koje se
@@ -162,12 +129,6 @@ suggestions, and modern input method editors for certain languages. When
 viewing emojis, for best experience, enable Unicode Consortium setting from
 NvDA's speech settings and set symbol level to "some" or higher.
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
-  later, including redesigned panel in Version 1809 (build 17661 and later)
-  and changes made in Version 1903 (build 18262 and later, including kaomoji
-  and symbols categories in build 18305). This is also applicable in Version
-  2004 (build 18963 and later) as the app has been renamed. All of these
-  changes are now part of NVDA 2019.3.
 * When opening clipboard history, NVDA will no longer announce "clipboard"
   when there are items in the clipboard under some circumstances.
 * Na nekim sustavima koji imaju verziju 1903 (nadogradnja svibnja 2019.) i
@@ -189,8 +150,6 @@ NvDA's speech settings and set symbol level to "some" or higher.
   dvaput.
 * Za većinu odabirnih okvira i izbornih gumba, NVDA će uspjeti prepoznati
   oznaku i-ili najaviti promjene vrijednosti.
-* Audio Volume progress bar beeps are no longer heard in Version 1803 and
-  later. This is now part of NVDA 2019.3.
 * NVDA više neće izgledati kao da ništa ne radi ili svirati tonove za
   greške, ako se koriste naredbe navigacijskog objekta pod nekim
   okolnostima.
