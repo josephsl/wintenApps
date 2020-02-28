@@ -16,11 +16,9 @@ privire la ceea ce este inclus):
 
 * Calculator (modern).
 * Calendar
-* Cortana (Classic and Conversations)
-* Centrul de Feedback
+* Cortana (Conversations)
 * Mail
 * Hărți
-* Microsoft Edge
 * Microsoft Store
 * Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
   clipboard history/modern input method editors)
@@ -31,9 +29,9 @@ privire la ceea ce este inclus):
 
 Note:
 
-* This add-on requires Windows 10 Version 1809 (build 17763) or later and
-  NVDA 2019.3 or later. For best results, use the add-on with latest Windows
-  10 stable release (build 18363) and latest stable version of NVDA.
+* This add-on requires Windows 10 Version 1903 (build 18362) or later. For
+  best results, use the add-on with latest Windows 10 stable release (build
+  18363).
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
 * Pentru intrările care nu sunt listate mai jos, puteți presupune că
@@ -51,9 +49,6 @@ versiunile suplimentului][3].
 * NVDA will no longer play error tones or do nothing if this add-on becomes
   active from Windows 7, Windows 8.1, and unsupported releases of Windows
   10.
-* Submenu items are properly recognized in various apps, including context
-  menu for Start menu tiles and microsoft Edge's app menu in Version 1809
-  (October 2018 Update).
 * Anumite dialoguri sunt acum recunoscute ca dialoguri corespunzătoare și
   sunt raportate ca atare. Acestea includ dialogul Insider Preview
   (aplicația setări).
@@ -61,14 +56,10 @@ versiunile suplimentului][3].
   majoritatea cazurilor. Această opțiune este controlată de „informația
   poziției obiectului din dialogul prezentării obiectului, găsit în panoul
   de setări NVDA.
-* NVDA will no longer announce "blank" when pressing up or down arrow to
-  open all apps views in Start menu. This is now part of NVDA 2019.3.
 * When searching in Start menu or File Explorer in Version 1909 (November
   2019 Update) and later, instances of NVDA announcing search results twice
   when reviewing results are less noticeable, which also makes braille
   output more consistent when reviewing items.
-* În anumite meniuri contextuale (cum ar fi în Edge), informația poziției
-  (e.x. 1 din 2) nu mai este anunțată.
 * The following UIA events are recognized: controller for, drag start, drag
   cancel, drag complete, drag target enter, drag target leave, drag target
   dropped, element selected, item status, live region change, notification,
@@ -78,14 +69,10 @@ versiunile suplimentului][3].
   somewhere other than the currently active app.
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
-* Tooltips from Edge and universal apps are recognized and will be
-  announced. This is now part of NVDA 2019.3.
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce current desktop name (desktop 2, for example).
 * NVDA nu mai anunță „dimensiune text start meniu” la schimbarea rezoluției
   ecranului sau a orientării.
-* App name and version for various Microsoft Store apps are now shown
-  correctly. This is now part of NVDA 2019.3.
 * When arranging Start menu tiles or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce information on dragged items or
   new position of the dragged item.
@@ -107,22 +94,13 @@ versiunile suplimentului][3].
 
 ## Cortana
 
-Most items are no longer applicable on Version 1903 and later. Classic
-Cortana refers to older Cortana interface which was part of Start menu.
+Most items are no longer applicable on Version 1903 and later unless Cortana
+Conversations (Version 2004 and later) is in use.
 
-* Textual responses from Cortana (both Classic and Conversations UI) are
-  announced in most situations (if using Classic Cortana, reopen Start menu
-  and try searching again if responses are not announced).
+* Textual responses from Cortana are announced in most situations.
 * NVDA va fi silențios atunci când vorbiți cu Cortana prin voce.
-* In Classic Cortana, NVDA will announce reminder confirmation after you set
-  one.
 * In Version 1909 (November 2019 Update) and later, modern search experience
   in File Explorer powered by Windows Search user interface is supported.
-
-## Centrul de Feedback
-
-* Pentru versiunile mai noi de aplicații, NVDA nu va mai anunța categoriile
-  de feedback de două ori.
 
 ## Mail
 
@@ -139,17 +117,6 @@ Cortana refers to older Cortana interface which was part of Start menu.
   opțiunea "utilizare tastatură" este activată, NVDA va anunța adrese pe
   măsură ce utilizați tastele săgeată pentru a naviga pe hartă.
 
-## Microsoft Edge
-
-This refers to classic EdgeHTML-based Microsoft Edge.
-
-* Text auto-complete will be tracked and announced in address omnibar. This
-  is now part of NVDA 2019.3.
-* NVDA will no longer play suggestion sound when pressing F11 to toggle full
-  screen. This is now part of NVDA 2019.3.
-* Removed suggestions sound playback for address omnibar. This is now part
-  of NVDA 2019.3.
-
 ## Microsoft Store
 
 * După căutarea actualizărilor aplicației, nume de aplicații în lista
@@ -164,12 +131,6 @@ suggestions, and modern input method editors for certain languages. When
 viewing emojis, for best experience, enable Unicode Consortium setting from
 NvDA's speech settings and set symbol level to "some" or higher.
 
-* Support for Emoji input panel in Version 1709 (Fall Creators Update) and
-  later, including redesigned panel in Version 1809 (build 17661 and later)
-  and changes made in Version 1903 (build 18262 and later, including kaomoji
-  and symbols categories in build 18305). This is also applicable in Version
-  2004 (build 18963 and later) as the app has been renamed. All of these
-  changes are now part of NVDA 2019.3.
 * When opening clipboard history, NVDA will no longer announce "clipboard"
   when there are items in the clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update) and later, NVDA
@@ -191,8 +152,6 @@ NvDA's speech settings and set symbol level to "some" or higher.
   ori.
 * Pentru unele casete combinate și butoane rotative, NVDA nu va mai eșua la
   recunoașterea etichetelor și/sau anunțarea schimbărilor valorii.
-* Audio Volume progress bar beeps are no longer heard in Version 1803 and
-  later. This is now part of NVDA 2019.3.
 * NVDA nu va mai fi nevoit să nu facă nimic sau să redea tonuri de eroare
   dacă se utilizează comenzile de navigare ale obiectului în anumite
   circumstanțe.

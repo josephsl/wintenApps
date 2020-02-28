@@ -14,11 +14,9 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 * Kalkulator (nowoczesny).
 * Kalendarz
-* Cortana (klasyczna i konwersacje)
-* Centrum opinii
+* Cortana (konwersacje)
 * Poczta
 * Mapy
-* Microsoft Edge
 * Microsoft Store
 * Klawiatura współczesna (panel emoji/dyktowanie/podpowiedzie wpisywania na
   klawiaturze sprzętowej/historia schowka w chmurze/współczesne edytory
@@ -30,10 +28,10 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* Ten dodatek wymaga wersję systemu operacyjnego Windows 10 1809 (kompilacja
-  17763) lub nowsza i NVDA 2019.3 lub nowsza. Dla najlepszych wyników,
-  trzeba używać dodatku z ostatnią stabilną wersją operacyjnego systemu
-  Windows (kompilacja 18363) i najnowszą stabilną wersją NVDA.
+* Ten dodatek wymaga wersji systemu operacyjnego Windows 10 1903 (kompilacja
+  18362) lub nowsza i NVDA 2019.3 lub nowsza. Dla lepszych wyników, trzeba
+  używać dodatku z ostatnią stabilną wersją operacyjnego systemu Windows
+  (kompilacja 18363).
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
@@ -48,24 +46,16 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * NVDA już nie będzie odtwarzało dźwięki błędu oraz robiło nic jeżeli ten
   dodatek zostanie aktywowany w Windowsie 7, Windowsie 8.1, i niewspieranych
   wersjach Windowsa 10.
-* Elementy meni rozwijanego są prawidłowo rozpoznawane w różnych
-  aplikacjach, takich jak menu kontekstowe dla kafelków meni start, a także
-  menu aplikacji dla Microsoft Edge (aktualizacja 1809).
 * Niektóre okna dialogowe są od teraz prawidłowo rozpoznawane i wymawiane
   jako okna dialogowe. Są to np. okna dialogowe w wersjach testowych
   (settings app). Jest to już wbudowane w sam czytnik ekranu.
 * W większości przypadków, NVDA może ogłaszać liczbę sugestii
   wyszukiwania. Ta funkcja jest kontrolowana przez opcję "odczytuj położenie
   obiektu" dostępną w ustawieniach NVDA, w panelu "prezentacja obiektu".
-* NVDA już nie będzie wymawiała "pusto" gdy jest naciśnięta strzałka w górę
-  lub w dół, aby otworzyć przegląd wszystkich aplikacji w meni start. Jest
-  to teraz częscia NVDA 2019.3.
 * Gdy jest uruchomione wyszukiwanie w wersji 1909 (aktualizacja listopadowa
   2019) i nowszych, podwójnie wymawianie wyników wyszukiwania jest mniej
   zauważalne, co idzie za tym, że to co jest wyświetlane na monitorze
   brajlowskim jest bardziej spójne przy przeglądaniu elementy.
-* W większości meni kontekstowych (tak jak w Microsoft Edge), informacja o
-  położeniu (NP. 1 z 2) nie jest już odczytywana.
 * Następujące zdarzenia UIA są rozpoznawane: controller for, drag start,
   drag cancel, drag complete, drag target enter, drag target leave, drag
   target dropped, element selected, item status, live region change,
@@ -76,15 +66,11 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   aktywnej aplikacji.
 * Teraz jest możliwe śledzenie zdarzeń z określonych oraz specyficznych
   aplikacji.
-* Dymki powiadomien z Edge i aplikacji uniwersalnych są rozpoznawani i są
-  wypowiadani. Jest to teraz częścią NVDA 2019.3.
 * Podczas otwierania, zamykając lub przełączając się między wirtualnymi
   pulpitami, NVDA będzie oznajmiała aktualny identyfikator (na przykład
   pulpit 2).
 * NVDA nie będzie wypowiadało wielkość tekstu w meni start, gdy zmienia się
   rozdzielczość ekranu lub orientacja ekranu.
-* Nazwa i wersja dla niektórych aplikacji z Microsoft store od teraz są
-  poprawnie wyświetlane. jest to teraz czescią NVDA 2019.3.
 * Przy ułożeniu kafelków meni start lub szybkich akcji w centrum akcji za
   pomocą Alt+Shift+strzałek, NVDA będzie wymawiała informację o
   upuszczonyche elementach lub o ich nowych pozycjach.
@@ -107,24 +93,14 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 
 ## Cortana
 
-Niektóre elementy już nie są zastosowalne dla wersji 1903 i
-nowszych. Kortana klasyczna była częścią meni start.
+Większość elementów nie jest już zastosowalna dla wersji 1903 i nowszych
+wyjątkiem są konwersacje Cortana (wersja 2004 and later) .
 
-* Tekstualne odpowiedzi Cortany (zarówno klasycznej jak i interfejsu
-  konwersacji) są wypowiadane w większości sytuacji (Jeśli jest używana
-  klasyczna Cortana, ponownie otwórz Cortanę klasyczną jeśli odpowiedzi nie
-  są wypowiadane).
+* Odpowiedzi tekstowe kortany są wymawiane w większości sytuacjach.
 * NVDA będzie przyciszony, gdy mówisz do Cortany.
-* W Cortany klasycznej, NVDA będzie wypowiadała powiadomienia cortany kiedy
-  jedne będzie ustawione.
 * W wersji 1909 (aktualizacja dla listopada 2019) i nowszych, współczesne
   wyszukiwanie używane przez interfejs wyszukiwania windows od teraz jest
   wymawiane prawidłowo.
-
-## Centrum opinii
-
-* Dla nowych wyda aplikacji, NVDA więcej nie będzie oznajmiało kategorię
-  informacji zwrotnych dwukrotnie.
 
 ## Poczta
 
@@ -139,17 +115,6 @@ nowszych. Kortana klasyczna była częścią meni start.
 * NVDA ottwarza sygnały dźwiękowe położenia dla położenia na mapie.
 * Przy użyciu trybu ulicy i jeśli opcja "użyj klawiatury" jest włączona,
   NVDA będzie wymawiać adresy ulic przy nawigacji strzałkami po mapie.
-
-## Microsoft Edge
-
-Jest to odwołanie do klasycznego Microsoft edge.
-
-* Tekst autouzupełniania w omnibarze będzie poprawnie śledzony i
-  wypowiadany. Jest to teraz częścią  NVDA 2019.3.
-* NVDA już nie będzie odtwarzałą dźwięk podpowiedzi gdy jest włączany tryb
-  pełnoekranowy za pomocą f11. Jest to od teraz częścia NVDA 2019.3.
-* Usunięto odtwarzanie dźwięku podpowiedzi dla omnibaru. Jest to od teraz
-  częścią NVDA 2019.3.
 
 ## Microsoft Store
 
@@ -166,13 +131,6 @@ wprowadzania dla niektórych jezyków. Aby przeglądać emoji, dla najlepszego
 wrażenia, włącz dane konzorcjum unicode i ustaw poziom symboli na "niektóre"
 lub wyżej.
 
-* wsparcie dla Emoji panel wprowadzania w wersji 1709 (zimowa aktualizacja
-  dla twórców) i nowsze, włączając w to przeprojektowany panel w wersji 1809
-  (kompilacja 17661 i nowszy) i zmiany wprowadzone w wersji 1903 (kompilacja
-  18262 i nowsze, włączając w to kaomoji i kategorie symboli w kompilacji
-  18305). Jest to także zastosowane dla wersji 2004 (kompilacja 18963 i
-  nowsze) bo aplikacja zmieniła nazwę. Te wszystkie zmiany od teraz są
-  częscią NVDA 2019.3.
 * Gdy historia schowka jest wypowiadana, NVDA już nie będzie wymawiała
   "schowek" w niektórych przypadkach, gdy istnieje treść.
 * Na niektórych komputerach na których jest uruchomiony Windows 10  1903
@@ -196,8 +154,6 @@ lub wyżej.
   automatycznie.
 * Dla niektórych list rozwijanych i przycisków opcji, NVDA będzie wykrywał
   nazwę oraz wypowiadał zmiany wartości. 
-* Paski postępu głośności już nie są słyszane w wersji 1803 i nowszej. jest
-  to od teraz częscią NVDA 2019.3.
 * W niektórych przypadkach, gdy używana jest nawigacja obiektowa, NVDA nie
   będzie się zachowywał  sposób nijaki, albo nie będzie odtwarzał dźwięku
   błedu.
