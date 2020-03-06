@@ -4,8 +4,6 @@
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
 * Yhteensopivuus: NVDA 2019.3 ja uudemmat
-* Lataa [vanhempi versio,][4] joka on yhteensopiva NVDA 2019.2.1:n ja sitä
-  vanhempien kanssa
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -185,5 +183,3 @@ korkeampi.
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
-
-[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019

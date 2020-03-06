@@ -4,7 +4,6 @@
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
 * NVDA-Kompatibilität: 2019.3 und neuer
-* [Ältere Version herunterladen][4] (kompatibel mit NVDA 2019.2.1 und älter)
 
 Diese Erweiterung bietet eine Sammlung von Anwendungsmodulen für
 verschiedene Windows 10 Anwendungen sowie Korrekturen in einigen Windows 10
@@ -133,11 +132,10 @@ denn, Cortana (Version 2004 und neuer) wird verwendet.
 
 ## Moderne virtuelle Tastaturen
 
-Dazu gehören Emoji-Panel, Verlauf der Zwischenablage, Diktieren,
-Hardware-Eingabevorschläge und moderne Eingabemethoden-Editoren für
-bestimmte Sprachen. Beim Betrachten von Emojis sollten Sie die
-Unicode-Konsortium-Einstellung in den Spracheinstellungen von NvDA
-aktivieren und den Symbol-Level auf "Einige" oder höher setzen.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "Some" or higher.
 
 * Beim Öffnen des Verlauf der Zwischenablage wird NVDA unter Umständen nicht
   mehr das Wort "Zwischenablage" mitteilen, wenn sich Elemente in der
@@ -194,5 +192,3 @@ aktivieren und den Symbol-Level auf "Einige" oder höher setzen.
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
-
-[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019

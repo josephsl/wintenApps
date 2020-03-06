@@ -4,7 +4,6 @@
 * Stiahnuť [stabilnú verziu][1]
 * Stiahnuť [vývojovú verziu][2]
 * Funguje s NVDA od verzie 2019.3.
-* Stiahnuť [Staršiu verziu ][4] pre NVDA do verzie 2019.2.1 .
 
 Obsahuje aplikačné moduly pre rôzne aplikácie systému Windows 10, ako aj
 vylepšenia a opravy určitých ovládacích prvkov systému Windows 10.
@@ -166,5 +165,3 @@ aktivovať v nastaveniach reči použitie databázy unicode konzorcia a nastavi�
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
-
-[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019

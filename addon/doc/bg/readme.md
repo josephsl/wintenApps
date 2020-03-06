@@ -4,8 +4,6 @@
 * Изтегляне на [стабилна версия][1]
 * Изтегляне на [тестова версия][2]
 * Съвместимост с NVDA: 2019.3 и по-нови версии
-* Изтегляне на [по-стара версия][4] съвместима с NVDA 2019.2.1 и по-стари
-  версии
 
 Тази добавка е колекция от спомагателни модули за разни приложения в Windows
 10. Тя също така съдържа поправки и подобрения за разни контроли в
@@ -136,12 +134,10 @@
 
 ## Модерна клавиатура
 
-Това включва панел за емоджи, хронология на клипборда, гласово въвеждане,
-предложения при хардуерно въвеждане и редактори за съвременни методи за
-въвеждане на определени езици. Когато преглеждате емоджи, за най-добро
-изживяване, включете опцията за използване на данни от Уникод консорциума от
-настройките за реч на NVDA и задайте нивото на пунктуацията на "някои" или
-по-високо.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "Some" or higher.
 
 * При отваряне на хронологията на клипборда, NVDA вече няма да съобщава
   "клипборд" при определени обстоятелства, когато има елементи в клипборда.
@@ -197,5 +193,3 @@
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
-
-[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019

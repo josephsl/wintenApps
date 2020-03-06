@@ -3,8 +3,7 @@
 * 作者: Joseph Lee, Derek Riemer and other Windows 10 users
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA compatibility: 2019.3 and beyond
-* Download [older version][4] compatible with NVDA 2019.2.1 and earlier
+* NVDA兼容版本: 2019.3以上
 
 此附加组件用于各种Windows 10应用程序的模块集合，以及针对某些Windows 10控件的增强功能和修复程序。
 
@@ -12,12 +11,11 @@
 
 * 计算器（现代）。
 * 日历
-* Cortana (Conversations)
+* Cortana（会话）
 * 邮件
 * 地图
 * 微软商店
-* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
-  clipboard history/modern input method editors)
+* 现代键盘（表情符号面板/听写/硬件输入建议/云剪贴板历史记录/现代输入法编辑器）
 * {longName} ({name})
   版本: {version}
   网址: {url}
@@ -36,9 +34,8 @@
 
 注意:
 
-* This add-on requires Windows 10 Version 1903 (build 18362) or later. For
-  best results, use the add-on with latest Windows 10 stable release (build
-  18363).
+* 此插件需要Windows 10版本1903（版本18362）或更高版本以及NVDA 2019.2或更高版本。为获得最佳体验，请使用最新Windows
+  10稳定版（build 18363）和最新稳定版NVDA插件配合使用。
 * 一些插件功能可能将成为NVDA屏幕阅读器的一部分。
 * 对于未在下面列出的条目，您可以假定功能是NVDA的一部分，不再适用，因为插件不支持旧版本的Windows
   10，或者对应用程序进行了更改，使条目不再适用。
@@ -71,13 +68,11 @@
 
 ## 小娜
 
-Most items are no longer applicable on Version 1903 and later unless Cortana
-Conversations (Version 2004 and later) is in use.
+大多数项目不再适用于1903版和2004版。经典Cortana指的是较旧的Cortana界面，它现在是“开始”菜单的一部分。
 
-* Textual responses from Cortana are announced in most situations.
+* 现在，在大多数情况下，都会发布来自Cortana的文字回复。
 * 通过语音与Cortana交互时，NVDA将保持沉默。
-* In Version 1909 (November 2019 Update) and later, modern search experience
-  in File Explorer powered by Windows Search user interface is supported.
+* 在版本1909（2019年11月更新）及更高版本中，现在支持资源管理器的Windows 搜索用户的现代界面。
 
 ## 邮件
 
@@ -96,16 +91,12 @@ Conversations (Version 2004 and later) is in use.
 
 ## 系统键盘
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NvDA's speech settings and set symbol level to "some" or higher.
+这包括表情符号面板，剪贴板历史记录，听写，硬件输入建议以及某些语言的现代输入法编辑器。查看表情符号时，为了获得最佳体验，请从NVDA的语音设置中启用Unicode
+Consortium设置，并将符号级别设置为“ Some”或更高。
 
-* When opening clipboard history, NVDA will no longer announce "clipboard"
-  when there are items in the clipboard under some circumstances.
+* 当前，打开剪贴板历史记录时，在某些情况下，剪贴板中有项目时，NVDA将不再读出“剪贴板”。
 * 在某些运行版本1903（2019年5月更新）的系统上，当表情符号面板打开时，NVDA将不再显示任何内容。
-* Added support for modern Chinese, Japanese, and Korean (CJK) IME
-  candidates interface introduced in Version 2004 (build 18965 and later).
+* 增加了对版本2004内部版本18965和更高版本中引入的现代中文，日文和韩文（CJK）IME的支持。
 
 ## {longName} ({name})
 版本: {version}
@@ -144,5 +135,3 @@ NvDA's speech settings and set symbol level to "some" or higher.
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
-
-[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019

@@ -4,8 +4,6 @@
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
 * Compatibilidad con NVDA: 2019.3 y versiones posteriores
-* Descargar [versión más antigua][4] compatible con NVDA 2019.2.1 y
-  versiones anteriores
 
 Este complemento es una colección de app modules para varias aplicaciones de
 Windows 10, así como Mejoras y correcciones para ciertos controles de
@@ -193,5 +191,3 @@ voz de NVDA y configura el nivel de símbolos en "alguno" o más alto.
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
-
-[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019

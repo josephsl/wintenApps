@@ -4,7 +4,6 @@
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
 * Zgodność z wersjami NVDA: 2019.3 i nowsze
-* Pobierz [Wersję starszą][4] zgodna z NVDA 2019.2.1 i starszymi
 
 Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
 również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
@@ -125,11 +124,10 @@ wyjątkiem są konwersacje Cortana (wersja 2004 and later) .
 
 ## Klawiatura nowoczesna
 
-W to jest włączony panel emoji, historia schowka, dyktowanie, podpowiedzi
-dla wpisywania na klawiaturze sprzętowej, i współcześni edytorzy
-wprowadzania dla niektórych jezyków. Aby przeglądać emoji, dla najlepszego
-wrażenia, włącz dane konzorcjum unicode i ustaw poziom symboli na "niektóre"
-lub wyżej.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "Some" or higher.
 
 * Gdy historia schowka jest wypowiadana, NVDA już nie będzie wymawiała
   "schowek" w niektórych przypadkach, gdy istnieje treść.
@@ -185,5 +183,3 @@ lub wyżej.
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
-
-[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019

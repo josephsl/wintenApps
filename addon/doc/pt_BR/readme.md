@@ -3,8 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixe a [versão estável][1]
 * Baixe a [versão em desenvolvimento][2]
-* NVDA compatibility: 2019.3 and beyond
-* Download [older version][4] compatible with NVDA 2019.2.1 and earlier
+* Compatibilidade com NVDA: 2019.3 e posteriores
 
 Este complemento é uma coleção de módulos de aplicativos — app modules —
 para vários aplicativos do Windows 10, bem como aprimoramentos e correções
@@ -19,9 +18,10 @@ detalhes sobre o que está incluído):
 * Cortana (Conversations)
 * Email
 * Mapas
-* Microsoft Store
-* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
-  clipboard history/modern input method editors)
+* Microsoft Store (Loja da Microsoft)
+* Teclado moderno (painel emoji/ditado/sugestões de entrada de
+  hardware/histórico da área de transferência na nuvem/editores de métodos
+  de entrada modernos)
 * Pessoas
 * Configurações (configurações do sistema, Windows+I)
 * Clima.
@@ -29,60 +29,65 @@ detalhes sobre o que está incluído):
 
 Notas:
 
-* This add-on requires Windows 10 Version 1903 (build 18362) or later. For
-  best results, use the add-on with latest Windows 10 stable release (build
-  18363).
+* Este complemento requer o Windows 10 Versão 1903 (compilação 18362) ou
+  posterior. Para obter melhores resultados, use o complemento com a versão
+  estável mais recente do Windows 10 (compilação 18363).
 * Alguns recursos do complemento são ou farão parte do leitor de tela NVDA.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support old Windows 10
-  releases, or changes were made to Windows 10 and apps that makes entries
-  no longer applicable.
+* Para entradas não listadas abaixo, você pode assumir que os recursos fazem
+  parte do NVDA, não são mais aplicáveis, pois o complemento não oferece
+  suporte a versões antigas do Windows 10, ou foram feitas alterações no
+  Windows 10 e aplicativos que tornam as entradas não mais aplicáveis.
 
 Para obter uma lista de alterações feitas entre cada lançamento do
 complemento, consulte o documento [changelogs for add-on releases][3].
 
 ## Geral
 
-* NVDA will no longer play error tones or do nothing if this add-on becomes
-  active from Windows 7, Windows 8.1, and unsupported releases of Windows
-  10.
-* In addition to dialogs recognized by NVDA, more dialogs are now recognized
-  as proper dialogs and reported as such, including Insider Preview dialog
-  (settings app).
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation panel found in NVDA settings.
-* When searching in Start menu or File Explorer in Version 1909 (November
-  2019 Update) and later, instances of NVDA announcing search results twice
-  when reviewing results are less noticeable, which also makes braille
-  output more consistent when reviewing items.
-* The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, drag target enter, drag target leave, drag target
-  dropped, element selected, item status, live region change, notification,
-  system alert, text change, tooltip opened, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard if notifications come from
-  somewhere other than the currently active app.
-* It is possible to tracke only specific events and/or events coming from
-  specific apps.
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce current desktop name (desktop 2, for example).
+* NVDA não reproduzirá mais tons de erro ou não fará nada se esse
+  complemento se tornar ativo no Windows 7, Windows 8.1 e em versões não
+  suportadas do Windows 10.
+* Além dos diálogos reconhecidos pelo NVDA, agora mais caixas de diálogo são
+  reconhecidas como adequadas e relatadas como tal, incluindo o diálogo
+  Insider Preview (aplicativo de configurações).
+* NVDA pode anunciar a contagem de sugestões ao realizar uma pesquisa na
+  maioria dos casos. Essa opção é controlada por "Anunciar informações de
+  posição do objeto" no painel de Apresentação de objetos, encontrado nas
+  configurações do NVDA.
+* Ao pesquisar no menu Iniciar ou no Explorador de Arquivo na versão 1909
+  (Atualização de Novembro de 2019) e posteriores, as instâncias do NVDA
+  anunciando os resultados da pesquisa duas vezes ao revisar os resultados
+  são menos perceptíveis, o que também torna a saída de braille mais
+  consistente ao revisar itens.
+* Os seguintes eventos UIA são reconhecidos: controlador para, arrastar
+  início, arrastar cancelamento, arrastar completo, elemento selecionado,
+  status do item, alteração da região ativa, notificação, alerta do sistema,
+  alteração do texto, dica de ferramenta aberta, janela aberta. Com o NVDA
+  configurado para ser executado com o log de depuração ativado, esses
+  eventos serão rastreados e, para o evento de notificação UIA, um bipe de
+  depuração será ouvido se as notificações vierem de algum lugar diferente
+  do aplicativo atualmente ativo.
+* É possível rastrear apenas eventos específicos e/ou eventos provenientes
+  de aplicativos específicos.
+* Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
+  anunciará o nome atual da área de trabalho (área de trabalho 2, por
+  exemplo).
 * O NVDA deixará de anunciar o tamanho do texto do menu Iniciar quando
   alterar as resoluções ou a orientação da tela.
-* When arranging Start menu tiles or Action Center quick actions with
-  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
-  new position of the dragged item.
+* Ao organizar os blocos do menu Iniciar ou as ações rápidas da Central de
+  Ações com as teclas Alt+Shift+setas, o NVDA anuncia informações sobre
+  itens arrastados ou nova posição do item arrastado.
 
 ## Calculadora
 
-* When ENTER or Escape is pressed, NVDA will announce calculation results.
+* Quando pressionar ENTER ou Esc, o NVDA anunciará os resultados do cálculo.
 * Para cálculos como conversor de unidades e conversor de moeda, o NVDA
   anunciará os resultados assim que os cálculos forem inseridos.
 * O NVDA não anunciará mais "nível de cabeçalho" para os resultados da
   calculadora.
-* NVDA will notify if maximum digit count has been reached while entering
-  expressions.
-* Added support for always on mode in Calculator version 10.1908 and later.
+* O NVDA notificará se a contagem máxima de dígitos foi atingida ao inserir
+  expressões.
+* Adicionado suporte para o modo sempre ativo na Calculadora versão 10.1908
+  e posteriores.
 
 ## Calendário
 
@@ -91,13 +96,14 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 ## Cortana
 
-Most items are no longer applicable on Version 1903 and later unless Cortana
-Conversations (Version 2004 and later) is in use.
+A maioria dos itens não é mais aplicável na versão 1903 e posteriores, a
+menos que Cortana Conversations (versão 2004 e posteriores) esteja em uso.
 
-* Textual responses from Cortana are announced in most situations.
+* As respostas textuais da Cortana são anunciadas na maioria das situações.
 * O NVDA ficará em silêncio ao falar com Cortana via voz.
-* In Version 1909 (November 2019 Update) and later, modern search experience
-  in File Explorer powered by Windows Search user interface is supported.
+* Na Versão 1909 (Atualização de Novembro de 2019) e mais recente, é
+  suportada a experiência de pesquisa moderna no Explorador de Arquivo
+  desenvolvido pela interface de usuário da Pesquisa do Windows.
 
 ## Email
 
@@ -114,7 +120,7 @@ Conversations (Version 2004 and later) is in use.
   ativada, o NVDA anunciará os endereços de rua enquanto usa as teclas de
   seta para navegar no mapa.
 
-## Microsoft Store
+## Microsoft Store (Loja da Microsoft)
 
 * Depois de verificar as atualizações de aplicativos, os nomes dos
   aplicativos na lista de aplicativos a serem atualizados, são indicados
@@ -124,17 +130,21 @@ Conversations (Version 2004 and later) is in use.
 
 ## Teclado moderno
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NvDA's speech settings and set symbol level to "some" or higher.
+Isso inclui painel de emoji, histórico da área de transferência, ditado,
+sugestões de entrada de hardware e editores modernos de métodos de entrada
+para determinados idiomas. Ao visualizar emojis, para melhor experiência,
+ative a configuração do Consórcio Unicode nas configurações de fala do NVDA
+e defina o grau de símbolo como "Pouco" ou superior.
 
-* When opening clipboard history, NVDA will no longer announce "clipboard"
-  when there are items in the clipboard under some circumstances.
-* On some systems running Version 1903 (May 2019 Update) and later, NVDA
-  will no longer appear to do nothing when emoji panel opens.
-* Added support for modern Chinese, Japanese, and Korean (CJK) IME
-  candidates interface introduced in Version 2004 (build 18965 and later).
+* Ao abrir o histórico da área de transferência, o NVDA não anunciará mais a
+  "área de transferência" quando houver itens na área de transferência em
+  algumas circunstâncias.
+* Em alguns sistemas que executam a Versão 1903 (Atualização de Maio de
+  2019) e posteriores, o NVDA não parece mais não fazer nada quando o painel
+  de emoji é aberto.
+* Adicionado suporte para interfaces candidata a IME Chinesa, Japonesa e
+  Coreana (CJK) modernas, introduzida na versão 2004 (compilação 18965 e
+  posteriores).
 
 ## Pessoas
 
@@ -143,9 +153,9 @@ NvDA's speech settings and set symbol level to "some" or higher.
 
 ## Configurações
 
-* Certain information such as Windows Update progress is reported
-  automatically, including Storage sense/disk cleanup widget and errors from
-  Windows Update.
+* Certas informações, como o progresso do Windows Update, são relatadas
+  automaticamente, incluindo o widget de detecção de disco/limpeza de disco
+  e os erros do Windows Update.
 * Os valores da barra de progresso e outras informações já não são
   anunciados duas vezes.
 * Para algumas caixas combinadas e botões de opção, o NVDA não falhará ao
@@ -154,23 +164,24 @@ NvDA's speech settings and set symbol level to "some" or higher.
   comandos de navegação de objetos sob algumas circunstâncias.
 * A caixa de diálogo do lembrete do Windows Update é reconhecida como um
   diálogo apropriado.
-* Odd control labels seen in certain Windows 10 installations has been
-  corrected.
-* In more recent revisions of Version 1803 and later, due to changes to
-  Windows Update procedure for feature updates, a "download and install now"
-  link has been added. NVDA will now announce the title for the new update
-  if present.
+* Etiquetas de controle estranhas vistas em determinadas instalações do
+  Windows 10 foram corrigidas.
+* Nas revisões mais recentes da Versão 1803 e posteriores, devido a
+  alterações no procedimento do Windows Update para atualizações de
+  recursos, foi adicionado um link "baixar e instalar agora". Agora, o NVDA
+  anunciará o título da nova atualização, se presente.
 
 ## Clima
 
 * Abas como "previsão" e "mapas" são reconhecidas como guias adequadas
   (patch de Derek Riemer).
-* When reading a forecast, use the left and right arrows to move between
-  items. Use the up and down arrows to read the individual items. For
-  example, pressing the right arrow might report "Monday: 79 degrees, partly
-  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
-  again will read the next item (Like the temperature). This currently works
-  for daily and hourly forecasts.
+* Ao ler uma previsão, use as setas esquerda e direita para se mover entre
+  os itens. Use as setas para cima e para baixo para ler os itens
+  individuais. Por exemplo, pressionar a seta para a direita pode indicar
+  "Segunda-feira: 79 graus, parcialmente nublado, ..." pressionar a seta
+  para baixo dirá "Segunda-feira". Em seguida, pressionar novamente lerá o
+  próximo item (como a temperatura). Atualmente, isso funciona para
+  previsões diárias e horárias.
 
 [[!tag dev stable]]
 
@@ -179,5 +190,3 @@ NvDA's speech settings and set symbol level to "some" or higher.
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
-
-[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019

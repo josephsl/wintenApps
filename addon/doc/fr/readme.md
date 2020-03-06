@@ -4,7 +4,6 @@
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
 * NVDA compatibility: 2019.3 and beyond
-* Download [older version][4] compatible with NVDA 2019.2.1 and earlier
 
 Cette extension est une collection d'app modules pour diverses apps de
 Windows 10, ainsi que des améliorations et des correctifs pour certains
@@ -132,7 +131,7 @@ Conversations (Version 2004 and later) is in use.
 This includes emoji panel, clipboard history, dictation, hardware input
 suggestions, and modern input method editors for certain languages. When
 viewing emojis, for best experience, enable Unicode Consortium setting from
-NvDA's speech settings and set symbol level to "some" or higher.
+NVDA's speech settings and set symbol level to "Some" or higher.
 
 * When opening clipboard history, NVDA will no longer announce "clipboard"
   when there are items in the clipboard under some circumstances.
@@ -185,5 +184,3 @@ NvDA's speech settings and set symbol level to "some" or higher.
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
-
-[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019

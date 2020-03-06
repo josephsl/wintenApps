@@ -4,8 +4,6 @@
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
 * Compatibilidade con NVDA: 2019.3 en diante
-* Descargar [versión máis antiga][4] compatible con NVDA 2019.2.1 e
-  anteriores
 
 Este complemento é unha coleción de app modules para varias aplicacións de
 Windows 10, así coma melloras e correccións para certos controis de windows
@@ -188,5 +186,3 @@ o nivel de símbolos en "algunha" ou superior.
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
-
-[4]: https://addons.nvda-project.org/files/get.php?file=w10-2019
