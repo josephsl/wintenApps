@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA compatibility: 2019.3 and beyond
+* NVDA kompatibilnost: 2019.3 i novija
 
 Ovaj NVDA dodatak je zbirka aplikacijskih modula za razne Windows 10
 aplikacije, kao i poboljšanja i ispravci određenih windows 10 kontrola.
@@ -17,18 +17,18 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 * Pošta
 * Karte
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
-  clipboard history/modern input method editors)
+* Moderna tipkovnica (emoji ploča, diktatiranje, prijedlozi za ulazni
+  hardver, povijest međuspremnika oblaka, moderni uređivači za način unosa)
 * Osobe
 * Postavke (postavke sustava, Windows+I)
-* Prognoza
+* Vremenska prognoza.
 * Dodatni moduli za kontrole kao što su pločice izbornika Start.
 
 Napomene:
 
-* This add-on requires Windows 10 Version 1903 (build 18362) or later. For
-  best results, use the add-on with latest Windows 10 stable release (build
-  18363).
+* Za ovaj dodatak potrebna je Windows 10 verzija 1903 (verzija 18362) ili
+  novija. Za najbolje rezultate, koristi dodatak s najnovijim stabilnim
+  izdanjem sustava Windows 10 (gradnja 18363).
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Za unose koji niže dolje nisu navedeni, može se pretpostaviti da su te
   funkcije dio NVDA čitača. Više nisu primjenjive jer dodatak ne podržava
@@ -92,13 +92,14 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 
 ## Cortana
 
-Most items are no longer applicable on Version 1903 and later unless Cortana
-Conversations (Version 2004 and later) is in use.
+Većina stavki više nije primjenjiva u verzijama 1903 i novijim, ukoliko se
+ne koristi Cortana Conversations (verzija 2004 i novije).
 
-* Textual responses from Cortana are announced in most situations.
+* Tekstualni odgovori Cortane najavljuju se u većini slučajeva.
 * NVDA neće govoriti kad pričaš sa Cortanom.
-* In Version 1909 (November 2019 Update) and later, modern search experience
-  in File Explorer powered by Windows Search user interface is supported.
+* U verziji 1909 (studeni 2019.) i novijim verzijama, podržano je moderno
+  pretraživanja u Exploreru datoteka koje pokreće korisničko sučelje Windows
+  Search.
 
 ## Pošta
 
@@ -123,18 +124,19 @@ Conversations (Version 2004 and later) is in use.
 
 ## Moderna tipkovnica
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "Some" or higher.
+To uključuje ploču s emojijima, povijest međuspremnika, diktatiranje,
+prijedloge unosa hardvera i moderne uređivače načina unosa za određene
+jezike. Kad pregledavaš emojije, aktiviraj postavku Unicode Consortium u
+NVDA postavkama govora i postavi razinu simbola na „Neki” ili višu.
 
-* When opening clipboard history, NVDA will no longer announce "clipboard"
-  when there are items in the clipboard under some circumstances.
+* Prilikom otvaranja povijesti međuspremnika, pod nekim okolnostima, NVDA
+  više neće objavljivati „međuspremnik” kad se u međuspremniku nalaze
+  stavke.
 * Na nekim sustavima koji imaju verziju 1903 (nadogradnja svibnja 2019.) i
   noviju, NVDA više neće izgledati kao da ništa ne radi kad se otvori ploča
   s emojijima.
-* Added support for modern Chinese, Japanese, and Korean (CJK) IME
-  candidates interface introduced in Version 2004 (build 18965 and later).
+* Dodana je podrška za sučelja suvremenih IME kandidata za kineski, japanski
+  i korejski (CJK), uvedena u verziji 2004 (gradnja 18965 i novije).
 
 ## Osobe
 

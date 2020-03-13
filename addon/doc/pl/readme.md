@@ -124,10 +124,11 @@ wyjątkiem są konwersacje Cortana (wersja 2004 and later) .
 
 ## Klawiatura nowoczesna
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "Some" or higher.
+Włączony jest w to panel emoji, historia schowka, dyktowanie, podpowiedzi
+klawiatury sprzętowej, i współczesne edytory IME dla niektórych
+języków. Przy przeglądaniu emoji, dla najlepszego doświadczenia, włącz
+ustawienie Unicode consortium i ustaw poziom symboli na "niektóre" lub
+większy.
 
 * Gdy historia schowka jest wypowiadana, NVDA już nie będzie wymawiała
   "schowek" w niektórych przypadkach, gdy istnieje treść.
