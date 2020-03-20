@@ -70,7 +70,7 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 * NVDA više neće najaviti veličinu teksta izbornika Start, kad se mijenja
   rezolucija ili položaj ekrana.
 * Kad se pločice izbornika Start ili brze radnje za Action Center
-  raspoređuju s tipkama Alt+Shift+strelice, NVDA će najaviti podatke o
+  raspoređuju s tipkama Alt+šift+strelice, NVDA će najaviti podatke o
   povučenim stavkama ili o novom položaju povučene stavke.
 
 ## Kalkulator

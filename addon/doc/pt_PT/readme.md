@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixar [versão estável][1]
 * Baixar [versão de desenvolvimento][2]
-* NVDA compatibility: 2019.3 and beyond
+* Compatibilidade com NVDA: 2018.4 a 2019.2
 
 Este extra é uma colecção de módulos de aplicações para várias aplicações do
 Windows 10, bem como aprimoramentos e correcções para determinados
@@ -56,13 +56,14 @@ consulte o documento [changelogs for releases, release][3].
   2019 Update) and later, instances of NVDA announcing search results twice
   when reviewing results are less noticeable, which also makes braille
   output more consistent when reviewing items.
-* The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, drag target enter, drag target leave, drag target
-  dropped, element selected, item status, live region change, notification,
-  system alert, text change, tooltip opened, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard if notifications come from
-  somewhere other than the currently active app.
+* Os seguintes eventos UIA são, agora, reconhecidos: alteração da posição do
+  texto activo, controlador para, arrastar início, arrastar cancelamento,
+  arrastar completo, elemento selecionado, alterar região ao vivo,
+  notificação, alerta do sistema, tooltip aberta, janela aberta. Com o NVDA
+  configurado para ser executado com o log de depuração activado, esses
+  eventos serão rastreados e, para o evento de notificação UIA, um beep de
+  depuração será ouvido se as notificações vierem de algum lugar diferente
+  do aplicativo actualmente activo.
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
