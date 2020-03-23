@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and other Windows 10 users
 * Download [stable version][1]
 * Download [development version][2]
-* NVDA compatibility: 2019.3
+* NVDA compatibility: 2019.3 to 2020.1
 
 This add-on is a collection of app modules for various Windows 10 apps, as well as enhancements and fixes for certain windows 10 controls.
 
@@ -40,6 +40,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
 * When arranging Start menu tiles or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce information on dragged items or new position of the dragged item.
+* IN recent releases of Word 365, NVDA will no longer announce "delete back word" when pressing Control+Backspace.
 
 ## Calculator
 
