@@ -251,6 +251,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				import tones
 				# For debugging purposes.
 				tones.beep(500, 100)
+		# In recent versions of Word 365, notification event is used to announce editing functions, some of them being quite anoying.
+		if obj.appModule.appName == "winword" and activityId == "AccSN2":
+			return
 		nextHandler()
 
 	def event_UIA_dragStart(self, obj, nextHandler):
