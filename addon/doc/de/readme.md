@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA-Kompatibilität: 2019.3 und neuer
+* NVDA compatibility: 2019.3 to 2020.1
 
 Diese Erweiterung bietet eine Sammlung von Anwendungsmodulen für
 verschiedene Windows 10 Anwendungen sowie Korrekturen in einigen Windows 10
@@ -77,6 +77,8 @@ Versionen][3].
 * Beim Anordnen von Startmenükacheln oder Action-Center-Schnellaktionen mit
   Alt+Umschalt+Pfeiltasten gibt NVDA Informationen zu gezogenen Elementen
   oder zur neuen Position des gezogenen Elements an.
+* IN recent releases of Word 365, NVDA will no longer announce "delete back
+  word" when pressing Control+Backspace.
 
 ## Rechner
 
@@ -135,7 +137,7 @@ denn, Cortana (Version 2004 und neuer) wird verwendet.
 This includes emoji panel, clipboard history, dictation, hardware input
 suggestions, and modern input method editors for certain languages. When
 viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "Some" or higher.
+NvDA's speech settings and set symbol level to "some" or higher.
 
 * Beim Öffnen des Verlauf der Zwischenablage wird NVDA unter Umständen nicht
   mehr das Wort "Zwischenablage" mitteilen, wenn sich Elemente in der

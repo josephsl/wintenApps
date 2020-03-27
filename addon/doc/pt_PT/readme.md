@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixar [versão estável][1]
 * Baixar [versão de desenvolvimento][2]
-* Compatibilidade com NVDA: 2018.4 a 2019.2
+* NVDA compatibility: 2019.3 to 2020.1
 
 Este extra é uma colecção de módulos de aplicações para várias aplicações do
 Windows 10, bem como aprimoramentos e correcções para determinados
@@ -73,6 +73,8 @@ consulte o documento [changelogs for releases, release][3].
 * When arranging Start menu tiles or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce information on dragged items or
   new position of the dragged item.
+* IN recent releases of Word 365, NVDA will no longer announce "delete back
+  word" when pressing Control+Backspace.
 
 ## Calculadora
 
@@ -127,7 +129,7 @@ Conversations (Version 2004 and later) is in use.
 This includes emoji panel, clipboard history, dictation, hardware input
 suggestions, and modern input method editors for certain languages. When
 viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "Some" or higher.
+NvDA's speech settings and set symbol level to "some" or higher.
 
 * When opening clipboard history, NVDA will no longer announce "clipboard"
   when there are items in the clipboard under some circumstances.

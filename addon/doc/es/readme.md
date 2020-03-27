@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer y otros usuarios de Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
-* Compatibilidad con NVDA: 2019.3 y versiones posteriores
+* Compatibilidad con NVDA: de 2019.3 a 2020.1
 
 Este complemento es una colección de app modules para varias aplicaciones de
 Windows 10, así como Mejoras y correcciones para ciertos controles de
@@ -75,6 +75,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * Al reordenar los elementos del menú Inicio o acciones rápidas del centro
   de actividades con alt+shift+flechas, NVDA anunciará información de los
   elementos arrastrados o su nueva posición.
+* En las últimas versiones de Word 365, NVDA ya no anunciará "Eliminar
+  palabra anterior" al pulsar control+retroceso.
 
 ## Calculadora
 

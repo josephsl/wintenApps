@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2019.3 and beyond
+* NVDA compatibility: 2019.3 to 2020.1
 
 Denne tilføjelse er en samling af app-moduler til forskellige Windows 10
 apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.
@@ -69,6 +69,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * When arranging Start menu tiles or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce information on dragged items or
   new position of the dragged item.
+* IN recent releases of Word 365, NVDA will no longer announce "delete back
+  word" when pressing Control+Backspace.
 
 ## Lommeregner
 
@@ -126,7 +128,7 @@ Conversations (Version 2004 and later) is in use.
 This includes emoji panel, clipboard history, dictation, hardware input
 suggestions, and modern input method editors for certain languages. When
 viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "Some" or higher.
+NvDA's speech settings and set symbol level to "some" or higher.
 
 * When opening clipboard history, NVDA will no longer announce "clipboard"
   when there are items in the clipboard under some circumstances.

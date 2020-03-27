@@ -1,9 +1,9 @@
-# Windows 10 aplicativos essenciais #
+# Windows 10 Aplicativos Essenciais (Windows 10 App Essentials) #
 
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixe a [versão estável][1]
 * Baixe a [versão em desenvolvimento][2]
-* Compatibilidade com NVDA: 2019.3 e posteriores
+* Compatibilidade com NVDA: 2019.3 a 2020.1
 
 Este complemento é uma coleção de módulos de aplicativos — app modules —
 para vários aplicativos do Windows 10, bem como aprimoramentos e correções
@@ -76,6 +76,8 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 * Ao organizar os blocos do menu Iniciar ou as ações rápidas da Central de
   Ações com as teclas Alt+Shift+setas, o NVDA anuncia informações sobre
   itens arrastados ou nova posição do item arrastado.
+* Nas versões recentes do Word 365, o NVDA não anunciará mais "excluir
+  palavra anterior" ao pressionar Control+Backspace.
 
 ## Calculadora
 
@@ -134,7 +136,7 @@ Isso inclui painel de emoji, histórico da área de transferência, ditado,
 sugestões de entrada de hardware e editores modernos de métodos de entrada
 para determinados idiomas. Ao visualizar emojis, para melhor experiência,
 ative a configuração do Consórcio Unicode nas configurações de fala do NVDA
-e defina o grau de símbolo como "Pouco" ou superior.
+e defina o grau de símbolo como "pouco" ou superior.
 
 * Ao abrir o histórico da área de transferência, o NVDA não anunciará mais a
   "área de transferência" quando houver itens na área de transferência em

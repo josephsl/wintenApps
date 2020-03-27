@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA kompatibilnost: 2019.3 i novija
+* NVDA kompatibilnost: 2019.3 do 2020.1
 
 Ovaj NVDA dodatak je zbirka aplikacijskih modula za razne Windows 10
 aplikacije, kao i poboljšanja i ispravci određenih windows 10 kontrola.
@@ -72,6 +72,8 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 * Kad se pločice izbornika Start ili brze radnje za Action Center
   raspoređuju s tipkama Alt+šift+strelice, NVDA će najaviti podatke o
   povučenim stavkama ili o novom položaju povučene stavke.
+* U nedavnim izdanjima Worda 365, NVDA više neće objavljivati „izbriši
+  riječi ispred” pritiskom na kontrol+backspace.
 
 ## Kalkulator
 
@@ -127,7 +129,7 @@ ne koristi Cortana Conversations (verzija 2004 i novije).
 To uključuje ploču s emojijima, povijest međuspremnika, diktatiranje,
 prijedloge unosa hardvera i moderne uređivače načina unosa za određene
 jezike. Kad pregledavaš emojije, aktiviraj postavku Unicode Consortium u
-NVDA postavkama govora i postavi razinu simbola na „Neki” ili višu.
+NVDA postavkama govora i postavi razinu simbola na „neki” ili višu.
 
 * Prilikom otvaranja povijesti međuspremnika, pod nekim okolnostima, NVDA
   više neće objavljivati „međuspremnik” kad se u međuspremniku nalaze

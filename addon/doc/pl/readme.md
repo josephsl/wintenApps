@@ -3,7 +3,7 @@
 * Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
-* Zgodność z wersjami NVDA: 2019.3 i nowsze
+* NVDA compatibility: 2019.3 to 2020.1
 
 Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
 również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
@@ -73,6 +73,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * Przy ułożeniu kafelków meni start lub szybkich akcji w centrum akcji za
   pomocą Alt+Shift+strzałek, NVDA będzie wymawiała informację o
   upuszczonyche elementach lub o ich nowych pozycjach.
+* IN recent releases of Word 365, NVDA will no longer announce "delete back
+  word" when pressing Control+Backspace.
 
 ## Kalkulator
 
@@ -124,11 +126,10 @@ wyjątkiem są konwersacje Cortana (wersja 2004 and later) .
 
 ## Klawiatura nowoczesna
 
-Włączony jest w to panel emoji, historia schowka, dyktowanie, podpowiedzi
-klawiatury sprzętowej, i współczesne edytory IME dla niektórych
-języków. Przy przeglądaniu emoji, dla najlepszego doświadczenia, włącz
-ustawienie Unicode consortium i ustaw poziom symboli na "niektóre" lub
-większy.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NvDA's speech settings and set symbol level to "some" or higher.
 
 * Gdy historia schowka jest wypowiadana, NVDA już nie będzie wymawiała
   "schowek" w niektórych przypadkach, gdy istnieje treść.

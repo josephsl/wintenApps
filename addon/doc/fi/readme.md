@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2019.3 ja uudemmat
+* NVDA compatibility: 2019.3 to 2020.1
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -71,6 +71,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * Kun Käynnistä-valikon ruutuja tai Toimintokeskuksen pikatoimintoja
   järjestellään Alt+Vaihto+nuolinäppäimillä, NVDA puhuu raahattujen
   kohteiden tiedot tai raahatun kohteen uuden sijainnin.
+* IN recent releases of Word 365, NVDA will no longer announce "delete back
+  word" when pressing Control+Backspace.
 
 ## Laskin
 
@@ -123,12 +125,10 @@ Cortana-keskustelut (versio 2004 ja uudemmat) ole käytössä.
 
 ## Moderni näppäimistö
 
-Näitä ovat emojipaneeli, leikepöydän historia, sanelu, ehdotukset
-syötettäessä tekstiä fyysisellä näppäimistöllä sekä modernin
-syöttömenetelmän editorit tietyille kielille. Ota käyttöön emojeita
-tarkasteltaessa parhaan kokemuksen saamiseksi Unicode-konsortion datan
-asetus NVDA:n puheasetuksista ja aseta symbolitasoksi "jotain" tai
-korkeampi.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NvDA's speech settings and set symbol level to "some" or higher.
 
 * NVDA ei enää sano leikepöydän historiaa avattaessa joissakin tilanteissa
   "leikepöytä", kun leikepöydällä on kohteita.

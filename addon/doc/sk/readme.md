@@ -3,7 +3,7 @@
 * Autory: Joseph Lee, Derek Riemer a ďalší používatelia Windowsu 10
 * Stiahnuť [stabilnú verziu][1]
 * Stiahnuť [vývojovú verziu][2]
-* Funguje s NVDA od verzie 2019.3.
+* Funguje s NVDA 2019.3 a 2020.1
 
 Obsahuje aplikačné moduly pre rôzne aplikácie systému Windows 10, ako aj
 vylepšenia a opravy určitých ovládacích prvkov systému Windows 10.
@@ -68,6 +68,8 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
   orientácie obrazovky.
 * Pri presúvaní dlaždíc alebo položiek v centre akcií (skratky
   alt+shift+šípky), NVDA oznamuje nové umiestnenie položiek.
+* NVDA viac neoznamuje správu "zmazať slovo" pri mazaní skratkou
+  ctrl+backspace vo Worde 365.
 
 ## Kalkulačka
 

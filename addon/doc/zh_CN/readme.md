@@ -3,7 +3,7 @@
 * 作者: Joseph Lee, Derek Riemer and other Windows 10 users
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA兼容版本: 2019.3以上
+* NVDA compatibility: 2019.3 to 2020.1
 
 此附加组件用于各种Windows 10应用程序的模块集合，以及针对某些Windows 10控件的增强功能和修复程序。
 
@@ -53,6 +53,8 @@
 * 在虚拟桌面之间打开，关闭或切换时，NVDA将朗读当前桌面名称（例如，桌面2）。
 * 在更改屏幕分辨率或方向时，NVDA将不再公布“开始”菜单大小文本。
 * 当使用Alt + Shift +箭头键托移“开始”菜单图块或“操作中心”快速操作时，NVDA将朗读有关所拖动项目或所拖动项目的新位置的信息。
+* IN recent releases of Word 365, NVDA will no longer announce "delete back
+  word" when pressing Control+Backspace.
 
 ## 计算器
 
@@ -91,8 +93,10 @@
 
 ## 系统键盘
 
-这包括表情符号面板，剪贴板历史记录，听写，硬件输入建议以及某些语言的现代输入法编辑器。查看表情符号时，为了获得最佳体验，请从NVDA的语音设置中启用Unicode
-Consortium设置，并将符号级别设置为“ Some”或更高。
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NvDA's speech settings and set symbol level to "some" or higher.
 
 * 当前，打开剪贴板历史记录时，在某些情况下，剪贴板中有项目时，NVDA将不再读出“剪贴板”。
 * 在某些运行版本1903（2019年5月更新）的系统上，当表情符号面板打开时，NVDA将不再显示任何内容。
