@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros usuarios do Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
-* NVDA compatibility: 2019.3 to 2020.1
+* Compatibilidade con NVDA: da 2019.3 á 2020.1
 
 Este complemento é unha coleción de app modules para varias aplicacións de
 Windows 10, así coma melloras e correccións para certos controis de windows
@@ -75,8 +75,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
 * Ao ordear as tarxetas do menú inicio ou as accións rápidas do centro de
   accións con Alt+Shift+teclas de frechas, NVDA anunciará información sobre
   os elementos arrastrados ou da nova posición dos mesmos.
-* IN recent releases of Word 365, NVDA will no longer announce "delete back
-  word" when pressing Control+Backspace.
+* En novas versións de Word 365, NVDA non lerá "delete back word" ao premer
+  Control+Retroceso.
 
 ## Calculadora
 
@@ -130,10 +130,11 @@ que esteas a usar Cortana Conversations (versión 2004 e posteriores).
 
 ## Teclado Moderno
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NvDA's speech settings and set symbol level to "some" or higher.
+Isto inclúe o panel de Emoji, o historial do portapapeis, o dictado, as
+suxestións de entrada por hardware, e os editores co método de entrada
+moderna para certas linguas. Ao ver emojis, para unha mellor experiencia,
+habilita a opción Unicode Consortium nos axustes de voz do NvDA e establece
+o nivel de símbolos en "algunha" ou superior.
 
 * Ao abrir o historial do portapapeis, NVDA xa non anunciará "portapapeis"
   cando haxa elementos no portapapeis baixo algunhas circunstancias.
