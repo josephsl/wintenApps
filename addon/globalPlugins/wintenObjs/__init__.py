@@ -252,7 +252,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				# For debugging purposes.
 				tones.beep(500, 100)
 		# In recent versions of Word 365, notification event is used to announce editing functions, some of them being quite anoying.
-		if obj.appModule.appName == "winword" and activityId == "AccSN2":
+		if obj.appModule.appName == "winword" and activityId in ("AccSN1", "AccSN2"):
 			return
 		nextHandler()
 
