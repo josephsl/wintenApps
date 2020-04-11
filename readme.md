@@ -14,6 +14,7 @@ The following app modules or support modules for some apps are included (see eac
 * Cortana (Conversations)
 * Mail
 * Maps
+* Microsoft Solitaire Collection
 * Microsoft Store
 * Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud clipboard history/modern input method editors)
 * People
@@ -71,6 +72,10 @@ Most items are no longer applicable on Version 1903 and later unless Cortana Con
 
 * NVDA plays location beep for map locations.
 * When using street side view and if "use keyboard" option is enabled, NVDA will announce street addresses as you use arrow keys to navigate the map.
+
+## Microsoft Solitaire Collection
+
+* NVDA will announce names of cards and card decks.
 
 ## Microsoft Store
 
