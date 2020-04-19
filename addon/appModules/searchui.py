@@ -30,10 +30,10 @@ class AppModule(AppModule):
 			if obj.UIAElement.cachedAutomationID == "suggestionCountForNarrator" and obj.firstChild is not None:
 				obj.name = obj.firstChild.name
 
-	def chooseNVDAObjectOverlayClasses(self,obj,clsList):
+	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Without this, NVDA will announce "suggestions" in braille.
 		# Return early so the app module class included in NVDA Core can proceed with checking for other overlay classes.
-		if isinstance(obj,UIA) and obj.UIAElement.cachedAutomationID == "SearchTextBox":
+		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "SearchTextBox":
 			clsList.insert(0, StartMenuSearchField)
 			return
 		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)

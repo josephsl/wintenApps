@@ -99,7 +99,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		for event, name in W10Events.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
-				UIAHandler.handler.clientObject.addAutomationEventHandler(event,UIAHandler.handler.rootElement,UIAHandler.TreeScope_Subtree,UIAHandler.handler.baseCacheRequest,UIAHandler.handler)
+				UIAHandler.handler.clientObject.addAutomationEventHandler(event, UIAHandler.handler.rootElement, UIAHandler.TreeScope_Subtree, UIAHandler.handler.baseCacheRequest, UIAHandler.handler)
 				log.debug(f"W10: added event ID {event}, assigned to {name}")
 		# Allow NVDA to recognize more dialogs, especially ones that are not advertising themselves as such.
 		for dialogClassName in UIAAdditionalDialogClassNames:
