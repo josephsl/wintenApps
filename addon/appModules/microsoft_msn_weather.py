@@ -46,7 +46,7 @@ class WeatherForecastItem(NVDAObject):
 
 	def script_previousLine(self, gesture):
 		if self.curLine > 0:
-			self.curLine -=1
+			self.curLine -= 1
 			ui.message(self.lines[self.curLine])
 		else:
 			# Translators: Message presented when no more weather data is available for the current item.

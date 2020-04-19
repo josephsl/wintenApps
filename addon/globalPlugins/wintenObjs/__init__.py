@@ -53,7 +53,7 @@ class UIAEditableTextWithSuggestions(EditableTextWithSuggestions, UIA):
 
 	def event_UIA_controllerFor(self):
 		# Obtain controller for property directly instead of relying on focused control.
-		if len(self.controllerFor)>0:
+		if len(self.controllerFor) > 0:
 			self.event_suggestionsOpened()
 		else:
 			self.event_suggestionsClosed()

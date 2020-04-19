@@ -18,17 +18,17 @@ class MapLocation(UIA):
 	"""Plays a tone indicating the current map position."""
 
 	def event_becomeNavigatorObject(self):
-		l,t,w,h=self.location
+		l,t,w,h = self.location
 		x = l+(w/2)
 		y = t+(h/2)
 		screenWidth, screenHeight = api.getDesktopObject().location[2:]
 		if x <= screenWidth or y <= screenHeight:
-			minPitch=config.conf['mouse']['audioCoordinates_minPitch']
-			maxPitch=config.conf['mouse']['audioCoordinates_maxPitch']
-			curPitch=minPitch+((maxPitch-minPitch)*((screenHeight-y)/float(screenHeight)))
-			brightness=config.conf['mouse']['audioCoordinates_maxVolume']
-			leftVolume=int((85*((screenWidth-float(x))/screenWidth))*brightness)
-			rightVolume=int((85*(float(x)/screenWidth))*brightness)
+			minPitch = config.conf['mouse']['audioCoordinates_minPitch']
+			maxPitch = config.conf['mouse']['audioCoordinates_maxPitch']
+			curPitch = minPitch+((maxPitch-minPitch)*((screenHeight-y)/float(screenHeight)))
+			brightness = config.conf['mouse']['audioCoordinates_maxVolume']
+			leftVolume = int((85*((screenWidth-float(x))/screenWidth))*brightness)
+			rightVolume = int((85*(float(x)/screenWidth))*brightness)
 			tones.beep(curPitch,40,left=leftVolume,right=rightVolume)
 		super(MapLocation,self).event_becomeNavigatorObject()
 
@@ -61,4 +61,4 @@ class AppModule(appModuleHandler.AppModule):
 		# And no, never call next handler.
 
 	def event_appModule_loseFocus(self):
-		self.liveText= ""
+		self.liveText = ""
