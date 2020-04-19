@@ -178,7 +178,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				info.append(f"item status: {element.currentItemStatus}")
 			if globalVars.appArgs.debugLogging: logger = log.debug
 			else: logger = log.info
-			logger(u"W10: UIA {debuginfo}".format(debuginfo = ", ".join(info)))
+			logger(u"W10: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
 	def event_nameChange(self, obj, nextHandler):
 		# NVDA Core issue 5641: try catching virtual desktop switch event, which will result in name change for the desktop object.
