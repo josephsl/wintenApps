@@ -13,17 +13,17 @@ from NVDAObjects import NVDAObject
 import addonHandler
 addonHandler.initTranslation()
 
-#Regexp for deciding whether this ID should be a tab control
+# Regexp for deciding whether this ID should be a tab control
 RE_TAB_AUTOMATION_MATCH = re.compile("|".join([
 	r"L1NavigationButton_(Places|Home|Maps|Historical|News)",
 	r"L1NavigationButton_Feedback",
 ]))
-#Regexp for deciding if this should be a button
+# Regexp for deciding if this should be a button
 RE_BUTTONCONTROL = re.compile("|".join([
 	r"L1NavigationButton_Settings",
 ]))
-#Regexp for multiLine List items, whos children need the list class added.
-#This is because the AutomationID for them is non existant, so we check their parent.
+# Regexp for multiLine List items, whos children need the list class added.
+# This is because the AutomationID for them is non existant, so we check their parent.
 RE_PARENT_LISTS = re.compile("|".join([
 	r"DailyList",
 	r"HourlyList",
