@@ -32,7 +32,7 @@ RE_PARENT_LISTS = re.compile("|".join([
 class WeatherForecastItem(NVDAObject):
 
 	def initOverlayClass(self):
-		self.curLine = -1 #Start out reading the first thing.
+		self.curLine = -1  # Start out reading the first thing.
 		self.lines = self.name.split("\r\n")
 
 	def script_nextLine(self, gesture):
