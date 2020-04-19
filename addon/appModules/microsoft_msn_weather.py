@@ -54,8 +54,8 @@ class WeatherForecastItem(NVDAObject):
 			wx.Bell()
 
 	__gestures = {
-		"kb:downarrow" : "nextLine",
-		"kb:uparrow" : "previousLine",
+		"kb:downArrow": "nextLine",
+		"kb:upArrow": "previousLine",
 	}
 
 class AppModule(appModuleHandler.AppModule):
