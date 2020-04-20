@@ -11,6 +11,7 @@ import winVersion
 import addonHandler
 addonHandler.initTranslation()
 
+
 def onInstall():
 	requiredVer = "Windows 10 Version 1903"
 	# Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
