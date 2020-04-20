@@ -9,7 +9,6 @@ import ui
 from NVDAObjects.UIA import UIA, SearchField, Dialog
 from NVDAObjects.behaviors import EditableTextWithSuggestions
 import api
-import nvwave
 import config
 import queueHandler
 import eventHandler
