@@ -8,6 +8,7 @@ import appModuleHandler
 import UIAHandler
 import controlTypes
 
+
 class AppModule(appModuleHandler.AppModule):
 
 	def event_NVDAObject_init(self, obj):

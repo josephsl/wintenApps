@@ -9,6 +9,7 @@ import ui
 import controlTypes
 from NVDAObjects.UIA import UIA
 
+
 class AppModule(appModuleHandler.AppModule):
 
 	def event_NVDAObject_init(self, obj):

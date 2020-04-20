@@ -9,6 +9,7 @@ import api
 import ui
 import controlTypes
 
+
 class AppModule(appModuleHandler.AppModule):
 
 	# Sometimes, Cortana's textual response is announced twice.

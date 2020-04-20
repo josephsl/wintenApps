@@ -15,6 +15,7 @@ import controlTypes
 from NVDAObjects.UIA import ComboBoxWithoutValuePattern
 import winVersion
 
+
 class AppModule(AppModule):
 
 	def event_NVDAObject_init(self, obj):

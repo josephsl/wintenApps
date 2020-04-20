@@ -7,6 +7,7 @@
 import appModuleHandler
 from NVDAObjects.UIA import UIA, SuggestionListItem
 
+
 class AppModule(appModuleHandler.AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):

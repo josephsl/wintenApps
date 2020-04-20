@@ -8,6 +8,7 @@ import appModuleHandler
 import ui
 from NVDAObjects.UIA import UIA
 
+
 class AppModule(appModuleHandler.AppModule):
 
 	def event_nameChange(self, obj, nextHandler):

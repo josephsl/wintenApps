@@ -47,6 +47,7 @@ W10Events = {
 # Additional dialogs not recognized by NVDA itself.
 UIAAdditionalDialogClassNames = ["Popup"]
 
+
 # General UIA controller for edit field.
 # Used as a base class for controls such as Mail's composition window, search fields and such.
 class UIAEditableTextWithSuggestions(EditableTextWithSuggestions, UIA):
@@ -57,6 +58,7 @@ class UIAEditableTextWithSuggestions(EditableTextWithSuggestions, UIA):
 			self.event_suggestionsOpened()
 		else:
 			self.event_suggestionsClosed()
+
 
 # Search fields.
 # Unlike the Core implementation, this class announces suggestion count, to be incorporated into NVDA later.

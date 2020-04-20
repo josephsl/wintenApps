@@ -12,6 +12,7 @@ from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import RowWithFakeNavigation
 import ui
 
+
 class MailItemRow(RowWithFakeNavigation, UIA):
 
 	# Since 2019, columns are exposed as regular children, not simple children, breaking the below two scripts.

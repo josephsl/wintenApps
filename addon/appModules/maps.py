@@ -12,6 +12,7 @@ from NVDAObjects.UIA import UIA
 import tones
 import ui
 
+
 # Map locations
 # A static text denoting where one is located on the map.
 class MapLocation(UIA):

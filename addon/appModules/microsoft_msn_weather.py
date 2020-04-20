@@ -29,6 +29,7 @@ RE_PARENT_LISTS = re.compile("|".join([
 	r"HourlyList",
 ]))
 
+
 class WeatherForecastItem(NVDAObject):
 
 	def initOverlayClass(self):
@@ -57,6 +58,7 @@ class WeatherForecastItem(NVDAObject):
 		"kb:downArrow": "nextLine",
 		"kb:upArrow": "previousLine",
 	}
+
 
 class AppModule(appModuleHandler.AppModule):
 

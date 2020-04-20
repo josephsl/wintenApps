@@ -14,6 +14,7 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *
 import eventHandler
 
+
 class AppModule(AppModule):
 
 	def event_UIA_elementSelected(self, obj, nextHandler):

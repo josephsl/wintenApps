@@ -7,6 +7,7 @@
 
 from .hxoutlook import *
 
+
 class AppModule(AppModule):
 
 	def event_NVDAObject_init(self, obj):
