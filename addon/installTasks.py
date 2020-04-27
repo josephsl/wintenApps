@@ -5,14 +5,14 @@
 # Mostly checks compatibility.
 # Routines are partly based on other add-ons, particularly Place Markers by Noelia Martinez (thanks add-on authors).
 
-import gui
-import wx
-import winVersion
 import addonHandler
 addonHandler.initTranslation()
 
 
 def onInstall():
+	import gui
+	import wx
+	import winVersion
 	requiredVer = "Windows 10 Version 1903"
 	# Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 	if not winVersion.isWin10(version=1903) and gui.messageBox(_("You are using an older version of Windows. This add-on requires {minSupportedVersion} or later. Are you sure you wish to install this add-on anyway?").format(minSupportedVersion=requiredVer),

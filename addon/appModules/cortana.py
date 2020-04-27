@@ -16,7 +16,7 @@ class AppModule(appModuleHandler.AppModule):
 	_cortanaResponse = ""
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, **kwargs):
-		# For some reason Cortana fires this event whenever user types and answer is received.
+		# For some reason Cortana fires this event whenever user types and an answer is received.
 		# Results are displayed inside a list.
 		# Thus respond to both and see what should be announced.
 		if displayString != "Cortana message received.": return
@@ -26,8 +26,8 @@ class AppModule(appModuleHandler.AppModule):
 		responses = api.getForegroundObject().children[1].simpleFirstChild.next
 		try:
 			cortanaResponse = responses.children[-1]
-			if cortanaResponse.firstChild.role == controlTypes.ROLE_GROUPING:
-				cortanaResponse = cortanaResponse.firstChild.firstChild
+			if cortanaResponse.name.startswith("Cortana") and cortanaResponse.simpleFirstChild.role == controlTypes.ROLE_GROUPING:
+				cortanaResponse = cortanaResponse.simpleFirstChild.firstChild
 				# When searching through Bing, summary text shows up.
 				if cortanaResponse.childCount > 1:
 					cortanaResponse = ", ".join([response.name for response in cortanaResponse.children])
@@ -38,5 +38,6 @@ class AppModule(appModuleHandler.AppModule):
 			try:
 				ui.message(cortanaResponse)
 				self._cortanaResponse = cortanaResponse
-			except IndexError:
+			except (IndexError, TypeError):
+				# IndexError deals with multi-part mesage, while TypeError deals with a list item with users's message on it. Skip them.
 				pass
