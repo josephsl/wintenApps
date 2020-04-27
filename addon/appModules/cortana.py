@@ -37,5 +37,6 @@ class AppModule(appModuleHandler.AppModule):
 			try:
 				ui.message(cortanaResponse)
 				self._cortanaResponse = cortanaResponse
-			except IndexError:
+			except (IndexError, TypeError):
+				# IndexError deals with multi-part mesage, while TypeError deals with a list item with users's message on it. Skip them.
 				pass
