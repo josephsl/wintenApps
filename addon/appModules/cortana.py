@@ -23,7 +23,7 @@ class AppModule(appModuleHandler.AppModule):
 		# Version 1.1910 (beta) changed UIA tree for responses list.
 		# 1.1911 (beta) and version 2 changed the tree yet again.
 		# Thankfully, Cortana's response is part of a grouping object.
-		responses = api.getForegroundObject().children[1].simpleFirstChild
+		responses = api.getForegroundObject().children[1].simpleFirstChild.next
 		try:
 			cortanaResponse = responses.children[-1]
 			if cortanaResponse.firstChild.role == controlTypes.ROLE_GROUPING:
