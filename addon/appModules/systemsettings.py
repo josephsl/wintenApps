@@ -70,10 +70,12 @@ class AppModule(AppModule):
 			# Don't repeat the fact that update download/installation is in progress if progress bar beep is on.
 			return not (automationID == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock" and obj.previous.value and obj.previous.value > "0")
 		# Except for specific cases, announce all live regions.
-		# Do not announce "result not found" error unless have to.
-		if ((automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID != "StatusTextPopup")
-		# Announce individual update progress in build 16215 and later preferably only once per update stage.
-		or ("ApplicableUpdate" in automationID and not automationID.endswith("_ContextDescriptionTextBlock"))):
+		if (
+			# Do not announce "result not found" error unless have to.
+			(automationID == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationID != "StatusTextPopup")
+			# Announce individual update progress in build 16215 and later preferably only once per update stage.
+			or ("ApplicableUpdate" in automationID and not automationID.endswith("_ContextDescriptionTextBlock"))
+		):
 			return False
 		return True
 
@@ -97,9 +99,12 @@ class AppModule(AppModule):
 		if isinstance(obj, UIA):
 			# Storage/disk cleanup progress bar raises name change event.
 			# Because "Purging:" is announced multiple times, coerce this to live region change event, which does handle this case.
-			if (obj.UIAElement.cachedAutomationID == "SystemSettings_StorageSense_TemporaryFiles_InstallationProgressBar"
-			# Announce result text for Storage Sense/cleanup.
-			or obj.UIAElement.cachedAutomationID.startswith("SystemSettings_StorageSense_SmartPolicy_ExecuteNow")):
+			if (
+				# Because "Purging:" is announced multiple times, coerce this to live region change event, which does handle this case.
+				obj.UIAElement.cachedAutomationID == "SystemSettings_StorageSense_TemporaryFiles_InstallationProgressBar"
+				# Announce result text for Storage Sense/cleanup.
+				or obj.UIAElement.cachedAutomationID.startswith("SystemSettings_StorageSense_SmartPolicy_ExecuteNow")
+			):
 				self.event_liveRegionChange(obj, nextHandler)
 		nextHandler()
 
