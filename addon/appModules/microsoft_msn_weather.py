@@ -71,7 +71,7 @@ class AppModule(appModuleHandler.AppModule):
 			theId = obj.UIAElement.CachedAutomationId
 		except AttributeError:
 			return
-		if obj.UIAElement.CachedAutomationId == "SideNavigationBar" and not obj.role in (controlTypes.ROLE_GROUPING, ):
+		if obj.UIAElement.CachedAutomationId == "SideNavigationBar" and obj.role != controlTypes.ROLE_GROUPING:
 			obj.role = controlTypes.ROLE_TABCONTROL
 		if RE_TAB_AUTOMATION_MATCH.match(theId):
 			obj.role = controlTypes.ROLE_TAB
