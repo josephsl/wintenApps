@@ -72,7 +72,7 @@ class SearchField(SearchField):
 			if self.UIAElement.cachedAutomationID == "TextBox" or self.UIAElement.cachedAutomationID == "SearchTextBox" and self.appModule.appName not in ("searchui", "searchapp"):
 				# Item count must be the last one spoken.
 				suggestionsCount = self.controllerFor[0].childCount
-				suggestionsMessage = "1 suggestion" if suggestionsCount == 1 else "%s suggestions"%suggestionsCount
+				suggestionsMessage = "1 suggestion" if suggestionsCount == 1 else "{} suggestions".format(suggestionsCount)
 				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
 
 
