@@ -4,36 +4,36 @@
 # Change this file instead of sconstruct or manifest files, whenever possible.
 
 # Full getext (please don't change)
-_ = lambda x : x
+_ = lambda x: x
 
 # Add-on information variables
 addon_info = {
 	# for previously unpublished addons, please follow the community guidelines at:
 	# https://bitbucket.org/nvdaaddonteam/todo/raw/master/guideLines.txt
 	# add-on Name, internal for nvda
-	"addon_name" : "wintenApps",
+	"addon_name": "wintenApps",
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on to be shown on installation and add-on information.
-	"addon_summary" : _("Windows 10 App Essentials"),
+	"addon_summary": _("Windows 10 App Essentials"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description" : _("""A collection of app modules for various Windows 10 apps"""),
+	"addon_description": _("""A collection of app modules for various Windows 10 apps"""),
 	# version
-	"addon_version" : "20.05",
+	"addon_version": "20.05",
 	# Author(s)
-	"addon_author" : u"Joseph Lee <joseph.lee22590@gmail.com>, Derek Riemer <driemer.riemer@gmail.com> and others",
+	"addon_author": u"Joseph Lee <joseph.lee22590@gmail.com>, Derek Riemer <driemer.riemer@gmail.com> and others",
 	# URL for the add-on documentation support
-	"addon_url" : "https://addons.nvda-project.org/",
+	"addon_url": "https://addons.nvda-project.org/",
 	# Documentation file name
-	"addon_docFileName" : "readme.html",
+	"addon_docFileName": "readme.html",
 	# Minimum NVDA version supported
-	"addon_minimumNVDAVersion" : "2019.3.0",
+	"addon_minimumNVDAVersion": "2019.3.0",
 	# Last NVDA version supported/tested
-	"addon_lastTestedNVDAVersion" : "2020.2.0",
+	"addon_lastTestedNVDAVersion": "2020.2.0",
 	# Minimum Windows version supported
-	"addon_minimumWindowsVersion" : "10.0.18362",
+	"addon_minimumWindowsVersion": "10.0.18362",
 	# Add-on update channel (default is stable)
-	"addon_updateChannel" : None,
+	"addon_updateChannel": None,
 }
 
 
