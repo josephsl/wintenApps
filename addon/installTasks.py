@@ -13,8 +13,8 @@ def onInstall():
 	import gui
 	import wx
 	import winVersion
-	requiredVer = "Windows 10 Version 1903"
-	if not winVersion.isWin10(version=1903) and gui.messageBox(
+	requiredVer = "Windows 10 Version 1909"
+	if not winVersion.isWin10(version=1909) and gui.messageBox(
 		# Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
 		_("You are using an older version of Windows. This add-on requires {minSupportedVersion} or later. Are you sure you wish to install this add-on anyway?").format(minSupportedVersion=requiredVer),
 		# Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
