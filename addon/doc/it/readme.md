@@ -16,6 +16,7 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 * Cortana (Conversations)
 * Posta
 * Mappe
+* Microsoft Solitaire Collection
 * Microsoft Store
 * Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
   clipboard history/modern input method editors)
@@ -114,6 +115,10 @@ Conversations (Version 2004 and later) is in use.
 * Quando si usa la visualizzazione per strade e l'opzione "utilizza
   tastiera" è attiva, NVDA annuncerà gli indirizzi delle vie mentre si
   scorre la mappa con le frecce.
+
+## Microsoft Solitaire Collection
+
+* NVDA will announce names of cards and card decks.
 
 ## Microsoft Store
 

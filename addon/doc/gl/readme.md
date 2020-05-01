@@ -18,6 +18,7 @@ se inclúe):
 * Cortana (Conversations)
 * Correo
 * Mapas
+* Microsoft Solitaire Collection
 * Tenda Microsoft
 * Teclado Moderno (panel de emoji/ditado/suxestións de entrada por
   hardware/historial do portapapeis na nube/editores co método de entrada
@@ -120,6 +121,10 @@ que esteas a usar Cortana Conversations (versión 2004 e posteriores).
 * Cando se usa a vista lateral da rúa e se a opción "usar teclado" está
   habilitada, NVDA anunciará os enderezos das rúas según utilices as teclas
   das frechas para navegar polo mapa.
+
+## Microsoft Solitaire Collection
+
+* NVDA anunciará os nomes das tarxetas e das pías de tarxetas.
 
 ## Tenda Microsoft
 

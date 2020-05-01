@@ -18,6 +18,7 @@ detalhes sobre o que está incluído):
 * Cortana (Conversations)
 * Email
 * Mapas
+* Microsoft Solitaire Collection (Coleção de Paciência)
 * Microsoft Store (Loja da Microsoft)
 * Teclado moderno (painel emoji/ditado/sugestões de entrada de
   hardware/histórico da área de transferência na nuvem/editores de métodos
@@ -121,6 +122,10 @@ menos que Cortana Conversations (versão 2004 e posteriores) esteja em uso.
 * Ao usar a vista lateral da rua e se a opção "Usar teclado" estiver
   ativada, o NVDA anunciará os endereços de rua enquanto usa as teclas de
   seta para navegar no mapa.
+
+## Microsoft Solitaire Collection (Coleção de Paciência)
+
+* O NVDA anunciará os nomes das cartas e dos baralhos.
 
 ## Microsoft Store (Loja da Microsoft)
 

@@ -16,6 +16,7 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Cortana (Conversations)
 * Mail
 * Kort
+* Microsoft Solitaire Collection
 * Microsoft store
 * Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
   clipboard history/modern input method editors)
@@ -115,6 +116,10 @@ Conversations (Version 2004 and later) is in use.
 * Når du bruger side street view, og hvis indstillingen "Brug tastaturet" er
   aktiveret, annoncere NVDA gadenavne, som du bruger piletasterne til at
   navigere kortet.
+
+## Microsoft Solitaire Collection
+
+* NVDA will announce names of cards and card decks.
 
 ## Microsoft store
 

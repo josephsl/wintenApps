@@ -18,6 +18,7 @@ qué se incluye):
 * Cortana (conversaciones)
 * Correo
 * Mapas
+* Microsoft Solitaire Collection
 * Microsoft Store
 * Teclado Moderno (panel emoji / dictado / sugerencias de entrada hardware /
   elementos del portapapeles en la nube / editores modernos de método de
@@ -122,6 +123,10 @@ en uso.
 * Cuando se utiliza la vista lateral de la calle y si la opción "usar
   teclado" está habilitada, NVDA anunciará las direcciones de las calles
   según utilices las teclas de flechas para navegar por el mapa.
+
+## Microsoft Solitaire Collection
+
+* NVDA anunciará los nombres de las cartas y los montones de cartas.
 
 ## Microsoft Store
 

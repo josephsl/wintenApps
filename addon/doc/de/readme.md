@@ -17,6 +17,7 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 * Cortana (Unterhaltungen)
 * E-Mail
 * Karten
+* Microsoft Solitaire Collection
 * Microsoft Store
 * Moderne Tastatur (Emoji-Panel- / Diktier- / Hardware-Eingabevorschläge /
   Cloud-Zwischenablage-Elemente in Version 1709 und höher)
@@ -124,6 +125,10 @@ denn, Cortana (Version 2004 und neuer) wird verwendet.
 * Wenn Sie die Straßenseitenansicht verwenden und die Option"Tastatur
   verwenden" aktiviert ist, wird NVDA Straßenadressen ankündigen, während
   Sie mit den Pfeiltasten durch die Karte navigieren.
+
+## Microsoft Solitaire Collection
+
+* NVDA will announce names of cards and card decks.
 
 ## Microsoft Store
 
