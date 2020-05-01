@@ -98,7 +98,6 @@ class AppModule(AppModule):
 	def event_nameChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
 			# Storage/disk cleanup progress bar raises name change event.
-			# Because "Purging:" is announced multiple times, coerce this to live region change event, which does handle this case.
 			if (
 				# Because "Purging:" is announced multiple times, coerce this to live region change event, which does handle this case.
 				obj.UIAElement.cachedAutomationID == "SystemSettings_StorageSense_TemporaryFiles_InstallationProgressBar"
