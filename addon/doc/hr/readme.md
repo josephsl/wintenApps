@@ -16,6 +16,7 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 * Cortana (Conversations)
 * Pošta
 * Karte
+* Microsoft Solitaire Collection
 * Microsoft Store
 * Moderna tipkovnica (emoji ploča, diktatiranje, prijedlozi za ulazni
   hardver, povijest međuspremnika oblaka, moderni uređivači za način unosa)
@@ -116,6 +117,10 @@ ne koristi Cortana Conversations (verzija 2004 i novije).
 * Prilikom korištenja prikaza ulice te ako je opcija „korištenje tipkovnice”
   omogućena, NVDA će izgovarati adrese i kućne brojeve prilikom kretanja
   strelicama po karti.
+
+## Microsoft Solitaire Collection
+
+* NVDA će najaviti imenta karata i setove karata.
 
 ## Microsoft Store
 

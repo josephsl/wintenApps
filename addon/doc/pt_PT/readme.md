@@ -18,6 +18,7 @@ detalhes sobre o que está incluído):
 * Cortana (Conversations)
 * Correio.
 * Mapas.
+* Microsoft Solitaire Collection
 * Microsoft Store
 * Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
   clipboard history/modern input method editors)
@@ -116,6 +117,10 @@ Conversations (Version 2004 and later) is in use.
 * Ao usar a vista lateral da rua e se a opção "Usar teclado" estiver
   activada, o NVDA anunciará os endereços de rua enquanto usa as teclas de
   seta para navegar no mapa.
+
+## Microsoft Solitaire Collection
+
+* NVDA will announce names of cards and card decks.
 
 ## Microsoft Store
 

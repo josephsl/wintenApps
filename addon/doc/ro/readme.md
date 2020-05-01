@@ -18,6 +18,7 @@ privire la ceea ce este inclus):
 * Cortana (Conversations)
 * Mail
 * Hărți
+* Microsoft Solitaire Collection
 * Microsoft Store
 * Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
   clipboard history/modern input method editors)
@@ -117,6 +118,10 @@ Conversations (Version 2004 and later) is in use.
 * Atunci când se utilizează vedere din stradă laterală și în cazul în care
   opțiunea "utilizare tastatură" este activată, NVDA va anunța adrese pe
   măsură ce utilizați tastele săgeată pentru a naviga pe hartă.
+
+## Microsoft Solitaire Collection
+
+* NVDA will announce names of cards and card decks.
 
 ## Microsoft Store
 

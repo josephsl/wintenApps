@@ -16,6 +16,7 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 * Cortana (konwersacje)
 * Poczta
 * Mapy
+* Microsoft Solitaire Collection
 * Microsoft Store
 * Klawiatura współczesna (panel emoji/dyktowanie/podpowiedzie wpisywania na
   klawiaturze sprzętowej/historia schowka w chmurze/współczesne edytory
@@ -117,6 +118,10 @@ wyjątkiem są konwersacje Cortana (wersja 2004 and later) .
 * NVDA ottwarza sygnały dźwiękowe położenia dla położenia na mapie.
 * Przy użyciu trybu ulicy i jeśli opcja "użyj klawiatury" jest włączona,
   NVDA będzie wymawiać adresy ulic przy nawigacji strzałkami po mapie.
+
+## Microsoft Solitaire Collection
+
+* NVDA będzie wymawiała nazwy kart i talij.
 
 ## Microsoft Store
 

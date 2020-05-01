@@ -15,6 +15,7 @@ Zahrnuté sú nasledujúce moduly (podrobný popis nájdete nižšie):
 * Cortana (konverzácia)
 * Pošta
 * Mapy
+* Microsoft Solitaire Collection
 * Obchod microsoft
 * Podpora pre vstupy (zahŕňa panel emoji, diktovanie, návrhy pri písaní,
   schránka a moderné spôsoby písania)
@@ -107,6 +108,10 @@ Conversations (od verzie 2004).
 * NVDA zvukom indikuje polohu na mape.
 * Ak používate zobrazenie s pohľadom na ulicu, a ak je povolená možnosť
   použiť klávesnicu, NVDA pri pohybe šípkami oznamuje názvy ulíc.
+
+## Microsoft Solitaire Collection
+
+* NVDA oznamuje karty a kombinácie kariet.
 
 ## Obchod microsoft
 

@@ -17,6 +17,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Cortana (keskustelut)
 * Sähköposti
 * Kartat
+* Microsoft Solitaire Collection
 * Microsoft Store
 * Moderni näppäimistö (emojipaneeli/sanelu/fyysisen näppäimistösyötteen
   ehdotukset/pilvileikepöydän historia/modernin syöttömenetelmän editorit)
@@ -115,6 +116,10 @@ Cortana-keskustelut (versio 2004 ja uudemmat) ole käytössä.
 * NVDA ilmoittaa katuosoitteet käyttäessäsi nuolinäppäimiä kartalla
   liikkumiseen oltaessa katunäkymässä ja mikäli "käytä näppäimistöä"
   -vaihtoehto on otettu käyttöön.
+
+## Microsoft Solitaire Collection
+
+* NVDA will announce names of cards and card decks.
 
 ## Microsoft Store
 
