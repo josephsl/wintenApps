@@ -1,7 +1,7 @@
 # NVDA add-on template  SCONSTRUCT file
-#Copyright (C) 2012, 2014 Rui Batista <ruiandrebatista@gmail.com>
-#This file is covered by the GNU General Public License.
-#See the file COPYING.txt for more details.
+# Copyright (C) 2012-2020 Rui Batista, Noelia Martinez, Joseph Lee
+# This file is covered by the GNU General Public License.
+# See the file COPYING.txt for more details.
 
 import codecs
 import gettext
@@ -27,13 +27,12 @@ def md2html(source, dest):
 			mdText = mdText.replace(k, v, 1)
 		htmlText = markdown.markdown(mdText)
 	with codecs.open(dest, "w", "utf-8") as f:
-		f.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-			"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\n" +
-			"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n" +
-			"<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"%s\" lang=\"%s\">\n" % (lang, lang) +
+		f.write("<!DOCTYPE html>\n" +
+			"<html lang=\"%s\">\n" % lang +
 			"<head>\n" +
-			"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n" +
-			"<link rel=\"stylesheet\" type=\"text/css\" href=\"../style.css\" media=\"screen\"/>\n" +
+			"<meta charset=\"UTF-8\">\n" +
+			"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
+			"<link rel=\"stylesheet\" type=\"text/css\" href=\"../style.css\" media=\"screen\">\n" +
 			"<title>%s</title>\n" % title +
 			"</head>\n<body>\n"
 		)
@@ -70,6 +69,9 @@ elif env["version"] is not None:
 	env["addon_version"] = env["version"]
 if "channel" in env and env["channel"] is not None:
 	env["addon_updateChannel"] = env["channel"]
+
+buildVars.addon_info["addon_version"] = env["addon_version"]
+buildVars.addon_info["addon_updateChannel"] = env["addon_updateChannel"]
 
 addonFile = env.File("${addon_name}-${addon_version}.nvda-addon")
 
@@ -120,8 +122,6 @@ def createAddonBundleFromPath(path, dest):
 
 def generateManifest(source, dest):
 	addon_info = buildVars.addon_info
-	addon_info["addon_version"] = env["addon_version"]
-	addon_info["addon_updateChannel"] = env["addon_updateChannel"]
 	with codecs.open(source, "r", "utf-8") as f:
 		manifest_template = f.read()
 	manifest = manifest_template.format(**addon_info)
