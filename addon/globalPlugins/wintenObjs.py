@@ -136,8 +136,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				clsList.insert(0, UIAEditableTextWithSuggestions)
 				return
 			# Recognize headings as reported by XAML (build 17134 and later).
+			# But not for apps such as Calculator where doing so results in confusing user experience.
 			elif obj._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) > UIAHandler.HeadingLevel_None:
-				clsList.insert(0, XAMLHeading)
+				if obj.appModule.appName != "calculator":
+					clsList.insert(0, XAMLHeading)
 		except:
 			pass
 
