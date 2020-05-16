@@ -5,9 +5,9 @@
 * Baixe a [versão em desenvolvimento][2]
 * Compatibilidade com NVDA: 2019.3 a 2020.1
 
-Este complemento é uma coleção de módulos de aplicativos — app modules —
-para vários aplicativos do Windows 10, bem como aprimoramentos e correções
-para determinados controles.
+Este complemento é uma coleção de módulos de aplicativos (app modules) para
+vários aplicativos do Windows 10, bem como aprimoramentos e correções para
+determinados controles.
 
 Os seguintes módulos de aplicativos ou módulos de suporte para alguns
 aplicativos estão incluídos (consulte a seção de cada aplicativo para obter
