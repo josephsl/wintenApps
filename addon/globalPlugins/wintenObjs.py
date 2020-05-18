@@ -259,6 +259,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# In recent versions of Word 365, notification event is used to announce editing functions, some of them being quite anoying.
 		if obj.appModule.appName == "winword" and activityId in ("AccSN1", "AccSN2"):
 			return
+		# Do not allow notification to be announced if "report notifications" is off.
+		if not config.conf["presentation"]["reportHelpBalloons"]:
+			return
 		nextHandler()
 
 	def event_UIA_dragStart(self, obj, nextHandler):
