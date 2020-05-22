@@ -78,6 +78,10 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   elementos arrastrados o su nueva posición.
 * En las últimas versiones de Word 365, NVDA ya no anunciará "Eliminar
   palabra anterior" al pulsar control+retroceso.
+* Algunos anuncios, como los de cambio de brillo o volumen en el explorador
+  de archivos y las notificaciones de actualización de aplicaciones de la
+  tienda Microsoft pueden suprimirse desactivando Anunciar notificaciones
+  desde las opciones de presentación de objetos de NVDA.
 
 ## Calculadora
 

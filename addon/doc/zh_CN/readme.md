@@ -55,6 +55,9 @@
 * 在更改屏幕分辨率或方向时，NVDA将不再公布“开始”菜单大小文本。
 * 当使用Alt + Shift +光标键托移“开始”菜单图块或“操作中心”快速操作时，NVDA将朗读有关所拖动项目或所拖动项目的新位置的信息。
 * 在Word 365的最新版本中，按Control + Backspace键时，NVDA将不再读出“删除的单词”。
+* Announcements such as volume/brightness changes in File Explorer and app
+  update notifications from Microsoft Store can be suppressed by turning off
+  Report Notifications in NVDA's object presentation settings.
 
 ## 计算器
 

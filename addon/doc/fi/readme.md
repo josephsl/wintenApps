@@ -17,7 +17,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Cortana (keskustelut)
 * Sähköposti
 * Kartat
-* Microsoft Solitaire Collection
+* Microsoft Solitaire -kokoelma
 * Microsoft Store
 * Moderni näppäimistö (emojipaneeli/sanelu/fyysisen näppäimistösyötteen
   ehdotukset/pilvileikepöydän historia/modernin syöttömenetelmän editorit)
@@ -74,6 +74,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   kohteiden tiedot tai raahatun kohteen uuden sijainnin.
 * NVDA ei enää sano "poista edellinen sana" Word 365:n uudemmissa versioissa
   painettaessa Ctrl+Askelpalautin.
+* Announcements such as volume/brightness changes in File Explorer and app
+  update notifications from Microsoft Store can be suppressed by turning off
+  Report Notifications in NVDA's object presentation settings.
 
 ## Laskin
 
@@ -117,9 +120,9 @@ Cortana-keskustelut (versio 2004 ja uudemmat) ole käytössä.
   liikkumiseen oltaessa katunäkymässä ja mikäli "käytä näppäimistöä"
   -vaihtoehto on otettu käyttöön.
 
-## Microsoft Solitaire Collection
+## Microsoft Solitaire -kokoelma
 
-* NVDA will announce names of cards and card decks.
+* NVDA sanoo korttien ja korttipakkojen nimet.
 
 ## Microsoft Store
 

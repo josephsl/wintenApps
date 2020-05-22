@@ -78,6 +78,10 @@ documento [rexistros de trocos para publicacións de complementos][3].
   os elementos arrastrados ou da nova posición dos mesmos.
 * En novas versións de Word 365, NVDA non lerá "delete back word" ao premer
   Control+Retroceso.
+* Anuncios como o de cambios no volume/brillo no Explorador de Arquivos e o
+  de notificacións de actualización de app da Microsoft Store pódense
+  suprimir desactivando Anunciar Notificacións nas opcións de Presentación
+  de Obxectos do NVDA.
 
 ## Calculadora
 

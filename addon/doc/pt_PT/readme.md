@@ -76,6 +76,9 @@ consulte o documento [changelogs for releases, release][3].
   new position of the dragged item.
 * IN recent releases of Word 365, NVDA will no longer announce "delete back
   word" when pressing Control+Backspace.
+* Announcements such as volume/brightness changes in File Explorer and app
+  update notifications from Microsoft Store can be suppressed by turning off
+  Report Notifications in NVDA's object presentation settings.
 
 ## Calculadora
 

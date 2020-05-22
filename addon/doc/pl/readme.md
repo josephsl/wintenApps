@@ -77,6 +77,9 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * W ostatnich wersjach programu Word 365, NVDA już nie będzie wypowiadała
   "usuniętą słowo wstecz" gdy jest naciśnięta kombinacja klawiszy
   Control+Backspace.
+* Announcements such as volume/brightness changes in File Explorer and app
+  update notifications from Microsoft Store can be suppressed by turning off
+  Report Notifications in NVDA's object presentation settings.
 
 ## Kalkulator
 

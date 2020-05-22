@@ -71,6 +71,9 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
   alt+shift+šípky), NVDA oznamuje nové umiestnenie položiek.
 * NVDA viac neoznamuje správu "zmazať slovo" pri mazaní skratkou
   ctrl+backspace vo Worde 365.
+* Announcements such as volume/brightness changes in File Explorer and app
+  update notifications from Microsoft Store can be suppressed by turning off
+  Report Notifications in NVDA's object presentation settings.
 
 ## Kalkulačka
 
