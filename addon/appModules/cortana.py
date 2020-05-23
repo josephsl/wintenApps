@@ -8,6 +8,8 @@ import appModuleHandler
 import api
 import ui
 import controlTypes
+import UIAHandler
+from NVDAObjects.UIA import UIA
 
 
 class AppModule(appModuleHandler.AppModule):
@@ -23,7 +25,12 @@ class AppModule(appModuleHandler.AppModule):
 		# Version 1.1910 (beta) changed UIA tree for responses list.
 		# 1.1911 (beta) and version 2 changed the tree yet again.
 		# Thankfully, Cortana's response is part of a grouping object.
-		responses = api.getForegroundObject().children[1].simpleFirstChild.next
+		# As long as conversation list uses the same UIA automation ID, traversal will work across versions (code credit: Abdel)
+		clientObject = UIAHandler.handler.clientObject
+		condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_AutomationIdPropertyId, "ConversationList")
+		cortanaWindow = clientObject.ElementFromHandleBuildCache(api.getForegroundObject().windowHandle, UIAHandler.handler.baseCacheRequest)
+		# Instantiate UIA object directly.
+		responses = UIA(UIAElement=cortanaWindow.FindFirstBuildCache(UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest))
 		try:
 			cortanaResponse = responses.children[-1]
 			if cortanaResponse.name.startswith("Cortana") and cortanaResponse.simpleFirstChild.role == controlTypes.ROLE_GROUPING:
