@@ -79,9 +79,10 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   itens arrastados ou nova posição do item arrastado.
 * Nas versões recentes do Word 365, o NVDA não anunciará mais "excluir
   palavra anterior" ao pressionar Control+Backspace.
-* Announcements such as volume/brightness changes in File Explorer and app
-  update notifications from Microsoft Store can be suppressed by turning off
-  Report Notifications in NVDA's object presentation settings.
+* Anúncios como alterações de volume/brilho no Explorador de Arquivo e
+  notificações de atualização de aplicativos da Microsoft Store podem ser
+  suprimidos desativando Anunciar Notificações nas configurações de
+  apresentação de objetos do NVDA.
 
 ## Calculadora
 
