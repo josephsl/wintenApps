@@ -74,9 +74,10 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   kohteiden tiedot tai raahatun kohteen uuden sijainnin.
 * NVDA ei enää sano "poista edellinen sana" Word 365:n uudemmissa versioissa
   painettaessa Ctrl+Askelpalautin.
-* Announcements such as volume/brightness changes in File Explorer and app
-  update notifications from Microsoft Store can be suppressed by turning off
-  Report Notifications in NVDA's object presentation settings.
+* Ilmoitukset, kuten äänenvoimakkuuden/kirkkauden muutokset
+  resurssienhallinnassa sekä sovellusten päivitysilmoitukset Microsoft
+  Storesta voidaan estää poistamalla käytöstä Lue ilmoitukset -asetus NVDA:n
+  objektien lukemisen asetuksista.
 
 ## Laskin
 
