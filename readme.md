@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and other Windows 10 users
 * Download [stable version][1]
 * Download [development version][2]
-* NVDA compatibility: 2019.3 to 2020.1
+* NVDA compatibility: 2019.3 to 2020.2
 
 This add-on is a collection of app modules for various Windows 10 apps, as well as enhancements and fixes for certain windows 10 controls.
 
