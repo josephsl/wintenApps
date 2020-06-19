@@ -45,7 +45,8 @@ class AppModule(AppModule):
 			# In some cases, Active Directory-style name is the name of the window, so tell NVDA to use something more meaningful.
 			elif obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
 				obj.name = obj.firstChild.name
-			# Developer mode label in Version 2004 is wrong - it shows class name rather than the actual label.
+			# Developer mode label in Version 2004 and 20H2/2009 is wrong - it shows class name rather than the actual label.
+			# 2020 releases are build 19041 and an enablement package (no for 2004, yes for 20H2/2009).
 			# This is resolved in build 19536 and later.
 			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name
