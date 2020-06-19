@@ -21,7 +21,7 @@ class AppModule(appModuleHandler.AppModule):
 		# For some reason Cortana fires this event whenever user types and an answer is received.
 		# Results are displayed inside a list.
 		# Thus respond to both and see what should be announced.
-		if displayString != "Cortana message received.": return
+		if not "Cortana" in displayString: return
 		# Version 1.1910 (beta) changed UIA tree for responses list.
 		# 1.1911 (beta) and version 2 changed the tree yet again.
 		# Thankfully, Cortana's response is part of a grouping object.
@@ -33,7 +33,8 @@ class AppModule(appModuleHandler.AppModule):
 		responses = UIA(UIAElement=cortanaWindow.FindFirstBuildCache(UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest))
 		try:
 			cortanaResponse = responses.children[-1]
-			if cortanaResponse.name.startswith("Cortana") and cortanaResponse.simpleFirstChild.role == controlTypes.ROLE_GROUPING:
+			# In non-English builds, Cortana's response doesn't start with "Cortana".
+			if "Cortana" in cortanaResponse.name and cortanaResponse.simpleFirstChild.role == controlTypes.ROLE_GROUPING:
 				cortanaResponse = cortanaResponse.simpleFirstChild.firstChild
 				# When searching through Bing, summary text shows up.
 				if cortanaResponse.childCount > 1:
