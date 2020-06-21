@@ -21,7 +21,7 @@ class AppModule(appModuleHandler.AppModule):
 		# For some reason Cortana fires this event whenever user types and an answer is received.
 		# Results are displayed inside a list.
 		# Thus respond to both and see what should be announced.
-		if not "Cortana" in displayString: return
+		if "Cortana" not in displayString: return
 		# Version 1.1910 (beta) changed UIA tree for responses list.
 		# 1.1911 (beta) and version 2 changed the tree yet again.
 		# Thankfully, Cortana's response is part of a grouping object.
