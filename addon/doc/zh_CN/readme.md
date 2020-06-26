@@ -3,7 +3,7 @@
 * 作者: Joseph Lee, Derek Riemer and other Windows 10 users
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA兼容版本: 2019.3至2020.1
+* NVDA兼容版本: 2019.3至2020.2
 
 此附加组件用于各种Windows 10应用程序的模块集合，以及针对某些Windows 10控件的增强功能和修复程序。
 
@@ -55,9 +55,8 @@
 * 在更改屏幕分辨率或方向时，NVDA将不再公布“开始”菜单大小文本。
 * 当使用Alt + Shift +光标键托移“开始”菜单图块或“操作中心”快速操作时，NVDA将朗读有关所拖动项目或所拖动项目的新位置的信息。
 * 在Word 365的最新版本中，按Control + Backspace键时，NVDA将不再读出“删除的单词”。
-* Announcements such as volume/brightness changes in File Explorer and app
-  update notifications from Microsoft Store can be suppressed by turning off
-  Report Notifications in NVDA's object presentation settings.
+* 通过在NVDA的对象设置中关闭“报告通知”，可以禁止诸如文件资源管理器中的音量/亮度更改和来自Microsoft
+  Store的应用程序更新通知之类的通知。
 
 ## 计算器
 
