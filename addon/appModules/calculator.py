@@ -71,7 +71,8 @@ class AppModule(appModuleHandler.AppModule):
 			shouldAnnounceNotification = resultElement and resultElement.firstChild and resultElement.firstChild.UIAElement.cachedAutomationID not in noCalculatorEntryAnnouncements
 		# Also, warn users if maximum digit count has been reached (a different activity ID than display updates).
 		# In addition, graph view change must be announced (note that this information repeats).
-		if shouldAnnounceNotification or activityId in ("MaxDigitsReached", "GraphViewChanged"):
+		# Also announce memory management, category changes and such (source: Microsoft Calculator source code from GitHub)
+		if shouldAnnounceNotification or activityId in ("MaxDigitsReached", "GraphViewChanged", "CategoryNameChanged", "MemoryCleared", "MemorySlotChanged", "MemorySlotAdded", "HistoryCleared", "UpdateCurrencyRates"):
 			nextHandler()
 
 	# A list of native commands to handle calculator result announcement.
