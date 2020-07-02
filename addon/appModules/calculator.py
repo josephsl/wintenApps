@@ -67,7 +67,8 @@ class AppModule(appModuleHandler.AppModule):
 				resultElement = resultElement.parent.children[1]
 			shouldAnnounceNotification = resultElement and resultElement.firstChild and resultElement.firstChild.UIAElement.cachedAutomationID not in noCalculatorEntryAnnouncements
 		# Also, warn users if maximum digit count has been reached (a different activity ID than display updates).
-		if shouldAnnounceNotification or activityId == "MaxDigitsReached":
+		# In addition, graph view change must be announced (note that this information repeats).
+		if shouldAnnounceNotification or activityId in ("MaxDigitsReached", "GraphViewChanged"):
 			nextHandler()
 
 	# A list of native commands to handle calculator result announcement.
