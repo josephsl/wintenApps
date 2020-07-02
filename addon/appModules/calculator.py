@@ -54,7 +54,10 @@ class AppModule(appModuleHandler.AppModule):
 		self._shouldAnnounceResult = False
 		nextHandler()
 
-	def event_UIA_notification(self, obj, nextHandler, activityId=None, **kwargs):
+	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
+		# Some notification messages are repeated (most notable being graph view change notification).
+		if activityId == "GraphViewChanged" and self._resultsCache == displayString: return
+		self._resultsCache = displayString
 		# From May 2018 onwards, unit converter uses a different automation iD.
 		# Changed significantly in July 2018 thanks to UI redesign, and as a result, attribute error is raised.
 		try:
