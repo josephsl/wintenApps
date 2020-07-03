@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros usuarios do Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
-* NVDA compatibility: 2019.3 to 2020.2
+* Compatibilidade con NVDA: da 2019.3 á 2020.2
 
 Este complemento é unha coleción de app modules para varias aplicacións de
 Windows 10, así coma melloras e correccións para certos controis de windows
@@ -30,10 +30,9 @@ se inclúe):
 
 Notas:
 
-* Este complemento require do Windows 10 Versión 1809 (compilación 17763) ou
-  posterior e do NVDA 2019.3 ou posterior. Para uns mellores resultados, usa
-  o complemento coa compilación estable máis recente (compilación 18363) e
-  versión estable máis recente do NVDA.
+* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
+  best results, use the add-on with latest Windows 10 stable release (build
+  19041).
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
 * Para entradas non listadas a continuación, podes asumir que as

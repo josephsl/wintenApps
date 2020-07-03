@@ -29,9 +29,9 @@ privire la ceea ce este inclus):
 
 Note:
 
-* This add-on requires Windows 10 Version 1903 (build 18362) or later. For
+* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
   best results, use the add-on with latest Windows 10 stable release (build
-  18363).
+  19041).
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
 * Pentru intrările care nu sunt listate mai jos, puteți presupune că

@@ -28,9 +28,9 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 
 Note:
 
-* Questo addon richiede Windows 10 Versione 1903 (build 18362) o
-  successive. Per migliori prestazioni, utilizzare il componente con
-  l'ultima versione stabile di Windows10 (build 18363).
+* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
+  best results, use the add-on with latest Windows 10 stable release (build
+  19041).
 * Alcune caratteristiche di questo componente aggiuntivo sono o diventeranno
   parte di NVDA.
 * Per le voci non elencate di seguito, si può supporre che esse siano

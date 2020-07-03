@@ -28,10 +28,9 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* Ten dodatek wymaga wersji systemu operacyjnego Windows 10 1903 (kompilacja
-  18362) lub nowsza i NVDA 2019.3 lub nowsza. Dla lepszych wyników, trzeba
-  używać dodatku z ostatnią stabilną wersją operacyjnego systemu Windows
-  (kompilacja 18363).
+* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
+  best results, use the add-on with latest Windows 10 stable release (build
+  19041).
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie

@@ -31,9 +31,9 @@ qué se incluye):
 
 Notas:
 
-* Este complemento requiere Windows 10 Versión 1903 (compilación 18362) o
+* Este complemento requiere Windows 10 Versión 1909 (compilación 18363) o
   posterior. Para unos mejores resultados, utiliza el complemento con la
-  compilación estable más reciente de Windows 10 (compilación 18363).
+  compilación estable más reciente de Windows 10 (compilación 19041).
 * Algunas de las características del complemento son o serán parte del
   lector de pantalla NVDA.
 * Para las entradas que no se listen a continuación, puedes asumir que las
