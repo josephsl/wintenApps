@@ -29,9 +29,9 @@ detalhes sobre o que está incluído):
 
 Notas:
 
-* This add-on requires Windows 10 Version 1903 (build 18362) or later. For
+* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
   best results, use the add-on with latest Windows 10 stable release (build
-  18363).
+  19041).
 * Alguns recursos adicionais são ou farão parte do leitor de tela do NVDA.
 * Para entradas não listadas abaixo, pode assumir que os recursos fazem já
   parte do NVDA, não sendo mais aplicáveis, pois o complemento não suporta

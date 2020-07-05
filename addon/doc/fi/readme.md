@@ -28,9 +28,9 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Tämä lisäosa edellyttää Windows 10:n versiota 1903 (koontiversio 18362)
-  tai uudempaa. Käytä parhaan käyttökokemuksen varmistamiseksi Windows 10:n
-  viimeisintä vakaata versiota (koontiversio 18363).
+* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
+  best results, use the add-on with latest Windows 10 stable release (build
+  19041).
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja

@@ -28,9 +28,9 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* Diese Erweiterung benötigt Windows 10 Version 1903 (Build 18362) oder
-  höher. Für bessere Ergebnisse verwenden Sie die Erweiterung mit der
-  neuesten stabilen Version von Windows 10 Version 1909 (Build 18363).
+* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
+  best results, use the add-on with latest Windows 10 stable release (build
+  19041).
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Für Einträge, die im Folgenden nicht aufgeführt sind, können Sie davon
   ausgehen, dass Funktionen Teil von NVDA sind, die nicht mehr benötigt
