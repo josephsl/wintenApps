@@ -43,6 +43,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * When arranging Start menu tiles or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce information on dragged items or new position of the dragged item.
 * IN recent releases of Word 365, NVDA will no longer announce "delete back word" when pressing Control+Backspace.
 * Announcements such as volume/brightness changes in File Explorer and app update notifications from Microsoft Store can be suppressed by turning off Report Notifications in NVDA's object presentation settings.
+* Open With dialog in Version 2004 (May 2020 Update) and later is announced when opened.
 
 ## Calculator
 
