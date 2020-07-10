@@ -13,7 +13,7 @@ class AppModule(AppModule):
 
 	def isGoodUIAWindow(self, hwnd):
 		# NVDA Core issue 11335: Open With dialog isn't read in version 2004.
-		# For maximum compatibility, use build number directly because NVDA 2020.1 does not recognize build 19041 as Version 2004.
-		if winVersion.winVersion.build >= 19041 and winUser.getClassName(hwnd) == "Shell_Flyout":
+		# For consistency, apply this fix to earlier Windows 10 releases.
+		if winUser.getClassName(hwnd) == "Shell_Flyout":
 			return True
 		return False
