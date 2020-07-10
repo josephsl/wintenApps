@@ -82,6 +82,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   de archivos y las notificaciones de actualización de aplicaciones de la
   tienda Microsoft pueden suprimirse desactivando Anunciar notificaciones
   desde las opciones de presentación de objetos de NVDA.
+* Se anuncia el diálogo Abrir con en la versión 2004 (actualización de mayo
+  de 2020) y posteriores cuando este se abre.
 
 ## Calculadora
 

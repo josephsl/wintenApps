@@ -28,9 +28,9 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
-  best results, use the add-on with latest Windows 10 stable release (build
-  19041).
+* Tämä lisäosa edellyttää Windows 10:n versiota 1909 (koontiversio 18363)
+  tai uudempaa. Käytä parhaan käyttökokemuksen varmistamiseksi Windows 10:n
+  viimeisintä vakaata versiota (koontiversio 19041).
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
@@ -78,6 +78,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   resurssienhallinnassa sekä sovellusten päivitysilmoitukset Microsoft
   Storesta voidaan estää poistamalla käytöstä Lue ilmoitukset -asetus NVDA:n
   objektien lukemisen asetuksista.
+* Open With dialog in Version 2004 (May 2020 Update) and later is announced
+  when opened.
 
 ## Laskin
 
