@@ -83,6 +83,8 @@ Versionen][3].
 * Announcements such as volume/brightness changes in File Explorer and app
   update notifications from Microsoft Store can be suppressed by turning off
   Report Notifications in NVDA's object presentation settings.
+* Open With dialog in Version 2004 (May 2020 Update) and later is announced
+  when opened.
 
 ## Rechner
 

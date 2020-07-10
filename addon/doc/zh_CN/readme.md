@@ -35,9 +35,8 @@
 
 注意:
 
-* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
-  best results, use the add-on with latest Windows 10 stable release (build
-  19041).
+* 此插件需要Windows 10版本1909（18363）或更高版本以及NVDA 2019.2或更高版本。为获得最佳体验，请使用最新Windows
+  10稳定版（19041）和最新稳定版NVDA插件配合使用。
 * 一些插件功能可能将成为NVDA屏幕阅读器的一部分。
 * 对于未在下面列出的条目，您可以假定功能是NVDA的一部分，不再适用，因为插件不支持旧版本的Windows
   10，或者对应用程序进行了更改，使条目不再适用。
@@ -58,6 +57,7 @@
 * 在Word 365的最新版本中，按Control + Backspace键时，NVDA将不再读出“删除的单词”。
 * 通过在NVDA的对象设置中关闭“报告通知”，可以禁止诸如文件资源管理器中的音量/亮度更改和来自Microsoft
   Store的应用程序更新通知之类的通知。
+* 朗读2004版本（2020 年 5 月更新）中的打开方式对话框。
 
 ## 计算器
 

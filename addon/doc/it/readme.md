@@ -84,6 +84,8 @@ riferimento al documento [changelogs for add-on releases][3].
   le notifiche di aggiornamento delle app in Microsoft Store possono essere
   soppressi disattivando l'opzione Annuncia Notifiche nelle impostazioni di
   NVDA, categoria presentazione oggetti.
+* Open With dialog in Version 2004 (May 2020 Update) and later is announced
+  when opened.
 
 ## Calcolatrice
 

@@ -75,9 +75,12 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   povučenim stavkama ili o novom položaju povučene stavke.
 * U nedavnim izdanjima Worda 365, NVDA više neće objavljivati „izbriši
   riječi ispred” pritiskom na kontrol+backspace.
-* Announcements such as volume/brightness changes in File Explorer and app
-  update notifications from Microsoft Store can be suppressed by turning off
-  Report Notifications in NVDA's object presentation settings.
+* Najave kao što su promjena glasnoće/svjetline u File Explorereru i
+  obavijesti aktualiziranja programa s Microsoft Store stranica, mogu se
+  potisnuti isključivanjem opcije „Izvijesti o obavijestima” u NVDA
+  postavkama prikaza objekata.
+* U verziji 2004. (aktualizirano u svibnju 2020.) i kasnijim verzijama,
+  dijalog „Otvori s” najavljuje se kad se otvori.
 
 ## Kalkulator
 

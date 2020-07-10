@@ -83,6 +83,8 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   notificações de atualização de aplicativos da Microsoft Store podem ser
   suprimidos desativando Anunciar Notificações nas configurações de
   apresentação de objetos do NVDA.
+* Open With dialog in Version 2004 (May 2020 Update) and later is announced
+  when opened.
 
 ## Calculadora
 

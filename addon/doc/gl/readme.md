@@ -30,9 +30,9 @@ se inclúe):
 
 Notas:
 
-* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
-  best results, use the add-on with latest Windows 10 stable release (build
-  19041).
+* Este complemento require do Windows 10 Versión 1909 (compilación 18363) ou
+  posterior. Para uns mellores resultados, usa o complemento coa compilación
+  estable máis recente (compilación 19041).
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
 * Para entradas non listadas a continuación, podes asumir que as
@@ -81,6 +81,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
   de notificacións de actualización de app da Microsoft Store pódense
   suprimir desactivando Anunciar Notificacións nas opcións de Presentación
   de Obxectos do NVDA.
+* O diálogo Abrir Con na Versión 2004 (May 2020 Update) y posterior se
+  anuncia al abrirse.
 
 ## Calculadora
 
