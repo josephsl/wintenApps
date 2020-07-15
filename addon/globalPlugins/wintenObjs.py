@@ -30,7 +30,6 @@ UIA_Drag_DragCompleteEventId = 20028
 UIA_DropTarget_DragEnterEventId = 20029
 UIA_DropTarget_DragLeaveEventId = 20030
 UIA_DropTarget_DroppedEventId = 20031
-UIA_Text_TextChangedEventId = 20015
 
 # For convenience.
 W10Events = {
@@ -40,7 +39,6 @@ W10Events = {
 	UIA_DropTarget_DragEnterEventId: "UIA_dragEnter",
 	UIA_DropTarget_DragLeaveEventId: "UIA_dragLeave",
 	UIA_DropTarget_DroppedEventId: "UIA_dragDropped",
-	UIA_Text_TextChangedEventId: "textChange"
 }
 
 # Additional dialogs not recognized by NVDA itself.
