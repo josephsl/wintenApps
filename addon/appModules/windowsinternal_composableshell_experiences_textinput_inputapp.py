@@ -18,6 +18,12 @@ import eventHandler
 class AppModule(AppModule):
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
+		# Ask NvDA to respond to UIA events coming from this overlay.
+		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
+		import UIAHandler
+		if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]:
+			UIAHandler.handler.removeEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+			UIAHandler.handler.addEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 		# #7273: When this is fired on categories, the first emoji from the new category is selected but not announced.
 		# Therefore, move the navigator object to that item if possible.
 		# However, in recent builds, name change event is also fired.
@@ -88,6 +94,12 @@ class AppModule(AppModule):
 		# Emoji panel in build 17666 and later (unless this changes).
 		elif inputPanelAutomationID == "TEMPLATE_PART_ExpressionGroupedFullView":
 			self._emojiPanelJustOpened = True
+			# Ask NvDA to respond to UIA events coming from this overlay.
+			# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
+			import UIAHandler
+			if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]:
+				UIAHandler.handler.removeEventHandlerGroup(inputPanel.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+				UIAHandler.handler.addEventHandlerGroup(inputPanel.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 			# On some systems, there is something else besides grouping controls, so another child control must be used.
 			emojisList = inputPanel.children[-2]
 			if emojisList.UIAElement.cachedAutomationID != "TEMPLATE_PART_Items_GridView":
