@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixe a [versão estável][1]
 * Baixe a [versão em desenvolvimento][2]
-* NVDA compatibility: 2019.3 to 2020.2
+* Compatibilidade com NVDA: 2019.3 a 2020.2
 
 Este complemento é uma coleção de módulos de aplicativos (app modules) para
 vários aplicativos do Windows 10, bem como aprimoramentos e correções para
@@ -30,9 +30,9 @@ detalhes sobre o que está incluído):
 
 Notas:
 
-* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
-  best results, use the add-on with latest Windows 10 stable release (build
-  19041).
+* Este complemento requer o Windows 10 Versão 1909 (compilação 18363) ou
+  posterior. Para obter melhores resultados, use o complemento com a versão
+  estável mais recente do Windows 10 (compilação 19041).
 * Alguns recursos do complemento são ou farão parte do leitor de tela NVDA.
 * Para entradas não listadas abaixo, você pode assumir que os recursos fazem
   parte do NVDA, não são mais aplicáveis, pois o complemento não oferece
@@ -83,8 +83,8 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   notificações de atualização de aplicativos da Microsoft Store podem ser
   suprimidos desativando Anunciar Notificações nas configurações de
   apresentação de objetos do NVDA.
-* Open With dialog in Version 2004 (May 2020 Update) and later is announced
-  when opened.
+* Caixa de diálogo Abrir Com na versão 2004 (Atualização de Maio de 2020) e
+  posteriores é anunciada quando aberta.
 
 ## Calculadora
 
