@@ -20,7 +20,7 @@ class AppModule(appModuleHandler.AppModule):
 	# just like Settings app, have a cache of download progress text handy.
 	_appInstallProgress = ""
 
-	def event_nameChange(self, obj, nextHandler):
+	def announceDownloadProgress(self, obj):
 		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "InstallControl":
 			# Install control comes with an anoying name, so look at its children.
 			# Sometimes one of its children disappears, causing attribute error to be thrown.
@@ -31,9 +31,13 @@ class AppModule(appModuleHandler.AppModule):
 			if progressText != self._appInstallProgress:
 				self._appInstallProgress = progressText
 				ui.message(progressText)
+
+	def event_nameChange(self, obj, nextHandler):
+		# In version 12007, it is value change event that will present content download progress.
+		self.announceDownloadProgress(obj)
 		nextHandler()
 
 	def event_valueChange(self, obj, nextHandler):
 		# Version 12007 and later fires value change event instead, but the procedure is same as name change event.
-		self.event_nameChange(obj, nextHandler)
+		self.announceDownloadProgress(obj)
 		nextHandler()
