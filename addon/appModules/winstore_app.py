@@ -32,3 +32,8 @@ class AppModule(appModuleHandler.AppModule):
 				self._appInstallProgress = progressText
 				ui.message(progressText)
 		nextHandler()
+
+	def event_valueChange(self, obj, nextHandler):
+		# Version 12007 and later fires value change event instead, but the procedure is same as name change event.
+		self.event_nameChange(obj, nextHandler)
+		nextHandler()
