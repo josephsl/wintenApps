@@ -3,7 +3,7 @@
 * Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
-* NVDA compatibility: 2019.3 to 2020.2
+* Zgodność z wersjami NVDA: 2019.3 do 2020.2
 
 Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
 również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
@@ -28,9 +28,9 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
-  best results, use the add-on with latest Windows 10 stable release (build
-  19041).
+* Ten dodatek wymaga wersji systemu operacyjnego Windows 10 1909 (kompilacja
+  18362) lub nowsza . Dla lepszych wyników, trzeba używać dodatku z ostatnią
+  stabilną wersją systemu operacyjnego windows 10 (kompilacja 19041).
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
@@ -76,11 +76,12 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * W ostatnich wersjach programu Word 365, NVDA już nie będzie wypowiadała
   "usuniętą słowo wstecz" gdy jest naciśnięta kombinacja klawiszy
   Control+Backspace.
-* Announcements such as volume/brightness changes in File Explorer and app
-  update notifications from Microsoft Store can be suppressed by turning off
-  Report Notifications in NVDA's object presentation settings.
-* Open With dialog in Version 2004 (May 2020 Update) and later is announced
-  when opened.
+* Powiadomienia takie jak zmiany głośności oraz jasności w eksploratorze
+  plików i aktualizacji aplikacji powiadomienia o aktualizacjach w Microsoft
+  store można wyłączyć, wyłączając opcje odczytuj powiadomienia w
+  ustawieniach prezentacji obiektów NVDA.
+* Okno dialogowe otwórz za pomocą w wersji 2004 (majowa aktualizacja 2020)
+  and later jest odpowiednio wymawian gdy jest otwarte.
 
 ## Kalkulator
 

@@ -3,7 +3,7 @@
 * Autory: Joseph Lee, Derek Riemer a ďalší používatelia Windowsu 10
 * Stiahnuť [stabilnú verziu][1]
 * Stiahnuť [vývojovú verziu][2]
-* NVDA compatibility: 2019.3 to 2020.2
+* Funguje s NVDA 2019.3 až 2020.2
 
 Obsahuje aplikačné moduly pre rôzne aplikácie systému Windows 10, ako aj
 vylepšenia a opravy určitých ovládacích prvkov systému Windows 10.
@@ -26,8 +26,8 @@ Zahrnuté sú nasledujúce moduly (podrobný popis nájdete nižšie):
 
 Poznámky:
 
-* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
-  best results, use the add-on with latest Windows 10 stable release (build
+* Doplnok správne funguje od verzie Windows 10 1909 (zostava
+  18363). Odporúčame používať aktuálnu stabilnú verziu Windows (zostava
   19041).
 * Niektoré doplnkové funkcie sú alebo časom budú súčasťou NVDA.
 * V prípade položiek, ktoré nie sú uvedené nižšie, môžete predpokladať, že
@@ -71,11 +71,11 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
   alt+shift+šípky), NVDA oznamuje nové umiestnenie položiek.
 * NVDA viac neoznamuje správu "zmazať slovo" pri mazaní skratkou
   ctrl+backspace vo Worde 365.
-* Announcements such as volume/brightness changes in File Explorer and app
-  update notifications from Microsoft Store can be suppressed by turning off
-  Report Notifications in NVDA's object presentation settings.
-* Open With dialog in Version 2004 (May 2020 Update) and later is announced
-  when opened.
+* Oznamovanie zmeny hlasitosti a jasu v okne pracovnej plochy a iných oknách
+  Explorera a tiež upozornení z obchodu Microsoft store je možné pozastaviť
+  odčiarknutím možnosti Oznamovať notifikácie v nastaveniach > prezentácia
+  objektov.
+* Okno otvoriť v programe je správne oznamované od verzie 2004 (Máj 2020).
 
 ## Kalkulačka
 
