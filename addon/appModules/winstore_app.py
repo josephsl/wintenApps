@@ -5,6 +5,7 @@
 # Enhancements to support Microsoft Store (formerly Windows Store).
 
 import appModuleHandler
+import api
 import ui
 import controlTypes
 from NVDAObjects.UIA import UIA
@@ -33,11 +34,14 @@ class AppModule(appModuleHandler.AppModule):
 				ui.message(progressText)
 
 	def event_nameChange(self, obj, nextHandler):
-		# In version 12007, it is value change event that will present content download progress.
-		self.announceDownloadProgress(obj)
+		# Do not proceed if we're not even focused on Microsoft Store.
+		if any([obj.appModule.appName == self.appName for obj in api.getFocusAncestors()]):
+			# In version 12007, it is value change event that will present content download progress.
+			self.announceDownloadProgress(obj)
 		nextHandler()
 
 	def event_valueChange(self, obj, nextHandler):
 		# Version 12007 and later fires value change event instead, but the procedure is same as name change event.
-		self.announceDownloadProgress(obj)
+		if any([obj.appModule.appName == self.appName for obj in api.getFocusAncestors()]):
+			self.announceDownloadProgress(obj)
 		nextHandler()
