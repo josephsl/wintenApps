@@ -95,19 +95,30 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #20: don't even think about proceeding in secure screens.
 		# #40: skip over the rest if appx is in effect.
 		if globalVars.appArgs.secure or config.isAppX: return
-		# Add a series of events instead of doing it one at a time.
-		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
-		log.debug("W10: adding additional events")
-		for event, name in W10Events.items():
-			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
-				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
-				UIAHandler.handler.clientObject.addAutomationEventHandler(event, UIAHandler.handler.rootElement, UIAHandler.TreeScope_Subtree, UIAHandler.handler.baseCacheRequest, UIAHandler.handler)
-				log.debug(f"W10: added event ID {event}, assigned to {name}")
+		# Try addigin additional events in the constructor.
+		# If it fails, try again after NVDA is fully initialized.
+		try:
+			log.debug("W10: adding additional events")
+			self._addAdditionalUIAEvents()
+		except AttributeError:
+			log.debug("W10: UIA handler not ready, delaying until NVDA is fully initialized")
+			queueHandler.queueFunction(queueHandler.eventQueue, self._addAdditionalUIAEvents, delay=True)
 		# Allow NVDA to recognize more dialogs, especially ones that are not advertising themselves as such.
 		for dialogClassName in UIAAdditionalDialogClassNames:
 			if dialogClassName not in UIAHandler.UIADialogClassNames:
 				log.debug(f"W10: adding class name {dialogClassName} to known dialog class names")
 				UIAHandler.UIADialogClassNames.append(dialogClassName)
+
+	# Manually add events after root element is located.
+	def _addAdditionalUIAEvents(self, delay=False):
+		# Add a series of events instead of doing it one at a time.
+		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
+		if delay: log.debug("W10: adding additional events after a delay")
+		for event, name in W10Events.items():
+			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
+				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
+				UIAHandler.handler.clientObject.addAutomationEventHandler(event, UIAHandler.handler.rootElement, UIAHandler.TreeScope_Subtree, UIAHandler.handler.baseCacheRequest, UIAHandler.handler)
+				log.debug(f"W10: added event ID {event}, assigned to {name}")
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# There's no point looking at non-UIA objects.
