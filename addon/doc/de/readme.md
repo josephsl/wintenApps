@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA compatibility: 2019.3 to 2020.2
+* NVDA-Kompatibilität: 2019.3 bis 2020.2
 
 Diese Erweiterung bietet eine Sammlung von Anwendungsmodulen für
 verschiedene Windows 10 Anwendungen sowie Korrekturen in einigen Windows 10
@@ -15,22 +15,22 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 * Rechner (modern)
 * Kalender
 * Cortana (Unterhaltungen)
-* E-Mail
+* Mail
 * Karten
 * Microsoft Solitaire Collection
 * Microsoft Store
 * Moderne Tastatur (Emoji-Panel- / Diktier- / Hardware-Eingabevorschläge /
   Cloud-Zwischenablage-Elemente in Version 1709 und höher)
 * Kontakte
-* Einstellungen (Systemeinstellungen, Windows+I)
+* Einstellungen (System-Einstellungen, Windows+I)
 * Wetter.
 * Diverse Steuermodule wie beispielsweise die Startmenübereiche.
 
 Hinweise:
 
-* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
-  best results, use the add-on with latest Windows 10 stable release (build
-  19041).
+* Diese Erweiterung benötigt Windows 10 Version 1909 (Build 18363) oder
+  neuer. Für beste Ergebnisse verwenden Sie die Erweiterung mit der neuesten
+  stabilen Version von Windows 10 Version 2004 (Build 19041).
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Für Einträge, die im Folgenden nicht aufgeführt sind, können Sie davon
   ausgehen, dass Funktionen Teil von NVDA sind, die nicht mehr benötigt
@@ -78,13 +78,15 @@ Versionen][3].
 * Beim Anordnen von Startmenükacheln oder Action-Center-Schnellaktionen mit
   Alt+Umschalt+Pfeiltasten gibt NVDA Informationen zu gezogenen Elementen
   oder zur neuen Position des gezogenen Elements an.
-* IN recent releases of Word 365, NVDA will no longer announce "delete back
-  word" when pressing Control+Backspace.
-* Announcements such as volume/brightness changes in File Explorer and app
-  update notifications from Microsoft Store can be suppressed by turning off
-  Report Notifications in NVDA's object presentation settings.
-* Open With dialog in Version 2004 (May 2020 Update) and later is announced
-  when opened.
+* In den letzten Versionen von Word 365 meldet NVDA nicht mehr, dass beim
+  Drücken der Tastenkombination Strg+Rücktaste das Wort "Vorheriges Wort
+  löschen" gelöscht wird.
+* Rückmeldungen wie z. B. Lautstärke-/Helligkeitsänderungen im
+  Datei-Explorer und App-Update-Benachrichtigungen aus dem Microsoft Store
+  können unterdrückt werden, indem die Benachrichtigung über Berichte in den
+  Objektpräsentationseinstellungen von NVDA deaktiviert wird.
+* Das Dialogfeld "Öffnen mit" in Version 2004 (Update Mai 2020) und neuer
+  wird nun angesagt.
 
 ## Rechner
 
@@ -116,7 +118,7 @@ denn, Cortana (Version 2004 und neuer) wird verwendet.
   Suche im Datei-Explorer mit der Benutzeroberfläche der Windows-Suche
   unterstützt.
 
-## E-Mail
+## Mail
 
 * Beim Navigieren durch Elemente in der Nachrichtenliste können Sie nun
   Tabellen-Navigationsbefehle verwenden, um Betreffzeilen zu überprüfen. Die
@@ -133,7 +135,7 @@ denn, Cortana (Version 2004 und neuer) wird verwendet.
 
 ## Microsoft Solitaire Collection
 
-* NVDA will announce names of cards and card decks.
+* NVDA sagt nun die Karten und den Kartenstapel an.
 
 ## Microsoft Store
 
@@ -144,10 +146,11 @@ denn, Cortana (Version 2004 und neuer) wird verwendet.
 
 ## Moderne virtuelle Tastaturen
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NvDA's speech settings and set symbol level to "some" or higher.
+Dazu gehören Emoji-Panel, Verlauf der Zwischenablage, Diktat,
+Hardware-Eingabevorschläge und moderne Eingabemethoden-Editoren für
+bestimmte Sprachen. Wenn Sie Emojis betrachten, aktivieren Sie am besten die
+Unicode-Konsortium-Einstellung in NVDA und setzen Sie die Symbol-Stufe auf
+"Einige" oder höher.
 
 * Beim Öffnen des Verlauf der Zwischenablage wird NVDA unter Umständen nicht
   mehr das Wort "Zwischenablage" mitteilen, wenn sich Elemente in der
