@@ -181,6 +181,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if not event:
 				event = "no event specified"
 			info.append(f"event: {event}")
+			if event == "valueChange":
+				info.append(f"value: {obj.value}")
+			elif event == "stateChange":
+				# Copied from NVDA Core's default navigator object dev info's state retriever.
+				try:
+					stateConsts = dict((const, name) for name, const in controlTypes.__dict__.items() if name.startswith("STATE_"))
+					ret = ", ".join(
+						stateConsts.get(state) or str(state)
+						for state in obj.states)
+				except Exception as e:
+					ret = "exception: %s" % e
+				info.append(f"states: {ret}")
 			info.append(f"app module: {obj.appModule}")
 			element = obj.UIAElement
 			info.append(f"automation Id: {element.cachedAutomationID}")
