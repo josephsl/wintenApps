@@ -29,7 +29,12 @@ class AppModule(AppModule):
 		# However, in recent builds, name change event is also fired.
 		# For consistent experience, report the new category first by traversing through controls.
 		# #8189: do not announce candidates list itself (not items), as this is repeated each time candidate items are selected.
-		if obj.UIAElement.cachedAutomationID == "CandidateList": return
+		if (
+			obj.UIAElement.cachedAutomationID == "CandidateList"
+			# Also, when changing categories (emoji, kaomoji, symbols) in Version 1903 or later, category items are selected when in fact they have no text labels.
+			or obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_Sets_ListView"
+		):
+			return
 		speech.cancelSpeech()
 		# Sometimes, due to bad tree traversal or wrong item getting selected, something other than the selected item sees this event.
 		# Sometimes clipboard candidates list gets selected, so ask NvDA to descend one more level.
