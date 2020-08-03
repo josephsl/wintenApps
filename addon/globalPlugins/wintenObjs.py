@@ -3,6 +3,7 @@
 
 # Adds handlers for various UIA controls found in Windows 10.
 
+from comtypes import COMError
 import globalPluginHandler
 import controlTypes
 import ui
@@ -195,7 +196,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				info.append(f"states: {ret}")
 			info.append(f"app module: {obj.appModule}")
 			element = obj.UIAElement
-			info.append(f"automation Id: {element.cachedAutomationID}")
+			# Sometimes due to timing errors, COM error is thrown when trying to obtain automation ID from the underlying UIA element.
+			try:
+				info.append(f"automation Id: {element.cachedAutomationID}")
+			except COMError:
+				info.append("automation Id: not found")
 			info.append(f"class name: {element.cachedClassName}")
 			if event == "controllerFor":
 				info.append(f"controller for count: {len(obj.controllerFor)}")
