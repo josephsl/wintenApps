@@ -17,6 +17,9 @@ import eventHandler
 
 class AppModule(AppModule):
 
+	_symbolsGroupSelected = False
+	_searchInProgress = False
+
 	def event_UIA_elementSelected(self, obj, nextHandler):
 		# Ask NvDA to respond to UIA events coming from this overlay.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
@@ -24,24 +27,44 @@ class AppModule(AppModule):
 		if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]:
 			UIAHandler.handler.removeEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 			UIAHandler.handler.addEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+		# Wait until modern keyboard is fully displayed on screen.
+		# Force this flag on if search is in progress.
+		if self._searchInProgress: self._emojiPanelJustOpened = True
+		if winVersion.isWin10(version=1803) and not self._emojiPanelJustOpened: return
+		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object (for presentational purposes) and move on.
+		if obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_Groups_ListView":
+			if obj._getUIACacheablePropertyValue(UIAHandler.UIA_PositionInSetPropertyId) == 1:
+				self._searchInProgress = True
+			else:
+				# Symbols group flag must be set if and only if emoji panel is active, as UIA item selected event is fired just before emoji panel opens when opening the panel after closing it for a while.
+				api.setNavigatorObject(obj)
+				if self._emojiPanelJustOpened: 
+					self._symbolsGroupSelected = True
+			return
+		automationID = obj._getUIACacheablePropertyValue(UIAHandler.UIA_AutomationIdPropertyId)
 		# #7273: When this is fired on categories, the first emoji from the new category is selected but not announced.
 		# Therefore, move the navigator object to that item if possible.
 		# However, in recent builds, name change event is also fired.
 		# For consistent experience, report the new category first by traversing through controls.
 		# #8189: do not announce candidates list itself (not items), as this is repeated each time candidate items are selected.
 		if (
-			obj.UIAElement.cachedAutomationID == "CandidateList"
+			automationID == "CandidateList"
 			# Also, when changing categories (emoji, kaomoji, symbols) in Version 1903 or later, category items are selected when in fact they have no text labels.
 			or obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_Sets_ListView"
+			# Specifically to suppress skin tone modifiers from being announced after an emoji group was selected.
+			or self._symbolsGroupSelected
+			# In Version 1709 and 1803, both categories and items raise element selected event when category changes.
+			or obj.name == self._recentlySelected and not winVersion.isWin10(version=1809)
 		):
 			return
 		speech.cancelSpeech()
 		# Sometimes, due to bad tree traversal or wrong item getting selected, something other than the selected item sees this event.
 		# Sometimes clipboard candidates list gets selected, so ask NvDA to descend one more level.
-		if obj.UIAElement.cachedAutomationID == "TEMPLATE_PART_ClipboardItemsList":
+		if automationID == "TEMPLATE_PART_ClipboardItemsList":
 			obj = obj.firstChild
 		# In build 18262, emoji panel may open to People group and skin tone modifier or the list housing them gets selected.
-		elif obj.UIAElement.cachedAutomationID == "SkinTonePanelModifier_ListView":
+		# Skin tone modifiers are also selected when switching to People emoji group, and this should be suppressed.
+		elif automationID == "SkinTonePanelModifier_ListView":
 			obj = obj.next
 		elif obj.parent.UIAElement.cachedAutomationID == "SkinTonePanelModifier_ListView":
 			# But this will point to nothing if emoji search results are not people.
