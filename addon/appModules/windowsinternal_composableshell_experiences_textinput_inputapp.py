@@ -161,9 +161,9 @@ class AppModule(AppModule):
 		# On some systems, touch keyboard keys keeps firing name change event.
 		# In build 17704, whenever skin tones are selected, name change is fired by emoji entries (GridViewItem).
 		if ((obj.UIAElement.cachedClassName in ("CRootKey", "GridViewItem"))
-		# Just ignore useless clipboard status.
+		# Just ignore useless clipboard status and vertical scroll bar label.
 		# Also top emoji search result must be announced for better user experience.
-		or (cachedAutomationID in ("TEMPLATE_PART_ClipboardItemsList", "TEMPLATE_PART_Search_TextBlock"))
+		or (cachedAutomationID in ("TEMPLATE_PART_ClipboardItemsList", "TEMPLATE_PART_Search_TextBlock", "VerticalScrollBar"))
 		# And no, emoji entries should not be announced here.
 		or (self._recentlySelected is not None and self._recentlySelected in obj.name)):
 			return
