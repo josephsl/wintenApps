@@ -104,8 +104,13 @@ class AppModule(AppModule):
 		# However this event is raised when the input panel closes.
 		inputPanel = obj.firstChild
 		if inputPanel is None:
+			self._symbolsGroupSelected = False
+			self._emojiPanelJustOpened = False
+			self._recentlySelected = None
 			return
 		inputPanelAutomationID = inputPanel.UIAElement.cachedAutomationID
+		self._emojiPanelJustOpened = True
+		self._symbolsGroupSelected = False
 		# Emoji panel for build 16299 and 17134.
 		# This event is properly raised in build 17134.
 		if not winVersion.isWin10(version=1809) and inputPanelAutomationID in self._classicEmojiPanelAutomationID:
@@ -121,7 +126,6 @@ class AppModule(AppModule):
 				pass
 		# Emoji panel in build 17666 and later (unless this changes).
 		elif inputPanelAutomationID == "TEMPLATE_PART_ExpressionGroupedFullView":
-			self._emojiPanelJustOpened = True
 			# Ask NvDA to respond to UIA events coming from this overlay.
 			# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 			import UIAHandler
