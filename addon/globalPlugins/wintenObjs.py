@@ -95,7 +95,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #20: don't even think about proceeding in secure screens.
 		# #40: skip over the rest if appx is in effect.
 		if globalVars.appArgs.secure or config.isAppX: return
-		# Try addigin additional events in the constructor.
+		# Try adding additional events in the constructor.
 		# If it fails, try again after NVDA is fully initialized.
 		try:
 			log.debug("W10: adding additional events")
