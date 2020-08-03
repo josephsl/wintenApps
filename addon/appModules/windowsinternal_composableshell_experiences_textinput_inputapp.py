@@ -150,4 +150,35 @@ class AppModule(AppModule):
 	def event_nameChange(self, obj, nextHandler):
 		# In build 18975, CJK IME candidates fire name change event.
 		if obj.UIAElement.cachedClassName == "ListViewItem": return
-		super(AppModule, self).event_nameChange(obj, nextHandler)
+		try:
+			cachedAutomationID = obj.UIAElement.cachedAutomationID
+		except:
+			cachedAutomationID = ""
+		# On some systems, touch keyboard keys keeps firing name change event.
+		# In build 17704, whenever skin tones are selected, name change is fired by emoji entries (GridViewItem).
+		if ((obj.UIAElement.cachedClassName in ("CRootKey", "GridViewItem"))
+		# Just ignore useless clipboard status.
+		# Also top emoji search result must be announced for better user experience.
+		or (cachedAutomationID in ("TEMPLATE_PART_ClipboardItemsList", "TEMPLATE_PART_Search_TextBlock"))
+		# And no, emoji entries should not be announced here.
+		or (self._recentlySelected is not None and self._recentlySelected in obj.name)):
+			return
+		# The word "blank" is kept announced, so suppress this on build 17666 and later.
+		if winVersion.winVersion.build > 17134:
+			# In build 17672 and later, return immediatley when element selected event on clipboard item was fired just prior to this.
+			# In some cases, parent will be None, as seen when emoji panel is closed in build 18267.
+			try:
+				if cachedAutomationID == "TEMPLATE_PART_ClipboardItemIndex" or obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_ClipboardItemsList": return
+			except AttributeError:
+				return
+			if not self._emojiPanelJustOpened or cachedAutomationID != "TEMPLATE_PART_ExpressionGroupedFullView": speech.cancelSpeech()
+		# Don't forget to add "Microsoft Candidate UI" as something that should be suppressed.
+		if cachedAutomationID not in ("TEMPLATE_PART_ExpressionFullViewItemsGrid", "TEMPLATE_PART_ClipboardItemIndex", "CandidateWindowControl"):
+			ui.message(obj.name)
+		self._symbolsGroupSelected = False
+		if obj.location == (0, 0, 0, 0):
+			self._emojiPanelJustOpened = False
+			self._symbolsGroupSelected = False
+			self._recentlySelected = None
+			self._searchInProgress = False
+		nextHandler()
