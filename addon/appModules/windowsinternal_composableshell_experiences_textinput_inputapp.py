@@ -103,7 +103,6 @@ class AppModule(AppModule):
 		# However this event is raised when the input panel closes.
 		inputPanel = obj.firstChild
 		if inputPanel is None:
-			self._symbolsGroupSelected = False
 			self._emojiPanelJustOpened = False
 			self._recentlySelected = None
 			return
@@ -181,7 +180,6 @@ class AppModule(AppModule):
 		self._symbolsGroupSelected = False
 		if obj.location == (0, 0, 0, 0):
 			self._emojiPanelJustOpened = False
-			self._symbolsGroupSelected = False
 			self._recentlySelected = None
 			self._searchInProgress = False
 		nextHandler()
@@ -189,7 +187,6 @@ class AppModule(AppModule):
 	def event_stateChange(self, obj, nextHandler):
 		# Attempting to retrieve object location fails when emoji panel closes without selecting anything, especially in Version 1903 and later.
 		if obj.location is None and winVersion.isWin10(version=1903):
-			self._symbolsGroupSelected = False
 			self._emojiPanelJustOpened = False
 			self._recentlySelected = None
 		nextHandler()
