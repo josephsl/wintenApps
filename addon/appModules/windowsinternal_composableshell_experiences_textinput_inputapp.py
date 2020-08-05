@@ -38,8 +38,7 @@ class AppModule(AppModule):
 			else:
 				# Symbols group flag must be set if and only if emoji panel is active, as UIA item selected event is fired just before emoji panel opens when opening the panel after closing it for a while.
 				api.setNavigatorObject(obj)
-				if self._emojiPanelJustOpened: 
-					self._symbolsGroupSelected = True
+				self._symbolsGroupSelected = True
 			return
 		automationID = obj._getUIACacheablePropertyValue(UIAHandler.UIA_AutomationIdPropertyId)
 		# #7273: When this is fired on categories, the first emoji from the new category is selected but not announced.
