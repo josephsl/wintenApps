@@ -178,7 +178,7 @@ class AppModule(AppModule):
 		if cachedAutomationID not in ("TEMPLATE_PART_ExpressionFullViewItemsGrid", "TEMPLATE_PART_ClipboardItemIndex", "CandidateWindowControl"):
 			ui.message(obj.name)
 		self._symbolsGroupSelected = False
-		if obj.location == (0, 0, 0, 0):
+		if not any(obj.location):
 			self._emojiPanelJustOpened = False
 			self._recentlySelected = None
 			self._searchInProgress = False
