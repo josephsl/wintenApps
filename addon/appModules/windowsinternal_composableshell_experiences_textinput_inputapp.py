@@ -58,12 +58,9 @@ class AppModule(AppModule):
 			return
 		speech.cancelSpeech()
 		# Sometimes, due to bad tree traversal or wrong item getting selected, something other than the selected item sees this event.
-		# Sometimes clipboard candidates list gets selected, so ask NvDA to descend one more level.
-		if automationID == "TEMPLATE_PART_ClipboardItemsList":
-			obj = obj.firstChild
 		# In build 18262, emoji panel may open to People group and skin tone modifier gets selected.
 		# Skin tone modifiers are also selected when switching to People emoji group, and this should be suppressed.
-		elif obj.parent.UIAElement.cachedAutomationID == "SkinTonePanelModifier_ListView":
+		if obj.parent.UIAElement.cachedAutomationID == "SkinTonePanelModifier_ListView":
 			# But this will point to nothing if emoji search results are not people.
 			if obj.parent.next is not None: obj = obj.parent.next
 			else: obj = obj.parent.parent.firstChild
@@ -148,6 +145,9 @@ class AppModule(AppModule):
 			clipboardHistory = obj.children[-2]
 			if clipboardHistory.UIAElement.cachedAutomationID == inputPanelAutomationID:
 				clipboardHistory = clipboardHistory.next
+			# Make sure to move to actual clipboard history item if available.
+			if clipboardHistory.firstChild is not None:
+				clipboardHistory = clipboardHistory.firstChild
 			eventHandler.executeEvent("UIA_elementSelected", clipboardHistory)
 		nextHandler()
 
