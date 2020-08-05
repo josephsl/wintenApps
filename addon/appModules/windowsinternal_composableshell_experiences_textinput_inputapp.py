@@ -187,8 +187,12 @@ class AppModule(AppModule):
 		nextHandler()
 
 	def event_stateChange(self, obj, nextHandler):
-		# Attempting to retrieve object location fails when emoji panel closes without selecting anything, especially in Version 1903 and later.
-		if obj.location is None and winVersion.isWin10(version=1903):
+		import controlTypes
+		# Try detecting if modern keyboard elements are off-screen
+		# But attempting to retrieve object location fails when emoji panel closes without selecting anything, especially in Version 1903 and later.
+		# Because of exceptions, check location first.
+		if ((obj.location is None and winVersion.isWin10(version=1903))
+		or controlTypes.STATE_OFFSCREEN in obj.states):
 			self._emojiPanelJustOpened = False
 			self._recentlySelected = None
 		nextHandler()
