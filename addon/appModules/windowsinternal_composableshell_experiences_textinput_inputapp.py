@@ -61,10 +61,8 @@ class AppModule(AppModule):
 		# Sometimes clipboard candidates list gets selected, so ask NvDA to descend one more level.
 		if automationID == "TEMPLATE_PART_ClipboardItemsList":
 			obj = obj.firstChild
-		# In build 18262, emoji panel may open to People group and skin tone modifier or the list housing them gets selected.
+		# In build 18262, emoji panel may open to People group and skin tone modifier gets selected.
 		# Skin tone modifiers are also selected when switching to People emoji group, and this should be suppressed.
-		elif automationID == "SkinTonePanelModifier_ListView":
-			obj = obj.next
 		elif obj.parent.UIAElement.cachedAutomationID == "SkinTonePanelModifier_ListView":
 			# But this will point to nothing if emoji search results are not people.
 			if obj.parent.next is not None: obj = obj.parent.next
@@ -135,7 +133,11 @@ class AppModule(AppModule):
 			if emojisList.UIAElement.cachedAutomationID != "TEMPLATE_PART_Items_GridView":
 				emojisList = emojisList.previous
 			try:
-				eventHandler.executeEvent("UIA_elementSelected", emojisList.firstChild.firstChild)
+				# Avoid announcing skin tone modifiers if possible.
+				emojiItem = emojisList.firstChild.firstChild
+				if emojiItem.UIAElement.cachedAutomationId == "SkinTonePanelModifier_ListView":
+					emojiItem = emojiItem.next
+				eventHandler.executeEvent("UIA_elementSelected", emojiItem)
 			except AttributeError:
 				# In build 18272's emoji panel, emoji list becomes empty in some situations.
 				pass
