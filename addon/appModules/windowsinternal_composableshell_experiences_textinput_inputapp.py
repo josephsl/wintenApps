@@ -13,6 +13,7 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *
 import eventHandler
+import controlTypes
 
 
 class AppModule(AppModule):
@@ -33,7 +34,7 @@ class AppModule(AppModule):
 		if winVersion.isWin10(version=1803) and not self._emojiPanelJustOpened: return
 		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object (for presentational purposes) and move on.
 		if obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_Groups_ListView":
-			if obj._getUIACacheablePropertyValue(UIAHandler.UIA_PositionInSetPropertyId) == 1:
+			if obj.positionInfo["indexInGroup"] == 1:
 				self._searchInProgress = True
 			else:
 				# Symbols group flag must be set if and only if emoji panel is active, as UIA item selected event is fired just before emoji panel opens when opening the panel after closing it for a while.
@@ -187,11 +188,10 @@ class AppModule(AppModule):
 		nextHandler()
 
 	def event_stateChange(self, obj, nextHandler):
-		import controlTypes
-		# Try detecting if modern keyboard elements are off-screen
+		# Try detecting if modern keyboard elements are off-screen or the window itself is gone (parent's first child is nothing).
 		# But attempting to retrieve object location fails when emoji panel closes without selecting anything, especially in Version 1903 and later.
 		# Because of exceptions, check location first.
-		if ((obj.location is None and winVersion.isWin10(version=1903))
+		if ((obj.location is None and obj.parent.firstChild is None and winVersion.isWin10(version=1903))
 		or controlTypes.STATE_OFFSCREEN in obj.states):
 			self._emojiPanelJustOpened = False
 			self._recentlySelected = None
