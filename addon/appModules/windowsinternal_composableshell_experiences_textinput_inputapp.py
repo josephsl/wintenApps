@@ -18,6 +18,7 @@ import controlTypes
 
 class AppModule(AppModule):
 
+	_modernKeyboardInterfaceActive = False
 	_symbolsGroupSelected = False
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
@@ -28,7 +29,7 @@ class AppModule(AppModule):
 			UIAHandler.handler.removeEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 			UIAHandler.handler.addEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 		# Wait until modern keyboard is fully displayed on screen.
-		if winVersion.isWin10(version=1803) and not self._emojiPanelJustOpened: return
+		if winVersion.isWin10(version=1803) and not self._modernKeyboardInterfaceActive: return
 		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object (for presentational purposes) and move on.
 		if obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_Groups_ListView":
 			api.setNavigatorObject(obj)
@@ -94,11 +95,11 @@ class AppModule(AppModule):
 		# However this event is raised when the input panel closes.
 		inputPanel = obj.firstChild
 		if inputPanel is None:
-			self._emojiPanelJustOpened = False
+			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
 			return
 		inputPanelAutomationID = inputPanel.UIAElement.cachedAutomationID
-		self._emojiPanelJustOpened = True
+		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
 		# Emoji panel for build 16299 and 17134.
 		# This event is properly raised in build 17134.
@@ -178,13 +179,13 @@ class AppModule(AppModule):
 				if cachedAutomationID == "TEMPLATE_PART_ClipboardItemIndex" or obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_ClipboardItemsList": return
 			except AttributeError:
 				return
-			if not self._emojiPanelJustOpened or cachedAutomationID != "TEMPLATE_PART_ExpressionGroupedFullView": speech.cancelSpeech()
+			if not self._modernKeyboardInterfaceActive or cachedAutomationID != "TEMPLATE_PART_ExpressionGroupedFullView": speech.cancelSpeech()
 		# Don't forget to add "Microsoft Candidate UI" as something that should be suppressed.
 		if cachedAutomationID not in ("TEMPLATE_PART_ExpressionFullViewItemsGrid", "TEMPLATE_PART_ClipboardItemIndex", "CandidateWindowControl"):
 			ui.message(obj.name)
 		self._symbolsGroupSelected = False
 		if not any(obj.location):
-			self._emojiPanelJustOpened = False
+			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
 		nextHandler()
 
@@ -194,6 +195,6 @@ class AppModule(AppModule):
 		# Because of exceptions, check location first.
 		if ((obj.location is None and obj.parent.firstChild is None and winVersion.isWin10(version=1903))
 		or controlTypes.STATE_OFFSCREEN in obj.states):
-			self._emojiPanelJustOpened = False
+			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
 		nextHandler()
