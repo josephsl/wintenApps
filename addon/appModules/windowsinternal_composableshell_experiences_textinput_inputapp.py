@@ -31,11 +31,9 @@ class AppModule(AppModule):
 		if winVersion.isWin10(version=1803) and not self._emojiPanelJustOpened: return
 		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object (for presentational purposes) and move on.
 		if obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_Groups_ListView":
-			if obj.positionInfo["indexInGroup"] == 1:
-				self._searchInProgress = True
-			else:
+			api.setNavigatorObject(obj)
+			if obj.positionInfo["indexInGroup"] != 1:
 				# Symbols group flag must be set if and only if emoji panel is active, as UIA item selected event is fired just before emoji panel opens when opening the panel after closing it for a while.
-				api.setNavigatorObject(obj)
 				self._symbolsGroupSelected = True
 			return
 		automationID = obj._getUIACacheablePropertyValue(UIAHandler.UIA_AutomationIdPropertyId)
