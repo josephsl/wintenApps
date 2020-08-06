@@ -19,7 +19,6 @@ import controlTypes
 class AppModule(AppModule):
 
 	_symbolsGroupSelected = False
-	_searchInProgress = False
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
 		# Ask NvDA to respond to UIA events coming from this overlay.
@@ -29,8 +28,6 @@ class AppModule(AppModule):
 			UIAHandler.handler.removeEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 			UIAHandler.handler.addEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 		# Wait until modern keyboard is fully displayed on screen.
-		# Force this flag on if search is in progress.
-		if self._searchInProgress: self._emojiPanelJustOpened = True
 		if winVersion.isWin10(version=1803) and not self._emojiPanelJustOpened: return
 		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object (for presentational purposes) and move on.
 		if obj.parent.UIAElement.cachedAutomationID == "TEMPLATE_PART_Groups_ListView":
@@ -184,7 +181,6 @@ class AppModule(AppModule):
 		if not any(obj.location):
 			self._emojiPanelJustOpened = False
 			self._recentlySelected = None
-			self._searchInProgress = False
 		nextHandler()
 
 	def event_stateChange(self, obj, nextHandler):
