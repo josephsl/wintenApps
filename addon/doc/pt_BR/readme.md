@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixe a [versão estável][1]
 * Baixe a [versão em desenvolvimento][2]
-* Compatibilidade com NVDA: 2019.3 a 2020.2
+* Compatibilidade com NVDA: 2020.1 a 2020.2
 
 Este complemento é uma coleção de módulos de aplicativos (app modules) para
 vários aplicativos do Windows 10, bem como aprimoramentos e correções para
@@ -66,9 +66,14 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   configurado para ser executado com o log de depuração ativado, esses
   eventos serão rastreados e, para o evento de notificação UIA, um bipe de
   depuração será ouvido se as notificações vierem de algum lugar diferente
-  do aplicativo atualmente ativo.
+  do aplicativo atualmente ativo. Alguns eventos fornecerão informações
+  adicionais, como contagem de elementos no controlador para evento, estado
+  do elemento para evento de mudança de estado, e texto do item para o
+  evento de status do item.
 * É possível rastrear apenas eventos específicos e/ou eventos provenientes
   de aplicativos específicos.
+* O NVDA não irá mais parecer não fazer nada ou tocar bipes de erro se a Id
+  de Automação UIA de um elemento não puder ser gravado ao rastrear eventos.
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
   anunciará o nome atual da área de trabalho (área de trabalho 2, por
   exemplo).
@@ -158,6 +163,9 @@ e defina o grau de símbolo como "pouco" ou superior.
 * Adicionado suporte para interfaces candidata a IME Chinesa, Japonesa e
   Coreana (CJK) modernas, introduzida na versão 2004 (compilação 18965 e
   posteriores).
+* Quando um grupo de emoji (incluindo o kaomoji e o grupo de símbolos na
+  versão 1903 ou posterior) é selecionado, o NVDA não move mais o objeto de
+  navegação para determinados emojis.
 
 ## Pessoas
 

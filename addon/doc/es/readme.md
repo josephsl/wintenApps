@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer y otros usuarios de Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
-* Compatibilidad con NVDA: de 2019.3 a 2020.2
+* Compatibilidad con NVDA: de 2020.1 a 2020.2
 
 Este complemento es una colección de app modules para varias aplicaciones de
 Windows 10, así como Mejoras y correcciones para ciertos controles de
@@ -66,9 +66,15 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   configurado para ejecutarse con el registro de depuración habilitado,
   estos eventos se seguirán, y se oirá un tono de depuración para el evento
   UIA notification si las notificaciones vienen de un lugar distinto a la
-  aplicación actual.
+  aplicación actual. Algunos eventos proporcionarán información adicional,
+  como la cantidad de elementos en el evento Controller for, el estado del
+  elemento en el evento State change, y el texto del elemento en el vento
+  Item status.
 * Es posible seguir sólo eventos específicos y/o eventos que vienen de
   aplicaciones específicas.
+* NVDA ya no parecerá hacer nada o reproducir tonos de error si no se puede
+  registrar el Id de UIA Automation de un elemento al hacer seguimiento de
+  eventos.
 * Al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
   nombre del escritorio actual (escritorio 2, por ejemplo).
 * NVDA ya no anuncia Menú Inicio tamaño de texto al cambiar la resolución de
@@ -158,6 +164,9 @@ voz de NVDA y configura el nivel de símbolos en "alguno" o más alto.
 * Se ha añadido soporte para la interfaz de candidatos IME en chino moderno,
   japonés y coreano (CJK) introducida en la versión 2004 (compilación 18965
   y posteriores).
+* Cuando se seleccione un grupo de emojis (incluyendo kaomoji y el grupo de
+  símbolos en la versión 1903 o posteriores), NVDA ya no moverá el navegador
+  de objetos a ciertos emojis.
 
 ## Gente
 

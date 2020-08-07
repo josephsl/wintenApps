@@ -3,7 +3,7 @@
 * Autory: Joseph Lee, Derek Riemer a ďalší používatelia Windowsu 10
 * Stiahnuť [stabilnú verziu][1]
 * Stiahnuť [vývojovú verziu][2]
-* Funguje s NVDA 2019.3 až 2020.2
+* Funguje s NVDA 2020.1 až 2020.2
 
 Obsahuje aplikačné moduly pre rôzne aplikácie systému Windows 10, ako aj
 vylepšenia a opravy určitých ovládacích prvkov systému Windows 10.
@@ -54,14 +54,15 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 * NVDA rozpoznáva nasledujúce udalosti UIA: controller for, drag start, drag
   cancel, drag complete, drag target enter, drag target leave, drag target
   dropped, element selected, item status, live region change, notification,
-  system alert, text change, tooltip opened, window opened. \v(Poznámka
-  prekladateľa: Pre bežného používateľa je podstatné, že NVDA dokáže
-  oznamovať väčšinu prvkov a ich zmien v moderných aplikáciách Windows). Ak
-  je nastavená úroveň záznamu na debug, budú tieto udalosti zapísané do logu
-  a ak sa objaví udalosť mimo aktívneho okna, NVDA na to upozorní zvukom
-  chyby.
+  system alert, text change, tooltip opened, window opened. Informácie o
+  prvkoch sa zapisujú do záznamu (pri nastavenej úrovni debug). Ak príde
+  udalosť z inej aplikácie, udalosť sa rovnako zapíše a vývojové verzie NVDA
+  ohlásia zápis charakteristickým zvukom chyby. Pri niektorých prvkoch je
+  tiež doplnená informácia o počte položiek, stav alebo text.
 * Je možné sledovať iba konkrétne udalosti a udalosti pochádzajúce z
   konkrétnych aplikácií.
+* NVDA viac neupozorňuje zvukom na situácie, keď nie je možné zistiť ID
+  prvku.
 * Pri otváraní, zatváraní alebo prepínaní medzi virtuálnymi pracovnými
   plochami NVDA oznámi aktuálny názov pracovnej plochy (napríklad pracovná
   plocha 2).
@@ -138,6 +139,8 @@ aktivovať v nastaveniach reči použitie databázy unicode konzorcia a nastavi�
   oznamované otvorenie panela emoji.
 * pridaná podpora pre metódy písania v Čínštine, Japončine a Kórejčine,
   predstavené od verzie 2004 (zostava 18965)
+* Ak je vybratá skupina emoji(alebo symbolov a kaomoji od verzie 1903), NVDA
+  nepresúva navigačný objekt automaticky na prvú položku.
 
 ## Ľudia
 

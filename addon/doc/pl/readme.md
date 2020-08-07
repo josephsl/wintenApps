@@ -3,7 +3,7 @@
 * Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
-* Zgodność z wersjami NVDA: 2019.3 do 2020.2
+* NVDA compatibility: 2020.1 to 2020.2
 
 Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
 również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
@@ -55,16 +55,20 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   2019) i nowszych, podwójnie wymawianie wyników wyszukiwania jest mniej
   zauważalne, co idzie za tym, że to co jest wyświetlane na monitorze
   brajlowskim jest bardziej spójne przy przeglądaniu elementy.
-* Następujące zdarzenia UIA są rozpoznawane: controller for, drag start,
-  drag cancel, drag complete, drag target enter, drag target leave, drag
-  target dropped, element selected, item status, live region change,
-  notification, system alert, text change, tooltip opened, window
-  opened. Gdy NVDA jest uruchomiony z zapisywaniem debugowania, te zdarzenia
-  będą śledzone, i dla UIA zdarzenia powiadomień, a dźwięk debugowania
-  będzie odtwarzany jeżeli powiadomienia przychodzą z innej niż aktualnie
-  aktywnej aplikacji.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, drag target enter, drag target leave, drag target
+  dropped, element selected, item status, live region change, notification,
+  system alert, text change, tooltip opened, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard if notifications come from
+  somewhere other than the currently active app. Some events will provide
+  additional information such as element count in controller for event,
+  state of the element for state change event, and item text for item status
+  event.
 * Teraz jest możliwe śledzenie zdarzeń z określonych oraz specyficznych
   aplikacji.
+* NVDA will no longer appear to do nothing or play error tones if UIA
+  Automation Id for an element could not be recorded when tracking events.
 * Podczas otwierania, zamykając lub przełączając się między wirtualnymi
   pulpitami, NVDA będzie oznajmiała aktualny identyfikator (na przykład
   pulpit 2).
@@ -151,6 +155,9 @@ odczytywania emoji w ustawieniach mowy NVDA, a poziom interpunkcji na
 * Dodano wsparcie dla współczesnego interfejsu kandydatów dla chińskiego,
   japońskiego, i koreańskiego (CJK) wprowadzonego w wersji 2004 (kompilacja
   18965 i nowsze).
+* When an emoji group (including kaomoji and symbols group in Version 1903
+  or later) is selected, NVDA will no longer move navigator object to
+  certain emojis.
 
 ## Osoby
 

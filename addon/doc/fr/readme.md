@@ -3,7 +3,7 @@
 * Auteurs: Joseph Lee, Derek Riemer et d’autres utilisateurs de Windows 10
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
-* NVDA compatibility: 2019.3 to 2020.2
+* NVDA compatibility: 2020.1 to 2020.2
 
 Cette extension est une collection d'app modules pour diverses apps de
 Windows 10, ainsi que des améliorations et des correctifs pour certains
@@ -65,9 +65,14 @@ l'extension][3].
   system alert, text change, tooltip opened, window opened. With NVDA set to
   run with debug logging enabled, these events will be tracked, and for UIA
   notification event, a debug tone will be heard if notifications come from
-  somewhere other than the currently active app.
+  somewhere other than the currently active app. Some events will provide
+  additional information such as element count in controller for event,
+  state of the element for state change event, and item text for item status
+  event.
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
+* NVDA will no longer appear to do nothing or play error tones if UIA
+  Automation Id for an element could not be recorded when tracking events.
 * Lors de l'ouverture, de la fermeture ou du basculement entre les bureaux
   virtuels, NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
 * NVDA n'annoncera plus le texte de la taille du menu Démarrer lorsque vous
@@ -151,6 +156,9 @@ NvDA's speech settings and set symbol level to "some" or higher.
   will no longer appear to do nothing when emoji panel opens.
 * Added support for modern Chinese, Japanese, and Korean (CJK) IME
   candidates interface introduced in Version 2004 (build 18965 and later).
+* When an emoji group (including kaomoji and symbols group in Version 1903
+  or later) is selected, NVDA will no longer move navigator object to
+  certain emojis.
 
 ## Personnes
 

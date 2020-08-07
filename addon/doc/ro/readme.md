@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer și alți utilizatori Windows 10
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
-* NVDA compatibility: 2019.3 to 2020.2
+* NVDA compatibility: 2020.1 to 2020.2
 
 Acest supliment cuprinde o colecție de module pentru diverse aplicații din
 Windows 10, dar și rezolvări și îmbunătățiri pentru anumite controale din
@@ -66,9 +66,14 @@ versiunile suplimentului][3].
   system alert, text change, tooltip opened, window opened. With NVDA set to
   run with debug logging enabled, these events will be tracked, and for UIA
   notification event, a debug tone will be heard if notifications come from
-  somewhere other than the currently active app.
+  somewhere other than the currently active app. Some events will provide
+  additional information such as element count in controller for event,
+  state of the element for state change event, and item text for item status
+  event.
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
+* NVDA will no longer appear to do nothing or play error tones if UIA
+  Automation Id for an element could not be recorded when tracking events.
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce current desktop name (desktop 2, for example).
 * NVDA nu mai anunță „dimensiune text start meniu” la schimbarea rezoluției
@@ -148,6 +153,9 @@ NvDA's speech settings and set symbol level to "some" or higher.
   will no longer appear to do nothing when emoji panel opens.
 * Added support for modern Chinese, Japanese, and Korean (CJK) IME
   candidates interface introduced in Version 2004 (build 18965 and later).
+* When an emoji group (including kaomoji and symbols group in Version 1903
+  or later) is selected, NVDA will no longer move navigator object to
+  certain emojis.
 
 ## Persoane
 

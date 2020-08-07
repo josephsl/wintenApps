@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2019.3 to 2020.2
+* NVDA compatibility: 2020.1 to 2020.2
 
 Denne tilføjelse er en samling af app-moduler til forskellige Windows 10
 apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.
@@ -54,15 +54,20 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   Update) og senere, vil NVDA ikke længere annoncere søgeresultater to
   gange, når du gennemser resultater, hvilket også gør punktoutput mere
   ensartet, når du gennemgår elementer.
-* De følgende UIA begivenheder er anerkendt: controller for, drag start,
-  drag cancel, drag complete, drag target enter, drag target leave, drag
-  target dropped, element selected, item status, live region change,
-  notification, system alert, text change, tooltip opened, window
-  opened. Med NVDA indstillet til at køre med logføring aktiveret, spores
-  disse begivenheder, og for UIA notification event, vil en fejltone blive
-  hørt, hvis notifikationer kommer fra en anden app en den aktuelle.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, drag target enter, drag target leave, drag target
+  dropped, element selected, item status, live region change, notification,
+  system alert, text change, tooltip opened, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard if notifications come from
+  somewhere other than the currently active app. Some events will provide
+  additional information such as element count in controller for event,
+  state of the element for state change event, and item text for item status
+  event.
 * Det er muligt at overvåge specifikke hændelser og/eller hændelser, der
   kommer fra specifikke apps.
+* NVDA will no longer appear to do nothing or play error tones if UIA
+  Automation Id for an element could not be recorded when tracking events.
 * Når åbning, lukning, eller Skift mellem virtuelle skrivebord forekommer,
   vil NVDA annoncere nuværende desktop ID (f.eks. "Skrivebord 2").
 * NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
@@ -149,6 +154,9 @@ indstille tegnsætningsniveauet til "nogle" eller højere.
 * Tilføjet understøttelse af moderne kinesisk, japansk og koreansk (CJK)
   IME-kandidater interface introduceret i version 2004 (build 18965 og
   senere).
+* When an emoji group (including kaomoji and symbols group in Version 1903
+  or later) is selected, NVDA will no longer move navigator object to
+  certain emojis.
 
 ## Personer
 

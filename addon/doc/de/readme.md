@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA-Kompatibilität: 2019.3 bis 2020.2
+* NVDA compatibility: 2020.1 to 2020.2
 
 Diese Erweiterung bietet eine Sammlung von Anwendungsmodulen für
 verschiedene Windows 10 Anwendungen sowie Korrekturen in einigen Windows 10
@@ -59,18 +59,20 @@ Versionen][3].
   der Überprüfung von Ergebnissen zweimal angekündigt werden, weniger
   auffällig, was auch die Brailleausgabe bei der Überprüfung von Elementen
   einheitlicher macht.
-* Die folgenden Ereignisse für die Benutzeroberflächenautomatisierung werden
-  erkannt: Steuerung für, Drag Start, Drag Cancel, Drag Complete, drag
-  target enter, drag target leave, drag target dropped, Element ausgewählt,
-  Elementstatus, Änderung der Live-Region, Benachrichtigung, Systemalarm,
-  Textänderung, Tooltipp geöffnet, Fenster geöffnet. Wenn NVDA so
-  eingestellt ist, dass es mit aktivierter Debug-Protokollierung läuft,
-  werden diese Ereignisse verfolgt und für das Benachrichtigungsereignis der
-  Benutzeroberflächenautomatisierung wird ein Fehler-Ton ausgegeben, wenn
-  Benachrichtigungen von einem anderen Ort als der aktuell aktiven Anwendung
-  stammen.
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, drag target enter, drag target leave, drag target
+  dropped, element selected, item status, live region change, notification,
+  system alert, text change, tooltip opened, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard if notifications come from
+  somewhere other than the currently active app. Some events will provide
+  additional information such as element count in controller for event,
+  state of the element for state change event, and item text for item status
+  event.
 * Es ist möglich, nur bestimmte Ereignisse bzw. Ereignisse aus bestimmten
   Anwendungen zu verfolgen.
+* NVDA will no longer appear to do nothing or play error tones if UIA
+  Automation Id for an element could not be recorded when tracking events.
 * Beim Öffnen, Schließen oder Umschalten virtueller Desktops meldet NVDA den
   aktuellen Desktop-Namen (z. B. Desktop 2).
 * NVDA sagt den Text für die Größe des Startmenüs nicht mehr an, wenn die
@@ -161,6 +163,9 @@ Unicode-Konsortium-Einstellung in NVDA und setzen Sie die Symbol-Stufe auf
 * Unterstützung für die moderne IME-Kandidaten-Schnittstelle für Chinesisch,
   Japanisch und Koreanisch (CJK) wurde in Version 2004 (Build 18965 und
   neuer) eingeführt.
+* When an emoji group (including kaomoji and symbols group in Version 1903
+  or later) is selected, NVDA will no longer move navigator object to
+  certain emojis.
 
 ## Kontakte
 

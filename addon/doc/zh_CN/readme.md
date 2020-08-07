@@ -3,7 +3,7 @@
 * 作者: Joseph Lee, Derek Riemer and other Windows 10 users
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA兼容版本: 2019.3至2020.2
+* NVDA compatibility: 2020.1 to 2020.2
 
 此附加组件用于各种Windows 10应用程序的模块集合，以及针对某些Windows 10控件的增强功能和修复程序。
 
@@ -49,8 +49,19 @@
 * 某些对话框现在被识别为正确的对话框并按此朗读，包括“内幕预览”对话框（设置应用程序）。
 * 在大多数情况下，NVDA可以在执行搜索时朗读建议计数。此选项由NVDA设置中的对象显示面板中的“朗读对象位置信息”控制。
 * 在1909版（2019年11月更新）及更高版本中的``开始''菜单或``文件资源管理器''中进行搜索时，现在NVDA在浏览结果时两次宣布搜索结果的实例不太明显，这也使盲文输出在浏览项目时更加一致。
-* 可以识别以下UIA事件：控制器，拖动开始，拖动取消，拖动完成，拖动目标进入，拖动目标离开，拖动目标掉落，所选元素，项目状态，活动区域更改，通知，系统警报，文本更改，工具提示打开，窗口打开。将NVDA设置为在启用调试日志记录的情况下运行时，将跟踪这些事件，对于UIA通知事件，如果通知来自当前活动应用程序以外的其他位置，则会听到调试音。
+* The following UIA events are recognized: controller for, drag start, drag
+  cancel, drag complete, drag target enter, drag target leave, drag target
+  dropped, element selected, item status, live region change, notification,
+  system alert, text change, tooltip opened, window opened. With NVDA set to
+  run with debug logging enabled, these events will be tracked, and for UIA
+  notification event, a debug tone will be heard if notifications come from
+  somewhere other than the currently active app. Some events will provide
+  additional information such as element count in controller for event,
+  state of the element for state change event, and item text for item status
+  event.
 * 现在，可以仅传送来自特定应用的特定事件和/或事件。
+* NVDA will no longer appear to do nothing or play error tones if UIA
+  Automation Id for an element could not be recorded when tracking events.
 * 在虚拟桌面之间打开，关闭或切换时，NVDA将朗读当前桌面名称（例如，桌面2）。
 * 在更改屏幕分辨率或方向时，NVDA将不再公布“开始”菜单大小文本。
 * 当使用Alt + Shift +光标键托移“开始”菜单图块或“操作中心”快速操作时，NVDA将朗读有关所拖动项目或所拖动项目的新位置的信息。
@@ -106,6 +117,9 @@ Consortium设置，并将符号级别设置为“some”或更高。
 * 当前，打开剪贴板历史记录时，在某些情况下，剪贴板中有项目时，NVDA将不再读出“剪贴板”。
 * 在某些运行版本1903（2019年5月更新）的系统上，当表情符号面板打开时，NVDA将不再显示任何内容。
 * 增加了对版本2004内部版本18965和更高版本中引入的现代中文，日文和韩文（CJK）IME的支持。
+* When an emoji group (including kaomoji and symbols group in Version 1903
+  or later) is selected, NVDA will no longer move navigator object to
+  certain emojis.
 
 ## {longName} ({name})
 版本: {version}

@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros usuarios do Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
-* Compatibilidade con NVDA: da 2019.3 á 2020.2
+* Compatibilidade con NVDA: da 2020.1 á 2020.2
 
 Este complemento é unha coleción de app modules para varias aplicacións de
 Windows 10, así coma melloras e correccións para certos controis de windows
@@ -62,12 +62,16 @@ documento [rexistros de trocos para publicacións de complementos][3].
   cancel, drag complete, drag target enter, drag target leave, drag target
   dropped, element selected, item status, live region change, notification,
   system alert, text change, tooltip opened, window opened. Co NVDA
-  configurado para executarse co rexistro de depuración habilitado, estos
-  eventos seguiranse e, no caso do evento UIA notification oirase un ton se
+  configurado para executarse co rexistro de depuración habilitado, estes
+  eventos seguiranse, e no caso do evento UIA notification oirase un ton se
   as notificacións veñen de calquera lugar que non sexa a app actualmente
-  activa.
+  activa. Algúns eventos proporcionarán información adicional como o
+  contador de elementos en eventos controlled for, estado do elemento en
+  eventos state change, e o texto do elemento para eventos item status.
 * É posible o seguimento só de eventos específicos e/ou de eventos provintes
   de aplicacións específicas.
+* NVDA xa non parecerá non facer nada ou reproducirá tons de erro se o Id de
+  UIA automation para un elemento non se puido gravar ao seguir eventos.
 * Cando se abran, pechen ou se conmute entre escritorios virtuales, NVDA
   anunciará o nome do escritorio actual (escritorio 2, por exemplo).
 * NVDA xa non anuncia Menú Inicio tamaño de texto ao cambiar a resolución de
@@ -153,6 +157,9 @@ o nivel de símbolos en "algunha" ou superior.
 * Engadido soporte para a interface de candidatos IME en chino, xaponés e
   coreano (CJK) introducida na versión 2004 (compilación 18965 e
   posteriores).
+* Cando se selecciona un grupo de emojis (incluindo kaomoji e grupos de
+  símbolos na Versión 1903 ou posterior), NVDA xa non moverá o navegador de
+  obxectos a certos emojis.
 
 ## Xente
 
