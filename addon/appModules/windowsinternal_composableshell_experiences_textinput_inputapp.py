@@ -149,19 +149,19 @@ class AppModule(AppModule):
 		nextHandler()
 
 	def event_nameChange(self, obj, nextHandler):
+		try:
+			cachedAutomationId = obj.UIAElement.cachedAutomationId
+		except:
+			cachedAutomationId = ""
 		# Forget it if there is no Automation ID and class name set.
 		if (
-			(obj.UIAElement.cachedClassName == "" and obj.UIAElement.cachedAutomationId == "")
+			(obj.UIAElement.cachedClassName == "" and cachedAutomationId == "")
 			# In build 18975, CJK IME candidates fire name change event.
 			or obj.UIAElement.cachedClassName == "ListViewItem"
 			# Clipboard entries fire name change event when opened.
-			or (obj.UIAElement.cachedClassName == "TextBlock" and obj.UIAElement.CachedAutomationId == "")
+			or (obj.UIAElement.cachedClassName == "TextBlock" and cachedAutomationId == "")
 		):
 			return
-		try:
-			cachedAutomationID = obj.UIAElement.cachedAutomationID
-		except:
-			cachedAutomationID = ""
 		# On some systems, touch keyboard keys keeps firing name change event.
 		# In build 17704, whenever skin tones are selected, name change is fired by emoji entries (GridViewItem).
 		if ((obj.UIAElement.cachedClassName in ("CRootKey", "GridViewItem"))
