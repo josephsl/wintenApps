@@ -24,7 +24,7 @@ RE_BUTTONCONTROL = re.compile("|".join([
 	r"L1NavigationButton_Settings",
 ]))
 # Regexp for multiLine List items, whos children need the list class added.
-# This is because the AutomationID for them is non existant, so we check their parent.
+# This is because the Automation Id for them is non-existent, so we check their parent.
 RE_PARENT_LISTS = re.compile("|".join([
 	r"DailyList",
 	r"HourlyList",
@@ -61,7 +61,7 @@ class WeatherForecastItem(NVDAObject):
 class AppModule(appModuleHandler.AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		if obj.role == controlTypes.ROLE_LISTITEM and RE_PARENT_LISTS.match(obj.parent.UIAElement.CachedAutomationID):
+		if obj.role == controlTypes.ROLE_LISTITEM and RE_PARENT_LISTS.match(obj.parent.UIAElement.CachedAutomationId):
 			clsList.insert(0, WeatherForecastItem)
 
 	def event_NVDAObject_init(self, obj):

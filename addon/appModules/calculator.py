@@ -39,13 +39,13 @@ class AppModule(appModuleHandler.AppModule):
 	def event_nameChange(self, obj, nextHandler):
 		if not isinstance(obj, UIA): return
 		# No, announce value changes immediately except for calculator results and expressions.
-		if obj.UIAElement.cachedAutomationID in noCalculatorEntryAnnouncements or obj.UIAElement.cachedClassName == "LandmarkTarget":
+		if obj.UIAElement.cachedAutomationId in noCalculatorEntryAnnouncements or obj.UIAElement.cachedClassName == "LandmarkTarget":
 			self._shouldAnnounceResult = False
 		# For the rest:
-		elif obj.UIAElement.cachedAutomationID not in noCalculatorEntryAnnouncements and obj.name != self._resultsCache:
+		elif obj.UIAElement.cachedAutomationId not in noCalculatorEntryAnnouncements and obj.name != self._resultsCache:
 			# For unit conversion, UIA notification event presents much better messages.
 			# For date calculation, live region change event is also fired for difference between dates.
-			if obj.UIAElement.cachedAutomationID not in ("Value1", "Value2", "DateDiffAllUnitsResultLabel"):
+			if obj.UIAElement.cachedAutomationId not in ("Value1", "Value2", "DateDiffAllUnitsResultLabel"):
 				ui.message(obj.name)
 			self._resultsCache = obj.name
 		if not self._shouldAnnounceResult:
@@ -60,14 +60,14 @@ class AppModule(appModuleHandler.AppModule):
 		# From May 2018 onwards, unit converter uses a different automation iD.
 		# Changed significantly in July 2018 thanks to UI redesign, and as a result, attribute error is raised.
 		try:
-			shouldAnnounceNotification = obj.previous.UIAElement.cachedAutomationID in ("numberPad", "UnitConverterRootGrid")
+			shouldAnnounceNotification = obj.previous.UIAElement.cachedAutomationId in ("numberPad", "UnitConverterRootGrid")
 		except AttributeError:
 			# Another UI redesign in 2019, causing attribute error when changing categories.
 			resultElement = api.getForegroundObject().children[1].lastChild
 			# Another redesign in 2019 due to introduction of "always on top" i.e. picture-in-picture mode.
 			if resultElement.UIAElement.cachedClassName != "LandmarkTarget":
 				resultElement = resultElement.parent.children[1]
-			shouldAnnounceNotification = resultElement and resultElement.firstChild and resultElement.firstChild.UIAElement.cachedAutomationID not in noCalculatorEntryAnnouncements
+			shouldAnnounceNotification = resultElement and resultElement.firstChild and resultElement.firstChild.UIAElement.cachedAutomationId not in noCalculatorEntryAnnouncements
 		# Announce activity ID's other than "DisplayUpdate" as this is redundant if speak typed characters is on (activity ID's courtesy of Microsoft Calculator source code hosted on GitHub, MIT license).
 		if shouldAnnounceNotification or activityId != "DisplayUpdated":
 			nextHandler()
@@ -85,7 +85,7 @@ class AppModule(appModuleHandler.AppModule):
 		# Hack: only announce display text when an actual calculator button (usually equals button) is pressed.
 		# In redstone, pressing enter does not move focus to equals button.
 		if isinstance(focus, UIA):
-			if focus.UIAElement.cachedAutomationID == "CalculatorResults":
+			if focus.UIAElement.cachedAutomationId == "CalculatorResults":
 				queueHandler.queueFunction(queueHandler.eventQueue, focus.reportFocus)
 			else:
 				resultsScreen = api.getForegroundObject().children[1].lastChild

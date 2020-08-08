@@ -12,7 +12,7 @@ from NVDAObjects.UIA import UIA
 class AppModule(appModuleHandler.AppModule):
 
 	def event_nameChange(self, obj, nextHandler):
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "HeaderTextBlock":
+		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationId == "HeaderTextBlock":
 			# Not only header should be announced, dialog text should also be announced as well.
 			# This works properly if the parent object is recognized as a dialog.
 			ui.message(obj.parent.description)

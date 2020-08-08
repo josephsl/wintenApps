@@ -47,5 +47,5 @@ class AppModule(AppModule):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if WordDocument in clsList:
 			clsList.insert(0, MailWordDocument)
-		elif isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "MailItem":
+		elif isinstance(obj, UIA) and obj.UIAElement.cachedAutomationId == "MailItem":
 			clsList.insert(0, MailItemRow)

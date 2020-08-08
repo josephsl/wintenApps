@@ -28,13 +28,13 @@ class AppModule(AppModule):
 		if isinstance(obj, UIA):
 			# Build 18945 introduces (or re-introduces) modern search experience in File Explorer, and as part of this, suggestion count is part of a live region.
 			# Although it is geared for Narrator, it is applicable to other screen readers as well. The live region itself is a child of the one shown here.
-			if obj.UIAElement.cachedAutomationID == "suggestionCountForNarrator" and obj.firstChild is not None:
+			if obj.UIAElement.cachedAutomationId == "suggestionCountForNarrator" and obj.firstChild is not None:
 				obj.name = obj.firstChild.name
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Without this, NVDA will announce "suggestions" in braille.
 		# Return early so the app module class included in NVDA Core can proceed with checking for other overlay classes.
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationID == "SearchTextBox":
+		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationId == "SearchTextBox":
 			clsList.insert(0, StartMenuSearchField)
 			return
 		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
