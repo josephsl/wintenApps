@@ -69,7 +69,7 @@ class SearchField(SearchField):
 		# Oddly, Edge's address omnibar returns 0 for suggestion count when there are clearly suggestions (implementation differences).
 		# Because inaccurate count could be announced (when users type, suggestion count changes), thus announce this if position info reporting is enabled.
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
-			if self.UIAElement.cachedAutomationID == "TextBox" or self.UIAElement.cachedAutomationID == "SearchTextBox" and self.appModule.appName not in ("searchui", "searchapp"):
+			if self.UIAElement.cachedAutomationId == "TextBox" or self.UIAElement.cachedAutomationId == "SearchTextBox" and self.appModule.appName not in ("searchui", "searchapp"):
 				# Item count must be the last one spoken.
 				suggestionsCount = self.controllerFor[0].childCount
 				# Translators: presented when there is one suggestion for a search term.
@@ -140,14 +140,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				return
 			# Search field that does raise controller for event.
 			# Although basic functionality is included in NVDA 2017.3, added enhancements such as announcing suggestion count.
-			if obj.UIAElement.cachedAutomationID in ("SearchTextBox", "TextBox"):
+			if obj.UIAElement.cachedAutomationId in ("SearchTextBox", "TextBox"):
 				# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcement problem.
 				# Because the add-on version deals with focus comparison, let all search fields go through this check as much as possible except for specific apps.
 				if obj.appModule.appName not in ("searchui", "searchapp"):
 					clsList.insert(0, SearchField)
 					return
 			# A dedicated version for Mail app's address/mention suggestions.
-			elif obj.UIAElement.cachedAutomationID == "RootFocusControl":
+			elif obj.UIAElement.cachedAutomationId == "RootFocusControl":
 				clsList.insert(0, UIAEditableTextWithSuggestions)
 				return
 			# Recognize headings as reported by XAML (build 17134 and later).
@@ -203,7 +203,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			element = obj.UIAElement
 			# Sometimes due to timing errors, COM error is thrown when trying to obtain automation ID from the underlying UIA element.
 			try:
-				info.append(f"automation Id: {element.cachedAutomationID}")
+				info.append(f"automation Id: {element.cachedAutomationId}")
 			except COMError:
 				info.append("automation Id: not found")
 			info.append(f"class name: {element.cachedClassName}")
@@ -252,7 +252,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if isinstance(obj, UIA):
 			# No, do not let Start menu size be announced.
 			# Moved from Shell Experience Host in 2018 as a different app hosts this control in build 18282.
-			if obj.UIAElement.cachedAutomationID == "FrameSizeAccessibilityField": return
+			if obj.UIAElement.cachedAutomationId == "FrameSizeAccessibilityField": return
 			# #50 (NVDA Core issue 8466): certain aria-alert messages.
 			if obj.role == controlTypes.ROLE_ALERT:
 				if not obj.name and obj.treeInterceptor is not None:
@@ -278,7 +278,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Log which modern keyboard header is active.
 		# Although this can be done from modern keyboard app module, that module is destined for NVDA Core, hence do it here.
 		if obj.appModule.appName in ("windowsinternal_composableshell_experiences_textinput_inputapp", "textinputhost") and obj.firstChild is not None and globalVars.appArgs.debugLogging:
-			log.debug(f"W10: automation ID for currently opened modern keyboard feature is {obj.firstChild.UIAElement.cachedAutomationID}")
+			log.debug(f"W10: automation Id for currently opened modern keyboard feature is {obj.firstChild.UIAElement.cachedAutomationId}")
 		nextHandler()
 
 	def event_UIA_notification(self, obj, nextHandler, notificationKind=None, notificationProcessing=None, displayString=None, activityId=None):
