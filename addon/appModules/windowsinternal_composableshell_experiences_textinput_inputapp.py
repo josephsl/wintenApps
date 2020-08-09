@@ -103,8 +103,16 @@ class AppModule(AppModule):
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 		import UIAHandler
 		if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]:
-			UIAHandler.handler.removeEventHandlerGroup(inputPanel.UIAElement, UIAHandler.handler.localEventHandlerGroup)
-			UIAHandler.handler.addEventHandlerGroup(inputPanel.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+			localEventHandlerElements = [inputPanel]
+			# For dictation, add elements manually so name change event can be handled.
+			if inputPanelAutomationId == "DictationMicrophoneButton":
+				element = inputPanel.next
+				while element is not None:
+					localEventHandlerElements.append(element)
+					element = element.next
+			for element in localEventHandlerElements:
+				UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+				UIAHandler.handler.addEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
 		# Emoji panel for build 16299 and 17134.
