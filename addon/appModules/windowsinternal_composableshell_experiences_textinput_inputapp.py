@@ -99,6 +99,12 @@ class AppModule(AppModule):
 			self._recentlySelected = None
 			return
 		inputPanelAutomationId = inputPanel.UIAElement.cachedAutomationId
+		# Ask NvDA to respond to UIA events coming from modern keyboard interface.
+		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
+		import UIAHandler
+		if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]:
+			UIAHandler.handler.removeEventHandlerGroup(inputPanel.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+			UIAHandler.handler.addEventHandlerGroup(inputPanel.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
 		# Emoji panel for build 16299 and 17134.
@@ -116,12 +122,6 @@ class AppModule(AppModule):
 				pass
 		# Emoji panel in build 17666 and later (unless this changes).
 		elif inputPanelAutomationId == "TEMPLATE_PART_ExpressionGroupedFullView":
-			# Ask NvDA to respond to UIA events coming from this overlay.
-			# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
-			import UIAHandler
-			if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]:
-				UIAHandler.handler.removeEventHandlerGroup(inputPanel.UIAElement, UIAHandler.handler.localEventHandlerGroup)
-				UIAHandler.handler.addEventHandlerGroup(inputPanel.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 			# On some systems, there is something else besides grouping controls, so another child control must be used.
 			emojisList = inputPanel.children[-2]
 			if emojisList.UIAElement.cachedAutomationId != "TEMPLATE_PART_Items_GridView":
