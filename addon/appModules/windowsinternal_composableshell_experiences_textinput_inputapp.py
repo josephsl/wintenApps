@@ -88,6 +88,20 @@ class AppModule(AppModule):
 	_classicEmojiPanelAutomationId = ("TEMPLATE_PART_ExpressiveInputFullViewFuntionBarItemControl", "TEMPLATE_PART_ExpressiveInputFullViewFuntionBarCloseButton")
 
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
+		# Ask NvDA to respond to UIA events coming from modern keyboard interface.
+		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
+		import UIAHandler
+		if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"] and obj.firstChild is not None:
+			localEventHandlerElements = [obj.firstChild]
+			# For dictation, add elements manually so name change event can be handled.
+			if obj.firstChild.UIAElement.cachedAutomationId == "DictationMicrophoneButton":
+				element = obj.children[1]
+				while element.next is not None:
+					localEventHandlerElements.append(element)
+					element = element.next
+			for element in localEventHandlerElements:
+				UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+				UIAHandler.handler.addEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 		# Make sure to announce most recently used emoji first in post-1709 builds.
 		# Fake the announcement by locating 'most recently used" category and calling selected event on this.
 		# However, in build 17666 and later, child count is the same for both emoji panel and hardware keyboard candidates list.
@@ -99,20 +113,6 @@ class AppModule(AppModule):
 			self._recentlySelected = None
 			return
 		inputPanelAutomationId = inputPanel.UIAElement.cachedAutomationId
-		# Ask NvDA to respond to UIA events coming from modern keyboard interface.
-		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
-		import UIAHandler
-		if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]:
-			localEventHandlerElements = [inputPanel]
-			# For dictation, add elements manually so name change event can be handled.
-			if inputPanelAutomationId == "DictationMicrophoneButton":
-				element = inputPanel.next
-				while element is not None:
-					localEventHandlerElements.append(element)
-					element = element.next
-			for element in localEventHandlerElements:
-				UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
-				UIAHandler.handler.addEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
 		# Emoji panel for build 16299 and 17134.
