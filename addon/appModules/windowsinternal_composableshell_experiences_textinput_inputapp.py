@@ -172,12 +172,14 @@ class AppModule(AppModule):
 			return
 		# On some systems, touch keyboard keys keeps firing name change event.
 		# In build 17704, whenever skin tones are selected, name change is fired by emoji entries (GridViewItem).
-		if ((obj.UIAElement.cachedClassName in ("CRootKey", "GridViewItem"))
-		# Just ignore useless clipboard status and vertical scroll bar label.
-		# Also top emoji search result must be announced for better user experience.
-		or (cachedAutomationId in ("TEMPLATE_PART_ClipboardItemsList", "TEMPLATE_PART_Search_TextBlock", "VerticalScrollBar"))
-		# And no, emoji entries should not be announced here.
-		or (self._recentlySelected is not None and self._recentlySelected in obj.name)):
+		if (
+			(obj.UIAElement.cachedClassName in ("CRootKey", "GridViewItem"))
+			# Just ignore useless clipboard status and vertical scroll bar label.
+			# Also top emoji search result must be announced for better user experience.
+			or (cachedAutomationId in ("TEMPLATE_PART_ClipboardItemsList", "TEMPLATE_PART_Search_TextBlock", "VerticalScrollBar"))
+			# And no, emoji entries should not be announced here.
+			or (self._recentlySelected is not None and self._recentlySelected in obj.name)
+		):
 			return
 		# The word "blank" is kept announced, so suppress this on build 17666 and later.
 		if winVersion.isWin10(version=1809):
@@ -201,8 +203,10 @@ class AppModule(AppModule):
 		# Try detecting if modern keyboard elements are off-screen or the window itself is gone (parent's first child is nothing).
 		# But attempting to retrieve object location fails when emoji panel closes without selecting anything, especially in Version 1903 and later.
 		# Because of exceptions, check location first.
-		if ((obj.location is None and obj.parent.firstChild is None and winVersion.isWin10(version=1903))
-		or controlTypes.STATE_OFFSCREEN in obj.states):
+		if (
+			(obj.location is None and obj.parent.firstChild is None and winVersion.isWin10(version=1903))
+			or controlTypes.STATE_OFFSCREEN in obj.states
+		):
 			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
 		nextHandler()
