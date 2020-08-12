@@ -85,7 +85,7 @@ class AppModule(AppModule):
 		nextHandler()
 
 	# Emoji panel for build 16299 and 17134.
-	_classicEmojiPanelAutomationId = ("TEMPLATE_PART_ExpressiveInputFullViewFuntionBarItemControl", "TEMPLATE_PART_ExpressiveInputFullViewFuntionBarCloseButton")
+	_classicEmojiPanelAutomationIds = ("TEMPLATE_PART_ExpressiveInputFullViewFuntionBarItemControl", "TEMPLATE_PART_ExpressiveInputFullViewFuntionBarCloseButton")
 
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Ask NvDA to respond to UIA events coming from modern keyboard interface.
@@ -117,7 +117,7 @@ class AppModule(AppModule):
 		self._symbolsGroupSelected = False
 		# Emoji panel for build 16299 and 17134.
 		# This event is properly raised in build 17134.
-		if not winVersion.isWin10(version=1809) and inputPanelAutomationId in self._classicEmojiPanelAutomationId:
+		if not winVersion.isWin10(version=1809) and inputPanelAutomationId in self._classicEmojiPanelAutomationIds:
 			eventHandler.executeEvent("UIA_elementSelected", obj.lastChild.firstChild)
 		# Handle hardware keyboard and CJK IME suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
