@@ -29,7 +29,8 @@ class AppModule(AppModule):
 			UIAHandler.handler.removeEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 			UIAHandler.handler.addEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 		# Wait until modern keyboard is fully displayed on screen.
-		if winVersion.isWin10(version=1803) and not self._modernKeyboardInterfaceActive: return
+		if winVersion.isWin10(version=1803) and not self._modernKeyboardInterfaceActive:
+			return
 		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object (for presentational purposes) and move on.
 		if obj.parent.UIAElement.cachedAutomationId == "TEMPLATE_PART_Groups_ListView":
 			api.setNavigatorObject(obj)
@@ -59,8 +60,10 @@ class AppModule(AppModule):
 		# Skin tone modifiers are also selected when switching to People emoji group, and this should be suppressed.
 		if obj.parent.UIAElement.cachedAutomationId == "SkinTonePanelModifier_ListView":
 			# But this will point to nothing if emoji search results are not people.
-			if obj.parent.next is not None: obj = obj.parent.next
-			else: obj = obj.parent.parent.firstChild
+			if obj.parent.next is not None:
+				obj = obj.parent.next
+			else:
+				obj = obj.parent.parent.firstChild
 		candidate = obj
 		if obj and obj.UIAElement.cachedClassName == "ListViewItem" and obj.parent and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationId != "TEMPLATE_PART_ClipboardItemsList":
 			# The difference between emoji panel and suggestions list is absence of categories/emoji separation.
@@ -73,8 +76,10 @@ class AppModule(AppModule):
 		if obj is not None:
 			api.setNavigatorObject(obj)
 			# NvDA Core issue 10093: for Japanese IME, candidates must be spelled.
-			if obj.parent.UIAElement.cachedAutomationId == "IME_Candidate_Window": speech.speakSpelling(obj.name, useCharacterDescriptions=True)
-			else: obj.reportFocus()
+			if obj.parent.UIAElement.cachedAutomationId == "IME_Candidate_Window":
+				speech.speakSpelling(obj.name, useCharacterDescriptions=True)
+			else:
+				obj.reportFocus()
 			# NVDA Core issue 10371: as part of speech sequence work in 2019.3, braille.getBrailleTextForProperties has been renamed to getPropertiesBraille.
 			braille.handler.message(braille.getPropertiesBraille(name=obj.name, role=obj.role, positionInfo=obj.positionInfo))
 			# Cache selected item.
@@ -186,10 +191,12 @@ class AppModule(AppModule):
 			# In build 17672 and later, return immediatley when element selected event on clipboard item was fired just prior to this.
 			# In some cases, parent will be None, as seen when emoji panel is closed in build 18267.
 			try:
-				if cachedAutomationId == "TEMPLATE_PART_ClipboardItemIndex" or obj.parent.UIAElement.cachedAutomationId == "TEMPLATE_PART_ClipboardItemsList": return
+				if cachedAutomationId == "TEMPLATE_PART_ClipboardItemIndex" or obj.parent.UIAElement.cachedAutomationId == "TEMPLATE_PART_ClipboardItemsList":
+					return
 			except AttributeError:
 				return
-			if not self._modernKeyboardInterfaceActive or cachedAutomationId != "TEMPLATE_PART_ExpressionGroupedFullView": speech.cancelSpeech()
+			if not self._modernKeyboardInterfaceActive or cachedAutomationId != "TEMPLATE_PART_ExpressionGroupedFullView":
+				speech.cancelSpeech()
 		# Don't forget to add "Microsoft Candidate UI" as something that should be suppressed.
 		if cachedAutomationId not in ("TEMPLATE_PART_ExpressionFullViewItemsGrid", "TEMPLATE_PART_ClipboardItemIndex", "CandidateWindowControl"):
 			ui.message(obj.name)
