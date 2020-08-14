@@ -72,10 +72,12 @@ class SearchField(SearchField):
 			if self.UIAElement.cachedAutomationId == "TextBox" or self.UIAElement.cachedAutomationId == "SearchTextBox" and self.appModule.appName not in ("searchui", "searchapp"):
 				# Item count must be the last one spoken.
 				suggestionsCount = self.controllerFor[0].childCount
-				# Translators: presented when there is one suggestion for a search term.
-				if suggestionsCount == 1: suggestionsMessage = "1 suggestion" if suggestionsCount == 1 else "{} suggestions".format(suggestionsCount)
-				# Translators: presented when there are multiple suggestions for a search term.
-				else: suggestionsMessage = "{} suggestions".format(suggestionsCount)
+				if suggestionsCount == 1:
+					# Translators: presented when there is one suggestion for a search term.
+					suggestionsMessage = "1 suggestion" if suggestionsCount == 1 else "{} suggestions".format(suggestionsCount)
+				else:
+					# Translators: presented when there are multiple suggestions for a search term.
+					suggestionsMessage = "{} suggestions".format(suggestionsCount)
 				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
 
 
@@ -93,10 +95,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super(GlobalPlugin, self).__init__()
 		# Don't do anything unless this is Windows 10.
 		# #52: and this is a supported build.
-		if not W10AddonSupported: return
+		if not W10AddonSupported:
+			return
 		# #20: don't even think about proceeding in secure screens.
 		# #40: skip over the rest if appx is in effect.
-		if globalVars.appArgs.secure or config.isAppX: return
+		if globalVars.appArgs.secure or config.isAppX:
+			return
 		# Patch UIA object's find overlay classes method to catch automation ID exception if nVDA does not provide a built-in Automation Id property.
 		if not hasattr(UIA, "UIAAutomationId"):
 			log.debug("W10: UIA object does not include built-in UIA Automation Id property getter, patching")
@@ -119,7 +123,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def _addAdditionalUIAEvents(self, delay=False):
 		# Add a series of events instead of doing it one at a time.
 		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
-		if delay: log.debug("W10: adding additional events after a delay")
+		if delay:
+			log.debug("W10: adding additional events after a delay")
 		for event, name in W10Events.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
@@ -213,8 +218,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				info.append(f"framework Id: {element.cachedFrameworkId}")
 			elif event == "itemStatus":
 				info.append(f"item status: {element.currentItemStatus}")
-			if globalVars.appArgs.debugLogging: logger = log.debug
-			else: logger = log.info
+			if globalVars.appArgs.debugLogging:
+				logger = log.debug
+			else:
+				logger = log.info
 			logger(u"W10: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
 	def event_nameChange(self, obj, nextHandler):
@@ -252,7 +259,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if isinstance(obj, UIA):
 			# No, do not let Start menu size be announced.
 			# Moved from Shell Experience Host in 2018 as a different app hosts this control in build 18282.
-			if obj.UIAElement.cachedAutomationId == "FrameSizeAccessibilityField": return
+			if obj.UIAElement.cachedAutomationId == "FrameSizeAccessibilityField":
+				return
 			# #50 (NVDA Core issue 8466): certain aria-alert messages.
 			if obj.role == controlTypes.ROLE_ALERT:
 				if not obj.name and obj.treeInterceptor is not None:
