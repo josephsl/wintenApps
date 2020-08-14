@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA compatibility: 2020.1 to 2020.2
+* NVDA kompatibilnost: 2020.1 do 2020.2
 
 Ovaj NVDA dodatak je zbirka aplikacijskih modula za razne Windows 10
 aplikacije, kao i poboljšanja i ispravci određenih windows 10 kontrola.
@@ -55,20 +55,22 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   najavljuje rezultate pretrage prilikom pregledavanja rezultata su manje
   uočljivi, čime i izlazna brajica postaje dosljednija prilikom
   pregledavanja stavki.
-* The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, drag target enter, drag target leave, drag target
-  dropped, element selected, item status, live region change, notification,
-  system alert, text change, tooltip opened, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard if notifications come from
-  somewhere other than the currently active app. Some events will provide
-  additional information such as element count in controller for event,
-  state of the element for state change event, and item text for item status
-  event.
+* Prepoznaju se sljedeći UIA događaji: kontroler za, početak povlačenja,
+  prekid povlačenja, povlačenje dovršeno, povlačenje u cilj, povlačenje
+  izvan cilja, povlačenje i ispuštanje u cilj, element odabran, stanje
+  stavke, promjena regije uživo, obavijest, upozorenje sustava, promjena
+  teksta, alatni savjet otvoren, prozor otvoren. Kad se NVDA postavi, tako
+  da se pokrene s aktiviranim zapisivanjem grešaka, ti će se događaji
+  pratiti. Za UIA događaj obavijesti, ćut će se ton za uklanjanje grešaka,
+  ako obavijesti dolaze odnekud drugdje od trenutačno aktivne
+  aplikacije. Neki će događaji pružati dodatne informacije kao što su broj
+  elemenata u kontroleru za događaj, stanje elementa za događaj promjene
+  stanja i tekst stavke za događaj stanja stavke.
 * Moguće je pratiti samo određene događaje i-ili događaje koji dolaze iz
   određenih aplikacija.
-* NVDA will no longer appear to do nothing or play error tones if UIA
-  Automation Id for an element could not be recorded when tracking events.
+* NVDA više neće izgledati kao da ništa ne radi ili svirati tonove za
+  greške, ako se UIA Id automatizacije za element ne može zabilježiti
+  prilikom praćenja događaja.
 * Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
   površina, NVDA će najaviti trenutačno ime radne površine (na primjer,
   desktop 2).
@@ -154,9 +156,9 @@ NVDA postavkama govora i postavi razinu simbola na „neki” ili višu.
   s emojijima.
 * Dodana je podrška za sučelja suvremenih IME kandidata za kineski, japanski
   i korejski (CJK), uvedena u verziji 2004 (gradnja 18965 i novije).
-* When an emoji group (including kaomoji and symbols group in Version 1903
-  or later) is selected, NVDA will no longer move navigator object to
-  certain emojis.
+* Kad se odabere grupa emojija (uključujući kaomoji i skupinu simbola u
+  verziji 1903 ili novijoj), NVDA više neće pomicati navigacijski objekt na
+  određene emojije.
 
 ## Osobe
 
