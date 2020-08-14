@@ -39,7 +39,7 @@ class WeatherForecastItem(NVDAObject):
 
 	@scriptHandler.script(gesture="kb:downArrow")
 	def script_nextLine(self, gesture):
-		if self.curLine < len(self.lines)-1:
+		if self.curLine < len(self.lines) - 1:
 			self.curLine += 1
 			ui.message(self.lines[self.curLine])
 		else:
