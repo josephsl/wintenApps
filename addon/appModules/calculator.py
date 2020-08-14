@@ -37,7 +37,8 @@ class AppModule(appModuleHandler.AppModule):
 	_resultsCache = ""
 
 	def event_nameChange(self, obj, nextHandler):
-		if not isinstance(obj, UIA): return
+		if not isinstance(obj, UIA):
+			return
 		# No, announce value changes immediately except for calculator results and expressions.
 		if obj.UIAElement.cachedAutomationId in noCalculatorEntryAnnouncements or obj.UIAElement.cachedClassName == "LandmarkTarget":
 			self._shouldAnnounceResult = False
@@ -55,7 +56,8 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
 		# Some notification messages are repeated (most notable being graph view change notification).
-		if activityId == "GraphViewChanged" and self._resultsCache == displayString: return
+		if activityId == "GraphViewChanged" and self._resultsCache == displayString:
+			return
 		self._resultsCache = displayString
 		# From May 2018 onwards, unit converter uses a different automation iD.
 		# Changed significantly in July 2018 thanks to UI redesign, and as a result, attribute error is raised.
