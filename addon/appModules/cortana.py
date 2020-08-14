@@ -33,13 +33,13 @@ class AppModule(appModuleHandler.AppModule):
 		responses = UIA(UIAElement=cortanaWindow.FindFirstBuildCache(UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest))
 		try:
 			cortanaResponse = responses.children[-1]
-			# In non-English builds, Cortana's response doesn't start with "Cortana".
-			if "Cortana" in cortanaResponse.name and cortanaResponse.simpleFirstChild.role == controlTypes.ROLE_GROUPING:
-				cortanaResponse = cortanaResponse.simpleFirstChild.firstChild
+			# Since August 2020, different Automation Id's are used for Cortana responses versus Bing searches.
+			if cortanaResponse.UIAElement.cachedAutomationId == "CortanaResponseTextWrapper":
+				cortanaResponse = cortanaResponse.firstChild.name
+			elif cortanaResponse.UIAElement.cachedAutomationId == "CardResponseWrapper":
 				# When searching through Bing, summary text shows up.
-				if cortanaResponse.childCount > 1:
-					cortanaResponse = ", ".join([response.name for response in cortanaResponse.children])
-				else: cortanaResponse = cortanaResponse.name
+				if cortanaResponse.firstChild.childCount > 1:
+					cortanaResponse = ", ".join([response.name for response in cortanaResponse.firstChild.children])
 		except IndexError:
 			cortanaResponse = ""
 		if cortanaResponse != self._cortanaResponse:
