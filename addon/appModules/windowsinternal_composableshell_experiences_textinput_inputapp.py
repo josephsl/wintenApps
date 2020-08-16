@@ -14,6 +14,7 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *
 import eventHandler
 import controlTypes
+from comtypes import COMError
 
 
 class AppModule(AppModule):
@@ -164,7 +165,7 @@ class AppModule(AppModule):
 	def event_nameChange(self, obj, nextHandler):
 		try:
 			cachedAutomationId = obj.UIAElement.cachedAutomationId
-		except:
+		except COMError:
 			cachedAutomationId = ""
 		# Forget it if there is no Automation ID and class name set.
 		if (

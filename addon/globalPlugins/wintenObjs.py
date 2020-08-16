@@ -160,7 +160,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif obj._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) > UIAHandler.HeadingLevel_None:
 				if obj.appModule.appName != "calculator":
 					clsList.insert(0, XAMLHeading)
-		except:
+		except COMError:
 			pass
 
 	# Find out if log recording is possible.
