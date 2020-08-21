@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* NVDA compatibility: 2020.1 to 2020.2
+* Yhteensopivuus: NVDA 2020.1-2020.2
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -55,20 +55,21 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   Käynnistä-valikossa tai Resurssienhallinnassa versiossa 1909 (November
   2019 -päivitys) ja uudemmissa, mikä tekee lisäksi
   pistekirjoitustulosteesta yhdenmukaisempaa kohteita tarkasteltaessa.
-* The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, drag target enter, drag target leave, drag target
-  dropped, element selected, item status, live region change, notification,
-  system alert, text change, tooltip opened, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard if notifications come from
-  somewhere other than the currently active app. Some events will provide
-  additional information such as element count in controller for event,
-  state of the element for state change event, and item text for item status
-  event.
+* Seuraavat UIA-tapahtumat tunnistetaan: ohjain kohteelle, vetämisen
+  aloitus, vetämisen peruutus, vetäminen suoritettu, vetämisen kohteeseen
+  siirtyminen, vetämisen kohteesta poistuminen, vetämisen kohde pudotettu,
+  elementti valittu, kohteen tila, aktiivisen alueen muutos, ilmoitus,
+  järjestelmän ilmoitus, tekstin muutos, työkaluvihje avattu, ikkuna
+  avattu. Näitä tapahtumia seurataan, kun NVDA:n lokitasoksi on määritetty
+  "virheenkorjaus", ja UIA-ilmoitustapahtuma ilmaistaan virheäänellä, mikäli
+  ilmoitukset tulevat muualta kuin aktiivisesta sovelluksesta. Jotkin
+  tapahtumat tarjoavat lisätietoja, kuten elementtien määrä ohjain kohteelle
+  -tapahtumalla, elementin tila tilan muutos -tapahtumalla sekä kohteen
+  teksti kohteen tila -tapahtumalla.
 * On mahdollista seurata vain tiettyjä tapahtumia ja/tai tietyistä
   sovelluksista tulevia tapahtumia.
-* NVDA will no longer appear to do nothing or play error tones if UIA
-  Automation Id for an element could not be recorded when tracking events.
+* NVDA ei näytä enää tekevän mitään tai toista virheääniä, mikäli elementin
+  UIA-automaatiotunnusta ei voitu rekisteröidä tapahtumia seurattaessa.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2) avattaessa
   ja suljettaessa virtuaalityöpöytiä tai siirryttäessä niiden välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
@@ -82,8 +83,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   resurssienhallinnassa sekä sovellusten päivitysilmoitukset Microsoft
   Storesta voidaan estää poistamalla käytöstä Lue ilmoitukset -asetus NVDA:n
   objektien lukemisen asetuksista.
-* Open With dialog in Version 2004 (May 2020 Update) and later is announced
-  when opened.
+* Avaa sovelluksessa -valintaikkuna puhutaan avattaessa Windows 10:n
+  versiossa 2004 (toukokuun 2020 päivitys) ja uudemmissa.
 
 ## Laskin
 
@@ -155,9 +156,9 @@ korkeampi.
 * Lisätty tuki modernille kiinan, japanin ja korean (CJK) IME-ehdotusten
   liittymälle, joka esiteltiin versiossa 2004 (koontiversio 18965 ja
   uudemmat).
-* When an emoji group (including kaomoji and symbols group in Version 1903
-  or later) is selected, NVDA will no longer move navigator object to
-  certain emojis.
+* Kun emojiryhmä (mukaan lukien kaomoji ja symboliryhmä versiossa 1903 tai
+  uudemmissa) valitaan, NVDA ei enää siirrä navigointiobjektia tiettyihin
+  emojeihin.
 
 ## Ihmiset
 
