@@ -23,7 +23,7 @@ class AppModule(AppModule):
 	_symbolsGroupSelected = False
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
-		# Ask NvDA to respond to UIA events coming from this overlay.
+		# Ask NVDA to respond to UIA events coming from this overlay.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 		import UIAHandler
 		if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]:
@@ -76,7 +76,7 @@ class AppModule(AppModule):
 				obj = candidate.firstChild
 		if obj is not None:
 			api.setNavigatorObject(obj)
-			# NvDA Core issue 10093: for Japanese IME, candidates must be spelled.
+			# NVDA Core issue 10093: for Japanese IME, candidates must be spelled.
 			if obj.parent.UIAElement.cachedAutomationId == "IME_Candidate_Window":
 				speech.speakSpelling(obj.name, useCharacterDescriptions=True)
 			else:
@@ -94,7 +94,7 @@ class AppModule(AppModule):
 	_classicEmojiPanelAutomationIds = ("TEMPLATE_PART_ExpressiveInputFullViewFuntionBarItemControl", "TEMPLATE_PART_ExpressiveInputFullViewFuntionBarCloseButton")
 
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
-		# Ask NvDA to respond to UIA events coming from modern keyboard interface.
+		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 		import UIAHandler
 		if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"] and obj.firstChild is not None:
