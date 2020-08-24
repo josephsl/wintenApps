@@ -87,7 +87,7 @@ Most items are no longer applicable on Version 1903 and later unless Cortana Con
 
 ## Modern keyboard
 
-This includes emoji panel, clipboard history, dictation, hardware input suggestions, and modern input method editors for certain languages. When viewing emojis, for best experience, enable Unicode Consortium setting from NvDA's speech settings and set symbol level to "some" or higher.
+This includes emoji panel, clipboard history, dictation, hardware input suggestions, and modern input method editors for certain languages. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher.
 
 * When opening clipboard history, NVDA will no longer announce "clipboard" when there are items in the clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update) and later, NVDA will no longer appear to do nothing when emoji panel opens.
