@@ -128,10 +128,10 @@ Conversations (od verzie 2004).
 
 ## Moderná klávesnica
 
-Zahŕňa podporu pre panel emoji, históriu schránky, diktovanie, návrhy pri
-písaní a iné editory pre rôzne jazyky. Pri používaní panelu emoji odporúčame
-aktivovať v nastaveniach reči použitie databázy unicode konzorcia a nastaviť
-úroveň interpunkcie na väčšina alebo všetka.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher.
 
 * Pri otvorení histórie schránky, NVDA viac neoznamuje slovo "schránka" pri
   niektorých položkách.

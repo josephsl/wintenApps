@@ -148,7 +148,7 @@ Conversations (Version 2004 and later) is in use.
 This includes emoji panel, clipboard history, dictation, hardware input
 suggestions, and modern input method editors for certain languages. When
 viewing emojis, for best experience, enable Unicode Consortium setting from
-NvDA's speech settings and set symbol level to "some" or higher.
+NVDA's speech settings and set symbol level to "some" or higher.
 
 * When opening clipboard history, NVDA will no longer announce "clipboard"
   when there are items in the clipboard under some circumstances.

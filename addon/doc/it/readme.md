@@ -147,9 +147,10 @@ La maggior parte delle funzionalità non sono più applicabili nelle versioni
 
 ## Tastiera moderna
 
-Questa funzionalità comprende il pannello emoji, lo storico degli appunti,
-la dettatura, i suggerimenti per l'input da tastiere hardware e l'editor di
-metodi di input moderni per alcune lingue.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher.
 
 * In alcune circostanze, quando si apre lo storico degli appunti, NVDA non
   dirà più "appunti" se vi sono elementi negli appunti.

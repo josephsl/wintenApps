@@ -141,11 +141,10 @@ medmindre Cortana Samtaler (version 2004 og nyere) er i brug.
 
 ## Moderne tastatur
 
-Dette inkluderer emoji-panelet, historik for udklipsholderen, diktering,
-forslag i forhold til hardwareinput og moderne Input Methodf Editor for
-visse sprog. Når du ser emojier, skal du for at få den bedste oplevelse
-aktivere Unicode Consortium-indstillingen fra NvDAs taleindstillinger og
-indstille tegnsætningsniveauet til "nogle" eller højere.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher.
 
 * NVDA vil ikke længere annoncere "Udklipsholder", når der er elementer i
   udklipsholderen under nogle omstændigheder.

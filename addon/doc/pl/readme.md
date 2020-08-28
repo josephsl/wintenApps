@@ -141,11 +141,10 @@ wyjątkiem są konwersacje Cortana (wersja 2004 and later) .
 
 ## Klawiatura nowoczesna
 
-Włączony jest w to panel emoji, historia schowka, dyktowanie, podpowiedzi
-klawiatury sprzętowej, i współczesne metody wprowadzania dla niektórych
-języków. Przy czytaniu emoji, dla lepszej doświadczenia, włącz ustawienie
-odczytywania emoji w ustawieniach mowy NVDA, a poziom interpunkcji na
-"niektóre" lub wyższy.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher.
 
 * Gdy historia schowka jest wypowiadana, NVDA już nie będzie wymawiała
   "schowek" w niektórych przypadkach, gdy istnieje treść.

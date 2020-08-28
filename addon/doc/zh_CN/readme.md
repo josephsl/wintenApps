@@ -3,88 +3,74 @@
 * 作者: Joseph Lee, Derek Riemer and other Windows 10 users
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA compatibility: 2020.1 to 2020.2
+* NVDA兼容版本: 2020.1 到 2020.2
 
-此附加组件用于各种Windows 10应用程序的模块集合，以及针对某些Windows 10控件的增强功能和修复程序。
+此插件用于各种 Windows 10 应用程序的模块集合，以及针对某些 Windows 10 控件的增强功能和修复程序。
 
-以下应用程序模块或用于某些应用程序的支持已包含在内（请参阅每个应用程序部分以了解包含的内容）：
+包括以下应用程序的支持模块（有关所包含内容的详细信息，请参阅每个应用程序部分）：
 
 * 计算器（现代）。
 * 日历
 * Cortana（会话）
 * 邮件
 * 地图
-* 微软纸牌系列
-* 微软商店
-* 现代键盘（表情符号面板/听写/硬件输入建议/云剪贴板历史记录/现代输入法编辑器）
-* {longName} ({name})
-  版本: {version}
-  网址: {url}
-  {copyright}
-  
-{name} 遵循 GNU 通用公共授权协议第二版， 您可以自由分享或者以任何方式修改本软件， 但在重新发布时必须包含本协议，
-  同时必须公开原版和修改版的源代码， 并附上任何用本软件的源代码所产生的软件。
-  关于授权协议的详情,您可以通过“帮助”菜单的“授权信息”访问。
-  您也可参看以下网页： https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-  
-{name} 是由非赢利组织“NV Access”开发的一个用于协助视障用户的免费且开放源代码的解决方案。
-  若您觉的 NVDA 很实用，并希望他可以继续发展，请赞助“NV Access”。您可以通过选择位于 NVDA 主菜单的“捐赠”菜单打开捐赠页面
+* Microsoft Solitaire Collection（微软纸牌游戏）
+* Microsoft Store
+* 现代键盘（包括表情符号面板、听写、硬件输入建议、云剪贴板历史记录以及现代输入法编辑器）
+* 人脉
 * 设置（系统设置，Windows + I）
 * 天气。
 * 开始菜单中瓷贴控件等其他模块。
 
 注意:
 
-* 此插件需要Windows 10版本1909（18363）或更高版本以及NVDA 2019.2或更高版本。为获得最佳体验，请使用最新Windows
-  10稳定版（19041）和最新稳定版NVDA插件配合使用。
-* 一些插件功能可能将成为NVDA屏幕阅读器的一部分。
-* 对于未在下面列出的条目，您可以假定功能是NVDA的一部分，不再适用，因为插件不支持旧版本的Windows
+* 此插件需要 Windows 10 版本 1909（18363）或更高版本以及 NVDA 2019.2 或更高版本。为获得最佳体验，请使用最新
+  Windows 10 稳定版（19041）和最新稳定版 NVDA 插件配合使用。
+* 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
+* 对于未在下方列出的条目，您可以假定功能已是 NVDA 的一部分，不再适用，因为插件不支持旧版本的 Windows
   10，或者对应用程序进行了更改，使条目不再适用。
 
 有关每个附加发行版之间所做的更改的列表，请参阅[更新日志的附加发布] [3]文档。
 
 ## 常规设置
 
-* 如果此插件在Windows 7和8.1或者是超过支持周期的旧版Windows10上面启用，NVDA将不再播放错误音效。
-* 某些对话框现在被识别为正确的对话框并按此朗读，包括“内幕预览”对话框（设置应用程序）。
-* 在大多数情况下，NVDA可以在执行搜索时朗读建议计数。此选项由NVDA设置中的对象显示面板中的“朗读对象位置信息”控制。
-* 在1909版（2019年11月更新）及更高版本中的``开始''菜单或``文件资源管理器''中进行搜索时，现在NVDA在浏览结果时两次宣布搜索结果的实例不太明显，这也使盲文输出在浏览项目时更加一致。
-* The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, drag target enter, drag target leave, drag target
-  dropped, element selected, item status, live region change, notification,
-  system alert, text change, tooltip opened, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard if notifications come from
-  somewhere other than the currently active app. Some events will provide
-  additional information such as element count in controller for event,
-  state of the element for state change event, and item text for item status
-  event.
-* 现在，可以仅传送来自特定应用的特定事件和/或事件。
-* NVDA will no longer appear to do nothing or play error tones if UIA
-  Automation Id for an element could not be recorded when tracking events.
-* 在虚拟桌面之间打开，关闭或切换时，NVDA将朗读当前桌面名称（例如，桌面2）。
-* 在更改屏幕分辨率或方向时，NVDA将不再公布“开始”菜单大小文本。
-* 当使用Alt + Shift +光标键托移“开始”菜单图块或“操作中心”快速操作时，NVDA将朗读有关所拖动项目或所拖动项目的新位置的信息。
+* 如果此插件在 Windows 7 和 8.1 或者是超过支持周期的旧版 Windows 10 上面启用，NVDA 将不再播放错误音效。
+* 某些对话框现在可以被正确的识别并读出，比如设置应用程序的“内幕预览”对话框。
+* 在大多数情况下，NVDA 可以在执行搜索时朗读建议计数。此选项由 NVDA “对象提示”设置对话框中的“读出对象的位置信息”复选框控制。
+* 在 1909 版（2019年11月更新）及更高版本 Windows 10 中的‘开始’菜单或文件资源管理器中进行搜索时，现在 NVDA
+  在浏览结果时两次宣布搜索结果的实例不太明显，这也使盲文输出在浏览项目时更加一致。
+* 可以识别以下UIA事件： controller for, drag start, drag cancel, drag complete, drag
+  target enter, drag target leave, drag target dropped, element selected,
+  item status, live region change, notification, system alert, text change,
+  tooltip opened, window
+  opened.
+  。NVDA日志级别设为调试的时候，会在日志里面记录这些事件，对于UIA通知事件，如果通知来自当前活动应用程序以外的其他位置，则会听到调试音。某些事件会提供其他信息，controller
+  ，对象的状态文本等等。
+* 可以只跟踪特定事件或来自特定应用程序的事件。
+* 如果跟踪事件时无法记录元素的 UIA Automation Id，则 NVDA 将不在提示为不执行任何操作或播放错误提示音。
+* 打开、关闭或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
+* 在更改屏幕分辨率或方向时，NVDA将不再读出“开始”菜单大小文本。
+* 当使用 Alt + Shift +光标键托移“开始”菜单磁贴或“操作中心”快速操作按钮时，NVDA 将朗读有关所拖动项目及所拖动项目的新位置的信息。
 * 在Word 365的最新版本中，按Control + Backspace键时，NVDA将不再读出“删除的单词”。
-* 通过在NVDA的对象设置中关闭“报告通知”，可以禁止诸如文件资源管理器中的音量/亮度更改和来自Microsoft
-  Store的应用程序更新通知之类的通知。
-* 朗读2004版本（2020 年 5 月更新）中的打开方式对话框。
+* 通过在 NVDA 的“对象提示”设置中关闭“读出通知提示”，可以禁止诸如文件资源管理器中的音量、亮度更改和来自 Microsoft Store
+  的应用程序更新之类的通知。
+* 可以读出 Windows 10 版本 2004（2020 年 5 月更新）中的打开方式对话框。
 
 ## 计算器
 
-* 当按ENTER或Escape键时，NVDA将读出计算结果。
-* 对于计算，如单位换算，汇率转换器，NVDA将在输入计算后立即读出结果。
-* NVDA将不再朗读计算器结果的“标题级别”。
+* 当按回车或 Esc 键时，NVDA 将读出计算结果。
+* 对于转换计算，如单位换算、汇率转换，NVDA 将在输入计算后立即读出结果。
+* NVDA 将不再读出计算器结果的“标题级别”。
 * 如果在输入表达式时达到最大统计值，NVDA现在将读出。
-* 在计算器版本10.1908及更高版本中增加了对始终打开模式的支持。
+* 在计算器版本 10.1908 及更高版本中增加了对始终打开模式的支持。
 
 ## 日历
 
-* NVDA不再在邮件正文和其他字段中读出“编辑”或“只读”。
+* NVDA 不再在邮件正文和其他字段中读出“编辑”或“只读”。
 
-## 小娜
+## Cortana
 
-大多数项目不再适用于1903版和2004版。经典Cortana指的是较旧的Cortana界面，它现在是“开始”菜单的一部分。
+大多数项目不再适用于 Windows 10 1903版和2004版。经典Cortana指的是较旧的Cortana界面，它现在是“开始”菜单的一部分。
 
 * 现在，在大多数情况下，都会发布来自Cortana的文字回复。
 * 通过语音与Cortana交互时，NVDA将保持沉默。
@@ -100,51 +86,39 @@
 * NVDA为地图位置播放位置嘟嘟声。
 * 在使用街道视图时，如果启用“使用键盘”选项，NVDA将在您使用光标键浏览地图时读出街道地址。
 
-## 微软纸牌系列
+## Microsoft Solitaire Collection（微软纸牌游戏）
 
 * NVDA现在可读出卡片和卡片组的名称。
 
-## 微软商店
+## Microsoft Store
 
-* 检查应用程序更新后，应更新的应用程序列表中的应用程序名称将被正确标记。
-* 下载应用程序和电影等内容时，NVDA会读出产品名称和下载进度。
+* 检查应用更新后，应更新的应用列表中的应用名称将被正确标记。
+* 下载应用和电影等内容时，NVDA会读出产品名称和下载进度。
 
 ## 系统键盘
 
-这包括表情符号面板，剪贴板历史记录，听写，硬件输入建议以及某些语言的现代输入法编辑器。查看表情符号时，为了获得最佳体验，请从NvDA的语音设置中启用Unicode
-Consortium设置，并将符号级别设置为“some”或更高。
+这包括表情符号面板、剪贴板历史记录、听写、硬件输入建议以及某些语言的现代输入法编辑器。查看表情符号时，为了获得最佳体验，请从 NvDA
+的语音设置对话框中选中“处理字符和符号时包含 Unicode 数据（表情符号）”复选框，并将符号级别设置为“少数”或更高。
 
 * 当前，打开剪贴板历史记录时，在某些情况下，剪贴板中有项目时，NVDA将不再读出“剪贴板”。
 * 在某些运行版本1903（2019年5月更新）的系统上，当表情符号面板打开时，NVDA将不再显示任何内容。
 * 增加了对版本2004内部版本18965和更高版本中引入的现代中文，日文和韩文（CJK）IME的支持。
-* When an emoji group (including kaomoji and symbols group in Version 1903
-  or later) is selected, NVDA will no longer move navigator object to
-  certain emojis.
+* 当选择表情符号组（包括版本 1903之后的绘文字）时，NVDA 将不再将导航器对象移动到某些表情符号。
 
-## {longName} ({name})
-版本: {version}
-网址: {url}
-{copyright}
-
-{name} 遵循 GNU 通用公共授权协议第二版， 您可以自由分享或者以任何方式修改本软件， 但在重新发布时必须包含本协议， 同时必须公开原版和修改版的源代码， 并附上任何用本软件的源代码所产生的软件。
-关于授权协议的详情,您可以通过“帮助”菜单的“授权信息”访问。
-您也可参看以下网页： https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-
-{name} 是由非赢利组织“NV Access”开发的一个用于协助视障用户的免费且开放源代码的解决方案。
-若您觉的 NVDA 很实用，并希望他可以继续发展，请赞助“NV Access”。您可以通过选择位于 NVDA 主菜单的“捐赠”菜单打开捐赠页面
+## 人脉
 
 * 搜索联系人时，将首先朗读搜索的建议，特别是在使用最新的应用程序版本时。
 
 ## 设置
 
-* 现在将自动报告某些信息，例如Windows Update进度，包括存储感知/磁盘清理小部件和Windows Update中的错误。
+* 现在将自动读出某些信息，例如 Windows Update 进度，包括存储感知、磁盘清理和 Windows Update中的错误。
 * 进度栏值和其他信息不再重复朗读两次。
-* 对于某些组合框和单选按钮，NVDA将不再无法识别标签和/或读出更改值。
-* 如果在某些情况下使用对象导航命令，NVDA将不再显示任何内容或播放错误音。
-* Windows Update提醒对话框被识别为正确的对话框。
-* 在某些Windows10安装中看到的奇怪的控件标签已被更正。
-* 在版本1803及更高版本中，Windows Update功能更新过程发生了更改，因此添加了“立即下载并安装”链接。
-  NVDA现在将朗读新更新的标题（如果存在）。
+* 对于某些组合框和单选按钮，NVDA将不再无法识别标签或读出更改值。
+* 在某些情况下如果使用对象导航命令，NVDA 将不再提示不执行任何操作或播放错误提示音。
+* Windows 更新提醒对话框被识别为正确的对话框。
+* 在某些Windows 10 安装中看到的奇怪的控件标签已被更正。
+* 在版本 1803 及更高版本的 Windows 10 中，Windows 更新中的某些更新添加了“立即下载并安装”链接。NVDA
+  现在将朗读新更新的标题（如果存在）。
 
 ## 天气
 

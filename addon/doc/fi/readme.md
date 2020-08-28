@@ -141,12 +141,10 @@ Cortana-keskustelut (versio 2004 ja uudemmat) ole käytössä.
 
 ## Moderni näppäimistö
 
-Näitä ovat emojipaneeli, leikepöydän historia, sanelu, ehdotukset
-syötettäessä tekstiä fyysisellä näppäimistöllä sekä modernin
-syöttömenetelmän editorit tietyille kielille. Ota käyttöön emojeita
-tarkasteltaessa parhaan kokemuksen saamiseksi Unicode-konsortion datan
-asetus NVDA:n puheasetuksista ja aseta symbolitasoksi "jotain" tai
-korkeampi.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher.
 
 * NVDA ei enää sano leikepöydän historiaa avattaessa joissakin tilanteissa
   "leikepöytä", kun leikepöydällä on kohteita.

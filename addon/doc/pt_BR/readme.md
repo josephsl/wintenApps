@@ -148,11 +148,10 @@ menos que Cortana Conversations (versão 2004 e posteriores) esteja em uso.
 
 ## Teclado moderno
 
-Isso inclui painel de emoji, histórico da área de transferência, ditado,
-sugestões de entrada de hardware e editores modernos de métodos de entrada
-para determinados idiomas. Ao visualizar emojis, para melhor experiência,
-ative a configuração do Consórcio Unicode nas configurações de fala do NVDA
-e defina o grau de símbolo como "pouco" ou superior.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher.
 
 * Ao abrir o histórico da área de transferência, o NVDA não anunciará mais a
   "área de transferência" quando houver itens na área de transferência em
