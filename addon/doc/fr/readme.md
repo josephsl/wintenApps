@@ -3,7 +3,7 @@
 * Auteurs: Joseph Lee, Derek Riemer et d’autres utilisateurs de Windows 10
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
-* NVDA compatibility: 2020.1 to 2020.2
+* Compatibilité NVDA: 2020.1 à 2020.2
 
 Cette extension est une collection d'app modules pour diverses apps de
 Windows 10, ainsi que des améliorations et des correctifs pour certains
@@ -20,8 +20,9 @@ est inclus) :
 * Cartes
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
-  clipboard history/modern input method editors)
+* cClavier moderne (panneau des emoji/dictée/suggestions de saisie
+  matérielle/historique du presse-papiers du cloud/éditeurs de méthode de
+  saisie moderne)
 * Personnes
 * Paramètres (paramètres système, Windows+I)
 * Météo.
@@ -29,9 +30,9 @@ est inclus) :
 
 Notes:
 
-* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
-  best results, use the add-on with latest Windows 10 stable release (build
-  19041).
+* Cette extension nécessite Windows 10 Version 1909 (build 18363) ou version
+  ultérieur. Pour de meilleurs résultats, utilisez l'extension avec la
+  dernière version stable de Windows 10 (build 19041).
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
 * Pour les entrées non répertoriées ci-dessous, vous pouvez supposer que les
@@ -55,49 +56,59 @@ l'extension][3].
 * NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
   majorité des cas. Cette option est contrôlée par "Annoncer le rang de
   l'objet dans une liste" dans le dialogue Présentation des Objets.
-* When searching in Start menu or File Explorer in Version 1909 (November
-  2019 Update) and later, instances of NVDA announcing search results twice
-  when reviewing results are less noticeable, which also makes braille
-  output more consistent when reviewing items.
-* The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, drag target enter, drag target leave, drag target
-  dropped, element selected, item status, live region change, notification,
-  system alert, text change, tooltip opened, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard if notifications come from
-  somewhere other than the currently active app. Some events will provide
-  additional information such as element count in controller for event,
-  state of the element for state change event, and item text for item status
-  event.
-* It is possible to tracke only specific events and/or events coming from
-  specific apps.
-* NVDA will no longer appear to do nothing or play error tones if UIA
-  Automation Id for an element could not be recorded when tracking events.
+* Lors de la recherche dans le menu Démarrer ou l'Explorateur de fichiers
+  dans la version 1909 (November 2019 Update) et ultérieure, les instances
+  de NVDA annonce des résultats de recherche deux fois lorsque les résultats
+  en révision sont moins visibles, ce qui rend également la sortie braille
+  plus cohérente lors de la révision des éléments.
+* Les événements UIA suivants sont reconnus : contrôleur pour, début de
+  déplacement, annulation de déplacement, déplacement complet, déplacement
+  de la sible entrer, déplacement de la sible en direct, déplacement de la
+  sible glissée, élément sélectionné, état de l'élément, changement de
+  région en direct, notification, alerte système, suggestion ouverte,
+  fenêtre ouverte. Avec NVDA configuré pour être exécuté avec le journal
+  activé en mode débogage ces événements seront suivis et pour l'événement
+  de notification UIA, une tonalité de débogage sera entendue si les
+  notifications proviennent d'un endroit autre que l'application
+  actuellement active. Certains événements fourniront des informations
+  complémentaires telles que le nombre d'éléments dans le contrôleur pour
+  l'événement, le changement de l'état de l'élément de l'événement et la
+  position du texte de l'élément pour l'état de l'événement de l'élément.
+* Il est possible de faire le suivi seul des événements spécifiques et / ou
+  des événements à venir à partir des applications spécifiques.
+* NVDA ne semblera plus rien faire et ne jouera pas des tonalités d'erreur
+  si UIA Automation Id pour un élément ne pouvait être enregistré lors des
+  suivi des événements.
 * Lors de l'ouverture, de la fermeture ou du basculement entre les bureaux
   virtuels, NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
 * NVDA n'annoncera plus le texte de la taille du menu Démarrer lorsque vous
   changez la résolution ou l'orientation de l'écran.
-* When arranging Start menu tiles or Action Center quick actions with
-  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
-  new position of the dragged item.
-* IN recent releases of Word 365, NVDA will no longer announce "delete back
-  word" when pressing Control+Backspace.
-* Announcements such as volume/brightness changes in File Explorer and app
-  update notifications from Microsoft Store can be suppressed by turning off
-  Report Notifications in NVDA's object presentation settings.
-* Open With dialog in Version 2004 (May 2020 Update) and later is announced
-  when opened.
+* Lorsque vous organisez les tuiles du menu Démarrer ou le Centre de
+  notifications Actions rapides avec les touches Alt+Maj+touches fléchées,
+  NVDA annoncera des informations sur les éléments glissés ou la nouvelle
+  position de l'élément glissé.
+* Dans les versions récentes de Word 365,, NVDA n'annonce plus "delete back
+  word" lorsque vous appuyez sur Contrôle+Retour arrière.
+* L'annonces tels que les changements de volume / luminosité dans
+  l'Explorateur de fichiers et les notifications de mise à jour de
+  l'application de Microsoft Store peuvent être supprimés en désactivant
+  Annoncer les notifications dans les Paramètres de NVDA, Présentation des
+  Objets.
+* Le dialogue Ouvrir avec dans la Version 2004 (May 2020 Update) et
+  ultérieure est annoncée lorsqu'il est ouvert.
 
 ## Calculatrice
 
-* When ENTER or Escape is pressed, NVDA will announce calculation results.
+* Lorsque vous appuyez sur Entrée ou Échap, NVDA annonce les résultats du
+  calcul.
 * Pour les calculs tels que le convertisseur d'unités et le convertisseur de
   devises, NVDA annoncera les résultats dès que les calculs seront entrés.
 * NVDA n'annoncera plus le "titre niveau" pour les résultats de la
   calculatrice.
 * NVDA notifiera lorsque le nombre maximum de chiffres aura été atteint lors
   de la saisie d'expressions.
-* Added support for always on mode in Calculator version 10.1908 and later.
+* Ajout du support pour toujours en mode Calculatrice Version 10.1908 et
+  ultérieure.
 
 ## Calendrier
 
@@ -106,14 +117,17 @@ l'extension][3].
 
 ## Cortana
 
-Most items are no longer applicable on Version 1903 and later unless Cortana
-Conversations (Version 2004 and later) is in use.
+La plupart des éléments ne sont plus applicables à la Version 1903 et
+ultérieure à moins que Cortana Conversations (Version 2004 et ultérieure)
+est en cours d'utilisation.
 
-* Textual responses from Cortana are announced in most situations.
+* Les réponses textuelles de Cortana sont annoncées dans la plupart des
+  situations.
 * NVDA sera silencieux quand vous vous adresserez vocalement à Cortana via
   la voix.
-* In Version 1909 (November 2019 Update) and later, modern search experience
-  in File Explorer powered by Windows Search user interface is supported.
+* Dans la Version 1909 (November 2019 Update) et ultérieure, l'expérience de
+  recherche moderne dans l'Explorateur de fichiers alimenté par l'interface
+  utilisateur Windows Search est pris en charge.
 
 ## Courrier
 
@@ -133,7 +147,7 @@ Conversations (Version 2004 and later) is in use.
 
 ## Microsoft Solitaire Collection
 
-* NVDA will announce names of cards and card decks.
+* NVDA annoncera les noms des cartes et des jeux de cartes.
 
 ## Microsoft Store
 
@@ -145,20 +159,25 @@ Conversations (Version 2004 and later) is in use.
 
 ## Clavier moderne
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher.
+Cela comprend le panneau des emoji, historique du presse-papiers, dictée,
+suggestions de saisie matérielle et éditeurs de méthode de saisie moderne
+pour certaines langues. Lors de l'affichage des emoji, pour une meilleure
+expérience, activer  le Consortium Unicode dans les Paramètres de NVDA,
+Parole et configurer le Niveau de ponctuations et symboles  sur
+"quelques-uns" ou la plupart.
 
-* When opening clipboard history, NVDA will no longer announce "clipboard"
-  when there are items in the clipboard under some circumstances.
-* On some systems running Version 1903 (May 2019 Update) and later, NVDA
-  will no longer appear to do nothing when emoji panel opens.
-* Added support for modern Chinese, Japanese, and Korean (CJK) IME
-  candidates interface introduced in Version 2004 (build 18965 and later).
-* When an emoji group (including kaomoji and symbols group in Version 1903
-  or later) is selected, NVDA will no longer move navigator object to
-  certain emojis.
+* Lors de l'ouverture de l'historique du presse-papiers, NVDA n'annoncera
+  "presse-papiers" quand il y a des éléments dans le presse-papiers dans
+  certaines circonstances.
+* Sur certains systèmes exécutant Windows Version 1903 (May 2019 Update) et
+  ultérieure, NVDA ne paraîtra plus inactif quand le panneau d'emoji
+  s'ouvre.
+* Ajout du support pour le chinois moderne, japonais et coréen (CJK) IME
+  candidates interface introduite dans la Version 2004 (build 18965 et
+  ultérieure).
+* Lorsqu'un groupe emoji (y compris Kaomoji et un groupe des symboles dans
+  la Version 1903 ou ultérieure) est sélectionné, NVDA ne sera plus déplacer
+  à l'objet navigateur vers certains emojis.
 
 ## Personnes
 
@@ -181,21 +200,24 @@ NVDA's speech settings and set symbol level to "some" or higher.
 * Le dialogue de rappel de Windows Update est reconnu comme un dialogue
   propre.
 * Correction de quelques labels qui étaient incorrectes dans quelques cas
-* In more recent revisions of Version 1803 and later, due to changes to
-  Windows Update procedure for feature updates, a "download and install now"
-  link has been added. NVDA will now announce the title for the new update
-  if present.
+* Dans les révisions les plus récentes de la Version 1803 et ultérieure en
+  raison de modifications apportées à la procédure Windows Update pour les
+  mises à jour de fonctionnalités, un lien "télécharger et installer
+  maintenant" a été ajouté. NVDA annonce maintenant le titre de la nouvelle
+  mise à jour si elle est présente.
 
 ## Météo
 
 * Les onglets tels que "prévisions" et "cartes" sont reconnus comme des
   onglets propres (patch par Derek Riemer).
-* When reading a forecast, use the left and right arrows to move between
-  items. Use the up and down arrows to read the individual items. For
-  example, pressing the right arrow might report "Monday: 79 degrees, partly
-  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
-  again will read the next item (Like the temperature). This currently works
-  for daily and hourly forecasts.
+* Lorsque vous lisez une prévision, utilisez les flèches gauche et droite
+  pour vous déplacer entre les éléments. Utilisez les flèches haut et bas
+  pour lire les éléments individuels. Par exemple, en appuyant sur la flèche
+  droite peut annoncer "Lundi: 79 degrés, partiellement nuageux, ..." en
+  appuyant sur la flèche bas il va dire "Lundi" Puis en appuyant à nouveau
+  sur celle-ci il va lire l'élément suivant (Comme la température). Ceci
+  fonctionne actuellement pour les prévisions quotidienne,  et toutes les
+  heures.
 
 [[!tag dev stable]]
 
