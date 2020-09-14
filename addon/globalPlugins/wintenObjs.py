@@ -175,7 +175,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		appsTracked = len(self.trackedApps) > 0
 		# Log properties based on the following truth table/conditional statements.
 		if not eventsTracked and not appsTracked:
-			return globalVars.appArgs.debugLogging
+			return log.isEnabledFor(log.DEBUG)
 		elif eventsTracked and not appsTracked:
 			return event in self.trackedEvents
 		elif not eventsTracked and appsTracked:
@@ -218,7 +218,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				info.append(f"framework Id: {element.cachedFrameworkId}")
 			elif event == "itemStatus":
 				info.append(f"item status: {element.currentItemStatus}")
-			if globalVars.appArgs.debugLogging:
+			if log.isEnabledFor(log.DEBUG):
 				logger = log.debug
 			else:
 				logger = log.info
@@ -229,7 +229,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# To be taken care of by NVDA Core, and for older releases, let the add-on handle it for a time.
 		# This may degrade performance and/or cause NVDA to become verbose in situations other than virtual desktop switch, so exercise discretion.
 		if obj.windowClassName == "#32769":
-			if globalVars.appArgs.debugLogging:
+			if log.isEnabledFor(log.DEBUG):
 				import tones
 				tones.beep(512, 50)
 				log.debug(f"W10: possible desktop name change from {obj}, app module: {obj.appModule}")
@@ -285,14 +285,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "windowOpen")
 		# Log which modern keyboard header is active.
 		# Although this can be done from modern keyboard app module, that module is destined for NVDA Core, hence do it here.
-		if obj.appModule.appName in ("windowsinternal_composableshell_experiences_textinput_inputapp", "textinputhost") and obj.firstChild is not None and globalVars.appArgs.debugLogging:
+		if obj.appModule.appName in ("windowsinternal_composableshell_experiences_textinput_inputapp", "textinputhost") and obj.firstChild is not None and log.isEnabledFor(log.DEBUG):
 			log.debug(f"W10: automation Id for currently opened modern keyboard feature is {obj.firstChild.UIAElement.cachedAutomationId}")
 		nextHandler()
 
 	def event_UIA_notification(self, obj, nextHandler, notificationKind=None, notificationProcessing=None, displayString=None, activityId=None):
 		# Introduced in Version 1709, to be treated as a notification event.
 		self.uiaDebugLogging(obj, "notification")
-		if isinstance(obj, UIA) and globalVars.appArgs.debugLogging:
+		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
 			log.debug(f"W10: UIA notification: sender: {obj.UIAElement}, notification kind: {notificationKind}, notification processing: {notificationProcessing}, display string: {displayString}, activity ID: {activityId}")
 			# Play a debug tone if and only if notifications come from somewhere other than the active app.
 			if obj.appModule != api.getFocusObject().appModule:
