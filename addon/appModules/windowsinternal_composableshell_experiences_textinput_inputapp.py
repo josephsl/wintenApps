@@ -219,13 +219,13 @@ class AppModule(AppModule):
 		# Emoji panel for build 16299 and 17134.
 		# This event is properly raised in build 17134.
 		if not winVersion.isWin10(version=1809) and inputPanelAutomationId in self._classicEmojiPanelAutomationIds:
-			eventHandler.executeEvent("UIA_elementSelected", obj.lastChild.firstChild)
+			eventHandler.queueEvent("UIA_elementSelected", obj.lastChild.firstChild)
 		# Handle hardware keyboard and CJK IME suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
 		# In fact, in 20H1, this is the CJK IME candidates window.
 		elif inputPanelAutomationId in ("CandidateWindowControl", "IME_Candidate_Window", "IME_Prediction_Window") and config.conf["inputComposition"]["autoReportAllCandidates"]:
 			try:
-				eventHandler.executeEvent("UIA_elementSelected", inputPanel.firstChild.firstChild)
+				eventHandler.queueEvent("UIA_elementSelected", inputPanel.firstChild.firstChild)
 			except AttributeError:
 				# Because this is dictation window.
 				pass
@@ -240,7 +240,7 @@ class AppModule(AppModule):
 				emojiItem = emojisList.firstChild.firstChild
 				if emojiItem.UIAElement.cachedAutomationId == "SkinTonePanelModifier_ListView":
 					emojiItem = emojiItem.next
-				eventHandler.executeEvent("UIA_elementSelected", emojiItem)
+				eventHandler.queueEvent("UIA_elementSelected", emojiItem)
 			except AttributeError:
 				# In build 18272's emoji panel, emoji list becomes empty in some situations.
 				pass
@@ -254,7 +254,7 @@ class AppModule(AppModule):
 			# Make sure to move to actual clipboard history item if available.
 			if clipboardHistoryItem.firstChild is not None:
 				clipboardHistoryItem = clipboardHistoryItem.firstChild
-			eventHandler.executeEvent("UIA_elementSelected", clipboardHistoryItem)
+			eventHandler.queueEvent("UIA_elementSelected", clipboardHistoryItem)
 		nextHandler()
 
 	def event_nameChange(self, obj, nextHandler):
