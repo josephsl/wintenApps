@@ -212,6 +212,10 @@ class AppModule(AppModule):
 		# Handle Ime Candidate UI being shown
 		if isinstance(inputPanel, ImeCandidateUI):
 			eventHandler.queueEvent("show", inputPanel)
+			# Don't forget to add actual candidate item element so name change event can be handled (mostly for hardware keyboard input suggestions).
+			if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]:
+				UIAHandler.handler.removeEventHandlerGroup(inputPanel.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+				UIAHandler.handler.addEventHandlerGroup(inputPanel.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 			return
 		inputPanelAutomationId = inputPanel.UIAElement.cachedAutomationId
 		self._modernKeyboardInterfaceActive = True
