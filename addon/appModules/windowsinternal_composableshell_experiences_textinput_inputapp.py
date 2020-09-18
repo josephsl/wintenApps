@@ -274,8 +274,6 @@ class AppModule(AppModule):
 		# Forget it if there is no Automation ID and class name set.
 		if (
 			(obj.UIAElement.cachedClassName == "" and cachedAutomationId == "")
-			# In build 18975, CJK IME candidates fire name change event.
-			or obj.UIAElement.cachedClassName == "ListViewItem"
 			# Clipboard entries fire name change event when opened.
 			or (obj.UIAElement.cachedClassName == "TextBlock" and cachedAutomationId == "")
 		):
