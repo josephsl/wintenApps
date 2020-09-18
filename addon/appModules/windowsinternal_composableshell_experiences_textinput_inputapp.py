@@ -62,9 +62,8 @@ class ImeCandidateItem(CandidateItemBehavior, UIA):
 
 	def _get_parent(self):
 		parent = super(ImeCandidateItem, self).parent
-		# Translators: A label for a 'candidate' list
-		# which contains symbols the user can choose from  when typing east-asian characters into a document.
-		parent.name = _("Candidate")
+		from . import skipTranslation
+		parent.name = skipTranslation.translate("Candidate")
 		parent.description = None
 		return parent
 
