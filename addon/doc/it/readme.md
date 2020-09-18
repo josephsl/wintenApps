@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer e altri utenti Windows 10
 * Scarica la [versione stabile][1]
 * Scarica la [versione in sviluppo][2]
-* NVDA compatibility: 2020.1 to 2020.2
+* NVDA compatibility: 2020.1 to 2020.3
 
 Questo componente aggiuntivo è un insieme di app module per numerose app di
 Windows 10, che inoltre risolve anomalie e migliora alcuni controlli.

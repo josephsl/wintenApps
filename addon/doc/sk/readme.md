@@ -3,7 +3,7 @@
 * Autory: Joseph Lee, Derek Riemer a ďalší používatelia Windowsu 10
 * Stiahnuť [stabilnú verziu][1]
 * Stiahnuť [vývojovú verziu][2]
-* Funguje s NVDA 2020.1 až 2020.2
+* NVDA compatibility: 2020.1 to 2020.3
 
 Obsahuje aplikačné moduly pre rôzne aplikácie systému Windows 10, ako aj
 vylepšenia a opravy určitých ovládacích prvkov systému Windows 10.
@@ -128,10 +128,10 @@ Conversations (od verzie 2004).
 
 ## Moderná klávesnica
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher.
+Zahŕňa podporu pre panel emoji, históriu schránky, diktovanie, návrhy pri
+písaní a podporu pre moderné editory pre rôzne jazyky. Pri používaní panelu
+emoji odporúčame aktivovať v nastaveniach reči použitie databázy unicode
+konzorcia a nastaviť úroveň interpunkcie na väčšina alebo všetka.
 
 * Pri otvorení histórie schránky, NVDA viac neoznamuje slovo "schránka" pri
   niektorých položkách.
