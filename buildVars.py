@@ -25,9 +25,9 @@ addon_info = {
 	# Documentation file name
 	"addon_docFileName": "readme.html",
 	# Minimum NVDA version supported
-	"addon_minimumNVDAVersion": "2020.1.0",
+	"addon_minimumNVDAVersion": "2020.1",
 	# Last NVDA version supported/tested
-	"addon_lastTestedNVDAVersion": "2020.4.0",
+	"addon_lastTestedNVDAVersion": "2020.4",
 	# Minimum Windows version supported
 	"addon_minimumWindowsVersion": "10.0.18363",
 	# Add-on update channel (default is stable)
