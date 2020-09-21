@@ -230,9 +230,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# This may degrade performance and/or cause NVDA to become verbose in situations other than virtual desktop switch, so exercise discretion.
 		if obj.windowClassName == "#32769":
 			if log.isEnabledFor(log.DEBUG):
-				import tones
-				tones.beep(512, 50)
 				log.debug(f"W10: possible desktop name change from {obj}, app module: {obj.appModule}")
+				# Play a debug beep only if NVDA was restarted with debug logging enabled.
+				if globalVars.appArgs.debugLogging:
+					import tones
+					tones.beep(512, 50)
 			# CSRSS: Client/Server Runtime Subsystem (Windows subsystem process/desktop object)
 			if obj.appModule.appName == "csrss":
 				import wx
@@ -294,8 +296,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "notification")
 		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
 			log.debug(f"W10: UIA notification: sender: {obj.UIAElement}, notification kind: {notificationKind}, notification processing: {notificationProcessing}, display string: {displayString}, activity ID: {activityId}")
-			# Play a debug tone if and only if notifications come from somewhere other than the active app.
-			if obj.appModule != api.getFocusObject().appModule:
+			# Play a debug tone if and only if notifications come from somewhere other than the active app and NVDA was restarted with debug logging mode.
+			if obj.appModule != api.getFocusObject().appModule and globalVars.appArgs.debugLogging:
 				import tones
 				# For debugging purposes.
 				tones.beep(500, 100)
