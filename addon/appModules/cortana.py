@@ -31,7 +31,11 @@ class AppModule(appModuleHandler.AppModule):
 		condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_AutomationIdPropertyId, "ConversationList")
 		cortanaWindow = clientObject.ElementFromHandleBuildCache(api.getForegroundObject().windowHandle, UIAHandler.handler.baseCacheRequest)
 		# Instantiate UIA object directly.
-		responses = UIA(UIAElement=cortanaWindow.FindFirstBuildCache(UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest))
+		# In order for this to work, a valid UIA pointer must be returned 9value error is seen when Cortana window closes).
+		try:
+			responses = UIA(UIAElement=cortanaWindow.FindFirstBuildCache(UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest))
+		except ValueError:
+			return
 		try:
 			cortanaResponse = responses.children[-1]
 			# Since August 2020, different Automation Id's are used for Cortana responses versus Bing searches.
