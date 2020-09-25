@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2019-04-19 12:13+0300\n"
+"PO-Revision-Date: 2020-09-18 15:50+0300\n"
 "Last-Translator: Juan C. Buño <oprisniki@gmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.4\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: appModules\n"
 "X-Poedit-SearchPath-1: globalPlugins\n"
@@ -47,7 +47,7 @@ msgstr "Bu öğe için daha fazla hava raporu verisi yok"
 #. Translators: A label for a 'candidate' list
 #. which contains symbols the user can choose from  when typing east-asian characters into a document.
 msgid "Candidate"
-msgstr ""
+msgstr "Ana sürüm öncesi"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

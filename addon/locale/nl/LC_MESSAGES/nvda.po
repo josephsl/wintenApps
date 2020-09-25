@@ -41,11 +41,6 @@ msgstr ""
 msgid "No more weather data for this item."
 msgstr "Geen weergegevens meer voor dit item."
 
-#. Translators: A label for a 'candidate' list
-#. which contains symbols the user can choose from  when typing east-asian characters into a document.
-msgid "Candidate"
-msgstr ""
-
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Windows 10 App Essentials"

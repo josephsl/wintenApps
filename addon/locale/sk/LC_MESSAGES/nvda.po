@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 18.12\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-01-07 17:58+0100\n"
+"PO-Revision-Date: 2020-09-20 09:38+0100\n"
 "Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
 "Language-Team: \n"
 "Language: sk\n"
@@ -43,7 +43,7 @@ msgstr "Nie sú dostupné ďalšie informácie o počasí pre túto lokalitu."
 #. Translators: A label for a 'candidate' list
 #. which contains symbols the user can choose from  when typing east-asian characters into a document.
 msgid "Candidate"
-msgstr ""
+msgstr "návrh"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
