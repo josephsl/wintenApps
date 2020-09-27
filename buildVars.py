@@ -3,7 +3,12 @@
 # Build customizations
 # Change this file instead of sconstruct or manifest files, whenever possible.
 
-# Full getext
+
+# Since some strings in `addon_info` are translatable,
+# we need to include them in the .po files.
+# Gettext recognizes only strings given as parameters to the `_` function.
+# To avoid initializing translations in this module we simply roll our own "fake" `_` function
+# which returns whatever is given to it as an argument.
 def _(arg):
 	return arg
 
@@ -43,7 +48,13 @@ addon_info = {
 import os.path  # NOQA
 
 # Define the python files that are the sources of your add-on.
-# You can use glob expressions here, they will be expanded.
+# You can either list every file (using ""/") as a path separator,
+# or use glob expressions.
+# For example to include all files with a ".py" extension from the "globalPlugins" dir of your add-on
+# the list can be written as follows:
+# pythonSources = ["addon/globalPlugins/*.py"]
+# For more information on SCons Glob expressions please take a look at:
+# https://scons.org/doc/production/HTML/scons-user/apd.html
 pythonSources = [
 	os.path.join("addon", "*.py"),
 	os.path.join("addon", "appModules", "*.py"),
