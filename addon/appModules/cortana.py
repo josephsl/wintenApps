@@ -26,12 +26,14 @@ class AppModule(appModuleHandler.AppModule):
 		# Version 1.1910 (beta) changed UIA tree for responses list.
 		# 1.1911 (beta) and version 2 changed the tree yet again.
 		# Thankfully, Cortana's response is part of a grouping object.
-		# As long as conversation list uses the same UIA automation ID, traversal will work across versions (code credit: Abdel)
+		# As long as conversation list uses the same UIA automation ID,
+		# traversal will work across versions (code credit: Abdel)
 		clientObject = UIAHandler.handler.clientObject
 		condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_AutomationIdPropertyId, "ConversationList")
 		cortanaWindow = clientObject.ElementFromHandleBuildCache(api.getForegroundObject().windowHandle, UIAHandler.handler.baseCacheRequest)
 		# Instantiate UIA object directly.
-		# In order for this to work, a valid UIA pointer must be returned 9value error is seen when Cortana window closes).
+		# In order for this to work, a valid UIA pointer must be returned
+		# (value error is seen when Cortana window closes).
 		try:
 			responses = UIA(UIAElement=cortanaWindow.FindFirstBuildCache(UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest))
 		except ValueError:
@@ -52,5 +54,6 @@ class AppModule(appModuleHandler.AppModule):
 				ui.message(cortanaResponse)
 				self._cortanaResponse = cortanaResponse
 			except (IndexError, TypeError):
-				# IndexError deals with multi-part mesage, while TypeError deals with a list item with users's message on it. Skip them.
+				# IndexError deals with multi-part mesage,
+				# while TypeError deals with a list item with users's message on it.
 				pass

@@ -13,7 +13,8 @@ import queueHandler
 import ui
 import scriptHandler
 
-# NVDA Core issue 9428: do not announce current values until calculations are done in order to avoid repetitions.
+# NVDA Core issue 9428: do not announce current values until calculations are done
+# in order to avoid repetitions.
 noCalculatorEntryAnnouncements = [
 	# Display field with Calculator set to full screen mode.
 	"CalculatorResults",
@@ -70,7 +71,8 @@ class AppModule(appModuleHandler.AppModule):
 			if resultElement.UIAElement.cachedClassName != "LandmarkTarget":
 				resultElement = resultElement.parent.children[1]
 			shouldAnnounceNotification = resultElement and resultElement.firstChild and resultElement.firstChild.UIAElement.cachedAutomationId not in noCalculatorEntryAnnouncements
-		# Announce activity ID's other than "DisplayUpdate" as this is redundant if speak typed characters is on (activity ID's courtesy of Microsoft Calculator source code hosted on GitHub, MIT license).
+		# Announce activity ID's other than "DisplayUpdate" as this is redundant if speak typed characters is on
+		# (activity ID's courtesy of Microsoft Calculator source code hosted on GitHub, MIT license).
 		if shouldAnnounceNotification or activityId != "DisplayUpdated":
 			nextHandler()
 
@@ -82,7 +84,8 @@ class AppModule(appModuleHandler.AppModule):
 		# To prevent double focus announcement, check where we are.
 		focus = api.getFocusObject()
 		gesture.send()
-		# In redstone, calculator result keeps firing name change, so tell it to do so if and only if enter has been pressed.
+		# In redstone, calculator result keeps firing name change,
+		# so tell it to do so if and only if enter has been pressed.
 		self._shouldAnnounceResult = True
 		# Hack: only announce display text when an actual calculator button (usually equals button) is pressed.
 		# In redstone, pressing enter does not move focus to equals button.
