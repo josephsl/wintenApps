@@ -65,9 +65,12 @@ class SearchField(SearchField):
 
 	def event_suggestionsOpened(self):
 		super(SearchField, self).event_suggestionsOpened()
-		# Announce number of items found (except in Start search box where the suggestions are selected as user types).
-		# Oddly, Edge's address omnibar returns 0 for suggestion count when there are clearly suggestions (implementation differences).
-		# Because inaccurate count could be announced (when users type, suggestion count changes), thus announce this if position info reporting is enabled.
+		# Announce number of items found
+		# (except in Start search box where the suggestions are selected as user types).
+		# Oddly, Edge's address omnibar returns 0 for suggestion count
+		# when there are clearly suggestions (implementation differences).
+		# Because inaccurate count could be announced (when users type, suggestion count changes),
+		# thus announce this if position info reporting is enabled.
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
 			if self.UIAElement.cachedAutomationId == "TextBox" or self.UIAElement.cachedAutomationId == "SearchTextBox" and self.appModule.appName not in ("searchui", "searchapp"):
 				# Item count must be the last one spoken.
@@ -101,7 +104,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #40: skip over the rest if appx is in effect.
 		if globalVars.appArgs.secure or config.isAppX:
 			return
-		# Patch UIA object's find overlay classes method to catch automation ID exception if nVDA does not provide a built-in Automation Id property.
+		# Patch UIA object's find overlay classes method to catch automation ID exception
+		# if NVDA does not provide a built-in Automation Id property.
 		if not hasattr(UIA, "UIAAutomationId"):
 			log.debug("W10: UIA object does not include built-in UIA Automation Id property getter, patching")
 			UIA.findOverlayClasses = _uiaobj.findOverlayClassesEx
@@ -122,7 +126,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Manually add events after root element is located.
 	def _addAdditionalUIAEvents(self, delay=False):
 		# Add a series of events instead of doing it one at a time.
-		# Some events are only available in a specific build range and/or while a specific version of IUIAutomation interface is in use.
+		# Some events are only available in a specific build range
+		# and/or while a specific version of IUIAutomation interface is in use.
 		if delay:
 			log.debug("W10: adding additional events after a delay")
 		for event, name in W10Events.items():
@@ -133,21 +138,26 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# There's no point looking at non-UIA objects.
-		# Also because this add-on might be turned on "accidentally" in earlier Windows releases, including unsupported Windows 10 builds...
+		# Also because this add-on might be turned on "accidentally" in earlier Windows releases,
+		# including unsupported Windows 10 builds...
 		if not (isinstance(obj, UIA) and W10AddonSupported):
 			return
 		# Somehow, search field finder raises COM error, so put the bulk of this method inside a try block.
 		try:
 			# Windows that are really dialogs.
-			# Some dialogs, although listed as a dialog thanks to UIA class name, does not advertise the proper role of dialog.
+			# Some dialogs, although listed as a dialog thanks to UIA class name,
+			# does not advertise the proper role of dialog.
 			if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 				clsList.insert(0, Dialog)
 				return
 			# Search field that does raise controller for event.
-			# Although basic functionality is included in NVDA 2017.3, added enhancements such as announcing suggestion count.
+			# Although basic functionality is included in NVDA 2017.3,
+			# added enhancements such as announcing suggestion count.
 			if obj.UIAElement.cachedAutomationId in ("SearchTextBox", "TextBox"):
-				# NVDA 2017.3 includes a dedicated search box over class in searchui to deal with search term announcement problem.
-				# Because the add-on version deals with focus comparison, let all search fields go through this check as much as possible except for specific apps.
+				# NVDA 2017.3 includes a dedicated search box overlay class in searchui
+				# to deal with search term announcement problem.
+				# Because the add-on version deals with focus comparison,
+				# let all search fields go through this check as much as possible except for specific apps.
 				if obj.appModule.appName not in ("searchui", "searchapp"):
 					clsList.insert(0, SearchField)
 					return
@@ -206,7 +216,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				info.append(f"states: {ret}")
 			info.append(f"app module: {obj.appModule}")
 			element = obj.UIAElement
-			# Sometimes due to timing errors, COM error is thrown when trying to obtain automation ID from the underlying UIA element.
+			# Sometimes due to timing errors, COM error is thrown
+			# when trying to obtain automation ID from the underlying UIA element.
 			try:
 				info.append(f"automation Id: {element.cachedAutomationId}")
 			except COMError:
@@ -225,9 +236,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			logger(u"W10: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
 	def event_nameChange(self, obj, nextHandler):
-		# NVDA Core issue 5641: try catching virtual desktop switch event, which will result in name change for the desktop object.
+		# NVDA Core issue 5641: try catching virtual desktop switch event,
+		# which will result in name change for the desktop object.
 		# To be taken care of by NVDA Core, and for older releases, let the add-on handle it for a time.
-		# This may degrade performance and/or cause NVDA to become verbose in situations other than virtual desktop switch, so exercise discretion.
+		# This may degrade performance and/or cause NVDA to become verbose in situations other than
+		# virtual desktop switch, so exercise discretion.
 		if obj.windowClassName == "#32769":
 			if log.isEnabledFor(log.DEBUG):
 				log.debug(f"W10: possible desktop name change from {obj}, app module: {obj.appModule}")
@@ -238,7 +251,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# CSRSS: Client/Server Runtime Subsystem (Windows subsystem process/desktop object)
 			if obj.appModule.appName == "csrss":
 				import wx
-				# Even with desktop name change handler added, older Windows 10 releases won't support this properly.
+				# Even with desktop name change handler added,
+				# older Windows 10 releases won't support this properly.
 				if (not hasattr(eventHandler, "handlePossibleDesktopNameChange") or (hasattr(eventHandler, "handlePossibleDesktopNameChange") and not winVersion.isWin10(version=1909))):
 					wx.CallLater(500, ui.message, obj.name)
 		self.uiaDebugLogging(obj, "nameChange")
@@ -275,7 +289,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_systemAlert(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "systemAlert")
-		# NVDA Core issue 8557: for some alerts, text is scattered across its children, so take care of this too.
+		# NVDA Core issue 8557: for some alerts, text is scattered across its children,
+		# so take care of this too.
 		if isinstance(obj, UIA):
 			if obj.role == controlTypes.ROLE_ALERT:
 				if not obj.name and obj.treeInterceptor is not None:
@@ -286,7 +301,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Specifically in order to debug multiple toast announcements.
 		self.uiaDebugLogging(obj, "windowOpen")
 		# Log which modern keyboard header is active.
-		# Although this can be done from modern keyboard app module, that module is destined for NVDA Core, hence do it here.
+		# Although this can be done from modern keyboard app module,
+		# that module is destined for NVDA Core, hence do it here.
 		if obj.appModule.appName in ("windowsinternal_composableshell_experiences_textinput_inputapp", "textinputhost") and obj.firstChild is not None and log.isEnabledFor(log.DEBUG):
 			log.debug(f"W10: automation Id for currently opened modern keyboard feature is {obj.firstChild.UIAElement.cachedAutomationId}")
 		nextHandler()
@@ -296,12 +312,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "notification")
 		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
 			log.debug(f"W10: UIA notification: sender: {obj.UIAElement}, notification kind: {notificationKind}, notification processing: {notificationProcessing}, display string: {displayString}, activity ID: {activityId}")
-			# Play a debug tone if and only if notifications come from somewhere other than the active app and NVDA was restarted with debug logging mode.
+			# Play a debug tone if and only if notifications come from somewhere other than the active app
+			# and NVDA was restarted with debug logging mode.
 			if obj.appModule != api.getFocusObject().appModule and globalVars.appArgs.debugLogging:
 				import tones
 				# For debugging purposes.
 				tones.beep(500, 100)
-		# In recent versions of Word 365, notification event is used to announce editing functions, some of them being quite anoying.
+		# In recent versions of Word 365, notification event is used to announce editing functions,
+		# some of them being quite anoying.
 		if obj.appModule.appName == "winword" and activityId in ("AccSN1", "AccSN2"):
 			return
 		# Do not allow notification to be announced if "report notifications" is off.
