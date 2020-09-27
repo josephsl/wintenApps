@@ -1,7 +1,5 @@
 addon/doc/*.css
 addon/doc/en/
-addon/globalPlugins/tips.json
-*_docHandler.py
 *.html
 *.ini
 *.mo
