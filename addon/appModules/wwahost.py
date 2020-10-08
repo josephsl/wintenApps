@@ -19,7 +19,9 @@ import winKernel
 def getAppNameFromHost(processId):
 	# Some apps that come with Windows 8 and 8.1 are hosted by wwahost.exe.
 	# App modules for these are named after the hosted app name.
-	processHandle = winKernel.openProcess(winKernel.SYNCHRONIZE | winKernel.PROCESS_QUERY_INFORMATION, False, processId)
+	processHandle = winKernel.openProcess(
+		winKernel.SYNCHRONIZE | winKernel.PROCESS_QUERY_INFORMATION, False, processId
+	)
 	length = ctypes.c_uint()
 	winKernel.kernel32.GetApplicationUserModelId(processHandle, ctypes.byref(length), None)
 	appModel = ctypes.create_unicode_buffer(length.value)
