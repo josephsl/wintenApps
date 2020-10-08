@@ -69,14 +69,19 @@ class AppModule(appModuleHandler.AppModule):
 		# From May 2018 onwards, unit converter uses a different automation iD.
 		# Changed significantly in July 2018 thanks to UI redesign, and as a result, attribute error is raised.
 		try:
-			shouldAnnounceNotification = obj.previous.UIAElement.cachedAutomationId in ("numberPad", "UnitConverterRootGrid")
+			shouldAnnounceNotification = obj.previous.UIAElement.cachedAutomationId in (
+				"numberPad", "UnitConverterRootGrid"
+			)
 		except AttributeError:
 			# Another UI redesign in 2019, causing attribute error when changing categories.
 			resultElement = api.getForegroundObject().children[1].lastChild
 			# Another redesign in 2019 due to introduction of "always on top" i.e. picture-in-picture mode.
 			if resultElement.UIAElement.cachedClassName != "LandmarkTarget":
 				resultElement = resultElement.parent.children[1]
-			shouldAnnounceNotification = resultElement and resultElement.firstChild and resultElement.firstChild.UIAElement.cachedAutomationId not in noCalculatorEntryAnnouncements
+			shouldAnnounceNotification = (
+				resultElement and resultElement.firstChild
+				and resultElement.firstChild.UIAElement.cachedAutomationId not in noCalculatorEntryAnnouncements
+			)
 		# Announce activity ID's other than "DisplayUpdate" as this is redundant if speak typed characters is on
 		# (activity ID's courtesy of Microsoft Calculator source code hosted on GitHub, MIT license).
 		if shouldAnnounceNotification or activityId != "DisplayUpdated":

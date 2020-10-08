@@ -30,12 +30,18 @@ class AppModule(appModuleHandler.AppModule):
 		# traversal will work across versions (code credit: Abdel)
 		clientObject = UIAHandler.handler.clientObject
 		condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_AutomationIdPropertyId, "ConversationList")
-		cortanaWindow = clientObject.ElementFromHandleBuildCache(api.getForegroundObject().windowHandle, UIAHandler.handler.baseCacheRequest)
+		cortanaWindow = clientObject.ElementFromHandleBuildCache(
+			api.getForegroundObject().windowHandle, UIAHandler.handler.baseCacheRequest
+		)
 		# Instantiate UIA object directly.
 		# In order for this to work, a valid UIA pointer must be returned
 		# (value error is seen when Cortana window closes).
 		try:
-			responses = UIA(UIAElement=cortanaWindow.FindFirstBuildCache(UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest))
+			responses = UIA(
+				UIAElement=cortanaWindow.FindFirstBuildCache(
+					UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest
+				)
+			)
 		except ValueError:
 			return
 		try:
