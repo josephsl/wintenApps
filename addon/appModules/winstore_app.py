@@ -16,7 +16,10 @@ class AppModule(appModuleHandler.AppModule):
 	def event_NVDAObject_init(self, obj):
 		# Extraneous information announced when going through apps to be updated/installed,
 		# so use a grandchild's name.
-		if isinstance(obj, UIA) and obj.role == controlTypes.ROLE_LISTITEM and obj.firstChild and obj.firstChild.UIAElement.cachedAutomationId == "InstallControl":
+		if (
+			isinstance(obj, UIA) and obj.role == controlTypes.ROLE_LISTITEM
+			and obj.firstChild and obj.firstChild.UIAElement.cachedAutomationId == "InstallControl"
+		):
 			obj.name = obj.firstChild.firstChild.name
 
 	# just like Settings app, have a cache of download progress text handy.

@@ -41,10 +41,16 @@ class AppModule(appModuleHandler.AppModule):
 		if not isinstance(obj, UIA):
 			return
 		# No, announce value changes immediately except for calculator results and expressions.
-		if obj.UIAElement.cachedAutomationId in noCalculatorEntryAnnouncements or obj.UIAElement.cachedClassName == "LandmarkTarget":
+		if (
+			obj.UIAElement.cachedAutomationId in noCalculatorEntryAnnouncements
+			or obj.UIAElement.cachedClassName == "LandmarkTarget"
+		):
 			self._shouldAnnounceResult = False
 		# For the rest:
-		elif obj.UIAElement.cachedAutomationId not in noCalculatorEntryAnnouncements and obj.name != self._resultsCache:
+		elif (
+			obj.UIAElement.cachedAutomationId not in noCalculatorEntryAnnouncements
+			and obj.name != self._resultsCache
+		):
 			# For unit conversion, UIA notification event presents much better messages.
 			# For date calculation, live region change event is also fired for difference between dates.
 			if obj.UIAElement.cachedAutomationId not in ("Value1", "Value2", "DateDiffAllUnitsResultLabel"):

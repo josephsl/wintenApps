@@ -61,7 +61,10 @@ class WeatherForecastItem(NVDAObject):
 class AppModule(appModuleHandler.AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		if obj.role == controlTypes.ROLE_LISTITEM and RE_PARENT_LISTS.match(obj.parent.UIAElement.CachedAutomationId):
+		if (
+			obj.role == controlTypes.ROLE_LISTITEM
+			and RE_PARENT_LISTS.match(obj.parent.UIAElement.CachedAutomationId)
+		):
 			clsList.insert(0, WeatherForecastItem)
 
 	def event_NVDAObject_init(self, obj):

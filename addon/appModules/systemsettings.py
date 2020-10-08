@@ -66,7 +66,11 @@ class AppModule(AppModule):
 			# Resolved in 18800 and above, which means Version 1903 (build 18362)
 			# and 1909 (build 18363) will still carry this problem.
 			# Note that 1909 is still 18362 internally, so just check platform version tuple (Python 3.7 and later).
-			if winVersion.winVersion.platform_version == (10, 0, 18362) and obj.role == controlTypes.ROLE_COMBOBOX and obj.UIAElement.cachedAutomationId.startswith("SystemSettings_StorageSense_SmartPolicy_"):
+			if (
+				winVersion.winVersion.platform_version == (10, 0, 18362)
+				and obj.role == controlTypes.ROLE_COMBOBOX
+				and obj.UIAElement.cachedAutomationId.startswith("SystemSettings_StorageSense_SmartPolicy_")
+			):
 				clsList.insert(0, ComboBoxWithoutValuePattern)
 
 	# Sometimes, the same text is announced, so consult this cache.
@@ -81,7 +85,10 @@ class AppModule(AppModule):
 		# Except for specific cases, announce all live regions.
 		if (
 			# Do not announce "result not found" error unless have to.
-			(automationId == "NoResultsFoundTextBlock" and obj.parent.UIAElement.cachedAutomationId != "StatusTextPopup")
+			(
+				automationId == "NoResultsFoundTextBlock"
+				and obj.parent.UIAElement.cachedAutomationId != "StatusTextPopup"
+			)
 			# Announce individual update progress in build 16215 and later preferably only once per update stage.
 			or ("ApplicableUpdate" in automationId and not automationId.endswith("_ContextDescriptionTextBlock"))
 		):
