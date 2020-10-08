@@ -72,7 +72,11 @@ class SearchField(SearchField):
 		# Because inaccurate count could be announced (when users type, suggestion count changes),
 		# thus announce this if position info reporting is enabled.
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
-			if self.UIAElement.cachedAutomationId == "TextBox" or self.UIAElement.cachedAutomationId == "SearchTextBox" and self.appModule.appName not in ("searchui", "searchapp"):
+			if (
+				self.UIAElement.cachedAutomationId == "TextBox"
+				or self.UIAElement.cachedAutomationId == "SearchTextBox"
+				and self.appModule.appName not in ("searchui", "searchapp")
+			):
 				# Item count must be the last one spoken.
 				suggestionsCount = self.controllerFor[0].childCount
 				if suggestionsCount == 1:
@@ -133,7 +137,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		for event, name in W10Events.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
-				UIAHandler.handler.clientObject.addAutomationEventHandler(event, UIAHandler.handler.rootElement, UIAHandler.TreeScope_Subtree, UIAHandler.handler.baseCacheRequest, UIAHandler.handler)
+				UIAHandler.handler.clientObject.addAutomationEventHandler(
+					event,
+					UIAHandler.handler.rootElement,
+					UIAHandler.TreeScope_Subtree,
+					UIAHandler.handler.baseCacheRequest,
+					UIAHandler.handler
+				)
 				log.debug(f"W10: added event ID {event}, assigned to {name}")
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
@@ -167,7 +177,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				return
 			# Recognize headings as reported by XAML (build 17134 and later).
 			# But not for apps such as Calculator where doing so results in confusing user experience.
-			elif obj._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) > UIAHandler.HeadingLevel_None:
+			elif (
+				obj._getUIACacheablePropertyValue(
+					UIAHandler.UIA_HeadingLevelPropertyId
+				) > UIAHandler.HeadingLevel_None
+			):
 				if obj.appModule.appName != "calculator":
 					clsList.insert(0, XAMLHeading)
 		except COMError:
@@ -207,7 +221,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif event == "stateChange":
 				# Copied from NVDA Core's default navigator object dev info's state retriever.
 				try:
-					stateConsts = dict((const, name) for name, const in controlTypes.__dict__.items() if name.startswith("STATE_"))
+					stateConsts = dict(
+						(const, name) for name, const in controlTypes.__dict__.items() if name.startswith("STATE_")
+					)
 					ret = ", ".join(
 						stateConsts.get(state) or str(state)
 						for state in obj.states)
@@ -253,7 +269,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				import wx
 				# Even with desktop name change handler added,
 				# older Windows 10 releases won't support this properly.
-				if (not hasattr(eventHandler, "handlePossibleDesktopNameChange") or (hasattr(eventHandler, "handlePossibleDesktopNameChange") and not winVersion.isWin10(version=1909))):
+				if (
+					not hasattr(eventHandler, "handlePossibleDesktopNameChange")
+					or (
+						hasattr(eventHandler, "handlePossibleDesktopNameChange") and not winVersion.isWin10(version=1909)
+					)
+				):
 					wx.CallLater(500, ui.message, obj.name)
 		self.uiaDebugLogging(obj, "nameChange")
 		nextHandler()
@@ -303,15 +324,32 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Log which modern keyboard header is active.
 		# Although this can be done from modern keyboard app module,
 		# that module is destined for NVDA Core, hence do it here.
-		if obj.appModule.appName in ("windowsinternal_composableshell_experiences_textinput_inputapp", "textinputhost") and obj.firstChild is not None and log.isEnabledFor(log.DEBUG):
-			log.debug(f"W10: automation Id for currently opened modern keyboard feature is {obj.firstChild.UIAElement.cachedAutomationId}")
+		if (
+			obj.appModule.appName in (
+				"windowsinternal_composableshell_experiences_textinput_inputapp", "textinputhost"
+			) and obj.firstChild is not None and log.isEnabledFor(log.DEBUG)
+		):
+			log.debug(
+				"W10: automation Id for currently opened modern keyboard feature "
+				f"is {obj.firstChild.UIAElement.cachedAutomationId}"
+			)
 		nextHandler()
 
-	def event_UIA_notification(self, obj, nextHandler, notificationKind=None, notificationProcessing=None, displayString=None, activityId=None):
+	def event_UIA_notification(
+			self, obj, nextHandler,
+			notificationKind=None, notificationProcessing=None, displayString=None, activityId=None
+	):
 		# Introduced in Version 1709, to be treated as a notification event.
 		self.uiaDebugLogging(obj, "notification")
 		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
-			log.debug(f"W10: UIA notification: sender: {obj.UIAElement}, notification kind: {notificationKind}, notification processing: {notificationProcessing}, display string: {displayString}, activity ID: {activityId}")
+			log.debug(
+				"W10: UIA notification: "
+				f"sender: {obj.UIAElement}, "
+				f"notification kind: {notificationKind}, "
+				f"notification processing: {notificationProcessing}, "
+				f"display string: {displayString}, "
+				f"activity ID: {activityId}"
+			)
 			# Play a debug tone if and only if notifications come from somewhere other than the active app
 			# and NVDA was restarted with debug logging mode.
 			if obj.appModule != api.getFocusObject().appModule and globalVars.appArgs.debugLogging:
