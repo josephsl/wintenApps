@@ -168,7 +168,11 @@ class AppModule(AppModule):
 			else:
 				obj = obj.parent.parent.firstChild
 		candidate = obj
-		if obj and obj.UIAElement.cachedClassName == "ListViewItem" and obj.parent and isinstance(obj.parent, UIA) and obj.parent.UIAElement.cachedAutomationId != "TEMPLATE_PART_ClipboardItemsList":
+		if (
+			obj and obj.UIAElement.cachedClassName == "ListViewItem"
+			and obj.parent and isinstance(obj.parent, UIA)
+			and obj.parent.UIAElement.cachedAutomationId != "TEMPLATE_PART_ClipboardItemsList"
+		):
 			# The difference between emoji panel and suggestions list is absence of categories/emoji separation.
 			# Turns out automation ID for the container is different,
 			# observed in build 17666 when opening clipboard copy history.
@@ -186,7 +190,9 @@ class AppModule(AppModule):
 				obj.reportFocus()
 			# NVDA Core issue 10371: as part of speech sequence work in 2019.3,
 			# braille.getBrailleTextForProperties has been renamed to getPropertiesBraille.
-			braille.handler.message(braille.getPropertiesBraille(name=obj.name, role=obj.role, positionInfo=obj.positionInfo))
+			braille.handler.message(
+				braille.getPropertiesBraille(name=obj.name, role=obj.role, positionInfo=obj.positionInfo)
+			)
 			# Cache selected item.
 			self._recentlySelected = obj.name
 		else:
@@ -195,13 +201,19 @@ class AppModule(AppModule):
 		nextHandler()
 
 	# Emoji panel for build 16299 and 17134.
-	_classicEmojiPanelAutomationIds = ("TEMPLATE_PART_ExpressiveInputFullViewFuntionBarItemControl", "TEMPLATE_PART_ExpressiveInputFullViewFuntionBarCloseButton")
+	_classicEmojiPanelAutomationIds = (
+		"TEMPLATE_PART_ExpressiveInputFullViewFuntionBarItemControl",
+		"TEMPLATE_PART_ExpressiveInputFullViewFuntionBarCloseButton"
+	)
 
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 		import UIAHandler
-		if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"] and obj.firstChild is not None:
+		if (
+			hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]
+			and obj.firstChild is not None
+		):
 			localEventHandlerElements = [obj.firstChild]
 			# For dictation, add elements manually so name change event can be handled.
 			if obj.firstChild.UIAElement.cachedAutomationId == "DictationMicrophoneButton":
@@ -228,9 +240,15 @@ class AppModule(AppModule):
 			eventHandler.queueEvent("show", inputPanel)
 			# Don't forget to add actual candidate item element so name change event can be handled
 			# (mostly for hardware keyboard input suggestions).
-			if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]:
-				UIAHandler.handler.removeEventHandlerGroup(inputPanel.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup)
-				UIAHandler.handler.addEventHandlerGroup(inputPanel.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+			if (
+				hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]
+			):
+				UIAHandler.handler.removeEventHandlerGroup(
+					inputPanel.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup
+				)
+				UIAHandler.handler.addEventHandlerGroup(
+					inputPanel.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup
+				)
 			return
 		inputPanelAutomationId = inputPanel.UIAElement.cachedAutomationId
 		self._modernKeyboardInterfaceActive = True
@@ -242,7 +260,10 @@ class AppModule(AppModule):
 		# Handle hardware keyboard and CJK IME suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
 		# In fact, in 20H1, this is the CJK IME candidates window.
-		elif inputPanelAutomationId in ("CandidateWindowControl", "IME_Candidate_Window", "IME_Prediction_Window") and config.conf["inputComposition"]["autoReportAllCandidates"]:
+		elif (
+			inputPanelAutomationId in ("CandidateWindowControl", "IME_Candidate_Window", "IME_Prediction_Window")
+			and config.conf["inputComposition"]["autoReportAllCandidates"]
+		):
 			try:
 				eventHandler.queueEvent("UIA_elementSelected", inputPanel.firstChild.firstChild)
 			except AttributeError:
@@ -306,7 +327,9 @@ class AppModule(AppModule):
 			(obj.UIAElement.cachedClassName in ("CRootKey", "GridViewItem"))
 			# Just ignore useless clipboard status and vertical scroll bar label.
 			# Also top emoji search result must be announced for better user experience.
-			or (cachedAutomationId in ("TEMPLATE_PART_ClipboardItemsList", "TEMPLATE_PART_Search_TextBlock", "VerticalScrollBar"))
+			or (cachedAutomationId in (
+				"TEMPLATE_PART_ClipboardItemsList", "TEMPLATE_PART_Search_TextBlock", "VerticalScrollBar"
+			))
 			# And no, emoji entries should not be announced here.
 			or (self._recentlySelected is not None and self._recentlySelected in obj.name)
 		):
@@ -317,14 +340,24 @@ class AppModule(AppModule):
 			# return immediatley when element selected event on clipboard item was fired just prior to this.
 			# In some cases, parent will be None, as seen when emoji panel is closed in build 18267.
 			try:
-				if cachedAutomationId == "TEMPLATE_PART_ClipboardItemIndex" or obj.parent.UIAElement.cachedAutomationId == "TEMPLATE_PART_ClipboardItemsList":
+				if (
+					cachedAutomationId == "TEMPLATE_PART_ClipboardItemIndex"
+					or obj.parent.UIAElement.cachedAutomationId == "TEMPLATE_PART_ClipboardItemsList"
+				):
 					return
 			except AttributeError:
 				return
-			if not self._modernKeyboardInterfaceActive or cachedAutomationId != "TEMPLATE_PART_ExpressionGroupedFullView":
+			if (
+				not self._modernKeyboardInterfaceActive
+				or cachedAutomationId != "TEMPLATE_PART_ExpressionGroupedFullView"
+			):
 				speech.cancelSpeech()
 		# Don't forget to add "Microsoft Candidate UI" as something that should be suppressed.
-		if cachedAutomationId not in ("TEMPLATE_PART_ExpressionFullViewItemsGrid", "TEMPLATE_PART_ClipboardItemIndex", "CandidateWindowControl"):
+		if cachedAutomationId not in (
+			"TEMPLATE_PART_ExpressionFullViewItemsGrid",
+			"TEMPLATE_PART_ClipboardItemIndex",
+			"CandidateWindowControl"
+		):
 			ui.message(obj.name)
 		self._symbolsGroupSelected = False
 		if not any(obj.location):
