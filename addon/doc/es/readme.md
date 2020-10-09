@@ -77,8 +77,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   eventos.
 * Al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
   nombre del escritorio actual (escritorio 2, por ejemplo).
-* NVDA ya no anuncia Menú Inicio tamaño de texto al cambiar la resolución de
-  pantalla o la orientación.
+* NVDA ya no anunciará Menú Inicio tamaño de texto al cambiar la resolución
+  de pantalla o la orientación.
 * Al reordenar los elementos del menú Inicio o acciones rápidas del centro
   de actividades con alt+shift+flechas, NVDA anunciará información de los
   elementos arrastrados o su nueva posición.
@@ -167,6 +167,8 @@ voz de NVDA y configura el nivel de símbolos en "alguno" o más alto.
 * Cuando se seleccione un grupo de emojis (incluyendo kaomoji y el grupo de
   símbolos en la versión 1903 o posteriores), NVDA ya no moverá el navegador
   de objetos a ciertos emojis.
+* NVDA anunciará el emoji seleccionado si el panel de emojis se abre más de
+  una vez en la compilación 20226.
 
 ## Gente
 

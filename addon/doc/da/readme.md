@@ -70,8 +70,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   Automation Id for an element could not be recorded when tracking events.
 * Når åbning, lukning, eller Skift mellem virtuelle skrivebord forekommer,
   vil NVDA annoncere nuværende desktop ID (f.eks. "Skrivebord 2").
-* NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
-  du ændrer skærmopløsning eller orientering.
+* NVDA will no longer announce Start menu size text when changing screen
+  resolution or orientation.
 * Når du arrangerer fliser på start-menuen eller hurtige handlinger i
   Handlingscenter med Alt+Shift+piletasterne, vil NVDA oplyse informationer
   om emner, når disse flyttes.
@@ -156,6 +156,8 @@ NVDA's speech settings and set symbol level to "some" or higher.
 * When an emoji group (including kaomoji and symbols group in Version 1903
   or later) is selected, NVDA will no longer move navigator object to
   certain emojis.
+* NVDA will announce selected emoji if emoji panel is opened more than once
+  in build 20226.
 
 ## Personer
 

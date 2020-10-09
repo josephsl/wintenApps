@@ -76,8 +76,8 @@ versiunile suplimentului][3].
   Automation Id for an element could not be recorded when tracking events.
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce current desktop name (desktop 2, for example).
-* NVDA nu mai anunță „dimensiune text start meniu” la schimbarea rezoluției
-  ecranului sau a orientării.
+* NVDA will no longer announce Start menu size text when changing screen
+  resolution or orientation.
 * When arranging Start menu tiles or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce information on dragged items or
   new position of the dragged item.
@@ -156,6 +156,8 @@ NVDA's speech settings and set symbol level to "some" or higher.
 * When an emoji group (including kaomoji and symbols group in Version 1903
   or later) is selected, NVDA will no longer move navigator object to
   certain emojis.
+* NVDA will announce selected emoji if emoji panel is opened more than once
+  in build 20226.
 
 ## Persoane
 

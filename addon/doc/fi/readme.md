@@ -72,8 +72,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   UIA-automaatiotunnusta ei voitu rekisteröidä tapahtumia seurattaessa.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2) avattaessa
   ja suljettaessa virtuaalityöpöytiä tai siirryttäessä niiden välillä.
-* NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
-  suuntaa vaihdettaessa.
+* NVDA will no longer announce Start menu size text when changing screen
+  resolution or orientation.
 * Kun Käynnistä-valikon ruutuja tai Toimintokeskuksen pikatoimintoja
   järjestellään Alt+Vaihto+nuolinäppäimillä, NVDA puhuu raahattujen
   kohteiden tiedot tai raahatun kohteen uuden sijainnin.
@@ -157,6 +157,8 @@ NVDA's speech settings and set symbol level to "some" or higher.
 * Kun emojiryhmä (mukaan lukien kaomoji ja symboliryhmä versiossa 1903 tai
   uudemmissa) valitaan, NVDA ei enää siirrä navigointiobjektia tiettyihin
   emojeihin.
+* NVDA will announce selected emoji if emoji panel is opened more than once
+  in build 20226.
 
 ## Ihmiset
 

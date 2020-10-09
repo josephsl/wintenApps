@@ -160,6 +160,8 @@ o nivel de símbolos en "algunha" ou superior.
 * Cando se selecciona un grupo de emojis (incluindo kaomoji e grupos de
   símbolos na Versión 1903 ou posterior), NVDA xa non moverá o navegador de
   obxectos a certos emojis.
+* NVDA anuncairá o emoji seleccionado se o panel de emojis se abre máis
+  dunha vez na compilación 20226.
 
 ## Xente
 

@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA compatibility: 2020.1 to 2020.3
+* NVDA kompatibilnost: 2020.1 do 2020.3
 
 Ovaj NVDA dodatak je zbirka aplikacijskih modula za razne Windows 10
 aplikacije, kao i poboljšanja i ispravci određenih windows 10 kontrola.
@@ -18,8 +18,8 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 * Karte
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Moderna tipkovnica (emoji ploča, diktatiranje, prijedlozi za ulazni
-  hardver, povijest međuspremnika oblaka, moderni uređivači za način unosa)
+* Moderna tipkovnica (ploča emojija, diktatiranje, prijedlozi za ulazni
+  hardver, povijest međuspremnika oblaka, moderni uređivači za unos)
 * Osobe
 * Postavke (postavke sustava, Windows+I)
 * Vremenska prognoza.
@@ -159,6 +159,8 @@ NVDA postavkama govora i postavi razinu simbola na „neki” ili višu.
 * Kad se odabere grupa emojija (uključujući kaomoji i skupinu simbola u
   verziji 1903 ili novijoj), NVDA više neće pomicati navigacijski objekt na
   određene emojije.
+* NVDA će najaviti odabrane emojije, ako se ploča emojija otvori više puta u
+  gradnji 20226.
 
 ## Osobe
 
