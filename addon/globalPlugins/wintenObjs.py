@@ -81,7 +81,7 @@ class SearchField(SearchField):
 				suggestionsCount = self.controllerFor[0].childCount
 				if suggestionsCount == 1:
 					# Translators: presented when there is one suggestion for a search term.
-					suggestionsMessage = "1 suggestion" if suggestionsCount == 1 else "{} suggestions".format(suggestionsCount)
+					suggestionsMessage = "1 suggestion"
 				else:
 					# Translators: presented when there are multiple suggestions for a search term.
 					suggestionsMessage = "{} suggestions".format(suggestionsCount)
