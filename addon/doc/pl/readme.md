@@ -72,8 +72,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * Podczas otwierania, zamykając lub przełączając się między wirtualnymi
   pulpitami, NVDA będzie oznajmiała aktualny identyfikator (na przykład
   pulpit 2).
-* NVDA nie będzie wypowiadało wielkość tekstu w meni start, gdy zmienia się
-  rozdzielczość ekranu lub orientacja ekranu.
+* NVDA will no longer announce Start menu size text when changing screen
+  resolution or orientation.
 * Przy ułożeniu kafelków meni start lub szybkich akcji w centrum akcji za
   pomocą Alt+Shift+strzałek, NVDA będzie wymawiała informację o
   upuszczonyche elementach lub o ich nowych pozycjach.
@@ -157,6 +157,8 @@ NVDA's speech settings and set symbol level to "some" or higher.
 * When an emoji group (including kaomoji and symbols group in Version 1903
   or later) is selected, NVDA will no longer move navigator object to
   certain emojis.
+* NVDA will announce selected emoji if emoji panel is opened more than once
+  in build 20226.
 
 ## Osoby
 

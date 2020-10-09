@@ -75,8 +75,8 @@ riferimento al documento [changelogs for add-on releases][3].
   Automation Id for an element could not be recorded when tracking events.
 * Quando si passa ad un desktop virtuale successivo, o ne viene chiuso o
   aperto uno, NVDA annuncerà il numero del desktop, ad esempio Desktop2.
-* NVDA non leggerà più le dimensioni del testo del menu avvio quando si
-  cambia la risoluzione o l'orientamento dello schermo.
+* NVDA will no longer announce Start menu size text when changing screen
+  resolution or orientation.
 * Quando si riposizionano le mattonelle del menu Avvio o le azioni rapide
   del centro azioni con Alt+Shift+frecce, NVDA fornirà informazioni sugli
   elementi trascinati e sulle loro nuove posizioni.
@@ -163,6 +163,8 @@ NVDA's speech settings and set symbol level to "some" or higher.
 * When an emoji group (including kaomoji and symbols group in Version 1903
   or later) is selected, NVDA will no longer move navigator object to
   certain emojis.
+* NVDA will announce selected emoji if emoji panel is opened more than once
+  in build 20226.
 
 ## Persone
 

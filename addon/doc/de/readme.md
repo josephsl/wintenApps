@@ -78,8 +78,8 @@ Versionen][3].
   Ereignissen nicht aufgezeichnet werden konnte.
 * Beim Öffnen, Schließen oder Umschalten virtueller Desktops meldet NVDA den
   aktuellen Desktop-Namen (z. B. Desktop 2).
-* NVDA sagt den Text für die Größe des Startmenüs nicht mehr an, wenn die
-  Bildschirmauflösung oder Ausrichtung geändert wird.
+* NVDA wird beim Ändern der Bildschirmauflösung oder -ausrichtung keinen
+  Text in der Größe des Startmenüs mehr vermelden.
 * Beim Anordnen von Startmenükacheln oder Action-Center-Schnellaktionen mit
   Alt+Umschalt+Pfeiltasten gibt NVDA Informationen zu gezogenen Elementen
   oder zur neuen Position des gezogenen Elements an.
@@ -169,6 +169,8 @@ setzen Sie die Symbol-Stufe auf "Einige" oder höher.
 * Wenn eine Emoji-Gruppe (einschließlich kaomoji und Symbolgruppe in Version
   1903 oder später) ausgewählt wird, verschiebt NVDA das Navigator-Objekt
   nicht mehr zu bestimmten Emojis.
+* NVDA liest das ausgewählte Emoji vor, sobald das Emoji-Panel mehr als
+  einmal in Build 20226 geöffnet wird.
 
 ## Kontakte
 

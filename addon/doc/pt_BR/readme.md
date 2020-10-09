@@ -77,8 +77,8 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
   anunciará o nome atual da área de trabalho (área de trabalho 2, por
   exemplo).
-* O NVDA deixará de anunciar o tamanho do texto do menu Iniciar quando
-  alterar as resoluções ou a orientação da tela.
+* NVDA will no longer announce Start menu size text when changing screen
+  resolution or orientation.
 * Ao organizar os blocos do menu Iniciar ou as ações rápidas da Central de
   Ações com as teclas Alt+Shift+setas, o NVDA anuncia informações sobre
   itens arrastados ou nova posição do item arrastado.
@@ -165,6 +165,8 @@ NVDA's speech settings and set symbol level to "some" or higher.
 * Quando um grupo de emoji (incluindo o kaomoji e o grupo de símbolos na
   versão 1903 ou posterior) é selecionado, o NVDA não move mais o objeto de
   navegação para determinados emojis.
+* NVDA will announce selected emoji if emoji panel is opened more than once
+  in build 20226.
 
 ## Pessoas
 

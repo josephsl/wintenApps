@@ -81,8 +81,8 @@ l'extension][3].
   suivi des événements.
 * Lors de l'ouverture, de la fermeture ou du basculement entre les bureaux
   virtuels, NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
-* NVDA n'annoncera plus le texte de la taille du menu Démarrer lorsque vous
-  changez la résolution ou l'orientation de l'écran.
+* NVDA will no longer announce Start menu size text when changing screen
+  resolution or orientation.
 * Lorsque vous organisez les tuiles du menu Démarrer ou le Centre de
   notifications Actions rapides avec les touches Alt+Maj+touches fléchées,
   NVDA annoncera des informations sur les éléments glissés ou la nouvelle
@@ -178,6 +178,8 @@ Parole et configurer le Niveau de ponctuations et symboles  sur
 * Lorsqu'un groupe emoji (y compris Kaomoji et un groupe des symboles dans
   la Version 1903 ou ultérieure) est sélectionné, NVDA ne sera plus déplacer
   à l'objet navigateur vers certains emojis.
+* NVDA will announce selected emoji if emoji panel is opened more than once
+  in build 20226.
 
 ## Personnes
 

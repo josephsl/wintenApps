@@ -66,8 +66,8 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 * Pri otváraní, zatváraní alebo prepínaní medzi virtuálnymi pracovnými
   plochami NVDA oznámi aktuálny názov pracovnej plochy (napríklad pracovná
   plocha 2).
-* NVDA neoznamuje veľkosť textu ponuky Štart pri zmene rozlíšenia alebo
-  orientácie obrazovky.
+* NVDA will no longer announce Start menu size text when changing screen
+  resolution or orientation.
 * Pri presúvaní dlaždíc alebo položiek v centre akcií (skratky
   alt+shift+šípky), NVDA oznamuje nové umiestnenie položiek.
 * NVDA viac neoznamuje správu "zmazať slovo" pri mazaní skratkou
@@ -141,6 +141,8 @@ konzorcia a nastaviť úroveň interpunkcie na väčšina alebo všetka.
   predstavené od verzie 2004 (zostava 18965)
 * Ak je vybratá skupina emoji(alebo symbolov a kaomoji od verzie 1903), NVDA
   nepresúva navigačný objekt automaticky na prvú položku.
+* NVDA will announce selected emoji if emoji panel is opened more than once
+  in build 20226.
 
 ## Ľudia
 
