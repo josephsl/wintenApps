@@ -73,7 +73,7 @@ class SearchField(SearchField):
 		# thus announce this if position info reporting is enabled.
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
 			if (
-				self.UIAElement.cachedAutomationId == "TextBox"
+				self.UIAAutomationId == "TextBox"
 				or self.UIAElement.cachedAutomationId == "SearchTextBox"
 				and self.appModule.appName not in ("searchui", "searchapp")
 			):
@@ -163,7 +163,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Search field that does raise controller for event.
 			# Although basic functionality is included in NVDA 2017.3,
 			# added enhancements such as announcing suggestion count.
-			if obj.UIAElement.cachedAutomationId in ("SearchTextBox", "TextBox"):
+			if obj.UIAAutomationId in ("SearchTextBox", "TextBox"):
 				# NVDA 2017.3 includes a dedicated search box overlay class in searchui
 				# to deal with search term announcement problem.
 				# Because the add-on version deals with focus comparison,
@@ -172,7 +172,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					clsList.insert(0, SearchField)
 					return
 			# A dedicated version for Mail app's address/mention suggestions.
-			elif obj.UIAElement.cachedAutomationId == "RootFocusControl":
+			elif obj.UIAAutomationId == "RootFocusControl":
 				clsList.insert(0, UIAEditableTextWithSuggestions)
 				return
 			# Recognize headings as reported by XAML (build 17134 and later).
@@ -234,6 +234,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			element = obj.UIAElement
 			# Sometimes due to timing errors, COM error is thrown
 			# when trying to obtain automation ID from the underlying UIA element.
+			# To keep an eye on this, use cached Automation Id
+			# rather than fetching UIAAutomationId property directly.
 			try:
 				info.append(f"automation Id: {element.cachedAutomationId}")
 			except COMError:
@@ -296,7 +298,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if isinstance(obj, UIA):
 			# No, do not let Start menu size be announced.
 			# Moved from Shell Experience Host in 2018 as a different app hosts this control in build 18282.
-			if obj.UIAElement.cachedAutomationId == "FrameSizeAccessibilityField":
+			if obj.UIAAutomationId == "FrameSizeAccessibilityField":
 				return
 			# #50 (NVDA Core issue 8466): certain aria-alert messages.
 			if obj.role == controlTypes.ROLE_ALERT:
@@ -331,7 +333,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		):
 			log.debug(
 				"W10: automation Id for currently opened modern keyboard feature "
-				f"is {obj.firstChild.UIAElement.cachedAutomationId}"
+				f"is {obj.firstChild.UIAAutomationId}"
 			)
 		nextHandler()
 
