@@ -47,9 +47,9 @@ class AppModule(appModuleHandler.AppModule):
 		try:
 			cortanaResponse = responses.children[-1]
 			# Since August 2020, different Automation Id's are used for Cortana responses versus Bing searches.
-			if cortanaResponse.UIAElement.cachedAutomationId.startswith("CortanaResponseText"):
+			if cortanaResponse.UIAAutomationId.startswith("CortanaResponseText"):
 				cortanaResponse = cortanaResponse.firstChild.name
-			elif cortanaResponse.UIAElement.cachedAutomationId.startswith("CardResponse"):
+			elif cortanaResponse.UIAAutomationId.startswith("CardResponse"):
 				# When searching through Bing, summary text shows up.
 				if cortanaResponse.firstChild.childCount > 1:
 					cortanaResponse = ", ".join([response.name for response in cortanaResponse.firstChild.children])

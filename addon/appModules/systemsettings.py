@@ -27,19 +27,19 @@ class AppModule(AppModule):
 			# and is initially called "download and install now", thus add the feature update title as well.
 			if obj.role == controlTypes.ROLE_LINK:
 				nameList = [obj.name]
-				if obj.UIAElement.cachedAutomationId.startswith("HistoryEvent") and obj.name != obj.previous.name:
+				if obj.UIAAutomationId.startswith("HistoryEvent") and obj.name != obj.previous.name:
 					# Add the status text in 1709 and later.
 					# But since 16251, a "what's new" link has been added for feature updates,
 					# so consult two previous objects.
-					eventID = obj.UIAElement.cachedAutomationId.split("_")[0]
+					eventID = obj.UIAAutomationId.split("_")[0]
 					possibleFeatureUpdateText = obj.previous.previous
 					# This automation ID may change in a future Windows 10 release.
-					if possibleFeatureUpdateText.UIAElement.cachedAutomationId == "_".join([eventID, "TitleTextBlock"]):
+					if possibleFeatureUpdateText.UIAAutomationId == "_".join([eventID, "TitleTextBlock"]):
 						nameList.insert(0, obj.previous.name)
 						nameList.insert(0, possibleFeatureUpdateText.name)
 					else:
 						nameList.append(obj.next.name)
-				elif obj.UIAElement.cachedAutomationId == "SystemSettings_MusUpdate_SeekerUpdateUX_HyperlinkButton":
+				elif obj.UIAAutomationId == "SystemSettings_MusUpdate_SeekerUpdateUX_HyperlinkButton":
 					# Unconditionally locate the new feature update title, skipping the link description.
 					# Note that for optional cumulative updates, the actual update title is next to this link,
 					# so one must fetch all of these.
@@ -69,7 +69,7 @@ class AppModule(AppModule):
 			if (
 				winVersion.winVersion.platform_version == (10, 0, 18362)
 				and obj.role == controlTypes.ROLE_COMBOBOX
-				and obj.UIAElement.cachedAutomationId.startswith("SystemSettings_StorageSense_SmartPolicy_")
+				and obj.UIAAutomationId.startswith("SystemSettings_StorageSense_SmartPolicy_")
 			):
 				clsList.insert(0, ComboBoxWithoutValuePattern)
 
@@ -90,7 +90,7 @@ class AppModule(AppModule):
 			# Do not announce "result not found" error unless have to.
 			(
 				automationId == "NoResultsFoundTextBlock"
-				and obj.parent.UIAElement.cachedAutomationId != "StatusTextPopup"
+				and obj.parent.UIAAutomationId != "StatusTextPopup"
 			)
 			# Announce individual update progress in build 16215 and later preferably only once per update stage.
 			or ("ApplicableUpdate" in automationId and not automationId.endswith("_ContextDescriptionTextBlock"))
@@ -100,7 +100,7 @@ class AppModule(AppModule):
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA) and obj.name and obj.name != self._nameChangeCache:
-			automationId = obj.UIAElement.cachedAutomationId
+			automationId = obj.UIAAutomationId
 			try:
 				if self.announceLiveRegion(obj, automationId):
 					self._nameChangeCache = obj.name
@@ -120,9 +120,9 @@ class AppModule(AppModule):
 			if (
 				# Because "Purging:" is announced multiple times,
 				# coerce this to live region change event, which does handle this case.
-				obj.UIAElement.cachedAutomationId == "SystemSettings_StorageSense_TemporaryFiles_InstallationProgressBar"
+				obj.UIAAutomationId == "SystemSettings_StorageSense_TemporaryFiles_InstallationProgressBar"
 				# Announce result text for Storage Sense/cleanup.
-				or obj.UIAElement.cachedAutomationId.startswith("SystemSettings_StorageSense_SmartPolicy_ExecuteNow")
+				or obj.UIAAutomationId.startswith("SystemSettings_StorageSense_SmartPolicy_ExecuteNow")
 			):
 				self.event_liveRegionChange(obj, nextHandler)
 		nextHandler()

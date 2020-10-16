@@ -63,16 +63,16 @@ class AppModule(appModuleHandler.AppModule):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if (
 			obj.role == controlTypes.ROLE_LISTITEM
-			and RE_PARENT_LISTS.match(obj.parent.UIAElement.CachedAutomationId)
+			and RE_PARENT_LISTS.match(obj.parent.UIAAutomationId)
 		):
 			clsList.insert(0, WeatherForecastItem)
 
 	def event_NVDAObject_init(self, obj):
 		try:
-			theId = obj.UIAElement.CachedAutomationId
+			theId = obj.UIAAutomationId
 		except AttributeError:
 			return
-		if obj.UIAElement.CachedAutomationId == "SideNavigationBar" and obj.role != controlTypes.ROLE_GROUPING:
+		if obj.UIAAutomationId == "SideNavigationBar" and obj.role != controlTypes.ROLE_GROUPING:
 			obj.role = controlTypes.ROLE_TABCONTROL
 		if RE_TAB_AUTOMATION_MATCH.match(theId):
 			obj.role = controlTypes.ROLE_TAB

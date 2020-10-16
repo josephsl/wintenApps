@@ -42,18 +42,18 @@ class AppModule(appModuleHandler.AppModule):
 			return
 		# No, announce value changes immediately except for calculator results and expressions.
 		if (
-			obj.UIAElement.cachedAutomationId in noCalculatorEntryAnnouncements
+			obj.UIAAutomationId in noCalculatorEntryAnnouncements
 			or obj.UIAElement.cachedClassName == "LandmarkTarget"
 		):
 			self._shouldAnnounceResult = False
 		# For the rest:
 		elif (
-			obj.UIAElement.cachedAutomationId not in noCalculatorEntryAnnouncements
+			obj.UIAAutomationId not in noCalculatorEntryAnnouncements
 			and obj.name != self._resultsCache
 		):
 			# For unit conversion, UIA notification event presents much better messages.
 			# For date calculation, live region change event is also fired for difference between dates.
-			if obj.UIAElement.cachedAutomationId not in ("Value1", "Value2", "DateDiffAllUnitsResultLabel"):
+			if obj.UIAAutomationId not in ("Value1", "Value2", "DateDiffAllUnitsResultLabel"):
 				ui.message(obj.name)
 			self._resultsCache = obj.name
 		if not self._shouldAnnounceResult:
@@ -69,7 +69,7 @@ class AppModule(appModuleHandler.AppModule):
 		# From May 2018 onwards, unit converter uses a different automation iD.
 		# Changed significantly in July 2018 thanks to UI redesign, and as a result, attribute error is raised.
 		try:
-			shouldAnnounceNotification = obj.previous.UIAElement.cachedAutomationId in (
+			shouldAnnounceNotification = obj.previous.UIAAutomationId in (
 				"numberPad", "UnitConverterRootGrid"
 			)
 		except AttributeError:
@@ -80,7 +80,7 @@ class AppModule(appModuleHandler.AppModule):
 				resultElement = resultElement.parent.children[1]
 			shouldAnnounceNotification = (
 				resultElement and resultElement.firstChild
-				and resultElement.firstChild.UIAElement.cachedAutomationId not in noCalculatorEntryAnnouncements
+				and resultElement.firstChild.UIAAutomationId not in noCalculatorEntryAnnouncements
 			)
 		# Announce activity ID's other than "DisplayUpdate" as this is redundant if speak typed characters is on
 		# (activity ID's courtesy of Microsoft Calculator source code hosted on GitHub, MIT license).
@@ -101,7 +101,7 @@ class AppModule(appModuleHandler.AppModule):
 		# Hack: only announce display text when an actual calculator button (usually equals button) is pressed.
 		# In redstone, pressing enter does not move focus to equals button.
 		if isinstance(focus, UIA):
-			if focus.UIAElement.cachedAutomationId == "CalculatorResults":
+			if focus.UIAAutomationId == "CalculatorResults":
 				queueHandler.queueFunction(queueHandler.eventQueue, focus.reportFocus)
 			else:
 				resultsScreen = api.getForegroundObject().children[1].lastChild

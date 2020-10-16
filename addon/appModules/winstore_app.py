@@ -18,7 +18,7 @@ class AppModule(appModuleHandler.AppModule):
 		# so use a grandchild's name.
 		if (
 			isinstance(obj, UIA) and obj.role == controlTypes.ROLE_LISTITEM
-			and obj.firstChild and obj.firstChild.UIAElement.cachedAutomationId == "InstallControl"
+			and obj.firstChild and obj.firstChild.UIAAutomationId == "InstallControl"
 		):
 			obj.name = obj.firstChild.firstChild.name
 
@@ -26,7 +26,7 @@ class AppModule(appModuleHandler.AppModule):
 	_appInstallProgress = ""
 
 	def announceDownloadProgress(self, obj):
-		if isinstance(obj, UIA) and obj.UIAElement.cachedAutomationId == "InstallControl":
+		if isinstance(obj, UIA) and obj.UIAAutomationId == "InstallControl":
 			# Install control comes with an anoying name, so look at its children.
 			# Sometimes one of its children disappears, causing attribute error to be thrown.
 			try:

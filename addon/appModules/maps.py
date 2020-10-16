@@ -50,7 +50,7 @@ class AppModule(appModuleHandler.AppModule):
 	def event_nameChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
 			# #18: Announce street side changes as one uses the keyboard.
-			if obj.UIAElement.cachedAutomationId == "StreetsideAddressTextBlock":
+			if obj.UIAAutomationId == "StreetsideAddressTextBlock":
 				ui.message(obj.name)
 		nextHandler()
 
@@ -59,7 +59,7 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):
-			if obj.parent.UIAElement.cachedAutomationId == "MapControl" and obj.name != self.liveText:
+			if obj.parent.UIAAutomationId == "MapControl" and obj.name != self.liveText:
 				self.liveText = obj.name
 				ui.message(obj.name)
 		# And no, never call next handler.

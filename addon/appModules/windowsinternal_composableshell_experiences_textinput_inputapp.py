@@ -31,7 +31,7 @@ class ImeCandidateUI(UIA):
 		# Report the current candidates page and the currently selected item.
 		# Sometimes UIA does not fire an elementSelected event when it is first opened,
 		# Therefore we must fake it here.
-		if (self.UIAElement.cachedAutomationId == "IME_Prediction_Window"):
+		if (self.UIAAutomationId == "IME_Prediction_Window"):
 			candidateItem = self.firstChild
 			eventHandler.queueEvent("UIA_elementSelected", candidateItem)
 		elif (
@@ -124,7 +124,7 @@ class AppModule(AppModule):
 			return
 		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object
 		# (for presentational purposes) and move on.
-		if obj.parent.UIAElement.cachedAutomationId == "TEMPLATE_PART_Groups_ListView":
+		if obj.parent.UIAAutomationId == "TEMPLATE_PART_Groups_ListView":
 			# Emoji panel in build 20226 has just opened, so ignore element selected event.
 			if not self._noCategoryAnnouncement:
 				api.setNavigatorObject(obj)
@@ -147,7 +147,7 @@ class AppModule(AppModule):
 			automationId == "CandidateList"
 			# Also, when changing categories (emoji, kaomoji, symbols) in Version 1903 or later,
 			# category items are selected when in fact they have no text labels.
-			or obj.parent.UIAElement.cachedAutomationId == "TEMPLATE_PART_Sets_ListView"
+			or obj.parent.UIAAutomationId == "TEMPLATE_PART_Sets_ListView"
 			# Specifically to suppress skin tone modifiers from being announced after an emoji group was selected.
 			or self._symbolsGroupSelected
 			# In Version 1709 and 1803, both categories and items raise element selected event when category changes.
@@ -159,7 +159,7 @@ class AppModule(AppModule):
 		# something other than the selected item sees this event.
 		# In build 18262, emoji panel may open to People group and skin tone modifier gets selected.
 		# Skin tone modifiers are also selected when switching to People emoji group, and this should be suppressed.
-		if obj.parent.UIAElement.cachedAutomationId == "SkinTonePanelModifier_ListView":
+		if obj.parent.UIAAutomationId == "SkinTonePanelModifier_ListView":
 			# But this will point to nothing if emoji search results are not people.
 			if obj.parent.next is not None:
 				obj = obj.parent.next
@@ -169,7 +169,7 @@ class AppModule(AppModule):
 		if (
 			obj and obj.UIAElement.cachedClassName == "ListViewItem"
 			and obj.parent and isinstance(obj.parent, UIA)
-			and obj.parent.UIAElement.cachedAutomationId != "TEMPLATE_PART_ClipboardItemsList"
+			and obj.parent.UIAAutomationId != "TEMPLATE_PART_ClipboardItemsList"
 		):
 			# The difference between emoji panel and suggestions list is absence of categories/emoji separation.
 			# Turns out automation ID for the container is different,
@@ -182,7 +182,7 @@ class AppModule(AppModule):
 		if obj is not None:
 			api.setNavigatorObject(obj)
 			# NVDA Core issue 10093: for Japanese IME, candidates must be spelled.
-			if obj.parent.UIAElement.cachedAutomationId == "IME_Candidate_Window":
+			if obj.parent.UIAAutomationId == "IME_Candidate_Window":
 				speech.speakSpelling(obj.name, useCharacterDescriptions=True)
 			else:
 				obj.reportFocus()
@@ -214,7 +214,7 @@ class AppModule(AppModule):
 		):
 			localEventHandlerElements = [obj.firstChild]
 			# For dictation, add elements manually so name change event can be handled.
-			if obj.firstChild.UIAElement.cachedAutomationId == "DictationMicrophoneButton":
+			if obj.firstChild.UIAAutomationId == "DictationMicrophoneButton":
 				element = obj.children[1]
 				while element.next is not None:
 					localEventHandlerElements.append(element)
@@ -248,7 +248,7 @@ class AppModule(AppModule):
 					inputPanel.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup
 				)
 			return
-		inputPanelAutomationId = inputPanel.UIAElement.cachedAutomationId
+		inputPanelAutomationId = inputPanel.UIAAutomationId
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
 		# Emoji panel for build 16299 and 17134.
@@ -272,13 +272,13 @@ class AppModule(AppModule):
 			# On some systems (particularly non-English builds of Version 1903 and later),
 			# there is something else besides grouping controls, so another child control must be used.
 			emojisList = inputPanel.children[-2]
-			if emojisList.UIAElement.cachedAutomationId != "TEMPLATE_PART_Items_GridView":
+			if emojisList.UIAAutomationId != "TEMPLATE_PART_Items_GridView":
 				emojisList = emojisList.previous
 			if emojisList.firstChild and emojisList.firstChild.firstChild:
 				emojiItem = emojisList.firstChild.firstChild
 			# Avoid announcing skin tone modifiers if possible.
 			# For people emoji, the first emoji is actually next to skin tone modifiers list.
-			if emojiItem.UIAElement.cachedAutomationId == "SkinTonePanelModifier_ListView" and emojiItem.next:
+			if emojiItem.UIAAutomationId == "SkinTonePanelModifier_ListView" and emojiItem.next:
 				emojiItem = emojiItem.next
 			# In build 20226, categories fire element selected event whenever emoji panel opens.
 			# Suppress this to avoid navigator object moving to somewhere other than the selected emoji.
@@ -291,7 +291,7 @@ class AppModule(AppModule):
 			# Under some cases, clipboard tip text isn't shown on screen,
 			# causing clipboard history title to be announced instead of most recently copied item.
 			clipboardHistoryItem = obj.children[-2]
-			if clipboardHistoryItem.UIAElement.cachedAutomationId == inputPanelAutomationId:
+			if clipboardHistoryItem.UIAAutomationId == inputPanelAutomationId:
 				clipboardHistoryItem = clipboardHistoryItem.next
 			# Make sure to move to actual clipboard history item if available.
 			if clipboardHistoryItem.firstChild is not None:
@@ -307,7 +307,7 @@ class AppModule(AppModule):
 		elif isinstance(obj, ImeCandidateUI):
 			return nextHandler()
 		try:
-			cachedAutomationId = obj.UIAElement.cachedAutomationId
+			cachedAutomationId = obj.UIAAutomationId
 		except COMError:
 			cachedAutomationId = ""
 		# Forget it if there is no Automation ID and class name set.
@@ -338,7 +338,7 @@ class AppModule(AppModule):
 			try:
 				if (
 					cachedAutomationId == "TEMPLATE_PART_ClipboardItemIndex"
-					or obj.parent.UIAElement.cachedAutomationId == "TEMPLATE_PART_ClipboardItemsList"
+					or obj.parent.UIAAutomationId == "TEMPLATE_PART_ClipboardItemsList"
 				):
 					return
 			except AttributeError:
@@ -364,7 +364,7 @@ class AppModule(AppModule):
 	def event_stateChange(self, obj, nextHandler):
 		# Do not clear symbols group selected flag if an emoji group item is still the navigator object.
 		parent = api.getNavigatorObject().parent
-		if isinstance(parent, UIA) and parent.UIAElement.cachedAutomationId != "TEMPLATE_PART_Groups_ListView":
+		if isinstance(parent, UIA) and parent.UIAAutomationId != "TEMPLATE_PART_Groups_ListView":
 			self._symbolsGroupSelected = False
 		# Try detecting if modern keyboard elements are off-screen or the window itself is gone
 		# (parent's first child is nothing).
@@ -383,16 +383,16 @@ class AppModule(AppModule):
 		if isinstance(obj, UIA):
 			if obj.role == controlTypes.ROLE_LISTITEM and (
 				(
-					obj.parent.UIAElement.cachedAutomationId in (
+					obj.parent.UIAAutomationId in (
 						"ExpandedCandidateList",
 						"TEMPLATE_PART_AdaptiveSuggestionList",
 					)
-					and obj.parent.parent.UIAElement.cachedAutomationId == "IME_Candidate_Window"
+					and obj.parent.parent.UIAAutomationId == "IME_Candidate_Window"
 				)
-				or obj.parent.UIAElement.cachedAutomationId in ("IME_Candidate_Window", "IME_Prediction_Window")
+				or obj.parent.UIAAutomationId in ("IME_Candidate_Window", "IME_Prediction_Window")
 			):
 				clsList.insert(0, ImeCandidateItem)
-			elif obj.role == controlTypes.ROLE_PANE and obj.UIAElement.cachedAutomationId in (
+			elif obj.role == controlTypes.ROLE_PANE and obj.UIAAutomationId in (
 				"IME_Candidate_Window",
 				"IME_Prediction_Window"
 			):
