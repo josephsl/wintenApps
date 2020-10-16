@@ -364,8 +364,10 @@ class AppModule(AppModule):
 		nextHandler()
 
 	def event_stateChange(self, obj, nextHandler):
-		# Unconditionally clear symbols group selected flag.
-		self._symbolsGroupSelected = False
+		# Do not clear symbols group selected flag if an emoji group item is still the navigator object.
+		parent = api.getNavigatorObject().parent
+		if isinstance(parent, UIA) and parent.UIAElement.cachedAutomationId != "TEMPLATE_PART_Groups_ListView":
+			self._symbolsGroupSelected = False
 		# Try detecting if modern keyboard elements are off-screen or the window itself is gone
 		# (parent's first child is nothing).
 		# But attempting to retrieve obj location fails when emoji panel closes without selecting anything,
