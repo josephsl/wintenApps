@@ -269,24 +269,22 @@ class AppModule(AppModule):
 				pass
 		# Emoji panel in build 17666 and later (unless this changes).
 		elif inputPanelAutomationId == "TEMPLATE_PART_ExpressionGroupedFullView":
-			# On some systems, there is something else besides grouping controls,
-			# so another child control must be used.
+			# On some systems (particularly non-English builds of Version 1903 and later),
+			# there is something else besides grouping controls, so another child control must be used.
 			emojisList = inputPanel.children[-2]
 			if emojisList.UIAElement.cachedAutomationId != "TEMPLATE_PART_Items_GridView":
 				emojisList = emojisList.previous
-			try:
-				# Avoid announcing skin tone modifiers if possible.
+			if emojisList.firstChild and emojisList.firstChild.firstChild:
 				emojiItem = emojisList.firstChild.firstChild
-				if emojiItem.UIAElement.cachedAutomationId == "SkinTonePanelModifier_ListView":
-					emojiItem = emojiItem.next
-				# In build 20226, categories fire element selected event whenever emoji panel opens.
-				# Suppress this to avoid navigator object moving to somewhere other than the selected emoji.
-				if eventHandler.isPendingEvents("UIA_elementSelected"):
-					self._noCategoryAnnouncement = True
-				eventHandler.queueEvent("UIA_elementSelected", emojiItem)
-			except AttributeError:
-				# In build 18272's emoji panel, emoji list becomes empty in some situations.
-				pass
+			# Avoid announcing skin tone modifiers if possible.
+			# For people emoji, the first emoji is actually next to skin tone modifiers list.
+			if emojiItem.UIAElement.cachedAutomationId == "SkinTonePanelModifier_ListView" and emojiItem.next:
+				emojiItem = emojiItem.next
+			# In build 20226, categories fire element selected event whenever emoji panel opens.
+			# Suppress this to avoid navigator object moving to somewhere other than the selected emoji.
+			if eventHandler.isPendingEvents("UIA_elementSelected"):
+				self._noCategoryAnnouncement = True
+			eventHandler.queueEvent("UIA_elementSelected", emojiItem)
 		# Clipboard history.
 		# Move to clipboard list so element selected event can pick it up.
 		elif inputPanelAutomationId == "TEMPLATE_PART_ClipboardTitleBar":
