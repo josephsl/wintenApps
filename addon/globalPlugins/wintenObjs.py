@@ -8,7 +8,6 @@ import globalPluginHandler
 import controlTypes
 import ui
 from NVDAObjects.UIA import UIA, SearchField, Dialog
-from . import _uiaobj  # Temporary to support NVDA 2020.2 and earlier
 from NVDAObjects.behaviors import EditableTextWithSuggestions
 import api
 import config
@@ -108,11 +107,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #40: skip over the rest if appx is in effect.
 		if globalVars.appArgs.secure or config.isAppX:
 			return
-		# Patch UIA object's find overlay classes method to catch automation ID exception
-		# if NVDA does not provide a built-in Automation Id property.
-		if not hasattr(UIA, "UIAAutomationId"):
-			log.debug("W10: UIA object does not include built-in UIA Automation Id property getter, patching")
-			UIA.findOverlayClasses = _uiaobj.findOverlayClassesEx
 		# Try adding additional events in the constructor.
 		# If it fails, try again after NVDA is fully initialized.
 		try:
