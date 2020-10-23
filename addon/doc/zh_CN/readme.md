@@ -3,7 +3,7 @@
 * 作者: Joseph Lee, Derek Riemer and other Windows 10 users
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA兼容版本: 2020.1 到 2020.3
+* NVDA compatibility: 2020.2 to 2020.3
 
 此插件用于各种 Windows 10 应用程序的模块集合，以及针对某些 Windows 10 控件的增强功能和修复程序。
 
@@ -49,8 +49,7 @@
 * 可以只跟踪特定事件或来自特定应用程序的事件。
 * 如果跟踪事件时无法记录元素的 UIA Automation Id，则 NVDA 将不在提示为不执行任何操作或播放错误提示音。
 * 打开、关闭或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
-* NVDA will no longer announce Start menu size text when changing screen
-  resolution or orientation.
+* 在更改屏幕分辨率或方向时，NVDA将不再读出“开始”菜单大小文本。
 * 当使用 Alt + Shift +光标键托移“开始”菜单磁贴或“操作中心”快速操作按钮时，NVDA 将朗读有关所拖动项目及所拖动项目的新位置的信息。
 * 在Word 365的最新版本中，按Control + Backspace键时，NVDA将不再读出“删除的单词”。
 * 通过在 NVDA 的“对象提示”设置中关闭“读出通知提示”，可以禁止诸如文件资源管理器中的音量、亮度更改和来自 Microsoft Store
@@ -105,8 +104,7 @@
 * 在某些运行版本1903（2019年5月更新）的系统上，当表情符号面板打开时，NVDA将不再显示任何内容。
 * 增加了对版本2004内部版本18965和更高版本中引入的现代中文，日文和韩文（CJK）IME的支持。
 * 当选择表情符号组（包括版本 1903之后的绘文字）时，NVDA 将不再将导航器对象移动到某些表情符号。
-* NVDA will announce selected emoji if emoji panel is opened more than once
-  in build 20226.
+* 如果表情符号面板在 build 20226 及以上版本的系统中打开不止一次， Nvda 将宣布选定的表情符号。
 
 ## 人脉
 

@@ -20,7 +20,8 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.8.9\n"
 
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
+#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
+#. (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
@@ -44,8 +45,17 @@ msgstr "Impossível mover-se entre linhas"
 msgid "No more weather data for this item."
 msgstr "Não há mais dados meteorológicos para este item."
 
+#. Translators: presented when there is one suggestion for a search term.
+msgid "1 suggestion"
+msgstr ""
+
+#. Translators: presented when there are multiple suggestions for a search term.
+msgid "{} suggestions"
+msgstr ""
+
 #. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information.
 msgid "Windows 10 App Essentials"
 msgstr "Windows 10 App Essentials"
 

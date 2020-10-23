@@ -20,7 +20,8 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows (minSupportedVersion is the minimum version required for this add-on).
+#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
+#. (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
@@ -43,13 +44,17 @@ msgstr "Premještanje po retcima nije moguće"
 msgid "No more weather data for this item."
 msgstr "Nema daljnjih vremenskih podataka za ovaj element."
 
-#. Translators: A label for a 'candidate' list
-#. which contains symbols the user can choose from  when typing east-asian characters into a document.
-msgid "Candidate"
-msgstr "Kandidat"
+#. Translators: presented when there is one suggestion for a search term.
+msgid "1 suggestion"
+msgstr ""
+
+#. Translators: presented when there are multiple suggestions for a search term.
+msgid "{} suggestions"
+msgstr ""
 
 #. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information.
 msgid "Windows 10 App Essentials"
 msgstr "Osnovni moduli za Windows 10 aplikacije"
 
@@ -57,3 +62,6 @@ msgstr "Osnovni moduli za Windows 10 aplikacije"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Zbirka modula za razne Windows 10 aplikacije"
+
+#~ msgid "Candidate"
+#~ msgstr "Kandidat"
