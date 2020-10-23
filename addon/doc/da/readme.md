@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2020.1 to 2020.3
+* NVDA compatibility: 2020.2 to 2020.3
 
 Denne tilføjelse er en samling af app-moduler til forskellige Windows 10
 apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.

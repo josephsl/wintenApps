@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* NVDA compatibility: 2020.1 to 2020.3
+* NVDA compatibility: 2020.2 to 2020.3
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -72,8 +72,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   UIA-automaatiotunnusta ei voitu rekisteröidä tapahtumia seurattaessa.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2) avattaessa
   ja suljettaessa virtuaalityöpöytiä tai siirryttäessä niiden välillä.
-* NVDA will no longer announce Start menu size text when changing screen
-  resolution or orientation.
+* NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
+  suuntaa vaihdettaessa.
 * Kun Käynnistä-valikon ruutuja tai Toimintokeskuksen pikatoimintoja
   järjestellään Alt+Vaihto+nuolinäppäimillä, NVDA puhuu raahattujen
   kohteiden tiedot tai raahatun kohteen uuden sijainnin.
@@ -141,10 +141,12 @@ Cortana-keskustelut (versio 2004 ja uudemmat) ole käytössä.
 
 ## Moderni näppäimistö
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher.
+Näitä ovat emojipaneeli, leikepöydän historia, sanelu, ehdotukset
+syötettäessä tekstiä fyysisellä näppäimistöllä sekä modernin
+syöttömenetelmän editorit tietyille kielille. Ota käyttöön emojeita
+tarkasteltaessa parhaan kokemuksen saamiseksi Unicode-konsortion datan
+asetus NVDA:n puheasetuksista ja aseta symbolitasoksi "jotain" tai
+korkeampi.
 
 * NVDA ei enää sano leikepöydän historiaa avattaessa joissakin tilanteissa
   "leikepöytä", kun leikepöydällä on kohteita.
@@ -157,8 +159,8 @@ NVDA's speech settings and set symbol level to "some" or higher.
 * Kun emojiryhmä (mukaan lukien kaomoji ja symboliryhmä versiossa 1903 tai
   uudemmissa) valitaan, NVDA ei enää siirrä navigointiobjektia tiettyihin
   emojeihin.
-* NVDA will announce selected emoji if emoji panel is opened more than once
-  in build 20226.
+* NVDA puhuu valitun emojin, jos emojipaneeli on avattu useammin kuin kerran
+  koontiversiossa 20226.
 
 ## Ihmiset
 

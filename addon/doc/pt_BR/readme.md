@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixe a [versão estável][1]
 * Baixe a [versão em desenvolvimento][2]
-* NVDA compatibility: 2020.1 to 2020.3
+* NVDA compatibility: 2020.2 to 2020.3
 
 Este complemento é uma coleção de módulos de aplicativos (app modules) para
 vários aplicativos do Windows 10, bem como aprimoramentos e correções para
