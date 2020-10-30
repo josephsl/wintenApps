@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA compatibility: 2020.2 to 2020.3
+* NVDA-Kompatibilität: 2020.2 bis 2020.3
 
 Diese Erweiterung bietet eine Sammlung von Anwendungsmodulen für
 verschiedene Windows 10 Anwendungen sowie Korrekturen in einigen Windows 10
@@ -30,7 +30,7 @@ Hinweise:
 
 * Diese Erweiterung benötigt Windows 10 Version 1909 (Build 18363) oder
   neuer. Für beste Ergebnisse verwenden Sie die Erweiterung mit der neuesten
-  stabilen Version von Windows 10 Version 2004 (Build 19041).
+  Windows 10-Version (20H2 / Build 19042).
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Für Einträge, die im Folgenden nicht aufgeführt sind, können Sie davon
   ausgehen, dass Funktionen Teil von NVDA sind, die nicht mehr benötigt

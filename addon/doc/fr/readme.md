@@ -30,9 +30,9 @@ est inclus) :
 
 Notes:
 
-* Cette extension nécessite Windows 10 Version 1909 (build 18363) ou version
-  ultérieur. Pour de meilleurs résultats, utilisez l'extension avec la
-  dernière version stable de Windows 10 (build 19041).
+* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (20H2/build 19042).
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
 * Pour les entrées non répertoriées ci-dessous, vous pouvez supposer que les

@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA compatibility: 2020.2 to 2020.3
+* NVDA kompatibilnost: 2020.2 do 2020.3
 
 Ovaj NVDA dodatak je zbirka aplikacijskih modula za razne Windows 10
 aplikacije, kao i poboljšanja i ispravci određenih windows 10 kontrola.
@@ -29,7 +29,7 @@ Napomene:
 
 * Za ovaj dodatak potrebna je Windows 10 verzija 1909 (gradnja 18363) ili
   novija. Za najbolje rezultate, koristi dodatak s najnovijim stabilnim
-  izdanjem sustava Windows 10 (gradnja 19041).
+  izdanjem sustava Windows 10 (20H2/gradnja 19042).
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Za unose koji niže dolje nisu navedeni, može se pretpostaviti da su te
   funkcije dio NVDA čitača. Više nisu primjenjive jer dodatak ne podržava
