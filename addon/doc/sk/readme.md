@@ -26,9 +26,9 @@ Zahrnuté sú nasledujúce moduly (podrobný popis nájdete nižšie):
 
 Poznámky:
 
-* Doplnok správne funguje od verzie Windows 10 1909 (zostava
-  18363). Odporúčame používať aktuálnu stabilnú verziu Windows (zostava
-  19041).
+* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (20H2/build 19042).
 * Niektoré doplnkové funkcie sú alebo časom budú súčasťou NVDA.
 * V prípade položiek, ktoré nie sú uvedené nižšie, môžete predpokladať, že
   funkcie sú súčasťou NVDA, alebo už nie sú relevantné, pretože doplnok

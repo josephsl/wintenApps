@@ -3,7 +3,7 @@
 * Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
-* NVDA compatibility: 2020.2 to 2020.3
+* Zgodność z wersjami NVDA: 2020.2 do 2020.3
 
 Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
 również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
@@ -29,8 +29,8 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 Uwagi:
 
 * Ten dodatek wymaga wersji systemu operacyjnego Windows 10 1909 (kompilacja
-  18362) lub nowsza . Dla lepszych wyników, trzeba używać dodatku z ostatnią
-  stabilną wersją systemu operacyjnego windows 10 (kompilacja 19041).
+  18362) lub nowsza. Dla lepszych wyników, trzeba używać dodatku z ostatnią
+  stabilną wersją systemu operacyjnego windows 10 (20H2/kompilacja 19042).
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
@@ -55,25 +55,25 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   2019) i nowszych, podwójnie wymawianie wyników wyszukiwania jest mniej
   zauważalne, co idzie za tym, że to co jest wyświetlane na monitorze
   brajlowskim jest bardziej spójne przy przeglądaniu elementy.
-* The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, drag target enter, drag target leave, drag target
-  dropped, element selected, item status, live region change, notification,
-  system alert, text change, tooltip opened, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard if notifications come from
-  somewhere other than the currently active app. Some events will provide
-  additional information such as element count in controller for event,
-  state of the element for state change event, and item text for item status
-  event.
+* Następujące zdarzenia UIA są rozpoznawane: controller for, drag start,
+  drag cancel, drag complete, drag target enter, drag target leave, drag
+  target dropped, element selected, item status, live region change,
+  notification, system alert, text change, tooltip opened, window
+  opened. Gdy NVDA jest uruchomiony z zapisywaniem debugowania, te zdarzenia
+  będą śledzone, i dla UIA zdarzenia powiadomień, a dźwięk debugowania
+  będzie odtwarzany jeżeli powiadomienia przychodzą z innej niż aktualnie
+  aktywnej aplikacji. Niektóre zdarzenia dostarcząsuch także inne
+  informacje, takie jak liczba elementów w kontroli dla zdarzenia, stan
+  elementu dla zmiany stanu elementu, i tekst elementu dla zdarzenia stanu.
 * Teraz jest możliwe śledzenie zdarzeń z określonych oraz specyficznych
   aplikacji.
-* NVDA will no longer appear to do nothing or play error tones if UIA
-  Automation Id for an element could not be recorded when tracking events.
+* NVDA już nie będzie robił nic lub odtwarzał dźwięk błędu jeżeli
+  identyfikator UIA nie może być dostarczony gdy zdarzenia są śledzone.
 * Podczas otwierania, zamykając lub przełączając się między wirtualnymi
   pulpitami, NVDA będzie oznajmiała aktualny identyfikator (na przykład
   pulpit 2).
-* NVDA will no longer announce Start menu size text when changing screen
-  resolution or orientation.
+* NVDA już nie będzie wypowiadał tekst wielkości meni start gdy zmieniana
+  jest rozdzielczość ekranu lub orientacja.
 * Przy ułożeniu kafelków meni start lub szybkich akcji w centrum akcji za
   pomocą Alt+Shift+strzałek, NVDA będzie wymawiała informację o
   upuszczonyche elementach lub o ich nowych pozycjach.
@@ -141,10 +141,11 @@ wyjątkiem są konwersacje Cortana (wersja 2004 and later) .
 
 ## Klawiatura nowoczesna
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher.
+włączone są w to następujące części interfejsu systemu: panel emoji,
+historia schowka, dyktowanie, podpowiedzi wpisywania sprzętowego, i
+współczesne edytory metod wprowadzania dla niektórych języków. Podczas
+odczytywania znaków emoji, dla lepszego doświadczenai, włącz repozytorium
+CLDR w ustawieniach i ustaw poziom symboli na"niektóre" lub wyższy poziom.
 
 * Gdy historia schowka jest wypowiadana, NVDA już nie będzie wymawiała
   "schowek" w niektórych przypadkach, gdy istnieje treść.
@@ -154,11 +155,11 @@ NVDA's speech settings and set symbol level to "some" or higher.
 * Dodano wsparcie dla współczesnego interfejsu kandydatów dla chińskiego,
   japońskiego, i koreańskiego (CJK) wprowadzonego w wersji 2004 (kompilacja
   18965 i nowsze).
-* When an emoji group (including kaomoji and symbols group in Version 1903
-  or later) is selected, NVDA will no longer move navigator object to
-  certain emojis.
-* NVDA will announce selected emoji if emoji panel is opened more than once
-  in build 20226.
+* Gdy zaznaczona jest grupa emoji, włączając w to kaomoji i grupę symboli w
+  wersji Windowsa 10 1903 lub nowszej) NVDA nie będzie przemieszczał obiekt
+  nawigatora do poszczególnych emoji.
+* NVDA będzie oznajmiał wybrany emoji jeżeli panel emoji jest otwarty  wiele
+  razy w kompilacji 20226.
 
 ## Osoby
 

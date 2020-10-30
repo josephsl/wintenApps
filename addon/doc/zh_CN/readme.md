@@ -3,7 +3,7 @@
 * 作者: Joseph Lee, Derek Riemer and other Windows 10 users
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA compatibility: 2020.2 to 2020.3
+* NVDA兼容版本: 2020.2 到 2020.3
 
 此插件用于各种 Windows 10 应用程序的模块集合，以及针对某些 Windows 10 控件的增强功能和修复程序。
 
@@ -24,8 +24,9 @@
 
 注意:
 
-* 此插件需要 Windows 10 版本 1909（18363）或更高版本以及 NVDA 2019.2 或更高版本。为获得最佳体验，请使用最新
-  Windows 10 稳定版（19041）和最新稳定版 NVDA 插件配合使用。
+* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (20H2/build 19042).
 * 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
 * 对于未在下方列出的条目，您可以假定功能已是 NVDA 的一部分，不再适用，因为插件不支持旧版本的 Windows
   10，或者对应用程序进行了更改，使条目不再适用。

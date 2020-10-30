@@ -28,8 +28,8 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 Bemærkninger:
 
 * This add-on requires Windows 10 Version 1909 (build 18363) or later. For
-  best results, use the add-on with latest Windows 10 stable release (build
-  19041).
+  best results, use the add-on with latest Windows 10 stable release
+  (20H2/build 19042).
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
 * For emner, der ikke er anført nedenfor, kan du antage, at funktionerne er

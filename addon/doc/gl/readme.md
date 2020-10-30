@@ -30,9 +30,9 @@ se inclúe):
 
 Notas:
 
-* Este complemento require do Windows 10 Versión 1909 (compilación 18363) ou
-  posterior. Para uns mellores resultados, usa o complemento coa compilación
-  estable máis recente (compilación 19041).
+* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (20H2/build 19042).
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
 * Para entradas non listadas a continuación, podes asumir que as

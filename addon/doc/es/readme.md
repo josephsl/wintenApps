@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer y otros usuarios de Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
-* NVDA compatibility: 2020.2 to 2020.3
+* Compatibilidad con NVDA: de 2020.2 a 2020.3
 
 Este complemento es una colección de app modules para varias aplicaciones de
 Windows 10, así como Mejoras y correcciones para ciertos controles de
@@ -33,7 +33,7 @@ Notas:
 
 * Este complemento requiere Windows 10 Versión 1909 (compilación 18363) o
   posterior. Para unos mejores resultados, utiliza el complemento con la
-  compilación estable más reciente de Windows 10 (compilación 19041).
+  compilación estable más reciente de Windows 10 (20H2 / compilación 19042).
 * Algunas de las características del complemento son o serán parte del
   lector de pantalla NVDA.
 * Para las entradas que no se listen a continuación, puedes asumir que las

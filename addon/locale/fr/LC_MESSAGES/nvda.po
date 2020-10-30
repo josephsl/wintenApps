@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-09-22 22:15+0200\n"
+"PO-Revision-Date: 2020-10-23 16:00+0200\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
@@ -25,9 +25,9 @@ msgid ""
 "{minSupportedVersion} or later. Are you sure you wish to install this add-on "
 "anyway?"
 msgstr ""
-"Vous utilisez une version antérieure de Windows. Ce module complémentaire "
-"nécessite {minSupportedVersion} ou ultérieure. Êtes-vous sûr de vouloir "
-"quand-même installer Ce module complémentaire ?"
+"Vous utilisez une version antérieure de Windows. Cette extension nécessite "
+"{minSupportedVersion} ou ultérieure. Êtes-vous sûr de vouloir quand-même "
+"installer Cette extension ?"
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"
@@ -44,11 +44,11 @@ msgstr "Aucune donnée météo supplémentaire pour cet élément."
 
 #. Translators: presented when there is one suggestion for a search term.
 msgid "1 suggestion"
-msgstr ""
+msgstr "1 suggestion"
 
 #. Translators: presented when there are multiple suggestions for a search term.
 msgid "{} suggestions"
-msgstr ""
+msgstr "{} suggestions"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
@@ -60,6 +60,3 @@ msgstr "Windows 10 App Essentials"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Une collection de modules pour diverses applications Windows 10"
-
-#~ msgid "Candidate"
-#~ msgstr "Candidate"

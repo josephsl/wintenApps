@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-09-20 22:02+0200\n"
+"PO-Revision-Date: 2020-10-24 11:19+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -44,11 +44,11 @@ msgstr "Ei enempää säätietoja tälle kohteelle."
 
 #. Translators: presented when there is one suggestion for a search term.
 msgid "1 suggestion"
-msgstr ""
+msgstr "1 ehdotus"
 
 #. Translators: presented when there are multiple suggestions for a search term.
 msgid "{} suggestions"
-msgstr ""
+msgstr "{} ehdotusta"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

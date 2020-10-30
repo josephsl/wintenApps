@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-09-18 14:44+0200\n"
+"PO-Revision-Date: 2020-10-23 14:18+0200\n"
 "Last-Translator: José Manuel Delicado <jmdaweb@hotmail.com>\n"
 "Language-Team: add-ons spanihs translation team <oprisniki@gmail.com>\n"
 "Language: es\n"
@@ -44,11 +44,11 @@ msgstr "No hay más datos del clima para este elemento."
 
 #. Translators: presented when there is one suggestion for a search term.
 msgid "1 suggestion"
-msgstr ""
+msgstr "una sugerencia"
 
 #. Translators: presented when there are multiple suggestions for a search term.
 msgid "{} suggestions"
-msgstr ""
+msgstr "{} sugerencias"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
