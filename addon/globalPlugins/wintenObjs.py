@@ -22,7 +22,7 @@ addonHandler.initTranslation()
 
 # #52: forget everything if the current release is not a supported version of Windows 10.
 # NVDA 2019.2 includes a handy Windows 10 version check function.
-W10AddonSupported = winVersion.isWin10(version=1909)
+W10AddonSupported = winVersion.isWin10(version=2004)
 
 # Extra UIA constants
 UIA_Drag_DragStartEventId = 20026
