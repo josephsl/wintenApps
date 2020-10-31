@@ -13,7 +13,6 @@ from nvdaBuiltin.appModules.systemsettings import *
 import ui
 import controlTypes
 from NVDAObjects.UIA import ComboBoxWithoutValuePattern
-import winVersion
 
 
 class AppModule(AppModule):
