@@ -57,22 +57,6 @@ class AppModule(AppModule):
 			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name
 
-	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		# Although there will be duplication below, call super method first.
-		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
-		if isinstance(obj, UIA):
-			# In 18200 series and above, various Storage Sense option combo boxes have
-			# values but are not exposed as such, so treated it as combo box without value pattern.
-			# Resolved in 18800 and above, which means Version 1903 (build 18362)
-			# and 1909 (build 18363) will still carry this problem.
-			# Note that 1909 is still 18362 internally, so just check platform version tuple (Python 3.7 and later).
-			if (
-				winVersion.winVersion.platform_version == (10, 0, 18362)
-				and obj.role == controlTypes.ROLE_COMBOBOX
-				and obj.UIAAutomationId.startswith("SystemSettings_StorageSense_SmartPolicy_")
-			):
-				clsList.insert(0, ComboBoxWithoutValuePattern)
-
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache = ""
 
