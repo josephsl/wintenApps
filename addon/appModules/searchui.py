@@ -4,8 +4,6 @@
 # See the file COPYING for more details.
 # Extended by Joseph Lee (copyright 2016-2020, released under GPL)
 
-# Extended to let NVDA cooperate with Cortana.
-
 from nvdaBuiltin.appModules.searchui import *
 import config
 import nvwave
