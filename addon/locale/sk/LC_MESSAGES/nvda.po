@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 18.12\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-09-20 09:38+0100\n"
+"PO-Revision-Date: 2020-11-01 08:35-0800\n"
 "Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
 "Language-Team: \n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.11\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
@@ -60,6 +60,3 @@ msgstr "Vylepšenia prístupnosti pre Windows 10"
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr ""
 "Zbierka modulov, ktoré sprístupňujúf funkcie operačného systému Windows 10"
-
-#~ msgid "Candidate"
-#~ msgstr "návrh"

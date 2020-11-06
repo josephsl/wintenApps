@@ -24,9 +24,8 @@
 
 注意:
 
-* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (20H2/build 19042).
+* 此插件需要 Windows 10 版本 1909（内部版本 18363）或更高版本。为获得最佳体验，请将此插件与最新 Windows 10 20H2
+  稳定版（内部版本 19042）一起使用。
 * 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
 * 对于未在下方列出的条目，您可以假定功能已是 NVDA 的一部分，不再适用，因为插件不支持旧版本的 Windows
   10，或者对应用程序进行了更改，使条目不再适用。

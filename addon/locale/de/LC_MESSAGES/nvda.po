@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-09-18 20:13+0200\n"
+"PO-Revision-Date: 2020-11-02 15:56+0100\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -43,11 +43,11 @@ msgstr "Keine weiteren Wetterdaten für diesen Eintrag verfügbar."
 
 #. Translators: presented when there is one suggestion for a search term.
 msgid "1 suggestion"
-msgstr ""
+msgstr "Ein Vorschlag"
 
 #. Translators: presented when there are multiple suggestions for a search term.
 msgid "{} suggestions"
-msgstr ""
+msgstr "{} Vorschläge"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
@@ -59,6 +59,3 @@ msgstr "Windows 10-Apps"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Eine Sammlung von Anwendungsmodulen für diverse Windows 10-Apps"
-
-#~ msgid "Candidate"
-#~ msgstr "Kandidat"
