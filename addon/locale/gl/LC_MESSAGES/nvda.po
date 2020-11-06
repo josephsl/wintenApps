@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-09-18 19:24+0200\n"
+"PO-Revision-Date: 2020-11-02 18:28+0100\n"
 "Last-Translator: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
 "Language-Team: add-ons galician translation team <oprisniki@gmail.com>\n"
 "Language: gl\n"
@@ -44,11 +44,11 @@ msgstr "Non hai máis datos do tempo para este elemento."
 
 #. Translators: presented when there is one suggestion for a search term.
 msgid "1 suggestion"
-msgstr ""
+msgstr "1 suxestión"
 
 #. Translators: presented when there are multiple suggestions for a search term.
 msgid "{} suggestions"
-msgstr ""
+msgstr "{} suxestións"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
@@ -60,6 +60,3 @@ msgstr "Windows 10 App Essentials"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "A collection of app modules for various Windows 10 apps"
 msgstr "Unha coleción de app modules para varias aplicación de Windows 10"
-
-#~ msgid "Candidate"
-#~ msgstr "Candidato"
