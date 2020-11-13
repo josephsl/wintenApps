@@ -22,7 +22,7 @@ addonHandler.initTranslation()
 
 # #52: forget everything if the current release is not a supported version of Windows 10.
 # NVDA 2019.2 includes a handy Windows 10 version check function.
-W10AddonSupported = winVersion.isWin10(version=1909)
+W10AddonSupported = winVersion.winVersion.build >= 18363
 
 # Extra UIA constants
 UIA_Drag_DragStartEventId = 20026
@@ -268,7 +268,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if (
 					not hasattr(eventHandler, "handlePossibleDesktopNameChange")
 					or (
-						hasattr(eventHandler, "handlePossibleDesktopNameChange") and not winVersion.isWin10(version=1909)
+						hasattr(eventHandler, "handlePossibleDesktopNameChange") and winVersion.winVersion.build < 18363
 					)
 				):
 					wx.CallLater(500, ui.message, obj.name)
