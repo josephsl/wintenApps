@@ -120,7 +120,7 @@ class AppModule(AppModule):
 		if isinstance(obj, ImeCandidateItem):
 			return nextHandler()
 		# Wait until modern keyboard is fully displayed on screen.
-		if winVersion.isWin10(version=1803) and not self._modernKeyboardInterfaceActive:
+		if winVersion.winVersion.build >= 17134 and not self._modernKeyboardInterfaceActive:
 			return
 		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object
 		# (for presentational purposes) and move on.
@@ -151,7 +151,7 @@ class AppModule(AppModule):
 			# Specifically to suppress skin tone modifiers from being announced after an emoji group was selected.
 			or self._symbolsGroupSelected
 			# In Version 1709 and 1803, both categories and items raise element selected event when category changes.
-			or obj.name == self._recentlySelected and not winVersion.isWin10(version=1809)
+			or obj.name == self._recentlySelected and winVersion.winVersion.build < 17763
 		):
 			return
 		speech.cancelSpeech()
@@ -253,7 +253,7 @@ class AppModule(AppModule):
 		self._symbolsGroupSelected = False
 		# Emoji panel for build 16299 and 17134.
 		# This event is properly raised in build 17134.
-		if not winVersion.isWin10(version=1809) and inputPanelAutomationId in self._classicEmojiPanelAutomationIds:
+		if winVersion.winVersion.build < 17763 and inputPanelAutomationId in self._classicEmojiPanelAutomationIds:
 			eventHandler.queueEvent("UIA_elementSelected", obj.lastChild.firstChild)
 		# Handle hardware keyboard and CJK IME suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
@@ -331,7 +331,7 @@ class AppModule(AppModule):
 		):
 			return
 		# The word "blank" is kept announced, so suppress this on build 17666 and later.
-		if winVersion.isWin10(version=1809):
+		if winVersion.winVersion.build >= 17763:
 			# In build 17672 and later,
 			# return immediatley when element selected event on clipboard item was fired just prior to this.
 			# In some cases, parent will be None, as seen when emoji panel is closed in build 18267.
@@ -372,7 +372,7 @@ class AppModule(AppModule):
 		# especially in Version 1903 and later.
 		# Because of exceptions, check location first.
 		if (
-			(obj.location is None and obj.parent.firstChild is None and winVersion.isWin10(version=1903))
+			(obj.location is None and obj.parent.firstChild is None and winVersion.winVersion.build >= 18362)
 			or controlTypes.STATE_OFFSCREEN in obj.states
 		):
 			self._modernKeyboardInterfaceActive = False
