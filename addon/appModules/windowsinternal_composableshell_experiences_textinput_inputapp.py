@@ -15,7 +15,6 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *
 import eventHandler
 import controlTypes
-from comtypes import COMError
 from NVDAObjects.behaviors import CandidateItem as CandidateItemBehavior
 
 
@@ -305,10 +304,7 @@ class AppModule(AppModule):
 			return nextHandler()
 		elif isinstance(obj, ImeCandidateUI):
 			return nextHandler()
-		try:
-			cachedAutomationId = obj.UIAAutomationId
-		except COMError:
-			cachedAutomationId = ""
+		cachedAutomationId = obj.UIAAutomationId
 		# Forget it if there is no Automation ID and class name set.
 		if (
 			(obj.UIAElement.cachedClassName == "" and cachedAutomationId == "")
