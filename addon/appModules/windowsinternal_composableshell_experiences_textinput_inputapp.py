@@ -15,7 +15,6 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *
 import eventHandler
 import controlTypes
-from comtypes import COMError
 from NVDAObjects.behaviors import CandidateItem as CandidateItemBehavior
 
 
@@ -134,7 +133,7 @@ class AppModule(AppModule):
 					self._symbolsGroupSelected = True
 			self._noCategoryAnnouncement = False
 			return
-		automationId = obj._getUIACacheablePropertyValue(UIAHandler.UIA_AutomationIdPropertyId)
+		automationId = obj.UIAAutomationId
 		# #7273: When this is fired on categories,
 		# the first emoji from the new category is selected but not announced.
 		# Therefore, move the navigator object to that item if possible.
@@ -305,15 +304,12 @@ class AppModule(AppModule):
 			return nextHandler()
 		elif isinstance(obj, ImeCandidateUI):
 			return nextHandler()
-		try:
-			cachedAutomationId = obj.UIAAutomationId
-		except COMError:
-			cachedAutomationId = ""
+		automationId = obj.UIAAutomationId
 		# Forget it if there is no Automation ID and class name set.
 		if (
-			(obj.UIAElement.cachedClassName == "" and cachedAutomationId == "")
+			(obj.UIAElement.cachedClassName == "" and automationId == "")
 			# Clipboard entries fire name change event when opened.
-			or (obj.UIAElement.cachedClassName == "TextBlock" and cachedAutomationId == "")
+			or (obj.UIAElement.cachedClassName == "TextBlock" and automationId == "")
 		):
 			return
 		# On some systems, touch keyboard keys keeps firing name change event.
@@ -322,7 +318,7 @@ class AppModule(AppModule):
 			(obj.UIAElement.cachedClassName in ("CRootKey", "GridViewItem"))
 			# Just ignore useless clipboard status and vertical scroll bar label.
 			# Also top emoji search result must be announced for better user experience.
-			or (cachedAutomationId in (
+			or (automationId in (
 				"TEMPLATE_PART_ClipboardItemsList", "TEMPLATE_PART_Search_TextBlock", "VerticalScrollBar"
 			))
 			# And no, emoji entries should not be announced here.
@@ -336,7 +332,7 @@ class AppModule(AppModule):
 			# In some cases, parent will be None, as seen when emoji panel is closed in build 18267.
 			try:
 				if (
-					cachedAutomationId == "TEMPLATE_PART_ClipboardItemIndex"
+					automationId == "TEMPLATE_PART_ClipboardItemIndex"
 					or obj.parent.UIAAutomationId == "TEMPLATE_PART_ClipboardItemsList"
 				):
 					return
@@ -344,11 +340,11 @@ class AppModule(AppModule):
 				return
 			if (
 				not self._modernKeyboardInterfaceActive
-				or cachedAutomationId != "TEMPLATE_PART_ExpressionGroupedFullView"
+				or automationId != "TEMPLATE_PART_ExpressionGroupedFullView"
 			):
 				speech.cancelSpeech()
 		# Don't forget to add "Microsoft Candidate UI" as something that should be suppressed.
-		if cachedAutomationId not in (
+		if automationId not in (
 			"TEMPLATE_PART_ExpressionFullViewItemsGrid",
 			"TEMPLATE_PART_ClipboardItemIndex",
 			"CandidateWindowControl"
