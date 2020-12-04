@@ -38,20 +38,16 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * When searching in Start menu or File Explorer in Version 1909 (November 2019 Update) and later, instances of NVDA announcing search results twice when reviewing results are less noticeable, which also makes braille output more consistent when reviewing items.
 * The following UIA events are recognized: controller for, drag start, drag cancel, drag complete, drag target enter, drag target leave, drag target dropped, element selected, item status, live region change, notification, system alert, text change, tooltip opened, window opened. With NVDA's log level set to debug, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app. Some events will provide additional information such as element count in controller for event, state of the element for state change event, and item text for item status event.
 * It is possible to tracke only specific events and/or events coming from specific apps.
-* NVDA will no longer appear to do nothing or play error tones if UIA Automation Id for an element could not be recorded when tracking events.
 * When opening, closing, or switching between virtual desktops, NVDA will announce current desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
 * When arranging Start menu tiles or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce information on dragged items or new position of the dragged item.
-* IN recent releases of Word 365, NVDA will no longer announce "delete back word" when pressing Control+Backspace.
 * Announcements such as volume/brightness changes in File Explorer and app update notifications from Microsoft Store can be suppressed by turning off Report Notifications in NVDA's object presentation settings.
 
 ## Calculator
 
 * When ENTER or Escape is pressed, NVDA will announce calculation results.
 * For calculations such as unit converter and currency converter, NVDA will announce results as soon as calculations are entered.
-* NVDA will no longer announce "heading level" for calculator results.
 * NVDA will notify if maximum digit count has been reached while entering expressions.
-* Added support for always on mode in Calculator version 10.1908 and later.
 
 ## Calendar
 
@@ -101,8 +97,6 @@ This includes emoji panel, clipboard history, dictation, hardware input suggesti
 
 * Certain information such as Windows Update progress is reported automatically, including Storage sense/disk cleanup widget and errors from Windows Update.
 * Progress bar values and other information are no longer announced twice.
-* For some combo boxes and radio buttons, NVDA will no longer fail to recognize labels and/or announce value changes.
-* NVDA will no longer appear to do nothing or play error tones if using object navigation commands under some circumstances.
 * Windows Update reminder dialog is recognized as a proper dialog.
 * Odd control labels seen in certain Windows 10 installations has been corrected.
 * In more recent revisions of Version 1803 and later, due to changes to Windows Update procedure for feature updates, a "download and install now" link has been added. NVDA will now announce the title for the new update if present.
