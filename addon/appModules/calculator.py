@@ -39,9 +39,9 @@ class AppModule(appModuleHandler.AppModule):
 	def event_NVDAObject_init(self, obj):
 		if not isinstance(obj, UIA):
 			return
-		# Version 10.2009 introduces a regression where history items have no names
+		# Version 10.2009 introduces a regression where history and memory items have no names
 		# but can be fetched through its children.
-		if not obj.name and obj.parent.UIAAutomationId == "HistoryListView":
+		if not obj.name and obj.parent.UIAAutomationId in ("HistoryListView", "MemoryListView"):
 			obj.name = "".join([item.name for item in obj.children])
 
 	_shouldAnnounceResult = False
