@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2020.2-2020.3
+* Yhteensopivuus: NVDA 2020.2-2020.4
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille

@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA kompatibilnost: 2020.2 do 2020.3
+* NVDA kompatibilnost: 2020.2 do 2020.4
 
 Ovaj NVDA dodatak je zbirka aplikacijskih modula za razne Windows 10
 aplikacije, kao i poboljšanja i ispravci određenih windows 10 kontrola.
