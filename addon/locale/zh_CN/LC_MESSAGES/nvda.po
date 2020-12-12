@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2019-04-14 15:08-0700\n"
-"Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
+"PO-Revision-Date: 2020-12-08 16:12+0800\n"
+"Last-Translator: 完美很难 <1872265132@qq.com>\n"
 "Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
 "2010-2019>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
@@ -45,11 +45,11 @@ msgstr "此项目没有更多的天气数据。"
 
 #. Translators: presented when there is one suggestion for a search term.
 msgid "1 suggestion"
-msgstr ""
+msgstr "1 条建议"
 
 #. Translators: presented when there are multiple suggestions for a search term.
 msgid "{} suggestions"
-msgstr ""
+msgstr "{} 条建议"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

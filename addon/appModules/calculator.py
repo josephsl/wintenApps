@@ -39,9 +39,9 @@ class AppModule(appModuleHandler.AppModule):
 	def event_NVDAObject_init(self, obj):
 		if not isinstance(obj, UIA):
 			return
-		# Version 10.2009 introduces a regression where history items have no names
+		# Version 10.2009 introduces a regression where history and memory items have no names
 		# but can be fetched through its children.
-		if not obj.name and obj.parent.UIAAutomationId == "HistoryListView":
+		if not obj.name and obj.parent.UIAAutomationId in ("HistoryListView", "MemoryListView"):
 			obj.name = "".join([item.name for item in obj.children])
 
 	_shouldAnnounceResult = False
@@ -81,8 +81,9 @@ class AppModule(appModuleHandler.AppModule):
 		# From May 2018 onwards, unit converter uses a different automation iD.
 		# Changed significantly in July 2018 thanks to UI redesign, and as a result, attribute error is raised.
 		try:
-			shouldAnnounceNotification = obj.previous.UIAAutomationId in (
-				"numberPad", "UnitConverterRootGrid"
+			shouldAnnounceNotification = (
+				obj.previous.UIAAutomationId in
+				("numberPad", "UnitConverterRootGrid")
 			)
 		except AttributeError:
 			# Another UI redesign in 2019, causing attribute error when changing categories.
@@ -91,7 +92,8 @@ class AppModule(appModuleHandler.AppModule):
 			if resultElement.UIAElement.cachedClassName != "LandmarkTarget":
 				resultElement = resultElement.parent.children[1]
 			shouldAnnounceNotification = (
-				resultElement and resultElement.firstChild
+				resultElement
+				and resultElement.firstChild
 				and resultElement.firstChild.UIAAutomationId not in noCalculatorEntryAnnouncements
 			)
 		# Announce activity ID's other than "DisplayUpdate" as this is redundant if speak typed characters is on

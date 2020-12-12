@@ -16,13 +16,14 @@ import eventHandler
 import globalVars
 import UIAHandler
 from logHandler import log
-import winVersion
+# Until winVersion.getWinVer function shows up.
+import sys
 import addonHandler
 addonHandler.initTranslation()
 
 # #52: forget everything if the current release is not a supported version of Windows 10.
 # NVDA 2019.2 includes a handy Windows 10 version check function.
-W10AddonSupported = winVersion.winVersion.build >= 19041
+W10AddonSupported = sys.getwindowsversion().build >= 19041
 
 # Extra UIA constants
 UIA_Drag_DragStartEventId = 20026
@@ -268,7 +269,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if (
 					not hasattr(eventHandler, "handlePossibleDesktopNameChange")
 					or (
-						hasattr(eventHandler, "handlePossibleDesktopNameChange") and winVersion.winVersion.build < 18363
+						hasattr(eventHandler, "handlePossibleDesktopNameChange") and sys.getwindowsversion().build < 18363
 					)
 				):
 					wx.CallLater(500, ui.message, obj.name)

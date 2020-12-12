@@ -3,7 +3,7 @@
 * 作者: Joseph Lee, Derek Riemer and other Windows 10 users
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA兼容版本: 2020.2 到 2020.3
+* NVDA compatibility: 2020.2 to 2020.4
 
 此插件用于各种 Windows 10 应用程序的模块集合，以及针对某些 Windows 10 控件的增强功能和修复程序。
 
