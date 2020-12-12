@@ -12,7 +12,7 @@ from nvdaBuiltin.appModules.systemsettings import *
 import ui
 import controlTypes
 from NVDAObjects.UIA import ComboBoxWithoutValuePattern
-import winVersion
+import sys
 
 
 class AppModule(AppModule):
@@ -66,7 +66,7 @@ class AppModule(AppModule):
 			# and 1909 (build 18363) will still carry this problem.
 			# Note that 1909 is still 18362 internally, so just check platform version tuple (Python 3.7 and later).
 			if (
-				winVersion.winVersion.platform_version == (10, 0, 18362)
+				sys.getwindowsversion().platform_version == (10, 0, 18362)
 				and obj.role == controlTypes.ROLE_COMBOBOX
 				and obj.UIAAutomationId.startswith("SystemSettings_StorageSense_SmartPolicy_")
 			):

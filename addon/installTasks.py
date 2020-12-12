@@ -13,9 +13,10 @@ addonHandler.initTranslation()
 def onInstall():
 	import gui
 	import wx
-	import winVersion
+	# Until winVersion.getWinVer function shows up.
+	import sys
 	requiredVer = "Windows 10 Version 1909"
-	if winVersion.winVersion.build < 18363 and gui.messageBox(
+	if sys.getwindowsversion().build < 18363 and gui.messageBox(
 		_(
 			# Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
 			# (minSupportedVersion is the minimum version required for this add-on).
