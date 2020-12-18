@@ -1,11 +1,11 @@
 # Windows 10 App Essentials #
 
-* Autori: Joseph Lee, Derek Riemer e altri utenti Windows 10
+* Autori: Joseph Lee, Derek Riemer e altri utenti di Windows 10
 * Scarica la [versione stabile][1]
 * Scarica la [versione in sviluppo][2]
-* NVDA compatibility: 2020.2 to 2020.4
+* Compatibilità con NVDA: dalla versione 2020.2 alla 2020.4
 
-Questo componente aggiuntivo è un insieme di app module per numerose app di
+Questo componente aggiuntivo è un insieme di app modules per numerose app di
 Windows 10, che inoltre risolve anomalie e migliora alcuni controlli.
 
 Di seguito l'elenco di tutti gli appmodule contenuti nel componente
@@ -29,8 +29,8 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 Note:
 
 * Questo addon richiede Windows 10 Versione 1909 (build 18363) o
-  successive. Per migliori prestazioni, utilizzare il componente con
-  l'ultima versione stabile di Windows10 (20H2/build 19042).
+  successive. Per migliori prestazioni, utilizzare il componente con la
+  versione 20H2/build 19042.
 * Alcune caratteristiche di questo componente aggiuntivo sono o diventeranno
   parte di NVDA.
 * Per le voci non elencate di seguito, si può supporre che esse siano
@@ -48,12 +48,12 @@ riferimento al documento [changelogs for add-on releases][3].
   attivato con Windows 7, Windows 8.1 e versioni non supportate di Windows
   10.
 * Oltre alle finestre di dialogo riconosciute da NVDA, ora ne vengono
-  gestite correttamente altre, comprese quelle delle Insider Preview (app
+  gestite correttamente altre, compresa la finestra Insider Preview (app
   impostazioni)
 * Nella maggior parte dei casi, NVDA può annunciare il numero dei
   suggerimenti quando si esegue una ricerca. Questa funzione è controllata
   dall'opzione "leggi le informazioni sulla posizione dell'oggetto" nella
-  finestra presentazioni oggetti di NVDA.
+  finestra presentazioni oggetti, presente nelle impostazioni di NVDA.
 * Quando si cerca nel menu Avvio o in Esplora File nella Versione 1909
   (aggiornamento di novembre 2019) e successive,  le doppie ripetizioni da
   parte di NVDA quando si leggono i risultati con il cursore di controllo
@@ -115,7 +115,7 @@ La maggior parte delle funzionalità non sono più applicabili nelle versioni
 1903 e successive, a meno che non si utilizzi Cortana Conversations versione
 2004 o superiore.
 
-* Le risposte testuali di Cortana sono vocalizzate nella magior parte dei
+* Le risposte testuali di Cortana sono vocalizzate nella maggior parte dei
   casi.
 * NVDA rimarrà in silenzio mentre si parla a Cortana  con la voce.
 * Nella versione 1909 (aggiornamento di novembre 2019) e nelle successive, è
@@ -205,7 +205,7 @@ punteggiatura/simboli su "qualcuno" o a un livello superiore.
   (patch da Derek Riemer).
 * Durante la lettura di una previsione, utilizzare le frecce sinistra e
   destra per spostarsi tra gli elementi. Utilizzare le frecce su e giù per
-  leggere i singoli elementi. Per esempio, premendo la freccia destra
+  leggere i dettagli di un elemento. Per esempio, premendo la freccia destra
   potrebbe venir annunciato "lunedì: 29 gradi, parzialmente nuvoloso, ..."
   premendo la freccia giù dirà "lunedì", Quindi premerla di nuovo per
   leggere il prossimo elemento (ad esempio la temperatura). Ciò funziona per
