@@ -112,7 +112,7 @@ class AppModule(AppModule):
 		# Ask NVDA to respond to UIA events coming from this overlay.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 		import UIAHandler
-		if hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]:
+		if config.conf["UIA"]["selectiveEventRegistration"]:
 			UIAHandler.handler.removeEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 			UIAHandler.handler.addEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 		# Logic for IME candidate items is handled all within its own object
@@ -208,10 +208,7 @@ class AppModule(AppModule):
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 		import UIAHandler
-		if (
-			hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]
-			and obj.firstChild is not None
-		):
+		if config.conf["UIA"]["selectiveEventRegistration"] and obj.firstChild is not None:
 			localEventHandlerElements = [obj.firstChild]
 			# For dictation, add elements manually so name change event can be handled.
 			if obj.firstChild.UIAAutomationId == "DictationMicrophoneButton":
@@ -238,9 +235,7 @@ class AppModule(AppModule):
 			eventHandler.queueEvent("show", inputPanel)
 			# Don't forget to add actual candidate item element so name change event can be handled
 			# (mostly for hardware keyboard input suggestions).
-			if (
-				hasattr(UIAHandler.handler, "addEventHandlerGroup") and config.conf["UIA"]["selectiveEventRegistration"]
-			):
+			if config.conf["UIA"]["selectiveEventRegistration"]:
 				UIAHandler.handler.removeEventHandlerGroup(
 					inputPanel.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup
 				)
