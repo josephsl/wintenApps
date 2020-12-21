@@ -284,6 +284,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "stateChange")
 		nextHandler()
 
+	def event_descriptionChange(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "descriptionChange")
+		nextHandler()
+
 	def event_UIA_controllerFor(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "controllerFor")
 		nextHandler()
