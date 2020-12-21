@@ -74,7 +74,7 @@ class SearchField(SearchField):
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
 			if (
 				self.UIAAutomationId == "TextBox"
-				or self.UIAElement.cachedAutomationId == "SearchTextBox"
+				or self.UIAAutomationId == "SearchTextBox"
 				and self.appModule.appName not in ("searchui", "searchapp")
 			):
 				# Item count must be the last one spoken.
