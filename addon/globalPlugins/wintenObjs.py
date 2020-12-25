@@ -124,17 +124,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# and/or while a specific version of IUIAutomation interface is in use.
 		if delay:
 			log.debug("W10: adding additional events after a delay")
+		# Use event handler group facility to add more events (properly introduced in NVDA 2020.3).
+		# Use IUIAutomation6 interface directly (Version 1809 or later).
+		addonGlobalEventHandlerGroup = UIAHandler.handler.clientObject.CreateEventHandlerGroup()
 		for event, name in W10Events.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
-				UIAHandler.handler.clientObject.addAutomationEventHandler(
+				# Global event handler group set must be updated, too.
+				UIAHandler.globalEventHandlerGroupUIAEventIds.add(event)
+				addonGlobalEventHandlerGroup.addAutomationEventHandler(
 					event,
-					UIAHandler.handler.rootElement,
 					UIAHandler.TreeScope_Subtree,
 					UIAHandler.handler.baseCacheRequest,
 					UIAHandler.handler
 				)
 				log.debug(f"W10: added event ID {event}, assigned to {name}")
+		UIAHandler.handler.addEventHandlerGroup(UIAHandler.handler.rootElement, addonGlobalEventHandlerGroup)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# There's no point looking at non-UIA objects.
