@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA kompatibilnost: 2020.2 do 2020.4
+* NVDA kompatibilnost: 2020.3 do 2020.4
 
 Ovaj NVDA dodatak je zbirka aplikacijskih modula za razne Windows 10
 aplikacije, kao i poboljšanja i ispravci određenih windows 10 kontrola.
@@ -55,38 +55,28 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   najavljuje rezultate pretrage prilikom pregledavanja rezultata su manje
   uočljivi, čime i izlazna brajica postaje dosljednija prilikom
   pregledavanja stavki.
-* Prepoznaju se sljedeći UIA događaji: kontroler za, početak povlačenja,
-  prekid povlačenja, povlačenje dovršeno, povlačenje u cilj, povlačenje
-  izvan cilja, povlačenje i ispuštanje u cilj, element odabran, stanje
-  stavke, promjena regije uživo, obavijest, upozorenje sustava, promjena
-  teksta, alatni savjet otvoren, prozor otvoren. Kad se NVDA postavi, tako
-  da se pokrene s aktiviranim zapisivanjem grešaka, ti će se događaji
-  pratiti. Za UIA događaj obavijesti, ćut će se ton za uklanjanje grešaka,
-  ako obavijesti dolaze odnekud drugdje od trenutačno aktivne
-  aplikacije. Neki će događaji pružati dodatne informacije kao što su broj
-  elemenata u kontroleru za događaj, stanje elementa za događaj promjene
-  stanja i tekst stavke za događaj stanja stavke.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drag target
+  enter, drag target leave, drag target dropped. With NVDA's log level set
+  to debug, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard if notifications come from somewhere other than
+  the currently active app. Some events will provide additional information
+  such as element count in controller for event, state of the element for
+  state change event, and item text for item status event.
 * Moguće je pratiti samo određene događaje i-ili događaje koji dolaze iz
   određenih aplikacija.
-* NVDA više neće izgledati kao da ništa ne radi ili svirati tonove za
-  greške, ako se UIA Id automatizacije za element ne može zabilježiti
-  prilikom praćenja događaja.
 * Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
   površina, NVDA će najaviti trenutačno ime radne površine (na primjer,
   desktop 2).
-* NVDA više neće najaviti veličinu teksta izbornika Start, kad se mijenja
-  rezolucija ili položaj ekrana.
+* NVDA više neće najaviti veličinu teksta izbornika Start, kad se mijenjaju
+  rezolucije ili položaj ekrana.
 * Kad se pločice izbornika Start ili brze radnje za Action Center
   raspoređuju s tipkama Alt+šift+strelice, NVDA će najaviti podatke o
   povučenim stavkama ili o novom položaju povučene stavke.
-* U nedavnim izdanjima Worda 365, NVDA više neće objavljivati „izbriši
-  riječi ispred” pritiskom na kontrol+backspace.
 * Najave kao što su promjena glasnoće/svjetline u File Explorereru i
   obavijesti aktualiziranja programa s Microsoft Store stranica, mogu se
   potisnuti isključivanjem opcije „Izvijesti o obavijestima” u NVDA
   postavkama prikaza objekata.
-* U verziji 2004. (aktualizirano u svibnju 2020.) i kasnijim verzijama,
-  dijalog „Otvori s” najavljuje se kad se otvori.
 
 ## Kalkulator
 
@@ -94,11 +84,8 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   izračuna.
 * Za izračune kao što su pretvaranje jedinica i pretvaranje valuta, NVDA će
   objaviti rezultate čim se pojave.
-* NVDA više neće javljati tekst za razinu naslova pri rezultatima izračuna.
 * NVDA će obavijestiti kad se dostigne maksimalni broj znamenki tijekom
   unosa izraza.
-* Dodana je podrška za modus „uvijek uključen” u Kalkulatoru 10.1908 i
-  novijim verzijama.
 
 ## Kalendar
 
@@ -159,8 +146,6 @@ NVDA postavkama govora i postavi razinu simbola na „neki” ili višu.
 * Kad se odabere grupa emojija (uključujući kaomoji i skupinu simbola u
   verziji 1903 ili novijoj), NVDA više neće pomicati navigacijski objekt na
   određene emojije.
-* NVDA će najaviti odabrane emojije, ako se ploča emojija otvori više puta u
-  gradnji 20226.
 
 ## Osobe
 
@@ -173,11 +158,6 @@ NVDA postavkama govora i postavi razinu simbola na „neki” ili višu.
   izvještava automatski.
 * Vrijednosti trake napredovanja i druge informacije više se ne najavljuju
   dvaput.
-* Za većinu odabirnih okvira i izbornih gumba, NVDA će uspjeti prepoznati
-  oznaku i-ili najaviti promjene vrijednosti.
-* NVDA više neće izgledati kao da ništa ne radi ili svirati tonove za
-  greške, ako se koriste naredbe navigacijskog objekta pod nekim
-  okolnostima.
 * Dijaloški okvir podsjetnika za ažuriranje Windowsa će se prepoznati kao
   pravi dijaloški okvir.
 * Čudne kontrolne oznake viđene u određenim instalacijama sustava Windows 10

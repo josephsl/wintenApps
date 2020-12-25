@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2020.2-2020.4
+* NVDA compatibility: 2020.3 to 2020.4
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -55,48 +55,35 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   Käynnistä-valikossa tai Resurssienhallinnassa versiossa 1909 (November
   2019 -päivitys) ja uudemmissa, mikä tekee lisäksi
   pistekirjoitustulosteesta yhdenmukaisempaa kohteita tarkasteltaessa.
-* Seuraavat UIA-tapahtumat tunnistetaan: ohjain kohteelle, vetämisen
-  aloitus, vetämisen peruutus, vetäminen suoritettu, vetämisen kohteeseen
-  siirtyminen, vetämisen kohteesta poistuminen, vetämisen kohde pudotettu,
-  elementti valittu, kohteen tila, aktiivisen alueen muutos, ilmoitus,
-  järjestelmän ilmoitus, tekstin muutos, työkaluvihje avattu, ikkuna
-  avattu. Näitä tapahtumia seurataan, kun NVDA:n lokitasoksi on määritetty
-  "virheenkorjaus", ja UIA-ilmoitustapahtuma ilmaistaan virheäänellä, mikäli
-  ilmoitukset tulevat muualta kuin aktiivisesta sovelluksesta. Jotkin
-  tapahtumat tarjoavat lisätietoja, kuten elementtien määrä ohjain kohteelle
-  -tapahtumalla, elementin tila tilan muutos -tapahtumalla sekä kohteen
-  teksti kohteen tila -tapahtumalla.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drag target
+  enter, drag target leave, drag target dropped. With NVDA's log level set
+  to debug, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard if notifications come from somewhere other than
+  the currently active app. Some events will provide additional information
+  such as element count in controller for event, state of the element for
+  state change event, and item text for item status event.
 * On mahdollista seurata vain tiettyjä tapahtumia ja/tai tietyistä
   sovelluksista tulevia tapahtumia.
-* NVDA ei näytä enää tekevän mitään tai toista virheääniä, mikäli elementin
-  UIA-automaatiotunnusta ei voitu rekisteröidä tapahtumia seurattaessa.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2) avattaessa
   ja suljettaessa virtuaalityöpöytiä tai siirryttäessä niiden välillä.
-* NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
-  suuntaa vaihdettaessa.
+* NVDA will no longer announce Start menu size text when changing screen
+  resolutions or orientation.
 * Kun Käynnistä-valikon ruutuja tai Toimintokeskuksen pikatoimintoja
   järjestellään Alt+Vaihto+nuolinäppäimillä, NVDA puhuu raahattujen
   kohteiden tiedot tai raahatun kohteen uuden sijainnin.
-* NVDA ei enää sano "poista edellinen sana" Word 365:n uudemmissa versioissa
-  painettaessa Ctrl+Askelpalautin.
 * Ilmoitukset, kuten äänenvoimakkuuden/kirkkauden muutokset
   resurssienhallinnassa sekä sovellusten päivitysilmoitukset Microsoft
   Storesta voidaan estää poistamalla käytöstä Lue ilmoitukset -asetus NVDA:n
   objektien lukemisen asetuksista.
-* Avaa sovelluksessa -valintaikkuna puhutaan avattaessa Windows 10:n
-  versiossa 2004 (toukokuun 2020 päivitys) ja uudemmissa.
 
 ## Laskin
 
 * NVDA ilmoittaa laskutoimituksen tuloksen Enteriä tai Esciä painettaessa.
 * NVDA puhuu laskutoimitusten tulokset (esim. yksikkö- ja
   valuuttamuuntimessa) heti laskukaavoja syötettäessä.
-* NVDA ei enää sano "otsikkotaso" tarkasteltaessa laskutoimitusten tuloksia
-  laskimessa.
 * NVDA ilmoittaa, jos lukujen enimmäismäärä saavutetaan ilmaisuja
   kirjoitettaessa.
-* Lisätty tuki Laskin-sovelluksen version 10.1908 ja uudempien aina käytössä
-  -tilalle.
 
 ## Kalenteri
 
@@ -159,8 +146,6 @@ korkeampi.
 * Kun emojiryhmä (mukaan lukien kaomoji ja symboliryhmä versiossa 1903 tai
   uudemmissa) valitaan, NVDA ei enää siirrä navigointiobjektia tiettyihin
   emojeihin.
-* NVDA puhuu valitun emojin, jos emojipaneeli on avattu useammin kuin kerran
-  koontiversiossa 20226.
 
 ## Ihmiset
 
@@ -173,11 +158,6 @@ korkeampi.
   mukaan lukien Tallennusseurannan/Levynsiivouksen pienoisohjelma sekä
   Windows Updaten virheet, puhutaan nyt automaattisesti.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
-* NVDA ei enää epäonnistu joidenkin yhdistelmäruutujen ja
-  valintapainikkeiden selitteiden tunnistamisessa ja/tai arvomuutosten
-  ilmoittamisessa.
-* NVDA ei tee enää mitään tai toista virheääniä, mikäli
-  objektinavigointikomentoja käytetään tietyissä tilanteissa.
 * Windows Updaten muistutusvalintaikkuna tunnistetaan asianmukaisesti
   valintaikkunaksi.
 * Joissakin Windows-asennuksissa näkyvät erikoiset säädinten nimet on

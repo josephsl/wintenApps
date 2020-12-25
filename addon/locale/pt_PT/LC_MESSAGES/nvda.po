@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.10.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-06-23 21:16+0100\n"
+"PO-Revision-Date: 2020-12-22 22:13+0000\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; "
 "rui.fontes@tiflotecnia.com>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
@@ -46,11 +46,11 @@ msgstr "Não há mais dados meteorológicos para este item."
 
 #. Translators: presented when there is one suggestion for a search term.
 msgid "1 suggestion"
-msgstr ""
+msgstr "1 sugestão"
 
 #. Translators: presented when there are multiple suggestions for a search term.
 msgid "{} suggestions"
-msgstr ""
+msgstr "{} sugestões"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

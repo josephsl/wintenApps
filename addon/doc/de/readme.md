@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA-Kompatibilität: 2020.2 bis 2020.4
+* NVDA-Kompatibilität: 2020.3 bis 2020.4
 
 Diese Erweiterung bietet eine Sammlung von Anwendungsmodulen für
 verschiedene Windows 10 Anwendungen sowie Korrekturen in einigen Windows 10
@@ -59,39 +59,29 @@ Versionen][3].
   der Überprüfung von Ergebnissen zweimal angekündigt werden, weniger
   auffällig, was auch die Brailleausgabe bei der Überprüfung von Elementen
   einheitlicher macht.
-* Die folgenden UIA-Ereignisse werden erkannt: Controller für, Drag Start,
-  Drag Abbrechen, Drag Vollständig, Drag Ziel eingeben, Drag Ziel verlassen,
-  Drag Ziel fallenlassen, Element ausgewählt, Elementstatus,
-  Live-Regionsänderung, Benachrichtigung, Systemalarm, Textänderung, Tooltip
-  geöffnet, Fenster geöffnet. Wenn NVDA so eingestellt ist, dass es mit
-  aktivierter Debug-Protokollierung läuft, werden diese Ereignisse verfolgt,
-  und für das UIA-Benachrichtigungsereignis wird ein Debug-Ton ausgegeben,
-  wenn die Benachrichtigungen von einer anderen als der derzeit aktiven
-  Anwendung kommen. Einige Ereignisse liefern zusätzliche Informationen wie
-  die Elementanzahl im Controller für das Ereignis, den Zustand des Elements
-  für das Zustandsänderungsereignis und den Elementtext für das
-  Elementstatusereignis.
+* Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignis-Handlern werden
+  die folgenden UIA-Ereignisse erkannt: Start starten, Abbruch ziehen,
+  Abschluss ziehen, Ziel eingeben, Ziel verlassen ziehen, Ziel fallen
+  lassen. Wenn die Protokollstufe von NVDA auf Debug eingestellt ist, werden
+  diese Ereignisse nachverfolgt, und bei UIA-Benachrichtigungsereignissen
+  ertönt ein Debug-Ton, wenn Benachrichtigungen von einem anderen Ort als
+  der derzeit aktiven App stammen. Einige Ereignisse enthalten zusätzliche
+  Informationen, z. B. die Anzahl der Elemente im Controller für das
+  Ereignis, den Status des Elements für das Statusänderungsereignis und den
+  Elementtext für das Ereignis des Elementstatus.
 * Es ist möglich, nur bestimmte Ereignisse bzw. Ereignisse aus bestimmten
   Anwendungen zu verfolgen.
-* NVDA verstummt nicht länger mehr oder Fehlertöne wiederzugeben, wenn die
-  UIA-Automatisierungskennung für ein Element bei der Verfolgung von
-  Ereignissen nicht aufgezeichnet werden konnte.
 * Beim Öffnen, Schließen oder Umschalten virtueller Desktops meldet NVDA den
   aktuellen Desktop-Namen (z. B. Desktop 2).
-* NVDA wird beim Ändern der Bildschirmauflösung oder -ausrichtung keinen
-  Text in der Größe des Startmenüs mehr vermelden.
+* NVDA gibt beim Ändern der Bildschirmauflösung oder -ausrichtung keinen
+  Text in der Startmenügröße mehr aus.
 * Beim Anordnen von Startmenükacheln oder Action-Center-Schnellaktionen mit
   Alt+Umschalt+Pfeiltasten gibt NVDA Informationen zu gezogenen Elementen
   oder zur neuen Position des gezogenen Elements an.
-* In den letzten Versionen von Word 365 meldet NVDA nicht mehr, dass beim
-  Drücken der Tastenkombination Strg+Rücktaste das Wort "Vorheriges Wort
-  löschen" gelöscht wird.
 * Rückmeldungen wie z. B. Lautstärke-/Helligkeitsänderungen im
   Datei-Explorer und App-Update-Benachrichtigungen aus dem Microsoft Store
   können unterdrückt werden, indem die Benachrichtigung über Berichte in den
   Objektpräsentationseinstellungen von NVDA deaktiviert wird.
-* Das Dialogfeld "Öffnen mit" in Version 2004 (Update Mai 2020) und neuer
-  wird nun angesagt.
 
 ## Rechner
 
@@ -99,11 +89,8 @@ Versionen][3].
   an.
 * Für Berechnungen wie Umrechnungen von Einheiten und Währungen gibt NVDA
   das Ergebnis Ergebnisse bekannt, sobald die Berechnung eingegeben wird.
-* NVDA nennt bei Berechnungsergebnissen nicht mehr "Überschriftebenen".
 * NVDA meldet, wenn die maximale Anzahl der Ziffern während der Eingabe von
   Ausdrücken erreicht wurde.
-* Unterstützung für den Always-On-Modus in Calculator Version 10.1908 und
-  neuer hinzugefügt.
 
 ## Kalender
 
@@ -169,8 +156,6 @@ setzen Sie die Symbol-Stufe auf "Einige" oder höher.
 * Wenn eine Emoji-Gruppe (einschließlich kaomoji und Symbolgruppe in Version
   1903 oder später) ausgewählt wird, verschiebt NVDA das Navigator-Objekt
   nicht mehr zu bestimmten Emojis.
-* NVDA liest das ausgewählte Emoji vor, sobald das Emoji-Panel mehr als
-  einmal in Build 20226 geöffnet wird.
 
 ## Kontakte
 
@@ -184,10 +169,6 @@ setzen Sie die Symbol-Stufe auf "Einige" oder höher.
   und Festplattenbereinigung und der Fehler von Windows Update.
 * Werte in Fortschrittsbalken und andere Informationen werden nicht mehr
   zweimal angesagt.
-* Bei einigen Kombinationsfeldern und Kontrollfeldern wird NVDA nun die
-  Beschriftung erkennen und/oder Wertänderungen ankündigen.
-* NVDA wird nun ordnungsgemäß reagieren und keine Fehlertöne mehr während
-  der Objektnavigation abspielen.
 * Das Erinnerungsdialogfeld von Windows Update wird als richtiger Dialog
   erkannt.
 * Unsaubere Kontrollbeschriftungen, die in bestimmten

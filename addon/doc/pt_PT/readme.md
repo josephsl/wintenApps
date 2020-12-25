@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros utilizadores do Windows 10
 * Baixar [versão estável][1]
 * Baixar [versão de desenvolvimento][2]
-* NVDA compatibility: 2020.2 to 2020.4
+* NVDA compatibility: 2020.3 to 2020.4
 
 Este extra é uma colecção de módulos de aplicações para várias aplicações do
 Windows 10, bem como aprimoramentos e correcções para determinados
@@ -57,45 +57,34 @@ consulte o documento [changelogs for releases, release][3].
   2019 Update) and later, instances of NVDA announcing search results twice
   when reviewing results are less noticeable, which also makes braille
   output more consistent when reviewing items.
-* The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, drag target enter, drag target leave, drag target
-  dropped, element selected, item status, live region change, notification,
-  system alert, text change, tooltip opened, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard if notifications come from
-  somewhere other than the currently active app. Some events will provide
-  additional information such as element count in controller for event,
-  state of the element for state change event, and item text for item status
-  event.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drag target
+  enter, drag target leave, drag target dropped. With NVDA's log level set
+  to debug, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard if notifications come from somewhere other than
+  the currently active app. Some events will provide additional information
+  such as element count in controller for event, state of the element for
+  state change event, and item text for item status event.
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
-* NVDA will no longer appear to do nothing or play error tones if UIA
-  Automation Id for an element could not be recorded when tracking events.
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
   anunciará o nome da área de trabalho (área de trabalho 2, por exemplo).
 * NVDA will no longer announce Start menu size text when changing screen
-  resolution or orientation.
+  resolutions or orientation.
 * When arranging Start menu tiles or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce information on dragged items or
   new position of the dragged item.
-* IN recent releases of Word 365, NVDA will no longer announce "delete back
-  word" when pressing Control+Backspace.
 * Announcements such as volume/brightness changes in File Explorer and app
   update notifications from Microsoft Store can be suppressed by turning off
   Report Notifications in NVDA's object presentation settings.
-* Open With dialog in Version 2004 (May 2020 Update) and later is announced
-  when opened.
 
 ## Calculadora
 
 * When ENTER or Escape is pressed, NVDA will announce calculation results.
 * Para cálculos como conversor de unidades e conversor de moeda, o NVDA
   anunciará os resultados assim que os cálculos forem inseridos.
-* O NVDA não anunciará mais "nível de cabeçalho" para os resultados da
-  calculadora.
 * ao inserir expressões, o NVDA notificará se a contagem máxima de dígitos
   foi atingida.
-* Added support for always on mode in Calculator version 10.1908 and later.
 
 ## Calendário.
 
@@ -154,8 +143,6 @@ NVDA's speech settings and set symbol level to "some" or higher.
 * When an emoji group (including kaomoji and symbols group in Version 1903
   or later) is selected, NVDA will no longer move navigator object to
   certain emojis.
-* NVDA will announce selected emoji if emoji panel is opened more than once
-  in build 20226.
 
 ## Pessoas.
 
@@ -169,10 +156,6 @@ NVDA's speech settings and set symbol level to "some" or higher.
   erros da actualização do Windows.
 * Os valores da barra de progresso e outras informações já não são
   anunciados duas vezes.
-* Para algumas caixas combinadas e botões de rádio, o NVDA não falhará ao
-  reconhecer os rótulos e / ou anunciar mudanças de valor.
-* O NVDA não irá mais parecer não fazer nada ou tocar tons de erro se usar
-  comandos de navegação de objectos sob algumas circunstâncias.
 * A caixa de diálogo de lembretes do Windows Update é reconhecida como um
   diálogo apropriado.
 * Etiquetas de controlo ímpar, vistas em determinadas instalações do Windows
