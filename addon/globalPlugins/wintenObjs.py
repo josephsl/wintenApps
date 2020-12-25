@@ -72,20 +72,15 @@ class SearchField(SearchField):
 		# Because inaccurate count could be announced (when users type, suggestion count changes),
 		# thus announce this if position info reporting is enabled.
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
-			if (
-				self.UIAAutomationId == "TextBox"
-				or self.UIAAutomationId == "SearchTextBox"
-				and self.appModule.appName not in ("searchui", "searchapp")
-			):
-				# Item count must be the last one spoken.
-				suggestionsCount = self.controllerFor[0].childCount
-				if suggestionsCount == 1:
-					# Translators: presented when there is one suggestion for a search term.
-					suggestionsMessage = _("1 suggestion")
-				else:
-					# Translators: presented when there are multiple suggestions for a search term.
-					suggestionsMessage = _("{} suggestions").format(suggestionsCount)
-				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
+			# Item count must be the last one spoken.
+			suggestionsCount = self.controllerFor[0].childCount
+			if suggestionsCount == 1:
+				# Translators: presented when there is one suggestion for a search term.
+				suggestionsMessage = _("1 suggestion")
+			else:
+				# Translators: presented when there are multiple suggestions for a search term.
+				suggestionsMessage = _("{} suggestions").format(suggestionsCount)
+			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
 
 
 # Various XAML headings (Settings app, for example) introduced in Version 1803.
