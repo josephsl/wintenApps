@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2020.2 to 2020.4
+* NVDA compatibility: 2020.3 to 2020.4
 
 Denne tilføjelse er en samling af app-moduler til forskellige Windows 10
 apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.
@@ -54,34 +54,26 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   Update) og senere, vil NVDA ikke længere annoncere søgeresultater to
   gange, når du gennemser resultater, hvilket også gør punktoutput mere
   ensartet, når du gennemgår elementer.
-* The following UIA events are recognized: controller for, drag start, drag
-  cancel, drag complete, drag target enter, drag target leave, drag target
-  dropped, element selected, item status, live region change, notification,
-  system alert, text change, tooltip opened, window opened. With NVDA set to
-  run with debug logging enabled, these events will be tracked, and for UIA
-  notification event, a debug tone will be heard if notifications come from
-  somewhere other than the currently active app. Some events will provide
-  additional information such as element count in controller for event,
-  state of the element for state change event, and item text for item status
-  event.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drag target
+  enter, drag target leave, drag target dropped. With NVDA's log level set
+  to debug, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard if notifications come from somewhere other than
+  the currently active app. Some events will provide additional information
+  such as element count in controller for event, state of the element for
+  state change event, and item text for item status event.
 * Det er muligt at overvåge specifikke hændelser og/eller hændelser, der
   kommer fra specifikke apps.
-* NVDA will no longer appear to do nothing or play error tones if UIA
-  Automation Id for an element could not be recorded when tracking events.
 * Når åbning, lukning, eller Skift mellem virtuelle skrivebord forekommer,
   vil NVDA annoncere nuværende desktop ID (f.eks. "Skrivebord 2").
 * NVDA will no longer announce Start menu size text when changing screen
-  resolution or orientation.
+  resolutions or orientation.
 * Når du arrangerer fliser på start-menuen eller hurtige handlinger i
   Handlingscenter med Alt+Shift+piletasterne, vil NVDA oplyse informationer
   om emner, når disse flyttes.
-* I de seneste udgivelser af Word 365 vil NVDA ikke længere meddele "slet
-  ord bagud", når du trykker på Control+Backspace.
 * Announcements such as volume/brightness changes in File Explorer and app
   update notifications from Microsoft Store can be suppressed by turning off
   Report Notifications in NVDA's object presentation settings.
-* Open With dialog in Version 2004 (May 2020 Update) and later is announced
-  when opened.
 
 ## Lommeregner
 
@@ -89,12 +81,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   beregningsresultaterne.
 * For beregninger som enhedsberegninger og valutaberegninger, vil NVDA
   annoncere resultater så snart beregningerne er indtastet.
-* NVDA vil ikke længere meddele "Overskriftsniveau", når resultater i
-  Lommeregner annonceres.
 * NVDA giver besked, hvis det maksimale antal cifre er nået, mens du
   indtaster udtryk.
-* Understøttelse af Always On mode i Lommeregner version 10,1908 og nyere er
-  tilføjet.
 
 ## Kalender
 
@@ -156,8 +144,6 @@ NVDA's speech settings and set symbol level to "some" or higher.
 * When an emoji group (including kaomoji and symbols group in Version 1903
   or later) is selected, NVDA will no longer move navigator object to
   certain emojis.
-* NVDA will announce selected emoji if emoji panel is opened more than once
-  in build 20226.
 
 ## Personer
 
@@ -170,10 +156,6 @@ NVDA's speech settings and set symbol level to "some" or higher.
   automatisk, herunder ved brug af Storage sense/disk cleanup widget.
 * Værdier på behandlingslinjer og andre oplysninger er ikke længere
   annonceret to gange.
-* For nogle combo boxe, vil NVDA ikke længere undlade at rapportere
-  etiketter- og- eller annoncere værdiændringer.
-* NVDA ser ikke længere ud til at gøre ingenting eller afspille fejltoner,
-  hvis du bruger objektnavigeringskommandoer under visse omstændigheder.
 * Dialogboksen Windows Update-påmindelse genkendes som en korrekt dialog.
 * Bemærkelsesværdige kontroletiketter ses i visse Windowt 10 installationer
   er blevet løst.

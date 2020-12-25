@@ -1,61 +1,57 @@
 # Windows 10 App Essentials #
 
-* Autori: Joseph Lee, Derek Riemer și alți utilizatori Windows 10
-* Descărcați [versiunea stabilă][1]
-* Descărcați [versiunea în dezvoltare][2]
+* Auteurs: Joseph Lee, Derek Riemer en andere Windows 10 gebruikers
+* Download [stabiele versie][1]
+* Download [ontwikkelversie][2]
 * NVDA compatibility: 2020.3 to 2020.4
 
-Acest supliment cuprinde o colecție de module pentru diverse aplicații din
-Windows 10, dar și rezolvări și îmbunătățiri pentru anumite controale din
-Windows 10.
+This add-on is a collection of app modules for various Windows 10 apps, as
+well as enhancements and fixes for certain windows 10 controls.
 
-Următoarele module de aplicații sau module de suport pentru unele aplicații
-sunt incluse (verificați fiecare secțiune a aplicației pentru detalii cu
-privire la ceea ce este inclus):
+De volgende app-modules of ondersteuningsmodules voor sommige apps zijn
+inbegrepen (zie elke app-sectie voor details over wat is inbegrepen):
 
-* Calculator (modern).
-* Calendar
-* Cortana (Conversations)
+* Rekenmachine (modern).
+* Agenda
+* Cortana (Gesprekken)
 * Mail
-* Hărți
+* Kaarten
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
-  clipboard history/modern input method editors)
-* Persoane
-* Setări (setări de sistem, Windows+I)
-* Meteo.
-* Diverse module de control precum comenzile din meniul start.
+* Modern toetsenbord (emoji-paneel / dicteren / hardware-invoersuggesties /
+  cloudklembordgeschiedenis / moderne invoermethode-editors)
+* Personen
+* Instellingen (systeeminstellingen, Windows+I)
+* Weer
+* Diverse modules voor bedieningselementen zoals Start Menu-tegels.
 
-Note:
+Opmerkingen:
 
 * This add-on requires Windows 10 Version 1909 (build 18363) or later. For
   best results, use the add-on with latest Windows 10 stable release
   (20H2/build 19042).
-* Unele caracteristici ale suplimentului fac sau vor face parte din
-  cititorul de ecran NVDA.
-* Pentru intrările care nu sunt listate mai jos, puteți presupune că
-  funcționalitățile fac parte din NVDA, nu mai sunt aplicabile, întrucât
-  suplimentul nu mai suportă versiunile vechi de Windows 10, sau că au fost
-  efectuate modificări la Windows 10 și la aplicații, care fac ca intrările
-  să nu mai fie aplicabile.
+* Sommige add-on-functies zijn of zullen deel gaan uitmaken van de
+  NVDA-schermlezer.
+* Voor items die hieronder niet worden vermeld, kunt u ervan uitgaan dat
+  functies deel uitmaken van NVDA, niet langer van toepassing zijn omdat de
+  add-on geen ondersteuning biedt voor oude Windows 10 versies, of er
+  wijzigingen zijn aangebracht in Windows 10 en apps waardoor items niet
+  langer van toepassing zijn.
 
-Pentru o listă a modificărilor efectuate la fiecare versiune a
-suplimentului, consultați documentul [jurnalelor de modificări pentru
-versiunile suplimentului][3].
+Voor een lijst met wijzigingen die zijn aangebracht in elke nieuwe versie
+van deze add-on, zie het document [changelogs for add-on releases][3].
 
-## General
+## Algemeen
 
 * NVDA will no longer play error tones or do nothing if this add-on becomes
   active from Windows 7, Windows 8.1, and unsupported releases of Windows
   10.
-* Anumite dialoguri sunt acum recunoscute ca dialoguri corespunzătoare și
-  sunt raportate ca atare. Acestea includ dialogul Insider Preview
-  (aplicația setări).
-* NVDA poate anunța numărul de sugestii la efectuarea unei căutări în
-  majoritatea cazurilor. Această opțiune este controlată de „informația
-  poziției obiectului din dialogul prezentării obiectului, găsit în panoul
-  de setări NVDA.
+* In addition to dialogs recognized by NVDA, more dialogs are now recognized
+  as proper dialogs and reported as such, including Insider Preview dialog
+  (settings app).
+* NVDA can announce suggestion count when performing a search in majority of
+  cases. This option is controlled by "Report object position information"
+  in Object presentation panel found in NVDA settings.
 * When searching in Start menu or File Explorer in Version 1909 (November
   2019 Update) and later, instances of NVDA announcing search results twice
   when reviewing results are less noticeable, which also makes braille
@@ -81,18 +77,18 @@ versiunile suplimentului][3].
   update notifications from Microsoft Store can be suppressed by turning off
   Report Notifications in NVDA's object presentation settings.
 
-## Calculator
+## Rekenmachine
 
 * When ENTER or Escape is pressed, NVDA will announce calculation results.
-* Pentru calcule precum convertorul de unitate și convertorul valutar, NVDA
-  va anunța rezultatele de îndată ce vor fi introduse calculele.
+* For calculations such as unit converter and currency converter, NVDA will
+  announce results as soon as calculations are entered.
 * NVDA will notify if maximum digit count has been reached while entering
   expressions.
 
-## Calendar
+## Agenda
 
-* NVDA nu mai anunță „Editare” sau „doar citire” în corpul mesajului sau în
-  alte câmpuri.
+* NVDA no longer announces "edit" or "read-only" in message body and other
+  fields.
 
 ## Cortana
 
@@ -100,24 +96,23 @@ Most items are no longer applicable on Version 1903 and later unless Cortana
 Conversations (Version 2004 and later) is in use.
 
 * Textual responses from Cortana are announced in most situations.
-* NVDA va fi silențios atunci când vorbiți cu Cortana prin voce.
+* NVDA will be silent when talking to Cortana via voice.
 * In Version 1909 (November 2019 Update) and later, modern search experience
   in File Explorer powered by Windows Search user interface is supported.
 
 ## Mail
 
-* Când examinați elemente dinn lista de mesaje, puteți să folosiți comenzile
-  de navigare ale tabelului pentru a examina antetele mesajelor. Rețineți că
-  navigarea printre rânduri (mesaje) nu este suportată.
-* La scrierea unui mesaj, aspectele sugestiilor de menționare a arondului
-  sunt indicate de sunete.
+* When reviewing items in messages list, you can now use table navigation
+  commands to review message headers. Note that navigating between rows
+  (messages) is not supported.
+* When writing a message, appearance of at mention suggestions are indicated
+  by sounds.
 
-## Hărți
+## Kaarten
 
-* NVDA redă bipul locației pentru locațiile hărții.
-* Atunci când se utilizează vedere din stradă laterală și în cazul în care
-  opțiunea "utilizare tastatură" este activată, NVDA va anunța adrese pe
-  măsură ce utilizați tastele săgeată pentru a naviga pe hartă.
+* NVDA plays location beep for map locations.
+* When using street side view and if "use keyboard" option is enabled, NVDA
+  will announce street addresses as you use arrow keys to navigate the map.
 
 ## Microsoft Solitaire Collection
 
@@ -125,12 +120,12 @@ Conversations (Version 2004 and later) is in use.
 
 ## Microsoft Store
 
-* După căutarea actualizărilor aplicației, nume de aplicații în lista
-  aplicațiilor care urmează să fie actualizate sunt etichetate corect.
-* La descărcarea conținutului, cum ar fi aplicații și filme, NVDA va anunța
-  numele produsului și progresul descărcării.
+* After checking for app updates, app names in list of apps to be updated
+  are correctly labeled.
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress.
 
-## Tastatură modernă
+## Modern keyboard
 
 This includes emoji panel, clipboard history, dictation, hardware input
 suggestions, and modern input method editors for certain languages. When
@@ -147,19 +142,18 @@ NVDA's speech settings and set symbol level to "some" or higher.
   or later) is selected, NVDA will no longer move navigator object to
   certain emojis.
 
-## Persoane
+## Personen
 
-* La căutarea de contacte, va fi anunțată prima sugestie, în particular dacă
-  se folosesc versiuni recente ale aplicației.
+* When searching for contacts, first suggestion will be announced,
+  particularly if using recent app releases.
 
-## Setări
+## Instellingen
 
 * Certain information such as Windows Update progress is reported
   automatically, including Storage sense/disk cleanup widget and errors from
   Windows Update.
-* Valorile barei de progres și alte informații nu mai sunt anunțate de două
-  ori.
-* Dialogul de tip memento al Windows Update este recunoscut așa cum trebuie.
+* Progress bar values and other information are no longer announced twice.
+* Windows Update reminder dialog is recognized as a proper dialog.
 * Odd control labels seen in certain Windows 10 installations has been
   corrected.
 * In more recent revisions of Version 1803 and later, due to changes to
@@ -167,10 +161,10 @@ NVDA's speech settings and set symbol level to "some" or higher.
   link has been added. NVDA will now announce the title for the new update
   if present.
 
-## Meteo
+## Weer
 
-* Etichete precum „vremea” și „hărțile” sunt recunoscute ca etichete
-  adegvate (patch de Derek Riemer).
+* Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by
+  Derek Riemer).
 * When reading a forecast, use the left and right arrows to move between
   items. Use the up and down arrows to read the individual items. For
   example, pressing the right arrow might report "Monday: 79 degrees, partly

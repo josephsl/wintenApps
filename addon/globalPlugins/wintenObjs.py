@@ -74,7 +74,7 @@ class SearchField(SearchField):
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
 			if (
 				self.UIAAutomationId == "TextBox"
-				or self.UIAElement.cachedAutomationId == "SearchTextBox"
+				or self.UIAAutomationId == "SearchTextBox"
 				and self.appModule.appName not in ("searchui", "searchapp")
 			):
 				# Item count must be the last one spoken.
@@ -282,6 +282,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_stateChange(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "stateChange")
+		nextHandler()
+
+	def event_descriptionChange(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "descriptionChange")
 		nextHandler()
 
 	def event_UIA_controllerFor(self, obj, nextHandler):

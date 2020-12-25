@@ -3,7 +3,7 @@
 * Autory: Joseph Lee, Derek Riemer a ďalší používatelia Windowsu 10
 * Stiahnuť [stabilnú verziu][1]
 * Stiahnuť [vývojovú verziu][2]
-* NVDA compatibility: 2020.2 to 2020.4
+* NVDA compatibility: 2020.3 to 2020.4
 
 Obsahuje aplikačné moduly pre rôzne aplikácie systému Windows 10, ako aj
 vylepšenia a opravy určitých ovládacích prvkov systému Windows 10.
@@ -51,41 +51,34 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 * NVDA viac neoznamuje dvakrát výsledky hľadania pri vyhľadávaní v ponuke
   štart alebo prieskumníkovi (Windows od verzie 1909 (November 2019)). Toto
   tiež zlepšuje oznamovanie výsledkov na braillovskom riadku.
-* NVDA rozpoznáva nasledujúce udalosti UIA: controller for, drag start, drag
-  cancel, drag complete, drag target enter, drag target leave, drag target
-  dropped, element selected, item status, live region change, notification,
-  system alert, text change, tooltip opened, window opened. Informácie o
-  prvkoch sa zapisujú do záznamu (pri nastavenej úrovni debug). Ak príde
-  udalosť z inej aplikácie, udalosť sa rovnako zapíše a vývojové verzie NVDA
-  ohlásia zápis charakteristickým zvukom chyby. Pri niektorých prvkoch je
-  tiež doplnená informácia o počte položiek, stav alebo text.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drag target
+  enter, drag target leave, drag target dropped. With NVDA's log level set
+  to debug, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard if notifications come from somewhere other than
+  the currently active app. Some events will provide additional information
+  such as element count in controller for event, state of the element for
+  state change event, and item text for item status event.
 * Je možné sledovať iba konkrétne udalosti a udalosti pochádzajúce z
   konkrétnych aplikácií.
-* NVDA viac neupozorňuje zvukom na situácie, keď nie je možné zistiť ID
-  prvku.
 * Pri otváraní, zatváraní alebo prepínaní medzi virtuálnymi pracovnými
   plochami NVDA oznámi aktuálny názov pracovnej plochy (napríklad pracovná
   plocha 2).
 * NVDA will no longer announce Start menu size text when changing screen
-  resolution or orientation.
+  resolutions or orientation.
 * Pri presúvaní dlaždíc alebo položiek v centre akcií (skratky
   alt+shift+šípky), NVDA oznamuje nové umiestnenie položiek.
-* NVDA viac neoznamuje správu "zmazať slovo" pri mazaní skratkou
-  ctrl+backspace vo Worde 365.
 * Oznamovanie zmeny hlasitosti a jasu v okne pracovnej plochy a iných oknách
   Explorera a tiež upozornení z obchodu Microsoft store je možné pozastaviť
   odčiarknutím možnosti Oznamovať notifikácie v nastaveniach > prezentácia
   objektov.
-* Okno otvoriť v programe je správne oznamované od verzie 2004 (Máj 2020).
 
 ## Kalkulačka
 
 * Keď stlačíte ENTER alebo Escape, NVDA oznámi výsledky výpočtu.
 * Pri výpočtoch, ako sú prevodník jednotiek a prevodník mien, NVDA oznámi
   výsledky hneď po zadaní príkladu.
-* NVDA neoznamuje pri výsledkoch úroveň nadpisu.
 * NVDA upozorní, ak pri zadávaní výrazu dosiahnete maximálny počet číslic.
-* Pridaná podpora pre režim vždy zapnuté v kalkulačke od verzie 10.1908.
 
 ## Kalendár
 
@@ -141,8 +134,6 @@ konzorcia a nastaviť úroveň interpunkcie na väčšina alebo všetka.
   predstavené od verzie 2004 (zostava 18965)
 * Ak je vybratá skupina emoji(alebo symbolov a kaomoji od verzie 1903), NVDA
   nepresúva navigačný objekt automaticky na prvú položku.
-* NVDA will announce selected emoji if emoji panel is opened more than once
-  in build 20226.
 
 ## Ľudia
 
@@ -155,9 +146,6 @@ konzorcia a nastaviť úroveň interpunkcie na väčšina alebo všetka.
   priebeh a dokončenie čistenia disku.
 * NVDA dvojnásobne neopakuje hodnoty indikátorov priebehu a ďalšie
   informácie.
-* NVDA dokáže vo väčšine prípadov rozpoznať názvy a hodnoty pri zoznamových
-  rámikoch a prepínačoch.
-* NVDA správne funguje pri použití objektovej navigácie.
 * Dialóg s pripomenutím aktualizácie Windows je rozpoznaný ako štandardný
   dialóg.
 * Opravené nesprávne popisky prvkov v niektorých verziách Windows 10.
