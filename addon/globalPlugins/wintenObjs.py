@@ -1,5 +1,5 @@
 # Windows 10 controls repository
-# Copyright 2015-2020 Joseph Lee, released under GPL.
+# Copyright 2015-2021 Joseph Lee, released under GPL.
 
 # Adds handlers for various UIA controls found in Windows 10.
 

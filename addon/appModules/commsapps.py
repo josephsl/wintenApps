@@ -1,6 +1,6 @@
 # WinTenApps/commsapps.py
 # Part of Windows 10 App Essentials collection
-# Copyright 2020 Joseph Lee, released under GPL.
+# Copyright 2020-2021 Joseph Lee, released under GPL.
 
 # In 2020, Mail and Calendar became one app, sharing an executable named commsapps.exe.
 # This app module is based mostly on old Calendar app with workarounds from Mail included.
