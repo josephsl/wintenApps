@@ -1,6 +1,6 @@
 # Microsoft Solitaire Collection
 # Part of Windows 10 App Essentials collection
-# Copyright 2020 Joseph Lee, released under GPL
+# Copyright 2020-2021 Joseph Lee, released under GPL
 
 # Support for Microsoft Solitaire Collection.
 
