@@ -3,10 +3,11 @@
 * Autori: Joseph Lee, Derek Riemer e altri utenti di Windows 10
 * Scarica la [versione stabile][1]
 * Scarica la [versione in sviluppo][2]
-* NVDA compatibility: 2020.3 to 2020.4
+* Compatibilità con NVDA: dalla versione 2020.3 alla 2020.4
 
-Questo componente aggiuntivo è un insieme di app modules per numerose app di
-Windows 10, che inoltre risolve anomalie e migliora alcuni controlli.
+Questo componente aggiuntivo è un insieme di app modules per numerose
+applicazioni di Windows 10, che inoltre risolve anomalie e migliora alcuni
+controlli.
 
 Di seguito l'elenco di tutti gli appmodule contenuti nel componente
 aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
@@ -22,7 +23,7 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
   tastiere hardware/storico degli appunti nel cloud/editor per i metodi di
   input moderni)
 * Persone
-* Impostazioni (Impostazioni Windows, Windows+i)
+* Impostazioni (Impostazioni di Windows, Windows+i)
 * Meteo.
 * Vari moduli per controlli come le mattonelle del menu avvio.
 
@@ -59,20 +60,21 @@ riferimento al documento [changelogs for add-on releases][3].
   parte di NVDA quando si leggono i risultati con il cursore di controllo
   sono meno frequenti, il che migliora anche l'output Braille nella stessa
   situazione.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drag target
-  enter, drag target leave, drag target dropped. With NVDA's log level set
-  to debug, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard if notifications come from somewhere other than
-  the currently active app. Some events will provide additional information
-  such as element count in controller for event, state of the element for
-  state change event, and item text for item status event.
+* In aggiunta agli handler degli eventi forniti da NVDA, sono riconosciuti i
+  seguenti eventi UIA: drag start, drag cancel, drag complete, drag target
+  enter, drag target leave, drag target dropped. Quando il livello di log di
+  NVDA è impostato su debug, questi eventi saranno tracciati, e, per le
+  notifiche degli eventi UIA, verrà emesso un segnale acustico di debug se
+  le notifiche provengono da applicazioni diverse da quella attiva. Alcuni
+  eventi forniranno informazioni aggiuntive, come il numero degli elementi
+  nell'evento controller for, lo stato dell'elemento nell'evento state
+  change e il testo dell'elemento per l'evento item status.
 * E' possibile tracciare solo specifici eventi e/o eventi provenienti solo
   da applicazioni specifiche.
 * Quando si passa ad un desktop virtuale successivo, o ne viene chiuso o
   aperto uno, NVDA annuncerà il numero del desktop, ad esempio Desktop2.
-* NVDA will no longer announce Start menu size text when changing screen
-  resolutions or orientation.
+* NVDA non leggerà più le dimensioni del testo del menu avvio quando si
+  cambia la risoluzione o l'orientamento dello schermo.
 * Quando si riposizionano le mattonelle del menu Avvio o le azioni rapide
   del centro azioni con Alt+Shift+frecce, NVDA fornirà informazioni sugli
   elementi trascinati e sulle loro nuove posizioni.

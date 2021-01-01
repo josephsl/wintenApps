@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* NVDA compatibility: 2020.3 to 2020.4
+* Yhteensopivuus: NVDA 2020.3-2020.4
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -55,20 +55,22 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   Käynnistä-valikossa tai Resurssienhallinnassa versiossa 1909 (November
   2019 -päivitys) ja uudemmissa, mikä tekee lisäksi
   pistekirjoitustulosteesta yhdenmukaisempaa kohteita tarkasteltaessa.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drag target
-  enter, drag target leave, drag target dropped. With NVDA's log level set
-  to debug, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard if notifications come from somewhere other than
-  the currently active app. Some events will provide additional information
-  such as element count in controller for event, state of the element for
-  state change event, and item text for item status event.
+* Seuraavat UIA-tapahtumat tunnistetaan NVDA:n tarjoamien
+  UIA-tapahtumakäsittelijöiden lisäksi: vetämisen aloitus, vetämisen
+  peruutus, vetäminen suoritettu, vetämisen kohteeseen siirtyminen,
+  vetämisen kohteesta poistuminen, vetämisen kohde pudotettu. Näitä
+  tapahtumia seurataan, kun NVDA:n lokitasoksi on määritetty
+  "virheenkorjaus", ja UIA-ilmoitustapahtuma ilmaistaan virheäänellä, mikäli
+  ilmoitukset tulevat muualta kuin aktiivisesta sovelluksesta. Jotkin
+  tapahtumat tarjoavat lisätietoja, kuten elementtien määrä ohjain kohteelle
+  -tapahtumalla, elementin tila tilan muutos -tapahtumalla sekä kohteen
+  teksti kohteen tila -tapahtumalla.
 * On mahdollista seurata vain tiettyjä tapahtumia ja/tai tietyistä
   sovelluksista tulevia tapahtumia.
 * NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2) avattaessa
   ja suljettaessa virtuaalityöpöytiä tai siirryttäessä niiden välillä.
-* NVDA will no longer announce Start menu size text when changing screen
-  resolutions or orientation.
+* NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
+  suuntaa vaihdettaessa.
 * Kun Käynnistä-valikon ruutuja tai Toimintokeskuksen pikatoimintoja
   järjestellään Alt+Vaihto+nuolinäppäimillä, NVDA puhuu raahattujen
   kohteiden tiedot tai raahatun kohteen uuden sijainnin.
