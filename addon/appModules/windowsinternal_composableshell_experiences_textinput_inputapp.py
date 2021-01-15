@@ -325,7 +325,7 @@ class AppModule(AppModule):
 		# The word "blank" is kept announced, so suppress this on build 17666 and later.
 		if sys.getwindowsversion().build >= 17763:
 			# In build 17672 and later,
-			# return immediatley when element selected event on clipboard item was fired just prior to this.
+			# return immediately when element selected event on clipboard item was fired just prior to this.
 			# In some cases, parent will be None, as seen when emoji panel is closed in build 18267.
 			try:
 				if (
