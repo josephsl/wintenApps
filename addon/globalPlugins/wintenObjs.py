@@ -61,10 +61,10 @@ class UIAEditableTextWithSuggestions(EditableTextWithSuggestions, UIA):
 
 # Search fields.
 # Unlike the Core implementation, this class announces suggestion count, to be incorporated into NVDA later.
-class SearchField(SearchField):
+class W10SearchField(SearchField):
 
 	def event_suggestionsOpened(self):
-		super(SearchField, self).event_suggestionsOpened()
+		super(W10SearchField, self).event_suggestionsOpened()
 		# Announce number of items found
 		# (except in Start search box where the suggestions are selected as user types).
 		# Oddly, Edge's address omnibar returns 0 for suggestion count
@@ -162,7 +162,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Because the add-on version deals with focus comparison,
 			# let all search fields go through this check as much as possible except for specific apps.
 			if obj.appModule.appName not in ("searchui", "searchapp"):
-				clsList.insert(0, SearchField)
+				clsList.insert(0, W10SearchField)
 				return
 		# A dedicated version for Mail app's address/mention suggestions.
 		elif obj.UIAAutomationId == "RootFocusControl":
