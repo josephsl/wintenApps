@@ -160,11 +160,7 @@ def generateManifest(source, dest):
 
 
 def generateTranslatedManifest(source, language, out):
-	# No ugettext in Python 3.
-	if sys.version_info.major == 2:
-		_ = gettext.translation("nvda", localedir=os.path.join("addon", "locale"), languages=[language]).ugettext
-	else:
-		_ = gettext.translation("nvda", localedir=os.path.join("addon", "locale"), languages=[language]).gettext
+	_ = gettext.translation("nvda", localedir=os.path.join("addon", "locale"), languages=[language]).gettext
 	vars = {}
 	for var in ("addon_summary", "addon_description"):
 		vars[var] = _(buildVars.addon_info[var])
