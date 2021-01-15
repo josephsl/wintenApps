@@ -120,7 +120,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				UIAHandler.UIADialogClassNames.append(dialogClassName)
 
 	# Manually add events after root element is located.
-	def _addAdditionalUIAEvents(self, delay: bool=False) -> None:
+	def _addAdditionalUIAEvents(self, delay: bool = False) -> None:
 		# Add a series of events instead of doing it one at a time.
 		# Some events are only available in a specific build range
 		# and/or while a specific version of IUIAutomation interface is in use.
@@ -202,7 +202,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return event in self.trackedEvents and obj.appModule.appName in self.trackedApps
 
 	# Record UIA property info about an object if told to do so.
-	def uiaDebugLogging(self, obj: Any, event: Optional[str]=None) -> None:
+	def uiaDebugLogging(self, obj: Any, event: Optional[str] = None) -> None:
 		if self.recordLog(obj, event):
 			info: List[str] = [f"object: {repr(obj)}"]
 			info.append(f"name: {obj.name}")
