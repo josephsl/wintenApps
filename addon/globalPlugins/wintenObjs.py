@@ -3,6 +3,8 @@
 
 # Adds handlers for various UIA controls found in Windows 10.
 
+# Help Mypy and other static checkers for a time by importing uppercase versions of built-in types.
+from typing import Optional, Any, Dict, List, Set
 from comtypes import COMError
 import globalPluginHandler
 import controlTypes
@@ -23,18 +25,18 @@ addonHandler.initTranslation()
 
 # #52: forget everything if the current release is not a supported version of Windows 10.
 # NVDA 2019.2 includes a handy Windows 10 version check function.
-W10AddonSupported = sys.getwindowsversion().build >= 19041
+W10AddonSupported: bool = sys.getwindowsversion().build >= 19041
 
 # Extra UIA constants
-UIA_Drag_DragStartEventId = 20026
-UIA_Drag_DragCancelEventId = 20027
-UIA_Drag_DragCompleteEventId = 20028
-UIA_DropTarget_DragEnterEventId = 20029
-UIA_DropTarget_DragLeaveEventId = 20030
-UIA_DropTarget_DroppedEventId = 20031
+UIA_Drag_DragStartEventId: int = 20026
+UIA_Drag_DragCancelEventId: int = 20027
+UIA_Drag_DragCompleteEventId: int = 20028
+UIA_DropTarget_DragEnterEventId: int = 20029
+UIA_DropTarget_DragLeaveEventId: int = 20030
+UIA_DropTarget_DroppedEventId: int = 20031
 
 # For convenience.
-W10Events = {
+W10Events: Dict[int, str] = {
 	UIA_Drag_DragStartEventId: "UIA_dragStart",
 	UIA_Drag_DragCancelEventId: "UIA_dragCancel",
 	UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
@@ -44,7 +46,7 @@ W10Events = {
 }
 
 # Additional dialogs not recognized by NVDA itself.
-UIAAdditionalDialogClassNames = ["Popup"]
+UIAAdditionalDialogClassNames: List[str] = ["Popup"]
 
 
 # General UIA controller for edit field.
@@ -73,7 +75,7 @@ class W10SearchField(SearchField):
 		# thus announce this if position info reporting is enabled.
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
 			# Item count must be the last one spoken.
-			suggestionsCount = self.controllerFor[0].childCount
+			suggestionsCount: int = self.controllerFor[0].childCount
 			if suggestionsCount == 1:
 				# Translators: presented when there is one suggestion for a search term.
 				suggestionsMessage = _("1 suggestion")
@@ -86,7 +88,7 @@ class W10SearchField(SearchField):
 # Various XAML headings (Settings app, for example) introduced in Version 1803.
 class XAMLHeading(UIA):
 
-	def _get_role(self):
+	def _get_role(self) -> int:
 		# Heading levels are 8005x, control types heading levels are 4x, therefore the below object role formula.
 		return self._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) - 80010
 
@@ -118,7 +120,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				UIAHandler.UIADialogClassNames.append(dialogClassName)
 
 	# Manually add events after root element is located.
-	def _addAdditionalUIAEvents(self, delay=False):
+	def _addAdditionalUIAEvents(self, delay: bool=False) -> None:
 		# Add a series of events instead of doing it one at a time.
 		# Some events are only available in a specific build range
 		# and/or while a specific version of IUIAutomation interface is in use.
@@ -180,10 +182,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Find out if log recording is possible.
 	# This will work if debug logging is on and/or tracing apps and/or events is specified.
-	trackedEvents = set()
-	trackedApps = set()
+	trackedEvents: Set[str] = set()
+	trackedApps: Set[str] = set()
 
-	def recordLog(self, obj, event):
+	def recordLog(self, obj: Any, event: Optional[str]) -> bool:
 		if not isinstance(obj, UIA):
 			return False
 		eventsTracked = len(self.trackedEvents) > 0
@@ -200,9 +202,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return event in self.trackedEvents and obj.appModule.appName in self.trackedApps
 
 	# Record UIA property info about an object if told to do so.
-	def uiaDebugLogging(self, obj, event=None):
+	def uiaDebugLogging(self, obj: Any, event: Optional[str]=None) -> None:
 		if self.recordLog(obj, event):
-			info = [f"object: {repr(obj)}"]
+			info: List[str] = [f"object: {repr(obj)}"]
 			info.append(f"name: {obj.name}")
 			if not event:
 				event = "no event specified"
@@ -212,7 +214,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif event == "stateChange":
 				# Copied from NVDA Core's default navigator object dev info's state retriever.
 				try:
-					stateConsts = dict(
+					stateConsts: Dict[int, str] = dict(
 						(const, name) for name, const in controlTypes.__dict__.items() if name.startswith("STATE_")
 					)
 					ret = ", ".join(
