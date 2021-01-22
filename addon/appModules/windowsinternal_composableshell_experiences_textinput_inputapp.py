@@ -371,6 +371,12 @@ class AppModule(AppModule):
 			self._recentlySelected = None
 		nextHandler()
 
+	def event_UIA_notification(self, obj, nextHandler, displayString=None, **kwargs):
+		# Announce input experience panel items (emoji/clipboard) in build 21296.
+		# Note that input experience panel is not really a focusable window - it is an overlay.
+		ui.message(displayString)
+		nextHandler()
+
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
 			if obj.role == controlTypes.ROLE_LISTITEM and (
