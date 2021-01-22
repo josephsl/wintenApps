@@ -375,10 +375,14 @@ class AppModule(AppModule):
 	def event_UIA_notification(
 			self, obj, nextHandler,
 			notificationProcessing=UIAHandler.NotificationProcessing_CurrentThenMostRecent,
-			displayString=None, **kwargs
+			displayString=None, activityId=None, **kwargs
 	):
 		# Announce input experience panel items (emoji/clipboard) in build 21296.
 		# Note that input experience panel is not really a focusable window - it is an overlay.
+		# Filter out extraneous notifications such as those raised by root document window
+		# (after all, input experience panel is a web document).
+		if activityId == "Windows.Shell.InputApp.SuggestionUI.DocumentTitle":
+			return
 		# Try emulating default UIA notification event handler for UIA objects.
 		if notificationProcessing in (
 			UIAHandler.NotificationProcessing_ImportantMostRecent, UIAHandler.NotificationProcessing_MostRecent
