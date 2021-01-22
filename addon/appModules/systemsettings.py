@@ -8,6 +8,8 @@
 # Originally copyright 2016-2021 Joseph Lee, released under GPL
 # Several hacks related to Settings app, some of which are part of NVDA Core.
 
+# Help Mypy and other static checkers for a time by importing uppercase versions of built-in types.
+from typing import Any
 from nvdaBuiltin.appModules.systemsettings import *
 import ui
 import controlTypes
@@ -57,7 +59,7 @@ class AppModule(AppModule):
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache: str = ""
 
-	def announceLiveRegion(self, obj, automationId):
+	def announceLiveRegion(self, obj: Any, automationId: str) -> bool:
 		# Announce update status no matter what it is.
 		# This is more relevant in build 17063 and later where a subtitle has been added.
 		if "MusUpdate_UpdateStatus" in automationId:

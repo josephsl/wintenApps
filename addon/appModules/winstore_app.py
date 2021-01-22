@@ -4,6 +4,8 @@
 
 # Enhancements to support Microsoft Store (formerly Windows Store).
 
+# Help Mypy and other static checkers for a time by importing uppercase versions of built-in types.
+from typing import Any
 import appModuleHandler
 import api
 import ui
@@ -25,7 +27,7 @@ class AppModule(appModuleHandler.AppModule):
 	# just like Settings app, have a cache of download progress text handy.
 	_appInstallProgress: str = ""
 
-	def announceDownloadProgress(self, obj):
+	def announceDownloadProgress(self, obj: Any) -> None:
 		if isinstance(obj, UIA) and obj.UIAAutomationId == "InstallControl":
 			# Install control comes with an anoying name, so look at its children.
 			# Sometimes one of its children disappears, causing attribute error to be thrown.
