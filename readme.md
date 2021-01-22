@@ -82,12 +82,13 @@ Most items are no longer applicable on Version 1903 and later unless Cortana Con
 
 ## Modern keyboard
 
-This includes emoji panel, clipboard history, dictation, hardware input suggestions, and modern input method editors for certain languages. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher.
+This includes emoji panel, clipboard history, dictation, hardware input suggestions, and modern input method editors for certain languages. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA supports updated input experience panel in build 21296 and later.
 
 * When opening clipboard history, NVDA will no longer announce "clipboard" when there are items in the clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update) and later, NVDA will no longer appear to do nothing when emoji panel opens.
 * Added support for modern Chinese, Japanese, and Korean (CJK) IME candidates interface introduced in Version 2004 (build 18965 and later).
 * When an emoji group (including kaomoji and symbols group in Version 1903 or later) is selected, NVDA will no longer move navigator object to certain emojis.
+* Added support for updated input experience panel (combined emoji panel and clipboard history) in build 21296 and later.
 
 ## People
 

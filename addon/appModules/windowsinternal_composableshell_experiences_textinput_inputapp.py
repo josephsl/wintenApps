@@ -16,6 +16,7 @@ from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinpu
 # Until winVersion.getWinVer function shows up.
 import sys
 import eventHandler
+import UIAHandler
 import controlTypes
 from NVDAObjects.behaviors import CandidateItem as CandidateItemBehavior
 
@@ -111,7 +112,6 @@ class AppModule(AppModule):
 	def event_UIA_elementSelected(self, obj, nextHandler):
 		# Ask NVDA to respond to UIA events coming from this overlay.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
-		import UIAHandler
 		if config.conf["UIA"]["selectiveEventRegistration"]:
 			UIAHandler.handler.removeEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 			UIAHandler.handler.addEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
@@ -207,7 +207,6 @@ class AppModule(AppModule):
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
-		import UIAHandler
 		if config.conf["UIA"]["selectiveEventRegistration"] and obj.firstChild is not None:
 			localEventHandlerElements = [obj.firstChild]
 			# For dictation, add elements manually so name change event can be handled.
@@ -369,6 +368,25 @@ class AppModule(AppModule):
 		):
 			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
+		nextHandler()
+
+	def event_UIA_notification(
+			self, obj, nextHandler,
+			notificationProcessing=UIAHandler.NotificationProcessing_CurrentThenMostRecent,
+			displayString=None, activityId=None, **kwargs
+	):
+		# Announce input experience panel items (emoji/clipboard) in build 21296.
+		# Note that input experience panel is not really a focusable window - it is an overlay.
+		# Filter out extraneous notifications such as those raised by root document window
+		# (after all, input experience panel is a web document).
+		if activityId == "Windows.Shell.InputApp.SuggestionUI.DocumentTitle":
+			return
+		# Try emulating default UIA notification event handler for UIA objects.
+		if notificationProcessing in (
+			UIAHandler.NotificationProcessing_ImportantMostRecent, UIAHandler.NotificationProcessing_MostRecent
+		):
+			speech.cancelSpeech()
+		ui.message(displayString)
 		nextHandler()
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
