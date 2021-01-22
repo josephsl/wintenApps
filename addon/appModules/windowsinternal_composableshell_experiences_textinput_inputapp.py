@@ -16,6 +16,7 @@ from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinpu
 # Until winVersion.getWinVer function shows up.
 import sys
 import eventHandler
+import UIAHandler
 import controlTypes
 from NVDAObjects.behaviors import CandidateItem as CandidateItemBehavior
 
@@ -371,9 +372,18 @@ class AppModule(AppModule):
 			self._recentlySelected = None
 		nextHandler()
 
-	def event_UIA_notification(self, obj, nextHandler, displayString=None, **kwargs):
+	def event_UIA_notification(
+			self, obj, nextHandler,
+			notificationProcessing=UIAHandler.NotificationProcessing_CurrentThenMostRecent,
+			displayString=None, **kwargs
+	):
 		# Announce input experience panel items (emoji/clipboard) in build 21296.
 		# Note that input experience panel is not really a focusable window - it is an overlay.
+		# Try emulating default UIA notification event handler for UIA objects.
+		if notificationProcessing in (
+			UIAHandler.NotificationProcessing_ImportantMostRecent, UIAHandler.NotificationProcessing_MostRecent
+		):
+			speech.cancelSpeech()
 		ui.message(displayString)
 		nextHandler()
 
