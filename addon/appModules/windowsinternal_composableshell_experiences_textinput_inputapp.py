@@ -112,7 +112,6 @@ class AppModule(AppModule):
 	def event_UIA_elementSelected(self, obj, nextHandler):
 		# Ask NVDA to respond to UIA events coming from this overlay.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
-		import UIAHandler
 		if config.conf["UIA"]["selectiveEventRegistration"]:
 			UIAHandler.handler.removeEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 			UIAHandler.handler.addEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
@@ -208,7 +207,6 @@ class AppModule(AppModule):
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
-		import UIAHandler
 		if config.conf["UIA"]["selectiveEventRegistration"] and obj.firstChild is not None:
 			localEventHandlerElements = [obj.firstChild]
 			# For dictation, add elements manually so name change event can be handled.
