@@ -55,7 +55,7 @@ class AppModule(appModuleHandler.AppModule):
 		nextHandler()
 
 	# Yet again, live region change fires even if no text has changed.
-	liveText = ""
+	liveText: str = ""
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA):

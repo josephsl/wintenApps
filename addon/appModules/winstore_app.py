@@ -23,7 +23,7 @@ class AppModule(appModuleHandler.AppModule):
 			obj.name = obj.firstChild.firstChild.name
 
 	# just like Settings app, have a cache of download progress text handy.
-	_appInstallProgress = ""
+	_appInstallProgress: str = ""
 
 	def announceDownloadProgress(self, obj):
 		if isinstance(obj, UIA) and obj.UIAAutomationId == "InstallControl":

@@ -12,6 +12,8 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 # The add-on version of this module will extend the one that comes with NVDA Core (2018.3 and later).
 # Parts come from Microsoft Quick Input support pull request (author: Mick Curran from NV Access)
 
+# Help Mypy and other static checkers for a time by importing uppercase versions of built-in types.
+from typing import Tuple
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *
 # Until winVersion.getWinVer function shows up.
 import sys
@@ -105,9 +107,9 @@ class ImeCandidateItem(CandidateItemBehavior, UIA):
 
 class AppModule(AppModule):
 
-	_modernKeyboardInterfaceActive = False
-	_symbolsGroupSelected = False
-	_noCategoryAnnouncement = False
+	_modernKeyboardInterfaceActive: bool = False
+	_symbolsGroupSelected: bool = False
+	_noCategoryAnnouncement: bool = False
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
 		# Ask NVDA to respond to UIA events coming from this overlay.
@@ -199,7 +201,7 @@ class AppModule(AppModule):
 		nextHandler()
 
 	# Emoji panel for build 16299 and 17134.
-	_classicEmojiPanelAutomationIds = (
+	_classicEmojiPanelAutomationIds: Tuple[str, ...] = (
 		"TEMPLATE_PART_ExpressiveInputFullViewFuntionBarItemControl",
 		"TEMPLATE_PART_ExpressiveInputFullViewFuntionBarCloseButton"
 	)

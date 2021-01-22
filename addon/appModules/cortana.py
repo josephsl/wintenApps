@@ -14,7 +14,7 @@ from NVDAObjects.UIA import UIA
 class AppModule(appModuleHandler.AppModule):
 
 	# Sometimes, Cortana's textual response is announced twice.
-	_cortanaResponse = ""
+	_cortanaResponse: str = ""
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, **kwargs):
 		# For some reason Cortana fires this event whenever user types and an answer is received.

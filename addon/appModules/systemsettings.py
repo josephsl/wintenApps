@@ -55,7 +55,7 @@ class AppModule(AppModule):
 				obj.name = obj.previous.name
 
 	# Sometimes, the same text is announced, so consult this cache.
-	_nameChangeCache = ""
+	_nameChangeCache: str = ""
 
 	def announceLiveRegion(self, obj, automationId):
 		# Announce update status no matter what it is.

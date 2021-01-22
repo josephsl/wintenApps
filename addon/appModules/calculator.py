@@ -5,6 +5,8 @@
 
 """App module for Windows 10 Calculator"""
 
+# Help Mypy and other static checkers for a time by importing uppercase versions of built-in types.
+from typing import List, Tuple
 import appModuleHandler
 import api
 from NVDAObjects.UIA import UIA
@@ -14,7 +16,7 @@ import scriptHandler
 
 # NVDA Core issue 9428: do not announce current values until calculations are done
 # in order to avoid repetitions.
-noCalculatorEntryAnnouncements = [
+noCalculatorEntryAnnouncements: List[str] = [
 	# Display field with Calculator set to full screen mode.
 	"CalculatorResults",
 	# In the middle of a calculation expression entry.
@@ -44,9 +46,9 @@ class AppModule(appModuleHandler.AppModule):
 		if not obj.name and obj.parent.UIAAutomationId in ("HistoryListView", "MemoryListView"):
 			obj.name = "".join([item.name for item in obj.children])
 
-	_shouldAnnounceResult = False
+	_shouldAnnounceResult: bool = False
 	# Name change says the same thing multiple times for some items.
-	_resultsCache = ""
+	_resultsCache: str = ""
 
 	def event_nameChange(self, obj, nextHandler):
 		if not isinstance(obj, UIA):
@@ -102,7 +104,7 @@ class AppModule(appModuleHandler.AppModule):
 			nextHandler()
 
 	# A list of native commands to handle calculator result announcement.
-	_calculatorResultGestures = ("kb:enter", "kb:numpadEnter", "kb:escape")
+	_calculatorResultGestures: Tuple[str, ...] = ("kb:enter", "kb:numpadEnter", "kb:escape")
 
 	@scriptHandler.script(gestures=_calculatorResultGestures)
 	def script_calculatorResult(self, gesture):
