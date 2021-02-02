@@ -42,8 +42,11 @@ class AppModule(AppModule):
 					# Unconditionally locate the new feature update title, skipping the link description.
 					# Note that for optional cumulative updates, the actual update title is next to this link,
 					# so one must fetch all of these.
-					nameList.insert(0, obj.previous.name)
-					nameList.insert(0, obj.previous.previous.name)
+					# Ignore all this if there is "View all optional updates" link,
+					# seen when there is one or more driver updates on top of feature/quality updates.
+					if obj.previous.UIAElement.cachedClassName == "TextBlock":
+						nameList.insert(0, obj.previous.name)
+						nameList.insert(0, obj.previous.previous.name)
 				obj.name = ", ".join(nameList)
 			# In some cases, Active Directory style name is the name of the window,
 			# so tell NVDA to use something more meaningful.
