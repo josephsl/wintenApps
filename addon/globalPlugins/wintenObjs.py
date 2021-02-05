@@ -69,8 +69,6 @@ class W10SearchField(SearchField):
 		super(W10SearchField, self).event_suggestionsOpened()
 		# Announce number of items found
 		# (except in Start search box where the suggestions are selected as user types).
-		# Oddly, Edge's address omnibar returns 0 for suggestion count
-		# when there are clearly suggestions (implementation differences).
 		# Because inaccurate count could be announced (when users type, suggestion count changes),
 		# thus announce this if position info reporting is enabled.
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
