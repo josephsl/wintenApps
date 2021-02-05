@@ -28,9 +28,9 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* Ten dodatek wymaga wersji systemu operacyjnego Windows 10 1909 (kompilacja
-  18362) lub nowsza. Dla lepszych wyników, trzeba używać dodatku z ostatnią
-  stabilną wersją systemu operacyjnego windows 10 (20H2/kompilacja 19042).
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (20H2/build 19042).
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
@@ -130,11 +130,11 @@ wyjątkiem są konwersacje Cortana (wersja 2004 and later) .
 
 ## Klawiatura nowoczesna
 
-włączone są w to następujące części interfejsu systemu: panel emoji,
-historia schowka, dyktowanie, podpowiedzi wpisywania sprzętowego, i
-współczesne edytory metod wprowadzania dla niektórych języków. Podczas
-odczytywania znaków emoji, dla lepszego doświadczenai, włącz repozytorium
-CLDR w ustawieniach i ustaw poziom symboli na"niektóre" lub wyższy poziom.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+supports updated input experience panel in build 21296 and later.
 
 * Gdy historia schowka jest wypowiadana, NVDA już nie będzie wymawiała
   "schowek" w niektórych przypadkach, gdy istnieje treść.
@@ -147,6 +147,8 @@ CLDR w ustawieniach i ustaw poziom symboli na"niektóre" lub wyższy poziom.
 * Gdy zaznaczona jest grupa emoji, włączając w to kaomoji i grupę symboli w
   wersji Windowsa 10 1903 lub nowszej) NVDA nie będzie przemieszczał obiekt
   nawigatora do poszczególnych emoji.
+* Added support for updated input experience panel (combined emoji panel and
+  clipboard history) in build 21296 and later.
 
 ## Osoby
 

@@ -31,7 +31,7 @@ qué se incluye):
 
 Notas:
 
-* Este complemento requiere Windows 10 Versión 1909 (compilación 18363) o
+* Este complemento requiere Windows 10 Versión 2004 (compilación 19041) o
   posterior. Para unos mejores resultados, utiliza el complemento con la
   compilación estable más reciente de Windows 10 (20H2 / compilación 19042).
 * Algunas de las características del complemento son o serán parte del
@@ -142,7 +142,9 @@ Esto incluye el panel de emojis, historial del portapapeles, dictado,
 sugerencias de entrada por hardware, y los editores modernos de métodos de
 entrada para ciertos idiomas. Al visualizar emojis, para una mejor
 experiencia, activa la opción del consorcio Unicode desde las opciones de
-voz de NVDA y configura el nivel de símbolos en "alguno" o más alto.
+voz de NVDA y configura el nivel de símbolos en "alguno" o más alto. NVDA
+también soporta el panel actualizado de experiencia de entrada, disponible
+en la compilación 21296 y posteriores.
 
 * Al abrir el historial del portapapeles, NVDA ya no dirá "portapapeles"
   cuando haya elementos en el portapapeles bajo algunas circunstancias.
@@ -155,6 +157,9 @@ voz de NVDA y configura el nivel de símbolos en "alguno" o más alto.
 * Cuando se seleccione un grupo de emojis (incluyendo kaomoji y el grupo de
   símbolos en la versión 1903 o posteriores), NVDA ya no moverá el navegador
   de objetos a ciertos emojis.
+* Se ha añadido soporte para el panel actualizado de experiencia de entrada
+  (una combinación del panel de emojis y el historial del portapapeles) en
+  la compilación 21296 y posteriores.
 
 ## Gente
 

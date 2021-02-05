@@ -27,9 +27,9 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* Za ovaj dodatak potrebna je Windows 10 verzija 1909 (gradnja 18363) ili
-  novija. Za najbolje rezultate, koristi dodatak s najnovijim stabilnim
-  izdanjem sustava Windows 10 (20H2/gradnja 19042).
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (20H2/build 19042).
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Za unose koji niže dolje nisu navedeni, može se pretpostaviti da su te
   funkcije dio NVDA čitača. Više nisu primjenjive jer dodatak ne podržava
@@ -130,10 +130,11 @@ ne koristi Cortana Conversations (verzija 2004 i novije).
 
 ## Moderna tipkovnica
 
-To uključuje ploču s emojijima, povijest međuspremnika, diktatiranje,
-prijedloge unosa hardvera i moderne uređivače načina unosa za određene
-jezike. Kad pregledavaš emojije, aktiviraj postavku Unicode Consortium u
-NVDA postavkama govora i postavi razinu simbola na „neki” ili višu.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+supports updated input experience panel in build 21296 and later.
 
 * Prilikom otvaranja povijesti međuspremnika, pod nekim okolnostima, NVDA
   više neće objavljivati „međuspremnik” kad se u međuspremniku nalaze
@@ -146,6 +147,8 @@ NVDA postavkama govora i postavi razinu simbola na „neki” ili višu.
 * Kad se odabere grupa emojija (uključujući kaomoji i skupinu simbola u
   verziji 1903 ili novijoj), NVDA više neće pomicati navigacijski objekt na
   određene emojije.
+* Added support for updated input experience panel (combined emoji panel and
+  clipboard history) in build 21296 and later.
 
 ## Osobe
 
