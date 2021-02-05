@@ -30,9 +30,9 @@ est inclus) :
 
 Notes:
 
-* Cette extension nécessite Windows 10 Version 1909 (build 18363) ou version
-  ultérieur. Pour de meilleurs résultats, utilisez l'extension avec la
-  dernière version stable de Windows 10 (20H2/build 19042).
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (20H2/build 19042).
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
 * Pour les entrées non répertoriées ci-dessous, vous pouvez supposer que les
@@ -149,12 +149,11 @@ est en cours d'utilisation.
 
 ## Clavier moderne
 
-Cela comprend le panneau des emoji, historique du presse-papiers, dictée,
-suggestions de saisie matérielle et éditeurs de méthode de saisie moderne
-pour certaines langues. Lors de l'affichage des emoji, pour une meilleure
-expérience, activer  le Consortium Unicode dans les Paramètres de NVDA,
-Parole et configurer le Niveau de ponctuations et symboles  sur
-"quelques-uns" ou la plupart.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+supports updated input experience panel in build 21296 and later.
 
 * Lors de l'ouverture de l'historique du presse-papiers, NVDA n'annoncera
   "presse-papiers" quand il y a des éléments dans le presse-papiers dans
@@ -168,6 +167,8 @@ Parole et configurer le Niveau de ponctuations et symboles  sur
 * Lorsqu'un groupe emoji (y compris Kaomoji et un groupe des symboles dans
   la Version 1903 ou ultérieure) est sélectionné, NVDA ne sera plus déplacer
   à l'objet navigateur vers certains emojis.
+* Added support for updated input experience panel (combined emoji panel and
+  clipboard history) in build 21296 and later.
 
 ## Personnes
 

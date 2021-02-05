@@ -30,8 +30,8 @@ se inclúe):
 
 Notas:
 
-* Este complemento require do Windows 10 Versión 1909 (compilación 18363) ou
-  posterior. Para uns mellores resultados, usa o complemento coa íúltima
+* Este complemento require do Windows 10 Versión 2004 (compilación 19041) ou
+  posterior. Para uns mellores resultados, usa o complemento coa última
   versión estable do windows 10 (20H2/compilación 19042).
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
@@ -137,7 +137,8 @@ Isto inclúe o panel de Emoji, o historial do portapapeis, o dictado, as
 suxestións de entrada por hardware, e os editores co método de entrada
 moderna para certas linguas. Ao ver emojis, para unha mellor experiencia,
 habilita a opción Unicode Consortium nos axustes de voz do NvDA e establece
-o nivel de símbolos en "algunha" ou superior.
+o nivel de símbolos en "algunha" ou superior. Ademais, NVDA soporta o panel
+de experiencia de entrada actualizado na compilación 21296 e posterior.
 
 * Ao abrir o historial do portapapeis, NVDA xa non anunciará "portapapeis"
   cando haxa elementos no portapapeis baixo algunhas circunstancias.
@@ -149,6 +150,9 @@ o nivel de símbolos en "algunha" ou superior.
 * Cando se selecciona un grupo de emojis (incluindo kaomoji e grupos de
   símbolos na Versión 1903 ou posterior), NVDA xa non moverá o navegador de
   obxectos a certos emojis.
+* engadido soporte para o panel actualizado de experiencia de entrada (panel
+  de emoji e historial de portapapeis combinados) na compilación 21296 e
+  posterior.
 
 ## Xente
 

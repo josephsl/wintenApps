@@ -28,9 +28,9 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* Diese Erweiterung benötigt Windows 10 Version 1909 (Build 18363) oder
-  neuer. Für beste Ergebnisse verwenden Sie die Erweiterung mit der neuesten
-  Windows 10-Version (20H2 / Build 19042).
+* Diese Erweiterung erfordert Windows 10 Version 2004 (Build 19041) oder
+  neuer. Verwenden Sie für optimale Ergebnisse die Erweiterung mit der
+  neueste Windows 10-Version (20H2 bzw. Build 19042).
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Für Einträge, die im Folgenden nicht aufgeführt sind, können Sie davon
   ausgehen, dass Funktionen Teil von NVDA sind, die nicht mehr benötigt
@@ -138,11 +138,13 @@ denn, Cortana (Version 2004 und neuer) wird verwendet.
 
 ## Moderne virtuelle Tastaturen
 
-Dazu gehören Emoji-Panel, Verlauf der Zwischenablage, Diktat,
-Hardware-Eingabevorschläge und moderne Eingabemethoden-Editoren für
-bestimmte Sprachen. Wenn Sie Emojis betrachten, aktivieren Sie am besten die
-Unicode-Konsortium-Einstellung in den Spracheinstellungen von NVDA und
-setzen Sie die Symbol-Stufe auf "Einige" oder höher.
+Dies umfasst das Emoji-Bedienfeld, den Verlauf der Zwischenablage, die
+Diktierfunktion, Vorschläge für Hardware-Eingaben und moderne Editoren für
+Eingabemethoden für bestimmte Sprachen. Aktivieren Sie beim Anzeigen von
+Emojis die Unicode Consortium-Einstellung in den Spracheinstellungen von
+NVDA und stellen Sie die Symbolstufe auf "Einige" oder höher ein. Außerdem
+unterstützt NVDA das aktualisierte Input Experience Panel in Build 21296 und
+neuer.
 
 * Beim Öffnen des Verlauf der Zwischenablage wird NVDA unter Umständen nicht
   mehr das Wort "Zwischenablage" mitteilen, wenn sich Elemente in der
@@ -156,6 +158,9 @@ setzen Sie die Symbol-Stufe auf "Einige" oder höher.
 * Wenn eine Emoji-Gruppe (einschließlich kaomoji und Symbolgruppe in Version
   1903 oder später) ausgewählt wird, verschiebt NVDA das Navigator-Objekt
   nicht mehr zu bestimmten Emojis.
+* Unterstützung für das aktualisierte Input Experience Panel (kombiniertes
+  Emoji-Bedienfeld und Zwischenablageverlauf) in Build 21296 und neuer
+  hinzugefügt.
 
 ## Kontakte
 

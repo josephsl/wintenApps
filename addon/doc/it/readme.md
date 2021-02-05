@@ -29,9 +29,9 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 
 Note:
 
-* Questo addon richiede Windows 10 Versione 1909 (build 18363) o
-  successive. Per migliori prestazioni, utilizzare il componente con la
-  versione 20H2/build 19042.
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (20H2/build 19042).
 * Alcune caratteristiche di questo componente aggiuntivo sono o diventeranno
   parte di NVDA.
 * Per le voci non elencate di seguito, si può supporre che esse siano
@@ -137,12 +137,11 @@ La maggior parte delle funzionalità non sono più applicabili nelle versioni
 
 ## Tastiera moderna
 
-Questa funzionalità comprende il pannello emoji, lo storico degli appunti,
-la dettatura, i suggerimenti per l'input da tastiere hardware e l'editor di
-metodi di input moderni per alcune lingue. Quando si visualizzano le emoji,
-per un'esperienza migliore, abilitate l'impostazione "INcludi i dati del
-Consorzio Unicode..." dalle impostazioni voce di NVDA e impostate il livello
-punteggiatura/simboli su "qualcuno" o a un livello superiore.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+supports updated input experience panel in build 21296 and later.
 
 * In alcune circostanze, quando si apre lo storico degli appunti, NVDA non
   dirà più "appunti" se vi sono elementi negli appunti.
@@ -155,6 +154,8 @@ punteggiatura/simboli su "qualcuno" o a un livello superiore.
 * Quando viene selezionato un gruppo emoji (comprese le kaomoji e il gruppo
   di simboli nella versione 1903 o successive), NVDA non sposterà più il
   navigatore a oggetti su certe emoji.
+* Added support for updated input experience panel (combined emoji panel and
+  clipboard history) in build 21296 and later.
 
 ## Persone
 
