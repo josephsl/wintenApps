@@ -29,7 +29,7 @@ privire la ceea ce este inclus):
 
 Note:
 
-* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
   best results, use the add-on with latest Windows 10 stable release
   (20H2/build 19042).
 * Unele caracteristici ale suplimentului fac sau vor face parte din
@@ -135,7 +135,8 @@ Conversations (Version 2004 and later) is in use.
 This includes emoji panel, clipboard history, dictation, hardware input
 suggestions, and modern input method editors for certain languages. When
 viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher.
+NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+supports updated input experience panel in build 21296 and later.
 
 * When opening clipboard history, NVDA will no longer announce "clipboard"
   when there are items in the clipboard under some circumstances.
@@ -146,6 +147,8 @@ NVDA's speech settings and set symbol level to "some" or higher.
 * When an emoji group (including kaomoji and symbols group in Version 1903
   or later) is selected, NVDA will no longer move navigator object to
   certain emojis.
+* Added support for updated input experience panel (combined emoji panel and
+  clipboard history) in build 21296 and later.
 
 ## Persoane
 

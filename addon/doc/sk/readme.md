@@ -26,7 +26,7 @@ Zahrnuté sú nasledujúce moduly (podrobný popis nájdete nižšie):
 
 Poznámky:
 
-* This add-on requires Windows 10 Version 1909 (build 18363) or later. For
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
   best results, use the add-on with latest Windows 10 stable release
   (20H2/build 19042).
 * Niektoré doplnkové funkcie sú alebo časom budú súčasťou NVDA.
@@ -121,10 +121,11 @@ Conversations (od verzie 2004).
 
 ## Moderná klávesnica
 
-Zahŕňa podporu pre panel emoji, históriu schránky, diktovanie, návrhy pri
-písaní a podporu pre moderné editory pre rôzne jazyky. Pri používaní panelu
-emoji odporúčame aktivovať v nastaveniach reči použitie databázy unicode
-konzorcia a nastaviť úroveň interpunkcie na väčšina alebo všetka.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+supports updated input experience panel in build 21296 and later.
 
 * Pri otvorení histórie schránky, NVDA viac neoznamuje slovo "schránka" pri
   niektorých položkách.
@@ -134,6 +135,8 @@ konzorcia a nastaviť úroveň interpunkcie na väčšina alebo všetka.
   predstavené od verzie 2004 (zostava 18965)
 * Ak je vybratá skupina emoji(alebo symbolov a kaomoji od verzie 1903), NVDA
   nepresúva navigačný objekt automaticky na prvú položku.
+* Added support for updated input experience panel (combined emoji panel and
+  clipboard history) in build 21296 and later.
 
 ## Ľudia
 
