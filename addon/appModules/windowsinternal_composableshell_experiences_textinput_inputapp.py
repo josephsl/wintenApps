@@ -212,8 +212,12 @@ class AppModule(AppModule):
 		if config.conf["UIA"]["selectiveEventRegistration"] and obj.firstChild is not None:
 			localEventHandlerElements = [obj.firstChild]
 			# For dictation, add elements manually so name change event can be handled.
-			if obj.firstChild.UIAAutomationId == "DictationMicrophoneButton":
-				element = obj.children[1]
+			# Object hierarchy is different in voice typing (build 21296 and later).
+			if obj.firstChild.UIAAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
+				if obj.firstChild.UIAAutomationId == "DictationMicrophoneButton":
+					element = obj.children[1]
+				else:
+					element = obj.firstChild.firstChild.firstChild
 				while element.next is not None:
 					localEventHandlerElements.append(element)
 					element = element.next
