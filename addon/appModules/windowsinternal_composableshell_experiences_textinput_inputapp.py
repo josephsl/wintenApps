@@ -230,25 +230,25 @@ class AppModule(AppModule):
 		# child count is the same for both emoji panel and hardware keyboard candidates list.
 		# Thankfully first child automation ID's are different for each modern input technology.
 		# However this event is raised when the input panel closes.
-		inputPanel = obj.firstChild
-		if inputPanel is None:
+		firstChild = obj.firstChild
+		if firstChild is None:
 			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
 			return
 		# Handle Ime Candidate UI being shown
-		if isinstance(inputPanel, ImeCandidateUI):
-			eventHandler.queueEvent("show", inputPanel)
+		if isinstance(firstChild, ImeCandidateUI):
+			eventHandler.queueEvent("show", firstChild)
 			# Don't forget to add actual candidate item element so name change event can be handled
 			# (mostly for hardware keyboard input suggestions).
 			if config.conf["UIA"]["selectiveEventRegistration"]:
 				UIAHandler.handler.removeEventHandlerGroup(
-					inputPanel.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup
+					firstChild.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup
 				)
 				UIAHandler.handler.addEventHandlerGroup(
-					inputPanel.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup
+					firstChild.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup
 				)
 			return
-		inputPanelAutomationId = inputPanel.UIAAutomationId
+		inputPanelAutomationId = firstChild.UIAAutomationId
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
 		# Emoji panel for build 16299 and 17134.
@@ -263,7 +263,7 @@ class AppModule(AppModule):
 			and config.conf["inputComposition"]["autoReportAllCandidates"]
 		):
 			try:
-				eventHandler.queueEvent("UIA_elementSelected", inputPanel.firstChild.firstChild)
+				eventHandler.queueEvent("UIA_elementSelected", firstChild.firstChild.firstChild)
 			except AttributeError:
 				# Because this is dictation window.
 				pass
@@ -271,7 +271,7 @@ class AppModule(AppModule):
 		elif inputPanelAutomationId == "TEMPLATE_PART_ExpressionGroupedFullView":
 			# On some systems (particularly non-English builds of Version 1903 and later),
 			# there is something else besides grouping controls, so another child control must be used.
-			emojisList = inputPanel.children[-2]
+			emojisList = firstChild.children[-2]
 			if emojisList.UIAAutomationId != "TEMPLATE_PART_Items_GridView":
 				emojisList = emojisList.previous
 			if emojisList.firstChild and emojisList.firstChild.firstChild:
