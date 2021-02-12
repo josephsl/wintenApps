@@ -209,15 +209,16 @@ class AppModule(AppModule):
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
+		firstChild = obj.firstChild
 		if config.conf["UIA"]["selectiveEventRegistration"] and obj.firstChild is not None:
-			localEventHandlerElements = [obj.firstChild]
+			localEventHandlerElements = [firstChild]
 			# For dictation, add elements manually so name change event can be handled.
 			# Object hierarchy is different in voice typing (build 21296 and later).
-			if obj.firstChild.UIAAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
-				if obj.firstChild.UIAAutomationId == "DictationMicrophoneButton":
-					element = obj.children[1]
+			if firstChild.UIAAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
+				if firstChild.UIAAutomationId == "DictationMicrophoneButton":
+					element = firstChild.next
 				else:
-					element = obj.firstChild.firstChild.firstChild
+					element = firstChild.firstChild.firstChild
 				while element.next is not None:
 					localEventHandlerElements.append(element)
 					element = element.next
@@ -230,7 +231,6 @@ class AppModule(AppModule):
 		# child count is the same for both emoji panel and hardware keyboard candidates list.
 		# Thankfully first child automation ID's are different for each modern input technology.
 		# However this event is raised when the input panel closes.
-		firstChild = obj.firstChild
 		if firstChild is None:
 			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
