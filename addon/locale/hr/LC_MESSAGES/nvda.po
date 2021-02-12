@@ -22,11 +22,10 @@ msgstr ""
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
-#, python-brace-format
+#, fuzzy, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
-"{minSupportedVersion} or later. Are you sure you wish to install this add-on "
-"anyway?"
+"{minSupportedVersion} or later."
 msgstr ""
 "Koristiš stariju verziju Windows sustava. Ovaj dodatak zahtijeva verziju "
 "{minSupportedVersion} ili noviju. Svejedno instalirati?"
