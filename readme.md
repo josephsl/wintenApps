@@ -46,9 +46,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## Calculator
 
-* When ENTER or Escape is pressed, NVDA will announce calculation results.
-* For calculations such as unit converter and currency converter, NVDA will announce results as soon as calculations are entered.
-* NVDA will notify if maximum digit count has been reached while entering expressions.
+* NVDA will no longer announce graphing calculator screen message twice.
 
 ## Calendar
 
@@ -87,7 +85,6 @@ This includes emoji panel, clipboard history, dictation, hardware input suggesti
 
 * When opening clipboard history, NVDA will no longer announce "clipboard" when there are items in the clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update) and later, NVDA will no longer appear to do nothing when emoji panel opens.
-* Added support for modern Chinese, Japanese, and Korean (CJK) IME candidates interface introduced in Version 2004 (build 18965 and later).
 * When an emoji group (including kaomoji and symbols group in Version 1903 or later) is selected, NVDA will no longer move navigator object to certain emojis.
 * Added support for updated input experience panel (combined emoji panel and clipboard history) in build 21296 and later.
 
