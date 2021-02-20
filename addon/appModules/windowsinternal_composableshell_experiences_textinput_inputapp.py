@@ -121,6 +121,10 @@ class AppModule(AppModule):
 		# Therefore pass these events straight on.
 		if isinstance(obj, ImeCandidateItem):
 			return nextHandler()
+		# The rest of this event handler isn't applicable in build 20200 and later due to UI redesign.
+		# Early builds had accessibility problems, which was improved in build 21000 series.
+		if sys.getwindowsversion().build >= 21296:
+			return
 		# Wait until modern keyboard is fully displayed on screen.
 		if sys.getwindowsversion().build >= 17134 and not self._modernKeyboardInterfaceActive:
 			return
@@ -248,6 +252,13 @@ class AppModule(AppModule):
 					firstChild.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup
 				)
 			return
+		# Build 20200 and later introduced a completely different user interface for modern keyboard.
+		# Essentially, emoji panel and clipboard are combined and housed inside a web document interface.
+		# As a result, automation ID's are the same and UIA tree is different (hosted inside an EdgeHTML document),
+		# so the rest of this event handler isn't applicable.
+		# At least call nextHandler so other objects can respond to window open event.
+		if sys.getwindowsversion().build >= 21296:
+			return nextHandler()
 		childAutomationId = firstChild.UIAAutomationId
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
