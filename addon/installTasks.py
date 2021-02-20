@@ -19,11 +19,11 @@ def onInstall():
 	if sys.getwindowsversion().build < 19041:
 		gui.messageBox(
 			_(
-				# Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
+				# Translators: Dialog text shown when trying to install the add-on on an unsupported version of Windows
 				# (minSupportedVersion is the minimum version required for this add-on).
 				"You are using an older version of Windows. This add-on requires {minSupportedVersion} or later."
 			).format(minSupportedVersion=requiredVer),
-			# Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
+			# Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
 			_("Old Windows version"), wx.OK | wx.ICON_ERROR
 		)
 		raise RuntimeError("Old Windows version detected")
