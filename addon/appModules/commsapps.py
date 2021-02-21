@@ -8,7 +8,8 @@
 from .hxoutlook import *
 
 
-class AppModule(AppModule):
+# Bulk of the below class is defined in Mail and Calendar (hxoutlook) app module but Mypy doesn't know that.
+class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_NVDAObject_init(self, obj):
 		# It is quite anoying to hear the same text for name and description, so forget the description.

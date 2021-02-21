@@ -105,7 +105,8 @@ class ImeCandidateItem(CandidateItemBehavior, UIA):
 		self.reportFocus()
 
 
-class AppModule(AppModule):
+# Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
+class AppModule(AppModule):  # type: ignore[misc]
 
 	_modernKeyboardInterfaceActive: bool = False
 	_symbolsGroupSelected: bool = False

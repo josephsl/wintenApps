@@ -12,7 +12,9 @@ import nvwave
 # In build 18363 and later, File Explorer gains Cortana search field.
 # For Start menu and File Explorer, "suggestions" should not be brailled.
 # This is more so for File Explorer as a live region will announce suggestion count.
-class StartMenuSearchField(StartMenuSearchField):
+# Note that tools such as Mypy may say there is a cyclic definition
+# but the class is renamed thus to align with NVDA Core.
+class StartMenuSearchField(StartMenuSearchField):  # type: ignore[misc]
 
 	def event_suggestionsOpened(self):
 		# Do not announce "suggestions" in braille.
@@ -20,7 +22,8 @@ class StartMenuSearchField(StartMenuSearchField):
 			nvwave.playWaveFile(r"waves\suggestionsOpened.wav")
 
 
-class AppModule(AppModule):
+# Inherits from built-in Search UI app module class.
+class AppModule(AppModule):  # type: ignore[misc]
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):

@@ -15,7 +15,8 @@ import ui
 import controlTypes
 
 
-class AppModule(AppModule):
+# App module class comes from built-in System Settings app module but Mypy doesn't know that.
+class AppModule(AppModule):  # type: ignore[misc]
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):
