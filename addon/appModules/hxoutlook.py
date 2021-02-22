@@ -42,7 +42,8 @@ class MailItemRow(RowWithFakeNavigation, UIA):
 		ui.message(_("Cannot move between rows"))
 
 
-class AppModule(AppModule):
+# The below app module class inherits from built-in Mail and Calendar app module class, so inform mypy.
+class AppModule(AppModule):  # type: ignore[misc]
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if WordDocument in clsList:
