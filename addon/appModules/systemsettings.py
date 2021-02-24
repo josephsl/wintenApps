@@ -53,9 +53,10 @@ class AppModule(AppModule):  # type: ignore[misc]
 			# so tell NVDA to use something more meaningful.
 			elif obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
 				obj.name = obj.firstChild.name
-			# Developer mode label in Version 2004 and 20H2/2009 is wrong.
+			# Developer mode label in Version 2004 (build 19041) is wrong.
 			# It shows class name rather than the actual label.
-			# 2020 releases are build 19041 and an enablement package (no for 2004, yes for 20H2/2009).
+			# This also affects 20H2 (build 19042) and 21H1 (build 19043)
+			# as they are really enablement packages on top of 2004.
 			# This is resolved in build 19536 and later.
 			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name
