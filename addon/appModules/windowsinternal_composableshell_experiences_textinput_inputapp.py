@@ -110,7 +110,6 @@ class AppModule(AppModule):  # type: ignore[misc]
 
 	_modernKeyboardInterfaceActive: bool = False
 	_symbolsGroupSelected: bool = False
-	_noCategoryAnnouncement: bool = False
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
 		# Ask NVDA to respond to UIA events coming from this overlay.
@@ -132,15 +131,12 @@ class AppModule(AppModule):  # type: ignore[misc]
 		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object
 		# (for presentational purposes) and move on.
 		if obj.parent.UIAAutomationId == "TEMPLATE_PART_Groups_ListView":
-			# Emoji panel in build 20226 has just opened, so ignore element selected event.
-			if not self._noCategoryAnnouncement:
-				api.setNavigatorObject(obj)
-				if obj.positionInfo["indexInGroup"] != 1:
-					# Symbols group flag must be set if and only if emoji panel is active,
-					# as UIA item selected event is fired just before emoji panel opens
-					# when opening the panel after closing it for a while.
-					self._symbolsGroupSelected = True
-			self._noCategoryAnnouncement = False
+			api.setNavigatorObject(obj)
+			if obj.positionInfo["indexInGroup"] != 1:
+				# Symbols group flag must be set if and only if emoji panel is active,
+				# as UIA item selected event is fired just before emoji panel opens
+				# when opening the panel after closing it for a while.
+				self._symbolsGroupSelected = True
 			return
 		automationId = obj.UIAAutomationId
 		# #7273: When this is fired on categories,
@@ -292,10 +288,6 @@ class AppModule(AppModule):  # type: ignore[misc]
 			# For people emoji, the first emoji is actually next to skin tone modifiers list.
 			if emojiItem.UIAAutomationId == "SkinTonePanelModifier_ListView" and emojiItem.next:
 				emojiItem = emojiItem.next
-			# In build 20226, categories fire element selected event whenever emoji panel opens.
-			# Suppress this to avoid navigator object moving to somewhere other than the selected emoji.
-			if eventHandler.isPendingEvents("UIA_elementSelected"):
-				self._noCategoryAnnouncement = True
 			eventHandler.queueEvent("UIA_elementSelected", emojiItem)
 		# Clipboard history.
 		# Move to clipboard list so element selected event can pick it up.
