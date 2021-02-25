@@ -80,7 +80,7 @@ class AppModule(appModuleHandler.AppModule):
 		if activityId == "GraphViewChanged" and self._resultsCache == displayString:
 			return
 		self._resultsCache = displayString
-		# From May 2018 onwards, unit converter uses a different automation iD.
+		# From May 2018 onwards, unit converter uses a different Automation Id.
 		# Changed significantly in July 2018 thanks to UI redesign, and as a result, attribute error is raised.
 		try:
 			shouldAnnounceNotification = (

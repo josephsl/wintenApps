@@ -175,7 +175,7 @@ class AppModule(AppModule):  # type: ignore[misc]
 			and obj.parent.UIAAutomationId != "TEMPLATE_PART_ClipboardItemsList"
 		):
 			# The difference between emoji panel and suggestions list is absence of categories/emoji separation.
-			# Turns out automation ID for the container is different,
+			# Turns out Automation Id for the container is different,
 			# observed in build 17666 when opening clipboard copy history.
 			candidate = obj.parent.previous
 			if candidate is not None:
@@ -230,7 +230,7 @@ class AppModule(AppModule):  # type: ignore[misc]
 		# Fake the announcement by locating 'most recently used" category and calling selected event on this.
 		# However, in build 17666 and later,
 		# child count is the same for both emoji panel and hardware keyboard candidates list.
-		# Thankfully first child automation ID's are different for each modern input technology.
+		# Thankfully first child Automation Id's are different for each modern input technology.
 		# However this event is raised when the input panel closes.
 		if firstChild is None:
 			self._modernKeyboardInterfaceActive = False
@@ -251,7 +251,7 @@ class AppModule(AppModule):  # type: ignore[misc]
 			return
 		# Build 20200 and later introduced a completely different user interface for modern keyboard.
 		# Essentially, emoji panel and clipboard are combined and housed inside a web document interface.
-		# As a result, automation ID's are the same and UIA tree is different (hosted inside an EdgeHTML document),
+		# As a result, Automation Id's are the same and UIA tree is different (hosted inside an EdgeHTML document),
 		# so the rest of this event handler isn't applicable.
 		# At least call nextHandler so other objects can respond to window open event.
 		if sys.getwindowsversion().build >= 21296:
@@ -311,7 +311,7 @@ class AppModule(AppModule):  # type: ignore[misc]
 		elif isinstance(obj, ImeCandidateUI):
 			return nextHandler()
 		automationId = obj.UIAAutomationId
-		# Forget it if there is no Automation ID and class name set.
+		# Forget it if there is no Automation Id and class name set.
 		if (
 			(obj.UIAElement.cachedClassName == "" and automationId == "")
 			# Clipboard entries fire name change event when opened.

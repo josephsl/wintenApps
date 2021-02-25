@@ -12,6 +12,6 @@ class AppModule(appModuleHandler.AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
-			# Apart from a different automation ID, contacts search suggestions are suggestions.
+			# Apart from a different Automation Id, contacts search suggestions are suggestions.
 			if obj.UIAAutomationId == "SuggestedListItem":
 				clsList.insert(0, SuggestionListItem)

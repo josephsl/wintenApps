@@ -33,7 +33,7 @@ class AppModule(AppModule):  # type: ignore[misc]
 					# so consult two previous objects.
 					eventID = obj.UIAAutomationId.split("_")[0]
 					possibleFeatureUpdateText = obj.previous.previous
-					# This automation ID may change in a future Windows 10 release.
+					# This Automation Id may change in a future Windows 10 release.
 					if possibleFeatureUpdateText.UIAAutomationId == "_".join([eventID, "TitleTextBlock"]):
 						nameList.insert(0, obj.previous.name)
 						nameList.insert(0, possibleFeatureUpdateText.name)
