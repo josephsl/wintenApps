@@ -25,7 +25,7 @@ class AppModule(appModuleHandler.AppModule):
 		# Version 1.1910 (beta) changed UIA tree for responses list.
 		# 1.1911 (beta) and version 2 changed the tree yet again.
 		# Thankfully, Cortana's response is part of a grouping object.
-		# As long as conversation list uses the same UIA automation ID,
+		# As long as conversation list uses the same UIA Automation Id,
 		# traversal will work across versions (code credit: Abdel)
 		clientObject = UIAHandler.handler.clientObject
 		condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_AutomationIdPropertyId, "ConversationList")

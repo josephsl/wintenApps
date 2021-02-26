@@ -224,13 +224,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			info.append(f"app module: {obj.appModule}")
 			element = obj.UIAElement
 			# Sometimes due to timing errors, COM error is thrown
-			# when trying to obtain automation ID from the underlying UIA element.
+			# when trying to obtain Automation Id from the underlying UIA element.
 			# To keep an eye on this, use cached Automation Id
 			# rather than fetching UIAAutomationId property directly.
 			try:
-				info.append(f"automation Id: {element.cachedAutomationId}")
+				info.append(f"Automation Id: {element.cachedAutomationId}")
 			except COMError:
-				info.append("automation Id: not found")
+				info.append("Automation Id: not found")
 			info.append(f"class name: {element.cachedClassName}")
 			if event == "controllerFor":
 				info.append(f"controller for count: {len(obj.controllerFor)}")
@@ -327,7 +327,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			) and obj.firstChild is not None and log.isEnabledFor(log.DEBUG)
 		):
 			log.debug(
-				"W10: automation Id for currently opened modern keyboard feature "
+				"W10: Automation Id for currently opened modern keyboard feature "
 				f"is {obj.firstChild.UIAAutomationId}"
 			)
 		nextHandler()
