@@ -104,7 +104,9 @@ class AppModule(appModuleHandler.AppModule):
 			nextHandler()
 
 	# A list of native commands to handle calculator result announcement.
-	_calculatorResultGestures: Tuple[str, ...] = ("kb:enter", "kb:numpadEnter", "kb:escape")
+	_calculatorResultGestures: Tuple[str, ...] = (
+		"kb:enter", "kb:numpadEnter", "kb:escape", "kb:delete", "kb:numpadDelete"
+	)
 
 	@scriptHandler.script(gestures=_calculatorResultGestures)
 	def script_calculatorResult(self, gesture):
