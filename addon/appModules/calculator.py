@@ -10,6 +10,12 @@ from nvdaBuiltin.appModules.calculator import *
 
 class AppModule(AppModule):
 
+	def __init__(self, *args, **kwargs):
+		super(AppModule, self).__init__(*args, **kwargs)
+		# Add additional Calculator result gestures until they are added to NVDA Core.
+		self.bindGesture("kb:delete", "calculatorResult")
+		self.bindGesture("kb:numpadDelete", "calculatorResult")
+
 	def event_NVDAObject_init(self, obj):
 		if not isinstance(obj, UIA):
 			return
