@@ -22,6 +22,12 @@ import sys
 import eventHandler
 import UIAHandler
 import controlTypes
+import config
+import api
+import speech
+import braille
+import ui
+from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import CandidateItem as CandidateItemBehavior
 
 

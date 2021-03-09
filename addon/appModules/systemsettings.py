@@ -14,6 +14,7 @@ from typing import Any
 from nvdaBuiltin.appModules.systemsettings import *  # NOQA: F403
 import ui
 import controlTypes
+from NVDAObjects.UIA import UIA
 
 
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.

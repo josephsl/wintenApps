@@ -8,6 +8,7 @@
 from nvdaBuiltin.appModules.searchui import *  # NOQA: F403
 import config
 import nvwave
+from NVDAObjects.UIA import UIA
 
 
 # In build 18363 and later, File Explorer gains Cortana search field.
