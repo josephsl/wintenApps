@@ -6,7 +6,8 @@
 
 """An appModule for the Windows 10 Mail app"""
 
-from nvdaBuiltin.appModules.hxoutlook import *
+# Borrows heavily from built-in Mail and Calendar app module.
+from nvdaBuiltin.appModules.hxoutlook import *  # NOQA: F403
 import api
 from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import RowWithFakeNavigation
