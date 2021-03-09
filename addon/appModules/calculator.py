@@ -5,7 +5,8 @@
 
 """App module for Windows 10 Calculator"""
 
-from nvdaBuiltin.appModules.calculator import *
+# NVDA Core includes bulk of this app module.
+from nvdaBuiltin.appModules.calculator import *  # NOQA: F403
 
 
 class AppModule(AppModule):
