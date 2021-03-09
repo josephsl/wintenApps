@@ -10,7 +10,8 @@ from .hxoutlook import *  # NOQA: F403
 
 
 # Bulk of the below class is defined in Mail and Calendar (hxoutlook) app module but Mypy doesn't know that.
-class AppModule(AppModule):  # type: ignore[no-redef]
+# It also confuses linters such as Flake8.
+class AppModule(AppModule):  # type: ignore[no-redef]  # NOQA: F405
 
 	def event_NVDAObject_init(self, obj):
 		# It is quite anoying to hear the same text for name and description, so forget the description.

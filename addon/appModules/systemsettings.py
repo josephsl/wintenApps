@@ -17,7 +17,8 @@ import controlTypes
 
 
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
-class AppModule(AppModule):  # type: ignore[misc]
+# Also linters such as Flake8 should ignore this.
+class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):

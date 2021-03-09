@@ -108,7 +108,8 @@ class ImeCandidateItem(CandidateItemBehavior, UIA):
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
-class AppModule(AppModule):  # type: ignore[misc]
+# And Flake8 and other linters, to.
+class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	_modernKeyboardInterfaceActive: bool = False
 	_symbolsGroupSelected: bool = False

@@ -44,7 +44,8 @@ class MailItemRow(RowWithFakeNavigation, UIA):
 
 
 # The below app module class inherits from built-in Mail and Calendar app module class, so inform mypy.
-class AppModule(AppModule):  # type: ignore[misc]
+# Also Flake8 and other linters should ignore this.
+class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if WordDocument in clsList:

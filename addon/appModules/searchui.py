@@ -24,7 +24,7 @@ class StartMenuSearchField(StartMenuSearchField):  # type: ignore[misc]
 
 
 # Inherits from built-in Search UI app module class.
-class AppModule(AppModule):  # type: ignore[misc]
+class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):
