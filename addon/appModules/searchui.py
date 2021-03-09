@@ -15,7 +15,7 @@ import nvwave
 # This is more so for File Explorer as a live region will announce suggestion count.
 # Note that tools such as Mypy may say there is a cyclic definition
 # but the class is renamed thus to align with NVDA Core.
-class StartMenuSearchField(StartMenuSearchField):  # type: ignore[misc]
+class StartMenuSearchField(StartMenuSearchField):  # type: ignore[misc]  # NOQA: F405
 
 	def event_suggestionsOpened(self):
 		# Do not announce "suggestions" in braille.
