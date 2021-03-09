@@ -11,6 +11,7 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 
 # The add-on version of this module will extend the one that comes with NVDA Core (2018.3 and later).
 # Parts come from Microsoft Quick Input support pull request (author: Mick Curran from NV Access)
+# For IME candidate item/UI definition, Flake8 must be told to ignore it.
 
 # Help Mypy and other static checkers for a time by importing uppercase versions of built-in types.
 from typing import Tuple
@@ -45,7 +46,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			UIAHandler.handler.addEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 		# Logic for IME candidate items is handled all within its own object
 		# Therefore pass these events straight on.
-		if isinstance(obj, ImeCandidateItem):
+		if isinstance(obj, ImeCandidateItem):  # NOQA: F405
 			return nextHandler()
 		# The rest of this event handler isn't applicable in build 20200 and later due to UI redesign.
 		# Early builds had accessibility problems, which was improved in build 21000 series.
@@ -163,7 +164,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			self._recentlySelected = None
 			return
 		# Handle Ime Candidate UI being shown
-		if isinstance(firstChild, ImeCandidateUI):
+		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
 			eventHandler.queueEvent("show", firstChild)
 			# Don't forget to add actual candidate item element so name change event can be handled
 			# (mostly for hardware keyboard input suggestions).
@@ -232,9 +233,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	def event_nameChange(self, obj, nextHandler):
 		# Logic for IME candidate items is handled all within its own object
 		# Therefore pass these events straight on.
-		if isinstance(obj, ImeCandidateItem):
+		if isinstance(obj, ImeCandidateItem):  # NOQA: F405
 			return nextHandler()
-		elif isinstance(obj, ImeCandidateUI):
+		elif isinstance(obj, ImeCandidateUI):  # NOQA: F405
 			return nextHandler()
 		automationId = obj.UIAAutomationId
 		# Forget it if there is no Automation Id and class name set.
