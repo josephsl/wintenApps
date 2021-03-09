@@ -10,7 +10,9 @@ from nvdaBuiltin.appModules.calculator import *  # NOQA: F403
 from NVDAObjects.UIA import UIA
 
 
-class AppModule(AppModule):
+# Mypy should be reminded that this app module is powered by built-in Calculator app module.
+# Inform Flake8 as well.
+class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def __init__(self, *args, **kwargs):
 		super(AppModule, self).__init__(*args, **kwargs)
