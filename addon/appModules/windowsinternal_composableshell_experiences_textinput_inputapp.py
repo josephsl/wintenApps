@@ -14,7 +14,9 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 
 # Help Mypy and other static checkers for a time by importing uppercase versions of built-in types.
 from typing import Tuple
-from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *
+# Yes, this app module is powered by built-in modern keyboard app module.
+# Argh, line length exceeded.
+from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *  # NOQA: F403, E501
 # Until winVersion.getWinVer function shows up.
 import sys
 import eventHandler
@@ -23,7 +25,8 @@ import controlTypes
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
-class AppModule(AppModule):  # type: ignore[misc]
+# And Flake8 and other linters, to.
+class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	_modernKeyboardInterfaceActive: bool = False
 	_symbolsGroupSelected: bool = False

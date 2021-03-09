@@ -6,7 +6,8 @@
 
 """An appModule for the Windows 10 Mail app"""
 
-from nvdaBuiltin.appModules.hxoutlook import *
+# Borrows heavily from built-in Mail and Calendar app module.
+from nvdaBuiltin.appModules.hxoutlook import *  # NOQA: F403
 import api
 from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import RowWithFakeNavigation
@@ -43,10 +44,12 @@ class MailItemRow(RowWithFakeNavigation, UIA):
 
 
 # The below app module class inherits from built-in Mail and Calendar app module class, so inform mypy.
-class AppModule(AppModule):  # type: ignore[misc]
+# Also Flake8 and other linters should ignore this.
+class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		if WordDocument in clsList:
-			clsList.insert(0, MailWordDocument)
+		# Word document and Mail document classes come from NVDA Core.
+		if WordDocument in clsList:  # NOQA: F405
+			clsList.insert(0, MailWordDocument)  # NOQA: F405
 		elif isinstance(obj, UIA) and obj.UIAAutomationId == "MailItem":
 			clsList.insert(0, MailItemRow)

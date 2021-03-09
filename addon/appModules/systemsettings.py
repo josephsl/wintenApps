@@ -10,13 +10,16 @@
 
 # Help Mypy and other static checkers for a time by importing uppercase versions of built-in types.
 from typing import Any
-from nvdaBuiltin.appModules.systemsettings import *
+# See the above note as to why the below procedure must be done.
+from nvdaBuiltin.appModules.systemsettings import *  # NOQA: F403
 import ui
 import controlTypes
+from NVDAObjects.UIA import UIA
 
 
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
-class AppModule(AppModule):  # type: ignore[misc]
+# Also linters such as Flake8 should ignore this.
+class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):

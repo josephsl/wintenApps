@@ -1,5 +1,5 @@
 # NVDA add-on template  SCONSTRUCT file
-# Copyright (C) 2012-2020 Rui Batista, Noelia Martinez, Joseph Lee
+# Copyright (C) 2012-2021 Rui Batista, Noelia Martinez, Joseph Lee
 # This file is covered by the GNU General Public License.
 # See the file COPYING.txt for more details.
 
@@ -24,9 +24,17 @@ import buildVars  # NOQA: E402
 
 def md2html(source, dest):
 	import markdown
+	# Use extensions if defined.
+	mdExtensions = buildVars.markdownExtensions
 	lang = os.path.basename(os.path.dirname(source)).replace('_', '-')
+	localeLang = os.path.basename(os.path.dirname(source))
+	try:
+		_ = gettext.translation("nvda", localedir=os.path.join("addon", "locale"), languages=[localeLang]).gettext
+		summary = _(buildVars.addon_info["addon_summary"])
+	except Exception:
+		summary = buildVars.addon_info["addon_summary"]
 	title = "{addonSummary} {addonVersion}".format(
-		addonSummary=buildVars.addon_info["addon_summary"], addonVersion=buildVars.addon_info["addon_version"]
+		addonSummary=summary, addonVersion=buildVars.addon_info["addon_version"]
 	)
 	headerDic = {
 		"[[!meta title=\"": "# ",
@@ -36,7 +44,7 @@ def md2html(source, dest):
 		mdText = f.read()
 		for k, v in headerDic.items():
 			mdText = mdText.replace(k, v, 1)
-		htmlText = markdown.markdown(mdText)
+		htmlText = markdown.markdown(mdText, extensions=mdExtensions)
 	# Optimization: build resulting HTML text in one go instead of writing parts separately.
 	docText = "\n".join([
 		"<!DOCTYPE html>",

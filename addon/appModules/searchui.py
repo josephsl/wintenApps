@@ -4,9 +4,11 @@
 # See the file COPYING for more details.
 # Extended by Joseph Lee (copyright 2016-2021, released under GPL)
 
-from nvdaBuiltin.appModules.searchui import *
+# Powered by built-in SearchUI app module.
+from nvdaBuiltin.appModules.searchui import *  # NOQA: F403
 import config
 import nvwave
+from NVDAObjects.UIA import UIA
 
 
 # In build 18363 and later, File Explorer gains Cortana search field.
@@ -14,7 +16,7 @@ import nvwave
 # This is more so for File Explorer as a live region will announce suggestion count.
 # Note that tools such as Mypy may say there is a cyclic definition
 # but the class is renamed thus to align with NVDA Core.
-class StartMenuSearchField(StartMenuSearchField):  # type: ignore[misc]
+class StartMenuSearchField(StartMenuSearchField):  # type: ignore[misc]  # NOQA: F405
 
 	def event_suggestionsOpened(self):
 		# Do not announce "suggestions" in braille.
@@ -23,7 +25,7 @@ class StartMenuSearchField(StartMenuSearchField):  # type: ignore[misc]
 
 
 # Inherits from built-in Search UI app module class.
-class AppModule(AppModule):  # type: ignore[misc]
+class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):
