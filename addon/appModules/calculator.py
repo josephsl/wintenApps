@@ -7,6 +7,7 @@
 
 # NVDA Core includes bulk of this app module.
 from nvdaBuiltin.appModules.calculator import *  # NOQA: F403
+from NVDAObjects.UIA import UIA
 
 
 class AppModule(AppModule):

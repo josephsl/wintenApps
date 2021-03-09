@@ -22,6 +22,12 @@ import sys
 import eventHandler
 import UIAHandler
 import controlTypes
+import config
+import api
+import speech
+import braille
+import ui
+from NVDAObjects.UIA import UIA
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
