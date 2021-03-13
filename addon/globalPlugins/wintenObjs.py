@@ -170,13 +170,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		# Recognize headings as reported by XAML (build 17134 and later).
 		# But not for apps such as Calculator where doing so results in confusing user experience.
-		elif (
-			obj._getUIACacheablePropertyValue(
-				UIAHandler.UIA_HeadingLevelPropertyId
-			) > UIAHandler.HeadingLevel_None
-		):
-			if obj.appModule.appName != "calculator":
-				clsList.insert(0, XAMLHeading)
+		# Some apps may cause COM to throw timeout error.
+		try:
+			if (
+				obj._getUIACacheablePropertyValue(
+					UIAHandler.UIA_HeadingLevelPropertyId
+				) > UIAHandler.HeadingLevel_None
+			):
+				if obj.appModule.appName != "calculator":
+					clsList.insert(0, XAMLHeading)
+		except COMError:
+			pass
 
 	# Find out if log recording is possible.
 	# This will work if debug logging is on and/or tracing apps and/or events is specified.
