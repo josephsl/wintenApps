@@ -7,6 +7,9 @@
 
 # NVDA Core includes bulk of this app module.
 from nvdaBuiltin.appModules.calculator import *  # NOQA: F403
+import api
+import queueHandler
+import ui
 from NVDAObjects.UIA import UIA
 
 
@@ -35,3 +38,21 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		self._resultsCache = displayString
 		# Call the built-in app module version of UIA notification event handler.
 		super(AppModule, self).event_UIA_notification(obj, nextHandler, activityId=activityId, **kwargs)
+
+	def script_calculatorResult(self, gesture):
+		# To prevent double focus announcement, check where we are.
+		focus = api.getFocusObject()
+		gesture.send()
+		# In redstone, calculator result keeps firing name change,
+		# so tell it to do so if and only if enter has been pressed.
+		self._shouldAnnounceResult = True
+		# Hack: only announce display text when an actual calculator button (usually equals button) is pressed.
+		# In redstone, pressing enter does not move focus to equals button.
+		if isinstance(focus, UIA):
+			if focus.UIAAutomationId in ("CalculatorResults", "CalculatorAlwaysOnTopResults"):
+				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, focus.name)
+			else:
+				resultsScreen = api.getForegroundObject().children[1].lastChild
+				if isinstance(resultsScreen, UIA) and resultsScreen.UIAElement.cachedClassName == "LandmarkTarget":
+					# And no, do not allow focus to move.
+					queueHandler.queueFunction(queueHandler.eventQueue, ui.message, resultsScreen.firstChild.name)
