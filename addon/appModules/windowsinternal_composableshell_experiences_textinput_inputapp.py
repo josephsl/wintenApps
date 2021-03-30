@@ -17,7 +17,7 @@ from typing import Tuple
 # Yes, this app module is powered by built-in modern keyboard app module.
 # Argh, line length exceeded.
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *  # NOQA: F403, E501
-# Until winVersion.getWinVer function shows up.
+import winVersion
 import sys
 import eventHandler
 import UIAHandler
@@ -29,6 +29,24 @@ import braille
 import ui
 from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import CandidateItem as CandidateItemBehavior
+
+
+# Temporary: define Windows 10 feature update constants and a custom getWinVer function.
+# Do not use winVersion.WIN10 attribute names directly until the add-on requires NVDA 2020.1 or later.
+if hasattr(winVersion, "getWinVer"):
+	from winVersion import WIN10_1803, WIN10_1809, WIN10_1903
+else:
+	WIN10_1803 = 17134
+	WIN10_1809 = 17763
+	WIN10_1903 = 18362
+
+
+# Temporary: return either a build number in 2020.4 or earlier or WinVersion object in 2021.1 or later.
+def getWinVer():
+	try:
+		return winVersion.getWinVer()
+	except AttributeError:
+		return sys.getwindowsversion().build
 
 
 class ImeCandidateUI(UIA):
