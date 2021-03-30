@@ -18,14 +18,19 @@ import eventHandler
 import globalVars
 import UIAHandler
 from logHandler import log
-# Until winVersion.getWinVer function shows up.
+import winVersion
 import sys
 import addonHandler
 addonHandler.initTranslation()
 
 # #52: forget everything if the current release is not a supported version of Windows 10.
 # NVDA 2019.2 includes a handy Windows 10 version check function.
-W10AddonSupported: bool = sys.getwindowsversion().build >= 19041
+# Changed in NVDA 2021.1 to include Windows 10 constants.
+if hasattr(winVersion, "getWinVer"):
+	W10AddonSupported: bool = winVersion.getWinVer() >= winVersion.WIN10_2004
+else:
+	W10AddonSupported: bool = sys.getwindowsversion().build >= 19041
+
 
 # Extra UIA constants
 UIA_Drag_DragStartEventId: int = 20026
