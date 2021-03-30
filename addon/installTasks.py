@@ -13,10 +13,13 @@ addonHandler.initTranslation()
 def onInstall():
 	import gui
 	import wx
-	# Until winVersion.getWinVer function shows up.
+	import winVersion
 	import sys
 	requiredVer = "Windows 10 Version 2004"
-	W10AddonSupported = sys.getwindowsversion().build >= 19041
+	if hasattr(winVersion, "getWinVer"):
+		W10AddonSupported = winVersion.getWinVer() >= winVersion.WIN10_2004
+	else:
+		W10AddonSupported = sys.getwindowsversion().build >= 19041
 	if not W10AddonSupported:
 		gui.messageBox(
 			_(
