@@ -16,7 +16,8 @@ def onInstall():
 	# Until winVersion.getWinVer function shows up.
 	import sys
 	requiredVer = "Windows 10 Version 2004"
-	if sys.getwindowsversion().build < 19041:
+	W10AddonSupported = sys.getwindowsversion().build >= 19041
+	if not W10AddonSupported:
 		gui.messageBox(
 			_(
 				# Translators: Dialog text shown when trying to install the add-on on an unsupported version of Windows
