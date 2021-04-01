@@ -16,7 +16,7 @@ The following app modules or support modules for some apps are included (see eac
 * Maps
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud clipboard history/modern input method editors)
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/clipboard history/modern input method editors)
 * People
 * Settings (system settings, Windows+I)
 * Weather.
@@ -56,7 +56,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## Cortana
 
-Most items are no longer applicable on Version 1903 and later unless Cortana Conversations (Version 2004 and later) is in use.
+Most items are applicable when using Cortana Conversations (Version 2004 and later).
 
 * Textual responses from Cortana are announced in most situations.
 * NVDA will be silent when talking to Cortana via voice.
