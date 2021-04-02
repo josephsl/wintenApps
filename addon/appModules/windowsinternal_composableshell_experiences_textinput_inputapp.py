@@ -32,7 +32,7 @@ from NVDAObjects.behaviors import CandidateItem as CandidateItemBehavior
 
 
 # Temporary: define Windows 10 feature update constants and a custom getWinVer function.
-# Do not use winVersion.WIN10 attribute names directly until the add-on requires NVDA 2020.1 or later.
+# Do not use winVersion.WIN10 attribute names directly until the add-on requires NVDA 2021.1 or later.
 if hasattr(winVersion, "getWinVer"):
 	from winVersion import WIN10_1803, WIN10_1809, WIN10_1903
 else:
