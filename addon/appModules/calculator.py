@@ -104,7 +104,6 @@ class AppModule(appModuleHandler.AppModule):
 		# For "DisplayUpdated", announce display strings in braille and move on.
 		if activityId == "DisplayUpdated":
 			braille.handler.message(displayString)
-			return
 		if shouldAnnounceNotification or activityId != "DisplayUpdated":
 			nextHandler()
 
