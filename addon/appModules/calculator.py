@@ -13,6 +13,7 @@ from NVDAObjects.UIA import UIA
 import queueHandler
 import ui
 import scriptHandler
+import braille
 
 # NVDA Core issue 9428: do not announce current values until calculations are done
 # in order to avoid repetitions.
@@ -100,6 +101,10 @@ class AppModule(appModuleHandler.AppModule):
 			)
 		# Announce activity ID's other than "DisplayUpdate" as this is redundant if speak typed characters is on
 		# (activity ID's courtesy of Microsoft Calculator source code hosted on GitHub, MIT license).
+		# For "DisplayUpdated", announce display strings in braille and move on.
+		if activityId == "DisplayUpdated":
+			braille.handler.message(displayString)
+			return
 		if shouldAnnounceNotification or activityId != "DisplayUpdated":
 			nextHandler()
 
