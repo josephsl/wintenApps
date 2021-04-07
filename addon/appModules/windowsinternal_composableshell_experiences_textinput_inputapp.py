@@ -34,8 +34,9 @@ from NVDAObjects.UIA import UIA
 # Temporary: define Windows 10 feature update constants and a custom getWinVer function.
 # Do not use winVersion.WIN10 attribute names directly until the add-on requires NVDA 2021.1 or later.
 if hasattr(winVersion, "getWinVer"):
-	from winVersion import WIN10_1803, WIN10_1809, WIN10_1903
+	from winVersion import WIN10_1709, WIN10_1803, WIN10_1809, WIN10_1903
 else:
+	WIN10_1709 = 16299
 	WIN10_1803 = 17134
 	WIN10_1809 = 17763
 	WIN10_1903 = 18362
@@ -206,9 +207,14 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		childAutomationId = firstChild.UIAAutomationId
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
-		# Emoji panel for build 16299 and 17134.
+		# Emoji panel for 1709 (build 16299) and 1803 (17134).
+		emojiPanelInitial = WIN10_1709
 		# This event is properly raised in build 17134.
-		if getWinVer() < WIN10_1809 and childAutomationId in self._classicEmojiPanelAutomationIds:
+		emojiPanelWindowOpenEvent = WIN10_1803
+		if (
+			emojiPanelInitial <= getWinVer() <= emojiPanelWindowOpenEvent
+			and childAutomationId in self._classicEmojiPanelAutomationIds
+		):
 			eventHandler.queueEvent("UIA_elementSelected", obj.lastChild.firstChild)
 		# Handle hardware keyboard and CJK IME suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
@@ -279,7 +285,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		):
 			return
 		# The word "blank" is kept announced, so suppress this on build 17666 and later.
-		if getWinVer() >= WIN10_1809:
+		if getWinVer() > WIN10_1803:
 			# In build 17672 and later,
 			# return immediately when element selected event on clipboard item was fired just prior to this.
 			# In some cases, parent will be None, as seen when emoji panel is closed in build 18267.
