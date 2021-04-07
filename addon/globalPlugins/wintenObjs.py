@@ -46,9 +46,9 @@ W10Events: Dict[int, str] = {
 	UIA_Drag_DragStartEventId: "UIA_dragStart",
 	UIA_Drag_DragCancelEventId: "UIA_dragCancel",
 	UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
-	UIA_DropTarget_DragEnterEventId: "UIA_dragEnter",
-	UIA_DropTarget_DragLeaveEventId: "UIA_dragLeave",
-	UIA_DropTarget_DroppedEventId: "UIA_dragDropped",
+	UIA_DropTarget_DragEnterEventId: "UIA_dopTargetDragEnter",
+	UIA_DropTarget_DragLeaveEventId: "UIA_dropTargetDragLeave",
+	UIA_DropTarget_DroppedEventId: "UIA_dropTargetDropped",
 }
 
 # Additional dialogs not recognized by NVDA itself.
@@ -382,16 +382,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		eventHandler.queueEvent("gainFocus", obj)
 		nextHandler()
 
-	def event_UIA_dragEnter(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "dragEnter")
+	def event_UIA_dopTargetDragEnter(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "dropTargetDragEnter")
 		nextHandler()
 
-	def event_UIA_dragLeave(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "dragLeave")
+	def event_UIA_dropTargetDragLeave(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "dropTargetDragLeave")
 		nextHandler()
 
-	def event_UIA_dragDropped(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "dragDropped")
+	def event_UIA_dropTargetDropped(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "dropTargetDropped")
 		# Unlike drag complete event, it is something else that raises this event
 		# but NVDA records the correct focused element, so fake a gain focus event.
 		eventHandler.queueEvent("gainFocus", api.getFocusObject())
