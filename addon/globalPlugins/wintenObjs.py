@@ -379,7 +379,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_UIA_dragComplete(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dragComplete")
 		# Announce the new drop location by faking a gain focus event.
-		eventHandler.queueEvent("gainFocus", api.getFocusObject())
+		eventHandler.queueEvent("gainFocus", obj)
 		nextHandler()
 
 	def event_UIA_dragEnter(self, obj, nextHandler):
@@ -392,7 +392,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_dragDropped(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dragDropped")
-		# Announce the new drop location by faking a gain focus event.
+		# Unlike drag complete event, it is something else that raises this event
+		# but NVDA records the correct focused element, so fake a gain focus event.
 		eventHandler.queueEvent("gainFocus", api.getFocusObject())
 		nextHandler()
 
