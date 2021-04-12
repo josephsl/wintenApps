@@ -353,3 +353,10 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			speech.cancelSpeech()
 		ui.message(displayString)
 		nextHandler()
+
+	def event_gainFocus(self, obj, nextHandler):
+		# Input experience panel is focused when trying to close it, so move focus to somewhere else.
+		if obj.parent.childCount == 0:
+			objectWithFocus = obj.objectWithFocus()
+			eventHandler.queueEvent("gainFocus", objectWithFocus)
+		nextHandler()
