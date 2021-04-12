@@ -378,6 +378,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Recognize more candidate item elements in build 20200 and later.
 		if isinstance(obj, UIA):
 			if obj.role == controlTypes.ROLE_LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
-				clsList.insert(0, ImeCandidateItem)
+				clsList.insert(0, ImeCandidateItem)  # NOQA: F405
 				return
 		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
