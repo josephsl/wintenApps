@@ -203,6 +203,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# At least call nextHandler so other objects can respond to window open event.
 		# Temporary: do not use winVersion.getWinVer.
 		if sys.getwindowsversion().build >= 21296:
+			# Move NVDA's focus to input experience panel so arrow keys can be used to navigate among emojis.
+			api.setFocusObject(obj)
 			return nextHandler()
 		childAutomationId = firstChild.UIAAutomationId
 		self._modernKeyboardInterfaceActive = True
