@@ -366,8 +366,17 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	def script_closeInputExperiencePanel(self, gesture):
 		# In build 20200 and later, pressing Escape moves focus to input experience panel.
 		# Therefore tell NVDA to move focus to system focus.
+		# Focus redirect is applicable for emoji panel and clipboard history.
 		gesture.send()
 		# Temporary: do not use winVersion.getWinVer.
 		if sys.getwindowsversion().build >= 21296:
 			objectWithFocus = api.getFocusObject().objectWithFocus()
 			eventHandler.queueEvent("gainFocus", objectWithFocus)
+
+	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+		# Recognize more candidate item elements in build 20200 and later.
+		if isinstance(obj, UIA):
+			if obj.role == controlTypes.ROLE_LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
+				clsList.insert(0, ImeCandidateItem)
+				return
+		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
