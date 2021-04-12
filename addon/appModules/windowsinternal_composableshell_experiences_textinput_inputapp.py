@@ -189,12 +189,16 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			eventHandler.queueEvent("show", firstChild)
 			# Don't forget to add actual candidate item element so name change event can be handled
 			# (mostly for hardware keyboard input suggestions).
+			imeCandidateItem = firstChild.firstChild.firstChild
+			# In build 20200 and later, an extra element is located between candidate UI window and items themselves.
+			if sys.getwindowsversion().build >= 21296:
+				imeCandidateItem = imeCandidateItem.firstChild
 			if config.conf["UIA"]["selectiveEventRegistration"]:
 				UIAHandler.handler.removeEventHandlerGroup(
-					firstChild.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup
+					imeCandidateItem.UIAElement, UIAHandler.handler.localEventHandlerGroup
 				)
 				UIAHandler.handler.addEventHandlerGroup(
-					firstChild.firstChild.firstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup
+					imeCandidateItem.UIAElement, UIAHandler.handler.localEventHandlerGroup
 				)
 			return
 		# Build 20200 and later introduced a completely different user interface for modern keyboard.
