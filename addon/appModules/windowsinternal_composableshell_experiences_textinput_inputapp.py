@@ -25,6 +25,7 @@ import UIAHandler
 import controlTypes
 import config
 import api
+import scriptHandler
 import speech
 import braille
 import ui
@@ -360,3 +361,13 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			objectWithFocus = obj.objectWithFocus()
 			eventHandler.queueEvent("gainFocus", objectWithFocus)
 		nextHandler()
+
+	@scriptHandler.script(gesture="kb:escape")
+	def script_closeInputExperiencePanel(self, gesture):
+		# In build 20200 and later, pressing Escape moves focus to input experience panel.
+		# Therefore tell NVDA to move focus to system focus.
+		gesture.send()
+		# Temporary: do not use winVersion.getWinVer.
+		if sys.getwindowsversion().build >= 21296:
+			objectWithFocus = api.getFocusObject().objectWithFocus()
+			eventHandler.queueEvent("gainFocus", objectWithFocus)
