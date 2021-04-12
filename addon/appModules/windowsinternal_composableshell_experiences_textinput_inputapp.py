@@ -201,16 +201,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 					imeCandidateItem.UIAElement, UIAHandler.handler.localEventHandlerGroup
 				)
 			return
-		# Build 20200 and later introduced a completely different user interface for modern keyboard.
-		# Essentially, emoji panel and clipboard are combined and housed inside a web document interface.
-		# As a result, Automation Id's are the same and UIA tree is different (hosted inside an EdgeHTML document),
-		# so the rest of this event handler isn't applicable.
-		# At least call nextHandler so other objects can respond to window open event.
-		# Temporary: do not use winVersion.getWinVer.
-		if sys.getwindowsversion().build >= 21296:
-			# Move NVDA's focus to input experience panel so arrow keys can be used to navigate among emojis.
-			api.setFocusObject(obj)
-			return nextHandler()
 		childAutomationId = firstChild.UIAAutomationId
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
@@ -261,6 +251,13 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			if clipboardHistoryItem.firstChild is not None:
 				clipboardHistoryItem = clipboardHistoryItem.firstChild
 			eventHandler.queueEvent("UIA_elementSelected", clipboardHistoryItem)
+		# Combined emoji panel and clipboard history in build 20200 and later.
+		# Build 20200 and later introduced a completely different user interface for modern keyboard.
+		# Essentially, emoji panel and clipboard are combined and housed inside a web document interface.
+		# As a result, Automation Id's are the same and UIA tree is different (hosted inside an EdgeHTML document).
+		# Move NVDA's focus to input experience panel so arrow keys can be used to navigate among emojis.
+		elif childAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI":
+			api.setFocusObject(obj)
 		nextHandler()
 
 	def event_nameChange(self, obj, nextHandler):
