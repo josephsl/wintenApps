@@ -28,9 +28,9 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (20H2/build 19042).
+* Tämä lisäosa edellyttää Windows 10:n versiota 2004 (koontiversio 19041)
+  tai uudempaa. Käytä parhaan käyttökokemuksen varmistamiseksi Windows 10:n
+  viimeisintä vakaata versiota (20H2/koontiversio 19042).
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
@@ -130,11 +130,13 @@ Cortana-keskustelut (versio 2004 ja uudemmat) ole käytössä.
 
 ## Moderni näppäimistö
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
-supports updated input experience panel in build 21296 and later.
+Näitä ovat emojipaneeli, leikepöydän historia, sanelu, ehdotukset
+syötettäessä tekstiä fyysisellä näppäimistöllä sekä modernin
+syöttömenetelmän editorit tietyille kielille. Ota emojeita tarkasteltaessa
+parhaan kokemuksen saamiseksi käyttöön Unicode-konsortion datan asetus
+NVDA:n puheasetuksista ja aseta symbolitasoksi "jotain" tai korkeampi. NVDA
+tukee lisäksi päivitettyä syöttökokemuksen paneelia koontiversiossa 21296 ja
+uudemmissa.
 
 * NVDA ei enää sano leikepöydän historiaa avattaessa joissakin tilanteissa
   "leikepöytä", kun leikepöydällä on kohteita.
@@ -147,8 +149,8 @@ supports updated input experience panel in build 21296 and later.
 * Kun emojiryhmä (mukaan lukien kaomoji ja symboliryhmä versiossa 1903 tai
   uudemmissa) valitaan, NVDA ei enää siirrä navigointiobjektia tiettyihin
   emojeihin.
-* Added support for updated input experience panel (combined emoji panel and
-  clipboard history) in build 21296 and later.
+* Lisätty tuki päivitetylle syöttökokemuksen paneelille (yhdistetty
+  emojipaneeli ja leikepöydän historia) koontiversiossa 21296 ja uudemmissa.
 
 ## Ihmiset
 

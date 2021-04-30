@@ -24,9 +24,8 @@
 
 注意:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (20H2/build 19042).
+* 此插件需要 Windows 10 版本 2004（内部版本 19041）或更高版本。为获得最佳体验，请将此插件与最新 Windows 10 20H2
+  稳定版（内部版本 19042）一起使用。
 * 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
 * 对于未在下方列出的条目，您可以假定功能已是 NVDA 的一部分，不再适用，因为插件不支持旧版本的 Windows
   10，或者对应用程序进行了更改，使条目不再适用。
@@ -87,18 +86,15 @@
 
 ## 系统键盘
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
-supports updated input experience panel in build 21296 and later.
+这包括表情符号面板、剪贴板历史记录、听写、硬件输入建议以及某些语言的现代输入法编辑器。查看表情符号时，为了获得最佳体验，请从 NvDA
+的语音设置对话框中选中“处理字符和符号时包含 Unicode 数据（表情符号）”复选框，并将符号级别设置为“少数”或更高。此外，NVDA 在
+Windows 10 内部版本 21296 及更高版本中支持更新的输入体验面板。
 
 * 当前，打开剪贴板历史记录时，在某些情况下，剪贴板中有项目时，NVDA将不再读出“剪贴板”。
 * 在某些运行版本1903（2019年5月更新）的系统上，当表情符号面板打开时，NVDA将不再显示任何内容。
 * 增加了对版本2004内部版本18965和更高版本中引入的现代中文，日文和韩文（CJK）IME的支持。
 * 当选择表情符号组（包括版本 1903之后的绘文字）时，NVDA 将不再将导航器对象移动到某些表情符号。
-* Added support for updated input experience panel (combined emoji panel and
-  clipboard history) in build 21296 and later.
+* 在Windows 10 内部版本 21296 及更高版本中，增加了对更新的输入体验面板（组合的表情符号面板和剪贴板历史记录）的支持。
 
 ## 人脉
 

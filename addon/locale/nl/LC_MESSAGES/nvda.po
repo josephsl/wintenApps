@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.10\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-09-30 22:05+1000\n"
-"PO-Revision-Date: 2020-10-24 09:42+0100\n"
+"PO-Revision-Date: 2021-02-13 10:19+0100\n"
 "Last-Translator: Artin Dekker <vertalen@artindekker.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -19,14 +19,13 @@ msgstr ""
 
 #. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
 "{minSupportedVersion} or later."
 msgstr ""
 "U gebruikt een oudere versie van Windows. Deze add-on vereist "
-"{minSupportedVersion} of later. Weet u zeker dat u deze add-on toch wilt "
-"installeren?"
+"{minSupportedVersion} of later."
 
 #. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
 msgid "Old Windows version"

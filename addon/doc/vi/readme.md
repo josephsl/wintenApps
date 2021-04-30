@@ -3,6 +3,7 @@
 * Tác giả: Joseph Lee, Derek Riemer và những người dùng Windows 10 khác
 * Tải về [phiên bản chính thức][1]
 * Tải về [phiên bản thử nghiệm][2]
+* NVDA compatibility: 2020.3 to 2020.4
 
 Add-on này là một bộ sưu tập các modules cho nhiều ứng dụng của Windows 10,
 đồng thời là các cải tiến và sửa lỗi cho một số điều khiển trong windows 10.
@@ -10,119 +11,99 @@ Add-on này là một bộ sưu tập các modules cho nhiều ứng dụng củ
 Các module cho các ứng dụng sau đây đã được tích hợp (xem phần thông tin chi
 tiết của mỗi ứng dụng để biết thêm chi tiết):
 
-* Alarms and Clock.
-* Calendar
 * Calculator (bản mới).
-* Cortana
-* Feedback Hub
-* Game Bar
+* Calendar
+* Cortana (Conversations)
 * Mail
 * Maps
-* Microsoft Edge
-* Bàn phím hiện đại (bản biểu tượng cảm xúc / gợi ý thiết bị đầu vào / các
-  thành phần bộ nhớ tạm đám mây trong phiên bản 1709 trở lên)
+* Microsoft Solitaire Collection
+* Microsoft Store
+* Modern keyboard (emoji panel/dictation/hardware input suggestions/cloud
+  clipboard history/modern input method editors)
 * People
 * Thiết lập (thiết lập hệ thống, Windows+I)
-* Skype (ứng dụng universal)
-* Store
 * Weather.
 * Các module tổng hợp cho các điều khiển như Start Menu tiles.
 
 Lưu ý:
 
-* Add-on này yêu cầu Windows 10 phiên bản 1709 (build 16299) trở lên và NVDA
-  2018.2 trở lên. Tốt nhất, là dùng add-on với bản Windows 10 mới nhất
-  (build 17134) và bản chính thức mới nhất của NVDA.
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (20H2/build 19042).
 * Vài tính năng của add-on đã hoặc sẽ là một phần tính năng của trình đọc
   màn hình NVDA.
-* Với những thành phần không được liệt kê bên dưới, bạn có thể xem như các
-  tính năng đó đã là một phần của NVDA, không phải áp dụng như add-on không
-  hỗ trợ Windows 10 phiên bản cũ hay các thay đổi của các ứng dụng làm cho
-  chúng không còn tác dụng.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support old Windows 10
+  releases, or changes were made to Windows 10 and apps that makes entries
+  no longer applicable.
 
 Để biết các thay đổi giữa các lần phát hành của add-on, xem phần [changelogs
 for add-on releases][3] .
 
 ## Chung
 
-* Thành phần có trình đơn con đã được nhận dạng chính xác trong nhiều ứng
-  dụng, bao gồm trình đơn ngữ cảnh của Start menu tiles và microsoft Edge
-  (Redstone 5).
-* Một số hộp thoại giờ đã được nhận diện đúng thuộc tính và thông báo chính
-  xác, bao gồm hộp thoại Insider Preview (ứng dụng settings).
-* NVDA có thể thông báo số gợi ý đếm được khi thực hiện tìm kiếm trong một
-  số trường họp. Tùy chọn này được điều khiển bởi "Thông báo thông tin vị
-  trí đối tượng" trong hộp thoại trình bày đối tượng.
-* Trong một số trình đơn ngữ cảnh (như của Edge), thông tin vị trí (như 1
-  trên 2) không còn được đọc nữa.
-* Các sự kiện UIA sau đã được nhận dạng: active text position change,
-  controller for, drag start, drag cancel, drag complete, element selected,
-  live region change, notification, system alert, tooltip opened, window
-  opened. Khi NVDA được thiết lập chạy với bản ghi dò lỗi, những sự kiện này
-  sẽ được theo dõi, và với sự kiện thông báo UIA, một âm báo lỗi sẽ được
-  phát lên nếu các thông báo đến từ một nơi khác với ứng dụng đang chạy.
-* Thêm khả năng kiểm tra cập nhật add-on (tự động hoặc thủ công) thông qua
-  hộp thoại Windows 10 App Essentials được tìm thấy trong trình đơn tùy chọn
-  của NvDA . Mặc định, các phiên bản chính thức và thử nghiệm sẽ được tự
-  động kiểm tra cập nhật hàng ngày hoặc hàng tuần.
-* Trong một số ứng dụng, live region text đã được thông báo, bao gồm các
-  thông báo trong Edge (bao gôm các thành phần được đánh dấu thuộc tính
-  aria-role=alert), các kết quả trong Calculator và các thông tin khác. Lưu
-  ý rằng các kết quả này có thể được đọc hai lần trong vài trường hợp.
-* Thông báo từ các ứng dụng mới phát hành trên Windows 10 phiên bản 1709
-  (build 16299) trở lên đã được đọc.
-* Thông báo trên đối tượng từ Edge và các ứng dụng tương tự đã được nhận
-  dạng và sẽ được thông báo.
-* Khi bật set (build 17627 đến 17692 với vài người), khi mở một bộ tab mới
-  (Control+Windows+T), NVDA sẽ thông báo kết quả tìm kiếm khi tìm các thành
-  phần trong cửa sổ Cortana đã được nhún vào.
-* Nếu bật setts, khi chuyển giữa các bộ tab, NvDA sẽ thông báo tên và vị trí
-  của tab bạn đang chuyển đến.
-* Khi mở, đóng, hay chuyển giữa desktop ảo, NVDA sẽ thông báo desktop ID
-  hiện tại (desktop 2 chẳng hạn).
+* NVDA will no longer play error tones or do nothing if this add-on becomes
+  active from Windows 7, Windows 8.1, and unsupported releases of Windows
+  10.
+* In addition to dialogs recognized by NVDA, more dialogs are now recognized
+  as proper dialogs and reported as such, including Insider Preview dialog
+  (settings app).
+* NVDA can announce suggestion count when performing a search in majority of
+  cases. This option is controlled by "Report object position information"
+  in Object presentation panel found in NVDA settings.
+* When searching in Start menu or File Explorer in Version 1909 (November
+  2019 Update) and later, instances of NVDA announcing search results twice
+  when reviewing results are less noticeable, which also makes braille
+  output more consistent when reviewing items.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drag target
+  enter, drag target leave, drag target dropped. With NVDA's log level set
+  to debug, these events will be tracked, and for UIA notification event, a
+  debug tone will be heard if notifications come from somewhere other than
+  the currently active app. Some events will provide additional information
+  such as element count in controller for event, state of the element for
+  state change event, and item text for item status event.
+* It is possible to tracke only specific events and/or events coming from
+  specific apps.
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce current desktop name (desktop 2, for example).
 * NVDA sẽ không thông báo kích thước văn bản của Start menu khi thay đổi độ
   phân giải hay hướng màn hình.
-
-## Alarms and clock
-
-* Giá trị của bộ chọn thời gian (Time picker) giờ đã được đọc, đặc biệt là
-  khi chuyển con trỏ đến điều khiển để chọn. điều này cũng có tác dụng với
-  điều khiển đã dùng để chọn thời gian khởi động lại máy để hoàn tất việc
-  cài đặt cập nhật.
+* When arranging Start menu tiles or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
+  new position of the dragged item.
+* Announcements such as volume/brightness changes in File Explorer and app
+  update notifications from Microsoft Store can be suppressed by turning off
+  Report Notifications in NVDA's object presentation settings.
 
 ## Calculator
 
-* Khi bấm ENTER hay Escape, NVDA sẽ thông báo kết quả tính toán.
+* When ENTER or Escape is pressed, NVDA will announce calculation results.
 * Với các phép tính như chuyển đổi đơn vị và tiền tệ, NVDA sẽ thông báo ngay
   khi phép tính được nhập.
-* NVDA không còn đọc "tiêu đề cấp" cho kết quả tính toán.
+* NVDA will notify if maximum digit count has been reached while entering
+  expressions.
 
-## calendar
+## Calendar
 
 * NVDA không còn thông báo "có thể nhập" hay "chỉ đọc" trong nội dung thư và
   các trường khác.
 
 ## Cortana
 
-* Phản hồi văn bản từ Cortana được thông báo trong hầu hết tình huống (nếu
-  không, thử mở lại Start menu và tìm kiếm lại).
+Most items are no longer applicable on Version 1903 and later unless Cortana
+Conversations (Version 2004 and later) is in use.
+
+* Textual responses from Cortana are announced in most situations.
 * NVDA sẽ im lặng khi điều khiển Cortana bằng giọng nói.
-* NVDA giờ đây sẽ thông báo nhắc nhở cuộc trò chuyện nếu bạn thiết lập.
-
-## Feedback Hub
-
-* Từ các ứng dụng mới ra, NVDA không còn thông báo hai lần loại phản hồi.
-
-## Game Bar
-
-* NVDA sẽ thông báo sự xuất hiện của cửa sổ Game Bar. vì giới hạn kĩ thuật,
-  NVDA không thể tương tác hoàn toàn với Game Bar trong các phiên bản trước
-  build 17723.
+* In Version 1909 (November 2019 Update) and later, modern search experience
+  in File Explorer powered by Windows Search user interface is supported.
 
 ## Mail
 
-* Khi xem các thành phần trong danh sách tin nhắn, bạn có thể dùng các phím
-  điều hướng trong bảng để xem lại các tiêu để của tin nhắn.
+* When reviewing items in messages list, you can now use table navigation
+  commands to review message headers. Note that navigating between rows
+  (messages) is not supported.
 * Khi viết một tin nhắn, sự xuất hiện các đề xuất được đề cập được biểu thị
   bằng âm thanh.
 
@@ -133,27 +114,36 @@ for add-on releases][3] .
   sẽ thông báo địa chỉ của đường khi bạn dùng mũi tên để điều hướng trong
   bản đồ.
 
-## Microsoft Edge
+## Microsoft Solitaire Collection
 
-* Các thông báo như tải tập tin và nhiều thông báo khác trên web, và khả
-  năng của chế độ xem (nếu dùng phiên bản 1709 trở lên) đã được đọc.
+* NVDA will announce names of cards and card decks.
+
+## Microsoft Store
+
+* Sau khi kiểm tra cập nhật ứng dụng, tên của các ứng dụng trong danh sách
+  chờ cập nhật đã được gán nhãn một cách chính xác.
+* Khi tải các nội dung như ứng dụng và phim, NVDA sẽ thông báo tên sản phẩm
+  và tiến trình tải về.
 
 ## Modern keyboard
 
-* Hỗ trợ bản đầu vào cho Emoji trong phiên bản 1709 (Fall Creators Update)
-  trở lên, bao gồm bản thiết kế lại trong build 17661 trở lên. để có trải
-  nghiệm tốt nhất khi đọc các biểu tượng, hãy sử dụng bộ đọc Windows
-  OneCore.
-* Hỗ trợ cho gợi ý thiết bị đầu vào  trong phiên bản 1803 (April 2018
-  Update) trở lên.
-* Trong post-1709 builds, NVDA sẽ thông báo biểu tượng được chọn đầu tiên
-  khi mở bản biểu tượng cảm xúc.
-* Hỗ trợ thông báo thành phần của bộ nhớ tạm đám mây trong build 17666
-  (Redstone 5) trở lên.
-* Bỏ những cấp độ không cần thiết khi làm việc với modern keyboard và tính
-  năng của nó. Bao gồm không còn thông báo "Microsoft Candidate UI" khi mở
-  gợi ý thiết bị bàn phím đầu vào và giữ im lặng khi một số phím trên bàn
-  phím cảm ứng tăng sự kiện đổi tên trên một số hệ thống.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+supports updated input experience panel in build 21296 and later.
+
+* When opening clipboard history, NVDA will no longer announce "clipboard"
+  when there are items in the clipboard under some circumstances.
+* On some systems running Version 1903 (May 2019 Update) and later, NVDA
+  will no longer appear to do nothing when emoji panel opens.
+* Added support for modern Chinese, Japanese, and Korean (CJK) IME
+  candidates interface introduced in Version 2004 (build 18965 and later).
+* When an emoji group (including kaomoji and symbols group in Version 1903
+  or later) is selected, NVDA will no longer move navigator object to
+  certain emojis.
+* Added support for updated input experience panel (combined emoji panel and
+  clipboard history) in build 21296 and later.
 
 ## People
 
@@ -162,51 +152,29 @@ for add-on releases][3] .
 
 ## Thiết lập
 
-* Vài thông tin như thanh tiến trình của Windows Update đã được thông báo tự
-  động.
+* Certain information such as Windows Update progress is reported
+  automatically, including Storage sense/disk cleanup widget and errors from
+  Windows Update.
 * Giá trị của thanh tiến trình và các thông tin khác không còn bị đọc hai
   lần.
-* Các nhóm thiết lập đã được nhận dạng khi dùng điều hướng đối tượng để di
-  chuyển giữa các điều khiển.
-* Với vài hộp xổ, NVDA không còn lỗi không nhận dạng được nhãn hay các thay
-  đổi giá trị.
-* Không còn nghe tiếng beep của thanh tiến trình âm lượng audio trong phiên
-  bản 1803 trở lên.
-* Nhiều thông tin về trạng thái cập nhật Windows đã được thông báo, đặc biệt
-  là khi việc cập nhật Windows xảy ra lỗi.
-
-## Skype
-
-* Thông báo nhập văn bản chỉ được đọc giống như Skype for Desktop client.
-* Control+NvDA+phím số, dùng để đọc lịch sử chat gần đây và di chuyển đối
-  tượng điều hướng đến nội dung chat trong Skype for Desktop, cũng có luôn
-  trong Skype UWP.
-* Bạn có thể bấm Alt+phím số để xác định và chuyển đến các cuộc đàm thoại
-  (1), danh bạ (2), bots (3) và trường nhập liệu chat nếu có (4). Lưu ý rằng
-  các lệnh này sẽ hoạt động tốt nếu được cài bản Skype cập nhật tháng
-  3/2017.
-* NVDA không còn đọc "Skype Message" khi xem lại tin nhắn trong nhiều trường
-  hợp.
-* Từ danh sách lịch sử tin nhắn, bấm NVDA+D tại một tin nhắn sẽ cho phép
-  NVDA đọc các thông tin chi tiết của tin nhắn như loại kênh, ngày giờ gửi,
-  vân vân.
-
-## Store
-
-* Sau khi kiểm tra cập nhật ứng dụng, tên của các ứng dụng trong danh sách
-  chờ cập nhật đã được gán nhãn một cách chính xác.
-* Khi tải các nội dung như ứng dụng và phim, NVDA sẽ thông báo tên sản phẩm
-  và tiến trình tải về.
+* Windows Update reminder dialog is recognized as a proper dialog.
+* Odd control labels seen in certain Windows 10 installations has been
+  corrected.
+* In more recent revisions of Version 1803 and later, due to changes to
+  Windows Update procedure for feature updates, a "download and install now"
+  link has been added. NVDA will now announce the title for the new update
+  if present.
 
 ## Weather
 
 * Các thẻ như "dự báo" và "bản đồ" đã được nhận dạng chính xác (vá lỗi bởi
   Derek Riemer).
-* khi đọc một dự báo, dùng mũi tên trái phải để chuyển giữa các thành
-  phần. Dùng mũi tên lên xuống để đọc từng thành phần. Ví dụ, Bấm mũi tên
-  phải có thể thông báo "Thứ hai: 26 độ, có mây, ..." Bấm mũi tên xuống sẽ
-  đọc "Thứ hai" và bấm lần nữa sẽ đọc thành phần tiếp theo (nhiệt độ chẳng
-  hạn). Tính năng này hiện hoạt động với dự báo theo ngày và theo giờ.
+* When reading a forecast, use the left and right arrows to move between
+  items. Use the up and down arrows to read the individual items. For
+  example, pressing the right arrow might report "Monday: 79 degrees, partly
+  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
+  again will read the next item (Like the temperature). This currently works
+  for daily and hourly forecasts.
 
 [[!tag dev stable]]
 
