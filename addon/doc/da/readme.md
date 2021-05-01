@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2020.3 to 2020.4
+* NVDA-kompatibilitet: 2020.3 til 2020.4
 
 Denne tilføjelse er en samling af app-moduler til forskellige Windows 10
 apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.
@@ -27,9 +27,9 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 Bemærkninger:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (20H2/build 19042).
+* Denne tilføjelse kræver Windows 10 version 2004 (build 19041) eller
+  nyere. For at få de bedste resultater skal du bruge tilføjelsen med den
+  nyeste stabile version af Windows 10 (20H2/build 19042).
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
 * For emner, der ikke er anført nedenfor, kan du antage, at funktionerne er
@@ -54,26 +54,28 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   Update) og senere, vil NVDA ikke længere annoncere søgeresultater to
   gange, når du gennemser resultater, hvilket også gør punktoutput mere
   ensartet, når du gennemgår elementer.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drag target
-  enter, drag target leave, drag target dropped. With NVDA's log level set
-  to debug, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard if notifications come from somewhere other than
-  the currently active app. Some events will provide additional information
-  such as element count in controller for event, state of the element for
-  state change event, and item text for item status event.
+* Udover de UIA-håndteringsmuligheder, som NVDA leverer, vil følgende
+  UIA-hændelser blive opfanget af skærmlæseren: drag start, drag cancel,
+  drag complete, drag target enter, drag target leave, drag target
+  dropped. Hvis NVDAs logningsniveau er indstillet til "Fejlfinding", vil
+  disse hændelser blive sporet, og en tone vil blive hørt, hvis en
+  UIA-hændelse stammer fra andet end den aktuelt fokuserede app. Nogle
+  hændelser angiver yderligere oplysninger, såsom antal af elementer i
+  kontrolhændelsen, status for elementet ved en hændelse, hvor status
+  ændres, samt emnetekst for hændelser, hvor der anmodes om emnestatus.
 * Det er muligt at overvåge specifikke hændelser og/eller hændelser, der
   kommer fra specifikke apps.
 * Når åbning, lukning, eller Skift mellem virtuelle skrivebord forekommer,
   vil NVDA annoncere nuværende desktop ID (f.eks. "Skrivebord 2").
-* NVDA will no longer announce Start menu size text when changing screen
-  resolutions or orientation.
+* NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
+  du ændrer skærmopløsning eller orientering.
 * Når du arrangerer fliser på start-menuen eller hurtige handlinger i
   Handlingscenter med Alt+Shift+piletasterne, vil NVDA oplyse informationer
   om emner, når disse flyttes.
-* Announcements such as volume/brightness changes in File Explorer and app
-  update notifications from Microsoft Store can be suppressed by turning off
-  Report Notifications in NVDA's object presentation settings.
+* Meddelelser, som ændringer i lydstyrke/lysstyrke i Stifinder og
+  appopdateringsmeddelelser fra Microsoft Store, kan deaktiveres ved at
+  deaktivere rapportering af meddelelserne i NVDAs
+  objektpræsentationsindstillinger.
 
 ## Lommeregner
 
@@ -129,11 +131,12 @@ medmindre Cortana Samtaler (version 2004 og nyere) er i brug.
 
 ## Moderne tastatur
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
-supports updated input experience panel in build 21296 and later.
+Dette inkluderer emoji-panelet, historik for udklipsholderen, diktering,
+forslag i forhold til hardwareinput og moderne Input Methodf Editor for
+visse sprog. Når du ser emojier, skal du for at få den bedste oplevelse
+aktivere Unicode Consortium-indstillingen fra NvDAs taleindstillinger og
+indstille tegnsætningsniveauet til "nogle" eller højere. NVDA understøtter
+også det opdaterede inputoplevelsespanel i build 21296 og nyere.
 
 * NVDA vil ikke længere annoncere "Udklipsholder", når der er elementer i
   udklipsholderen under nogle omstændigheder.
@@ -142,11 +145,11 @@ supports updated input experience panel in build 21296 and later.
 * Tilføjet understøttelse af moderne kinesisk, japansk og koreansk (CJK)
   IME-kandidater interface introduceret i version 2004 (build 18965 og
   senere).
-* When an emoji group (including kaomoji and symbols group in Version 1903
-  or later) is selected, NVDA will no longer move navigator object to
-  certain emojis.
-* Added support for updated input experience panel (combined emoji panel and
-  clipboard history) in build 21296 and later.
+* Når en emoji-gruppe (inklusive kaomoji og symbolgrupper i version 1903
+  eller nyere) er valgt, vil NVDA ikke længere flytte navigatorobjektet til
+  bestemte emoji'er.
+* Understøtter nu opdateret input-oplevelsespanel (kombineret emoji-panel og
+  udklipsholderhistorik) i build 21296 og nyere.
 
 ## Personer
 
