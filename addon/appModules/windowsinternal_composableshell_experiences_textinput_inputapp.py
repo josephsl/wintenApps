@@ -215,7 +215,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			eventHandler.queueEvent("UIA_elementSelected", obj.lastChild.firstChild)
 		# Handle hardware keyboard and CJK IME suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
-		# In fact, in 20H1, this is the CJK IME candidates window.
+		# In fact, in Version 2004 and later, this is the CJK IME candidates window.
 		elif (
 			childAutomationId in ("CandidateWindowControl", "IME_Candidate_Window", "IME_Prediction_Window")
 			and config.conf["inputComposition"]["autoReportAllCandidates"]
