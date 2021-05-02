@@ -23,7 +23,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):
-			# From Redstone 1 onwards, update history shows status rather than the title.
+			# From Version 1607 onwards, update history shows status rather than the title.
 			# In build 16232, the title is shown but not the status,
 			# so include this for sake of backward compatibility.
 			# In later revisions of build 17134 and later, feature update download link is provided

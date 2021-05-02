@@ -47,11 +47,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# To prevent double focus announcement, check where we are.
 		focus = api.getFocusObject()
 		gesture.send()
-		# In redstone, calculator result keeps firing name change,
+		# In newer app releases, calculator result keeps firing name change event,
 		# so tell it to do so if and only if enter has been pressed.
 		self._shouldAnnounceResult = True
 		# Hack: only announce display text when an actual calculator button (usually equals button) is pressed.
-		# In redstone, pressing enter does not move focus to equals button.
+		# In newer app releases, pressing enter does not move focus to equals button.
 		if isinstance(focus, UIA):
 			if focus.UIAAutomationId in ("CalculatorResults", "CalculatorAlwaysOnTopResults"):
 				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, focus.name)
