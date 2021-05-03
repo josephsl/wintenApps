@@ -27,10 +27,12 @@ addonHandler.initTranslation()
 # #52: forget everything if the current release is not a supported version of Windows 10.
 # NVDA 2019.2 includes a handy Windows 10 version check function.
 # Changed in NVDA 2021.1 to include Windows 10 constants.
+# To avoid redefinition error from mypy, do not tag the following flag with a boolean type hint.
+# The flag will be tagged again once NVDA 2021.1 requirement is in effect.
 if hasattr(winVersion, "getWinVer"):
-	W10AddonSupported: bool = winVersion.getWinVer() >= winVersion.WIN10_2004
+	W10AddonSupported = winVersion.getWinVer() >= winVersion.WIN10_2004
 else:
-	W10AddonSupported: bool = sys.getwindowsversion().build >= 19041
+	W10AddonSupported = sys.getwindowsversion().build >= 19041
 
 
 # Extra UIA constants
