@@ -208,9 +208,10 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		emojiPanelInitial = WIN10_1709
 		# This event is properly raised in build 17134.
 		emojiPanelWindowOpenEvent = WIN10_1803
+		# Comparing build numbers is more optimal, but for consistency reasons, compare Automation Id's.
 		if (
-			emojiPanelInitial <= getWinVer() <= emojiPanelWindowOpenEvent
-			and childAutomationId in self._classicEmojiPanelAutomationIds
+			childAutomationId in self._classicEmojiPanelAutomationIds
+			and emojiPanelInitial <= getWinVer() <= emojiPanelWindowOpenEvent
 		):
 			eventHandler.queueEvent("UIA_elementSelected", obj.lastChild.firstChild)
 		# Handle hardware keyboard and CJK IME suggestions.
