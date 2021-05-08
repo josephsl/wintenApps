@@ -15,11 +15,11 @@ def onInstall():
 	import wx
 	import winVersion
 	import sys
-	requiredVer = "Windows 10 Version 2004"
+	requiredVer = "Windows 10 Version 20H2"
 	if hasattr(winVersion, "getWinVer"):
-		W10AddonSupported = winVersion.getWinVer() >= winVersion.WIN10_2004
+		W10AddonSupported = winVersion.getWinVer() >= winVersion.WIN10_20H2
 	else:
-		W10AddonSupported = sys.getwindowsversion().build >= 19041
+		W10AddonSupported = sys.getwindowsversion().build >= 19042
 	if not W10AddonSupported:
 		gui.messageBox(
 			_(
