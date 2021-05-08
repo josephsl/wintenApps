@@ -37,7 +37,7 @@ addon_info = {
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
 	"addon_lastTestedNVDAVersion": "2020.4",
 	# Minimum Windows version supported
-	"addon_minimumWindowsVersion": "10.0.19041",
+	"addon_minimumWindowsVersion": "10.0.19042",
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!
