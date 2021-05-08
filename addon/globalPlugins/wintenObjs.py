@@ -30,9 +30,9 @@ addonHandler.initTranslation()
 # To avoid redefinition error from mypy, do not tag the following flag with a boolean type hint.
 # The flag will be tagged again once NVDA 2021.1 requirement is in effect.
 if hasattr(winVersion, "getWinVer"):
-	W10AddonSupported = winVersion.getWinVer() >= winVersion.WIN10_2004
+	W10AddonSupported = winVersion.getWinVer() >= winVersion.WIN10_20H2
 else:
-	W10AddonSupported = sys.getwindowsversion().build >= 19041
+	W10AddonSupported = sys.getwindowsversion().build >= 19042
 
 
 # Extra UIA constants
