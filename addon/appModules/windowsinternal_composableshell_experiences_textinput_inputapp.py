@@ -159,7 +159,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 		firstChild = obj.firstChild
-		if config.conf["UIA"]["selectiveEventRegistration"] and obj.firstChild is not None:
+		if config.conf["UIA"]["selectiveEventRegistration"] and firstChild is not None:
 			localEventHandlerElements = [firstChild]
 			# For dictation, add elements manually so name change event can be handled.
 			# Object hierarchy is different in voice typing (build 21296 and later).
