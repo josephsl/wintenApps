@@ -159,6 +159,16 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 		firstChild = obj.firstChild
+		# Make sure to announce most recently used emoji first in post-1709 builds.
+		# Fake the announcement by locating 'most recently used" category and calling selected event on this.
+		# However, in build 17666 and later,
+		# child count is the same for both emoji panel and hardware keyboard candidates list.
+		# Thankfully first child Automation Id's are different for each modern input technology.
+		# However this event is raised when the input panel closes.
+		if firstChild is None:
+			self._modernKeyboardInterfaceActive = False
+			self._recentlySelected = None
+			return
 		if config.conf["UIA"]["selectiveEventRegistration"] and firstChild is not None:
 			localEventHandlerElements = [firstChild]
 			# For dictation, add elements manually so name change event can be handled.
@@ -174,16 +184,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			for element in localEventHandlerElements:
 				UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 				UIAHandler.handler.addEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
-		# Make sure to announce most recently used emoji first in post-1709 builds.
-		# Fake the announcement by locating 'most recently used" category and calling selected event on this.
-		# However, in build 17666 and later,
-		# child count is the same for both emoji panel and hardware keyboard candidates list.
-		# Thankfully first child Automation Id's are different for each modern input technology.
-		# However this event is raised when the input panel closes.
-		if firstChild is None:
-			self._modernKeyboardInterfaceActive = False
-			self._recentlySelected = None
-			return
 		# Handle Ime Candidate UI being shown
 		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
 			eventHandler.queueEvent("show", firstChild)
