@@ -13,8 +13,6 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 # Parts come from Microsoft Quick Input support pull request (author: Mick Curran from NV Access)
 # For IME candidate item/UI definition, Flake8 must be told to ignore it.
 
-# Help Mypy and other static checkers for a time by importing uppercase versions of built-in types.
-from typing import Tuple
 # Yes, this app module is powered by built-in modern keyboard app module.
 # Argh, line length exceeded.
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *  # NOQA: F403, E501
