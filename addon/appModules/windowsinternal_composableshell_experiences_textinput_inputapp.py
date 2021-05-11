@@ -283,23 +283,23 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		):
 			return
 		# The word "blank" is kept announced, so suppress this on build 17666 and later.
-		if getWinVer() > WIN10_1803:
-			# In build 17672 and later,
-			# return immediately when element selected event on clipboard item was fired just prior to this.
-			# In some cases, parent will be None, as seen when emoji panel is closed in build 18267.
-			try:
-				if (
-					automationId == "TEMPLATE_PART_ClipboardItemIndex"
-					or obj.parent.UIAAutomationId == "TEMPLATE_PART_ClipboardItemsList"
-				):
-					return
-			except AttributeError:
-				return
+		# Version 1809 or later.
+		# In build 17672 and later,
+		# return immediately when element selected event on clipboard item was fired just prior to this.
+		# In some cases, parent will be None, as seen when emoji panel is closed in build 18267.
+		try:
 			if (
-				not self._modernKeyboardInterfaceActive
-				or automationId != "TEMPLATE_PART_ExpressionGroupedFullView"
+				automationId == "TEMPLATE_PART_ClipboardItemIndex"
+				or obj.parent.UIAAutomationId == "TEMPLATE_PART_ClipboardItemsList"
 			):
-				speech.cancelSpeech()
+				return
+		except AttributeError:
+			return
+		if (
+			not self._modernKeyboardInterfaceActive
+			or automationId != "TEMPLATE_PART_ExpressionGroupedFullView"
+		):
+			speech.cancelSpeech()
 		# Don't forget to add "Microsoft Candidate UI" as something that should be suppressed.
 		if automationId not in (
 			"TEMPLATE_PART_ExpressionFullViewItemsGrid",
