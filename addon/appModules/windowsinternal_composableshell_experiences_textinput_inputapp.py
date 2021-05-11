@@ -204,20 +204,13 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		childAutomationId = firstChild.UIAAutomationId
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
-		# Emoji panel for 1709 (build 16299) and 1803 (17134).
-		emojiPanelInitial = WIN10_1709
-		# This event is properly raised in build 17134.
-		emojiPanelWindowOpenEvent = WIN10_1803
-		# Comparing build numbers is more optimal, but for consistency reasons, compare Automation Id's.
-		if (
-			childAutomationId in self._classicEmojiPanelAutomationIds
-			and emojiPanelInitial <= getWinVer() <= emojiPanelWindowOpenEvent
-		):
-			eventHandler.queueEvent("UIA_elementSelected", obj.lastChild.firstChild)
+		# Emoji panel for 1709 (build 16299) and 1803 (17134) is not supported.
+		# Emoji panel window open event is properly raised in Version 1803.
+		# See older add-on releases for details.
 		# Handle hardware keyboard and CJK IME suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
 		# In fact, in Version 2004 and later, this is the CJK IME candidates window.
-		elif (
+		if (
 			childAutomationId in ("CandidateWindowControl", "IME_Candidate_Window", "IME_Prediction_Window")
 			and config.conf["inputComposition"]["autoReportAllCandidates"]
 		):
