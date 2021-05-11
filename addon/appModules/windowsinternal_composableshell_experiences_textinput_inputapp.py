@@ -140,12 +140,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			skipTranslation.translate("No emoji")
 		nextHandler()
 
-	# Emoji panel for build 16299 and 17134.
-	_classicEmojiPanelAutomationIds: Tuple[str, ...] = (
-		"TEMPLATE_PART_ExpressiveInputFullViewFuntionBarItemControl",
-		"TEMPLATE_PART_ExpressiveInputFullViewFuntionBarCloseButton"
-	)
-
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
