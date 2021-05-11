@@ -325,8 +325,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# But attempting to retrieve obj location fails when emoji panel closes without selecting anything,
 		# especially in Version 1903 and later.
 		# Because of exceptions, check location first.
+		# Version 1903 or later.
 		if (
-			(obj.location is None and obj.parent.firstChild is None and getWinVer() >= WIN10_1903)
+			(obj.location is None and obj.parent.firstChild is None)
 			or controlTypes.STATE_OFFSCREEN in obj.states
 		):
 			self._modernKeyboardInterfaceActive = False
