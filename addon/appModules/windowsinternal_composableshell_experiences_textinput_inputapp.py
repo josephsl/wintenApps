@@ -103,7 +103,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# Specifically to suppress skin tone modifiers from being announced after an emoji group was selected.
 			or self._symbolsGroupSelected
 			# In Version 1709 and 1803, both categories and items raise element selected event when category changes.
-			or obj.name == self._recentlySelected and getWinVer() < WIN10_1809
+			# No longer applicable but kept just in case this is seen in newer releases.
+			or obj.name == self._recentlySelected
 		):
 			return
 		speech.cancelSpeech()
