@@ -74,7 +74,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		if sys.getwindowsversion().build >= 21296:
 			return
 		# Wait until modern keyboard is fully displayed on screen.
-		if getWinVer() >= WIN10_1803 and not self._modernKeyboardInterfaceActive:
+		# Version 1803 or later
+		if not self._modernKeyboardInterfaceActive:
 			return
 		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object
 		# (for presentational purposes) and move on.
