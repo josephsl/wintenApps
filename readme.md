@@ -9,7 +9,7 @@ This add-on is a collection of app modules for various Windows 10 apps, as well 
 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
-* Calculator (modern).
+* Calculator (modern)
 * Calendar
 * Cortana (Conversations)
 * Mail
@@ -19,8 +19,8 @@ The following app modules or support modules for some apps are included (see eac
 * Modern keyboard (emoji panel/dictation/hardware input suggestions/clipboard history/modern input method editors)
 * People
 * Settings (system settings, Windows+I)
-* Weather.
-* Miscellaneous modules for controls such as Start Menu tiles.
+* Weather
+* Miscellaneous modules for controls such as Start Menu tiles
 
 Notes:
 
