@@ -270,12 +270,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				import wx
 				# Even with desktop name change handler added,
 				# older Windows 10 releases won't support this properly.
-				if (
-					not hasattr(eventHandler, "handlePossibleDesktopNameChange")
-					or (
-						hasattr(eventHandler, "handlePossibleDesktopNameChange") and sys.getwindowsversion().build < 18363
-					)
-				):
+				# Properly supported in Version 1909.
+				if not hasattr(eventHandler, "handlePossibleDesktopNameChange"):
 					wx.CallLater(500, ui.message, obj.name)
 		self.uiaDebugLogging(obj, "nameChange")
 		nextHandler()
