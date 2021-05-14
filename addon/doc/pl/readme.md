@@ -11,20 +11,19 @@ również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
 Dołączone są następujące moduły wspierające aplikacje (sprawdź rozdział
 każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
-* Kalkulator (nowoczesny).
+* Calculator (modern)
 * Kalendarz
 * Cortana (konwersacje)
 * Poczta
 * Mapy
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Klawiatura współczesna (panel emoji/dyktowanie/podpowiedzie wpisywania na
-  klawiaturze sprzętowej/historia schowka w chmurze/współczesne edytory
-  wprowadzania wschodnioazjatyckiego)
+* Modern keyboard (emoji panel/dictation/hardware input
+  suggestions/clipboard history/modern input method editors)
 * Osoby
 * Ustawienia (Ustawienia systemowe, Windows+I)
-* Pogoda.
-* Różne moduły dla takich kontrolek, jak kafelki meni start.
+* Pogoda
+* Miscellaneous modules for controls such as Start Menu tiles
 
 Uwagi:
 
@@ -36,6 +35,9 @@ Uwagi:
   wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
   wspiera starszych wydań systemu, lub aplikacje są zmienione w taki sposób,
   że te wpisy są unieważnione.
+* Some apps support compact overlay mode (always on top in Calculator, for
+  example), and this mode will not work properly with portable version of
+  NVDA.
 
 Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 [listę zmian dla wersji dodatku][3].
@@ -56,13 +58,13 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   zauważalne, co idzie za tym, że to co jest wyświetlane na monitorze
   brajlowskim jest bardziej spójne przy przeglądaniu elementy.
 * In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drag target
-  enter, drag target leave, drag target dropped. With NVDA's log level set
-  to debug, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard if notifications come from somewhere other than
-  the currently active app. Some events will provide additional information
-  such as element count in controller for event, state of the element for
-  state change event, and item text for item status event.
+  events are recognized: drag start, drag cancel, drag complete, drop target
+  drag enter, drop target drag leave, drop target dropped. With NVDA's log
+  level set to debug, these events will be tracked, and for UIA notification
+  event, a debug tone will be heard if notifications come from somewhere
+  other than the currently active app. Some events will provide additional
+  information such as element count in controller for event, state of the
+  element for state change event, and item text for item status event.
 * Teraz jest możliwe śledzenie zdarzeń z określonych oraz specyficznych
   aplikacji.
 * Podczas otwierania, zamykając lub przełączając się między wirtualnymi
@@ -86,6 +88,7 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   automatycznie będzie wymawiało wyniki obliczenia
 * NVDA powiadomi, jeżeli ilość liczb osiągnie maksymalną wartość przy
   wpisywaniu wyrażenia.
+* NVDA will no longer announce graphing calculator screen message twice.
 
 ## Kalendarz
 
@@ -94,8 +97,8 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 
 ## Cortana
 
-Większość elementów nie jest już zastosowalna dla wersji 1903 i nowszych
-wyjątkiem są konwersacje Cortana (wersja 2004 and later) .
+Most items are applicable when using Cortana Conversations (Version 2004 and
+later).
 
 * Odpowiedzi tekstowe kortany są wymawiane w większości sytuacjach.
 * NVDA będzie przyciszony, gdy mówisz do Cortany.

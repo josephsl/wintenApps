@@ -13,7 +13,7 @@ Inclúense os seguintes app modules ou o apoio para módulos para algunhas
 aplicacións (consulta cada sección para a aplicación para detalles sobre que
 se inclúe):
 
-* Calculadora (modern).
+* Calculadora (modern)
 * Calendario
 * Cortana (Conversations)
 * Correo
@@ -21,12 +21,11 @@ se inclúe):
 * Microsoft Solitaire Collection
 * Tenda Microsoft
 * Teclado Moderno (panel de emoji/ditado/suxestións de entrada por
-  hardware/historial do portapapeis na nube/editores co método de entrada
-  moderna)
+  hardware/historial do portapapeis/editores co método de entrada moderna)
 * Xente
 * Opcións (opcións do sistema, Windows+I)
-* O Tempo.
-* Módulos misceláneos para controis como mosaicos do Menú Inicio.
+* O Tempo
+* Módulos misceláneos para controis como mosaicos do Menú Inicio
 
 Notas:
 
@@ -39,6 +38,9 @@ Notas:
   características forman parte do NVDA, que xa non aplican debido a que o
   complemento non soporta versións vellas de Windows, ou que se fixeron
   cambios nas apps que fan que as entradas xa non sexan aplicables.
+* Algunhas apps soportan o modo de capa compacto (sempre enriba na
+  Calculadora, por exemplo), e este modo non funcionará correctamente con
+  versións portables de NVDA.
 
 Para unha lista de trocos feitos entre cada versión do complemento, visita o
 documento [rexistros de trocos para publicacións de complementos][3].
@@ -58,15 +60,15 @@ documento [rexistros de trocos para publicacións de complementos][3].
   (November 2019 Update) e posteriores, NVDA xa non anunciará os resultados
   de busca dúas veces ao revisalos, o que tamén fai a saída braille máis
   consistente ao revisar elementos.
-* Recoñécense os seguintes eventos UIA ademais dos proporcionados por NVDA:
-  drag start, drag cancel, drag complete, drag target enter, drag target
-  leave, drag target dropped. Co NVDA configurado para executarse co
-  rexistro de depuración habilitado, estes eventos seguiranse, e no caso do
-  evento UIA notification oirase un ton se as notificacións veñen de
-  calquera lugar que non sexa a app actualmente activa. Algúns eventos
-  proporcionarán información adicional como o contador de elementos en
-  eventos controlled for, estado do elemento en eventos state change, e o
-  texto do elemento para eventos item status.
+* Ademais dos manexadores de eventos UIA proporcionados por NVDA,
+  recoñécense os seguintes eventos UIA: drag start, drag cancel, drag
+  complete, drop target drag enter, drop target drag leave, drop target
+  dropped. Co nivel de rexistro de NVDA configurado como depuración, estes
+  eventos seguiranse, e no caso de eventos UIA notification oirase un ton de
+  depuración se as notificacións veñen de calquera lugar que non sexa a app
+  actualmente activa. Algúns eventos proporcionarán información adicional
+  como o contador de elementos en eventos controlled for, estado do elemento
+  en eventos state change, e o texto do elemento para eventos item status.
 * É posible o seguimento só de eventos específicos e/ou de eventos provintes
   de aplicacións específicas.
 * Cando se abran, pechen ou se conmute entre escritorios virtuales, NVDA
@@ -88,6 +90,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
   anunciará os resultados tan pronto coma os cálculos se introduzan.
 * NVDA notificará cando se chegue ao límite de díxitos introducindo
   expresións.
+* NVDA xa non anunciará dúas veces a mensaxe en pantalla da calculadora
+  gráfica.
 
 ## Calendario
 
@@ -96,8 +100,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Cortana
 
-A maioría dos elementos xa non aplican na versión 1903 e posteriores a menos
-que esteas a usar Cortana Conversations (versión 2004 e posteriores).
+A maioría dos elementos aplican se se usa Cortana Conversations (versión
+2004 e posteriores).
 
 * As respostas textuais de Cortana anúncianse na maioría de situacións.
 * NVDA silenciarase cando lle fales ao Cortana a través da voz.
@@ -150,7 +154,7 @@ de experiencia de entrada actualizado na compilación 21296 e posterior.
 * Cando se selecciona un grupo de emojis (incluindo kaomoji e grupos de
   símbolos na Versión 1903 ou posterior), NVDA xa non moverá o navegador de
   obxectos a certos emojis.
-* engadido soporte para o panel actualizado de experiencia de entrada (panel
+* Engadido soporte para o panel actualizado de experiencia de entrada (panel
   de emoji e historial de portapapeis combinados) na compilación 21296 e
   posterior.
 

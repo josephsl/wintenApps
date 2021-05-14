@@ -13,20 +13,19 @@ Les app modules suivants ou la prise en charge des modules pour certaines
 apps sont inclus (voir chaque section app pour plus de détails sur ce qui
 est inclus) :
 
-* Calculatrice (modern).
+* Calculator (modern)
 * Calendrier
 * Cortana (Conversations)
 * Courrier
 * Cartes
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Clavier moderne (panneau des emoji/dictée/suggestions de saisie
-  matérielle/historique du presse-papiers du cloud/éditeurs de méthode de
-  saisie moderne)
+* Modern keyboard (emoji panel/dictation/hardware input
+  suggestions/clipboard history/modern input method editors)
 * Personnes
 * Paramètres (paramètres système, Windows+I)
-* Météo.
-* Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
+* Météo
+* Miscellaneous modules for controls such as Start Menu tiles
 
 Notes:
 
@@ -40,6 +39,9 @@ Notes:
   car l'extension ne prend pas en charge les anciennes versions de Windows
   10 ou des modifications ont été apportées à Windows 10 et aux applications
   pour que les entrées ne soient plus applicables.
+* Some apps support compact overlay mode (always on top in Calculator, for
+  example), and this mode will not work properly with portable version of
+  NVDA.
 
 Pour obtenir la liste des changements effectuées entre chaque version de
 l'extension, reportez-vous au document [changelogs pour les versions de
@@ -61,20 +63,14 @@ l'extension][3].
   de NVDA annonce des résultats de recherche deux fois lorsque les résultats
   en révision sont moins visibles, ce qui rend également la sortie braille
   plus cohérente lors de la révision des éléments.
-* En plus des événements UIA supportés par NVDA, les événements UIA suivants
-  sont reconnus : contrôleur pour, début de déplacement, annulation de
-  déplacement, déplacement complet, déplacement de la sible entrer,
-  déplacement de la sible en direct, déplacement de la sible glissée,
-  élément sélectionné, état de l'élément, changement de région en direct,
-  notification, alerte système, suggestion ouverte, fenêtre ouverte. Avec
-  NVDA configuré pour être exécuté avec le journal activé en mode débogage
-  ces événements seront suivis et pour l'événement de notification UIA, une
-  tonalité de débogage sera entendue si les notifications proviennent d'un
-  endroit autre que l'application actuellement active. Certains événements
-  fourniront des informations complémentaires telles que le nombre
-  d'éléments dans le contrôleur pour l'événement, le changement de l'état de
-  l'élément de l'événement et la position du texte de l'élément pour l'état
-  de l'événement de l'élément.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drop target
+  drag enter, drop target drag leave, drop target dropped. With NVDA's log
+  level set to debug, these events will be tracked, and for UIA notification
+  event, a debug tone will be heard if notifications come from somewhere
+  other than the currently active app. Some events will provide additional
+  information such as element count in controller for event, state of the
+  element for state change event, and item text for item status event.
 * Il est possible de faire le suivi seul des événements spécifiques et / ou
   des événements à venir à partir des applications spécifiques.
 * Lors de l'ouverture, de la fermeture ou du basculement entre les bureaux
@@ -99,6 +95,7 @@ l'extension][3].
   devises, NVDA annoncera les résultats dès que les calculs seront entrés.
 * NVDA notifiera lorsque le nombre maximum de chiffres aura été atteint lors
   de la saisie d'expressions.
+* NVDA will no longer announce graphing calculator screen message twice.
 
 ## Calendrier
 
@@ -107,9 +104,8 @@ l'extension][3].
 
 ## Cortana
 
-La plupart des éléments ne sont plus applicables à la Version 1903 et
-ultérieure à moins que Cortana Conversations (Version 2004 et ultérieure)
-est en cours d'utilisation.
+Most items are applicable when using Cortana Conversations (Version 2004 and
+later).
 
 * Les réponses textuelles de Cortana sont annoncées dans la plupart des
   situations.

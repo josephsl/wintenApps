@@ -12,19 +12,19 @@ Elementen.
 Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
 Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
-* Rechner (modern)
+* Taschenrechner (modern)
 * Kalender
 * Cortana (Unterhaltungen)
 * Mail
 * Karten
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Moderne Tastatur (Emoji-Panel- / Diktier- / Hardware-Eingabevorschläge /
-  Cloud-Zwischenablage-Elemente in Version 1709 und höher)
+* Moderne Tastatur (Emoji-Panel / Diktat / Hardware-Eingabevorschläge /
+  Zwischenablage-Verlauf / Editoren für moderne Eingabemethoden)
 * Kontakte
 * Einstellungen (System-Einstellungen, Windows+I)
-* Wetter.
-* Diverse Steuermodule wie beispielsweise die Startmenübereiche.
+* Wetter
+* Verschiedene Module für Bedienelemente wie Startmenü-Kacheln
 
 Hinweise:
 
@@ -37,6 +37,9 @@ Hinweise:
   werden, da die Erweiterung alte Windows 10-Versionen nicht unterstützt
   oder Änderungen an Windows 10 und Anwendungen vorgenommen wurden, die
   Einträge nicht mehr notwendig sind.
+* Einige Apps unterstützen den kompakten Overlay-Modus (z. B. im
+  Taschenrechner immer ganz oben). Dieser Modus funktioniert mit der
+  portablen NVDA-Version nicht ordnungsgemäß.
 
 Eine Liste aller Änderungen in den einzelnen Versionen der Erweiterung
 finden Sie im Dokument [Änderungsprotokolle  der veröffentlichten
@@ -59,14 +62,14 @@ Versionen][3].
   der Überprüfung von Ergebnissen zweimal angekündigt werden, weniger
   auffällig, was auch die Brailleausgabe bei der Überprüfung von Elementen
   einheitlicher macht.
-* Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignis-Handlern werden
+* Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignishandlern werden
   die folgenden UIA-Ereignisse erkannt: Start starten, Abbruch ziehen,
-  Abschluss ziehen, Ziel eingeben, Ziel verlassen ziehen, Ziel fallen
-  lassen. Wenn die Protokollstufe von NVDA auf Debug eingestellt ist, werden
-  diese Ereignisse nachverfolgt, und bei UIA-Benachrichtigungsereignissen
+  Abschluss ziehen, Ziel ziehen ziehen lassen, Ziel ziehen lassen, Ziel
+  fallen lassen. Wenn die Protokollstufe von NVDA auf Debug eingestellt ist,
+  werden diese Ereignisse verfolgt, und bei UIA-Benachrichtigungsereignissen
   ertönt ein Debug-Ton, wenn Benachrichtigungen von einem anderen Ort als
   der derzeit aktiven App stammen. Einige Ereignisse enthalten zusätzliche
-  Informationen, z. B. die Anzahl der Elemente im Controller für das
+  Informationen, z. B. die Anzahl der Elemente in der Steuerung für das
   Ereignis, den Status des Elements für das Statusänderungsereignis und den
   Elementtext für das Ereignis des Elementstatus.
 * Es ist möglich, nur bestimmte Ereignisse bzw. Ereignisse aus bestimmten
@@ -91,6 +94,8 @@ Versionen][3].
   das Ergebnis Ergebnisse bekannt, sobald die Berechnung eingegeben wird.
 * NVDA meldet, wenn die maximale Anzahl der Ziffern während der Eingabe von
   Ausdrücken erreicht wurde.
+* NVDA liest die Bildschirmmeldung des Grafikrechners nicht mehr doppelt
+  vor.
 
 ## Kalender
 
@@ -99,8 +104,8 @@ Versionen][3].
 
 ## Cortana
 
-Die meisten Punkte sind ab der Version 1903 nicht mehr verwendbar, es sei
-denn, Cortana (Version 2004 und neuer) wird verwendet.
+Die meisten Elemente gelten für die Verwendung von Cortana-Unterhaltungen
+(Version 2004 und neuer).
 
 * Rückmeldungstexte von Cortana werden in den meisten Situationen
   angekündigt.

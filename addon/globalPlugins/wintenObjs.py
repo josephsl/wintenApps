@@ -6,7 +6,6 @@
 # Help Mypy and other static checkers for a time by importing uppercase versions of built-in types.
 from typing import Optional, Any, Dict, List, Set
 from comtypes import COMError
-import gettext
 import globalPluginHandler
 import controlTypes
 import ui
@@ -82,9 +81,13 @@ class W10SearchField(SearchField):
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
 			# Item count must be the last one spoken.
 			suggestionsCount: int = self.controllerFor[0].childCount
-			# Translators: part of the suggestions count message (for example: 2 suggestions).
-			suggestionsMessage = gettext.ngettext("suggestion", "suggestions", suggestionsCount)
-			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, f"{suggestionsCount} {suggestionsMessage}")
+			suggestionsMessage = (
+				# Translators: part of the suggestions count message (for example: 2 suggestions).
+				_("1 suggestion")
+				# Translators: part of the suggestions count message (for example: 2 suggestions).
+				if suggestionsCount == 1 else _("{} suggestions").format(suggestionsCount)
+			)
+			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
 
 
 # Various XAML headings (Settings app, for example) introduced in Version 1803.

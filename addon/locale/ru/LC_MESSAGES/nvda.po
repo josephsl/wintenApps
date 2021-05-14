@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2020-10-26 10:55+0100\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"

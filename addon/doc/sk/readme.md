@@ -10,19 +10,19 @@ vylepšenia a opravy určitých ovládacích prvkov systému Windows 10.
 
 Zahrnuté sú nasledujúce moduly (podrobný popis nájdete nižšie):
 
-* Kalkulačka (moderná)
+* Calculator (modern)
 * Kalendár
 * Cortana (konverzácia)
 * Pošta
 * Mapy
 * Microsoft Solitaire Collection
 * Obchod microsoft
-* Podpora pre vstupy (zahŕňa panel emoji, diktovanie, návrhy pri písaní,
-  schránka a moderné spôsoby písania)
+* Modern keyboard (emoji panel/dictation/hardware input
+  suggestions/clipboard history/modern input method editors)
 * Ľudia
 * Nastavenia (systémové nastavenia, Win+I)
-* Počasie.
-* Rôzne moduly pre ovládacie prvky, napríklad dlaždice ponuky Štart.
+* Počasie
+* Miscellaneous modules for controls such as Start Menu tiles
 
 Poznámky:
 
@@ -34,6 +34,9 @@ Poznámky:
   funkcie sú súčasťou NVDA, alebo už nie sú relevantné, pretože doplnok
   nepodporuje staré vydania systému Windows 10 alebo boli vykonané zmeny v
   systéme Windows 10 a úpravy viac nie sú potrebné.
+* Some apps support compact overlay mode (always on top in Calculator, for
+  example), and this mode will not work properly with portable version of
+  NVDA.
 
 Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 (anglicky)][3].
@@ -52,13 +55,13 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
   štart alebo prieskumníkovi (Windows od verzie 1909 (November 2019)). Toto
   tiež zlepšuje oznamovanie výsledkov na braillovskom riadku.
 * In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drag target
-  enter, drag target leave, drag target dropped. With NVDA's log level set
-  to debug, these events will be tracked, and for UIA notification event, a
-  debug tone will be heard if notifications come from somewhere other than
-  the currently active app. Some events will provide additional information
-  such as element count in controller for event, state of the element for
-  state change event, and item text for item status event.
+  events are recognized: drag start, drag cancel, drag complete, drop target
+  drag enter, drop target drag leave, drop target dropped. With NVDA's log
+  level set to debug, these events will be tracked, and for UIA notification
+  event, a debug tone will be heard if notifications come from somewhere
+  other than the currently active app. Some events will provide additional
+  information such as element count in controller for event, state of the
+  element for state change event, and item text for item status event.
 * Je možné sledovať iba konkrétne udalosti a udalosti pochádzajúce z
   konkrétnych aplikácií.
 * Pri otváraní, zatváraní alebo prepínaní medzi virtuálnymi pracovnými
@@ -79,6 +82,7 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 * Pri výpočtoch, ako sú prevodník jednotiek a prevodník mien, NVDA oznámi
   výsledky hneď po zadaní príkladu.
 * NVDA upozorní, ak pri zadávaní výrazu dosiahnete maximálny počet číslic.
+* NVDA will no longer announce graphing calculator screen message twice.
 
 ## Kalendár
 
@@ -87,8 +91,8 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 
 ## Cortana
 
-Väčšina položiek už nie je aktuálnych od verzie 1903 ak nepoužívate Cortana
-Conversations (od verzie 2004).
+Most items are applicable when using Cortana Conversations (Version 2004 and
+later).
 
 * Väčšinou sú oznamované textové odpovede z Cortany.
 * NVDA nevyrušuje, keď komunikujete s Cortanou.
