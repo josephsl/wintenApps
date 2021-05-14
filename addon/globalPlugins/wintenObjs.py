@@ -83,8 +83,8 @@ class W10SearchField(SearchField):
 			# Item count must be the last one spoken.
 			suggestionsCount: int = self.controllerFor[0].childCount
 			# Translators: part of the suggestions count message (for example: 2 suggestions).
-			suggestionsMessage = gettext.ngettext("suggestion", "suggestions", suggestionsCount)
-			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, f"{suggestionsCount} {suggestionsMessage}")
+			suggestionsMessage = gettext.ngettext("1 suggestion", "{} suggestions".format(suggestionsCount), suggestionsCount)
+			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
 
 
 # Various XAML headings (Settings app, for example) introduced in Version 1803.
