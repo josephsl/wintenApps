@@ -9,18 +9,19 @@
 
 包括以下应用程序的支持模块（有关所包含内容的详细信息，请参阅每个应用程序部分）：
 
-* 计算器（现代）。
+* Calculator (modern)
 * 日历
 * Cortana（会话）
 * 邮件
 * 地图
 * Microsoft Solitaire Collection（微软纸牌游戏）
 * Microsoft Store
-* 现代键盘（包括表情符号面板、听写、硬件输入建议、云剪贴板历史记录以及现代输入法编辑器）
+* Modern keyboard (emoji panel/dictation/hardware input
+  suggestions/clipboard history/modern input method editors)
 * 人脉
 * 设置（系统设置，Windows + I）
-* 天气。
-* 开始菜单中瓷贴控件等其他模块。
+* 天气
+* Miscellaneous modules for controls such as Start Menu tiles
 
 注意:
 
@@ -29,6 +30,9 @@
 * 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
 * 对于未在下方列出的条目，您可以假定功能已是 NVDA 的一部分，不再适用，因为插件不支持旧版本的 Windows
   10，或者对应用程序进行了更改，使条目不再适用。
+* Some apps support compact overlay mode (always on top in Calculator, for
+  example), and this mode will not work properly with portable version of
+  NVDA.
 
 有关每个附加发行版之间所做的更改的列表，请参阅[更新日志的附加发布] [3]文档。
 
@@ -39,7 +43,14 @@
 * 在大多数情况下，NVDA 可以在执行搜索时朗读建议计数。此选项由 NVDA “对象提示”设置对话框中的“读出对象的位置信息”复选框控制。
 * 在 1909 版（2019年11月更新）及更高版本 Windows 10 中的‘开始’菜单或文件资源管理器中进行搜索时，现在 NVDA
   在浏览结果时两次宣布搜索结果的实例不太明显，这也使盲文输出在浏览项目时更加一致。
-* 除了NVDA提供的UIA事件处理程序外，还可以识别以下UIA事件：拖动开始、拖动取消、拖动完成、拖动目标进入、拖动目标离开、拖动目标丢弃。在NVDA的日志级别设置为调试时，这些事件将被跟踪，对于UIA通知事件，如果通知来自当前活动应用以外的其他地方，将听到调试音。有些事件会提供额外的信息，比如事件的控制器中的元素数量，状态变化事件的元素状态，以及项目状态事件的项目文本。
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drop target
+  drag enter, drop target drag leave, drop target dropped. With NVDA's log
+  level set to debug, these events will be tracked, and for UIA notification
+  event, a debug tone will be heard if notifications come from somewhere
+  other than the currently active app. Some events will provide additional
+  information such as element count in controller for event, state of the
+  element for state change event, and item text for item status event.
 * 可以只跟踪特定事件或来自特定应用程序的事件。
 * 打开、关闭或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
 * 当改变屏幕分辨率或方向时，NVDA将不再读出开始菜单的大小文本。
@@ -52,6 +63,7 @@
 * 当按回车或 Esc 键时，NVDA 将读出计算结果。
 * 对于转换计算，如单位换算、汇率转换，NVDA 将在输入计算后立即读出结果。
 * 如果在输入表达式时达到最大统计值，NVDA现在将读出。
+* NVDA will no longer announce graphing calculator screen message twice.
 
 ## 日历
 
@@ -59,7 +71,8 @@
 
 ## Cortana
 
-大多数项目不再适用于 Windows 10 1903版和2004版。经典Cortana指的是较旧的Cortana界面，它现在是“开始”菜单的一部分。
+Most items are applicable when using Cortana Conversations (Version 2004 and
+later).
 
 * 现在，在大多数情况下，都会发布来自Cortana的文字回复。
 * 通过语音与Cortana交互时，NVDA将保持沉默。

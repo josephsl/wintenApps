@@ -11,19 +11,19 @@ apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.
 Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
 hver appsektion for detaljer om, hvad der er inkluderet):
 
-* Lommeregner (moderne).
+* Calculator (modern)
 * Kalender
 * Cortana (samtaler)
 * Mail
 * Kort
 * Microsoft Kabale Samling
 * Microsoft store
-* Moderne tastatur (Emoji-panel, diktering, forslag til hardwareinput,
-  historik for udklipsholder i skyen og Input Method Editor)
+* Modern keyboard (emoji panel/dictation/hardware input
+  suggestions/clipboard history/modern input method editors)
 * Personer
 * Indstillinger (systemindstillinger, Windows+I)
 * Vejr
-* Diverse moduler til betjeninger som Start Menu-felter.
+* Miscellaneous modules for controls such as Start Menu tiles
 
 Bemærkninger:
 
@@ -36,6 +36,9 @@ Bemærkninger:
   en del af NVDA, ikke længere gældende som tilføjelsesprogrammet ikke
   understøtter ældre Windows 10 udgivelser, eller ændringer til apps, der
   gør disse emner ugyldige.
+* Some apps support compact overlay mode (always on top in Calculator, for
+  example), and this mode will not work properly with portable version of
+  NVDA.
 
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
@@ -54,15 +57,14 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   Update) og senere, vil NVDA ikke længere annoncere søgeresultater to
   gange, når du gennemser resultater, hvilket også gør punktoutput mere
   ensartet, når du gennemgår elementer.
-* Udover de UIA-håndteringsmuligheder, som NVDA leverer, vil følgende
-  UIA-hændelser blive opfanget af skærmlæseren: drag start, drag cancel,
-  drag complete, drag target enter, drag target leave, drag target
-  dropped. Hvis NVDAs logningsniveau er indstillet til "Fejlfinding", vil
-  disse hændelser blive sporet, og en tone vil blive hørt, hvis en
-  UIA-hændelse stammer fra andet end den aktuelt fokuserede app. Nogle
-  hændelser angiver yderligere oplysninger, såsom antal af elementer i
-  kontrolhændelsen, status for elementet ved en hændelse, hvor status
-  ændres, samt emnetekst for hændelser, hvor der anmodes om emnestatus.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drop target
+  drag enter, drop target drag leave, drop target dropped. With NVDA's log
+  level set to debug, these events will be tracked, and for UIA notification
+  event, a debug tone will be heard if notifications come from somewhere
+  other than the currently active app. Some events will provide additional
+  information such as element count in controller for event, state of the
+  element for state change event, and item text for item status event.
 * Det er muligt at overvåge specifikke hændelser og/eller hændelser, der
   kommer fra specifikke apps.
 * Når åbning, lukning, eller Skift mellem virtuelle skrivebord forekommer,
@@ -85,6 +87,7 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   annoncere resultater så snart beregningerne er indtastet.
 * NVDA giver besked, hvis det maksimale antal cifre er nået, mens du
   indtaster udtryk.
+* NVDA will no longer announce graphing calculator screen message twice.
 
 ## Kalender
 
@@ -93,8 +96,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Cortana
 
-De fleste punkter er ikke længere gældende i version 1903 og senere,
-medmindre Cortana Samtaler (version 2004 og nyere) er i brug.
+Most items are applicable when using Cortana Conversations (Version 2004 and
+later).
 
 * Tekstlige svar fra Cortana annonceres i de fleste tilfælde.
 * NVDA vil forblive tavs, når du taler til Cortana med stemmen.

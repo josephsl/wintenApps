@@ -13,21 +13,20 @@ Se incluyen Los siguientes app modules o el apoyo para módulos para algunas
 aplicaciones (consulta cada sección para la aplicación para detalles sobre
 qué se incluye):
 
-* Calculadora (modern).
+* Calculadora (moderna).
 * Calendario
 * Cortana (conversaciones)
 * Correo
 * Mapas
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Teclado Moderno (panel emoji / dictado / sugerencias de entrada hardware /
-  elementos del portapapeles en la nube / editores modernos de método de
+* Teclado Moderno (panel de emojis / dictado / sugerencias de entrada
+  hardware / historial del portapapeles / editores modernos de método de
   entrada)
 * Gente
 * Opciones (opciones de sistema, Windows+I)
-* El Tiempo.
-* Módulos misceláneos para controles tales como los mosaicos del Menú
-  Inicio.
+* El Tiempo
+* Módulos varios para controles tales como los mosaicos del Menú Inicio
 
 Notas:
 
@@ -40,6 +39,9 @@ Notas:
   características son parte de NVDA, no se aplican porque el complemento no
   da soporte a versiones antiguas de Windows 10, o se han hecho cambios a
   las aplicaciones que permiten que ya no sea necesario aplicarlas.
+* Algunas aplicaciones soportan el modo de superposición compacta (siempre
+  visible en la calculadora, por ejemplo), y este modo no funcionará
+  adecuadamente con la versión portable de NVDA.
 
 Para ver una lista de cambios hechos entre cada actualización del
 complemento, consulta el documento [changelogs for add-on releases][3].
@@ -59,16 +61,16 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   (actualización de noviembre de 2019) y posteriores, NVDA ya no anunciará
   tanto los resultados de búsqueda dos veces al revisarlos, lo que al mismo
   tiempo hace la salida braille más consistente al revisar elementos.
-* Además de los manejadores UIA proporcionados por NVDA, se reconocen los
-  siguientes eventos UIA: drag start, drag cancel, drag complete, drag
-  target enter, drag target leave, drag target dropped. Con NVDA configurado
-  para ejecutarse con el registro de depuración habilitado, estos eventos se
-  seguirán, y se oirá un tono de depuración para el evento UIA notification
-  si las notificaciones vienen de un lugar distinto a la aplicación
-  actual. Algunos eventos proporcionarán información adicional, como la
-  cantidad de elementos en el evento Controller for, el estado del elemento
-  en el evento State change, y el texto del elemento en el evento Item
-  status.
+* Además de los manejadores de eventos UIA proporcionados por NVDA, se
+  reconocen los siguientes eventos UIA: drag start, drag cancel, drag
+  complete, drop target drag enter, drop target drag leave, drop target
+  dropped. Con NVDA configurado para ejecutarse con el registro de
+  depuración habilitado, estos eventos se seguirán, y se oirá un tono de
+  depuración para el evento UIA notification si las notificaciones vienen de
+  un lugar distinto a la aplicación actual. Algunos eventos proporcionarán
+  información adicional, como la cantidad de elementos en el evento
+  Controller for, el estado del elemento en el evento State change, y el
+  texto del elemento en el evento Item status.
 * Es posible seguir sólo eventos específicos y/o eventos que vienen de
   aplicaciones específicas.
 * Al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
@@ -90,6 +92,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   NVDA anunciará los resultados tan pronto como los cálculos se introduzcan.
 * NVDA avisará si se alcanza la cantidad máxima de dígitos al introducir
   expresiones.
+* NVDA ya no anunciará dos veces el mensaje en pantalla de la calculadora
+  gráfica.
 
 ## Calendario
 
@@ -98,9 +102,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 ## Cortana
 
-La mayoría de elementos ya no se aplican en la versión 1903 y posteriores a
-menos que las conversaciones de Cortana (Versión 2004 y posteriores) estén
-en uso.
+La mayoría de elementos se aplican al usar las conversaciones de Cortana
+(versión 2004 y posteriores).
 
 * Las respuestas textuales de Cortana se verbalizan en la mayoría de
   situaciones.
