@@ -82,8 +82,10 @@ class W10SearchField(SearchField):
 		if config.conf["presentation"]["reportObjectPositionInformation"]:
 			# Item count must be the last one spoken.
 			suggestionsCount: int = self.controllerFor[0].childCount
-			# Translators: part of the suggestions count message (for example: 2 suggestions).
-			suggestionsMessage = gettext.ngettext("1 suggestion", "{} suggestions".format(suggestionsCount), suggestionsCount)
+			suggestionsMessage = gettext.ngettext(
+				# Translators: part of the suggestions count message (for example: 2 suggestions).
+				"1 suggestion", "{} suggestions".format(suggestionsCount), suggestionsCount
+			)
 			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
 
 
