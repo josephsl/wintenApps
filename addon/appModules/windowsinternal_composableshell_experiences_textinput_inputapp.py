@@ -149,7 +149,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
 			return
-		if config.conf["UIA"]["selectiveEventRegistration"] and firstChild is not None:
+		if config.conf["UIA"]["selectiveEventRegistration"]:
 			localEventHandlerElements = [firstChild]
 			# For dictation, add elements manually so name change event can be handled.
 			# Object hierarchy is different in voice typing (build 21296 and later).
