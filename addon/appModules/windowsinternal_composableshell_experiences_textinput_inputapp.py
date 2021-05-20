@@ -190,6 +190,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Handle hardware keyboard and CJK IME suggestions.
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
 		# In fact, in Version 2004 and later, this is the CJK IME candidates window.
+		# In short, hardware keyboard input suggestions and IME window uses the same interface.
 		# IME prediction and candidate Automation Id's are recognized as IME candidate window in NVDA 2020.4.
 		if (
 			childAutomationId == "CandidateWindowControl"
