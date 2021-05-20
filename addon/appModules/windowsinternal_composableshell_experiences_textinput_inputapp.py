@@ -226,7 +226,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Move NVDA's focus to input experience panel so arrow keys can be used to navigate among emojis.
 		elif childAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI":
 			api.setFocusObject(obj)
-		nextHandler()
+		super(AppModule, self).event_UIA_window_windowOpen(obj, nextHandler)
 
 	def event_nameChange(self, obj, nextHandler):
 		# Logic for IME candidate items is handled all within its own object
