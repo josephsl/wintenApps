@@ -161,25 +161,20 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				while element.next is not None:
 					localEventHandlerElements.append(element)
 					element = element.next
+			# Don't forget to add actual candidate item element so name change event can be handled
+			# (mostly for hardware keyboard input suggestions).
+			if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
+				imeCandidateItem = firstChild.firstChild.firstChild
+				# In build 20200 and later, an extra element is located between candidate UI window and items themselves.
+				if sys.getwindowsversion().build >= 21296:
+					imeCandidateItem = imeCandidateItem.firstChild
+				localEventHandlerElements.append(imeCandidateItem)
 			for element in localEventHandlerElements:
 				UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 				UIAHandler.handler.addEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 		# Handle Ime Candidate UI being shown
 		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
 			eventHandler.queueEvent("show", firstChild)
-			# Don't forget to add actual candidate item element so name change event can be handled
-			# (mostly for hardware keyboard input suggestions).
-			imeCandidateItem = firstChild.firstChild.firstChild
-			# In build 20200 and later, an extra element is located between candidate UI window and items themselves.
-			if sys.getwindowsversion().build >= 21296:
-				imeCandidateItem = imeCandidateItem.firstChild
-			if config.conf["UIA"]["selectiveEventRegistration"]:
-				UIAHandler.handler.removeEventHandlerGroup(
-					imeCandidateItem.UIAElement, UIAHandler.handler.localEventHandlerGroup
-				)
-				UIAHandler.handler.addEventHandlerGroup(
-					imeCandidateItem.UIAElement, UIAHandler.handler.localEventHandlerGroup
-				)
 			return
 		childAutomationId = firstChild.UIAAutomationId
 		self._modernKeyboardInterfaceActive = True
