@@ -204,6 +204,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			if emojiItem.UIAAutomationId == "SkinTonePanelModifier_ListView" and emojiItem.next:
 				emojiItem = emojiItem.next
 			eventHandler.queueEvent("UIA_elementSelected", emojiItem)
+			return
 		# Clipboard history.
 		# Move to clipboard list so element selected event can pick it up.
 		elif childAutomationId == "TEMPLATE_PART_ClipboardTitleBar":
@@ -216,6 +217,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			if clipboardHistoryItem.firstChild is not None:
 				clipboardHistoryItem = clipboardHistoryItem.firstChild
 			eventHandler.queueEvent("UIA_elementSelected", clipboardHistoryItem)
+			return
 		# Combined emoji panel and clipboard history in build 20200 and later.
 		# Build 20200 and later introduced a completely different user interface for modern keyboard.
 		# Essentially, emoji panel and clipboard are combined and housed inside a web document interface.
@@ -223,6 +225,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Move NVDA's focus to input experience panel so arrow keys can be used to navigate among emojis.
 		elif childAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI":
 			api.setFocusObject(obj)
+			return
 		super(AppModule, self).event_UIA_window_windowOpen(obj, nextHandler)
 
 	def event_nameChange(self, obj, nextHandler):
