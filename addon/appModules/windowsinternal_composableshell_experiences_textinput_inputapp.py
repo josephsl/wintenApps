@@ -135,6 +135,32 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			skipTranslation.translate("No emoji")
 		nextHandler()
 
+	# Register modern keyboard interface elements with local event handler group.
+	def _windowOpenEventInternalEventHandlerGroupRegistration(self, firstChild):
+		# Gather elements to be registered inside a list so they can be registered in one go.
+		localEventHandlerElements = [firstChild]
+		# For dictation, add elements manually so name change event can be handled.
+		# Object hierarchy is different in voice typing (build 21296 and later).
+		if firstChild.UIAAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
+			if firstChild.UIAAutomationId == "DictationMicrophoneButton":
+				element = firstChild.next
+			else:
+				element = firstChild.firstChild.firstChild
+			while element.next is not None:
+				localEventHandlerElements.append(element)
+				element = element.next
+		# Don't forget to add actual candidate item element so name change event can be handled
+		# (mostly for hardware keyboard input suggestions).
+		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
+			imeCandidateItem = firstChild.firstChild.firstChild
+			# In build 20200 and later, an extra element is located between candidate UI window and items themselves.
+			if sys.getwindowsversion().build >= 21296:
+				imeCandidateItem = imeCandidateItem.firstChild
+			localEventHandlerElements.append(imeCandidateItem)
+		for element in localEventHandlerElements:
+			UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+			UIAHandler.handler.addEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
@@ -149,29 +175,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
 			return
+		# Originally part of this method, split into an internal function to reduce complexity.
 		if config.conf["UIA"]["selectiveEventRegistration"]:
-			localEventHandlerElements = [firstChild]
-			# For dictation, add elements manually so name change event can be handled.
-			# Object hierarchy is different in voice typing (build 21296 and later).
-			if firstChild.UIAAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
-				if firstChild.UIAAutomationId == "DictationMicrophoneButton":
-					element = firstChild.next
-				else:
-					element = firstChild.firstChild.firstChild
-				while element.next is not None:
-					localEventHandlerElements.append(element)
-					element = element.next
-			# Don't forget to add actual candidate item element so name change event can be handled
-			# (mostly for hardware keyboard input suggestions).
-			if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
-				imeCandidateItem = firstChild.firstChild.firstChild
-				# In build 20200 and later, an extra element is located between candidate UI window and items themselves.
-				if sys.getwindowsversion().build >= 21296:
-					imeCandidateItem = imeCandidateItem.firstChild
-				localEventHandlerElements.append(imeCandidateItem)
-			for element in localEventHandlerElements:
-				UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
-				UIAHandler.handler.addEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+			self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
 		# Handle Ime Candidate UI being shown
 		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
 			eventHandler.queueEvent("show", firstChild)
