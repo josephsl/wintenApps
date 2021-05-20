@@ -24,7 +24,7 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 Version 20H2 (build 19042) or later. For best results, use the add-on with latest Windows 10 stable release (20H2/build 19042).
+* This add-on requires Windows 10 Version 20H2 (build 19042) or later. For best results, use the add-on with latest Windows 10 stable release (21H1/build 19043).
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to Windows 10 and apps that makes entries no longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for example), and this mode will not work properly with portable version of NVDA.
@@ -33,13 +33,12 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## General
 
-* NVDA will no longer play error tones or do nothing if this add-on becomes active from Windows 7, Windows 8.1, and unsupported releases of Windows 10.
 * In addition to dialogs recognized by NVDA, more dialogs are now recognized as proper dialogs and reported as such, including Insider Preview dialog (settings app).
 * NVDA can announce suggestion count when performing a search in majority of cases. This option is controlled by "Report object position information" in Object presentation panel found in NVDA settings.
 * When searching in Start menu or File Explorer in Version 1909 (November 2019 Update) and later, instances of NVDA announcing search results twice when reviewing results are less noticeable, which also makes braille output more consistent when reviewing items.
 * In addition to UIA event handlers provided by NVDA, the following UIA events are recognized: drag start, drag cancel, drag complete, drop target drag enter, drop target drag leave, drop target dropped. With NVDA's log level set to debug, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app. Some events will provide additional information such as element count in controller for event, state of the element for state change event, and item text for item status event.
 * It is possible to tracke only specific events and/or events coming from specific apps.
-* When opening, closing, or switching between virtual desktops, NVDA will announce current desktop name (desktop 2, for example).
+* When opening, closing, reordering (build 21337 or later), or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
 * When arranging Start menu tiles or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce information on dragged items or new position of the dragged item.
 * Announcements such as volume/brightness changes in File Explorer and app update notifications from Microsoft Store can be suppressed by turning off Report Notifications in NVDA's object presentation settings.
