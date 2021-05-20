@@ -192,18 +192,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
 		# In fact, in Version 2004 and later, this is the CJK IME candidates window.
 		# In short, hardware keyboard input suggestions and IME window uses the same interface.
-		# IME prediction and candidate Automation Id's are recognized as IME candidate window in NVDA 2020.4.
-		if (
-			childAutomationId == "CandidateWindowControl"
-			and config.conf["inputComposition"]["autoReportAllCandidates"]
-		):
-			try:
-				eventHandler.queueEvent("UIA_elementSelected", firstChild.firstChild.firstChild)
-			except AttributeError:
-				# Because this is dictation window.
-				pass
+		# See older add-on releases for details.
 		# Emoji panel in build 17666 and later (unless this changes).
-		elif childAutomationId == "TEMPLATE_PART_ExpressionGroupedFullView":
+		if childAutomationId == "TEMPLATE_PART_ExpressionGroupedFullView":
 			# On some systems (particularly non-English builds of Version 1903 and later),
 			# there is something else besides grouping controls, so another child control must be used.
 			emojisList = firstChild.children[-2]
