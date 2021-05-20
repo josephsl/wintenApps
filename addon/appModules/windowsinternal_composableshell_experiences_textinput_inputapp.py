@@ -179,10 +179,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		if config.conf["UIA"]["selectiveEventRegistration"]:
 			self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
 		# Handle Ime Candidate UI being shown
-		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
-			eventHandler.queueEvent("show", firstChild)
-			return
-		childAutomationId = firstChild.UIAAutomationId
+		# See older add-on releases for details.
+		childAutomationId = obj.firstChild.UIAAutomationId
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
 		# Emoji panel for 1709 (build 16299) and 1803 (17134) is not supported.
