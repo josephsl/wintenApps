@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2021-05-13 18:59+0200\n"
-"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
+"PO-Revision-Date: 2021-05-15 01:19+0200\n"
+"Last-Translator: Bernd Dorer <mail@bdorer.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -42,9 +42,8 @@ msgid "No more weather data for this item."
 msgstr "Keine weiteren Wetterdaten für diesen Eintrag verfügbar."
 
 #. Translators: part of the suggestions count message (for example: 2 suggestions).
-#, fuzzy
 msgid "1 suggestion"
-msgstr "Vorschlag"
+msgstr "1 Vorschlag"
 
 #. Translators: part of the suggestions count message (for example: 2 suggestions).
 msgid "{} suggestions"

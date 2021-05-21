@@ -28,9 +28,9 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 
 Note:
 
-* Questo addon richiede Windows 10 Versione 2004 (build 19041) o
-  successive. Per migliori prestazioni, utilizzare il componente con la
-  versione 20H2/build 19042.
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (21H1/build 19043).
 * Alcune caratteristiche di questo componente aggiuntivo sono o diventeranno
   parte di NVDA.
 * Per le voci non elencate di seguito, si può supporre che esse siano

@@ -27,9 +27,9 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 Bemærkninger:
 
-* Denne tilføjelse kræver Windows 10 version 2004 (build 19041) eller
-  nyere. For at få de bedste resultater skal du bruge tilføjelsen med den
-  nyeste stabile version af Windows 10 (20H2/build 19042).
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (21H1/build 19043).
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
 * For emner, der ikke er anført nedenfor, kan du antage, at funktionerne er

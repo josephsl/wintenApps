@@ -28,9 +28,9 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* Diese Erweiterung erfordert Windows 10 Version 2004 (Build 19041) oder
-  neuer. Verwenden Sie für optimale Ergebnisse die Erweiterung mit der
-  neueste Windows 10-Version (20H2 bzw. Build 19042).
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (21H1/build 19043).
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Für Einträge, die im Folgenden nicht aufgeführt sind, können Sie davon
   ausgehen, dass Funktionen Teil von NVDA sind, die nicht mehr benötigt
