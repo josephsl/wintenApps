@@ -229,14 +229,13 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		super(AppModule, self).event_UIA_window_windowOpen(obj, nextHandler)
 
 	def event_nameChange(self, obj, nextHandler):
-		automationId = obj.UIAAutomationId
 		# Forget it if there is no Automation Id and class name set.
 		if (
-			(obj.UIAElement.cachedClassName == "" and automationId == "")
+			(obj.UIAElement.cachedClassName == "" and obj.UIAAutomationId == "")
 			# Clipboard entries fire name change event when opened.
-			or (obj.UIAElement.cachedClassName == "TextBlock" and automationId == "")
+			or (obj.UIAElement.cachedClassName == "TextBlock" and obj.UIAAutomationId == "")
 			# Ignore useless clipboard entry scrolling announcements.
-			or automationId == "VerticalScrollBar"
+			or obj.UIAAutomationId == "VerticalScrollBar"
 		):
 			return
 		# Logic for IME candidate items is handled all within its own object
@@ -251,7 +250,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			(obj.UIAElement.cachedClassName in ("CRootKey", "GridViewItem"))
 			# Just ignore useless clipboard status and vertical scroll bar label.
 			# Also top emoji search result must be announced for better user experience.
-			or (automationId in (
+			or (obj.UIAAutomationId in (
 				"TEMPLATE_PART_ClipboardItemsList", "TEMPLATE_PART_Search_TextBlock"
 			))
 			# And no, emoji entries should not be announced here.
@@ -265,7 +264,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# In some cases, parent will be None, as seen when emoji panel is closed in build 18267.
 		try:
 			if (
-				automationId == "TEMPLATE_PART_ClipboardItemIndex"
+				obj.UIAAutomationId == "TEMPLATE_PART_ClipboardItemIndex"
 				or obj.parent.UIAAutomationId == "TEMPLATE_PART_ClipboardItemsList"
 			):
 				return
@@ -273,11 +272,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			return
 		if (
 			not self._modernKeyboardInterfaceActive
-			or automationId != "TEMPLATE_PART_ExpressionGroupedFullView"
+			or obj.UIAAutomationId != "TEMPLATE_PART_ExpressionGroupedFullView"
 		):
 			speech.cancelSpeech()
 		# Don't forget to add "Microsoft Candidate UI" as something that should be suppressed.
-		if automationId not in (
+		if obj.UIAAutomationId not in (
 			"TEMPLATE_PART_ExpressionFullViewItemsGrid",
 			"TEMPLATE_PART_ClipboardItemIndex",
 			"CandidateWindowControl"
