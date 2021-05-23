@@ -238,6 +238,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			or obj.UIAAutomationId == "VerticalScrollBar"
 		):
 			return
+		if (
+			not self._modernKeyboardInterfaceActive
+			or obj.UIAAutomationId != "TEMPLATE_PART_ExpressionGroupedFullView"
+		):
+			speech.cancelSpeech()
 		# Logic for IME candidate items is handled all within its own object
 		# Therefore pass these events straight on.
 		if isinstance(obj, ImeCandidateItem):  # NOQA: F405
