@@ -192,6 +192,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# See older add-on releases for details.
 		# Emoji panel in build 17666 and later (unless this changes).
 		if childAutomationId == "TEMPLATE_PART_ExpressionGroupedFullView":
+			self._emojiPanelJustOpened = True
 			# On some systems (particularly non-English builds of Version 1903 and later),
 			# there is something else besides grouping controls, so another child control must be used.
 			emojisList = obj.firstChild.children[-2]
@@ -276,10 +277,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		except AttributeError:
 			return
 		if (
-			not self._modernKeyboardInterfaceActive
+			not self._emojiPanelJustOpened
 			or obj.UIAAutomationId != "TEMPLATE_PART_ExpressionGroupedFullView"
 		):
 			speech.cancelSpeech()
+		self._emojiPanelJustOpened = False
 		# Don't forget to add "Microsoft Candidate UI" as something that should be suppressed.
 		if obj.UIAAutomationId not in (
 			"TEMPLATE_PART_ExpressionFullViewItemsGrid",
