@@ -229,12 +229,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		super(AppModule, self).event_UIA_window_windowOpen(obj, nextHandler)
 
 	def event_nameChange(self, obj, nextHandler):
-		# Logic for IME candidate items is handled all within its own object
-		# Therefore pass these events straight on.
-		if isinstance(obj, ImeCandidateItem):  # NOQA: F405
-			return nextHandler()
-		elif isinstance(obj, ImeCandidateUI):  # NOQA: F405
-			return nextHandler()
 		automationId = obj.UIAAutomationId
 		# Forget it if there is no Automation Id and class name set.
 		if (
@@ -245,6 +239,12 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			or automationId == "VerticalScrollBar"
 		):
 			return
+		# Logic for IME candidate items is handled all within its own object
+		# Therefore pass these events straight on.
+		if isinstance(obj, ImeCandidateItem):  # NOQA: F405
+			return nextHandler()
+		elif isinstance(obj, ImeCandidateUI):  # NOQA: F405
+			return nextHandler()
 		# On some systems, touch keyboard keys keeps firing name change event.
 		# In build 17704, whenever skin tones are selected, name change is fired by emoji entries (GridViewItem).
 		if (
