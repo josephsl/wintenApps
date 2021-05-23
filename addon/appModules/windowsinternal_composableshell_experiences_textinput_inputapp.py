@@ -241,6 +241,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			(obj.UIAElement.cachedClassName == "" and automationId == "")
 			# Clipboard entries fire name change event when opened.
 			or (obj.UIAElement.cachedClassName == "TextBlock" and automationId == "")
+			# Ignore useless clipboard entry scrolling announcements.
+			or automationId == "VerticalScrollBar"
 		):
 			return
 		# On some systems, touch keyboard keys keeps firing name change event.
@@ -250,7 +252,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# Just ignore useless clipboard status and vertical scroll bar label.
 			# Also top emoji search result must be announced for better user experience.
 			or (automationId in (
-				"TEMPLATE_PART_ClipboardItemsList", "TEMPLATE_PART_Search_TextBlock", "VerticalScrollBar"
+				"TEMPLATE_PART_ClipboardItemsList", "TEMPLATE_PART_Search_TextBlock"
 			))
 			# And no, emoji entries should not be announced here.
 			or (self._recentlySelected is not None and self._recentlySelected in obj.name)
