@@ -118,11 +118,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				obj = candidate.firstChild
 		if obj is not None:
 			api.setNavigatorObject(obj)
-			# NVDA Core issue 10093: for Japanese IME, candidates must be spelled.
-			if obj.parent.UIAAutomationId == "IME_Candidate_Window":
-				speech.speakSpelling(obj.name, useCharacterDescriptions=True)
-			else:
-				obj.reportFocus()
+			obj.reportFocus()
 			# NVDA Core issue 10371: as part of speech sequence work in 2019.3,
 			# braille.getBrailleTextForProperties has been renamed to getPropertiesBraille.
 			braille.handler.message(
