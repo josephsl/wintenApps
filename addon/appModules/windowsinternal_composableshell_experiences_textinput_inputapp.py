@@ -16,7 +16,6 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 # Yes, this app module is powered by built-in modern keyboard app module.
 # Argh, line length exceeded.
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *  # NOQA: F403, E501
-import winVersion
 import sys
 import eventHandler
 import UIAHandler
@@ -28,14 +27,6 @@ import speech
 import braille
 import ui
 from NVDAObjects.UIA import UIA
-
-
-# Temporary: return either a build number in 2020.4 or earlier or WinVersion object in 2021.1 or later.
-def getWinVer():
-	try:
-		return winVersion.getWinVer()
-	except AttributeError:
-		return sys.getwindowsversion().build
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
