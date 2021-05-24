@@ -24,8 +24,9 @@
 
 사용시 주의 사항:
 
-* 본 추가 기능은 윈도우 10 버전 2004(빌드 19041) 이상을 지원하며 최신 윈도우 10 출시 버전(20H2/빌드 19042)에
-  최적화되어 있습니다.
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (21H1/build 19043).
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
 * 다음 중 하나 이상 발생시 본 추가 기능에 탑제된 기능중 몇이 삭제됩니다: NVDA가 그 기능을 탑제할때, 지원이 중단된 윈도우 10
   버전에서 제공하는 기능일 경우, 윈도우 10이나 앱이 변경되어 기능 지원이 필요가 없을때.

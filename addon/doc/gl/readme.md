@@ -29,9 +29,9 @@ se inclúe):
 
 Notas:
 
-* Este complemento require do Windows 10 Versión 2004 (compilación 19041) ou
-  posterior. Para uns mellores resultados, usa o complemento coa última
-  versión estable do windows 10 (20H2/compilación 19042).
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (21H1/build 19043).
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
 * Para entradas non listadas a continuación, podes asumir que as

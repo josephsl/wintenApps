@@ -31,7 +31,7 @@ Notas:
 
 * This add-on requires Windows 10 Version 2004 (build 19041) or later. For
   best results, use the add-on with latest Windows 10 stable release
-  (20H2/build 19042).
+  (21H1/build 19043).
 * Alguns recursos do complemento são ou farão parte do leitor de tela NVDA.
 * Para entradas não listadas abaixo, você pode assumir que os recursos fazem
   parte do NVDA, não são mais aplicáveis, pois o complemento não oferece

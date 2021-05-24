@@ -31,7 +31,7 @@ Note:
 
 * This add-on requires Windows 10 Version 2004 (build 19041) or later. For
   best results, use the add-on with latest Windows 10 stable release
-  (20H2/build 19042).
+  (21H1/build 19043).
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
 * Pentru intrările care nu sunt listate mai jos, puteți presupune că

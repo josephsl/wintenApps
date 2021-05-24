@@ -27,8 +27,9 @@ tiết của mỗi ứng dụng để biết them):
 
 Lưu ý:
 
-* Add-on này yêu cầu Windows 10 phiên bản 2004 (build 19041) trở lên. Tốt
-  nhất, hay dùng add-on với bản Windows 10 mới nhất (20H2/build 19042).
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows 10 stable release
+  (21H1/build 19043).
 * Vài tính năng của add-on đã hoặc sẽ là một phần tính năng của trình đọc
   màn hình NVDA.
 * Với những thành phần không được liệt kê bên dưới, bạn có thể xem như các
