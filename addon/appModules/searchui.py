@@ -5,7 +5,7 @@
 # Extended by Joseph Lee (copyright 2016-2021, released under GPL)
 
 # Powered by built-in SearchUI app module.
-from nvdaBuiltin.appModules.searchui import *  # NOQA: F403
+from nvdaBuiltin.appModules.searchapp import *  # NOQA: F403
 import config
 import nvwave
 from NVDAObjects.UIA import UIA
