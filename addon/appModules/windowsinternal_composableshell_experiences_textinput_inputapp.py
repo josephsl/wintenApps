@@ -15,7 +15,7 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 
 # Yes, this app module is powered by built-in modern keyboard app module.
 # Argh, line length exceeded.
-from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import *  # NOQA: F403, E501
+from nvdaBuiltin.appModules.textinputhost import *  # NOQA: F403, E501
 import sys
 import eventHandler
 import UIAHandler
