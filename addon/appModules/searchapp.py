@@ -4,7 +4,7 @@
 # See the file COPYING for more details.
 # Extended by Joseph Lee (copyright 2016-2021, released under GPL)
 
-# Powered by built-in SearchUI app module.
+# Powered by built-in SearchApp (formerly SearchUI) app module.
 from nvdaBuiltin.appModules.searchapp import *  # NOQA: F403
 import config
 import nvwave
