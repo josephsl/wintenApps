@@ -13,7 +13,8 @@ This is applicable on Windows 10 Fall Creators Update and later."""
 # Parts come from Microsoft Quick Input support pull request (author: Mick Curran from NV Access)
 # For IME candidate item/UI definition, Flake8 must be told to ignore it.
 
-# Yes, this app module is powered by built-in modern keyboard app module.
+# Yes, this app module is powered by built-in modern keyboard (TextInputHost) app module
+# (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
 from nvdaBuiltin.appModules.textinputhost import *  # NOQA: F403
 import sys
 import eventHandler
