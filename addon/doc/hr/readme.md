@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA kompatibilnost: 2020.3 do 2020.4
+* NVDA compatibility: 2020.4 and beyond
 
 Ovaj NVDA dodatak je zbirka aplikacijskih modula za razne Windows 10
 aplikacije, kao i poboljšanja i ispravci određenih windows 10 kontrola.
@@ -44,9 +44,6 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 
 ## Opće
 
-* NVDA više neće svirati tonove grešaka ili neće raditi ništa, ako se ovaj
-  dodatak aktivira u sustavima Windows 7, Windows 8.1 i nepodržanim
-  izdanjima sustava Windows 10.
 * Većina dijaloških okvira se sada prepoznaju kao pravi dijaloški okviri i o
   njima se izvještava kao takvima, uključujući dijaloški okvir za Insider
   Preview (aplikacija za postavke).
@@ -68,9 +65,9 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   element for state change event, and item text for item status event.
 * Moguće je pratiti samo određene događaje i-ili događaje koji dolaze iz
   određenih aplikacija.
-* Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
-  površina, NVDA će najaviti trenutačno ime radne površine (na primjer,
-  desktop 2).
+* When opening, closing, reordering (build 21337 or later), or switching
+  between virtual desktops, NVDA will announce active virtual desktop name
+  (desktop 2, for example).
 * NVDA više neće najaviti veličinu teksta izbornika Start, kad se mijenjaju
   rezolucije ili položaj ekrana.
 * Kad se pločice izbornika Start ili brze radnje za Action Center
@@ -83,12 +80,6 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 
 ## Kalkulator
 
-* Kad su tipke enter ili escape pritisnute, NVDA izgovara rezultate
-  izračuna.
-* Za izračune kao što su pretvaranje jedinica i pretvaranje valuta, NVDA će
-  objaviti rezultate čim se pojave.
-* NVDA će obavijestiti kad se dostigne maksimalni broj znamenki tijekom
-  unosa izraza.
 * NVDA will no longer announce graphing calculator screen message twice.
 
 ## Kalendar
@@ -146,8 +137,6 @@ supports updated input experience panel in build 21296 and later.
 * Na nekim sustavima koji imaju verziju 1903 (nadogradnja svibnja 2019.) i
   noviju, NVDA više neće izgledati kao da ništa ne radi kad se otvori ploča
   s emojijima.
-* Dodana je podrška za sučelja suvremenih IME kandidata za kineski, japanski
-  i korejski (CJK), uvedena u verziji 2004 (gradnja 18965 i novije).
 * Kad se odabere grupa emojija (uključujući kaomoji i skupinu simbola u
   verziji 1903 ili novijoj), NVDA više neće pomicati navigacijski objekt na
   određene emojije.

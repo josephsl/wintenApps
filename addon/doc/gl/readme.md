@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros usuarios do Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
-* Compatibilidade con NVDA: da 2020.3 á 2020.4
+* NVDA compatibility: 2020.4 and beyond
 
 Este complemento é unha coleción de app modules para varias aplicacións de
 Windows 10, así coma melloras e correccións para certos controis de windows
@@ -47,9 +47,6 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Xeral
 
-* NVDA xa non reproducirá tons de erro ou aparentará non facer nada se este
-  complemento se activa en Windows 7, Windows 8.1 e versións sen soporte de
-  Windows 10.
 * Agora recoñécense certos diálogos como proprios diálogos. Esto inclúe o
   diálogo Insider Preview (settings app).
 * NVDA pode anunciar o número de suxestións cando se realiza unha procura na
@@ -71,8 +68,9 @@ documento [rexistros de trocos para publicacións de complementos][3].
   en eventos state change, e o texto do elemento para eventos item status.
 * É posible o seguimento só de eventos específicos e/ou de eventos provintes
   de aplicacións específicas.
-* Cando se abran, pechen ou se conmute entre escritorios virtuales, NVDA
-  anunciará o nome do escritorio actual (escritorio 2, por exemplo).
+* When opening, closing, reordering (build 21337 or later), or switching
+  between virtual desktops, NVDA will announce active virtual desktop name
+  (desktop 2, for example).
 * NVDA xa non anuncia Menú Inicio tamaño de texto ao cambiar a resolución de
   pantalla ou a orientación.
 * Ao ordear as tarxetas do menú inicio ou as accións rápidas do centro de
@@ -85,11 +83,6 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Calculadora
 
-* Cando se prema INTRO ou Escape, NVDA anunciará os resultados do cálculo.
-* Para cálculos coma conversión de unidades e conversión de moneda, o NVDA
-  anunciará os resultados tan pronto coma os cálculos se introduzan.
-* NVDA notificará cando se chegue ao límite de díxitos introducindo
-  expresións.
 * NVDA xa non anunciará dúas veces a mensaxe en pantalla da calculadora
   gráfica.
 
@@ -148,9 +141,6 @@ de experiencia de entrada actualizado na compilación 21296 e posterior.
   cando haxa elementos no portapapeis baixo algunhas circunstancias.
 * Nalgúns sistemas coa versión 1903 (May 2019 Update), NVDA xa non
   aparentará non facer nada cando se abra o panel de emoji.
-* Engadido soporte para a interface de candidatos IME en chino, xaponés e
-  coreano (CJK) introducida na versión 2004 (compilación 18965 e
-  posteriores).
 * Cando se selecciona un grupo de emojis (incluindo kaomoji e grupos de
   símbolos na Versión 1903 ou posterior), NVDA xa non moverá o navegador de
   obxectos a certos emojis.

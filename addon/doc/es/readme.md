@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer y otros usuarios de Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
-* Compatibilidad con NVDA: de 2020.3 a 2020.4
+* NVDA compatibility: 2020.4 and beyond
 
 Este complemento es una colección de app modules para varias aplicaciones de
 Windows 10, así como Mejoras y correcciones para ciertos controles de
@@ -30,9 +30,9 @@ qué se incluye):
 
 Notas:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (21H1/build 19043).
+* Este complemento requiere Windows 10 Versión 2004 (compilación 19041) o
+  posterior. Para unos mejores resultados, utiliza el complemento con la
+  compilación estable más reciente de Windows 10 (21H1 / compilación 19043).
 * Algunas de las características del complemento son o serán parte del
   lector de pantalla NVDA.
 * Para las entradas que no se listen a continuación, puedes asumir que las
@@ -48,9 +48,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 ## General
 
-* NVDA ya no reproducirá tonos de error o se quedará sin hacer nada si este
-  complemento se activa en Windows 7, Windows 8.1 y versiones sin soporte de
-  Windows 10.
 * Además de los diálogos reconocidos como tales por NVDA, ahora se reconocen
   más diálogos y se anuncian adecuadamente, como el diálogo Insider Preview
   (aplicación de configuración).
@@ -73,8 +70,9 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   texto del elemento en el evento Item status.
 * Es posible seguir sólo eventos específicos y/o eventos que vienen de
   aplicaciones específicas.
-* Al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
-  nombre del escritorio actual (escritorio 2, por ejemplo).
+* When opening, closing, reordering (build 21337 or later), or switching
+  between virtual desktops, NVDA will announce active virtual desktop name
+  (desktop 2, for example).
 * NVDA ya no anunciará el tamaño del texto del Menú Inicio al cambiar la
   resolución de pantalla o la orientación.
 * Al reordenar los elementos del menú Inicio o acciones rápidas del centro
@@ -87,11 +85,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 ## Calculadora
 
-* Cuando se pulse INTRO o Escape, NVDA anunciará los resultados del cálculo.
-* Para cálculos tales como conversión de unidades y conversión de moneda,
-  NVDA anunciará los resultados tan pronto como los cálculos se introduzcan.
-* NVDA avisará si se alcanza la cantidad máxima de dígitos al introducir
-  expresiones.
 * NVDA ya no anunciará dos veces el mensaje en pantalla de la calculadora
   gráfica.
 
@@ -154,9 +147,6 @@ en la compilación 21296 y posteriores.
 * En algunos sistemas que ejecutan la versión 1903 (actualización de mayo de
   2019) y posteriores, NVDA ya no parecerá hacer nada cuando el panel de
   emojis se abra.
-* Se ha añadido soporte para la interfaz de candidatos IME en chino moderno,
-  japonés y coreano (CJK) introducida en la versión 2004 (compilación 18965
-  y posteriores).
 * Cuando se seleccione un grupo de emojis (incluyendo kaomoji y el grupo de
   símbolos en la versión 1903 o posteriores), NVDA ya no moverá el navegador
   de objetos a ciertos emojis.

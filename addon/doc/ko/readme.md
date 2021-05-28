@@ -3,7 +3,7 @@
 * 저자: Joseph Lee(이성원), Derek Riemer 외 윈도우 10 사용자들
 * [출시 버전][1]
 * [개발 버전][2]
-* NVDA 호환: 2020.3-2020.4
+* NVDA compatibility: 2020.4 and beyond
 
 본 추가 기능은 여러 윈도우 10 앱 지원 모듈 및 윈도우 10 컨트롤 지원 기능 향상 및 버그 수정을 포함합니다.
 
@@ -24,9 +24,8 @@
 
 사용시 주의 사항:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (21H1/build 19043).
+* 본 추가 기능은 윈도우 10 버전 2004(빌드 19041) 이상을 지원하며 최신 윈도우 10 출시 버전(21H1/빌드 19043)에
+  최적화되어 있습니다.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
 * 다음 중 하나 이상 발생시 본 추가 기능에 탑제된 기능중 몇이 삭제됩니다: NVDA가 그 기능을 탑제할때, 지원이 중단된 윈도우 10
   버전에서 제공하는 기능일 경우, 윈도우 10이나 앱이 변경되어 기능 지원이 필요가 없을때.
@@ -37,9 +36,6 @@
 
 ## 일반
 
-* NVDA will no longer play error tones or do nothing if this add-on becomes
-  active from Windows 7, Windows 8.1, and unsupported releases of Windows
-  10.
 * In addition to dialogs recognized by NVDA, more dialogs are now recognized
   as proper dialogs and reported as such, including Insider Preview dialog
   (settings app).
@@ -60,8 +56,9 @@
   element for state change event, and item text for item status event.
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce current desktop name (desktop 2, for example).
+* When opening, closing, reordering (build 21337 or later), or switching
+  between virtual desktops, NVDA will announce active virtual desktop name
+  (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen
   resolutions or orientation.
 * When arranging Start menu tiles or Action Center quick actions with
@@ -73,11 +70,6 @@
 
 ## 계산기
 
-* When ENTER or Escape is pressed, NVDA will announce calculation results.
-* For calculations such as unit converter and currency converter, NVDA will
-  announce results as soon as calculations are entered.
-* NVDA will notify if maximum digit count has been reached while entering
-  expressions.
 * NVDA will no longer announce graphing calculator screen message twice.
 
 ## 달력
@@ -132,8 +124,6 @@ supports updated input experience panel in build 21296 and later.
   when there are items in the clipboard under some circumstances.
 * On some systems running Version 1903 (May 2019 Update) and later, NVDA
   will no longer appear to do nothing when emoji panel opens.
-* Added support for modern Chinese, Japanese, and Korean (CJK) IME
-  candidates interface introduced in Version 2004 (build 18965 and later).
 * When an emoji group (including kaomoji and symbols group in Version 1903
   or later) is selected, NVDA will no longer move navigator object to
   certain emojis.

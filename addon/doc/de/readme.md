@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA-Kompatibilität: 2020.3 bis 2020.4
+* NVDA compatibility: 2020.4 and beyond
 
 Diese Erweiterung bietet eine Sammlung von Anwendungsmodulen für
 verschiedene Windows 10 Anwendungen sowie Korrekturen in einigen Windows 10
@@ -28,9 +28,9 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (21H1/build 19043).
+* Diese Erweiterung benötigt mindestens Windows 10 Version 2004 (Build
+  19041) oder neuer. Am besten funktioniert es mit Windows 10 Version 21H1
+  (Build 19043).
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Für Einträge, die im Folgenden nicht aufgeführt sind, können Sie davon
   ausgehen, dass Funktionen Teil von NVDA sind, die nicht mehr benötigt
@@ -47,9 +47,6 @@ Versionen][3].
 
 ## Allgemein
 
-* NVDA wird keine Fehlertöne mehr abspielen oder nichts tun, wenn diese
-  Erweiterung unter Windows 7, Windows 8.1 und nicht unterstützten Versionen
-  von Windows 10 benutzt wird.
 * Zusätzlich zu den von der NVDA erkannten Dialogen werden nun mehr Dialoge
   als richtige Dialoge erkannt und als solche gemeldet, einschließlich des
   Dialogs Insider-Vorschau (Einstellungsanwendung).
@@ -74,8 +71,9 @@ Versionen][3].
   Elementtext für das Ereignis des Elementstatus.
 * Es ist möglich, nur bestimmte Ereignisse bzw. Ereignisse aus bestimmten
   Anwendungen zu verfolgen.
-* Beim Öffnen, Schließen oder Umschalten virtueller Desktops meldet NVDA den
-  aktuellen Desktop-Namen (z. B. Desktop 2).
+* When opening, closing, reordering (build 21337 or later), or switching
+  between virtual desktops, NVDA will announce active virtual desktop name
+  (desktop 2, for example).
 * NVDA gibt beim Ändern der Bildschirmauflösung oder -ausrichtung keinen
   Text in der Startmenügröße mehr aus.
 * Beim Anordnen von Startmenükacheln oder Action-Center-Schnellaktionen mit
@@ -88,12 +86,6 @@ Versionen][3].
 
 ## Rechner
 
-* NVDA sagt die Rechenergebnisse beim Drücken der Eingabe- oder Escape-Taste
-  an.
-* Für Berechnungen wie Umrechnungen von Einheiten und Währungen gibt NVDA
-  das Ergebnis Ergebnisse bekannt, sobald die Berechnung eingegeben wird.
-* NVDA meldet, wenn die maximale Anzahl der Ziffern während der Eingabe von
-  Ausdrücken erreicht wurde.
 * NVDA liest die Bildschirmmeldung des Grafikrechners nicht mehr doppelt
   vor.
 
@@ -157,9 +149,6 @@ neuer.
 * Auf einigen Systemen, auf denen die Version 1903 (Update Mai 2019) und
   neuer läuft, wird NVDA beim Öffnen des Emoji-Panels nichts mehr zu tun
   haben.
-* Unterstützung für die moderne IME-Kandidaten-Schnittstelle für Chinesisch,
-  Japanisch und Koreanisch (CJK) wurde in Version 2004 (Build 18965 und
-  neuer) eingeführt.
 * Wenn eine Emoji-Gruppe (einschließlich kaomoji und Symbolgruppe in Version
   1903 oder später) ausgewählt wird, verschiebt NVDA das Navigator-Objekt
   nicht mehr zu bestimmten Emojis.

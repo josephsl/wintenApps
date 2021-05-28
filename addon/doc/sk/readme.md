@@ -3,7 +3,7 @@
 * Autory: Joseph Lee, Derek Riemer a ďalší používatelia Windowsu 10
 * Stiahnuť [stabilnú verziu][1]
 * Stiahnuť [vývojovú verziu][2]
-* NVDA compatibility: 2020.3 to 2020.4
+* NVDA compatibility: 2020.4 and beyond
 
 Obsahuje aplikačné moduly pre rôzne aplikácie systému Windows 10, ako aj
 vylepšenia a opravy určitých ovládacích prvkov systému Windows 10.
@@ -43,9 +43,6 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 
 ## Všeobecné
 
-* NVDA neprehráva chybové tóny a jednoducho nerobí nič, ak bude tento
-  doplnok aktívny v systéme Windows 7, Windows 8.1 a nepodporovaných
-  vydaniach systému Windows 10.
 * Okrem dialógov rozpoznaných programom NVDA je teraz zlepšená orientácia vo
   viacerých dialógoch, vrátane časti Windows insider program.
 * NVDA vo väčšine prípadov dokáže oznámiť počet návrhov pri
@@ -64,9 +61,9 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
   element for state change event, and item text for item status event.
 * Je možné sledovať iba konkrétne udalosti a udalosti pochádzajúce z
   konkrétnych aplikácií.
-* Pri otváraní, zatváraní alebo prepínaní medzi virtuálnymi pracovnými
-  plochami NVDA oznámi aktuálny názov pracovnej plochy (napríklad pracovná
-  plocha 2).
+* When opening, closing, reordering (build 21337 or later), or switching
+  between virtual desktops, NVDA will announce active virtual desktop name
+  (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen
   resolutions or orientation.
 * Pri presúvaní dlaždíc alebo položiek v centre akcií (skratky
@@ -78,10 +75,6 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 
 ## Kalkulačka
 
-* Keď stlačíte ENTER alebo Escape, NVDA oznámi výsledky výpočtu.
-* Pri výpočtoch, ako sú prevodník jednotiek a prevodník mien, NVDA oznámi
-  výsledky hneď po zadaní príkladu.
-* NVDA upozorní, ak pri zadávaní výrazu dosiahnete maximálny počet číslic.
 * NVDA will no longer announce graphing calculator screen message twice.
 
 ## Kalendár
@@ -135,8 +128,6 @@ supports updated input experience panel in build 21296 and later.
   niektorých položkách.
 * Na niektorých systémoch s verziou 1903 (aktualizácia z mája 2019) je
   oznamované otvorenie panela emoji.
-* pridaná podpora pre metódy písania v Čínštine, Japončine a Kórejčine,
-  predstavené od verzie 2004 (zostava 18965)
 * Ak je vybratá skupina emoji(alebo symbolov a kaomoji od verzie 1903), NVDA
   nepresúva navigačný objekt automaticky na prvú položku.
 * Added support for updated input experience panel (combined emoji panel and

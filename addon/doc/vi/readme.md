@@ -3,7 +3,7 @@
 * Tác giả: Joseph Lee, Derek Riemer và những người dùng Windows 10 khác
 * Tải về [phiên bản chính thức][1]
 * Tải về [phiên bản thử nghiệm][2]
-* NVDA tương thích: 2020.3 đến 2020.4
+* NVDA compatibility: 2020.4 and beyond
 
 Add-on này là một bộ sưu tập các modules cho nhiều ứng dụng của Windows 10,
 đồng thời là các cải tiến và sửa lỗi cho một số điều khiển trong windows 10.
@@ -46,9 +46,6 @@ for add-on releases][3] .
 
 ## Chung
 
-* NVDA sẽ không còn phát âm báo lỗi hoặc không làm gì nếu add-on này hoạt
-  động trên Windows 7, Windows 8.1 và các bản phát hành Windows 10 không
-  được hỗ trợ.
 * Ngoài các hộp thoại được NVDA nhận ra, nhiều hộp thoại giờ đã được nhận
   diện đúng thuộc tính và thông báo chính xác, bao gồm hộp thoại Insider
   Preview (ứng dụng settings).
@@ -71,8 +68,9 @@ for add-on releases][3] .
   kiện trạng thái thành phần.
 * Đã có thể chỉ theo dõi một số sự kiện nhất định và / hoặc các sự kiện từ
   một ứng dụng nhất định.
-* Khi mở, đóng, hay chuyển giữa desktop ảo, NVDA sẽ thông báo tên cửa sổ
-  desktop hiện tại (desktop 2 chẳng hạn).
+* When opening, closing, reordering (build 21337 or later), or switching
+  between virtual desktops, NVDA will announce active virtual desktop name
+  (desktop 2, for example).
 * NVDA sẽ không thông báo kích thước văn bản của Start menu khi thay đổi độ
   phân giải hay hướng màn hình.
 * Khi sắp xếp Start menu tiles hoặc Action Center quick actions với
@@ -85,10 +83,6 @@ for add-on releases][3] .
 
 ## Calculator
 
-* Khi bấm ENTER hay Escape, NVDA sẽ thông báo kết quả tính toán.
-* Với các phép tính như chuyển đổi đơn vị và tiền tệ, NVDA sẽ thông báo ngay
-  khi phép tính được nhập.
-* NVDA sẽ thông báo nếu đã đạt số tối đa khi nhập công thức.
 * NVDA sẽ không còn đọc hai lần thông điệp trên màn hình tính toán đồ thị.
 
 ## Calendar
@@ -146,9 +140,6 @@ trong  bản dựng 21296 trở lên.
   dung trong khay nhớ tạm ở vài trường hợp.
 * Trên vài hệ thống chạy phiên bản 1903 (May 2019 Update) trở lên, NVDA sẽ
   không còn tình trạng không làm gì khi mở bản biểu tượng cảm xúc.
-* Đã thêm hỗ trợ cho các kiểu nhập mới của tiếng Trung,  tiếng Nhật và tiếng
-  Hàn (CJK) trên giao diện không chính thức, ra mắt trong phiên bản 2004
-  (build 18965 trở lên).
 * Khi một nhóm biểu tượng cảm xúc (bao gồm kaomoji và nhóm các kí hiệu trong
   phiên bản 1903 trở lên) được chọn, NVDA sẽ không còn di chuyển đối tượng
   điều hướng tới một biểu tượng nhất định.
