@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA-kompatibilitet: 2020.3 til 2020.4
+* NVDA compatibility: 2020.4 and beyond
 
 Denne tilføjelse er en samling af app-moduler til forskellige Windows 10
 apps, samt forbedringer og rettelser for visse windows 10 kontrolelementer.
@@ -45,9 +45,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Generelt
 
-* NVDA vil ikke længere spille fejltoner eller gøre ingenting, hvis denne
-  tilføjelse bliver aktiv fra Windows 7 og 8.1 og andre versioner af
-  Windows, der ikke understøttes.
 * Visse dialogbokse er nu anerkendt som ordentlige dialoger og rapporteret
   som sådan, herunder Insider Preview dialog (indstillinger app).
 * NVDA kan annoncere nummeret af forslag, når du udfører en søgning i de
@@ -67,8 +64,9 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   element for state change event, and item text for item status event.
 * Det er muligt at overvåge specifikke hændelser og/eller hændelser, der
   kommer fra specifikke apps.
-* Når åbning, lukning, eller Skift mellem virtuelle skrivebord forekommer,
-  vil NVDA annoncere nuværende desktop ID (f.eks. "Skrivebord 2").
+* When opening, closing, reordering (build 21337 or later), or switching
+  between virtual desktops, NVDA will announce active virtual desktop name
+  (desktop 2, for example).
 * NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
   du ændrer skærmopløsning eller orientering.
 * Når du arrangerer fliser på start-menuen eller hurtige handlinger i
@@ -81,12 +79,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Lommeregner
 
-* Når der trykkes på ENTER eller Escape, vil NVDA annoncere
-  beregningsresultaterne.
-* For beregninger som enhedsberegninger og valutaberegninger, vil NVDA
-  annoncere resultater så snart beregningerne er indtastet.
-* NVDA giver besked, hvis det maksimale antal cifre er nået, mens du
-  indtaster udtryk.
 * NVDA will no longer announce graphing calculator screen message twice.
 
 ## Kalender
@@ -145,9 +137,6 @@ også det opdaterede inputoplevelsespanel i build 21296 og nyere.
   udklipsholderen under nogle omstændigheder.
 * På nogle systemer, der kører version 1903 (May 2019 Update) og senere, vil
   NVDA ikke længere foretage sig ingenting, når Emoji panel åbnes.
-* Tilføjet understøttelse af moderne kinesisk, japansk og koreansk (CJK)
-  IME-kandidater interface introduceret i version 2004 (build 18965 og
-  senere).
 * Når en emoji-gruppe (inklusive kaomoji og symbolgrupper i version 1903
   eller nyere) er valgt, vil NVDA ikke længere flytte navigatorobjektet til
   bestemte emoji'er.

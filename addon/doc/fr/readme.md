@@ -3,7 +3,7 @@
 * Auteurs: Joseph Lee, Derek Riemer et d’autres utilisateurs de Windows 10
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
-* Compatibilité NVDA: 2020.3 à 2020.4
+* NVDA compatibility: 2020.4 and beyond
 
 Cette extension est une collection d'app modules pour diverses apps de
 Windows 10, ainsi que des améliorations et des correctifs pour certains
@@ -49,9 +49,6 @@ l'extension][3].
 
 ## Générale
 
-* NVDA ne lira plus les sons d'erreur ou ne cesse plus de fonctionner si
-  cette extension est utilisée sous Windows 7, windows 8.1 et des versions
-  incompatibles de Windows 10.
 * En plus des dialogues reconnus par NVDA, d'autres dialogues sont
   maintenant reconus et annoncés comme tels, incluant le dialogue de Insider
   Preview (app de paramètres).
@@ -73,8 +70,9 @@ l'extension][3].
   element for state change event, and item text for item status event.
 * Il est possible de faire le suivi seul des événements spécifiques et / ou
   des événements à venir à partir des applications spécifiques.
-* Lors de l'ouverture, de la fermeture ou du basculement entre les bureaux
-  virtuels, NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
+* When opening, closing, reordering (build 21337 or later), or switching
+  between virtual desktops, NVDA will announce active virtual desktop name
+  (desktop 2, for example).
 * NVDA n'annoncera plus la taille du menu Démarrer lorsque vous changez la
   résolution ou l'orientation de l'écran.
 * Lorsque vous organisez les tuiles du menu Démarrer ou le Centre de
@@ -89,12 +87,6 @@ l'extension][3].
 
 ## Calculatrice
 
-* Lorsque vous appuyez sur Entrée ou Échap, NVDA annonce les résultats du
-  calcul.
-* Pour les calculs tels que le convertisseur d'unités et le convertisseur de
-  devises, NVDA annoncera les résultats dès que les calculs seront entrés.
-* NVDA notifiera lorsque le nombre maximum de chiffres aura été atteint lors
-  de la saisie d'expressions.
 * NVDA will no longer announce graphing calculator screen message twice.
 
 ## Calendrier
@@ -157,9 +149,6 @@ supports updated input experience panel in build 21296 and later.
 * Sur certains systèmes exécutant Windows Version 1903 (May 2019 Update) et
   ultérieure, NVDA ne paraîtra plus inactif quand le panneau d'emoji
   s'ouvre.
-* Ajout du support pour le chinois moderne, japonais et coréen (CJK) IME
-  candidates interface introduite dans la Version 2004 (build 18965 et
-  ultérieure).
 * Lorsqu'un groupe emoji (y compris Kaomoji et un groupe des symboles dans
   la Version 1903 ou ultérieure) est sélectionné, NVDA ne sera plus déplacer
   à l'objet navigateur vers certains emojis.

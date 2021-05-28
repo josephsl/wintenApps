@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2020.3-2020.4
+* NVDA compatibility: 2020.4 and beyond
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -12,42 +12,38 @@ säätimille.
 Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
-* Calculator (modern)
+* Laskin (moderni)
 * Kalenteri
 * Cortana (keskustelut)
 * Sähköposti
 * Kartat
 * Microsoft Solitaire -kokoelma
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/hardware input
-  suggestions/clipboard history/modern input method editors)
+* Moderni näppäimistö (emojipaneeli/sanelu/fyysisen näppäimistösyötteen
+  ehdotukset/pilvileikepöydän historia/modernin syöttömenetelmän editorit)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Sää
-* Miscellaneous modules for controls such as Start Menu tiles
+* Sekalaisia moduuleita säätimille, esim. Käynnistä-valikon ruuduille.
 
 Huomautuksia:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (21H1/build 19043).
+* Tämä lisäosa edellyttää Windows 10:n versiota 2004 (koontiversio 19041)
+  tai uudempaa. Käytä parhaan käyttökokemuksen varmistamiseksi Windows 10:n
+  viimeisintä vakaata versiota (21H1/koontiversio 19043).
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
   Windows 10 -versioita tai eivät ole enää käyttökelpoisia Windows 10:een ja
   sovelluksiin tehtyjen muutosten vuoksi.
-* Some apps support compact overlay mode (always on top in Calculator, for
-  example), and this mode will not work properly with portable version of
-  NVDA.
+* Jotkin sovellukset tukevat kompaktia peitetilaa (esim. Laskimessa Aina
+  päällimmäisenä), joka ei toimi oikein NVDA:n massamuistiversion kanssa.
 
 Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 [lisäosajulkaisujen muutoslokeista.][3]
 
 ## Yleistä
 
-* NVDA ei toista enää virheääniä tai tee mitään, mikäli tämä lisäosa
-  aktivoituu Windows 7:ssä, 8.1:ssä tai sellaisissa Windows 10:n versioissa,
-  joita ei enää tueta.
 * Entistä enemmän valintaikkunoita tunnistetaan ja ilmoitetaan nyt
   asianmukaisesti valintaikkunoina, mukaan lukien Insider-esiversion
   valintaikkuna (Asetukset-sovellus). Tämä sisältyy nyt NVDA 2018.3:een.
@@ -58,18 +54,21 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   Käynnistä-valikossa tai Resurssienhallinnassa versiossa 1909 (November
   2019 -päivitys) ja uudemmissa, mikä tekee lisäksi
   pistekirjoitustulosteesta yhdenmukaisempaa kohteita tarkasteltaessa.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drop target
-  drag enter, drop target drag leave, drop target dropped. With NVDA's log
-  level set to debug, these events will be tracked, and for UIA notification
-  event, a debug tone will be heard if notifications come from somewhere
-  other than the currently active app. Some events will provide additional
-  information such as element count in controller for event, state of the
-  element for state change event, and item text for item status event.
+* Seuraavat UIA-tapahtumat tunnistetaan NVDA:n tarjoamien
+  UIA-tapahtumakäsittelijöiden lisäksi: vetämisen aloitus, vetämisen
+  peruutus, vetäminen suoritettu, vetämisen kohteeseen siirtyminen,
+  vetämisen kohteesta poistuminen, vetämisen kohde pudotettu. Näitä
+  tapahtumia seurataan, kun NVDA:n lokitasoksi on määritetty
+  "virheenkorjaus", ja UIA-ilmoitustapahtuma ilmaistaan virheäänellä, mikäli
+  ilmoitukset tulevat muualta kuin aktiivisesta sovelluksesta. Jotkin
+  tapahtumat tarjoavat lisätietoja, kuten elementtien määrä ohjain kohteelle
+  -tapahtumalla, elementin tila tilan muutos -tapahtumalla sekä kohteen
+  teksti kohteen tila -tapahtumalla.
 * On mahdollista seurata vain tiettyjä tapahtumia ja/tai tietyistä
   sovelluksista tulevia tapahtumia.
-* NVDA ilmoittaa nykyisen työpöydän tunnisteen (esim. työpöytä 2) avattaessa
-  ja suljettaessa virtuaalityöpöytiä tai siirryttäessä niiden välillä.
+* When opening, closing, reordering (build 21337 or later), or switching
+  between virtual desktops, NVDA will announce active virtual desktop name
+  (desktop 2, for example).
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
   suuntaa vaihdettaessa.
 * Kun Käynnistä-valikon ruutuja tai Toimintokeskuksen pikatoimintoja
@@ -82,12 +81,7 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Laskin
 
-* NVDA ilmoittaa laskutoimituksen tuloksen Enteriä tai Esciä painettaessa.
-* NVDA puhuu laskutoimitusten tulokset (esim. yksikkö- ja
-  valuuttamuuntimessa) heti laskukaavoja syötettäessä.
-* NVDA ilmoittaa, jos lukujen enimmäismäärä saavutetaan ilmaisuja
-  kirjoitettaessa.
-* NVDA will no longer announce graphing calculator screen message twice.
+* NVDA ei enää sano graafisen laskinnäytön ilmoitusta kahdesti.
 
 ## Kalenteri
 
@@ -96,13 +90,14 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Cortana
 
-Most items are applicable when using Cortana Conversations (Version 2004 and
-later).
+Useimmat kohdat koskevat versiota 2004 ja uudempia Cortana-keskusteluja
+käytettäessä.
 
 * Cortanan tekstimuotoiset vastaukset puhutaan useimmissa tilanteissa.
 * NVDA on hiljaa puhuttaessa Cortanalle mikrofonin välityksellä.
-* In Version 1909 (November 2019 Update) and later, modern search experience
-  in File Explorer powered by Windows Search user interface is supported.
+* Modernia Windows-haun käyttöliittymän voimalla toimivaa
+  resurssienhallinnan hakukokemusta tuetaan versiossa 1909 (marraskuun 2019
+  päivitys) ja uudemmassa.
 
 ## Sähköposti
 
@@ -144,9 +139,6 @@ uudemmissa.
 * Emojipaneelin avautuessa ei enää näytä siltä, että NVDA  ei tee mitään
   joissakin järjestelmissä, joissa on asennettuna Windows 10:n versio 1903
   (May 2019 -päivitys) tai uudempi.
-* Lisätty tuki modernille kiinan, japanin ja korean (CJK) IME-ehdotusten
-  liittymälle, joka esiteltiin versiossa 2004 (koontiversio 18965 ja
-  uudemmat).
 * Kun emojiryhmä (mukaan lukien kaomoji ja symboliryhmä versiossa 1903 tai
   uudemmissa) valitaan, NVDA ei enää siirrä navigointiobjektia tiettyihin
   emojeihin.
