@@ -3,8 +3,9 @@
 
 # Adds handlers for various UIA controls found in Windows 10.
 
-# Help Mypy and other static checkers for a time by importing uppercase versions of built-in types.
-from typing import Optional, Any, Dict, List, Set
+# Help Mypy and other static checkers for a time by using annotations from future Python releases.
+from __future__ import annotations
+from typing import Optional, Any
 from comtypes import COMError
 import globalPluginHandler
 import controlTypes
@@ -43,7 +44,7 @@ UIA_DropTarget_DragLeaveEventId: int = 20030
 UIA_DropTarget_DroppedEventId: int = 20031
 
 # For convenience.
-W10Events: Dict[int, str] = {
+W10Events: dict[int, str] = {
 	UIA_Drag_DragStartEventId: "UIA_dragStart",
 	UIA_Drag_DragCancelEventId: "UIA_dragCancel",
 	UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
@@ -53,7 +54,7 @@ W10Events: Dict[int, str] = {
 }
 
 # Additional dialogs not recognized by NVDA itself.
-UIAAdditionalDialogClassNames: List[str] = ["Popup"]
+UIAAdditionalDialogClassNames: list[str] = ["Popup"]
 
 
 # General UIA controller for edit field.
@@ -191,8 +192,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Find out if log recording is possible.
 	# This will work if debug logging is on and/or tracing apps and/or events is specified.
-	trackedEvents: Set[str] = set()
-	trackedApps: Set[str] = set()
+	trackedEvents: set[str] = set()
+	trackedApps: set[str] = set()
 
 	def recordLog(self, obj: Any, event: Optional[str]) -> bool:
 		if not isinstance(obj, UIA):
@@ -213,7 +214,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Record UIA property info about an object if told to do so.
 	def uiaDebugLogging(self, obj: Any, event: Optional[str] = None) -> None:
 		if self.recordLog(obj, event):
-			info: List[str] = [f"object: {repr(obj)}"]
+			info: list[str] = [f"object: {repr(obj)}"]
 			info.append(f"name: {obj.name}")
 			if not event:
 				event = "no event specified"
@@ -223,7 +224,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			elif event == "stateChange":
 				# Copied from NVDA Core's default navigator object dev info's state retriever.
 				try:
-					stateConsts: Dict[int, str] = dict(
+					stateConsts: dict[int, str] = dict(
 						(const, name) for name, const in controlTypes.__dict__.items() if name.startswith("STATE_")
 					)
 					ret = ", ".join(
