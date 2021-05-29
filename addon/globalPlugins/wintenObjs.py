@@ -54,7 +54,7 @@ W10Events: dict[int, str] = {
 }
 
 # Additional dialogs not recognized by NVDA itself.
-UIAAdditionalDialogClassNames: list[str] = ["Popup"]
+UIAAdditionalDialogClassNames: list[str] = []
 
 
 # General UIA controller for edit field.
