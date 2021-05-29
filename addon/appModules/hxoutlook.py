@@ -43,7 +43,7 @@ class MailItemRow(RowWithFakeNavigation, UIA):
 		ui.message(_("Cannot move between rows"))
 
 
-# The below app module class inherits from built-in Mail and Calendar app module class, so inform mypy.
+# The below app module class inherits from built-in Mail and Calendar app module class, so inform Mypy.
 # Also Flake8 and other linters should ignore this.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
