@@ -257,6 +257,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			logger(u"W10: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
 	def event_nameChange(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "nameChange")
 		# NVDA Core issue 5641: try catching virtual desktop switch event,
 		# which will result in name change for the desktop object.
 		# To be taken care of by NVDA Core, and for older releases, let the add-on handle it for a time.
@@ -265,10 +266,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if obj.windowClassName == "#32769":
 			if log.isEnabledFor(log.DEBUG):
 				log.debug(f"W10: possible desktop name change from {obj}, app module: {obj.appModule}")
-				# Play a debug beep only if NVDA was restarted with debug logging enabled.
-				if globalVars.appArgs.debugLogging:
-					import tones
-					tones.beep(512, 50)
 			# CSRSS: Client/Server Runtime Subsystem (Windows subsystem process/desktop object)
 			if obj.appModule.appName == "csrss":
 				import wx
@@ -277,7 +274,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				# Properly supported in Version 1909.
 				if not hasattr(eventHandler, "handlePossibleDesktopNameChange"):
 					wx.CallLater(500, ui.message, obj.name)
-		self.uiaDebugLogging(obj, "nameChange")
 		nextHandler()
 
 	def event_valueChange(self, obj, nextHandler):
