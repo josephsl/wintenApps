@@ -419,4 +419,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_layoutInvalidated(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "layoutInvalidated")
+		focus = api.getFocusObject()
+		focusControllerFor = focus.controllerFor
+		import speech
+		speech.cancelSpeech()
+		if len(focusControllerFor) and focusControllerFor[0].appModule is obj.appModule and obj.firstChild.name:
+			focus._layoutInvalidatedReportSuggestionsCount()
 		nextHandler()
