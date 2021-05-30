@@ -349,7 +349,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				f"notification kind: {notificationKind}, "
 				f"notification processing: {notificationProcessing}, "
 				f"display string: {displayString}, "
-				f"activity ID: {activityId}"
+				f"activity Id: {activityId}"
 			)
 			# Play a debug tone if and only if notifications come from somewhere other than the active app
 			# and NVDA was restarted with debug logging mode.
