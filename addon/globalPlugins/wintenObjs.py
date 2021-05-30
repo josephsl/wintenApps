@@ -42,6 +42,7 @@ UIA_Drag_DragCompleteEventId: int = 20028
 UIA_DropTarget_DragEnterEventId: int = 20029
 UIA_DropTarget_DragLeaveEventId: int = 20030
 UIA_DropTarget_DroppedEventId: int = 20031
+UIA_LayoutInvalidatedEventId: int = 20008
 
 # For convenience.
 W10Events: dict[int, str] = {
@@ -51,6 +52,7 @@ W10Events: dict[int, str] = {
 	UIA_DropTarget_DragEnterEventId: "UIA_dopTargetDragEnter",
 	UIA_DropTarget_DragLeaveEventId: "UIA_dropTargetDragLeave",
 	UIA_DropTarget_DroppedEventId: "UIA_dropTargetDropped",
+	UIA_LayoutInvalidatedEventId: "UIA_layoutInvalidated",
 }
 
 # Additional dialogs not recognized by NVDA itself.
@@ -409,4 +411,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_textChange(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "textChange")
+		nextHandler()
+
+	def event_UIA_layoutInvalidated(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "layoutInvalidated")
 		nextHandler()
