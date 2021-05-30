@@ -290,8 +290,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_controllerFor(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "controllerFor")
-		if log.isEnabledFor(log.DEBUG):
-			log.debug(f"W10: controller for count: {len(obj.controllerFor)}")
 		nextHandler()
 
 	def event_liveRegionChange(self, obj, nextHandler):
