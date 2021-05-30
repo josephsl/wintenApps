@@ -421,8 +421,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "layoutInvalidated")
 		focus = api.getFocusObject()
 		focusControllerFor = focus.controllerFor
-		import speech
-		speech.cancelSpeech()
+		# In some cases, suggestions list fires layout invalidated event repeatedly.
+		# This is the case with Microsoft Store's search field.
+		# But do not cut off focus announcements when controller for array is empty.
+		if len(focusControllerFor):
+			import speech
+			speech.cancelSpeech()
 		if len(focusControllerFor) and focusControllerFor[0].appModule is obj.appModule and obj.firstChild.name:
 			focus._layoutInvalidatedReportSuggestionsCount()
 		nextHandler()
