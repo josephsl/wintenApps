@@ -77,6 +77,10 @@ class W10SearchField(SearchField):
 
 	def event_suggestionsOpened(self):
 		super(W10SearchField, self).event_suggestionsOpened()
+		# #59: use an internal function to announce suggestions count.
+		self._layoutInvalidatedReportSuggestionsCount()
+
+	def _layoutInvalidatedReportSuggestionsCount(self):
 		# Announce number of items found
 		# (except in Start search box where the suggestions are selected as user types).
 		# Because inaccurate count could be announced (when users type, suggestion count changes),
