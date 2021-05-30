@@ -94,7 +94,7 @@ class W10SearchField(SearchField):
 				# Translators: part of the suggestions count message (for example: 2 suggestions).
 				if suggestionsCount == 1 else _("{} suggestions").format(suggestionsCount)
 			)
-			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, suggestionsMessage)
+			ui.message(suggestionsMessage)
 
 
 # Various XAML headings (Settings app, for example) introduced in Version 1803.
