@@ -419,6 +419,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_layoutInvalidated(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "layoutInvalidated")
+		if log.isEnabledFor(log.DEBUG):
+			log.debug(f"W10: list item count: {obj.childCount}")
 		# Forget all this if the element is not even shown on screen.
 		if not any(obj.location):
 			return
