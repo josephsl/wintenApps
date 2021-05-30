@@ -250,12 +250,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			except COMError:
 				info.append("Automation Id: not found")
 			info.append(f"class name: {element.cachedClassName}")
-			if event == "controllerFor":
-				info.append(f"controller for count: {len(obj.controllerFor)}")
-			elif event == "tooltipOpened":
-				info.append(f"framework Id: {element.cachedFrameworkId}")
-			elif event == "itemStatus":
-				info.append(f"item status: {element.currentItemStatus}")
 			if log.isEnabledFor(log.DEBUG):
 				logger = log.debug
 			else:
@@ -300,6 +294,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_controllerFor(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "controllerFor")
+		if log.isEnabledFor(log.DEBUG):
+			log.debug(f"W10: controller for count: {len(obj.controllerFor)}")
 		nextHandler()
 
 	def event_liveRegionChange(self, obj, nextHandler):
@@ -407,10 +403,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "tooltipOpened")
+		if log.isEnabledFor(log.DEBUG):
+			log.debug(f"W10: tooltip framework Id: {element.cachedFrameworkId}")
 		nextHandler()
 
 	def event_UIA_itemStatus(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "itemStatus")
+		if log.isEnabledFor(log.DEBUG):
+			log.debug(f"W10: item status: {element.currentItemStatus}")
 		nextHandler()
 
 	def event_textChange(self, obj, nextHandler):
