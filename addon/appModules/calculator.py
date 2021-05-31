@@ -12,6 +12,7 @@ import queueHandler
 import ui
 from NVDAObjects.UIA import UIA
 import braille
+import scriptHandler
 
 
 # Mypy should be reminded that this app module is powered by built-in Calculator app module.
@@ -43,6 +44,16 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Call the built-in app module version of UIA notification event handler.
 		super(AppModule, self).event_UIA_notification(obj, nextHandler, activityId=activityId, **kwargs)
 
+	# A list of native commands to handle calculator result announcement.
+	_calculatorResultGestures = (
+		"kb:enter",
+		"kb:numpadEnter",
+		"kb:escape",
+		"kb:delete",
+		"kb:numpadDelete"
+	)
+
+	@scriptHandler.script(gestures=_calculatorResultGestures)
 	def script_calculatorResult(self, gesture):
 		# To prevent double focus announcement, check where we are.
 		focus = api.getFocusObject()
