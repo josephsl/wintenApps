@@ -19,12 +19,6 @@ import scriptHandler
 # Inform Flake8 as well.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
-	def __init__(self, *args, **kwargs):
-		super(AppModule, self).__init__(*args, **kwargs)
-		# Add additional Calculator result gestures until they are added to NVDA Core.
-		self.bindGesture("kb:delete", "calculatorResult")
-		self.bindGesture("kb:numpadDelete", "calculatorResult")
-
 	def event_NVDAObject_init(self, obj):
 		if not isinstance(obj, UIA):
 			return
