@@ -395,8 +395,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "tooltipOpened")
-		if log.isEnabledFor(log.DEBUG):
-			log.debug(f"W10: tooltip framework Id: {element.cachedFrameworkId}")
 		nextHandler()
 
 	def event_UIA_itemStatus(self, obj, nextHandler):
