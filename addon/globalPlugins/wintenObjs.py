@@ -399,8 +399,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_itemStatus(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "itemStatus")
-		if log.isEnabledFor(log.DEBUG):
-			log.debug(f"W10: item status: {element.currentItemStatus}")
 		nextHandler()
 
 	def event_textChange(self, obj, nextHandler):
