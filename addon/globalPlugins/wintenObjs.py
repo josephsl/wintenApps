@@ -409,15 +409,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "layoutInvalidated")
 		if log.isEnabledFor(log.DEBUG):
 			log.debug(f"W10: list item count: {obj.childCount}")
-		# Forget all this if the element is not even shown on screen.
-		if not any(obj.location):
+		focus = api.getFocusObject()
+		focusControllerFor = focus.controllerFor
+		# Forget all this if the element is not even shown on screen or not associated with a search field.
+		if not any(obj.location) or not len(focusControllerFor):
 			return
 		# In some cases, suggestions list fires layout invalidated event repeatedly.
 		# This is the case with Microsoft Store's search field.
 		import speech
 		speech.cancelSpeech()
-		focus = api.getFocusObject()
-		focusControllerFor = focus.controllerFor
 		if len(focusControllerFor) and focusControllerFor[0].appModule is obj.appModule and obj.firstChild.name:
 			focus._layoutInvalidatedReportSuggestionsCount()
 		nextHandler()
