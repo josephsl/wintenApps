@@ -37,7 +37,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		if activityId == "GraphViewChanged" and self._resultsCache == displayString:
 			return
 		self._resultsCache = displayString
-		# For "DisplayUpdated", announce display strings in braille and move on.
+		# NVDA Core issue 12268: for "DisplayUpdated", announce display strings in braille and move on.
 		if activityId == "DisplayUpdated":
 			braille.handler.message(displayString)
 		# Call the built-in app module version of UIA notification event handler.
