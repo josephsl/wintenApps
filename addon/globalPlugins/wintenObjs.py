@@ -294,11 +294,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_liveRegionChange(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "liveRegionChange")
-		if isinstance(obj, UIA):
-			# No, do not let Start menu size be announced.
-			# Moved from Shell Experience Host in 2018 as a different app hosts this control in build 18282.
-			if obj.UIAAutomationId == "FrameSizeAccessibilityField":
-				return
+		# No, do not let Start menu size be announced.
+		# Moved from Shell Experience Host in 2018 as a different app hosts this control in build 18282.
+		if isinstance(obj, UIA) and obj.UIAAutomationId == "FrameSizeAccessibilityField":
+			return
 		nextHandler()
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
