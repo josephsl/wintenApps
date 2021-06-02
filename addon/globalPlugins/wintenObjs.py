@@ -299,10 +299,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Moved from Shell Experience Host in 2018 as a different app hosts this control in build 18282.
 			if obj.UIAAutomationId == "FrameSizeAccessibilityField":
 				return
-			# #50 (NVDA Core issue 8466): certain aria-alert messages.
-			if obj.role == controlTypes.ROLE_ALERT:
-				if not obj.name and obj.treeInterceptor is not None:
-					ui.message(obj.treeInterceptor.makeTextInfo(obj).text)
 		nextHandler()
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
