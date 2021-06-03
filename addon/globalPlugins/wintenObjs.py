@@ -186,10 +186,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# But not for apps such as Calculator where doing so results in confusing user experience.
 		# Some apps may cause COM to throw timeout error.
 		try:
+			# NvDA does not recognize heading levels 7, 8, and 9, therefore use a chained comparison.
 			if (
-				obj._getUIACacheablePropertyValue(
+				UIAHandler.HeadingLevel1 <= obj._getUIACacheablePropertyValue(
 					UIAHandler.UIA_HeadingLevelPropertyId
-				) > UIAHandler.HeadingLevel_None
+				) <= UIAHandler.HeadingLevel6
 			):
 				if obj.appModule.appName != "calculator":
 					clsList.insert(0, XAMLHeading)
