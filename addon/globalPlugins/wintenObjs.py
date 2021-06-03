@@ -46,13 +46,13 @@ UIA_LayoutInvalidatedEventId: int = 20008
 
 # For convenience.
 W10Events: dict[int, str] = {
-	UIA_Drag_DragStartEventId: "UIA_dragStart",
-	UIA_Drag_DragCancelEventId: "UIA_dragCancel",
-	UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
-	UIA_DropTarget_DragEnterEventId: "UIA_dopTargetDragEnter",
-	UIA_DropTarget_DragLeaveEventId: "UIA_dropTargetDragLeave",
-	UIA_DropTarget_DroppedEventId: "UIA_dropTargetDropped",
-	UIA_LayoutInvalidatedEventId: "UIA_layoutInvalidated",
+	UIAHandler.UIA_Drag_DragStartEventId: "UIA_dragStart",
+	UIAHandler.UIA_Drag_DragCancelEventId: "UIA_dragCancel",
+	UIAHandler.UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
+	UIAHandler.UIA_DropTarget_DragEnterEventId: "UIA_dopTargetDragEnter",
+	UIAHandler.UIA_DropTarget_DragLeaveEventId: "UIA_dropTargetDragLeave",
+	UIAHandler.UIA_DropTarget_DroppedEventId: "UIA_dropTargetDropped",
+	UIAHandler.UIA_LayoutInvalidatedEventId: "UIA_layoutInvalidated",
 }
 
 # Additional dialogs not recognized by NVDA itself.
