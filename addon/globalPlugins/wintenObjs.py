@@ -183,7 +183,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			clsList.insert(0, UIAEditableTextWithSuggestions)
 			return
 		# Recognize headings as reported by XAML (build 17134 and later).
-		# But not for apps such as Calculator where doing so results in confusing user experience.
 		# Some apps may cause COM to throw timeout error.
 		try:
 			# NvDA does not recognize heading levels 7, 8, and 9, therefore use a chained comparison.
@@ -191,9 +190,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				UIAHandler.HeadingLevel1 <= obj._getUIACacheablePropertyValue(
 					UIAHandler.UIA_HeadingLevelPropertyId
 				) <= UIAHandler.HeadingLevel6
+				# But not for apps such as Calculator where doing so results in confusing user experience.
+				and obj.appModule.appName != "calculator"
 			):
-				if obj.appModule.appName != "calculator":
-					clsList.insert(0, XAMLHeading)
+				clsList.insert(0, XAMLHeading)
 		except COMError:
 			pass
 
