@@ -36,13 +36,7 @@ else:
 
 
 # Extra UIA constants
-UIA_Drag_DragStartEventId: int = 20026
-UIA_Drag_DragCancelEventId: int = 20027
-UIA_Drag_DragCompleteEventId: int = 20028
-UIA_DropTarget_DragEnterEventId: int = 20029
-UIA_DropTarget_DragLeaveEventId: int = 20030
-UIA_DropTarget_DroppedEventId: int = 20031
-UIA_LayoutInvalidatedEventId: int = 20008
+# None at this time
 
 # For convenience.
 W10Events: dict[int, str] = {
