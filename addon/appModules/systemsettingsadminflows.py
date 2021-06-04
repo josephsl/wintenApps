@@ -17,3 +17,18 @@ class AppModule(appModuleHandler.AppModule):
 			# This works properly if the parent object is recognized as a dialog.
 			ui.message(obj.parent.description)
 		nextHandler()
+
+	def event_UIA_window_windowOpen(self, obj, nextHandler):
+		# With selective UIA event registration on, name change event from the header text will not be handled.
+		import config
+		import UIAHandler
+		if config.conf["UIA"]["selectiveEventRegistration"]:
+			# First child is a title bar, but simple first child is the actual header text.
+			# Therefore try using simple first child unless the situation changes in the future.
+			UIAHandler.handler.removeEventHandlerGroup(
+				obj.simpleFirstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup
+			)
+			UIAHandler.handler.addEventHandlerGroup(
+				obj.simpleFirstChild.UIAElement, UIAHandler.handler.localEventHandlerGroup
+			)
+		nextHandler()
