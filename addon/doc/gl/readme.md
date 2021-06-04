@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros usuarios do Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
-* NVDA compatibility: 2020.4 and beyond
+* Compatibilidade con NVDA: 2020.4 en diante
 
 Este complemento é unha coleción de app modules para varias aplicacións de
 Windows 10, así coma melloras e correccións para certos controis de windows
@@ -29,9 +29,9 @@ se inclúe):
 
 Notas:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (21H1/build 19043).
+* Este complemento require do Windows 10 Versión 2004 (compilación 19041) ou
+  posterior. Para uns mellores resultados, usa o complemento coa última
+  versión estable do windows 10 (21H1/compilación 19043).
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
 * Para entradas non listadas a continuación, podes asumir que as
@@ -47,8 +47,6 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Xeral
 
-* Agora recoñécense certos diálogos como proprios diálogos. Esto inclúe o
-  diálogo Insider Preview (settings app).
 * NVDA pode anunciar o número de suxestións cando se realiza unha procura na
   maioría dos casos. Esta opción contrólase por "Anunciar información de
   posición do obxecto" no panel Presentación de Obxectos ubicado nas opcións
@@ -68,9 +66,9 @@ documento [rexistros de trocos para publicacións de complementos][3].
   en eventos state change, e o texto do elemento para eventos item status.
 * É posible o seguimento só de eventos específicos e/ou de eventos provintes
   de aplicacións específicas.
-* When opening, closing, reordering (build 21337 or later), or switching
-  between virtual desktops, NVDA will announce active virtual desktop name
-  (desktop 2, for example).
+* Cando se abran, pechen, reordenen (compilación 21337 e posterior), ou se
+  conmute entre escritorios virtuales, NVDA anunciará o nome do escritorio
+  actual (escritorio 2, por exemplo).
 * NVDA xa non anuncia Menú Inicio tamaño de texto ao cambiar a resolución de
   pantalla ou a orientación.
 * Ao ordear as tarxetas do menú inicio ou as accións rápidas do centro de

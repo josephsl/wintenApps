@@ -47,9 +47,6 @@ riferimento al documento [changelogs for add-on releases][3].
 
 ## Generale
 
-* Oltre alle finestre di dialogo riconosciute da NVDA, ora ne vengono
-  gestite correttamente altre, compresa la finestra Insider Preview (app
-  impostazioni)
 * Nella maggior parte dei casi, NVDA può annunciare il numero dei
   suggerimenti quando si esegue una ricerca. Questa funzione è controllata
   dall'opzione "leggi le informazioni sulla posizione dell'oggetto" nella

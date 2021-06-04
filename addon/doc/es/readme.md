@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer y otros usuarios de Windows 10
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
-* NVDA compatibility: 2020.4 and beyond
+* Compatibilidad con NVDA: 2020.4 y posterior
 
 Este complemento es una colección de app modules para varias aplicaciones de
 Windows 10, así como Mejoras y correcciones para ciertos controles de
@@ -48,9 +48,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 ## General
 
-* Además de los diálogos reconocidos como tales por NVDA, ahora se reconocen
-  más diálogos y se anuncian adecuadamente, como el diálogo Insider Preview
-  (aplicación de configuración).
 * NVDA puede anunciar cuenta de sugerencias cuando se realiza una búsqueda
   en la mayoría de casos. Esta opción se controla por "Anunciar información
   de posición del objeto" en el panel Presentación de Objetos.
@@ -70,9 +67,9 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   texto del elemento en el evento Item status.
 * Es posible seguir sólo eventos específicos y/o eventos que vienen de
   aplicaciones específicas.
-* When opening, closing, reordering (build 21337 or later), or switching
-  between virtual desktops, NVDA will announce active virtual desktop name
-  (desktop 2, for example).
+* Al abrir, cerrar, reordenar (compilación 21337 o posterior) o cambiar
+  entre escritorios virtuales, NVDA anunciará el nombre del escritorio
+  virtual activo (escritorio 2, por ejemplo).
 * NVDA ya no anunciará el tamaño del texto del Menú Inicio al cambiar la
   resolución de pantalla o la orientación.
 * Al reordenar los elementos del menú Inicio o acciones rápidas del centro

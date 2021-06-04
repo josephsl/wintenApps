@@ -44,9 +44,6 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 
 ## Ogólne
 
-* Niektóre okna dialogowe są od teraz prawidłowo rozpoznawane i wymawiane
-  jako okna dialogowe. Są to np. okna dialogowe w wersjach testowych
-  (settings app). Jest to już wbudowane w sam czytnik ekranu.
 * W większości przypadków, NVDA może ogłaszać liczbę sugestii
   wyszukiwania. Ta funkcja jest kontrolowana przez opcję "odczytuj położenie
   obiektu" dostępną w ustawieniach NVDA, w panelu "prezentacja obiektu".

@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* NVDA compatibility: 2020.4 and beyond
+* Yhteensopivuus: NVDA 2020.4 ja uudemmat
 
 Tämä lisäosa sisältää kokoelman sovellusmoduuleja Windows 10:n mukana
 tuleville sovelluksille sekä laajennuksia ja korjauksia tietyille
@@ -44,9 +44,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
-* Entistä enemmän valintaikkunoita tunnistetaan ja ilmoitetaan nyt
-  asianmukaisesti valintaikkunoina, mukaan lukien Insider-esiversion
-  valintaikkuna (Asetukset-sovellus). Tämä sisältyy nyt NVDA 2018.3:een.
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
   -asetuksella Objektien lukeminen -paneelista NVDA:n asetuksista.
@@ -66,9 +63,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   teksti kohteen tila -tapahtumalla.
 * On mahdollista seurata vain tiettyjä tapahtumia ja/tai tietyistä
   sovelluksista tulevia tapahtumia.
-* When opening, closing, reordering (build 21337 or later), or switching
-  between virtual desktops, NVDA will announce active virtual desktop name
-  (desktop 2, for example).
+* NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
+  avattaessa, suljettaessa, uudelleenjärjestettäessä (koontiversio 21337 tai
+  uudempi) tai siirryttäessä niiden välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
   suuntaa vaihdettaessa.
 * Kun Käynnistä-valikon ruutuja tai Toimintokeskuksen pikatoimintoja

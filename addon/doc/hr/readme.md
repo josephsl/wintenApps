@@ -1,9 +1,9 @@
-# Osnovni dodaci za Windows 10 aplikacije #
+# Osnovni moduli za Windows 10 aplikacije #
 
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA compatibility: 2020.4 and beyond
+* NVDA kompatibilnost: 2020.4 i novije
 
 Ovaj NVDA dodatak je zbirka aplikacijskih modula za razne Windows 10
 aplikacije, kao i poboljšanja i ispravci određenih windows 10 kontrola.
@@ -11,42 +11,39 @@ aplikacije, kao i poboljšanja i ispravci određenih windows 10 kontrola.
 Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 što je uključeno):
 
-* Calculator (modern)
+* Kalkulator (moderan)
 * Kalendar
-* Cortana (Conversations)
-* Pošta
+* Cortana (konverzacije)
+* Mail
 * Karte
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/hardware input
-  suggestions/clipboard history/modern input method editors)
+* Moderna tipkovnica (ploča emojija, diktatiranje, prijedlozi za ulazni
+  hardver, povijest međuspremnika, moderni uređivači za unos)
 * Osobe
 * Postavke (postavke sustava, Windows+I)
-* Vremenska prognoza
-* Miscellaneous modules for controls such as Start Menu tiles
+* Vrijeme
+* Dodatni moduli za kontrole kao što su pločice izbornika Start
 
 Napomene:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (21H1/build 19043).
+* Za ovaj dodatak potrebna je Windows 10 verzija 2004 (gradnja 19041) ili
+  novija. Za najbolje rezultate, koristi dodatak s najnovijim stabilnim
+  izdanjem sustava Windows 10 (21H1/gradnja 19043).
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Za unose koji niže dolje nisu navedeni, može se pretpostaviti da su te
   funkcije dio NVDA čitača. Više nisu primjenjive jer dodatak ne podržava
   stara izdanja sustava Windows 10 ili su napravljene promjene u sustavu
   Windows 10 i aplikacijama, zbog čega unosi više nisu primjenjivi.
-* Some apps support compact overlay mode (always on top in Calculator, for
-  example), and this mode will not work properly with portable version of
-  NVDA.
+* Neke aplikacije podržavaju način kompaktnog preklapanja (na primjer,
+  uvijek na vrhu u Kalkulatoru) i ovaj modus neće ispravno raditi s
+  prijenosnom verzijom NVDA čitača.
 
 Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 [dokument s izmjenama izdanja dodatka][3].
 
 ## Opće
 
-* Većina dijaloških okvira se sada prepoznaju kao pravi dijaloški okviri i o
-  njima se izvještava kao takvima, uključujući dijaloški okvir za Insider
-  Preview (aplikacija za postavke).
 * U većini slučajeva NVDA može najaviti broj prijedloga prilikom
   pretrage. Ova opcija se kontrolira u „Izvijesti o informaciji o položaju
   objekta” u ploči „Prezentacija objekta”.
@@ -55,19 +52,19 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   najavljuje rezultate pretrage prilikom pregledavanja rezultata su manje
   uočljivi, čime i izlazna brajica postaje dosljednija prilikom
   pregledavanja stavki.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drop target
-  drag enter, drop target drag leave, drop target dropped. With NVDA's log
-  level set to debug, these events will be tracked, and for UIA notification
-  event, a debug tone will be heard if notifications come from somewhere
-  other than the currently active app. Some events will provide additional
-  information such as element count in controller for event, state of the
-  element for state change event, and item text for item status event.
+* Prepoznaju se sljedeći UIA događaji: drag start, drag cancel, drag
+  complete, drop target drag enter, drop target drag leave, drop target
+  dropped. Kad je razina NVDA dnevnika postavljena na otklanjanje grešaka,
+  ti će se događaji pratiti. Za obavijesti UIA događaja, ćut će se ton za
+  otklanjanje grešaka, ako obavijesti dolaze odnekud drugdje od trenutačno
+  aktivne aplikacije. Neki će događaji pružati dodatne informacije kao što
+  su broj elemenata u kontroleru za događaj, stanje elementa za događaj
+  promjene stanja i tekst stavke za događaj stanja stavke.
 * Moguće je pratiti samo određene događaje i-ili događaje koji dolaze iz
   određenih aplikacija.
-* When opening, closing, reordering (build 21337 or later), or switching
-  between virtual desktops, NVDA will announce active virtual desktop name
-  (desktop 2, for example).
+* Prilikom otvaranja, zatvaranja, preraspoređivanja (gradnja 21337 ili
+  novija) ili prebacivanja između virtualnih radnih površina, NVDA će
+  najaviti trenutačno ime radne površine (na primjer, desktop 2).
 * NVDA više neće najaviti veličinu teksta izbornika Start, kad se mijenjaju
   rezolucije ili položaj ekrana.
 * Kad se pločice izbornika Start ili brze radnje za Action Center
@@ -80,17 +77,17 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 
 ## Kalkulator
 
-* NVDA will no longer announce graphing calculator screen message twice.
+* NVDA više neće dvaputa najaviti poruku ekrana grafičkog kalkulatora.
 
 ## Kalendar
 
-* NVDA više ne izgovara „uređivanje” ili „samo za čitanje” u tijelu poruke i
-  drugim poljima.
+* NVDA više ne najavljuje „uređivanje” ili „samo za čitanje” u sadržaju
+  poruke i drugim poljima.
 
 ## Cortana
 
-Most items are applicable when using Cortana Conversations (Version 2004 and
-later).
+Većina stavki je primjenjiva kad se koristi Cortana konverzacije (verzija
+2004 i novija).
 
 * Tekstualni odgovori Cortane najavljuju se u većini slučajeva.
 * NVDA neće govoriti kad pričaš sa Cortanom.
@@ -98,7 +95,7 @@ later).
   pretraživanja u Exploreru datoteka koje pokreće korisničko sučelje Windows
   Search.
 
-## Pošta
+## Mail
 
 * Prilikom pregleda stavaka u popisu poruka, sada možete koristiti prečace
   za navigaciju po tablicama kako biste pregledali zaglavlja poruke.
@@ -125,11 +122,11 @@ later).
 
 ## Moderna tipkovnica
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
-supports updated input experience panel in build 21296 and later.
+To uključuje ploču s emojijima, povijest međuspremnika, diktatiranje,
+prijedloge unosa hardvera i moderne uređivače načina unosa za određene
+jezike. Kad pregledavaš emojije, aktiviraj postavku Unicode Consortium u
+NVDA postavkama govora i postavi razinu simbola na „neki” ili višu. Također,
+NVDA podržava aktualiziranu ploču unosa u gradnji 21296 i novijoj.
 
 * Prilikom otvaranja povijesti međuspremnika, pod nekim okolnostima, NVDA
   više neće objavljivati „međuspremnik” kad se u međuspremniku nalaze
@@ -140,8 +137,8 @@ supports updated input experience panel in build 21296 and later.
 * Kad se odabere grupa emojija (uključujući kaomoji i skupinu simbola u
   verziji 1903 ili novijoj), NVDA više neće pomicati navigacijski objekt na
   određene emojije.
-* Added support for updated input experience panel (combined emoji panel and
-  clipboard history) in build 21296 and later.
+* Dodana je podrška za aktualiziranu ploču unosa (kombinacija ploče emojija
+  i povijesti međuspremnika) u gradnji 21296 i novijoj.
 
 ## Osobe
 
@@ -163,7 +160,7 @@ supports updated input experience panel in build 21296 and later.
   instaliraj sada”. NVDA će sad objaviti naslov nove nadogradnje, ako
   postoji.
 
-## Vremenska prognoza
+## Vrijeme
 
 * Kartice poput „prognoza” i „karte” prepoznaju se kao ispravne kartice
   (zakrpu je napravio Derek Riemer).

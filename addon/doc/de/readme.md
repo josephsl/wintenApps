@@ -47,9 +47,6 @@ Versionen][3].
 
 ## Allgemein
 
-* Zusätzlich zu den von der NVDA erkannten Dialogen werden nun mehr Dialoge
-  als richtige Dialoge erkannt und als solche gemeldet, einschließlich des
-  Dialogs Insider-Vorschau (Einstellungsanwendung).
 * NVDA kann in den meisten Fällen die Anzahl der Vorschläge bei der
   Durchführung einer Suche bekannt geben. Diese Option wird durch
   "Objekt-Positionsinformationen mitteilen" im Objektpräsentationsfenster in

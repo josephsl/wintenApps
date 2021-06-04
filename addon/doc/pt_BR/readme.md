@@ -46,9 +46,6 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 ## Geral
 
-* Além dos diálogos reconhecidos pelo NVDA, agora mais caixas de diálogo são
-  reconhecidas como adequadas e relatadas como tal, incluindo o diálogo
-  Insider Preview (aplicativo de configurações).
 * NVDA pode anunciar a contagem de sugestões ao realizar uma pesquisa na
   maioria dos casos. Essa opção é controlada por "Anunciar informações de
   posição do objeto" no painel de Apresentação de objetos, encontrado nas
