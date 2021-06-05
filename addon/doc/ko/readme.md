@@ -9,7 +9,7 @@
 
 다음 앱 모듈 및 지원 모듈을 포함합니다(각 앱 관련 엔트리를 참고 바람):
 
-* Calculator (modern)
+* 계산기(UWP)
 * 달력
 * Cortana(Conversations)
 * 메일
@@ -20,7 +20,7 @@
 * People
 * 설정(시스템 설정 앱, Windows+I)
 * 날씨
-* Miscellaneous modules for controls such as Start Menu tiles
+* 그 외 지원 모듈(시작 메뉴 타일 지원 등)
 
 사용시 주의 사항:
 
@@ -36,24 +36,16 @@
 
 ## 일반
 
-* In addition to dialogs recognized by NVDA, more dialogs are now recognized
-  as proper dialogs and reported as such, including Insider Preview dialog
-  (settings app).
-* NVDA can announce suggestion count when performing a search in majority of
-  cases. This option is controlled by "Report object position information"
-  in Object presentation panel found in NVDA settings.
+* 특정 검색창에서 검색 결과수가 출력되도록 함(본 기능은 NVDA 설정내 객체 알림 페널에 있는 객체 위치 출력 설정으로 제어할 수
+  있음).
 * When searching in Start menu or File Explorer in Version 1909 (November
   2019 Update) and later, instances of NVDA announcing search results twice
   when reviewing results are less noticeable, which also makes braille
   output more consistent when reviewing items.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drop target
-  drag enter, drop target drag leave, drop target dropped. With NVDA's log
-  level set to debug, these events will be tracked, and for UIA notification
-  event, a debug tone will be heard if notifications come from somewhere
-  other than the currently active app. Some events will provide additional
-  information such as element count in controller for event, state of the
-  element for state change event, and item text for item status event.
+* NVDA가 지원하는 UIA  이벤트 외의 다음 이벤트 추적 가능: drag start, drag cancel, drag
+  complete, drop target drag enter, drop target drag leave, drop target
+  dropped. NVDA가 디버그 로깅 상태로 재시작된 경우 위 이벤트가 추적되며 notification 이벤트는 추가 디버그 정보가
+  출력되도록 함.
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
 * When opening, closing, reordering (build 21337 or later), or switching

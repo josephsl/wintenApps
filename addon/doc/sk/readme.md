@@ -43,8 +43,6 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 
 ## Všeobecné
 
-* Okrem dialógov rozpoznaných programom NVDA je teraz zlepšená orientácia vo
-  viacerých dialógoch, vrátane časti Windows insider program.
 * NVDA vo väčšine prípadov dokáže oznámiť počet návrhov pri
   vyhľadávaní. Oznamovanie môžete zapnúť a vypnúť v strome nastavení NVDA,
   časť prezentácia objektov, položka Oznamovať pozíciu objektu.

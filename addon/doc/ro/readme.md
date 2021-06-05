@@ -49,9 +49,6 @@ versiunile suplimentului][3].
 
 ## General
 
-* Anumite dialoguri sunt acum recunoscute ca dialoguri corespunzătoare și
-  sunt raportate ca atare. Acestea includ dialogul Insider Preview
-  (aplicația setări).
 * NVDA poate anunța numărul de sugestii la efectuarea unei căutări în
   majoritatea cazurilor. Această opțiune este controlată de „informația
   poziției obiectului din dialogul prezentării obiectului, găsit în panoul

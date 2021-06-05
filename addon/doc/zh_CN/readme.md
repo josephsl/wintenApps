@@ -3,7 +3,7 @@
 * 作者: Joseph Lee, Derek Riemer and other Windows 10 users
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA compatibility: 2020.4 and beyond
+* NVDA兼容版本: 2020.4 或更高
 
 此插件用于各种 Windows 10 应用程序的模块集合，以及针对某些 Windows 10 控件的增强功能和修复程序。
 
@@ -24,29 +24,23 @@
 
 注意:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (21H1/build 19043).
+* 此插件需要 Windows 10 版本 2004（内部版本 19041）或更高版本。为获得最佳体验，请将此插件与最新 Windows 10 21H1
+  稳定版（内部版本 19043）一起使用。
 * 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
 * 对于未在下方列出的条目，您可以假定功能已是 NVDA 的一部分，不再适用，因为插件不支持旧版本的 Windows
   10，或者对应用程序进行了更改，使条目不再适用。
-* Some apps support compact overlay mode (always on top in Calculator, for
-  example), and this mode will not work properly with portable version of
-  NVDA.
+* 某些应用程序支持紧凑叠加模式（例如，计算器中的始终置顶模式），该模式无法与 NVDA 的便携版正常工作。
 
 有关每个附加发行版之间所做的更改的列表，请参阅[更新日志的附加发布] [3]文档。
 
 ## 常规设置
 
-* 某些对话框现在可以被正确的识别并读出，比如设置应用程序的“内幕预览”对话框。
 * 在大多数情况下，NVDA 可以在执行搜索时朗读建议计数。此选项由 NVDA “对象提示”设置对话框中的“读出对象的位置信息”复选框控制。
 * 在 1909 版（2019年11月更新）及更高版本 Windows 10 中的‘开始’菜单或文件资源管理器中进行搜索时，现在 NVDA
   在浏览结果时两次宣布搜索结果的实例不太明显，这也使盲文输出在浏览项目时更加一致。
 * 除了NVDA提供的UIA事件处理程序外，还可以识别以下UIA事件：拖动开始、拖动取消、拖动完成、拖动目标进入、拖动目标离开、拖动目标丢弃。在NVDA的日志级别设置为调试时，这些事件将被跟踪，对于UIA通知事件，如果通知来自当前活动应用以外的其他地方，将听到调试音。有些事件会提供额外的信息，比如事件的控制器中的元素数量，状态变化事件的元素状态，以及项目状态事件的项目文本。
 * 可以只跟踪特定事件或来自特定应用程序的事件。
-* When opening, closing, reordering (build 21337 or later), or switching
-  between virtual desktops, NVDA will announce active virtual desktop name
-  (desktop 2, for example).
+* 打开、关闭、重新排序（内部版本 21337 或更高版本）或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
 * 当改变屏幕分辨率或方向时，NVDA将不再读出开始菜单的大小文本。
 * 当使用 Alt + Shift +光标键托移“开始”菜单磁贴或“操作中心”快速操作按钮时，NVDA 将朗读有关所拖动项目及所拖动项目的新位置的信息。
 * 通过在 NVDA 的“对象提示”设置中关闭“读出通知提示”，可以禁止诸如文件资源管理器中的音量、亮度更改和来自 Microsoft Store
@@ -54,7 +48,7 @@
 
 ## 计算器
 
-* NVDA will no longer announce graphing calculator screen message twice.
+* NVDA 将不再两次宣布图形计算器屏幕消息。
 
 ## 日历
 

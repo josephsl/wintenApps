@@ -3,7 +3,7 @@
 * Tác giả: Joseph Lee, Derek Riemer và những người dùng Windows 10 khác
 * Tải về [phiên bản chính thức][1]
 * Tải về [phiên bản thử nghiệm][2]
-* NVDA compatibility: 2020.4 and beyond
+* NVDA tương thích: 2020.4 trở lên
 
 Add-on này là một bộ sưu tập các modules cho nhiều ứng dụng của Windows 10,
 đồng thời là các cải tiến và sửa lỗi cho một số điều khiển trong windows 10.
@@ -27,9 +27,8 @@ tiết của mỗi ứng dụng để biết them):
 
 Lưu ý:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (21H1/build 19043).
+* Add-on này yêu cầu Windows 10 phiên bản 2004 (build 19041) trở lên. Tốt
+  nhất, hay dùng add-on với bản Windows 10 mới nhất (21H1/build 19043).
 * Vài tính năng của add-on đã hoặc sẽ là một phần tính năng của trình đọc
   màn hình NVDA.
 * Với những thành phần không được liệt kê bên dưới, bạn có thể xem như các
@@ -46,9 +45,6 @@ for add-on releases][3] .
 
 ## Chung
 
-* Ngoài các hộp thoại được NVDA nhận ra, nhiều hộp thoại giờ đã được nhận
-  diện đúng thuộc tính và thông báo chính xác, bao gồm hộp thoại Insider
-  Preview (ứng dụng settings).
 * NVDA có thể thông báo số gợi ý đếm được khi thực hiện tìm kiếm trong đa số
   trường họp. Tùy chọn này được điều khiển bởi "Thông báo thông tin vị trí
   đối tượng" trong bảng điều khiển trình bày đối tượng, tìm thấy trong cài
@@ -68,9 +64,8 @@ for add-on releases][3] .
   kiện trạng thái thành phần.
 * Đã có thể chỉ theo dõi một số sự kiện nhất định và / hoặc các sự kiện từ
   một ứng dụng nhất định.
-* When opening, closing, reordering (build 21337 or later), or switching
-  between virtual desktops, NVDA will announce active virtual desktop name
-  (desktop 2, for example).
+* Khi mở, đóng, sắp xếp lại (build 21337 trở lên), hay chuyển giữa desktop
+  ảo, NVDA sẽ thông báo tên cửa sổ desktop hiện tại (desktop 2 chẳng hạn).
 * NVDA sẽ không thông báo kích thước văn bản của Start menu khi thay đổi độ
   phân giải hay hướng màn hình.
 * Khi sắp xếp Start menu tiles hoặc Action Center quick actions với
