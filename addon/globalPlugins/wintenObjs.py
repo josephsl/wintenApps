@@ -176,7 +176,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		elif obj.UIAAutomationId == "RootFocusControl":
 			clsList.insert(0, UIAEditableTextWithSuggestions)
 			return
-		# Recognize headings as reported by XAML (build 17134 and later).
+		# Recognize headings as reported by XAML (Version 1803 or later).
 		# Some apps may cause COM to throw timeout error.
 		try:
 			# NvDA does not recognize heading levels 7, 8, and 9, therefore use a chained comparison.

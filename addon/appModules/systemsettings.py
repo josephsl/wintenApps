@@ -26,7 +26,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# From Version 1607 onwards, update history shows status rather than the title.
 			# In build 16232, the title is shown but not the status,
 			# so include this for sake of backward compatibility.
-			# In later revisions of build 17134 and later, feature update download link is provided
+			# In later revisions of Version 1803 and later, feature update download link is provided
 			# and is initially called "download and install now", thus add the feature update title as well.
 			if obj.role == controlTypes.ROLE_LINK:
 				nameList = [obj.name]
@@ -56,10 +56,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# so tell NVDA to use something more meaningful.
 			elif obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
 				obj.name = obj.firstChild.name
-			# Developer mode label in Version 2004 (build 19041) is wrong.
+			# Developer mode label in Version 2004 is wrong.
 			# It shows class name rather than the actual label.
-			# This also affects 20H2 (build 19042) and 21H1 (build 19043)
-			# as they are really enablement packages on top of 2004.
+			# This also affects 20H2 and 21H1 as they are really enablement packages on top of 2004.
 			# This is resolved in build 19536 and later.
 			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name

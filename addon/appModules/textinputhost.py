@@ -169,7 +169,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		childAutomationId = obj.firstChild.UIAAutomationId
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
-		# Emoji panel for 1709 (build 16299) and 1803 (17134) is not supported.
+		# Emoji panel for Version 1709 and 1803 is not supported.
 		# Emoji panel window open event is properly raised in Version 1803.
 		# See older add-on releases for details.
 		# Handle hardware keyboard and CJK IME suggestions.

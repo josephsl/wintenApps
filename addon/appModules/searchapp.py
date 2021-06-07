@@ -11,7 +11,7 @@ import nvwave
 from NVDAObjects.UIA import UIA
 
 
-# In build 18363 and later, File Explorer gains Cortana search field.
+# In Version 1909 and later, File Explorer gains Cortana search field.
 # For Start menu and File Explorer, "suggestions" should not be brailled.
 # This is more so for File Explorer as a live region will announce suggestion count.
 # Note that tools such as Mypy may say there is a cyclic definition
