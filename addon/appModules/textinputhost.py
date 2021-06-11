@@ -119,7 +119,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			self._recentlySelected = obj.name
 		else:
 			from . import skipTranslation
-			skipTranslation.translate("No emoji")
+			# Message included in NVDA Core
+			ui.message(skipTranslation.translate("No emoji"))
 		nextHandler()
 
 	# Register modern keyboard interface elements with local event handler group.
