@@ -112,9 +112,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			obj.reportFocus()
 			# NVDA Core issue 10371: as part of speech sequence work in 2019.3,
 			# braille.getBrailleTextForProperties has been renamed to getPropertiesBraille.
-			braille.handler.message(
-				braille.getPropertiesBraille(name=obj.name, role=obj.role, positionInfo=obj.positionInfo)
-			)
+			braille.handler.message(braille.getPropertiesBraille(
+				name=obj.name,
+				role=obj.role,
+				positionInfo=obj.positionInfo
+			))
 			# Cache selected item.
 			self._recentlySelected = obj.name
 		else:
