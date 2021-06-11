@@ -32,6 +32,8 @@ Notas:
 * This add-on requires Windows 10 Version 2004 (build 19041) or later. For
   best results, use the add-on with latest Windows 10 stable release
   (21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows 10
+  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Alguns recursos adicionais são ou farão parte do leitor de tela do NVDA.
 * Para entradas não listadas abaixo, pode assumir que os recursos fazem já
   parte do NVDA, não sendo mais aplicáveis, pois o complemento não suporta

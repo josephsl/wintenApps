@@ -26,6 +26,8 @@
 
 * 此插件需要 Windows 10 版本 2004（内部版本 19041）或更高版本。为获得最佳体验，请将此插件与最新 Windows 10 21H1
   稳定版（内部版本 19043）一起使用。
+* Although installation is possible, this add-on does not support Windows 10
+  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
 * 对于未在下方列出的条目，您可以假定功能已是 NVDA 的一部分，不再适用，因为插件不支持旧版本的 Windows
   10，或者对应用程序进行了更改，使条目不再适用。
