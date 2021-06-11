@@ -29,6 +29,9 @@ Lưu ý:
 
 * Add-on này yêu cầu Windows 10 phiên bản 2004 (build 19041) trở lên. Tốt
   nhất, hay dùng add-on với bản Windows 10 mới nhất (21H1/build 19043).
+* Dù vẫn có thể cài đặt được, add-on này không hỗ trợ Windows 10 Enterprise
+  LTSC (Long-Term Servicing Channel) và các bản phát hành của Windows
+  Server.
 * Vài tính năng của add-on đã hoặc sẽ là một phần tính năng của trình đọc
   màn hình NVDA.
 * Với những thành phần không được liệt kê bên dưới, bạn có thể xem như các

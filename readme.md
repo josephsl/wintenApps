@@ -25,6 +25,7 @@ The following app modules or support modules for some apps are included (see eac
 Notes:
 
 * This add-on requires Windows 10 Version 20H2 (build 19042) or later. For best results, use the add-on with latest Windows 10 stable release (21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows 10 Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to Windows 10 and apps that makes entries no longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for example), and this mode will not work properly with portable version of NVDA.

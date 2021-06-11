@@ -30,6 +30,8 @@ Napomene:
 * Za ovaj dodatak potrebna je Windows 10 verzija 2004 (gradnja 19041) ili
   novija. Za najbolje rezultate, koristi dodatak s najnovijim stabilnim
   izdanjem sustava Windows 10 (21H1/gradnja 19043).
+* Although installation is possible, this add-on does not support Windows 10
+  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Za unose koji niže dolje nisu navedeni, može se pretpostaviti da su te
   funkcije dio NVDA čitača. Više nisu primjenjive jer dodatak ne podržava

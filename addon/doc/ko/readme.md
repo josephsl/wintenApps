@@ -26,6 +26,8 @@
 
 * 본 추가 기능은 윈도우 10 버전 2004(빌드 19041) 이상을 지원하며 최신 윈도우 10 출시 버전(21H1/빌드 19043)에
   최적화되어 있습니다.
+* Although installation is possible, this add-on does not support Windows 10
+  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
 * 다음 중 하나 이상 발생시 본 추가 기능에 탑제된 기능중 몇이 삭제됩니다: NVDA가 그 기능을 탑제할때, 지원이 중단된 윈도우 10
   버전에서 제공하는 기능일 경우, 윈도우 10이나 앱이 변경되어 기능 지원이 필요가 없을때.

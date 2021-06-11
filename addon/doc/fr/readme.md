@@ -33,6 +33,8 @@ Notes:
 * Cette extension nécessite Windows 10 Version 2004 (build 19041) ou version
   ultérieur. Pour de meilleurs résultats, utilisez l'extension avec la
   dernière version stable de Windows 10 (21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows 10
+  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
 * Pour les entrées non répertoriées ci-dessous, vous pouvez supposer que les

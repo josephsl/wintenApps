@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA compatibility: 2020.4 and beyond
+* NVDA-Kompatibilität: 2020.4 und neuer
 
 Diese Erweiterung bietet eine Sammlung von Anwendungsmodulen für
 verschiedene Windows 10 Anwendungen sowie Korrekturen in einigen Windows 10
@@ -31,6 +31,9 @@ Hinweise:
 * Diese Erweiterung benötigt mindestens Windows 10 Version 2004 (Build
   19041) oder neuer. Am besten funktioniert es mit Windows 10 Version 21H1
   (Build 19043).
+* Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
+  Windows 10 Enterprise LTSC (Long-Term Servicing Channel) und Windows
+  Server-Versionen.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Für Einträge, die im Folgenden nicht aufgeführt sind, können Sie davon
   ausgehen, dass Funktionen Teil von NVDA sind, die nicht mehr benötigt
@@ -68,9 +71,9 @@ Versionen][3].
   Elementtext für das Ereignis des Elementstatus.
 * Es ist möglich, nur bestimmte Ereignisse bzw. Ereignisse aus bestimmten
   Anwendungen zu verfolgen.
-* When opening, closing, reordering (build 21337 or later), or switching
-  between virtual desktops, NVDA will announce active virtual desktop name
-  (desktop 2, for example).
+* Beim Öffnen, Schließen, Neuordnen (Build 21337 oder neuer) oder Wechseln
+  zwischen virtuellen Desktops gibt NVDA den Namen des aktiven virtuellen
+  Desktops bekannt (z. B. Desktop 2).
 * NVDA gibt beim Ändern der Bildschirmauflösung oder -ausrichtung keinen
   Text in der Startmenügröße mehr aus.
 * Beim Anordnen von Startmenükacheln oder Action-Center-Schnellaktionen mit

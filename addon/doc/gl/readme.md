@@ -32,6 +32,9 @@ Notas:
 * Este complemento require do Windows 10 Versión 2004 (compilación 19041) ou
   posterior. Para uns mellores resultados, usa o complemento coa última
   versión estable do windows 10 (21H1/compilación 19043).
+* Aínda que a instalación é posible, este complemento non soporta Windows 10
+  Enterprise LTSC (Long-Term Servicing Channel) nin versións de Windows
+  Server.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
 * Para entradas non listadas a continuación, podes asumir que as
