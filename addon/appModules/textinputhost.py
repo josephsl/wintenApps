@@ -65,7 +65,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				# when opening the panel after closing it for a while.
 				self._symbolsGroupSelected = True
 			return
-		automationId = obj.UIAAutomationId
 		# #7273: When this is fired on categories,
 		# the first emoji from the new category is selected but not announced.
 		# Therefore, move the navigator object to that item if possible.
@@ -74,7 +73,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# #8189: do not announce candidates list itself (not items),
 		# as this is repeated each time candidate items are selected.
 		if (
-			automationId == "CandidateList"
+			obj.UIAAutomationId == "CandidateList"
 			# Also, when changing categories (emoji, kaomoji, symbols) in Version 1903 or later,
 			# category items are selected when in fact they have no text labels.
 			or obj.parent.UIAAutomationId == "TEMPLATE_PART_Sets_ListView"
