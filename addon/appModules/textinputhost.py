@@ -84,9 +84,13 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		speech.cancelSpeech()
 		# Sometimes, due to bad tree traversal or wrong item getting selected,
 		# something other than the selected item sees this event.
-		# In build 18262, emoji panel may open to People group and skin tone modifier gets selected.
-		# Skin tone modifiers are also selected when switching to People emoji group, and this should be suppressed.
-		if obj.parent.UIAAutomationId == "SkinTonePanelModifier_ListView":
+		# Sometimes clipboard candidates list gets selected, so ask NvDA to descend one more level.
+		if obj.UIAAutomationId == "TEMPLATE_PART_ClipboardItemsList":
+			obj = obj.firstChild
+		# In build 18262, emoji panel may open to People group and skin tone modifier or the list housing them gets selected.
+		elif obj.UIAAutomationId == "SkinTonePanelModifier_ListView":
+			obj = obj.next
+		elif obj.parent.UIAAutomationId == "SkinTonePanelModifier_ListView":
 			# But this will point to nothing if emoji search results are not people.
 			if obj.parent.next is not None:
 				obj = obj.parent.next
