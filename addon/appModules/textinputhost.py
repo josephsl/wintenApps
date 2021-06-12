@@ -110,8 +110,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		if obj is not None:
 			api.setNavigatorObject(obj)
 			obj.reportFocus()
-			# NVDA Core issue 10371: as part of speech sequence work in 2019.3,
-			# braille.getBrailleTextForProperties has been renamed to getPropertiesBraille.
 			braille.handler.message(braille.getPropertiesBraille(
 				name=obj.name,
 				role=obj.role,
