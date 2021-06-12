@@ -87,7 +87,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Sometimes clipboard candidates list gets selected, so ask NvDA to descend one more level.
 		if obj.UIAAutomationId == "TEMPLATE_PART_ClipboardItemsList":
 			obj = obj.firstChild
-		# In build 18262, emoji panel may open to People group and skin tone modifier or the list housing them gets selected.
+		# In build 18262, emoji panel may open to People group and skin tone modifier
+		# or the list housing them gets selected.
 		elif obj.UIAAutomationId == "SkinTonePanelModifier_ListView":
 			obj = obj.next
 		elif obj.parent.UIAAutomationId == "SkinTonePanelModifier_ListView":
