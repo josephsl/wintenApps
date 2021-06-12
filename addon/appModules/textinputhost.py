@@ -71,11 +71,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# For consistent experience, report the new category first by traversing through controls.
 		# #8189: do not announce candidates list itself (not items),
 		# as this is repeated each time candidate items are selected.
+		# See older add-on releases for details.
 		if (
-			obj.UIAAutomationId == "CandidateList"
-			# Also, when changing categories (emoji, kaomoji, symbols) in Version 1903 or later,
+			# When changing categories (emoji, kaomoji, symbols) in Version 1903 or later,
 			# category items are selected when in fact they have no text labels.
-			or obj.parent.UIAAutomationId == "TEMPLATE_PART_Sets_ListView"
+			obj.parent.UIAAutomationId == "TEMPLATE_PART_Sets_ListView"
 			# Specifically to suppress skin tone modifiers from being announced after an emoji group was selected.
 			or self._symbolsGroupSelected
 		):
