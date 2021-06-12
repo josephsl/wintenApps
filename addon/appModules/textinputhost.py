@@ -24,7 +24,6 @@ import config
 import api
 import scriptHandler
 import speech
-import braille
 import ui
 from NVDAObjects.UIA import UIA
 
