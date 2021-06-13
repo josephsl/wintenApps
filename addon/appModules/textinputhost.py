@@ -125,7 +125,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		if config.conf["UIA"]["selectiveEventRegistration"]:
 			self._windowOpenEventInternalEventHandlerGroupRegistration(obj.firstChild)
 		# Handle Ime Candidate UI being shown
-		# See older add-on releases for details.
+		if isinstance(obj.firstChild, ImeCandidateUI):  # NOQA: F405
+			eventHandler.queueEvent("show", obj.firstChild)
+			return
 		childAutomationId = obj.firstChild.UIAAutomationId
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
