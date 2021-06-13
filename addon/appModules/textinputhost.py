@@ -80,6 +80,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			or self._symbolsGroupSelected
 		):
 			return
+		# NVDA Core takes care of the rest.
 		super(AppModule, self).event_UIA_elementSelected(obj, nextHandler)
 
 	# Register modern keyboard interface elements with local event handler group.
@@ -177,6 +178,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		elif childAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI":
 			api.setFocusObject(obj)
 			return
+		# NVDA Core takes care of the rest.
 		super(AppModule, self).event_UIA_window_windowOpen(obj, nextHandler)
 
 	def event_nameChange(self, obj, nextHandler):
@@ -265,4 +267,5 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			if obj.role == controlTypes.ROLE_LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
 				clsList.insert(0, ImeCandidateItem)  # NOQA: F405
 				return
+		# NVDA Core takes care of the rest.
 		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
