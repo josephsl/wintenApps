@@ -111,24 +111,25 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
+		firstChild = obj.firstChild
 		# Make sure to announce most recently used emoji first in post-1709 builds.
 		# Fake the announcement by locating 'most recently used" category and calling selected event on this.
 		# However, in build 17666 and later,
 		# child count is the same for both emoji panel and hardware keyboard candidates list.
 		# Thankfully first child Automation Id's are different for each modern input technology.
 		# However this event is raised when the input panel closes.
-		if obj.firstChild is None:
+		if firstChild is None:
 			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
 			return
 		# Originally part of this method, split into an internal function to reduce complexity.
 		if config.conf["UIA"]["selectiveEventRegistration"]:
-			self._windowOpenEventInternalEventHandlerGroupRegistration(obj.firstChild)
+			self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
 		# Handle Ime Candidate UI being shown
-		if isinstance(obj.firstChild, ImeCandidateUI):  # NOQA: F405
-			eventHandler.queueEvent("show", obj.firstChild)
+		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
+			eventHandler.queueEvent("show", firstChild)
 			return
-		childAutomationId = obj.firstChild.UIAAutomationId
+		childAutomationId = firstChild.UIAAutomationId
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
 		# Emoji panel for Version 1709 and 1803 is not supported.
@@ -144,7 +145,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			self._emojiPanelJustOpened = True
 			# On some systems (particularly non-English builds of Version 1903 and later),
 			# there is something else besides grouping controls, so another child control must be used.
-			emojisList = obj.firstChild.children[-2]
+			emojisList = firstChild.children[-2]
 			if emojisList.UIAAutomationId != "TEMPLATE_PART_Items_GridView":
 				emojisList = emojisList.previous
 			if emojisList.firstChild and emojisList.firstChild.firstChild:
