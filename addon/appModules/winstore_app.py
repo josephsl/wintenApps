@@ -4,8 +4,6 @@
 
 # Enhancements to support Microsoft Store (formerly Windows Store).
 
-# Help Mypy and other static checkers for a time by importing uppercase versions of built-in types.
-from typing import Any
 import appModuleHandler
 import api
 import ui
