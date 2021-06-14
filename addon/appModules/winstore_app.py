@@ -27,13 +27,6 @@ class AppModule(appModuleHandler.AppModule):
 	# just like Settings app, have a cache of download progress text handy.
 	_appInstallProgress: str = ""
 
-	def event_nameChange(self, obj, nextHandler):
-		# Do not proceed if we're not even focused on Microsoft Store.
-		if any([obj.appModule.appName == self.appName for obj in api.getFocusAncestors()]):
-			# In version 12007, it is value change event that will present content download progress.
-			self.announceDownloadProgress(obj)
-		nextHandler()
-
 	def event_valueChange(self, obj, nextHandler):
 		# Version 12007 and later fires value change event instead, but the procedure is same as name change event.
 		# Do not proceed if we're not even focused on Microsoft Store.
