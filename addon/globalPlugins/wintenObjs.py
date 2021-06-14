@@ -305,17 +305,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "windowOpen")
-		# Log which modern keyboard header is active.
-		# Although this can be done from modern keyboard app module,
-		# that module is destined for NVDA Core, hence do it here.
-		if (
-			obj.appModule.appName == "textinputhost"
-			and obj.firstChild is not None and log.isEnabledFor(log.DEBUG)
-		):
-			log.debug(
-				"W10: Automation Id for currently opened modern keyboard feature "
-				f"is {obj.firstChild.UIAAutomationId}"
-			)
 		nextHandler()
 
 	def event_UIA_notification(

@@ -25,6 +25,7 @@ import api
 import scriptHandler
 import speech
 import ui
+from logHandler import log
 from NVDAObjects.UIA import UIA
 
 
@@ -123,6 +124,12 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
 			return
+		# Log which modern keyboard header is active.
+		if log.isEnabledFor(log.DEBUG):
+			log.debug(
+				"W10: Automation Id for currently opened modern keyboard feature "
+				f"is {firstChild.UIAAutomationId}"
+			)
 		# Originally part of this method, split into an internal function to reduce complexity.
 		if config.conf["UIA"]["selectiveEventRegistration"]:
 			self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
