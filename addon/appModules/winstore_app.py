@@ -29,7 +29,9 @@ class AppModule(appModuleHandler.AppModule):
 		# Version 12007 and later fires value change event instead, but the procedure is same as name change event.
 		# Do not proceed if we're not even focused on Microsoft Store.
 		if any([obj.appModule.appName == self.appName for obj in api.getFocusAncestors()]):
-			if isinstance(obj, UIA) and obj.UIAAutomationId == "InstallControl":
+			# Optimization: only handle value changes if progress text is shown on screen.
+			# This may result in missing some announcements.
+			if isinstance(obj, UIA) and obj.UIAAutomationId == "InstallControl" and any(obj.location):
 				# Install control comes with an anoying name, so look at its children.
 				# Separate title and progress message for readability and to react to UI changes.
 				downloadTitle = obj.firstChild.name
