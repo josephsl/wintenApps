@@ -27,23 +27,6 @@ class AppModule(appModuleHandler.AppModule):
 	# just like Settings app, have a cache of download progress text handy.
 	_appInstallProgress: str = ""
 
-	def announceDownloadProgress(self, obj: Any) -> None:
-		if isinstance(obj, UIA) and obj.UIAAutomationId == "InstallControl":
-			# Install control comes with an anoying name, so look at its children.
-			# Sometimes one of its children disappears, causing attribute error to be thrown.
-			try:
-				# Separate title and progress message for readability and to react to UI changes.
-				downloadTitle = obj.firstChild.name
-				# Optimization: obtain first child according to UIA instead of using simple first child.
-				# This speeds up element lookup significantly.
-				downloadProgress = obj.children[0].name
-				progressText = " ".join([downloadTitle, downloadProgress])
-			except AttributeError:
-				progressText = ""
-			if progressText != self._appInstallProgress:
-				self._appInstallProgress = progressText
-				ui.message(progressText)
-
 	def event_nameChange(self, obj, nextHandler):
 		# Do not proceed if we're not even focused on Microsoft Store.
 		if any([obj.appModule.appName == self.appName for obj in api.getFocusAncestors()]):
@@ -53,6 +36,21 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_valueChange(self, obj, nextHandler):
 		# Version 12007 and later fires value change event instead, but the procedure is same as name change event.
+		# Do not proceed if we're not even focused on Microsoft Store.
 		if any([obj.appModule.appName == self.appName for obj in api.getFocusAncestors()]):
-			self.announceDownloadProgress(obj)
+			if isinstance(obj, UIA) and obj.UIAAutomationId == "InstallControl":
+				# Install control comes with an anoying name, so look at its children.
+				# Sometimes one of its children disappears, causing attribute error to be thrown.
+				try:
+					# Separate title and progress message for readability and to react to UI changes.
+					downloadTitle = obj.firstChild.name
+					# Optimization: obtain first child according to UIA instead of using simple first child.
+					# This speeds up element lookup significantly.
+					downloadProgress = obj.children[0].name
+					progressText = " ".join([downloadTitle, downloadProgress])
+				except AttributeError:
+					progressText = ""
+				if progressText != self._appInstallProgress:
+					self._appInstallProgress = progressText
+					ui.message(progressText)
 		nextHandler()
