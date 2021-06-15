@@ -384,8 +384,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			log.debug(f"W10: list item count: {obj.childCount}")
 		focus = api.getFocusObject()
 		focusControllerFor = focus.controllerFor
-		# Forget all this if the element is not even shown on screen or not associated with a search field.
-		if not any(obj.location) or not len(focusControllerFor):
+		if (
+			# Forget all this if the element is not even shown on screen.
+			not any(obj.location)
+			# Return if the lis view is not associated with a search field.
+			or not len(focusControllerFor)
+			# In Settings app, add language list view raises this event repeatedly.
+			or obj.UIAAutomationId == "SystemSettings_Language_Add_Profile_Language_Dialog_ListView"
+		):
 			return
 		# In some cases, suggestions list fires layout invalidated event repeatedly.
 		# This is the case with Microsoft Store's search field.
