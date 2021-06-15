@@ -65,14 +65,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				# when opening the panel after closing it for a while.
 				self._symbolsGroupSelected = True
 			return
-		# #7273: When this is fired on categories,
-		# the first emoji from the new category is selected but not announced.
-		# Therefore, move the navigator object to that item if possible.
-		# However, in recent builds, name change event is also fired.
-		# For consistent experience, report the new category first by traversing through controls.
-		# #8189: do not announce candidates list itself (not items),
-		# as this is repeated each time candidate items are selected.
-		# See older add-on releases for details.
 		if (
 			# When changing categories (emoji, kaomoji, symbols) in Version 1903 or later,
 			# category items are selected when in fact they have no text labels.
