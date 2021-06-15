@@ -139,14 +139,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		childAutomationId = firstChild.UIAAutomationId
 		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
-		# Emoji panel for Version 1709 and 1803 is not supported.
-		# Emoji panel window open event is properly raised in Version 1803.
-		# See older add-on releases for details.
-		# Handle hardware keyboard and CJK IME suggestions.
-		# Treat it the same as CJK composition list - don't announce this if candidate announcement setting is off.
-		# In fact, in Version 2004 and later, this is the CJK IME candidates window.
-		# In short, hardware keyboard input suggestions and IME window uses the same interface.
-		# See older add-on releases for details.
 		# Emoji panel in build 17666 and later (unless this changes).
 		if childAutomationId == "TEMPLATE_PART_ExpressionGroupedFullView":
 			self._emojiPanelJustOpened = True
