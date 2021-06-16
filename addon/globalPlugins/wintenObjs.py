@@ -386,7 +386,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		focusControllerFor = focus.controllerFor
 		if (
 			# Forget all this if the element is not even shown on screen.
-			not any(obj.location)
+			obj and not any(obj.location)
 			# Return if the lis view is not associated with a search field.
 			or not len(focusControllerFor)
 			# In Settings app, add language list view raises this event repeatedly.
