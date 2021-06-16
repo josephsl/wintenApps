@@ -20,7 +20,6 @@ class AppModule(appModuleHandler.AppModule):
 
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# With selective UIA event registration on, name change event from the header text will not be handled.
-		import config
 		import UIAHandler
 		# First child is a title bar, but simple first child is the actual header text.
 		# Therefore try using simple first child unless the situation changes in the future.

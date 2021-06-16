@@ -20,7 +20,6 @@ import sys
 import eventHandler
 import UIAHandler
 import controlTypes
-import config
 import api
 import scriptHandler
 import speech
