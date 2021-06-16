@@ -125,8 +125,10 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				f"is {firstChild.UIAAutomationId}"
 			)
 		# Originally part of this method, split into an internal function to reduce complexity.
-		if config.conf["UIA"]["selectiveEventRegistration"]:
+		try:
 			self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
+		except NotImplementedError:
+			pass
 		# Handle Ime Candidate UI being shown
 		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
 			eventHandler.queueEvent("show", firstChild)
