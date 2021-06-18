@@ -31,8 +31,8 @@ Huomautuksia:
 * Tämä lisäosa edellyttää Windows 10:n versiota 2004 (koontiversio 19041)
   tai uudempaa. Käytä parhaan käyttökokemuksen varmistamiseksi Windows 10:n
   viimeisintä vakaata versiota (21H1/koontiversio 19043).
-* Although installation is possible, this add-on does not support Windows 10
-  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Vaikka asennus on mahdollista, tämä lisäosa ei tue Windows 10 Enterprise
+  LTSC:tä (Long-Term Servicing Channel) eikä Windows Server -versioita.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
