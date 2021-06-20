@@ -48,8 +48,7 @@ class MailItemRow(RowWithFakeNavigation, UIA):
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		# Word document and Mail document classes come from NVDA Core.
-		if WordDocument in clsList:  # NOQA: F405
-			clsList.insert(0, MailWordDocument)  # NOQA: F405
-		elif isinstance(obj, UIA) and obj.UIAAutomationId == "MailItem":
+		if isinstance(obj, UIA) and obj.UIAAutomationId == "MailItem":
 			clsList.insert(0, MailItemRow)
+		# NVDA Core takes care of the rest.
+		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
