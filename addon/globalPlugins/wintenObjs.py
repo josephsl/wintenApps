@@ -11,7 +11,6 @@ import globalPluginHandler
 import controlTypes
 import ui
 from NVDAObjects.UIA import UIA, SearchField, Dialog
-from NVDAObjects.behaviors import EditableTextWithSuggestions
 import api
 import config
 import queueHandler
@@ -51,18 +50,6 @@ W10Events: dict[int, str] = {
 
 # Additional dialogs not recognized by NVDA itself.
 UIAAdditionalDialogClassNames: list[str] = []
-
-
-# General UIA controller for edit field.
-# Used as a base class for controls such as Mail's composition window, search fields and such.
-class UIAEditableTextWithSuggestions(EditableTextWithSuggestions, UIA):
-
-	def event_UIA_controllerFor(self):
-		# Obtain controller for property directly instead of relying on focused control.
-		if len(self.controllerFor) > 0:
-			self.event_suggestionsOpened()
-		else:
-			self.event_suggestionsClosed()
 
 
 # Search fields.
