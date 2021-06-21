@@ -12,6 +12,8 @@ import api
 from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import RowWithFakeNavigation
 import ui
+import config
+import nvwave
 
 
 class MailItemRow(RowWithFakeNavigation, UIA):
@@ -46,6 +48,15 @@ class MailItemRow(RowWithFakeNavigation, UIA):
 # The below app module class inherits from built-in Mail and Calendar app module class, so inform Mypy.
 # Also Flake8 and other linters should ignore this.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
+
+	def event_UIA_controllerFor(self, obj, nextHandler):
+		if config.conf["presentation"]["reportAutoSuggestionsWithSound"]:
+			# Obtain controller for property directly instead of relying on focused control.
+			if len(obj.controllerFor) > 0:
+				nvwave.playWaveFile(r"waves\suggestionsOpened.wav")
+			else:
+				nvwave.playWaveFile(r"waves\suggestionsClosed.wav")
+		nextHandler()
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA) and obj.UIAAutomationId == "MailItem":

@@ -172,10 +172,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if obj.appModule.appName not in ("searchui", "searchapp"):
 				clsList.insert(0, W10SearchField)
 				return
-		# A dedicated version for Mail app's address/mention suggestions.
-		elif obj.UIAAutomationId == "RootFocusControl":
-			clsList.insert(0, UIAEditableTextWithSuggestions)
-			return
 		# Recognize headings as reported by XAML (Version 1803 or later).
 		# Some apps may cause COM to throw timeout error.
 		try:
