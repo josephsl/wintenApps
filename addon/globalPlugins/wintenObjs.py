@@ -229,11 +229,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if event == "valueChange":
 				info.append(f"value: {obj.value}")
 			elif event == "stateChange":
-				# Copied from NVDA Core's default navigator object dev info's state retriever.
+				# Parts copied from NVDA Core's default navigator object dev info's state retriever (credit: NV Access).
 				try:
-					stateConsts: dict[int, str] = dict(
-						(const, name) for name, const in controlTypes.__dict__.items() if name.startswith("STATE_")
-					)
 					ret = ", ".join(
 						stateConsts.get(state) or str(state)
 						for state in obj.states)
