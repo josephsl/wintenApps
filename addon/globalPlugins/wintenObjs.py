@@ -52,6 +52,12 @@ W10Events: dict[int, str] = {
 # Additional dialogs not recognized by NVDA itself.
 UIAAdditionalDialogClassNames: list[str] = []
 
+# Object states constants for use when tracking events.
+# Copied from NVDA Core's default navigator object dev info's state retriever (credit: NV Access).
+stateConsts: dict[int, str] = dict(
+	(const, name) for name, const in controlTypes.__dict__.items() if name.startswith("STATE_")
+)
+
 
 # General UIA controller for edit field.
 # Used as a base class for controls such as Mail's composition window, search fields and such.
