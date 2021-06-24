@@ -5,6 +5,8 @@
 * Download [development version][2]
 * NVDA compatibility: 2020.4 and beyond
 
+Note: despite the name, this add-on also supports Windows 11 as the basics are the same as Windows 10.
+
 This add-on is a collection of app modules for various Windows 10 apps, as well as enhancements and fixes for certain windows 10 controls.
 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
@@ -24,10 +26,10 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 Version 20H2 (build 19042) or later. For best results, use the add-on with latest Windows 10 stable release (21H1/build 19043).
-* Although installation is possible, this add-on does not support Windows 10 Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* This add-on requires Windows 10 Version 20H2 (build 19042) or later. For best results, use the add-on with latest Windows release (Windows 10 Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Some add-on features are or will be part of NVDA screen reader.
-* For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support old Windows 10 releases, or changes were made to Windows 10 and apps that makes entries no longer applicable.
+* For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support older Windows releases, or changes were made to Windows and apps that makes entries no longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for example), and this mode will not work properly with portable version of NVDA.
 
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][3] document.
@@ -96,7 +98,7 @@ This includes emoji panel, clipboard history, dictation, hardware input suggesti
 * Certain information such as Windows Update progress is reported automatically, including Storage sense/disk cleanup widget and errors from Windows Update.
 * Progress bar values and other information are no longer announced twice.
 * Windows Update reminder dialog is recognized as a proper dialog.
-* Odd control labels seen in certain Windows 10 installations has been corrected.
+* Odd control labels seen in certain Windows installations has been corrected.
 * In more recent revisions of Version 1803 and later, due to changes to Windows Update procedure for feature updates, a "download and install now" link has been added. NVDA will now announce the title for the new update if present.
 
 ## Weather
