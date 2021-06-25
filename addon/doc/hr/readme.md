@@ -27,16 +27,16 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* Za ovaj dodatak potrebna je Windows 10 verzija 2004 (gradnja 19041) ili
-  novija. Za najbolje rezultate, koristi dodatak s najnovijim stabilnim
-  izdanjem sustava Windows 10 (21H1/gradnja 19043).
-* Although installation is possible, this add-on does not support Windows 10
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
-* Za unose koji niže dolje nisu navedeni, može se pretpostaviti da su te
-  funkcije dio NVDA čitača. Više nisu primjenjive jer dodatak ne podržava
-  stara izdanja sustava Windows 10 ili su napravljene promjene u sustavu
-  Windows 10 i aplikacijama, zbog čega unosi više nisu primjenjivi.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * Neke aplikacije podržavaju način kompaktnog preklapanja (na primjer,
   uvijek na vrhu u Kalkulatoru) i ovaj modus neće ispravno raditi s
   prijenosnom verzijom NVDA čitača.
@@ -155,8 +155,8 @@ NVDA podržava aktualiziranu ploču unosa u gradnji 21296 i novijoj.
   dvaput.
 * Dijaloški okvir podsjetnika za ažuriranje Windowsa će se prepoznati kao
   pravi dijaloški okvir.
-* Čudne kontrolne oznake viđene u određenim instalacijama sustava Windows 10
-  su ispravljene.
+* Odd control labels seen in certain Windows installations has been
+  corrected.
 * U novijim revizijama verzije 1803 i novije, zbog promjena u postupku
   Windows ažuriranja za ažuriranje funkcija, dodana je poveznica „preuzmi i
   instaliraj sada”. NVDA će sad objaviti naslov nove nadogradnje, ako

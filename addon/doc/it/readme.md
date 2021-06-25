@@ -29,17 +29,16 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 Note:
 
 * This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (21H1/build 19043).
-* Although installation is possible, this add-on does not support Windows 10
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Alcune caratteristiche di questo componente aggiuntivo sono o diventeranno
   parte di NVDA.
-* Per le voci non elencate di seguito, si può supporre che esse siano
-  caratteristiche incluse in NVDA, non più applicabili dal componente in
-  quanto non supporta precedenti versioni di Windows 10, o che le
-  applicazioni siano state modificate in modo che le caratteristiche del
-  componente non sono più applicabili.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for
   example), and this mode will not work properly with portable version of
   NVDA.
@@ -166,8 +165,8 @@ successive.
   letti due volte.
 * La finestra di notifica per nuovi aggiornamenti windows verrà ora
   visualizzata  correttamente.
-* Le strane etichette dei controlli viste in alcune installazioni di Windows
-  10 sono state corrette.
+* Odd control labels seen in certain Windows installations has been
+  corrected.
 * Nelle revisioni più recenti della versione 1803 e nelle successive, a
   causa di modifiche alla procedura di Windows Update dovuta ad
   aggiornamenti di alcune funzionalità, è stato aggiunto un link "scarica e

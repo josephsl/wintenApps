@@ -27,15 +27,15 @@ Zahrnuté sú nasledujúce moduly (podrobný popis nájdete nižšie):
 Poznámky:
 
 * This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (21H1/build 19043).
-* Although installation is possible, this add-on does not support Windows 10
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Niektoré doplnkové funkcie sú alebo časom budú súčasťou NVDA.
-* V prípade položiek, ktoré nie sú uvedené nižšie, môžete predpokladať, že
-  funkcie sú súčasťou NVDA, alebo už nie sú relevantné, pretože doplnok
-  nepodporuje staré vydania systému Windows 10 alebo boli vykonané zmeny v
-  systéme Windows 10 a úpravy viac nie sú potrebné.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for
   example), and this mode will not work properly with portable version of
   NVDA.
@@ -146,7 +146,8 @@ supports updated input experience panel in build 21296 and later.
   informácie.
 * Dialóg s pripomenutím aktualizácie Windows je rozpoznaný ako štandardný
   dialóg.
-* Opravené nesprávne popisky prvkov v niektorých verziách Windows 10.
+* Odd control labels seen in certain Windows installations has been
+  corrected.
 * V novších verziách verzie 1803 a novších, bol do dialógu aktualizácie
   Windows pridaný odkaz stiahnuť a nainštalovať teraz. NVDA teraz oznámi
   názov novej aktualizácie, ak je k dispozícii.

@@ -27,16 +27,16 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* Ten dodatek wymaga systemu Windows 10 w wersji 2004 (kompilacja 19041) lub
-  nowszej. Aby uzyskać najlepsze wyniki, użyj dodatku z najnowszą wersją
-  stabilną systemu Windows 10 (21H1/kompilacja 19043).
-* Although installation is possible, this add-on does not support Windows 10
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
-* Dla wpisów nie podanych poniżej, można wnioskować, że zostały one
-  wprowadzone do NVDA. Nie można ich już zastosować, ponieważ dodatek nie
-  wspiera starszych wydań systemu, lub aplikacje są zmienione w taki sposób,
-  że te wpisy są unieważnione.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * Niektóre aplikacje obsługują tryb kompaktowej nakładki (zawsze na górze w
   kalkulatorze, na przykład), a ten tryb nie będzie działać poprawnie z
   przenośną wersją NVDA.
@@ -157,8 +157,8 @@ panel środowiska wejściowego w kompilacji 21296 i nowszych.
   automatycznie.
 * Okno dialogowe przypomnienia o aktualizacjach Windows, teraz jest
   rozpoznawane jako poprawne okno dialogowe.
-* Nieparzyste kontrolki obecne w niektórych oknach instalacji Windows 10
-  zostały poprawione.
+* Odd control labels seen in certain Windows installations has been
+  corrected.
 * Wbardziej ostatnich aktualizacjach Windowsa  1803 i nowszych, z powodu
   zmian procederów windows update dla aktualizacji funkcji, dodano przycisk
   "pobierz i zainstaluj teraz". Jeżeli znaleziono aktualizację, NVDA będzie

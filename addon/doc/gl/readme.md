@@ -29,18 +29,17 @@ se inclúe):
 
 Notas:
 
-* Este complemento require do Windows 10 Versión 2004 (compilación 19041) ou
-  posterior. Para uns mellores resultados, usa o complemento coa última
-  versión estable do windows 10 (21H1/compilación 19043).
-* Aínda que a instalación é posible, este complemento non soporta Windows 10
-  Enterprise LTSC (Long-Term Servicing Channel) nin versións de Windows
-  Server.
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
+  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
-* Para entradas non listadas a continuación, podes asumir que as
-  características forman parte do NVDA, que xa non aplican debido a que o
-  complemento non soporta versións vellas de Windows, ou que se fixeron
-  cambios nas apps que fan que as entradas xa non sexan aplicables.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * Algunhas apps soportan o modo de capa compacto (sempre enriba na
   Calculadora, por exemplo), e este modo non funcionará correctamente con
   versións portables de NVDA.
@@ -163,8 +162,8 @@ de experiencia de entrada actualizado na compilación 21296 e posterior.
   dúas veces.
 * O diálogo de recordatorio de actualización de Windows é recoñecido
   axeitadamente como un diálogo.
-* Corrixiuse a disparidade en etiquetas de controis advertida en certas
-  instalacións de Windows.
+* Odd control labels seen in certain Windows installations has been
+  corrected.
 * En revisións máis recentes da versión 1803 e posteriores, por mor de
   cambios no procedemento de Windows Update para actualizacións de
   características, engadiuse unha ligazón "descargar e instalar agora". NVDA

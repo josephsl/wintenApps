@@ -27,18 +27,17 @@ tiết của mỗi ứng dụng để biết them):
 
 Lưu ý:
 
-* Add-on này yêu cầu Windows 10 phiên bản 2004 (build 19041) trở lên. Tốt
-  nhất, hay dùng add-on với bản Windows 10 mới nhất (21H1/build 19043).
-* Dù vẫn có thể cài đặt được, add-on này không hỗ trợ Windows 10 Enterprise
-  LTSC (Long-Term Servicing Channel) và các bản phát hành của Windows
-  Server.
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
+  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Vài tính năng của add-on đã hoặc sẽ là một phần tính năng của trình đọc
   màn hình NVDA.
-* Với những thành phần không được liệt kê bên dưới, bạn có thể xem như các
-  tính năng đó đã là một phần tính năng của NVDA, không phải áp dụng như
-  add-on không hỗ trợ cho các bản phát hành Windows 10 cũ hay các thay đổi
-  đã được thực hiện cho Windows 10 và các ứng dụng này không còn được áp
-  dụng.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * Vài ứng dụng hỗ trợ chế độ compact overlay (luon chạy ở trên như
   Calculator), và chế độ này sẽ không hoạt động tốt với các phiên bản chạy
   trực tiếp của NVDA.
@@ -156,8 +155,8 @@ trong  bản dựng 21296 trở lên.
 * Giá trị của thanh tiến trình và các thông tin khác không còn bị đọc hai
   lần.
 * Hộp thoại Windows Update reminder đã được nha65nn dạng đúng là hộp thoại.
-* Nhãn không hợp lý cho các điều khiển trong một số bản cài Windows 10 đã
-  được sửa.
+* Odd control labels seen in certain Windows installations has been
+  corrected.
 * Trong các bản cập nhật gần đây của phiên bản 1803 trở lên, do các thay đổi
   trong thủ tục của Windows Update cho feature updates, liên kết tên
   "download and install now" đã được thêm. NVDA giờ đây sẽ đọc tiêu đề của

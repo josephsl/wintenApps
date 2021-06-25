@@ -30,18 +30,17 @@ est inclus) :
 
 Notes:
 
-* Cette extension nécessite Windows 10 Version 2004 (build 19041) ou version
-  ultérieur. Pour de meilleurs résultats, utilisez l'extension avec la
-  dernière version stable de Windows 10 (21H1/build 19043).
-* Although installation is possible, this add-on does not support Windows 10
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
-* Pour les entrées non répertoriées ci-dessous, vous pouvez supposer que les
-  fonctionnalités font partie de NVDA, qu'elles ne sont plus applicables,
-  car l'extension ne prend pas en charge les anciennes versions de Windows
-  10 ou des modifications ont été apportées à Windows 10 et aux applications
-  pour que les entrées ne soient plus applicables.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * Certaines Apps prennent en charge le mode de superposition compact
   (Toujours au-dessus pour la calculatrice par exemple), et ce mode ne
   fonctionne pas bien avec la version portable de NVDA. 
@@ -178,7 +177,8 @@ de NVDA, Parole et configurer le Niveau de ponctuations et symboles  sur
   plus annoncés deux fois.
 * Le dialogue de rappel de Windows Update est reconnu comme un dialogue
   propre.
-* Correction de quelques labels qui étaient incorrectes dans quelques cas
+* Odd control labels seen in certain Windows installations has been
+  corrected.
 * Dans les révisions les plus récentes de la Version 1803 et ultérieure en
   raison de modifications apportées à la procédure Windows Update pour les
   mises à jour de fonctionnalités, un lien "télécharger et installer

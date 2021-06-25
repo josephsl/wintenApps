@@ -24,13 +24,16 @@
 
 注意:
 
-* 此插件需要 Windows 10 版本 2004（内部版本 19041）或更高版本。为获得最佳体验，请将此插件与最新 Windows 10 21H1
-  稳定版（内部版本 19043）一起使用。
-* Although installation is possible, this add-on does not support Windows 10
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
-* 对于未在下方列出的条目，您可以假定功能已是 NVDA 的一部分，不再适用，因为插件不支持旧版本的 Windows
-  10，或者对应用程序进行了更改，使条目不再适用。
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * 某些应用程序支持紧凑叠加模式（例如，计算器中的始终置顶模式），该模式无法与 NVDA 的便携版正常工作。
 
 有关每个附加发行版之间所做的更改的列表，请参阅[更新日志的附加发布] [3]文档。
@@ -103,7 +106,8 @@ Windows 10 内部版本 21296 及更高版本中支持更新的输入体验面�
 * 现在将自动读出某些信息，例如 Windows Update 进度，包括存储感知、磁盘清理和 Windows Update中的错误。
 * 进度栏值和其他信息不再重复朗读两次。
 * Windows 更新提醒对话框被识别为正确的对话框。
-* 在某些Windows 10 安装中看到的奇怪的控件标签已被更正。
+* Odd control labels seen in certain Windows installations has been
+  corrected.
 * 在版本 1803 及更高版本的 Windows 10 中，Windows 更新中的某些更新添加了“立即下载并安装”链接。NVDA
   现在将朗读新更新的标题（如果存在）。
 
