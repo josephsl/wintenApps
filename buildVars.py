@@ -23,7 +23,7 @@ addon_info = {
 	"addon_summary": _("Windows App Essentials"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description": _("""A collection of app modules for various Windows 10 apps"""),
+	"addon_description": _("""Improving support for various apps and controls on Windows 10 and later"""),
 	# version
 	"addon_version": "21.06",
 	# Author(s)
