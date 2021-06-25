@@ -28,16 +28,16 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 Bemærkninger:
 
 * This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (21H1/build 19043).
-* Although installation is possible, this add-on does not support Windows 10
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
-* For emner, der ikke er anført nedenfor, kan du antage, at funktionerne er
-  en del af NVDA, ikke længere gældende som tilføjelsesprogrammet ikke
-  understøtter ældre Windows 10 udgivelser, eller ændringer til apps, der
-  gør disse emner ugyldige.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for
   example), and this mode will not work properly with portable version of
   NVDA.
@@ -155,8 +155,8 @@ også det opdaterede inputoplevelsespanel i build 21296 og nyere.
 * Værdier på behandlingslinjer og andre oplysninger er ikke længere
   annonceret to gange.
 * Dialogboksen Windows Update-påmindelse genkendes som en korrekt dialog.
-* Bemærkelsesværdige kontroletiketter ses i visse Windowt 10 installationer
-  er blevet løst.
+* Odd control labels seen in certain Windows installations has been
+  corrected.
 * I nyere versioner af version 1803 og nyere, på grund af ændringer i
   Windows Update-proceduren for FUNKTIONSOPDATERINGER, er linket "Hent og
   Installer nu" blevet tilføjet. NVDA vil nu annoncere titlen for den nye

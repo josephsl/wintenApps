@@ -30,17 +30,17 @@
 
 Забележки:
 
-* Тази добавка изисква Windows 10 версия 2004 (компилация 19041) или
-  по-нова. За най-добри резултати използвайте добавката с последната
-  стабилна версия на Windows 10 (21H1/компилация 19043).
-* Въпреки че е възможно да се инсталира на тях, тази добавка не поддържа
-  Windows 10 Enterprise LTSC (Long-Term Servicing Channel) и Windows Server.
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
+  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Някои функции на добавката са в момента или ще бъдат включени в екранния
   четец NVDA.
-* За записи, които не са изброени по-долу, можете да приемете, че функциите
-  са част от NVDA, вече не са приложими, тъй като добавката не поддържа
-  стари версии на Windows 10 или са направени промени в Windows 10 и
-  приложенията, които правят записите вече неприложими.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * Някои приложения поддържат режим на компактно припокриване (например
   "Задържане отгоре" в приложението "Калкулатор") и този режим няма да
   работи правилно с преносимата версия на NVDA.
@@ -169,8 +169,8 @@
   съобщават двукратно.
 * Диалоговият прозорец за напомняне от Windows Update вече коректно се
   разпознава като такъв.
-* Коригирани са неправилните етикети за контроли, които се забелязват в
-  някои инсталации на Windows 10.
+* Odd control labels seen in certain Windows installations has been
+  corrected.
 * В по-новите редакции на версия 1803 и по-нови, поради промени в
   процедурата за актуализиране на Windows за актуализации на функции, е
   добавена връзка "изтегляне и инсталиране сега". Сега NVDA ще обяви

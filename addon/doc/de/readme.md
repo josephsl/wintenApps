@@ -28,18 +28,16 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* Diese Erweiterung benötigt mindestens Windows 10 Version 2004 (Build
-  19041) oder neuer. Am besten funktioniert es mit Windows 10 Version 21H1
-  (Build 19043).
-* Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
-  Windows 10 Enterprise LTSC (Long-Term Servicing Channel) und Windows
-  Server-Versionen.
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
+  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
-* Für Einträge, die im Folgenden nicht aufgeführt sind, können Sie davon
-  ausgehen, dass Funktionen Teil von NVDA sind, die nicht mehr benötigt
-  werden, da die Erweiterung alte Windows 10-Versionen nicht unterstützt
-  oder Änderungen an Windows 10 und Anwendungen vorgenommen wurden, die
-  Einträge nicht mehr notwendig sind.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * Einige Apps unterstützen den kompakten Overlay-Modus (z. B. im
   Taschenrechner immer ganz oben). Dieser Modus funktioniert mit der
   portablen NVDA-Version nicht ordnungsgemäß.
@@ -170,8 +168,8 @@ neuer.
   zweimal angesagt.
 * Das Erinnerungsdialogfeld von Windows Update wird als richtiger Dialog
   erkannt.
-* Unsaubere Kontrollbeschriftungen, die in bestimmten
-  Windows-10-Installationen zu sehen sind, wurden korrigiert.
+* Odd control labels seen in certain Windows installations has been
+  corrected.
 * In neueren Revisionen der Version 1803 und später wurde aufgrund von
   Änderungen am Windows Update-Verfahren für Feature-Updates ein Link "Jetzt
   herunterladen und installieren" hinzugefügt. NVDA wird nun den Titel für

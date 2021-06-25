@@ -30,17 +30,16 @@ privire la ceea ce este inclus):
 Note:
 
 * This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (21H1/build 19043).
-* Although installation is possible, this add-on does not support Windows 10
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
-* Pentru intrările care nu sunt listate mai jos, puteți presupune că
-  funcționalitățile fac parte din NVDA, nu mai sunt aplicabile, întrucât
-  suplimentul nu mai suportă versiunile vechi de Windows 10, sau că au fost
-  efectuate modificări la Windows 10 și la aplicații, care fac ca intrările
-  să nu mai fie aplicabile.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for
   example), and this mode will not work properly with portable version of
   NVDA.
@@ -157,7 +156,7 @@ supports updated input experience panel in build 21296 and later.
 * Valorile barei de progres și alte informații nu mai sunt anunțate de două
   ori.
 * Dialogul de tip memento al Windows Update este recunoscut așa cum trebuie.
-* Odd control labels seen in certain Windows 10 installations has been
+* Odd control labels seen in certain Windows installations has been
   corrected.
 * In more recent revisions of Version 1803 and later, due to changes to
   Windows Update procedure for feature updates, a "download and install now"

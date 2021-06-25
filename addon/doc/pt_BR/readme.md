@@ -30,15 +30,15 @@ detalhes sobre o que está incluído):
 Notas:
 
 * This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows 10 stable release
-  (21H1/build 19043).
-* Although installation is possible, this add-on does not support Windows 10
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Alguns recursos do complemento são ou farão parte do leitor de tela NVDA.
-* Para entradas não listadas abaixo, você pode assumir que os recursos fazem
-  parte do NVDA, não são mais aplicáveis, pois o complemento não oferece
-  suporte a versões antigas do Windows 10, ou foram feitas alterações no
-  Windows 10 e aplicativos que tornam as entradas não mais aplicáveis.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for
   example), and this mode will not work properly with portable version of
   NVDA.
@@ -161,8 +161,8 @@ supports updated input experience panel in build 21296 and later.
   anunciados duas vezes.
 * A caixa de diálogo do lembrete do Windows Update é reconhecida como um
   diálogo apropriado.
-* Etiquetas de controle estranhas vistas em determinadas instalações do
-  Windows 10 foram corrigidas.
+* Odd control labels seen in certain Windows installations has been
+  corrected.
 * Nas revisões mais recentes da Versão 1803 e posteriores, devido a
   alterações no procedimento do Windows Update para atualizações de
   recursos, foi adicionado um link "baixar e instalar agora". Agora, o NVDA

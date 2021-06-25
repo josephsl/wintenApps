@@ -28,16 +28,16 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Tämä lisäosa edellyttää Windows 10:n versiota 2004 (koontiversio 19041)
-  tai uudempaa. Käytä parhaan käyttökokemuksen varmistamiseksi Windows 10:n
-  viimeisintä vakaata versiota (21H1/koontiversio 19043).
-* Vaikka asennus on mahdollista, tämä lisäosa ei tue Windows 10 Enterprise
-  LTSC:tä (Long-Term Servicing Channel) eikä Windows Server -versioita.
+* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
+  best results, use the add-on with latest Windows release (Windows 10
+  Version 21H1/build 19043).
+* Although installation is possible, this add-on does not support Windows
+  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
-* Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
-  sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue vanhoja
-  Windows 10 -versioita tai eivät ole enää käyttökelpoisia Windows 10:een ja
-  sovelluksiin tehtyjen muutosten vuoksi.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support older Windows
+  releases, or changes were made to Windows and apps that makes entries no
+  longer applicable.
 * Jotkin sovellukset tukevat kompaktia peitetilaa (esim. Laskimessa Aina
   päällimmäisenä), joka ei toimi oikein NVDA:n massamuistiversion kanssa.
 
@@ -157,8 +157,8 @@ uudemmissa.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
 * Windows Updaten muistutusvalintaikkuna tunnistetaan asianmukaisesti
   valintaikkunaksi.
-* Joissakin Windows-asennuksissa näkyvät erikoiset säädinten nimet on
-  korjattu.
+* Odd control labels seen in certain Windows installations has been
+  corrected.
 * Windows Update -prosessiin ominaisuuspäivitysten osalta tehtyjen muutosten
   vuoksi uudempiin 1803:n versioihin ja sitä tuoreempiin  on lisätty Lataa
   ja asenna nyt -linkki. Jos uusi päivitys on saatavilla, NVDA puhuu nyt sen
