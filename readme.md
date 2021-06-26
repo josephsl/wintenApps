@@ -1,11 +1,11 @@
-# Windows 10 App Essentials
+# Windows App Essentials
 
 * Authors: Joseph Lee, Derek Riemer and other Windows 10 users
 * Download [stable version][1]
 * Download [development version][2]
 * NVDA compatibility: 2020.4 and beyond
 
-Note: despite the name, this add-on also supports Windows 11 as the basics are the same as Windows 10.
+Note: renamed from Windows 10 App Essentials in 2021 to add support for Windows 11 and later.
 
 This add-on is a collection of app modules for various Windows 10 apps, as well as enhancements and fixes for certain windows 10 controls.
 
