@@ -1,5 +1,5 @@
 # WinTenApps/microsoft_msn_weather.py
-# Part of Windows 10 App Essentials collection
+# Part of Windows App Essentials collection
 # Copyright 2016-2021 Derek Riemer, released under GPL.
 
 # Provides workarounds for the weather app.

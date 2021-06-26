@@ -1,8 +1,8 @@
 # WinTenApps/hxcalendarappimm.py
-# Part of Windows 10 App Essentials collection
+# Part of Windows App Essentials collection
 # Copyright 2016-2021 Joseph Lee, released under GPL.
 
-# Fixes for certain issues with Windows 10 Calendar app (based on Outlook 2016).
+# Fixes for certain issues with Calendar app (based on Outlook 2016).
 
 import appModuleHandler
 

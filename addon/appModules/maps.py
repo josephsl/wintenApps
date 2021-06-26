@@ -1,5 +1,5 @@
 # WinTenApps/maps.py
-# Part of Windows 10 App Essentials collection
+# Part of Windows App Essentials collection
 # Copyright 2016-2021 Joseph Lee, released under GPL.
 
 # Numerous enhancements for Bing Maps app.

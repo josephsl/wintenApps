@@ -3,7 +3,7 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
-"""App module for Windows 10 Settings app (aka Immersive Control Panel)."""
+"""App module for modern Settings app (aka Immersive Control Panel)."""
 
 # Originally copyright 2016-2021 Joseph Lee, released under GPL
 # Several hacks related to Settings app, some of which are part of NVDA Core.
@@ -23,10 +23,10 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):
-			# From Version 1607 onwards, update history shows status rather than the title.
+			# From Windows 10 1607 onwards, update history shows status rather than the title.
 			# In build 16232, the title is shown but not the status,
 			# so include this for sake of backward compatibility.
-			# In later revisions of Version 1803 and later, feature update download link is provided
+			# In later revisions of Windows 10 1803 and later, feature update download link is provided
 			# and is initially called "download and install now", thus add the feature update title as well.
 			if obj.role == controlTypes.ROLE_LINK:
 				nameList = [obj.name]
@@ -36,7 +36,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 					# so consult two previous objects.
 					eventID = obj.UIAAutomationId.split("_")[0]
 					possibleFeatureUpdateText = obj.previous.previous
-					# This Automation Id may change in a future Windows 10 release.
+					# This Automation Id may change in a future Windows release.
 					if possibleFeatureUpdateText.UIAAutomationId == "_".join([eventID, "TitleTextBlock"]):
 						nameList.insert(0, obj.previous.name)
 						nameList.insert(0, possibleFeatureUpdateText.name)
@@ -56,9 +56,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# so tell NVDA to use something more meaningful.
 			elif obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
 				obj.name = obj.firstChild.name
-			# Developer mode label in Version 2004 is wrong.
+			# Developer mode label in Windows 10 2004 is wrong.
 			# It shows class name rather than the actual label.
-			# This also affects 20H2 and 21H1 as they are really enablement packages on top of 2004.
+			# This also affects Windows 10 20H2 and 21H1 as they are really enablement packages on top of 2004.
 			# This is resolved in build 19536 and later.
 			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name
