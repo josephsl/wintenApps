@@ -1,7 +1,7 @@
-# Windows 10 controls repository
+# Windows app controls repository
 # Copyright 2015-2021 Joseph Lee, released under GPL.
 
-# Adds handlers for various UIA controls found in Windows 10.
+# Adds handlers for various UIA controls found in Windows 10 and later.
 
 # Help Mypy and other static checkers for a time by using annotations from future Python releases.
 from __future__ import annotations
@@ -23,9 +23,9 @@ import sys
 import addonHandler
 addonHandler.initTranslation()
 
-# #52: forget everything if the current release is not a supported version of Windows 10.
+# #52: forget everything if the current release is not a supported version of Windows.
 # NVDA 2019.2 includes a handy Windows 10 version check function.
-# Changed in NVDA 2021.1 to include Windows 10 constants.
+# Changed in NVDA 2021.1 to include Windows release constants.
 # To avoid redefinition error from Mypy, do not tag the following flag with a boolean type hint.
 # The flag will be tagged again once NVDA 2021.1 requirement is in effect.
 if hasattr(winVersion, "getWinVer"):
@@ -96,7 +96,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
-		# Don't do anything unless this is Windows 10.
+		# Don't do anything unless this is Windows 10 or later.
 		# #52: and this is a supported build.
 		if not W10AddonSupported:
 			return
@@ -145,7 +145,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# There's no point looking at non-UIA objects.
 		# Also because this add-on might be turned on "accidentally" in earlier Windows releases,
-		# including unsupported Windows 10 builds...
+		# including unsupported Windows builds...
 		if not (isinstance(obj, UIA) and W10AddonSupported):
 			return
 		# Windows that are really dialogs.
@@ -251,8 +251,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if obj.appModule.appName == "csrss":
 				import wx
 				# Even with desktop name change handler added,
-				# older Windows 10 releases won't support this properly.
-				# Properly supported in Version 1909.
+				# older Windows releases won't support this properly.
+				# Properly supported in Windows 10 1909.
 				if not hasattr(eventHandler, "handlePossibleDesktopNameChange"):
 					wx.CallLater(500, ui.message, obj.name)
 		nextHandler()
