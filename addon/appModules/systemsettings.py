@@ -3,7 +3,7 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
-"""App module for Windows 10 Settings app (aka Immersive Control Panel)."""
+"""App module for modern Settings app (aka Immersive Control Panel)."""
 
 # Originally copyright 2016-2021 Joseph Lee, released under GPL
 # Several hacks related to Settings app, some of which are part of NVDA Core.
@@ -37,10 +37,10 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):
-			# From Version 1607 onwards, update history shows status rather than the title.
+			# From Windows 10 1607 onwards, update history shows status rather than the title.
 			# In build 16232, the title is shown but not the status,
 			# so include this for sake of backward compatibility.
-			# In later revisions of Version 1803 and later, feature update download link is provided
+			# In later revisions of Windows 10 1803 and later, feature update download link is provided
 			# and is initially called "download and install now", thus add the feature update title as well.
 			if obj.role == controlTypes.ROLE_LINK:
 				nameList = [obj.name]
@@ -50,7 +50,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 					# so consult two previous objects.
 					eventID = obj.UIAAutomationId.split("_")[0]
 					possibleFeatureUpdateText = obj.previous.previous
-					# This Automation Id may change in a future Windows 10 release.
+					# This Automation Id may change in a future Windows release.
 					if possibleFeatureUpdateText.UIAAutomationId == "_".join([eventID, "TitleTextBlock"]):
 						nameList.insert(0, obj.previous.name)
 						nameList.insert(0, possibleFeatureUpdateText.name)

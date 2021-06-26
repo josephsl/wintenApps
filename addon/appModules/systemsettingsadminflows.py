@@ -1,5 +1,5 @@
 # Windows 10 Settings/Reset This PC
-# Part of Windows 10 App Essentials collection
+# Part of Windows App Essentials collection
 # Copyright 2018-2021 Joseph Lee, released under GPL
 
 # Specific to Reset This PC window in Settings.

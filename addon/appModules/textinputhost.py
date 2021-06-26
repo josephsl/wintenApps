@@ -3,14 +3,13 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
-"""App module for Windows 10 Modern Keyboard aka new touch keyboard panel.
+"""App module for modern keyboard aka new touch keyboard panel.
 The chief feature is allowing NVDA to announce
 selected emoji when using the keyboard to search for and select one.
 Another feature is to announce candidates for misspellings if suggestions for hardware keyboard is selected.
-This is applicable on Windows 10 Fall Creators Update and later."""
+This is applicable on Windows 10 1709 (Fall Creators Update) and later."""
 
 # The add-on version of this module will extend the one that comes with NVDA Core (2018.3 and later).
-# Parts come from Microsoft Quick Input support pull request (author: Mick Curran from NV Access)
 # For IME candidate item/UI definition, Flake8 must be told to ignore it.
 
 # Yes, this app module is powered by built-in modern keyboard (TextInputHost) app module
@@ -70,7 +69,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			return nextHandler()
 		# Wait until modern keyboard is fully displayed on screen.
 		# This is applicable on Windows 10, as doing so on Windows 11 causes emojis to not be announced.
-		# Version 1803 or later
+		# Windows 10 1803 or later
 		if not self._modernKeyboardInterfaceActive and not WIN11:
 			return
 		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object
@@ -84,7 +83,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				self._symbolsGroupSelected = True
 			return
 		if (
-			# When changing categories (emoji, kaomoji, symbols) in Version 1903 or later,
+			# When changing categories (emoji, kaomoji, symbols) in Windows 10 1903 or later,
 			# category items are selected when in fact they have no text labels.
 			obj.parent.UIAAutomationId == "TEMPLATE_PART_Sets_ListView"
 			# Specifically to suppress skin tone modifiers from being announced after an emoji group was selected.
@@ -157,7 +156,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Emoji panel in build 17666 and later (unless this changes).
 		if childAutomationId == "TEMPLATE_PART_ExpressionGroupedFullView":
 			self._emojiPanelJustOpened = True
-			# On some systems (particularly non-English builds of Version 1903 and later),
+			# On some systems (particularly non-English builds of Windows 10 1903 and later),
 			# there is something else besides grouping controls, so another child control must be used.
 			emojisList = firstChild.children[-2]
 			if emojisList.UIAAutomationId != "TEMPLATE_PART_Items_GridView":
@@ -225,9 +224,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Try detecting if modern keyboard elements are off-screen or the window itself is gone
 		# (parent's first child is nothing).
 		# But attempting to retrieve obj location fails when emoji panel closes without selecting anything,
-		# especially in Version 1903 and later.
+		# especially in Windows 10 1903 and later.
 		# Because of exceptions, check location first.
-		# Version 1903 or later.
+		# Windows 10 1903 or later.
 		if (
 			(obj.location is None and obj.parent.firstChild is None)
 			or controlTypes.STATE_OFFSCREEN in obj.states
