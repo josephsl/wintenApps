@@ -5,9 +5,9 @@
 * Download [development version][2]
 * NVDA compatibility: 2020.4 and beyond
 
-Note: renamed from Windows 10 App Essentials in 2021 to add support for Windows 11 and later.
+Note: Originally called Windows 10 App Essentials, it was renamed in 2021 to support Windows 10 and future releases such as Windows 11. Parts of this add-on will still refer to the original add-on name.
 
-This add-on is a collection of app modules for various Windows 10 apps, as well as enhancements and fixes for certain windows 10 controls.
+This add-on is a collection of app modules for various modern Windows apps, as well as enhancements and fixes for certain controls found in Windows 10 and later.
 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
@@ -29,7 +29,7 @@ Notes:
 * This add-on requires Windows 10 Version 20H2 (build 19042) or later. For best results, use the add-on with latest Windows release (Windows 10 Version 21H1/build 19043).
 * Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Some add-on features are or will be part of NVDA screen reader.
-* For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support older Windows releases, or changes were made to Windows and apps that makes entries no longer applicable.
+* For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support unsupported Windows releases such as old Windows 10 versions, or changes were made to Windows and apps that makes entries no longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for example), and this mode will not work properly with portable version of NVDA.
 
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][3] document.
