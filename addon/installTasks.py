@@ -15,7 +15,7 @@ def onInstall():
 	import wx
 	import winVersion
 	import sys
-	requiredVer = "Windows 10 Version 20H2"
+	requiredVer = "Windows 10 20H2"
 	if hasattr(winVersion, "getWinVer"):
 		W10AddonSupported = winVersion.getWinVer() >= winVersion.WIN10_20H2
 	else:
