@@ -28,10 +28,13 @@ addonHandler.initTranslation()
 # Changed in NVDA 2021.1 to include Windows release constants.
 # To avoid redefinition error from Mypy, do not tag the following flag with a boolean type hint.
 # The flag will be tagged again once NVDA 2021.1 requirement is in effect.
+# Temporary: detect Windows 11 for log output until it is released to the general public.
 if hasattr(winVersion, "getWinVer"):
 	W10AddonSupported = winVersion.getWinVer() >= winVersion.WIN10_20H2
+	WIN11 = winVersion.getWinVer().build >= 21390
 else:
 	W10AddonSupported = sys.getwindowsversion().build >= 19042
+	WIN11 = sys.getwindowsversion().build >= 21390
 
 
 # Extra UIA constants
@@ -104,6 +107,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #40: skip over the rest if appx is in effect.
 		if globalVars.appArgs.secure or config.isAppX:
 			return
+		# Detect Windows 11.
+		if WIN11:
+			log.info("W10: Windows 11 detected")
 		# Try adding additional events in the constructor.
 		# If it fails, try again after NVDA is fully initialized.
 		try:
