@@ -26,7 +26,6 @@ addonHandler.initTranslation()
 # NVDA 2019.2 includes a handy Windows 10 version check function.
 # Changed in NVDA 2021.1 to include Windows release constants.
 W10AddonSupported = winVersion.getWinVer() >= winVersion.WIN10_20H2
-WIN11 = winVersion.getWinVer().build >= 21390
 
 
 # Extra UIA constants
@@ -100,7 +99,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if globalVars.appArgs.secure or config.isAppX:
 			return
 		# Detect Windows 11.
-		if WIN11:
+		WIN11 = winVersion.WinVersion(major=10, minor=0, build=21390)
+		if winVersion.getWinVer() >= WIN11:
 			log.info("W10: Windows 11 detected")
 		# Try adding additional events in the constructor.
 		# If it fails, try again after NVDA is fully initialized.

@@ -29,7 +29,7 @@ from NVDAObjects.UIA import UIA
 
 # Temporary: detect Windows 11.
 # Use build 21296 to align semantics with older add-on releases.
-WIN11 = winVersion.getWinVer().build >= 21296
+WIN11 = winVersion.WinVersion(major=10, minor=0, build=21296)
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
@@ -53,8 +53,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			return nextHandler()
 		# The rest of this event handler isn't applicable in build 20200 and later due to UI redesign.
 		# Early builds had accessibility problems, which was improved in build 21000 series.
-		# Temporary: detect Windows 11 with a flag.
-		if WIN11:
+		if winVersion.getWinVer() >= WIN11:
 			return
 		# Wait until modern keyboard is fully displayed on screen.
 		# Windows 10 1803 or later
@@ -100,7 +99,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
 			imeCandidateItem = firstChild.firstChild.firstChild
 			# In build 20200 and later, an extra element is located between candidate UI window and items themselves.
-			if WIN11:
+			if winVersion.getWinVer() >= WIN11:
 				imeCandidateItem = imeCandidateItem.firstChild
 			localEventHandlerElements.append(imeCandidateItem)
 		for element in localEventHandlerElements:
@@ -254,8 +253,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Therefore tell NVDA to move focus to system focus.
 		# Focus redirect is applicable for emoji panel and clipboard history.
 		gesture.send()
-		# Temporary: detect Windows 11 with a flag.
-		if WIN11:
+		if winVersion.getWinVer() >= WIN11:
 			objectWithFocus = api.getFocusObject().objectWithFocus()
 			eventHandler.queueEvent("gainFocus", objectWithFocus)
 
