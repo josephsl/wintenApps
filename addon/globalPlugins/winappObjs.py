@@ -19,22 +19,14 @@ import globalVars
 import UIAHandler
 from logHandler import log
 import winVersion
-import sys
 import addonHandler
 addonHandler.initTranslation()
 
 # #52: forget everything if the current release is not a supported version of Windows.
 # NVDA 2019.2 includes a handy Windows 10 version check function.
 # Changed in NVDA 2021.1 to include Windows release constants.
-# To avoid redefinition error from Mypy, do not tag the following flag with a boolean type hint.
-# The flag will be tagged again once NVDA 2021.1 requirement is in effect.
-# Temporary: detect Windows 11 for log output until it is released to the general public.
-if hasattr(winVersion, "getWinVer"):
-	W10AddonSupported = winVersion.getWinVer() >= winVersion.WIN10_20H2
-	WIN11 = winVersion.getWinVer().build >= 21390
-else:
-	W10AddonSupported = sys.getwindowsversion().build >= 19042
-	WIN11 = sys.getwindowsversion().build >= 21390
+W10AddonSupported = winVersion.getWinVer() >= winVersion.WIN10_20H2
+WIN11 = winVersion.getWinVer().build >= 21390
 
 
 # Extra UIA constants
