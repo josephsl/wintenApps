@@ -32,10 +32,10 @@ addonHandler.initTranslation()
 # Temporary: detect Windows 11 for log output until it is released to the general public.
 if hasattr(winVersion, "getWinVer"):
 	W10AddonSupported = winVersion.getWinVer() >= winVersion.WIN10_20H2
-	WIN11 = winVersion.getWinVer().build >= 21390
+	WIN11 = winVersion.getWinVer().build >= 22000
 else:
 	W10AddonSupported = sys.getwindowsversion().build >= 19042
-	WIN11 = sys.getwindowsversion().build >= 21390
+	WIN11 = sys.getwindowsversion().build >= 22000
 
 
 # Extra UIA constants

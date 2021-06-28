@@ -31,7 +31,7 @@ from NVDAObjects.UIA import UIA
 
 # Temporary: detect Windows 11.
 # Use build 21296 to align semantics with older add-on releases.
-WIN11 = sys.getwindowsversion().build >= 21296
+WIN11 = sys.getwindowsversion().build >= 22000
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
