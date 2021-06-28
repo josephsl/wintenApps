@@ -99,7 +99,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if globalVars.appArgs.secure or config.isAppX:
 			return
 		# Detect Windows 11.
-		WIN11 = winVersion.WinVersion(major=10, minor=0, build=21390)
+		WIN11 = winVersion.WinVersion(major=10, minor=0, build=22000)
 		if winVersion.getWinVer() >= WIN11:
 			log.info("W10: Windows 11 detected")
 		# Try adding additional events in the constructor.
