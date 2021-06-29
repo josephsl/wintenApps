@@ -269,7 +269,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				obj.role in (controlTypes.ROLE_LIST, controlTypes.ROLE_POPUPMENU)
 				and obj.UIAAutomationId in ("TEMPLATE_PART_CandidatePanel", "IME_Prediction_Window")
 			):
-				clsList.insert(0, ImeCandidateUI)
+				clsList.insert(0, ImeCandidateUI)  # NOQA: F405
 			return
 		# NVDA Core takes care of the rest.
 		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
