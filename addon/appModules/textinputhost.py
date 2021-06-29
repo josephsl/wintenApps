@@ -87,7 +87,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Gather elements to be registered inside a list so they can be registered in one go.
 		localEventHandlerElements = [firstChild]
 		# For dictation, add elements manually so name change event can be handled.
-		# Object hierarchy is different in voice typing (build 21296 and later).
+		# Object hierarchy is different in voice typing (Windows 11).
 		if firstChild.UIAAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
 			if firstChild.UIAAutomationId == "DictationMicrophoneButton":
 				element = firstChild.next
@@ -168,8 +168,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				clipboardHistoryItem = clipboardHistoryItem.firstChild
 			eventHandler.queueEvent("UIA_elementSelected", clipboardHistoryItem)
 			return
-		# Combined emoji panel and clipboard history in build 20200 and later.
-		# Build 20200 and later introduced a completely different user interface for modern keyboard.
+		# Combined emoji panel and clipboard history.
+		# Windows 11 introduced a completely different user interface for modern keyboard.
 		# Essentially, emoji panel and clipboard are combined and housed inside a web document interface.
 		# As a result, Automation Id's are the same and UIA tree is different (hosted inside an EdgeHTML document).
 		# Move NVDA's focus to input experience panel so arrow keys can be used to navigate among emojis.
@@ -227,7 +227,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			notificationProcessing=UIAHandler.NotificationProcessing_CurrentThenMostRecent,
 			displayString=None, activityId=None, **kwargs
 	):
-		# Announce input experience panel items (emoji/clipboard) in build 21296 and later.
+		# Announce input experience panel items (emoji/clipboard) in Windows 11.
 		# Note that input experience panel is not really a focusable window - it is an overlay.
 		# Filter out extraneous notifications such as those raised by root document window
 		# (after all, input experience panel (at least emoji panel and clipboard history) is a web document).
@@ -250,7 +250,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	@scriptHandler.script(gesture="kb:escape")
 	def script_closeInputExperiencePanel(self, gesture):
-		# In build 20200 and later, pressing Escape moves focus to input experience panel.
+		# In Windows 11, pressing Escape moves focus to input experience panel.
 		# Therefore tell NVDA to move focus to system focus.
 		# Focus redirect is applicable for emoji panel and clipboard history.
 		gesture.send()
