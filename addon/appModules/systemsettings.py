@@ -68,7 +68,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			elif not obj.name and obj.UIAElement.cachedClassName == "Microsoft.UI.Xaml.Controls.BreadcrumbBarItem":
 				# Descend several times if a class name is the child label.
 				firstChild = obj.firstChild
-				if firstChild.name == "BreadcrumbBarItemButton":
+				# Breadcrumb items are gone when moving to parent section.
+				if firstChild.name == "BreadcrumbBarItemButton" and obj.simpleFirstChild:
 					obj.name = obj.simpleFirstChild.name
 				else:
 					obj.name = firstChild.name
