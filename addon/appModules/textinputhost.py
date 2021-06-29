@@ -100,7 +100,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			imeCandidateItem = firstChild.firstChild.firstChild
 			# In Windows 11, an extra element is located between candidate UI window and items themselves.
 			if winVersion.getWinVer() >= WIN11:
-				imeCandidateItem = imeCandidateItem.firstChild
+				# For some odd reason, suggested text is the last element.
+				imeCandidateItem = imeCandidateItem.lastChild
 			localEventHandlerElements.append(imeCandidateItem)
 		for element in localEventHandlerElements:
 			UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
@@ -258,10 +259,17 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			eventHandler.queueEvent("gainFocus", objectWithFocus)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		# Recognize more candidate item elements in Windows 11.
+		# Recognize more candidate UI and item elements in Windows 11.
 		if isinstance(obj, UIA):
+			# Candidate item.
 			if obj.role == controlTypes.ROLE_LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
 				clsList.insert(0, ImeCandidateItem)  # NOQA: F405
-				return
+			# Candidate UI.
+			elif (
+				obj.role in (controlTypes.ROLE_LIST, controlTypes.ROLE_POPUPMENU)
+				and obj.UIAAutomationId in ("TEMPLATE_PART_CandidatePanel", "IME_Prediction_Window")
+			):
+				clsList.insert(0, ImeCandidateUI)
+			return
 		# NVDA Core takes care of the rest.
 		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
