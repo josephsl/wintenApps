@@ -274,10 +274,17 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			eventHandler.queueEvent("gainFocus", objectWithFocus)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		# Recognize more candidate item elements in build 20200 and later.
+		# Recognize more candidate UI and item elements in build 20200 and later.
 		if isinstance(obj, UIA):
+			# Candidate item.
 			if obj.role == controlTypes.ROLE_LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
 				clsList.insert(0, ImeCandidateItem)  # NOQA: F405
-				return
+			# Candidate UI.
+			elif (
+				obj.role in (controlTypes.ROLE_LIST, controlTypes.ROLE_POPUPMENU)
+				and obj.UIAAutomationId in ("TEMPLATE_PART_CandidatePanel", "IME_Prediction_Window")
+			):
+				clsList.insert(0, ImeCandidateUI)
+			return
 		# NVDA Core takes care of the rest.
 		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
