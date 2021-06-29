@@ -30,7 +30,8 @@ from NVDAObjects.UIA import UIA
 
 
 # Temporary: detect Windows 11.
-# Use build 21296 to align semantics with older add-on releases.
+# Use build 22000 as cut-off build.
+# Parts will refer to older builds such as 21296.
 WIN11 = sys.getwindowsversion().build >= 22000
 
 
