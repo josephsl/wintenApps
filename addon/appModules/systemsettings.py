@@ -70,11 +70,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# so tell NVDA to use something more meaningful.
 			elif obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
 				obj.name = obj.firstChild.name
-			# Developer mode label in Version 2004 is wrong.
-			# It shows class name rather than the actual label.
-			# This also affects 20H2/21H1/21H2 as they are really enablement packages on top of 2004.
-			# This is resolved in build 19536 and later.
-			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
+			# Some elements use XAML class name as their label (SystemSettings_*).
+			# Thankfully labels are next door to these, specifically previous.name.
+			elif obj.name in XAML_CLASS_ELEMENT_NAMES:
 				obj.name = obj.previous.name
 
 	# Sometimes, the same text is announced, so consult this cache.
