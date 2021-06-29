@@ -79,6 +79,13 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				and obj.parent.UIAAutomationId == "SystemSettings_Users_SignInOptionsForDeviceList_ListView"
 			):
 				obj.name = ", ".join([child.name for child in obj.children[:2]])
+			# Microsoft Account/sign-in options are mislabeled.
+			# These include Windows Hello recommendation and finishing setup using account info.
+			# Just like development mode toggle from Windows 10, previous object is its label.
+			elif obj.name in (
+				"SystemSettings_Users_PasswordLessSignInDesktopDescription", "SystemSettings_Users_AutomaticSignOnLock_UpdateV2"
+			):
+				obj.name = obj.previous.name
 
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache: str = ""
