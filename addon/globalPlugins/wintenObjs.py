@@ -181,7 +181,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# to deal with search term announcement problem.
 			# Because the add-on version deals with focus comparison,
 			# let all search fields go through this check as much as possible except for specific apps.
-			if obj.appModule.appName not in ("searchui", "searchapp"):
+			if obj.appModule.appName not in ("searchui", "searchapp", "searchhost"):
 				clsList.insert(0, W10SearchField)
 				return
 		# A dedicated version for Mail app's address/mention suggestions.
