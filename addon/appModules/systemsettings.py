@@ -59,7 +59,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# Developer mode label in Windows 10 2004 is wrong.
 			# It shows class name rather than the actual label.
 			# This also affects Windows 10 20H2 and 21H1 as they are really enablement packages on top of 2004.
-			# This is resolved in build 19536 and later.
+			# This is resolved in Windows 11.
 			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name
 			# Windows 11 introduces breadcrumb bar to navigate to parent sections more quickly.

@@ -51,7 +51,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Therefore pass these events straight on.
 		if isinstance(obj, ImeCandidateItem):  # NOQA: F405
 			return nextHandler()
-		# The rest of this event handler isn't applicable in build 20200 and later due to UI redesign.
+		# The rest of this event handler isn't applicable in Windows 11 due to UI redesign.
 		# Early builds had accessibility problems, which was improved in build 21000 series.
 		if winVersion.getWinVer() >= WIN11:
 			return
@@ -85,7 +85,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Gather elements to be registered inside a list so they can be registered in one go.
 		localEventHandlerElements = [firstChild]
 		# For dictation, add elements manually so name change event can be handled.
-		# Object hierarchy is different in voice typing (build 21296 and later).
+		# Object hierarchy is different in voice typing (Windows 11).
 		if firstChild.UIAAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
 			if firstChild.UIAAutomationId == "DictationMicrophoneButton":
 				element = firstChild.next
@@ -98,7 +98,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# (mostly for hardware keyboard input suggestions).
 		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
 			imeCandidateItem = firstChild.firstChild.firstChild
-			# In build 20200 and later, an extra element is located between candidate UI window and items themselves.
+			# In Windows 11, an extra element is located between candidate UI window and items themselves.
 			if winVersion.getWinVer() >= WIN11:
 				imeCandidateItem = imeCandidateItem.firstChild
 			localEventHandlerElements.append(imeCandidateItem)
@@ -167,8 +167,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				clipboardHistoryItem = clipboardHistoryItem.firstChild
 			eventHandler.queueEvent("UIA_elementSelected", clipboardHistoryItem)
 			return
-		# Combined emoji panel and clipboard history in build 20200 and later.
-		# Build 20200 and later introduced a completely different user interface for modern keyboard.
+		# Combined emoji panel and clipboard history.
+		# Windows 11 introduced a completely different user interface for modern keyboard.
 		# Essentially, emoji panel and clipboard are combined and housed inside a web document interface.
 		# As a result, Automation Id's are the same and UIA tree is different (hosted inside an EdgeHTML document).
 		# Move NVDA's focus to input experience panel so arrow keys can be used to navigate among emojis.
@@ -226,7 +226,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			notificationProcessing=UIAHandler.NotificationProcessing_CurrentThenMostRecent,
 			displayString=None, activityId=None, **kwargs
 	):
-		# Announce input experience panel items (emoji/clipboard) in build 21296 and later.
+		# Announce input experience panel items (emoji/clipboard) in Windows 11.
 		# Note that input experience panel is not really a focusable window - it is an overlay.
 		# Filter out extraneous notifications such as those raised by root document window
 		# (after all, input experience panel (at least emoji panel and clipboard history) is a web document).
@@ -249,7 +249,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	@scriptHandler.script(gesture="kb:escape")
 	def script_closeInputExperiencePanel(self, gesture):
-		# In build 20200 and later, pressing Escape moves focus to input experience panel.
+		# In Windows 11, pressing Escape moves focus to input experience panel.
 		# Therefore tell NVDA to move focus to system focus.
 		# Focus redirect is applicable for emoji panel and clipboard history.
 		gesture.send()
@@ -258,7 +258,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			eventHandler.queueEvent("gainFocus", objectWithFocus)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		# Recognize more candidate item elements in build 20200 and later.
+		# Recognize more candidate item elements in Windows 11.
 		if isinstance(obj, UIA):
 			if obj.role == controlTypes.ROLE_LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
 				clsList.insert(0, ImeCandidateItem)  # NOQA: F405
