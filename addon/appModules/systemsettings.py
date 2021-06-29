@@ -72,6 +72,13 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 					obj.name = obj.simpleFirstChild.name
 				else:
 					obj.name = firstChild.name
+			# Sign-in option labels have XAML class names as labels.
+			# Thankfully the first two child objects record their labels.
+			elif (
+				obj.role == controlTypes.ROLE_LISTITEM
+				and obj.parent.UIAAutomationId == "SystemSettings_Users_SignInOptionsForDeviceList_ListView"
+			):
+				obj.name = ", ".join([child.name for child in obj.children[:2]])
 
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache: str = ""
