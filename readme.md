@@ -5,7 +5,7 @@
 * Download [development version][2]
 * NVDA compatibility: 2020.4 and beyond
 
-Note: Originally called Windows 10 App Essentials, it was renamed in 2021 to support Windows 10 and future releases such as Windows 11. Parts of this add-on will still refer to the original add-on name.
+Note: Originally called Windows 10 App Essentials, it was renamed to Windows App Essentials in 2021 to support Windows 10 and future releases such as Windows 11. Parts of this add-on will still refer to the original add-on name.
 
 This add-on is a collection of app modules for various modern Windows apps, as well as enhancements and fixes for certain controls found in Windows 10 and later.
 
@@ -28,6 +28,7 @@ Notes:
 
 * This add-on requires Windows 10 20H2 (build 19042) or later. For best results, use the add-on with latest Windows release (Windows 10 21H1/build 19043).
 * Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Support for Windows 11 is experimental, and some features will not work (see relevant entries for details).
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support unsupported Windows releases such as old Windows 10 versions, or changes were made to Windows and apps that makes entries no longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for example), and this mode will not work properly with portable version of NVDA.
@@ -40,7 +41,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * When searching in Start menu or File Explorer in Windows 10 1909 (November 2019 Update) and later, instances of NVDA announcing search results twice when reviewing results are less noticeable, which also makes braille output more consistent when reviewing items.
 * In addition to UIA event handlers provided by NVDA, the following UIA events are recognized: drag start, drag cancel, drag complete, drop target drag enter, drop target drag leave, drop target dropped, layout invalidated. With NVDA's log level set to debug, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app. Some events will provide additional information such as element count in controller for event, state of the element for state change event, and item text for item status event.
 * It is possible to tracke only specific events and/or events coming from specific apps.
-* When opening, closing, reordering (build 21337 or later), or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
+* When opening, closing, reordering (Windows 11), or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
 * When arranging Start menu tiles or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce information on dragged items or new position of the dragged item.
 * Announcements such as volume/brightness changes in File Explorer and app update notifications from Microsoft Store can be suppressed by turning off Report Notifications in NVDA's object presentation settings.
@@ -78,7 +79,7 @@ Most items are applicable when using Cortana Conversations (Windows 10 2004 and 
 ## Microsoft Store
 
 * After checking for app updates, app names in list of apps to be updated are correctly labeled.
-* When downloading content such as apps and movies, NVDA will announce product name and download progress.
+* When downloading content such as apps and movies, NVDA will announce product name and download progress (does not work properly in updated Microsoft Store in Windows 11).
 
 ## Modern keyboard
 
@@ -87,7 +88,7 @@ This includes emoji panel, clipboard history, dictation, hardware input suggesti
 * When opening clipboard history, NVDA will no longer announce "clipboard" when there are items in the clipboard under some circumstances.
 * On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA will no longer appear to do nothing when emoji panel opens.
 * When an emoji group (including kaomoji and symbols group in Windows 10 1903 or later) is selected, NVDA will no longer move navigator object to certain emojis.
-* Added support for updated input experience panel (combined emoji panel and clipboard history) in build 21296 and later.
+* Added support for updated input experience panel (combined emoji panel and clipboard history) in Windows 11.
 
 ## People
 
@@ -100,6 +101,7 @@ This includes emoji panel, clipboard history, dictation, hardware input suggesti
 * Windows Update reminder dialog is recognized as a proper dialog.
 * Odd control labels seen in certain Windows installations has been corrected.
 * In more recent revisions of Windows 10 1803 and later, due to changes to Windows Update procedure for feature updates, a "download and install now" link has been added. NVDA will now announce the title for the new update if present.
+* In Windows 11, settings breadcrumb items are properly labeled.
 
 ## Weather
 
