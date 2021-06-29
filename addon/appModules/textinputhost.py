@@ -109,7 +109,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			imeCandidateItem = firstChild.firstChild.firstChild
 			# In build 20200 and later, an extra element is located between candidate UI window and items themselves.
 			if WIN11:
-				imeCandidateItem = imeCandidateItem.firstChild
+				# For some odd reason, suggested text is the last element.
+				imeCandidateItem = imeCandidateItem.lastChild
 			localEventHandlerElements.append(imeCandidateItem)
 		for element in localEventHandlerElements:
 			UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
