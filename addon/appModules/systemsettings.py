@@ -17,6 +17,20 @@ import controlTypes
 from NVDAObjects.UIA import UIA
 
 
+# Controls with XAML class names as labels (SystemSettings_*).
+# Thankfully labels are previous object names.
+XAML_CLASS_ELEMENT_NAMES = [
+	# Developer mode label in Windows 10 2004/20H2/21H1.
+	# Resolved in Windows 11.
+	"SystemSettings_Developer_Mode_Advanced_NarratorText",
+	# Microsoft Account sign-in options in Windows 11.
+	# Windows Hello recommendation.
+	"SystemSettings_Users_PasswordLessSignInDesktopDescription",
+	# Complete setup with account info after an update or restart.
+	"SystemSettings_Users_AutomaticSignOnLock_UpdateV2"
+]
+
+
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
 # Also linters such as Flake8 should ignore this.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
