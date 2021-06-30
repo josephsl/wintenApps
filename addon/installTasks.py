@@ -37,7 +37,7 @@ def onInstall():
 	warnWin11Experimental = False
 	for addon in addonHandler.getAvailableAddons():
 		if addon.name == "wintenApps" and addon.isPendingInstall:
-			warnWin11Experimental = isWin11 and addon.manifest["updateChannel"] != "dev"
+			warnWin11Experimental = isWin11 and not addon.version.endswith("-dev")
 			break
 	if warnWin11Experimental:
 		# THIS WARNING DIALOG WILL NOT BE TRANSLATED!
