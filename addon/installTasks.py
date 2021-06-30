@@ -28,7 +28,7 @@ def onInstall():
 		raise RuntimeError("Old Windows version detected")
 	# Temporary: warn stable release users about experimental support for Windows 11
 	# (dev channel subscribers will not receive warnings).
-	isWin11 = sys.getwindowsversion().build >= 22000
+	isWin11 = winVersion.getWinVer().build >= 22000
 	warnWin11Experimental = False
 	for addon in addonHandler.getAvailableAddons():
 		if addon.name == "wintenApps" and addon.isPendingInstall:
