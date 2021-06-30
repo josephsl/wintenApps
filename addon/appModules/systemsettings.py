@@ -31,6 +31,15 @@ XAML_CLASS_ELEMENT_NAMES = [
 ]
 
 
+# Support control types refactor (both before and after for a time).
+if hasattr(controlTypes, "Role"):
+	ROLE_LINK = controlTypes.Role.LINK
+	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
+else:
+	ROLE_LINK = controlTypes.ROLE_LINK
+	ROLE_LISTITEM = controlType.Role.LISTITEM
+
+
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
 # Also linters such as Flake8 should ignore this.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
@@ -42,7 +51,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# so include this for sake of backward compatibility.
 			# In later revisions of Windows 10 1803 and later, feature update download link is provided
 			# and is initially called "download and install now", thus add the feature update title as well.
-			if obj.role == controlTypes.ROLE_LINK:
+			if obj.role == ROLE_LINK:
 				nameList = [obj.name]
 				if obj.UIAAutomationId.startswith("HistoryEvent") and obj.name != obj.previous.name:
 					# Add the status text in 1709 and later.
@@ -88,7 +97,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# Sign-in option labels have XAML class names as labels.
 			# Thankfully the first two child objects record their labels.
 			elif (
-				obj.role == controlTypes.ROLE_LISTITEM
+				obj.role == ROLE_LISTITEM
 				and obj.parent.UIAAutomationId == "SystemSettings_Users_SignInOptionsForDeviceList_ListView"
 			):
 				obj.name = ", ".join([child.name for child in obj.children[:2]])

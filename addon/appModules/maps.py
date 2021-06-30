@@ -13,6 +13,15 @@ import tones
 import ui
 
 
+# Support control types refactor (both before and after for a time).
+if hasattr(controlTypes, "Role"):
+	ROLE_STATICTEXT = controlTypes.Role.STATICTEXT
+	ROLE_BUTTON = controlTypes.Role.BUTTON
+else:
+	ROLE_STATICTEXT = controlTypes.ROLE_STATICTEXT
+	ROLE_BUTTON = controlTypes.ROLE_BUTTON
+
+
 # Map locations
 # A static text denoting where one is located on the map.
 class MapLocation(UIA):
@@ -40,7 +49,7 @@ class AppModule(appModuleHandler.AppModule):
 		if isinstance(obj, UIA):
 			try:
 				if (
-					obj.role in (controlTypes.ROLE_STATICTEXT, controlTypes.ROLE_BUTTON)
+					obj.role in (ROLE_STATICTEXT, ROLE_BUTTON)
 					and obj.parent.parent.UIAElement.cachedClassName == "Map"
 				):
 					clsList.insert(0, MapLocation)

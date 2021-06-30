@@ -23,6 +23,15 @@ WIN11_RECLASSIFY_TOGGLE_BUTTONS = [
 ]
 
 
+# Support control types refactor (both before and after for a time).
+if hasattr(controlTypes, "Role"):
+	ROLE_BUTTON = controlTypes.Role.BUTTON
+	STATE_CHECKABLE = controlTypes.State.CHECKABLE
+else:
+	ROLE_BUTTON = controlTypes.ROLE_BUTTON
+	STATE_CHECKABLE = controlTypes.STATE_CHECKABLE
+
+
 # Built-in File Explorer app module powers bulk of the below app module class, so inform Mypy.
 # And Flake8 and other linters, to.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
@@ -30,7 +39,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	def event_NVDAObject_init(self, obj):
 		# No, these buttons should not be a toggle button, and discard checkable state, too.
 		if isinstance(obj, UIA) and obj.UIAAutomationId in WIN11_RECLASSIFY_TOGGLE_BUTTONS:
-			obj.role = controlTypes.ROLE_BUTTON
-			obj.states.discard(controlTypes.STATE_CHECKABLE)
+			obj.role = ROLE_BUTTON
+			obj.states.discard(STATE_CHECKABLE)
 			return
 		super(AppModule, self).event_NVDAObject_init(obj)

@@ -32,6 +32,19 @@ from NVDAObjects.UIA import UIA
 WIN11 = winVersion.WinVersion(major=10, minor=0, build=22000)
 
 
+# Support control types refactor (both before and after for a time).
+if hasattr(controlTypes, "Role"):
+	ROLE_LISTITEM = controlTypes.Role.LISTITEM
+	ROLE_LIST = controlTypes.ROLE_LIST
+	ROLE_POPUPMENU = controlTypes.ROLE_POPUPMENU
+	STATE_OFFSCREEN = controlTypes.State.OFFSCREEN
+else:
+	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
+	ROLE_LIST = controlTypes.Role.LIST
+	ROLE_POPUPMENU = controlTypes.Role.POPUPMENU
+	STATE_OFFSCREEN = controlTypes.STATE_OFFSCREEN
+
+
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
 # And Flake8 and other linters, to.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
@@ -216,7 +229,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Windows 10 1903 or later.
 		if (
 			(obj.location is None and obj.parent.firstChild is None)
-			or controlTypes.STATE_OFFSCREEN in obj.states
+			or STATE_OFFSCREEN in obj.states
 		):
 			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
@@ -262,11 +275,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Recognize more candidate UI and item elements in Windows 11.
 		if isinstance(obj, UIA):
 			# Candidate item.
-			if obj.role == controlTypes.ROLE_LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
+			if obj.role == ROLE_LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
 				clsList.insert(0, ImeCandidateItem)  # NOQA: F405
 			# Candidate UI.
 			elif (
-				obj.role in (controlTypes.ROLE_LIST, controlTypes.ROLE_POPUPMENU)
+				obj.role in (ROLE_LIST, ROLE_POPUPMENU)
 				and obj.UIAAutomationId in ("TEMPLATE_PART_CandidatePanel", "IME_Prediction_Window")
 			):
 				clsList.insert(0, ImeCandidateUI)  # NOQA: F405

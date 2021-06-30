@@ -11,13 +11,20 @@ import controlTypes
 from NVDAObjects.UIA import UIA
 
 
+# Support control types refactor (both before and after for a time).
+if hasattr(controlTypes, "Role"):
+	ROLE_LISTITEM = controlTypes.Role.LISTITEM
+else:
+	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
+
+
 class AppModule(appModuleHandler.AppModule):
 
 	def event_NVDAObject_init(self, obj):
 		# Extraneous information announced when going through apps to be updated/installed,
 		# so use a grandchild's name.
 		if (
-			isinstance(obj, UIA) and obj.role == controlTypes.ROLE_LISTITEM
+			isinstance(obj, UIA) and obj.role == ROLE_LISTITEM
 			and obj.firstChild and obj.firstChild.UIAAutomationId == "InstallControl"
 		):
 			obj.name = obj.firstChild.firstChild.name

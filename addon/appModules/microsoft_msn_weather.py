@@ -31,6 +31,21 @@ RE_PARENT_LISTS = re.compile("|".join([
 ]))
 
 
+# Support control types refactor (both before and after for a time).
+if hasattr(controlTypes, "Role"):
+	ROLE_LISTITEM = controlTypes.Role.LISTITEM
+	ROLE_GROUPING = controlTypes.Role.GROUPING
+	ROLE_TABCONTROL = controlTypes.Role.TABCONTROL
+	ROLE_TAB = controlTypes.Role.TAB
+	ROLE_BUTTON = controlTypes.Role.BUTTON
+else:
+	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
+	ROLE_GROUPING = controlTypes.ROLE_GROUPING
+	ROLE_TABCONTROL = controlTypes.ROLE_TABCONTROL
+	ROLE_TAB = controlTypes.ROLE_TAB
+	ROLE_BUTTON = controlTypes.ROLE_BUTTON
+
+
 class WeatherForecastItem(NVDAObject):
 
 	def initOverlayClass(self):
@@ -62,7 +77,7 @@ class AppModule(appModuleHandler.AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if (
-			obj.role == controlTypes.ROLE_LISTITEM
+			obj.role == ROLE_LISTITEM
 			and RE_PARENT_LISTS.match(obj.parent.UIAAutomationId)
 		):
 			clsList.insert(0, WeatherForecastItem)
@@ -72,9 +87,9 @@ class AppModule(appModuleHandler.AppModule):
 			theId = obj.UIAAutomationId
 		except AttributeError:
 			return
-		if obj.UIAAutomationId == "SideNavigationBar" and obj.role != controlTypes.ROLE_GROUPING:
-			obj.role = controlTypes.ROLE_TABCONTROL
+		if obj.UIAAutomationId == "SideNavigationBar" and obj.role != ROLE_GROUPING:
+			obj.role = ROLE_TABCONTROL
 		if RE_TAB_AUTOMATION_MATCH.match(theId):
-			obj.role = controlTypes.ROLE_TAB
+			obj.role = ROLE_TAB
 		elif RE_BUTTONCONTROL.match(theId):
-			obj.role = controlTypes.ROLE_BUTTON
+			obj.role = ROLE_BUTTON
