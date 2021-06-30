@@ -31,7 +31,7 @@ XAML_CLASS_ELEMENT_NAMES = [
 ]
 
 
-# Support control types refactor (both before and after for a time).
+# Support control types refactor (both before (2021.1) and after (2021.2) for a time).
 if hasattr(controlTypes, "Role"):
 	ROLE_LINK = controlTypes.Role.LINK
 	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM

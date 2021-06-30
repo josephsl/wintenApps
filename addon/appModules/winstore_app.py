@@ -11,7 +11,7 @@ import controlTypes
 from NVDAObjects.UIA import UIA
 
 
-# Support control types refactor (both before and after for a time).
+# Support control types refactor (both before (2021.1) and after (2021.2) for a time).
 if hasattr(controlTypes, "Role"):
 	ROLE_LISTITEM = controlTypes.Role.LISTITEM
 else:

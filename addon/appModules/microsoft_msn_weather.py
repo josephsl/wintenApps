@@ -31,7 +31,7 @@ RE_PARENT_LISTS = re.compile("|".join([
 ]))
 
 
-# Support control types refactor (both before and after for a time).
+# Support control types refactor (both before (2021.1) and after (2021.2) for a time).
 if hasattr(controlTypes, "Role"):
 	ROLE_LISTITEM = controlTypes.Role.LISTITEM
 	ROLE_GROUPING = controlTypes.Role.GROUPING

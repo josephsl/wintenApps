@@ -48,6 +48,7 @@ UIAAdditionalDialogClassNames: list[str] = []
 # Object states constants for use when tracking events.
 # Copied from NVDA Core's default navigator object dev info's state retriever (credit: NV Access).
 # State constants in control types were rearranged in control types refactor (enumeration) in NVDA.
+# Support control types refactor (both before (2021.1) and after (2021.2) for a time).
 if hasattr(controlTypes, "State"):
 	stateConsts: dict[int, str] = dict(
 		(state.value, state.name) for state in controlTypes.State

@@ -32,7 +32,7 @@ from NVDAObjects.UIA import UIA
 WIN11 = winVersion.WinVersion(major=10, minor=0, build=22000)
 
 
-# Support control types refactor (both before and after for a time).
+# Support control types refactor (both before (2021.1) and after (2021.2) for a time).
 if hasattr(controlTypes, "Role"):
 	ROLE_LISTITEM = controlTypes.Role.LISTITEM
 	ROLE_LIST = controlTypes.ROLE_LIST
