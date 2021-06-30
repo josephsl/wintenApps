@@ -28,7 +28,7 @@ Notes:
 
 * This add-on requires Windows 10 20H2 (build 19042) or later. For best results, use the add-on with latest Windows release (Windows 10 21H1/build 19043).
 * Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
-* Support for Windows 11 is experimental, and some features will not work (see relevant entries for details).
+* Support for Windows 11 is experimental, and some features will not work (see relevant entries for details). A warning dialog will be shown if trying to install stable versions of this add-on on Windows 11 prior to general availability.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support unsupported Windows releases such as old Windows 10 versions, or changes were made to Windows and apps that makes entries no longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for example), and this mode will not work properly with portable version of NVDA.
