@@ -73,13 +73,16 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 					obj.name = obj.simpleFirstChild.name
 				else:
 					obj.name = firstChild.name
-			# Sign-in option labels have XAML class names as labels.
-			# Thankfully the first two child objects record their labels.
-			elif (
-				obj.role == controlTypes.ROLE_LISTITEM
-				and obj.parent.UIAAutomationId == "SystemSettings_Users_SignInOptionsForDeviceList_ListView"
-			):
-				obj.name = ", ".join([child.name for child in obj.children[:2]])
+			# Some XAML controls are named SystemSettings.ViewModel.SettingEntry.
+			# For list items, simple children records actual label.
+			# For Personalization/Themes/browse button, first child records its actual label.
+			elif obj.name == "SystemSettings.ViewModel.SettingEntry":
+				if obj.UIAAutomationId == "SystemSettings_Personalize_Theme_Store_Button":
+					obj.name = obj.firstChild.name
+				elif obj.role == controlTypes.ROLE_LISTITEM:
+					obj.name = "; ".join(
+						[child.name for child in obj.children if child.role == controlTypes.ROLE_STATICTEXT]
+					)
 			# Microsoft Account/sign-in options are mislabeled.
 			# These include Windows Hello recommendation and finishing setup using account info.
 			# Just like development mode toggle from Windows 10, previous object is its label.
