@@ -35,9 +35,11 @@ XAML_CLASS_ELEMENT_NAMES = [
 if hasattr(controlTypes, "Role"):
 	ROLE_LINK = controlTypes.Role.LINK
 	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
+	ROLE_STATICTEXT = controlTypes.ROLE_STATICTEXT
 else:
 	ROLE_LINK = controlTypes.ROLE_LINK
-	ROLE_LISTITEM = controlType.Role.LISTITEM
+	ROLE_LISTITEM = controlTypes.Role.LISTITEM
+	ROLE_STATICTEXT = controlTypes.Role.STATICTEXT
 
 
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
@@ -100,9 +102,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			elif obj.name == "SystemSettings.ViewModel.SettingEntry":
 				if obj.UIAAutomationId == "SystemSettings_Personalize_Theme_Store_Button":
 					obj.name = obj.firstChild.name
-				elif obj.role == controlTypes.ROLE_LISTITEM:
+				elif obj.role == ROLE_LISTITEM:
 					obj.name = "; ".join(
-						[child.name for child in obj.children if child.role == controlTypes.ROLE_STATICTEXT]
+						[child.name for child in obj.children if child.role == ROLE_STATICTEXT]
 					)
 
 	# Sometimes, the same text is announced, so consult this cache.
