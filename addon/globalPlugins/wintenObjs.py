@@ -208,6 +208,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		elif obj.UIAAutomationId == "RootFocusControl":
 			clsList.insert(0, UIAEditableTextWithSuggestions)
 			return
+		# Recognize suggestions list view firing layout invalidated event.
+		# Although certain list views such as languages list in Settings app fire layout invalidated event,
+		# they are not true suggestions list views.
+		if obj.UIAAutomationId == "SuggestionsList":
+			clsList.insert(0, SuggestionsListView)
+			return
 		# Recognize headings as reported by XAML (Version 1803 or later).
 		# Some apps may cause COM to throw timeout error.
 		try:
