@@ -36,7 +36,7 @@ W10Events: dict[int, str] = {
 	UIAHandler.UIA_Drag_DragStartEventId: "UIA_dragStart",
 	UIAHandler.UIA_Drag_DragCancelEventId: "UIA_dragCancel",
 	UIAHandler.UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
-	UIAHandler.UIA_DropTarget_DragEnterEventId: "UIA_dopTargetDragEnter",
+	UIAHandler.UIA_DropTarget_DragEnterEventId: "UIA_dropTargetDragEnter",
 	UIAHandler.UIA_DropTarget_DragLeaveEventId: "UIA_dropTargetDragLeave",
 	UIAHandler.UIA_DropTarget_DroppedEventId: "UIA_dropTargetDropped",
 	UIAHandler.UIA_LayoutInvalidatedEventId: "UIA_layoutInvalidated",
@@ -342,7 +342,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		eventHandler.queueEvent("gainFocus", obj)
 		nextHandler()
 
-	def event_UIA_dopTargetDragEnter(self, obj, nextHandler):
+	def event_UIA_dropTargetDragEnter(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dropTargetDragEnter")
 		nextHandler()
 
@@ -373,17 +373,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "layoutInvalidated")
 		if log.isEnabledFor(log.DEBUG):
 			log.debug(f"W10: list item count: {obj.childCount}")
+		# Forget it if no suggestions are present.
+		# This may happen if this event is fired prior to controller for event.
+		if obj.childCount == 0:
+			return
+		# Limit this event handler to proper suggestions list view.
+		if obj.UIAAutomationId != "SuggestionsList":
+			return
 		focus = api.getFocusObject()
 		focusControllerFor = focus.controllerFor
-		if (
-			# Forget all this if the element is not even shown on screen.
-			obj and not any(obj.location)
-			# Return if the lis view is not associated with a search field.
-			or not len(focusControllerFor)
-			# In Settings app, add language list view raises this event repeatedly.
-			or obj.UIAAutomationId == "SystemSettings_Language_Add_Profile_Language_Dialog_ListView"
-		):
-			return
 		# In some cases, suggestions list fires layout invalidated event repeatedly.
 		# This is the case with Microsoft Store's search field.
 		import speech
