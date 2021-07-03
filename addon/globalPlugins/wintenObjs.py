@@ -391,17 +391,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "layoutInvalidated")
 		if log.isEnabledFor(log.DEBUG):
 			log.debug(f"W10: list item count: {obj.childCount}")
+		# Limit this event handler to proper suggestions list view.
+		if obj.UIAAutomationId != "SuggestionsList":
+			return
 		focus = api.getFocusObject()
 		focusControllerFor = focus.controllerFor
-		if (
-			# Forget all this if the element is not even shown on screen.
-			obj and not any(obj.location)
-			# Return if the lis view is not associated with a search field.
-			or not len(focusControllerFor)
-			# In Settings app, add language list view raises this event repeatedly.
-			or obj.UIAAutomationId == "SystemSettings_Language_Add_Profile_Language_Dialog_ListView"
-		):
-			return
 		# In some cases, suggestions list fires layout invalidated event repeatedly.
 		# This is the case with Microsoft Store's search field.
 		import speech
