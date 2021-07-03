@@ -87,7 +87,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# These include Windows Hello recommendation and finishing setup using account info.
 			# Just like development mode toggle from Windows 10, previous object is its label.
 			elif obj.name in (
-				"SystemSettings_Users_PasswordLessSignInDesktopDescription", "SystemSettings_Users_AutomaticSignOnLock_UpdateV2"
+				"SystemSettings_Users_PasswordLessSignInDesktopDescription",
+				"SystemSettings_Users_AutomaticSignOnLock_UpdateV2"
 			):
 				obj.name = obj.previous.name
 
