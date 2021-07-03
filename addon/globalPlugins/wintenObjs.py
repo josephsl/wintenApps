@@ -391,6 +391,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "layoutInvalidated")
 		if log.isEnabledFor(log.DEBUG):
 			log.debug(f"W10: list item count: {obj.childCount}")
+		# Forget it if no suggestions are present.
+		# This may happen if this event is fired prior to controller for event.
+		if obj.childCount == 0:
+			return
 		# Limit this event handler to proper suggestions list view.
 		if obj.UIAAutomationId != "SuggestionsList":
 			return
