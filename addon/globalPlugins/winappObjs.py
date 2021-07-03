@@ -85,6 +85,26 @@ class W10SearchField(SearchField):
 			ui.message(suggestionsMessage)
 
 
+# Suggestions list view.
+# Unlike Start menu suggestions, these fire UIA layout invalidated event and top suggestion is not announced.
+# At least announce suggestions count.
+class SuggestionsListView(UIA):
+
+	def event_UIA_layoutInvalidated(self):
+		# Forget it if no suggestions are present.
+		# This may happen if this event is fired prior to controller for event.
+		if self.childCount == 0:
+			return
+		focus = api.getFocusObject()
+		focusControllerFor = focus.controllerFor
+		# In some cases, suggestions list fires layout invalidated event repeatedly.
+		# This is the case with Microsoft Store's search field.
+		import speech
+		speech.cancelSpeech()
+		if len(focusControllerFor) and focusControllerFor[0].appModule is self.appModule and self.firstChild.name:
+			focus._layoutInvalidatedReportSuggestionsCount()
+
+
 # Various XAML headings (Settings app, for example) introduced in Version 1803.
 class XAMLHeading(UIA):
 
@@ -373,19 +393,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.uiaDebugLogging(obj, "layoutInvalidated")
 		if log.isEnabledFor(log.DEBUG):
 			log.debug(f"W10: list item count: {obj.childCount}")
-		# Forget it if no suggestions are present.
-		# This may happen if this event is fired prior to controller for event.
-		if obj.childCount == 0:
-			return
-		# Limit this event handler to proper suggestions list view.
-		if obj.UIAAutomationId != "SuggestionsList":
-			return
-		focus = api.getFocusObject()
-		focusControllerFor = focus.controllerFor
-		# In some cases, suggestions list fires layout invalidated event repeatedly.
-		# This is the case with Microsoft Store's search field.
-		import speech
-		speech.cancelSpeech()
-		if len(focusControllerFor) and focusControllerFor[0].appModule is obj.appModule and obj.firstChild.name:
-			focus._layoutInvalidatedReportSuggestionsCount()
 		nextHandler()
