@@ -46,7 +46,7 @@ W10Events: dict[int, str] = {
 	UIAHandler.UIA_Drag_DragStartEventId: "UIA_dragStart",
 	UIAHandler.UIA_Drag_DragCancelEventId: "UIA_dragCancel",
 	UIAHandler.UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
-	UIAHandler.UIA_DropTarget_DragEnterEventId: "UIA_dopTargetDragEnter",
+	UIAHandler.UIA_DropTarget_DragEnterEventId: "UIA_dropTargetDragEnter",
 	UIAHandler.UIA_DropTarget_DragLeaveEventId: "UIA_dropTargetDragLeave",
 	UIAHandler.UIA_DropTarget_DroppedEventId: "UIA_dropTargetDropped",
 	UIAHandler.UIA_LayoutInvalidatedEventId: "UIA_layoutInvalidated",
@@ -360,7 +360,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		eventHandler.queueEvent("gainFocus", obj)
 		nextHandler()
 
-	def event_UIA_dopTargetDragEnter(self, obj, nextHandler):
+	def event_UIA_dropTargetDragEnter(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dropTargetDragEnter")
 		nextHandler()
 
