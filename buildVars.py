@@ -41,7 +41,8 @@ addon_info = {
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!
-	"addon_updateChannel": None,
+	# This is prerelease code, permanently set update channel to "dev".
+	"addon_updateChannel": "dev",
 	# Add-on license such as GPL 2
 	"addon_license": "GPL v2",
 	# URL for the license document the ad-on is licensed under
