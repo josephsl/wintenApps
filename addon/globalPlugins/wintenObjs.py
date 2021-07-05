@@ -84,20 +84,7 @@ class W10SearchField(SearchField):
 		self._layoutInvalidatedReportSuggestionsCount()
 
 	def _layoutInvalidatedReportSuggestionsCount(self):
-		# Announce number of items found
-		# (except in Start search box where the suggestions are selected as user types).
-		# Because inaccurate count could be announced (when users type, suggestion count changes),
-		# thus announce this if position info reporting is enabled.
-		if config.conf["presentation"]["reportObjectPositionInformation"]:
-			# Item count must be the last one spoken.
-			suggestionsCount: int = self.controllerFor[0].childCount
-			suggestionsMessage = (
-				# Translators: part of the suggestions count message (for example: 2 suggestions).
-				_("1 suggestion")
-				# Translators: part of the suggestions count message (for example: 2 suggestions).
-				if suggestionsCount == 1 else _("{} suggestions").format(suggestionsCount)
-			)
-			ui.message(suggestionsMessage)
+		pass
 
 
 # Suggestions list view.
@@ -106,18 +93,28 @@ class W10SearchField(SearchField):
 class SuggestionsListView(UIA):
 
 	def event_UIA_layoutInvalidated(self):
-		# Forget it if no suggestions are present.
+		# Announce number of items found
+		# (except in Start search box where the suggestions are selected as user types).
+		# Because inaccurate count could be announced (when users type, suggestion count changes),
+		# thus announce this if position info reporting is enabled.
+		# However, forget all this if no suggestions are present.
 		# This may happen if this event is fired prior to controller for event.
 		if self.childCount == 0:
 			return
-		focus = api.getFocusObject()
-		focusControllerFor = focus.controllerFor
 		# In some cases, suggestions list fires layout invalidated event repeatedly.
 		# This is the case with Microsoft Store's search field.
 		import speech
 		speech.cancelSpeech()
-		if len(focusControllerFor) and focusControllerFor[0].appModule is self.appModule and self.firstChild.name:
-			focus._layoutInvalidatedReportSuggestionsCount()
+		if config.conf["presentation"]["reportObjectPositionInformation"]:
+			# Item count must be the last one spoken.
+			suggestionsCount: int = self.childCount
+			suggestionsMessage = (
+				# Translators: part of the suggestions count message (for example: 2 suggestions).
+				_("1 suggestion")
+				# Translators: part of the suggestions count message (for example: 2 suggestions).
+				if suggestionsCount == 1 else _("{} suggestions").format(suggestionsCount)
+			)
+			ui.message(suggestionsMessage)
 
 
 # Various XAML headings (Settings app, for example) introduced in Version 1803.
