@@ -10,7 +10,7 @@ from comtypes import COMError
 import globalPluginHandler
 import controlTypes
 import ui
-from NVDAObjects.UIA import UIA, SearchField, Dialog
+from NVDAObjects.UIA import UIA, Dialog
 import api
 import config
 import queueHandler
@@ -57,19 +57,6 @@ else:
 	stateConsts: dict[int, str] = dict(
 		(const, name) for name, const in controlTypes.__dict__.items() if name.startswith("STATE_")
 	)
-
-
-# Search fields.
-# Unlike the Core implementation, this class announces suggestion count, to be incorporated into NVDA later.
-class W10SearchField(SearchField):
-
-	def event_suggestionsOpened(self):
-		super(W10SearchField, self).event_suggestionsOpened()
-		# #59: use an internal function to announce suggestions count.
-		self._layoutInvalidatedReportSuggestionsCount()
-
-	def _layoutInvalidatedReportSuggestionsCount(self):
-		pass
 
 
 # Suggestions list view.
