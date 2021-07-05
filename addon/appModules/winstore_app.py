@@ -43,3 +43,6 @@ class AppModule(appModuleHandler.AppModule):
 					self._appInstallProgress = progressText
 					ui.message(progressText)
 		nextHandler()
+
+	def event_appModule_loseFocus(self):
+		self._appInstallProgress = ""
