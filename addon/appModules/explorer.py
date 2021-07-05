@@ -24,6 +24,11 @@ WIN11_RECLASSIFY_TOGGLE_BUTTONS = [
 ]
 
 
+# Do not allow "pane" to be announced when switching apps in Windows 11.
+class InputSiteWindow(UIA):
+	shouldAllowUIAFocusEvent = False
+
+
 # Support control types refactor (both before (2021.1) and after (2021.2) for a time).
 if hasattr(controlTypes, "Role"):
 	ROLE_BUTTON = controlTypes.Role.BUTTON
@@ -44,3 +49,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			obj.states.discard(STATE_CHECKABLE)
 			return
 		super(AppModule, self).event_NVDAObject_init(obj)
+
+	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+		if isinstance(obj, UIA):
+			# Suppress focus announcement for input site window as it is annoying.
+			if obj.UIAElement.cachedClassName == "Windows.UI.Input.InputSite.WindowClass":
+				clsList.insert(0, InputSiteWindow)
+				return
+		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)

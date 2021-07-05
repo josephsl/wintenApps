@@ -161,6 +161,5 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				self.event_liveRegionChange(obj, nextHandler)
 		nextHandler()
 
-	def event_UIA_controllerFor(self, obj, nextHandler):
+	def event_appModule_loseFocus(self):
 		self._nameChangeCache = ""
-		nextHandler()
