@@ -10,7 +10,7 @@ from comtypes import COMError
 import globalPluginHandler
 import controlTypes
 import ui
-from NVDAObjects.UIA import UIA, SearchField, Dialog
+from NVDAObjects.UIA import UIA, Dialog
 from NVDAObjects.behaviors import EditableTextWithSuggestions
 import api
 import config
@@ -72,19 +72,6 @@ class UIAEditableTextWithSuggestions(EditableTextWithSuggestions, UIA):
 			self.event_suggestionsOpened()
 		else:
 			self.event_suggestionsClosed()
-
-
-# Search fields.
-# Unlike the Core implementation, this class announces suggestion count, to be incorporated into NVDA later.
-class W10SearchField(SearchField):
-
-	def event_suggestionsOpened(self):
-		super(W10SearchField, self).event_suggestionsOpened()
-		# #59: use an internal function to announce suggestions count.
-		self._layoutInvalidatedReportSuggestionsCount()
-
-	def _layoutInvalidatedReportSuggestionsCount(self):
-		pass
 
 
 # Suggestions list view.
