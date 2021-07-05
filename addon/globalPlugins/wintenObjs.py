@@ -190,19 +190,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
 			return
-		# Search field that does raise controller for event.
-		# Although basic functionality is included in NVDA 2017.3,
-		# added enhancements such as announcing suggestion count.
-		if obj.UIAAutomationId in ("SearchTextBox", "TextBox"):
-			# NVDA 2017.3 includes a dedicated search box overlay class in searchui
-			# to deal with search term announcement problem.
-			# Because the add-on version deals with focus comparison,
-			# let all search fields go through this check as much as possible except for specific apps.
-			if obj.appModule.appName not in ("searchui", "searchapp", "searchhost"):
-				clsList.insert(0, W10SearchField)
-				return
-		# A dedicated version for Mail app's address/mention suggestions.
-		elif obj.UIAAutomationId == "RootFocusControl":
+		# A dedicated auto-complete field for Mail app's address/mention suggestions.
+		if obj.UIAAutomationId == "RootFocusControl":
 			clsList.insert(0, UIAEditableTextWithSuggestions)
 			return
 		# Recognize suggestions list view firing layout invalidated event.
