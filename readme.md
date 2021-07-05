@@ -65,7 +65,6 @@ Most items are applicable when using Cortana Conversations (Windows 10 2004 and 
 ## Mail
 
 * When reviewing items in messages list, you can now use table navigation commands to review message headers. Note that navigating between rows (messages) is not supported.
-* When writing a message, appearance of at mention suggestions are indicated by sounds.
 
 ## Maps
 
