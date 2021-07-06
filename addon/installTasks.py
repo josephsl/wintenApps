@@ -31,6 +31,18 @@ def onInstall():
 			_("Old Windows version"), wx.OK | wx.ICON_ERROR
 		)
 		raise RuntimeError("Old Windows version detected")
+	# Although installation on server systems is possible, Windows App Essentials does not support it fully.
+	# Therefore display a warning message if running on servers.
+	productType = ("workstation", "domain controller", "server")[sys.getwindowsversion().product_type - 1]
+	if productType != "workstation":
+		gui.messageBox(
+			_(
+				# Translators: warning text shown when trying to install the add-on on server computers.
+				"This is a Windows Server system. Although you can install the add-on, not all features will work."
+			),
+			# Translators: title of the warning dialog shown when trying to install the add-on on server systems.
+			_("Windows App Essentials and Windows Server"), wx.OK | wx.ICON_WARNING
+		)
 	# Temporary: warn stable release users about experimental support for Windows 11
 	# (dev channel subscribers will not receive warnings).
 	if sys.getwindowsversion().build >= 22000:
