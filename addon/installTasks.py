@@ -14,14 +14,15 @@ def onInstall():
 	import gui
 	import wx
 	import winVersion
-	requiredVer = "Windows 10 20H2"
+	minimumSupportedReleaseName = "Windows 10 20H2"
 	if winVersion.getWinVer() < winVersion.WIN10_20H2:
+		addonInstallErrorMessage = _(
+			# Translators: Dialog text shown when trying to install the add-on on an unsupported version of Windows
+			# (minSupportedVersion is the minimum version required for this add-on).
+			"You are using an older version of Windows. This add-on requires {minSupportedVersion} or later."
+		).format(minSupportedVersion=minimumSupportedReleaseName)
 		gui.messageBox(
-			_(
-				# Translators: Dialog text shown when trying to install the add-on on an unsupported version of Windows
-				# (minSupportedVersion is the minimum version required for this add-on).
-				"You are using an older version of Windows. This add-on requires {minSupportedVersion} or later."
-			).format(minSupportedVersion=requiredVer),
+			addonInstallErrorMessage,
 			# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 			# Unsupported systems include Windows versions earlier than 10 and old Windows 10 feature updates.
 			_("Unsupported Windows release"), wx.OK | wx.ICON_ERROR
