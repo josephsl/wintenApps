@@ -22,8 +22,9 @@ def onInstall():
 				# (minSupportedVersion is the minimum version required for this add-on).
 				"You are using an older version of Windows. This add-on requires {minSupportedVersion} or later."
 			).format(minSupportedVersion=requiredVer),
-			# Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
-			_("Old Windows version"), wx.OK | wx.ICON_ERROR
+			# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+			# Unsupported systems include Windows versions earlier than 10 and old Windows 10 feature updates.
+			_("Unsupported Windows release"), wx.OK | wx.ICON_ERROR
 		)
 		raise RuntimeError("Old Windows version detected")
 	# Temporary: warn stable release users about experimental support for Windows 11
