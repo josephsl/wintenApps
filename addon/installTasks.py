@@ -18,6 +18,7 @@ def onInstall():
 	# For now only check Windows 10.
 	minimumSupportedRelease = winVersion.WIN10_20H2
 	minimumSupportedReleaseName = "Windows 10 20H2"
+	addonInstallPossible = True
 	addonInstallErrorMessage = ""
 	# Windows App Essentials requires Windows 10 or later.
 	if currentWinVer < winVersion.WIN10:
@@ -25,6 +26,7 @@ def onInstall():
 			# Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
 			"You are using an older version of Windows. This add-on requires Windows 10 or later."
 		)
+		addonInstallPossible = False
 	# Windows App Essentials does not support old feature updates.
 	# This is the case for Windows 10 (to be expanded to Windows 11 in the future).
 	elif winVersion.WIN10 <= currentWinVer < minimumSupportedRelease:
@@ -33,13 +35,15 @@ def onInstall():
 			# (minSupportedVersion is the minimum Windows 10 release required for this add-on).
 			"You are using an unsupported Windows 10 release. This add-on requires {minSupportedVersion} or later."
 		).format(minSupportedVersion=minimumSupportedReleaseName)
+		addonInstallPossible = False
+	if not addonInstallPossible:
 		gui.messageBox(
 			addonInstallErrorMessage,
 			# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 			# Unsupported systems include Windows versions earlier than 10 and old Windows 10 feature updates.
 			_("Unsupported Windows release"), wx.OK | wx.ICON_ERROR
 		)
-		raise RuntimeError("Old Windows version detected")
+		raise RuntimeError("Attempting to install Windows App Essentials on unsupported Windows release")
 	# Temporary: warn stable release users about experimental support for Windows 11
 	# (dev channel subscribers will not receive warnings).
 	isWin11 = winVersion.getWinVer().build >= 22000
