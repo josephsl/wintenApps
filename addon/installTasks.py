@@ -25,11 +25,13 @@ def onInstall():
 			# Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
 			"You are using an older version of Windows. This add-on requires Windows 10 or later."
 		)
-	if currentWinVer < minimumSupportedRelease:
+	# Windows App Essentials does not support old feature updates.
+	# This is the case for Windows 10 (to be expanded to Windows 11 in the future).
+	elif winVersion.WIN10 <= currentWinVer < minimumSupportedRelease:
 		addonInstallErrorMessage = _(
-			# Translators: Dialog text shown when trying to install the add-on on an unsupported version of Windows
-			# (minSupportedVersion is the minimum version required for this add-on).
-			"You are using an older version of Windows. This add-on requires {minSupportedVersion} or later."
+			# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows 10 release
+			# (minSupportedVersion is the minimum Windows 10 release required for this add-on).
+			"You are using an unsupported Windows 10 release. This add-on requires {minSupportedVersion} or later."
 		).format(minSupportedVersion=minimumSupportedReleaseName)
 		gui.messageBox(
 			addonInstallErrorMessage,
