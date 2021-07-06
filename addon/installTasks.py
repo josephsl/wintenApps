@@ -14,8 +14,12 @@ def onInstall():
 	import gui
 	import wx
 	import winVersion
+	currentWinVer = winVersion.getWinVer()
+	# For now only check Windows 10.
+	minimumSupportedRelease = winVersion.WIN10_20H2
 	minimumSupportedReleaseName = "Windows 10 20H2"
-	if winVersion.getWinVer() < winVersion.WIN10_20H2:
+	addonInstallErrorMessage = ""
+	if currentWinVer < minimumSupportedRelease:
 		addonInstallErrorMessage = _(
 			# Translators: Dialog text shown when trying to install the add-on on an unsupported version of Windows
 			# (minSupportedVersion is the minimum version required for this add-on).
