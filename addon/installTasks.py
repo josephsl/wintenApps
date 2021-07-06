@@ -16,6 +16,7 @@ def onInstall():
 	import winVersion
 	currentWinVer = winVersion.getWinVer()
 	# For now only check Windows 10.
+	windowsReleaseSeries = "Windows 10"
 	minimumSupportedRelease = winVersion.WIN10_20H2
 	minimumSupportedReleaseName = "Windows 10 20H2"
 	addonInstallPossible = True
@@ -31,10 +32,14 @@ def onInstall():
 	# This is the case for Windows 10 (to be expanded to Windows 11 in the future).
 	elif winVersion.WIN10 <= currentWinVer < minimumSupportedRelease:
 		addonInstallErrorMessage = _(
-			# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows 10 release
-			# (minSupportedVersion is the minimum Windows 10 release required for this add-on).
-			"You are using an unsupported Windows 10 release. This add-on requires {minSupportedVersion} or later."
-		).format(minSupportedVersion=minimumSupportedReleaseName)
+			# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+			# winRelease can be Windows 10, Windows 11, or other release series name.
+			# minSupportedUpdate is the minimum update for a Windows release series required for this add-on.
+			# Example: an add-on release requiring Windows 10 May 2021 Update
+			# will set windowsRelease to Windows 10 and minSupportedUpdate to Windows 10 21H1.
+			"You are using an unsupported {windowsRelease} release. "
+			"This add-on requires {minSupportedUpdate} or later."
+		).format(windowsRelease=windowsReleaseSeries, minSupportedUpdate=minimumSupportedReleaseName)
 		addonInstallPossible = False
 	if not addonInstallPossible:
 		gui.messageBox(
