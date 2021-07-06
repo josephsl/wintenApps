@@ -19,6 +19,12 @@ def onInstall():
 	minimumSupportedRelease = winVersion.WIN10_20H2
 	minimumSupportedReleaseName = "Windows 10 20H2"
 	addonInstallErrorMessage = ""
+	# Windows App Essentials requires Windows 10 or later.
+	if currentWinVer < winVersion.WIN10:
+		addonInstallErrorMessage = _(
+			# Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
+			"You are using an older version of Windows. This add-on requires Windows 10 or later."
+		)
 	if currentWinVer < minimumSupportedRelease:
 		addonInstallErrorMessage = _(
 			# Translators: Dialog text shown when trying to install the add-on on an unsupported version of Windows
