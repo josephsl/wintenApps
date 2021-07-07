@@ -33,16 +33,16 @@ def onInstall():
 		raise RuntimeError("Old Windows version detected")
 	# Temporary: warn stable release users about experimental support for Windows 11
 	# (dev channel subscribers will not receive warnings).
-	isWin11 = sys.getwindowsversion().build >= 22000
-	warnWin11Experimental = False
-	for addon in addonHandler.getAvailableAddons():
-		if addon.name == "wintenApps" and addon.isPendingInstall:
-			warnWin11Experimental = isWin11 and not addon.version.endswith("-dev")
-			break
-	if warnWin11Experimental:
-		# THIS WARNING DIALOG WILL NOT BE TRANSLATED!
-		gui.messageBox(
-			"You are using Windows 11 Preview. Support for Windows 11 is experimental "
-			"and features can change without notice prior to its general release.",
-			"Windows 11 support notice", wx.OK | wx.ICON_WARNING
-		)
+	if sys.getwindowsversion().build >= 22000:
+		warnWin11Experimental = False
+		for addon in addonHandler.getAvailableAddons():
+			if addon.name == "wintenApps" and addon.isPendingInstall:
+				warnWin11Experimental = not addon.version.endswith("-dev")
+				break
+		if warnWin11Experimental:
+			# THIS WARNING DIALOG WILL NOT BE TRANSLATED!
+			gui.messageBox(
+				"You are using Windows 11 Insider Preview. Support for Windows 11 is experimental "
+				"and features can change without notice prior to its general release.",
+				"Windows 11 support notice", wx.OK | wx.ICON_WARNING
+			)
