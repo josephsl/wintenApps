@@ -46,12 +46,14 @@ def onInstall():
 		gui.messageBox(addonInstallErrorMessage, _("Unsupported Windows release"), wx.OK | wx.ICON_ERROR)
 		raise RuntimeError("Attempting to install Windows App Essentials on unsupported Windows release")
 	# Although installation on server systems is possible, Windows App Essentials does not support it fully.
+	# Namely Windows Server does not come with modern apps such as Microsoft Store.
 	# Therefore display a warning message if running on servers.
 	if currentWinVer.productType != "workstation":
 		gui.messageBox(
 			_(
 				# Translators: warning text shown when trying to install the add-on on server computers.
-				"This is a Windows Server system. Although you can install the add-on, not all features will work."
+				"This is a Windows Server system. Although you can install the add-on, "
+				"not all features will work as Windows Server does not include modern apps such as Microsoft Store."
 			),
 			# Translators: title of the warning dialog shown when trying to install the add-on on server systems.
 			_("Windows App Essentials and Windows Server"), wx.OK | wx.ICON_WARNING
