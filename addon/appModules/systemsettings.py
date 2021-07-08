@@ -62,17 +62,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# This is resolved in build 19536 and later.
 			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name
-			# Windows 11 introduces breadcrumb bar to navigate to parent sections more quickly.
-			# However the actual items are not labeled, but its child is.
-			# Therefore use the child name as the breadcrumb bar item label.
-			elif not obj.name and obj.UIAElement.cachedClassName == "Microsoft.UI.Xaml.Controls.BreadcrumbBarItem":
-				# Descend several times if a class name is the child label.
-				firstChild = obj.firstChild
-				# Breadcrumb items are gone when moving to parent section.
-				if firstChild.name == "BreadcrumbBarItemButton" and obj.simpleFirstChild:
-					obj.name = obj.simpleFirstChild.name
-				else:
-					obj.name = firstChild.name
 			# Some XAML controls are named SystemSettings.ViewModel.SettingEntry.
 			# For list items, simple children records actual label.
 			# For Personalization/Themes/browse button, first child records its actual label.
