@@ -8,6 +8,7 @@
 from nvdaBuiltin.appModules.searchapp import *  # NOQA: F403
 import config
 import nvwave
+import winVersion
 from NVDAObjects.UIA import UIA
 
 
@@ -33,7 +34,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# and as part of this, suggestion count is part of a live region.
 			# Although it is geared for Narrator, it is applicable to other screen readers as well.
 			# The live region itself is a child of the one shown here.
-			if obj.UIAAutomationId == "suggestionCountForNarrator" and obj.firstChild is not None:
+			if (
+				winVersion.getWinVer() >= winVersion.WIN10_1909
+				and obj.UIAAutomationId == "suggestionCountForNarrator"
+				and obj.firstChild is not None
+			):
 				obj.name = obj.firstChild.name
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
