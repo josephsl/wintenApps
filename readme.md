@@ -101,7 +101,6 @@ This includes emoji panel, clipboard history, dictation, hardware input suggesti
 * Windows Update reminder dialog is recognized as a proper dialog.
 * Odd control labels seen in certain Windows installations has been corrected.
 * NVDA will announce the name of the optional quality update link if present, typically named "download and install now".
-* In Windows 11, settings breadcrumb items are properly labeled.
 
 ## Weather
 
