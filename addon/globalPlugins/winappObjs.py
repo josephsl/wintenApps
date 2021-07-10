@@ -166,27 +166,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except COMError:
 			pass
 
-	# Find out if log recording is possible.
-	# This will work if debug logging is on and/or tracing apps and/or events is specified.
-	trackedEvents: set[str] = set()
-	trackedApps: set[str] = set()
-
-	def recordLog(self, obj: Any, event: Optional[str]) -> bool:
-		if not isinstance(obj, UIA):
-			return False
-		eventsTracked = len(self.trackedEvents) > 0
-		appsTracked = len(self.trackedApps) > 0
-		# Log properties based on the following truth table/conditional statements.
-		if not eventsTracked and not appsTracked:
-			return log.isEnabledFor(log.DEBUG)
-		elif eventsTracked and not appsTracked:
-			return event in self.trackedEvents
-		elif not eventsTracked and appsTracked:
-			return obj.appModule.appName in self.trackedApps
-		# Just in case an event/app combo is specified.
-		else:
-			return event in self.trackedEvents and obj.appModule.appName in self.trackedApps
-
 	# Record UIA property info about an object if told to do so.
 	# An add-on named Event Tracker (deriving from this add-on) will log event information for most events.
 	# However, because this add-on adds additional events, log them here.
