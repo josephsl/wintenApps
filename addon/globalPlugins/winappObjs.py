@@ -274,14 +274,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Introduced in Version 1709, to be treated as a notification event.
 		# Bulk of this transferred to Event Tracker add-on in 2021.
 		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
-			"""log.debug(
-				"W10: UIA notification: "
-				f"sender: {obj.UIAElement}, "
-				f"notification kind: {notificationKind}, "
-				f"notification processing: {notificationProcessing}, "
-				f"display string: {displayString}, "
-				f"activity Id: {activityId}"
-			)"""
 			# Play a debug tone if and only if notifications come from somewhere other than the active app
 			# and NVDA was restarted with debug logging mode.
 			if obj.appModule != api.getFocusObject().appModule and globalVars.appArgs.debugLogging:
