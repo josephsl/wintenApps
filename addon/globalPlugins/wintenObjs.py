@@ -262,6 +262,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				logger = log.info
 			logger(u"W10: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
+	# Events defined in NVDA.
+
 	def event_nameChange(self, obj, nextHandler):
 		# self.uiaDebugLogging(obj, "nameChange")
 		# NVDA Core issue 5641: try catching virtual desktop switch event,
@@ -349,6 +351,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		nextHandler()
 
+	def event_UIA_toolTipOpened(self, obj, nextHandler):
+		# self.uiaDebugLogging(obj, "tooltipOpened")
+		nextHandler()
+
+	def event_UIA_itemStatus(self, obj, nextHandler):
+		# self.uiaDebugLogging(obj, "itemStatus")
+		nextHandler()
+
+	def event_textChange(self, obj, nextHandler):
+		# self.uiaDebugLogging(obj, "textChange")
+		nextHandler()
+
+	# Events defined in this add-on.
+
 	def event_UIA_dragStart(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dragStart")
 		nextHandler()
@@ -376,18 +392,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Unlike drag complete event, it is something else that raises this event
 		# but NVDA records the correct focused element, so fake a gain focus event.
 		eventHandler.queueEvent("gainFocus", api.getFocusObject())
-		nextHandler()
-
-	def event_UIA_toolTipOpened(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "tooltipOpened")
-		nextHandler()
-
-	def event_UIA_itemStatus(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "itemStatus")
-		nextHandler()
-
-	def event_textChange(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "textChange")
 		nextHandler()
 
 	def event_UIA_layoutInvalidated(self, obj, nextHandler):
