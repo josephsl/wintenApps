@@ -242,7 +242,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Events defined in NVDA.
 
 	def event_nameChange(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "nameChange")
 		# NVDA Core issue 5641: try catching virtual desktop switch event,
 		# which will result in name change for the desktop object.
 		# To be taken care of by NVDA Core, and for older releases, let the add-on handle it for a time.
@@ -262,7 +261,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_liveRegionChange(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "liveRegionChange")
 		# No, do not let Start menu size be announced.
 		# Moved from Shell Experience Host in 2018 as a different app hosts this control in build 18282.
 		if isinstance(obj, UIA) and obj.UIAAutomationId == "FrameSizeAccessibilityField":
@@ -275,7 +273,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	):
 		# Introduced in Version 1709, to be treated as a notification event.
 		# Bulk of this transferred to Event Tracker add-on in 2021.
-		# self.uiaDebugLogging(obj, "notification")
 		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
 			"""log.debug(
 				"W10: UIA notification: "
