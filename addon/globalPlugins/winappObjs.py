@@ -217,19 +217,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		nextHandler()
 
-	def event_UIA_notification(
-			self, obj, nextHandler,
-			notificationKind=None, notificationProcessing=None, displayString=None, activityId=None
-	):
+	def event_UIA_notification(self, obj, nextHandler, activityId=None):
 		# Introduced in Version 1709, to be treated as a notification event.
 		# Bulk of this transferred to Event Tracker add-on in 2021.
-		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
-			# Play a debug tone if and only if notifications come from somewhere other than the active app
-			# and NVDA was restarted with debug logging mode.
-			if obj.appModule != api.getFocusObject().appModule and globalVars.appArgs.debugLogging:
-				import tones
-				# For debugging purposes.
-				tones.beep(500, 100)
+		# Play a debug tone if and only if notifications come from somewhere other than the active app
+		# and NVDA was restarted with debug logging mode.
+		if (
+			isinstance(obj, UIA)
+			and obj.appModule != api.getFocusObject().appModule
+			and globalVars.appArgs.debugLogging
+		):
+			import tones
+			# For debugging purposes.
+			tones.beep(500, 100)
 		# In recent versions of Word 365, notification event is used to announce editing functions,
 		# some of them being quite anoying.
 		if obj.appModule.appName == "winword" and activityId in ("AccSN1", "AccSN2"):
