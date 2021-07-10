@@ -261,40 +261,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					wx.CallLater(500, ui.message, obj.name)
 		nextHandler()
 
-	def event_valueChange(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "valueChange")
-		nextHandler()
-
-	def event_stateChange(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "stateChange")
-		nextHandler()
-
-	def event_descriptionChange(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "descriptionChange")
-		nextHandler()
-
-	def event_UIA_controllerFor(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "controllerFor")
-		nextHandler()
-
 	def event_liveRegionChange(self, obj, nextHandler):
 		# self.uiaDebugLogging(obj, "liveRegionChange")
 		# No, do not let Start menu size be announced.
 		# Moved from Shell Experience Host in 2018 as a different app hosts this control in build 18282.
 		if isinstance(obj, UIA) and obj.UIAAutomationId == "FrameSizeAccessibilityField":
 			return
-		nextHandler()
-
-	def event_UIA_elementSelected(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "elementSelected")
-		nextHandler()
-
-	def event_UIA_systemAlert(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "systemAlert")
-		nextHandler()
-
-	def event_UIA_window_windowOpen(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "windowOpen")
 		nextHandler()
 
 	def event_UIA_notification(
@@ -326,18 +298,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Do not allow notification to be announced if "report notifications" is off.
 		if not config.conf["presentation"]["reportHelpBalloons"]:
 			return
-		nextHandler()
-
-	def event_UIA_toolTipOpened(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "tooltipOpened")
-		nextHandler()
-
-	def event_UIA_itemStatus(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "itemStatus")
-		nextHandler()
-
-	def event_textChange(self, obj, nextHandler):
-		# self.uiaDebugLogging(obj, "textChange")
 		nextHandler()
 
 	# Events defined in this add-on.
