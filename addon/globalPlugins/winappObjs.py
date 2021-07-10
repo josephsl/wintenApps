@@ -191,7 +191,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# An add-on named Event Tracker (deriving from this add-on) will log event information for most events.
 	# However, because this add-on adds additional events, log them here.
 	def uiaDebugLogging(self, obj: Any, event: Optional[str] = None) -> None:
-		if self.recordLog(obj, event):
+		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
 			info: list[str] = [f"object: {repr(obj)}"]
 			info.append(f"name: {obj.name}")
 			if not event:
@@ -208,11 +208,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			except COMError:
 				info.append("Automation Id: not found")
 			info.append(f"class name: {element.cachedClassName}")
-			if log.isEnabledFor(log.DEBUG):
-				logger = log.debug
-			else:
-				logger = log.info
-			logger(u"W10: UIA {debuginfo}".format(debuginfo=", ".join(info)))
+			log.debug(u"W10: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
 	# Events defined in NVDA.
 
