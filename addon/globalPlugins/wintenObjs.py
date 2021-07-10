@@ -225,6 +225,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return event in self.trackedEvents and obj.appModule.appName in self.trackedApps
 
 	# Record UIA property info about an object if told to do so.
+	# An add-on named Event Tracker (deriving from this add-on) will log event information for most events.
+	# However, because this add-on adds additional events, log them here.
 	def uiaDebugLogging(self, obj: Any, event: Optional[str] = None) -> None:
 		if self.recordLog(obj, event):
 			info: list[str] = [f"object: {repr(obj)}"]
@@ -261,7 +263,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			logger(u"W10: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
 	def event_nameChange(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "nameChange")
+		# self.uiaDebugLogging(obj, "nameChange")
 		# NVDA Core issue 5641: try catching virtual desktop switch event,
 		# which will result in name change for the desktop object.
 		# To be taken care of by NVDA Core, and for older releases, let the add-on handle it for a time.
@@ -281,23 +283,23 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_valueChange(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "valueChange")
+		# self.uiaDebugLogging(obj, "valueChange")
 		nextHandler()
 
 	def event_stateChange(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "stateChange")
+		# self.uiaDebugLogging(obj, "stateChange")
 		nextHandler()
 
 	def event_descriptionChange(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "descriptionChange")
+		# self.uiaDebugLogging(obj, "descriptionChange")
 		nextHandler()
 
 	def event_UIA_controllerFor(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "controllerFor")
+		# self.uiaDebugLogging(obj, "controllerFor")
 		nextHandler()
 
 	def event_liveRegionChange(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "liveRegionChange")
+		# self.uiaDebugLogging(obj, "liveRegionChange")
 		# No, do not let Start menu size be announced.
 		# Moved from Shell Experience Host in 2018 as a different app hosts this control in build 18282.
 		if isinstance(obj, UIA) and obj.UIAAutomationId == "FrameSizeAccessibilityField":
@@ -305,15 +307,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "elementSelected")
+		# self.uiaDebugLogging(obj, "elementSelected")
 		nextHandler()
 
 	def event_UIA_systemAlert(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "systemAlert")
+		# self.uiaDebugLogging(obj, "systemAlert")
 		nextHandler()
 
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "windowOpen")
+		# self.uiaDebugLogging(obj, "windowOpen")
 		nextHandler()
 
 	def event_UIA_notification(
@@ -321,16 +323,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			notificationKind=None, notificationProcessing=None, displayString=None, activityId=None
 	):
 		# Introduced in Version 1709, to be treated as a notification event.
-		self.uiaDebugLogging(obj, "notification")
+		# Bulk of this transferred to Event Tracker add-on in 2021.
+		# self.uiaDebugLogging(obj, "notification")
 		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
-			log.debug(
+			"""log.debug(
 				"W10: UIA notification: "
 				f"sender: {obj.UIAElement}, "
 				f"notification kind: {notificationKind}, "
 				f"notification processing: {notificationProcessing}, "
 				f"display string: {displayString}, "
 				f"activity Id: {activityId}"
-			)
+			)"""
 			# Play a debug tone if and only if notifications come from somewhere other than the active app
 			# and NVDA was restarted with debug logging mode.
 			if obj.appModule != api.getFocusObject().appModule and globalVars.appArgs.debugLogging:
@@ -376,15 +379,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_toolTipOpened(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "tooltipOpened")
+		# self.uiaDebugLogging(obj, "tooltipOpened")
 		nextHandler()
 
 	def event_UIA_itemStatus(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "itemStatus")
+		# self.uiaDebugLogging(obj, "itemStatus")
 		nextHandler()
 
 	def event_textChange(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "textChange")
+		# self.uiaDebugLogging(obj, "textChange")
 		nextHandler()
 
 	def event_UIA_layoutInvalidated(self, obj, nextHandler):
