@@ -54,9 +54,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			return nextHandler()
 		# The rest of this event handler isn't applicable in build 20200 and later due to UI redesign.
 		# Early builds had accessibility problems, which was improved in build 21000 series.
+		# However, newer revisions of Windows 11 build 22000 restores this event for emoji panel items.
 		# Temporary: detect Windows 11 with a flag.
-		if WIN11:
-			return
 		# Wait until modern keyboard is fully displayed on screen.
 		# Version 1803 or later
 		if not self._modernKeyboardInterfaceActive:
