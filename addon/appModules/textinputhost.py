@@ -64,10 +64,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Therefore pass these events straight on.
 		if isinstance(obj, ImeCandidateItem):  # NOQA: F405
 			return nextHandler()
-		# The rest of this event handler isn't applicable in Windows 11 due to UI redesign.
-		# Early builds had accessibility problems, which was improved in build 21000 series.
-		if winVersion.getWinVer() >= WIN11:
-			return
 		# Wait until modern keyboard is fully displayed on screen.
 		# Windows 10 1803 or later
 		if not self._modernKeyboardInterfaceActive:
