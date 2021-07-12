@@ -1,13 +1,18 @@
-# Zugänglichkeitsverbesserungen für Windows 10 Apps #
+# Windows App Essentials #
 
 * Autoren: Joseph Lee, Derek Riemer und mehrere Benutzer von Windows 10
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
 * NVDA-Kompatibilität: 2020.4 und neuer
 
-Diese Erweiterung bietet eine Sammlung von Anwendungsmodulen für
-verschiedene Windows 10 Anwendungen sowie Korrekturen in einigen Windows 10
-Elementen.
+Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
+2021 in Windows App Essentials umbenannt, um Windows 10 und zukünftige
+Versionen wie Windows 11 zu unterstützen. Teile dieser Erweiterung beziehen
+sich weiterhin auf den ursprünglichen Namen der Erweiterung.
+
+Diese Erweiterung ist eine Sammlung von App-Modulen für verschiedene moderne
+Windows-Apps sowie Verbesserungen und Korrekturen für bestimmte
+Steuerelemente in Windows 10 und neuer.
 
 Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
 Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
@@ -28,16 +33,20 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows release (Windows 10
-  Version 21H1/build 19043).
-* Although installation is possible, this add-on does not support Windows
-  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Diese Erweiterung benötigt Windows 10 Version 20H2 (Build 19042) oder
+  neuer. Verwenden Sie für beste Ergebnisse die Erweiterung mit der neuesten
+  Windows-Version (Windows 10 21H1 Build 19043).
+* Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
+  Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
+  Windows Server.
+* Die Unterstützung für Windows 11 ist experimentell und einige Funktionen
+  funktionieren nicht (siehe entsprechende Einträge für Details).
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support older Windows
-  releases, or changes were made to Windows and apps that makes entries no
-  longer applicable.
+* Bei Einträgen, die unten nicht aufgeführt sind, können Sie davon ausgehen,
+  dass Funktionen Teil von NVDA sind und nicht mehr nutzbar sind, da die
+  Erweiterung nicht unterstützte Windows-Versionen wie alte Windows
+  10-Versionen nicht unterstützt oder Änderungen an Windows und Apps
+  vorgenommen wurden, die keine Einträge mehr vornehmen.
 * Einige Apps unterstützen den kompakten Overlay-Modus (z. B. im
   Taschenrechner immer ganz oben). Dieser Modus funktioniert mit der
   portablen NVDA-Version nicht ordnungsgemäß.
@@ -52,11 +61,10 @@ Versionen][3].
   Durchführung einer Suche bekannt geben. Diese Option wird durch
   "Objekt-Positionsinformationen mitteilen" im Objektpräsentationsfenster in
   den NVDA-Einstellungen gesteuert.
-* Bei der Suche im Startmenü oder im Datei-Explorer der Version 1909 (Update
-  November 2019) und neuer sind Fälle von NVDA, in denen Suchergebnisse bei
-  der Überprüfung von Ergebnissen zweimal angekündigt werden, weniger
-  auffällig, was auch die Brailleausgabe bei der Überprüfung von Elementen
-  einheitlicher macht.
+* Bei der Suche im Startmenü oder Datei-Explorer in Windows 10 Version 1909
+  (November 2019 Update) und neuer sind Fälle, in denen NVDA Suchergebnisse
+  beim Überprüfen der Ergebnisse zweimal ankündigt, weniger auffällig, was
+  auch die Brailleausgabe beim Überprüfen von Elementen konsistenter macht.
 * Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignishandlern werden
   die folgenden UIA-Ereignisse erkannt: Start starten, Abbruch ziehen,
   Abschluss ziehen, Ziel ziehen ziehen lassen, Ziel ziehen lassen, Ziel
@@ -69,9 +77,9 @@ Versionen][3].
   Elementtext für das Ereignis des Elementstatus.
 * Es ist möglich, nur bestimmte Ereignisse bzw. Ereignisse aus bestimmten
   Anwendungen zu verfolgen.
-* Beim Öffnen, Schließen, Neuordnen (Build 21337 oder neuer) oder Wechseln
-  zwischen virtuellen Desktops gibt NVDA den Namen des aktiven virtuellen
-  Desktops bekannt (z. B. Desktop 2).
+* Beim Öffnen, Schließen, Neuordnen (Windows 11) oder Wechseln zwischen
+  virtuellen Desktops gibt NVDA den Namen des aktiven virtuellen Desktops an
+  (z. B. Desktop 2).
 * NVDA gibt beim Ändern der Bildschirmauflösung oder -ausrichtung keinen
   Text in der Startmenügröße mehr aus.
 * Beim Anordnen von Startmenükacheln oder Action-Center-Schnellaktionen mit
@@ -94,16 +102,16 @@ Versionen][3].
 
 ## Cortana
 
-Die meisten Elemente gelten für die Verwendung von Cortana-Unterhaltungen
-(Version 2004 und neuer).
+Die meisten Elemente sind bei Verwendung von Cortana-Unterhaltungen (Windows
+10 Version 2004 und neuer) anwendbar.
 
 * Rückmeldungstexte von Cortana werden in den meisten Situationen
   angekündigt.
 * NVDA verstummt bei der Verwendung von Cortana, so dass sich die Stimmen
   nicht mehr in die Quere kommen.
-* In der Version 1909 (Update November 2019) und neuer wird die moderne
-  Suche im Datei-Explorer mit der Benutzeroberfläche der Windows-Suche
-  unterstützt.
+* In Windows 10 Version 1909 (November 2019 Update) und neuer wird die
+  moderne Sucherfahrung im Datei-Explorer unterstützt von der
+  Benutzeroberfläche der Windows-Suche unterstützt.
 
 ## Mail
 
@@ -128,30 +136,30 @@ Die meisten Elemente gelten für die Verwendung von Cortana-Unterhaltungen
 
 * Nach der Suche nach App-Aktualisierungen werden die App-Namen in der Liste
   der zu aktualisierenden Apps korrekt beschriftet.
-* Beim Herunterladen von Inhalten wie Apps und Filmen wird NVDA den
-  Produktnamen und den Fortschritt des Downloads bekannt geben.
+* Beim Herunterladen von Inhalten wie Apps und Filmen gibt NVDA den
+  Produktnamen und den Downloadfortschritt an (funktioniert im
+  aktualisierten Microsoft Store in Windows 11 nicht ordnungsgemäß).
 
 ## Moderne virtuelle Tastaturen
 
-Dies umfasst das Emoji-Bedienfeld, den Verlauf der Zwischenablage, die
-Diktierfunktion, Vorschläge für Hardware-Eingaben und moderne Editoren für
-Eingabemethoden für bestimmte Sprachen. Aktivieren Sie beim Anzeigen von
-Emojis die Unicode Consortium-Einstellung in den Spracheinstellungen von
-NVDA und stellen Sie die Symbolstufe auf "Einige" oder höher ein. Außerdem
-unterstützt NVDA das aktualisierte Input Experience Panel in Build 21296 und
-neuer.
+Dazu gehören Emoji-Panel, Zwischenablageverlauf, Diktat,
+Hardware-Eingabevorschläge und moderne Eingabemethoden-Editoren für
+bestimmte Sprachen. Aktivieren Sie beim Anzeigen von Emojis für die beste
+Erfahrung die Unicode-Konsortium-Einstellung in den Spracheinstellungen von
+NVDA und setzen Sie die Symbolstufe auf "Einige" oder höher. Außerdem
+unterstützt NVDA das aktualisierte Eingabeerlebnis-Panel in Windows 11.
 
 * Beim Öffnen des Verlauf der Zwischenablage wird NVDA unter Umständen nicht
   mehr das Wort "Zwischenablage" mitteilen, wenn sich Elemente in der
   Zwischenablage befinden.
-* Auf einigen Systemen, auf denen die Version 1903 (Update Mai 2019) und
-  neuer läuft, wird NVDA beim Öffnen des Emoji-Panels nichts mehr zu tun
-  haben.
-* Wenn eine Emoji-Gruppe (einschließlich kaomoji und Symbolgruppe in Version
-  1903 oder später) ausgewählt wird, verschiebt NVDA das Navigator-Objekt
-  nicht mehr zu bestimmten Emojis.
-* Unterstützung für das aktualisierte Input Experience Panel (kombiniertes
-  Emoji-Bedienfeld und Zwischenablageverlauf) in Build 21296 und neuer
+* Auf einigen Systemen, auf denen Windows 10 Version 1903 (Update vom Mai
+  2019) und neuer ausgeführt wird, scheint NVDA nicht mehr zu tun, wenn das
+  Emoji-Panel geöffnet wird.
+* Wenn eine Emoji-Gruppe (einschließlich Kaomoji- und Symbolgruppe in
+  Windows 10 Version 1903 oder neuer) ausgewählt wird, verschiebt NVDA das
+  Navigatorobjekt nicht mehr in bestimmte Emojis.
+* Unterstützung für das aktualisierte Erlebnis-Panel für die Eingabe
+  (kombiniertes Emoji-Panel und Zwischenablageverlauf) in Windows 11
   hinzugefügt.
 
 ## Kontakte
@@ -168,12 +176,11 @@ neuer.
   zweimal angesagt.
 * Das Erinnerungsdialogfeld von Windows Update wird als richtiger Dialog
   erkannt.
-* Odd control labels seen in certain Windows installations has been
-  corrected.
-* In neueren Revisionen der Version 1803 und später wurde aufgrund von
-  Änderungen am Windows Update-Verfahren für Feature-Updates ein Link "Jetzt
-  herunterladen und installieren" hinzugefügt. NVDA wird nun den Titel für
-  das neue Update bekannt geben, falls vorhanden.
+* Ungerade Steuerelementbezeichnungen in bestimmten Windows-Installationen
+  wurden korrigiert.
+* NVDA wird den Namen des optionalen Qualitäts-Update-Links, falls
+  vorhanden, bekannt geben, normalerweise mit dem Namen "Jetzt herunterladen
+  und installieren".
 
 ## Wetter
 

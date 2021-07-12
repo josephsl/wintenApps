@@ -1,12 +1,18 @@
-# Windows 10 App Essentials #
+# Windows App Essentials #
 
 * Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
 * Zgodność z wersjami NVDA: 2020.3 do 2020.4
 
-Ten dodatek jest kolekcją różnych modułów aplikacji dla Windows 10, jak
-również ulepszeń i poprawek dla niektórych kontrolek w tym systemie.
+Note: Originally called Windows 10 App Essentials, it was renamed to Windows
+App Essentials in 2021 to support Windows 10 and future releases such as
+Windows 11. Parts of this add-on will still refer to the original add-on
+name.
+
+This add-on is a collection of app modules for various modern Windows apps,
+as well as enhancements and fixes for certain controls found in Windows 10
+and later.
 
 Dołączone są następujące moduły wspierające aplikacje (sprawdź rozdział
 każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
@@ -27,16 +33,18 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows release (Windows 10
-  Version 21H1/build 19043).
+* This add-on requires Windows 10 20H2 (build 19042) or later. For best
+  results, use the add-on with latest Windows release (Windows 10 21H1/build
+  19043).
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Support for Windows 11 is experimental, and some features will not work
+  (see relevant entries for details).
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support older Windows
-  releases, or changes were made to Windows and apps that makes entries no
-  longer applicable.
+  NVDA, no longer applicable as the add-on does not support unsupported
+  Windows releases such as old Windows 10 versions, or changes were made to
+  Windows and apps that makes entries no longer applicable.
 * Niektóre aplikacje obsługują tryb kompaktowej nakładki (zawsze na górze w
   kalkulatorze, na przykład), a ten tryb nie będzie działać poprawnie z
   przenośną wersją NVDA.
@@ -49,10 +57,10 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * W większości przypadków, NVDA może ogłaszać liczbę sugestii
   wyszukiwania. Ta funkcja jest kontrolowana przez opcję "odczytuj położenie
   obiektu" dostępną w ustawieniach NVDA, w panelu "prezentacja obiektu".
-* Gdy jest uruchomione wyszukiwanie w wersji 1909 (aktualizacja listopadowa
-  2019) i nowszych, podwójnie wymawianie wyników wyszukiwania jest mniej
-  zauważalne, co idzie za tym, że to co jest wyświetlane na monitorze
-  brajlowskim jest bardziej spójne przy przeglądaniu elementy.
+* When searching in Start menu or File Explorer in Windows 10 1909 (November
+  2019 Update) and later, instances of NVDA announcing search results twice
+  when reviewing results are less noticeable, which also makes braille
+  output more consistent when reviewing items.
 * Oprócz programów obsługi zdarzeń UIA dostarczonych przez NVDA rozpoznawane
   są następujące zdarzenia UIA: drag start, drag cancel, drag complete, drop
   target drag enter, drop target drag leave, drop target dropped. Z poziomu
@@ -64,9 +72,9 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   zmiany stanu i tekst elementu dla zdarzenia stanu elementu.
 * Teraz jest możliwe śledzenie zdarzeń z określonych oraz specyficznych
   aplikacji.
-* Podczas otwierania, zamykając lub przełączając się między wirtualnymi
-  pulpitami, NVDA będzie oznajmiała aktualny identyfikator (na przykład
-  pulpit 2). Działa w kompilacji 21337 lub nowszej.
+* When opening, closing, reordering (Windows 11), or switching between
+  virtual desktops, NVDA will announce active virtual desktop name (desktop
+  2, for example).
 * NVDA nie będzie już ogłaszać tekstu o rozmiarze menu Start podczas zmiany
   rozdzielczości ekranu lub orientacji.
 * Przy ułożeniu kafelków meni start lub szybkich akcji w centrum akcji za
@@ -89,14 +97,14 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 
 ## Cortana
 
-Większość elementów ma zastosowanie podczas korzystania z konwersacji
-Cortany (wersja 2004 lub nowsza).
+Most items are applicable when using Cortana Conversations (Windows 10 2004
+and later).
 
 * Odpowiedzi tekstowe kortany są wymawiane w większości sytuacjach.
 * NVDA będzie przyciszony, gdy mówisz do Cortany.
-* W wersji 1909 (aktualizacja dla listopada 2019) i nowszych, współczesne
-  wyszukiwanie używane przez interfejs wyszukiwania windows od teraz jest
-  wymawiane prawidłowo.
+* In Windows 10 1909 (November 2019 Update) and later, modern search
+  experience in File Explorer powered by Windows Search user interface is
+  supported.
 
 ## Poczta
 
@@ -120,28 +128,27 @@ Cortany (wersja 2004 lub nowsza).
 
 * Po sprawdzaniu aktualizacji aplikacji, nazyw aplikacji w liście aplikacji
   do zaktualizowania są poprawnie oznaczone.
-* Przy pobieraniu zawartości, takiej jak aplikacje i muzyka, NVDA wymówi
-  nazwę produktu i pasek postępu.
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress (does not work properly in updated
+  Microsoft Store in Windows 11).
 
 ## Klawiatura nowoczesna
 
-Obejmuje to panel emoji, historię schowka, dyktowanie, sugestie dotyczące
-wprowadzania sprzętu i nowoczesne edytory metod wprowadzania dla niektórych
-języków. Podczas przeglądania emotikonów, aby uzyskać najlepsze wrażenia,
-włącz ustawienie Konsorcjum Unicode z ustawień mowy NVDA i ustaw poziom
-symbolu na "niektóre" lub wyższe. Ponadto NVDA obsługuje zaktualizowany
-panel środowiska wejściowego w kompilacji 21296 i nowszych.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+supports updated input experience panel in Windows 11.
 
 * Gdy historia schowka jest wypowiadana, NVDA już nie będzie wymawiała
   "schowek" w niektórych przypadkach, gdy istnieje treść.
-* Na niektórych komputerach na których jest uruchomiony Windows 10  1903
-  (Aktualizacja z maju 2019), NVDA nie będzie wydawała efekt robienia nic
-  gdy panel emoji się otwiera.
-* Gdy zaznaczona jest grupa emoji, włączając w to kaomoji i grupę symboli w
-  wersji Windowsa 10 1903 lub nowszej) NVDA nie będzie przemieszczał obiekt
-  nawigatora do poszczególnych emoji.
-* Dodano obsługę zaktualizowanego panelu wejścia (połączony panel emoji i
-  historię schowka) w kompilacji 21296 i nowszych.
+* On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA
+  will no longer appear to do nothing when emoji panel opens.
+* When an emoji group (including kaomoji and symbols group in Windows 10
+  1903 or later) is selected, NVDA will no longer move navigator object to
+  certain emojis.
+* Added support for updated input experience panel (combined emoji panel and
+  clipboard history) in Windows 11.
 
 ## Osoby
 
@@ -159,10 +166,8 @@ panel środowiska wejściowego w kompilacji 21296 i nowszych.
   rozpoznawane jako poprawne okno dialogowe.
 * Odd control labels seen in certain Windows installations has been
   corrected.
-* Wbardziej ostatnich aktualizacjach Windowsa  1803 i nowszych, z powodu
-  zmian procederów windows update dla aktualizacji funkcji, dodano przycisk
-  "pobierz i zainstaluj teraz". Jeżeli znaleziono aktualizację, NVDA będzie
-  oznajmiałą jej tytuł.
+* NVDA will announce the name of the optional quality update link if
+  present, typically named "download and install now".
 
 ## Pogoda
 

@@ -1,12 +1,18 @@
-# Windows 10 App Essentials #
+# Windows App Essentials #
 
 * Tác giả: Joseph Lee, Derek Riemer và những người dùng Windows 10 khác
 * Tải về [phiên bản chính thức][1]
 * Tải về [phiên bản thử nghiệm][2]
 * NVDA tương thích: 2020.4 trở lên
 
-Add-on này là một bộ sưu tập các modules cho nhiều ứng dụng của Windows 10,
-đồng thời là các cải tiến và sửa lỗi cho một số điều khiển trong windows 10.
+Note: Originally called Windows 10 App Essentials, it was renamed to Windows
+App Essentials in 2021 to support Windows 10 and future releases such as
+Windows 11. Parts of this add-on will still refer to the original add-on
+name.
+
+This add-on is a collection of app modules for various modern Windows apps,
+as well as enhancements and fixes for certain controls found in Windows 10
+and later.
 
 Các module cho các ứng dụng sau đây đã được tích hợp (xem phần thông tin chi
 tiết của mỗi ứng dụng để biết them):
@@ -27,17 +33,19 @@ tiết của mỗi ứng dụng để biết them):
 
 Lưu ý:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows release (Windows 10
-  Version 21H1/build 19043).
+* This add-on requires Windows 10 20H2 (build 19042) or later. For best
+  results, use the add-on with latest Windows release (Windows 10 21H1/build
+  19043).
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Support for Windows 11 is experimental, and some features will not work
+  (see relevant entries for details).
 * Vài tính năng của add-on đã hoặc sẽ là một phần tính năng của trình đọc
   màn hình NVDA.
 * For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support older Windows
-  releases, or changes were made to Windows and apps that makes entries no
-  longer applicable.
+  NVDA, no longer applicable as the add-on does not support unsupported
+  Windows releases such as old Windows 10 versions, or changes were made to
+  Windows and apps that makes entries no longer applicable.
 * Vài ứng dụng hỗ trợ chế độ compact overlay (luon chạy ở trên như
   Calculator), và chế độ này sẽ không hoạt động tốt với các phiên bản chạy
   trực tiếp của NVDA.
@@ -51,10 +59,10 @@ for add-on releases][3] .
   trường họp. Tùy chọn này được điều khiển bởi "Thông báo thông tin vị trí
   đối tượng" trong bảng điều khiển trình bày đối tượng, tìm thấy trong cài
   đặt của NVDA.
-* Khi tìm kiếm trên Start menu hoặc File Explorer trong phiên bản 1909 (bản
-  cập nhật tháng 11/2019) trở lên, việc NVDA thông báo kết quả tìm kiếm hai
-  lần khi duyệt quả chúng sẽ giảm đi. Nó cũng làm coh việc xem các thành
-  phần ở đầu ra chữ nổi được thể hiện hợp lý hơn.
+* When searching in Start menu or File Explorer in Windows 10 1909 (November
+  2019 Update) and later, instances of NVDA announcing search results twice
+  when reviewing results are less noticeable, which also makes braille
+  output more consistent when reviewing items.
 * Ngoài UIA event handlers cung cấp bởi NVDA, các sự kiện UIA sau đây được
   nhận dạng: drag start, drag cancel, drag complete, drop target drag enter,
   drop target drag leave, drop target dropped. Với cấp độ log của NVDA là
@@ -66,8 +74,9 @@ for add-on releases][3] .
   kiện trạng thái thành phần.
 * Đã có thể chỉ theo dõi một số sự kiện nhất định và / hoặc các sự kiện từ
   một ứng dụng nhất định.
-* Khi mở, đóng, sắp xếp lại (build 21337 trở lên), hay chuyển giữa desktop
-  ảo, NVDA sẽ thông báo tên cửa sổ desktop hiện tại (desktop 2 chẳng hạn).
+* When opening, closing, reordering (Windows 11), or switching between
+  virtual desktops, NVDA will announce active virtual desktop name (desktop
+  2, for example).
 * NVDA sẽ không thông báo kích thước văn bản của Start menu khi thay đổi độ
   phân giải hay hướng màn hình.
 * Khi sắp xếp Start menu tiles hoặc Action Center quick actions với
@@ -89,14 +98,14 @@ for add-on releases][3] .
 
 ## Cortana
 
-Hầu hết các thành phần đều dùng được khi sử dụng Cortana Conversations
-(phiên bản 2004 trở lên).
+Most items are applicable when using Cortana Conversations (Windows 10 2004
+and later).
 
 * Phản hồi văn bản từ Cortana được thông báo trong hầu hết tình huống.
 * NVDA sẽ im lặng khi điều khiển Cortana bằng giọng nói.
-* Trong phiên bản 1909 (November 2019 Update) trở lên, trải nghiệm tìm kiếm
-  mới trong File Explorer quản lý bởi giao diện tìm kiếm người dùng của
-  Windows đã được hỗ trợ.
+* In Windows 10 1909 (November 2019 Update) and later, modern search
+  experience in File Explorer powered by Windows Search user interface is
+  supported.
 
 ## Mail
 
@@ -121,27 +130,27 @@ Hầu hết các thành phần đều dùng được khi sử dụng Cortana Con
 
 * Sau khi kiểm tra cập nhật ứng dụng, tên của các ứng dụng trong danh sách
   chờ cập nhật đã được gán nhãn một cách chính xác.
-* Khi tải các nội dung như ứng dụng và phim, NVDA sẽ thông báo tên sản phẩm
-  và tiến trình tải về.
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress (does not work properly in updated
+  Microsoft Store in Windows 11).
 
 ## Modern keyboard
 
-Đã bao gồm bản biểu tượng cảm xúc, lịch sử khay nhớ tạm, nhận dạng, gọi ý
-thiết bị đầu vào, và các kiểu nhập hiện đại cho vài ngôn ngữ nhất định. Khi
-xem các biểu tượng cảm xúc, để có trải nghiệm tốt nhất, hãy bật tùy chọn
-Unicode Consortium trong cài đặt tiếng  nói của NVDA và chọn mức độ đọc kí
-hiệu là  "một vài" hay cao hơn. NVDA cũng đã hỗ trợ kiểu nhập được cập nhật
-trong  bản dựng 21296 trở lên.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+supports updated input experience panel in Windows 11.
 
 * Khi mở lịch sử khay nhớ tạm, NVDA không còn đọc "clipboard" khi có nội
   dung trong khay nhớ tạm ở vài trường hợp.
-* Trên vài hệ thống chạy phiên bản 1903 (May 2019 Update) trở lên, NVDA sẽ
-  không còn tình trạng không làm gì khi mở bản biểu tượng cảm xúc.
-* Khi một nhóm biểu tượng cảm xúc (bao gồm kaomoji và nhóm các kí hiệu trong
-  phiên bản 1903 trở lên) được chọn, NVDA sẽ không còn di chuyển đối tượng
-  điều hướng tới một biểu tượng nhất định.
-* Đã thêm hỗ trợ cho bản các kiểu nhập được cập nhật (gộp chung bản biểu
-  tượng cảm xúc và lịch sử khay nhớ tạm) trong bản dựng 21296 trở lên.
+* On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA
+  will no longer appear to do nothing when emoji panel opens.
+* When an emoji group (including kaomoji and symbols group in Windows 10
+  1903 or later) is selected, NVDA will no longer move navigator object to
+  certain emojis.
+* Added support for updated input experience panel (combined emoji panel and
+  clipboard history) in Windows 11.
 
 ## People
 
@@ -157,10 +166,8 @@ trong  bản dựng 21296 trở lên.
 * Hộp thoại Windows Update reminder đã được nha65nn dạng đúng là hộp thoại.
 * Odd control labels seen in certain Windows installations has been
   corrected.
-* Trong các bản cập nhật gần đây của phiên bản 1803 trở lên, do các thay đổi
-  trong thủ tục của Windows Update cho feature updates, liên kết tên
-  "download and install now" đã được thêm. NVDA giờ đây sẽ đọc tiêu đề của
-  cập nhật mới nếu có.
+* NVDA will announce the name of the optional quality update link if
+  present, typically named "download and install now".
 
 ## Weather
 

@@ -1,12 +1,18 @@
-# Osnovni moduli za Windows 10 aplikacije #
+# Windows App Essentials #
 
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
 * NVDA kompatibilnost: 2020.4 i novije
 
-Ovaj NVDA dodatak je zbirka aplikacijskih modula za razne Windows 10
-aplikacije, kao i poboljšanja i ispravci određenih windows 10 kontrola.
+Note: Originally called Windows 10 App Essentials, it was renamed to Windows
+App Essentials in 2021 to support Windows 10 and future releases such as
+Windows 11. Parts of this add-on will still refer to the original add-on
+name.
+
+This add-on is a collection of app modules for various modern Windows apps,
+as well as enhancements and fixes for certain controls found in Windows 10
+and later.
 
 Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 što je uključeno):
@@ -27,16 +33,18 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows release (Windows 10
-  Version 21H1/build 19043).
+* This add-on requires Windows 10 20H2 (build 19042) or later. For best
+  results, use the add-on with latest Windows release (Windows 10 21H1/build
+  19043).
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Support for Windows 11 is experimental, and some features will not work
+  (see relevant entries for details).
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support older Windows
-  releases, or changes were made to Windows and apps that makes entries no
-  longer applicable.
+  NVDA, no longer applicable as the add-on does not support unsupported
+  Windows releases such as old Windows 10 versions, or changes were made to
+  Windows and apps that makes entries no longer applicable.
 * Neke aplikacije podržavaju način kompaktnog preklapanja (na primjer,
   uvijek na vrhu u Kalkulatoru) i ovaj modus neće ispravno raditi s
   prijenosnom verzijom NVDA čitača.
@@ -49,11 +57,10 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 * U većini slučajeva NVDA može najaviti broj prijedloga prilikom
   pretrage. Ova opcija se kontrolira u „Izvijesti o informaciji o položaju
   objekta” u ploči „Prezentacija objekta”.
-* Prilikom pretraživanja u izborniku Start ili Exploreru datoteka u verziji
-  1909 (nadogradnja studenog 2019.) i novijim, slučajevi gdje NVDA dvaput
-  najavljuje rezultate pretrage prilikom pregledavanja rezultata su manje
-  uočljivi, čime i izlazna brajica postaje dosljednija prilikom
-  pregledavanja stavki.
+* When searching in Start menu or File Explorer in Windows 10 1909 (November
+  2019 Update) and later, instances of NVDA announcing search results twice
+  when reviewing results are less noticeable, which also makes braille
+  output more consistent when reviewing items.
 * Prepoznaju se sljedeći UIA događaji: drag start, drag cancel, drag
   complete, drop target drag enter, drop target drag leave, drop target
   dropped. Kad je razina NVDA dnevnika postavljena na otklanjanje grešaka,
@@ -64,9 +71,9 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   promjene stanja i tekst stavke za događaj stanja stavke.
 * Moguće je pratiti samo određene događaje i-ili događaje koji dolaze iz
   određenih aplikacija.
-* Prilikom otvaranja, zatvaranja, preraspoređivanja (gradnja 21337 ili
-  novija) ili prebacivanja između virtualnih radnih površina, NVDA će
-  najaviti trenutačno ime radne površine (na primjer, desktop 2).
+* When opening, closing, reordering (Windows 11), or switching between
+  virtual desktops, NVDA will announce active virtual desktop name (desktop
+  2, for example).
 * NVDA više neće najaviti veličinu teksta izbornika Start, kad se mijenjaju
   rezolucije ili položaj ekrana.
 * Kad se pločice izbornika Start ili brze radnje za Action Center
@@ -88,14 +95,14 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 
 ## Cortana
 
-Većina stavki je primjenjiva kad se koristi Cortana konverzacije (verzija
-2004 i novija).
+Most items are applicable when using Cortana Conversations (Windows 10 2004
+and later).
 
 * Tekstualni odgovori Cortane najavljuju se u većini slučajeva.
 * NVDA neće govoriti kad pričaš sa Cortanom.
-* U verziji 1909 (studeni 2019.) i novijim verzijama, podržano je moderno
-  pretraživanja u Exploreru datoteka koje pokreće korisničko sučelje Windows
-  Search.
+* In Windows 10 1909 (November 2019 Update) and later, modern search
+  experience in File Explorer powered by Windows Search user interface is
+  supported.
 
 ## Mail
 
@@ -119,28 +126,28 @@ Većina stavki je primjenjiva kad se koristi Cortana konverzacije (verzija
 
 * Nakon provjere nadogradnji aplikacija, aplikacije na popisu koje se
   trebaju nadograditi su pravilno označene.
-* Prilikom preuzimanja sadržaja kao što su aplikacije i filmovi, NVDA će
-  najaviti naziv proizvoda i traku napredovanja preuzimanja.
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress (does not work properly in updated
+  Microsoft Store in Windows 11).
 
 ## Moderna tipkovnica
 
-To uključuje ploču s emojijima, povijest međuspremnika, diktatiranje,
-prijedloge unosa hardvera i moderne uređivače načina unosa za određene
-jezike. Kad pregledavaš emojije, aktiviraj postavku Unicode Consortium u
-NVDA postavkama govora i postavi razinu simbola na „neki” ili višu. Također,
-NVDA podržava aktualiziranu ploču unosa u gradnji 21296 i novijoj.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+supports updated input experience panel in Windows 11.
 
 * Prilikom otvaranja povijesti međuspremnika, pod nekim okolnostima, NVDA
   više neće objavljivati „međuspremnik” kad se u međuspremniku nalaze
   stavke.
-* Na nekim sustavima koji imaju verziju 1903 (nadogradnja svibnja 2019.) i
-  noviju, NVDA više neće izgledati kao da ništa ne radi kad se otvori ploča
-  s emojijima.
-* Kad se odabere grupa emojija (uključujući kaomoji i skupinu simbola u
-  verziji 1903 ili novijoj), NVDA više neće pomicati navigacijski objekt na
-  određene emojije.
-* Dodana je podrška za aktualiziranu ploču unosa (kombinacija ploče emojija
-  i povijesti međuspremnika) u gradnji 21296 i novijoj.
+* On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA
+  will no longer appear to do nothing when emoji panel opens.
+* When an emoji group (including kaomoji and symbols group in Windows 10
+  1903 or later) is selected, NVDA will no longer move navigator object to
+  certain emojis.
+* Added support for updated input experience panel (combined emoji panel and
+  clipboard history) in Windows 11.
 
 ## Osobe
 
@@ -157,10 +164,8 @@ NVDA podržava aktualiziranu ploču unosa u gradnji 21296 i novijoj.
   pravi dijaloški okvir.
 * Odd control labels seen in certain Windows installations has been
   corrected.
-* U novijim revizijama verzije 1803 i novije, zbog promjena u postupku
-  Windows ažuriranja za ažuriranje funkcija, dodana je poveznica „preuzmi i
-  instaliraj sada”. NVDA će sad objaviti naslov nove nadogradnje, ako
-  postoji.
+* NVDA will announce the name of the optional quality update link if
+  present, typically named "download and install now".
 
 ## Vrijeme
 
