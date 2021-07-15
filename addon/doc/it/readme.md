@@ -1,13 +1,18 @@
-# Windows 10 App Essentials #
+# Windows App Essentials #
 
 * Autori: Joseph Lee, Derek Riemer e altri utenti di Windows 10
 * Scarica la [versione stabile][1]
 * Scarica la [versione in sviluppo][2]
 * NVDA compatibility: 2020.4 and beyond
 
-Questo componente aggiuntivo è un insieme di app modules per numerose
-applicazioni di Windows 10, che inoltre risolve anomalie e migliora alcuni
-controlli.
+Note: Originally called Windows 10 App Essentials, it was renamed to Windows
+App Essentials in 2021 to support Windows 10 and future releases such as
+Windows 11. Parts of this add-on will still refer to the original add-on
+name.
+
+This add-on is a collection of app modules for various modern Windows apps,
+as well as enhancements and fixes for certain controls found in Windows 10
+and later.
 
 Di seguito l'elenco di tutti gli appmodule contenuti nel componente
 aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
@@ -28,17 +33,19 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 
 Note:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows release (Windows 10
-  Version 21H1/build 19043).
+* This add-on requires Windows 10 20H2 (build 19042) or later. For best
+  results, use the add-on with latest Windows release (Windows 10 21H1/build
+  19043).
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Support for Windows 11 is experimental, and some features will not work
+  (see relevant entries for details).
 * Alcune caratteristiche di questo componente aggiuntivo sono o diventeranno
   parte di NVDA.
 * For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support older Windows
-  releases, or changes were made to Windows and apps that makes entries no
-  longer applicable.
+  NVDA, no longer applicable as the add-on does not support unsupported
+  Windows releases such as old Windows 10 versions, or changes were made to
+  Windows and apps that makes entries no longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for
   example), and this mode will not work properly with portable version of
   NVDA.
@@ -52,11 +59,10 @@ riferimento al documento [changelogs for add-on releases][3].
   suggerimenti quando si esegue una ricerca. Questa funzione è controllata
   dall'opzione "leggi le informazioni sulla posizione dell'oggetto" nella
   finestra presentazioni oggetti, presente nelle impostazioni di NVDA.
-* Quando si cerca nel menu Avvio o in Esplora File nella Versione 1909
-  (aggiornamento di novembre 2019) e successive,  le doppie ripetizioni da
-  parte di NVDA quando si leggono i risultati con il cursore di controllo
-  sono meno frequenti, il che migliora anche l'output Braille nella stessa
-  situazione.
+* When searching in Start menu or File Explorer in Windows 10 1909 (November
+  2019 Update) and later, instances of NVDA announcing search results twice
+  when reviewing results are less noticeable, which also makes braille
+  output more consistent when reviewing items.
 * In addition to UIA event handlers provided by NVDA, the following UIA
   events are recognized: drag start, drag cancel, drag complete, drop target
   drag enter, drop target drag leave, drop target dropped. With NVDA's log
@@ -67,9 +73,9 @@ riferimento al documento [changelogs for add-on releases][3].
   element for state change event, and item text for item status event.
 * E' possibile tracciare solo specifici eventi e/o eventi provenienti solo
   da applicazioni specifiche.
-* When opening, closing, reordering (build 21337 or later), or switching
-  between virtual desktops, NVDA will announce active virtual desktop name
-  (desktop 2, for example).
+* When opening, closing, reordering (Windows 11), or switching between
+  virtual desktops, NVDA will announce active virtual desktop name (desktop
+  2, for example).
 * NVDA non leggerà più le dimensioni del testo del menu avvio quando si
   cambia la risoluzione o l'orientamento dello schermo.
 * Quando si riposizionano le mattonelle del menu Avvio o le azioni rapide
@@ -91,15 +97,15 @@ riferimento al documento [changelogs for add-on releases][3].
 
 ## Cortana
 
-Most items are applicable when using Cortana Conversations (Version 2004 and
-later).
+Most items are applicable when using Cortana Conversations (Windows 10 2004
+and later).
 
 * Le risposte testuali di Cortana sono vocalizzate nella maggior parte dei
   casi.
 * NVDA rimarrà in silenzio mentre si parla a Cortana  con la voce.
-* Nella versione 1909 (aggiornamento di novembre 2019) e nelle successive, è
-  supportata l'esperienza di ricerca moderna in Esplora File fornita
-  dall'interfaccia utente di Windows Search.
+* In Windows 10 1909 (November 2019 Update) and later, modern search
+  experience in File Explorer powered by Windows Search user interface is
+  supported.
 
 ## Posta
 
@@ -124,31 +130,27 @@ later).
 
 * Dopo aver controllato la presenza di aggiornamenti di app, il nome delle
   app nell'elenco degli aggiornamenti viene correttamente etichettato.
-* Mentre si scaricano contenuti quali app o film, NVDA ne leggerà il nome e
-  l'avanzamento del download.
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress (does not work properly in updated
+  Microsoft Store in Windows 11).
 
 ## Tastiera moderna
 
-Questa funzionalità comprende il pannello emoji, lo storico degli appunti,
-la dettatura, i suggerimenti per l'input da tastiere hardware e l'editor di
-metodi di input moderni per alcune lingue. Quando si visualizzano leemoji,
-per un'esperienza migliore, abilitate l'impostazione "INcludi i dati del
-Consorzio Unicode..." dalle impostazioni voce di NVDA e impostate il livello
-punteggiatura/simboli su "qualcuno" o a un livello superiore. NVDA supporta
-anche la finestra dell'esperienza di input aggiornata, nella build 21296 e
-successive.
+This includes emoji panel, clipboard history, dictation, hardware input
+suggestions, and modern input method editors for certain languages. When
+viewing emojis, for best experience, enable Unicode Consortium setting from
+NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+supports updated input experience panel in Windows 11.
 
 * In alcune circostanze, quando si apre lo storico degli appunti, NVDA non
   dirà più "appunti" se vi sono elementi negli appunti.
-* In alcuni sistemi che eseguono la versione 1903 (aggiornamento di maggio
-  2019) o superiore, NVDA non resterà più muto quando si apre il pannello
-  emoji.
-* Quando viene selezionato un gruppo emoji (comprese le kaomoji e il gruppo
-  di simboli nella versione 1903 o successive), NVDA non sposterà più il
-  navigatore a oggetti su certe emoji.
-* Aggiunto il supporto per la finestra dell'esperienza di input aggiornata
-  (combinazione del pannello emoji e dello storico degli appunti) nella
-  build 21296 e successive.
+* On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA
+  will no longer appear to do nothing when emoji panel opens.
+* When an emoji group (including kaomoji and symbols group in Windows 10
+  1903 or later) is selected, NVDA will no longer move navigator object to
+  certain emojis.
+* Added support for updated input experience panel (combined emoji panel and
+  clipboard history) in Windows 11.
 
 ## Persone
 
@@ -167,11 +169,8 @@ successive.
   visualizzata  correttamente.
 * Odd control labels seen in certain Windows installations has been
   corrected.
-* Nelle revisioni più recenti della versione 1803 e nelle successive, a
-  causa di modifiche alla procedura di Windows Update dovuta ad
-  aggiornamenti di alcune funzionalità, è stato aggiunto un link "scarica e
-  installa adesso". Ora NVDA vocalizzerà il titolo del nuovo aggiornamento
-  se presente.
+* NVDA will announce the name of the optional quality update link if
+  present, typically named "download and install now".
 
 ## Meteo
 

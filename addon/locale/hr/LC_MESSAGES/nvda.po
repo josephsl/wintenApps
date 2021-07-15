@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
+#. Translators: Dialog text shown when trying to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
 #, python-brace-format
 msgid ""
@@ -30,7 +30,7 @@ msgstr ""
 "Koristiš stariju verziju Windows sustava. Ovaj dodatak zahtijeva verziju "
 "{minSupportedVersion} ili noviju."
 
-#. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
+#. Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
 msgid "Old Windows version"
 msgstr "Stara verzija Windows sustava"
 
@@ -43,21 +43,25 @@ msgstr "Premještanje po redcima nije moguće"
 msgid "No more weather data for this item."
 msgstr "Nema daljnjih vremenskih podataka za ovaj element."
 
-#. Translators: presented when there is one suggestion for a search term.
+#. Translators: part of the suggestions count message (for example: 2 suggestions).
 msgid "1 suggestion"
 msgstr "1 prijedlog"
 
-#. Translators: presented when there are multiple suggestions for a search term.
+#. Translators: part of the suggestions count message (for example: 2 suggestions).
 msgid "{} suggestions"
 msgstr "{} prijedloga"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information.
-msgid "Windows 10 App Essentials"
+#, fuzzy
+msgid "Windows App Essentials"
 msgstr "Osnovni moduli za Windows 10 aplikacije"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "A collection of app modules for various Windows 10 apps"
-msgstr "Zbirka modula za razne Windows 10 aplikacije"
+msgid "Improving support for various apps and controls on Windows 10 and later"
+msgstr ""
+
+#~ msgid "A collection of app modules for various Windows 10 apps"
+#~ msgstr "Zbirka modula za razne Windows 10 aplikacije"
