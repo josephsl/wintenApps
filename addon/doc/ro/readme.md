@@ -1,13 +1,18 @@
-# Windows 10 App Essentials #
+# Windows App Essentials #
 
 * Autori: Joseph Lee, Derek Riemer și alți utilizatori Windows 10
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
 * NVDA compatibility: 2020.4 and beyond
 
-Acest supliment cuprinde o colecție de module pentru diverse aplicații din
-Windows 10, dar și rezolvări și îmbunătățiri pentru anumite controale din
-Windows 10.
+Note: Originally called Windows 10 App Essentials, it was renamed to Windows
+App Essentials in 2021 to support Windows 10 and future releases such as
+Windows 11. Parts of this add-on will still refer to the original add-on
+name.
+
+This add-on is a collection of app modules for various modern Windows apps,
+as well as enhancements and fixes for certain controls found in Windows 10
+and later.
 
 Următoarele module de aplicații sau module de suport pentru unele aplicații
 sunt incluse (verificați fiecare secțiune a aplicației pentru detalii cu
@@ -29,17 +34,19 @@ privire la ceea ce este inclus):
 
 Note:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows release (Windows 10
-  Version 21H1/build 19043).
+* This add-on requires Windows 10 20H2 (build 19042) or later. For best
+  results, use the add-on with latest Windows release (Windows 10 21H1/build
+  19043).
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Support for Windows 11 is experimental, and some features will not work
+  (see relevant entries for details).
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
 * For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support older Windows
-  releases, or changes were made to Windows and apps that makes entries no
-  longer applicable.
+  NVDA, no longer applicable as the add-on does not support unsupported
+  Windows releases such as old Windows 10 versions, or changes were made to
+  Windows and apps that makes entries no longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for
   example), and this mode will not work properly with portable version of
   NVDA.
@@ -54,7 +61,7 @@ versiunile suplimentului][3].
   majoritatea cazurilor. Această opțiune este controlată de „informația
   poziției obiectului din dialogul prezentării obiectului, găsit în panoul
   de setări NVDA.
-* When searching in Start menu or File Explorer in Version 1909 (November
+* When searching in Start menu or File Explorer in Windows 10 1909 (November
   2019 Update) and later, instances of NVDA announcing search results twice
   when reviewing results are less noticeable, which also makes braille
   output more consistent when reviewing items.
@@ -68,9 +75,9 @@ versiunile suplimentului][3].
   element for state change event, and item text for item status event.
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
-* When opening, closing, reordering (build 21337 or later), or switching
-  between virtual desktops, NVDA will announce active virtual desktop name
-  (desktop 2, for example).
+* When opening, closing, reordering (Windows 11), or switching between
+  virtual desktops, NVDA will announce active virtual desktop name (desktop
+  2, for example).
 * NVDA will no longer announce Start menu size text when changing screen
   resolutions or orientation.
 * When arranging Start menu tiles or Action Center quick actions with
@@ -91,13 +98,14 @@ versiunile suplimentului][3].
 
 ## Cortana
 
-Most items are applicable when using Cortana Conversations (Version 2004 and
-later).
+Most items are applicable when using Cortana Conversations (Windows 10 2004
+and later).
 
 * Textual responses from Cortana are announced in most situations.
 * NVDA va fi silențios atunci când vorbiți cu Cortana prin voce.
-* In Version 1909 (November 2019 Update) and later, modern search experience
-  in File Explorer powered by Windows Search user interface is supported.
+* In Windows 10 1909 (November 2019 Update) and later, modern search
+  experience in File Explorer powered by Windows Search user interface is
+  supported.
 
 ## Mail
 
@@ -122,8 +130,9 @@ later).
 
 * După căutarea actualizărilor aplicației, nume de aplicații în lista
   aplicațiilor care urmează să fie actualizate sunt etichetate corect.
-* La descărcarea conținutului, cum ar fi aplicații și filme, NVDA va anunța
-  numele produsului și progresul descărcării.
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress (does not work properly in updated
+  Microsoft Store in Windows 11).
 
 ## Tastatură modernă
 
@@ -131,17 +140,17 @@ This includes emoji panel, clipboard history, dictation, hardware input
 suggestions, and modern input method editors for certain languages. When
 viewing emojis, for best experience, enable Unicode Consortium setting from
 NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
-supports updated input experience panel in build 21296 and later.
+supports updated input experience panel in Windows 11.
 
 * When opening clipboard history, NVDA will no longer announce "clipboard"
   when there are items in the clipboard under some circumstances.
-* On some systems running Version 1903 (May 2019 Update) and later, NVDA
+* On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA
   will no longer appear to do nothing when emoji panel opens.
-* When an emoji group (including kaomoji and symbols group in Version 1903
-  or later) is selected, NVDA will no longer move navigator object to
+* When an emoji group (including kaomoji and symbols group in Windows 10
+  1903 or later) is selected, NVDA will no longer move navigator object to
   certain emojis.
 * Added support for updated input experience panel (combined emoji panel and
-  clipboard history) in build 21296 and later.
+  clipboard history) in Windows 11.
 
 ## Persoane
 
@@ -158,10 +167,8 @@ supports updated input experience panel in build 21296 and later.
 * Dialogul de tip memento al Windows Update este recunoscut așa cum trebuie.
 * Odd control labels seen in certain Windows installations has been
   corrected.
-* In more recent revisions of Version 1803 and later, due to changes to
-  Windows Update procedure for feature updates, a "download and install now"
-  link has been added. NVDA will now announce the title for the new update
-  if present.
+* NVDA will announce the name of the optional quality update link if
+  present, typically named "download and install now".
 
 ## Meteo
 

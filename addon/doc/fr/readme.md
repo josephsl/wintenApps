@@ -1,13 +1,19 @@
-# Windows 10 App Essentials #
+# Windows App Essentials #
 
 * Auteurs: Joseph Lee, Derek Riemer et d’autres utilisateurs de Windows 10
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
 * Compatibilité NVDA: 2020.3 et ultérieurs
 
+Remarque : à l'origine appelé Windows 10 App Essentials, elle a été renommée
+Windows App Essentials en 2021 pour prendre en charge Windows 10 et les
+versions futures telles que Windows 11. Certaines parties de ce module
+complémentaire feront toujours référence au nom du module complémentaire
+d'origine.
+
 Cette extension est une collection d'app modules pour diverses apps de
 Windows 10, ainsi que des améliorations et des correctifs pour certains
-contrôles de windows 10.
+contrôles de windows 10et versions ultérieures.
 
 Les app modules suivants ou la prise en charge des modules pour certaines
 apps sont inclus (voir chaque section app pour plus de détails sur ce qui
@@ -30,17 +36,22 @@ est inclus) :
 
 Notes:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows release (Windows 10
-  Version 21H1/build 19043).
-* Although installation is possible, this add-on does not support Windows
-  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Cette extension nécessite Windows 10 Version 20h2 (build 19042) ou version
+  ultérieur. Pour de meilleurs résultats, utilisez l'extension avec la
+  dernière version stable de Windows 10 (21H1/build 19043).
+* Bien que l'installation soit possible, cette extension ne prend pas en
+  charge les versions Windows Enterprise LTSC (Long-Term Servicing Channel)
+  et Windows Server.
+* La prise en charge de Windows 11 est expérimentale et certaines
+  fonctionnalités ne fonctionneront pas (voir les entrées pertinentes pour
+  plus de détails).
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support older Windows
-  releases, or changes were made to Windows and apps that makes entries no
-  longer applicable.
+* Pour les entrées non répertoriées ci-dessous, vous pouvez supposer que les
+  fonctionnalités font partie de NVDA, qu'elles ne sont plus applicables,
+  car l'extension ne prend pas en charge les anciennes versions de Windows
+  10 ou des modifications ont été apportées à Windows 10 et aux applications
+  pour que les entrées ne soient plus applicables.
 * Certaines Apps prennent en charge le mode de superposition compact
   (Toujours au-dessus pour la calculatrice par exemple), et ce mode ne
   fonctionne pas bien avec la version portable de NVDA. 
@@ -75,9 +86,9 @@ l'extension][3].
   de l'événement de l'élément.
 * Il est possible de faire le suivi seul des événements spécifiques et / ou
   des événements à venir à partir des applications spécifiques.
-* Lors de l'ouverture, de la fermeture ou du basculement entre les bureaux
-  virtuels (build 21337 ou ultérieure), , NVDA annonce l'ID de bureau actuel
-  (bureau 2, par exemple).
+* Lors de l'ouverture, de la fermeture, de la réorganisation (Windows 11)
+  ou du basculement entre les bureaux virtuels (build 21337 ou ultérieure),
+  , NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
 * NVDA n'annoncera plus la taille du menu Démarrer lorsque vous changez la
   résolution ou l'orientation de l'écran.
 * Lorsque vous organisez les tuiles du menu Démarrer ou le Centre de
@@ -103,15 +114,16 @@ l'extension][3].
 ## Cortana
 
 La plupart des éléments sont applicables lors de l'utilisation de Cortana
-Conversations (version 2004 et ultérieure).
+Conversations (Windows 10 version 2004 et ultérieures).
 
 * Les réponses textuelles de Cortana sont annoncées dans la plupart des
   situations.
 * NVDA sera silencieux quand vous vous adresserez vocalement à Cortana via
   la voix.
-* Dans la Version 1909 (November 2019 Update) et ultérieure, l'expérience de
-  recherche moderne dans l'Explorateur de fichiers alimenté par l'interface
-  utilisateur Windows Search est pris en charge.
+* Dans Windows 10 1909 (mise à jour de novembre 2019) et versions
+  ultérieures, l'expérience de recherche moderne dans l'Explorateur de
+  fichiers optimisée par l'interface utilisateur de recherche Windows est
+  prise en charge.
 
 ## Courrier
 
@@ -139,16 +151,19 @@ Conversations (version 2004 et ultérieure).
   applications dans la liste des applications à mettre à jour sera
   correctement étiqueté.
 * Lors du téléchargement de contenus tels que des applications et des films,
-  NVDA annoncera le nom du produit et la progression du téléchargement.
+  NVDA annoncera le nom du produit et la progression du téléchargement (ne
+  fonctionne pas correctement dans le Microsoft Store mis à jour sous
+  Windows 11).
 
 ## Clavier moderne
 
-Cela comprend le panneau des emoji, l'historique du presse-papiers, la
-dictée, les suggestions de saisie matérielle et éditeurs de méthode de
-saisie moderne pour certaines langues. Lors de l'affichage des emoji, pour
-une meilleure expérience, activer  le Consortium Unicode dans les Paramètres
-de NVDA, Parole et configurer le Niveau de ponctuations et symboles  sur
-"quelques-uns" ou la plupart.
+Cela inclut le panneau des emojis, l'historique du presse-papiers, la
+dictée, les suggestions de saisie matérielle et les éditeurs de méthodes de
+saisie modernes pour certaines langues. pour une meilleure expérience lors
+de la visualisation des emojis, activez le paramètre Consortium Unicode à
+partir des paramètres de parole de NVDA et réglez le niveau des symboles sur
+"quelques-uns" ou plus. En outre, NVDA prend en charge le panneau
+d'expérience de saisie mis à jour dans Windows 11.
 
 * Lors de l'ouverture de l'historique du presse-papiers, NVDA n'annoncera
   "presse-papiers" quand il y a des éléments dans le presse-papiers dans
@@ -159,9 +174,8 @@ de NVDA, Parole et configurer le Niveau de ponctuations et symboles  sur
 * Lorsqu'un groupe emoji (y compris Kaomoji et un groupe des symboles dans
   la Version 1903 ou ultérieure) est sélectionné, NVDA ne sera plus déplacer
   à l'objet navigateur vers certains emojis.
-* Ajout de la prise en charge du nouveau panneau d'expérience de saisie
-  (panneau emoji combiné et historique du presse-papiers) dans la build
-  21296 et versions ultérieures.
+* Ajout de la prise en charge du panneau d'expérience de saisie mis à jour
+  (panneau emoji combiné et historique du presse-papiers) dans Windows 11.
 
 ## Personnes
 
@@ -177,13 +191,10 @@ de NVDA, Parole et configurer le Niveau de ponctuations et symboles  sur
   plus annoncés deux fois.
 * Le dialogue de rappel de Windows Update est reconnu comme un dialogue
   propre.
-* Odd control labels seen in certain Windows installations has been
-  corrected.
-* Dans les révisions les plus récentes de la Version 1803 et ultérieure en
-  raison de modifications apportées à la procédure Windows Update pour les
-  mises à jour de fonctionnalités, un lien "télécharger et installer
-  maintenant" a été ajouté. NVDA annonce maintenant le titre de la nouvelle
-  mise à jour si elle est présente.
+* Les étiquettes de contrôle étranges vues dans certaines installations
+  Windows ont été corrigées.
+* NVDA annoncera le nom du lien de mise à jour facultative s'il est présent,
+  généralement appelé "télécharger et installer maintenant".
 
 ## Météo
 

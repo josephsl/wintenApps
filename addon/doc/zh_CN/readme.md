@@ -1,11 +1,14 @@
-# Windows10应用增强 #
+# Windows 应用增强 #
 
 * 作者: Joseph Lee, Derek Riemer and other Windows 10 users
 * 下载[稳定版][1]
 * 下载[开发板][2]
 * NVDA兼容版本: 2020.4 或更高
 
-此插件用于各种 Windows 10 应用程序的模块集合，以及针对某些 Windows 10 控件的增强功能和修复程序。
+注意：此插件最初称为 Windows 10 应用增强，在 2021 年更名为 Windows 应用增强，以支持 Windows 10 和 Windows
+11 等未来版本。此插件的部分内容仍将引用原始插件名称。
+
+此插件是用于各种现代 Windows 应用的应用模块集合，以及对 Windows 10 及更高版本中某些控件的增强和修复。
 
 包括以下应用程序的支持模块（有关所包含内容的详细信息，请参阅每个应用程序部分）：
 
@@ -24,16 +27,13 @@
 
 注意:
 
-* This add-on requires Windows 10 Version 2004 (build 19041) or later. For
-  best results, use the add-on with latest Windows release (Windows 10
-  Version 21H1/build 19043).
-* Although installation is possible, this add-on does not support Windows
-  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* 此插件需要 Windows 10 版本 20H2（内部版本 19042）或更高版本。为获得最佳体验，请将此插件与最新 Windows 10 21H1
+  稳定版（内部版本 19043）一起使用。
+* 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务频道）和 Windows Server 版本。
+* 对 Windows 11 的支持是实验性的，某些功能将无法使用（有关详细信息，请参阅相关条目）。
 * 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support older Windows
-  releases, or changes were made to Windows and apps that makes entries no
-  longer applicable.
+* 对于未在下方列出的条目，您可以假定功能已是 NVDA 的一部分，不再适用，因为插件不支持旧版本的
+  Windows，或者对应用程序进行了更改，使条目不再适用。
 * 某些应用程序支持紧凑叠加模式（例如，计算器中的始终置顶模式），该模式无法与 NVDA 的便携版正常工作。
 
 有关每个附加发行版之间所做的更改的列表，请参阅[更新日志的附加发布] [3]文档。
@@ -41,11 +41,11 @@
 ## 常规设置
 
 * 在大多数情况下，NVDA 可以在执行搜索时朗读建议计数。此选项由 NVDA “对象提示”设置对话框中的“读出对象的位置信息”复选框控制。
-* 在 1909 版（2019年11月更新）及更高版本 Windows 10 中的‘开始’菜单或文件资源管理器中进行搜索时，现在 NVDA
+* 在 Windows 10 版本 1909（2019 年 11 月更新）及更高版本中的‘开始’菜单或文件资源管理器中进行搜索时，现在 NVDA
   在浏览结果时两次宣布搜索结果的实例不太明显，这也使盲文输出在浏览项目时更加一致。
 * 除了NVDA提供的UIA事件处理程序外，还可以识别以下UIA事件：拖动开始、拖动取消、拖动完成、拖动目标进入、拖动目标离开、拖动目标丢弃。在NVDA的日志级别设置为调试时，这些事件将被跟踪，对于UIA通知事件，如果通知来自当前活动应用以外的其他地方，将听到调试音。有些事件会提供额外的信息，比如事件的控制器中的元素数量，状态变化事件的元素状态，以及项目状态事件的项目文本。
 * 可以只跟踪特定事件或来自特定应用程序的事件。
-* 打开、关闭、重新排序（内部版本 21337 或更高版本）或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
+* 打开、关闭、重新排序（Windows 11）或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
 * 当改变屏幕分辨率或方向时，NVDA将不再读出开始菜单的大小文本。
 * 当使用 Alt + Shift +光标键托移“开始”菜单磁贴或“操作中心”快速操作按钮时，NVDA 将朗读有关所拖动项目及所拖动项目的新位置的信息。
 * 通过在 NVDA 的“对象提示”设置中关闭“读出通知提示”，可以禁止诸如文件资源管理器中的音量、亮度更改和来自 Microsoft Store
@@ -61,11 +61,11 @@
 
 ## Cortana
 
-大多数项目适用于使用 Cortana 对话（版本 2004 及以后）。
+大多数项目适用于使用 Cortana 对话（Windows 10 版本 2004 及以后）。
 
 * 现在，在大多数情况下，都会发布来自Cortana的文字回复。
 * 通过语音与Cortana交互时，NVDA将保持沉默。
-* 在版本1909（2019年11月更新）及更高版本中，现在支持资源管理器的Windows 搜索用户的现代界面。
+* 在Windows 10 版本1909（2019年11月更新）及更高版本中，支持资源管理器的 Windows 搜索用户现代界面。
 
 ## 邮件
 
@@ -84,18 +84,18 @@
 ## Microsoft Store
 
 * 检查应用更新后，应更新的应用列表中的应用名称将被正确标记。
-* 下载应用和电影等内容时，NVDA会读出产品名称和下载进度。
+* 下载应用和电影等内容时，NVDA会读出产品名称和下载进度。（在 Windows 11 更新的 Microsoft Store 中不可用）。
 
 ## 系统键盘
 
 这包括表情符号面板、剪贴板历史记录、听写、硬件输入建议以及某些语言的现代输入法编辑器。查看表情符号时，为了获得最佳体验，请从 NvDA
 的语音设置对话框中选中“处理字符和符号时包含 Unicode 数据（表情符号）”复选框，并将符号级别设置为“少数”或更高。此外，NVDA 在
-Windows 10 内部版本 21296 及更高版本中支持更新的输入体验面板。
+Windows 11 中支持更新的输入体验面板。
 
 * 当前，打开剪贴板历史记录时，在某些情况下，剪贴板中有项目时，NVDA将不再读出“剪贴板”。
-* 在某些运行版本1903（2019年5月更新）的系统上，当表情符号面板打开时，NVDA将不再显示任何内容。
-* 当选择表情符号组（包括版本 1903之后的绘文字）时，NVDA 将不再将导航器对象移动到某些表情符号。
-* 在Windows 10 内部版本 21296 及更高版本中，增加了对更新的输入体验面板（组合的表情符号面板和剪贴板历史记录）的支持。
+* 在某些运行Windows 10 版本1903（2019年5月更新）的系统上，当表情符号面板打开时，NVDA将不再显示为不执行任何操作。
+* 当选择表情符号组（包括Windows 10 版本 1903之后的绘文字）时，NVDA 将不再将导航对象移动到某些表情符号。
+* 增加了对Windows 11 中更新的输入体验面板（组合的表情符号面板和剪贴板历史记录）的支持。
 
 ## 人脉
 
@@ -106,10 +106,8 @@ Windows 10 内部版本 21296 及更高版本中支持更新的输入体验面�
 * 现在将自动读出某些信息，例如 Windows Update 进度，包括存储感知、磁盘清理和 Windows Update中的错误。
 * 进度栏值和其他信息不再重复朗读两次。
 * Windows 更新提醒对话框被识别为正确的对话框。
-* Odd control labels seen in certain Windows installations has been
-  corrected.
-* 在版本 1803 及更高版本的 Windows 10 中，Windows 更新中的某些更新添加了“立即下载并安装”链接。NVDA
-  现在将朗读新更新的标题（如果存在）。
+* 在某些 Windows 安装中看到的奇怪的控件标签已被更正。
+* NVDA 将读出可选质量更新链接的名称，如果存在，通常命名为"立即下载和安装"。
 
 ## 天气
 
