@@ -27,6 +27,7 @@ import speech
 import ui
 from logHandler import log
 from NVDAObjects.UIA import UIA
+from NVDAObjects.behaviors import EditableTextWithAutoSelectDetection
 
 
 # Temporary: detect Windows 11.
@@ -282,6 +283,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				and obj.UIAAutomationId in ("TEMPLATE_PART_CandidatePanel", "IME_Prediction_Window")
 			):
 				clsList.insert(0, ImeCandidateUI)  # NOQA: F405
+			# Newer revisions of Windows 11 build 22000 moves focus to what appears to be an edit field.
+			# However this means NVDA's own edit field scripts will override emoji panel commands.
+			# Therefore remove text field movement commands so emoji panel commands can be used directly.
+			elif obj.UIAAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI.DelegationTextBox":
+				clsList.remove(EditableTextWithAutoSelectDetection)
 			return
 		# NVDA Core takes care of the rest.
 		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
