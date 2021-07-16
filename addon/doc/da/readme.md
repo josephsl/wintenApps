@@ -1,54 +1,55 @@
-# Windows App Essentials #
+# Vigtige forbedringer til Windows apps (Windows App Essentials) #
 
 * Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2020.4 and beyond
+* NVDA-kompatibilitet: 2020.4 og derover
 
-Note: Originally called Windows 10 App Essentials, it was renamed to Windows
-App Essentials in 2021 to support Windows 10 and future releases such as
-Windows 11. Parts of this add-on will still refer to the original add-on
-name.
+Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
+til Windows App Essentials i 2021 for at understøtte Windows 10 og
+fremtidige udgivelser som Windows 11. Dele af dette tilføjelsesprogram vil
+stadig henvise til det originale navn for tilføjelsen.
 
-This add-on is a collection of app modules for various modern Windows apps,
-as well as enhancements and fixes for certain controls found in Windows 10
-and later.
+Denne tilføjelse er en samling af app-moduler til forskellige Windows-apps,
+samt forbedringer og rettelser for visse windows 10 kontrolelementer.
 
 Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
 hver appsektion for detaljer om, hvad der er inkluderet):
 
-* Calculator (modern)
+* Lommeregner (moderne)
 * Kalender
 * Cortana (samtaler)
 * Mail
 * Kort
 * Microsoft Kabale Samling
 * Microsoft store
-* Modern keyboard (emoji panel/dictation/hardware input
-  suggestions/clipboard history/modern input method editors)
+* Moderne tastatur (Emoji-panel, diktering, forslag til hardwareinput,
+  historik for udklipsholder og Editor til inputmetode)
 * Personer
 * Indstillinger (systemindstillinger, Windows+I)
 * Vejr
-* Miscellaneous modules for controls such as Start Menu tiles
+* Diverse moduler til kontrolelementer som Start Menu-felter.
 
 Bemærkninger:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later. For best
-  results, use the add-on with latest Windows release (Windows 10 21H1/build
-  19043).
-* Although installation is possible, this add-on does not support Windows
-  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
-* Support for Windows 11 is experimental, and some features will not work
-  (see relevant entries for details).
+* Denne tilføjelse kræver Windows 10 20H2 (build 19042) eller nyere. For at
+  få de bedste resultater skal du bruge tilføjelsen med den nyeste
+  Windows-udgivelse (Windows 10 21H1/build 19043).
+* Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
+  Enterprise LTSC (Long-Term Servicing Channel) og Windows
+  Server-udgivelser.
+* Understøttelse for Windows 11 er eksperimentel, og nogle funktioner
+  fungerer ikke (se relevante afsnit for detaljer).
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support unsupported
-  Windows releases such as old Windows 10 versions, or changes were made to
-  Windows and apps that makes entries no longer applicable.
-* Some apps support compact overlay mode (always on top in Calculator, for
-  example), and this mode will not work properly with portable version of
-  NVDA.
+* For funktioner, der ikke er anført nedenfor, kan du antage, at funktioner
+  er en del af NVDA, ikke længere kan anvendes, da tilføjelsesprogrammet
+  ikke understøtter udgåede Windows-udgivelser såsom gamle Windows
+  10-versioner, eller der blev foretaget ændringer i Windows og apps, der
+  gør at disse ikke længere er aktuelle.
+* Nogle apps understøtter kompakt overlejring (for eksempel Bevar Øverst i
+  lommeregner), og denne tilstand fungerer ikke korrekt med flytbare kopier
+  af NVDA.
 
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
@@ -58,23 +59,24 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * NVDA kan annoncere nummeret af forslag, når du udfører en søgning i de
   fleste tilfælde. Denne indstilling styres af "Oplys information om
   objektets placering" i indstillingspanelet "Objektpræsentation".
-* When searching in Start menu or File Explorer in Windows 10 1909 (November
-  2019 Update) and later, instances of NVDA announcing search results twice
-  when reviewing results are less noticeable, which also makes braille
-  output more consistent when reviewing items.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drop target
-  drag enter, drop target drag leave, drop target dropped. With NVDA's log
-  level set to debug, these events will be tracked, and for UIA notification
-  event, a debug tone will be heard if notifications come from somewhere
-  other than the currently active app. Some events will provide additional
-  information such as element count in controller for event, state of the
-  element for state change event, and item text for item status event.
+* Når du søger i startmenuen eller Stifinder i version 1909 (november 2019
+  Update) og senere, vil NVDA ikke længere annoncere søgeresultater to
+  gange, når du gennemser resultater, hvilket også gør punktoutput mere
+  ensartet, når du gennemgår elementer.
+* Udover de UIA-håndteringsmuligheder, som NVDA leverer, vil følgende
+  UIA-hændelser blive opfanget af skærmlæseren: drag start, drag cancel,
+  drag complete, drop target drag enter, drop target drag leave, drop target
+  dropped. Hvis NVDAs logningsniveau er indstillet til "Fejlfinding", vil
+  disse hændelser blive sporet, og en tone vil blive hørt, hvis en
+  UIA-hændelse stammer fra andet end den aktuelt fokuserede app. Nogle
+  hændelser angiver yderligere oplysninger, såsom antal af elementer i
+  kontrolhændelsen, status for elementet ved en hændelse, hvor status
+  ændres, samt emnetekst for hændelser, hvor der anmodes om emnestatus.
 * Det er muligt at overvåge specifikke hændelser og/eller hændelser, der
   kommer fra specifikke apps.
-* When opening, closing, reordering (Windows 11), or switching between
-  virtual desktops, NVDA will announce active virtual desktop name (desktop
-  2, for example).
+* Når åbning, lukning, ændring af rækkefølge (Windows 11) eller Skift mellem
+  virtuelle skrivebord forekommer, vil NVDA annoncere det aktuelle navn for
+  det virtuelle skrivebord (f.eks. "Skrivebord 2").
 * NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
   du ændrer skærmopløsning eller orientering.
 * Når du arrangerer fliser på start-menuen eller hurtige handlinger i
@@ -87,7 +89,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Lommeregner
 
-* NVDA will no longer announce graphing calculator screen message twice.
+* NVDA annoncerer ikke længere en meddelelse om grafregnerens skærmbillede
+  to gange.
 
 ## Kalender
 
@@ -96,14 +99,14 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Cortana
 
-Most items are applicable when using Cortana Conversations (Windows 10 2004
-and later).
+De fleste funktioner er anvendelige, når du bruger Cortana-samtaler (Windows
+10 2004 og nyere).
 
 * Tekstlige svar fra Cortana annonceres i de fleste tilfælde.
 * NVDA vil forblive tavs, når du taler til Cortana med stemmen.
-* In Windows 10 1909 (November 2019 Update) and later, modern search
-  experience in File Explorer powered by Windows Search user interface is
-  supported.
+* I version 1909 (november 2019-opdatering) og senere understøttes den
+  moderne søgeoplevelse i Stifinder drevet af brugergrænseflade til Windows
+  Søg.
 
 ## Mail
 
@@ -129,27 +132,28 @@ and later).
 
 * Efter kontrol for app opdateringer, app navne i listen af apps der skal
   opdateres er korrekt navngivet.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress (does not work properly in updated
-  Microsoft Store in Windows 11).
+* Når du henter indhold som apps og film, vil NVDA annoncere produktnavn og
+  fremskridt af tilsvarende handling (virker ikke i øjeblikket som forventet
+  i den nyere Microsoft Store til Windows 11).
 
 ## Moderne tastatur
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
-supports updated input experience panel in Windows 11.
+Dette inkluderer emoji-panelet, historik for udklipsholderen, diktering,
+forslag i forhold til hardwareinput og moderne Input Methodf Editor for
+visse sprog. Når du ser emojier, skal du for at få den bedste oplevelse
+aktivere Unicode Consortium-indstillingen fra NvDAs taleindstillinger og
+indstille tegnsætningsniveauet til "nogle" eller højere. NVDA understøtter
+også det opdaterede inputoplevelsespanel i Windows 11.
 
 * NVDA vil ikke længere annoncere "Udklipsholder", når der er elementer i
   udklipsholderen under nogle omstændigheder.
-* On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA
-  will no longer appear to do nothing when emoji panel opens.
-* When an emoji group (including kaomoji and symbols group in Windows 10
-  1903 or later) is selected, NVDA will no longer move navigator object to
-  certain emojis.
-* Added support for updated input experience panel (combined emoji panel and
-  clipboard history) in Windows 11.
+* På nogle systemer, der kører version 1903 (May 2019 Update) og senere, vil
+  NVDA ikke længere foretage sig ingenting, når Emoji panel åbnes.
+* Når en emoji-gruppe (inklusive kaomoji og symbolgrupper i version 1903
+  eller nyere) er valgt, vil NVDA ikke længere flytte navigatorobjektet til
+  bestemte emojis.
+* Understøtter nu opdateret input-oplevelsespanel (kombineret emoji-panel og
+  udklipsholderhistorik) i Windows 11.
 
 ## Personer
 
@@ -163,10 +167,10 @@ supports updated input experience panel in Windows 11.
 * Værdier på behandlingslinjer og andre oplysninger er ikke længere
   annonceret to gange.
 * Dialogboksen Windows Update-påmindelse genkendes som en korrekt dialog.
-* Odd control labels seen in certain Windows installations has been
-  corrected.
-* NVDA will announce the name of the optional quality update link if
-  present, typically named "download and install now".
+* Bemærkelsesværdige kontroletiketter set i visse Windows-installationer er
+  blevet løst.
+* NVDA annoncerer navnet på linket for den valgfrie kvalitetsopdatering,
+  hvis det findes, typisk kaldet "Hent og installer nu".
 
 ## Vejr
 

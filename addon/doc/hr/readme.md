@@ -1,18 +1,18 @@
-# Windows App Essentials #
+# Osnovni moduli za Windows aplikacije #
 
 * Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
 * NVDA kompatibilnost: 2020.4 i novije
 
-Note: Originally called Windows 10 App Essentials, it was renamed to Windows
-App Essentials in 2021 to support Windows 10 and future releases such as
-Windows 11. Parts of this add-on will still refer to the original add-on
-name.
+Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
+je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
+Windows 10 i buduća izdanja poput Windows 11. Dijelovi ovog dodatka će se i
+nadalje odnositi na izvorno ime dodatka.
 
-This add-on is a collection of app modules for various modern Windows apps,
-as well as enhancements and fixes for certain controls found in Windows 10
-and later.
+Ovaj NVDA dodatak je zbirka aplikacijskih modula za razne Windows
+aplikacije, kao i poboljšanja i ispravci određenih kontrola u sustavu
+Windows 10 i novijim.
 
 Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 što je uključeno):
@@ -33,9 +33,9 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later. For best
-  results, use the add-on with latest Windows release (Windows 10 21H1/build
-  19043).
+* Za ovaj dodatak potreban je Windows 10 20H2 (gradnja 19042) ili novija
+  verzija. Za najbolje rezultate, koristi dodatak s najnovijim izdanjem
+  Windows sustava (Windows 10 21H1/gradnja 19043).
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Support for Windows 11 is experimental, and some features will not work
