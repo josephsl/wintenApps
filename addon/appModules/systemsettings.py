@@ -58,7 +58,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				obj.name = obj.firstChild.name
 			# Developer mode label in Version 2004 is wrong.
 			# It shows class name rather than the actual label.
-			# This also affects 20H2 and 21H1 as they are really enablement packages on top of 2004.
+			# This also affects 20H2/21H1/21H2 as they are really enablement packages on top of 2004.
 			# This is resolved in build 19536 and later.
 			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name
