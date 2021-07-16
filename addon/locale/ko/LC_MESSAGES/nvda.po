@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2021-07-10 11:56-0700\n"
+"PO-Revision-Date: 2021-07-15 19:28-0700\n"
 "Last-Translator: Dong hui Park <hi@aheu.org>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -58,9 +58,3 @@ msgstr "Windows App Essentials"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Improving support for various apps and controls on Windows 10 and later"
 msgstr "윈도우 10 이상에서의 앱 지원 기능 향상"
-
-#~ msgid "Windows 10 App Essentials"
-#~ msgstr "Windows 10 App Essentials"
-
-#~ msgid "A collection of app modules for various Windows 10 apps"
-#~ msgstr "윈도우 10 앱 모듈 모음"

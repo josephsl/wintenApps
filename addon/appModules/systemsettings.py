@@ -87,10 +87,13 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				obj.name = obj.previous.name
 			# Some XAML controls are named SystemSettings.ViewModel.SettingEntry.
 			# For list items, simple children records actual label.
+			# For themes list, first child (grouping) holds the theme label.
 			elif obj.name == "SystemSettings.ViewModel.SettingEntry":
 				if obj.role == controlTypes.ROLE_LISTITEM:
 					obj.name = "; ".join(
-						[child.name for child in obj.children if child.role == ROLE_STATICTEXT]
+						[child.name for child in obj.children if child.role in (
+							ROLE_STATICTEXT, controlTypes.ROLE_GROUPING
+						)]
 					)
 
 	# Sometimes, the same text is announced, so consult this cache.

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: wintenApps\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2021-06-26 19:38-0300\n"
+"PO-Revision-Date: 2021-07-15 19:31-0700\n"
 "Last-Translator: Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>\n"
 "Language-Team: NVDA Brazilian Portuguese translation team (Equipe de "
 "tradução do NVDA para Português Brasileiro) <clever97@gmail.com>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
@@ -55,16 +55,12 @@ msgstr "{} sugestões"
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information.
-#, fuzzy
 msgid "Windows App Essentials"
-msgstr "Windows 10 App Essentials"
+msgstr "Windows App Essentials"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Improving support for various apps and controls on Windows 10 and later"
 msgstr ""
-
-#~ msgid "A collection of app modules for various Windows 10 apps"
-#~ msgstr ""
-#~ "Uma coleção de módulos de aplicativos — app modules — para vários "
-#~ "aplicativos do Windows 10"
+"Melhora o suporte para vários aplicativos e controles no Windows 10 e "
+"posterior"

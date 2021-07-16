@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.02\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2021-02-24 14:33+0100\n"
+"PO-Revision-Date: 2021-07-15 19:21-0700\n"
 "Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
 "Language-Team: \n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 1.8.9\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
@@ -41,22 +42,22 @@ msgid "No more weather data for this item."
 msgstr "Ikke flere vejrdata for dette emne."
 
 #. Translators: part of the suggestions count message (for example: 2 suggestions).
-#, fuzzy
-msgid "suggestion"
-msgid_plural "suggestions"
-msgstr[0] "1 forslag"
-msgstr[1] "1 forslag"
+msgid "1 suggestion"
+msgstr "1 forslag"
+
+#. Translators: part of the suggestions count message (for example: 2 suggestions).
+msgid "{} suggestions"
+msgstr "{} forslag"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information.
-msgid "Windows 10 App Essentials"
-msgstr "Vigtige forbedringer til Windows 10-apps"
+msgid "Windows App Essentials"
+msgstr "Vigtige forbedringer til Windows apps"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "A collection of app modules for various Windows 10 apps"
-msgstr "En samling af programmoduler til forskellige Windows 10 apps"
-
-#~ msgid "{} suggestions"
-#~ msgstr "{} forslag"
+msgid "Improving support for various apps and controls on Windows 10 and later"
+msgstr ""
+"Forbedring af understøttelse for forskellige apps og kontrolelementer i "
+"Windows 10 og nyere"
