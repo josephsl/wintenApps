@@ -20,7 +20,7 @@ from NVDAObjects.UIA import UIA
 # Controls with XAML class names as labels (SystemSettings_*).
 # Thankfully labels are previous object names.
 XAML_CLASS_ELEMENT_NAMES = [
-	# Developer mode label in Windows 10 2004/20H2/21H1.
+	# Developer mode label in Windows 10 2004/20H2/21H1/21H2.
 	# Resolved in Windows 11.
 	"SystemSettings_Developer_Mode_Advanced_NarratorText",
 	# Microsoft Account sign-in options in Windows 11.
