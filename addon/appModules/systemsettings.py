@@ -36,10 +36,12 @@ if hasattr(controlTypes, "Role"):
 	ROLE_LINK = controlTypes.Role.LINK
 	ROLE_LISTITEM = controlTypes.Role.LISTITEM
 	ROLE_STATICTEXT = controlTypes.Role.STATICTEXT
+	ROLE_GROUPING = controlTypes.Role.GROUPING
 else:
 	ROLE_LINK = controlTypes.ROLE_LINK
 	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
 	ROLE_STATICTEXT = controlTypes.ROLE_STATICTEXT
+	ROLE_GROUPING = controlTypes.ROLE_GROUPING
 
 
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
@@ -91,9 +93,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			elif obj.name == "SystemSettings.ViewModel.SettingEntry":
 				if obj.role == controlTypes.ROLE_LISTITEM:
 					obj.name = "; ".join(
-						[child.name for child in obj.children if child.role in (
-							ROLE_STATICTEXT, controlTypes.ROLE_GROUPING
-						)]
+						[child.name for child in obj.children if child.role in (ROLE_STATICTEXT, ROLE_GROUPING)]
 					)
 
 	# Sometimes, the same text is announced, so consult this cache.
