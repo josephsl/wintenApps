@@ -42,7 +42,7 @@ def onInstall():
 	if warnWin11Experimental:
 		# THIS WARNING DIALOG WILL NOT BE TRANSLATED!
 		gui.messageBox(
-			"You are using Windows 11 Insider Preview. Support for Windows 11 is experimental "
+			"You are using Windows 11 Preview. Support for Windows 11 is experimental "
 			"and features can change without notice prior to its general release.",
 			"Windows 11 support notice", wx.OK | wx.ICON_WARNING
 		)
