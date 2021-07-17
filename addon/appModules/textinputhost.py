@@ -44,6 +44,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	_symbolsGroupSelected: bool = False
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
+		# In Windows 11, candidate panel houses candidate items, not the prediction window.
+		if obj.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
+			obj = obj.firstChild
 		# Ask NVDA to respond to UIA events coming from this overlay.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 		if config.conf["UIA"]["selectiveEventRegistration"]:
