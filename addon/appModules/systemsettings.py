@@ -91,7 +91,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# For list items, simple children records actual label.
 			# For themes list, first child (grouping) holds the theme label.
 			elif obj.name == "SystemSettings.ViewModel.SettingEntry":
-				if obj.role == controlTypes.ROLE_LISTITEM:
+				if obj.role == ROLE_LISTITEM:
 					obj.name = "; ".join(
 						[child.name for child in obj.children if child.role in (ROLE_STATICTEXT, ROLE_GROUPING)]
 					)
