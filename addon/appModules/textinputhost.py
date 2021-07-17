@@ -274,21 +274,24 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Recognize more candidate UI and item elements in build 20200 and later.
+		# Return after checking each item so candidate UI and items from Windows 10 can be recognized.
 		if isinstance(obj, UIA):
 			# Candidate item.
 			if obj.role == controlTypes.ROLE_LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
 				clsList.insert(0, ImeCandidateItem)  # NOQA: F405
+				return
 			# Candidate UI.
 			elif (
 				obj.role in (controlTypes.ROLE_LIST, controlTypes.ROLE_POPUPMENU)
 				and obj.UIAAutomationId in ("TEMPLATE_PART_CandidatePanel", "IME_Prediction_Window")
 			):
 				clsList.insert(0, ImeCandidateUI)  # NOQA: F405
+				return
 			# Newer revisions of Windows 11 build 22000 moves focus to what appears to be an edit field.
 			# However this means NVDA's own edit field scripts will override emoji panel commands.
 			# Therefore remove text field movement commands so emoji panel commands can be used directly.
 			elif obj.UIAAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI.DelegationTextBox":
 				clsList.remove(EditableTextWithAutoSelectDetection)
-			return
+				return
 		# NVDA Core takes care of the rest.
 		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
