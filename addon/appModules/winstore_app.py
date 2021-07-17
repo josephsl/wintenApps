@@ -12,9 +12,9 @@ from NVDAObjects.UIA import UIA
 
 
 # Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-if hasattr(controlTypes, "Role"):
+try:
 	ROLE_LISTITEM = controlTypes.Role.LISTITEM
-else:
+except AttributeError:
 	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
 
 

@@ -32,13 +32,13 @@ RE_PARENT_LISTS = re.compile("|".join([
 
 
 # Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-if hasattr(controlTypes, "Role"):
+try:
 	ROLE_LISTITEM = controlTypes.Role.LISTITEM
 	ROLE_GROUPING = controlTypes.Role.GROUPING
 	ROLE_TABCONTROL = controlTypes.Role.TABCONTROL
 	ROLE_TAB = controlTypes.Role.TAB
 	ROLE_BUTTON = controlTypes.Role.BUTTON
-else:
+except AttributeError:
 	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
 	ROLE_GROUPING = controlTypes.ROLE_GROUPING
 	ROLE_TABCONTROL = controlTypes.ROLE_TABCONTROL

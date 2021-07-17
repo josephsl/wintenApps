@@ -14,10 +14,10 @@ import ui
 
 
 # Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-if hasattr(controlTypes, "Role"):
+try:
 	ROLE_STATICTEXT = controlTypes.Role.STATICTEXT
 	ROLE_BUTTON = controlTypes.Role.BUTTON
-else:
+except AttributeError:
 	ROLE_STATICTEXT = controlTypes.ROLE_STATICTEXT
 	ROLE_BUTTON = controlTypes.ROLE_BUTTON
 

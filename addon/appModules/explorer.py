@@ -36,10 +36,10 @@ class Win11TaskSwitchingWindow(IAccessible):
 
 
 # Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-if hasattr(controlTypes, "Role"):
+try:
 	ROLE_BUTTON = controlTypes.Role.BUTTON
 	STATE_CHECKABLE = controlTypes.State.CHECKABLE
-else:
+except AttributeError:
 	ROLE_BUTTON = controlTypes.ROLE_BUTTON
 	STATE_CHECKABLE = controlTypes.STATE_CHECKABLE
 

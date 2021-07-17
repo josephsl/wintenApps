@@ -34,12 +34,12 @@ WIN11 = winVersion.WinVersion(major=10, minor=0, build=22000)
 
 
 # Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-if hasattr(controlTypes, "Role"):
+try:
 	ROLE_LISTITEM = controlTypes.Role.LISTITEM
 	ROLE_LIST = controlTypes.Role.LIST
 	ROLE_POPUPMENU = controlTypes.Role.POPUPMENU
 	STATE_OFFSCREEN = controlTypes.State.OFFSCREEN
-else:
+except AttributeError:
 	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
 	ROLE_LIST = controlTypes.ROLE_LIST
 	ROLE_POPUPMENU = controlTypes.ROLE_POPUPMENU
