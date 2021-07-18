@@ -217,7 +217,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		nextHandler()
 
-	def event_UIA_notification(self, obj, nextHandler, activityId=None):
+	def event_UIA_notification(self, obj, nextHandler, activityId=None, **kwargs):
 		# Introduced in Version 1709, to be treated as a notification event.
 		# Bulk of this transferred to Event Tracker add-on in 2021.
 		# Play a debug tone if and only if notifications come from somewhere other than the active app
