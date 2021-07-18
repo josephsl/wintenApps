@@ -54,6 +54,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	_symbolsGroupSelected: bool = False
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
+		# In Windows 11, candidate panel houses candidate items, not the prediction window.
+		if obj.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
+			obj = obj.firstChild
 		# Ask NVDA to respond to UIA events coming from this overlay.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 		try:
@@ -271,21 +274,24 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Recognize more candidate UI and item elements in Windows 11.
+		# Return after checking each item so candidate UI and items from Windows 10 can be recognized.
 		if isinstance(obj, UIA):
 			# Candidate item.
 			if obj.role == ROLE_LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
 				clsList.insert(0, ImeCandidateItem)  # NOQA: F405
+				return
 			# Candidate UI.
 			elif (
 				obj.role in (ROLE_LIST, ROLE_POPUPMENU)
 				and obj.UIAAutomationId in ("TEMPLATE_PART_CandidatePanel", "IME_Prediction_Window")
 			):
 				clsList.insert(0, ImeCandidateUI)  # NOQA: F405
+				return
 			# Newer revisions of Windows 11 build 22000 moves focus to what appears to be an edit field.
 			# However this means NVDA's own edit field scripts will override emoji panel commands.
 			# Therefore remove text field movement commands so emoji panel commands can be used directly.
 			elif obj.UIAAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI.DelegationTextBox":
 				clsList.remove(EditableTextWithAutoSelectDetection)
-			return
+				return
 		# NVDA Core takes care of the rest.
 		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
