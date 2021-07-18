@@ -173,6 +173,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Essentially, emoji panel and clipboard are combined and housed inside a web document interface.
 		# As a result, Automation Id's are the same and UIA tree is different (hosted inside an EdgeHTML document).
 		# Move NVDA's focus to input experience panel so arrow keys can be used to navigate among emojis.
+		# Focus movement is also required to announce selected emoji when the panel opens after a while.
 		elif childAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI":
 			api.setFocusObject(obj)
 			return
