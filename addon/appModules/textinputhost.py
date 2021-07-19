@@ -54,6 +54,21 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	_symbolsGroupSelected: bool = False
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
+		# Do not proceed if emoji panel category item is selected when the panel itself is gone.
+		# This is the case when closing emoji panel portion in Windows 11.
+		if obj.UIAAutomationId.startswith("navigation-menu-item"):
+			emojiPanelAncestors = [
+				item.appModule for item in api.getFocusAncestors()
+				if item.appModule == self
+			]
+			# System focus restored.
+			if not len(emojiPanelAncestors):
+				return
+			# NVDA is stuck in a nonexistent edit field.
+			elif not any(api.getFocusObject().location):
+				objectWithFocus = obj.objectWithFocus()
+				eventHandler.queueEvent("gainFocus", objectWithFocus)
+				return
 		# In Windows 11, candidate panel houses candidate items, not the prediction window.
 		if obj.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
 			obj = obj.firstChild
