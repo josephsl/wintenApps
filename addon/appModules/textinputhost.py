@@ -197,13 +197,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				clipboardHistoryItem = clipboardHistoryItem.firstChild
 			eventHandler.queueEvent("UIA_elementSelected", clipboardHistoryItem)
 			return
-		# Combined emoji panel and clipboard history.
-		# Windows 11 introduced a completely different user interface for modern keyboard.
-		# Essentially, emoji panel and clipboard are combined and housed inside a web document interface.
-		# As a result, Automation Id's are the same and UIA tree is different (hosted inside an EdgeHTML document).
-		# Move NVDA's focus to input experience panel so arrow keys can be used to navigate among emojis.
-		# Turns out this is unnecessary as focus moves to emoji search field in newer revisions of build 22000.
-		# See older add-on releases for details.
 		# NVDA Core takes care of the rest.
 		super(AppModule, self).event_UIA_window_windowOpen(obj, nextHandler)
 
