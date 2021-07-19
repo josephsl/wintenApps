@@ -239,25 +239,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			self._recentlySelected = None
 		nextHandler()
 
-	def event_UIA_notification(
-			self, obj, nextHandler,
-			notificationProcessing=UIAHandler.NotificationProcessing_CurrentThenMostRecent,
-			displayString=None, activityId=None, **kwargs
-	):
-		# Announce input experience panel items (emoji/clipboard) in Windows 11.
-		# Note that input experience panel is not really a focusable window - it is an overlay.
-		# Filter out extraneous notifications such as those raised by root document window
-		# (after all, input experience panel (at least emoji panel and clipboard history) is a web document).
-		if activityId == "Windows.Shell.InputApp.SuggestionUI.DocumentTitle":
-			return
-		# Try emulating default UIA notification event handler for UIA objects.
-		if notificationProcessing in (
-			UIAHandler.NotificationProcessing_ImportantMostRecent, UIAHandler.NotificationProcessing_MostRecent
-		):
-			speech.cancelSpeech()
-		ui.message(displayString)
-		nextHandler()
-
 	def event_gainFocus(self, obj, nextHandler):
 		# Input experience panel is focused when trying to close it, so move focus to somewhere else.
 		if obj.parent.childCount == 0:
