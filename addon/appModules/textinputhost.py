@@ -264,16 +264,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			eventHandler.queueEvent("gainFocus", objectWithFocus)
 		nextHandler()
 
-	@scriptHandler.script(gesture="kb:escape")
-	def script_closeInputExperiencePanel(self, gesture):
-		# In Windows 11, pressing Escape moves focus to input experience panel.
-		# Therefore tell NVDA to move focus to system focus.
-		# Focus redirect is applicable for emoji panel and clipboard history.
-		gesture.send()
-		if winVersion.getWinVer() >= WIN11:
-			objectWithFocus = api.getFocusObject().objectWithFocus()
-			eventHandler.queueEvent("gainFocus", objectWithFocus)
-
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Recognize more candidate UI and item elements in Windows 11.
 		# Return after checking each item so candidate UI and items from Windows 10 can be recognized.
