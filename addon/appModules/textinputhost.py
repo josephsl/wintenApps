@@ -20,9 +20,6 @@ import eventHandler
 import UIAHandler
 import controlTypes
 import api
-import scriptHandler
-import speech
-import ui
 from logHandler import log
 from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import EditableTextWithAutoSelectDetection
