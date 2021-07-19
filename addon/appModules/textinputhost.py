@@ -130,8 +130,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				f"is {firstChild.UIAAutomationId}"
 			)
 		# Originally part of this method, split into an internal function to reduce complexity.
+		# However, in Windows 11, combined emoji panel and clipboard history moves system focus to itself.
+		# Therefore there is no need to add UIA elements to local event handler group.
 		if config.conf["UIA"]["selectiveEventRegistration"]:
-			self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
+			if firstChild.UIAAutomationId != "Windows.Shell.InputApp.FloatingSuggestionUI":
+				self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
 		# Handle Ime Candidate UI being shown
 		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
 			eventHandler.queueEvent("show", firstChild)
