@@ -50,6 +50,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	_modernKeyboardInterfaceActive: bool = False
 	_symbolsGroupSelected: bool = False
 
+	def _emojiPanelClosed(self, obj):
+		# Move NVDA's focus object to what is actually focused on screen.
+		# This is needed in Windows 11 when emoji panel closes.
+		eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
+
 	def event_UIA_elementSelected(self, obj, nextHandler):
 		# Do not proceed if emoji panel category item is selected when the panel itself is gone.
 		# This is the case when closing emoji panel portion in Windows 11.
@@ -63,8 +68,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				return
 			# NVDA is stuck in a nonexistent edit field.
 			elif not any(api.getFocusObject().location):
-				objectWithFocus = obj.objectWithFocus()
-				eventHandler.queueEvent("gainFocus", objectWithFocus)
+				self._emojiPanelClosed(obj)
 				return
 		# In Windows 11, candidate panel houses candidate items, not the prediction window.
 		if obj.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
@@ -244,10 +248,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		nextHandler()
 
 	def event_gainFocus(self, obj, nextHandler):
-		# Input experience panel is focused when trying to close it, so move focus to somewhere else.
+		# An invisible edit field is focused when clipboard history is closed.
 		if obj.parent.childCount == 0:
-			objectWithFocus = obj.objectWithFocus()
-			eventHandler.queueEvent("gainFocus", objectWithFocus)
+			self._emojiPanelClosed(obj)
 		nextHandler()
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
