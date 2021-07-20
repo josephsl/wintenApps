@@ -35,12 +35,10 @@ try:
 	ROLE_LISTITEM = controlTypes.Role.LISTITEM
 	ROLE_LIST = controlTypes.Role.LIST
 	ROLE_POPUPMENU = controlTypes.Role.POPUPMENU
-	STATE_OFFSCREEN = controlTypes.State.OFFSCREEN
 except AttributeError:
 	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
 	ROLE_LIST = controlTypes.ROLE_LIST
 	ROLE_POPUPMENU = controlTypes.ROLE_POPUPMENU
-	STATE_OFFSCREEN = controlTypes.STATE_OFFSCREEN
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
