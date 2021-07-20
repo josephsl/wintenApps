@@ -73,13 +73,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# In Windows 11, candidate panel houses candidate items, not the prediction window.
 		if obj.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
 			obj = obj.firstChild
-		# Ask NVDA to respond to UIA events coming from this overlay.
-		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
-		try:
-			UIAHandler.handler.removeEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
-			UIAHandler.handler.addEventHandlerGroup(obj.UIAElement, UIAHandler.handler.localEventHandlerGroup)
-		except NotImplementedError:
-			pass
 		# Logic for IME candidate items is handled all within its own object
 		# Therefore pass these events straight on.
 		if isinstance(obj, ImeCandidateItem):  # NOQA: F405
