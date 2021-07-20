@@ -211,7 +211,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Back on add-on version.
 		self._symbolsGroupSelected = False
 		if not any(obj.location):
-			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
 
 	def event_stateChange(self, obj, nextHandler):
@@ -229,7 +228,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			(obj.location is None and obj.parent.firstChild is None)
 			or STATE_OFFSCREEN in obj.states
 		):
-			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
 		nextHandler()
 
