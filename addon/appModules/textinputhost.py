@@ -47,7 +47,6 @@ except AttributeError:
 # And Flake8 and other linters, to.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
-	_modernKeyboardInterfaceActive: bool = False
 	_symbolsGroupSelected: bool = False
 
 	def _emojiPanelClosed(self, obj):
