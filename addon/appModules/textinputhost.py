@@ -136,7 +136,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Thankfully first child Automation Id's are different for each modern input technology.
 		# However this event is raised when the input panel closes.
 		if firstChild is None:
-			self._modernKeyboardInterfaceActive = False
 			self._recentlySelected = None
 			return
 		# Log which modern keyboard header is active.
@@ -158,7 +157,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			eventHandler.queueEvent("show", firstChild)
 			return
 		childAutomationId = firstChild.UIAAutomationId
-		self._modernKeyboardInterfaceActive = True
 		self._symbolsGroupSelected = False
 		# Emoji panel in build 17666 and later (unless this changes).
 		if childAutomationId == "TEMPLATE_PART_ExpressionGroupedFullView":
