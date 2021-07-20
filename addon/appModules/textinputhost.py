@@ -206,13 +206,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# NVDA Core takes care of the rest.
 		super(AppModule, self).event_nameChange(obj, nextHandler)
 
-	def event_stateChange(self, obj, nextHandler):
-		# Do not clear symbols group selected flag if an emoji group item is still the navigator object.
-		parent = api.getNavigatorObject().parent
-		if isinstance(parent, UIA) and parent.UIAAutomationId != "TEMPLATE_PART_Groups_ListView":
-			self._symbolsGroupSelected = False
-		nextHandler()
-
 	def event_gainFocus(self, obj, nextHandler):
 		# An invisible edit field is focused when clipboard history is closed.
 		if obj.parent.childCount == 0:
