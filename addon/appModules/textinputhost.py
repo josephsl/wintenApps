@@ -208,25 +208,12 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		super(AppModule, self).event_nameChange(obj, nextHandler)
 		# Back on add-on version.
 		self._symbolsGroupSelected = False
-		if not any(obj.location):
-			self._recentlySelected = None
 
 	def event_stateChange(self, obj, nextHandler):
 		# Do not clear symbols group selected flag if an emoji group item is still the navigator object.
 		parent = api.getNavigatorObject().parent
 		if isinstance(parent, UIA) and parent.UIAAutomationId != "TEMPLATE_PART_Groups_ListView":
 			self._symbolsGroupSelected = False
-		# Try detecting if modern keyboard elements are off-screen or the window itself is gone
-		# (parent's first child is nothing).
-		# But attempting to retrieve obj location fails when emoji panel closes without selecting anything,
-		# especially in Windows 10 1903 and later.
-		# Because of exceptions, check location first.
-		# Windows 10 1903 or later.
-		if (
-			(obj.location is None and obj.parent.firstChild is None)
-			or STATE_OFFSCREEN in obj.states
-		):
-			self._recentlySelected = None
 		nextHandler()
 
 	def event_gainFocus(self, obj, nextHandler):
