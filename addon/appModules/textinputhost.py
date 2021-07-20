@@ -135,7 +135,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Thankfully first child Automation Id's are different for each modern input technology.
 		# However this event is raised when the input panel closes.
 		if firstChild is None:
-			self._recentlySelected = None
 			return
 		# Log which modern keyboard header is active.
 		if log.isEnabledFor(log.DEBUG):
