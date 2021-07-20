@@ -77,11 +77,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Therefore pass these events straight on.
 		if isinstance(obj, ImeCandidateItem):  # NOQA: F405
 			return nextHandler()
-		# Wait until modern keyboard is fully displayed on screen.
-		# This is applicable on Windows 10, as doing so on Windows 11 causes emojis to not be announced.
-		# Windows 10 1803 or later
-		if not self._modernKeyboardInterfaceActive and winVersion.getWinVer() < WIN11:
-			return
 		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object
 		# (for presentational purposes) and move on.
 		if obj.parent.UIAAutomationId == "TEMPLATE_PART_Groups_ListView":
