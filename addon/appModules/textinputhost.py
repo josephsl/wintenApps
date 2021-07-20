@@ -204,10 +204,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			or obj.UIAAutomationId == "VerticalScrollBar"
 		):
 			return
+		self._symbolsGroupSelected = False
 		# NVDA Core takes care of the rest.
 		super(AppModule, self).event_nameChange(obj, nextHandler)
-		# Back on add-on version.
-		self._symbolsGroupSelected = False
 
 	def event_stateChange(self, obj, nextHandler):
 		# Do not clear symbols group selected flag if an emoji group item is still the navigator object.
