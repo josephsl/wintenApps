@@ -26,6 +26,7 @@ jobs:
         with open("buildVars.py", 'r+', encoding='utf-8') as f:
           text = f.read()
           version = "${{ github.ref }}".split("/")[-1]
+          print(version)
           text = re.sub("\"addon_version\": ,", "\"addon_version\": \"%s\",", text) % version
           f.seek(0)
           f.write(text)
