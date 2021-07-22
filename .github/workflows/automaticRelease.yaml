@@ -29,7 +29,7 @@ jobs:
         import re
         with open("buildVars.py", 'r+', encoding='utf-8') as f:
           text = f.read()
-          text = re.sub("\"addon_version\" : ,", "\"addon_version\" : \"${{ github.sha }}\",", text)
+          text = re.sub("\"addon_version\": ,", "\"addon_version\": \"${{ github.sha }}\",", text)
           f.seek(0)
           f.write(text)
           f.truncate()
