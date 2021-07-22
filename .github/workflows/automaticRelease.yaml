@@ -1,0 +1,47 @@
+name: pre-release
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 * * 6'
+
+jobs:
+  pre-release:
+    name: Pre Release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        pip install scons markdown
+        sudo apt update
+        sudo apt install gettext
+    - name: Add add-on version
+      run: |
+        import re
+        with open("buildVars.py", 'r+', encoding='utf-8') as f:
+          text = f.read()
+          text = re.sub("\"addon_version\" : ,", "\"addon_version\" : \"${{ github.sha }}\",", text)
+          f.seek(0)
+          f.write(text)
+          f.truncate()
+      shell: python 
+    - name: Build
+      run: scons
+    - name: Automatic release
+      uses: marvinpinto/action-automatic-releases@latest
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        automatic_release_tag: latest
+        prerelease: true
+        title: Development Build
+        files: |
+          *.nvda-addon
