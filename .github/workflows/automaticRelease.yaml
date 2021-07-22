@@ -35,7 +35,7 @@ jobs:
           f.truncate()
       shell: python 
     - name: Build
-      run: scons
+      run: scons dev=true
     - name: Automatic release
       uses: marvinpinto/action-automatic-releases@latest
       with:
