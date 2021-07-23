@@ -29,14 +29,8 @@ XAML_CLASS_ELEMENT_NAMES = [
 # Support control types refactor (both before (2021.1) and after (2021.2) for a time).
 try:
 	ROLE_LINK = controlTypes.Role.LINK
-	ROLE_LISTITEM = controlTypes.Role.LISTITEM
-	ROLE_STATICTEXT = controlTypes.Role.STATICTEXT
-	ROLE_GROUPING = controlTypes.Role.GROUPING
 except AttributeError:
 	ROLE_LINK = controlTypes.ROLE_LINK
-	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
-	ROLE_STATICTEXT = controlTypes.ROLE_STATICTEXT
-	ROLE_GROUPING = controlTypes.ROLE_GROUPING
 
 
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
