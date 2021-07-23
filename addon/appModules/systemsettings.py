@@ -23,11 +23,6 @@ XAML_CLASS_ELEMENT_NAMES = [
 	# Developer mode label in Windows 10 2004/20H2/21H1/21H2.
 	# Resolved in Windows 11.
 	"SystemSettings_Developer_Mode_Advanced_NarratorText",
-	# Microsoft Account sign-in options in Windows 11.
-	# Windows Hello recommendation.
-	"SystemSettings_Users_PasswordLessSignInDesktopDescription",
-	# Complete setup with account info after an update or restart.
-	"SystemSettings_Users_AutomaticSignOnLock_UpdateV2"
 ]
 
 
