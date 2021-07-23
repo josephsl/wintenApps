@@ -62,13 +62,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# This is resolved in build 19536 and later.
 			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name
-			# Some XAML controls are named SystemSettings.ViewModel.SettingEntry.
-			# For list items, simple children records actual label.
-			elif obj.name == "SystemSettings.ViewModel.SettingEntry":
-				if obj.role == controlTypes.ROLE_LISTITEM:
-					obj.name = "; ".join(
-						[child.name for child in obj.children if child.role == controlTypes.ROLE_STATICTEXT]
-					)
 
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache: str = ""
