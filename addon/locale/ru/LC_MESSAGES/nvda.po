@@ -19,14 +19,13 @@ msgstr ""
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported version of Windows
 #. (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an older version of Windows. This add-on requires "
 "{minSupportedVersion} or later."
 msgstr ""
-"Вы используете старую версию Windows. Дополнение требует Windows "
-"{minSupportedVersion} или более позднюю. Вы действительно уверены, что все "
-"равно хотите установить дополнение?"
+"Вы используете более старую версию Windows. Это дополнение "
+"требует{minSupportedVersion} или блоее новую."
 
 #. Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
 msgid "Old Windows version"
@@ -58,4 +57,4 @@ msgstr "Windows App Essentials"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Improving support for various apps and controls on Windows 10 and later"
-msgstr ""
+msgstr "Улучшает поддержкуразных приложений и контролей Windows"

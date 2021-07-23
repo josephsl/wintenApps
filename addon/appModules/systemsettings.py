@@ -87,14 +87,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# Thankfully labels are next door to these, specifically previous.name.
 			elif obj.name in XAML_CLASS_ELEMENT_NAMES:
 				obj.name = obj.previous.name
-			# Some XAML controls are named SystemSettings.ViewModel.SettingEntry.
-			# For list items, simple children records actual label.
-			# For themes list, first child (grouping) holds the theme label.
-			elif obj.name == "SystemSettings.ViewModel.SettingEntry":
-				if obj.role == ROLE_LISTITEM:
-					obj.name = "; ".join(
-						[child.name for child in obj.children if child.role in (ROLE_STATICTEXT, ROLE_GROUPING)]
-					)
 
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache: str = ""
