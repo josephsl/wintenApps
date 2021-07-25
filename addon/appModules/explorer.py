@@ -36,12 +36,7 @@ class Win11TaskSwitchingWindow(IAccessible):
 
 
 # Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-try:
-	ROLE_BUTTON = controlTypes.Role.BUTTON
-	STATE_CHECKABLE = controlTypes.State.CHECKABLE
-except AttributeError:
-	ROLE_BUTTON = controlTypes.ROLE_BUTTON
-	STATE_CHECKABLE = controlTypes.STATE_CHECKABLE
+# Note that pre-refactor attributes will be gone in NVDA 2022.1.
 
 
 # Built-in File Explorer app module powers bulk of the below app module class, so inform Mypy.
@@ -51,8 +46,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	def event_NVDAObject_init(self, obj):
 		# No, these buttons should not be a toggle button, and discard checkable state, too.
 		if isinstance(obj, UIA) and obj.UIAAutomationId in WIN11_RECLASSIFY_TOGGLE_BUTTONS:
-			obj.role = ROLE_BUTTON
-			obj.states.discard(STATE_CHECKABLE)
+			obj.role = controlTypes.ROLE_BUTTON
+			obj.states.discard(controlTypes.STATE_CHECKABLE)
 			return
 		super(AppModule, self).event_NVDAObject_init(obj)
 

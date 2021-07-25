@@ -12,10 +12,7 @@ from NVDAObjects.UIA import UIA
 
 
 # Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-try:
-	ROLE_LISTITEM = controlTypes.Role.LISTITEM
-except AttributeError:
-	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
+# Note that the old style will be removed in NVDA 2022.1.
 
 
 class AppModule(appModuleHandler.AppModule):
@@ -24,7 +21,7 @@ class AppModule(appModuleHandler.AppModule):
 		# Extraneous information announced when going through apps to be updated/installed,
 		# so use a grandchild's name.
 		if (
-			isinstance(obj, UIA) and obj.role == ROLE_LISTITEM
+			isinstance(obj, UIA) and obj.role == controlTypes.ROLE_LISTITEM
 			and obj.firstChild and obj.firstChild.UIAAutomationId == "InstallControl"
 		):
 			obj.name = obj.firstChild.firstChild.name

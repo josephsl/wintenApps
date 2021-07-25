@@ -27,10 +27,7 @@ XAML_CLASS_ELEMENT_NAMES = [
 
 
 # Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-try:
-	ROLE_LINK = controlTypes.Role.LINK
-except AttributeError:
-	ROLE_LINK = controlTypes.ROLE_LINK
+# Note that pre-refactor attributes will be gone in NVDA 2022.1.
 
 
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
@@ -44,7 +41,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# so include this for sake of backward compatibility.
 			# In later revisions of Windows 10 1803 and later, feature update download link is provided
 			# and is initially called "download and install now", thus add the feature update title as well.
-			if obj.role == ROLE_LINK:
+			if obj.role == controlTypes.ROLE_LINK:
 				nameList = [obj.name]
 				if obj.UIAAutomationId.startswith("HistoryEvent") and obj.name != obj.previous.name:
 					# Add the status text in 1709 and later.
