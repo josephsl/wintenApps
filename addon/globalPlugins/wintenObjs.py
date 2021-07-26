@@ -104,7 +104,7 @@ class SuggestionsListView(UIA):
 			ui.message(suggestionsMessage)
 
 
-# Various XAML headings (Settings app, for example) introduced in Version 1803.
+# Various XAML headings (Settings app, for example) introduced in Windows 10 1803.
 class XAMLHeading(UIA):
 
 	def _get_role(self) -> int:
@@ -149,7 +149,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if delay:
 			log.debug("W10: adding additional events after a delay")
 		# Use event handler group facility to add more events (properly introduced in NVDA 2020.3).
-		# Use IUIAutomation6 interface directly (Version 1809 or later).
+		# Use IUIAutomation6 interface directly (Windows 10 1809 or later).
 		addonGlobalEventHandlerGroup = UIAHandler.handler.clientObject.CreateEventHandlerGroup()
 		for event, name in W10Events.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
@@ -187,7 +187,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if obj.UIAAutomationId == "SuggestionsList":
 			clsList.insert(0, SuggestionsListView)
 			return
-		# Recognize headings as reported by XAML (Version 1803 or later).
+		# Recognize headings as reported by XAML (Windows 10 1803 or later).
 		# Some apps may cause COM to throw timeout error.
 		try:
 			# NvDA does not recognize heading levels 7, 8, and 9, therefore use a chained comparison.
@@ -323,7 +323,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self, obj, nextHandler,
 			notificationKind=None, notificationProcessing=None, displayString=None, activityId=None
 	):
-		# Introduced in Version 1709, to be treated as a notification event.
+		# Introduced in Windows 10 1709, to be treated as a notification event.
 		# Bulk of this transferred to Event Tracker add-on in 2021.
 		# self.uiaDebugLogging(obj, "notification")
 		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
