@@ -1,7 +1,7 @@
-# Windows 10 controls repository
+# Windows app controls repository
 # Copyright 2015-2021 Joseph Lee, released under GPL.
 
-# Adds handlers for various UIA controls found in Windows 10.
+# Adds handlers for various UIA controls found in Windows 10 and later.
 
 # Help Mypy and other static checkers for a time by using annotations from future Python releases.
 from __future__ import annotations
@@ -116,7 +116,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
-		# Don't do anything unless this is Windows 10.
+		# Don't do anything unless this is Windows 10 or later.
 		# #52: and this is a supported build.
 		if not W10AddonSupported:
 			return
@@ -278,7 +278,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				import wx
 				# Even with desktop name change handler added,
 				# older Windows 10 releases won't support this properly.
-				# Properly supported in Version 1909.
+				# Properly supported in Windows 10 1909.
 				if not hasattr(eventHandler, "handlePossibleDesktopNameChange"):
 					wx.CallLater(500, ui.message, obj.name)
 		nextHandler()
