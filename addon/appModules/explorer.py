@@ -21,7 +21,8 @@ WIN11_RECLASSIFY_TOGGLE_BUTTONS = [
 	"StartButton",
 	"SearchButton",
 	"TaskViewButton",
-	"WidgetsButton"
+	"WidgetsButton",
+	"MeetNowButton"
 ]
 
 
