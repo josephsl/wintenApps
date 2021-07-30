@@ -81,7 +81,7 @@ Most items are applicable when using Cortana Conversations (Windows 10 2004 and 
 
 ## Modern keyboard
 
-This includes emoji panel, clipboard history, dictation, hardware input suggestions, and modern input method editors for certain languages. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher. When pasting from clipboard history, press Space key instead of Enter key to paste the selected item. NVDA also supports updated input experience panel in Windows 11.
+This includes emoji panel, clipboard history, dictation/voice typing, hardware input suggestions, and modern input method editors for certain languages. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher. When pasting from clipboard history in Windows 10, press Space key instead of Enter key to paste the selected item. NVDA also supports updated input experience panel in Windows 11.
 
 * When opening clipboard history, NVDA will no longer announce "clipboard" when there are items in the clipboard under some circumstances.
 * On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA will no longer appear to do nothing when emoji panel opens.
