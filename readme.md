@@ -18,7 +18,7 @@ The following app modules or support modules for some apps are included (see eac
 * Maps
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/hardware input suggestions/clipboard history/modern input method editors)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input suggestions/clipboard history/modern input method editors)
 * People
 * Settings (system settings, Windows+I)
 * Weather
