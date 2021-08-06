@@ -24,7 +24,7 @@ addonHandler.initTranslation()
 # #52: forget everything if the current release is not a supported version of Windows.
 # NVDA 2019.2 includes a handy Windows 10 version check function.
 # Changed in NVDA 2021.1 to include Windows release constants.
-W10AddonSupported = winVersion.getWinVer() >= winVersion.WIN10_20H2
+isAddonSupported = winVersion.getWinVer() >= winVersion.WIN10_20H2
 
 
 # Extra UIA constants
@@ -89,7 +89,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super(GlobalPlugin, self).__init__()
 		# Don't do anything unless this is Windows 10 or later.
 		# #52: and this is a supported build.
-		if not W10AddonSupported:
+		if not isAddonSupported:
 			return
 		# #20: don't even think about proceeding in secure screens.
 		# #40: skip over the rest if appx is in effect.
