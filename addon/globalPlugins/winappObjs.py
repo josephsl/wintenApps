@@ -135,9 +135,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# There's no point looking at non-UIA objects.
-		# Also because this add-on might be turned on "accidentally" in earlier Windows releases,
-		# including unsupported Windows builds...
-		if not (isinstance(obj, UIA) and W10AddonSupported):
+		if not isinstance(obj, UIA):
 			return
 		# Windows that are really dialogs.
 		# Some dialogs, although listed as a dialog thanks to UIA class name,
