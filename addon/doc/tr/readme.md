@@ -40,8 +40,10 @@ Notlar:
   kullanın. (Windows 10 21H1/build 19043).
 * Ne kadar yüklenebilse de, bu eklenti Windows Enterprise LTSC (Uzun Süreli
   Hizmet Kanalı) ve Windows Server sürümlerini desteklemez.
-* Windows 11 desteği deneyseldir ve bazı özellikler çalışmayacaktır
-  (ayrıntılar için ilgili bölümlere  bakın).
+* Support for Windows 11 is experimental, and some features will not work
+  (see relevant entries for details). A warning dialog will be shown if
+  trying to install stable versions of this add-on on Windows 11 prior to
+  general availability.
 * Bazı eklenti özellikleri, NVDA ekran okuyucusunun bir parçasıdır veya
   yakında olacaktır.
 * Aşağıda listelenmeyen özellikler için,listelenmeyen özelliklerin artık
@@ -58,22 +60,22 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 
 ## Genel
 
-* NVDA, çoğu durumda arama yaparken öneri sayısını bildirebilir. Bu seçenek,
-  NVDA ayarlarında bulunan Nesne sunumu bölümündeki  "Nesne konum bilgisini
-  bildir" ile kontrol edilir.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses. This
+  option is controlled by "Report object position information" in Object
+  presentation panel found in NVDA settings.
 * Windows 10 1909 (Kasım 2019 Güncellemesi) ve sonraki sürümlerinde Başlat
   menüsünde veya Dosya Gezgini'nde arama sırasında sonuçları incelerken
   NVDA'nın arama sonuçlarını iki kez bildirmesi daha az dikkat çeker, bu da
   öğeleri gözden geçirirken braille çıktısını daha tutarlı hale getirir.
-* NVDA'nın sağladığı UIA olay işleyicilerine ek olarak, aşağıdaki UIA
-  olayları tanınır: sürükleme başlatma, sürükleme iptal etme, sürükleme
-  tamamlama, hedef sürükleme girişini bırak, hedef bırak sürükle bırak,
-  hedefi bırak. NVDA'nın günlük seviyesi hata ayıklamaya ayarlandığında, bu
-  olaylar izlenir ve UIA bildirim olayı için, bildirimler o anda etkin olan
-  uygulama dışında bir yerden gelirse bir hata ayıklama tonu
-  duyulacaktır. Bazı olaylar, olay için denetleyicideki öğe sayısı, durum
-  değişikliği olayı için öğenin durumu ve öğe durumu olayı için öğe metni
-  gibi ek bilgiler sağlayacaktır.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drop target
+  drag enter, drop target drag leave, drop target dropped, layout
+  invalidated. With NVDA's log level set to debug, these events will be
+  tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active
+  app. Events built into NVDA such as name change and controller for events
+  will be tracked from an add-on called Event Tracker.
 * Yalnızca belirli olayları ve/veya belirli uygulamalardan gelen olayları
   izlemek mümkündür.
 * NVDA, sanal masaüstlerini açarken, kapatırken, yeniden düzenlerken
@@ -136,12 +138,13 @@ geçerlidir.
 
 ## Modern klavye
 
-Buna emoji paneli, pano geçmişi, dikte, donanım giriş önerileri ve belirli
-diller için modern giriş yöntemi düzenleyicileri dahildir. Emojileri
-görüntülerken, en iyi deneyim için, NVDA'nın konuşma ayarlarından Unicode
-Consortium ayarını etkinleştirin ve imla seslendirme düzeyini  "bazıları"
-veya  çoğu olarak ayarlayın. Ayrıca NVDA, Windows 11'de güncellenmiş giriş
-deneyimi panelini destekler.
+This includes emoji panel, clipboard history, dictation/voice typing,
+hardware input suggestions, and modern input method editors for certain
+languages. When viewing emojis, for best experience, enable Unicode
+Consortium setting from NVDA's speech settings and set symbol level to
+"some" or higher. When pasting from clipboard history in Windows 10, press
+Space key instead of Enter key to paste the selected item. NVDA also
+supports updated input experience panel in Windows 11.
 
 * Pano geçmişini açarken, bazı durumlarda panoda öğeler olduğunda NVDA artık
   "pano" duyurusu yapmayacaktır.

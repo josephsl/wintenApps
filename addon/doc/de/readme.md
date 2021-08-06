@@ -39,8 +39,10 @@ Hinweise:
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
-* Die Unterstützung für Windows 11 ist experimentell und einige Funktionen
-  funktionieren nicht (siehe entsprechende Einträge für Details).
+* Support for Windows 11 is experimental, and some features will not work
+  (see relevant entries for details). A warning dialog will be shown if
+  trying to install stable versions of this add-on on Windows 11 prior to
+  general availability.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Bei Einträgen, die unten nicht aufgeführt sind, können Sie davon ausgehen,
   dass Funktionen Teil von NVDA sind und nicht mehr nutzbar sind, da die
@@ -57,24 +59,22 @@ Versionen][3].
 
 ## Allgemein
 
-* NVDA kann in den meisten Fällen die Anzahl der Vorschläge bei der
-  Durchführung einer Suche bekannt geben. Diese Option wird durch
-  "Objekt-Positionsinformationen mitteilen" im Objektpräsentationsfenster in
-  den NVDA-Einstellungen gesteuert.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses. This
+  option is controlled by "Report object position information" in Object
+  presentation panel found in NVDA settings.
 * Bei der Suche im Startmenü oder Datei-Explorer in Windows 10 Version 1909
   (November 2019 Update) und neuer sind Fälle, in denen NVDA Suchergebnisse
   beim Überprüfen der Ergebnisse zweimal ankündigt, weniger auffällig, was
   auch die Brailleausgabe beim Überprüfen von Elementen konsistenter macht.
-* Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignishandlern werden
-  die folgenden UIA-Ereignisse erkannt: Start starten, Abbruch ziehen,
-  Abschluss ziehen, Ziel ziehen ziehen lassen, Ziel ziehen lassen, Ziel
-  fallen lassen. Wenn die Protokollstufe von NVDA auf Debug eingestellt ist,
-  werden diese Ereignisse verfolgt, und bei UIA-Benachrichtigungsereignissen
-  ertönt ein Debug-Ton, wenn Benachrichtigungen von einem anderen Ort als
-  der derzeit aktiven App stammen. Einige Ereignisse enthalten zusätzliche
-  Informationen, z. B. die Anzahl der Elemente in der Steuerung für das
-  Ereignis, den Status des Elements für das Statusänderungsereignis und den
-  Elementtext für das Ereignis des Elementstatus.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drop target
+  drag enter, drop target drag leave, drop target dropped, layout
+  invalidated. With NVDA's log level set to debug, these events will be
+  tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active
+  app. Events built into NVDA such as name change and controller for events
+  will be tracked from an add-on called Event Tracker.
 * Es ist möglich, nur bestimmte Ereignisse bzw. Ereignisse aus bestimmten
   Anwendungen zu verfolgen.
 * Beim Öffnen, Schließen, Neuordnen (Windows 11) oder Wechseln zwischen
@@ -142,12 +142,13 @@ Die meisten Elemente sind bei Verwendung von Cortana-Unterhaltungen (Windows
 
 ## Moderne virtuelle Tastaturen
 
-Dazu gehören Emoji-Panel, Zwischenablageverlauf, Diktat,
-Hardware-Eingabevorschläge und moderne Eingabemethoden-Editoren für
-bestimmte Sprachen. Aktivieren Sie beim Anzeigen von Emojis für die beste
-Erfahrung die Unicode-Konsortium-Einstellung in den Spracheinstellungen von
-NVDA und setzen Sie die Symbolstufe auf "Einige" oder höher. Außerdem
-unterstützt NVDA das aktualisierte Eingabeerlebnis-Panel in Windows 11.
+This includes emoji panel, clipboard history, dictation/voice typing,
+hardware input suggestions, and modern input method editors for certain
+languages. When viewing emojis, for best experience, enable Unicode
+Consortium setting from NVDA's speech settings and set symbol level to
+"some" or higher. When pasting from clipboard history in Windows 10, press
+Space key instead of Enter key to paste the selected item. NVDA also
+supports updated input experience panel in Windows 11.
 
 * Beim Öffnen des Verlauf der Zwischenablage wird NVDA unter Umständen nicht
   mehr das Wort "Zwischenablage" mitteilen, wenn sich Elemente in der

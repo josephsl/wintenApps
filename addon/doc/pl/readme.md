@@ -39,7 +39,9 @@ Uwagi:
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Support for Windows 11 is experimental, and some features will not work
-  (see relevant entries for details).
+  (see relevant entries for details). A warning dialog will be shown if
+  trying to install stable versions of this add-on on Windows 11 prior to
+  general availability.
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * For entries not listed below, you can assume that features are part of
   NVDA, no longer applicable as the add-on does not support unsupported
@@ -54,22 +56,22 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 
 ## Ogólne
 
-* W większości przypadków, NVDA może ogłaszać liczbę sugestii
-  wyszukiwania. Ta funkcja jest kontrolowana przez opcję "odczytuj położenie
-  obiektu" dostępną w ustawieniach NVDA, w panelu "prezentacja obiektu".
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses. This
+  option is controlled by "Report object position information" in Object
+  presentation panel found in NVDA settings.
 * When searching in Start menu or File Explorer in Windows 10 1909 (November
   2019 Update) and later, instances of NVDA announcing search results twice
   when reviewing results are less noticeable, which also makes braille
   output more consistent when reviewing items.
-* Oprócz programów obsługi zdarzeń UIA dostarczonych przez NVDA rozpoznawane
-  są następujące zdarzenia UIA: drag start, drag cancel, drag complete, drop
-  target drag enter, drop target drag leave, drop target dropped. Z poziomu
-  dziennika NVDA ustawiony na debugowanie, te zdarzenia będą śledzone, a dla
-  zdarzenia powiadomień UIA dźwięk debugowania będą słyszane, jeśli
-  powiadomienia pochodzą z innego miejsca niż aktualnie aktywna
-  aplikacja. Niektóre zdarzenia zapewni dodatkowe informacje, takie jak
-  liczba elementów w kontrolerze dla zdarzenia, stan elementu dla zdarzenia
-  zmiany stanu i tekst elementu dla zdarzenia stanu elementu.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drop target
+  drag enter, drop target drag leave, drop target dropped, layout
+  invalidated. With NVDA's log level set to debug, these events will be
+  tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active
+  app. Events built into NVDA such as name change and controller for events
+  will be tracked from an add-on called Event Tracker.
 * Teraz jest możliwe śledzenie zdarzeń z określonych oraz specyficznych
   aplikacji.
 * When opening, closing, reordering (Windows 11), or switching between
@@ -134,10 +136,12 @@ and later).
 
 ## Klawiatura nowoczesna
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+This includes emoji panel, clipboard history, dictation/voice typing,
+hardware input suggestions, and modern input method editors for certain
+languages. When viewing emojis, for best experience, enable Unicode
+Consortium setting from NVDA's speech settings and set symbol level to
+"some" or higher. When pasting from clipboard history in Windows 10, press
+Space key instead of Enter key to paste the selected item. NVDA also
 supports updated input experience panel in Windows 11.
 
 * Gdy historia schowka jest wypowiadana, NVDA już nie będzie wymawiała

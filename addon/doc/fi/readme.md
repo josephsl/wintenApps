@@ -5,14 +5,14 @@
 * Lataa [kehitysversio][2]
 * Yhteensopivuus: NVDA 2020.4 ja uudemmat
 
-Note: Originally called Windows 10 App Essentials, it was renamed to Windows
-App Essentials in 2021 to support Windows 10 and future releases such as
-Windows 11. Parts of this add-on will still refer to the original add-on
-name.
+Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
+nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows
+10:tä sekä tulevia versioita, kuten Windows 11:tä. Lisäosassa viitataan
+vielä osittain vanhaan nimeen.
 
-This add-on is a collection of app modules for various modern Windows apps,
-as well as enhancements and fixes for certain controls found in Windows 10
-and later.
+Tämä lisäosa on kokoelma sovellusmoduuleita moderneille
+Windows-sovelluksille sekä laajennuksia ja korjauksia tietyille säätimille
+Windows 10:ssä ja uudemmissa.
 
 Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
@@ -33,18 +33,21 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later. For best
-  results, use the add-on with latest Windows release (Windows 10 21H1/build
-  19043).
-* Although installation is possible, this add-on does not support Windows
-  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
-* Support for Windows 11 is experimental, and some features will not work
-  (see relevant entries for details).
+* Tämä lisäosa edellyttää Windows 10:n versiota 20H2 (koontiversio 19042)
+  tai uudempaa. Käytä parhaan käyttökokemuksen varmistamiseksi Windows 10:n
+  viimeisintä vakaata versiota (21H1/koontiversio 19043).
+* Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
+  Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
+* Windows 11:n tuki on kokeellinen, eivätkä kaikki ominaisudet toimi (katso
+  lisätietoja asianmukaisista kohdista). Varoitusvalintaikkuna näytetään,
+  jos yrität asentaa tämän lisäosan vakaita versioita Windows 11:een ennen
+  yleistä saatavuutta.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support unsupported
-  Windows releases such as old Windows 10 versions, or changes were made to
-  Windows and apps that makes entries no longer applicable.
+* Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
+  sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue tuen
+  piiristä poistuneita Windowseja, kuten vanhoja 10:n versioita, tai eivät
+  ole enää käyttökelpoisia Windowsiin ja sovelluksiin tehtyjen muutosten
+  vuoksi.
 * Jotkin sovellukset tukevat kompaktia peitetilaa (esim. Laskimessa Aina
   päällimmäisenä), joka ei toimi oikein NVDA:n massamuistiversion kanssa.
 
@@ -54,27 +57,27 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Yleistä
 
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
-  suoritettaessa. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
+  suoritettaessa, mukaan lukien tilanteet, joissa ehdotusten määrä muuttuu
+  haun edistyessä. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
   -asetuksella Objektien lukeminen -paneelista NVDA:n asetuksista.
-* When searching in Start menu or File Explorer in Windows 10 1909 (November
-  2019 Update) and later, instances of NVDA announcing search results twice
-  when reviewing results are less noticeable, which also makes braille
-  output more consistent when reviewing items.
+* NVDA puhuu nyt hakua suoritettaessa vähemmän hakutuloksia kahdesti
+  Käynnistä-valikossa tai Resurssienhallinnassa versiossa 1909 (November
+  2019 -päivitys) ja uudemmissa, mikä tekee lisäksi
+  pistekirjoitustulosteesta yhdenmukaisempaa kohteita tarkasteltaessa.
 * Seuraavat UIA-tapahtumat tunnistetaan NVDA:n tarjoamien
   UIA-tapahtumakäsittelijöiden lisäksi: vetämisen aloitus, vetämisen
   peruutus, vetäminen suoritettu, vetämisen kohteeseen siirtyminen,
-  vetämisen kohteesta poistuminen, vetämisen kohde pudotettu. Näitä
-  tapahtumia seurataan, kun NVDA:n lokitasoksi on määritetty
-  "virheenkorjaus", ja UIA-ilmoitustapahtuma ilmaistaan virheäänellä, mikäli
-  ilmoitukset tulevat muualta kuin aktiivisesta sovelluksesta. Jotkin
-  tapahtumat tarjoavat lisätietoja, kuten elementtien määrä ohjain kohteelle
-  -tapahtumalla, elementin tila tilan muutos -tapahtumalla sekä kohteen
-  teksti kohteen tila -tapahtumalla.
+  vetämisen kohteesta poistuminen, vetämisen kohde pudotettu, asettelu
+  mitätöity. Näitä tapahtumia seurataan, kun NVDA:n lokitasoksi on
+  määritetty "virheenkorjaus", ja UIA-ilmoitustapahtuma ilmaistaan
+  virheäänellä, mikäli ilmoitukset tulevat muualta kuin aktiivisesta
+  sovelluksesta. NVDA:han sisäänrakennettuja tapahtumia, kuten nimen muutos
+  ja ohjain tapahtumille seurataan Event Tracker -nimisestä lisäosasta.
 * On mahdollista seurata vain tiettyjä tapahtumia ja/tai tietyistä
   sovelluksista tulevia tapahtumia.
-* When opening, closing, reordering (Windows 11), or switching between
-  virtual desktops, NVDA will announce active virtual desktop name (desktop
-  2, for example).
+* NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
+  avattaessa, suljettaessa, uudelleenjärjestettäessä (Windows 11) tai
+  siirryttäessä niiden välillä.
 * NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
   suuntaa vaihdettaessa.
 * Kun Käynnistä-valikon ruutuja tai Toimintokeskuksen pikatoimintoja
@@ -96,14 +99,14 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Cortana
 
-Most items are applicable when using Cortana Conversations (Windows 10 2004
-and later).
+Useimpia kohtia sovelletaan Cortana-keskusteluja käytettäessä (Windows 10:n
+versio 2004 ja uudemmat).
 
 * Cortanan tekstimuotoiset vastaukset puhutaan useimmissa tilanteissa.
 * NVDA on hiljaa puhuttaessa Cortanalle mikrofonin välityksellä.
-* In Windows 10 1909 (November 2019 Update) and later, modern search
-  experience in File Explorer powered by Windows Search user interface is
-  supported.
+* Modernia Windows-haun käyttöliittymän voimalla toimivaa
+  resurssienhallinnan hakukokemusta tuetaan versiossa 1909 (marraskuun 2019
+  päivitys) ja uudemmissa.
 
 ## Sähköposti
 
@@ -127,27 +130,31 @@ and later).
 
 * Sovellusten nimet näytetään oikein päivitettävien sovellusten luettelossa
   päivitystarkistuksen jälkeen.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress (does not work properly in updated
-  Microsoft Store in Windows 11).
+* NVDA ilmoittaa tuotteen nimen ja latauksen edistymisen sisältöä, kuten
+  sovelluksia ja elokuvia ladattaessa (ei toimi oikein päivitetyssä Windows
+  11:n Microsoft Storessa).
 
 ## Moderni näppäimistö
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
-supports updated input experience panel in Windows 11.
+Näitä ovat emojipaneeli, leikepöydän historia, sanelu/puhekirjoitus,
+ehdotukset syötettäessä tekstiä fyysisellä näppäimistöllä sekä modernin
+syöttömenetelmän editorit tietyille kielille. Ota käyttöön emojeita
+tarkasteltaessa Unicode-konsortion datan asetus NVDA:n puheasetuksista
+parhaan kokemuksen saamiseksi, ja aseta symbolitasoksi "jotain" tai
+korkeampi. Kun liität leikepöydän historiasta, liitä valittu kohde
+painamalla välilyöntinäppäintä Enterin sijaan. NVDA tukee lisäksi
+päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 
 * NVDA ei enää sano leikepöydän historiaa avattaessa joissakin tilanteissa
   "leikepöytä", kun leikepöydällä on kohteita.
-* On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA
-  will no longer appear to do nothing when emoji panel opens.
-* When an emoji group (including kaomoji and symbols group in Windows 10
-  1903 or later) is selected, NVDA will no longer move navigator object to
-  certain emojis.
-* Added support for updated input experience panel (combined emoji panel and
-  clipboard history) in Windows 11.
+* Emojipaneelin avautuessa ei enää näytä siltä, että NVDA  ei tee mitään
+  joissakin järjestelmissä, joissa on asennettuna Windows 10:n versio 1903
+  (May 2019 -päivitys) tai uudempi.
+* Kun emojiryhmä (mukaan lukien kaomoji ja symboliryhmä Windows 10:n
+  versiossa 1903 tai uudemmissa) valitaan, NVDA ei enää siirrä
+  navigointiobjektia tiettyihin emojeihin.
+* Lisätty tuki Windows 11:n päivitetylle syöttökokemuksen paneelille
+  (yhdistetty emojipaneeli ja leikepöydän historia).
 
 ## Ihmiset
 
@@ -162,10 +169,10 @@ supports updated input experience panel in Windows 11.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
 * Windows Updaten muistutusvalintaikkuna tunnistetaan asianmukaisesti
   valintaikkunaksi.
-* Odd control labels seen in certain Windows installations has been
-  corrected.
-* NVDA will announce the name of the optional quality update link if
-  present, typically named "download and install now".
+* Joissakin Windows-asennuksissa näkyvät erikoiset säädinten nimet on
+  korjattu.
+* NVDA puhuu valinnaisen laatupäivityksen nimen linkin (tyypillisesti "Lataa
+  ja asenna nyt"), mikäli se on näkyvissä.
 
 ## Sää
 

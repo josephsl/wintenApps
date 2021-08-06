@@ -33,19 +33,22 @@ tiết của mỗi ứng dụng để biết them):
 
 Lưu ý:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later. For best
-  results, use the add-on with latest Windows release (Windows 10 21H1/build
-  19043).
-* Although installation is possible, this add-on does not support Windows
-  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Add-on này yêu cầu Windows 10 phiên bản 20H2 (build 19042) trở lên. Tốt
+  nhất, hay dùng add-on với bản Windows 10 mới nhất (21H1/build 19043).
+* Dù vẫn có thể cài đặt được, add-on này không hỗ trợ Windows 10 Enterprise
+  LTSC (Long-Term Servicing Channel) và các bản phát hành của Windows
+  Server.
 * Support for Windows 11 is experimental, and some features will not work
-  (see relevant entries for details).
+  (see relevant entries for details). A warning dialog will be shown if
+  trying to install stable versions of this add-on on Windows 11 prior to
+  general availability.
 * Vài tính năng của add-on đã hoặc sẽ là một phần tính năng của trình đọc
   màn hình NVDA.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support unsupported
-  Windows releases such as old Windows 10 versions, or changes were made to
-  Windows and apps that makes entries no longer applicable.
+* Với những thành phần không được liệt kê bên dưới, bạn có thể xem như các
+  tính năng đó đã là một phần tính năng của NVDA, không phải áp dụng như
+  add-on không hỗ trợ cho các bản phát hành Windows cũ như Windows 10 bản cũ
+  hay các thay đổi đã được thực hiện cho Windows và các ứng dụng này không
+  còn được áp dụng.
 * Vài ứng dụng hỗ trợ chế độ compact overlay (luon chạy ở trên như
   Calculator), và chế độ này sẽ không hoạt động tốt với các phiên bản chạy
   trực tiếp của NVDA.
@@ -55,23 +58,22 @@ for add-on releases][3] .
 
 ## Chung
 
-* NVDA có thể thông báo số gợi ý đếm được khi thực hiện tìm kiếm trong đa số
-  trường họp. Tùy chọn này được điều khiển bởi "Thông báo thông tin vị trí
-  đối tượng" trong bảng điều khiển trình bày đối tượng, tìm thấy trong cài
-  đặt của NVDA.
-* When searching in Start menu or File Explorer in Windows 10 1909 (November
-  2019 Update) and later, instances of NVDA announcing search results twice
-  when reviewing results are less noticeable, which also makes braille
-  output more consistent when reviewing items.
-* Ngoài UIA event handlers cung cấp bởi NVDA, các sự kiện UIA sau đây được
-  nhận dạng: drag start, drag cancel, drag complete, drop target drag enter,
-  drop target drag leave, drop target dropped. Với cấp độ log của NVDA là
-  sửa lỗi, các sự kiện này sẽ được theo dõi, và với các thông báo sự kiện
-  UIA, một âm báo lỗi sẽ được phát nếu thông báo đến từ nơi khác chứ không
-  phải ứng dụng đang hoạt động. Vài sự kiện sẽ cung cấp them các thông tin
-  như số thành phần đếm được trong điều khiển của sự kiện, trạng thái của
-  thành phần hay sự kiện thay đổi trạng thái, và văn bản thành phần cho sự
-  kiện trạng thái thành phần.
+* NVDA có thể thông báo số gợi ý đếm được trong đa số trường họp, bao gồm
+  thay đổi số gọi ý đếm được  khi thực hiện tìm kiếm. Tùy chọn này được điều
+  khiển bởi "Thông báo thông tin vị trí đối tượng" trong bảng điều khiển
+  trình bày đối tượng trong cài đặt của NVDA.
+* Khi tìm kiếm trên Start menu hoặc File Explorer trong Windows 10 1909 (bản
+  cập nhật tháng 11/2019) trở lên, việc NVDA thông báo kết quả tìm kiếm hai
+  lần khi duyệt qua chúng sẽ giảm đi. Nó cũng làm cho việc xem các thành
+  phần ở đầu ra chữ nổi được thể hiện hợp lý hơn.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drop target
+  drag enter, drop target drag leave, drop target dropped, layout
+  invalidated. With NVDA's log level set to debug, these events will be
+  tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active
+  app. Events built into NVDA such as name change and controller for events
+  will be tracked from an add-on called Event Tracker.
 * Đã có thể chỉ theo dõi một số sự kiện nhất định và / hoặc các sự kiện từ
   một ứng dụng nhất định.
 * When opening, closing, reordering (Windows 11), or switching between
@@ -136,10 +138,12 @@ and later).
 
 ## Modern keyboard
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+This includes emoji panel, clipboard history, dictation/voice typing,
+hardware input suggestions, and modern input method editors for certain
+languages. When viewing emojis, for best experience, enable Unicode
+Consortium setting from NVDA's speech settings and set symbol level to
+"some" or higher. When pasting from clipboard history in Windows 10, press
+Space key instead of Enter key to paste the selected item. NVDA also
 supports updated input experience panel in Windows 11.
 
 * Khi mở lịch sử khay nhớ tạm, NVDA không còn đọc "clipboard" khi có nội

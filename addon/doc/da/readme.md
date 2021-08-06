@@ -39,7 +39,9 @@ Bemærkninger:
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
 * Understøttelse for Windows 11 er eksperimentel, og nogle funktioner
-  fungerer ikke (se relevante afsnit for detaljer).
+  fungerer ikke (se relevante afsnit for detaljer). In advarsel vil blive
+  vist, hvis du forsøger at installere denne tilføjelse, før Windows 11 er
+  frit tilgængelig.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
 * For funktioner, der ikke er anført nedenfor, kan du antage, at funktioner
@@ -71,7 +73,10 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   UIA-hændelse stammer fra andet end den aktuelt fokuserede app. Nogle
   hændelser angiver yderligere oplysninger, såsom antal af elementer i
   kontrolhændelsen, status for elementet ved en hændelse, hvor status
-  ændres, samt emnetekst for hændelser, hvor der anmodes om emnestatus.
+  ændres, samt emnetekst for hændelser, hvor der anmodes om
+  emnestatus. Hændelser, der kommer fra NVDA, såsom name change og
+  controller for events, vil blive sporet af en tilføjelse kaldet "Event
+  Tracker".
 * Det er muligt at overvåge specifikke hændelser og/eller hændelser, der
   kommer fra specifikke apps.
 * Når åbning, lukning, ændring af rækkefølge (Windows 11) eller Skift mellem
@@ -142,8 +147,10 @@ Dette inkluderer emoji-panelet, historik for udklipsholderen, diktering,
 forslag i forhold til hardwareinput og moderne Input Methodf Editor for
 visse sprog. Når du ser emojier, skal du for at få den bedste oplevelse
 aktivere Unicode Consortium-indstillingen fra NvDAs taleindstillinger og
-indstille tegnsætningsniveauet til "nogle" eller højere. NVDA understøtter
-også det opdaterede inputoplevelsespanel i Windows 11.
+indstille tegnsætningsniveauet til "nogle" eller højere. Når du skal
+indstille fra historikken i Windows 10, skal du bruge mellemrumstasten i
+stedet for enter. NVDA understøtter også det opdaterede inputoplevelsespanel
+i Windows 11.
 
 * NVDA vil ikke længere annoncere "Udklipsholder", når der er elementer i
   udklipsholderen under nogle omstændigheder.

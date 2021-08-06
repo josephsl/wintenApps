@@ -39,7 +39,9 @@ Note:
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Support for Windows 11 is experimental, and some features will not work
-  (see relevant entries for details).
+  (see relevant entries for details). A warning dialog will be shown if
+  trying to install stable versions of this add-on on Windows 11 prior to
+  general availability.
 * Alcune caratteristiche di questo componente aggiuntivo sono o diventeranno
   parte di NVDA.
 * For entries not listed below, you can assume that features are part of
@@ -55,22 +57,22 @@ riferimento al documento [changelogs for add-on releases][3].
 
 ## Generale
 
-* Nella maggior parte dei casi, NVDA può annunciare il numero dei
-  suggerimenti quando si esegue una ricerca. Questa funzione è controllata
-  dall'opzione "leggi le informazioni sulla posizione dell'oggetto" nella
-  finestra presentazioni oggetti, presente nelle impostazioni di NVDA.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses. This
+  option is controlled by "Report object position information" in Object
+  presentation panel found in NVDA settings.
 * When searching in Start menu or File Explorer in Windows 10 1909 (November
   2019 Update) and later, instances of NVDA announcing search results twice
   when reviewing results are less noticeable, which also makes braille
   output more consistent when reviewing items.
 * In addition to UIA event handlers provided by NVDA, the following UIA
   events are recognized: drag start, drag cancel, drag complete, drop target
-  drag enter, drop target drag leave, drop target dropped. With NVDA's log
-  level set to debug, these events will be tracked, and for UIA notification
-  event, a debug tone will be heard if notifications come from somewhere
-  other than the currently active app. Some events will provide additional
-  information such as element count in controller for event, state of the
-  element for state change event, and item text for item status event.
+  drag enter, drop target drag leave, drop target dropped, layout
+  invalidated. With NVDA's log level set to debug, these events will be
+  tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active
+  app. Events built into NVDA such as name change and controller for events
+  will be tracked from an add-on called Event Tracker.
 * E' possibile tracciare solo specifici eventi e/o eventi provenienti solo
   da applicazioni specifiche.
 * When opening, closing, reordering (Windows 11), or switching between
@@ -136,10 +138,12 @@ and later).
 
 ## Tastiera moderna
 
-This includes emoji panel, clipboard history, dictation, hardware input
-suggestions, and modern input method editors for certain languages. When
-viewing emojis, for best experience, enable Unicode Consortium setting from
-NVDA's speech settings and set symbol level to "some" or higher. Also, NVDA
+This includes emoji panel, clipboard history, dictation/voice typing,
+hardware input suggestions, and modern input method editors for certain
+languages. When viewing emojis, for best experience, enable Unicode
+Consortium setting from NVDA's speech settings and set symbol level to
+"some" or higher. When pasting from clipboard history in Windows 10, press
+Space key instead of Enter key to paste the selected item. NVDA also
 supports updated input experience panel in Windows 11.
 
 * In alcune circostanze, quando si apre lo storico degli appunti, NVDA non
