@@ -42,9 +42,11 @@ Notes:
 * Bien que l'installation soit possible, cette extension ne prend pas en
   charge les versions Windows Enterprise LTSC (Long-Term Servicing Channel)
   et Windows Server.
-* La prise en charge de Windows 11 est expérimentale et certaines
-  fonctionnalités ne fonctionneront pas (voir les entrées pertinentes pour
-  plus de détails).
+* La prise en charge de Windows 11 est expérimentale et certaines choses ne
+  fonctionneront pas (voir les entrées concernées pour plus de détails). Une
+  boîte de dialogue d'avertissement s'affichera si vous essayez d'installer
+  des versions stables de cette extension sur Windows 11 avant la
+  disponibilité officielle.
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
 * Pour les entrées non répertoriées ci-dessous, vous pouvez supposer que les
@@ -63,27 +65,24 @@ l'extension][3].
 ## Générale
 
 * NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
-  majorité des cas. Cette option est contrôlée par "Annoncer le rang de
-  l'objet dans une liste" dans le dialogue Présentation des Objets.
+  majorité des cas, y compris lorsque ce nombre change au fur et à mesure
+  que la recherche progresse. Cette aspect est contrôlé par l'option
+  Annoncer le rang de l'objet dans une liste", dans la catégorie
+  "présentation des objets" dans les paramètres NVDA.
 * Lors de la recherche dans le menu Démarrer ou l'Explorateur de fichiers
   dans la version 1909 (November 2019 Update) et ultérieure, les instances
   de NVDA annonce des résultats de recherche deux fois lorsque les résultats
   en révision sont moins visibles, ce qui rend également la sortie braille
   plus cohérente lors de la révision des éléments.
-* En plus des événements UIA supportés par NVDA, les événements UIA suivants
-  sont reconnus : contrôleur pour, début de déplacement, annulation de
-  déplacement, déplacement complet, déplacement de la sible entrer,
-  déplacement de la sible en direct, déplacement de la sible glissée,
-  élément sélectionné, état de l'élément, changement de région en direct,
-  notification, alerte système, suggestion ouverte, fenêtre ouverte. Avec
-  NVDA configuré pour être exécuté avec le journal activé en mode débogage
-  ces événements seront suivis et pour l'événement de notification UIA, une
-  tonalité de débogage sera entendue si les notifications proviennent d'un
-  endroit autre que l'application actuellement active. Certains événements
-  fourniront des informations complémentaires telles que le nombre
-  d'éléments dans le contrôleur pour l'événement, le changement de l'état de
-  l'élément de l'événement et la position du texte de l'élément pour l'état
-  de l'événement de l'élément.
+* En plus de des événements UIA déjà gérés par NVDA, les événements UIA
+  suivants sont reconnus : drag start, drag cancel, drag complete, drop
+  target drag enter, drop target drag leave, drop target dropped, layout
+  invalidated. Avec le niveau de journal de NVDA réglé sur débogage, ces
+  événements seront suivis et pour les événements de notification UIA, un
+  son de débogage sera entendue si les notifications proviennent d'une
+  application autre que celle actuellement active. Les événements intégrés à
+  NVDA, comme le changement de nom et le contrôleur d'événements, seront
+  suivis à partir d'une extension appelé Event Tracker.
 * Il est possible de faire le suivi seul des événements spécifiques et / ou
   des événements à venir à partir des applications spécifiques.
 * Lors de l'ouverture, de la fermeture, de la réorganisation (Windows 11)
@@ -157,13 +156,15 @@ Conversations (Windows 10 version 2004 et ultérieures).
 
 ## Clavier moderne
 
-Cela inclut le panneau des emojis, l'historique du presse-papiers, la
-dictée, les suggestions de saisie matérielle et les éditeurs de méthodes de
-saisie modernes pour certaines langues. pour une meilleure expérience lors
-de la visualisation des emojis, activez le paramètre Consortium Unicode à
-partir des paramètres de parole de NVDA et réglez le niveau des symboles sur
-"quelques-uns" ou plus. En outre, NVDA prend en charge le panneau
-d'expérience de saisie mis à jour dans Windows 11.
+Cela inclut le panneau d'emoji, l'historique du presse-papiers, la dictée/la
+saisie vocale, les suggestions d'entrée matérielle et les éditeurs de
+méthodes d'entrée modernes pour certaines langues. Lorsque vous affichez des
+emojis, pour une expérience optimale, activez le paramètre Consortium
+Unicode dans les paramètres vocaux de NVDA et définissez le niveau des
+symboles sur "certains" ou plus. Lors du collage à partir de l'historique du
+presse-papiers dans Windows 10, appuyez sur la touche Espace au lieu de la
+touche Entrée pour coller l'élément sélectionné. NVDA prend également en
+charge le panneau d'expérience de saisie mis à jour dans Windows 11.
 
 * Lors de l'ouverture de l'historique du presse-papiers, NVDA n'annoncera
   "presse-papiers" quand il y a des éléments dans le presse-papiers dans

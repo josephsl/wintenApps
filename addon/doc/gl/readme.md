@@ -40,7 +40,9 @@ Notas:
   Enterprise LTSC (Long-Term Servicing Channel) nin versións de Windows
   Server.
 * O soporte para windows 11 é experimental, e algunhas características non
-  funcionarán (ver entradas relevantes para detalles).
+  funcionarán (ver entradas relevantes para detalles). Amosarase un diálogo
+  de advertencia se se trata de instalar versións estables deste complemento
+  en Windows 11 antes da súa dispoñibilidade xeral.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
 * Para entradas non listadas a continuación, podes asumir que as
@@ -57,7 +59,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
 ## Xeral
 
 * NVDA pode anunciar o número de suxestións cando se realiza unha procura na
-  maioría dos casos. Esta opción contrólase por "Anunciar información de
+  maioría dos casos, incluído cando o número de suxestións cambia conforme
+  progresa a procura. Esta opción contrólase por "Anunciar información de
   posición do obxecto" no panel Presentación de Obxectos ubicado nas opcións
   do NVDA.
 * Ao buscar no menú inicio ou no explorador de arquivos en windows 10 1909
@@ -67,12 +70,12 @@ documento [rexistros de trocos para publicacións de complementos][3].
 * Ademais dos manexadores de eventos UIA proporcionados por NVDA,
   recoñécense os seguintes eventos UIA: drag start, drag cancel, drag
   complete, drop target drag enter, drop target drag leave, drop target
-  dropped. Co nivel de rexistro de NVDA configurado como depuración, estes
-  eventos seguiranse, e no caso de eventos UIA notification oirase un ton de
-  depuración se as notificacións veñen de calquera lugar que non sexa a app
-  actualmente activa. Algúns eventos proporcionarán información adicional
-  como o contador de elementos en eventos controlled for, estado do elemento
-  en eventos state change, e o texto do elemento para eventos item status.
+  dropped, layout invalidated. Co nivel de rexistro de NVDA configurado como
+  depuración, estes eventos seguiranse, e no caso de eventos UIA
+  notification oirase un ton de depuración se as notificacións veñen de
+  calquera lugar que non sexa a app actualmente activa. Eventos incluídos en
+  NVDA como os eventos name change e controller for monitorizaranse por
+  parte dun complemento denominado Event Tracker.
 * É posible o seguimento só de eventos específicos e/ou de eventos provintes
   de aplicacións específicas.
 * Cando se abran, pechen, reordenen (Windows 11), ou se conmute entre
@@ -138,12 +141,13 @@ A maioría dos elementos aplican se se usa Cortana Conversations (Windows 10
 
 ## Teclado Moderno
 
-Isto inclúe o panel de Emoji, o historial do portapapeis, o dictado, as
-suxestións de entrada por hardware, e os editores co método de entrada
-moderna para certas linguas. Ao ver emojis, para unha mellor experiencia,
-habilita a opción Unicode Consortium nos axustes de voz do NvDA e establece
-o nivel de símbolos en "algunha" ou superior. Ademais, NVDA soporta o panel
-de experiencia de entrada actualizado na compilación 21296 e posterior. NVDA
+Isto inclúe o panel de Emoji, o historial do portapapeis, o
+dictado/escritura por voz, as suxestións de entrada por hardware, e os
+editores co método de entrada moderna para certas linguas. Ao ver emojis,
+para unha mellor experiencia, habilita a opción Unicode Consortium nos
+axustes de voz do NvDA e establece o nivel de símbolos en "algunha" ou
+superior. Ao pegar dende o historial do portapapeis en Windows 10, preme a
+tecla Espacio no canto de Intro para pegar o elemento seleccionado. NVDA
 tamén soporta o panel de experiencia de entrada actualizado en Windows 11.
 
 * Ao abrir o historial do portapapeis, NVDA xa non anunciará "portapapeis"

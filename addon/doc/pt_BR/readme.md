@@ -41,8 +41,10 @@ Notas:
 * Embora a instalação seja possível, este complemento não oferece suporte
   para Windows Enterprise LTSC (Long-Term Servicing Channel — Canal de
   Manutenção de Longo Prazo) e versões do Windows Server.
-* O suporte para Windows 11 é experimental e alguns recursos não funcionarão
-  (consulte as entradas relevantes para obter detalhes).
+* Support for Windows 11 is experimental, and some features will not work
+  (see relevant entries for details). A warning dialog will be shown if
+  trying to install stable versions of this add-on on Windows 11 prior to
+  general availability.
 * Alguns recursos do complemento são ou farão parte do leitor de tela NVDA.
 * * Para entradas não listadas abaixo, você pode presumir que os recursos
   fazem parte do NVDA, não são mais aplicáveis, pois o complemento não
@@ -58,25 +60,23 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 ## Geral
 
-* NVDA pode anunciar a contagem de sugestões ao realizar uma pesquisa na
-  maioria dos casos. Essa opção é controlada por "Anunciar informações de
-  posição do objeto" no painel de Apresentação de objetos, encontrado nas
-  configurações do NVDA.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses. This
+  option is controlled by "Report object position information" in Object
+  presentation panel found in NVDA settings.
 * Ao pesquisar no menu Iniciar ou no Explorador de arquivos do Windows 10
   1909 (Atualização de Novembro de 2019) e posteriores, casos de NVDA
   anunciando resultados de pesquisa duas vezes ao explorar resultados são
   menos perceptíveis, o que também torna a saída em braille mais consistente
   ao explorar os itens.
-* Além dos manipuladores de eventos UIA (Automação da Interface do Usuário)
-  fornecidos pelo NVDA, os seguintes eventos UIA são reconhecidos: drag
-  start, drag cancel, drag complete, drop target drag enter, drop target
-  drag leave, drop target dropped. Com o nível de log do NVDA definido para
-  depuração, esses eventos serão rastreados e, para eventos de notificação
-  de UIA, um tom de depuração será ouvido se as notificações vierem de outro
-  lugar que não o aplicativo atualmente ativo. Alguns eventos fornecerão
-  informações adicionais, como contagem de elemento no controlador para
-  evento, estado do elemento para evento de mudança de estado e texto do
-  item para evento de status do item.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag start, drag cancel, drag complete, drop target
+  drag enter, drop target drag leave, drop target dropped, layout
+  invalidated. With NVDA's log level set to debug, these events will be
+  tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active
+  app. Events built into NVDA such as name change and controller for events
+  will be tracked from an add-on called Event Tracker.
 * É possível rastrear apenas eventos específicos e/ou eventos provenientes
   de aplicativos específicos.
 * Ao abrir, fechar, reordenar (Windows 11) ou alternar entre áreas de
@@ -143,12 +143,13 @@ A maioria dos itens são aplicáveis ao usar Cortana Conversations (Windows 10
 
 ## Teclado moderno
 
-Isso inclui painel de emoji, histórico da área de transferência, ditado,
-sugestões de entrada de hardware e editores de métodos de entrada modernos
-para determinados idiomas. Ao visualizar emojis, para melhor experiência,
-habilite a configuração do Consórcio Unicode nas configurações de fala do
-NVDA e defina o grau de símbolos para "pouco" ou superior. Além disso, o
-NVDA suporta painel de experiência de entrada atualizado no Windows 11.
+This includes emoji panel, clipboard history, dictation/voice typing,
+hardware input suggestions, and modern input method editors for certain
+languages. When viewing emojis, for best experience, enable Unicode
+Consortium setting from NVDA's speech settings and set symbol level to
+"some" or higher. When pasting from clipboard history in Windows 10, press
+Space key instead of Enter key to paste the selected item. NVDA also
+supports updated input experience panel in Windows 11.
 
 * Ao abrir o histórico da área de transferência, o NVDA não anunciará mais a
   "área de transferência" quando houver itens na área de transferência em

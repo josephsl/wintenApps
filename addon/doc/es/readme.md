@@ -42,7 +42,9 @@ Notas:
   Enterprise LTSC (canal de servicio a largo plazo) ni las versiones de
   Windows Server.
 * El soporte de Windows 11 es experimental, y algunas características no
-  funcionarán (consulta las entradas relevantes para más detalles).
+  funcionarán (consulta las entradas relevantes para más detalles). Se
+  mostrará un diálogo de advertencia si intentas instalar versiones estables
+  de este complemento en Windows 11 antes de su disponibilidad general.
 * Algunas de las características del complemento son o serán parte del
   lector de pantalla NVDA.
 * Para las entradas que no se enumeren a continuación, puedes asumir que las
@@ -59,9 +61,11 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 ## General
 
-* NVDA puede anunciar cuenta de sugerencias cuando se realiza una búsqueda
-  en la mayoría de casos. Esta opción se controla por "Anunciar información
-  de posición del objeto" en el panel Presentación de Objetos.
+* NVDA puede anunciar la cantidad de sugerencias cuando se realiza una
+  búsqueda en la mayoría de casos, incluyendo cuando la cantidad de
+  sugerencias cambia según progresa la búsqueda. Esta opción se controla por
+  "Anunciar información de posición del objeto" en el panel Presentación de
+  Objetos disponible en las opciones de NVDA.
 * Al buscar en el menú Inicio o el explorador de archivos de Windows 10
   versión 1909 (actualización de noviembre de 2019) y posteriores, NVDA ya
   no anunciará tanto los resultados de búsqueda dos veces al revisarlos, lo
@@ -70,13 +74,12 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * Además de los manejadores de eventos UIA proporcionados por NVDA, se
   reconocen los siguientes eventos UIA: drag start, drag cancel, drag
   complete, drop target drag enter, drop target drag leave, drop target
-  dropped. Con NVDA configurado para ejecutarse con el registro de
-  depuración habilitado, estos eventos se seguirán, y se oirá un tono de
-  depuración para el evento UIA notification si las notificaciones vienen de
-  un lugar distinto a la aplicación actual. Algunos eventos proporcionarán
-  información adicional, como la cantidad de elementos en el evento
-  Controller for, el estado del elemento en el evento State change, y el
-  texto del elemento en el evento Item status.
+  dropped, Layout invalidated. Con NVDA configurado para ejecutarse con el
+  registro de depuración habilitado, estos eventos se seguirán, y se oirá un
+  tono de depuración para el evento UIA notification si las notificaciones
+  vienen de un lugar distinto a la aplicación actual. Los eventos
+  incorporados en NVDA, como name change y controller for, se rastrearán
+  desde un complemento llamado Rastreador de eventos.
 * Es posible seguir sólo eventos específicos y/o eventos que vienen de
   aplicaciones específicas.
 * Al abrir, cerrar, reordenar (Windows 11) o cambiar entre escritorios
@@ -145,13 +148,13 @@ La mayoría de elementos se aplican al usar las conversaciones de Cortana
 
 ## Teclado Moderno
 
-Esto incluye el panel de emojis, historial del portapapeles, dictado,
-sugerencias de entrada por hardware, y los editores modernos de métodos de
-entrada para ciertos idiomas. Al visualizar emojis, para una mejor
-experiencia, activa la opción del consorcio Unicode desde las opciones de
-voz de NVDA y configura el nivel de símbolos en "alguno" o más alto. NVDA
-también soporta el panel actualizado de experiencia de entrada de Windows
-11.
+Esto incluye el panel de emojis, historial del portapapeles, dictado /
+escritura por voz, sugerencias de entrada por hardware, y los editores
+modernos de métodos de entrada para ciertos idiomas. Al visualizar emojis,
+para una mejor experiencia, activa la opción del consorcio Unicode desde las
+opciones de voz de NVDA y configura el nivel de símbolos en "alguno" o más
+alto. NVDA también soporta el panel actualizado de experiencia de entrada de
+Windows 11.
 
 * Al abrir el historial del portapapeles, NVDA ya no dirá "portapapeles"
   cuando haya elementos en el portapapeles bajo algunas circunstancias.
