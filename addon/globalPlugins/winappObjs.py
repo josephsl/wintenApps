@@ -9,7 +9,8 @@ from typing import Optional, Any
 from comtypes import COMError
 import globalPluginHandler
 import ui
-from NVDAObjects.UIA import UIA, Dialog
+# Temporary: catch Flake8 F401 (Dialog is imported but unused) as adding additional dilaogs is deprecated.
+from NVDAObjects.UIA import UIA, Dialog  # NOQA: F401
 import api
 import config
 import queueHandler
@@ -41,7 +42,8 @@ W10Events: dict[int, str] = {
 	UIAHandler.UIA_LayoutInvalidatedEventId: "UIA_layoutInvalidated",
 }
 
-# Additional dialogs not recognized by NVDA itself.
+# Deprecated: additional dialogs not recognized by NVDA itself.
+# Windows and apps were updated in recent years to expose dialogs properly.
 UIAAdditionalDialogClassNames: list[str] = []
 
 
