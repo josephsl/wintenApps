@@ -12,7 +12,6 @@ This add-on is a collection of app modules for various modern Windows apps, as w
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
 * Calculator (modern)
-* Calendar
 * Cortana (Conversations)
 * Mail
 * Maps
@@ -48,10 +47,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## Calculator
 
 * NVDA will no longer announce graphing calculator screen message twice.
-
-## Calendar
-
-* NVDA no longer announces "edit" or "read-only" in message body and other fields.
 
 ## Cortana
 
