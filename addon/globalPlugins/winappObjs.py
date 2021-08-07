@@ -9,8 +9,7 @@ from typing import Optional, Any
 from comtypes import COMError
 import globalPluginHandler
 import ui
-# Temporary: catch Flake8 F401 (Dialog is imported but unused) as adding additional dilaogs is deprecated.
-from NVDAObjects.UIA import UIA, Dialog  # NOQA: F401
+from NVDAObjects.UIA import UIA, Dialog
 import api
 import config
 import queueHandler
@@ -145,9 +144,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Some dialogs, although listed as a dialog thanks to UIA class name,
 		# does not advertise the proper role of dialog.
 		# No longer necessary due to Windows an app updates and improved dialog markup.
-		"""if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
+		if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
-			return"""
+			return
 		# Recognize suggestions list view firing layout invalidated event.
 		# Although certain list views such as languages list in Settings app fire layout invalidated event,
 		# they are not true suggestions list views.
