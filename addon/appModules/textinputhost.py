@@ -139,21 +139,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		childAutomationId = firstChild.UIAAutomationId
 		self._symbolsGroupSelected = False
 		# Emoji panel in build 17666 and later (unless this changes).
-		if childAutomationId == "TEMPLATE_PART_ExpressionGroupedFullView":
-			self._emojiPanelJustOpened = True
-			# On some systems (particularly non-English builds of Windows 10 1903 and later),
-			# there is something else besides grouping controls, so another child control must be used.
-			emojisList = firstChild.children[-2]
-			if emojisList.UIAAutomationId != "TEMPLATE_PART_Items_GridView":
-				emojisList = emojisList.previous
-			if emojisList.firstChild and emojisList.firstChild.firstChild:
-				emojiItem = emojisList.firstChild.firstChild
-			# Avoid announcing skin tone modifiers if possible.
-			# For people emoji, the first emoji is actually next to skin tone modifiers list.
-			if emojiItem.UIAAutomationId == "SkinTonePanelModifier_ListView" and emojiItem.next:
-				emojiItem = emojiItem.next
-			eventHandler.queueEvent("UIA_elementSelected", emojiItem)
-			return
+		# See older add-on releases for details.
 		# Clipboard history.
 		# Move to clipboard list so element selected event can pick it up.
 		elif childAutomationId == "TEMPLATE_PART_ClipboardTitleBar":
