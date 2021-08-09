@@ -98,7 +98,6 @@ This includes emoji panel, clipboard history, dictation/voice typing, hardware i
 
 * Certain information such as Windows Update progress is reported automatically, including Storage sense/disk cleanup widget and errors from Windows Update.
 * Progress bar values and other information are no longer announced twice.
-* Windows Update reminder dialog is recognized as a proper dialog.
 * Odd control labels seen in certain Windows installations has been corrected.
 * NVDA will announce the name of the optional quality update link if present, typically named "download and install now".
 
