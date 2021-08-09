@@ -25,11 +25,6 @@ from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import EditableTextWithAutoSelectDetection
 
 
-# Temporary: detect Windows 11.
-# Use build 22000 as cut-off build.
-WIN11 = winVersion.WinVersion(major=10, minor=0, build=22000)
-
-
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
 # And Flake8 and other linters, to.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
@@ -103,7 +98,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
 			imeCandidateItem = firstChild.firstChild.firstChild
 			# In Windows 11, an extra element is located between candidate UI window and items themselves.
-			if winVersion.getWinVer() >= WIN11:
+			if winVersion.getWinVer() >= winVersion.WIN11:
 				# For some odd reason, suggested text is the last element.
 				imeCandidateItem = imeCandidateItem.lastChild
 			localEventHandlerElements.append(imeCandidateItem)
