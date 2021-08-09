@@ -54,7 +54,6 @@ Most items are applicable when using Cortana Conversations (Windows 10 2004 and 
 
 * Textual responses from Cortana are announced in most situations.
 * NVDA will be silent when talking to Cortana via voice.
-* In Windows 10 1909 (November 2019 Update) and later, modern search experience in File Explorer powered by Windows Search user interface is supported.
 
 ## Mail
 
@@ -78,8 +77,6 @@ Most items are applicable when using Cortana Conversations (Windows 10 2004 and 
 
 This includes emoji panel, clipboard history, dictation/voice typing, hardware input suggestions, and modern input method editors for certain languages. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher. When pasting from clipboard history in Windows 10, press Space key instead of Enter key to paste the selected item. NVDA also supports updated input experience panel in Windows 11.
 
-* When opening clipboard history, NVDA will no longer announce "clipboard" when there are items in the clipboard under some circumstances.
-* On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA will no longer appear to do nothing when emoji panel opens.
 * When an emoji group (including kaomoji and symbols group in Windows 10 1903 or later) is selected, NVDA will no longer move navigator object to certain emojis.
 * Added support for updated input experience panel (combined emoji panel and clipboard history) in Windows 11.
 
@@ -91,7 +88,6 @@ This includes emoji panel, clipboard history, dictation/voice typing, hardware i
 
 * Certain information such as Windows Update progress is reported automatically, including Storage sense/disk cleanup widget and errors from Windows Update.
 * Progress bar values and other information are no longer announced twice.
-* Windows Update reminder dialog is recognized as a proper dialog.
 * Odd control labels seen in certain Windows installations has been corrected.
 * NVDA will announce the name of the optional quality update link if present, typically named "download and install now".
 
