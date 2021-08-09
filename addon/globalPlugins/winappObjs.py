@@ -31,7 +31,7 @@ isAddonSupported = winVersion.getWinVer() >= winVersion.WIN10_20H2
 # None at this time
 
 # For convenience.
-W10Events: dict[int, str] = {
+additionalEvents: dict[int, str] = {
 	UIAHandler.UIA_Drag_DragStartEventId: "UIA_dragStart",
 	UIAHandler.UIA_Drag_DragCancelEventId: "UIA_dragCancel",
 	UIAHandler.UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
@@ -122,7 +122,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Use event handler group facility to add more events (properly introduced in NVDA 2020.3).
 		# Use IUIAutomation6 interface directly (Windows 10 1809 or later).
 		addonGlobalEventHandlerGroup = UIAHandler.handler.clientObject.CreateEventHandlerGroup()
-		for event, name in W10Events.items():
+		for event, name in additionalEvents.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
 				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
 				# Global event handler group set must be updated, too.
