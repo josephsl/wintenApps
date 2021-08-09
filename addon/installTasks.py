@@ -32,7 +32,7 @@ def onInstall():
 	# For now only check Windows 10.
 	windowsReleaseSeries = "Windows 10"
 	minimumSupportedRelease = winVersion.WIN10_20H2
-	minimumSupportedReleaseName = "Windows 10 20H2"
+	minimumSupportedReleaseName = minimumSupportedRelease.releaseName
 	addonInstallPossible = currentWinVer >= minimumSupportedRelease
 	if not addonInstallPossible:
 		gui.messageBox(
