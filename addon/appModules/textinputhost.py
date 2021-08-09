@@ -30,10 +30,6 @@ from NVDAObjects.behaviors import EditableTextWithAutoSelectDetection
 WIN11 = winVersion.WinVersion(major=10, minor=0, build=22000)
 
 
-# Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-# Note that pre-refactor attributes will be gone in NVDA 2022.1.
-
-
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
 # And Flake8 and other linters, to.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
@@ -210,12 +206,12 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Return after checking each item so candidate UI and items from Windows 10 can be recognized.
 		if isinstance(obj, UIA):
 			# Candidate item.
-			if obj.role == controlTypes.ROLE_LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
+			if obj.role == controlTypes.Role.LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
 				clsList.insert(0, ImeCandidateItem)  # NOQA: F405
 				return
 			# Candidate UI.
 			elif (
-				obj.role in (controlTypes.ROLE_LIST, controlTypes.ROLE_POPUPMENU)
+				obj.role in (controlTypes.Role.LIST, controlTypes.Role.POPUPMENU)
 				and obj.UIAAutomationId in ("TEMPLATE_PART_CandidatePanel", "IME_Prediction_Window")
 			):
 				clsList.insert(0, ImeCandidateUI)  # NOQA: F405

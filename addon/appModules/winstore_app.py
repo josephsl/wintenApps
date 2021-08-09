@@ -11,17 +11,13 @@ import controlTypes
 from NVDAObjects.UIA import UIA
 
 
-# Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-# Note that the old style will be removed in NVDA 2022.1.
-
-
 class AppModule(appModuleHandler.AppModule):
 
 	def event_NVDAObject_init(self, obj):
 		# Extraneous information announced when going through apps to be updated/installed,
 		# so use a grandchild's name.
 		if (
-			isinstance(obj, UIA) and obj.role == controlTypes.ROLE_LISTITEM
+			isinstance(obj, UIA) and obj.role == controlTypes.Role.LISTITEM
 			and obj.firstChild and obj.firstChild.UIAAutomationId == "InstallControl"
 		):
 			obj.name = obj.firstChild.firstChild.name

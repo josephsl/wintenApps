@@ -31,10 +31,6 @@ RE_PARENT_LISTS = re.compile("|".join([
 ]))
 
 
-# Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-# Note that pre-refactor attributes will be gone in NVDA 2022.1.
-
-
 class WeatherForecastItem(NVDAObject):
 
 	def initOverlayClass(self):
@@ -66,7 +62,7 @@ class AppModule(appModuleHandler.AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if (
-			obj.role == controlTypes.ROLE_LISTITEM
+			obj.role == controlTypes.Role.LISTITEM
 			and RE_PARENT_LISTS.match(obj.parent.UIAAutomationId)
 		):
 			clsList.insert(0, WeatherForecastItem)
@@ -76,9 +72,9 @@ class AppModule(appModuleHandler.AppModule):
 			theId = obj.UIAAutomationId
 		except AttributeError:
 			return
-		if obj.UIAAutomationId == "SideNavigationBar" and obj.role != controlTypes.ROLE_GROUPING:
-			obj.role = controlTypes.ROLE_TABCONTROL
+		if obj.UIAAutomationId == "SideNavigationBar" and obj.role != controlTypes.Role.GROUPING:
+			obj.role = controlTypes.Role.TABCONTROL
 		if RE_TAB_AUTOMATION_MATCH.match(theId):
-			obj.role = controlTypes.ROLE_TAB
+			obj.role = controlTypes.Role.TAB
 		elif RE_BUTTONCONTROL.match(theId):
-			obj.role = controlTypes.ROLE_BUTTON
+			obj.role = controlTypes.Role.BUTTON

@@ -13,10 +13,6 @@ import tones
 import ui
 
 
-# Support control types refactor (both before (2021.1) and after (2021.2) for a time).
-# Note that pre-refactor attributes will be gone in NVDA 2022.1.
-
-
 # Map locations
 # A static text denoting where one is located on the map.
 class MapLocation(UIA):
@@ -44,7 +40,7 @@ class AppModule(appModuleHandler.AppModule):
 		if isinstance(obj, UIA):
 			try:
 				if (
-					obj.role in (controlTypes.ROLE_STATICTEXT, controlTypes.ROLE_BUTTON)
+					obj.role in (controlTypes.Role.STATICTEXT, controlTypes.Role.BUTTON)
 					and obj.parent.parent.UIAElement.cachedClassName == "Map"
 				):
 					clsList.insert(0, MapLocation)
