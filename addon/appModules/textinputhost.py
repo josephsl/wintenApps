@@ -136,7 +136,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
 			eventHandler.queueEvent("show", firstChild)
 			return
-		childAutomationId = firstChild.UIAAutomationId
 		self._symbolsGroupSelected = False
 		# Emoji panel in build 17666 and later (unless this changes).
 		# See older add-on releases for details.
