@@ -43,6 +43,7 @@ additionalEvents: dict[int, str] = {
 
 # Deprecated: additional dialogs not recognized by NVDA itself.
 # Windows and apps were updated in recent years to expose dialogs properly.
+# See older add-on releases for details.
 UIAAdditionalDialogClassNames: list[str] = []
 
 
@@ -107,6 +108,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Allow NVDA to recognize more dialogs, especially ones that are not advertising themselves as such.
 		# Deprecated as recent Windows and app updates include improved dialog markup.
 		# As dialog classes list is empty, the below procedure is dead code in recent add-on releases.
+		# See older add-on releases for details.
 		"""for dialogClassName in UIAAdditionalDialogClassNames:
 			if dialogClassName not in UIAHandler.UIADialogClassNames:
 				log.debug(f"W10: adding class name {dialogClassName} to known dialog class names")
@@ -144,6 +146,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Some dialogs, although listed as a dialog thanks to UIA class name,
 		# does not advertise the proper role of dialog.
 		# No longer necessary due to Windows an app updates and improved dialog markup.
+		# See older add-on releases for details.
 		if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
 			return
