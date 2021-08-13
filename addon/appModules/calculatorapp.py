@@ -19,14 +19,6 @@ import scriptHandler
 # Inform Flake8 as well.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
-	def event_NVDAObject_init(self, obj):
-		if not isinstance(obj, UIA):
-			return
-		# Version 10.2009 introduces a regression where history and memory items have no names
-		# but can be fetched through its children.
-		if not obj.name and obj.parent.UIAAutomationId in ("HistoryListView", "MemoryListView"):
-			obj.name = "".join([item.name for item in obj.children])
-
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
 		# Some notification messages are repeated (most notable being graph view change notification).
 		if activityId == "GraphViewChanged" and self._resultsCache == displayString:
