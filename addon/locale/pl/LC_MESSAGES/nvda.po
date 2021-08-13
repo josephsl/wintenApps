@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2021-07-20 10:29+0200\n"
+"PO-Revision-Date: 2021-08-07 13:12+0200\n"
 "Last-Translator: Patryk <patric3031@wp.pl>\n"
 "Language-Team: pl <LL@li.org>\n"
 "Language: pl\n"
@@ -17,20 +17,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0\n"
 
-#. Translators: Dialog text shown when trying to install the add-on on an unsupported version of Windows
-#. (minSupportedVersion is the minimum version required for this add-on).
+#. Windows App Essentials requires Windows 10 or later.
+#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+#. Unsupported systems include Windows versions earlier than 10 and old Windows 10 feature updates.
+msgid "Unsupported Windows release"
+msgstr "Nieobsługiwana wersja systemu Windows"
+
+#. Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
+msgid ""
+"You are using an older version of Windows. This add-on requires Windows 10 "
+"or later."
+msgstr ""
+"Używasz starszej wersji systemu Windows. Ten dodatek wymaga systemu Windows "
+"10 lub nowszego."
+
+#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+#. winRelease can be Windows 10, Windows 11, or other release series name.
+#. minSupportedUpdate is the minimum update for a Windows release series required for this add-on.
+#. Example: an add-on release requiring Windows 10 May 2021 Update
+#. will set windowsRelease to Windows 10 and minSupportedUpdate to Windows 10 21H1.
 #, python-brace-format
 msgid ""
-"You are using an older version of Windows. This add-on requires "
-"{minSupportedVersion} or later."
+"You are using an unsupported {windowsRelease} release. This add-on requires "
+"{minSupportedUpdate} or later."
 msgstr ""
-"Wykryto starszą wersję systemu Windows. Ten dodatek wymaga "
-"{minSupportedVersion} lub nowszej. Czy jesteś pewien, że chcesz zainstalować "
-"ten dodatek mimo to?"
+"Używasz nieobsługiwanej wersji {windowsRelease}. Ten dodatek wymaga "
+"{minSupportedUpdate} lub nowszej."
 
-#. Translators: title of the dialog shown when trying to install the add-on on an old version of Windows.
-msgid "Old Windows version"
-msgstr "Stara wersja systemu windows"
+#. Translators: warning text shown when trying to install the add-on on server computers.
+msgid ""
+"This is a Windows Server system. Although you can install the add-on, not "
+"all features will work as Windows Server does not include modern apps such "
+"as Microsoft Store."
+msgstr ""
+"Jest to system Windows Server. Chociaż można zainstalować dodatek, nie "
+"wszystkie funkcje będą działać, ponieważ system Windows Server nie zawiera "
+"nowoczesnych aplikacji, takich jak Microsoft Store."
+
+#. Translators: title of the warning dialog shown when trying to install the add-on on server systems.
+msgid "Windows App Essentials and Windows Server"
+msgstr "Windows App Essentials i Windows Server"
 
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
@@ -61,3 +87,6 @@ msgid "Improving support for various apps and controls on Windows 10 and later"
 msgstr ""
 "Ulepsza wsparcie dla różnych kontrolek i aplikacji w operacyjnym systemie "
 "Windows 10 i nowszych"
+
+#~ msgid "Old Windows version"
+#~ msgstr "Stara wersja systemu windows"
