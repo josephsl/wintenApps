@@ -7,7 +7,6 @@
 # This is similar to older Calculator app but was redesigned from ground up.
 # NVDA Core includes bulk of this app module.
 from nvdaBuiltin.appModules.calculator import *  # NOQA: F403
-from NVDAObjects.UIA import UIA
 
 
 # Mypy should be reminded that this app module is powered by built-in Calculator app module.
