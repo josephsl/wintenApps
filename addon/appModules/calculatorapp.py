@@ -51,7 +51,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			shouldAnnounceNotification = (
 				resultElement
 				and resultElement.firstChild
-				and resultElement.firstChild.UIAAutomationId not in noCalculatorEntryAnnouncements
+				and resultElement.firstChild.UIAAutomationId not in noCalculatorEntryAnnouncements  # NOQA: F405
 			)
 		# Display updated activity ID seen when entering calculations should be ignored
 		# as as it is redundant if speak typed characters is on.
