@@ -165,7 +165,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					UIAHandler.UIA_HeadingLevelPropertyId
 				) <= UIAHandler.HeadingLevel6
 				# But not for apps such as Calculator where doing so results in confusing user experience.
-				and obj.appModule.appName != "calculator"
+				and obj.appModule.appName not in ("calculator", "calculatorapp")
 			):
 				clsList.insert(0, XAMLHeading)
 		except COMError:
