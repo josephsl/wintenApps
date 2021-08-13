@@ -32,11 +32,31 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		if activityId == "GraphViewChanged" and self._resultsCache == displayString:
 			return
 		self._resultsCache = displayString
+		# Version 10.2109 changes the UI a bit, requiring custom event handler implementation.
 		# NVDA Core issue 12268: for "DisplayUpdated", announce display strings in braille and move on.
 		if activityId == "DisplayUpdated":
 			braille.handler.message(displayString)
-		# Call the built-in app module version of UIA notification event handler.
-		super(AppModule, self).event_UIA_notification(obj, nextHandler, activityId=activityId, **kwargs)
+		try:
+			shouldAnnounceNotification = (
+				obj.previous.UIAAutomationId in
+				("numberPad", "UnitConverterRootGrid")
+			)
+		except AttributeError:
+			# The actual display text and other controls live inside a toggle control window.
+			# Therefore move one more level down compared to older Calculator releases.
+			resultElement = api.getForegroundObject().children[1].lastChild.firstChild
+			# Redesigned in 2019 due to introduction of "always on top" i.e. compact overlay mode.
+			if resultElement.UIAElement.cachedClassName != "LandmarkTarget":
+				resultElement = resultElement.parent.children[1]
+			shouldAnnounceNotification = (
+				resultElement
+				and resultElement.firstChild
+				and resultElement.firstChild.UIAAutomationId not in noCalculatorEntryAnnouncements
+			)
+		# Display updated activity ID seen when entering calculations should be ignored
+		# as as it is redundant if speak typed characters is on.
+		if shouldAnnounceNotification or activityId != "DisplayUpdated":
+			nextHandler()
 
 	# A list of native commands to handle calculator result announcement.
 	_calculatorResultGestures = (
