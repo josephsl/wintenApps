@@ -147,9 +147,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# does not advertise the proper role of dialog.
 		# No longer necessary due to Windows an app updates and improved dialog markup.
 		# See older add-on releases for details.
-		if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
-			clsList.insert(0, Dialog)
-			return
 		# Recognize suggestions list view firing layout invalidated event.
 		# Although certain list views such as languages list in Settings app fire layout invalidated event,
 		# they are not true suggestions list views.
