@@ -9,7 +9,7 @@ from typing import Optional, Any
 from comtypes import COMError
 import globalPluginHandler
 import ui
-from NVDAObjects.UIA import UIA, Dialog
+from NVDAObjects.UIA import UIA
 import api
 import config
 import queueHandler
