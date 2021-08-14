@@ -41,10 +41,6 @@ additionalEvents: dict[int, str] = {
 	UIAHandler.UIA_LayoutInvalidatedEventId: "UIA_layoutInvalidated",
 }
 
-# Deprecated: additional dialogs not recognized by NVDA itself.
-# Windows and apps were updated in recent years to expose dialogs properly.
-# See older add-on releases for details.
-
 
 # Suggestions list view.
 # Unlike Start menu suggestions, these fire UIA layout invalidated event and top suggestion is not announced.
@@ -104,10 +100,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except AttributeError:
 			log.debug("W10: UIA handler not ready, delaying until NVDA is fully initialized")
 			queueHandler.queueFunction(queueHandler.eventQueue, self._addAdditionalUIAEvents, delay=True)
-		# Allow NVDA to recognize more dialogs, especially ones that are not advertising themselves as such.
-		# Deprecated as recent Windows and app updates include improved dialog markup.
-		# As dialog classes list is empty, the below procedure is dead code in recent add-on releases.
-		# See older add-on releases for details.
 
 	# Manually add events after root element is located.
 	def _addAdditionalUIAEvents(self, delay: bool = False) -> None:
@@ -137,11 +129,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# There's no point looking at non-UIA objects.
 		if not isinstance(obj, UIA):
 			return
-		# Windows that are really dialogs.
-		# Some dialogs, although listed as a dialog thanks to UIA class name,
-		# does not advertise the proper role of dialog.
-		# No longer necessary due to Windows an app updates and improved dialog markup.
-		# See older add-on releases for details.
 		# Recognize suggestions list view firing layout invalidated event.
 		# Although certain list views such as languages list in Settings app fire layout invalidated event,
 		# they are not true suggestions list views.
