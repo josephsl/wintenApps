@@ -121,7 +121,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Log which modern keyboard header is active.
 		if log.isEnabledFor(log.DEBUG):
 			log.debug(
-				"W10: Automation Id for currently opened modern keyboard feature "
+				"winapps: Automation Id for currently opened modern keyboard feature "
 				f"is {firstChild.UIAAutomationId}"
 			)
 		# Originally part of this method, split into an internal function to reduce complexity.
