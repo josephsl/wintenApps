@@ -187,7 +187,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			except COMError:
 				info.append("Automation Id: not found")
 			info.append(f"class name: {element.cachedClassName}")
-			log.debug(u"W10: UIA {debuginfo}".format(debuginfo=", ".join(info)))
+			log.debug(u"winapps: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
 	# Events defined in NVDA.
 
@@ -199,7 +199,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# virtual desktop switch, so exercise discretion.
 		if obj.windowClassName == "#32769":
 			if log.isEnabledFor(log.DEBUG):
-				log.debug(f"W10: possible desktop name change from {obj}, app module: {obj.appModule}")
+				log.debug(f"winapps: possible desktop name change from {obj}, app module: {obj.appModule}")
 			# CSRSS: Client/Server Runtime Subsystem (Windows subsystem process/desktop object)
 			if obj.appModule.appName == "csrss":
 				import wx
@@ -276,5 +276,5 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# See older add-on releases for details.
 		self.uiaDebugLogging(obj, "layoutInvalidated")
 		if log.isEnabledFor(log.DEBUG):
-			log.debug(f"W10: list item count: {obj.childCount}")
+			log.debug(f"winapps: list item count: {obj.childCount}")
 		nextHandler()
