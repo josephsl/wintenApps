@@ -95,10 +95,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Try adding additional events in the constructor.
 		# If it fails, try again after NVDA is fully initialized.
 		try:
-			log.debug("W10: adding additional events")
+			log.debug("winapps: adding additional events")
 			self._addAdditionalUIAEvents()
 		except AttributeError:
-			log.debug("W10: UIA handler not ready, delaying until NVDA is fully initialized")
+			log.debug("winapps: UIA handler not ready, delaying until NVDA is fully initialized")
 			queueHandler.queueFunction(queueHandler.eventQueue, self._addAdditionalUIAEvents, delay=True)
 
 	# Manually add events after root element is located.
@@ -107,7 +107,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Some events are only available in a specific build range
 		# and/or while a specific version of IUIAutomation interface is in use.
 		if delay:
-			log.debug("W10: adding additional events after a delay")
+			log.debug("winapps: adding additional events after a delay")
 		# Use event handler group facility to add more events (properly introduced in NVDA 2020.3).
 		# Use IUIAutomation6 interface directly (Windows 10 1809 or later).
 		addonGlobalEventHandlerGroup = UIAHandler.handler.clientObject.CreateEventHandlerGroup()
@@ -122,7 +122,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					UIAHandler.handler.baseCacheRequest,
 					UIAHandler.handler
 				)
-				log.debug(f"W10: added event ID {event}, assigned to {name}")
+				log.debug(f"winapps: added event ID {event}, assigned to {name}")
 		UIAHandler.handler.addEventHandlerGroup(UIAHandler.handler.rootElement, addonGlobalEventHandlerGroup)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
