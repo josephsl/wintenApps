@@ -19,7 +19,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 지도
 * Microsoft Solitaire Collection
 * Microsoft Store
-* 현대식 키보드(에모지 페널/받아쓰기/하드웨어 입력 구성/클립보드 히스토리/현대식 IME 입력기)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/modern input method editors)
 * People
 * 설정(시스템 설정 앱, Windows+I)
 * 날씨
@@ -45,22 +46,16 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 일반
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  option is controlled by "Report object position information" in Object
-  presentation panel found in NVDA settings.
+* 특정 검색창에서 검색 결과수가(특히 검색중 결과수가 변경될 경우) 출력되도록 함(본 기능은 NVDA 설정내 객체 알림 페널에 있는
+  객체 위치 출력 설정으로 제어할 수 있음).
 * When searching in Start menu or File Explorer in Windows 10 1909 (November
   2019 Update) and later, instances of NVDA announcing search results twice
   when reviewing results are less noticeable, which also makes braille
   output more consistent when reviewing items.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drop target
-  drag enter, drop target drag leave, drop target dropped, layout
-  invalidated. With NVDA's log level set to debug, these events will be
-  tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active
-  app. Events built into NVDA such as name change and controller for events
-  will be tracked from an add-on called Event Tracker.
+* NVDA가 지원하는 UIA  이벤트 외의 다음 이벤트 추적 가능: drag start, drag cancel, drag
+  complete, drop target drag enter, drop target drag leave, drop target
+  dropped, layout invalidated. NVDA가 디버그 로깅 상태로 재시작된 경우 위 이벤트가 추적되며
+  notification 이벤트는 추가 디버그 정보가 출력되도록 함.
 * It is possible to tracke only specific events and/or events coming from
   specific apps.
 * When opening, closing, reordering (Windows 11), or switching between
@@ -152,7 +147,6 @@ supports updated input experience panel in Windows 11.
   automatically, including Storage sense/disk cleanup widget and errors from
   Windows Update.
 * Progress bar values and other information are no longer announced twice.
-* Windows Update reminder dialog is recognized as a proper dialog.
 * Odd control labels seen in certain Windows installations has been
   corrected.
 * NVDA will announce the name of the optional quality update link if

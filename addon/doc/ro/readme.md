@@ -25,7 +25,7 @@ privire la ceea ce este inclus):
 * Hărți
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/hardware input
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/modern input method editors)
 * Persoane
 * Setări (setări de sistem, Windows+I)
@@ -168,7 +168,6 @@ supports updated input experience panel in Windows 11.
   Windows Update.
 * Valorile barei de progres și alte informații nu mai sunt anunțate de două
   ori.
-* Dialogul de tip memento al Windows Update este recunoscut așa cum trebuie.
 * Odd control labels seen in certain Windows installations has been
   corrected.
 * NVDA will announce the name of the optional quality update link if
