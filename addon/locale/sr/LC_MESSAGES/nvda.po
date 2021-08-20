@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.03\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2021-08-07 15:13+0100\n"
+"PO-Revision-Date: 2021-08-19 08:11-0700\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: \n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #. Windows App Essentials requires Windows 10 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -85,6 +85,3 @@ msgstr "Windows App Essentials"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Improving support for various apps and controls on Windows 10 and later"
 msgstr "Poboljšava podršku za različite aplikacije na Windowsu 10 i novijim"
-
-#~ msgid "Old Windows version"
-#~ msgstr "Starija verzija Windowsa"

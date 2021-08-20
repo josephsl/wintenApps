@@ -26,9 +26,8 @@ est inclus) :
 * Cartes
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Clavier moderne (panneau des emoji/dictée/suggestions de saisie
-  matérielle/historique du presse-papiers du cloud/éditeurs de méthode de
-  saisie moderne)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/modern input method editors)
 * Personnes
 * Paramètres (paramètres système, Windows+I)
 * Météo
@@ -190,8 +189,6 @@ charge le panneau d'expérience de saisie mis à jour dans Windows 11.
   Détection de stockage / nettoyage de disque.
 * Les valeurs de la barre de progression et d'autres informations ne sont
   plus annoncés deux fois.
-* Le dialogue de rappel de Windows Update est reconnu comme un dialogue
-  propre.
 * Les étiquettes de contrôle étranges vues dans certaines installations
   Windows ont été corrigées.
 * NVDA annoncera le nom du lien de mise à jour facultative s'il est présent,

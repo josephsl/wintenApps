@@ -24,8 +24,8 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 * Karte
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Moderna tipkovnica (ploča emojija, diktatiranje, prijedlozi za ulazni
-  hardver, povijest međuspremnika, moderni uređivači za unos)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/modern input method editors)
 * Osobe
 * Postavke (postavke sustava, Windows+I)
 * Vrijeme
@@ -165,8 +165,6 @@ supports updated input experience panel in Windows 11.
   izvještava automatski.
 * Vrijednosti trake napredovanja i druge informacije više se ne najavljuju
   dvaput.
-* Dijaloški okvir podsjetnika za ažuriranje Windowsa će se prepoznati kao
-  pravi dijaloški okvir.
 * Odd control labels seen in certain Windows installations has been
   corrected.
 * NVDA will announce the name of the optional quality update link if

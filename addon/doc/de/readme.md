@@ -24,8 +24,9 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 * Karten
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Moderne Tastatur (Emoji-Panel / Diktat / Hardware-Eingabevorschläge /
-  Zwischenablage-Verlauf / Editoren für moderne Eingabemethoden)
+* Moderne Tastatur
+  (Emoji-Panel/Diktat/Spracheingabe/Hardware-Eingabevorschläge/Zwischenablageverlauf/moderne
+  Eingabemethoden-Editoren)
 * Kontakte
 * Einstellungen (System-Einstellungen, Windows+I)
 * Wetter
@@ -39,10 +40,11 @@ Hinweise:
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
-* Support for Windows 11 is experimental, and some features will not work
-  (see relevant entries for details). A warning dialog will be shown if
-  trying to install stable versions of this add-on on Windows 11 prior to
-  general availability.
+* Die Unterstützung für Windows 11 ist derzeit experimentell und einige
+  Funktionen stehen noch nicht nicht zur Verfügung (siehe entsprechende
+  Einträge für Details). Ein Warndialog wird angezeigt, beim Versuch eine
+  stabile Version dieser Erweiterung unter Windows 11 vor der allgemeinen
+  Verfügbarkeit zu installieren.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Bei Einträgen, die unten nicht aufgeführt sind, können Sie davon ausgehen,
   dass Funktionen Teil von NVDA sind und nicht mehr nutzbar sind, da die
@@ -59,22 +61,25 @@ Versionen][3].
 
 ## Allgemein
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  option is controlled by "Report object position information" in Object
-  presentation panel found in NVDA settings.
+* In den meisten Fällen kann NVDA die Anzahl der Vorschläge beim Durchführen
+  einer Suche ankündigen, auch wenn sich die Anzahl der Vorschläge im
+  Verlauf der Suche ändert. Diese Option wird durch
+  "Objektpositionsinformationen mitteilen" im Bereich "Objekt-Darstellungen"
+  in den NVDA-Einstellungen gesteuert.
 * Bei der Suche im Startmenü oder Datei-Explorer in Windows 10 Version 1909
   (November 2019 Update) und neuer sind Fälle, in denen NVDA Suchergebnisse
   beim Überprüfen der Ergebnisse zweimal ankündigt, weniger auffällig, was
   auch die Brailleausgabe beim Überprüfen von Elementen konsistenter macht.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drop target
-  drag enter, drop target drag leave, drop target dropped, layout
-  invalidated. With NVDA's log level set to debug, these events will be
-  tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active
-  app. Events built into NVDA such as name change and controller for events
-  will be tracked from an add-on called Event Tracker.
+* Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignishandlern werden
+  die folgenden UIA-Ereignisse erkannt: Drag Start, Drag Cancel, Drag
+  Complete, Drop Target Drag Enter, Drop Target Drag Leave, Drop Target
+  Drop, Layout ungültig gemacht. Wenn die Protokollebene von NVDA auf Debug
+  eingestellt ist, werden diese Ereignisse nachverfolgt, und bei
+  Benachrichtigungsereignissen der UIA ist ein Debugton zu hören, wenn
+  Benachrichtigungen von einem anderen Ort als der derzeit aktiven App
+  stammen. In NVDA integrierte Ereignisse wie Namensänderungen und
+  Controller für Ereignisse werden von der Erweiterung "Ereignis-Tracker"
+  verfolgt.
 * Es ist möglich, nur bestimmte Ereignisse bzw. Ereignisse aus bestimmten
   Anwendungen zu verfolgen.
 * Beim Öffnen, Schließen, Neuordnen (Windows 11) oder Wechseln zwischen
@@ -142,13 +147,15 @@ Die meisten Elemente sind bei Verwendung von Cortana-Unterhaltungen (Windows
 
 ## Moderne virtuelle Tastaturen
 
-This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, and modern input method editors for certain
-languages. When viewing emojis, for best experience, enable Unicode
-Consortium setting from NVDA's speech settings and set symbol level to
-"some" or higher. When pasting from clipboard history in Windows 10, press
-Space key instead of Enter key to paste the selected item. NVDA also
-supports updated input experience panel in Windows 11.
+Dazu gehören Emoji-Panel, Zwischenablageverlauf, Diktat-/Spracheingabe,
+Hardware-Eingabevorschläge und moderne Eingabemethoden-Editoren für
+bestimmte Sprachen. Aktivieren Sie beim Anzeigen von Emojis für die beste
+Erfahrung die Unicode-Konsortium-Einstellung in den Spracheinstellungen von
+NVDA und stellen Sie die Symbolstufe auf "Einige" oder höher ein. Drücken
+Sie beim Einfügen aus dem Zwischenablageverlauf in Windows 10 die Leertaste
+anstelle der Eingabetaste, um das ausgewählte Element einzufügen. NVDA
+unterstützt auch das Panel für aktualisierte Eingabe-Erlebnisse in Windows
+11.
 
 * Beim Öffnen des Verlauf der Zwischenablage wird NVDA unter Umständen nicht
   mehr das Wort "Zwischenablage" mitteilen, wenn sich Elemente in der
@@ -175,8 +182,6 @@ supports updated input experience panel in Windows 11.
   und Festplattenbereinigung und der Fehler von Windows Update.
 * Werte in Fortschrittsbalken und andere Informationen werden nicht mehr
   zweimal angesagt.
-* Das Erinnerungsdialogfeld von Windows Update wird als richtiger Dialog
-  erkannt.
 * Ungerade Steuerelementbezeichnungen in bestimmten Windows-Installationen
   wurden korrigiert.
 * NVDA wird den Namen des optionalen Qualitäts-Update-Links, falls

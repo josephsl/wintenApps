@@ -19,7 +19,8 @@
 * 地图
 * Microsoft Solitaire Collection（微软纸牌游戏）
 * Microsoft Store
-* 现代键盘（包括表情符号面板、听写、硬件输入建议、云剪贴板历史记录以及现代输入法编辑器）
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/modern input method editors)
 * 人脉
 * 设置（系统设置，Windows + I）
 * 天气
@@ -30,10 +31,8 @@
 * 此插件需要 Windows 10 版本 20H2（内部版本 19042）或更高版本。为获得最佳体验，请将此插件与最新 Windows 10 21H1
   稳定版（内部版本 19043）一起使用。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务频道）和 Windows Server 版本。
-* Support for Windows 11 is experimental, and some features will not work
-  (see relevant entries for details). A warning dialog will be shown if
-  trying to install stable versions of this add-on on Windows 11 prior to
-  general availability.
+* 对 Windows 11 的支持是实验性的，某些功能将无法使用（有关详细信息，请参阅相关条目）。如果在正式发布之前尝试在 Windows 11
+  上安装此插件的稳定版本，则会显示警告对话框。
 * 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
 * 对于未在下方列出的条目，您可以假定功能已是 NVDA 的一部分，不再适用，因为插件不支持旧版本的
   Windows，或者对应用程序进行了更改，使条目不再适用。
@@ -43,20 +42,12 @@
 
 ## 常规设置
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  option is controlled by "Report object position information" in Object
-  presentation panel found in NVDA settings.
+* 在大多数情况下，NVDA 可以在执行搜索时朗读建议计数，包括当建议计数随着搜索进行而发生变化时。此选项由 NVDA
+  “对象提示”设置对话框中的“读出对象的位置信息”复选框控制。
 * 在 Windows 10 版本 1909（2019 年 11 月更新）及更高版本中的‘开始’菜单或文件资源管理器中进行搜索时，现在 NVDA
   在浏览结果时两次宣布搜索结果的实例不太明显，这也使盲文输出在浏览项目时更加一致。
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drop target
-  drag enter, drop target drag leave, drop target dropped, layout
-  invalidated. With NVDA's log level set to debug, these events will be
-  tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active
-  app. Events built into NVDA such as name change and controller for events
-  will be tracked from an add-on called Event Tracker.
+* 除了NVDA提供的UIA事件处理程序外，还可以识别以下UIA事件：拖动开始、拖动取消、拖动完成、拖动目标进入、拖动目标离开、拖动目标丢弃、布局无效。在NVDA的日志级别设置为调试时，这些事件将被跟踪，对于UIA通知事件，如果通知来自当前活动应用以外的其他地方，将听到调试音。NVDA
+  中内置的事件，例如名称更改和事件控制器，将通过名为 Event Tracker 的插件进行跟踪。
 * 可以只跟踪特定事件或来自特定应用程序的事件。
 * 打开、关闭、重新排序（Windows 11）或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
 * 当改变屏幕分辨率或方向时，NVDA将不再读出开始菜单的大小文本。
@@ -101,13 +92,9 @@
 
 ## 系统键盘
 
-This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, and modern input method editors for certain
-languages. When viewing emojis, for best experience, enable Unicode
-Consortium setting from NVDA's speech settings and set symbol level to
-"some" or higher. When pasting from clipboard history in Windows 10, press
-Space key instead of Enter key to paste the selected item. NVDA also
-supports updated input experience panel in Windows 11.
+这包括表情符号面板、剪贴板历史记录、听写/语音输入、硬件输入建议以及某些语言的现代输入法编辑器。查看表情符号时，为了获得最佳体验，请从 NvDA
+的语音设置对话框中选中“处理字符和符号时包含 Unicode 数据（表情符号）”复选框，并将符号级别设置为“少数”或更高。在 Windows 10
+中从剪贴板历史记录粘贴时，请按空格键而非回车键来粘贴所选项目。此外，NVDA 在 Windows 11 中支持更新的输入体验面板。
 
 * 当前，打开剪贴板历史记录时，在某些情况下，剪贴板中有项目时，NVDA将不再读出“剪贴板”。
 * 在某些运行Windows 10 版本1903（2019年5月更新）的系统上，当表情符号面板打开时，NVDA将不再显示为不执行任何操作。
@@ -122,7 +109,6 @@ supports updated input experience panel in Windows 11.
 
 * 现在将自动读出某些信息，例如 Windows Update 进度，包括存储感知、磁盘清理和 Windows Update中的错误。
 * 进度栏值和其他信息不再重复朗读两次。
-* Windows 更新提醒对话框被识别为正确的对话框。
 * 在某些 Windows 安装中看到的奇怪的控件标签已被更正。
 * NVDA 将读出可选质量更新链接的名称，如果存在，通常命名为"立即下载和安装"。
 

@@ -24,8 +24,8 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 * Mapy
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Nowoczesna klawiatura (panel emoji / dyktowanie / sugestie wejścia
-  sprzętowego / historia schowka / nowoczesne edytory metod wprowadzania)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/modern input method editors)
 * Osoby
 * Ustawienia (Ustawienia systemowe, Windows+I)
 * Pogoda
@@ -166,8 +166,6 @@ supports updated input experience panel in Windows 11.
   z Windows update.
 * Wartości paska postępu i inne informacje, nie są wypowiadane
   automatycznie.
-* Okno dialogowe przypomnienia o aktualizacjach Windows, teraz jest
-  rozpoznawane jako poprawne okno dialogowe.
 * Odd control labels seen in certain Windows installations has been
   corrected.
 * NVDA will announce the name of the optional quality update link if
