@@ -23,7 +23,7 @@ Zahrnuté sú nasledujúce moduly (podrobný popis nájdete nižšie):
 * Mapy
 * Microsoft Solitaire Collection
 * Obchod microsoft
-* Modern keyboard (emoji panel/dictation/hardware input
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/modern input method editors)
 * Ľudia
 * Nastavenia (systémové nastavenia, Win+I)
@@ -161,8 +161,6 @@ supports updated input experience panel in Windows 11.
   priebeh a dokončenie čistenia disku.
 * NVDA dvojnásobne neopakuje hodnoty indikátorov priebehu a ďalšie
   informácie.
-* Dialóg s pripomenutím aktualizácie Windows je rozpoznaný ako štandardný
-  dialóg.
 * Odd control labels seen in certain Windows installations has been
   corrected.
 * NVDA will announce the name of the optional quality update link if

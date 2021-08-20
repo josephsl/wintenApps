@@ -24,7 +24,7 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 * Mappe
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/hardware input
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/modern input method editors)
 * Persone
 * Impostazioni (Impostazioni di Windows, Windows+i)
@@ -169,8 +169,6 @@ supports updated input experience panel in Windows 11.
   Update.
 * I valori delle barre di avanzamento ed altre informazioni non vengono più
   letti due volte.
-* La finestra di notifica per nuovi aggiornamenti windows verrà ora
-  visualizzata  correttamente.
 * Odd control labels seen in certain Windows installations has been
   corrected.
 * NVDA will announce the name of the optional quality update link if

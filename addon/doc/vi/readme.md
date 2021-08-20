@@ -24,8 +24,8 @@ tiết của mỗi ứng dụng để biết them):
 * Maps
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Bàn phím hiện đại (bản biểu tượng cảm xúc / đọc chính tả / gợi ý thiết bị
-  đầu vào / các thành phần bộ nhớ tạm)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/modern input method editors)
 * People
 * Settings (system settings, Windows+I)
 * Weather
@@ -167,7 +167,6 @@ supports updated input experience panel in Windows 11.
   động, bao gồm Storage sense/disk cleanup và các lỗi từ Windows Update.
 * Giá trị của thanh tiến trình và các thông tin khác không còn bị đọc hai
   lần.
-* Hộp thoại Windows Update reminder đã được nha65nn dạng đúng là hộp thoại.
 * Odd control labels seen in certain Windows installations has been
   corrected.
 * NVDA will announce the name of the optional quality update link if

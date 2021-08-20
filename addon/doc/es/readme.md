@@ -25,9 +25,9 @@ qué se incluye):
 * Mapas
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Teclado Moderno (panel de emojis / dictado / sugerencias de entrada
-  hardware / historial del portapapeles / editores modernos de método de
-  entrada)
+* Teclado Moderno (panel de emojis / dictado / escritura por voz /
+  sugerencias de entrada hardware / historial del portapapeles / editores
+  modernos de método de entrada)
 * Gente
 * Opciones (opciones de sistema, Windows+I)
 * El Tiempo
@@ -180,8 +180,6 @@ Windows 11.
   limpieza de disco y los errores del propio Windows Update.
 * Los valores de la barra de progreso y otra información ya no se anuncian
   dos veces.
-* El diálogo de recordatorio de Windows Update se reconoce correctamente
-  como un diálogo.
 * Corregidas etiquetas de controles defectuosas advertidas en ciertas
   instalaciones de Windows.
 * NVDA anunciará el nombre del enlace de la actualización de calidad

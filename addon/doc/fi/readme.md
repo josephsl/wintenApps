@@ -24,8 +24,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Kartat
 * Microsoft Solitaire -kokoelma
 * Microsoft Store
-* Moderni näppäimistö (emojipaneeli/sanelu/fyysisen näppäimistösyötteen
-  ehdotukset/pilvileikepöydän historia/modernin syöttömenetelmän editorit)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/modern input method editors)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Sää
@@ -167,8 +167,6 @@ päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
   mukaan lukien Tallennusseurannan/Levynsiivouksen pienoisohjelma sekä
   Windows Updaten virheet, puhutaan nyt automaattisesti.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
-* Windows Updaten muistutusvalintaikkuna tunnistetaan asianmukaisesti
-  valintaikkunaksi.
 * Joissakin Windows-asennuksissa näkyvät erikoiset säädinten nimet on
   korjattu.
 * NVDA puhuu valinnaisen laatupäivityksen nimen linkin (tyypillisesti "Lataa

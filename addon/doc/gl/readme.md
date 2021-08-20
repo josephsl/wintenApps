@@ -24,8 +24,8 @@ se inclúe):
 * Mapas
 * Microsoft Solitaire Collection
 * Tenda Microsoft
-* Teclado Moderno (panel de emoji/ditado/suxestións de entrada por
-  hardware/historial do portapapeis/editores co método de entrada moderna)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/modern input method editors)
 * Xente
 * Opcións (opcións do sistema, Windows+I)
 * O Tempo
@@ -172,8 +172,6 @@ tamén soporta o panel de experiencia de entrada actualizado en Windows 11.
   en disco e os erros de windows Update.
 * Os valores da barra de progreso e outra información xa non se anuncian
   dúas veces.
-* O diálogo de recordatorio de actualización de Windows é recoñecido
-  axeitadamente como un diálogo.
 * Corrixiuse as etiquetas de controis extrañas advertidas en certas
   instalacións de Windows.
 * NVDA anunciará o nome da ligazón á actualización de calidade opcional se

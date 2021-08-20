@@ -25,9 +25,8 @@ detalhes sobre o que está incluso):
 * Mapas
 * Microsoft Solitaire Collection (Coleção de Paciência)
 * Microsoft Store (Loja da Microsoft)
-* Teclado moderno (painel de emoji/ditado/sugestões de entrada de
-  hardware/histórico da área de transferência/editores de métodos de entrada
-  modernos)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/modern input method editors)
 * Pessoas
 * Configurações (configurações do sistema, Windows+I)
 * Clima
@@ -176,8 +175,6 @@ supports updated input experience panel in Windows 11.
   disco e os erros do Windows Update.
 * Os valores da barra de progresso e outras informações já não são
   anunciados duas vezes.
-* O diálogo de lembrete do Windows Update é reconhecido como uma caixa de
-  diálogo apropriada.
 * Foram corrigidos Rótulos de controle estranhos vistos em certas
   instalações do Windows.
 * O NVDA anunciará o nome do link de atualização de qualidade opcional se

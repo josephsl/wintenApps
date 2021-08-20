@@ -23,8 +23,8 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Kort
 * Microsoft Kabale Samling
 * Microsoft store
-* Moderne tastatur (Emoji-panel, diktering, forslag til hardwareinput,
-  historik for udklipsholder og Editor til inputmetode)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/modern input method editors)
 * Personer
 * Indstillinger (systemindstillinger, Windows+I)
 * Vejr
@@ -173,7 +173,6 @@ i Windows 11.
   automatisk, herunder ved brug af Storage sense/disk cleanup widget.
 * Værdier på behandlingslinjer og andre oplysninger er ikke længere
   annonceret to gange.
-* Dialogboksen Windows Update-påmindelse genkendes som en korrekt dialog.
 * Bemærkelsesværdige kontroletiketter set i visse Windows-installationer er
   blevet løst.
 * NVDA annoncerer navnet på linket for den valgfrie kvalitetsopdatering,
