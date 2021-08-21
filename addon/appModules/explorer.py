@@ -43,6 +43,12 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			return
 		super(AppModule, self).event_NVDAObject_init(obj)
 
+	def event_gainFocus(self, obj, nextHandler):
+		if isinstance(obj, IAccessible):
+			if obj.windowClassName == "XamlExplorerHostIslandWindow":
+				return
+		super(AppModule, self).event_gainFocus(obj, nextHandler)
+
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
 			# Do not allow "pane" to be announced when switching apps in Windows 11.
@@ -50,9 +56,5 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# Thankfully this behavior is similar to Windows 10's multitasking view frame window.
 			if obj.UIAElement.cachedClassName == "Windows.UI.Input.InputSite.WindowClass":
 				clsList.insert(0, MultitaskingViewFrameWindow)  # NOQA: F405
-				return
-		elif isinstance(obj, IAccessible):
-			if obj.windowClassName == "XamlExplorerHostIslandWindow":
-				clsList.insert(0, Win11TaskSwitchingWindow)
 				return
 		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
