@@ -36,9 +36,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def event_gainFocus(self, obj, nextHandler):
 		# Do not allow "task switching" to be announced when switching apps in Windows 11.
-		if isinstance(obj, IAccessible):
-			if obj.windowClassName == "XamlExplorerHostIslandWindow":
-				return
+		if obj.windowClassName == "XamlExplorerHostIslandWindow":
+			return
 		super(AppModule, self).event_gainFocus(obj, nextHandler)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
