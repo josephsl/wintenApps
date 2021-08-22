@@ -26,11 +26,6 @@ WIN11_RECLASSIFY_TOGGLE_BUTTONS = [
 ]
 
 
-# Do not allow "pane" to be announced when switching apps in Windows 11.
-class InputSiteWindow(UIA):
-	shouldAllowUIAFocusEvent = False
-
-
 # Do not allow "task switching" to be announced when switching apps in Windows 11.
 class Win11TaskSwitchingWindow(IAccessible):
 	event_gainFocus = None
