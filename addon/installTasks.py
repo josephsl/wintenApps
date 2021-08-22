@@ -1,4 +1,4 @@
-# WinTenApps/installTasks.py
+# WinApps/installTasks.py
 # Copyright 2016-2021 Joseph Lee, released under GPL.
 
 # Provides needed routines during add-on installation and removal.
