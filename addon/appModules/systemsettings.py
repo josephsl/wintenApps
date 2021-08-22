@@ -2,10 +2,8 @@
 # Copyright (C) 2019-2021 NV Access Limited, Joseph Lee
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
-
-"""App module for modern Settings app (aka Immersive Control Panel)."""
-
 # Originally copyright 2016-2021 Joseph Lee, released under GPL
+
 # Several hacks related to Settings app, some of which are part of NVDA Core.
 
 # Help Mypy and other static checkers for a time by importing uppercase versions of built-in types.

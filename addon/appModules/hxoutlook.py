@@ -4,8 +4,6 @@
 # See the file COPYING for more details.
 # Extended in 2017 and 2019 by Joseph Lee
 
-"""An appModule for the Mail app on Windows 10 and later"""
-
 # Borrows heavily from built-in Mail and Calendar app module.
 from nvdaBuiltin.appModules.hxoutlook import *  # NOQA: F403
 import api
