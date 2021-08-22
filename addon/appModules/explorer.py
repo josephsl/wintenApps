@@ -26,11 +26,6 @@ WIN11_RECLASSIFY_TOGGLE_BUTTONS = [
 ]
 
 
-# Do not allow "task switching" to be announced when switching apps in Windows 11.
-class Win11TaskSwitchingWindow(IAccessible):
-	event_gainFocus = None
-
-
 # Built-in File Explorer app module powers bulk of the below app module class, so inform Mypy.
 # And Flake8 and other linters, to.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
@@ -44,16 +39,17 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		super(AppModule, self).event_NVDAObject_init(obj)
 
 	def event_gainFocus(self, obj, nextHandler):
+		# Do not allow "task switching" to be announced when switching apps in Windows 11.
 		if isinstance(obj, IAccessible):
 			if obj.windowClassName == "XamlExplorerHostIslandWindow":
 				return
 		super(AppModule, self).event_gainFocus(obj, nextHandler)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+		# Do not allow "pane" to be announced when switching apps in Windows 11.
+		# Caused by UIA focus event coming from input site window.
+		# Thankfully this behavior is similar to Windows 10's multitasking view frame window.
 		if isinstance(obj, UIA):
-			# Do not allow "pane" to be announced when switching apps in Windows 11.
-			# Caused by UIA focus event coming from input site window.
-			# Thankfully this behavior is similar to Windows 10's multitasking view frame window.
 			if obj.UIAElement.cachedClassName == "Windows.UI.Input.InputSite.WindowClass":
 				clsList.insert(0, MultitaskingViewFrameWindow)  # NOQA: F405
 				return
