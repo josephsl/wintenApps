@@ -2,8 +2,6 @@
 # Part of Windows App Essentials collection
 # Copyright 2021 Joseph Lee, released under GPL
 
-"""App module for redesigned modern Calculator on Windows 11"""
-
 # This is similar to older Calculator app but was redesigned from ground up.
 # NVDA Core includes bulk of this app module.
 from nvdaBuiltin.appModules.calculator import *  # NOQA: F403

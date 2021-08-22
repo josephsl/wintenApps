@@ -3,8 +3,6 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
-"""App module for modern Calculator on Windows 10 and later"""
-
 # NVDA Core includes bulk of this app module.
 from nvdaBuiltin.appModules.calculator import *  # NOQA: F403
 from NVDAObjects.UIA import UIA

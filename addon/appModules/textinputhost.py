@@ -3,12 +3,6 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
-"""App module for modern keyboard aka new touch keyboard panel.
-The chief feature is allowing NVDA to announce
-selected emoji when using the keyboard to search for and select one.
-Another feature is to announce candidates for misspellings if suggestions for hardware keyboard is selected.
-This is applicable on Windows 10 1709 (Fall Creators Update) and later."""
-
 # The add-on version of this module will extend the one that comes with NVDA Core (2018.3 and later).
 # For IME candidate item/UI definition, Flake8 must be told to ignore it.
 
