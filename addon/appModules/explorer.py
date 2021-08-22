@@ -50,9 +50,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
-			# Suppress focus announcement for input site window as it is annoying.
+			# Do not allow "pane" to be announced when switching apps in Windows 11.
+			# Caused by UIA focus event coming from input site window.
+			# Thankfully this behavior is similar to Windows 10's multitasking view frame window.
 			if obj.UIAElement.cachedClassName == "Windows.UI.Input.InputSite.WindowClass":
-				clsList.insert(0, InputSiteWindow)
+				clsList.insert(0, MultitaskingViewFrameWindow)  # NOQA: F405
 				return
 		elif isinstance(obj, IAccessible):
 			if obj.windowClassName == "XamlExplorerHostIslandWindow":
