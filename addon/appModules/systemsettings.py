@@ -15,15 +15,6 @@ import controlTypes
 from NVDAObjects.UIA import UIA
 
 
-# Controls with XAML class names as labels (SystemSettings_*).
-# Thankfully labels are previous object names.
-XAML_CLASS_ELEMENT_NAMES = [
-	# Developer mode label in Windows 10 2004/20H2/21H1/21H2.
-	# Resolved in Windows 11.
-	"SystemSettings_Developer_Mode_Advanced_NarratorText",
-]
-
-
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
 # Also linters such as Flake8 should ignore this.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
@@ -63,9 +54,10 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# so tell NVDA to use something more meaningful.
 			elif obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
 				obj.name = obj.firstChild.name
-			# Some elements use XAML class name as their label (SystemSettings_*).
-			# Thankfully labels are next door to these, specifically previous.name.
-			elif obj.name in XAML_CLASS_ELEMENT_NAMES:
+			# Developer mode label in Windows 10 2004/20H2/21H1/21H2.
+			# The label itself is the name of the previous object.
+			# Resolved in Windows 11.
+			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name
 
 	# Sometimes, the same text is announced, so consult this cache.
