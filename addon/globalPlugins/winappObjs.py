@@ -24,13 +24,8 @@ import addonHandler
 addonHandler.initTranslation()
 
 # #52: forget everything if the current release is not a supported version of Windows.
-# NVDA 2019.2 includes a handy Windows 10 version check function.
-# Changed in NVDA 2021.1 to include Windows release constants.
 isAddonSupported = winVersion.getWinVer() >= winVersion.WIN10_20H2
 
-
-# Extra UIA constants
-# None at this time
 
 # For convenience.
 additionalEvents: dict[int, str] = {
@@ -50,12 +45,11 @@ additionalEvents: dict[int, str] = {
 
 # Suggestions list view.
 # Unlike Start menu suggestions, these fire UIA layout invalidated event and top suggestion is not announced.
-# At least announce suggestions count.
+# At least announce suggestion count.
 class SuggestionsListView(UIA):
 
 	def event_UIA_layoutInvalidated(self):
 		# Announce number of items found
-		# (except in Start search box where the suggestions are selected as user types).
 		# Because inaccurate count could be announced (when users type, suggestion count changes),
 		# thus announce this if position info reporting is enabled.
 		# However, forget all this if no suggestions are present.
@@ -118,8 +112,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# and/or while a specific version of IUIAutomation interface is in use.
 		if delay:
 			log.debug("winapps: adding additional events after a delay")
-		# Use event handler group facility to add more events (properly introduced in NVDA 2020.3).
-		# Use IUIAutomation6 interface directly (Windows 10 1809 or later).
+		# Use event handler group facility to add more events.
+		# Internally powered by IUIAutomation6 interface introduced in Windows 10 1809.
 		addonGlobalEventHandlerGroup = UIAHandler.handler.clientObject.CreateEventHandlerGroup()
 		for event, name in additionalEvents.items():
 			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
@@ -136,7 +130,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		UIAHandler.handler.addEventHandlerGroup(UIAHandler.handler.rootElement, addonGlobalEventHandlerGroup)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		# There's no point looking at non-UIA objects.
 		if not isinstance(obj, UIA):
 			return
 		# Windows that are really dialogs.
