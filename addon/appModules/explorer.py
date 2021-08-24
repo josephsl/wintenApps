@@ -10,17 +10,6 @@ import controlTypes
 from NVDAObjects.UIA import UIA
 
 
-# The following buttons are really buttons, not toggle buttons
-# unless the purpose of these buttons are different.
-WIN11_RECLASSIFY_TOGGLE_BUTTONS = [
-	"StartButton",
-	"SearchButton",
-	"TaskViewButton",
-	"WidgetsButton",
-	"MeetNowButton"
-]
-
-
 # Built-in File Explorer app module powers bulk of the below app module class, so inform Mypy.
 # And Flake8 and other linters, to.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
