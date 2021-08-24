@@ -26,8 +26,12 @@ WIN11_RECLASSIFY_TOGGLE_BUTTONS = [
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def event_NVDAObject_init(self, obj):
-		# No, these buttons should not be a toggle button, and discard checkable state, too.
-		if isinstance(obj, UIA) and obj.UIAAutomationId in WIN11_RECLASSIFY_TOGGLE_BUTTONS:
+		# No, these shell buttons inside Windows 11 taskbar should not be a toggle button,
+		# and discard checkable state, too.
+		if (
+			isinstance(obj, UIA) and obj.role == controlTypes.Role.TOGGLEBUTTON
+			and isinstance(obj.parent, UIA) and obj.parent.UIAAutomationId == "TaskbarFrameRepeater"
+		):
 			obj.role = controlTypes.Role.BUTTON
 			obj.states.discard(controlTypes.State.CHECKABLE)
 			return
