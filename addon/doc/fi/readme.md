@@ -24,8 +24,9 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Kartat
 * Microsoft Solitaire -kokoelma
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/modern input method editors)
+* Moderni näppäimistö (emojipaneeli/sanelu/puhekirjoitus/fyysisen
+  näppäimistösyötteen ehdotukset/pilvileikepöydän historia/modernin
+  syöttömenetelmän muokkaimet)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Sää
