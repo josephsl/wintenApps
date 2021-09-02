@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-12-08 16:12+0800\n"
+"PO-Revision-Date: 2021-08-25 14:16+0800\n"
 "Last-Translator: 完美很难 <1872265132@qq.com>\n"
 "Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
 "2010-2019>\n"
@@ -16,22 +16,46 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
-#. (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
-msgid ""
-"You are using an older version of Windows. This add-on requires "
-"{minSupportedVersion} or later."
-msgstr ""
-"您正在使用较旧版本的Windows。此插件需要{minSupportedVersion}或更高版本。您确"
-"定要安装这个插件吗？"
+#. Windows App Essentials requires Windows 10 or later.
+#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+#. Unsupported systems include Windows versions earlier than 10 and old Windows 10 feature updates.
+msgid "Unsupported Windows release"
+msgstr "不受支持的 Windows 版本"
 
-#. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
-msgid "Old Windows version"
-msgstr "旧版Windows"
+#. Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
+msgid ""
+"You are using an older version of Windows. This add-on requires Windows 10 "
+"or later."
+msgstr "您正在使用较旧版本的 Windows。此插件需要 Windows 10 或更高版本。"
+
+#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+#. winRelease can be Windows 10, Windows 11, or other release series name.
+#. minSupportedUpdate is the minimum update for a Windows release series required for this add-on.
+#. Example: an add-on release requiring Windows 10 May 2021 Update
+#. will set windowsRelease to Windows 10 and minSupportedUpdate to Windows 10 21H1.
+#, python-brace-format
+msgid ""
+"You are using an unsupported {windowsRelease} release. This add-on requires "
+"{minSupportedUpdate} or later."
+msgstr ""
+"您正在使用不受支持的 {windowsRelease} 版本。此插件需要 {minSupportedUpdate} "
+"或更高版本。"
+
+#. Translators: warning text shown when trying to install the add-on on server computers.
+msgid ""
+"This is a Windows Server system. Although you can install the add-on, not "
+"all features will work as Windows Server does not include modern apps such "
+"as Microsoft Store."
+msgstr ""
+"这是一个 Windows Server 系统。尽管您可以安装此插件，但并非所有功能都可以使"
+"用，因为 Windows Server 不包括 Microsoft Store 等现代应用程序。"
+
+#. Translators: title of the warning dialog shown when trying to install the add-on on server systems.
+msgid "Windows App Essentials and Windows Server"
+msgstr "Windows 应用增强和 Windows Server"
 
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
@@ -42,21 +66,21 @@ msgstr "无法在行之间移动"
 msgid "No more weather data for this item."
 msgstr "此项目没有更多的天气数据。"
 
-#. Translators: presented when there is one suggestion for a search term.
+#. Translators: part of the suggestions count message (for example: 2 suggestions).
 msgid "1 suggestion"
 msgstr "1 条建议"
 
-#. Translators: presented when there are multiple suggestions for a search term.
+#. Translators: part of the suggestions count message (for example: 2 suggestions).
 msgid "{} suggestions"
 msgstr "{} 条建议"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information.
-msgid "Windows 10 App Essentials"
-msgstr "Windows 10 应用增强"
+msgid "Windows App Essentials"
+msgstr "Windows 应用增强"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "A collection of app modules for various Windows 10 apps"
-msgstr "各种Windows 10应用程序的应用程序模块集合"
+msgid "Improving support for various apps and controls on Windows 10 and later"
+msgstr "改进对 Windows 10 及更高版本系统的各种应用程序和控件的支持"

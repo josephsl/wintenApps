@@ -26,4 +26,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			return
 		self._resultsCache = displayString
 		# Call the built-in app module version of UIA notification event handler.
-		super(AppModule, self).event_UIA_notification(obj, nextHandler, activityId=activityId, **kwargs)
+		super(AppModule, self).event_UIA_notification(
+			obj, nextHandler, displayString=displayString, activityId=activityId, **kwargs
+		)
