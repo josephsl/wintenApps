@@ -22,6 +22,10 @@ class AppModule(appModuleHandler.AppModule):
 				and obj.firstChild and obj.firstChild.UIAAutomationId == "InstallControl"
 			):
 				obj.name = obj.firstChild.firstChild.name
+			# Version 22108 (Windows 11) changes the UI and comes with a label issue for library filter choice list.
+			# It uses XAML class name and the actual label is the first child's name.
+			elif obj.name == "WinStore.ViewModels.MyLibraryFilterChoice":
+				obj.name = obj.firstChild.name
 
 	# just like Settings app, have a cache of download progress text handy.
 	_appInstallProgress: str = ""
