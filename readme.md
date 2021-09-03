@@ -71,7 +71,7 @@ Most items are applicable when using Cortana Conversations (Windows 10 2004 and 
 ## Microsoft Store
 
 * After checking for app updates, app names in list of apps to be updated are correctly labeled.
-* When downloading content such as apps and movies, NVDA will announce product name and download progress (does not work properly in updated Microsoft Store in Windows 11).
+* When downloading content such as apps and movies, NVDA will announce product name and download progress.
 
 ## Modern keyboard
 
