@@ -7,7 +7,6 @@
 import appModuleHandler
 import api
 import ui
-import controlTypes
 from NVDAObjects.UIA import UIA
 
 
