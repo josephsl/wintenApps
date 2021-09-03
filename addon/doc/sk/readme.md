@@ -17,7 +17,6 @@ and later.
 Zahrnuté sú nasledujúce moduly (podrobný popis nájdete nižšie):
 
 * Calculator (modern)
-* Kalendár
 * Cortana (konverzácia)
 * Pošta
 * Mapy
@@ -71,8 +70,6 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
   notifications come from somewhere other than the currently active
   app. Events built into NVDA such as name change and controller for events
   will be tracked from an add-on called Event Tracker.
-* Je možné sledovať iba konkrétne udalosti a udalosti pochádzajúce z
-  konkrétnych aplikácií.
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
@@ -88,11 +85,6 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 ## Kalkulačka
 
 * NVDA will no longer announce graphing calculator screen message twice.
-
-## Kalendár
-
-* NVDA neoznamuje v tele správy a iných prvkoch nadbitočné informácie, ako
-  editačné pole alebo iba na čítanie.
 
 ## Cortana
 
@@ -110,7 +102,6 @@ and later).
 * Pri prezeraní položiek v zozname správ môžete teraz použiť príkazy
   navigácie v tabuľke na kontrolu hlavičiek správ. Upozorňujeme, že
   navigácia medzi riadkami (správami) nie je podporovaná.
-* NVDA zvukom upozorní, ak pri písaní správy spomeniete niekoho z kontaktov.
 
 ## Mapy
 
@@ -127,8 +118,7 @@ and later).
 * Po kontrole aktualizácií je možné prezerať zoznam s aktualizovanými
   aplikáciami.
 * When downloading content such as apps and movies, NVDA will announce
-  product name and download progress (does not work properly in updated
-  Microsoft Store in Windows 11).
+  product name and download progress.
 
 ## Moderná klávesnica
 

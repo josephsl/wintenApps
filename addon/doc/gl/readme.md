@@ -18,14 +18,14 @@ aplicacións (consulta cada sección para a aplicación para detalles sobre que
 se inclúe):
 
 * Calculadora (modern)
-* Calendario
 * Cortana (Conversations)
 * Correo
 * Mapas
 * Microsoft Solitaire Collection
 * Tenda Microsoft
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/modern input method editors)
+* Teclado Moderno (panel de emoji/ditado/escritura por voz/suxestións de
+  entrada por hardware/historial do portapapeis/editores co método de
+  entrada moderna)
 * Xente
 * Opcións (opcións do sistema, Windows+I)
 * O Tempo
@@ -76,8 +76,6 @@ documento [rexistros de trocos para publicacións de complementos][3].
   calquera lugar que non sexa a app actualmente activa. Eventos incluídos en
   NVDA como os eventos name change e controller for monitorizaranse por
   parte dun complemento denominado Event Tracker.
-* É posible o seguimento só de eventos específicos e/ou de eventos provintes
-  de aplicacións específicas.
 * Cando se abran, pechen, reordenen (Windows 11), ou se conmute entre
   escritorios virtuales, NVDA anunciará o nome do escritorio actual
   (escritorio 2, por exemplo).
@@ -96,11 +94,6 @@ documento [rexistros de trocos para publicacións de complementos][3].
 * NVDA xa non anunciará dúas veces a mensaxe en pantalla da calculadora
   gráfica.
 
-## Calendario
-
-* NVDA xa non anuncia "editar" ou "só lectura" para asuntos da cita no
-  Calendario e no contido do mensaxe no Correo.
-
 ## Cortana
 
 A maioría dos elementos aplican se se usa Cortana Conversations (Windows 10
@@ -117,8 +110,6 @@ A maioría dos elementos aplican se se usa Cortana Conversations (Windows 10
 * Cando se revisan elementos na listaxe de mensaxes, agora podes usar ordes
   de navegación de táboas para revisar as cabeceiras de mensaxe. Téñase en
   conta que a navegación entre fileiras(mensaxes) non se soporta.
-* Cando se escrebe unha mensaxe, a apariencia da mención de suxerencias
-  indícase con sons.
 
 ## Mapas
 
@@ -135,9 +126,8 @@ A maioría dos elementos aplican se se usa Cortana Conversations (Windows 10
 
 * Despois de buscar actualizacións das aplicacións, os nomes das aplicacións
   na lista de aplicacions actualizarán as etiquetas correctamente.
-* Cando se cargue contido como aplicacións e películas, NVDA anunciará o
-  nome do producto e o progreso da descarga (non funciona correctamente na
-  Microsoft Store actualizada de Windows 11).
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress.
 
 ## Teclado Moderno
 

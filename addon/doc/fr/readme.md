@@ -20,7 +20,6 @@ apps sont inclus (voir chaque section app pour plus de détails sur ce qui
 est inclus) :
 
 * Calculatrice (modern).
-* Calendrier
 * Cortana (Conversations)
 * Courrier
 * Cartes
@@ -82,8 +81,6 @@ l'extension][3].
   application autre que celle actuellement active. Les événements intégrés à
   NVDA, comme le changement de nom et le contrôleur d'événements, seront
   suivis à partir d'une extension appelé Event Tracker.
-* Il est possible de faire le suivi seul des événements spécifiques et / ou
-  des événements à venir à partir des applications spécifiques.
 * Lors de l'ouverture, de la fermeture, de la réorganisation (Windows 11)
   ou du basculement entre les bureaux virtuels (build 21337 ou ultérieure),
   , NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
@@ -103,11 +100,6 @@ l'extension][3].
 
 * NVDA n'annoncera plus deux fois le message de l'écran de la calculatrice
   graphique.
-
-## Calendrier
-
-* NVDA n'annoncera plus "edition" ou "lecture seule" dans le corps du
-  message et d'autres  champs.
 
 ## Cortana
 
@@ -129,8 +121,6 @@ Conversations (Windows 10 version 2004 et ultérieures).
   maintenant utiliser les commandes de navigation dans les  tableaux pour
   examiner les en-têtes des messages. Notez que la navigation entre les
   lignes (messages) n'est pas prise en charge.
-* Lors de l'écriture d'un message, l'apparence des suggestions de mention
-  est indiquée par des sons.
 
 ## Cartes
 
@@ -148,10 +138,8 @@ Conversations (Windows 10 version 2004 et ultérieures).
 * Après vérification des mises à jour des applications, le nom des
   applications dans la liste des applications à mettre à jour sera
   correctement étiqueté.
-* Lors du téléchargement de contenus tels que des applications et des films,
-  NVDA annoncera le nom du produit et la progression du téléchargement (ne
-  fonctionne pas correctement dans le Microsoft Store mis à jour sous
-  Windows 11).
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress.
 
 ## Clavier moderne
 

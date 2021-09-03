@@ -18,7 +18,6 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 što je uključeno):
 
 * Kalkulator (moderan)
-* Kalendar
 * Cortana (konverzacije)
 * Mail
 * Karte
@@ -72,8 +71,6 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   notifications come from somewhere other than the currently active
   app. Events built into NVDA such as name change and controller for events
   will be tracked from an add-on called Event Tracker.
-* Moguće je pratiti samo određene događaje i-ili događaje koji dolaze iz
-  određenih aplikacija.
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
@@ -91,11 +88,6 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 
 * NVDA više neće dvaputa najaviti poruku ekrana grafičkog kalkulatora.
 
-## Kalendar
-
-* NVDA više ne najavljuje „uređivanje” ili „samo za čitanje” u sadržaju
-  poruke i drugim poljima.
-
 ## Cortana
 
 Most items are applicable when using Cortana Conversations (Windows 10 2004
@@ -111,8 +103,6 @@ and later).
 
 * Prilikom pregleda stavaka u popisu poruka, sada možete koristiti prečace
   za navigaciju po tablicama kako biste pregledali zaglavlja poruke.
-* Tijekom pisanja poruke, ako spominjete neku osobu, pojavljeni prijedlozi
-  bit će naznačeni zvukovima.
 
 ## Karte
 
@@ -130,8 +120,7 @@ and later).
 * Nakon provjere nadogradnji aplikacija, aplikacije na popisu koje se
   trebaju nadograditi su pravilno označene.
 * When downloading content such as apps and movies, NVDA will announce
-  product name and download progress (does not work properly in updated
-  Microsoft Store in Windows 11).
+  product name and download progress.
 
 ## Moderna tipkovnica
 

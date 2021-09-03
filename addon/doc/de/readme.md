@@ -18,7 +18,6 @@ Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
 Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 * Taschenrechner (modern)
-* Kalender
 * Cortana (Unterhaltungen)
 * Mail
 * Karten
@@ -80,8 +79,6 @@ Versionen][3].
   stammen. In NVDA integrierte Ereignisse wie Namensänderungen und
   Controller für Ereignisse werden von der Erweiterung "Ereignis-Tracker"
   verfolgt.
-* Es ist möglich, nur bestimmte Ereignisse bzw. Ereignisse aus bestimmten
-  Anwendungen zu verfolgen.
 * Beim Öffnen, Schließen, Neuordnen (Windows 11) oder Wechseln zwischen
   virtuellen Desktops gibt NVDA den Namen des aktiven virtuellen Desktops an
   (z. B. Desktop 2).
@@ -99,11 +96,6 @@ Versionen][3].
 
 * NVDA liest die Bildschirmmeldung des Grafikrechners nicht mehr doppelt
   vor.
-
-## Kalender
-
-* NVDA sagt nicht mehr "bearbeiten" oder"schreibgeschützt" im
-  Nachrichtentext und in anderen Feldern an.
 
 ## Cortana
 
@@ -123,8 +115,6 @@ Die meisten Elemente sind bei Verwendung von Cortana-Unterhaltungen (Windows
 * Beim Navigieren durch Elemente in der Nachrichtenliste können Sie nun
   Tabellen-Navigationsbefehle verwenden, um Betreffzeilen zu überprüfen. Die
   Navigation zwischen Zeilen (Nachrichten) wird noch nicht unterstützt.
-* Wenn Sie eine Nachricht schreiben, wird das Erscheinen von Vorschlägen
-  durch Töne angezeigt.
 
 ## Karten
 
@@ -142,8 +132,7 @@ Die meisten Elemente sind bei Verwendung von Cortana-Unterhaltungen (Windows
 * Nach der Suche nach App-Aktualisierungen werden die App-Namen in der Liste
   der zu aktualisierenden Apps korrekt beschriftet.
 * Beim Herunterladen von Inhalten wie Apps und Filmen gibt NVDA den
-  Produktnamen und den Downloadfortschritt an (funktioniert im
-  aktualisierten Microsoft Store in Windows 11 nicht ordnungsgemäß).
+  Produktnamen und den Download-Fortschritt an.
 
 ## Moderne virtuelle Tastaturen
 

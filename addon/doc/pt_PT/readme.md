@@ -19,7 +19,6 @@ aplicações estão incluídos (consulte a secção de cada aplicação para obt
 detalhes sobre o que está incluído):
 
 * Calculadora (moderna)
-* Calendário.
 * Cortana (Conversas)
 * Correio.
 * Mapas.
@@ -78,8 +77,6 @@ consulte o documento [changelogs for releases, release][3].
   activa. Os eventos integrados no NVDA, tais como mudança de nome e
   controlador de eventos, serão rastreados a partir de um add-on chamado
   Event Tracker.
-* É possível seguir apenas eventos específicos e/ou eventos provenientes de
-  aplicações específicas.
 * Ao abrir, fechar, reordenar (Windows 11), ou alternar entre desktops
   virtuais, o NVDA anunciará o nome do desktop virtual activo (desktop 2,
   por exemplo).
@@ -97,11 +94,6 @@ consulte o documento [changelogs for releases, release][3].
 
 * O NVDA já não lerá duas vezes a mensagem do ecrã da calculadora gráfica.
 
-## Calendário.
-
-* O NVDA já não anuncia "editar" ou "somente leitura" no corpo da mensagem e
-  em outros campos.
-
 ## Cortana
 
 A maioria dos itens são aplicáveis quando se utiliza o Cortana Conversations
@@ -118,8 +110,6 @@ A maioria dos itens são aplicáveis quando se utiliza o Cortana Conversations
 * Ao rever itens na lista de mensagens, agora pode usar os comandos de
   navegação da tabela para rever os respectivos cabeçalhos. Observe que a
   navegação entre linhas (mensagens) não é suportada.
-* Ao escrever uma mensagem, a aparência das sugestões de menção é indicada
-  pelos sons.
 
 ## Mapas.
 
@@ -136,9 +126,8 @@ A maioria dos itens são aplicáveis quando se utiliza o Cortana Conversations
 
 * Depois de verificar as atualizações da aplicação, os nomes das aplicações,
   na lista de aplicações a serem actualizadas, são indicados correctamente.
-* Ao descarregar conteúdo como aplicações e filmes, o NVDA anunciará o nome
-  do produto e o progresso do descarregamento (não funciona correctamente na
-  loja da Microsoft, actualizado no Windows 11).
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress.
 
 ## Teclado moderno
 

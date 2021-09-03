@@ -19,7 +19,6 @@ aplicaciones (consulta cada sección para la aplicación para detalles sobre
 qué se incluye):
 
 * Calculadora (moderna).
-* Calendario
 * Cortana (conversaciones)
 * Correo
 * Mapas
@@ -80,8 +79,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   vienen de un lugar distinto a la aplicación actual. Los eventos
   incorporados en NVDA, como name change y controller for, se rastrearán
   desde un complemento llamado Rastreador de eventos.
-* Es posible seguir sólo eventos específicos y/o eventos que vienen de
-  aplicaciones específicas.
 * Al abrir, cerrar, reordenar (Windows 11) o cambiar entre escritorios
   virtuales, NVDA anunciará el nombre del escritorio virtual activo
   (escritorio 2, por ejemplo).
@@ -99,11 +96,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 * NVDA ya no anunciará dos veces el mensaje en pantalla de la calculadora
   gráfica.
-
-## Calendario
-
-* NVDA ya no anuncia "editar" o "sólo lectura" en el cuerpo del mensaje y
-  otros campos.
 
 ## Cortana
 
@@ -123,8 +115,6 @@ La mayoría de elementos se aplican al usar las conversaciones de Cortana
 * Cuando se revisan elementos en la lista de mensajes, ahora puedes utilizar
   órdenes de navegación de tablas para revisar los encabezados de
   mensaje. Ten en cuenta que no está soportado navegar por filas (mensajes).
-* Cuando se escribe un mensaje, la apariencia de la mención de sugerencias
-  se indica con sonidos.
 
 ## Mapas
 
@@ -142,9 +132,8 @@ La mayoría de elementos se aplican al usar las conversaciones de Cortana
 * Después de buscar actualizaciones de aplicaciones, los nombres de las
   aplicaciones en la lista de aplicaciones etiquetadas se actualizan
   correctamente.
-* Cuando se cargue contenido tal como aplicaciones y películas, NVDA
-  anunciará el nombre del producto y el progreso de la descarga (no funciona
-  adecuadamente en la Tienda Microsoft actualizada en Windows 11).
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress.
 
 ## Teclado Moderno
 

@@ -19,7 +19,6 @@ aplicativos estão incluídos (consulte a seção de cada aplicativo para obter
 detalhes sobre o que está incluso):
 
 * Calculadora (moderna)
-* Calendário
 * Cortana (Conversations)
 * Email
 * Mapas
@@ -76,8 +75,6 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   notifications come from somewhere other than the currently active
   app. Events built into NVDA such as name change and controller for events
   will be tracked from an add-on called Event Tracker.
-* É possível rastrear apenas eventos específicos e/ou eventos provenientes
-  de aplicativos específicos.
 * Ao abrir, fechar, reordenar (Windows 11) ou alternar entre áreas de
   trabalho virtuais, o NVDA anunciará o nome do desktop virtual ativo (área
   de trabalho 2, por exemplo).
@@ -96,11 +93,6 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 * O NVDA não anunciará mais a mensagem de tela calculadora gráfica duas
   vezes.
 
-## Calendário
-
-* O NVDA já não anuncia "editar" ou "somente leitura" no corpo da mensagem e
-  em outros campos.
-
 ## Cortana
 
 A maioria dos itens são aplicáveis ao usar Cortana Conversations (Windows 10
@@ -117,8 +109,6 @@ A maioria dos itens são aplicáveis ao usar Cortana Conversations (Windows 10
 * Ao explorar itens na lista de mensagens, agora pode usar os comandos de
   navegação da tabela para explorar os respectivos cabeçalhos. Note que a
   navegação entre linhas (mensagens) não é suportada.
-* Ao escrever uma mensagem, o aparecimento de sugestões de menção é indicado
-  por sons.
 
 ## Mapas
 
@@ -136,9 +126,8 @@ A maioria dos itens são aplicáveis ao usar Cortana Conversations (Windows 10
 * Depois de verificar as atualizações de aplicativos, os nomes dos
   aplicativos na lista de aplicativos a serem atualizados são rotulados
   corretamente.
-* Ao baixar conteúdo como aplicativos e filmes, o NVDA anunciará o nome do
-  produto e o andamento do download (não funciona corretamente na Microsoft
-  Store atualizada no Windows 11).
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress.
 
 ## Teclado moderno
 

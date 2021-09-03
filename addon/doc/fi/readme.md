@@ -18,7 +18,6 @@ Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 * Laskin (moderni)
-* Kalenteri
 * Cortana (keskustelut)
 * Sähköposti
 * Kartat
@@ -74,8 +73,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   virheäänellä, mikäli ilmoitukset tulevat muualta kuin aktiivisesta
   sovelluksesta. NVDA:han sisäänrakennettuja tapahtumia, kuten nimen muutos
   ja ohjain tapahtumille seurataan Event Tracker -nimisestä lisäosasta.
-* On mahdollista seurata vain tiettyjä tapahtumia ja/tai tietyistä
-  sovelluksista tulevia tapahtumia.
 * NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
   avattaessa, suljettaessa, uudelleenjärjestettäessä (Windows 11) tai
   siirryttäessä niiden välillä.
@@ -93,11 +90,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 * NVDA ei enää sano graafisen laskinnäytön ilmoitusta kahdesti.
 
-## Kalenteri
-
-* NVDA ei sano enää "muokattava" tai "vain luku" viestisisällössä ja muissa
-  kentissä.
-
 ## Cortana
 
 Useimpia kohtia sovelletaan Cortana-keskusteluja käytettäessä (Windows 10:n
@@ -114,7 +106,6 @@ versio 2004 ja uudemmat).
 * Voit nyt käyttää viestiluettelon kohteita tarkastellessasi
   taulukkonavigointikomentoja viestiotsakkeiden lukemiseen. Huomaa, että
   rivien (viestien) välillä liikkumista ei tueta.
-* Ät-maininnan ehdotukset ilmaistaan äänimerkeillä viestiä kirjoitettaessa.
 
 ## Kartat
 
@@ -131,9 +122,8 @@ versio 2004 ja uudemmat).
 
 * Sovellusten nimet näytetään oikein päivitettävien sovellusten luettelossa
   päivitystarkistuksen jälkeen.
-* NVDA ilmoittaa tuotteen nimen ja latauksen edistymisen sisältöä, kuten
-  sovelluksia ja elokuvia ladattaessa (ei toimi oikein päivitetyssä Windows
-  11:n Microsoft Storessa).
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress.
 
 ## Moderni näppäimistö
 

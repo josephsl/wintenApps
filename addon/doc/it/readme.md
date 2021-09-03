@@ -18,7 +18,6 @@ Di seguito l'elenco di tutti gli appmodule contenuti nel componente
 aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 
 * Calculator (modern)
-* Calendario
 * Cortana (Conversazioni)
 * Posta
 * Mappe
@@ -73,8 +72,6 @@ riferimento al documento [changelogs for add-on releases][3].
   notifications come from somewhere other than the currently active
   app. Events built into NVDA such as name change and controller for events
   will be tracked from an add-on called Event Tracker.
-* E' possibile tracciare solo specifici eventi e/o eventi provenienti solo
-  da applicazioni specifiche.
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
@@ -91,11 +88,6 @@ riferimento al documento [changelogs for add-on releases][3].
 ## Calcolatrice
 
 * NVDA will no longer announce graphing calculator screen message twice.
-
-## Calendario
-
-* Non verrà più letta la dicitura "Modificabile" e  "sola lettura" nel corpo
-  del messaggio o in altri campi editazione.
 
 ## Cortana
 
@@ -114,8 +106,6 @@ and later).
 * Quando si scorrono le voci nell'elenco messaggi, è possibile utilizzare i
   comandi di navigazione tabella per controllarne le intestazioni. Notare
   che la navigazione tra le righe (messaggi) non è supportata.
-* Durante la composizione di un messaggio, verranno emessi segnali acustici
-  nel caso ci siano dei suggerimenti per menzioni dopo la chiocciola.
 
 ## Mappe
 
@@ -133,8 +123,7 @@ and later).
 * Dopo aver controllato la presenza di aggiornamenti di app, il nome delle
   app nell'elenco degli aggiornamenti viene correttamente etichettato.
 * When downloading content such as apps and movies, NVDA will announce
-  product name and download progress (does not work properly in updated
-  Microsoft Store in Windows 11).
+  product name and download progress.
 
 ## Tastiera moderna
 

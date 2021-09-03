@@ -13,7 +13,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 다음 앱 모듈 및 지원 모듈을 포함합니다(각 앱 관련 엔트리를 참고 바람):
 
 * 계산기(UWP)
-* 달력
 * Cortana(Conversations)
 * 메일
 * 지도
@@ -56,8 +55,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   complete, drop target drag enter, drop target drag leave, drop target
   dropped, layout invalidated. NVDA가 디버그 로깅 상태로 재시작된 경우 위 이벤트가 추적되며
   notification 이벤트는 추가 디버그 정보가 출력되도록 함.
-* It is possible to tracke only specific events and/or events coming from
-  specific apps.
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
@@ -73,11 +70,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 ## 계산기
 
 * NVDA will no longer announce graphing calculator screen message twice.
-
-## 달력
-
-* NVDA no longer announces "edit" or "read-only" in message body and other
-  fields.
 
 ## Cortana
 
@@ -95,8 +87,6 @@ and later).
 * When reviewing items in messages list, you can now use table navigation
   commands to review message headers. Note that navigating between rows
   (messages) is not supported.
-* When writing a message, appearance of at mention suggestions are indicated
-  by sounds.
 
 ## 지도
 
@@ -113,8 +103,7 @@ and later).
 * After checking for app updates, app names in list of apps to be updated
   are correctly labeled.
 * When downloading content such as apps and movies, NVDA will announce
-  product name and download progress (does not work properly in updated
-  Microsoft Store in Windows 11).
+  product name and download progress.
 
 ## 현대식 키보드
 
