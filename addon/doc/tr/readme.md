@@ -20,7 +20,6 @@ Bazı uygulamalar için aşağıdaki uygulama veya destek modülleri  mevcuttur
 bakın):
 
 * Hesap makinesi (modern)
-* Takvim
 * Cortana (Konuşmalar)
 * Posta
 * Haritalar
@@ -77,8 +76,6 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
   ayıklama tonu duyulacaktır. İsim değişikliği ve olaylar için kontrolör
   gibi NVDA'da yerleşik olan olaylar, Event Tracker adlı bir eklentiden
   izlenecektir.
-* Yalnızca belirli olayları ve/veya belirli uygulamalardan gelen olayları
-  izlemek mümkündür.
 * NVDA, sanal masaüstlerini açarken, kapatırken, yeniden düzenlerken
   (Windows 11) veya sanal masaüstleri arasında geçiş yaparken etkin sanal
   masaüstü adını duyurur (örneğin, masaüstü 2).
@@ -94,11 +91,6 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 ## Hesap makinesi
 
 * NVDA artık grafik hesap makinesi ekran mesajını iki kez bildirmeyecek.
-
-## Takvim
-
-* NVDA artık Mesaj kutularında ve diğer alanlarda "düzenle" veya "salt
-  okunur" ifadesini bildirmeyecek.
 
 ## Cortana
 
@@ -116,7 +108,6 @@ geçerlidir.
 * Mesaj listesindeki öğeleri gözden geçirirken, artık mesaj başlıklarını
   gözden geçirmek için tablo gezinme komutlarını kullanabilirsiniz. Satırlar
   (mesajlar) arasında gezinmenin desteklenmediğini unutmayın.
-* Mesaj yazarken, söz konusu önerilerin görünümü seslerle belirtilir.
 
 ## Haritalar
 
@@ -133,9 +124,8 @@ geçerlidir.
 
 * Uygulama güncellemelerini kontrol ettikten sonra, güncellenecek
   uygulamalar listesindeki uygulama adları doğru şekilde etiketlenir.
-* Uygulamalar ve filmler gibi içerikleri indirirken, NVDA ürün adını ve
-  indirme ilerlemesini bildirecektir (Windows 11'de güncellenmiş Microsoft
-  Store'da düzgün çalışmıyor).
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress.
 
 ## Modern klavye
 

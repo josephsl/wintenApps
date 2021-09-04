@@ -18,7 +18,6 @@ Dołączone są następujące moduły wspierające aplikacje (sprawdź rozdział
 każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 * Kalkulator (nowoczesny)
-* Kalendarz
 * Cortana (konwersacje)
 * Poczta
 * Mapy
@@ -72,8 +71,6 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   notifications come from somewhere other than the currently active
   app. Events built into NVDA such as name change and controller for events
   will be tracked from an add-on called Event Tracker.
-* Teraz jest możliwe śledzenie zdarzeń z określonych oraz specyficznych
-  aplikacji.
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
@@ -92,11 +89,6 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
 * NVDA nie będzie już dwukrotnie ogłaszać komunikatu ekranu kalkulatora
   wykresów.
 
-## Kalendarz
-
-* NVDA nie wymawia więcej "pole edycji" lub "tylko do odczytu" w ciele
-  wiadomości i innych polach.
-
 ## Cortana
 
 Most items are applicable when using Cortana Conversations (Windows 10 2004
@@ -113,8 +105,6 @@ and later).
 * Przy wyświetlaniu elementów w listy wiadomości, teraz można użyć skrótów
   dla nawigacji po tabelach, aby przeczytać nagłówki wiadomości. Miejcie na
   uwadze, że nawigacja po kolumnach (wiadomościach) jest niewspierana.
-* Przy pisaniu wiadomości, istnienie podpowiedzi o wzmiankach teraz jest
-  oznajmiane dzwiękami.
 
 ## Mapy
 
@@ -131,8 +121,7 @@ and later).
 * Po sprawdzaniu aktualizacji aplikacji, nazyw aplikacji w liście aplikacji
   do zaktualizowania są poprawnie oznaczone.
 * When downloading content such as apps and movies, NVDA will announce
-  product name and download progress (does not work properly in updated
-  Microsoft Store in Windows 11).
+  product name and download progress.
 
 ## Klawiatura nowoczesna
 

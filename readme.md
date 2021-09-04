@@ -27,7 +27,6 @@ Notes:
 
 * This add-on requires Windows 10 20H2 (build 19042) or later. For best results, use the add-on with latest Windows release (Windows 10 21H1/build 19043).
 * Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
-* Support for Windows 11 is experimental, and some features will not work (see relevant entries for details). A warning dialog will be shown if trying to install stable versions of this add-on on Windows 11 prior to general availability.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support unsupported Windows releases such as old Windows 10 versions, or changes were made to Windows and apps that makes entries no longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for example), and this mode will not work properly with portable version of NVDA.
@@ -37,7 +36,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## General
 
 * NVDA can announce suggestion count when performing a search in majority of cases, including when suggestion count changes as search progresses. This option is controlled by "Report object position information" in Object presentation panel found in NVDA settings.
-* When searching in Start menu or File Explorer in Windows 10 1909 (November 2019 Update) and later, instances of NVDA announcing search results twice when reviewing results are less noticeable, which also makes braille output more consistent when reviewing items.
 * In addition to UIA event handlers provided by NVDA, the following UIA events are recognized: drag start, drag cancel, drag complete, drop target drag enter, drop target drag leave, drop target dropped, layout invalidated. With NVDA's log level set to debug, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app. Events built into NVDA such as name change and controller for events will be tracked from an add-on called Event Tracker.
 * When opening, closing, reordering (Windows 11), or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
@@ -71,7 +69,7 @@ Most items are applicable when using Cortana Conversations (Windows 10 2004 and 
 ## Microsoft Store
 
 * After checking for app updates, app names in list of apps to be updated are correctly labeled.
-* When downloading content such as apps and movies, NVDA will announce product name and download progress (does not work properly in updated Microsoft Store in Windows 11).
+* When downloading content such as apps and movies, NVDA will announce product name and download progress.
 
 ## Modern keyboard
 

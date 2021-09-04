@@ -18,7 +18,6 @@ Các module cho các ứng dụng sau đây đã được tích hợp (xem phầ
 tiết của mỗi ứng dụng để biết them):
 
 * Calculator (modern)
-* Calendar
 * Cortana (Conversations)
 * Mail
 * Maps
@@ -74,8 +73,6 @@ for add-on releases][3] .
   notifications come from somewhere other than the currently active
   app. Events built into NVDA such as name change and controller for events
   will be tracked from an add-on called Event Tracker.
-* Đã có thể chỉ theo dõi một số sự kiện nhất định và / hoặc các sự kiện từ
-  một ứng dụng nhất định.
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
@@ -93,11 +90,6 @@ for add-on releases][3] .
 
 * NVDA sẽ không còn đọc hai lần thông điệp trên màn hình tính toán đồ thị.
 
-## Calendar
-
-* NVDA không còn thông báo "có thể nhập" hay "chỉ đọc" trong nội dung thư và
-  các trường khác.
-
 ## Cortana
 
 Most items are applicable when using Cortana Conversations (Windows 10 2004
@@ -114,8 +106,6 @@ and later).
 * Khi xem các thành phần trong danh sách thư, bạn có thể dùng các phím điều
   hướng trong bảng để xem lại các tiêu để của thư. Lưu ý rằng việc điều
   hướng qua từng dòng (từng thư) chưa được hỗ trợ.
-* Khi soạn thư, sự xuất hiện các đề xuất được đề cập được biểu thị bằng âm
-  thanh.
 
 ## Maps
 
@@ -133,8 +123,7 @@ and later).
 * Sau khi kiểm tra cập nhật ứng dụng, tên của các ứng dụng trong danh sách
   chờ cập nhật đã được gán nhãn một cách chính xác.
 * When downloading content such as apps and movies, NVDA will announce
-  product name and download progress (does not work properly in updated
-  Microsoft Store in Windows 11).
+  product name and download progress.
 
 ## Modern keyboard
 

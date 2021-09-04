@@ -19,7 +19,6 @@ sunt incluse (verificați fiecare secțiune a aplicației pentru detalii cu
 privire la ceea ce este inclus):
 
 * Calculator (modern)
-* Calendar
 * Cortana (Conversations)
 * Mail
 * Hărți
@@ -75,8 +74,6 @@ versiunile suplimentului][3].
   notifications come from somewhere other than the currently active
   app. Events built into NVDA such as name change and controller for events
   will be tracked from an add-on called Event Tracker.
-* It is possible to tracke only specific events and/or events coming from
-  specific apps.
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
@@ -92,11 +89,6 @@ versiunile suplimentului][3].
 ## Calculator
 
 * NVDA will no longer announce graphing calculator screen message twice.
-
-## Calendar
-
-* NVDA nu mai anunță „Editare” sau „doar citire” în corpul mesajului sau în
-  alte câmpuri.
 
 ## Cortana
 
@@ -114,8 +106,6 @@ and later).
 * Când examinați elemente dinn lista de mesaje, puteți să folosiți comenzile
   de navigare ale tabelului pentru a examina antetele mesajelor. Rețineți că
   navigarea printre rânduri (mesaje) nu este suportată.
-* La scrierea unui mesaj, aspectele sugestiilor de menționare a arondului
-  sunt indicate de sunete.
 
 ## Hărți
 
@@ -133,8 +123,7 @@ and later).
 * După căutarea actualizărilor aplicației, nume de aplicații în lista
   aplicațiilor care urmează să fie actualizate sunt etichetate corect.
 * When downloading content such as apps and movies, NVDA will announce
-  product name and download progress (does not work properly in updated
-  Microsoft Store in Windows 11).
+  product name and download progress.
 
 ## Tastatură modernă
 

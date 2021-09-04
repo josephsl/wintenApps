@@ -17,7 +17,6 @@ Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
 hver appsektion for detaljer om, hvad der er inkluderet):
 
 * Lommeregner (moderne)
-* Kalender
 * Cortana (samtaler)
 * Mail
 * Kort
@@ -77,8 +76,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   emnestatus. Hændelser, der kommer fra NVDA, såsom name change og
   controller for events, vil blive sporet af en tilføjelse kaldet "Event
   Tracker".
-* Det er muligt at overvåge specifikke hændelser og/eller hændelser, der
-  kommer fra specifikke apps.
 * Når åbning, lukning, ændring af rækkefølge (Windows 11) eller Skift mellem
   virtuelle skrivebord forekommer, vil NVDA annoncere det aktuelle navn for
   det virtuelle skrivebord (f.eks. "Skrivebord 2").
@@ -97,11 +94,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * NVDA annoncerer ikke længere en meddelelse om grafregnerens skærmbillede
   to gange.
 
-## Kalender
-
-* NVDA annoncerer ikke længere "Edit" eller "skrivebeskyttet" i
-  meddelelsesfelter og andre felter.
-
 ## Cortana
 
 De fleste funktioner er anvendelige, når du bruger Cortana-samtaler (Windows
@@ -119,8 +111,6 @@ De fleste funktioner er anvendelige, når du bruger Cortana-samtaler (Windows
   tabelnavigationskommandoer til at gennemgå
   meddelelsesoverskrifter. Bemærk, at navigering mellem rækker (meddelelser)
   ikke understøttes.
-* Når du skriver en besked, vil @omtale forslag indikeres med lyd, når de
-  vises.
 
 ## Kort
 
@@ -137,9 +127,8 @@ De fleste funktioner er anvendelige, når du bruger Cortana-samtaler (Windows
 
 * Efter kontrol for app opdateringer, app navne i listen af apps der skal
   opdateres er korrekt navngivet.
-* Når du henter indhold som apps og film, vil NVDA annoncere produktnavn og
-  fremskridt af tilsvarende handling (virker ikke i øjeblikket som forventet
-  i den nyere Microsoft Store til Windows 11).
+* When downloading content such as apps and movies, NVDA will announce
+  product name and download progress.
 
 ## Moderne tastatur
 
