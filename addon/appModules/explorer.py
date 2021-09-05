@@ -42,7 +42,10 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		if isinstance(obj, IAccessible):
 			if obj.windowClassName == "XamlExplorerHostIslandWindow":
 				# Do not allow "task switching" to be announced when switching apps in Windows 11.
-				isTaskSwitchingWindow = obj.firstChild.firstChild.firstChild.UIAAutomationId == "TaskSwitchingWindow"
+				try:
+					isTaskSwitchingWindow = obj.firstChild.firstChild.firstChild.UIAAutomationId == "TaskSwitchingWindow"
+				except AttributeError:
+					isTaskSwitchingWindow = False
 				if isTaskSwitchingWindow:
 					return
 		super(AppModule, self).event_gainFocus(obj, nextHandler)
