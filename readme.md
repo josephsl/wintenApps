@@ -1,6 +1,6 @@
 # Windows App Essentials
 
-* Authors: Joseph Lee, Derek Riemer and other Windows 10 users
+* Authors: Joseph Lee, Derek Riemer and others
 * Download [stable version][1]
 * Download [development version][2]
 * NVDA compatibility: 2021.2 and beyond
