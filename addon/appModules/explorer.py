@@ -46,7 +46,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 					isTaskSwitchingWindow = obj.firstChild.firstChild.firstChild.UIAAutomationId == "TaskSwitchingWindow"
 				except AttributeError:
 					isTaskSwitchingWindow = False
-				if isTaskSwitchingWindow:
+				# Suppress "pane" announcement when Windows 11 Snap Layouts opens.
+				# As this is a name check, do this before checking Task Switching window for performance.
+				if obj.name is None or isTaskSwitchingWindow:
 					return
 		super(AppModule, self).event_gainFocus(obj, nextHandler)
 
