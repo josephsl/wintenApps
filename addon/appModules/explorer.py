@@ -27,9 +27,16 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		super(AppModule, self).event_NVDAObject_init(obj)
 
 	def event_gainFocus(self, obj, nextHandler):
-		# Do not allow "task switching" to be announced when switching apps in Windows 11.
 		if obj.windowClassName == "XamlExplorerHostIslandWindow":
-			return
+			# Do not allow "task switching" to be announced when switching apps in Windows 11.
+			try:
+				isTaskSwitchingWindow = obj.firstChild.firstChild.firstChild.UIAAutomationId == "TaskSwitchingWindow"
+			except AttributeError:
+				isTaskSwitchingWindow = False
+			# Suppress "pane" announcement when Windows 11 Snap Layouts opens.
+			# As this is a name check, do this before checking Task Switching window for performance.
+			if obj.name is None or isTaskSwitchingWindow:
+				return
 		super(AppModule, self).event_gainFocus(obj, nextHandler)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):

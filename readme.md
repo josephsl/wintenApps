@@ -1,9 +1,9 @@
 # Windows App Essentials
 
-* Authors: Joseph Lee, Derek Riemer and other Windows 10 users
+* Authors: Joseph Lee, Derek Riemer and others
 * Download [stable version][1]
 * Download [development version][2]
-* NVDA compatibility: 2021.1 and beyond
+* NVDA compatibility: 2021.2 and beyond
 
 Note: Originally called Windows 10 App Essentials, it was renamed to Windows App Essentials in 2021 to support Windows 10 and future releases such as Windows 11. Parts of this add-on will still refer to the original add-on name.
 
