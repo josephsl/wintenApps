@@ -122,8 +122,8 @@ versio 2004 ja uudemmat).
 
 * Sovellusten nimet näytetään oikein päivitettävien sovellusten luettelossa
   päivitystarkistuksen jälkeen.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* NVDA ilmoittaa tuotteen nimen ja latauksen edistymisen sisältöä, kuten
+  sovelluksia ja elokuvia ladattaessa.
 
 ## Moderni näppäimistö
 

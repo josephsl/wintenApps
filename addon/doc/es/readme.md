@@ -132,8 +132,8 @@ La mayoría de elementos se aplican al usar las conversaciones de Cortana
 * Después de buscar actualizaciones de aplicaciones, los nombres de las
   aplicaciones en la lista de aplicaciones etiquetadas se actualizan
   correctamente.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* Cuando se descargue contenido, como aplicaciones o películas, NVDA
+  anunciará el nombre del producto y el progreso de la descarga.
 
 ## Teclado Moderno
 
