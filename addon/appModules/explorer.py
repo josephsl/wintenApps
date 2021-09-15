@@ -17,6 +17,7 @@ from NVDAObjects.IAccessible import IAccessible
 
 # The following buttons are really buttons, not toggle buttons
 # unless the purpose of these buttons are different.
+# Kept for a while for historical reasons, but for all practical purposes it is not used.
 WIN11_RECLASSIFY_TOGGLE_BUTTONS = [
 	"StartButton",
 	"SearchButton",
@@ -29,14 +30,6 @@ WIN11_RECLASSIFY_TOGGLE_BUTTONS = [
 # Built-in File Explorer app module powers bulk of the below app module class, so inform Mypy.
 # And Flake8 and other linters, to.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
-
-	def event_NVDAObject_init(self, obj):
-		# No, these buttons should not be a toggle button, and discard checkable state, too.
-		if isinstance(obj, UIA) and obj.UIAAutomationId in WIN11_RECLASSIFY_TOGGLE_BUTTONS:
-			obj.role = controlTypes.Role.BUTTON
-			obj.states.discard(controlTypes.State.CHECKABLE)
-			return
-		super(AppModule, self).event_NVDAObject_init(obj)
 
 	def event_gainFocus(self, obj, nextHandler):
 		if isinstance(obj, IAccessible):
