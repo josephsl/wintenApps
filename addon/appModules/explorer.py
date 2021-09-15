@@ -10,7 +10,6 @@ Provides workarounds for controls such as identifying Start button, notification
 
 # Specific workarounds for Windows 11.
 from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
-import controlTypes
 from NVDAObjects.UIA import UIA
 from NVDAObjects.IAccessible import IAccessible
 
