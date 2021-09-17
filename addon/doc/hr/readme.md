@@ -1,9 +1,9 @@
 # Osnovni moduli za Windows aplikacije #
 
-* Autori: Joseph Lee, Derek Riemer u drugi korisnici Windows 10
+* Authors: Joseph Lee, Derek Riemer and others
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA kompatibilnost: 2020.4 i novije
+* NVDA compatibility: 2021.2 and beyond
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
@@ -32,15 +32,10 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* Za ovaj dodatak potreban je Windows 10 20H2 (gradnja 19042) ili novija
-  verzija. Za najbolje rezultate, koristi dodatak s najnovijim izdanjem
-  Windows sustava (Windows 10 21H1/gradnja 19043).
+* This add-on requires Windows 10 20H2 (build 19042) or later and is
+  compatible with Windows 11.
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
-* Support for Windows 11 is experimental, and some features will not work
-  (see relevant entries for details). A warning dialog will be shown if
-  trying to install stable versions of this add-on on Windows 11 prior to
-  general availability.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * For entries not listed below, you can assume that features are part of
   NVDA, no longer applicable as the add-on does not support unsupported
@@ -59,10 +54,6 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   cases, including when suggestion count changes as search progresses. This
   option is controlled by "Report object position information" in Object
   presentation panel found in NVDA settings.
-* When searching in Start menu or File Explorer in Windows 10 1909 (November
-  2019 Update) and later, instances of NVDA announcing search results twice
-  when reviewing results are less noticeable, which also makes braille
-  output more consistent when reviewing items.
 * In addition to UIA event handlers provided by NVDA, the following UIA
   events are recognized: drag start, drag cancel, drag complete, drop target
   drag enter, drop target drag leave, drop target dropped, layout
@@ -95,9 +86,6 @@ and later).
 
 * Tekstualni odgovori Cortane najavljuju se u većini slučajeva.
 * NVDA neće govoriti kad pričaš sa Cortanom.
-* In Windows 10 1909 (November 2019 Update) and later, modern search
-  experience in File Explorer powered by Windows Search user interface is
-  supported.
 
 ## Mail
 
@@ -132,11 +120,6 @@ Consortium setting from NVDA's speech settings and set symbol level to
 Space key instead of Enter key to paste the selected item. NVDA also
 supports updated input experience panel in Windows 11.
 
-* Prilikom otvaranja povijesti međuspremnika, pod nekim okolnostima, NVDA
-  više neće objavljivati „međuspremnik” kad se u međuspremniku nalaze
-  stavke.
-* On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA
-  will no longer appear to do nothing when emoji panel opens.
 * When an emoji group (including kaomoji and symbols group in Windows 10
   1903 or later) is selected, NVDA will no longer move navigator object to
   certain emojis.

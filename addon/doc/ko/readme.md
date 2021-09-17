@@ -1,9 +1,9 @@
 # Windows App Essentials #
 
-* 저자: Joseph Lee(이성원), Derek Riemer 외 윈도우 10 사용자들
+* 저자: Joseph Lee(이성원), Derek Riemer 외 다수
 * [출시 버전][1]
 * [개발 버전][2]
-* NVDA 호환: 2020.4 이상
+* NVDA 호환: 2021.2 이상
 
 참고: 윈도우 10 이상(특히 윈도우 11)을 지원하기 위해 2021년에 Windows 10 App Essentials에서 Windows
 App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름이 뜰 수 있습니다.
@@ -18,8 +18,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 지도
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/modern input method editors)
+* 현대식 키보드(에모지 페널/받아쓰기/하드웨어 입력 구성/클립보드 히스토리/현대식 IME 입력기)
 * People
 * 설정(시스템 설정 앱, Windows+I)
 * 날씨
@@ -27,14 +26,9 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 사용시 주의 사항:
 
-* 본 추가 기능은 윈도우 10 20H2(빌드 19042) 이상을 지원하며 최신 윈도우 버전(윈도우 10 21H1/빌드 19043)에
-  최적화되어 있습니다.
+* 본 추가 기능은 윈도우 10 20H2(빌드 19042) 이상(윈도우 11 포함)을 지원합니다.
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
-* Support for Windows 11 is experimental, and some features will not work
-  (see relevant entries for details). A warning dialog will be shown if
-  trying to install stable versions of this add-on on Windows 11 prior to
-  general availability.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
 * 다음 중 하나 이상 발생시 본 추가 기능에 탑제된 기능중 몇이 삭제됩니다: NVDA가 그 기능을 탑제할때, 지원이 중단된 윈도우
   버전(예: 지원이 중단된 윈도우 10 기능 업데이트)에서 제공하는 기능일 경우, 윈도우나 앱이 변경되어 기능 지원이 필요가 없을때.
@@ -47,10 +41,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 * 특정 검색창에서 검색 결과수가(특히 검색중 결과수가 변경될 경우) 출력되도록 함(본 기능은 NVDA 설정내 객체 알림 페널에 있는
   객체 위치 출력 설정으로 제어할 수 있음).
-* When searching in Start menu or File Explorer in Windows 10 1909 (November
-  2019 Update) and later, instances of NVDA announcing search results twice
-  when reviewing results are less noticeable, which also makes braille
-  output more consistent when reviewing items.
 * NVDA가 지원하는 UIA  이벤트 외의 다음 이벤트 추적 가능: drag start, drag cancel, drag
   complete, drop target drag enter, drop target drag leave, drop target
   dropped, layout invalidated. NVDA가 디버그 로깅 상태로 재시작된 경우 위 이벤트가 추적되며
@@ -78,9 +68,6 @@ and later).
 
 * Textual responses from Cortana are announced in most situations.
 * NVDA will be silent when talking to Cortana via voice.
-* In Windows 10 1909 (November 2019 Update) and later, modern search
-  experience in File Explorer powered by Windows Search user interface is
-  supported.
 
 ## 메일
 
@@ -115,10 +102,6 @@ Consortium setting from NVDA's speech settings and set symbol level to
 Space key instead of Enter key to paste the selected item. NVDA also
 supports updated input experience panel in Windows 11.
 
-* When opening clipboard history, NVDA will no longer announce "clipboard"
-  when there are items in the clipboard under some circumstances.
-* On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA
-  will no longer appear to do nothing when emoji panel opens.
 * When an emoji group (including kaomoji and symbols group in Windows 10
   1903 or later) is selected, NVDA will no longer move navigator object to
   certain emojis.

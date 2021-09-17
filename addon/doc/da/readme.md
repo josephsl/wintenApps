@@ -1,9 +1,9 @@
 # Vigtige forbedringer til Windows apps (Windows App Essentials) #
 
-* Forfattere: Joseph Lee, Derek Riemer og andre brugere af Windows 10
+* Authors: Joseph Lee, Derek Riemer and others
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA-kompatibilitet: 2020.4 og derover
+* NVDA compatibility: 2021.2 and beyond
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
 til Windows App Essentials i 2021 for at understøtte Windows 10 og
@@ -31,16 +31,11 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 Bemærkninger:
 
-* Denne tilføjelse kræver Windows 10 20H2 (build 19042) eller nyere. For at
-  få de bedste resultater skal du bruge tilføjelsen med den nyeste
-  Windows-udgivelse (Windows 10 21H1/build 19043).
+* This add-on requires Windows 10 20H2 (build 19042) or later and is
+  compatible with Windows 11.
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
-* Understøttelse for Windows 11 er eksperimentel, og nogle funktioner
-  fungerer ikke (se relevante afsnit for detaljer). In advarsel vil blive
-  vist, hvis du forsøger at installere denne tilføjelse, før Windows 11 er
-  frit tilgængelig.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
 * For funktioner, der ikke er anført nedenfor, kan du antage, at funktioner
@@ -60,10 +55,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * NVDA kan annoncere nummeret af forslag, når du udfører en søgning i de
   fleste tilfælde. Denne indstilling styres af "Oplys information om
   objektets placering" i indstillingspanelet "Objektpræsentation".
-* Når du søger i startmenuen eller Stifinder i version 1909 (november 2019
-  Update) og senere, vil NVDA ikke længere annoncere søgeresultater to
-  gange, når du gennemser resultater, hvilket også gør punktoutput mere
-  ensartet, når du gennemgår elementer.
 * Udover de UIA-håndteringsmuligheder, som NVDA leverer, vil følgende
   UIA-hændelser blive opfanget af skærmlæseren: drag start, drag cancel,
   drag complete, drop target drag enter, drop target drag leave, drop target
@@ -101,9 +92,6 @@ De fleste funktioner er anvendelige, når du bruger Cortana-samtaler (Windows
 
 * Tekstlige svar fra Cortana annonceres i de fleste tilfælde.
 * NVDA vil forblive tavs, når du taler til Cortana med stemmen.
-* I version 1909 (november 2019-opdatering) og senere understøttes den
-  moderne søgeoplevelse i Stifinder drevet af brugergrænseflade til Windows
-  Søg.
 
 ## Mail
 
@@ -141,10 +129,6 @@ indstille fra historikken i Windows 10, skal du bruge mellemrumstasten i
 stedet for enter. NVDA understøtter også det opdaterede inputoplevelsespanel
 i Windows 11.
 
-* NVDA vil ikke længere annoncere "Udklipsholder", når der er elementer i
-  udklipsholderen under nogle omstændigheder.
-* På nogle systemer, der kører version 1903 (May 2019 Update) og senere, vil
-  NVDA ikke længere foretage sig ingenting, når Emoji panel åbnes.
 * Når en emoji-gruppe (inklusive kaomoji og symbolgrupper i version 1903
   eller nyere) er valgt, vil NVDA ikke længere flytte navigatorobjektet til
   bestemte emojis.

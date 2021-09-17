@@ -1,9 +1,9 @@
 # Windows Temel Uygulamalar #
 
-* Yazarlar: Joseph Lee, Derek Riemer ve diğer Windows 10 kullanıcıları
+* Authors: Joseph Lee, Derek Riemer and others
 * [kararlı sürüm][1]ü indir
 * [geliştirme sürümü][2]nü indir
-* NVDA uyumluluğu: 2020.4 ve sonrası
+* NVDA compatibility: 2021.2 and beyond
 
 Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
 adlandırılırken, Windows 10 ve Windows 11 gibi gelecekteki windows
@@ -34,15 +34,10 @@ bakın):
 
 Notlar:
 
-* Bu eklenti, Windows 10 20H2 (derleme 19042) veya sonraki bir sürümünü
-  gerektirir. En iyi deneyim için, en son Windows ve eklenti sürümünü
-  kullanın. (Windows 10 21H1/build 19043).
+* This add-on requires Windows 10 20H2 (build 19042) or later and is
+  compatible with Windows 11.
 * Ne kadar yüklenebilse de, bu eklenti Windows Enterprise LTSC (Uzun Süreli
   Hizmet Kanalı) ve Windows Server sürümlerini desteklemez.
-* Windows 11 desteği deneyseldir ve bazı özellikler çalışmayacaktır
-  (ayrıntılar için ilgili bölümlere  bakın). Genel kullanıma sunulmadan önce
-  bu eklentinin kararlı sürümlerini Windows 11'e yüklemeye çalışıyorsanız
-  bir uyarı iletişim kutusu gösterilecektir.
 * Bazı eklenti özellikleri, NVDA ekran okuyucusunun bir parçasıdır veya
   yakında olacaktır.
 * Aşağıda listelenmeyen özellikler için,listelenmeyen özelliklerin artık
@@ -63,10 +58,6 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
   çoğu durumda arama yaparken öneri sayısını bildirebilir. Bunun çalışması
   NVDA ayarlarında bulunan Nesne sunumu bölümündeki  "Nesne konum bilgisini
   bildir" onay kutusunun statüsüne bağlıdır.
-* Windows 10 1909 (Kasım 2019 Güncellemesi) ve sonraki sürümlerinde Başlat
-  menüsünde veya Dosya Gezgini'nde arama sırasında sonuçları incelerken
-  NVDA'nın arama sonuçlarını iki kez bildirmesi daha az dikkat çeker, bu da
-  öğeleri gözden geçirirken braille çıktısını daha tutarlı hale getirir.
 * NVDA tarafından sağlanan UIA olay işleyicilerine ek olarak, aşağıdaki UIA
   olayları tanınır: sürükle başlat, sürükle iptal, sürükle tamam, bırak
   hedefi sürükle gir gir, hedefi bırak sürükle bırak, bırak hedefi bırak,
@@ -99,9 +90,6 @@ geçerlidir.
 
 * Cortana'dan gelen metin içerikli yanıtlar çoğu durumda bildirilir.
 * Cortana ile sesli konuşurken NVDA konuşmayacaktır.
-* Windows 10 1909 (Kasım 2019 Güncelleştirmesi) ve sonraki sürümlerinde,
-  Windows Aarama kullanıcı arabirimi tarafından desteklenen Dosya
-  Gezgini'ndeki modern arama deneyimi desteklenir.
 
 ## Posta
 
@@ -137,11 +125,6 @@ veya  çoğu olarak ayarlayın. Windows 10'da pano geçmişinden yapıştırırk
 seçilen öğeyi yapıştırmak için Enter tuşu yerine Aralık tuşuna basın. Ayrıca
 NVDA, Windows 11'de güncellenmiş giriş deneyimi panelini destekler.
 
-* Pano geçmişini açarken, bazı durumlarda panoda öğeler olduğunda NVDA artık
-  "pano" duyurusu yapmayacaktır.
-* Windows 10 1903 (Mayıs 2019 Güncellemesi) ve sonraki sürümleri çalıştıran
-  bazı sistemlerde emoji paneli açıldığında NVDA artık hiçbir şey
-  yapmıyormuş gibi görünmeyecektir.
 * Bir emoji grubu (Windows 10 1903 veya sonraki sürümlerde kaomoji ve
   semboller grubu dahil) seçildiğinde, NVDA artık   nesne sunucusunu belirli
   emojilere taşımayacaktır.
