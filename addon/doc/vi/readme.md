@@ -1,9 +1,9 @@
 # Windows App Essentials #
 
-* Tác giả: Joseph Lee, Derek Riemer và những người dùng Windows 10 khác
+* Authors: Joseph Lee, Derek Riemer and others
 * Tải về [phiên bản chính thức][1]
 * Tải về [phiên bản thử nghiệm][2]
-* NVDA tương thích: 2020.4 trở lên
+* NVDA compatibility: 2021.2 and beyond
 
 Note: Originally called Windows 10 App Essentials, it was renamed to Windows
 App Essentials in 2021 to support Windows 10 and future releases such as
@@ -32,15 +32,11 @@ tiết của mỗi ứng dụng để biết them):
 
 Lưu ý:
 
-* Add-on này yêu cầu Windows 10 phiên bản 20H2 (build 19042) trở lên. Tốt
-  nhất, hay dùng add-on với bản Windows 10 mới nhất (21H1/build 19043).
+* This add-on requires Windows 10 20H2 (build 19042) or later and is
+  compatible with Windows 11.
 * Dù vẫn có thể cài đặt được, add-on này không hỗ trợ Windows 10 Enterprise
   LTSC (Long-Term Servicing Channel) và các bản phát hành của Windows
   Server.
-* Support for Windows 11 is experimental, and some features will not work
-  (see relevant entries for details). A warning dialog will be shown if
-  trying to install stable versions of this add-on on Windows 11 prior to
-  general availability.
 * Vài tính năng của add-on đã hoặc sẽ là một phần tính năng của trình đọc
   màn hình NVDA.
 * Với những thành phần không được liệt kê bên dưới, bạn có thể xem như các
@@ -61,10 +57,6 @@ for add-on releases][3] .
   thay đổi số gọi ý đếm được  khi thực hiện tìm kiếm. Tùy chọn này được điều
   khiển bởi "Thông báo thông tin vị trí đối tượng" trong bảng điều khiển
   trình bày đối tượng trong cài đặt của NVDA.
-* Khi tìm kiếm trên Start menu hoặc File Explorer trong Windows 10 1909 (bản
-  cập nhật tháng 11/2019) trở lên, việc NVDA thông báo kết quả tìm kiếm hai
-  lần khi duyệt qua chúng sẽ giảm đi. Nó cũng làm cho việc xem các thành
-  phần ở đầu ra chữ nổi được thể hiện hợp lý hơn.
 * In addition to UIA event handlers provided by NVDA, the following UIA
   events are recognized: drag start, drag cancel, drag complete, drop target
   drag enter, drop target drag leave, drop target dropped, layout
@@ -97,9 +89,6 @@ and later).
 
 * Phản hồi văn bản từ Cortana được thông báo trong hầu hết tình huống.
 * NVDA sẽ im lặng khi điều khiển Cortana bằng giọng nói.
-* In Windows 10 1909 (November 2019 Update) and later, modern search
-  experience in File Explorer powered by Windows Search user interface is
-  supported.
 
 ## Mail
 
@@ -135,10 +124,6 @@ Consortium setting from NVDA's speech settings and set symbol level to
 Space key instead of Enter key to paste the selected item. NVDA also
 supports updated input experience panel in Windows 11.
 
-* Khi mở lịch sử khay nhớ tạm, NVDA không còn đọc "clipboard" khi có nội
-  dung trong khay nhớ tạm ở vài trường hợp.
-* On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA
-  will no longer appear to do nothing when emoji panel opens.
 * When an emoji group (including kaomoji and symbols group in Windows 10
   1903 or later) is selected, NVDA will no longer move navigator object to
   certain emojis.

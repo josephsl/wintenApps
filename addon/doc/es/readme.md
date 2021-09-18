@@ -1,9 +1,9 @@
 # Windows App Essentials #
 
-* Autores: Joseph Lee, Derek Riemer y otros usuarios de Windows 10
+* Autores: Joseph Lee, Derek Riemer y otros
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
-* Compatibilidad con NVDA: 2020.4 y posterior
+* Compatibilidad con NVDA: de 2021.2 en adelante
 
 Nota: originalmente llamado Windows 10 App Essentials, se renombró a Windows
 App Essentials en 2021 para soportar Windows 10 y versiones futuras, como
@@ -35,15 +35,10 @@ qué se incluye):
 Notas:
 
 * Este complemento requiere Windows 10 Versión 20H2 (compilación 19042) o
-  posterior. Para unos mejores resultados, utiliza el complemento con la
-  compilación estable más reciente de Windows 10 (21H1 / compilación 19043).
+  posterior y es compatible con Windows 11.
 * Aunque la instalación es posible, este complemento no soporta Windows
   Enterprise LTSC (canal de servicio a largo plazo) ni las versiones de
   Windows Server.
-* El soporte de Windows 11 es experimental, y algunas características no
-  funcionarán (consulta las entradas relevantes para más detalles). Se
-  mostrará un diálogo de advertencia si intentas instalar versiones estables
-  de este complemento en Windows 11 antes de su disponibilidad general.
 * Algunas de las características del complemento son o serán parte del
   lector de pantalla NVDA.
 * Para las entradas que no se enumeren a continuación, puedes asumir que las
@@ -65,11 +60,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   sugerencias cambia según progresa la búsqueda. Esta opción se controla por
   "Anunciar información de posición del objeto" en el panel Presentación de
   Objetos disponible en las opciones de NVDA.
-* Al buscar en el menú Inicio o el explorador de archivos de Windows 10
-  versión 1909 (actualización de noviembre de 2019) y posteriores, NVDA ya
-  no anunciará tanto los resultados de búsqueda dos veces al revisarlos, lo
-  que al mismo tiempo hace la salida braille más consistente al revisar
-  elementos.
 * Además de los manejadores de eventos UIA proporcionados por NVDA, se
   reconocen los siguientes eventos UIA: drag start, drag cancel, drag
   complete, drop target drag enter, drop target drag leave, drop target
@@ -105,10 +95,6 @@ La mayoría de elementos se aplican al usar las conversaciones de Cortana
 * Las respuestas textuales de Cortana se verbalizan en la mayoría de
   situaciones.
 * NVDA se silenciará cuando hables a Cortana a través de la voz.
-* En Windows 10 versión 1909 (actualización de noviembre de 2019) y
-  posteriores, se soporta la interfaz de usuario de la experiencia de
-  búsqueda moderna proporcionada por Windows Search en el explorador de
-  Windows.
 
 ## Correo
 
@@ -132,8 +118,8 @@ La mayoría de elementos se aplican al usar las conversaciones de Cortana
 * Después de buscar actualizaciones de aplicaciones, los nombres de las
   aplicaciones en la lista de aplicaciones etiquetadas se actualizan
   correctamente.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* Cuando se descargue contenido, como aplicaciones o películas, NVDA
+  anunciará el nombre del producto y el progreso de la descarga.
 
 ## Teclado Moderno
 
@@ -145,11 +131,6 @@ opciones de voz de NVDA y configura el nivel de símbolos en "alguno" o más
 alto. NVDA también soporta el panel actualizado de experiencia de entrada de
 Windows 11.
 
-* Al abrir el historial del portapapeles, NVDA ya no dirá "portapapeles"
-  cuando haya elementos en el portapapeles bajo algunas circunstancias.
-* En algunos sistemas que ejecutan Windows 10 versión 1903 (actualización de
-  mayo de 2019) y posteriores, NVDA ya no parecerá hacer nada cuando el
-  panel de emojis se abra.
 * Cuando se seleccione un grupo de emojis (incluyendo kaomoji y el grupo de
   símbolos en Windows 10 versión 1903 o posteriores), NVDA ya no moverá el
   navegador de objetos a ciertos emojis.

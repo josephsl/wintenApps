@@ -1,9 +1,9 @@
 # Windows App Essentials #
 
-* Tekijät: Joseph Lee, Derek Riemer sekä muut Windows 10:n käyttäjät
+* Authors: Joseph Lee, Derek Riemer and others
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2020.4 ja uudemmat
+* NVDA compatibility: 2021.2 and beyond
 
 Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
 nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows
@@ -33,15 +33,10 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Tämä lisäosa edellyttää Windows 10:n versiota 20H2 (koontiversio 19042)
-  tai uudempaa. Käytä parhaan käyttökokemuksen varmistamiseksi Windows 10:n
-  viimeisintä vakaata versiota (21H1/koontiversio 19043).
+* This add-on requires Windows 10 20H2 (build 19042) or later and is
+  compatible with Windows 11.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
-* Windows 11:n tuki on kokeellinen, eivätkä kaikki ominaisudet toimi (katso
-  lisätietoja asianmukaisista kohdista). Varoitusvalintaikkuna näytetään,
-  jos yrität asentaa tämän lisäosan vakaita versioita Windows 11:een ennen
-  yleistä saatavuutta.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue tuen
@@ -60,10 +55,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   suoritettaessa, mukaan lukien tilanteet, joissa ehdotusten määrä muuttuu
   haun edistyessä. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
   -asetuksella Objektien lukeminen -paneelista NVDA:n asetuksista.
-* NVDA puhuu nyt hakua suoritettaessa vähemmän hakutuloksia kahdesti
-  Käynnistä-valikossa tai Resurssienhallinnassa versiossa 1909 (November
-  2019 -päivitys) ja uudemmissa, mikä tekee lisäksi
-  pistekirjoitustulosteesta yhdenmukaisempaa kohteita tarkasteltaessa.
 * Seuraavat UIA-tapahtumat tunnistetaan NVDA:n tarjoamien
   UIA-tapahtumakäsittelijöiden lisäksi: vetämisen aloitus, vetämisen
   peruutus, vetäminen suoritettu, vetämisen kohteeseen siirtyminen,
@@ -97,9 +88,6 @@ versio 2004 ja uudemmat).
 
 * Cortanan tekstimuotoiset vastaukset puhutaan useimmissa tilanteissa.
 * NVDA on hiljaa puhuttaessa Cortanalle mikrofonin välityksellä.
-* Modernia Windows-haun käyttöliittymän voimalla toimivaa
-  resurssienhallinnan hakukokemusta tuetaan versiossa 1909 (marraskuun 2019
-  päivitys) ja uudemmissa.
 
 ## Sähköposti
 
@@ -122,8 +110,8 @@ versio 2004 ja uudemmat).
 
 * Sovellusten nimet näytetään oikein päivitettävien sovellusten luettelossa
   päivitystarkistuksen jälkeen.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* NVDA ilmoittaa tuotteen nimen ja latauksen edistymisen sisältöä, kuten
+  sovelluksia ja elokuvia ladattaessa.
 
 ## Moderni näppäimistö
 
@@ -136,11 +124,6 @@ korkeampi. Kun liität leikepöydän historiasta, liitä valittu kohde
 painamalla välilyöntinäppäintä Enterin sijaan. NVDA tukee lisäksi
 päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 
-* NVDA ei enää sano leikepöydän historiaa avattaessa joissakin tilanteissa
-  "leikepöytä", kun leikepöydällä on kohteita.
-* Emojipaneelin avautuessa ei enää näytä siltä, että NVDA  ei tee mitään
-  joissakin järjestelmissä, joissa on asennettuna Windows 10:n versio 1903
-  (May 2019 -päivitys) tai uudempi.
 * Kun emojiryhmä (mukaan lukien kaomoji ja symboliryhmä Windows 10:n
   versiossa 1903 tai uudemmissa) valitaan, NVDA ei enää siirrä
   navigointiobjektia tiettyihin emojeihin.

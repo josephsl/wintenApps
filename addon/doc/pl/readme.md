@@ -1,9 +1,9 @@
 # Windows App Essentials #
 
-* Autorzy: Joseph Lee, Derek Riemer i Inni użytkownicy windowsa 10.
+* Authors: Joseph Lee, Derek Riemer and others
 * Pobierz [wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
-* Zgodność z wersjami NVDA: 2020.3 do 2020.4
+* NVDA compatibility: 2021.2 and beyond
 
 Note: Originally called Windows 10 App Essentials, it was renamed to Windows
 App Essentials in 2021 to support Windows 10 and future releases such as
@@ -32,15 +32,10 @@ każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
 
 Uwagi:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later. For best
-  results, use the add-on with latest Windows release (Windows 10 21H1/build
-  19043).
+* This add-on requires Windows 10 20H2 (build 19042) or later and is
+  compatible with Windows 11.
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
-* Support for Windows 11 is experimental, and some features will not work
-  (see relevant entries for details). A warning dialog will be shown if
-  trying to install stable versions of this add-on on Windows 11 prior to
-  general availability.
 * Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
 * For entries not listed below, you can assume that features are part of
   NVDA, no longer applicable as the add-on does not support unsupported
@@ -59,10 +54,6 @@ Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
   cases, including when suggestion count changes as search progresses. This
   option is controlled by "Report object position information" in Object
   presentation panel found in NVDA settings.
-* When searching in Start menu or File Explorer in Windows 10 1909 (November
-  2019 Update) and later, instances of NVDA announcing search results twice
-  when reviewing results are less noticeable, which also makes braille
-  output more consistent when reviewing items.
 * In addition to UIA event handlers provided by NVDA, the following UIA
   events are recognized: drag start, drag cancel, drag complete, drop target
   drag enter, drop target drag leave, drop target dropped, layout
@@ -96,9 +87,6 @@ and later).
 
 * Odpowiedzi tekstowe kortany są wymawiane w większości sytuacjach.
 * NVDA będzie przyciszony, gdy mówisz do Cortany.
-* In Windows 10 1909 (November 2019 Update) and later, modern search
-  experience in File Explorer powered by Windows Search user interface is
-  supported.
 
 ## Poczta
 
@@ -133,10 +121,6 @@ Consortium setting from NVDA's speech settings and set symbol level to
 Space key instead of Enter key to paste the selected item. NVDA also
 supports updated input experience panel in Windows 11.
 
-* Gdy historia schowka jest wypowiadana, NVDA już nie będzie wymawiała
-  "schowek" w niektórych przypadkach, gdy istnieje treść.
-* On some systems running Windows 10 1903 (May 2019 Update) and later, NVDA
-  will no longer appear to do nothing when emoji panel opens.
 * When an emoji group (including kaomoji and symbols group in Windows 10
   1903 or later) is selected, NVDA will no longer move navigator object to
   certain emojis.

@@ -6,25 +6,12 @@
 
 # Specific workarounds for Windows 11.
 from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
-import controlTypes
 from NVDAObjects.UIA import UIA
 
 
 # Built-in File Explorer app module powers bulk of the below app module class, so inform Mypy.
 # And Flake8 and other linters, to.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
-
-	def event_NVDAObject_init(self, obj):
-		# No, these shell buttons inside Windows 11 taskbar should not be a toggle button,
-		# and discard checkable state, too.
-		if (
-			isinstance(obj, UIA) and obj.role == controlTypes.Role.TOGGLEBUTTON
-			and isinstance(obj.parent, UIA) and obj.parent.UIAAutomationId == "TaskbarFrameRepeater"
-		):
-			obj.role = controlTypes.Role.BUTTON
-			obj.states.discard(controlTypes.State.CHECKABLE)
-			return
-		super(AppModule, self).event_NVDAObject_init(obj)
 
 	def event_gainFocus(self, obj, nextHandler):
 		if obj.windowClassName == "XamlExplorerHostIslandWindow":
