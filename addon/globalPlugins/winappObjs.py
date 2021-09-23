@@ -10,6 +10,8 @@ from comtypes import COMError
 import globalPluginHandler
 import ui
 from NVDAObjects.UIA import UIA
+# Temporary: test for suggestions list until NVDA 2021.3 requirement is in effect.
+import NVDAObjects.UIA
 import api
 import config
 import queueHandler
@@ -125,7 +127,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Recognize suggestions list view firing layout invalidated event.
 		# Although certain list views such as languages list in Settings app fire layout invalidated event,
 		# they are not true suggestions list views.
-		if obj.UIAAutomationId == "SuggestionsList":
+		# NVDA 2021.3 transplants suggestions list class into NVDA Core.
+		if obj.UIAAutomationId == "SuggestionsList" and not hasattr(NVDAObjects.UIA, "SuggestionsList"):
 			clsList.insert(0, SuggestionsListView)
 			return
 		# Recognize headings as reported by XAML (Windows 10 1803 or later).
@@ -248,6 +251,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_layoutInvalidated(self, obj, nextHandler):
+		# NVDA 2021.3 transplants layout invalidated event into NVDA Core.
+		# Deprecated: the below code is duplicated by Event Tracker add-on.
+		# See older add-on releases for details.
 		self.uiaDebugLogging(obj, "layoutInvalidated")
 		if log.isEnabledFor(log.DEBUG):
 			log.debug(f"winapps: list item count: {obj.childCount}")
