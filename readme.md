@@ -35,7 +35,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## General
 
-* NVDA can announce suggestion count when performing a search in majority of cases, including when suggestion count changes as search progresses. This option is controlled by "Report object position information" in Object presentation panel found in NVDA settings.
+* NVDA can announce suggestion count when performing a search in majority of cases, including when suggestion count changes as search progresses.
 * In addition to UIA event handlers provided by NVDA, the following UIA events are recognized: drag start, drag cancel, drag complete, drop target drag enter, drop target drag leave, drop target dropped, layout invalidated. With NVDA's log level set to debug, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app. Events built into NVDA such as name change and controller for events will be tracked from an add-on called Event Tracker.
 * When opening, closing, reordering (Windows 11), or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
