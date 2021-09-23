@@ -280,8 +280,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_layoutInvalidated(self, obj, nextHandler):
 		# NVDA 2021.3 transplants layout invalidated event into NVDA Core.
-		if not hasattr(NVDAObjects.UIA, "SuggestionsList"):
-			self.uiaDebugLogging(obj, "layoutInvalidated")
-			if log.isEnabledFor(log.DEBUG):
-				log.debug(f"W10: list item count: {obj.childCount}")
+		# Deprecated: the below code is duplicated by Event Tracker add-on.
+		# See older add-on releases for details.
+		self.uiaDebugLogging(obj, "layoutInvalidated")
+		if log.isEnabledFor(log.DEBUG):
+			log.debug(f"W10: list item count: {obj.childCount}")
 		nextHandler()
