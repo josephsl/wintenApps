@@ -60,16 +60,15 @@ class SuggestionsListView(UIA):
 		# This is the case with Microsoft Store's search field.
 		import speech
 		speech.cancelSpeech()
-		if config.conf["presentation"]["reportObjectPositionInformation"]:
-			# Item count must be the last one spoken.
-			suggestionsCount: int = self.childCount
-			suggestionsMessage = (
-				# Translators: part of the suggestions count message (for example: 2 suggestions).
-				_("1 suggestion")
-				# Translators: part of the suggestions count message (for example: 2 suggestions).
-				if suggestionsCount == 1 else _("{} suggestions").format(suggestionsCount)
-			)
-			ui.message(suggestionsMessage)
+		# Item count must be the last one spoken.
+		suggestionsCount: int = self.childCount
+		suggestionsMessage = (
+			# Translators: part of the suggestions count message (for example: 2 suggestions).
+			_("1 suggestion")
+			# Translators: part of the suggestions count message (for example: 2 suggestions).
+			if suggestionsCount == 1 else _("{} suggestions").format(suggestionsCount)
+		)
+		ui.message(suggestionsMessage)
 
 
 # Various XAML headings (Settings app, for example) introduced in Windows 10 1803.
