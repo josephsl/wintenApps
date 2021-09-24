@@ -1,9 +1,9 @@
 # Windows App Essentials #
 
-* Authors: Joseph Lee, Derek Riemer and others
+* Tekijät: Joseph Lee, Derek Riemer sekä muut
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* NVDA compatibility: 2021.2 and beyond
+* Yhteensopivuus: NVDA 2021.2 ja uudemmat
 
 Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
 nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows
@@ -33,8 +33,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later and is
-  compatible with Windows 11.
+* Tämä lisäosa edellyttää Windows 10:n versiota 20H2 (koontiversio 19042)
+  tai uudempaa ja on yhteensopiva Windows 11:n kanssa.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
