@@ -1,9 +1,9 @@
 # Windows App Essentials #
 
-* Authors: Joseph Lee, Derek Riemer and others
+* Autores: Joseph Lee, Derek Riemer e outros
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
-* NVDA compatibility: 2021.2 and beyond
+* Compatibilidade con NVDA: 2021.2 en diante
 
 Nota: Orixinalmente chamado Windows 10 App Essentials, renomeouse a windows
 App Essentials en 2021 para soportar windows 10 e versións futuras como
@@ -33,8 +33,8 @@ se inclúe):
 
 Notas:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later and is
-  compatible with Windows 11.
+* Este complemento require do Windows 10 20H2 (compilación 19042) ou
+  posterior e é compatible con Windows 11.
 * Aínda que a instalación é posible, este complemento non soporta Windows
   Enterprise LTSC (Long-Term Servicing Channel) nin versións de Windows
   Server.
@@ -114,8 +114,8 @@ A maioría dos elementos aplican se se usa Cortana Conversations (Windows 10
 
 * Despois de buscar actualizacións das aplicacións, os nomes das aplicacións
   na lista de aplicacions actualizarán as etiquetas correctamente.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* Cando se descargue contido como aplicacións e películas, NVDA anunciará o
+  nome do produto e o progreso da descarga.
 
 ## Teclado Moderno
 
