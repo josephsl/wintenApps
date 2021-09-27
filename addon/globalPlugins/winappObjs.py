@@ -220,14 +220,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Events defined in this add-on.
 
-	def event_UIA_dragStart(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "dragStart")
-		nextHandler()
-
-	def event_UIA_dragCancel(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "dragCancel")
-		nextHandler()
-
 	def event_UIA_dragComplete(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dragComplete")
 		# Announce the new drop location by faking a gain focus event.
