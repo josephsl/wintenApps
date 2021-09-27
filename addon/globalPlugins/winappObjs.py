@@ -226,14 +226,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		eventHandler.queueEvent("gainFocus", obj)
 		nextHandler()
 
-	def event_UIA_dropTargetDragEnter(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "dropTargetDragEnter")
-		nextHandler()
-
-	def event_UIA_dropTargetDragLeave(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "dropTargetDragLeave")
-		nextHandler()
-
 	def event_UIA_dropTargetDropped(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dropTargetDropped")
 		# Unlike drag complete event, it is something else that raises this event
