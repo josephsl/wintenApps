@@ -122,8 +122,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Windows that are really dialogs.
 		# Some dialogs, although listed as a dialog thanks to UIA class name,
 		# does not advertise the proper role of dialog.
-		# No longer necessary due to Windows an app updates and improved dialog markup.
-		# See older add-on releases for details.
+		# This is still the case with some dialogs such as restart to install updates dialog in Windows 11.
 		if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
 			return
