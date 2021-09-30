@@ -9,7 +9,7 @@ from typing import Optional, Any
 from comtypes import COMError
 import globalPluginHandler
 import ui
-from NVDAObjects.UIA import UIA
+from NVDAObjects.UIA import UIA, Dialog
 # Temporary: test for suggestions list until NVDA 2021.3 requirement is in effect.
 import NVDAObjects.UIA
 import api
