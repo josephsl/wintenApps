@@ -119,6 +119,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if not isinstance(obj, UIA):
 			return
+		# Windows that are really dialogs.
+		# Some dialogs, although listed as a dialog thanks to UIA class name,
+		# does not advertise the proper role of dialog.
+		# No longer necessary due to Windows an app updates and improved dialog markup.
+		# See older add-on releases for details.
 		# Recognize suggestions list view firing layout invalidated event.
 		# Although certain list views such as languages list in Settings app fire layout invalidated event,
 		# they are not true suggestions list views.
