@@ -9,6 +9,7 @@ from typing import Optional, Any
 from comtypes import COMError
 import globalPluginHandler
 import ui
+import controlTypes
 from NVDAObjects.UIA import UIA, Dialog
 # Temporary: test for suggestions list until NVDA 2021.3 requirement is in effect.
 import NVDAObjects.UIA
@@ -73,11 +74,20 @@ class SuggestionsListView(UIA):
 
 
 # Various XAML headings (Settings app, for example) introduced in Windows 10 1803.
+UIAHeadingsToNVDAHeadings: dict[int, controlTypes.Role] = {
+	UIAHandler.HeadingLevel1: controlTypes.Role.HEADING1,
+	UIAHandler.HeadingLevel2: controlTypes.Role.HEADING2,
+	UIAHandler.HeadingLevel3: controlTypes.Role.HEADING3,
+	UIAHandler.HeadingLevel4: controlTypes.Role.HEADING4,
+	UIAHandler.HeadingLevel5: controlTypes.Role.HEADING5,
+	UIAHandler.HeadingLevel6: controlTypes.Role.HEADING6,
+}
+
+
 class XAMLHeading(UIA):
 
 	def _get_role(self) -> int:
-		# Heading levels are 8005x, control types heading levels are 4x, therefore the below object role formula.
-		return self._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId) - 80010
+		return UIAHeadingsToNVDAHeadings[self._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId)]
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
