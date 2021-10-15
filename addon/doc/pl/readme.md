@@ -1,131 +1,139 @@
 # Windows App Essentials #
 
-* Authors: Joseph Lee, Derek Riemer and others
+* Autorzy: Joseph Lee, Derek Riemer i inni
 * Pobierz [wersja stabilna][1]
-* Pobierz [Wersja rozwojowa][2]
-* NVDA compatibility: 2021.2 and beyond
+* Pobierz [wersja rozwojowa][2]
+* Zgodność z wersjami NVDA: 2021.2 i nowsze
 
-Note: Originally called Windows 10 App Essentials, it was renamed to Windows
-App Essentials in 2021 to support Windows 10 and future releases such as
-Windows 11. Parts of this add-on will still refer to the original add-on
-name.
+Uwaga: Pierwotniea nazwa tego dodatku była Windows 10 App Essentials, a
+potem została zmieniona na Windows App Essentials w 2021 roku, aby
+obsługiwać Windows 10 i przyszłe wersje, takie jak Windows 11. Części tego
+dodatku nadal będą odnosić się do oryginalnej nazwy dodatku.
 
-This add-on is a collection of app modules for various modern Windows apps,
-as well as enhancements and fixes for certain controls found in Windows 10
-and later.
+Ten dodatek to zbiór modułów aplikacji dla różnych nowoczesnych aplikacji
+systemu Windows, a także ulepszeń i poprawek dla niektórych kontrolek
+znajdujących się w systemie Windows 10 i nowszych.
 
-Dołączone są następujące moduły wspierające aplikacje (sprawdź rozdział
-każdej aplikacji, aby dokładnie sprawdzić co jest wspierane):
+Dołączone są następujące moduły aplikacji lub moduły pomocy technicznej dla
+niektórych aplikacji (szczegółowe informacje na temat tego, co jest
+dołączone, zobacz każdą sekcję aplikacji):
 
 * Kalkulator (nowoczesny)
 * Cortana (konwersacje)
-* Poczta
+* Mail
 * Mapy
 * Microsoft Solitaire Collection
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/modern input method editors)
+* Nowoczesna klawiatura (panel emoji / dyktowanie / pisanie głosowe /
+  podpowiedzi do pisania na klawiaturze sprzętowej / historia schowka /
+  nowoczesne edytory metod wprowadzania)
 * Osoby
-* Ustawienia (Ustawienia systemowe, Windows+I)
+* Ustawienia (ustawienia systemowe, Windows+I)
 * Pogoda
 * Różne moduły dla kontrolek, takie jak kafelki menu Start
 
-Uwagi:
+uwagi: 
 
-* This add-on requires Windows 10 20H2 (build 19042) or later and is
-  compatible with Windows 11.
-* Although installation is possible, this add-on does not support Windows
-  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
-* Niektóre funkcję dodatku są, lub staną się częścią czytnika ekranu NVDA.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support unsupported
-  Windows releases such as old Windows 10 versions, or changes were made to
-  Windows and apps that makes entries no longer applicable.
-* Niektóre aplikacje obsługują tryb kompaktowej nakładki (zawsze na górze w
-  kalkulatorze, na przykład), a ten tryb nie będzie działać poprawnie z
+* Ten dodatek wymaga systemu Windows 10 20H2 (kompilacja 19042) lub nowszego
+  i jest zgodny z systemem Windows 11.
+* Chociaż instalacja jest możliwa, ten dodatek nie obsługuje wersji Windows
+  Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
+* Niektóre funkcje dodatkowe są lub będą częścią czytnika ekranu NVDA.
+* W przypadku wpisów niewymienionych poniżej można założyć, że funkcje są
+  częścią NVDA, nie mają już zastosowania, ponieważ dodatek nie obsługuje
+  przestarzałe wersji systemu Windows, takich jak stare wersje systemu
+  Windows 10, lub wprowadzono zmiany w systemie Windows i aplikacjach, które
+  sprawiają, że wpisy nie mają już zastosowania.
+* Niektóre aplikacje obsługują tryb kompaktowej nakładki (na przykład zawsze
+  na górze w kalkulatorze), a ten tryb nie będzie działał poprawnie z
   przenośną wersją NVDA.
 
-Aby zobaczyć listę zmian pomiędzy kolejnymi wersjami, prosimy przeczytać
-[listę zmian dla wersji dodatku][3].
+Listę zmian wprowadzonych między poszczególnymi wersjami dodatków można
+znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 
 ## Ogólne
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  option is controlled by "Report object position information" in Object
-  presentation panel found in NVDA settings.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drop target
-  drag enter, drop target drag leave, drop target dropped, layout
-  invalidated. With NVDA's log level set to debug, these events will be
-  tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active
-  app. Events built into NVDA such as name change and controller for events
-  will be tracked from an add-on called Event Tracker.
-* When opening, closing, reordering (Windows 11), or switching between
-  virtual desktops, NVDA will announce active virtual desktop name (desktop
-  2, for example).
-* NVDA nie będzie już ogłaszać tekstu o rozmiarze menu Start podczas zmiany
-  rozdzielczości ekranu lub orientacji.
-* Przy ułożeniu kafelków meni start lub szybkich akcji w centrum akcji za
-  pomocą Alt+Shift+strzałek, NVDA będzie wymawiała informację o
-  upuszczonyche elementach lub o ich nowych pozycjach.
-* Powiadomienia takie jak zmiany głośności oraz jasności w eksploratorze
-  plików i aktualizacji aplikacji powiadomienia o aktualizacjach w Microsoft
-  store można wyłączyć, wyłączając opcje odczytuj powiadomienia w
-  ustawieniach prezentacji obiektów NVDA.
+* NVDA może ogłosić liczbę sugestii podczas wyszukiwania w większości
+  przypadków, w tym gdy sugestie liczą zmiany w miarę postępu
+  wyszukiwania. Ta opcja jest kontrolowana przez "Raport informacji o
+  położenia obiektu" w panelu Prezentacja obiektu znajdującym się w
+  ustawieniach NVDA.
+* Oprócz programów obsługi zdarzeń UIA dostarczanych przez NVDA rozpoznawane
+  są następujące zdarzenia UIA: przeciągnij start, przeciągnij anuluj,
+  przeciągnij complete, upuść docelowy przeciągnij enter, upuść docelowy
+  przeciągnij w udziel, upuść cel upuszczony, układ unieważniony. Po
+  ustawieniu poziomu dziennika NVDA na debugowanie zdarzenia te będą
+  śledzone, a w przypadku zdarzenia powiadomienia UIA dźwięk debugowania
+  będzie słyszalny, jeśli powiadomienia pochodzą z innego miejsca niż
+  aktualnie aktywna aplikacja. Zdarzenia wbudowane w NVDA, takie jak zmiana
+  nazwy i kontroler zdarzeń, będą śledzone z dodatku o nazwie Event Tracker.
+* Podczas otwierania, zamykania, zmiany kolejności (Windows 11) lub
+  przełączania się między pulpitami wirtualnymi NVDA ogłosi nazwę aktywnego
+  pulpitu wirtualnego (na przykład pulpit 2).
+* NVDA nie będzie już ogłaszać tekstu rozmiaru menu Start podczas zmiany
+  rozdzielczości lub orientacji ekranu.
+* Podczas rozmieszczania kafelków menu Start lub szybkich akcji Centrum
+  akcji za pomocą Alt+ Shift + strzałek, NVDA ogłosi informacje o
+  przeciągniętych elementach lub nowym położeniu przeciągniętego elementu.
+* Anonsy, takie jak zmiany głośności/jasności w Eksploratorze plików i
+  powiadomienia o aktualizacjach aplikacji ze sklepu Microsoft Store, można
+  pominąć, wyłączając opcję Powiadomienia o raportach w ustawieniach
+  prezentacji obiektów NVDA.
 
 ## Kalkulator
 
-* NVDA nie będzie już dwukrotnie ogłaszać komunikatu ekranu kalkulatora
-  wykresów.
+* NVDA nie będzie już dwukrotnie ogłaszać komunikatu na ekranie kalkulatora
+  graficznego.
 
 ## Cortana
 
-Most items are applicable when using Cortana Conversations (Windows 10 2004
-and later).
+Większość elementów ma zastosowanie podczas korzystania z konwersacji
+Cortany (Windows 10 2004 i nowsze).
 
-* Odpowiedzi tekstowe kortany są wymawiane w większości sytuacjach.
-* NVDA będzie przyciszony, gdy mówisz do Cortany.
+* Odpowiedzi tekstowe z Cortany są ogłaszane w większości sytuacji.
+* NVDA będzie milczeć podczas rozmowy z Cortaną za pomocą głosu.
 
-## Poczta
+## Mail
 
-* Przy wyświetlaniu elementów w listy wiadomości, teraz można użyć skrótów
-  dla nawigacji po tabelach, aby przeczytać nagłówki wiadomości. Miejcie na
-  uwadze, że nawigacja po kolumnach (wiadomościach) jest niewspierana.
+* Podczas przeglądania elementów na liście wiadomości można teraz używać
+  poleceń nawigacji po tabeli do przeglądania nagłówków
+  wiadomości. Pamiętaj, że nawigacja między wierszami (wiadomościami) nie
+  jest obsługiwana.
 
 ## Mapy
 
-* NVDA ottwarza sygnały dźwiękowe położenia dla położenia na mapie.
-* Przy użyciu trybu ulicy i jeśli opcja "użyj klawiatury" jest włączona,
-  NVDA będzie wymawiać adresy ulic przy nawigacji strzałkami po mapie.
+* NVDA odtwarza sygnał dźwiękowy lokalizacji dla lokalizacji na mapie.
+* Podczas korzystania z widoku ulicy i jeśli opcja użyj klawiatury jest
+  włączona, NVDA ogłosi adresy ulic, gdy używasz strzałek do poruszania się
+  po mapie.
 
 ## Microsoft Solitaire Collection
 
-* NVDA będzie wymawiała nazwy kart i talij.
+* NVDA ogłosi nazwy kart i talii kart.
 
 ## Microsoft Store
 
-* Po sprawdzaniu aktualizacji aplikacji, nazyw aplikacji w liście aplikacji
-  do zaktualizowania są poprawnie oznaczone.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* Po sprawdzeniu dostępności aktualizacji aplikacji nazwy aplikacji na
+  liście aplikacji do zaktualizowania są poprawnie oznaczone etykietami.
+* Przy pobieraniu zawartości, takiej jak aplikacje i filmy, NVDA wymówi
+  nazwę produktu i pasek postępu.
 
 ## Klawiatura nowoczesna
 
-This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, and modern input method editors for certain
-languages. When viewing emojis, for best experience, enable Unicode
-Consortium setting from NVDA's speech settings and set symbol level to
-"some" or higher. When pasting from clipboard history in Windows 10, press
-Space key instead of Enter key to paste the selected item. NVDA also
-supports updated input experience panel in Windows 11.
+Obejmuje to panel emoji, historię schowka, dyktowanie / pisanie głosowe,
+sugestie wprowadzania sprzętu i nowoczesne edytory metod wprowadzania dla
+niektórych języków. Podczas przeglądania emotikonów, aby uzyskać najlepsze
+wrażenia, włącz ustawienie Unicode Consortium w ustawieniach mowy NVDA i
+ustaw poziom symbolu na "niektóre" lub wyższe. Podczas wklejania z historii
+schowka w systemie Windows 10 naciśnij spacji zamiast wchodzić, aby wkleić
+wybrany element. NVDA obsługuje również zaktualizowany panel doświadczenia
+wejściowego w systemie Windows 11.
 
-* When an emoji group (including kaomoji and symbols group in Windows 10
-  1903 or later) is selected, NVDA will no longer move navigator object to
-  certain emojis.
-* Added support for updated input experience panel (combined emoji panel and
-  clipboard history) in Windows 11.
+* Po wybraniu grupy emotikonów (w tym grupy kaomoji i symboli w systemie
+  Windows 10 1903 lub nowszym) NVDA nie będzie już przenosić obiektu
+  nawigatora do określonych emotikonów.
+* Dodano obsługę zaktualizowanego panelu doświadczenia wprowadzania
+  (połączony panel emoji i historia schowka) w systemie Windows 11.
 
 ## Osoby
 
@@ -139,10 +147,10 @@ supports updated input experience panel in Windows 11.
   z Windows update.
 * Wartości paska postępu i inne informacje, nie są wypowiadane
   automatycznie.
-* Odd control labels seen in certain Windows installations has been
-  corrected.
-* NVDA will announce the name of the optional quality update link if
-  present, typically named "download and install now".
+* Niezrozumiałe nazwy kontrolek obecne w niektórych oknach instalacji
+  Windows 10 zostały poprawione.
+* NVDA będzie wymawiała nazwę linku do pobieraniado opcjonalnej aktualizacji
+  jakości, jeśli jest obecny, zwykle o nazwie "pobierz i zainstaluj teraz".
 
 ## Pogoda
 
