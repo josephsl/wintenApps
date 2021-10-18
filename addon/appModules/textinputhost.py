@@ -50,8 +50,9 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			obj = obj.firstChild
 		# Logic for IME candidate items is handled all within its own object
 		# Therefore pass these events straight on.
+		# But not in Windows 11 because it also fires gain focus event.
 		if isinstance(obj, ImeCandidateItem):  # NOQA: F405
-			return nextHandler()
+			return nextHandler() if winVersion.getWinVer() < winVersion.WIN11 else None
 		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object
 		# (for presentational purposes) and move on.
 		if obj.parent.UIAAutomationId == "TEMPLATE_PART_Groups_ListView":
