@@ -174,10 +174,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# when trying to obtain Automation Id from the underlying UIA element.
 			# To keep an eye on this, use cached Automation Id
 			# rather than fetching UIAAutomationId property directly.
-			try:
-				info.append(f"Automation Id: {element.cachedAutomationId}")
-			except COMError:
-				info.append("Automation Id: not found")
+			# See older add-on releases for details on cached Automation Id.
+			info.append(f"Automation Id: {obj.UIAAutomationId}")
 			info.append(f"class name: {element.cachedClassName}")
 			log.debug(u"winapps: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
