@@ -145,18 +145,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		# Recognize headings as reported by XAML (Windows 10 1803 or later).
 		# Some apps may cause COM to throw timeout error.
-		try:
-			# NvDA does not recognize heading levels 7, 8, and 9, therefore use a chained comparison.
-			if (
-				UIAHandler.HeadingLevel1 <= obj._getUIACacheablePropertyValue(
-					UIAHandler.UIA_HeadingLevelPropertyId
-				) <= UIAHandler.HeadingLevel6
-				# But not for apps such as Calculator where doing so results in confusing user experience.
-				and obj.appModule.appName not in ("calculator", "calculatorapp")
-			):
-				clsList.insert(0, XAMLHeading)
-		except COMError:
-			pass
+		# See older add-on releases for details on COM error handling.
+		# NvDA does not recognize heading levels 7, 8, and 9, therefore use a chained comparison.
+		if (
+			UIAHandler.HeadingLevel1 <= obj._getUIACacheablePropertyValue(
+				UIAHandler.UIA_HeadingLevelPropertyId
+			) <= UIAHandler.HeadingLevel6
+			# But not for apps such as Calculator where doing so results in confusing user experience.
+			and obj.appModule.appName not in ("calculator", "calculatorapp")
+		):
+			clsList.insert(0, XAMLHeading)
 
 	# Record UIA property info about an object if told to do so.
 	# An add-on named Event Tracker (deriving from this add-on) will log event information for most events.
