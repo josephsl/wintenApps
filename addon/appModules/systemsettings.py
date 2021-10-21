@@ -50,6 +50,10 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 						nameList.insert(0, obj.previous.name)
 						nameList.insert(0, obj.previous.previous.name)
 				obj.name = ", ".join(nameList)
+			# Announce optional updates in Windows 11.
+			# Same as above except it uses a different Automation Id.
+			elif obj.UIAAutomationId == "SystemSettings_MusUpdate_SeekerUpdateUX_Button":
+				obj.name = ", ".join([obj.previous.previous.name, obj.name])
 			# In some cases, Active Directory style name is the name of the window,
 			# so tell NVDA to use something more meaningful.
 			elif obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
