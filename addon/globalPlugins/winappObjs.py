@@ -6,7 +6,6 @@
 # Help Mypy and other static checkers for a time by using annotations from future Python releases.
 from __future__ import annotations
 from typing import Optional, Any
-from comtypes import COMError
 import globalPluginHandler
 import ui
 import controlTypes
