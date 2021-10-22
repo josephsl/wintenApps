@@ -54,9 +54,7 @@ versiunile suplimentului][3].
 ## General
 
 * NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  option is controlled by "Report object position information" in Object
-  presentation panel found in NVDA settings.
+  cases, including when suggestion count changes as search progresses.
 * In addition to UIA event handlers provided by NVDA, the following UIA
   events are recognized: drag start, drag cancel, drag complete, drop target
   drag enter, drop target drag leave, drop target dropped, layout

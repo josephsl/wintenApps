@@ -52,11 +52,8 @@ consulte o documento [changelogs for releases, release][3].
 
 ## Geral
 
-* A NVDA pode anunciar a contagem de sugestões ao efectuar uma pesquisa na
-  maioria dos casos, incluindo quando a contagem de sugestões muda à medida
-  que a pesquisa progride. Esta opção é controlada por "anunciar a
-  informação da posição do objecto" no painel de apresentação de objectos
-  encontrado nas configurações do NVDA.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses.
 * Para além dos manipuladores de eventos UIA fornecidos pelo NVDA, são
   reconhecidos os seguintes eventos UIA: arrastar iniciar, arrastar
   cancelar, arrastar completo, largar alvo arrastar entrar, largar alvo

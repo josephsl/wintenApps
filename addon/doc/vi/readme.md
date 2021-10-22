@@ -53,10 +53,8 @@ for add-on releases][3] .
 
 ## Chung
 
-* NVDA có thể thông báo số gợi ý đếm được trong đa số trường họp, bao gồm
-  thay đổi số gọi ý đếm được  khi thực hiện tìm kiếm. Tùy chọn này được điều
-  khiển bởi "Thông báo thông tin vị trí đối tượng" trong bảng điều khiển
-  trình bày đối tượng trong cài đặt của NVDA.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses.
 * In addition to UIA event handlers provided by NVDA, the following UIA
   events are recognized: drag start, drag cancel, drag complete, drop target
   drag enter, drop target drag leave, drop target dropped, layout

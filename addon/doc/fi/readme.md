@@ -51,10 +51,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
-* NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
-  suoritettaessa, mukaan lukien tilanteet, joissa ehdotusten määrä muuttuu
-  haun edistyessä. Tätä toimintoa hallitaan "Lue objektien sijaintitiedot"
-  -asetuksella Objektien lukeminen -paneelista NVDA:n asetuksista.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses.
 * Seuraavat UIA-tapahtumat tunnistetaan NVDA:n tarjoamien
   UIA-tapahtumakäsittelijöiden lisäksi: vetämisen aloitus, vetämisen
   peruutus, vetäminen suoritettu, vetämisen kohteeseen siirtyminen,

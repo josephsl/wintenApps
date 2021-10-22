@@ -39,8 +39,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 일반
 
-* 특정 검색창에서 검색 결과수가(특히 검색중 결과수가 변경될 경우) 출력되도록 함(본 기능은 NVDA 설정내 객체 알림 페널에 있는
-  객체 위치 출력 설정으로 제어할 수 있음).
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses.
 * NVDA가 지원하는 UIA  이벤트 외의 다음 이벤트 추적 가능: drag start, drag cancel, drag
   complete, drop target drag enter, drop target drag leave, drop target
   dropped, layout invalidated. NVDA가 디버그 로깅 상태로 재시작된 경우 위 이벤트가 추적되며

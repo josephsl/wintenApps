@@ -57,9 +57,7 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 * NVDA puede anunciar la cantidad de sugerencias cuando se realiza una
   búsqueda en la mayoría de casos, incluyendo cuando la cantidad de
-  sugerencias cambia según progresa la búsqueda. Esta opción se controla por
-  "Anunciar información de posición del objeto" en el panel Presentación de
-  Objetos disponible en las opciones de NVDA.
+  sugerencias cambia según progresa la búsqueda.
 * Además de los manejadores de eventos UIA proporcionados por NVDA, se
   reconocen los siguientes eventos UIA: drag start, drag cancel, drag
   complete, drop target drag enter, drop target drag leave, drop target
