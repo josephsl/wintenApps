@@ -143,8 +143,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			clsList.insert(0, SuggestionsListView)
 			return
 		# Recognize headings as reported by XAML (Windows 10 1803 or later).
-		# Some apps may cause COM to throw timeout error.
-		# See older add-on releases for details on COM error handling.
 		# NvDA does not recognize heading levels 7, 8, and 9, therefore use a chained comparison.
 		if (
 			UIAHandler.HeadingLevel1 <= obj._getUIACacheablePropertyValue(
@@ -167,11 +165,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			info.append(f"event: {event}")
 			info.append(f"app module: {obj.appModule}")
 			element = obj.UIAElement
-			# Sometimes due to timing errors, COM error is thrown
-			# when trying to obtain Automation Id from the underlying UIA element.
-			# To keep an eye on this, use cached Automation Id
-			# rather than fetching UIAAutomationId property directly.
-			# See older add-on releases for details on cached Automation Id.
 			info.append(f"Automation Id: {obj.UIAAutomationId}")
 			info.append(f"class name: {element.cachedClassName}")
 			log.debug(u"winapps: UIA {debuginfo}".format(debuginfo=", ".join(info)))
