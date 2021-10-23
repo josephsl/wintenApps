@@ -56,11 +56,8 @@ l'extension][3].
 
 ## Générale
 
-* NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
-  majorité des cas, y compris lorsque ce nombre change au fur et à mesure
-  que la recherche progresse. Cette aspect est contrôlé par l'option
-  Annoncer le rang de l'objet dans une liste", dans la catégorie
-  "présentation des objets" dans les paramètres NVDA.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses.
 * En plus de des événements UIA déjà gérés par NVDA, les événements UIA
   suivants sont reconnus : drag start, drag cancel, drag complete, drop
   target drag enter, drop target drag leave, drop target dropped, layout

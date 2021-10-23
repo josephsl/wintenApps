@@ -53,11 +53,8 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 
 ## Ogólne
 
-* NVDA może ogłosić liczbę sugestii podczas wyszukiwania w większości
-  przypadków, w tym gdy sugestie liczą zmiany w miarę postępu
-  wyszukiwania. Ta opcja jest kontrolowana przez "Raport informacji o
-  położenia obiektu" w panelu Prezentacja obiektu znajdującym się w
-  ustawieniach NVDA.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses.
 * Oprócz programów obsługi zdarzeń UIA dostarczanych przez NVDA rozpoznawane
   są następujące zdarzenia UIA: przeciągnij start, przeciągnij anuluj,
   przeciągnij complete, upuść docelowy przeciągnij enter, upuść docelowy

@@ -52,9 +52,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Generelt
 
-* NVDA kan annoncere nummeret af forslag, når du udfører en søgning i de
-  fleste tilfælde. Denne indstilling styres af "Oplys information om
-  objektets placering" i indstillingspanelet "Objektpræsentation".
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses.
 * Udover de UIA-håndteringsmuligheder, som NVDA leverer, vil følgende
   UIA-hændelser blive opfanget af skærmlæseren: drag start, drag cancel,
   drag complete, drop target drag enter, drop target drag leave, drop target

@@ -38,8 +38,8 @@
 
 ## 常规设置
 
-* 在大多数情况下，NVDA 可以在执行搜索时朗读建议计数，包括当建议计数随着搜索进行而发生变化时。此选项由 NVDA
-  “对象提示”设置对话框中的“读出对象的位置信息”复选框控制。
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses.
 * 除了NVDA提供的UIA事件处理程序外，还可以识别以下UIA事件：拖动开始、拖动取消、拖动完成、拖动目标进入、拖动目标离开、拖动目标丢弃、布局无效。在NVDA的日志级别设置为调试时，这些事件将被跟踪，对于UIA通知事件，如果通知来自当前活动应用以外的其他地方，将听到调试音。NVDA
   中内置的事件，例如名称更改和事件控制器，将通过名为 Event Tracker 的插件进行跟踪。
 * 打开、关闭、重新排序（Windows 11）或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。

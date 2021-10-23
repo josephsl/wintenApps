@@ -53,11 +53,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Xeral
 
-* NVDA pode anunciar o número de suxestións cando se realiza unha procura na
-  maioría dos casos, incluído cando o número de suxestións cambia conforme
-  progresa a procura. Esta opción contrólase por "Anunciar información de
-  posición do obxecto" no panel Presentación de Obxectos ubicado nas opcións
-  do NVDA.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses.
 * Ademais dos manexadores de eventos UIA proporcionados por NVDA,
   recoñécense os seguintes eventos UIA: drag start, drag cancel, drag
   complete, drop target drag enter, drop target drag leave, drop target

@@ -1,9 +1,9 @@
 # Windows Temel Uygulamalar #
 
-* Authors: Joseph Lee, Derek Riemer and others
+* Yazarlar: Joseph Lee, Derek Riemer ve diğerleri
 * [kararlı sürüm][1]ü indir
 * [geliştirme sürümü][2]nü indir
-* NVDA compatibility: 2021.2 and beyond
+* NVDA uyumluluğu: 2021.2 ve sonrası
 
 Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
 adlandırılırken, Windows 10 ve Windows 11 gibi gelecekteki windows
@@ -34,8 +34,8 @@ bakın):
 
 Notlar:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later and is
-  compatible with Windows 11.
+* Bu eklenti, Windows 10 20H2 (derleme 19042) veya sonraki bir sürümünü
+  gerektirir ve Windows 11 ile uyumludur.
 * Ne kadar yüklenebilse de, bu eklenti Windows Enterprise LTSC (Uzun Süreli
   Hizmet Kanalı) ve Windows Server sürümlerini desteklemez.
 * Bazı eklenti özellikleri, NVDA ekran okuyucusunun bir parçasıdır veya
@@ -55,9 +55,7 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 ## Genel
 
 * NVDA, arama ifadesi değiştikçe değişen öneri sayısının bildirimi  dahil
-  çoğu durumda arama yaparken öneri sayısını bildirebilir. Bunun çalışması
-  NVDA ayarlarında bulunan Nesne sunumu bölümündeki  "Nesne konum bilgisini
-  bildir" onay kutusunun statüsüne bağlıdır.
+  çoğu durumda arama yaparken öneri sayısını bildirebilir.
 * NVDA tarafından sağlanan UIA olay işleyicilerine ek olarak, aşağıdaki UIA
   olayları tanınır: sürükle başlat, sürükle iptal, sürükle tamam, bırak
   hedefi sürükle gir gir, hedefi bırak sürükle bırak, bırak hedefi bırak,
@@ -112,8 +110,8 @@ geçerlidir.
 
 * Uygulama güncellemelerini kontrol ettikten sonra, güncellenecek
   uygulamalar listesindeki uygulama adları doğru şekilde etiketlenir.
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* Uygulamalar ve filmler gibi içerikleri indirirken, NVDA ürün adını ve
+  indirme ilerlemesini bildirecektir.
 
 ## Modern klavye
 

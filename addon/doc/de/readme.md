@@ -54,11 +54,8 @@ Versionen][3].
 
 ## Allgemein
 
-* In den meisten Fällen kann NVDA die Anzahl der Vorschläge beim Durchführen
-  einer Suche ankündigen, auch wenn sich die Anzahl der Vorschläge im
-  Verlauf der Suche ändert. Diese Option wird durch
-  "Objektpositionsinformationen mitteilen" im Bereich "Objekt-Darstellungen"
-  in den NVDA-Einstellungen gesteuert.
+* NVDA can announce suggestion count when performing a search in majority of
+  cases, including when suggestion count changes as search progresses.
 * Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignishandlern werden
   die folgenden UIA-Ereignisse erkannt: Drag Start, Drag Cancel, Drag
   Complete, Drop Target Drag Enter, Drop Target Drag Leave, Drop Target
