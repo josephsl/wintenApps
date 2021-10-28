@@ -11,8 +11,8 @@ This add-on is a collection of app modules for various modern Windows apps, as w
 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
-* Calculator (modern)
-* Cortana (Conversations)
+* Calculator
+* Cortana
 * Mail
 * Maps
 * Microsoft Solitaire Collection
@@ -35,7 +35,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## General
 
-* NVDA can announce suggestion count when performing a search in majority of cases, including when suggestion count changes as search progresses.
+* NVDA can announce suggestion count when performing a search in majority of cases, including when suggestion count changes as search progresses. This is now part of NVDA 2021.3.
 * In addition to UIA event handlers provided by NVDA, the following UIA events are recognized: drag start, drag cancel, drag complete, drop target drag enter, drop target drag leave, drop target dropped, layout invalidated. With NVDA's log level set to debug, these events will be tracked, and for UIA notification event, a debug tone will be heard if notifications come from somewhere other than the currently active app. Events built into NVDA such as name change and controller for events will be tracked from an add-on called Event Tracker.
 * When opening, closing, reordering (Windows 11), or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
 * NVDA will no longer announce Start menu size text when changing screen resolutions or orientation.
@@ -47,8 +47,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * NVDA will no longer announce graphing calculator screen message twice.
 
 ## Cortana
-
-Most items are applicable when using Cortana Conversations (Windows 10 2004 and later).
 
 * Textual responses from Cortana are announced in most situations.
 * NVDA will be silent when talking to Cortana via voice.
@@ -68,14 +66,13 @@ Most items are applicable when using Cortana Conversations (Windows 10 2004 and 
 
 ## Microsoft Store
 
-* After checking for app updates, app names in list of apps to be updated are correctly labeled.
 * When downloading content such as apps and movies, NVDA will announce product name and download progress.
 
 ## Modern keyboard
 
 This includes emoji panel, clipboard history, dictation/voice typing, hardware input suggestions, and modern input method editors for certain languages. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher. When pasting from clipboard history in Windows 10, press Space key instead of Enter key to paste the selected item. NVDA also supports updated input experience panel in Windows 11.
 
-* When an emoji group (including kaomoji and symbols group in Windows 10 1903 or later) is selected, NVDA will no longer move navigator object to certain emojis.
+* In Windows 10, when an emoji group (including kaomoji and symbols group) is selected, NVDA will no longer move navigator object to certain emojis.
 * Added support for updated input experience panel (combined emoji panel and clipboard history) in Windows 11.
 
 ## People
@@ -87,7 +84,7 @@ This includes emoji panel, clipboard history, dictation/voice typing, hardware i
 * Certain information such as Windows Update progress is reported automatically, including Storage sense/disk cleanup widget and errors from Windows Update.
 * Progress bar values and other information are no longer announced twice.
 * Odd control labels seen in certain Windows installations has been corrected.
-* NVDA will announce the name of the optional quality update link if present, typically named "download and install now".
+* NVDA will announce the name of the optional quality update control if present (download and install now link in Windows 10, download button in Windows 11).
 
 ## Weather
 
