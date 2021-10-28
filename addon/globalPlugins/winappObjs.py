@@ -87,7 +87,12 @@ UIAHeadingsToNVDAHeadings: dict[int, controlTypes.Role] = {
 class XAMLHeading(UIA):
 
 	def _get_role(self) -> int:
-		return UIAHeadingsToNVDAHeadings[self._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId)]
+		# In build 22489' Settings app, Microsoft Account page has been added,
+		# but a heading in there is not given a heading level (UIA returns 80050).
+		try:
+			return UIAHeadingsToNVDAHeadings[self._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId)]
+		except KeyError:
+			return super(XAMLHeading, self).role
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
