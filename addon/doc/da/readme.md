@@ -16,8 +16,8 @@ samt forbedringer og rettelser for visse windows 10 kontrolelementer.
 Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
 hver appsektion for detaljer om, hvad der er inkluderet):
 
-* Lommeregner (moderne)
-* Cortana (samtaler)
+* Lommeregner
+* Cortana
 * Mail
 * Kort
 * Microsoft Kabale Samling
@@ -53,7 +53,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 ## Generelt
 
 * NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses.
+  cases, including when suggestion count changes as search progresses. This
+  is now part of NVDA 2021.3.
 * Udover de UIA-håndteringsmuligheder, som NVDA leverer, vil følgende
   UIA-hændelser blive opfanget af skærmlæseren: drag start, drag cancel,
   drag complete, drop target drag enter, drop target drag leave, drop target
@@ -86,9 +87,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Cortana
 
-De fleste funktioner er anvendelige, når du bruger Cortana-samtaler (Windows
-10 2004 og nyere).
-
 * Tekstlige svar fra Cortana annonceres i de fleste tilfælde.
 * NVDA vil forblive tavs, når du taler til Cortana med stemmen.
 
@@ -112,8 +110,6 @@ De fleste funktioner er anvendelige, når du bruger Cortana-samtaler (Windows
 
 ## Microsoft store
 
-* Efter kontrol for app opdateringer, app navne i listen af apps der skal
-  opdateres er korrekt navngivet.
 * When downloading content such as apps and movies, NVDA will announce
   product name and download progress.
 
@@ -128,9 +124,8 @@ indstille fra historikken i Windows 10, skal du bruge mellemrumstasten i
 stedet for enter. NVDA understøtter også det opdaterede inputoplevelsespanel
 i Windows 11.
 
-* Når en emoji-gruppe (inklusive kaomoji og symbolgrupper i version 1903
-  eller nyere) er valgt, vil NVDA ikke længere flytte navigatorobjektet til
-  bestemte emojis.
+* In Windows 10, when an emoji group (including kaomoji and symbols group)
+  is selected, NVDA will no longer move navigator object to certain emojis.
 * Understøtter nu opdateret input-oplevelsespanel (kombineret emoji-panel og
   udklipsholderhistorik) i Windows 11.
 
@@ -147,8 +142,9 @@ i Windows 11.
   annonceret to gange.
 * Bemærkelsesværdige kontroletiketter set i visse Windows-installationer er
   blevet løst.
-* NVDA annoncerer navnet på linket for den valgfrie kvalitetsopdatering,
-  hvis det findes, typisk kaldet "Hent og installer nu".
+* NVDA will announce the name of the optional quality update control if
+  present (download and install now link in Windows 10, download button in
+  Windows 11).
 
 ## Vejr
 

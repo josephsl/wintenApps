@@ -12,8 +12,8 @@
 
 包括以下应用程序的支持模块（有关所包含内容的详细信息，请参阅每个应用程序部分）：
 
-* 计算器（现代）
-* Cortana（会话）
+* 计算器
+* Cortana
 * 邮件
 * 地图
 * Microsoft Solitaire Collection（微软纸牌游戏）
@@ -39,7 +39,8 @@
 ## 常规设置
 
 * NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses.
+  cases, including when suggestion count changes as search progresses. This
+  is now part of NVDA 2021.3.
 * 除了NVDA提供的UIA事件处理程序外，还可以识别以下UIA事件：拖动开始、拖动取消、拖动完成、拖动目标进入、拖动目标离开、拖动目标丢弃、布局无效。在NVDA的日志级别设置为调试时，这些事件将被跟踪，对于UIA通知事件，如果通知来自当前活动应用以外的其他地方，将听到调试音。NVDA
   中内置的事件，例如名称更改和事件控制器，将通过名为 Event Tracker 的插件进行跟踪。
 * 打开、关闭、重新排序（Windows 11）或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
@@ -53,8 +54,6 @@
 * NVDA 将不再两次宣布图形计算器屏幕消息。
 
 ## Cortana
-
-大多数项目适用于使用 Cortana 对话（Windows 10 版本 2004 及以后）。
 
 * 现在，在大多数情况下，都会发布来自Cortana的文字回复。
 * 通过语音与Cortana交互时，NVDA将保持沉默。
@@ -74,7 +73,6 @@
 
 ## Microsoft Store
 
-* 检查应用更新后，应更新的应用列表中的应用名称将被正确标记。
 * When downloading content such as apps and movies, NVDA will announce
   product name and download progress.
 
@@ -84,7 +82,8 @@
 的语音设置对话框中选中“处理字符和符号时包含 Unicode 数据（表情符号）”复选框，并将符号级别设置为“少数”或更高。在 Windows 10
 中从剪贴板历史记录粘贴时，请按空格键而非回车键来粘贴所选项目。此外，NVDA 在 Windows 11 中支持更新的输入体验面板。
 
-* 当选择表情符号组（包括Windows 10 版本 1903之后的绘文字）时，NVDA 将不再将导航对象移动到某些表情符号。
+* In Windows 10, when an emoji group (including kaomoji and symbols group)
+  is selected, NVDA will no longer move navigator object to certain emojis.
 * 增加了对Windows 11 中更新的输入体验面板（组合的表情符号面板和剪贴板历史记录）的支持。
 
 ## 人脉
@@ -96,7 +95,9 @@
 * 现在将自动读出某些信息，例如 Windows Update 进度，包括存储感知、磁盘清理和 Windows Update中的错误。
 * 进度栏值和其他信息不再重复朗读两次。
 * 在某些 Windows 安装中看到的奇怪的控件标签已被更正。
-* NVDA 将读出可选质量更新链接的名称，如果存在，通常命名为"立即下载和安装"。
+* NVDA will announce the name of the optional quality update control if
+  present (download and install now link in Windows 10, download button in
+  Windows 11).
 
 ## 天气
 

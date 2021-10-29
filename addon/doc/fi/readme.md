@@ -17,8 +17,8 @@ Windows 10:ssä ja uudemmissa.
 Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
-* Laskin (moderni)
-* Cortana (keskustelut)
+* Laskin
+* Cortana
 * Sähköposti
 * Kartat
 * Microsoft Solitaire -kokoelma
@@ -52,7 +52,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Yleistä
 
 * NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses.
+  cases, including when suggestion count changes as search progresses. This
+  is now part of NVDA 2021.3.
 * Seuraavat UIA-tapahtumat tunnistetaan NVDA:n tarjoamien
   UIA-tapahtumakäsittelijöiden lisäksi: vetämisen aloitus, vetämisen
   peruutus, vetäminen suoritettu, vetämisen kohteeseen siirtyminen,
@@ -81,9 +82,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Cortana
 
-Useimpia kohtia sovelletaan Cortana-keskusteluja käytettäessä (Windows 10:n
-versio 2004 ja uudemmat).
-
 * Cortanan tekstimuotoiset vastaukset puhutaan useimmissa tilanteissa.
 * NVDA on hiljaa puhuttaessa Cortanalle mikrofonin välityksellä.
 
@@ -106,8 +104,6 @@ versio 2004 ja uudemmat).
 
 ## Microsoft Store
 
-* Sovellusten nimet näytetään oikein päivitettävien sovellusten luettelossa
-  päivitystarkistuksen jälkeen.
 * NVDA ilmoittaa tuotteen nimen ja latauksen edistymisen sisältöä, kuten
   sovelluksia ja elokuvia ladattaessa.
 
@@ -122,9 +118,8 @@ korkeampi. Kun liität leikepöydän historiasta, liitä valittu kohde
 painamalla välilyöntinäppäintä Enterin sijaan. NVDA tukee lisäksi
 päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 
-* Kun emojiryhmä (mukaan lukien kaomoji ja symboliryhmä Windows 10:n
-  versiossa 1903 tai uudemmissa) valitaan, NVDA ei enää siirrä
-  navigointiobjektia tiettyihin emojeihin.
+* In Windows 10, when an emoji group (including kaomoji and symbols group)
+  is selected, NVDA will no longer move navigator object to certain emojis.
 * Lisätty tuki Windows 11:n päivitetylle syöttökokemuksen paneelille
   (yhdistetty emojipaneeli ja leikepöydän historia).
 
@@ -141,8 +136,9 @@ päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
 * Joissakin Windows-asennuksissa näkyvät erikoiset säädinten nimet on
   korjattu.
-* NVDA puhuu valinnaisen laatupäivityksen nimen linkin (tyypillisesti "Lataa
-  ja asenna nyt"), mikäli se on näkyvissä.
+* NVDA will announce the name of the optional quality update control if
+  present (download and install now link in Windows 10, download button in
+  Windows 11).
 
 ## Sää
 

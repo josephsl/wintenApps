@@ -1,9 +1,9 @@
 # Windows App Essentials #
 
-* Authors: Joseph Lee, Derek Riemer and others
+* Autoren: Joseph Lee, Derek Riemer und weitere
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA compatibility: 2021.2 and beyond
+* NVDA-Kompatibilität: 2021.2 und neuer
 
 Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
 2021 in Windows App Essentials umbenannt, um Windows 10 und zukünftige
@@ -17,8 +17,8 @@ Steuerelemente in Windows 10 und neuer.
 Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
 Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
-* Taschenrechner (modern)
-* Cortana (Unterhaltungen)
+* Rechner
+* Cortana
 * Mail
 * Karten
 * Microsoft Solitaire Collection
@@ -33,8 +33,8 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later and is
-  compatible with Windows 11.
+* Diese Erweiterung benötigt Windows 10 Version 20H2 (Build 19042) oder
+  neuer und ist mit Windows 11 kompatibel.
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
@@ -54,8 +54,9 @@ Versionen][3].
 
 ## Allgemein
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses.
+* In den meisten Fällen kann NVDA die Anzahl der Vorschläge beim Durchführen
+  einer Suche mitteilen, auch wenn sich die Anzahl der Vorschläge im Verlauf
+  der Suche ändert. Dies ist jetzt Teil von NVDA 2021.3.
 * Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignishandlern werden
   die folgenden UIA-Ereignisse erkannt: Drag Start, Drag Cancel, Drag
   Complete, Drop Target Drag Enter, Drop Target Drag Leave, Drop Target
@@ -86,9 +87,6 @@ Versionen][3].
 
 ## Cortana
 
-Die meisten Elemente sind bei Verwendung von Cortana-Unterhaltungen (Windows
-10 Version 2004 und neuer) anwendbar.
-
 * Rückmeldungstexte von Cortana werden in den meisten Situationen
   angekündigt.
 * NVDA verstummt bei der Verwendung von Cortana, so dass sich die Stimmen
@@ -113,8 +111,6 @@ Die meisten Elemente sind bei Verwendung von Cortana-Unterhaltungen (Windows
 
 ## Microsoft Store
 
-* Nach der Suche nach App-Aktualisierungen werden die App-Namen in der Liste
-  der zu aktualisierenden Apps korrekt beschriftet.
 * Beim Herunterladen von Inhalten wie Apps und Filmen gibt NVDA den
   Produktnamen und den Download-Fortschritt an.
 
@@ -130,9 +126,9 @@ anstelle der Eingabetaste, um das ausgewählte Element einzufügen. NVDA
 unterstützt auch das Panel für aktualisierte Eingabe-Erlebnisse in Windows
 11.
 
-* Wenn eine Emoji-Gruppe (einschließlich Kaomoji- und Symbolgruppe in
-  Windows 10 Version 1903 oder neuer) ausgewählt wird, verschiebt NVDA das
-  Navigatorobjekt nicht mehr in bestimmte Emojis.
+* Wenn in Windows 10 eine Emoji-Gruppe (einschließlich Kaomoji- und
+  Symbolgruppe) ausgewählt ist, verschiebt NVDA das Navigator-Objekt nicht
+  mehr in bestimmte Emojis.
 * Unterstützung für das aktualisierte Erlebnis-Panel für die Eingabe
   (kombiniertes Emoji-Panel und Zwischenablageverlauf) in Windows 11
   hinzugefügt.
@@ -151,9 +147,9 @@ unterstützt auch das Panel für aktualisierte Eingabe-Erlebnisse in Windows
   zweimal angesagt.
 * Ungerade Steuerelementbezeichnungen in bestimmten Windows-Installationen
   wurden korrigiert.
-* NVDA wird den Namen des optionalen Qualitäts-Update-Links, falls
-  vorhanden, bekannt geben, normalerweise mit dem Namen "Jetzt herunterladen
-  und installieren".
+* NVDA teilt den Namen optionaler Qualitätsupdates mit, falls vorhanden
+  (Link zum Download und Jetzt installieren in Windows 10,
+  Download-Schaltfläche in Windows 11).
 
 ## Wetter
 
