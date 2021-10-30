@@ -19,8 +19,8 @@ Bazı uygulamalar için aşağıdaki uygulama veya destek modülleri  mevcuttur
 (nelerin dahil olduğuyla ilgili ayrıntılar için her bir uygulama bölümüne
 bakın):
 
-* Hesap makinesi (modern)
-* Cortana (Konuşmalar)
+* Hesap makinesi
+* Cortana
 * Posta
 * Haritalar
 * Microsoft Solitaire Koleksiyonu
@@ -54,8 +54,9 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 
 ## Genel
 
-* NVDA, arama ifadesi değiştikçe değişen öneri sayısının bildirimi  dahil
-  çoğu durumda arama yaparken öneri sayısını bildirebilir.
+* NVDA, arama ilerledikçe öneri sayısının değiştiği durumlar da dahil olmak
+  üzere çoğu durumda bir arama yaparken öneri sayısını bildirebilir. Bu
+  artık NVDA 2021.3'ün bir parçasıdır.
 * NVDA tarafından sağlanan UIA olay işleyicilerine ek olarak, aşağıdaki UIA
   olayları tanınır: sürükle başlat, sürükle iptal, sürükle tamam, bırak
   hedefi sürükle gir gir, hedefi bırak sürükle bırak, bırak hedefi bırak,
@@ -83,9 +84,6 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 
 ## Cortana
 
-Çoğu öğe Cortana  Konuşmalar (Windows 10 2004 ve sonrası) kullanılırken
-geçerlidir.
-
 * Cortana'dan gelen metin içerikli yanıtlar çoğu durumda bildirilir.
 * Cortana ile sesli konuşurken NVDA konuşmayacaktır.
 
@@ -108,8 +106,6 @@ geçerlidir.
 
 ## Microsoft Store
 
-* Uygulama güncellemelerini kontrol ettikten sonra, güncellenecek
-  uygulamalar listesindeki uygulama adları doğru şekilde etiketlenir.
 * Uygulamalar ve filmler gibi içerikleri indirirken, NVDA ürün adını ve
   indirme ilerlemesini bildirecektir.
 
@@ -123,9 +119,9 @@ veya  çoğu olarak ayarlayın. Windows 10'da pano geçmişinden yapıştırırk
 seçilen öğeyi yapıştırmak için Enter tuşu yerine Aralık tuşuna basın. Ayrıca
 NVDA, Windows 11'de güncellenmiş giriş deneyimi panelini destekler.
 
-* Bir emoji grubu (Windows 10 1903 veya sonraki sürümlerde kaomoji ve
-  semboller grubu dahil) seçildiğinde, NVDA artık   nesne sunucusunu belirli
-  emojilere taşımayacaktır.
+* Windows 10'da bir emoji grubu (kaomoji ve semboller grubu dahil)
+  seçildiğinde, NVDA artık nesne sunucusunu belirli emojilere
+  taşımayacaktır.
 * Windows 11'de güncellenmiş giriş deneyimi paneli (birleşik emoji paneli ve
   pano geçmişi) için destek eklendi.
 
@@ -141,8 +137,9 @@ NVDA, Windows 11'de güncellenmiş giriş deneyimi panelini destekler.
   bilgiler otomatik olarak bildirilir.
 * İlerleme çubuğu değerleri ve diğer bilgiler artık iki kez duyurulmaz.
 * Bazı Windows kurulumlarında görülen garip kontrol etiketleri düzeltildi.
-* NVDA, varsa, genellikle "şimdi indir ve kur" olarak adlandırılan isteğe
-  bağlı kalite güncelleme bağlantısının adını duyurur.
+* NVDA, varsa isteğe bağlı kalite güncelleme kontrolünün adını duyurur
+  (Windows 10'da şimdi indir ve kur bağlantısı, Windows 11'de indir
+  düğmesi).
 
 ## Hava durumu
 

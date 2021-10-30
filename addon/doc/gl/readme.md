@@ -17,8 +17,8 @@ Inclúense os seguintes app modules ou o apoio para módulos para algunhas
 aplicacións (consulta cada sección para a aplicación para detalles sobre que
 se inclúe):
 
-* Calculadora (modern)
-* Cortana (Conversations)
+* Calculadora
+* Cortana
 * Correo
 * Mapas
 * Microsoft Solitaire Collection
@@ -54,7 +54,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
 ## Xeral
 
 * NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses.
+  cases, including when suggestion count changes as search progresses. This
+  is now part of NVDA 2021.3.
 * Ademais dos manexadores de eventos UIA proporcionados por NVDA,
   recoñécense os seguintes eventos UIA: drag start, drag cancel, drag
   complete, drop target drag enter, drop target drag leave, drop target
@@ -84,9 +85,6 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Cortana
 
-A maioría dos elementos aplican se se usa Cortana Conversations (Windows 10
-2004 e posteriores).
-
 * As respostas textuais de Cortana anúncianse na maioría de situacións.
 * NVDA silenciarase cando lle fales ao Cortana a través da voz.
 
@@ -109,8 +107,6 @@ A maioría dos elementos aplican se se usa Cortana Conversations (Windows 10
 
 ## Tenda Microsoft
 
-* Despois de buscar actualizacións das aplicacións, os nomes das aplicacións
-  na lista de aplicacions actualizarán as etiquetas correctamente.
 * Cando se descargue contido como aplicacións e películas, NVDA anunciará o
   nome do produto e o progreso da descarga.
 
@@ -125,9 +121,8 @@ superior. Ao pegar dende o historial do portapapeis en Windows 10, preme a
 tecla Espacio no canto de Intro para pegar o elemento seleccionado. NVDA
 tamén soporta o panel de experiencia de entrada actualizado en Windows 11.
 
-* Cando se selecciona un grupo de emojis (incluindo kaomoji e grupos de
-  símbolos en Windows 10 1903 ou posterior), NVDA xa non moverá o navegador
-  de obxectos a certos emojis.
+* In Windows 10, when an emoji group (including kaomoji and symbols group)
+  is selected, NVDA will no longer move navigator object to certain emojis.
 * Engadido soporte para o panel actualizado de experiencia de entrada (panel
   de emoji e historial de portapapeis combinados) en windows 11.
 
@@ -145,8 +140,9 @@ tamén soporta o panel de experiencia de entrada actualizado en Windows 11.
   dúas veces.
 * Corrixiuse as etiquetas de controis extrañas advertidas en certas
   instalacións de Windows.
-* NVDA anunciará o nome da ligazón á actualización de calidade opcional se
-  estiver presente, normalmente chamado "descargar e instalar agora".
+* NVDA will announce the name of the optional quality update control if
+  present (download and install now link in Windows 10, download button in
+  Windows 11).
 
 ## O Tempo
 
