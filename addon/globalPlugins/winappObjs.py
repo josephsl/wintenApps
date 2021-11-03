@@ -63,7 +63,7 @@ class SuggestionsListView(UIA):
 		ui.message(suggestionsMessage)
 
 
-# Various XAML headings (Settings app, for example) introduced in Windows 10 1803.
+# Deprecated: various XAML headings (Settings app, for example) introduced in Windows 10 1803.
 UIAHeadingsToNVDAHeadings: dict[int, controlTypes.Role] = {
 	UIAHandler.HeadingLevel1: controlTypes.Role.HEADING1,
 	UIAHandler.HeadingLevel2: controlTypes.Role.HEADING2,
@@ -147,8 +147,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if obj.UIAAutomationId == "SuggestionsList" and not hasattr(NVDAObjects.UIA, "SuggestionsList"):
 			clsList.insert(0, SuggestionsListView)
 			return
-		# Recognize headings as reported by XAML (Windows 10 1803 or later).
+		# Deprecated: recognize headings as reported by XAML (Windows 10 1803 or later).
 		# NvDA does not recognize heading levels 7, 8, and 9, therefore use a chained comparison.
+		# See older add-on releases for details.
 		if (
 			UIAHandler.HeadingLevel1 <= obj._getUIACacheablePropertyValue(
 				UIAHandler.UIA_HeadingLevelPropertyId
