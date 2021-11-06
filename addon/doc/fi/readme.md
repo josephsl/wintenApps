@@ -51,9 +51,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  is now part of NVDA 2021.3.
+* NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
+  suoritettaessa, mukaan lukien tilanteet, joissa ehdotusten määrä muuttuu
+  haun edistyessä. Tämä sisältyy NVDA 2021.3:een.
 * Seuraavat UIA-tapahtumat tunnistetaan NVDA:n tarjoamien
   UIA-tapahtumakäsittelijöiden lisäksi: vetämisen aloitus, vetämisen
   peruutus, vetäminen suoritettu, vetämisen kohteeseen siirtyminen,
@@ -118,8 +118,8 @@ korkeampi. Kun liität leikepöydän historiasta, liitä valittu kohde
 painamalla välilyöntinäppäintä Enterin sijaan. NVDA tukee lisäksi
 päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 
-* In Windows 10, when an emoji group (including kaomoji and symbols group)
-  is selected, NVDA will no longer move navigator object to certain emojis.
+* Kun emojiryhmä (kaomoji ja symboliryhmä mukaan lukien) valitaan Windows
+  10:ssä, NVDA ei enää siirrä navigointiobjektia tiettyihin emojeihin.
 * Lisätty tuki Windows 11:n päivitetylle syöttökokemuksen paneelille
   (yhdistetty emojipaneeli ja leikepöydän historia).
 
@@ -136,9 +136,9 @@ päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 * Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
 * Joissakin Windows-asennuksissa näkyvät erikoiset säädinten nimet on
   korjattu.
-* NVDA will announce the name of the optional quality update control if
-  present (download and install now link in Windows 10, download button in
-  Windows 11).
+* NVDA puhuu valinnaisen laatupäivityksen säätimen nimen (Lataa ja asenna
+  nyt -linkki Windows 10:ssä, Lataa-painike Windows 11:ssä), mikäli
+  sellainen on näkyvissä.
 
 ## Sää
 
