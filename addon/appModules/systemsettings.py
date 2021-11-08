@@ -10,6 +10,7 @@
 from typing import Any
 # See the above note as to why the below procedure must be done.
 from nvdaBuiltin.appModules.systemsettings import *  # NOQA: F403
+import UIAHandler
 import ui
 import controlTypes
 from NVDAObjects.UIA import UIA
@@ -63,6 +64,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# Resolved in Windows 11.
 			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name
+			# Windows 11's breadcrumb bar item uses a custom localized control type text.
+			# Although it is recognized as a heading, override role text to communicate what it actually is.
+			# This allows item label to be kept intact.
+			elif obj.UIAElement.cachedClassName.endswith("BreadcrumbBarItem"):
+				obj.roleText = obj._getUIACacheablePropertyValue(UIAHandler.UIA_LocalizedControlTypePropertyId)
 
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache: str = ""
