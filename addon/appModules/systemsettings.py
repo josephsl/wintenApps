@@ -112,6 +112,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				pass
 
 	def event_nameChange(self, obj, nextHandler):
+		# Duplicate events are filtered out in recent Windows 10 and NVDA releases.
+		# See older add-on releases for details.
 		if isinstance(obj, UIA):
 			# Storage/disk cleanup progress bar raises name change event.
 			if (
