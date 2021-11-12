@@ -1,9 +1,9 @@
-# Osnovni moduli za Windows aplikacije #
+# Osnovne Windows aplikacije (Windows App Essentials) #
 
-* Authors: Joseph Lee, Derek Riemer and others
+* Autori: Joseph Lee, Derek Riemer i drugi
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA compatibility: 2021.2 and beyond
+* NVDA kompatibilnost: 2021.2 i nadalje
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
@@ -21,10 +21,11 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 * Cortana
 * Mail
 * Karte
-* Microsoft Solitaire Collection
+* Microsoft Solitaire zbirka
 * Microsoft Store
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/modern input method editors)
+* Moderna tipkovnica (ploča emojija, diktatiranje, tipkanje glasom,
+  prijedlozi hardvera unosa, povijest međuspremnika, moderni uređivači za
+  unos)
 * Osobe
 * Postavke (postavke sustava, Windows+I)
 * Vrijeme
@@ -32,15 +33,16 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later and is
-  compatible with Windows 11.
-* Although installation is possible, this add-on does not support Windows
-  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Ovaj dodatak zahtijeva Windows 10 20H2 (gradnja 19042) ili novija i
+  kompatibilan je sa sustavom Windows 11.
+* Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
+  Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support unsupported
-  Windows releases such as old Windows 10 versions, or changes were made to
-  Windows and apps that makes entries no longer applicable.
+* Za unose koji niže dolje nisu navedeni, može se pretpostaviti da su te
+  funkcije dio NVDA čitača. Više nisu primjenjive jer dodatak ne podržava
+  stara izdanja sustava poput stare Windows 10 verzije ili su napravljene
+  promjene u Windows sustavu i aplikacijama, zbog čega unosi više nisu
+  primjenjivi.
 * Neke aplikacije podržavaju način kompaktnog preklapanja (na primjer,
   uvijek na vrhu u Kalkulatoru) i ovaj modus neće ispravno raditi s
   prijenosnom verzijom NVDA čitača.
@@ -50,9 +52,9 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 
 ## Opće
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  is now part of NVDA 2021.3.
+* U većini slučajeva NVDA može najaviti broj prijedloga prilikom pretrage,
+  uključujući kad se broj prijedloga mijenja kako pretraživanje
+  napreduje. Ovo je sada dio NVDA 2021.
 * In addition to UIA event handlers provided by NVDA, the following UIA
   events are recognized: drag start, drag cancel, drag complete, drop target
   drag enter, drop target drag leave, drop target dropped, layout
@@ -61,9 +63,9 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   notifications come from somewhere other than the currently active
   app. Events built into NVDA such as name change and controller for events
   will be tracked from an add-on called Event Tracker.
-* When opening, closing, reordering (Windows 11), or switching between
-  virtual desktops, NVDA will announce active virtual desktop name (desktop
-  2, for example).
+* Prilikom otvaranja, zatvaranja, preraspoređivanja (Windows 11) ili
+  prebacivanja između virtualnih radnih površina, NVDA će najaviti
+  trenutačno ime radne površine (na primjer, desktop 2).
 * NVDA više neće najaviti veličinu teksta izbornika Start, kad se mijenjaju
   rezolucije ili položaj ekrana.
 * Kad se pločice izbornika Start ili brze radnje za Action Center
@@ -95,29 +97,31 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   omogućena, NVDA će izgovarati adrese i kućne brojeve prilikom kretanja
   strelicama po karti.
 
-## Microsoft Solitaire Collection
+## Microsoft Solitaire zbirka
 
 * NVDA će najaviti imenta karata i setove karata.
 
 ## Microsoft Store
 
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
+* Prilikom preuzimanja sadržaja kao što su aplikacije i filmovi, NVDA će
+  najaviti naziv proizvoda i napredovanje preuzimanja.
 
 ## Moderna tipkovnica
 
-This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, and modern input method editors for certain
-languages. When viewing emojis, for best experience, enable Unicode
-Consortium setting from NVDA's speech settings and set symbol level to
-"some" or higher. When pasting from clipboard history in Windows 10, press
-Space key instead of Enter key to paste the selected item. NVDA also
-supports updated input experience panel in Windows 11.
+To uključuje ploču s emojijima, povijest međuspremnika,
+diktatiranje/tipkanje govorom, prijedloge unosa hardvera i moderne uređivače
+načina unosa za određene jezike. Kad pregledavaš emojije, aktiviraj postavku
+Unicode Consortium u NVDA postavkama govora i postavi razinu simbola na
+„neki” ili višu. Prilikom umetanja iz povijesti međuspremnika u sustavu
+Windows 10, pritisni tipku za razmak umjesto tipke Enter za umetanje
+odabranog elementa. Također, NVDA podržava aktualiziranu ploču unosa u
+Windows 11.
 
-* In Windows 10, when an emoji group (including kaomoji and symbols group)
-  is selected, NVDA will no longer move navigator object to certain emojis.
-* Added support for updated input experience panel (combined emoji panel and
-  clipboard history) in Windows 11.
+* U sustavu Windows 10, kad je odabrana grupa emojija (uključujući kaomoji i
+  grupu simbola), NVDA više neće pomicati navigacijski objekt na određene
+  emojije.
+* Dodana je podrška za aktualiziranu ploču unosa (kombinacija ploče emojija
+  i povijesti međuspremnika) u Windows 11.
 
 ## Osobe
 
@@ -130,11 +134,11 @@ supports updated input experience panel in Windows 11.
   izvještava automatski.
 * Vrijednosti trake napredovanja i druge informacije više se ne najavljuju
   dvaput.
-* Odd control labels seen in certain Windows installations has been
-  corrected.
-* NVDA will announce the name of the optional quality update control if
-  present (download and install now link in Windows 10, download button in
-  Windows 11).
+* Čudne kontrolne oznake viđene u određenim Windows instalacijama su
+  ispravljene.
+* NVDA će najaviti naziv opcionalne kontrole kvalitete aktualiziranja ako
+  postoji (preuzimi i instaliraj poveznicu sada u Windows 10, gumb za
+  preuzimanje u Windows 11).
 
 ## Vrijeme
 
