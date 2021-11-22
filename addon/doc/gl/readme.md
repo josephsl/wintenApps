@@ -53,9 +53,9 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Xeral
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  is now part of NVDA 2021.3.
+* NVDA pode anunciar o número de suxestións cando se realiza unha procura na
+  maioría dos casos, incluído cando o número de suxestións cambia conforme
+  progresa a procura. Isto agora é parte de NVDA 2021.3.
 * Ademais dos manexadores de eventos UIA proporcionados por NVDA,
   recoñécense os seguintes eventos UIA: drag start, drag cancel, drag
   complete, drop target drag enter, drop target drag leave, drop target
@@ -121,8 +121,9 @@ superior. Ao pegar dende o historial do portapapeis en Windows 10, preme a
 tecla Espacio no canto de Intro para pegar o elemento seleccionado. NVDA
 tamén soporta o panel de experiencia de entrada actualizado en Windows 11.
 
-* In Windows 10, when an emoji group (including kaomoji and symbols group)
-  is selected, NVDA will no longer move navigator object to certain emojis.
+* Cando se selecciona un grupo de emojis (incluindo kaomoji e grupos de
+  símbolos en Windows 10), NVDA xa non moverá o navegador de obxectos a
+  certos emojis.
 * Engadido soporte para o panel actualizado de experiencia de entrada (panel
   de emoji e historial de portapapeis combinados) en windows 11.
 
@@ -140,9 +141,9 @@ tamén soporta o panel de experiencia de entrada actualizado en Windows 11.
   dúas veces.
 * Corrixiuse as etiquetas de controis extrañas advertidas en certas
   instalacións de Windows.
-* NVDA will announce the name of the optional quality update control if
-  present (download and install now link in Windows 10, download button in
-  Windows 11).
+* NVDA anunciará o nome do control para a actualización de calidade opcional
+  se estiver presente (ligazón descargar e instalar agora en Windows 10 e
+  botón descargar en Windows 11).
 
 ## O Tempo
 
