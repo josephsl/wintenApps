@@ -38,7 +38,7 @@ addon_info = {
 	"addon_lastTestedNVDAVersion": "2021.3",
 	# Minimum Windows version supported
 	# Note: not to be included in the manifest, kept here to remind people about feature update support.
-	"addon_minimumWindowsVersion": "10.0.19042",
+	"addon_minimumWindowsVersion": "10.0.19043",
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!
