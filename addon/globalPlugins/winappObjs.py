@@ -24,7 +24,7 @@ import addonHandler
 addonHandler.initTranslation()
 
 # #52: forget everything if the current release is not a supported version of Windows.
-isAddonSupported = winVersion.getWinVer() >= winVersion.WIN10_20H2
+isAddonSupported = winVersion.getWinVer() >= winVersion.WIN10_21H1
 
 
 # For convenience.
