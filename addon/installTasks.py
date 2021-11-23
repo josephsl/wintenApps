@@ -31,7 +31,7 @@ def onInstall():
 	# This is the case for Windows 10 (to be expanded to Windows 11 in the future).
 	# For now only check Windows 10.
 	windowsReleaseSeries = "Windows 10"
-	minimumSupportedRelease = winVersion.WIN10_20H2
+	minimumSupportedRelease = winVersion.WIN10_21H1
 	minimumSupportedReleaseName = minimumSupportedRelease.releaseName
 	addonInstallPossible = currentWinVer >= minimumSupportedRelease
 	if not addonInstallPossible:
