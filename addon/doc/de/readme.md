@@ -57,16 +57,13 @@ Versionen][3].
 * In den meisten Fällen kann NVDA die Anzahl der Vorschläge beim Durchführen
   einer Suche mitteilen, auch wenn sich die Anzahl der Vorschläge im Verlauf
   der Suche ändert. Dies ist jetzt Teil von NVDA 2021.3.
-* Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignishandlern werden
-  die folgenden UIA-Ereignisse erkannt: Drag Start, Drag Cancel, Drag
-  Complete, Drop Target Drag Enter, Drop Target Drag Leave, Drop Target
-  Drop, Layout ungültig gemacht. Wenn die Protokollebene von NVDA auf Debug
-  eingestellt ist, werden diese Ereignisse nachverfolgt, und bei
-  Benachrichtigungsereignissen der UIA ist ein Debugton zu hören, wenn
-  Benachrichtigungen von einem anderen Ort als der derzeit aktiven App
-  stammen. In NVDA integrierte Ereignisse wie Namensänderungen und
-  Controller für Ereignisse werden von der Erweiterung "Ereignis-Tracker"
-  verfolgt.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag complete, drop target dropped, layout
+  invalidated. With NVDA's log level set to debug, these events will be
+  tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active
+  app. Events built into NVDA such as name change and controller for events
+  are tracked from an add-on called Event Tracker.
 * Beim Öffnen, Schließen, Neuordnen (Windows 11) oder Wechseln zwischen
   virtuellen Desktops gibt NVDA den Namen des aktiven virtuellen Desktops an
   (z. B. Desktop 2).
@@ -150,6 +147,7 @@ unterstützt auch das Panel für aktualisierte Eingabe-Erlebnisse in Windows
 * NVDA teilt den Namen optionaler Qualitätsupdates mit, falls vorhanden
   (Link zum Download und Jetzt installieren in Windows 10,
   Download-Schaltfläche in Windows 11).
+* In Windows 11, breadcrumb bar items are properly recognized.
 
 ## Wetter
 

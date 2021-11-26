@@ -57,15 +57,14 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 * NVDA, arama ilerledikçe öneri sayısının değiştiği durumlar da dahil olmak
   üzere çoğu durumda bir arama yaparken öneri sayısını bildirebilir. Bu
   artık NVDA 2021.3'ün bir parçasıdır.
-* NVDA tarafından sağlanan UIA olay işleyicilerine ek olarak, aşağıdaki UIA
-  olayları tanınır: sürükle başlat, sürükle iptal, sürükle tamam, bırak
-  hedefi sürükle gir gir, hedefi bırak sürükle bırak, bırak hedefi bırak,
-  düzen geçersiz kılındı. NVDA'nın günlük seviyesi hata ayıklamaya
-  ayarlandığında, bu olaylar izlenecek ve UIA bildirim olayı için,
-  bildirimler o anda etkin olan uygulama dışında bir yerden gelirse bir hata
-  ayıklama tonu duyulacaktır. İsim değişikliği ve olaylar için kontrolör
-  gibi NVDA'da yerleşik olan olaylar, Event Tracker adlı bir eklentiden
-  izlenecektir.
+* NVDA tarafından sağlanan UIA olay işleyicilerine ek olarak, şu UIA
+  olayları tanınır: sürükleme tamamlandı, bırakma hedefi bırakıldı, düzen
+  geçersiz kılındı. NVDA'nın günlük seviyesi hata ayıklamaya ayarlandığında,
+  bu olaylar izlenecek ve UIA bildirim olayı için, bildirimler o anda etkin
+  olan uygulama dışında bir yerden gelirse bir hata ayıklama tonu
+  duyulacaktır. Ad değişikliği ve olaylar için denetleyici gibi NVDA'da
+  yerleşik olarak bulunan olaylar, Event Tracker adlı bir eklentiden
+  izlenir.
 * NVDA, sanal masaüstlerini açarken, kapatırken, yeniden düzenlerken
   (Windows 11) veya sanal masaüstleri arasında geçiş yaparken etkin sanal
   masaüstü adını duyurur (örneğin, masaüstü 2).
@@ -140,6 +139,7 @@ NVDA, Windows 11'de güncellenmiş giriş deneyimi panelini destekler.
 * NVDA, varsa isteğe bağlı kalite güncelleme kontrolünün adını duyurur
   (Windows 10'da şimdi indir ve kur bağlantısı, Windows 11'de indir
   düğmesi).
+* Windows 11'de içerik haritası çubuğu öğeleri düzgün bir şekilde tanınır.
 
 ## Hava durumu
 

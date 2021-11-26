@@ -57,9 +57,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
   maioría dos casos, incluído cando o número de suxestións cambia conforme
   progresa a procura. Isto agora é parte de NVDA 2021.3.
 * Ademais dos manexadores de eventos UIA proporcionados por NVDA,
-  recoñécense os seguintes eventos UIA: drag start, drag cancel, drag
-  complete, drop target drag enter, drop target drag leave, drop target
-  dropped, layout invalidated. Co nivel de rexistro de NVDA configurado como
+  recoñécense os seguintes eventos UIA: drag complete, drop target dropped,
+  layout invalidated. Co nivel de rexistro de NVDA configurado como
   depuración, estes eventos seguiranse, e no caso de eventos UIA
   notification oirase un ton de depuración se as notificacións veñen de
   calquera lugar que non sexa a app actualmente activa. Eventos incluídos en
@@ -144,6 +143,8 @@ tamén soporta o panel de experiencia de entrada actualizado en Windows 11.
 * NVDA anunciará o nome do control para a actualización de calidade opcional
   se estiver presente (ligazón descargar e instalar agora en Windows 10 e
   botón descargar en Windows 11).
+* En Windows 11, os elementos da barra de faragullas de pan recoñécense
+  correctamente.
 
 ## O Tempo
 

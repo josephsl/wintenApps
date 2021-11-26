@@ -59,15 +59,13 @@ l'extension][3].
 * NVDA can announce suggestion count when performing a search in majority of
   cases, including when suggestion count changes as search progresses. This
   is now part of NVDA 2021.3.
-* En plus de des événements UIA déjà gérés par NVDA, les événements UIA
-  suivants sont reconnus : drag start, drag cancel, drag complete, drop
-  target drag enter, drop target drag leave, drop target dropped, layout
-  invalidated. Avec le niveau de journal de NVDA réglé sur débogage, ces
-  événements seront suivis et pour les événements de notification UIA, un
-  son de débogage sera entendue si les notifications proviennent d'une
-  application autre que celle actuellement active. Les événements intégrés à
-  NVDA, comme le changement de nom et le contrôleur d'événements, seront
-  suivis à partir d'une extension appelé Event Tracker.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag complete, drop target dropped, layout
+  invalidated. With NVDA's log level set to debug, these events will be
+  tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active
+  app. Events built into NVDA such as name change and controller for events
+  are tracked from an add-on called Event Tracker.
 * Lors de l'ouverture, de la fermeture, de la réorganisation (Windows 11)
   ou du basculement entre les bureaux virtuels (build 21337 ou ultérieure),
   , NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
@@ -152,6 +150,7 @@ charge le panneau d'expérience de saisie mis à jour dans Windows 11.
 * NVDA will announce the name of the optional quality update control if
   present (download and install now link in Windows 10, download button in
   Windows 11).
+* In Windows 11, breadcrumb bar items are properly recognized.
 
 ## Météo
 

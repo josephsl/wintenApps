@@ -56,15 +56,13 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 * NVDA can announce suggestion count when performing a search in majority of
   cases, including when suggestion count changes as search progresses. This
   is now part of NVDA 2021.3.
-* Oprócz programów obsługi zdarzeń UIA dostarczanych przez NVDA rozpoznawane
-  są następujące zdarzenia UIA: przeciągnij start, przeciągnij anuluj,
-  przeciągnij complete, upuść docelowy przeciągnij enter, upuść docelowy
-  przeciągnij w udziel, upuść cel upuszczony, układ unieważniony. Po
-  ustawieniu poziomu dziennika NVDA na debugowanie zdarzenia te będą
-  śledzone, a w przypadku zdarzenia powiadomienia UIA dźwięk debugowania
-  będzie słyszalny, jeśli powiadomienia pochodzą z innego miejsca niż
-  aktualnie aktywna aplikacja. Zdarzenia wbudowane w NVDA, takie jak zmiana
-  nazwy i kontroler zdarzeń, będą śledzone z dodatku o nazwie Event Tracker.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag complete, drop target dropped, layout
+  invalidated. With NVDA's log level set to debug, these events will be
+  tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active
+  app. Events built into NVDA such as name change and controller for events
+  are tracked from an add-on called Event Tracker.
 * Podczas otwierania, zamykania, zmiany kolejności (Windows 11) lub
   przełączania się między pulpitami wirtualnymi NVDA ogłosi nazwę aktywnego
   pulpitu wirtualnego (na przykład pulpit 2).
@@ -144,6 +142,7 @@ wejściowego w systemie Windows 11.
 * NVDA will announce the name of the optional quality update control if
   present (download and install now link in Windows 10, download button in
   Windows 11).
+* In Windows 11, breadcrumb bar items are properly recognized.
 
 ## Pogoda
 

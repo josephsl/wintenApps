@@ -60,14 +60,13 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   sugerencias cambia según progresa la búsqueda. Esto ahora forma parte de
   NVDA 2021.3.
 * Además de los manejadores de eventos UIA proporcionados por NVDA, se
-  reconocen los siguientes eventos UIA: drag start, drag cancel, drag
-  complete, drop target drag enter, drop target drag leave, drop target
-  dropped, Layout invalidated. Con NVDA configurado para ejecutarse con el
-  registro de depuración habilitado, estos eventos se seguirán, y se oirá un
-  tono de depuración para el evento UIA notification si las notificaciones
-  vienen de un lugar distinto a la aplicación actual. Los eventos
-  incorporados en NVDA, como name change y controller for, se rastrearán
-  desde un complemento llamado Rastreador de eventos.
+  reconocen los siguientes eventos UIA: drag complete, drop target dropped,
+  Layout invalidated. Con NVDA configurado para ejecutarse con el registro
+  de depuración habilitado, estos eventos se seguirán, y se oirá un tono de
+  depuración para el evento UIA notification si las notificaciones vienen de
+  un lugar distinto a la aplicación actual. Los eventos incorporados en
+  NVDA, como name change y controller for, se rastrearán desde un
+  complemento llamado Rastreador de eventos.
 * Al abrir, cerrar, reordenar (Windows 11) o cambiar entre escritorios
   virtuales, NVDA anunciará el nombre del escritorio virtual activo
   (escritorio 2, por ejemplo).
@@ -148,6 +147,8 @@ Windows 11.
 * NVDA anunciará el nombre del enlace de la actualización de calidad
   opcional si está presente (enlace Descargar e instalar ahora en Windows
   10, botón Descargar en Windows 11).
+* En Windows 11, los elementos de la barra de migas de pan se reconocen
+  correctamente.
 
 ## El Tiempo
 

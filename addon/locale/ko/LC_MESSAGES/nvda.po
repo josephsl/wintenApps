@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2021-08-14 09:37-0700\n"
+"PO-Revision-Date: 2021-11-25 17:42-0800\n"
 "Last-Translator: Dong hui Park <hi@aheu.org>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -65,11 +65,11 @@ msgstr "일기 예보 정보 없음"
 
 #. Translators: part of the suggestions count message (for example: 2 suggestions).
 msgid "1 suggestion"
-msgstr ""
+msgstr "1개의 제안 항목"
 
 #. Translators: part of the suggestions count message (for example: 2 suggestions).
 msgid "{} suggestions"
-msgstr ""
+msgstr "{}개의 제안 항목"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

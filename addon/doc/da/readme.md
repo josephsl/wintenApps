@@ -55,18 +55,13 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * NVDA can announce suggestion count when performing a search in majority of
   cases, including when suggestion count changes as search progresses. This
   is now part of NVDA 2021.3.
-* Udover de UIA-håndteringsmuligheder, som NVDA leverer, vil følgende
-  UIA-hændelser blive opfanget af skærmlæseren: drag start, drag cancel,
-  drag complete, drop target drag enter, drop target drag leave, drop target
-  dropped. Hvis NVDAs logningsniveau er indstillet til "Fejlfinding", vil
-  disse hændelser blive sporet, og en tone vil blive hørt, hvis en
-  UIA-hændelse stammer fra andet end den aktuelt fokuserede app. Nogle
-  hændelser angiver yderligere oplysninger, såsom antal af elementer i
-  kontrolhændelsen, status for elementet ved en hændelse, hvor status
-  ændres, samt emnetekst for hændelser, hvor der anmodes om
-  emnestatus. Hændelser, der kommer fra NVDA, såsom name change og
-  controller for events, vil blive sporet af en tilføjelse kaldet "Event
-  Tracker".
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag complete, drop target dropped, layout
+  invalidated. With NVDA's log level set to debug, these events will be
+  tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active
+  app. Events built into NVDA such as name change and controller for events
+  are tracked from an add-on called Event Tracker.
 * Når åbning, lukning, ændring af rækkefølge (Windows 11) eller Skift mellem
   virtuelle skrivebord forekommer, vil NVDA annoncere det aktuelle navn for
   det virtuelle skrivebord (f.eks. "Skrivebord 2").
@@ -145,6 +140,7 @@ i Windows 11.
 * NVDA will announce the name of the optional quality update control if
   present (download and install now link in Windows 10, download button in
   Windows 11).
+* In Windows 11, breadcrumb bar items are properly recognized.
 
 ## Vejr
 
