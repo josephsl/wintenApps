@@ -41,8 +41,13 @@
 * NVDA can announce suggestion count when performing a search in majority of
   cases, including when suggestion count changes as search progresses. This
   is now part of NVDA 2021.3.
-* 除了NVDA提供的UIA事件处理程序外，还可以识别以下UIA事件：拖动开始、拖动取消、拖动完成、拖动目标进入、拖动目标离开、拖动目标丢弃、布局无效。在NVDA的日志级别设置为调试时，这些事件将被跟踪，对于UIA通知事件，如果通知来自当前活动应用以外的其他地方，将听到调试音。NVDA
-  中内置的事件，例如名称更改和事件控制器，将通过名为 Event Tracker 的插件进行跟踪。
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag complete, drop target dropped, layout
+  invalidated. With NVDA's log level set to debug, these events will be
+  tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active
+  app. Events built into NVDA such as name change and controller for events
+  are tracked from an add-on called Event Tracker.
 * 打开、关闭、重新排序（Windows 11）或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
 * 当改变屏幕分辨率或方向时，NVDA将不再读出开始菜单的大小文本。
 * 当使用 Alt + Shift +光标键托移“开始”菜单磁贴或“操作中心”快速操作按钮时，NVDA 将朗读有关所拖动项目及所拖动项目的新位置的信息。
@@ -98,6 +103,7 @@
 * NVDA will announce the name of the optional quality update control if
   present (download and install now link in Windows 10, download button in
   Windows 11).
+* In Windows 11, breadcrumb bar items are properly recognized.
 
 ## 天气
 

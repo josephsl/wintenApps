@@ -56,13 +56,12 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   uključujući kad se broj prijedloga mijenja kako pretraživanje
   napreduje. Ovo je sada dio NVDA 2021.
 * In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drop target
-  drag enter, drop target drag leave, drop target dropped, layout
+  events are recognized: drag complete, drop target dropped, layout
   invalidated. With NVDA's log level set to debug, these events will be
   tracked, and for UIA notification event, a debug tone will be heard if
   notifications come from somewhere other than the currently active
   app. Events built into NVDA such as name change and controller for events
-  will be tracked from an add-on called Event Tracker.
+  are tracked from an add-on called Event Tracker.
 * Prilikom otvaranja, zatvaranja, preraspoređivanja (Windows 11) ili
   prebacivanja između virtualnih radnih površina, NVDA će najaviti
   trenutačno ime radne površine (na primjer, desktop 2).
@@ -139,6 +138,7 @@ Windows 11.
 * NVDA će najaviti naziv opcionalne kontrole kvalitete aktualiziranja ako
   postoji (preuzimi i instaliraj poveznicu sada u Windows 10, gumb za
   preuzimanje u Windows 11).
+* In Windows 11, breadcrumb bar items are properly recognized.
 
 ## Vrijeme
 

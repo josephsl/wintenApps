@@ -54,15 +54,13 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
   suoritettaessa, mukaan lukien tilanteet, joissa ehdotusten määrä muuttuu
   haun edistyessä. Tämä sisältyy NVDA 2021.3:een.
-* Seuraavat UIA-tapahtumat tunnistetaan NVDA:n tarjoamien
-  UIA-tapahtumakäsittelijöiden lisäksi: vetämisen aloitus, vetämisen
-  peruutus, vetäminen suoritettu, vetämisen kohteeseen siirtyminen,
-  vetämisen kohteesta poistuminen, vetämisen kohde pudotettu, asettelu
-  mitätöity. Näitä tapahtumia seurataan, kun NVDA:n lokitasoksi on
-  määritetty "virheenkorjaus", ja UIA-ilmoitustapahtuma ilmaistaan
-  virheäänellä, mikäli ilmoitukset tulevat muualta kuin aktiivisesta
-  sovelluksesta. NVDA:han sisäänrakennettuja tapahtumia, kuten nimen muutos
-  ja ohjain tapahtumille seurataan Event Tracker -nimisestä lisäosasta.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag complete, drop target dropped, layout
+  invalidated. With NVDA's log level set to debug, these events will be
+  tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active
+  app. Events built into NVDA such as name change and controller for events
+  are tracked from an add-on called Event Tracker.
 * NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
   avattaessa, suljettaessa, uudelleenjärjestettäessä (Windows 11) tai
   siirryttäessä niiden välillä.
@@ -139,6 +137,7 @@ päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 * NVDA puhuu valinnaisen laatupäivityksen säätimen nimen (Lataa ja asenna
   nyt -linkki Windows 10:ssä, Lataa-painike Windows 11:ssä), mikäli
   sellainen on näkyvissä.
+* In Windows 11, breadcrumb bar items are properly recognized.
 
 ## Sää
 

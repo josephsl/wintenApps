@@ -55,13 +55,12 @@ riferimento al documento [changelogs for add-on releases][3].
   cases, including when suggestion count changes as search progresses. This
   is now part of NVDA 2021.3.
 * In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag start, drag cancel, drag complete, drop target
-  drag enter, drop target drag leave, drop target dropped, layout
+  events are recognized: drag complete, drop target dropped, layout
   invalidated. With NVDA's log level set to debug, these events will be
   tracked, and for UIA notification event, a debug tone will be heard if
   notifications come from somewhere other than the currently active
   app. Events built into NVDA such as name change and controller for events
-  will be tracked from an add-on called Event Tracker.
+  are tracked from an add-on called Event Tracker.
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
@@ -140,6 +139,7 @@ supports updated input experience panel in Windows 11.
 * NVDA will announce the name of the optional quality update control if
   present (download and install now link in Windows 10, download button in
   Windows 11).
+* In Windows 11, breadcrumb bar items are properly recognized.
 
 ## Meteo
 

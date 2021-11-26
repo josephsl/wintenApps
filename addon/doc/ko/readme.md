@@ -39,11 +39,14 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 일반
 
-* 특정 검색창에서 검색 결과수가(특히 검색중 결과수가 변경될 경우) 출력되도록 함(본 기능은 NVDA 2021.3에 추가됨).
-* NVDA가 지원하는 UIA  이벤트 외의 다음 이벤트 추적 가능: drag start, drag cancel, drag
-  complete, drop target drag enter, drop target drag leave, drop target
-  dropped, layout invalidated. NVDA가 디버그 로깅 상태로 재시작된 경우 위 이벤트가 추적되며
-  notification 이벤트는 추가 디버그 정보가 출력되도록 함.
+* 특정 검색창에서 제안 항목수가(특히 검색중 제안 항목이 변경될 경우) 출력되도록 함(본 기능은 NVDA 2021.3에 추가됨).
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events are recognized: drag complete, drop target dropped, layout
+  invalidated. With NVDA's log level set to debug, these events will be
+  tracked, and for UIA notification event, a debug tone will be heard if
+  notifications come from somewhere other than the currently active
+  app. Events built into NVDA such as name change and controller for events
+  are tracked from an add-on called Event Tracker.
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
@@ -117,6 +120,7 @@ supports updated input experience panel in Windows 11.
 * NVDA will announce the name of the optional quality update control if
   present (download and install now link in Windows 10, download button in
   Windows 11).
+* In Windows 11, breadcrumb bar items are properly recognized.
 
 ## 날씨
 
