@@ -16,7 +16,6 @@ The following app modules or support modules for some apps are included (see eac
 * Mail
 * Maps
 * Microsoft Solitaire Collection
-* Microsoft Store
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input suggestions/clipboard history/modern input method editors)
 * People
 * Settings (system settings, Windows+I)
@@ -63,10 +62,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## Microsoft Solitaire Collection
 
 * NVDA will announce names of cards and card decks.
-
-## Microsoft Store
-
-* When downloading content such as apps and movies, NVDA will announce product name and download progress.
 
 ## Modern keyboard
 
