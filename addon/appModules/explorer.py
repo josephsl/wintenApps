@@ -30,6 +30,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Do not allow "pane" to be announced when switching apps in Windows 11.
 		# Caused by UIA focus event coming from input site window.
 		# Thankfully this behavior is similar to Windows 10's multitasking view frame window.
+		# Resolved in NVDA 2021.3.
 		if isinstance(obj, UIA):
 			if obj.UIAElement.cachedClassName == "Windows.UI.Input.InputSite.WindowClass":
 				clsList.insert(0, MultitaskingViewFrameWindow)  # NOQA: F405
