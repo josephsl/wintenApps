@@ -5,7 +5,6 @@
 # Support for Microsoft Solitaire Collection.
 
 import appModuleHandler
-import UIAHandler
 import controlTypes
 
 
