@@ -68,7 +68,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# Although it is recognized as a heading, override role text to communicate what it actually is.
 			# This allows item label to be kept intact.
 			elif obj.UIAElement.cachedClassName.endswith("BreadcrumbBarItem"):
-				obj.roleText = obj._getUIACacheablePropertyValue(UIAHandler.UIA_LocalizedControlTypePropertyId)
+				obj.roleText = obj.UIAElement.currentLocalizedControlType
 
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache: str = ""
