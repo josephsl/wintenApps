@@ -38,6 +38,7 @@ additionalEvents: dict[int, str] = {
 # Suggestions list view.
 # Unlike Start menu suggestions, these fire UIA layout invalidated event and top suggestion is not announced.
 # At least announce suggestion count.
+# This is now part of NVDA 2021.3.
 class SuggestionsListView(UIA):
 
 	def event_UIA_layoutInvalidated(self):
@@ -173,7 +174,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			element = obj.UIAElement
 			info.append(f"Automation Id: {obj.UIAAutomationId}")
 			info.append(f"class name: {element.cachedClassName}")
-			log.debug(u"winapps: UIA {debuginfo}".format(debuginfo=", ".join(info)))
+			log.debug("winapps: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
 	# Events defined in NVDA.
 
