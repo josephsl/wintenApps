@@ -174,7 +174,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			element = obj.UIAElement
 			info.append(f"Automation Id: {obj.UIAAutomationId}")
 			info.append(f"class name: {element.cachedClassName}")
-			log.debug(u"winapps: UIA {debuginfo}".format(debuginfo=", ".join(info)))
+			log.debug("winapps: UIA {debuginfo}".format(debuginfo=", ".join(info)))
 
 	# Events defined in NVDA.
 
