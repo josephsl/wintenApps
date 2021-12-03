@@ -17,7 +17,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 메일
 * 지도
 * Microsoft Solitaire Collection
-* Microsoft Store
 * 현대식 키보드(에모지 페널/받아쓰기/하드웨어 입력 구성/클립보드 히스토리/현대식 IME 입력기)
 * People
 * 설정(시스템 설정 앱, Windows+I)
@@ -83,11 +82,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 ## Microsoft Solitaire Collection
 
 * NVDA will announce names of cards and card decks.
-
-## Microsoft Store
-
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
 
 ## 현대식 키보드
 

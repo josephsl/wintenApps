@@ -21,7 +21,6 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Mail
 * Kort
 * Microsoft Kabale Samling
-* Microsoft store
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/modern input method editors)
 * Personer
@@ -102,11 +101,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 ## Microsoft Kabale Samling
 
 * NVDA vil annoncere navnene på kort og kortdæk.
-
-## Microsoft store
-
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
 
 ## Moderne tastatur
 

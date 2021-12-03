@@ -23,7 +23,6 @@ dołączone, zobacz każdą sekcję aplikacji):
 * Mail
 * Mapy
 * Microsoft Solitaire Collection
-* Microsoft Store
 * Nowoczesna klawiatura (panel emoji / dyktowanie / pisanie głosowe /
   podpowiedzi do pisania na klawiaturze sprzętowej / historia schowka /
   nowoczesne edytory metod wprowadzania)
@@ -103,11 +102,6 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 ## Microsoft Solitaire Collection
 
 * NVDA ogłosi nazwy kart i talii kart.
-
-## Microsoft Store
-
-* Przy pobieraniu zawartości, takiej jak aplikacje i filmy, NVDA wymówi
-  nazwę produktu i pasek postępu.
 
 ## Klawiatura nowoczesna
 

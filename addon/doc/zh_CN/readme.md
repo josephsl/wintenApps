@@ -17,7 +17,6 @@
 * 邮件
 * 地图
 * Microsoft Solitaire Collection（微软纸牌游戏）
-* Microsoft Store
 * 现代键盘（包括表情符号面板、听写、语音输入、硬件输入建议、云剪贴板历史记录以及现代输入法编辑器）
 * 人脉
 * 设置（系统设置，Windows + I）
@@ -75,11 +74,6 @@
 ## Microsoft Solitaire Collection（微软纸牌游戏）
 
 * NVDA现在可读出卡片和卡片组的名称。
-
-## Microsoft Store
-
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
 
 ## 系统键盘
 

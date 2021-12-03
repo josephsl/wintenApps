@@ -22,7 +22,6 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 * Posta
 * Mappe
 * Microsoft Solitaire Collection
-* Microsoft Store
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/modern input method editors)
 * Persone
@@ -100,11 +99,6 @@ riferimento al documento [changelogs for add-on releases][3].
 ## Microsoft Solitaire Collection
 
 * NVDA vocalizzerà i nomi delle carte e dei mazzi di carte.
-
-## Microsoft Store
-
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
 
 ## Tastiera moderna
 

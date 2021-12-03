@@ -22,7 +22,6 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 * Mail
 * Karte
 * Microsoft Solitaire zbirka
-* Microsoft Store
 * Moderna tipkovnica (ploča emojija, diktatiranje, tipkanje glasom,
   prijedlozi hardvera unosa, povijest međuspremnika, moderni uređivači za
   unos)
@@ -55,13 +54,13 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 * U većini slučajeva NVDA može najaviti broj prijedloga prilikom pretrage,
   uključujući kad se broj prijedloga mijenja kako pretraživanje
   napreduje. Ovo je sada dio NVDA 2021.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag complete, drop target dropped, layout
-  invalidated. With NVDA's log level set to debug, these events will be
-  tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active
-  app. Events built into NVDA such as name change and controller for events
-  are tracked from an add-on called Event Tracker.
+* Prepoznaju se sljedeći UIA događaji: drag complete, drop target dropped,
+  layout invalidated. Kad je razina NVDA dnevnika postavljena na otklanjanje
+  grešaka, ti će se događaji pratiti, a za događaj UAIA obavijesti, ton za
+  uklanjanje grešaka će se čuti ako obavijesti dolaze s nekog drugog
+  trenutačno aktivnog programa. Događaji koji su ugrađeni u NVDA kao što su
+  promjena imena i kontroler za događaje prate se iz dodatka nazvanog
+  „Praćenje događaja”.
 * Prilikom otvaranja, zatvaranja, preraspoređivanja (Windows 11) ili
   prebacivanja između virtualnih radnih površina, NVDA će najaviti
   trenutačno ime radne površine (na primjer, desktop 2).
@@ -99,11 +98,6 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 ## Microsoft Solitaire zbirka
 
 * NVDA će najaviti imenta karata i setove karata.
-
-## Microsoft Store
-
-* Prilikom preuzimanja sadržaja kao što su aplikacije i filmovi, NVDA će
-  najaviti naziv proizvoda i napredovanje preuzimanja.
 
 ## Moderna tipkovnica
 

@@ -23,7 +23,6 @@ detalhes sobre o que está incluído):
 * Correio.
 * Mapas.
 * Colecção Microsoft Solitaire
-* Loja Microsoft
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/modern input method editors)
 * Pessoas.
@@ -100,11 +99,6 @@ consulte o documento [changelogs for releases, release][3].
 ## Colecção Microsoft Solitaire
 
 * o NVDA anunciará os nomes das cartas e dos baralhos de cartas.
-
-## Loja Microsoft
-
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
 
 ## Teclado moderno
 

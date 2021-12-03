@@ -24,7 +24,6 @@ bakın):
 * Posta
 * Haritalar
 * Microsoft Solitaire Koleksiyonu
-* Microsoft Store
 * Modern klavye (emoji paneli/dikte/sesle yazma/donanım giriş önerileri/pano
   geçmişi/modern giriş yöntemi düzenleyicileri)
 * Kişiler
@@ -102,11 +101,6 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 ## Microsoft Solitaire Koleksiyonu
 
 * NVDA kartların ve kart destelerinin adlarını bildirir.
-
-## Microsoft Store
-
-* Uygulamalar ve filmler gibi içerikleri indirirken, NVDA ürün adını ve
-  indirme ilerlemesini bildirecektir.
 
 ## Modern klavye
 

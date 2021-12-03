@@ -23,7 +23,6 @@ qué se incluye):
 * Correo
 * Mapas
 * Microsoft Solitaire Collection
-* Microsoft Store
 * Teclado Moderno (panel de emojis / dictado / escritura por voz /
   sugerencias de entrada hardware / historial del portapapeles / editores
   modernos de método de entrada)
@@ -107,11 +106,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 ## Microsoft Solitaire Collection
 
 * NVDA anunciará los nombres de las cartas y los montones de cartas.
-
-## Microsoft Store
-
-* Cuando se descargue contenido, como aplicaciones o películas, NVDA
-  anunciará el nombre del producto y el progreso de la descarga.
 
 ## Teclado Moderno
 
