@@ -23,7 +23,6 @@ detalhes sobre o que está incluso):
 * Email
 * Mapas
 * Microsoft Solitaire Collection (Coleção de Paciência)
-* Microsoft Store (Loja da Microsoft)
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/modern input method editors)
 * Pessoas
@@ -102,11 +101,6 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 ## Microsoft Solitaire Collection (Coleção de Paciência)
 
 * O NVDA anunciará os nomes das cartas e dos baralhos.
-
-## Microsoft Store (Loja da Microsoft)
-
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
 
 ## Teclado moderno
 

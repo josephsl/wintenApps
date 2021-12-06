@@ -22,7 +22,6 @@ tiết của mỗi ứng dụng để biết them):
 * Mail
 * Maps
 * Microsoft Solitaire Collection
-* Microsoft Store
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/modern input method editors)
 * People
@@ -101,11 +100,6 @@ for add-on releases][3] .
 ## Microsoft Solitaire Collection
 
 * NVDA sẽ đọc tên của các lá bài và bài trên sàn.
-
-## Microsoft Store
-
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
 
 ## Modern keyboard
 

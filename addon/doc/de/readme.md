@@ -22,7 +22,6 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 * Mail
 * Karten
 * Microsoft Solitaire Collection
-* Microsoft Store
 * Moderne Tastatur
   (Emoji-Panel/Diktat/Spracheingabe/Hardware-Eingabevorschläge/Zwischenablageverlauf/moderne
   Eingabemethoden-Editoren)
@@ -105,11 +104,6 @@ Versionen][3].
 ## Microsoft Solitaire Collection
 
 * NVDA sagt nun die Karten und den Kartenstapel an.
-
-## Microsoft Store
-
-* Beim Herunterladen von Inhalten wie Apps und Filmen gibt NVDA den
-  Produktnamen und den Download-Fortschritt an.
 
 ## Moderne virtuelle Tastaturen
 

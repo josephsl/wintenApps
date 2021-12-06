@@ -22,7 +22,6 @@ se inclúe):
 * Correo
 * Mapas
 * Microsoft Solitaire Collection
-* Tenda Microsoft
 * Teclado Moderno (panel de emoji/ditado/escritura por voz/suxestións de
   entrada por hardware/historial do portapapeis/editores co método de
   entrada moderna)
@@ -103,11 +102,6 @@ documento [rexistros de trocos para publicacións de complementos][3].
 ## Microsoft Solitaire Collection
 
 * NVDA anunciará os nomes das tarxetas e das pías de tarxetas.
-
-## Tenda Microsoft
-
-* Cando se descargue contido como aplicacións e películas, NVDA anunciará o
-  nome do produto e o progreso da descarga.
 
 ## Teclado Moderno
 

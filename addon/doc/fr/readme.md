@@ -24,7 +24,6 @@ est inclus) :
 * Courrier
 * Cartes
 * Microsoft Solitaire Collection
-* Microsoft Store
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/modern input method editors)
 * Personnes
@@ -110,11 +109,6 @@ l'extension][3].
 ## Microsoft Solitaire Collection
 
 * NVDA annoncera les noms des cartes et des jeux de cartes.
-
-## Microsoft Store
-
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
 
 ## Clavier moderne
 

@@ -21,7 +21,6 @@ Zahrnuté sú nasledujúce moduly (podrobný popis nájdete nižšie):
 * Pošta
 * Mapy
 * Microsoft Solitaire Collection
-* Obchod microsoft
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/modern input method editors)
 * Ľudia
@@ -95,11 +94,6 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 ## Microsoft Solitaire Collection
 
 * NVDA oznamuje karty a kombinácie kariet.
-
-## Obchod microsoft
-
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
 
 ## Moderná klávesnica
 

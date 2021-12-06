@@ -23,7 +23,6 @@ privire la ceea ce este inclus):
 * Mail
 * Hărți
 * Microsoft Solitaire Collection
-* Microsoft Store
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/modern input method editors)
 * Persoane
@@ -100,11 +99,6 @@ versiunile suplimentului][3].
 ## Microsoft Solitaire Collection
 
 * NVDA will announce names of cards and card decks.
-
-## Microsoft Store
-
-* When downloading content such as apps and movies, NVDA will announce
-  product name and download progress.
 
 ## Tastatură modernă
 
