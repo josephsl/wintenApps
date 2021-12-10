@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and others
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA compatibility: 2021.2 and beyond
+* NVDA compatibility: 2021.2 and later
 
 注意：此插件最初称为 Windows 10 应用增强，在 2021 年更名为 Windows 应用增强，以支持 Windows 10 和 Windows
 11 等未来版本。此插件的部分内容仍将引用原始插件名称。

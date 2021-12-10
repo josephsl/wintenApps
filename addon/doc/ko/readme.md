@@ -3,7 +3,7 @@
 * 저자: Joseph Lee(이성원), Derek Riemer 외 다수
 * [출시 버전][1]
 * [개발 버전][2]
-* NVDA 호환: 2021.2 이상
+* NVDA compatibility: 2021.2 and later
 
 참고: 윈도우 10 이상(특히 윈도우 11)을 지원하기 위해 2021년에 Windows 10 App Essentials에서 Windows
 App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름이 뜰 수 있습니다.

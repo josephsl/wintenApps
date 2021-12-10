@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und weitere
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA-Kompatibilität: 2021.2 und neuer
+* NVDA compatibility: 2021.2 and later
 
 Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
 2021 in Windows App Essentials umbenannt, um Windows 10 und zukünftige
