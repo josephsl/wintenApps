@@ -3,7 +3,7 @@
 * Yazarlar: Joseph Lee, Derek Riemer ve diğerleri
 * [kararlı sürüm][1]ü indir
 * [geliştirme sürümü][2]nü indir
-* NVDA uyumluluğu: 2021.2 ve sonrası
+* NVDA uyumluluğu: 2021.2 ve üstü
 
 Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
 adlandırılırken, Windows 10 ve Windows 11 gibi gelecekteki windows

@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and others
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2021.2 and beyond
+* NVDA compatibility: 2021.2 and later
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
 til Windows App Essentials i 2021 for at understøtte Windows 10 og

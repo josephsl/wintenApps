@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer i drugi
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA kompatibilnost: 2021.2 i nadalje
+* NVDA compatibility: 2021.2 and later
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
