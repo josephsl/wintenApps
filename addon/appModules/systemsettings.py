@@ -83,13 +83,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			)
 		# Except for specific cases, announce all live regions.
 		if (
-			# Do not announce "result not found" error unless have to.
-			(
-				automationId == "NoResultsFoundTextBlock"
-				and obj.parent.UIAAutomationId != "StatusTextPopup"
-			)
 			# Announce individual update progress in build 16215 and later preferably only once per update stage.
-			or ("ApplicableUpdate" in automationId and not automationId.endswith("_ContextDescriptionTextBlock"))
+			"ApplicableUpdate" in automationId and not automationId.endswith("_ContextDescriptionTextBlock")
 		):
 			return False
 		return True
