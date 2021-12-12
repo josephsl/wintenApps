@@ -73,14 +73,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	_nameChangeCache: str = ""
 
 	def announceLiveRegion(self, obj: Any, automationId: str) -> bool:
-		# Announce update status no matter what it is.
-		# This is more relevant in build 17063 and later where a subtitle has been added.
-		if "MusUpdate_UpdateStatus" in automationId:
-			# Don't repeat the fact that update download/installation is in progress if progress bar beep is on.
-			return not (
-				automationId == "SystemSettings_MusUpdate_UpdateStatus_DescriptionTextBlock"
-				and obj.previous.value and obj.previous.value > "0"
-			)
 		# Except for specific cases, announce all live regions.
 		if (
 			# Announce individual update progress in build 16215 and later preferably only once per update stage.
