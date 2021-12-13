@@ -80,16 +80,13 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			if "ApplicableUpdate" in automationId and not automationId.endswith("_ContextDescriptionTextBlock"):
 				return
 			self._nameChangeCache = obj.name
-			try:
-				# Until the spacing problem is fixed for update label...
-				if "ApplicableUpdate" in automationId and automationId.endswith("_ContextDescriptionTextBlock"):
-					ui.message(" ".join([obj.parent.name, obj.name]))
-				else:
-					ui.message(obj.name)
-				# And no, never allow double-speaking (an ugly hack).
-				return
-			except AttributeError:
-				pass
+			# Until the spacing problem is fixed for update label...
+			if "ApplicableUpdate" in automationId and automationId.endswith("_ContextDescriptionTextBlock"):
+				ui.message(" ".join([obj.parent.name, obj.name]))
+			else:
+				ui.message(obj.name)
+			# And no, never allow double-speaking (an ugly hack).
+			return
 
 	def event_appModule_loseFocus(self):
 		self._nameChangeCache = ""
