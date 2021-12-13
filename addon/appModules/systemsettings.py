@@ -72,28 +72,22 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache: str = ""
 
-	def announceLiveRegion(self, obj: Any, automationId: str) -> bool:
-		# Except for specific cases, announce all live regions.
-		if (
-			# Announce individual update progress in build 16215 and later preferably only once per update stage.
-			"ApplicableUpdate" in automationId and not automationId.endswith("_ContextDescriptionTextBlock")
-		):
-			return False
-		return True
-
 	def event_liveRegionChange(self, obj, nextHandler):
 		if isinstance(obj, UIA) and obj.name and obj.name != self._nameChangeCache:
 			automationId = obj.UIAAutomationId
+			# Except for specific cases, announce all live regions.
+			# Announce individual update progress in build 16215 and later preferably only once per update stage.
+			if "ApplicableUpdate" in automationId and not automationId.endswith("_ContextDescriptionTextBlock"):
+				return
+			self._nameChangeCache = obj.name
 			try:
-				if self.announceLiveRegion(obj, automationId):
-					self._nameChangeCache = obj.name
-					# Until the spacing problem is fixed for update label...
-					if "ApplicableUpdate" in automationId and automationId.endswith("_ContextDescriptionTextBlock"):
-						ui.message(" ".join([obj.parent.name, obj.name]))
-					else:
-						ui.message(obj.name)
-					# And no, never allow double-speaking (an ugly hack).
-					return
+				# Until the spacing problem is fixed for update label...
+				if "ApplicableUpdate" in automationId and automationId.endswith("_ContextDescriptionTextBlock"):
+					ui.message(" ".join([obj.parent.name, obj.name]))
+				else:
+					ui.message(obj.name)
+				# And no, never allow double-speaking (an ugly hack).
+				return
 			except AttributeError:
 				pass
 
