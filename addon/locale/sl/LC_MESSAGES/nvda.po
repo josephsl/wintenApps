@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2021-01-15 13:31+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2021-12-13 18:45+0100\n"
+"Last-Translator: Jožef Gregorc <jozko.gregorc@gmail.com>\n"
 "Language-Team: \n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -17,20 +17,45 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#. Translators: Dialog text shown when attempting to install the add-on on an unsupported version of Windows
-#. (minSupportedVersion is the minimum version required for this add-on).
-#, fuzzy, python-brace-format
-msgid ""
-"You are using an older version of Windows. This add-on requires "
-"{minSupportedVersion} or later."
-msgstr ""
-"Uporabljate zastarelo različico Oken. Za delovanje tega dodatka potrebujete "
-"{minSupportedVersion} ali novejšo. Ste prepričani, da neglede na to želite "
-"namestiti ta dodatek?"
+#. Windows App Essentials requires Windows 10 or later.
+#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+#. Unsupported systems include Windows versions earlier than 10 and old Windows 10 feature updates.
+msgid "Unsupported Windows release"
+msgstr "Nepodprta izdaja sistema Windows"
 
-#. Translators: title of the dialog shown when attempting to install the add-on on an old version of Windows.
-msgid "Old Windows version"
-msgstr "Stara različica Oken"
+#. Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
+msgid ""
+"You are using an older version of Windows. This add-on requires Windows 10 "
+"or later."
+msgstr ""
+"Uporabljate starejšo različico sistema Windows. Ta doaatek zahteva Windows "
+"10 ali novejšo."
+
+#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+#. winRelease can be Windows 10, Windows 11, or other release series name.
+#. minSupportedUpdate is the minimum update for a Windows release series required for this add-on.
+#. Example: an add-on release requiring Windows 10 May 2021 Update
+#. will set windowsRelease to Windows 10 and minSupportedUpdate to Windows 10 21H1.
+msgid ""
+"You are using an unsupported {windowsRelease} release. This add-on requires "
+"{minSupportedUpdate} or later."
+msgstr ""
+"Uporabljate nepodprto {windowsRelease} izdajo. Ta dodatek zahteva "
+"{minSupportedUpdate} ali kasnejšo."
+
+#. Translators: warning text shown when trying to install the add-on on server computers.
+msgid ""
+"This is a Windows Server system. Although you can install the add-on, not "
+"all features will work as Windows Server does not include modern apps such "
+"as Microsoft Store."
+msgstr ""
+"To je sistem Windows Server. Čeprav lahko namestite dodatek, vse zmožnosti "
+"ne bodo delovale, saj Windows Server ne vključuje modernih programov, kot je "
+"Microsoft Store."
+
+#. Translators: title of the warning dialog shown when trying to install the add-on on server systems.
+msgid "Windows App Essentials and Windows Server"
+msgstr "Windows Osnove Aplikacijam in Windows Server"
 
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
@@ -41,21 +66,23 @@ msgstr "Ni možno pomikati se med vrsticami"
 msgid "No more weather data for this item."
 msgstr "Ni več vremenskih podatkov za to postavko."
 
-#. Translators: presented when there is one suggestion for a search term.
+#. Translators: part of the suggestions count message (for example: 2 suggestions).
 msgid "1 suggestion"
 msgstr "1 predlog"
 
-#. Translators: presented when there are multiple suggestions for a search term.
+#. Translators: part of the suggestions count message (for example: 2 suggestions).
 msgid "{} suggestions"
 msgstr "{} predlogov"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information.
-msgid "Windows 10 App Essentials"
-msgstr "Windows 10 Osnove Aplikacijam"
+msgid "Windows App Essentials"
+msgstr "Windows Osnove Aplikacijam"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "A collection of app modules for various Windows 10 apps"
-msgstr "Zbirka aplikacijskih modulov za več Windows 10 aplikacij"
+msgid "Improving support for various apps and controls on Windows 10 and later"
+msgstr ""
+"Izboljšanje podpore za različne programe in kontrolnike v sistemu Windows 10 "
+"in kasnejših"

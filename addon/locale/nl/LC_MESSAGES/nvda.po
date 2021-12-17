@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.10\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2016-09-30 22:05+1000\n"
-"PO-Revision-Date: 2021-08-19 08:11-0700\n"
+"PO-Revision-Date: 2021-12-15 11:28+0100\n"
 "Last-Translator: Artin Dekker <vertalen@artindekker.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 1.6.11\n"
 
 #. Windows App Essentials requires Windows 10 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -36,13 +36,13 @@ msgstr ""
 #. minSupportedUpdate is the minimum update for a Windows release series required for this add-on.
 #. Example: an add-on release requiring Windows 10 May 2021 Update
 #. will set windowsRelease to Windows 10 and minSupportedUpdate to Windows 10 21H1.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an unsupported {windowsRelease} release. This add-on requires "
 "{minSupportedUpdate} or later."
 msgstr ""
-"U gebruikt een oudere versie van Windows. Deze add-on vereist "
-"{minSupportedVersion} of later."
+"U gebruikt een niet ondersteunde versie van {windowsRelease}. Deze add-on "
+"vereist {minSupportedUpdate} of later."
 
 #. Translators: warning text shown when trying to install the add-on on server computers.
 msgid ""
@@ -55,9 +55,8 @@ msgstr ""
 "zoals Microsoft Store bevat."
 
 #. Translators: title of the warning dialog shown when trying to install the add-on on server systems.
-#, fuzzy
 msgid "Windows App Essentials and Windows Server"
-msgstr "Windows App Essentials"
+msgstr "Windows App Essentials en Windows Server"
 
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.

@@ -1,9 +1,9 @@
 # Windows App Essentials #
 
-* Authors: Joseph Lee, Derek Riemer and others
+* Autores: Joseph Lee, Derek Riemer e outros
 * Baixe a [versão estável][1]
 * Baixe a [versão em desenvolvimento][2]
-* NVDA compatibility: 2021.2 and later
+* Compatibilidade com NVDA: 2021.2 e posteriores
 
 Nota: Originalmente chamado de Windows 10 App Essentials, foi renomeado para
 Windows App Essentials em 2021 para oferecer suporte ao Windows 10 e versões
@@ -23,8 +23,9 @@ detalhes sobre o que está incluso):
 * Email
 * Mapas
 * Microsoft Solitaire Collection (Coleção de Paciência)
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/modern input method editors)
+* Teclado moderno (painel de emoji/ditado/digitação por voz/sugestões de
+  entrada de hardware/histórico da área de transferência/editores de métodos
+  de entrada modernos)
 * Pessoas
 * Configurações (configurações do sistema, Windows+I)
 * Clima
@@ -32,8 +33,8 @@ detalhes sobre o que está incluso):
 
 Notas:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later and is
-  compatible with Windows 11.
+* Este complemento requer o Windows 10 20H2 (compilação 19042) ou
+  posteriores e é compatível com o Windows 11.
 * Embora a instalação seja possível, este complemento não oferece suporte
   para Windows Enterprise LTSC (Long-Term Servicing Channel — Canal de
   Manutenção de Longo Prazo) e versões do Windows Server.
@@ -52,16 +53,17 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 ## Geral
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  is now part of NVDA 2021.3.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag complete, drop target dropped, layout
-  invalidated. With NVDA's log level set to debug, these events will be
-  tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active
-  app. Events built into NVDA such as name change and controller for events
-  are tracked from an add-on called Event Tracker.
+* O NVDA pode anunciar a contagem de sugestões ao realizar uma pesquisa na
+  maioria dos casos, incluindo quando a contagem de sugestões muda à medida
+  que a pesquisa avança. Isso agora faz parte do NVDA 2021.3.
+* Além dos manipuladores de eventos UIA fornecidos pelo NVDA, os seguintes
+  eventos UIA são reconhecidos: drag complete, drop target dropped, layout
+  invalidated. Com o nível de log do NVDA definido para depuração, esses
+  eventos serão rastreados e, para eventos de notificação UIA, um tom de
+  depuração será ouvido se as notificações vierem de outro lugar que não o
+  aplicativo atualmente ativo. Os eventos integrados ao NVDA, como mudança
+  de nome e controlador de eventos, são rastreados a partir de um
+  complemento chamado Event Tracker.
 * Ao abrir, fechar, reordenar (Windows 11) ou alternar entre áreas de
   trabalho virtuais, o NVDA anunciará o nome do desktop virtual ativo (área
   de trabalho 2, por exemplo).
@@ -104,16 +106,19 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 ## Teclado moderno
 
-This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, and modern input method editors for certain
-languages. When viewing emojis, for best experience, enable Unicode
-Consortium setting from NVDA's speech settings and set symbol level to
-"some" or higher. When pasting from clipboard history in Windows 10, press
-Space key instead of Enter key to paste the selected item. NVDA also
-supports updated input experience panel in Windows 11.
+Isso inclui painel de emoji, histórico da área de transferência,
+ditado/digitação por voz, sugestões de entrada de hardware e editores de
+métodos de entrada modernos para determinados idiomas. Ao visualizar emojis,
+para melhor experiência, habilite a configuração de Consórcio Unicode das
+configurações de voz do NVDA e defina o nível do símbolo para "pouco" ou
+superior. Ao colar do histórico da área de transferência no Windows 10,
+pressione a tecla Espaço em vez da tecla Enter para colar o item
+selecionado. O NVDA também suporta painel de experiência de entrada
+atualizado no Windows 11.
 
-* In Windows 10, when an emoji group (including kaomoji and symbols group)
-  is selected, NVDA will no longer move navigator object to certain emojis.
+* No Windows 10, quando um grupo de emoji (incluindo kaomoji e grupo de
+  símbolos) é selecionado, o NVDA não moverá mais a navegação de objeto para
+  certos emojis.
 * Adicionado suporte para painel de experiência de entrada atualizado
   (painel de emoji combinado e histórico da área de transferência) no
   Windows 11.
@@ -132,10 +137,11 @@ supports updated input experience panel in Windows 11.
   anunciados duas vezes.
 * Foram corrigidos Rótulos de controle estranhos vistos em certas
   instalações do Windows.
-* NVDA will announce the name of the optional quality update control if
-  present (download and install now link in Windows 10, download button in
-  Windows 11).
-* In Windows 11, breadcrumb bar items are properly recognized.
+* O NVDA anunciará o nome do controle de atualização de qualidade opcional,
+  se houver (link para baixar e instalar agora no Windows 10, botão de
+  download no Windows 11).
+* No Windows 11, os itens da barra de localização atual são reconhecidos
+  corretamente.
 
 ## Clima
 
