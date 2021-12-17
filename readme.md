@@ -17,6 +17,7 @@ The following app modules or support modules for some apps are included (see eac
 * Maps
 * Microsoft Solitaire Collection
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input suggestions/clipboard history/modern input method editors)
+* Notepad (Windows 11)
 * People
 * Settings (system settings, Windows+I)
 * Weather
@@ -69,6 +70,13 @@ This includes emoji panel, clipboard history, dictation/voice typing, hardware i
 
 * In Windows 10, when an emoji group (including kaomoji and symbols group) is selected, NVDA will no longer move navigator object to certain emojis.
 * Added support for updated input experience panel (combined emoji panel and clipboard history) in Windows 11.
+
+## Notepad
+
+This refers to Windows 11 Notepad version 11 or later.
+
+* NVDA will announce status bar contents when report status bar command is pressed.
+* NVDA will no longer announce entered text when pressing Enter key from the document.
 
 ## People
 
