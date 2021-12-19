@@ -71,20 +71,21 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	_nameChangeCache: str = ""
 
 	def event_liveRegionChange(self, obj, nextHandler):
-		if isinstance(obj, UIA) and obj.name and obj.name != self._nameChangeCache:
-			automationId = obj.UIAAutomationId
+		if isinstance(obj, UIA):
 			# Except for specific cases, announce all live regions.
 			# Announce individual update progress in build 16215 and later preferably only once per update stage.
-			if "ApplicableUpdate" in automationId and not automationId.endswith("_ContextDescriptionTextBlock"):
-				return
-			self._nameChangeCache = obj.name
-			# Until the spacing problem is fixed for update label...
-			if "ApplicableUpdate" in automationId and automationId.endswith("_ContextDescriptionTextBlock"):
-				ui.message(" ".join([obj.parent.name, obj.name]))
-			else:
-				ui.message(obj.name)
-			# And no, never allow double-speaking (an ugly hack).
-			return
+			if "ApplicableUpdate" in obj.UIAAutomationId:
+				# Do not announce status text itself.
+				if obj.UIAAutomationId.endswith("_ContextDescriptionTextBlock"):
+					return
+				if (
+					# Update title repeats while the update is downloaded and installed.
+					obj.UIAAutomationId.endswith("_DescriptionTextBlock")
+					and obj.name and obj.name == self._nameChangeCache
+				):
+					return
+				self._nameChangeCache = obj.name
+		nextHandler()
 
 	def event_appModule_loseFocus(self):
 		self._nameChangeCache = ""
