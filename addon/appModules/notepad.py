@@ -1,6 +1,6 @@
 # Windows 11 Notepad
 # Part of Windows App Essentials collection
-# Copyright 2021 Joseph Lee, released under GPL
+# Copyright 2021-2022 Joseph Lee, released under GPL
 
 # Support for Windows 11 Notepad.
 

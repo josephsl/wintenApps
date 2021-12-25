@@ -1,6 +1,6 @@
 # Cortana Conversations
 # Part of Windows App Essentials collection
-# Copyright 2019-2021 Joseph Lee, released under GPL
+# Copyright 2019-2022 Joseph Lee, released under GPL
 
 # Various workarounds for Cortana Conversations (in build 18922 and later)
 
