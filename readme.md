@@ -75,7 +75,7 @@ This includes emoji panel, clipboard history, dictation/voice typing, hardware i
 
 This refers to Windows 11 Notepad version 11 or later.
 
-* NVDA will announce status bar contents when report status bar command is pressed.
+* NVDA will announce status items such as line and column information when report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in laptop layout) is performed.
 * NVDA will no longer announce entered text when pressing Enter key from the document.
 
 ## People
