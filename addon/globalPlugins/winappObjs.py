@@ -8,7 +8,6 @@ from __future__ import annotations
 from typing import Optional, Any
 import globalPluginHandler
 import ui
-import controlTypes
 from NVDAObjects.UIA import UIA, Dialog
 # Temporary: test for suggestions list until NVDA 2021.3 requirement is in effect.
 import NVDAObjects.UIA
