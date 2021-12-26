@@ -64,28 +64,6 @@ class SuggestionsListView(UIA):
 		ui.message(suggestionsMessage)
 
 
-# Deprecated: various XAML headings (Settings app, for example) introduced in Windows 10 1803.
-UIAHeadingsToNVDAHeadings: dict[int, controlTypes.Role] = {
-	UIAHandler.HeadingLevel1: controlTypes.Role.HEADING1,
-	UIAHandler.HeadingLevel2: controlTypes.Role.HEADING2,
-	UIAHandler.HeadingLevel3: controlTypes.Role.HEADING3,
-	UIAHandler.HeadingLevel4: controlTypes.Role.HEADING4,
-	UIAHandler.HeadingLevel5: controlTypes.Role.HEADING5,
-	UIAHandler.HeadingLevel6: controlTypes.Role.HEADING6,
-}
-
-
-class XAMLHeading(UIA):
-
-	def _get_role(self) -> int:
-		# In build 22489' Settings app, Microsoft Account page has been added,
-		# but a heading in there is not given a heading level (UIA returns 80050).
-		try:
-			return UIAHeadingsToNVDAHeadings[self._getUIACacheablePropertyValue(UIAHandler.UIA_HeadingLevelPropertyId)]
-		except KeyError:
-			return super(XAMLHeading, self).role
-
-
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
