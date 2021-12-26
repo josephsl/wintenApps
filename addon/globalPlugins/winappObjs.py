@@ -161,18 +161,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# NVDA 2021.3 transplants suggestions list class into NVDA Core.
 		if obj.UIAAutomationId == "SuggestionsList" and not hasattr(NVDAObjects.UIA, "SuggestionsList"):
 			clsList.insert(0, SuggestionsListView)
-			return
-		# Deprecated: recognize headings as reported by XAML (Windows 10 1803 or later).
-		# NvDA does not recognize heading levels 7, 8, and 9, therefore use a chained comparison.
-		# See older add-on releases for details.
-		if (
-			UIAHandler.HeadingLevel1 <= obj._getUIACacheablePropertyValue(
-				UIAHandler.UIA_HeadingLevelPropertyId
-			) <= UIAHandler.HeadingLevel6
-			# But not for apps such as Calculator where doing so results in confusing user experience.
-			and obj.appModule.appName not in ("calculator", "calculatorapp")
-		):
-			clsList.insert(0, XAMLHeading)
 
 	# Record UIA property info about an object if told to do so.
 	# An add-on named Event Tracker (deriving from this add-on) will log event information for most events.
