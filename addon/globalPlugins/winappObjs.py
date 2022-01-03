@@ -111,20 +111,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if not isinstance(obj, UIA):
 			return
-		# Temporarily transferred from File Explorer app module and to be removed in a future add-on release.
-		# Do not allow "pane" to be announced when switching apps in Windows 11.
-		# Caused by UIA focus event coming from input site window.
-		# Thankfully this behavior is similar to Windows 10's multitasking view frame window.
-		# Resolved in NVDA 2021.3.
-		if (
-			winVersion.getWinVer() >= winVersion.WIN11
-			and obj.appModule.appName == "explorer"
-			and not hasattr(NVDAObjects.UIA, "SuggestionsList")
-		):
-			if obj.UIAElement.cachedClassName == "Windows.UI.Input.InputSite.WindowClass":
-				from appModules.explorer import MultitaskingViewFrameWindow
-				clsList.insert(0, MultitaskingViewFrameWindow)
-				return
 		# Windows that are really dialogs.
 		# Some dialogs, although listed as a dialog thanks to UIA class name,
 		# does not advertise the proper role of dialog.
