@@ -117,13 +117,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# This is still the case with some dialogs such as restart to install updates dialog in Windows 11.
 		if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
-			return
-		# Recognize suggestions list view firing layout invalidated event.
-		# Although certain list views such as languages list in Settings app fire layout invalidated event,
-		# they are not true suggestions list views.
-		# NVDA 2021.3 transplants suggestions list class into NVDA Core.
-		if obj.UIAAutomationId == "SuggestionsList" and not hasattr(NVDAObjects.UIA, "SuggestionsList"):
-			clsList.insert(0, SuggestionsListView)
 
 	# Record UIA property info about an object if told to do so.
 	# An add-on named Event Tracker (deriving from this add-on) will log event information for most events.
