@@ -30,7 +30,6 @@ isAddonSupported = winVersion.getWinVer() >= winVersion.WIN10_21H1
 additionalEvents: dict[int, str] = {
 	UIAHandler.UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
 	UIAHandler.UIA_DropTarget_DroppedEventId: "UIA_dropTargetDropped",
-	UIAHandler.UIA_LayoutInvalidatedEventId: "UIA_layoutInvalidated",
 }
 
 
