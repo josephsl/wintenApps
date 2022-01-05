@@ -25,7 +25,19 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		if activityId == "GraphViewChanged" and self._resultsCache == displayString:
 			return
 		self._resultsCache = displayString
-		# Call the built-in app module version of UIA notification event handler.
-		super(AppModule, self).event_UIA_notification(
-			obj, nextHandler, displayString=displayString, activityId=activityId, **kwargs
-		)
+		# NVDA Core issue 12268: for "DisplayUpdated", announce display strings in braille.
+		if activityId == "DisplayUpdated":
+			braille.handler.message(displayString)  # NOQA: F405
+			resultElement = api.getForegroundObject().children[1].lastChild  # NOQA: F405
+			# Redesigned in 2019 due to introduction of "always on top" i.e. compact overlay mode.
+			if resultElement.UIAElement.cachedClassName != "LandmarkTarget":
+				resultElement = resultElement.parent.children[1]
+			# Display updated activity ID seen when entering calculations should be ignored
+			# as as it is redundant if speak typed characters is on.
+			if (
+				resultElement
+				and resultElement.firstChild
+				and resultElement.firstChild.UIAAutomationId in noCalculatorEntryAnnouncements  # NOQA: F405
+			):
+				return
+		nextHandler()
