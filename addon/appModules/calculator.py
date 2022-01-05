@@ -25,10 +25,17 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		if activityId == "GraphViewChanged" and self._resultsCache == displayString:
 			return
 		self._resultsCache = displayString
+		# Version 10.2109 changes the UI a bit, requiring tweaked event handler implementation.
+		# Version bumped to 11 in October 2021.
+		calculatorVersion = int(self.productVersion.split(".")[0])
 		# NVDA Core issue 12268: for "DisplayUpdated", announce display strings in braille.
 		if activityId == "DisplayUpdated":
 			braille.handler.message(displayString)  # NOQA: F405
 			resultElement = api.getForegroundObject().children[1].lastChild  # NOQA: F405
+			# In version 11, the actual display text and other controls live inside a toggle control window.
+			# Therefore move one more level down compared to older Calculator releases.
+			if calculatorVersion >= 11:
+				resultElement = resultElement.firstChild
 			# Redesigned in 2019 due to introduction of "always on top" i.e. compact overlay mode.
 			if resultElement.UIAElement.cachedClassName != "LandmarkTarget":
 				resultElement = resultElement.parent.children[1]
