@@ -84,8 +84,6 @@ This refers to Windows 11 Notepad version 11 or later.
 
 ## Settings
 
-* Certain information such as Windows Update progress is reported automatically, including Storage sense/disk cleanup widget and errors from Windows Update.
-* Progress bar values and other information are no longer announced twice.
 * Odd control labels seen in certain Windows installations has been corrected.
 * NVDA will announce the name of the optional quality update control if present (download and install now link in Windows 10, download button in Windows 11).
 * In Windows 11, breadcrumb bar items are properly recognized.
