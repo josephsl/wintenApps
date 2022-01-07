@@ -32,8 +32,8 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* Diese Erweiterung benötigt Windows 10 Version 20H2 (Build 19042) oder
-  neuer und ist mit Windows 11 kompatibel.
+* This add-on requires Windows 10 21H1 (build 19043) or later and is
+  compatible with Windows 11.
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
@@ -80,6 +80,7 @@ Versionen][3].
 
 * NVDA liest die Bildschirmmeldung des Grafikrechners nicht mehr doppelt
   vor.
+* In Windows 10, history and memory list items are properly labeled.
 
 ## Cortana
 

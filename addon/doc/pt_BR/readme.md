@@ -33,7 +33,7 @@ detalhes sobre o que está incluso):
 
 Notas:
 
-* Este complemento requer o Windows 10 20H2 (compilação 19042) ou
+* Este complemento requer o Windows 10 21H1 (compilação 19043) ou
   posteriores e é compatível com o Windows 11.
 * Embora a instalação seja possível, este complemento não oferece suporte
   para Windows Enterprise LTSC (Long-Term Servicing Channel — Canal de
@@ -81,6 +81,8 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 * O NVDA não anunciará mais a mensagem de tela calculadora gráfica duas
   vezes.
+* No Windows 10, os itens de lista do histórico e memória são devidamente
+  rotulados.
 
 ## Cortana
 

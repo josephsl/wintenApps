@@ -31,7 +31,7 @@ tiết của mỗi ứng dụng để biết them):
 
 Lưu ý:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later and is
+* This add-on requires Windows 10 21H1 (build 19043) or later and is
   compatible with Windows 11.
 * Dù vẫn có thể cài đặt được, add-on này không hỗ trợ Windows 10 Enterprise
   LTSC (Long-Term Servicing Channel) và các bản phát hành của Windows
@@ -78,6 +78,7 @@ for add-on releases][3] .
 ## Calculator
 
 * NVDA sẽ không còn đọc hai lần thông điệp trên màn hình tính toán đồ thị.
+* In Windows 10, history and memory list items are properly labeled.
 
 ## Cortana
 

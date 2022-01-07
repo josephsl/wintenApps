@@ -32,8 +32,8 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* Ovaj dodatak zahtijeva Windows 10 20H2 (gradnja 19042) ili novija i
-  kompatibilan je sa sustavom Windows 11.
+* This add-on requires Windows 10 21H1 (build 19043) or later and is
+  compatible with Windows 11.
 * Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
@@ -77,6 +77,7 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 ## Kalkulator
 
 * NVDA više neće dvaputa najaviti poruku ekrana grafičkog kalkulatora.
+* In Windows 10, history and memory list items are properly labeled.
 
 ## Cortana
 

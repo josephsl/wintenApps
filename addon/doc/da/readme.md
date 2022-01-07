@@ -30,7 +30,7 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 Bemærkninger:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later and is
+* This add-on requires Windows 10 21H1 (build 19043) or later and is
   compatible with Windows 11.
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
@@ -78,6 +78,7 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 * NVDA annoncerer ikke længere en meddelelse om grafregnerens skærmbillede
   to gange.
+* In Windows 10, history and memory list items are properly labeled.
 
 ## Cortana
 

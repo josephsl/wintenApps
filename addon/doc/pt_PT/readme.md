@@ -32,7 +32,7 @@ detalhes sobre o que está incluído):
 
 Notas:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later and is
+* This add-on requires Windows 10 21H1 (build 19043) or later and is
   compatible with Windows 11.
 * Embora a instalação seja possível, este suplemento não suporta Windows
   Enterprise LTSC (Long-Term Servicing Channel) e versões Windows Server.
@@ -77,6 +77,7 @@ consulte o documento [changelogs for releases, release][3].
 ## Calculadora
 
 * O NVDA já não lerá duas vezes a mensagem do ecrã da calculadora gráfica.
+* In Windows 10, history and memory list items are properly labeled.
 
 ## Cortana
 

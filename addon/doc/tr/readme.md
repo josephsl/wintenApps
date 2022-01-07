@@ -33,8 +33,8 @@ bakın):
 
 Notlar:
 
-* Bu eklenti, Windows 10 20H2 (derleme 19042) veya sonraki bir sürümünü
-  gerektirir ve Windows 11 ile uyumludur.
+* This add-on requires Windows 10 21H1 (build 19043) or later and is
+  compatible with Windows 11.
 * Ne kadar yüklenebilse de, bu eklenti Windows Enterprise LTSC (Uzun Süreli
   Hizmet Kanalı) ve Windows Server sürümlerini desteklemez.
 * Bazı eklenti özellikleri, NVDA ekran okuyucusunun bir parçasıdır veya
@@ -79,6 +79,7 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 ## Hesap makinesi
 
 * NVDA artık grafik hesap makinesi ekran mesajını iki kez bildirmeyecek.
+* In Windows 10, history and memory list items are properly labeled.
 
 ## Cortana
 
