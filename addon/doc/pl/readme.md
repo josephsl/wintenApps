@@ -33,8 +33,8 @@ dołączone, zobacz każdą sekcję aplikacji):
 
 uwagi: 
 
-* Ten dodatek wymaga systemu Windows 10 20H2 (kompilacja 19042) lub nowszego
-  i jest zgodny z systemem Windows 11.
+* This add-on requires Windows 10 21H1 (build 19043) or later and is
+  compatible with Windows 11.
 * Chociaż instalacja jest możliwa, ten dodatek nie obsługuje wersji Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
 * Niektóre funkcje dodatkowe są lub będą częścią czytnika ekranu NVDA.
@@ -79,6 +79,7 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 
 * NVDA nie będzie już dwukrotnie ogłaszać komunikatu na ekranie kalkulatora
   graficznego.
+* In Windows 10, history and memory list items are properly labeled.
 
 ## Cortana
 

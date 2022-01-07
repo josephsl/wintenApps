@@ -25,7 +25,7 @@
 
 注意:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later and is
+* This add-on requires Windows 10 21H1 (build 19043) or later and is
   compatible with Windows 11.
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务频道）和 Windows Server 版本。
 * 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
@@ -56,6 +56,7 @@
 ## 计算器
 
 * NVDA 将不再两次宣布图形计算器屏幕消息。
+* In Windows 10, history and memory list items are properly labeled.
 
 ## Cortana
 

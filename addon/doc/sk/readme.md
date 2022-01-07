@@ -30,7 +30,7 @@ Zahrnuté sú nasledujúce moduly (podrobný popis nájdete nižšie):
 
 Poznámky:
 
-* This add-on requires Windows 10 20H2 (build 19042) or later and is
+* This add-on requires Windows 10 21H1 (build 19043) or later and is
   compatible with Windows 11.
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
@@ -73,6 +73,7 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 ## Kalkulačka
 
 * NVDA will no longer announce graphing calculator screen message twice.
+* In Windows 10, history and memory list items are properly labeled.
 
 ## Cortana
 

@@ -32,8 +32,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Tämä lisäosa edellyttää Windows 10:n versiota 20H2 (koontiversio 19042)
-  tai uudempaa ja on yhteensopiva Windows 11:n kanssa.
+* This add-on requires Windows 10 21H1 (build 19043) or later and is
+  compatible with Windows 11.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
@@ -77,6 +77,7 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Laskin
 
 * NVDA ei enää sano graafisen laskinnäytön ilmoitusta kahdesti.
+* In Windows 10, history and memory list items are properly labeled.
 
 ## Cortana
 

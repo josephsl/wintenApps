@@ -3,7 +3,7 @@
 * 저자: Joseph Lee(이성원), Derek Riemer 외 다수
 * [출시 버전][1]
 * [개발 버전][2]
-* NVDA compatibility: 2021.2 and later
+* NVDA 호환: 2021.2 이상
 
 참고: 윈도우 10 이상(특히 윈도우 11)을 지원하기 위해 2021년에 Windows 10 App Essentials에서 Windows
 App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름이 뜰 수 있습니다.
@@ -25,7 +25,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 사용시 주의 사항:
 
-* 본 추가 기능은 윈도우 10 20H2(빌드 19042) 이상(윈도우 11 포함)을 지원합니다.
+* 본 추가 기능은 윈도우 10 21H1(빌드 19043) 이상(윈도우 11 포함)을 지원합니다.
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
@@ -39,13 +39,9 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 ## 일반
 
 * 특정 검색창에서 제안 항목수가(특히 검색중 제안 항목이 변경될 경우) 출력되도록 함(본 기능은 NVDA 2021.3에 추가됨).
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag complete, drop target dropped, layout
-  invalidated. With NVDA's log level set to debug, these events will be
-  tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active
-  app. Events built into NVDA such as name change and controller for events
-  are tracked from an add-on called Event Tracker.
+* NVDA가 지원하는 UIA  이벤트 외의 다음 이벤트 추적 가능: drag complete, drop target dropped,
+  layout invalidated. NVDA가 디버그 로깅 상태로 재시작된 경우 위 이벤트가 추적되며 notification 이벤트는
+  추가 디버그 정보가 출력되도록 함.
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
@@ -61,6 +57,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 ## 계산기
 
 * NVDA will no longer announce graphing calculator screen message twice.
+* In Windows 10, history and memory list items are properly labeled.
 
 ## Cortana
 
