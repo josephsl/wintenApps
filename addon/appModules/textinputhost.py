@@ -127,23 +127,13 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
 		except NotImplementedError:
 			pass
-		# Handle Ime Candidate UI being shown
-		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
-			eventHandler.queueEvent("show", firstChild)
-			return
 		self._symbolsGroupSelected = False
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
 	def event_nameChange(self, obj, nextHandler):
-		# Logic for IME candidate items is handled all within its own object
-		# Therefore pass these events straight on.
-		if isinstance(obj, ImeCandidateItem):  # NOQA: F405
-			return nextHandler()
-		elif isinstance(obj, ImeCandidateUI):  # NOQA: F405
-			return nextHandler()
-		# Forget it if there is no Automation Id and class name set.
 		if (
+			# Forget it if there is no Automation Id and class name set.
 			(obj.UIAElement.cachedClassName == "" and obj.UIAAutomationId == "")
 			# Clipboard entries fire name change event when opened.
 			or (obj.UIAElement.cachedClassName == "TextBlock" and obj.UIAAutomationId == "")
