@@ -50,7 +50,7 @@ class AppModule(AppModule):  # type: ignore[misc]
 		# Logic for IME candidate items is handled all within its own object
 		# Therefore pass these events straight on.
 		# But not in Windows 11 because it also fires gain focus event.
-		if isinstance(obj, ImeCandidateItem):  # NOQA: F405
+		if isinstance(obj, ImeCandidateItem):
 			return nextHandler() if winVersion.getWinVer() < winVersion.WIN11 else None
 		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object
 		# (for presentational purposes) and move on.
@@ -89,7 +89,7 @@ class AppModule(AppModule):  # type: ignore[misc]
 				element = element.next
 		# Don't forget to add actual candidate item element so name change event can be handled
 		# (mostly for hardware keyboard input suggestions).
-		if isinstance(firstChild, ImeCandidateUI):  # NOQA: F405
+		if isinstance(firstChild, ImeCandidateUI):
 			imeCandidateItem = firstChild.firstChild.firstChild
 			# In Windows 11, an extra element is located between candidate UI window and items themselves.
 			if winVersion.getWinVer() >= winVersion.WIN11:
@@ -156,14 +156,14 @@ class AppModule(AppModule):  # type: ignore[misc]
 		if isinstance(obj, UIA):
 			# Candidate item.
 			if obj.role == controlTypes.Role.LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
-				clsList.insert(0, ImeCandidateItem)  # NOQA: F405
+				clsList.insert(0, ImeCandidateItem)
 				return
 			# Candidate UI.
 			elif (
 				obj.role in (controlTypes.Role.LIST, controlTypes.Role.POPUPMENU)
 				and obj.UIAAutomationId in ("TEMPLATE_PART_CandidatePanel", "IME_Prediction_Window")
 			):
-				clsList.insert(0, ImeCandidateUI)  # NOQA: F405
+				clsList.insert(0, ImeCandidateUI)
 				return
 			# Newer revisions of Windows 11 build 22000 moves focus to what appears to be an edit field.
 			# However this means NVDA's own edit field scripts will override emoji panel commands.

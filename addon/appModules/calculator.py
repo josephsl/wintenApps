@@ -45,7 +45,7 @@ class AppModule(AppModule):  # type: ignore[misc]
 			if (
 				resultElement
 				and resultElement.firstChild
-				and resultElement.firstChild.UIAAutomationId in noCalculatorEntryAnnouncements  # NOQA: F405
+				and resultElement.firstChild.UIAAutomationId in noCalculatorEntryAnnouncements
 			):
 				return
 		nextHandler()
