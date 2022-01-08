@@ -5,7 +5,7 @@
 # Extended in 2017 and 2019 by Joseph Lee
 
 # Borrows heavily from built-in Mail and Calendar app module.
-from nvdaBuiltin.appModules.hxoutlook import *  # NOQA: F403
+from nvdaBuiltin.appModules.hxoutlook import AppModule
 import api
 from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import RowWithFakeNavigation
@@ -42,8 +42,7 @@ class MailItemRow(RowWithFakeNavigation, UIA):
 
 
 # The below app module class inherits from built-in Mail and Calendar app module class, so inform Mypy.
-# Also Flake8 and other linters should ignore this.
-class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
+class AppModule(AppModule):  # type: ignore[misc]
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA) and obj.UIAAutomationId == "MailItem":

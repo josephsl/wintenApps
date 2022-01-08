@@ -3,16 +3,15 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
-# NVDA Core includes bulk of this app module.
-from nvdaBuiltin.appModules.calculator import *  # NOQA: F403
+# Extend NVDA Core's Calculator module.
+from nvdaBuiltin.appModules.calculator import AppModule, noCalculatorEntryAnnouncements
 import api
 import braille
 from NVDAObjects.UIA import UIA
 
 
 # Mypy should be reminded that this app module is powered by built-in Calculator app module.
-# Inform Flake8 as well.
-class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
+class AppModule(AppModule):  # type: ignore[misc]
 
 	def event_NVDAObject_init(self, obj):
 		if not isinstance(obj, UIA):

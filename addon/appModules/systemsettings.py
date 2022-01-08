@@ -6,15 +6,14 @@
 
 # Several hacks related to Settings app, some of which are part of NVDA Core.
 
-# See the above note as to why the below procedure must be done.
-from nvdaBuiltin.appModules.systemsettings import *  # NOQA: F403
+# Extends NVDA Core's System Settings app module.
+from nvdaBuiltin.appModules.systemsettings import AppModule
 import controlTypes
 from NVDAObjects.UIA import UIA
 
 
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
-# Also linters such as Flake8 should ignore this.
-class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
+class AppModule(AppModule):  # type: ignore[misc]
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):

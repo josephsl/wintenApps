@@ -8,7 +8,7 @@
 
 # Yes, this app module is powered by built-in modern keyboard (TextInputHost) app module
 # (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
-from nvdaBuiltin.appModules.textinputhost import *  # NOQA: F403
+from nvdaBuiltin.appModules.textinputhost import AppModule, ImeCandidateItem, ImeCandidateUI
 import winVersion
 import eventHandler
 import UIAHandler
@@ -20,8 +20,7 @@ from NVDAObjects.behaviors import EditableTextWithAutoSelectDetection
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
-# And Flake8 and other linters, to.
-class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
+class AppModule(AppModule):  # type: ignore[misc]
 
 	_symbolsGroupSelected: bool = False
 
