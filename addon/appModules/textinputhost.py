@@ -20,7 +20,7 @@ from NVDAObjects.behaviors import EditableTextWithAutoSelectDetection
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
-class AppModule(AppModule):  # type: ignore[misc]
+class AppModule(AppModule):  # type: ignore[no-redef]
 
 	_symbolsGroupSelected: bool = False
 

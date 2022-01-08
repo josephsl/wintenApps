@@ -13,7 +13,7 @@ from NVDAObjects.UIA import UIA
 
 
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
-class AppModule(AppModule):  # type: ignore[misc]
+class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):

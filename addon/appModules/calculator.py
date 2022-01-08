@@ -11,7 +11,7 @@ from NVDAObjects.UIA import UIA
 
 
 # Mypy should be reminded that this app module is powered by built-in Calculator app module.
-class AppModule(AppModule):  # type: ignore[misc]
+class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_NVDAObject_init(self, obj):
 		if not isinstance(obj, UIA):

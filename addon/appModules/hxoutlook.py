@@ -42,7 +42,7 @@ class MailItemRow(RowWithFakeNavigation, UIA):
 
 
 # The below app module class inherits from built-in Mail and Calendar app module class, so inform Mypy.
-class AppModule(AppModule):  # type: ignore[misc]
+class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA) and obj.UIAAutomationId == "MailItem":
