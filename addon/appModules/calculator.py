@@ -5,6 +5,8 @@
 
 # NVDA Core includes bulk of this app module.
 from nvdaBuiltin.appModules.calculator import *  # NOQA: F403
+import api
+import braille
 from NVDAObjects.UIA import UIA
 
 
@@ -30,8 +32,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		calculatorVersion = int(self.productVersion.split(".")[0])
 		# NVDA Core issue 12268: for "DisplayUpdated", announce display strings in braille.
 		if activityId == "DisplayUpdated":
-			braille.handler.message(displayString)  # NOQA: F405
-			resultElement = api.getForegroundObject().children[1].lastChild  # NOQA: F405
+			braille.handler.message(displayString)
+			resultElement = api.getForegroundObject().children[1].lastChild
 			# In version 11, the actual display text and other controls live inside a toggle control window.
 			# Therefore move one more level down compared to older Calculator releases.
 			if calculatorVersion >= 11:
