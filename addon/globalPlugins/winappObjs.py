@@ -34,7 +34,7 @@ additionalEvents: dict[int, str] = {
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
-		super(GlobalPlugin, self).__init__()
+		super().__init__()
 		# Don't do anything unless this is Windows 10 or later.
 		# #52: and this is a supported build.
 		if not isAddonSupported:
