@@ -31,7 +31,7 @@ class MapLocation(UIA):
 			leftVolume = int((85 * ((screenWidth - float(x)) / screenWidth)) * brightness)
 			rightVolume = int((85 * (float(x) / screenWidth)) * brightness)
 			tones.beep(curPitch, 40, left=leftVolume, right=rightVolume)
-		super(MapLocation, self).event_becomeNavigatorObject()
+		super().event_becomeNavigatorObject()
 
 
 class AppModule(appModuleHandler.AppModule):

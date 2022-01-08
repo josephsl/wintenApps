@@ -49,4 +49,4 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		if isinstance(obj, UIA) and obj.UIAAutomationId == "MailItem":
 			clsList.insert(0, MailItemRow)
 		# NVDA Core takes care of the rest.
-		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
+		super().chooseNVDAObjectOverlayClasses(obj, clsList)

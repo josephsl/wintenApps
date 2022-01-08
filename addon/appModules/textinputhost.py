@@ -72,7 +72,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		):
 			return
 		# NVDA Core takes care of the rest.
-		super(AppModule, self).event_UIA_elementSelected(obj, nextHandler)
+		super().event_UIA_elementSelected(obj, nextHandler)
 
 	# Register modern keyboard interface elements with local event handler group.
 	def _windowOpenEventInternalEventHandlerGroupRegistration(self, firstChild):
@@ -133,7 +133,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			return
 		self._symbolsGroupSelected = False
 		# NVDA Core takes care of the rest.
-		super(AppModule, self).event_UIA_window_windowOpen(obj, nextHandler)
+		super().event_UIA_window_windowOpen(obj, nextHandler)
 
 	def event_nameChange(self, obj, nextHandler):
 		# Logic for IME candidate items is handled all within its own object
@@ -153,7 +153,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			return
 		self._symbolsGroupSelected = False
 		# NVDA Core takes care of the rest.
-		super(AppModule, self).event_nameChange(obj, nextHandler)
+		super().event_nameChange(obj, nextHandler)
 
 	def event_gainFocus(self, obj, nextHandler):
 		# An invisible edit field is focused when clipboard history is closed.
@@ -183,4 +183,4 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				clsList.remove(EditableTextWithAutoSelectDetection)
 				return
 		# NVDA Core takes care of the rest.
-		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
+		super().chooseNVDAObjectOverlayClasses(obj, clsList)
