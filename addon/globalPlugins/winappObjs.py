@@ -123,13 +123,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					wx.CallLater(500, ui.message, obj.name)
 		nextHandler()
 
-	def event_liveRegionChange(self, obj, nextHandler):
-		# No, do not let Start menu size be announced.
-		# Moved from Shell Experience Host in 2018 as a different app hosts this control in build 18282.
-		if isinstance(obj, UIA) and obj.UIAAutomationId == "FrameSizeAccessibilityField":
-			return
-		nextHandler()
-
 	def event_UIA_notification(self, obj, nextHandler, activityId=None, **kwargs):
 		# Introduced in Windows 10 1709, to be treated as a notification event.
 		# Bulk of this transferred to Event Tracker add-on in 2021.
