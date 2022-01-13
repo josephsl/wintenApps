@@ -16,8 +16,9 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_NVDAObject_init(self, obj):
 		if not isinstance(obj, UIA):
 			return
-		# Version 10.2009 introduces a regression where history and memory items have no names
+		# NVDA Core issue 11858: 10.2009 introduces a regression where history and memory items have no names
 		# but can be fetched through its children.
+		# Resolved in version 10.2109 which is exclusive to Windows 11, and a fix is included in NVDA 2022.1.
 		if not obj.name and obj.parent.UIAAutomationId in ("HistoryListView", "MemoryListView"):
 			obj.name = "".join([item.name for item in obj.children])
 
