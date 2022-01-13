@@ -136,12 +136,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			import tones
 			# For debugging purposes.
 			tones.beep(500, 100)
+		# Do not allow notification to be announced if "report notifications" is off.
+		if not config.conf["presentation"]["reportHelpBalloons"]:
+			return
 		# In recent versions of Word 365, notification event is used to announce editing functions,
 		# some of them being quite anoying.
 		if obj.appModule.appName == "winword" and activityId == "AccSN1":
-			return
-		# Do not allow notification to be announced if "report notifications" is off.
-		if not config.conf["presentation"]["reportHelpBalloons"]:
 			return
 		nextHandler()
 
