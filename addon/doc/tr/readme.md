@@ -26,6 +26,7 @@ bakın):
 * Microsoft Solitaire Koleksiyonu
 * Modern klavye (emoji paneli/dikte/sesle yazma/donanım giriş önerileri/pano
   geçmişi/modern giriş yöntemi düzenleyicileri)
+* Notepad (Windows 11)
 * Kişiler
 * Ayarlar (sistem ayarları, Windows+I)
 * Hava durumu
@@ -118,6 +119,16 @@ NVDA, Windows 11'de güncellenmiş giriş deneyimi panelini destekler.
   taşımayacaktır.
 * Windows 11'de güncellenmiş giriş deneyimi paneli (birleşik emoji paneli ve
   pano geçmişi) için destek eklendi.
+
+## Notepad
+
+This refers to Windows 11 Notepad version 11 or later.
+
+* NVDA will announce status items such as line and column information when
+  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
+  laptop layout) is performed.
+* NVDA will no longer announce entered text when pressing Enter key from the
+  document.
 
 ## Kişiler
 

@@ -18,6 +18,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 지도
 * Microsoft Solitaire Collection
 * 현대식 키보드(에모지 페널/받아쓰기/하드웨어 입력 구성/클립보드 히스토리/현대식 IME 입력기)
+* Notepad (Windows 11)
 * People
 * 설정(시스템 설정 앱, Windows+I)
 * 날씨
@@ -94,6 +95,16 @@ supports updated input experience panel in Windows 11.
   is selected, NVDA will no longer move navigator object to certain emojis.
 * Added support for updated input experience panel (combined emoji panel and
   clipboard history) in Windows 11.
+
+## Notepad
+
+This refers to Windows 11 Notepad version 11 or later.
+
+* NVDA will announce status items such as line and column information when
+  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
+  laptop layout) is performed.
+* NVDA will no longer announce entered text when pressing Enter key from the
+  document.
 
 ## People
 

@@ -26,6 +26,7 @@ qué se incluye):
 * Teclado Moderno (panel de emojis / dictado / escritura por voz /
   sugerencias de entrada hardware / historial del portapapeles / editores
   modernos de método de entrada)
+* Bloc de notas (Windows 11)
 * Gente
 * Opciones (opciones de sistema, Windows+I)
 * El Tiempo
@@ -125,6 +126,17 @@ Windows 11.
 * Se ha añadido soporte para el panel actualizado de experiencia de entrada
   (una combinación del panel de emojis y el historial del portapapeles) en
   Windows 11.
+
+## Bloc de notas
+
+Esto hace referencia al Bloc de notas de Windows 11, versión 11 o posterior.
+
+* NVDA anunciará elementos de estado, como la información de línea y
+  columna, cuando se ejecute la orden para anunciar la barra de estado
+  (NVDA+fin en disposición de escritorio, NVDA+shift+fin en disposición
+  portátil).
+* NVDA ya no anunciará el texto introducido al pulsar la tecla intro desde
+  el documento.
 
 ## Gente
 

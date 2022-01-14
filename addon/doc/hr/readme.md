@@ -25,6 +25,7 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 * Moderna tipkovnica (ploča emojija, diktatiranje, tipkanje glasom,
   prijedlozi hardvera unosa, povijest međuspremnika, moderni uređivači za
   unos)
+* Notepad (Windows 11)
 * Osobe
 * Postavke (postavke sustava, Windows+I)
 * Vrijeme
@@ -116,6 +117,16 @@ Windows 11.
   emojije.
 * Dodana je podrška za aktualiziranu ploču unosa (kombinacija ploče emojija
   i povijesti međuspremnika) u Windows 11.
+
+## Notepad
+
+This refers to Windows 11 Notepad version 11 or later.
+
+* NVDA will announce status items such as line and column information when
+  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
+  laptop layout) is performed.
+* NVDA will no longer announce entered text when pressing Enter key from the
+  document.
 
 ## Osobe
 

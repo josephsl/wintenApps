@@ -23,6 +23,7 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Microsoft Kabale Samling
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/modern input method editors)
+* Notepad (Windows 11)
 * Personer
 * Indstillinger (systemindstillinger, Windows+I)
 * Vejr
@@ -118,6 +119,16 @@ i Windows 11.
   is selected, NVDA will no longer move navigator object to certain emojis.
 * Understøtter nu opdateret input-oplevelsespanel (kombineret emoji-panel og
   udklipsholderhistorik) i Windows 11.
+
+## Notepad
+
+This refers to Windows 11 Notepad version 11 or later.
+
+* NVDA will announce status items such as line and column information when
+  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
+  laptop layout) is performed.
+* NVDA will no longer announce entered text when pressing Enter key from the
+  document.
 
 ## Personer
 

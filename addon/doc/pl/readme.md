@@ -26,6 +26,7 @@ dołączone, zobacz każdą sekcję aplikacji):
 * Nowoczesna klawiatura (panel emoji / dyktowanie / pisanie głosowe /
   podpowiedzi do pisania na klawiaturze sprzętowej / historia schowka /
   nowoczesne edytory metod wprowadzania)
+* Notepad (Windows 11)
 * Osoby
 * Ustawienia (ustawienia systemowe, Windows+I)
 * Pogoda
@@ -119,6 +120,16 @@ wejściowego w systemie Windows 11.
   is selected, NVDA will no longer move navigator object to certain emojis.
 * Dodano obsługę zaktualizowanego panelu doświadczenia wprowadzania
   (połączony panel emoji i historia schowka) w systemie Windows 11.
+
+## Notepad
+
+This refers to Windows 11 Notepad version 11 or later.
+
+* NVDA will announce status items such as line and column information when
+  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
+  laptop layout) is performed.
+* NVDA will no longer announce entered text when pressing Enter key from the
+  document.
 
 ## Osoby
 

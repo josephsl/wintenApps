@@ -25,6 +25,7 @@ se inclúe):
 * Teclado Moderno (panel de emoji/ditado/escritura por voz/suxestións de
   entrada por hardware/historial do portapapeis/editores co método de
   entrada moderna)
+* Notepad (Windows 11)
 * Xente
 * Opcións (opcións do sistema, Windows+I)
 * O Tempo
@@ -120,6 +121,16 @@ tamén soporta o panel de experiencia de entrada actualizado en Windows 11.
   certos emojis.
 * Engadido soporte para o panel actualizado de experiencia de entrada (panel
   de emoji e historial de portapapeis combinados) en windows 11.
+
+## Notepad
+
+This refers to Windows 11 Notepad version 11 or later.
+
+* NVDA will announce status items such as line and column information when
+  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
+  laptop layout) is performed.
+* NVDA will no longer announce entered text when pressing Enter key from the
+  document.
 
 ## Xente
 
