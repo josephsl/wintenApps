@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und weitere
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA compatibility: 2021.2 and later
+* NVDA-Kompatibilität: 2021.2 und neuer
 
 Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
 2021 in Windows App Essentials umbenannt, um Windows 10 und zukünftige
@@ -25,6 +25,7 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 * Moderne Tastatur
   (Emoji-Panel/Diktat/Spracheingabe/Hardware-Eingabevorschläge/Zwischenablageverlauf/moderne
   Eingabemethoden-Editoren)
+* Notepad (Windows 11)
 * Kontakte
 * Einstellungen (System-Einstellungen, Windows+I)
 * Wetter
@@ -32,8 +33,8 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* This add-on requires Windows 10 21H1 (build 19043) or later and is
-  compatible with Windows 11.
+* Diese Erweiterung benötigt Windows 10 Version 21H1 (Build 19043) oder
+  neuer und ist kompatibel mit Windows 11.
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
@@ -56,13 +57,14 @@ Versionen][3].
 * In den meisten Fällen kann NVDA die Anzahl der Vorschläge beim Durchführen
   einer Suche mitteilen, auch wenn sich die Anzahl der Vorschläge im Verlauf
   der Suche ändert. Dies ist jetzt Teil von NVDA 2021.3.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag complete, drop target dropped, layout
-  invalidated. With NVDA's log level set to debug, these events will be
-  tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active
-  app. Events built into NVDA such as name change and controller for events
-  are tracked from an add-on called Event Tracker.
+* Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignis-Handlern werden
+  die folgenden UIA-Ereignisse erkannt: Ziehen abgeschlossen, Ziel fallen
+  gelassen, Layout ungültig gemacht. Wenn die NVDA-Protokollebene auf Debug
+  eingestellt ist, werden diese Ereignisse verfolgt, und bei
+  UIA-Benachrichtigungsereignissen ertönt ein Debug-Ton, wenn die
+  Benachrichtigungen von einem anderen Ort als der gerade aktiven Anwendung
+  kommen. In NVDA integrierte Ereignisse wie Namensänderung und Controller
+  für Ereignisse werden von der Erweiterung Event-Tracker verfolgt.
 * Beim Öffnen, Schließen, Neuordnen (Windows 11) oder Wechseln zwischen
   virtuellen Desktops gibt NVDA den Namen des aktiven virtuellen Desktops an
   (z. B. Desktop 2).
@@ -80,7 +82,7 @@ Versionen][3].
 
 * NVDA liest die Bildschirmmeldung des Grafikrechners nicht mehr doppelt
   vor.
-* In Windows 10, history and memory list items are properly labeled.
+* In Windows 10 sind Verlaufs- und Speicherlisten richtig beschriftet.
 
 ## Cortana
 
@@ -125,6 +127,16 @@ unterstützt auch das Panel für aktualisierte Eingabe-Erlebnisse in Windows
   (kombiniertes Emoji-Panel und Zwischenablageverlauf) in Windows 11
   hinzugefügt.
 
+## Notepad
+
+This refers to Windows 11 Notepad version 11 or later.
+
+* NVDA will announce status items such as line and column information when
+  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
+  laptop layout) is performed.
+* NVDA will no longer announce entered text when pressing Enter key from the
+  document.
+
 ## Kontakte
 
 * Bei der Suche nach Kontakten wird der erste Vorschlag angekündigt,
@@ -142,7 +154,7 @@ unterstützt auch das Panel für aktualisierte Eingabe-Erlebnisse in Windows
 * NVDA teilt den Namen optionaler Qualitätsupdates mit, falls vorhanden
   (Link zum Download und Jetzt installieren in Windows 10,
   Download-Schaltfläche in Windows 11).
-* In Windows 11, breadcrumb bar items are properly recognized.
+* In Windows 11 werden die Breadcrumb-Leisten richtig erkannt.
 
 ## Wetter
 

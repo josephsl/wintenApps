@@ -25,6 +25,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Moderni näppäimistö (emojipaneeli/sanelu/puhekirjoitus/fyysisen
   näppäimistösyötteen ehdotukset/pilvileikepöydän historia/modernin
   syöttömenetelmän muokkaimet)
+* Notepad (Windows 11)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Sää
@@ -116,6 +117,16 @@ päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
   10:ssä, NVDA ei enää siirrä navigointiobjektia tiettyihin emojeihin.
 * Lisätty tuki Windows 11:n päivitetylle syöttökokemuksen paneelille
   (yhdistetty emojipaneeli ja leikepöydän historia).
+
+## Notepad
+
+This refers to Windows 11 Notepad version 11 or later.
+
+* NVDA will announce status items such as line and column information when
+  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
+  laptop layout) is performed.
+* NVDA will no longer announce entered text when pressing Enter key from the
+  document.
 
 ## Ihmiset
 

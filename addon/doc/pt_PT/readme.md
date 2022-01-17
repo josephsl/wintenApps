@@ -25,6 +25,7 @@ detalhes sobre o que está incluído):
 * Colecção Microsoft Solitaire
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/modern input method editors)
+* Notepad (Windows 11)
 * Pessoas.
 * Configurações (configurações do sistema, Windows + I)
 * Meteorologia
@@ -116,6 +117,16 @@ supports updated input experience panel in Windows 11.
 * Adicionado suporte para painel de experiência de entrada actualizada
   (painel combinado de emoji e histórico da área de transferência) no
   Windows 11.
+
+## Notepad
+
+This refers to Windows 11 Notepad version 11 or later.
+
+* NVDA will announce status items such as line and column information when
+  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
+  laptop layout) is performed.
+* NVDA will no longer announce entered text when pressing Enter key from the
+  document.
 
 ## Pessoas.
 

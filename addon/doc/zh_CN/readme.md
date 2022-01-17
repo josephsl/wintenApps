@@ -18,6 +18,7 @@
 * 地图
 * Microsoft Solitaire Collection（微软纸牌游戏）
 * 现代键盘（包括表情符号面板、听写、语音输入、硬件输入建议、云剪贴板历史记录以及现代输入法编辑器）
+* Notepad (Windows 11)
 * 人脉
 * 设置（系统设置，Windows + I）
 * 天气
@@ -85,6 +86,16 @@
 * In Windows 10, when an emoji group (including kaomoji and symbols group)
   is selected, NVDA will no longer move navigator object to certain emojis.
 * 增加了对Windows 11 中更新的输入体验面板（组合的表情符号面板和剪贴板历史记录）的支持。
+
+## Notepad
+
+This refers to Windows 11 Notepad version 11 or later.
+
+* NVDA will announce status items such as line and column information when
+  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
+  laptop layout) is performed.
+* NVDA will no longer announce entered text when pressing Enter key from the
+  document.
 
 ## 人脉
 
