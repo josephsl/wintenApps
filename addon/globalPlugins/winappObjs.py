@@ -125,17 +125,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_notification(self, obj, nextHandler, activityId=None, **kwargs):
 		# Introduced in Windows 10 1709, to be treated as a notification event.
-		# Bulk of this transferred to Event Tracker add-on in 2021.
-		# Play a debug tone if and only if notifications come from somewhere other than the active app
-		# and NVDA was restarted with debug logging mode.
-		if (
-			isinstance(obj, UIA)
-			and obj.appModule != api.getFocusObject().appModule
-			and globalVars.appArgs.debugLogging
-		):
-			import tones
-			# For debugging purposes.
-			tones.beep(500, 100)
 		# Do not allow notification to be announced if "report notifications" is off.
 		if not config.conf["presentation"]["reportHelpBalloons"]:
 			return
