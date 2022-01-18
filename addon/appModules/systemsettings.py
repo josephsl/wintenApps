@@ -20,8 +20,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			# From Windows 10 1607 onwards, update history shows status rather than the title.
 			# In build 16232, the title is shown but not the status,
 			# so include this for sake of backward compatibility.
-			# In later revisions of Windows 10 1803 and later, feature update download link is provided
-			# and is initially called "download and install now", thus add the feature update title as well.
+			# In later revisions of Windows 10 1803 and later, optional update download link is provided
+			# and is initially called "download and install now", thus add the optional update title as well.
 			if obj.role == controlTypes.Role.LINK:
 				nameList = [obj.name]
 				if obj.UIAAutomationId.startswith("HistoryEvent") and obj.name != obj.previous.name:
@@ -37,8 +37,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 					else:
 						nameList.append(obj.next.name)
 				elif obj.UIAAutomationId == "SystemSettings_MusUpdate_SeekerUpdateUX_HyperlinkButton":
-					# Unconditionally locate the new feature update title, skipping the link description.
-					# Note that for optional cumulative updates, the actual update title is next to this link,
+					# Unconditionally locate the new optional update title, skipping the link description.
+					# For feature updates, update title is next to description text,
+					# and description text is next to the download link itself.
+					# For optional cumulative updates, the actual update title is next to this link,
 					# so one must fetch all of these.
 					# Ignore all this if there is "View all optional updates" link,
 					# seen when there is one or more driver updates on top of feature/quality updates.
