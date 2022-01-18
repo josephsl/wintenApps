@@ -17,25 +17,20 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):
-			# From Windows 10 1607 onwards, update history shows status rather than the title.
-			# In build 16232, the title is shown but not the status,
-			# so include this for sake of backward compatibility.
-			# In later revisions of Windows 10 1803 and later, optional update download link is provided
-			# and is initially called "download and install now", thus add the optional update title as well.
+			# Workarounds for Windows Update links found in Windows 10.
 			if obj.role == controlTypes.Role.LINK:
 				nameList = [obj.name]
+				# Since Windows 10 1709, latest feature update entry in update history adds "what's new" link.
+				# Therefore fetch feature update title located two objects down.
+				# Update history has changed completely in Windows 11.
 				if obj.UIAAutomationId.startswith("HistoryEvent") and obj.name != obj.previous.name:
-					# Add the status text in 1709 and later.
-					# But since 16251, a "what's new" link has been added for feature updates,
-					# so consult two previous objects.
 					eventID = obj.UIAAutomationId.split("_")[0]
 					possibleFeatureUpdateText = obj.previous.previous
 					# This Automation Id may change in a future Windows release.
 					if possibleFeatureUpdateText.UIAAutomationId == "_".join([eventID, "TitleTextBlock"]):
-						nameList.insert(0, obj.previous.name)
 						nameList.insert(0, possibleFeatureUpdateText.name)
-					else:
-						nameList.append(obj.next.name)
+				# In later revisions of Windows 10 1803 and later, optional update download link is provided
+				# and is initially called "download and install now", thus add the optional update title as well.
 				elif obj.UIAAutomationId == "SystemSettings_MusUpdate_SeekerUpdateUX_HyperlinkButton":
 					# Unconditionally locate the new optional update title, skipping the link description.
 					# For feature updates, update title is next to description text,
