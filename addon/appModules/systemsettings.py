@@ -23,7 +23,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				# Since Windows 10 1709, latest feature update entry in update history adds "what's new" link.
 				# Therefore fetch feature update title located two objects down.
 				# Update history has changed completely in Windows 11.
-				if obj.UIAAutomationId.startswith("HistoryEvent") and obj.name != obj.previous.name:
+				if obj.UIAAutomationId.startswith("HistoryEvent"):
 					eventID = obj.UIAAutomationId.split("_")[0]
 					possibleFeatureUpdateText = obj.previous.previous
 					# This Automation Id may change in a future Windows release.
