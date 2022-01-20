@@ -53,16 +53,3 @@ class AppModule(appModuleHandler.AppModule):
 			if obj.UIAAutomationId == "StreetsideAddressTextBlock":
 				ui.message(obj.name)
 		nextHandler()
-
-	# Yet again, live region change fires even if no text has changed.
-	liveText: str = ""
-
-	def event_liveRegionChange(self, obj, nextHandler):
-		if isinstance(obj, UIA):
-			if obj.parent.UIAAutomationId == "MapControl" and obj.name != self.liveText:
-				self.liveText = obj.name
-				ui.message(obj.name)
-		# And no, never call next handler.
-
-	def event_appModule_loseFocus(self):
-		self.liveText = ""
