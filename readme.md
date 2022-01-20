@@ -57,7 +57,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## Maps
 
 * NVDA plays location beep for map locations.
-* When using street side view and if "use keyboard" option is enabled, NVDA will announce street addresses as you use arrow keys to navigate the map.
 
 ## Microsoft Solitaire Collection
 
