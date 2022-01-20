@@ -46,10 +46,3 @@ class AppModule(appModuleHandler.AppModule):
 					clsList.insert(0, MapLocation)
 			except AttributeError:
 				pass
-
-	def event_nameChange(self, obj, nextHandler):
-		if isinstance(obj, UIA):
-			# #18: Announce street side changes as one uses the keyboard.
-			if obj.UIAAutomationId == "StreetsideAddressTextBlock":
-				ui.message(obj.name)
-		nextHandler()
