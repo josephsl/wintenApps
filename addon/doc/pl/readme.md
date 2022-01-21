@@ -120,6 +120,8 @@ wejściowego w systemie Windows 11.
   is selected, NVDA will no longer move navigator object to certain emojis.
 * Dodano obsługę zaktualizowanego panelu doświadczenia wprowadzania
   (połączony panel emoji i historia schowka) w systemie Windows 11.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens.
 
 ## Notepad
 

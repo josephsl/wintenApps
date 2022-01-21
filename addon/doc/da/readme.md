@@ -119,6 +119,8 @@ i Windows 11.
   is selected, NVDA will no longer move navigator object to certain emojis.
 * Understøtter nu opdateret input-oplevelsespanel (kombineret emoji-panel og
   udklipsholderhistorik) i Windows 11.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens.
 
 ## Notepad
 

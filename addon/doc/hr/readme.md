@@ -117,6 +117,8 @@ Windows 11.
   emojije.
 * Dodana je podrška za aktualiziranu ploču unosa (kombinacija ploče emojija
   i povijesti međuspremnika) u Windows 11.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens.
 
 ## Notepad
 

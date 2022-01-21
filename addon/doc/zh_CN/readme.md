@@ -86,6 +86,8 @@
 * In Windows 10, when an emoji group (including kaomoji and symbols group)
   is selected, NVDA will no longer move navigator object to certain emojis.
 * 增加了对Windows 11 中更新的输入体验面板（组合的表情符号面板和剪贴板历史记录）的支持。
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens.
 
 ## Notepad
 
