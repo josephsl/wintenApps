@@ -126,6 +126,8 @@ Windows 11.
 * Se ha añadido soporte para el panel actualizado de experiencia de entrada
   (una combinación del panel de emojis y el historial del portapapeles) en
   Windows 11.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens.
 
 ## Bloc de notas
 

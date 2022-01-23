@@ -117,6 +117,8 @@ päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
   10:ssä, NVDA ei enää siirrä navigointiobjektia tiettyihin emojeihin.
 * Lisätty tuki Windows 11:n päivitetylle syöttökokemuksen paneelille
   (yhdistetty emojipaneeli ja leikepöydän historia).
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens.
 
 ## Notepad
 

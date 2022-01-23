@@ -111,6 +111,8 @@ supports updated input experience panel in Windows 11.
   is selected, NVDA will no longer move navigator object to certain emojis.
 * Added support for updated input experience panel (combined emoji panel and
   clipboard history) in Windows 11.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens.
 
 ## Notepad
 

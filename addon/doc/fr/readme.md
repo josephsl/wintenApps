@@ -128,6 +128,8 @@ charge le panneau d'expérience de saisie mis à jour dans Windows 11.
   is selected, NVDA will no longer move navigator object to certain emojis.
 * Ajout de la prise en charge du panneau d'expérience de saisie mis à jour
   (panneau emoji combiné et historique du presse-papiers) dans Windows 11.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens.
 
 ## Notepad
 

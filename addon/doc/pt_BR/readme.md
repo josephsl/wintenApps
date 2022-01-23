@@ -26,7 +26,7 @@ detalhes sobre o que está incluso):
 * Teclado moderno (painel de emoji/ditado/digitação por voz/sugestões de
   entrada de hardware/histórico da área de transferência/editores de métodos
   de entrada modernos)
-* Notepad (Windows 11)
+* Bloco de Notas (Windows 11)
 * Pessoas
 * Configurações (configurações do sistema, Windows+I)
 * Clima
@@ -125,16 +125,19 @@ atualizado no Windows 11.
 * Adicionado suporte para painel de experiência de entrada atualizado
   (painel de emoji combinado e histórico da área de transferência) no
   Windows 11.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens.
 
-## Notepad
+## Bloco de Notas
 
-This refers to Windows 11 Notepad version 11 or later.
+Isso se refere à versão 11 ou posterior do Bloco de Notas do Windows 11.
 
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed.
-* NVDA will no longer announce entered text when pressing Enter key from the
-  document.
+* O NVDA anunciará itens de status, como informações de linha e coluna
+  quando o comando de informar barra de status (NVDA+End no leiaute de
+  computador de mesa, NvDA+Shift+End no leiaute de computador portátil) for
+  executado.
+* O NVDA não anunciará mais o texto inserido ao pressionar a tecla Enter no
+  documento.
 
 ## Pessoas
 

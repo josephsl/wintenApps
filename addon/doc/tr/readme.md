@@ -119,6 +119,8 @@ NVDA, Windows 11'de güncellenmiş giriş deneyimi panelini destekler.
   taşımayacaktır.
 * Windows 11'de güncellenmiş giriş deneyimi paneli (birleşik emoji paneli ve
   pano geçmişi) için destek eklendi.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens.
 
 ## Notepad
 

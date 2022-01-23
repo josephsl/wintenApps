@@ -18,7 +18,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 지도
 * Microsoft Solitaire Collection
 * 현대식 키보드(에모지 페널/받아쓰기/하드웨어 입력 구성/클립보드 히스토리/현대식 IME 입력기)
-* Notepad (Windows 11)
+* 메모장(윈도우 11)
 * People
 * 설정(시스템 설정 앱, Windows+I)
 * 날씨
@@ -27,8 +27,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 사용시 주의 사항:
 
 * 본 추가 기능은 윈도우 10 21H1(빌드 19043) 이상(윈도우 11 포함)을 지원합니다.
-* Although installation is possible, this add-on does not support Windows
-  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* 윈도우 Enterprise LTSC(Long-Term Servicing Channel)와 윈도우 서버 버전에 설치할 수 있으나 지원은
+  하지 않습니다.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
 * 다음 중 하나 이상 발생시 본 추가 기능에 탑제된 기능중 몇이 삭제됩니다: NVDA가 그 기능을 탑제할때, 지원이 중단된 윈도우
   버전(예: 지원이 중단된 윈도우 10 기능 업데이트)에서 제공하는 기능일 경우, 윈도우나 앱이 변경되어 기능 지원이 필요가 없을때.
@@ -95,8 +95,10 @@ supports updated input experience panel in Windows 11.
   is selected, NVDA will no longer move navigator object to certain emojis.
 * Added support for updated input experience panel (combined emoji panel and
   clipboard history) in Windows 11.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens.
 
-## Notepad
+## 메모장
 
 This refers to Windows 11 Notepad version 11 or later.
 

@@ -126,16 +126,18 @@ unterstützt auch das Panel für aktualisierte Eingabe-Erlebnisse in Windows
 * Unterstützung für das aktualisierte Erlebnis-Panel für die Eingabe
   (kombiniertes Emoji-Panel und Zwischenablageverlauf) in Windows 11
   hinzugefügt.
+* In Windows 11 ist es wieder möglich, die Pfeiltasten zu verwenden, um
+  Emojis zu überprüfen, wenn das Emoji-Bedienfeld geöffnet wird.
 
 ## Notepad
 
-This refers to Windows 11 Notepad version 11 or later.
+Dies bezieht sich auf Windows 11 Notepad Version 11 oder neuer.
 
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed.
-* NVDA will no longer announce entered text when pressing Enter key from the
-  document.
+* NVDA teilt die Status-Elemente wie Zeilen- und Spalteninformationen mit,
+  wenn der Befehl Statusleiste mitteilen (NVDA+Ende im Desktop-Layout,
+  NvDA+Umschalt+Ende im Laptop-Layout) ausgeführt wird.
+* NVDA liest den eingegebenen Text nicht mehr vor, sobald die Eingabetaste
+  im Dokument gedrückt wird.
 
 ## Kontakte
 

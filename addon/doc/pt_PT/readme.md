@@ -117,6 +117,8 @@ supports updated input experience panel in Windows 11.
 * Adicionado suporte para painel de experiência de entrada actualizada
   (painel combinado de emoji e histórico da área de transferência) no
   Windows 11.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens.
 
 ## Notepad
 

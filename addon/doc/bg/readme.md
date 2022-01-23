@@ -126,16 +126,18 @@ Windows. Тя също така съдържа поправки и подобр�
   определени емоджи.
 * Добавена поддръжка за обновения панел за въвеждане (комбиниран панел за
   емоджи и хронология на клипборда) в Windows 11.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens.
 
 ## Notepad
 
-This refers to Windows 11 Notepad version 11 or later.
+Това се отнася за Notepad в Windows 11 (версия 11 или по-нова).
 
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed.
-* NVDA will no longer announce entered text when pressing Enter key from the
-  document.
+* NVDA ще докладва елементи за състоянието, като информация за ред и колона,
+  когато се изпълни командата за докладване на лентата на състоянието
+  (NVDA+End при настолната подредба, NVDA+Shift+End при лаптоп подредбата).
+* NVDA вече няма да съобщава въведения текст при натискане на клавиш Enter
+  от документа.
 
 ## Хора
 
