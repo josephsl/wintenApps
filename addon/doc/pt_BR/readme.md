@@ -125,8 +125,8 @@ atualizado no Windows 11.
 * Adicionado suporte para painel de experiência de entrada atualizado
   (painel de emoji combinado e histórico da área de transferência) no
   Windows 11.
-* In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens.
+* No Windows 11, novamente é possível usar as teclas de seta para explorar
+  emojis quando o painel de emojis está aberto.
 
 ## Bloco de Notas
 

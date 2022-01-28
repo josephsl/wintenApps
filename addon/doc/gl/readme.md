@@ -25,7 +25,7 @@ se inclúe):
 * Teclado Moderno (panel de emoji/ditado/escritura por voz/suxestións de
   entrada por hardware/historial do portapapeis/editores co método de
   entrada moderna)
-* Notepad (Windows 11)
+* Bloc de notas (Windows 11)
 * Xente
 * Opcións (opcións do sistema, Windows+I)
 * O Tempo
@@ -33,8 +33,8 @@ se inclúe):
 
 Notas:
 
-* This add-on requires Windows 10 21H1 (build 19043) or later and is
-  compatible with Windows 11.
+* Este complemento require do Windows 10 21H1 (compilación 19043) ou
+  posterior e é compatible con Windows 11.
 * Aínda que a instalación é posible, este complemento non soporta Windows
   Enterprise LTSC (Long-Term Servicing Channel) nin versións de Windows
   Server.
@@ -81,7 +81,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 * NVDA xa non anunciará dúas veces a mensaxe en pantalla da calculadora
   gráfica.
-* In Windows 10, history and memory list items are properly labeled.
+* En Windows 10, o historial e os elementos da lista da memoria están
+  correctamente etiquetados.
 
 ## Cortana
 
@@ -121,18 +122,18 @@ tamén soporta o panel de experiencia de entrada actualizado en Windows 11.
   certos emojis.
 * Engadido soporte para o panel actualizado de experiencia de entrada (panel
   de emoji e historial de portapapeis combinados) en windows 11.
-* In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens.
+* En Windows 11,, volve a ser posible utilizar as frechas para revisar
+  emojis cando se abre o panel de emojis.
 
-## Notepad
+## Bloc de Notas
 
-This refers to Windows 11 Notepad version 11 or later.
+Isto refírese á versión 11 ou posterior do Bloc de Notas de Windows 11.
 
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed.
-* NVDA will no longer announce entered text when pressing Enter key from the
-  document.
+* NVDA anunciará elementos de estado como a información de liña e columna
+  cando se execute a orde de anunciar barra de estado (NVDA+Fin en
+  distribución de escritorio, NVDA+Shift+Fin en distribución portátil).
+* NVDA xa non anuncia´ra o texto introducido ao premer a tecla Intro dende o
+  documento.
 
 ## Xente
 
