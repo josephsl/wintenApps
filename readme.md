@@ -39,6 +39,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * When opening, closing, reordering (Windows 11), or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
 * When arranging Start menu tiles or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce information on dragged items or new position of the dragged item.
 * Announcements such as volume/brightness changes in File Explorer and app update notifications from Microsoft Store can be suppressed by turning off Report Notifications in NVDA's object presentation settings.
+* In Windows 11, microphone mute toggle status (Windows+Alt+K) is announced from everywhere.
 
 ## Calculator
 

@@ -123,7 +123,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					wx.CallLater(500, ui.message, obj.name)
 		nextHandler()
 
-	def event_UIA_notification(self, obj, nextHandler, activityId=None, **kwargs):
+	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
 		# Introduced in Windows 10 1709, to be treated as a notification event.
 		# Do not allow notification to be announced if "report notifications" is off.
 		if not config.conf["presentation"]["reportHelpBalloons"]:
@@ -132,6 +132,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# some of them being quite anoying.
 		if obj.appModule.appName == "winword" and activityId == "AccSN1":
 			return
+		# Announce microphone mute status from anywhere in Windows 11.
+		if obj.appModule.appName == "explorer" and activityId == "Windows.Shell.CallMuteAnnouncement":
+			if api.getFocusObject().appModule != obj.appModule:
+				ui.message(displayString)
+				return
 		nextHandler()
 
 	# Events defined in this add-on.

@@ -27,7 +27,13 @@ class AppModule(appModuleHandler.AppModule):
 		# This does not affect earlier versions.
 		if not self.productVersion.startswith("11"):
 			raise NotImplementedError()
+		# And no, status bar is shown when editing documents.
+		if not isinstance(api.getFocusObject(), NotepadDocument):
+			raise NotImplementedError()
 		fg = api.getForegroundObject()
 		# Look for a specific child as some children report the same UIA properties such as class name.
 		statusBar = fg.children[4].firstChild
+		# No location for a disabled status bar i.e. location is 0 (x, y, width, height).
+		if not any(statusBar.location):
+			raise NotImplementedError()
 		return statusBar
