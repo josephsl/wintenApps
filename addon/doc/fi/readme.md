@@ -25,7 +25,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Moderni näppäimistö (emojipaneeli/sanelu/puhekirjoitus/fyysisen
   näppäimistösyötteen ehdotukset/pilvileikepöydän historia/modernin
   syöttömenetelmän muokkaimet)
-* Notepad (Windows 11)
+* Muistio (Windows 11)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Sää
@@ -33,8 +33,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* This add-on requires Windows 10 21H1 (build 19043) or later and is
-  compatible with Windows 11.
+* Tämä lisäosa edellyttää Windows 10:n versiota 21H1 (koontiversio 19043)
+  tai uudempaa ja on yhteensopiva Windows 11:n kanssa.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
@@ -78,7 +78,7 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Laskin
 
 * NVDA ei enää sano graafisen laskinnäytön ilmoitusta kahdesti.
-* In Windows 10, history and memory list items are properly labeled.
+* Historia- ja muistiluettelon kohteet nimetään oikein Windows 10:ssä.
 
 ## Cortana
 
@@ -117,18 +117,18 @@ päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
   10:ssä, NVDA ei enää siirrä navigointiobjektia tiettyihin emojeihin.
 * Lisätty tuki Windows 11:n päivitetylle syöttökokemuksen paneelille
   (yhdistetty emojipaneeli ja leikepöydän historia).
-* In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens.
+* Windows 11:ssä on jälleen mahdollista käyttää nuolinäppäimiä emojien
+  tarkasteluun, kun emojipaneeli avautuu.
 
-## Notepad
+## Muistio
 
-This refers to Windows 11 Notepad version 11 or later.
+Tämä viittaa Windows 11:n Muistion versioon 11 tai sitä uudempiin.
 
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed.
-* NVDA will no longer announce entered text when pressing Enter key from the
-  document.
+* NVDA puhuu tilakohteet, kuten rivin ja sarakkeen tiedot, kun Puhu tilarivi
+  -komento (NVDA+End pöytäkoneissa, NVDA+Vaihto+End kannettavissa)
+  suoritetaan.
+* NVDA ei enää puhu kirjoitettua tekstiä, kun asiakirjassa painetaan
+  Enter-näppäintä.
 
 ## Ihmiset
 
