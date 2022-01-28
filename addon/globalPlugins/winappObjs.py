@@ -218,7 +218,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		nextHandler()
 
-	def event_UIA_notification(self, obj, nextHandler, activityId=None, **kwargs):
+	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
 		# Introduced in Windows 10 1709, to be treated as a notification event.
 		# Bulk of this transferred to Event Tracker add-on in 2021.
 		# Play a debug tone if and only if notifications come from somewhere other than the active app
@@ -238,6 +238,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Do not allow notification to be announced if "report notifications" is off.
 		if not config.conf["presentation"]["reportHelpBalloons"]:
 			return
+		# Announce microphone mute status from anywhere in Windows 11.
+		if obj.appModule.appName == "explorer" and activityId == "Windows.Shell.CallMuteAnnouncement":
+			if api.getFocusObject().appModule != obj.appModule:
+				ui.message(displayString)
+				return
 		nextHandler()
 
 	# Events defined in this add-on.
