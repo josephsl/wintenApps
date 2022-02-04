@@ -1,9 +1,9 @@
 # Windows 应用增强 #
 
-* Authors: Joseph Lee, Derek Riemer and others
+* 作者：Joseph Lee、Derek Riemer 等
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA compatibility: 2021.2 and later
+* NVDA 兼容性：2021.2 及更高版本
 
 注意：此插件最初称为 Windows 10 应用增强，在 2021 年更名为 Windows 应用增强，以支持 Windows 10 和 Windows
 11 等未来版本。此插件的部分内容仍将引用原始插件名称。
@@ -18,7 +18,7 @@
 * 地图
 * Microsoft Solitaire Collection（微软纸牌游戏）
 * 现代键盘（包括表情符号面板、听写、语音输入、硬件输入建议、云剪贴板历史记录以及现代输入法编辑器）
-* Notepad (Windows 11)
+* 记事本（Windows 11）
 * 人脉
 * 设置（系统设置，Windows + I）
 * 天气
@@ -26,8 +26,7 @@
 
 注意:
 
-* This add-on requires Windows 10 21H1 (build 19043) or later and is
-  compatible with Windows 11.
+* 此插件需要 Windows 10 21H1（内部版本 19043）或更高版本，并且与 Windows 11 兼容。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务频道）和 Windows Server 版本。
 * 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
 * 对于未在下方列出的条目，您可以假定功能已是 NVDA 的一部分，不再适用，因为插件不支持旧版本的
@@ -36,18 +35,12 @@
 
 有关每个附加发行版之间所做的更改的列表，请参阅[更新日志的附加发布] [3]文档。
 
-## 常规设置
+## 常规增强
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  is now part of NVDA 2021.3.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag complete, drop target dropped, layout
-  invalidated. With NVDA's log level set to debug, these events will be
-  tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active
-  app. Events built into NVDA such as name change and controller for events
-  are tracked from an add-on called Event Tracker.
+* 在大多数情况下，NVDA 可以在执行搜索时读出自动填充建议，现在是 NVDA 2021.3 的一部分。
+* 除了 NVDA 提供的 UIA 事件处理程序之外，还可以识别以下 UIA 事件：拖动完成、对象拖放、布局无效。将 NVDA
+  的日志级别设置为调试时，也会跟踪这些事件，对于 UIA 通知事件，如果通知来自当前激活的应用程序以外的其他位置，则会听到调试音。 NVDA
+  中内置的事件（例如名称更改和事件控制器）通过名为 Event Tracker 的插件进行跟踪。
 * 打开、关闭、重新排序（Windows 11）或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
 * 当改变屏幕分辨率或方向时，NVDA将不再读出开始菜单的大小文本。
 * 当使用 Alt + Shift +光标键托移“开始”菜单磁贴或“操作中心”快速操作按钮时，NVDA 将朗读有关所拖动项目及所拖动项目的新位置的信息。
@@ -57,12 +50,12 @@
 ## 计算器
 
 * NVDA 将不再两次宣布图形计算器屏幕消息。
-* In Windows 10, history and memory list items are properly labeled.
+* 在 Windows 10 中，历史记录和内存列表项已正确标记。
 
 ## Cortana
 
 * 现在，在大多数情况下，都会发布来自Cortana的文字回复。
-* 通过语音与Cortana交互时，NVDA将保持沉默。
+* 通过语音与Cortana互动时，NVDA会暂停朗读。
 
 ## 邮件
 
@@ -70,7 +63,7 @@
 
 ## 地图
 
-* NVDA为地图位置播放位置嘟嘟声。
+* NVDA为地图上的位置播放位置嘟嘟声。
 * 在使用街道视图时，如果启用“使用键盘”选项，NVDA将在您使用光标键浏览地图时读出街道地址。
 
 ## Microsoft Solitaire Collection（微软纸牌游戏）
@@ -83,21 +76,16 @@
 的语音设置对话框中选中“处理字符和符号时包含 Unicode 数据（表情符号）”复选框，并将符号级别设置为“少数”或更高。在 Windows 10
 中从剪贴板历史记录粘贴时，请按空格键而非回车键来粘贴所选项目。此外，NVDA 在 Windows 11 中支持更新的输入体验面板。
 
-* In Windows 10, when an emoji group (including kaomoji and symbols group)
-  is selected, NVDA will no longer move navigator object to certain emojis.
+* 在Windows 10中，选择Emoji组（包括Kaomoji和符号组）时，NVDA不会将导航对象移动到某些EMOJI上。
 * 增加了对Windows 11 中更新的输入体验面板（组合的表情符号面板和剪贴板历史记录）的支持。
-* In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens.
+* 恢复了在 Windows 11 中，当表情符号面板打开时，使用箭头键查看表情符号。
 
-## Notepad
+## 记事本
 
-This refers to Windows 11 Notepad version 11 or later.
+这是指 Windows 11 或更高版本系统上的记事本。
 
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed.
-* NVDA will no longer announce entered text when pressing Enter key from the
-  document.
+* NVDA在执行读出状态栏命令（台式机键盘方案为 NVDA+End，笔记本键盘方案为 NvDA+Shift+End）时会同时读出行列信息等状态条目。
+* 在文档中按 Enter 键时，NVDA 将不再读出输入的文本。
 
 ## 人脉
 
@@ -107,15 +95,13 @@ This refers to Windows 11 Notepad version 11 or later.
 
 * 现在将自动读出某些信息，例如 Windows Update 进度，包括存储感知、磁盘清理和 Windows Update中的错误。
 * 进度栏值和其他信息不再重复朗读两次。
-* 在某些 Windows 安装中看到的奇怪的控件标签已被更正。
-* NVDA will announce the name of the optional quality update control if
-  present (download and install now link in Windows 10, download button in
-  Windows 11).
-* In Windows 11, breadcrumb bar items are properly recognized.
+* 在某些 Windows 安装中看到的奇怪的控件标签已得到更正。
+* NVDA 将公布可选质量更新控件的名称（如果存在）（Windows 10 中的立即下载和安装链接，Windows 11 中的下载按钮）。
+* 在 Windows 11 中，可以正确识别 breadcrumb 栏项目。
 
 ## 天气
 
-* 如“预测”和“地图”之类的选项卡被识别为适当的选项卡（由Derek Riemer打补丁）。
+* 诸如“预测”和“地图”之类的选项卡被识别为适当的选项卡（来自Derek Riemer的补充修复）。
 * 阅读预测时，请使用左右光标在项目之间移动。使用上下光标读取单个项目。例如，按右光标可能会报告“星期一：79度，间中多云，...”。按向下光标将显示“星期一”，然后再次按将读取下一项（如温度）。目前，该功能可用于每日和每小时预测。
 
 [[!tag dev stable]]

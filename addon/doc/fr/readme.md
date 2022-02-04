@@ -1,9 +1,9 @@
 # Windows App Essentials #
 
-* Authors: Joseph Lee, Derek Riemer and others
+* Auteurs: Joseph Lee, Derek Riemer et autres utilisateurs
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
-* NVDA compatibility: 2021.2 and later
+* Compatibilité NVDA: 2021.2 et ultérieure
 
 Remarque : à l'origine appelé Windows 10 App Essentials, elle a été renommée
 Windows App Essentials en 2021 pour prendre en charge Windows 10 et les
@@ -24,9 +24,10 @@ est inclus) :
 * Courrier
 * Cartes
 * Microsoft Solitaire Collection
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/modern input method editors)
-* Notepad (Windows 11)
+* Clavier moderne (panneau des emojis/dictée/saisie vocale/suggestions de
+  saisie matérielle/historique du presse-papiers/éditeurs de méthodes de
+  saisie modernes)
+* Bloc-notes (Windows 11)
 * Personnes
 * Paramètres (paramètres système, Windows+I)
 * Météo
@@ -34,8 +35,8 @@ est inclus) :
 
 Notes:
 
-* This add-on requires Windows 10 21H1 (build 19043) or later and is
-  compatible with Windows 11.
+* Cette extension nécessite Windows 10 21H1 (build 19043) ou version
+  ultérieure et est compatible avec Windows 11.
 * Bien que l'installation soit possible, cette extension ne prend pas en
   charge les versions Windows Enterprise LTSC (Long-Term Servicing Channel)
   et Windows Server.
@@ -56,16 +57,19 @@ l'extension][3].
 
 ## Générale
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  is now part of NVDA 2021.3.
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag complete, drop target dropped, layout
-  invalidated. With NVDA's log level set to debug, these events will be
-  tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active
-  app. Events built into NVDA such as name change and controller for events
-  are tracked from an add-on called Event Tracker.
+* NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
+  majorité des cas, y compris lorsque ce nombre change au cours de la
+  recherche. Cela fait maintenant partie de NVDA 2021.3.
+* En plus des gestionnaires d'événements UIA déjà fournis par NVDA, les
+  événements UIA suivants sont reconnus : drag complete, drop target
+  dropped, layout invalidated. drag complete, drop target dropped, layout
+  invalidated. Quand le niveau de journalisation de NVDA est défini sur
+  débogage, ces événements seront suivis, et pour l'événement de
+  notification UIA, une tonalité de débogage sera entendue si les
+  notifications proviennent d'un endroit autre que l'application
+  actuellement active. Les événements intégrés à NVDA tels que name change
+  et le contrôleur d'événements sont suivis à partir d'une extension  appelé
+  Event Tracker.
 * Lors de l'ouverture, de la fermeture, de la réorganisation (Windows 11)
   ou du basculement entre les bureaux virtuels (build 21337 ou ultérieure),
   , NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
@@ -85,7 +89,8 @@ l'extension][3].
 
 * NVDA n'annoncera plus deux fois le message de l'écran de la calculatrice
   graphique.
-* In Windows 10, history and memory list items are properly labeled.
+* Dans Windows 10, les éléments de l'historique et de la liste de mémoire
+  sont correctement étiquetés.
 
 ## Cortana
 
@@ -124,22 +129,24 @@ presse-papiers dans Windows 10, appuyez sur la touche Espace au lieu de la
 touche Entrée pour coller l'élément sélectionné. NVDA prend également en
 charge le panneau d'expérience de saisie mis à jour dans Windows 11.
 
-* In Windows 10, when an emoji group (including kaomoji and symbols group)
-  is selected, NVDA will no longer move navigator object to certain emojis.
+* Dans Windows 10, lorsqu'un groupe d'emojis (y compris le groupe Kaomoji et
+  symboles) est sélectionné, NVDA ne déplacera plus l'objet navigateur vers
+  certains emojis.
 * Ajout de la prise en charge du panneau d'expérience de saisie mis à jour
   (panneau emoji combiné et historique du presse-papiers) dans Windows 11.
-* In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens.
+* Dans Windows 11, il est à nouveau possible d'utiliser les touches fléchées
+  pour parcourir les emojis lorsque le panneau emoji s'ouvre.
 
-## Notepad
+## Bloc-notes
 
-This refers to Windows 11 Notepad version 11 or later.
+Ceci se rapporte à la version 11 ou ultérieure du Bloc-notes de Windows 11.
 
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed.
-* NVDA will no longer announce entered text when pressing Enter key from the
-  document.
+* NVDA annoncera les éléments d'état tels que les informations sur la ligne
+  et la colonne lorsque la commande d'annonce de la barre d'état (NVDA+Fin
+  en disposition ordinateur de bureau, NVDA+Maj+Fin en disposition
+  ordinateur portable) est exécutée.
+* NVDA n'annoncera plus le texte saisi lorsque vous appuyez sur la touche
+  Entrée depuis le document.
 
 ## Personnes
 
@@ -155,10 +162,11 @@ This refers to Windows 11 Notepad version 11 or later.
   plus annoncés deux fois.
 * Les étiquettes de contrôle étranges vues dans certaines installations
   Windows ont été corrigées.
-* NVDA will announce the name of the optional quality update control if
-  present (download and install now link in Windows 10, download button in
-  Windows 11).
-* In Windows 11, breadcrumb bar items are properly recognized.
+* NVDA annoncera le nom du contrôle de mise à jour facultative s'il est
+  présent (lien télécharger et installer maintenant dans Windows 10, bouton
+  de téléchargement dans Windows 11).
+* Dans Windows 11, les éléments du fil d'Ariane des paramètres sont
+  correctement reconnus.
 
 ## Météo
 
