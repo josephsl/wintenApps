@@ -78,7 +78,7 @@ For NVDA releases, Windows App Essentials supports latest NVDA releases, includi
 
 For Windows releases, a stable Windows release (typically a feature update) is supported for at least 12 months (18 months for Windows 11 releases). Although the add-on will indicate support for a Windows release (or a feature update) months in advance, official support begins the moment a given release is made available to the general public. For example, although Windows 10 November 2021 Update was marked as supported since August 2021, official support duration is from November 2021 to at least December 2022. For Windows 11 original release, preview (and experimental) support began in August 2021, and official support duration is from October 2021 to at least April 2023. As a rule of thumb, Windows App Essentials uses consumer (Home, Pro, Pro for Workstations) support duration for a feature update to determine support duration. See release information page from Microsoft for details on support duration for Windows releases.
 
-Regarding end of support from the add-on, for stable Windows releases, end of support grace period (at least 30 days) is given to allow users to upgrade to a newer release, therefore support for a stable Windows release from the add-on will end at least a month or so after official add-on support duration ends (for Windows 10 November 2021 Update, last stable add-on release to support this release will be made in early 2023). For Windows Insiders, only the latest Insider Preview build is supported, particularly if using dev channel builds. Consequently, there is no concept of grace period from the add-on for Windows Insider Preview builds.
+Regarding end of support for a Windows release from the add-on, for stable Windows releases, end of support grace period (at least 30 days) is given to allow users to upgrade to a newer release, therefore support for a stable Windows release from the add-on will end at least a month or so after official add-on support duration ends (for Windows 10 November 2021 Update, last stable add-on release to support this release will be made in early 2023). For Windows Insiders, only the latest Insider Preview build is supported, particularly if using dev channel builds. Consequently, there is no concept of grace period from the add-on for Windows Insider Preview builds.
 
 Note: the only exception to support duration policy is the very last Windows 10 feature update, which will be supported until December 2025 regardless of release date (official support until October 2025 followed by 60-day grace period).
 
@@ -86,17 +86,21 @@ Note: the only exception to support duration policy is the very last Windows 10 
 
 Windows App Essentials uses continuous, iterative development process. This means a given feature or a change can take up to several weeks to months to be implemented and refined based on user feedback (this can take several milestones), along with being sensitive to changes to NVDA, Windows, and apps. To facilitate this, development snapshots are released whenever changes are made to the add-on source code and data, including when localizations are updated.
 
-For project management, the add-on uses "development semesters" lasting about six months. These semesters, named after a chemical element to align with Windows development cycle, are further divided into "development quarters" lasting about three months each. These quarterly releases are termed "milestone" or major releases dedicated to a specific theme or activity such as adding or dropping support for Windows and/or NVDA releases. One or more minor releases, consisting of backports from the next development quarter and responding to changes in Windows and apps, can be released between milestone releases, typically on a monthly basis. Localization updates can also trigger minor releases.
+For project management, the add-on uses "development milestones" lasting about a year. These milestones, named after a chemical element to align with Windows development cycle, are further divided into "development quarters" lasting about three months each. These quarterly releases are termed "milestone" or major releases dedicated to a specific theme or activity such as adding or dropping support for Windows and/or NVDA releases. One or more minor releases, consisting of backports from the next development quarter and responding to changes in Windows and apps, can be released between milestone releases, typically on a monthly basis. Localization updates can also trigger minor releases.
 
 The main development branch is named "main". This branch holds code for the upcoming milestone release. Although quality may vary, the aim is to house code that can ship as a stable version at anytime and can be backported to maintenance branches easily.
 
 At least two weeks prior to end of a milestone, code from the main branch is merged into a release branch (currently named "stable"). This is so localization data exchange can take place (to help people localize new messages if any) and to prepare the add-on for a stable release through additional testing. For minor releases, the release branch (named after the development quarter) includes latest stable branch changes and backports from upcoming milestone that does not involve major code rewrites (major rewrites are reserved for milestone releases), along with localization updates if any.
 
-#### Recent and upcoming development semesters and quarters
+#### Recent and upcoming development milestones and quarters
 
-* Nickel:
+Originally development semesters in 2021 but changed to annual milestones in 2022.
+
+* Nickel (2021):
 	* Nickel 1: June 2021 to September 2021, dedicated to refining Windows 11 support and introduction of control types refactor from NVDA 2021.2
 	* Nickel 2: September 2021 to January 2022, refinements to Windows 11 support and end of support for Windows 10 October 2020 Update (Version 20H2)
-* Copper:
-	* Copper 1: December 2021 to March 2022, NVDA 2021.3 support and changes from Insider Preview builds
-	* Copper 2: TBD
+* Copper (2022):
+	* Copper 1: December 2021 to March 2022, NVDA 2021.3 support, removing deprecated features, and changes from Insider Preview builds
+	* Copper 2: March 2022 to June 2022, TBD
+	* Copper 3: June 2022 to September 2022, TBD
+	* Copper 4: September 2022 to December 2022, TBD
