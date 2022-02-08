@@ -23,6 +23,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		"kb:s", "kb:shift+s", "kb:o", "kb:shift+o", "kb:t", "kb:shift+t",
 		# Trigonometric functions 2 (secant/cosecant/cotangent)
 		"kb:u", "kb:shift+u", "kb:i", "kb:shift+i", "kb:j", "kb:shift+j",
+		# Hyperbolic functions 1 (hyperbolic sine/cosine/tangent)
+		"kb:control+s", "kb:control+shift+s", "kb:control+o", "kb:control+shift+o", "kb:control+t", "kb:control+shift+t",
+		# Hyperbolic functions 2 (hyperbolic secant/cosecant/cotangent)
+		"kb:control+u", "kb:control+shift+u", "kb:control+i", "kb:control+shift+i", "kb:control+j", "kb:control+shift+j",
 	]
 
 	def __init__(self, *args, **kwargs):
