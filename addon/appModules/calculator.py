@@ -13,6 +13,17 @@ from NVDAObjects.UIA import UIA
 # Mypy should be reminded that this app module is powered by built-in Calculator app module.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
+	# Additional Calculator result shortcuts (source: www.makeuseof.com)
+	calculatorShortcuts = [
+		"kb:backspace", "kb:="
+	]
+
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+		# Tell NVDA to handle more result commands.
+		for shortcut in self.calculatorShortcuts:
+			self.bindGesture(shortcut, "calculatorResult")
+
 	def event_NVDAObject_init(self, obj):
 		if not isinstance(obj, UIA):
 			return
