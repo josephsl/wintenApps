@@ -19,6 +19,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		"kb:backspace", "kb:=", "kb:control+r", "kb:F9", "kb:r", "kb:shift+2", "kb:shift+5",
 		# Basic scientific calculator mode shortcuts (2/10 to the power of)
 		"kb:g", "kb:control+g",
+		# Trigonometric functions 1 (sine/cosine/tangent)
+		"kb:s", "kb:shift+s", "kb:o", "kb:shift+o", "kb:t", "kb:shift+t",
+		# Trigonometric functions 2 (secant/cosecant/cotangent)
+		"kb:u", "kb:shift+u", "kb:i", "kb:shift+i", "kb:j", "kb:shift+j",
 	]
 
 	def __init__(self, *args, **kwargs):
