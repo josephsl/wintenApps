@@ -17,6 +17,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	calculatorShortcuts = [
 		# Applicable in standard and scientific calculator modes
 		"kb:backspace", "kb:=", "kb:control+r", "kb:F9", "kb:r", "kb:shift+2", "kb:shift+5",
+		# Basic scientific calculator mode shortcuts (2/10 to the power of)
+		"kb:g", "kb:control+g",
 	]
 
 	def __init__(self, *args, **kwargs):
