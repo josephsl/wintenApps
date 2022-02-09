@@ -28,8 +28,13 @@ def onInstall():
 		)
 		raise RuntimeError("Attempting to install Windows App Essentials on Windows releases earlier than 10")
 	# Windows App Essentials does not support old feature updates.
-	# This is the case for Windows 10 (to be expanded to Windows 11 in the future).
-	# For now only check Windows 10.
+	# Until Windows 10 21H1 (19043), checking build range was acceptable because there was one to one mapping
+	# between feature updates/milestones and builds across clients and servers such as 1809/17763 (RS5).
+	# But 21H2 changes this: Windows 10 (19044), Windows Server 2022 (20348), and Windows 11 (22000)
+	# As these releases come from vibranium (vb), iron (fe), and cobalt (co) branches, respectively.
+	# Depending on the nature of Windows 10 22H2 and the build number of Windows 11 22H2,
+	# a different strategy may need to be employed in 2022 to test feature update builds.
+	# For now assume minimum supported version is the one listed below unless this is Windows 11.
 	windowsReleaseSeries = "Windows 10"
 	minimumSupportedRelease = winVersion.WIN10_21H1
 	minimumSupportedReleaseName = minimumSupportedRelease.releaseName
