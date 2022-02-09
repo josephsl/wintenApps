@@ -38,6 +38,14 @@ def onInstall():
 	windowsReleaseSeries = "Windows 10"
 	minimumSupportedRelease = winVersion.WIN10_21H1
 	minimumSupportedReleaseName = minimumSupportedRelease.releaseName
+	# Windows 11
+	# There is no known public release between Server 2022 (build 20348) and Windows 11 (build 22000).
+	# Builds in this range (21000) are Insider builds and are branded as Windows 10 but later changed to 11.
+	# For simplicity, treat these builds as Windows 11 builds and installation will fail.
+	if currentWinVer > winVersion.WINSERVER_2022:
+		windowsReleaseSeries = "Windows 11"
+		minimumSupportedRelease = winVersion.WIN11
+		minimumSupportedReleaseName = minimumSupportedRelease.releaseName
 	addonInstallPossible = currentWinVer >= minimumSupportedRelease
 	if not addonInstallPossible:
 		gui.messageBox(
