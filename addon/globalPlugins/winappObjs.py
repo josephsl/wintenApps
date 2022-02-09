@@ -22,7 +22,12 @@ addonHandler.initTranslation()
 
 # #52: forget everything if the current release is not a supported version of Windows.
 # #66: Version 21H2 is divided into three releases: Windows 10, Server 2022, and Windows 11.
-isAddonSupported = winVersion.getWinVer() >= winVersion.WIN10_21H1
+# Do not allow running on build 21000 series (Windows 10/11 Insider Preview).
+currentWinVer = winVersion.getWinVer()
+isAddonSupported = (
+	currentWinVer >= winVersion.WIN11 if currentWinVer > winVersion.WINSERVER_2022
+	else currentWinVer >= winVersion.WIN10_21H1
+)
 
 
 # For convenience.
