@@ -17,8 +17,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	calculatorShortcuts = [
 		# Applicable in standard and scientific calculator modes
 		"kb:backspace", "kb:=", "kb:control+r", "kb:F9", "kb:r", "kb:shift+2", "kb:shift+5",
-		# Basic scientific calculator mode shortcuts (2/10 to the power of)
-		"kb:g", "kb:control+g",
+		# Basic scientific calculator mode (2/10 to the power of, absolute value, factorial, round, pi)
+		"kb:g", "kb:control+g", "kb:shift+\\", "kb:[", "kb:]", "kb:shift+1", "kb:p",
 		# Trigonometric functions 1 (sine/cosine/tangent)
 		"kb:s", "kb:shift+s", "kb:o", "kb:shift+o", "kb:t", "kb:shift+t",
 		# Trigonometric functions 2 (secant/cosecant/cotangent)
