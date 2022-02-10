@@ -27,6 +27,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		"kb:control+s", "kb:control+shift+s", "kb:control+o", "kb:control+shift+o", "kb:control+t", "kb:control+shift+t",  # NOQA: E501
 		# Hyperbolic functions 2 (hyperbolic secant/cosecant/cotangent)
 		"kb:control+u", "kb:control+shift+u", "kb:control+i", "kb:control+shift+i", "kb:control+j", "kb:control+shift+j",  # NOQA: E501
+		# Advanced scientific calculator mode Logarithms, exponents, scientific notation, roots)
+		"kb:l", "kb:n", "kb:control+n", "kb:q", "kb:v", "kb:x", "kb:shift+3"
 	]
 
 	def __init__(self, *args, **kwargs):
