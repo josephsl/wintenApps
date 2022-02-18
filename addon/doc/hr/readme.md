@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer i drugi
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA compatibility: 2021.2 and later
+* NVDA kompatibilnost: 2021.2 i novija
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
@@ -33,8 +33,8 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* This add-on requires Windows 10 21H1 (build 19043) or later and is
-  compatible with Windows 11.
+* Ovaj dodatak zahtijeva Windows 10 21H1 (gradnja 19043) ili noviju verziju
+  i kompatibilan je sa sustavom Windows 11.
 * Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
@@ -78,7 +78,8 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 ## Kalkulator
 
 * NVDA više neće dvaputa najaviti poruku ekrana grafičkog kalkulatora.
-* In Windows 10, history and memory list items are properly labeled.
+* U sustavu Windows 10, povijest i elementi popisa memorije ispravno su
+  označeni.
 
 ## Cortana
 
@@ -117,18 +118,18 @@ Windows 11.
   emojije.
 * Dodana je podrška za aktualiziranu ploču unosa (kombinacija ploče emojija
   i povijesti međuspremnika) u Windows 11.
-* In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens.
+* U sustavu Windows 11 ponovo je moguće koristiti tipke sa strelicama za
+  pregled emojija kad se otvori ploča s emojijima.
 
 ## Notepad
 
-This refers to Windows 11 Notepad version 11 or later.
+Ovo se odnosi na Windows 11 Notepad verziju 11 ili noviju.
 
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed.
-* NVDA will no longer announce entered text when pressing Enter key from the
-  document.
+* NVDA će najaviti elemente stanja kao što su informacije o retku i stupcu
+  kad se izvrši naredba statusne trake izvještaja (NVDA+Kraj u izgledu radne
+  površine, NvDA+Shift+Kraj u izgledu prijenosnog računala).
+* NVDA više neće najaviti upisani tekst, kad se pritisne tipka Enter u
+  dokumentu.
 
 ## Osobe
 
@@ -146,7 +147,7 @@ This refers to Windows 11 Notepad version 11 or later.
 * NVDA će najaviti naziv opcionalne kontrole kvalitete aktualiziranja ako
   postoji (preuzimi i instaliraj poveznicu sada u Windows 10, gumb za
   preuzimanje u Windows 11).
-* In Windows 11, breadcrumb bar items are properly recognized.
+* U sustavu Windows 11 elementi trake navigacije se ispravno prepoznaju.
 
 ## Vrijeme
 
