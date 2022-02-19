@@ -33,12 +33,9 @@ class AppModule(appModuleHandler.AppModule):
 			raise NotImplementedError()
 		fg = api.getForegroundObject()
 		# Look for a specific child as some children report the same UIA properties such as class name.
-		# Status bar location in the UI tree has changed in 11.2112.
-		statusBar = fg.children[4]
-		if statusBar != focus:
-			statusBar = statusBar.firstChild
-		else:
-			statusBar = fg.children[7].firstChild
+		# Status bar location in the UI tree has changed in 11.2112,
+		# made available to stable build users in February 2022.
+		statusBar = fg.children[7].firstChild
 		# No location for a disabled status bar i.e. location is 0 (x, y, width, height).
 		if not any(statusBar.location):
 			raise NotImplementedError()
