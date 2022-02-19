@@ -23,6 +23,7 @@ from NVDAObjects.behaviors import EditableTextWithAutoSelectDetection
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	_symbolsGroupSelected: bool = False
+	disableBrowseModeByDefault = True
 
 	def _emojiPanelClosed(self, obj):
 		# Move NVDA's focus object to what is actually focused on screen.
