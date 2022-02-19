@@ -53,6 +53,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		self._resultsCache = displayString
 		# Version 10.2109 changes the UI a bit, requiring tweaked event handler implementation.
 		# Version bumped to 11 in October 2021.
+		# This, together with results handling, are part of NVDA 2022.1.
 		calculatorVersion = int(self.productVersion.split(".")[0])
 		# NVDA Core issue 12268: for "DisplayUpdated", announce display strings in braille.
 		if activityId == "DisplayUpdated":
