@@ -27,9 +27,11 @@ Notes:
 
 * This add-on requires Windows 10 21H1 (build 19043) or later and is compatible with Windows 11.
 * Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Not all features from Windows Insider Preview builds will be supported.
 * Some add-on features are or will be part of NVDA screen reader.
 * For entries not listed below, you can assume that features are part of NVDA, no longer applicable as the add-on does not support unsupported Windows releases such as old Windows 10 versions, or changes were made to Windows and apps that makes entries no longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for example), and this mode will not work properly with portable version of NVDA.
+* For best experience with apps that embed web technologies and content such as Start menu and its context menu, enable "Automatic focus mode for focus changes" setting from NVDA's browse mode settings panel.
 
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][3] document.
 
