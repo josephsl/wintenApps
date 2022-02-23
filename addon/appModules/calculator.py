@@ -55,6 +55,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		if activityId == "GraphViewChanged" and self._resultsCache == displayString:
 			return
 		self._resultsCache = displayString
+		doNotAnnounceCalculatorResults = self._doNotAnnounceCalculatorResults
+		self._doNotAnnounceCalculatorResults = False
 		# Version 10.2109 changes the UI a bit, requiring tweaked event handler implementation.
 		# Version bumped to 11 in October 2021.
 		# This, together with results handling, are part of NVDA 2022.1.
@@ -76,6 +78,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				resultElement
 				and resultElement.firstChild
 				and resultElement.firstChild.UIAAutomationId in noCalculatorEntryAnnouncements
+				and doNotAnnounceCalculatorResults
 			):
 				return
 		nextHandler()
