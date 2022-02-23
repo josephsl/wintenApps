@@ -7,6 +7,7 @@
 from nvdaBuiltin.appModules.calculator import AppModule, noCalculatorEntryAnnouncements
 import api
 import braille
+import scriptHandler
 from NVDAObjects.UIA import UIA
 
 
@@ -78,3 +79,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			):
 				return
 		nextHandler()
+
+	@scriptHandler.script(gestures=[f"kb:{i}" for i in range(10)])
+	def script_doNotAnnounceCalculatorResults(self, gesture):
+		gesture.send()
+		self._doNotAnnounceCalculatorResults = True
