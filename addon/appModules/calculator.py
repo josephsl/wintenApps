@@ -46,6 +46,9 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		if not obj.name and obj.parent.UIAAutomationId in ("HistoryListView", "MemoryListView"):
 			obj.name = "".join([item.name for item in obj.children])
 
+	# For some commands (such as number row keys), NVDA should not announce calculator results.
+	_doNotAnnounceCalculatorResults = False
+
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
 		# Some notification messages are repeated (most notable being graph view change notification).
 		if activityId == "GraphViewChanged" and self._resultsCache == displayString:
