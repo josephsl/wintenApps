@@ -15,6 +15,10 @@ from NVDAObjects.UIA import UIA
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	# Additional Calculator result shortcuts (source: www.makeuseof.com)
+	# Initially added to let NVDA announce display content when pressed.
+	# Turns out a simpler approach involving UIA notification event handler and a "do not announce results"
+	# flag was more effective in preventing announcements when number row keys are pressed.
+	# Therefore, this list will be removed when "do not announce results" flag approach becomes operational.
 	calculatorShortcuts = [
 		# Applicable in standard and scientific calculator modes
 		"kb:backspace", "kb:=", "kb:control+r", "kb:F9", "kb:r", "kb:shift+2", "kb:shift+5",
@@ -35,6 +39,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
 		# Tell NVDA to handle more result commands.
+		# This will be gone when "do not announce results" aproach becomes operational.
 		for shortcut in self.calculatorShortcuts:
 			self.bindGesture(shortcut, "calculatorResult")
 
@@ -55,6 +60,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		if activityId == "GraphViewChanged" and self._resultsCache == displayString:
 			return
 		self._resultsCache = displayString
+		# When no results shortcuts such as number row keys are pressed, display content will be announced.
+		# But it might be possible that the next command is a calculation shortcut such as S for sine.
+		# Therefore, clear no results flag from the app module while storing a copy of the flag here.
+		# The event handler copy is used to handle the overall notification announcement later.
 		doNotAnnounceCalculatorResults = self._doNotAnnounceCalculatorResults
 		self._doNotAnnounceCalculatorResults = False
 		# Version 10.2109 changes the UI a bit, requiring tweaked event handler implementation.
@@ -74,6 +83,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				resultElement = resultElement.parent.children[1]
 			# Display updated activity ID seen when entering calculations should be ignored
 			# as as it is redundant if speak typed characters is on.
+			# A key requirement is that do not announce results flag must be set.
 			if (
 				resultElement
 				and resultElement.firstChild
