@@ -83,6 +83,12 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				return
 		nextHandler()
 
+	def script_calculatorResult(self, gesture):
+		# If the superclass version is invoked, it will result in double announcement
+		# as NVDA will look for the display content element in addition to handling UIA notification event.
+		# Therefore, send gestures (Escape, Enter, Delete) and no more.
+		gesture.send()
+
 	@scriptHandler.script(gestures=[f"kb:{i}" for i in range(10)])
 	def script_doNotAnnounceCalculatorResults(self, gesture):
 		gesture.send()
