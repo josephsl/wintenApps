@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and others
 * Baixar [versão estável][1]
 * Baixar [versão de desenvolvimento][2]
-* NVDA compatibility: 2021.2 and later
+* NVDA compatibility: 2021.3 and later
 
 Nota: Originalmente chamado Windows 10 App Essentials, foi renomeado para
 Windows App Essentials em 2021 para suportar o Windows 10 e futuros
@@ -37,6 +37,7 @@ Notas:
   compatible with Windows 11.
 * Embora a instalação seja possível, este suplemento não suporta Windows
   Enterprise LTSC (Long-Term Servicing Channel) e versões Windows Server.
+* Not all features from Windows Insider Preview builds will be supported.
 * Alguns recursos adicionais são ou farão parte do leitor de tela do NVDA.
 * Para entradas não listadas abaixo, pode assumir que as funcionalidades
   fazem parte do NVDA, já não aplicável, uma vez que o extra não suporta
@@ -46,6 +47,9 @@ Notas:
 * Algumas aplicações suportam modo de sobreposição compacto (sempre em cima
   na Calculadora, por exemplo), e este modo não funcionará correctamente com
   a versão portátil do NVDA.
+* For best experience with apps that embed web technologies and content such
+  as Start menu and its context menu, enable "Automatic focus mode for focus
+  changes" setting from NVDA's browse mode settings panel.
 
 Para obter uma lista de alterações feitas entre cada release do extra,
 consulte o documento [changelogs for releases, release][3].
@@ -65,15 +69,15 @@ consulte o documento [changelogs for releases, release][3].
 * Ao abrir, fechar, reordenar (Windows 11), ou alternar entre desktops
   virtuais, o NVDA anunciará o nome do desktop virtual activo (desktop 2,
   por exemplo).
-* o NVDA não anunciará mais o tamanho do menu iniciar, quando alterar as
-  resoluções ou a orientação do ecrã.
-* Ao organizar painéis do menu Iniciar ou acções rápidas do Action Center
-  com as teclas Alt+Shift+seta, o NVDA anunciará informação sobre itens
-  arrastados ou nova posição do item arrastado.
+* When arranging pinned entries (tiles in Windows 10) in Start menu or
+  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
+  information on dragged items or new position of the dragged item.
 * Anúncios tais como alterações de volume/brilho no File Explorer e
   notificações de actualização de aplicações do Microsoft Store podem ser
   suprimidos desligando as Notificações de Relatório nas definições de
   apresentação de objectos do NVDA.
+* In Windows 11 Insider Preview builds, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 
 ## Calculadora
 
@@ -94,9 +98,6 @@ consulte o documento [changelogs for releases, release][3].
 ## Mapas.
 
 * NVDA reproduz o sinal sonoro de localização para locais no mapa.
-* Ao usar a vista lateral da rua e se a opção "Usar teclado" estiver
-  activada, o NVDA anunciará os endereços de rua enquanto usa as teclas de
-  seta para navegar no mapa.
 
 ## Colecção Microsoft Solitaire
 

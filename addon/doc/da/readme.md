@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and others
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2021.2 and later
+* NVDA compatibility: 2021.3 and later
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
 til Windows App Essentials i 2021 for at understøtte Windows 10 og
@@ -36,6 +36,7 @@ Bemærkninger:
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
+* Not all features from Windows Insider Preview builds will be supported.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
 * For funktioner, der ikke er anført nedenfor, kan du antage, at funktioner
@@ -46,6 +47,9 @@ Bemærkninger:
 * Nogle apps understøtter kompakt overlejring (for eksempel Bevar Øverst i
   lommeregner), og denne tilstand fungerer ikke korrekt med flytbare kopier
   af NVDA.
+* For best experience with apps that embed web technologies and content such
+  as Start menu and its context menu, enable "Automatic focus mode for focus
+  changes" setting from NVDA's browse mode settings panel.
 
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
@@ -65,15 +69,15 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * Når åbning, lukning, ændring af rækkefølge (Windows 11) eller Skift mellem
   virtuelle skrivebord forekommer, vil NVDA annoncere det aktuelle navn for
   det virtuelle skrivebord (f.eks. "Skrivebord 2").
-* NVDA vil ikke længere annoncere størrelsen af punkter på startmenuen, når
-  du ændrer skærmopløsning eller orientering.
-* Når du arrangerer fliser på start-menuen eller hurtige handlinger i
-  Handlingscenter med Alt+Shift+piletasterne, vil NVDA oplyse informationer
-  om emner, når disse flyttes.
+* When arranging pinned entries (tiles in Windows 10) in Start menu or
+  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
+  information on dragged items or new position of the dragged item.
 * Meddelelser, som ændringer i lydstyrke/lysstyrke i Stifinder og
   appopdateringsmeddelelser fra Microsoft Store, kan deaktiveres ved at
   deaktivere rapportering af meddelelserne i NVDAs
   objektpræsentationsindstillinger.
+* In Windows 11 Insider Preview builds, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 
 ## Lommeregner
 
@@ -96,9 +100,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 ## Kort
 
 * NVDA spiller placeringsbip for kortlokationer.
-* Når du bruger side street view, og hvis indstillingen "Brug tastaturet" er
-  aktiveret, annoncere NVDA gadenavne, som du bruger piletasterne til at
-  navigere kortet.
 
 ## Microsoft Kabale Samling
 

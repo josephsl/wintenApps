@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and others
 * Tải về [phiên bản chính thức][1]
 * Tải về [phiên bản thử nghiệm][2]
-* NVDA compatibility: 2021.2 and later
+* NVDA compatibility: 2021.3 and later
 
 Note: Originally called Windows 10 App Essentials, it was renamed to Windows
 App Essentials in 2021 to support Windows 10 and future releases such as
@@ -37,6 +37,7 @@ Lưu ý:
 * Dù vẫn có thể cài đặt được, add-on này không hỗ trợ Windows 10 Enterprise
   LTSC (Long-Term Servicing Channel) và các bản phát hành của Windows
   Server.
+* Not all features from Windows Insider Preview builds will be supported.
 * Vài tính năng của add-on đã hoặc sẽ là một phần tính năng của trình đọc
   màn hình NVDA.
 * Với những thành phần không được liệt kê bên dưới, bạn có thể xem như các
@@ -47,6 +48,9 @@ Lưu ý:
 * Vài ứng dụng hỗ trợ chế độ compact overlay (luon chạy ở trên như
   Calculator), và chế độ này sẽ không hoạt động tốt với các phiên bản chạy
   trực tiếp của NVDA.
+* For best experience with apps that embed web technologies and content such
+  as Start menu and its context menu, enable "Automatic focus mode for focus
+  changes" setting from NVDA's browse mode settings panel.
 
 Để biết các thay đổi giữa các lần phát hành của add-on, xem phần [changelogs
 for add-on releases][3] .
@@ -66,15 +70,15 @@ for add-on releases][3] .
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
-* NVDA sẽ không thông báo kích thước văn bản của Start menu khi thay đổi độ
-  phân giải hay hướng màn hình.
-* Khi sắp xếp Start menu tiles hoặc Action Center quick actions với
-  Alt+Shift+các phím mũi tên, NVDA sẽ thông báo các thông tin trên các thành
-  phần đã kéo hoặc vị trí mới của thành phần đã kéo.
+* When arranging pinned entries (tiles in Windows 10) in Start menu or
+  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
+  information on dragged items or new position of the dragged item.
 * Các thông báo như thay đổi âm lượng / độ sáng màn hình trong File Explorer
   và các thông báo cập nhật ứng dụng từ Microsoft Store có thể tắt đi bằng
   cách tắt tùy chọn Đọc các thông báo trong phần trình bày đối tượng của
   NVDA.
+* In Windows 11 Insider Preview builds, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 
 ## Calculator
 
@@ -95,9 +99,6 @@ for add-on releases][3] .
 ## Maps
 
 * NVDA phát tiếng beep cho vị trí trên bản đồ.
-* Khi dùng  street side view và nếu tùy chọn "use keyboard" được bật, NVDA
-  sẽ thông báo địa chỉ của đường khi bạn dùng mũi tên để điều hướng trong
-  bản đồ.
 
 ## Microsoft Solitaire Collection
 

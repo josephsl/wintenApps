@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and others
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
-* NVDA compatibility: 2021.2 and later
+* NVDA compatibility: 2021.3 and later
 
 Note: Originally called Windows 10 App Essentials, it was renamed to Windows
 App Essentials in 2021 to support Windows 10 and future releases such as
@@ -37,6 +37,7 @@ Note:
   compatible with Windows 11.
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Not all features from Windows Insider Preview builds will be supported.
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
 * For entries not listed below, you can assume that features are part of
@@ -46,6 +47,9 @@ Note:
 * Some apps support compact overlay mode (always on top in Calculator, for
   example), and this mode will not work properly with portable version of
   NVDA.
+* For best experience with apps that embed web technologies and content such
+  as Start menu and its context menu, enable "Automatic focus mode for focus
+  changes" setting from NVDA's browse mode settings panel.
 
 Pentru o listă a modificărilor efectuate la fiecare versiune a
 suplimentului, consultați documentul [jurnalelor de modificări pentru
@@ -66,14 +70,14 @@ versiunile suplimentului][3].
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
-* NVDA will no longer announce Start menu size text when changing screen
-  resolutions or orientation.
-* When arranging Start menu tiles or Action Center quick actions with
-  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
-  new position of the dragged item.
+* When arranging pinned entries (tiles in Windows 10) in Start menu or
+  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
+  information on dragged items or new position of the dragged item.
 * Announcements such as volume/brightness changes in File Explorer and app
   update notifications from Microsoft Store can be suppressed by turning off
   Report Notifications in NVDA's object presentation settings.
+* In Windows 11 Insider Preview builds, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 
 ## Calculator
 
@@ -94,9 +98,6 @@ versiunile suplimentului][3].
 ## Hărți
 
 * NVDA redă bipul locației pentru locațiile hărții.
-* Atunci când se utilizează vedere din stradă laterală și în cazul în care
-  opțiunea "utilizare tastatură" este activată, NVDA va anunța adrese pe
-  măsură ce utilizați tastele săgeată pentru a naviga pe hartă.
 
 ## Microsoft Solitaire Collection
 

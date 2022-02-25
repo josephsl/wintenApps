@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und weitere
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA-Kompatibilität: 2021.2 und neuer
+* NVDA-Kompatibilität: 2021.3 und neuer
 
 Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
 2021 in Windows App Essentials umbenannt, um Windows 10 und zukünftige
@@ -38,6 +38,8 @@ Hinweise:
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
+* Nicht alle Funktionen von Windows Insider Preview Builds werden
+  unterstützt.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Bei Einträgen, die unten nicht aufgeführt sind, können Sie davon ausgehen,
   dass Funktionen Teil von NVDA sind und nicht mehr nutzbar sind, da die
@@ -47,6 +49,10 @@ Hinweise:
 * Einige Apps unterstützen den kompakten Overlay-Modus (z. B. im
   Taschenrechner immer ganz oben). Dieser Modus funktioniert mit der
   portablen NVDA-Version nicht ordnungsgemäß.
+* Für eine optimale Nutzung von Anwendungen, die Webtechnologien und
+  -inhalte einbetten, wie z. B. das Startmenü und sein Kontextmenü,
+  aktivieren Sie die Einstellung "Automatischer Fokusmodus bei
+  Fokusänderungen" im NVDA-Einstellungsdialogfeld für den Suchmodus.
 
 Eine Liste aller Änderungen in den einzelnen Versionen der Erweiterung
 finden Sie im Dokument [Änderungsprotokolle  der veröffentlichten
@@ -68,15 +74,16 @@ Versionen][3].
 * Beim Öffnen, Schließen, Neuordnen (Windows 11) oder Wechseln zwischen
   virtuellen Desktops gibt NVDA den Namen des aktiven virtuellen Desktops an
   (z. B. Desktop 2).
-* NVDA gibt beim Ändern der Bildschirmauflösung oder -ausrichtung keinen
-  Text in der Startmenügröße mehr aus.
-* Beim Anordnen von Startmenükacheln oder Action-Center-Schnellaktionen mit
-  Alt+Umschalt+Pfeiltasten gibt NVDA Informationen zu gezogenen Elementen
-  oder zur neuen Position des gezogenen Elements an.
+* Beim Anordnen von angehefteten Einträgen (Kacheln in Windows 10) im
+  Startmenü oder in den Schnellaktionen des Action Centers mit
+  Alt+Umschalt+Pfeiltasten teilt NVDA Informationen über verschobene
+  Elemente oder die neue Position des verschobenen Elements mit.
 * Rückmeldungen wie z. B. Lautstärke-/Helligkeitsänderungen im
   Datei-Explorer und App-Update-Benachrichtigungen aus dem Microsoft Store
   können unterdrückt werden, indem die Benachrichtigung über Berichte in den
   Objektpräsentationseinstellungen von NVDA deaktiviert wird.
+* In den Windows 11 Insider Preview-Builds wird der Status die
+  Stummschaltung für das Mikrofon (Win+Alt+K) von überall her angezeigt.
 
 ## Rechner
 
@@ -100,9 +107,6 @@ Versionen][3].
 ## Karten
 
 * NVDA spielt einen Ortungston für Kartenstandorte ab.
-* Wenn Sie die Straßenseitenansicht verwenden und die Option"Tastatur
-  verwenden" aktiviert ist, wird NVDA Straßenadressen ankündigen, während
-  Sie mit den Pfeiltasten durch die Karte navigieren.
 
 ## Microsoft Solitaire Collection
 

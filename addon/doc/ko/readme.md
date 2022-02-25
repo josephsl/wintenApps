@@ -3,7 +3,7 @@
 * 저자: Joseph Lee(이성원), Derek Riemer 외 다수
 * [출시 버전][1]
 * [개발 버전][2]
-* NVDA 호환: 2021.2 이상
+* NVDA compatibility: 2021.3 and later
 
 참고: 윈도우 10 이상(특히 윈도우 11)을 지원하기 위해 2021년에 Windows 10 App Essentials에서 Windows
 App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름이 뜰 수 있습니다.
@@ -29,11 +29,15 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 본 추가 기능은 윈도우 10 21H1(빌드 19043) 이상(윈도우 11 포함)을 지원합니다.
 * 윈도우 Enterprise LTSC(Long-Term Servicing Channel)와 윈도우 서버 버전에 설치할 수 있으나 지원은
   하지 않습니다.
+* Not all features from Windows Insider Preview builds will be supported.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
 * 다음 중 하나 이상 발생시 본 추가 기능에 탑제된 기능중 몇이 삭제됩니다: NVDA가 그 기능을 탑제할때, 지원이 중단된 윈도우
   버전(예: 지원이 중단된 윈도우 10 기능 업데이트)에서 제공하는 기능일 경우, 윈도우나 앱이 변경되어 기능 지원이 필요가 없을때.
 * 여러 앱은 미니(compact overlay) 모드(예: 계산기)를 지원하지만 이 모드는 휴대용 NVDA를 사용시 제대로 사용할 수
   없습니다.
+* For best experience with apps that embed web technologies and content such
+  as Start menu and its context menu, enable "Automatic focus mode for focus
+  changes" setting from NVDA's browse mode settings panel.
 
 추가 기능 변경 내역은 [변경 내용 문서][3]에서 확인할 수 있습니다.
 
@@ -46,14 +50,14 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
-* NVDA will no longer announce Start menu size text when changing screen
-  resolutions or orientation.
-* When arranging Start menu tiles or Action Center quick actions with
-  Alt+Shift+arrow keys, NVDA will announce information on dragged items or
-  new position of the dragged item.
+* When arranging pinned entries (tiles in Windows 10) in Start menu or
+  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
+  information on dragged items or new position of the dragged item.
 * Announcements such as volume/brightness changes in File Explorer and app
   update notifications from Microsoft Store can be suppressed by turning off
   Report Notifications in NVDA's object presentation settings.
+* In Windows 11 Insider Preview builds, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 
 ## 계산기
 
@@ -74,8 +78,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 ## 지도
 
 * NVDA plays location beep for map locations.
-* When using street side view and if "use keyboard" option is enabled, NVDA
-  will announce street addresses as you use arrow keys to navigate the map.
 
 ## Microsoft Solitaire Collection
 

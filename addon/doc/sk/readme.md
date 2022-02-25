@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and others
 * Stiahnuť [stabilnú verziu][1]
 * Stiahnuť [vývojovú verziu][2]
-* NVDA compatibility: 2021.2 and later
+* NVDA compatibility: 2021.3 and later
 
 Note: Originally called Windows 10 App Essentials, it was renamed to Windows
 App Essentials in 2021 to support Windows 10 and future releases such as
@@ -35,6 +35,7 @@ Poznámky:
   compatible with Windows 11.
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Not all features from Windows Insider Preview builds will be supported.
 * Niektoré doplnkové funkcie sú alebo časom budú súčasťou NVDA.
 * For entries not listed below, you can assume that features are part of
   NVDA, no longer applicable as the add-on does not support unsupported
@@ -43,6 +44,9 @@ Poznámky:
 * Some apps support compact overlay mode (always on top in Calculator, for
   example), and this mode will not work properly with portable version of
   NVDA.
+* For best experience with apps that embed web technologies and content such
+  as Start menu and its context menu, enable "Automatic focus mode for focus
+  changes" setting from NVDA's browse mode settings panel.
 
 Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 (anglicky)][3].
@@ -62,14 +66,15 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
-* NVDA will no longer announce Start menu size text when changing screen
-  resolutions or orientation.
-* Pri presúvaní dlaždíc alebo položiek v centre akcií (skratky
-  alt+shift+šípky), NVDA oznamuje nové umiestnenie položiek.
+* When arranging pinned entries (tiles in Windows 10) in Start menu or
+  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
+  information on dragged items or new position of the dragged item.
 * Oznamovanie zmeny hlasitosti a jasu v okne pracovnej plochy a iných oknách
   Explorera a tiež upozornení z obchodu Microsoft store je možné pozastaviť
   odčiarknutím možnosti Oznamovať notifikácie v nastaveniach > prezentácia
   objektov.
+* In Windows 11 Insider Preview builds, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 
 ## Kalkulačka
 
@@ -90,8 +95,6 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 ## Mapy
 
 * NVDA zvukom indikuje polohu na mape.
-* Ak používate zobrazenie s pohľadom na ulicu, a ak je povolená možnosť
-  použiť klávesnicu, NVDA pri pohybe šípkami oznamuje názvy ulíc.
 
 ## Microsoft Solitaire Collection
 

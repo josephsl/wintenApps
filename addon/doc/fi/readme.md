@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2021.2 ja uudemmat
+* Yhteensopivuus: NVDA 2021.3 ja uudemmat
 
 Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
 nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows
@@ -37,6 +37,7 @@ Huomautuksia:
   tai uudempaa ja on yhteensopiva Windows 11:n kanssa.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
+* Kaikkia Windowsin Insider-esiversioiden ominaisuuksia ei tueta.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue tuen
@@ -45,6 +46,10 @@ Huomautuksia:
   vuoksi.
 * Jotkin sovellukset tukevat kompaktia peitetilaa (esim. Laskimessa Aina
   päällimmäisenä), joka ei toimi oikein NVDA:n massamuistiversion kanssa.
+* Saat parhaan kokemuksen verkkotekniikoita ja -sisältöä hyödyntävistä
+  sovelluksista, kuten Käynnistä-valikosta ja sen pikavalikosta, ottamalla
+  käyttöön "Automaattinen vuorovaikutustila kohdistuksen muuttuessa"
+  -asetuksen NVDA:n Selaustila-asetuspaneelista.
 
 Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 [lisäosajulkaisujen muutoslokeista.][3]
@@ -65,15 +70,16 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
   avattaessa, suljettaessa, uudelleenjärjestettäessä (Windows 11) tai
   siirryttäessä niiden välillä.
-* NVDA ei enää ilmoita Käynnistä-valikon kokoa  näytön resoluutiota tai
-  suuntaa vaihdettaessa.
-* Kun Käynnistä-valikon ruutuja tai Toimintokeskuksen pikatoimintoja
-  järjestellään Alt+Vaihto+nuolinäppäimillä, NVDA puhuu raahattujen
-  kohteiden tiedot tai raahatun kohteen uuden sijainnin.
+* NVDA puhuu raahattujen kohteiden tiedot tai raahatun kohteen uuden
+  sijainnin, kun Käynnistä-valikon kiinnitettyjä kohteita (ruutuja Windows
+  10:ssä) tai Toimintokeskuksen pikatoimintoja järjestellään
+  Alt+Vaihto+nuolinäppäimillä.
 * Ilmoitukset, kuten äänenvoimakkuuden/kirkkauden muutokset
   resurssienhallinnassa sekä sovellusten päivitysilmoitukset Microsoft
   Storesta voidaan estää poistamalla käytöstä Lue ilmoitukset -asetus NVDA:n
   objektien lukemisen asetuksista.
+* Mikrofonin mykistyskytkimen (Win+Alt+K) tila ilmoitetaan nyt kaikkialta
+  Windows 11:n Insider-esiversioissa.
 
 ## Laskin
 
@@ -94,9 +100,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Kartat
 
 * NVDA toistaa äänimerkin karttasijainneille.
-* NVDA ilmoittaa katuosoitteet käyttäessäsi nuolinäppäimiä kartalla
-  liikkumiseen oltaessa katunäkymässä ja mikäli "käytä näppäimistöä"
-  -vaihtoehto on otettu käyttöön.
 
 ## Microsoft Solitaire -kokoelma
 

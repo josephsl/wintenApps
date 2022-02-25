@@ -3,7 +3,7 @@
 * 作者：Joseph Lee、Derek Riemer 等
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA 兼容性：2021.2 及更高版本
+* NVDA compatibility: 2021.3 and later
 
 注意：此插件最初称为 Windows 10 应用增强，在 2021 年更名为 Windows 应用增强，以支持 Windows 10 和 Windows
 11 等未来版本。此插件的部分内容仍将引用原始插件名称。
@@ -28,10 +28,14 @@
 
 * 此插件需要 Windows 10 21H1（内部版本 19043）或更高版本，并且与 Windows 11 兼容。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务频道）和 Windows Server 版本。
+* Not all features from Windows Insider Preview builds will be supported.
 * 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
 * 对于未在下方列出的条目，您可以假定功能已是 NVDA 的一部分，不再适用，因为插件不支持旧版本的
   Windows，或者对应用程序进行了更改，使条目不再适用。
 * 某些应用程序支持紧凑叠加模式（例如，计算器中的始终置顶模式），该模式无法与 NVDA 的便携版正常工作。
+* For best experience with apps that embed web technologies and content such
+  as Start menu and its context menu, enable "Automatic focus mode for focus
+  changes" setting from NVDA's browse mode settings panel.
 
 有关每个附加发行版之间所做的更改的列表，请参阅[更新日志的附加发布] [3]文档。
 
@@ -42,10 +46,13 @@
   的日志级别设置为调试时，也会跟踪这些事件，对于 UIA 通知事件，如果通知来自当前激活的应用程序以外的其他位置，则会听到调试音。 NVDA
   中内置的事件（例如名称更改和事件控制器）通过名为 Event Tracker 的插件进行跟踪。
 * 打开、关闭、重新排序（Windows 11）或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
-* 当改变屏幕分辨率或方向时，NVDA将不再读出开始菜单的大小文本。
-* 当使用 Alt + Shift +光标键托移“开始”菜单磁贴或“操作中心”快速操作按钮时，NVDA 将朗读有关所拖动项目及所拖动项目的新位置的信息。
+* When arranging pinned entries (tiles in Windows 10) in Start menu or
+  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
+  information on dragged items or new position of the dragged item.
 * 通过在 NVDA 的“对象提示”设置中关闭“读出通知提示”，可以禁止诸如文件资源管理器中的音量、亮度更改和来自 Microsoft Store
   的应用程序更新之类的通知。
+* In Windows 11 Insider Preview builds, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 
 ## 计算器
 
@@ -64,7 +71,6 @@
 ## 地图
 
 * NVDA为地图上的位置播放位置嘟嘟声。
-* 在使用街道视图时，如果启用“使用键盘”选项，NVDA将在您使用光标键浏览地图时读出街道地址。
 
 ## Microsoft Solitaire Collection（微软纸牌游戏）
 

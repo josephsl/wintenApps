@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer i drugi
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA kompatibilnost: 2021.2 i novija
+* NVDA compatibility: 2021.3 and later
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
@@ -37,6 +37,7 @@ Napomene:
   i kompatibilan je sa sustavom Windows 11.
 * Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
+* Not all features from Windows Insider Preview builds will be supported.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Za unose koji niže dolje nisu navedeni, može se pretpostaviti da su te
   funkcije dio NVDA čitača. Više nisu primjenjive jer dodatak ne podržava
@@ -46,6 +47,9 @@ Napomene:
 * Neke aplikacije podržavaju način kompaktnog preklapanja (na primjer,
   uvijek na vrhu u Kalkulatoru) i ovaj modus neće ispravno raditi s
   prijenosnom verzijom NVDA čitača.
+* For best experience with apps that embed web technologies and content such
+  as Start menu and its context menu, enable "Automatic focus mode for focus
+  changes" setting from NVDA's browse mode settings panel.
 
 Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 [dokument s izmjenama izdanja dodatka][3].
@@ -65,15 +69,15 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 * Prilikom otvaranja, zatvaranja, preraspoređivanja (Windows 11) ili
   prebacivanja između virtualnih radnih površina, NVDA će najaviti
   trenutačno ime radne površine (na primjer, desktop 2).
-* NVDA više neće najaviti veličinu teksta izbornika Start, kad se mijenjaju
-  rezolucije ili položaj ekrana.
-* Kad se pločice izbornika Start ili brze radnje za Action Center
-  raspoređuju s tipkama Alt+šift+strelice, NVDA će najaviti podatke o
-  povučenim stavkama ili o novom položaju povučene stavke.
+* When arranging pinned entries (tiles in Windows 10) in Start menu or
+  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
+  information on dragged items or new position of the dragged item.
 * Najave kao što su promjena glasnoće/svjetline u File Explorereru i
   obavijesti aktualiziranja programa s Microsoft Store stranica, mogu se
   potisnuti isključivanjem opcije „Izvijesti o obavijestima” u NVDA
   postavkama prikaza objekata.
+* In Windows 11 Insider Preview builds, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 
 ## Kalkulator
 
@@ -94,9 +98,6 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 ## Karte
 
 * NVDA svira zvuk za lokacije za lokacije na karti.
-* Prilikom korištenja prikaza ulice te ako je opcija „korištenje tipkovnice”
-  omogućena, NVDA će izgovarati adrese i kućne brojeve prilikom kretanja
-  strelicama po karti.
 
 ## Microsoft Solitaire zbirka
 

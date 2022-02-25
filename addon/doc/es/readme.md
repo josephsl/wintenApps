@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer y otros
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
-* Compatibilidad con NVDA: de 2021.2 en adelante
+* Compatibilidad con NVDA: de 2021.3 en adelante
 
 Nota: originalmente llamado Windows 10 App Essentials, se renombró a Windows
 App Essentials en 2021 para soportar Windows 10 y versiones futuras, como
@@ -39,6 +39,8 @@ Notas:
 * Aunque la instalación es posible, este complemento no soporta Windows
   Enterprise LTSC (canal de servicio a largo plazo) ni las versiones de
   Windows Server.
+* No se soportarán todas las funciones de las compilaciones Windows Insider
+  Preview.
 * Algunas de las características del complemento son o serán parte del
   lector de pantalla NVDA.
 * Para las entradas que no se enumeren a continuación, puedes asumir que las
@@ -49,6 +51,10 @@ Notas:
 * Algunas aplicaciones soportan el modo de superposición compacta (siempre
   visible en la calculadora, por ejemplo), y este modo no funcionará
   adecuadamente con la versión portable de NVDA.
+* Para tener la mejor experiencia posible con aplicaciones que incrustan
+  tecnologías y contenidos web, como el menú Inicio y su menú contextual,
+  activa la opción "Modo Foco automático para cambios del foco" desde el
+  panel de opciones Modo exploración de NVDA.
 
 Para ver una lista de cambios hechos entre cada actualización del
 complemento, consulta el documento [changelogs for add-on releases][3].
@@ -70,15 +76,16 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * Al abrir, cerrar, reordenar (Windows 11) o cambiar entre escritorios
   virtuales, NVDA anunciará el nombre del escritorio virtual activo
   (escritorio 2, por ejemplo).
-* NVDA ya no anunciará el tamaño del texto del Menú Inicio al cambiar la
-  resolución de pantalla o la orientación.
-* Al reordenar los elementos del menú Inicio o acciones rápidas del centro
-  de actividades con alt+shift+flechas, NVDA anunciará información de los
-  elementos arrastrados o su nueva posición.
+* Al reordenar entradas ancladas (losas en Windows 10) del menú Inicio o
+  acciones rápidas del centro de actividades con alt+shift+flechas, NVDA
+  anunciará información de los elementos arrastrados o su nueva posición.
 * Algunos anuncios, como los de cambio de brillo o volumen en el explorador
   de archivos y las notificaciones de actualización de aplicaciones de la
   tienda Microsoft pueden suprimirse desactivando Anunciar notificaciones
   desde las opciones de presentación de objetos de NVDA.
+* En las compilaciones Insider Preview de Windows 11, el estado del
+  interruptor para silenciar el micrófono (Windows+alt+k) se anuncia desde
+  cualquier sitio.
 
 ## Calculadora
 
@@ -102,9 +109,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 ## Mapas
 
 * NVDA reproduce pitidos de localización para lugares en el mapa.
-* Cuando se utiliza la vista lateral de la calle y si la opción "usar
-  teclado" está habilitada, NVDA anunciará las direcciones de las calles
-  según utilices las teclas de flechas para navegar por el mapa.
 
 ## Microsoft Solitaire Collection
 

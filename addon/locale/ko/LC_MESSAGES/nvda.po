@@ -43,17 +43,6 @@ msgstr ""
 "본 추가 기능은 사용중인 {windowsRelease} 버전을 지원하지 않습니다. 추가 기능"
 "을 사용하려면 {minSupportedUpdate} 이상 버전으로 업그레이드하시기 바랍니다."
 
-#. Translators: warning text shown when trying to install the add-on on server computers.
-msgid ""
-"This is a Windows Server system. Although you can install the add-on, not "
-"all features will work as Windows Server does not include modern apps such "
-"as Microsoft Store."
-msgstr ""
-
-#. Translators: title of the warning dialog shown when trying to install the add-on on server systems.
-msgid "Windows App Essentials and Windows Server"
-msgstr "Windows App Essentials/Windows Server"
-
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
 msgid "Cannot move between rows"
@@ -62,14 +51,6 @@ msgstr "Cannot move between rows"
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "일기 예보 정보 없음"
-
-#. Translators: part of the suggestions count message (for example: 2 suggestions).
-msgid "1 suggestion"
-msgstr "1개의 제안 항목"
-
-#. Translators: part of the suggestions count message (for example: 2 suggestions).
-msgid "{} suggestions"
-msgstr "{}개의 제안 항목"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
@@ -81,3 +62,12 @@ msgstr "Windows App Essentials"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Improving support for various apps and controls on Windows 10 and later"
 msgstr "윈도우 10 이상에서의 앱 지원 기능 향상"
+
+#~ msgid "Windows App Essentials and Windows Server"
+#~ msgstr "Windows App Essentials/Windows Server"
+
+#~ msgid "1 suggestion"
+#~ msgstr "1개의 제안 항목"
+
+#~ msgid "{} suggestions"
+#~ msgstr "{}개의 제안 항목"

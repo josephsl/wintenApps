@@ -3,7 +3,7 @@
 * Yazarlar: Joseph Lee, Derek Riemer ve diğerleri
 * [kararlı sürüm][1]ü indir
 * [geliştirme sürümü][2]nü indir
-* NVDA uyumluluğu: 2021.2 ve üstü
+* NVDA compatibility: 2021.3 and later
 
 Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
 adlandırılırken, Windows 10 ve Windows 11 gibi gelecekteki windows
@@ -38,6 +38,7 @@ Notlar:
   compatible with Windows 11.
 * Ne kadar yüklenebilse de, bu eklenti Windows Enterprise LTSC (Uzun Süreli
   Hizmet Kanalı) ve Windows Server sürümlerini desteklemez.
+* Not all features from Windows Insider Preview builds will be supported.
 * Bazı eklenti özellikleri, NVDA ekran okuyucusunun bir parçasıdır veya
   yakında olacaktır.
 * Aşağıda listelenmeyen özellikler için,listelenmeyen özelliklerin artık
@@ -48,6 +49,9 @@ Notlar:
 * Bazı uygulamalar, kompakt bindirme modunu destekler (örneğin, Hesap
   Makinesi her zaman en üsttedir) ve bu mod, NVDA'nın taşınabilir sürümüyle
   düzgün çalışmaz.
+* For best experience with apps that embed web technologies and content such
+  as Start menu and its context menu, enable "Automatic focus mode for focus
+  changes" setting from NVDA's browse mode settings panel.
 
 Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 [eklenti sürümleri değişiklik değişiklik listesi][3] dosyasına bakın.
@@ -68,14 +72,14 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 * NVDA, sanal masaüstlerini açarken, kapatırken, yeniden düzenlerken
   (Windows 11) veya sanal masaüstleri arasında geçiş yaparken etkin sanal
   masaüstü adını duyurur (örneğin, masaüstü 2).
-* NVDA, ekran çözünürlüklerini veya yönünü değiştirirken artık Başlat menüsü
-  boyutu metnini duyurmayacaktır.
-* Artık NVDA, Alt+Shift+ok tuşlarıyla Başlat menüsü kutucuklarını veya İşlem
-  Merkezi hızlı eylemlerini düzenlerken,  sürüklenen öğeler veya sürüklenen
-  öğenin yeni konumu hakkında bilgi duyuracaktır.
+* When arranging pinned entries (tiles in Windows 10) in Start menu or
+  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
+  information on dragged items or new position of the dragged item.
 * Dosya Gezgini'ndeki ses/parlaklık değişiklikleri ve Microsoft Store'dan
   gelen uygulama güncelleme bildirimleri gibi duyurular, NVDA'nın nesne
   sunumu ayarlarından Rapor Bildirimleri kapatılarak engellenebilir.
+* In Windows 11 Insider Preview builds, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 
 ## Hesap makinesi
 
@@ -96,9 +100,6 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 ## Haritalar
 
 * NVDA, harita konumları için konum bip sesi çıkarır.
-* Sokak yan görünümünü kullanırken ve "klavyeyi kullan" seçeneği
-  etkinleştirilirse, haritada gezinmek için ok tuşlarını kullandığınızda
-  NVDA sokak adreslerini duyurur.
 
 ## Microsoft Solitaire Koleksiyonu
 
