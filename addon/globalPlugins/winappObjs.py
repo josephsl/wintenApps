@@ -37,6 +37,11 @@ additionalEvents: dict[int, str] = {
 }
 
 
+# Add additional property events not included in NVDA Core.
+# #69: specifically to support drag drop effect property when Windows 10 Start menu tiles are rearranged.
+additionalPropertyEvents: dict[int, str] = {}
+
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
@@ -49,10 +54,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #40: skip over the rest if appx is in effect.
 		if globalVars.appArgs.secure or config.isAppX:
 			return
-		# Try adding additional events in the constructor.
+		# Try adding additional events and properties in the constructor.
 		# If it fails, try again after NVDA is fully initialized.
 		try:
-			log.debug("winapps: adding additional events")
+			log.debug("winapps: adding additional events and properties")
 			self._addAdditionalUIAEvents()
 		except AttributeError:
 			log.debug("winapps: UIA handler not ready, delaying until NVDA is fully initialized")
@@ -60,11 +65,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Manually add events after root element is located.
 	def _addAdditionalUIAEvents(self, delay: bool = False) -> None:
-		# Add a series of events instead of doing it one at a time.
-		# Some events are only available in a specific build range
+		# Add a series of events and properties instead of doing it one at a time.
+		# Some events and properties are only available in a specific build range
 		# and/or while a specific version of IUIAutomation interface is in use.
 		if delay:
-			log.debug("winapps: adding additional events after a delay")
+			log.debug("winapps: adding additional events and properties after a delay")
 		# Use event handler group facility to add more events.
 		# Internally powered by IUIAutomation6 interface introduced in Windows 10 1809.
 		addonGlobalEventHandlerGroup = UIAHandler.handler.clientObject.CreateEventHandlerGroup()
@@ -80,6 +85,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					UIAHandler.handler
 				)
 				log.debug(f"winapps: added event ID {event}, assigned to {name}")
+		for event, name in additionalPropertyEvents.items():
+			if event not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
+				UIAHandler.UIAPropertyIdsToNVDAEventNames[event] = name
+				log.debug(f"winapps: added property event ID {event}, assigned to {name}")
+		# Global property event handler group set must be updated, too.
+		UIAHandler.globalEventHandlerGroupUIAPropertyIds.add(event)
+		addonGlobalEventHandlerGroup.AddPropertyChangedEventHandler(
+			UIAHandler.TreeScope_Subtree,
+			UIAHandler.handler.baseCacheRequest,
+			UIAHandler.handler,
+			*UIAHandler.handler.clientObject.IntSafeArrayToNativeArray(additionalPropertyEvents)
+		)
 		UIAHandler.handler.addEventHandlerGroup(UIAHandler.handler.rootElement, addonGlobalEventHandlerGroup)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
