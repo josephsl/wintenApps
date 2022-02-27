@@ -40,7 +40,9 @@ additionalEvents: dict[int, str] = {
 
 # Add additional property events not included in NVDA Core.
 # #69: specifically to support drag drop effect property when Windows 10 Start menu tiles are rearranged.
-additionalPropertyEvents: dict[int, str] = {}
+additionalPropertyEvents: dict[int, str] = {
+	UIAHandler.UIA_DragDropEffectPropertyId: "UIA_dragDropEffect"
+}
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
@@ -176,4 +178,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Unlike drag complete event, it is something else that raises this event
 		# but NVDA records the correct focused element, so fake a gain focus event.
 		eventHandler.queueEvent("gainFocus", api.getFocusObject())
+		nextHandler()
+
+	def event_UIA_dragDropEffect(self, obj, nextHandler):
+		self.uiaDebugLogging(obj, "dragDropEffect")
+		# Report drag and drop effect as communicated by UIA.
+		dragDropEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DragDropEffectPropertyId)
+		ui.message(dragDropEffect)
+		log.debug(f"Winapps: drag drop effect: {dragDropEffect}")
 		nextHandler()
