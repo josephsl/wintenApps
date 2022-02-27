@@ -30,7 +30,8 @@ isAddonSupported = (
 )
 
 
-# For convenience.
+# Add additional UIA events not included in NVDA Core.
+# Specifically to support drag and drop operations.
 additionalEvents: dict[int, str] = {
 	UIAHandler.UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
 	UIAHandler.UIA_DropTarget_DroppedEventId: "UIA_dropTargetDropped",
