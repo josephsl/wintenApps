@@ -175,6 +175,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_dropTargetDropped(self, obj, nextHandler):
 		self.uiaDebugLogging(obj, "dropTargetDropped")
+		# Announce drop target effect such as item placement in Start menu and Action center.
+		ui.message(obj._getUIACacheablePropertyValue(UIAHandler.UIA_DropTargetDropTargetEffectPropertyId))
 		# Unlike drag complete event, it is something else that raises this event
 		# but NVDA records the correct focused element, so fake a gain focus event.
 		eventHandler.queueEvent("gainFocus", api.getFocusObject())
