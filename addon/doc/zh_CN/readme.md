@@ -3,10 +3,10 @@
 * 作者：Joseph Lee、Derek Riemer 等
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA compatibility: 2021.3 and later
+* NVDA 兼容性：2021.3 及更高版本
 
 注意：此插件最初称为 Windows 10 应用增强，在 2021 年更名为 Windows 应用增强，以支持 Windows 10 和 Windows
-11 等未来版本。此插件的部分内容仍将引用原始插件名称。
+11 等后续版本。此插件的部分内容仍将引用原始插件名称。
 
 此插件是用于各种现代 Windows 应用的应用模块集合，以及对 Windows 10 及更高版本中某些控件的增强和修复。
 
@@ -20,39 +20,36 @@
 * 现代键盘（包括表情符号面板、听写、语音输入、硬件输入建议、云剪贴板历史记录以及现代输入法编辑器）
 * 记事本（Windows 11）
 * 人脉
-* 设置（系统设置，Windows + I）
+* 设置（Windows + I系统设置）
 * 天气
-* 开始菜单中瓷贴控件等其他模块
+* 开始菜单中的瓷贴控件和其他模块
 
 注意:
 
-* 此插件需要 Windows 10 21H1（内部版本 19043）或更高版本，并且与 Windows 11 兼容。
-* 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务频道）和 Windows Server 版本。
-* Not all features from Windows Insider Preview builds will be supported.
-* 某些插件功能可能将成为NVDA屏幕阅读器的一部分。
-* 对于未在下方列出的条目，您可以假定功能已是 NVDA 的一部分，不再适用，因为插件不支持旧版本的
-  Windows，或者对应用程序进行了更改，使条目不再适用。
-* 某些应用程序支持紧凑叠加模式（例如，计算器中的始终置顶模式），该模式无法与 NVDA 的便携版正常工作。
-* For best experience with apps that embed web technologies and content such
-  as Start menu and its context menu, enable "Automatic focus mode for focus
-  changes" setting from NVDA's browse mode settings panel.
+* 此插件需要 Windows 10 21H1（内部版本 19043）或更高版本，并且兼容 Windows 11。
+* 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
+* 并非支持 Windows Insider Preview 版本中的所有功能。
+* 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
+* 对于未在下方列出的条目，您可以假定功能已包含在 NVDA 核心中，或者不再适用，因为插件不支持旧版本的
+  Windows，或者对相关应用程序进行了更改，使相关条目不再适用。
+* 某些应用程序支持紧凑叠加模式（例如，计算器中的始终置顶模式），该模式无法在 NVDA 的便携版中使用。
+* 为了获得内嵌 Web 试图（例如开始菜单及其上下文菜单）的应用程序的最佳体验，请在 NVDA
+  的浏览模式设置面板启用“输入焦点移动时的自动焦点模式支持”。
 
-有关每个附加发行版之间所做的更改的列表，请参阅[更新日志的附加发布] [3]文档。
+有关每个发行版之间所做的更改的详细信息，请参阅[更新日志的附加发布] [3]文档。
 
 ## 常规增强
 
-* 在大多数情况下，NVDA 可以在执行搜索时读出自动填充建议，现在是 NVDA 2021.3 的一部分。
+* 在大多数情况下，NVDA 可以在执行搜索时读出自动填充建议，现在该功能已是 NVDA 2021.3 的一部分。
 * 除了 NVDA 提供的 UIA 事件处理程序之外，还可以识别以下 UIA 事件：拖动完成、对象拖放、布局无效。将 NVDA
   的日志级别设置为调试时，也会跟踪这些事件，对于 UIA 通知事件，如果通知来自当前激活的应用程序以外的其他位置，则会听到调试音。 NVDA
   中内置的事件（例如名称更改和事件控制器）通过名为 Event Tracker 的插件进行跟踪。
 * 打开、关闭、重新排序（Windows 11）或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
-* When arranging pinned entries (tiles in Windows 10) in Start menu or
-  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
-  information on dragged items or new position of the dragged item.
+* 当使用 Alt+Shift+箭头键在“开始”菜单（Windows 10 中的磁贴）或操作中心快速操作中排列固定条目时，NVDA
+  会读出已拖动项目的信息或已拖动项目的新位置。
 * 通过在 NVDA 的“对象提示”设置中关闭“读出通知提示”，可以禁止诸如文件资源管理器中的音量、亮度更改和来自 Microsoft Store
   的应用程序更新之类的通知。
-* In Windows 11 Insider Preview builds, microphone mute toggle status
-  (Windows+Alt+K) is announced from everywhere.
+* 在 Windows 11 Insider Preview 版本中，可读出 Windows+Alt+K 的麦克风静音切换状态。
 
 ## 计算器
 
