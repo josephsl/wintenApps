@@ -3,7 +3,7 @@
 * Auteurs: Joseph Lee, Derek Riemer et autres utilisateurs
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
-* NVDA compatibility: 2021.3 and later
+* Compatibilité NVDA: 2021.3 et ultérieure
 
 Remarque : à l'origine appelé Windows 10 App Essentials, elle a été renommée
 Windows App Essentials en 2021 pour prendre en charge Windows 10 et les
@@ -13,7 +13,7 @@ d'origine.
 
 Cette extension est une collection d'app modules pour diverses apps de
 Windows 10, ainsi que des améliorations et des correctifs pour certains
-contrôles de windows 10et versions ultérieures.
+contrôles de Windows 10 et versions ultérieures.
 
 Les app modules suivants ou la prise en charge des modules pour certaines
 apps sont inclus (voir chaque section app pour plus de détails sur ce qui
@@ -40,7 +40,8 @@ Notes:
 * Bien que l'installation soit possible, cette extension ne prend pas en
   charge les versions Windows Enterprise LTSC (Long-Term Servicing Channel)
   et Windows Server.
-* Not all features from Windows Insider Preview builds will be supported.
+* Toutes les fonctionnalités des builds Windows Insider Preview ne seront
+  pas prises en charge.
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
 * Pour les entrées non répertoriées ci-dessous, vous pouvez supposer que les
@@ -51,9 +52,11 @@ Notes:
 * Certaines Apps prennent en charge le mode de superposition compact
   (Toujours au-dessus pour la calculatrice par exemple), et ce mode ne
   fonctionne pas bien avec la version portable de NVDA. 
-* For best experience with apps that embed web technologies and content such
-  as Start menu and its context menu, enable "Automatic focus mode for focus
-  changes" setting from NVDA's browse mode settings panel.
+* Pour une meilleure expérience avec les applications qui intègrent des
+  technologies et du contenu Web tels que le menu Démarrer et son menu
+  contextuel, activez le paramètre "Mode formulaire automatique lors des
+  changements de focus" dans le panneau des paramètres du Mode navigation de
+  NVDA.
 
 Pour obtenir la liste des changements effectuées entre chaque version de
 l'extension, reportez-vous au document [changelogs pour les versions de
@@ -77,16 +80,17 @@ l'extension][3].
 * Lors de l'ouverture, de la fermeture, de la réorganisation (Windows 11)
   ou du basculement entre les bureaux virtuels (build 21337 ou ultérieure),
   , NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
-* When arranging pinned entries (tiles in Windows 10) in Start menu or
-  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
-  information on dragged items or new position of the dragged item.
+* Lorsque vous organisez les éléments épinglées (tuiles dans Windows 10) du
+  menu Démarrer ou des actions rapides du Centre de Notifications avec les
+  touches Alt+Maj+touches fléchées, NVDA annoncera des informations sur les
+  éléments déplacés ou la nouvelle position de l'élément déplacé.
 * L'annonces tels que les changements de volume / luminosité dans
   l'Explorateur de fichiers et les notifications de mise à jour de
   l'application de Microsoft Store peuvent être supprimés en désactivant
   Annoncer les notifications dans les Paramètres de NVDA, Présentation des
   Objets.
-* In Windows 11 Insider Preview builds, microphone mute toggle status
-  (Windows+Alt+K) is announced from everywhere.
+* Dans les versions de Windows 11 Insider Preview, l'état de la
+  désactivation du microphone (Windows + Alt + K) est annoncé de partout.
 
 ## Calculatrice
 
