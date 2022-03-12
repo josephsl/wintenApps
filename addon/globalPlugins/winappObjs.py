@@ -59,9 +59,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #52: and this is a supported build.
 		if not isAddonSupported:
 			return
-		# #40: skip over the rest if appx is in effect.
-		if config.isAppX:
-			return
 		# Try adding additional events and properties in the constructor.
 		# If it fails, try again after NVDA is fully initialized.
 		try:
