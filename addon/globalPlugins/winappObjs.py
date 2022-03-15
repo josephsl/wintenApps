@@ -53,6 +53,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #52: and this is a supported build.
 		if not isAddonSupported:
 			return
+		# #20: don't even think about proceeding in secure screens.
+		if globalVars.appArgs.secure:
+			return
 		# Try adding additional events and properties in the constructor.
 		# If it fails, try again after NVDA is fully initialized.
 		try:
