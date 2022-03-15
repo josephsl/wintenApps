@@ -99,7 +99,11 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Therefore, send gestures (Escape, Enter, Delete) and no more.
 		gesture.send()
 
-	@scriptHandler.script(gestures=[f"kb:{i}" for i in range(10)])
+	# Handle both number row and numpad with num lock on.
+	@scriptHandler.script(
+		gestures=[f"kb:{i}" for i in range(10)]
+		+ [f"kb:numLockNumpad{i}" for i in range(10)]
+	)
 	def script_doNotAnnounceCalculatorResults(self, gesture):
 		gesture.send()
 		self._doNotAnnounceCalculatorResults = True
