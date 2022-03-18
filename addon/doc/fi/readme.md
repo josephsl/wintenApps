@@ -56,17 +56,10 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
-* NVDA voi ilmoittaa ehdotusten määrän useimmissa tapauksissa hakua
-  suoritettaessa, mukaan lukien tilanteet, joissa ehdotusten määrä muuttuu
-  haun edistyessä. Tämä sisältyy NVDA 2021.3:een.
-* Seuraavat UIA-tapahtumat tunnistetaan NVDA:n tarjoamien
-  UIA-tapahtumakäsittelijöiden lisäksi: vetäminen suoritettu, vetämisen
-  kohde pudotettu, asettelu mitätöity. Näitä tapahtumia seurataan, kun
-  NVDA:n lokitasoksi on määritetty "virheenkorjaus", ja
-  UIA-ilmoitustapahtuma ilmaistaan virheäänellä, mikäli ilmoitukset tulevat
-  muualta kuin aktiivisesta sovelluksesta. NVDA:han sisäänrakennettuja
-  tapahtumia, kuten nimen muutos ja ohjain tapahtumille seurataan Event
-  Tracker -nimisestä lisäosasta.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag complete, drag drop effect,
+  drop target dropped. With NVDA's log level set to debug, these events will
+  be tracked and logged.
 * NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
   avattaessa, suljettaessa, uudelleenjärjestettäessä (Windows 11) tai
   siirryttäessä niiden välillä.
@@ -84,7 +77,10 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Laskin
 
 * NVDA ei enää sano graafisen laskinnäytön ilmoitusta kahdesti.
-* Historia- ja muistiluettelon kohteet nimetään oikein Windows 10:ssä.
+* In Windows 10, history and memory list items are properly labeled. This is
+  now part of NVDA 2022.1.
+* NVDA will now announce calculator display content when performing
+  scientific mode commands such as trigonometry operations.
 
 ## Cortana
 
@@ -120,8 +116,10 @@ päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
   10:ssä, NVDA ei enää siirrä navigointiobjektia tiettyihin emojeihin.
 * Lisätty tuki Windows 11:n päivitetylle syöttökokemuksen paneelille
   (yhdistetty emojipaneeli ja leikepöydän historia).
-* Windows 11:ssä on jälleen mahdollista käyttää nuolinäppäimiä emojien
-  tarkasteluun, kun emojipaneeli avautuu.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens. This is now part of NVDA 2022.1.
+* In Windows 11 clipboard history, browse mode will be turned off by
+  default, designed to let NVDA announce clipboard history entry menu items.
 
 ## Muistio
 
@@ -140,10 +138,6 @@ Tämä viittaa Windows 11:n Muistion versioon 11 tai sitä uudempiin.
 
 ## Asetukset
 
-* Määrätyt tiedot, kuten Windows Updaten päivitysten asennuksen edistyminen,
-  mukaan lukien Tallennusseurannan/Levynsiivouksen pienoisohjelma sekä
-  Windows Updaten virheet, puhutaan nyt automaattisesti.
-* Edistymispalkkien arvoja tai muita tietoja ei lueta enää kahdesti.
 * Joissakin Windows-asennuksissa näkyvät erikoiset säädinten nimet on
   korjattu.
 * NVDA puhuu valinnaisen laatupäivityksen säätimen nimen (Lataa ja asenna

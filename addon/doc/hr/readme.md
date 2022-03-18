@@ -56,16 +56,10 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 
 ## Opće
 
-* U većini slučajeva NVDA može najaviti broj prijedloga prilikom pretrage,
-  uključujući kad se broj prijedloga mijenja kako pretraživanje
-  napreduje. Ovo je sada dio NVDA 2021.
-* Prepoznaju se sljedeći UIA događaji: drag complete, drop target dropped,
-  layout invalidated. Kad je razina NVDA dnevnika postavljena na otklanjanje
-  grešaka, ti će se događaji pratiti, a za događaj UAIA obavijesti, ton za
-  uklanjanje grešaka će se čuti ako obavijesti dolaze s nekog drugog
-  trenutačno aktivnog programa. Događaji koji su ugrađeni u NVDA kao što su
-  promjena imena i kontroler za događaje prate se iz dodatka nazvanog
-  „Praćenje događaja”.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag complete, drag drop effect,
+  drop target dropped. With NVDA's log level set to debug, these events will
+  be tracked and logged.
 * Prilikom otvaranja, zatvaranja, preraspoređivanja (Windows 11) ili
   prebacivanja između virtualnih radnih površina, NVDA će najaviti
   trenutačno ime radne površine (na primjer, desktop 2).
@@ -82,8 +76,10 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 ## Kalkulator
 
 * NVDA više neće dvaputa najaviti poruku ekrana grafičkog kalkulatora.
-* U sustavu Windows 10, povijest i elementi popisa memorije ispravno su
-  označeni.
+* In Windows 10, history and memory list items are properly labeled. This is
+  now part of NVDA 2022.1.
+* NVDA will now announce calculator display content when performing
+  scientific mode commands such as trigonometry operations.
 
 ## Cortana
 
@@ -119,8 +115,10 @@ Windows 11.
   emojije.
 * Dodana je podrška za aktualiziranu ploču unosa (kombinacija ploče emojija
   i povijesti međuspremnika) u Windows 11.
-* U sustavu Windows 11 ponovo je moguće koristiti tipke sa strelicama za
-  pregled emojija kad se otvori ploča s emojijima.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens. This is now part of NVDA 2022.1.
+* In Windows 11 clipboard history, browse mode will be turned off by
+  default, designed to let NVDA announce clipboard history entry menu items.
 
 ## Notepad
 
@@ -139,10 +137,6 @@ Ovo se odnosi na Windows 11 Notepad verziju 11 ili noviju.
 
 ## Postavke
 
-* O većini informacija, poput trake napredovanja za ažuriranje Windowsa, se
-  izvještava automatski.
-* Vrijednosti trake napredovanja i druge informacije više se ne najavljuju
-  dvaput.
 * Čudne kontrolne oznake viđene u određenim Windows instalacijama su
   ispravljene.
 * NVDA će najaviti naziv opcionalne kontrole kvalitete aktualiziranja ako

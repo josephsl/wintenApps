@@ -61,18 +61,10 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 ## General
 
-* NVDA puede anunciar la cantidad de sugerencias cuando se realiza una
-  búsqueda en la mayoría de casos, incluyendo cuando la cantidad de
-  sugerencias cambia según progresa la búsqueda. Esto ahora forma parte de
-  NVDA 2021.3.
 * Además de los manejadores de eventos UIA proporcionados por NVDA, se
-  reconocen los siguientes eventos UIA: drag complete, drop target dropped,
-  Layout invalidated. Con NVDA configurado para ejecutarse con el registro
-  de depuración habilitado, estos eventos se seguirán, y se oirá un tono de
-  depuración para el evento UIA notification si las notificaciones vienen de
-  un lugar distinto a la aplicación actual. Los eventos incorporados en
-  NVDA, como name change y controller for, se rastrearán desde un
-  complemento llamado Rastreador de eventos.
+  reconocen los siguientes eventos y propiedades UIA: drag complete, drag
+  drop effect, drop target dropped. Con el nivel de registro de NVDA
+  configurado en depuración, estos eventos se rastrearán y se registrarán.
 * Al abrir, cerrar, reordenar (Windows 11) o cambiar entre escritorios
   virtuales, NVDA anunciará el nombre del escritorio virtual activo
   (escritorio 2, por ejemplo).
@@ -92,7 +84,10 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * NVDA ya no anunciará dos veces el mensaje en pantalla de la calculadora
   gráfica.
 * En Windows 10, los elementos de historial y lista de memoria se etiquetan
-  correctamente.
+  correctamente. Esto ahora forma parte de NVDA 2022.1.
+* Ahora, NVDA anunciará el contenido de la pantalla de la calculadora al
+  realizar comandos en modo científico, tales como operaciones
+  trigonométricas.
 
 ## Cortana
 
@@ -131,7 +126,11 @@ Windows 11.
   (una combinación del panel de emojis y el historial del portapapeles) en
   Windows 11.
 * En Windows 11, vuelve a ser posible usar las flechas para revisar los
-  emojis cuando se abre el panel de emojis.
+  emojis cuando se abre el panel de emojis. Esto ahora forma parte de NVDA
+  2022.1.
+* En el historial del portapapeles de Windows 11, se desactivará el modo
+  exploración por defecto, diseñado para permitir que NVDA anuncie los
+  elementos de menú con las entradas del historial del portapapeles.
 
 ## Bloc de notas
 
@@ -151,11 +150,6 @@ Esto hace referencia al Bloc de notas de Windows 11, versión 11 o posterior.
 
 ## Opciones
 
-* Cierta información como el progreso de Windows Update se anuncia
-  automáticamente, incluyendo el widget de sensor de almacenamiento /
-  limpieza de disco y los errores del propio Windows Update.
-* Los valores de la barra de progreso y otra información ya no se anuncian
-  dos veces.
 * Corregidas etiquetas de controles defectuosas advertidas en ciertas
   instalaciones de Windows.
 * NVDA anunciará el nombre del enlace de la actualización de calidad

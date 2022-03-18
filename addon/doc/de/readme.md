@@ -60,17 +60,11 @@ Versionen][3].
 
 ## Allgemein
 
-* In den meisten Fällen kann NVDA die Anzahl der Vorschläge beim Durchführen
-  einer Suche mitteilen, auch wenn sich die Anzahl der Vorschläge im Verlauf
-  der Suche ändert. Dies ist jetzt Teil von NVDA 2021.3.
 * Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignis-Handlern werden
-  die folgenden UIA-Ereignisse erkannt: Ziehen abgeschlossen, Ziel fallen
-  gelassen, Layout ungültig gemacht. Wenn die NVDA-Protokollebene auf Debug
-  eingestellt ist, werden diese Ereignisse verfolgt, und bei
-  UIA-Benachrichtigungsereignissen ertönt ein Debug-Ton, wenn die
-  Benachrichtigungen von einem anderen Ort als der gerade aktiven Anwendung
-  kommen. In NVDA integrierte Ereignisse wie Namensänderung und Controller
-  für Ereignisse werden von der Erweiterung Event-Tracker verfolgt.
+  die folgenden UIA-Ereignisse und -Eigenschaften der Effekte erkannt: Drag
+  abgeschlossen, Drag & Drop, Drop Target. Wenn die Protokollstufe in NVDA
+  auf Debug eingestellt ist, werden diese Ereignisse verfolgt und
+  protokolliert.
 * Beim Öffnen, Schließen, Neuordnen (Windows 11) oder Wechseln zwischen
   virtuellen Desktops gibt NVDA den Namen des aktiven virtuellen Desktops an
   (z. B. Desktop 2).
@@ -89,7 +83,11 @@ Versionen][3].
 
 * NVDA liest die Bildschirmmeldung des Grafikrechners nicht mehr doppelt
   vor.
-* In Windows 10 sind Verlaufs- und Speicherlisten richtig beschriftet.
+* In Windows 10 sind Verlaufs- und Speicherlistenelemente richtig
+  beschriftet. Dies ist jetzt Teil von NVDA 2022.1.
+* NVDA teilt nun den Inhalt der Anzeige des Taschenrechners mit, wenn
+  Befehle im wissenschaftlichen Modus ausgeführt werden,
+  z. B. trigonometrische Operationen.
 
 ## Cortana
 
@@ -131,7 +129,11 @@ unterstützt auch das Panel für aktualisierte Eingabe-Erlebnisse in Windows
   (kombiniertes Emoji-Panel und Zwischenablageverlauf) in Windows 11
   hinzugefügt.
 * In Windows 11 ist es wieder möglich, die Pfeiltasten zu verwenden, um
-  Emojis zu überprüfen, wenn das Emoji-Bedienfeld geöffnet wird.
+  Emojis zu überprüfen, wenn das Emoji-Panel geöffnet wird. Dies ist jetzt
+  Teil von NVDA 2022.1.
+* In der Zwischenablage von Windows 11 ist der Lesemodus standardmäßig
+  ausgeschaltet, damit NVDA Menüeinträge für die Zwischenablage mitteilen
+  kann.
 
 ## Notepad
 
@@ -150,11 +152,6 @@ Dies bezieht sich auf Windows 11 Notepad Version 11 oder neuer.
 
 ## Einstellungen
 
-* Bestimmte Informationen, wie z. B. der Fortschritt von Windows Update,
-  werden automatisch gemeldet, einschließlich des Widgets für die Speicher-
-  und Festplattenbereinigung und der Fehler von Windows Update.
-* Werte in Fortschrittsbalken und andere Informationen werden nicht mehr
-  zweimal angesagt.
 * Ungerade Steuerelementbezeichnungen in bestimmten Windows-Installationen
   wurden korrigiert.
 * NVDA teilt den Namen optionaler Qualitätsupdates mit, falls vorhanden

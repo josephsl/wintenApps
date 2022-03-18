@@ -31,7 +31,7 @@ est inclus) :
 * Personnes
 * Paramètres (paramètres système, Windows+I)
 * Météo
-* Divers modules pour des contrôles tels que les tuiles du Menu Démarrer.
+* Divers modules pour des contrôles tels que les tuiles du Menu Démarrer
 
 Notes:
 
@@ -51,7 +51,7 @@ Notes:
   pour que les entrées ne soient plus applicables.
 * Certaines Apps prennent en charge le mode de superposition compact
   (Toujours au-dessus pour la calculatrice par exemple), et ce mode ne
-  fonctionne pas bien avec la version portable de NVDA. 
+  fonctionne pas bien avec la version portable de NVDA.
 * Pour une meilleure expérience avec les applications qui intègrent des
   technologies et du contenu Web tels que le menu Démarrer et son menu
   contextuel, activez le paramètre "Mode formulaire automatique lors des
@@ -64,19 +64,10 @@ l'extension][3].
 
 ## Générale
 
-* NVDA peut annoncer le nombre de suggestions lors d'une recherche dans la
-  majorité des cas, y compris lorsque ce nombre change au cours de la
-  recherche. Cela fait maintenant partie de NVDA 2021.3.
-* En plus des gestionnaires d'événements UIA déjà fournis par NVDA, les
-  événements UIA suivants sont reconnus : drag complete, drop target
-  dropped, layout invalidated. drag complete, drop target dropped, layout
-  invalidated. Quand le niveau de journalisation de NVDA est défini sur
-  débogage, ces événements seront suivis, et pour l'événement de
-  notification UIA, une tonalité de débogage sera entendue si les
-  notifications proviennent d'un endroit autre que l'application
-  actuellement active. Les événements intégrés à NVDA tels que name change
-  et le contrôleur d'événements sont suivis à partir d'une extension  appelé
-  Event Tracker.
+* En plus des gestionnaires d'événements UIA fournis par NVDA, les
+  événements et propriétés UIA suivants sont reconnus : drag complete, drag
+  drop effect, drop target dropped. Avec le niveau de journalisation de NVDA
+  défini sur débogage, ces événements seront suivis et enregistrés.
 * Lors de l'ouverture, de la fermeture, de la réorganisation (Windows 11)
   ou du basculement entre les bureaux virtuels (build 21337 ou ultérieure),
   , NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
@@ -97,7 +88,10 @@ l'extension][3].
 * NVDA n'annoncera plus deux fois le message de l'écran de la calculatrice
   graphique.
 * Dans Windows 10, les éléments de l'historique et de la liste de mémoire
-  sont correctement étiquetés.
+  sont correctement étiquetés. Cela fait maintenant partie de NVDA 2022.1.
+* NVDA annoncera désormais le contenu de l'affichage de la calculatrice lors
+  de l'exécution de commandes en mode scientifique telles que les opérations
+  de trigonométrie.
 
 ## Cortana
 
@@ -139,7 +133,11 @@ charge le panneau d'expérience de saisie mis à jour dans Windows 11.
 * Ajout de la prise en charge du panneau d'expérience de saisie mis à jour
   (panneau emoji combiné et historique du presse-papiers) dans Windows 11.
 * Dans Windows 11, il est à nouveau possible d'utiliser les touches fléchées
-  pour parcourir les emojis lorsque le panneau emoji s'ouvre.
+  pour parcourir les emojis lorsque le panneau emoji s'ouvre. Cela fait
+  maintenant partie de NVDA 2022.1.
+* Dans l'historique du presse-papiers de Windows 11, le mode navigation sera
+  désactivé par défaut, conçu pour permettre à NVDA d'annoncer les éléments
+  du menu d'entrée de l'historique du presse-papiers.
 
 ## Bloc-notes
 
@@ -159,11 +157,6 @@ Ceci se rapporte à la version 11 ou ultérieure du Bloc-notes de Windows 11.
 
 ## Paramètres
 
-* Certaines informations telles que l'avancement de la Mise à jour de
-  Windows sont maintenant signalées automatiquement, y compris le widget
-  Détection de stockage / nettoyage de disque.
-* Les valeurs de la barre de progression et d'autres informations ne sont
-  plus annoncés deux fois.
 * Les étiquettes de contrôle étranges vues dans certaines installations
   Windows ont été corrigées.
 * NVDA annoncera le nom du contrôle de mise à jour facultative s'il est

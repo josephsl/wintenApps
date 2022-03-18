@@ -43,10 +43,10 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 일반
 
-* 특정 검색창에서 제안 항목수가(특히 검색중 제안 항목이 변경될 경우) 출력되도록 함(본 기능은 NVDA 2021.3에 추가됨).
-* NVDA가 지원하는 UIA  이벤트 외의 다음 이벤트 추적 가능: drag complete, drop target dropped,
-  layout invalidated. NVDA가 디버그 로깅 상태로 재시작된 경우 위 이벤트가 추적되며 notification 이벤트는
-  추가 디버그 정보가 출력되도록 함.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag complete, drag drop effect,
+  drop target dropped. With NVDA's log level set to debug, these events will
+  be tracked and logged.
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
@@ -62,7 +62,10 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 ## 계산기
 
 * NVDA will no longer announce graphing calculator screen message twice.
-* In Windows 10, history and memory list items are properly labeled.
+* In Windows 10, history and memory list items are properly labeled. This is
+  now part of NVDA 2022.1.
+* NVDA will now announce calculator display content when performing
+  scientific mode commands such as trigonometry operations.
 
 ## Cortana
 
@@ -98,7 +101,9 @@ supports updated input experience panel in Windows 11.
 * Added support for updated input experience panel (combined emoji panel and
   clipboard history) in Windows 11.
 * In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens.
+  when emoji panel opens. This is now part of NVDA 2022.1.
+* In Windows 11 clipboard history, browse mode will be turned off by
+  default, designed to let NVDA announce clipboard history entry menu items.
 
 ## 메모장
 
@@ -117,10 +122,6 @@ This refers to Windows 11 Notepad version 11 or later.
 
 ## 설정 앱
 
-* Certain information such as Windows Update progress is reported
-  automatically, including Storage sense/disk cleanup widget and errors from
-  Windows Update.
-* Progress bar values and other information are no longer announced twice.
 * Odd control labels seen in certain Windows installations has been
   corrected.
 * NVDA will announce the name of the optional quality update control if

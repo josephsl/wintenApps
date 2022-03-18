@@ -58,17 +58,10 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 ## Geral
 
-* O NVDA pode anunciar a contagem de sugestões ao realizar uma pesquisa na
-  maioria dos casos, incluindo quando a contagem de sugestões muda à medida
-  que a pesquisa avança. Isso agora faz parte do NVDA 2021.3.
-* Além dos manipuladores de eventos UIA fornecidos pelo NVDA, os seguintes
-  eventos UIA são reconhecidos: drag complete, drop target dropped, layout
-  invalidated. Com o nível de log do NVDA definido para depuração, esses
-  eventos serão rastreados e, para eventos de notificação UIA, um tom de
-  depuração será ouvido se as notificações vierem de outro lugar que não o
-  aplicativo atualmente ativo. Os eventos integrados ao NVDA, como mudança
-  de nome e controlador de eventos, são rastreados a partir de um
-  complemento chamado Event Tracker.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag complete, drag drop effect,
+  drop target dropped. With NVDA's log level set to debug, these events will
+  be tracked and logged.
 * Ao abrir, fechar, reordenar (Windows 11) ou alternar entre áreas de
   trabalho virtuais, o NVDA anunciará o nome do desktop virtual ativo (área
   de trabalho 2, por exemplo).
@@ -86,8 +79,10 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 * O NVDA não anunciará mais a mensagem de tela calculadora gráfica duas
   vezes.
-* No Windows 10, os itens de lista do histórico e memória são devidamente
-  rotulados.
+* In Windows 10, history and memory list items are properly labeled. This is
+  now part of NVDA 2022.1.
+* NVDA will now announce calculator display content when performing
+  scientific mode commands such as trigonometry operations.
 
 ## Cortana
 
@@ -126,8 +121,10 @@ atualizado no Windows 11.
 * Adicionado suporte para painel de experiência de entrada atualizado
   (painel de emoji combinado e histórico da área de transferência) no
   Windows 11.
-* No Windows 11, novamente é possível usar as teclas de seta para explorar
-  emojis quando o painel de emojis está aberto.
+* In Windows 11, it is again possible to use the arrow keys to review emojis
+  when emoji panel opens. This is now part of NVDA 2022.1.
+* In Windows 11 clipboard history, browse mode will be turned off by
+  default, designed to let NVDA announce clipboard history entry menu items.
 
 ## Bloco de Notas
 
@@ -147,11 +144,6 @@ Isso se refere à versão 11 ou posterior do Bloco de Notas do Windows 11.
 
 ## Configurações
 
-* Certas informações, como o progresso do Windows Update, são relatadas
-  automaticamente, incluindo o widget Sensor de armazenamento/limpeza de
-  disco e os erros do Windows Update.
-* Os valores da barra de progresso e outras informações já não são
-  anunciados duas vezes.
 * Foram corrigidos Rótulos de controle estranhos vistos em certas
   instalações do Windows.
 * O NVDA anunciará o nome do controle de atualização de qualidade opcional,

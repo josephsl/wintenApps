@@ -57,16 +57,10 @@ for add-on releases][3] .
 
 ## Chung
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  is now part of NVDA 2021.3.
 * In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag complete, drop target dropped, layout
-  invalidated. With NVDA's log level set to debug, these events will be
-  tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active
-  app. Events built into NVDA such as name change and controller for events
-  are tracked from an add-on called Event Tracker.
+  events and properties are recognized: drag complete, drag drop effect,
+  drop target dropped. With NVDA's log level set to debug, these events will
+  be tracked and logged.
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
@@ -83,7 +77,10 @@ for add-on releases][3] .
 ## Calculator
 
 * NVDA sẽ không còn đọc hai lần thông điệp trên màn hình tính toán đồ thị.
-* In Windows 10, history and memory list items are properly labeled.
+* In Windows 10, history and memory list items are properly labeled. This is
+  now part of NVDA 2022.1.
+* NVDA will now announce calculator display content when performing
+  scientific mode commands such as trigonometry operations.
 
 ## Cortana
 
@@ -119,7 +116,9 @@ supports updated input experience panel in Windows 11.
 * Added support for updated input experience panel (combined emoji panel and
   clipboard history) in Windows 11.
 * In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens.
+  when emoji panel opens. This is now part of NVDA 2022.1.
+* In Windows 11 clipboard history, browse mode will be turned off by
+  default, designed to let NVDA announce clipboard history entry menu items.
 
 ## Notepad
 
@@ -138,10 +137,6 @@ This refers to Windows 11 Notepad version 11 or later.
 
 ## Settings
 
-* Vài thông tin như thanh trạng thái của Windows Update đã được thông báo tự
-  động, bao gồm Storage sense/disk cleanup và các lỗi từ Windows Update.
-* Giá trị của thanh tiến trình và các thông tin khác không còn bị đọc hai
-  lần.
 * Odd control labels seen in certain Windows installations has been
   corrected.
 * NVDA will announce the name of the optional quality update control if

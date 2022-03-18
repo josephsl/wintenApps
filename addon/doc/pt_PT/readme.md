@@ -56,16 +56,10 @@ consulte o documento [changelogs for releases, release][3].
 
 ## Geral
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  is now part of NVDA 2021.3.
 * In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag complete, drop target dropped, layout
-  invalidated. With NVDA's log level set to debug, these events will be
-  tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active
-  app. Events built into NVDA such as name change and controller for events
-  are tracked from an add-on called Event Tracker.
+  events and properties are recognized: drag complete, drag drop effect,
+  drop target dropped. With NVDA's log level set to debug, these events will
+  be tracked and logged.
 * Ao abrir, fechar, reordenar (Windows 11), ou alternar entre desktops
   virtuais, o NVDA anunciará o nome do desktop virtual activo (desktop 2,
   por exemplo).
@@ -82,7 +76,10 @@ consulte o documento [changelogs for releases, release][3].
 ## Calculadora
 
 * O NVDA já não lerá duas vezes a mensagem do ecrã da calculadora gráfica.
-* In Windows 10, history and memory list items are properly labeled.
+* In Windows 10, history and memory list items are properly labeled. This is
+  now part of NVDA 2022.1.
+* NVDA will now announce calculator display content when performing
+  scientific mode commands such as trigonometry operations.
 
 ## Cortana
 
@@ -119,7 +116,9 @@ supports updated input experience panel in Windows 11.
   (painel combinado de emoji e histórico da área de transferência) no
   Windows 11.
 * In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens.
+  when emoji panel opens. This is now part of NVDA 2022.1.
+* In Windows 11 clipboard history, browse mode will be turned off by
+  default, designed to let NVDA announce clipboard history entry menu items.
 
 ## Notepad
 
@@ -138,11 +137,6 @@ This refers to Windows 11 Notepad version 11 or later.
 
 ## Configurações
 
-* Certas informações, como o progresso da actualização do Windows, são
-  relatadas automaticamente, incluindo sentido / disco de armazenamento e os
-  erros da actualização do Windows.
-* Os valores da barra de progresso e outras informações já não são
-  anunciados duas vezes.
 * As etiquetas de controlo estranhas observadas em certas instalações do
   Windows foram corrigidas.
 * NVDA will announce the name of the optional quality update control if

@@ -57,16 +57,10 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 
 ## Ogólne
 
-* NVDA can announce suggestion count when performing a search in majority of
-  cases, including when suggestion count changes as search progresses. This
-  is now part of NVDA 2021.3.
 * In addition to UIA event handlers provided by NVDA, the following UIA
-  events are recognized: drag complete, drop target dropped, layout
-  invalidated. With NVDA's log level set to debug, these events will be
-  tracked, and for UIA notification event, a debug tone will be heard if
-  notifications come from somewhere other than the currently active
-  app. Events built into NVDA such as name change and controller for events
-  are tracked from an add-on called Event Tracker.
+  events and properties are recognized: drag complete, drag drop effect,
+  drop target dropped. With NVDA's log level set to debug, these events will
+  be tracked and logged.
 * Podczas otwierania, zamykania, zmiany kolejności (Windows 11) lub
   przełączania się między pulpitami wirtualnymi NVDA ogłosi nazwę aktywnego
   pulpitu wirtualnego (na przykład pulpit 2).
@@ -84,7 +78,10 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 
 * NVDA nie będzie już dwukrotnie ogłaszać komunikatu na ekranie kalkulatora
   graficznego.
-* In Windows 10, history and memory list items are properly labeled.
+* In Windows 10, history and memory list items are properly labeled. This is
+  now part of NVDA 2022.1.
+* NVDA will now announce calculator display content when performing
+  scientific mode commands such as trigonometry operations.
 
 ## Cortana
 
@@ -122,7 +119,9 @@ wejściowego w systemie Windows 11.
 * Dodano obsługę zaktualizowanego panelu doświadczenia wprowadzania
   (połączony panel emoji i historia schowka) w systemie Windows 11.
 * In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens.
+  when emoji panel opens. This is now part of NVDA 2022.1.
+* In Windows 11 clipboard history, browse mode will be turned off by
+  default, designed to let NVDA announce clipboard history entry menu items.
 
 ## Notepad
 
@@ -141,11 +140,6 @@ This refers to Windows 11 Notepad version 11 or later.
 
 ## Ustawienia
 
-* Większość informacji, takich jak pasek stanu w Windows update, będzie
-  wypowiadany automatycznie, włączając w to widget czujnika pamięci i błędy
-  z Windows update.
-* Wartości paska postępu i inne informacje, nie są wypowiadane
-  automatycznie.
 * Niezrozumiałe nazwy kontrolek obecne w niektórych oknach instalacji
   Windows 10 zostały poprawione.
 * NVDA will announce the name of the optional quality update control if

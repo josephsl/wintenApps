@@ -58,17 +58,10 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 
 ## Genel
 
-* NVDA, arama ilerledikçe öneri sayısının değiştiği durumlar da dahil olmak
-  üzere çoğu durumda bir arama yaparken öneri sayısını bildirebilir. Bu
-  artık NVDA 2021.3'ün bir parçasıdır.
-* NVDA tarafından sağlanan UIA olay işleyicilerine ek olarak, şu UIA
-  olayları tanınır: sürükleme tamamlandı, bırakma hedefi bırakıldı, düzen
-  geçersiz kılındı. NVDA'nın günlük seviyesi hata ayıklamaya ayarlandığında,
-  bu olaylar izlenecek ve UIA bildirim olayı için, bildirimler o anda etkin
-  olan uygulama dışında bir yerden gelirse bir hata ayıklama tonu
-  duyulacaktır. Ad değişikliği ve olaylar için denetleyici gibi NVDA'da
-  yerleşik olarak bulunan olaylar, Event Tracker adlı bir eklentiden
-  izlenir.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag complete, drag drop effect,
+  drop target dropped. With NVDA's log level set to debug, these events will
+  be tracked and logged.
 * NVDA, sanal masaüstlerini açarken, kapatırken, yeniden düzenlerken
   (Windows 11) veya sanal masaüstleri arasında geçiş yaparken etkin sanal
   masaüstü adını duyurur (örneğin, masaüstü 2).
@@ -84,7 +77,10 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 ## Hesap makinesi
 
 * NVDA artık grafik hesap makinesi ekran mesajını iki kez bildirmeyecek.
-* In Windows 10, history and memory list items are properly labeled.
+* In Windows 10, history and memory list items are properly labeled. This is
+  now part of NVDA 2022.1.
+* NVDA will now announce calculator display content when performing
+  scientific mode commands such as trigonometry operations.
 
 ## Cortana
 
@@ -121,7 +117,9 @@ NVDA, Windows 11'de güncellenmiş giriş deneyimi panelini destekler.
 * Windows 11'de güncellenmiş giriş deneyimi paneli (birleşik emoji paneli ve
   pano geçmişi) için destek eklendi.
 * In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens.
+  when emoji panel opens. This is now part of NVDA 2022.1.
+* In Windows 11 clipboard history, browse mode will be turned off by
+  default, designed to let NVDA announce clipboard history entry menu items.
 
 ## Notepad
 
@@ -140,10 +138,6 @@ This refers to Windows 11 Notepad version 11 or later.
 
 ## Ayarlar
 
-* Depolama algılama/disk temizleme widget'ı ve Windows Update'ten gelen
-  hatalar dahil olmak üzere Windows Update ilerleme durumu gibi belirli
-  bilgiler otomatik olarak bildirilir.
-* İlerleme çubuğu değerleri ve diğer bilgiler artık iki kez duyurulmaz.
 * Bazı Windows kurulumlarında görülen garip kontrol etiketleri düzeltildi.
 * NVDA, varsa isteğe bağlı kalite güncelleme kontrolünün adını duyurur
   (Windows 10'da şimdi indir ve kur bağlantısı, Windows 11'de indir
