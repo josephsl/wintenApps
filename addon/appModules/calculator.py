@@ -14,28 +14,6 @@ from NVDAObjects.UIA import UIA
 # Mypy should be reminded that this app module is powered by built-in Calculator app module.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
-	# Additional Calculator result shortcuts (source: www.makeuseof.com)
-	# Initially added to let NVDA announce display content when pressed.
-	# Turns out a simpler approach involving UIA notification event handler and a "do not announce results"
-	# flag was more effective in preventing announcements when number row keys are pressed.
-	# Therefore, this list will be removed when "do not announce results" flag approach becomes operational.
-	calculatorShortcuts = [
-		# Applicable in standard and scientific calculator modes
-		"kb:backspace", "kb:=", "kb:control+r", "kb:F9", "kb:r", "kb:shift+2", "kb:shift+5",
-		# Basic scientific calculator mode (2/10 to the power of, absolute value, factorial, round, pi)
-		"kb:g", "kb:control+g", "kb:shift+\\", "kb:[", "kb:]", "kb:shift+1", "kb:p",
-		# Trigonometric functions 1 (sine/cosine/tangent)
-		"kb:s", "kb:shift+s", "kb:o", "kb:shift+o", "kb:t", "kb:shift+t",
-		# Trigonometric functions 2 (secant/cosecant/cotangent)
-		"kb:u", "kb:shift+u", "kb:i", "kb:shift+i", "kb:j", "kb:shift+j",
-		# Hyperbolic functions 1 (hyperbolic sine/cosine/tangent)
-		"kb:control+s", "kb:control+shift+s", "kb:control+o", "kb:control+shift+o", "kb:control+t", "kb:control+shift+t",  # NOQA: E501
-		# Hyperbolic functions 2 (hyperbolic secant/cosecant/cotangent)
-		"kb:control+u", "kb:control+shift+u", "kb:control+i", "kb:control+shift+i", "kb:control+j", "kb:control+shift+j",  # NOQA: E501
-		# Advanced scientific calculator mode Logarithms, exponents, scientific notation, roots)
-		"kb:l", "kb:n", "kb:control+n", "kb:q", "kb:v", "kb:x", "kb:shift+3"
-	]
-
 	def event_NVDAObject_init(self, obj):
 		if not isinstance(obj, UIA):
 			return
