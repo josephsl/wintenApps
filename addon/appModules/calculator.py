@@ -36,13 +36,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		"kb:l", "kb:n", "kb:control+n", "kb:q", "kb:v", "kb:x", "kb:shift+3"
 	]
 
-	def __init__(self, *args, **kwargs):
-		super().__init__(*args, **kwargs)
-		# Tell NVDA to handle more result commands.
-		# This will be gone when "do not announce results" aproach becomes operational.
-		for shortcut in self.calculatorShortcuts:
-			self.bindGesture(shortcut, "calculatorResult")
-
 	def event_NVDAObject_init(self, obj):
 		if not isinstance(obj, UIA):
 			return
