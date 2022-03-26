@@ -163,8 +163,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ui.message(displayString)
 				return
 		# Windows Terminal 1.12.10733 uses notification event for text output, resulting in repetitions.
-		# Resolved in NVDA 2022.1.
-		if obj.appModule.appName == "windowsterminal":
+		# Resolved in NVDA 2022.1, so check for 2021.3.x with a nonexistent attribute in add-on handler
+		# as UIA WinConsole object in NVDA 2022.1 will veto this event anyway.
+		if obj.appModule.appName == "windowsterminal" and not hasattr(addonHandler, "isCLIParamKnown"):
 			return
 		nextHandler()
 
