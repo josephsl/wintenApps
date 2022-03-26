@@ -162,6 +162,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if api.getFocusObject().appModule != obj.appModule:
 				ui.message(displayString)
 				return
+		# Windows Terminal 1.12.10733 uses notification event for text output, resulting in repetitions.
+		# Resolved in NVDA 2022.1.
+		if obj.appModule.appName == "windowsterminal":
+			return
 		nextHandler()
 
 	# Events defined in this add-on.
