@@ -73,7 +73,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	_nameChangeCache: str = ""
 
 	def event_liveRegionChange(self, obj, nextHandler):
-		if isinstance(obj, UIA):
+		# Only enter the below route if this is Windows 10.
+		if isinstance(obj, UIA) and winVersion.getWinVer() < winVersion.WIN11:
 			# Except for specific cases, announce all live regions.
 			# Announce individual update progress in build 16215 and later preferably only once per update stage.
 			if "ApplicableUpdate" in obj.UIAAutomationId:
