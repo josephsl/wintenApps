@@ -9,6 +9,7 @@
 # Extends NVDA Core's System Settings app module.
 from nvdaBuiltin.appModules.systemsettings import AppModule
 import controlTypes
+import winVersion
 from NVDAObjects.UIA import UIA
 
 
@@ -18,6 +19,9 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_NVDAObject_init(self, obj):
 		if not isinstance(obj, UIA):
 			return
+		# Perform different things based on Windows releases series.
+		# Windows 10 including Server 2022
+		if winVersion.getWinVer() < winVersion.WIN11:
 			# Workarounds for Windows Update links found in Windows 10.
 			if obj.role == controlTypes.Role.LINK:
 				nameList = [obj.name]
@@ -44,10 +48,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 						nameList.insert(0, obj.previous.name)
 						nameList.insert(0, obj.previous.previous.name)
 				obj.name = ", ".join(nameList)
-			# Announce optional updates in Windows 11.
-			# Same as above except it uses a different Automation Id.
-			elif obj.UIAAutomationId == "SystemSettings_MusUpdate_SeekerUpdateUX_Button":
-				obj.name = ", ".join([obj.previous.previous.name, obj.name])
 			# In some cases, Active Directory style name is the name of the window,
 			# so tell NVDA to use something more meaningful.
 			elif obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
@@ -57,6 +57,12 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			# Resolved in Windows 11.
 			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name
+		# Windows 11
+		else:
+			# Announce optional updates in Windows 11.
+			# Same as Windows 10 except it uses a different Automation Id.
+			if obj.UIAAutomationId == "SystemSettings_MusUpdate_SeekerUpdateUX_Button":
+				obj.name = ", ".join([obj.previous.previous.name, obj.name])
 			# Windows 11's breadcrumb bar item uses a custom localized control type text.
 			# Although it is recognized as a heading, override role text to communicate what it actually is.
 			# This allows item label to be kept intact.
