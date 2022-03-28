@@ -16,7 +16,8 @@ from NVDAObjects.UIA import UIA
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_NVDAObject_init(self, obj):
-		if isinstance(obj, UIA):
+		if not isinstance(obj, UIA):
+			return
 			# Workarounds for Windows Update links found in Windows 10.
 			if obj.role == controlTypes.Role.LINK:
 				nameList = [obj.name]
