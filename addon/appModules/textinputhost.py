@@ -55,24 +55,26 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# But not in Windows 11 because it also fires gain focus event.
 		if isinstance(obj, ImeCandidateItem):
 			return nextHandler() if winVersion.getWinVer() < winVersion.WIN11 else None
-		# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object
-		# (for presentational purposes) and move on.
-		if obj.parent.UIAAutomationId == "TEMPLATE_PART_Groups_ListView":
-			api.setNavigatorObject(obj)
-			if obj.positionInfo["indexInGroup"] != 1:
-				# Symbols group flag must be set if and only if emoji panel is active,
-				# as UIA item selected event is fired just before emoji panel opens
-				# when opening the panel after closing it for a while.
-				self._symbolsGroupSelected = True
-			return
-		if (
-			# When changing categories (emoji, kaomoji, symbols) in Windows 10 1903 or later,
-			# category items are selected when in fact they have no text labels.
-			obj.parent.UIAAutomationId == "TEMPLATE_PART_Sets_ListView"
-			# Specifically to suppress skin tone modifiers from being announced after an emoji group was selected.
-			or self._symbolsGroupSelected
-		):
-			return
+		# The following is applicable on Windows 10 and Server 2022.
+		if winVersion.getWinVer() < winVersion.WIN11:
+			# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object
+			# (for presentational purposes) and move on.
+			if obj.parent.UIAAutomationId == "TEMPLATE_PART_Groups_ListView":
+				api.setNavigatorObject(obj)
+				if obj.positionInfo["indexInGroup"] != 1:
+					# Symbols group flag must be set if and only if emoji panel is active,
+					# as UIA item selected event is fired just before emoji panel opens
+					# when opening the panel after closing it for a while.
+					self._symbolsGroupSelected = True
+				return
+			if (
+				# When changing categories (emoji, kaomoji, symbols) in Windows 10 1903 or later,
+				# category items are selected when in fact they have no text labels.
+				obj.parent.UIAAutomationId == "TEMPLATE_PART_Sets_ListView"
+				# Specifically to suppress skin tone modifiers from being announced after an emoji group was selected.
+				or self._symbolsGroupSelected
+			):
+				return
 		# NVDA Core takes care of the rest.
 		super().event_UIA_elementSelected(obj, nextHandler)
 
