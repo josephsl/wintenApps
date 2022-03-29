@@ -8,7 +8,8 @@ from __future__ import annotations
 from typing import Optional, Any
 import globalPluginHandler
 import ui
-from NVDAObjects.UIA import UIA, Dialog
+import controlTypes
+from NVDAObjects.UIA import UIA, Dialog, SuggestionListItem
 import api
 import config
 import queueHandler
@@ -110,6 +111,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# This is still the case with some dialogs such as restart to install updates dialog in Windows 11.
 		if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
+			return
+		# Start menu search result details are not announced due to UI redesign in 2019.
+		# This is applicable across Windows 10 and 11, thus use app module name (searchui).
+		if obj.appModule.appModuleName == "searchui":
+			if obj.role == controlTypes.Role.LISTITEM and isinstance(obj.parent.parent, SuggestionListItem):
+				clsList.insert(0, SuggestionListItem)
 
 	# Record UIA property info about an object if told to do so.
 	# An add-on named Event Tracker (deriving from this add-on) will log event information for most events.
