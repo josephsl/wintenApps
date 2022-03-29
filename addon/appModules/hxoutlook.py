@@ -5,7 +5,8 @@
 # Extended in 2017 and 2019 by Joseph Lee
 
 # Borrows heavily from built-in Mail and Calendar app module.
-from nvdaBuiltin.appModules.hxoutlook import AppModule
+# #70: NVDA Core pull requests are made using the core app module, not alias modules.
+from nvdaBuiltin.appModules.hxmail import AppModule
 from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import RowWithFakeNavigation
 import ui
