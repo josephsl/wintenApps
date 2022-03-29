@@ -12,7 +12,7 @@ from NVDAObjects.UIA import UIA, SuggestionListItem
 
 class AppModule(AppModule):
 
-	def chooseNVDAObjectOverlayClasses(self,obj,clsList):
+	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
 			# Start menu search result details are not announced due to UI redesign in 2019.
 			# This is applicable across Windows 10 and 11, thus fix it from the base app module.
