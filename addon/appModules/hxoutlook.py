@@ -6,7 +6,6 @@
 
 # Borrows heavily from built-in Mail and Calendar app module.
 from nvdaBuiltin.appModules.hxoutlook import AppModule
-import api
 from NVDAObjects.UIA import UIA
 from NVDAObjects.behaviors import RowWithFakeNavigation
 import ui
