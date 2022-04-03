@@ -10,6 +10,7 @@
 from nvdaBuiltin.appModules.systemsettings import AppModule
 import controlTypes
 import winVersion
+import speech
 from NVDAObjects.UIA import UIA
 
 
@@ -81,12 +82,13 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				# Do not announce status text itself.
 				if obj.UIAAutomationId.endswith("_ContextDescriptionTextBlock"):
 					return
-				if (
-					# Update title repeats while the update is downloaded and installed.
-					obj.UIAAutomationId.endswith("_DescriptionTextBlock")
-					and obj.name and obj.name == self._nameChangeCache
-				):
-					return
+				# Update title repeats while the update is downloaded and installed.
+				if obj.UIAAutomationId.endswith("_DescriptionTextBlock"):
+					# #71: NVDA is told to announce live regions to the end by default,
+					# which results in screen content and speech getting out of sync.
+					speech.cancelSpeech()
+					if obj.name and obj.name == self._nameChangeCache:
+						return
 				self._nameChangeCache = obj.name
 		nextHandler()
 
