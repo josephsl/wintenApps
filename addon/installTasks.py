@@ -56,6 +56,26 @@ def onInstall():
 		"This add-on requires {minSupportedUpdate} or later."
 	).format(windowsRelease=windowsReleaseSeries, minSupportedUpdate=minimumSupportedReleaseName)
 	addonInstallPossible = currentWinVer >= minimumSupportedRelease
+	# Windows 10 and Server 2022
+	# Although Server 2022 has a higher build number (20348), it is still Windows 10.
+	# But since it is labeled 21H2, add-on support duration is tied to the client (build 19044).
+	# Only display the below message if the prerelease flag is on,
+	# to be switched to the new message (or not) when Version 22H2 is announced.
+	newW10CompatMessage = False
+	if currentWinVer < winVersion.WIN11 and newW10CompatMessage:
+		supportedBuilds = {
+			19043: "21H1",
+			19044: "21H2",
+			20348: "Windows Server 2022"
+		}
+		addonInstallPossible = currentWinVer.build in supportedBuilds
+		unsupportedWindowsReleaseText = _(
+			# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows 10 release.
+			# Unlike Windows 11, Windows 10 releases from 21H2 are checked using a list of public builds.
+			# For example, if 21H1 and 21H2 are supported, the text will list supported releases at the end.
+			"You are using an unsupported {windowsRelease} release. "
+			"Supported releases: {windowsReleasesList}."
+		).format(windowsRelease=windowsReleaseSeries, windowsReleasesList=", ".join(supportedBuilds.values()))
 	if not addonInstallPossible:
 		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
 		raise RuntimeError(
