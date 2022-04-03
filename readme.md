@@ -92,6 +92,7 @@ This refers to Windows 11 Notepad version 11 or later.
 * Odd control labels seen in certain Windows installations has been corrected.
 * NVDA will announce the name of the optional quality update control if present (download and install now link in Windows 10, download button in Windows 11).
 * In Windows 11, breadcrumb bar items are properly recognized.
+* In Windows 10, NVDA will interupt speech and report updates to Windows Update status as download and install progresses.
 
 ## Weather
 
