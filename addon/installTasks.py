@@ -32,7 +32,7 @@ def onInstall():
 	# between feature updates/milestones and builds across clients and servers such as 1809/17763 (RS5).
 	# But 21H2 changes this: Windows 10 (19044), Windows Server 2022 (20348), and Windows 11 (22000)
 	# As these releases come from vibranium (vb), iron (fe), and cobalt (co) branches, respectively.
-	# Depending on the nature of Windows 10 22H2 and the build number of Windows 11 22H2,
+	# Depending on the nature of Windows 10 22H2 (so far Windows 11 22H2 build number is higher than 21H2),
 	# a different strategy may need to be employed in 2022 to test feature update builds.
 	# For now assume minimum supported version is the one listed below unless this is Windows 11.
 	windowsReleaseSeries = "Windows 10"
@@ -46,20 +46,18 @@ def onInstall():
 		windowsReleaseSeries = "Windows 11"
 		minimumSupportedRelease = winVersion.WIN11
 		minimumSupportedReleaseName = minimumSupportedRelease.releaseName
+	unsupportedWindowsReleaseText = _(
+		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+		# winRelease can be Windows 10, Windows 11, or other release series name.
+		# minSupportedUpdate is the minimum update for a Windows release series required for this add-on.
+		# Example: an add-on release requiring Windows 10 May 2021 Update
+		# will set windowsRelease to Windows 10 and minSupportedUpdate to Windows 10 21H1.
+		"You are using an unsupported {windowsRelease} release. "
+		"This add-on requires {minSupportedUpdate} or later."
+	).format(windowsRelease=windowsReleaseSeries, minSupportedUpdate=minimumSupportedReleaseName)
 	addonInstallPossible = currentWinVer >= minimumSupportedRelease
 	if not addonInstallPossible:
-		gui.messageBox(
-			_(
-				# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
-				# winRelease can be Windows 10, Windows 11, or other release series name.
-				# minSupportedUpdate is the minimum update for a Windows release series required for this add-on.
-				# Example: an add-on release requiring Windows 10 May 2021 Update
-				# will set windowsRelease to Windows 10 and minSupportedUpdate to Windows 10 21H1.
-				"You are using an unsupported {windowsRelease} release. "
-				"This add-on requires {minSupportedUpdate} or later."
-			).format(windowsRelease=windowsReleaseSeries, minSupportedUpdate=minimumSupportedReleaseName),
-			unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR
-		)
+		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
 		raise RuntimeError(
 			"Attempting to install Windows App Essentials "
 			f"on unsupported {windowsReleaseSeries} release"
