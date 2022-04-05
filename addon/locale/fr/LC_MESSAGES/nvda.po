@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2021-08-20 08:33+0200\n"
+"PO-Revision-Date: 2022-04-01 17:06-0700\n"
 "Last-Translator: Michel Such <michelsuch93@gmail.com>\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Windows App Essentials requires Windows 10 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -44,21 +44,6 @@ msgstr ""
 "Vous utilisez une version non supportée de Windows {windowsRelease}. Cette "
 "extension nécessite {minSupportedUpdate} ou ultérieure."
 
-#. Translators: warning text shown when trying to install the add-on on server computers.
-msgid ""
-"This is a Windows Server system. Although you can install the add-on, not "
-"all features will work as Windows Server does not include modern apps such "
-"as Microsoft Store."
-msgstr ""
-"Ceci est d'un système Windows Server. Bien que vous puissiez installer "
-"l'extension, toutes les fonctionnalités ne seront pas disponibles car "
-"Windows Server n'inclut pas d'applications modernes telles que Microsoft "
-"Store."
-
-#. Translators: title of the warning dialog shown when trying to install the add-on on server systems.
-msgid "Windows App Essentials and Windows Server"
-msgstr "Windows App Essentials et Windows Server"
-
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
 msgid "Cannot move between rows"
@@ -67,14 +52,6 @@ msgstr "Impossible de se déplacer entre les lignes"
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "Aucune donnée météo supplémentaire pour cet élément."
-
-#. Translators: part of the suggestions count message (for example: 2 suggestions).
-msgid "1 suggestion"
-msgstr "1 suggestion"
-
-#. Translators: part of the suggestions count message (for example: 2 suggestions).
-msgid "{} suggestions"
-msgstr "{} suggestions"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
