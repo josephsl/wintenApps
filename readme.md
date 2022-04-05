@@ -42,13 +42,13 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * When arranging pinned entries (tiles in Windows 10) in Start menu or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce information on dragged items or new position of the dragged item.
 * Announcements such as volume/brightness changes in File Explorer and app update notifications from Microsoft Store can be suppressed by turning off Report Notifications in NVDA's object presentation settings.
 * In Windows 11 Insider Preview builds, microphone mute toggle status (Windows+Alt+K) is announced from everywhere.
-* NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and later.
+* NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and later. This is now part of NVDA 2022.1.
 
 ## Calculator
 
 * NVDA will no longer announce graphing calculator screen message twice.
 * In Windows 10, history and memory list items are properly labeled. This is now part of NVDA 2022.1.
-* NVDA will now announce calculator display content when performing scientific mode commands such as trigonometry operations.
+* NVDA will announce calculator display content when performing scientific mode commands such as trigonometry operations.
 
 ## Cortana
 
@@ -92,7 +92,7 @@ This refers to Windows 11 Notepad version 11 or later.
 * Odd control labels seen in certain Windows installations has been corrected.
 * NVDA will announce the name of the optional quality update control if present (download and install now link in Windows 10, download button in Windows 11).
 * In Windows 11, breadcrumb bar items are properly recognized.
-* In Windows 10, NVDA will interupt speech and report updates to Windows Update status as download and install progresses.
+* In Windows 10, NVDA will interupt speech and report updates to Windows Update status as download and install progresses. This may result in speech interruption when navigating Settings app while updates are being downloaded and installed.
 
 ## Weather
 
