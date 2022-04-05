@@ -100,7 +100,7 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 	* Nickel 1: June 2021 to September 2021, dedicated to refining Windows 11 support and introduction of control types refactor from NVDA 2021.2
 	* Nickel 2: September 2021 to January 2022, refinements to Windows 11 support and end of support for Windows 10 October 2020 Update (Version 20H2)
 * Copper (2022):
-	* Copper 1: December 2021 to March 2022, NVDA 2021.3 support, removing deprecated features, and changes from Insider Preview builds
-	* Copper 2: March 2022 to June 2022, TBD
+	* Copper 1: December 2021 to March 2022, NVDA 2021.3 and 2022.1 support, removing deprecated features, and changes from Insider Preview builds
+	* Copper 2: March 2022 to June 2022, Windows 11 Version 2H2 previewm Windows 10 installation message preview, Voice Access
 	* Copper 3: June 2022 to September 2022, TBD
 	* Copper 4: September 2022 to December 2022, TBD
