@@ -12,6 +12,7 @@ from NVDAObjects.UIA import UIA
 class NotepadDocument(UIA):
 
 	# Do not announce the entered text when Enter key is pressed, similar to Start menu search field.
+	# Resolved in 11.2203.10.
 	announceNewLineText = False
 
 
@@ -19,6 +20,7 @@ class AppModule(appModuleHandler.AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Specifically to suppress text announcement when Enter key is pressed.
+		# Resolved in 11.2003.10.
 		if isinstance(obj, UIA) and obj.windowClassName == "RichEditD2DPT":
 			clsList.insert(0, NotepadDocument)
 
