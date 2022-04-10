@@ -20,7 +20,7 @@ class AppModule(appModuleHandler.AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Specifically to suppress text announcement when Enter key is pressed.
-		# Resolved in 11.2003.10.
+		# Resolved in 11.2203.10.
 		if isinstance(obj, UIA) and obj.windowClassName == "RichEditD2DPT":
 			clsList.insert(0, NotepadDocument)
 
