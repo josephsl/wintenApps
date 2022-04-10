@@ -30,8 +30,9 @@ class AppModule(appModuleHandler.AppModule):
 		if not self.productVersion.startswith("11"):
 			raise NotImplementedError()
 		# And no, status bar is shown when editing documents.
+		# Thankfully, of all the UIA objects encountered, document window has a unique window class name.
 		focus = api.getFocusObject()
-		if not isinstance(focus, NotepadDocument):
+		if focus.windowClassName != "RichEditD2DPT":
 			raise NotImplementedError()
 		fg = api.getForegroundObject()
 		# Look for a specific child as some children report the same UIA properties such as class name.
