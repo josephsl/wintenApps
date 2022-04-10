@@ -31,14 +31,12 @@ class AppModule(appModuleHandler.AppModule):
 			raise NotImplementedError()
 		# And no, status bar is shown when editing documents.
 		# Thankfully, of all the UIA objects encountered, document window has a unique window class name.
-		focus = api.getFocusObject()
-		if focus.windowClassName != "RichEditD2DPT":
+		if api.getFocusObject().windowClassName != "RichEditD2DPT":
 			raise NotImplementedError()
-		fg = api.getForegroundObject()
 		# Look for a specific child as some children report the same UIA properties such as class name.
 		# Status bar location in the UI tree has changed in 11.2112,
 		# made available to stable build users in February 2022.
-		statusBar = fg.children[7].firstChild
+		statusBar = api.getForegroundObject().children[7].firstChild
 		# No location for a disabled status bar i.e. location is 0 (x, y, width, height).
 		if not any(statusBar.location):
 			raise NotImplementedError()
