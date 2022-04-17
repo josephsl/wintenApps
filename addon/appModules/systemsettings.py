@@ -78,7 +78,11 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				if obj.UIAAutomationId.endswith("_DescriptionTextBlock"):
 					# #71: NVDA is told to announce live regions to the end by default,
 					# which results in screen content and speech getting out of sync.
-					speech.cancelSpeech()
+					# However do not cut off other live regions when action button appears next to updates list
+					# which is the sibling of the grandparent object (actual updates list element).
+					# Update action button appears if the system is up to date or an action is required.
+					if "UpdateActionButton" not in obj.parent.parent.next.UIAAutomationId:
+						speech.cancelSpeech()
 					if obj.name and obj.name == self._nameChangeCache:
 						return
 				self._nameChangeCache = obj.name
