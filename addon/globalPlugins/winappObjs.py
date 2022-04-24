@@ -76,6 +76,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except AttributeError:
 			log.debug("winapps: UIA handler not ready, delaying until NVDA is fully initialized")
 			queueHandler.queueFunction(queueHandler.eventQueue, self._addAdditionalUIAEvents, delay=True)
+		# #72: add additional good UIA window class names on Windows 11.
+		# NVDA Core window class names is a tuple, therefore convert to a list and back.
+		if winVersion.getWinVer() >= winVersion.WIN11:
+			log.debug("winapps: adding additional good UIA window class names")
+			goodUIAWindowClassNames = list(UIAHandler.goodUIAWindowClassNames) + w11GoodUIAWindowClassNames
+			UIAHandler.goodUIAWindowClassNames = tuple(goodUIAWindowClassNames)
+			log.debug("winapps: good UIA window class names: {}".format(", ".join(w11GoodUIAWindowClassNames)))
 
 	# Manually add events after root element is located.
 	def _addAdditionalUIAEvents(self, delay: bool = False) -> None:
