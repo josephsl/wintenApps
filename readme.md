@@ -43,6 +43,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * Announcements such as volume/brightness changes in File Explorer and app update notifications from Microsoft Store can be suppressed by turning off Report Notifications in NVDA's object presentation settings.
 * In Windows 11 Insider Preview builds, microphone mute toggle status (Windows+Alt+K) is announced from everywhere.
 * NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and later. This is now part of NVDA 2022.1.
+* In Windows 11, Taskbar items and other user interface controls can be detected properly when using mouse and/or touch interaction.
 
 ## Calculator
 
