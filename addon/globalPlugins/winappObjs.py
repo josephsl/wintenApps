@@ -52,8 +52,7 @@ w11GoodUIAWindowClassNames: list[str] = [
 	"ReBarWindow32",  # File Explorer/Bottom center (Taskbar icons)
 	"TrayNotifyWnd",  # File Explorer/Bottom right (system tray)
 	"XamlExplorerHostIslandWindow",  # File Explorer/Task View and Snap Layouts
-	"CabinetWClass",  # File Explorer/Menu bar
-	"Notepad"  # Notepad/menu bar
+	"CabinetWClass"  # File Explorer/Menu bar
 ]
 
 
