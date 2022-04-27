@@ -76,6 +76,9 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 					return
 				# Update title repeats while the update is downloaded and installed.
 				if obj.UIAAutomationId.endswith("_DescriptionTextBlock"):
+					# Keep announcing last status as long as object name is cached.
+					if obj.name and obj.name == self._nameChangeCache:
+						return
 					# #71: NVDA is told to announce live regions to the end by default,
 					# which results in screen content and speech getting out of sync.
 					# However do not cut off other live regions when action button appears next to updates list
@@ -83,8 +86,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 					# Update action button appears if the system is up to date or an action is required.
 					if "UpdateActionButton" not in obj.parent.parent.next.UIAAutomationId:
 						speech.cancelSpeech()
-					if obj.name and obj.name == self._nameChangeCache:
-						return
 				self._nameChangeCache = obj.name
 		nextHandler()
 
