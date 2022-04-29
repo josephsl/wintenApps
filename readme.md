@@ -49,7 +49,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 * NVDA will no longer announce graphing calculator screen message twice.
 * In Windows 10, history and memory list items are properly labeled. This is now part of NVDA 2022.1.
-* NVDA will announce calculator display content when performing scientific mode commands such as trigonometry operations.
+* NVDA will announce calculator display content when performing scientific mode commands such as trigonometry operations. This is now part of NVDA 2022.2.
 
 ## Cortana
 
