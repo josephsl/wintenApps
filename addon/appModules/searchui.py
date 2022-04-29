@@ -18,6 +18,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		if isinstance(obj, UIA):
 			# Start menu search result details are not announced due to UI redesign in 2019.
 			# This is applicable across Windows 10 and 11, thus fix it from the base app module.
+			# Resolved in NVDA 2022.2.
 			if obj.role == controlTypes.Role.LISTITEM and isinstance(obj.parent.parent, SuggestionListItem):
 				clsList.insert(0, SuggestionListItem)
 				return
