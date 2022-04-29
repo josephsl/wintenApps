@@ -26,7 +26,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	# NVDA Core issue 13383: For some commands (such as number row keys),
 	# NVDA should not announce calculator results.
 	# Resolved in NVDA 2022.2.
-	_doNotAnnounceCalculatorResults = False
+	_noCalculatorResultsGesturePressed= False
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
 		# Some notification messages are repeated (most notable being graph view change notification).
@@ -39,8 +39,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Therefore, clear no results flag from the app module while storing a copy of the flag here.
 		# The event handler copy is used to handle the overall notification announcement later.
 		# Resolved in NVDA 2022.2.
-		doNotAnnounceCalculatorResults = self._doNotAnnounceCalculatorResults
-		self._doNotAnnounceCalculatorResults = False
+		doNotAnnounceCalculatorResults = self._noCalculatorResultsGesturePressed
+		self._noCalculatorResultsGesturePressed = False
 		# Version 10.2109 changes the UI a bit, requiring tweaked event handler implementation.
 		# Version bumped to 11 in October 2021.
 		# This, together with results handling, are part of NVDA 2022.1.
@@ -83,4 +83,4 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	)
 	def script_doNotAnnounceCalculatorResults(self, gesture):
 		gesture.send()
-		self._doNotAnnounceCalculatorResults = True
+		self._noCalculatorResultsGesturePressed = True
