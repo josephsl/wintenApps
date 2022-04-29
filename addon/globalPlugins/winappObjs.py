@@ -133,6 +133,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		# Start menu search result details are not announced due to UI redesign in 2019.
 		# This is applicable across Windows 10 and 11, thus use app module name (searchui).
+		# Resolved in NVDA 2022.2 via SearchUI app module.
 		if obj.appModule.appModuleName == "searchui":
 			if obj.role == controlTypes.Role.LISTITEM and isinstance(obj.parent.parent, SuggestionListItem):
 				clsList.insert(0, SuggestionListItem)
