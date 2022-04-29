@@ -23,7 +23,9 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		if not obj.name and obj.parent.UIAAutomationId in ("HistoryListView", "MemoryListView"):
 			obj.name = "".join([item.name for item in obj.children])
 
-	# For some commands (such as number row keys), NVDA should not announce calculator results.
+	# NVDA Core issue 13383: For some commands (such as number row keys),
+	# NVDA should not announce calculator results.
+	# Resolved in NVDA 2022.2.
 	_doNotAnnounceCalculatorResults = False
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
@@ -31,10 +33,12 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		if activityId == "GraphViewChanged" and self._resultsCache == displayString:
 			return
 		self._resultsCache = displayString
-		# When no results shortcuts such as number row keys are pressed, display content will be announced.
+		# NVDA Core issue 13383: When no results shortcuts such as number row keys are pressed,
+		# display content will be announced.
 		# But it might be possible that the next command is a calculation shortcut such as S for sine.
 		# Therefore, clear no results flag from the app module while storing a copy of the flag here.
 		# The event handler copy is used to handle the overall notification announcement later.
+		# Resolved in NVDA 2022.2.
 		doNotAnnounceCalculatorResults = self._doNotAnnounceCalculatorResults
 		self._doNotAnnounceCalculatorResults = False
 		# Version 10.2109 changes the UI a bit, requiring tweaked event handler implementation.
@@ -68,9 +72,11 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# If the superclass version is invoked, it will result in double announcement
 		# as NVDA will look for the display content element in addition to handling UIA notification event.
 		# Therefore, send gestures (Escape, Enter, Delete) and no more.
+		# Resolved in NVDA 2022.2.
 		gesture.send()
 
-	# Handle both number row and numpad with num lock on.
+	# NVDA Core issue 13383: handle both number row and numpad with num lock on.
+	# Resolved in NVDA 2022.2.
 	@scriptHandler.script(
 		gestures=[f"kb:{i}" for i in range(10)]
 		+ [f"kb:numLockNumpad{i}" for i in range(10)]
