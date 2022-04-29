@@ -92,8 +92,12 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 					# However do not cut off other live regions when action button appears next to updates list
 					# which is the sibling of the grandparent object (actual updates list element).
 					# Update action button appears if the system is up to date or an action is required.
-					if "UpdateActionButton" not in obj.parent.parent.next.UIAAutomationId:
-						speech.cancelSpeech()
+					# However attribute error may result if "update action" button is not a UIA element.
+					try:
+						if "UpdateActionButton" not in obj.parent.parent.next.UIAAutomationId:
+							speech.cancelSpeech()
+					except AttributeError:
+						pass
 				self._nameChangeCache = obj.name
 		nextHandler()
 
