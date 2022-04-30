@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2021-08-20 03:09+0200\n"
+"PO-Revision-Date: 2022-04-01 16:34-0700\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Windows App Essentials requires Windows 10 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -45,20 +45,6 @@ msgstr ""
 "Sie verwenden eine nicht unterstützte Version von {windowsRelease}. Diese "
 "Erweiterung benötigt {minSupportedUpdate} oder neuer."
 
-#. Translators: warning text shown when trying to install the add-on on server computers.
-msgid ""
-"This is a Windows Server system. Although you can install the add-on, not "
-"all features will work as Windows Server does not include modern apps such "
-"as Microsoft Store."
-msgstr ""
-"Dies ist ein Windows Server. Obwohl Sie die Erweiterung installieren können, "
-"stehen vielleicht nicht alle Funktionen zur Verfügung, da Windows Server "
-"keine modernen Apps wie den Microsoft Store enthält."
-
-#. Translators: title of the warning dialog shown when trying to install the add-on on server systems.
-msgid "Windows App Essentials and Windows Server"
-msgstr "Windows App Essentials und Windows Server"
-
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
 msgid "Cannot move between rows"
@@ -67,14 +53,6 @@ msgstr "Konnte nicht zwischen Zeilen wechseln"
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "Keine weiteren Wetter-Informationen für diesen Eintrag."
-
-#. Translators: part of the suggestions count message (for example: 2 suggestions).
-msgid "1 suggestion"
-msgstr "ein Vorschlag"
-
-#. Translators: part of the suggestions count message (for example: 2 suggestions).
-msgid "{} suggestions"
-msgstr "{} Vorschläge"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
@@ -88,3 +66,21 @@ msgid "Improving support for various apps and controls on Windows 10 and later"
 msgstr ""
 "Verbesserte Unterstützung für verschiedene Apps und Steuerelemente unter "
 "Windows 10 und neuer"
+
+#~ msgid ""
+#~ "This is a Windows Server system. Although you can install the add-on, not "
+#~ "all features will work as Windows Server does not include modern apps "
+#~ "such as Microsoft Store."
+#~ msgstr ""
+#~ "Dies ist ein Windows Server. Obwohl Sie die Erweiterung installieren "
+#~ "können, stehen vielleicht nicht alle Funktionen zur Verfügung, da Windows "
+#~ "Server keine modernen Apps wie den Microsoft Store enthält."
+
+#~ msgid "Windows App Essentials and Windows Server"
+#~ msgstr "Windows App Essentials und Windows Server"
+
+#~ msgid "1 suggestion"
+#~ msgstr "ein Vorschlag"
+
+#~ msgid "{} suggestions"
+#~ msgstr "{} Vorschläge"

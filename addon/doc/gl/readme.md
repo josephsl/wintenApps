@@ -59,10 +59,10 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Xeral
 
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag complete, drag drop effect,
-  drop target dropped. With NVDA's log level set to debug, these events will
-  be tracked and logged.
+* Ademais dos manexadores de eventos UIA proporcionados por NVDA,
+  recoñécense os eventos e as propiedades UIA seguintes: drag complete, drag
+  drop effect, drop target dropped. co nivel de rexistro de NVDA establecido
+  en depuración, estes eventos seguiranse e rexistraranse.
 * Cando se abran, pechen, reordenen (Windows 11), ou se conmute entre
   escritorios virtuales, NVDA anunciará o nome do escritorio actual
   (escritorio 2, por exemplo).
@@ -81,10 +81,10 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 * NVDA xa non anunciará dúas veces a mensaxe en pantalla da calculadora
   gráfica.
-* In Windows 10, history and memory list items are properly labeled. This is
-  now part of NVDA 2022.1.
-* NVDA will now announce calculator display content when performing
-  scientific mode commands such as trigonometry operations.
+* En Windows 10, o historial e os elementos da lista da memoria están
+  correctamente etiquetados. Isto agora é parte de NVDA 2022.1.
+* Agora NVDA anunciará o contido da pantalla da calculadora ao realizar
+  operacións do modo científico como operacións trigonométricas.
 
 ## Cortana
 
@@ -121,10 +121,11 @@ tamén soporta o panel de experiencia de entrada actualizado en Windows 11.
   certos emojis.
 * Engadido soporte para o panel actualizado de experiencia de entrada (panel
   de emoji e historial de portapapeis combinados) en windows 11.
-* In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens. This is now part of NVDA 2022.1.
-* In Windows 11 clipboard history, browse mode will be turned off by
-  default, designed to let NVDA announce clipboard history entry menu items.
+* En Windows 11,, volve a ser posible utilizar as frechas para revisar
+  emojis cando se abre o panel de emojis. Isto agora é parte de NVDA 2022.1.
+* No historial do portapapeis de Windows 11, o modo exploración
+  desactivarase por defecto, deseñado para permitir que NVDA anuncie os
+  elementos do menú de entradas do historial do portapapeis.
 
 ## Bloc de Notas
 

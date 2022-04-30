@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-02-22 22:52+0200\n"
+"PO-Revision-Date: 2022-04-01 17:05-0700\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
@@ -44,20 +44,6 @@ msgstr ""
 "Utilizați o versiune nesuportată de {windowsRelease}. Acest supliment "
 "necesită {minSupportedUpdate} sau o versiune mai nouă."
 
-#. Translators: warning text shown when trying to install the add-on on server computers.
-msgid ""
-"This is a Windows Server system. Although you can install the add-on, not "
-"all features will work as Windows Server does not include modern apps such "
-"as Microsoft Store."
-msgstr ""
-"Acesta este un sistem de Windows Server. Deși puteți instala suplimentul, nu "
-"toate caracteristicile sale vor funcționa, căci Windows Server nu include "
-"aplicații moderne precum Microsoft Store."
-
-#. Translators: title of the warning dialog shown when trying to install the add-on on server systems.
-msgid "Windows App Essentials and Windows Server"
-msgstr "Windows App Essentials și Windows Server"
-
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
 msgid "Cannot move between rows"
@@ -66,14 +52,6 @@ msgstr "Nu se poate deplasa printre rânduri"
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "Nu există mai multe date meteorologice pentru acest element."
-
-#. Translators: part of the suggestions count message (for example: 2 suggestions).
-msgid "1 suggestion"
-msgstr "1 sugestie"
-
-#. Translators: part of the suggestions count message (for example: 2 suggestions).
-msgid "{} suggestions"
-msgstr "{} sugestii"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

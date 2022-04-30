@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2021-08-19 08:15-0700\n"
+"PO-Revision-Date: 2022-04-01 17:07-0700\n"
 "Last-Translator: José Manuel Delicado <jmdaweb@hotmail.com>\n"
 "Language-Team: add-ons spanihs translation team <oprisniki@gmail.com>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Windows App Essentials requires Windows 10 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -44,20 +44,6 @@ msgstr ""
 "Estás utilizando una versión {windowsRelease} no soportada. Este complemento "
 "requiere {minSupportedUpdate} o posterior."
 
-#. Translators: warning text shown when trying to install the add-on on server computers.
-msgid ""
-"This is a Windows Server system. Although you can install the add-on, not "
-"all features will work as Windows Server does not include modern apps such "
-"as Microsoft Store."
-msgstr ""
-"Este es un sistema Windows Server. Aunque puedes instalar el complemento, no "
-"todas sus características funcionarán, ya que Windows Server no incluye "
-"aplicaciones modernas como la tienda Microsoft."
-
-#. Translators: title of the warning dialog shown when trying to install the add-on on server systems.
-msgid "Windows App Essentials and Windows Server"
-msgstr "Windows App Essentials y Windows Server"
-
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
 msgid "Cannot move between rows"
@@ -66,14 +52,6 @@ msgstr "No puedes desplazarte entre filas"
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "No hay más datos del clima para este elemento."
-
-#. Translators: part of the suggestions count message (for example: 2 suggestions).
-msgid "1 suggestion"
-msgstr "una sugerencia"
-
-#. Translators: part of the suggestions count message (for example: 2 suggestions).
-msgid "{} suggestions"
-msgstr "{} sugerencias"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
