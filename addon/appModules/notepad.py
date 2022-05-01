@@ -7,24 +7,9 @@
 import appModuleHandler
 import api
 import winUser
-from NVDAObjects.UIA import UIA
-
-
-class NotepadDocument(UIA):
-
-	# Do not announce the entered text when Enter key is pressed, similar to Start menu search field.
-	# Resolved in 11.2203.10.
-	announceNewLineText = False
 
 
 class AppModule(appModuleHandler.AppModule):
-
-	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		# Specifically to suppress text announcement when Enter key is pressed.
-		# Resolved in 11.2203.10.
-		# The below object is a UIA object.
-		if obj.windowClassName == "RichEditD2DPT":
-			clsList.insert(0, NotepadDocument)
 
 	def _get_statusBar(self):
 		# Notepad 11 uses Windows 11 user interface, therefore status bar is harder to obtain.
