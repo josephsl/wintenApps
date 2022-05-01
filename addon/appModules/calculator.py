@@ -29,10 +29,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	_noCalculatorResultsGesturePressed = False
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
-		# Some notification messages are repeated (most notable being graph view change notification).
-		if activityId == "GraphViewChanged" and self._resultsCache == displayString:
-			return
-		self._resultsCache = displayString
 		# NVDA Core issue 13383: When no results shortcuts such as number row keys are pressed,
 		# display content will be announced.
 		# But it might be possible that the next command is a calculation shortcut such as S for sine.
