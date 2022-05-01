@@ -20,6 +20,7 @@ The following app modules or support modules for some apps are included (see eac
 * Notepad (Windows 11)
 * People
 * Settings (system settings, Windows+I)
+* Voice access (Windows 11)
 * Weather
 * Miscellaneous modules for controls such as Start Menu tiles
 
@@ -48,7 +49,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## Calculator
 
-* NVDA will no longer announce graphing calculator screen message twice.
 * In Windows 10, history and memory list items are properly labeled. This is now part of NVDA 2022.1.
 * NVDA will announce calculator display content when performing scientific mode commands such as trigonometry operations. This is now part of NVDA 2022.2.
 
@@ -71,10 +71,9 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## Modern keyboard
 
-This includes emoji panel, clipboard history, dictation/voice typing, hardware input suggestions, and modern input method editors for certain languages. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher. When pasting from clipboard history in Windows 10, press Space key instead of Enter key to paste the selected item. NVDA also supports updated input experience panel in Windows 11.
+This includes emoji panel, clipboard history, dictation/voice typing, hardware input suggestions, and modern input method editors for certain languages across Windows 10 and 11. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher. When pasting from clipboard history in Windows 10, press Space key instead of Enter key to paste the selected item.
 
 * In Windows 10, when an emoji group (including kaomoji and symbols group) is selected, NVDA will no longer move navigator object to certain emojis.
-* Added support for updated input experience panel (combined emoji panel and clipboard history) in Windows 11.
 * In Windows 11, it is again possible to use the arrow keys to review emojis when emoji panel opens. This is now part of NVDA 2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by default, designed to let NVDA announce clipboard history entry menu items.
 
@@ -83,7 +82,6 @@ This includes emoji panel, clipboard history, dictation/voice typing, hardware i
 This refers to Windows 11 Notepad version 11 or later.
 
 * NVDA will announce status items such as line and column information when report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in laptop layout) is performed.
-* NVDA will no longer announce entered text when pressing Enter key from the document.
 
 ## People
 
@@ -95,6 +93,12 @@ This refers to Windows 11 Notepad version 11 or later.
 * NVDA will announce the name of the optional quality update control if present (download and install now link in Windows 10, download button in Windows 11).
 * In Windows 11, breadcrumb bar items are properly recognized.
 * In Windows 10, NVDA will interupt speech and report updates to Windows Update status as download and install progresses. This may result in speech interruption when navigating Settings app while updates are being downloaded and installed.
+
+## Voice access
+
+This refers to Voice access feature introduced in Windows 11 22H2 preview.
+
+* NVDA will announce microphone status when toggling microphone from Voice access interface.
 
 ## Weather
 
