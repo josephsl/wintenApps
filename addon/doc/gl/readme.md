@@ -76,6 +76,12 @@ documento [rexistros de trocos para publicacións de complementos][3].
   de Obxectos do NVDA.
 * En versións de Windows 11 Insider Preview, o estado do conmutador de
   silencio do micrófono (Windows+Alt+K) anúnciase desde calquera sitio.
+* NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
+  later. This is now part of NVDA 2022.1.
+* NVDA will once again announce search result details in Start menu. This is
+  now part of NVDA 2022.2.
+* In Windows 11, Taskbar items and other user interface controls can be
+  detected properly when using mouse and/or touch interaction.
 
 ## Calculadora
 
@@ -83,8 +89,9 @@ documento [rexistros de trocos para publicacións de complementos][3].
   gráfica.
 * En Windows 10, o historial e os elementos da lista da memoria están
   correctamente etiquetados. Isto agora é parte de NVDA 2022.1.
-* Agora NVDA anunciará o contido da pantalla da calculadora ao realizar
-  operacións do modo científico como operacións trigonométricas.
+* NVDA will announce calculator display content when performing scientific
+  mode commands such as trigonometry operations. This is now part of NVDA
+  2022.2.
 
 ## Cortana
 
@@ -151,6 +158,10 @@ Isto refírese á versión 11 ou posterior do Bloc de Notas de Windows 11.
   botón descargar en Windows 11).
 * En Windows 11, os elementos da barra de faragullas de pan recoñécense
   correctamente.
+* In Windows 10, NVDA will interupt speech and report updates to Windows
+  Update status as download and install progresses. This may result in
+  speech interruption when navigating Settings app while updates are being
+  downloaded and installed.
 
 ## O Tempo
 

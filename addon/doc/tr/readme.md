@@ -73,14 +73,21 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
   sunumu ayarlarından Rapor Bildirimleri kapatılarak engellenebilir.
 * In Windows 11 Insider Preview builds, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
+* NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
+  later. This is now part of NVDA 2022.1.
+* NVDA will once again announce search result details in Start menu. This is
+  now part of NVDA 2022.2.
+* In Windows 11, Taskbar items and other user interface controls can be
+  detected properly when using mouse and/or touch interaction.
 
 ## Hesap makinesi
 
 * NVDA artık grafik hesap makinesi ekran mesajını iki kez bildirmeyecek.
 * In Windows 10, history and memory list items are properly labeled. This is
   now part of NVDA 2022.1.
-* NVDA will now announce calculator display content when performing
-  scientific mode commands such as trigonometry operations.
+* NVDA will announce calculator display content when performing scientific
+  mode commands such as trigonometry operations. This is now part of NVDA
+  2022.2.
 
 ## Cortana
 
@@ -143,6 +150,10 @@ This refers to Windows 11 Notepad version 11 or later.
   (Windows 10'da şimdi indir ve kur bağlantısı, Windows 11'de indir
   düğmesi).
 * Windows 11'de içerik haritası çubuğu öğeleri düzgün bir şekilde tanınır.
+* In Windows 10, NVDA will interupt speech and report updates to Windows
+  Update status as download and install progresses. This may result in
+  speech interruption when navigating Settings app while updates are being
+  downloaded and installed.
 
 ## Hava durumu
 
