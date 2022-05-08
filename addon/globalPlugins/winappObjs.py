@@ -114,7 +114,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if winVersion.getWinVer() >= winVersion.WIN11:
 			# There are two ways of doing this: globally or at the ap module level.
 			# Since the affected elements are shel objects, app module level solution should be part of Explorer.
-			patchAppModule = False
+			patchAppModule = True
 			if not patchAppModule:
 				# Method 1: add good UIA window class names globally.
 				# NVDA Core window class names is a tuple, therefore convert to a list and back.
