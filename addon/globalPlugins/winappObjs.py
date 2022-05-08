@@ -50,7 +50,9 @@ w11GoodUIAWindowClassNames: list[str] = [
 	"Shell_TrayWnd",  # File Explorer/bottom left (Start, Search, Widgets)
 	"MSTaskSwWClass",  # File Explorer/bottom center (Taskbar icons)
 	"ReBarWindow32",  # File Explorer/bottom center (Taskbar icons)
+	"Button",  # File Explorer/bottom right (notification chevron button)
 	"TIPBand",  # File Explorer/bottom right (touch keyboard button)
+	"VirtualTouchpad",  # File Explorer/bottom right (virtual touchpad)
 	"TrayNotifyWnd",  # File Explorer/bottom right (system tray)
 	"XamlExplorerHostIslandWindow",  # File Explorer/Task View and Snap Layouts
 	"CabinetWClass"  # File Explorer/Menu bar
