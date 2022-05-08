@@ -54,6 +54,7 @@ w11GoodUIAWindowClassNames: list[str] = [
 	"Button",  # File Explorer/bottom right (notification chevron button)
 	"TIPBand",  # File Explorer/bottom right (touch keyboard button)
 	"VirtualTouchpad",  # File Explorer/bottom right (virtual touchpad)
+	"Shell_InputSwitchTopLevelWindow",  # File Explorer/bottom right (language switcher)
 	"TrayNotifyWnd",  # File Explorer/bottom right (system tray)
 	"XamlExplorerHostIslandWindow",  # File Explorer/Task View and Snap Layouts
 	"CabinetWClass"  # File Explorer/Menu bar
@@ -79,6 +80,7 @@ def isGoodUIAWindow(self, hwnd):
 			"Button",  # File Explorer/bottom right (notification chevron button)
 			"TIPBand",  # File Explorer/bottom right (touch keyboard button)
 			"VirtualTouchpad",  # File Explorer/bottom right (virtual touchpad)
+			"Shell_InputSwitchTopLevelWindow",  # File Explorer/bottom right (language switcher)
 			"TrayNotifyWnd",  # File Explorer/bottom right (system tray)
 			"XamlExplorerHostIslandWindow",  # File Explorer/Task View and Snap Layouts
 			"CabinetWClass"  # File Explorer/Menu bar
