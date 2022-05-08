@@ -107,22 +107,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			queueHandler.queueFunction(queueHandler.eventQueue, self._addAdditionalUIAEvents, delay=True)
 		# #72: add additional good UIA window class names on Windows 11.
 		if winVersion.getWinVer() >= winVersion.WIN11:
-			# There are two ways of doing this: globally or at the ap module level.
 			# Since the affected elements are shel objects, app module level solution should be part of Explorer.
-			patchAppModule = True
-			if not patchAppModule:
-				# Method 1: add good UIA window class names globally.
-				# NVDA Core window class names is a tuple, therefore convert to a list and back.
-				log.debug("winapps: adding additional good UIA window class names")
-				goodUIAWindowClassNames = list(UIAHandler.goodUIAWindowClassNames) + w11GoodUIAWindowClassNames
-				UIAHandler.goodUIAWindowClassNames = tuple(goodUIAWindowClassNames)
-				log.debug("winapps: good UIA window class names: {}".format(", ".join(w11GoodUIAWindowClassNames)))
-			else:
-				# Method 2: patch appModules.explorer.AppModule.isGoodUIAWindow method.
-				# Patch the app module method with the one defined in this global plugin.
-				log.debug("winapps: patching File Explorer app module to add additional good uIA windows")
-				import appModules.explorer
-				appModules.explorer.AppModule.isGoodUIAWindow = isGoodUIAWindow
+			# Patch appModules.explorer.AppModule.isGoodUIAWindow with the one defined in this global plugin.
+			log.debug("winapps: patching File Explorer app module to add additional good uIA windows")
+			import appModules.explorer
+			appModules.explorer.AppModule.isGoodUIAWindow = isGoodUIAWindow
 
 	# Manually add events after root element is located.
 	def _addAdditionalUIAEvents(self, delay: bool = False) -> None:
