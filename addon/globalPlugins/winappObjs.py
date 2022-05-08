@@ -47,6 +47,7 @@ additionalPropertyEvents: dict[int, str] = {
 
 
 # #72: the following window classes should be recognized as good UIA windows in Windows 11.
+# Superseeded by app module method patching routine.
 w11GoodUIAWindowClassNames: list[str] = [
 	"Shell_TrayWnd",  # File Explorer/bottom left (Start, Search, Widgets)/Windows 11 shell UI root
 	"MSTaskSwWClass",  # File Explorer/bottom center (Taskbar icons)
@@ -61,7 +62,7 @@ w11GoodUIAWindowClassNames: list[str] = [
 ]
 
 
-# #72/alternate: patch File Explorer module to add more good UIA window class names.
+# #72: patch File Explorer module to add more good UIA window class names.
 def isGoodUIAWindow(self, hwnd):
 	currentWinVer = winVersion.getWinVer()
 	# NVDA Core issue 9204: shell raises window open event for emoji panel in build 18305 and later.
