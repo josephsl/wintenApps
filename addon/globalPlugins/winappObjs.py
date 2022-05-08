@@ -63,16 +63,17 @@ w11GoodUIAWindowClassNames: list[str] = [
 
 # #72/alternate: patch File Explorer module to add more good UIA window class names.
 def isGoodUIAWindow(self, hwnd):
+	currentWinVer = winVersion.getWinVer()
 	# NVDA Core issue 9204: shell raises window open event for emoji panel in build 18305 and later.
 	if (
-		winVersion.getWinVer() >= winVersion.WIN10_1903
+		currentWinVer >= winVersion.WIN10_1903
 		and winUser.getClassName(hwnd) == "ApplicationFrameWindow"
 	):
 		return True
 	# NVDA Core issue 13506: Windows 11 Taskbar and other items with the name of "DesktopWindowXamlSource"
 	# should be reclassified as UIA windows, not IAccessible, letting NVDA announce shell elements.
 	if (
-		winVersion.getWinVer() >= winVersion.WIN11
+		currentWinVer >= winVersion.WIN11
 		and winUser.getClassName(hwnd) in (
 			"Shell_TrayWnd",  # File Explorer/bottom left (Start, Search, Widgets)/Windows 11 shell UI root
 			"MSTaskSwWClass",  # File Explorer/bottom center (Taskbar icons)
