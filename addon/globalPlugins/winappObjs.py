@@ -72,9 +72,10 @@ def isGoodUIAWindow(self, hwnd):
 		return True
 	# NVDA Core issue 13506: Windows 11 Taskbar and other items with the name of "DesktopWindowXamlSource"
 	# should be reclassified as UIA windows, not IAccessible, letting NVDA announce shell elements.
+	# Ask Windows to traverse parwents until arriving at the top-level window with the below class names.
 	if (
 		currentWinVer >= winVersion.WIN11
-		and winUser.getClassName(hwnd) in (
+		and winUser.getClassName(winUser.getAncestor(hwnd, winUser.GA_ROOT)) in (
 			"Shell_TrayWnd",  # File Explorer/bottom left (Start, Search, Widgets)/Windows 11 shell UI root
 			"MSTaskSwWClass",  # File Explorer/bottom center (Taskbar icons)
 			"ReBarWindow32",  # File Explorer/bottom center (Taskbar icons)
