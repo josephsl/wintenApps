@@ -48,7 +48,7 @@ additionalPropertyEvents: dict[int, str] = {
 
 # #72: the following window classes should be recognized as good UIA windows in Windows 11.
 w11GoodUIAWindowClassNames: list[str] = [
-	"Shell_TrayWnd",  # File Explorer/bottom left (Start, Search, Widgets)
+	"Shell_TrayWnd",  # File Explorer/bottom left (Start, Search, Widgets)/Windows 11 shell UI root
 	"MSTaskSwWClass",  # File Explorer/bottom center (Taskbar icons)
 	"ReBarWindow32",  # File Explorer/bottom center (Taskbar icons)
 	"Button",  # File Explorer/bottom right (notification chevron button)
@@ -73,7 +73,7 @@ def isGoodUIAWindow(self, hwnd):
 	if (
 		winVersion.getWinVer() >= winVersion.WIN11
 		and winUser.getClassName(hwnd) in (
-			"Shell_TrayWnd",  # File Explorer/bottom left (Start, Search, Widgets)
+			"Shell_TrayWnd",  # File Explorer/bottom left (Start, Search, Widgets)/Windows 11 shell UI root
 			"MSTaskSwWClass",  # File Explorer/bottom center (Taskbar icons)
 			"ReBarWindow32",  # File Explorer/bottom center (Taskbar icons)
 			"Button",  # File Explorer/bottom right (notification chevron button)
