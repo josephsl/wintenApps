@@ -26,7 +26,7 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 21H1 (build 19043) or later and is compatible with Windows 11.
+* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build 22000) or later.
 * Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Not all features from Windows Insider Preview builds will be supported.
 * Some add-on features are or will be part of NVDA screen reader.
