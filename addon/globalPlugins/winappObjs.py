@@ -47,18 +47,20 @@ additionalPropertyEvents: dict[int, str] = {
 
 
 # #72: the following window classes should be recognized as good UIA windows in Windows 11.
-# Superseeded by app module method patching routine.
+# Superseeded by app module method patching routine as all the class names come from File Explorer.
 w11GoodUIAWindowClassNames: list[str] = [
-	"Shell_TrayWnd",  # File Explorer/bottom left (Start, Search, Widgets)/Windows 11 shell UI root
-	"MSTaskSwWClass",  # File Explorer/bottom center (Taskbar icons)
-	"ReBarWindow32",  # File Explorer/bottom center (Taskbar icons)
-	"Button",  # File Explorer/bottom right (notification chevron button)
-	"TIPBand",  # File Explorer/bottom right (touch keyboard button)
-	"VirtualTouchpad",  # File Explorer/bottom right (virtual touchpad)
-	"Shell_InputSwitchTopLevelWindow",  # File Explorer/bottom right (language switcher)
-	"TrayNotifyWnd",  # File Explorer/bottom right (system tray)
-	"XamlExplorerHostIslandWindow",  # File Explorer/Task View and Snap Layouts
-	"CabinetWClass"  # File Explorer/Menu bar
+	# Top-level window class names from Windows 11 shell
+	"Shell_TrayWnd",  # Start, Search, Widgets, Windows 11 shell UI root
+	"Shell_InputSwitchTopLevelWindow",  # Language switcher
+	"XamlExplorerHostIslandWindow",  # Task View and Snap Layouts
+	"CabinetWClass",  # File Explorer command bar
+	# Specific Windows 11 shell elements
+	"MSTaskSwWClass",  # Taskbar icons
+	"ReBarWindow32",  # Taskbar icons
+	"Button",  # Notification chevron button
+	"TIPBand",  # Touch keyboard button
+	"VirtualTouchpad",  # Virtual touchpad button
+	"TrayNotifyWnd",  # System tray
 ]
 
 
@@ -81,7 +83,7 @@ def isGoodUIAWindow(self, hwnd):
 			"Shell_TrayWnd",  # Start, Search, Widgets, Windows 11 shell UI root
 			"Shell_InputSwitchTopLevelWindow",  # Language switcher
 			"XamlExplorerHostIslandWindow",  # Task View and Snap Layouts
-			"CabinetWClass"  # Menu bar
+			"CabinetWClass"  # File Explorer command bar
 		)
 	):
 		return True
