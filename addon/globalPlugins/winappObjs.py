@@ -49,8 +49,9 @@ additionalPropertyEvents: dict[int, str] = {
 # #72: the following window classes should be recognized as good UIA windows in Windows 11.
 # Superseeded by app module method patching routine as all the class names come from File Explorer.
 w11GoodUIAWindowClassNames: list[str] = [
-	# Top-level window class names from Windows 11 shell
-	"Shell_TrayWnd",  # Start, Search, Widgets, Windows 11 shell UI root
+	# Windows 11 shell UI root, housing various shell elements shown on screen if enabled.
+	"Shell_TrayWnd",  # Start, Search, Widgets, other shell elements
+	# Top-level window class names from Windows 11 shell features
 	"Shell_InputSwitchTopLevelWindow",  # Language switcher
 	"XamlExplorerHostIslandWindow",  # Task View and Snap Layouts
 	# Specific Windows 11 shell elements
@@ -79,7 +80,9 @@ def isGoodUIAWindow(self, hwnd):
 	if (
 		currentWinVer >= winVersion.WIN11
 		and winUser.getClassName(winUser.getAncestor(hwnd, winUser.GA_ROOT)) in (
-			"Shell_TrayWnd",  # Start, Search, Widgets, Windows 11 shell UI root
+			# Windows 11 shell UI root, housing various shell elements shown on screen if enabled.
+			"Shell_TrayWnd",  # Start, Search, Widgets, other shell elements
+			# Top-level window class names from Windows 11 shell features
 			"Shell_InputSwitchTopLevelWindow",  # Language switcher
 			"XamlExplorerHostIslandWindow",  # Task View and Snap Layouts
 		)
