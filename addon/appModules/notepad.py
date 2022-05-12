@@ -6,7 +6,6 @@
 
 import appModuleHandler
 import api
-import winUser
 
 
 class AppModule(appModuleHandler.AppModule):
@@ -28,9 +27,3 @@ class AppModule(appModuleHandler.AppModule):
 		if not any(statusBar.location):
 			raise NotImplementedError()
 		return statusBar
-
-	def isGoodUIAWindow(self, hwnd):
-		# #72: allow proper mouse and touch interaction from Windows 11 Notepad menu bar.
-		if self.productVersion.startswith("11") and winUser.getClassName(hwnd) == "Notepad":
-			return True
-		return False
