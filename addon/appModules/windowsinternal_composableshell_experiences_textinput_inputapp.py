@@ -135,6 +135,16 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		except NotImplementedError:
 			pass
 		self._symbolsGroupSelected = False
+		# Build 25115 uses modern keyboard interface to display Suggested Actions
+		# if data such as phone number is copied to the clipboard.
+		# Because keyboard interaction is not possible, just report suggested actions.
+		if firstChild.UIAAutomationId == "TitleIcon":
+			import ui
+			suggestedActions = []
+			for suggestedAction in firstChild.parent.children:
+				if suggestedAction.name:
+					suggestedActions.append(suggestedAction.name)
+			ui.message("; ".join(suggestedActions))
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
