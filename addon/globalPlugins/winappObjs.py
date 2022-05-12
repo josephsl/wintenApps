@@ -53,7 +53,6 @@ w11GoodUIAWindowClassNames: list[str] = [
 	"Shell_TrayWnd",  # Start, Search, Widgets, Windows 11 shell UI root
 	"Shell_InputSwitchTopLevelWindow",  # Language switcher
 	"XamlExplorerHostIslandWindow",  # Task View and Snap Layouts
-	"CabinetWClass",  # File Explorer command bar
 	# Specific Windows 11 shell elements
 	"MSTaskSwWClass",  # Taskbar icons
 	"ReBarWindow32",  # Taskbar icons
@@ -83,7 +82,6 @@ def isGoodUIAWindow(self, hwnd):
 			"Shell_TrayWnd",  # Start, Search, Widgets, Windows 11 shell UI root
 			"Shell_InputSwitchTopLevelWindow",  # Language switcher
 			"XamlExplorerHostIslandWindow",  # Task View and Snap Layouts
-			"CabinetWClass"  # File Explorer command bar
 		)
 	):
 		return True
