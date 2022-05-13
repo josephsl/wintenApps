@@ -3,7 +3,7 @@
 * 저자: Joseph Lee(이성원), Derek Riemer 외 다수
 * [출시 버전][1]
 * [개발 버전][2]
-* NVDA compatibility: 2021.3 and later
+* NVDA 호환: 2021.3 이상
 
 참고: 윈도우 10 이상(특히 윈도우 11)을 지원하기 위해 2021년에 Windows 10 App Essentials에서 Windows
 App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름이 뜰 수 있습니다.
@@ -21,12 +21,14 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 메모장(윈도우 11)
 * People
 * 설정(시스템 설정 앱, Windows+I)
+* Voice access (Windows 11)
 * 날씨
 * 그 외 지원 모듈(시작 메뉴 타일 지원 등)
 
 사용시 주의 사항:
 
-* 본 추가 기능은 윈도우 10 21H1(빌드 19043) 이상(윈도우 11 포함)을 지원합니다.
+* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+  22000) or later.
 * 윈도우 Enterprise LTSC(Long-Term Servicing Channel)와 윈도우 서버 버전에 설치할 수 있으나 지원은
   하지 않습니다.
 * Not all features from Windows Insider Preview builds will be supported.
@@ -43,10 +45,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 일반
 
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag complete, drag drop effect,
-  drop target dropped. With NVDA's log level set to debug, these events will
-  be tracked and logged.
+* NVDA가 지원하는 UIA  이벤트 외의 다음 이벤트 추적 가능: drag complete, drag drop effect, drop
+  target dropped. NVDA 로깅 옵션을 디버그로 설정한 경우 위 이벤트가 추적되도록 함.
 * When opening, closing, reordering (Windows 11), or switching between
   virtual desktops, NVDA will announce active virtual desktop name (desktop
   2, for example).
@@ -67,12 +67,9 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 계산기
 
-* NVDA will no longer announce graphing calculator screen message twice.
 * In Windows 10, history and memory list items are properly labeled. This is
   now part of NVDA 2022.1.
-* NVDA will announce calculator display content when performing scientific
-  mode commands such as trigonometry operations. This is now part of NVDA
-  2022.2.
+* 삼각 함수와 같은 공학 계산기 명령 실행시 결과가 출력되도록 함(본 기능은 NVDA 2022.2에 추가됨).
 
 ## Cortana
 
@@ -105,8 +102,6 @@ supports updated input experience panel in Windows 11.
 
 * In Windows 10, when an emoji group (including kaomoji and symbols group)
   is selected, NVDA will no longer move navigator object to certain emojis.
-* Added support for updated input experience panel (combined emoji panel and
-  clipboard history) in Windows 11.
 * In Windows 11, it is again possible to use the arrow keys to review emojis
   when emoji panel opens. This is now part of NVDA 2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
@@ -119,8 +114,6 @@ This refers to Windows 11 Notepad version 11 or later.
 * NVDA will announce status items such as line and column information when
   report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
   laptop layout) is performed.
-* NVDA will no longer announce entered text when pressing Enter key from the
-  document.
 
 ## People
 
@@ -139,6 +132,13 @@ This refers to Windows 11 Notepad version 11 or later.
   Update status as download and install progresses. This may result in
   speech interruption when navigating Settings app while updates are being
   downloaded and installed.
+
+## Voice access
+
+This refers to Voice access feature introduced in Windows 11 22H2 preview.
+
+* NVDA will announce microphone status when toggling microphone from Voice
+  access interface.
 
 ## 날씨
 

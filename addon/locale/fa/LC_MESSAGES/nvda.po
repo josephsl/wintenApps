@@ -25,11 +25,11 @@ msgstr "نسخه‌ی پشتیبانی‌نشده‌ی ویندوز"
 
 #. Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
 msgid ""
-"You are using an older version of Windows. This add-on requires Windows 10 or "
-"later."
+"You are using an older version of Windows. This add-on requires Windows 10 "
+"or later."
 msgstr ""
-"شما دارید از یک نگارشِ قدیمیِ ویندوز استفاده میکنید. این افزونه نیازمندِ ویندوزِ ۱۰ "
-"یا بالاتر است."
+"شما دارید از یک نگارشِ قدیمیِ ویندوز استفاده میکنید. این افزونه نیازمندِ ویندوزِ "
+"۱۰ یا بالاتر است."
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 #. winRelease can be Windows 10, Windows 11, or other release series name.
@@ -41,8 +41,19 @@ msgid ""
 "You are using an unsupported {windowsRelease} release. This add-on requires "
 "{minSupportedUpdate} or later."
 msgstr ""
-"شما دارید از یک نسخه‌ی پشتیبانی‌نشده‌ی {windowsRelease} استفاده میکنید. این افزونه "
-"نیازمندِ {minSupportedUpdate} یا بالاتر است."
+"شما دارید از یک نسخه‌ی پشتیبانی‌نشده‌ی {windowsRelease} استفاده میکنید. این "
+"افزونه نیازمندِ {minSupportedUpdate} یا بالاتر است."
+
+#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows 10 release.
+#. Unlike Windows 11, Windows 10 releases from 21H2 are checked using a list of public builds.
+#. For example, if 21H1 and 21H2 are supported, the text will list supported releases at the end.
+#, fuzzy, python-brace-format
+msgid ""
+"You are using an unsupported {windowsRelease} release. Supported releases: "
+"{windowsReleasesList}."
+msgstr ""
+"شما دارید از یک نسخه‌ی پشتیبانی‌نشده‌ی {windowsRelease} استفاده میکنید. این "
+"افزونه نیازمندِ {minSupportedUpdate} یا بالاتر است."
 
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.

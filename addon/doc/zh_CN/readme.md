@@ -21,12 +21,14 @@
 * 记事本（Windows 11）
 * 人脉
 * 设置（Windows + I系统设置）
+* Voice access (Windows 11)
 * 天气
 * 开始菜单中的瓷贴控件和其他模块
 
 注意:
 
-* 此插件需要 Windows 10 21H1（内部版本 19043）或更高版本，并且兼容 Windows 11。
+* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+  22000) or later.
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
 * 并非支持 Windows Insider Preview 版本中的所有功能。
 * 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
@@ -55,7 +57,6 @@
 
 ## 计算器
 
-* NVDA 将不再两次宣布图形计算器屏幕消息。
 * 在 Windows 10 中，可以正确读出历史记录和内存列表项标签。该功能已是 NVDA 2022.1 的一部分。
 * NVDA 现可以在执行三角运算等科学计算模式命令时读出计算器显示内容。该修复已经包含在 NVDA2022.2 中。
 
@@ -83,7 +84,6 @@
 中从剪贴板历史记录粘贴时，请按空格键而非回车键来粘贴所选项目。此外，NVDA 在 Windows 11 中支持更新的输入体验面板。
 
 * 在Windows 10中，选择Emoji组（包括Kaomoji和符号组）时，NVDA不会将导航对象移动到某些EMOJI上。
-* 增加了对Windows 11 中更新的输入体验面板（组合的表情符号面板和剪贴板历史记录）的支持。
 * 在 Windows 11 中，当表情符号面板打开时，可以使用箭头键查看表情符号。该功能已是 NVDA2022.1 的一部分。
 * 在 Windows 11 剪贴板历史记录中，为了让 NVDA 宣布剪贴板历史记录条目菜单项，浏览模式将默认关闭。
 
@@ -92,7 +92,6 @@
 这是指 Windows 11 或更高版本系统上的记事本。
 
 * NVDA在执行读出状态栏命令（台式机键盘方案为 NVDA+End，笔记本键盘方案为 NvDA+Shift+End）时会同时读出行列信息等状态条目。
-* 在文档中按 Enter 键时，NVDA 将不再读出输入的文本。
 
 ## 人脉
 
@@ -104,6 +103,13 @@
 * NVDA 将公布可选质量更新控件的名称（如果存在）（Windows 10 中的立即下载和安装链接，Windows 11 中的下载按钮）。
 * 在 Windows 11 中，可以正确识别 breadcrumb 栏项目。
 * 在 Windows 10 中，NVDA 会在下载和安装更新过程中打断语音并读出 Windows 更新状态。这可能会导致在设置中导航时语音朗读被打断。
+
+## Voice access
+
+This refers to Voice access feature introduced in Windows 11 22H2 preview.
+
+* NVDA will announce microphone status when toggling microphone from Voice
+  access interface.
 
 ## 天气
 

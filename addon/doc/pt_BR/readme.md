@@ -29,13 +29,14 @@ detalhes sobre o que está incluso):
 * Bloco de Notas (Windows 11)
 * Pessoas
 * Configurações (configurações do sistema, Windows+I)
+* Voice access (Windows 11)
 * Clima
 * Módulos diversos para controles, como blocos do Menu Iniciar
 
 Notas:
 
-* Este complemento requer o Windows 10 21H1 (compilação 19043) ou
-  posteriores e é compatível com o Windows 11.
+* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+  22000) or later.
 * Embora a instalação seja possível, este complemento não oferece suporte
   para Windows Enterprise LTSC (Long-Term Servicing Channel — Canal de
   Manutenção de Longo Prazo) e versões do Windows Server.
@@ -83,8 +84,6 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 ## Calculadora
 
-* O NVDA não anunciará mais a mensagem de tela calculadora gráfica duas
-  vezes.
 * In Windows 10, history and memory list items are properly labeled. This is
   now part of NVDA 2022.1.
 * NVDA will announce calculator display content when performing scientific
@@ -125,9 +124,6 @@ atualizado no Windows 11.
 * No Windows 10, quando um grupo de emoji (incluindo kaomoji e grupo de
   símbolos) é selecionado, o NVDA não moverá mais a navegação de objeto para
   certos emojis.
-* Adicionado suporte para painel de experiência de entrada atualizado
-  (painel de emoji combinado e histórico da área de transferência) no
-  Windows 11.
 * In Windows 11, it is again possible to use the arrow keys to review emojis
   when emoji panel opens. This is now part of NVDA 2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
@@ -141,8 +137,6 @@ Isso se refere à versão 11 ou posterior do Bloco de Notas do Windows 11.
   quando o comando de informar barra de status (NVDA+End no leiaute de
   computador de mesa, NvDA+Shift+End no leiaute de computador portátil) for
   executado.
-* O NVDA não anunciará mais o texto inserido ao pressionar a tecla Enter no
-  documento.
 
 ## Pessoas
 
@@ -162,6 +156,13 @@ Isso se refere à versão 11 ou posterior do Bloco de Notas do Windows 11.
   Update status as download and install progresses. This may result in
   speech interruption when navigating Settings app while updates are being
   downloaded and installed.
+
+## Voice access
+
+This refers to Voice access feature introduced in Windows 11 22H2 preview.
+
+* NVDA will announce microphone status when toggling microphone from Voice
+  access interface.
 
 ## Clima
 

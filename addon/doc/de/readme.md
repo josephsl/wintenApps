@@ -28,13 +28,14 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 * Notepad (Windows 11)
 * Kontakte
 * Einstellungen (System-Einstellungen, Windows+I)
+* Sprachlicher Zugang (Windows 11)
 * Wetter
 * Verschiedene Module für Bedienelemente wie Startmenü-Kacheln
 
 Hinweise:
 
-* Diese Erweiterung benötigt Windows 10 Version 21H1 (Build 19043) oder
-  neuer und ist kompatibel mit Windows 11.
+* Diese Erweiterung benötigt Windows 10 Version 21H1 (Build 19043), Windows
+  11 Version 21H2 (Build 22000) oder neuer.
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
@@ -88,8 +89,6 @@ Versionen][3].
 
 ## Rechner
 
-* NVDA liest die Bildschirmmeldung des Grafikrechners nicht mehr doppelt
-  vor.
 * In Windows 10 sind Verlaufs- und Speicherlistenelemente richtig
   beschriftet. Dies ist jetzt Teil von NVDA 2022.1.
 * NVDA zeigt den Inhalt der Anzeige im Taschenrechner an, wenn Befehle im
@@ -133,9 +132,6 @@ unterstützt auch das Panel für aktualisierte Eingabe-Erlebnisse in Windows
 * Wenn in Windows 10 eine Emoji-Gruppe (einschließlich Kaomoji- und
   Symbolgruppe) ausgewählt ist, verschiebt NVDA das Navigator-Objekt nicht
   mehr in bestimmte Emojis.
-* Unterstützung für das aktualisierte Erlebnis-Panel für die Eingabe
-  (kombiniertes Emoji-Panel und Zwischenablageverlauf) in Windows 11
-  hinzugefügt.
 * In Windows 11 ist es wieder möglich, die Pfeiltasten zu verwenden, um
   Emojis zu überprüfen, wenn das Emoji-Panel geöffnet wird. Dies ist jetzt
   Teil von NVDA 2022.1.
@@ -150,8 +146,6 @@ Dies bezieht sich auf Windows 11 Notepad Version 11 oder neuer.
 * NVDA teilt die Status-Elemente wie Zeilen- und Spalteninformationen mit,
   wenn der Befehl Statusleiste mitteilen (NVDA+Ende im Desktop-Layout,
   NvDA+Umschalt+Ende im Laptop-Layout) ausgeführt wird.
-* NVDA liest den eingegebenen Text nicht mehr vor, sobald die Eingabetaste
-  im Dokument gedrückt wird.
 
 ## Kontakte
 
@@ -171,6 +165,14 @@ Dies bezieht sich auf Windows 11 Notepad Version 11 oder neuer.
   fortschreiten. Dies kann zu Sprachunterbrechungen führen, wenn Sie in der
   Einstellungen-App navigieren, während Updates heruntergeladen und
   installiert werden.
+
+## Sprachlicher Zugang
+
+Dies bezieht sich auf die Vorschau in der Windows 11 Version 22H2
+eingeführte Sprachzugriffsfunktion.
+
+* NVDA teilt den Mikrofon-Status mit, wenn das Mikrofon über die
+  Sprachzugriffsoberfläche umgeschaltet wird.
 
 ## Wetter
 

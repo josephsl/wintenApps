@@ -43,6 +43,17 @@ msgstr ""
 "본 추가 기능은 사용중인 {windowsRelease} 버전을 지원하지 않습니다. 추가 기능"
 "을 사용하려면 {minSupportedUpdate} 이상 버전으로 업그레이드하시기 바랍니다."
 
+#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows 10 release.
+#. Unlike Windows 11, Windows 10 releases from 21H2 are checked using a list of public builds.
+#. For example, if 21H1 and 21H2 are supported, the text will list supported releases at the end.
+#, fuzzy, python-brace-format
+msgid ""
+"You are using an unsupported {windowsRelease} release. Supported releases: "
+"{windowsReleasesList}."
+msgstr ""
+"본 추가 기능은 사용중인 {windowsRelease} 버전을 지원하지 않습니다. 추가 기능"
+"을 사용하려면 {minSupportedUpdate} 이상 버전으로 업그레이드하시기 바랍니다."
+
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
 msgid "Cannot move between rows"

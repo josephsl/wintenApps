@@ -28,13 +28,14 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Muistio (Windows 11)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
+* Voice access (Windows 11)
 * Sää
 * Sekalaisia moduuleita säätimille, esim. Käynnistä-valikon ruuduille.
 
 Huomautuksia:
 
-* Tämä lisäosa edellyttää Windows 10:n versiota 21H1 (koontiversio 19043)
-  tai uudempaa ja on yhteensopiva Windows 11:n kanssa.
+* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+  22000) or later.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
 * Kaikkia Windowsin Insider-esiversioiden ominaisuuksia ei tueta.
@@ -83,7 +84,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Laskin
 
-* NVDA ei enää sano graafisen laskinnäytön ilmoitusta kahdesti.
 * Historia- ja muistiluettelon kohteet nimetään oikein Windows 10:ssä. Tämä
   sisältyy NVDA 2022.1:een.
 * NVDA will announce calculator display content when performing scientific
@@ -122,8 +122,6 @@ päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 
 * Kun emojiryhmä (kaomoji ja symboliryhmä mukaan lukien) valitaan Windows
   10:ssä, NVDA ei enää siirrä navigointiobjektia tiettyihin emojeihin.
-* Lisätty tuki Windows 11:n päivitetylle syöttökokemuksen paneelille
-  (yhdistetty emojipaneeli ja leikepöydän historia).
 * Windows 11:ssä on jälleen mahdollista käyttää nuolinäppäimiä emojien
   tarkasteluun, kun emojipaneeli avautuu. Tämä sisältyy NVDA 2022.1:een.
 * Selaustila poistetaan käytöstä oletusarvoisesti Windows 11:n leikepöydän
@@ -137,8 +135,6 @@ Tämä viittaa Windows 11:n Muistion versioon 11 tai sitä uudempiin.
 * NVDA puhuu tilakohteet, kuten rivin ja sarakkeen tiedot, kun Puhu tilarivi
   -komento (NVDA+End pöytäkoneissa, NVDA+Vaihto+End kannettavissa)
   suoritetaan.
-* NVDA ei enää puhu kirjoitettua tekstiä, kun asiakirjassa painetaan
-  Enter-näppäintä.
 
 ## Ihmiset
 
@@ -157,6 +153,13 @@ Tämä viittaa Windows 11:n Muistion versioon 11 tai sitä uudempiin.
   Update status as download and install progresses. This may result in
   speech interruption when navigating Settings app while updates are being
   downloaded and installed.
+
+## Voice access
+
+This refers to Voice access feature introduced in Windows 11 22H2 preview.
+
+* NVDA will announce microphone status when toggling microphone from Voice
+  access interface.
 
 ## Sää
 

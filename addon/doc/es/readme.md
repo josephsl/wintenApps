@@ -29,13 +29,14 @@ qué se incluye):
 * Bloc de notas (Windows 11)
 * Gente
 * Opciones (opciones de sistema, Windows+I)
+* Acceso por voz (Windows 11)
 * El Tiempo
 * Módulos varios para controles tales como los mosaicos del Menú Inicio
 
 Notas:
 
-* Este complemento requiere Windows 10 Versión 21H1 (compilación 19043) o
-  posterior y es compatible con Windows 11.
+* Este complemento requiere Windows 10 Versión 21H1 (compilación 19043),
+  Windows 11 21H2 (compilación 22000) o posterior.
 * Aunque la instalación es posible, este complemento no soporta Windows
   Enterprise LTSC (canal de servicio a largo plazo) ni las versiones de
   Windows Server.
@@ -88,8 +89,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 ## Calculadora
 
-* NVDA ya no anunciará dos veces el mensaje en pantalla de la calculadora
-  gráfica.
 * En Windows 10, los elementos de historial y lista de memoria se etiquetan
   correctamente. Esto ahora forma parte de NVDA 2022.1.
 * NVDA anunciará el contenido de la pantalla de la calculadora al realizar
@@ -129,9 +128,6 @@ Windows 11.
 * En Windows 10, cuando se seleccione un grupo de emojis (incluyendo kaomoji
   y el grupo de símbolos), NVDA ya no moverá el navegador de objetos a
   ciertos emojis.
-* Se ha añadido soporte para el panel actualizado de experiencia de entrada
-  (una combinación del panel de emojis y el historial del portapapeles) en
-  Windows 11.
 * En Windows 11, vuelve a ser posible usar las flechas para revisar los
   emojis cuando se abre el panel de emojis. Esto ahora forma parte de NVDA
   2022.1.
@@ -147,8 +143,6 @@ Esto hace referencia al Bloc de notas de Windows 11, versión 11 o posterior.
   columna, cuando se ejecute la orden para anunciar la barra de estado
   (NVDA+fin en disposición de escritorio, NVDA+shift+fin en disposición
   portátil).
-* NVDA ya no anunciará el texto introducido al pulsar la tecla intro desde
-  el documento.
 
 ## Gente
 
@@ -168,6 +162,14 @@ Esto hace referencia al Bloc de notas de Windows 11, versión 11 o posterior.
   del estado de Windows Update según avancen la descarga e instalación. Esto
   puede resultar en interrupciones de voz al navegar por la aplicación de
   configuración mientras las actualizaciones se descargan y se instalan.
+
+## Acceso por voz
+
+Esto hace referencia a la función de acceso por voz introducida en Windows
+11 22H2 preview.
+
+* NVDA anunciará el estado del micrófono al conmutarlo desde la interfaz del
+  acceso por voz.
 
 ## El Tiempo
 

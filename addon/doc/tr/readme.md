@@ -29,13 +29,14 @@ bakın):
 * Notepad (Windows 11)
 * Kişiler
 * Ayarlar (sistem ayarları, Windows+I)
+* Voice access (Windows 11)
 * Hava durumu
 * Başlat Menüsü kutucukları gibi kontroller için çeşitli modüller
 
 Notlar:
 
-* This add-on requires Windows 10 21H1 (build 19043) or later and is
-  compatible with Windows 11.
+* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+  22000) or later.
 * Ne kadar yüklenebilse de, bu eklenti Windows Enterprise LTSC (Uzun Süreli
   Hizmet Kanalı) ve Windows Server sürümlerini desteklemez.
 * Not all features from Windows Insider Preview builds will be supported.
@@ -82,7 +83,6 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 
 ## Hesap makinesi
 
-* NVDA artık grafik hesap makinesi ekran mesajını iki kez bildirmeyecek.
 * In Windows 10, history and memory list items are properly labeled. This is
   now part of NVDA 2022.1.
 * NVDA will announce calculator display content when performing scientific
@@ -121,8 +121,6 @@ NVDA, Windows 11'de güncellenmiş giriş deneyimi panelini destekler.
 * Windows 10'da bir emoji grubu (kaomoji ve semboller grubu dahil)
   seçildiğinde, NVDA artık nesne sunucusunu belirli emojilere
   taşımayacaktır.
-* Windows 11'de güncellenmiş giriş deneyimi paneli (birleşik emoji paneli ve
-  pano geçmişi) için destek eklendi.
 * In Windows 11, it is again possible to use the arrow keys to review emojis
   when emoji panel opens. This is now part of NVDA 2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
@@ -135,8 +133,6 @@ This refers to Windows 11 Notepad version 11 or later.
 * NVDA will announce status items such as line and column information when
   report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
   laptop layout) is performed.
-* NVDA will no longer announce entered text when pressing Enter key from the
-  document.
 
 ## Kişiler
 
@@ -154,6 +150,13 @@ This refers to Windows 11 Notepad version 11 or later.
   Update status as download and install progresses. This may result in
   speech interruption when navigating Settings app while updates are being
   downloaded and installed.
+
+## Voice access
+
+This refers to Voice access feature introduced in Windows 11 22H2 preview.
+
+* NVDA will announce microphone status when toggling microphone from Voice
+  access interface.
 
 ## Hava durumu
 

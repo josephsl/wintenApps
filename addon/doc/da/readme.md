@@ -26,13 +26,14 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Notepad (Windows 11)
 * Personer
 * Indstillinger (systemindstillinger, Windows+I)
+* Voice access (Windows 11)
 * Vejr
 * Diverse moduler til kontrolelementer som Start Menu-felter.
 
 Bemærkninger:
 
-* This add-on requires Windows 10 21H1 (build 19043) or later and is
-  compatible with Windows 11.
+* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+  22000) or later.
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
@@ -81,8 +82,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Lommeregner
 
-* NVDA annoncerer ikke længere en meddelelse om grafregnerens skærmbillede
-  to gange.
 * In Windows 10, history and memory list items are properly labeled. This is
   now part of NVDA 2022.1.
 * NVDA will announce calculator display content when performing scientific
@@ -122,8 +121,6 @@ i Windows 11.
 
 * In Windows 10, when an emoji group (including kaomoji and symbols group)
   is selected, NVDA will no longer move navigator object to certain emojis.
-* Understøtter nu opdateret input-oplevelsespanel (kombineret emoji-panel og
-  udklipsholderhistorik) i Windows 11.
 * In Windows 11, it is again possible to use the arrow keys to review emojis
   when emoji panel opens. This is now part of NVDA 2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
@@ -136,8 +133,6 @@ This refers to Windows 11 Notepad version 11 or later.
 * NVDA will announce status items such as line and column information when
   report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
   laptop layout) is performed.
-* NVDA will no longer announce entered text when pressing Enter key from the
-  document.
 
 ## Personer
 
@@ -156,6 +151,13 @@ This refers to Windows 11 Notepad version 11 or later.
   Update status as download and install progresses. This may result in
   speech interruption when navigating Settings app while updates are being
   downloaded and installed.
+
+## Voice access
+
+This refers to Voice access feature introduced in Windows 11 22H2 preview.
+
+* NVDA will announce microphone status when toggling microphone from Voice
+  access interface.
 
 ## Vejr
 

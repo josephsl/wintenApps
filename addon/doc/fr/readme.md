@@ -30,13 +30,14 @@ est inclus) :
 * Bloc-notes (Windows 11)
 * Personnes
 * Paramètres (paramètres système, Windows+I)
+* Accès vocal (Windows 11)
 * Météo
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer
 
 Notes:
 
-* Cette extension nécessite Windows 10 21H1 (build 19043) ou version
-  ultérieure et est compatible avec Windows 11.
+* Cette extension nécessite Windows 10 21H1 (build 19043), Windows 11 21H2
+  (build 22000) ou version ultérieure.
 * Bien que l'installation soit possible, cette extension ne prend pas en
   charge les versions Windows Enterprise LTSC (Long-Term Servicing Channel)
   et Windows Server.
@@ -82,22 +83,21 @@ l'extension][3].
   Objets.
 * Dans les versions de Windows 11 Insider Preview, l'état de la
   désactivation du microphone (Windows + Alt + K) est annoncé de partout.
-* NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
-  later. This is now part of NVDA 2022.1.
-* NVDA will once again announce search result details in Start menu. This is
-  now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other user interface controls can be
-  detected properly when using mouse and/or touch interaction.
+* NVDA ne répétera plus la sortie de texte dans Windows Terminal 1.12.10733
+  et versions ultérieures. Cela fait maintenant partie de NVDA 2022.1.
+* NVDA annoncera à nouveau les détails des résultats de la recherche dans le
+  menu Démarrer. Cela fait maintenant partie de NVDA 2022.2.
+* Sous Windows 11, les éléments de la barre des tâches et d'autres commandes
+  de l'interface utilisateur peuvent être détectés correctement lors de
+  l'utilisation de la souris et/ou de l'interaction tactile.
 
 ## Calculatrice
 
-* NVDA n'annoncera plus deux fois le message de l'écran de la calculatrice
-  graphique.
 * Dans Windows 10, les éléments de l'historique et de la liste de mémoire
   sont correctement étiquetés. Cela fait maintenant partie de NVDA 2022.1.
-* NVDA will announce calculator display content when performing scientific
-  mode commands such as trigonometry operations. This is now part of NVDA
-  2022.2.
+* NVDA annoncera le contenu de l'affichage de la calculatrice lors de
+  l'exécution de commandes en mode scientifique telles que des opérations de
+  trigonométrie. Cela fait maintenant partie de NVDA 2022.2.
 
 ## Cortana
 
@@ -136,8 +136,6 @@ charge le panneau d'expérience de saisie mis à jour dans Windows 11.
 * Dans Windows 10, lorsqu'un groupe d'emojis (y compris le groupe Kaomoji et
   symboles) est sélectionné, NVDA ne déplacera plus l'objet navigateur vers
   certains emojis.
-* Ajout de la prise en charge du panneau d'expérience de saisie mis à jour
-  (panneau emoji combiné et historique du presse-papiers) dans Windows 11.
 * Dans Windows 11, il est à nouveau possible d'utiliser les touches fléchées
   pour parcourir les emojis lorsque le panneau emoji s'ouvre. Cela fait
   maintenant partie de NVDA 2022.1.
@@ -153,8 +151,6 @@ Ceci se rapporte à la version 11 ou ultérieure du Bloc-notes de Windows 11.
   et la colonne lorsque la commande d'annonce de la barre d'état (NVDA+Fin
   en disposition ordinateur de bureau, NVDA+Maj+Fin en disposition
   ordinateur portable) est exécutée.
-* NVDA n'annoncera plus le texte saisi lorsque vous appuyez sur la touche
-  Entrée depuis le document.
 
 ## Personnes
 
@@ -170,10 +166,19 @@ Ceci se rapporte à la version 11 ou ultérieure du Bloc-notes de Windows 11.
   de téléchargement dans Windows 11).
 * Dans Windows 11, les éléments du fil d'Ariane des paramètres sont
   correctement reconnus.
-* In Windows 10, NVDA will interupt speech and report updates to Windows
-  Update status as download and install progresses. This may result in
-  speech interruption when navigating Settings app while updates are being
-  downloaded and installed.
+* Sous Windows 10, NVDA interrompra la parole et signalera les mises à jour
+  de l'état de Windows Update au fur et à mesure que le téléchargement et
+  l'installation progressent. Cela peut entraîner une interruption de la
+  parole lors de la navigation dans l'application Paramètres pendant le
+  téléchargement et l'installation des mises à jour.
+
+## Accès vocal
+
+Cela fait référence à la fonctionnalité d'accès vocal introduite dans
+l'aperçu de Windows 11 22H2.
+
+* NVDA annoncera l'état du microphone lors du basculement du microphone
+  depuis l'interface d'accès vocal.
 
 ## Météo
 
