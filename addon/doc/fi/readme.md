@@ -74,14 +74,21 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   objektien lukemisen asetuksista.
 * Mikrofonin mykistyskytkimen (Win+Alt+K) tila ilmoitetaan nyt kaikkialta
   Windows 11:n Insider-esiversioissa.
+* NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
+  later. This is now part of NVDA 2022.1.
+* NVDA will once again announce search result details in Start menu. This is
+  now part of NVDA 2022.2.
+* In Windows 11, Taskbar items and other user interface controls can be
+  detected properly when using mouse and/or touch interaction.
 
 ## Laskin
 
 * NVDA ei enää sano graafisen laskinnäytön ilmoitusta kahdesti.
 * Historia- ja muistiluettelon kohteet nimetään oikein Windows 10:ssä. Tämä
   sisältyy NVDA 2022.1:een.
-* NVDA ilmoittaa nyt laskimen näytön sisällön funktiotilan komentoja, kuten
-  trigonometrisiä laskutoimituksia, suoritettaessa.
+* NVDA will announce calculator display content when performing scientific
+  mode commands such as trigonometry operations. This is now part of NVDA
+  2022.2.
 
 ## Cortana
 
@@ -146,6 +153,10 @@ Tämä viittaa Windows 11:n Muistion versioon 11 tai sitä uudempiin.
   nyt -linkki Windows 10:ssä, Lataa-painike Windows 11:ssä), mikäli
   sellainen on näkyvissä.
 * Navigointipolkupalkin kohteet tunnistetaan oikein Windows 11:ssä.
+* In Windows 10, NVDA will interupt speech and report updates to Windows
+  Update status as download and install progresses. This may result in
+  speech interruption when navigating Settings app while updates are being
+  downloaded and installed.
 
 ## Sää
 

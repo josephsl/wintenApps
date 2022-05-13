@@ -78,6 +78,13 @@ Versionen][3].
   Objektpräsentationseinstellungen von NVDA deaktiviert wird.
 * In den Windows 11 Insider Preview-Builds wird der Status die
   Stummschaltung für das Mikrofon (Win+Alt+K) von überall her angezeigt.
+* NVDA wiederholt die Textausgabe in Windows-Terminal (1.12.10733 und neuer)
+  nicht länger. Dies ist nun fester Bestandteil in NVDA 2022.1.
+* NVDA zeigt wieder Details zu Suchergebnissen im Startmenü an. Dies wird
+  fester Bestandteil in NVDA 2022.2.
+* In Windows 11 werden Elemente der Taskleiste und andere Steuerelemente der
+  Benutzeroberfläche richtig erkannt, wenn Maus- bzw. Touch-Interaktion
+  verwendet werden.
 
 ## Rechner
 
@@ -85,9 +92,10 @@ Versionen][3].
   vor.
 * In Windows 10 sind Verlaufs- und Speicherlistenelemente richtig
   beschriftet. Dies ist jetzt Teil von NVDA 2022.1.
-* NVDA teilt nun den Inhalt der Anzeige des Taschenrechners mit, wenn
-  Befehle im wissenschaftlichen Modus ausgeführt werden,
-  z. B. trigonometrische Operationen.
+* NVDA zeigt den Inhalt der Anzeige im Taschenrechner an, wenn Befehle im
+  wissenschaftlichen Modus ausgeführt werden, wie
+  z. B. Trigonometrie-Operationen. Dies ist wird fester Bestandteil in NVDA
+  2022.2.
 
 ## Cortana
 
@@ -158,6 +166,11 @@ Dies bezieht sich auf Windows 11 Notepad Version 11 oder neuer.
   (Link zum Download und Jetzt installieren in Windows 10,
   Download-Schaltfläche in Windows 11).
 * In Windows 11 werden die Breadcrumb-Leisten richtig erkannt.
+* In Windows 10 unterbricht NVDA die Sprachausgabe und meldet Updates an den
+  Windows Update-Status, während der Download und die Installation
+  fortschreiten. Dies kann zu Sprachunterbrechungen führen, wenn Sie in der
+  Einstellungen-App navigieren, während Updates heruntergeladen und
+  installiert werden.
 
 ## Wetter
 
