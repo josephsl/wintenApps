@@ -11,9 +11,11 @@ import api
 class AppModule(appModuleHandler.AppModule):
 
 	def _get_statusBar(self):
-		# Notepad 11 uses Windows 11 user interface, therefore status bar is harder to obtain.
+		# NVDA Core issue 13688: Notepad 11 uses Windows 11 user interface,
+		# therefore status bar is harder to obtain.
 		# This does not affect earlier versions.
-		if not self.productVersion.startswith("11"):
+		notepadVersion = int(self.productVersion.split(".")[0])
+		if notepadVersion < 11:
 			raise NotImplementedError()
 		# And no, status bar is shown when editing documents.
 		# Thankfully, of all the UIA objects encountered, document window has a unique window class name.
