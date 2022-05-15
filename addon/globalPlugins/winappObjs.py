@@ -73,12 +73,16 @@ def isGoodUIAWindow(self, hwnd):
 		and winUser.getClassName(hwnd) == "ApplicationFrameWindow"
 	):
 		return True
-	# NVDA Core issue 13506: Windows 11 Taskbar and other items with the name of "DesktopWindowXamlSource"
-	# should be reclassified as UIA windows, not IAccessible, letting NVDA announce shell elements.
-	# This is most applicable when navigating with the mouse and/or touch.
-	# Ask Windows to traverse parents until arriving at the top-level window with the below class names.
+	# NVDA Core issue 13506: Windows 11 UI elements such as Taskbar should be reclassified as UIA windows,
+	# letting NVDA announce shell elements when navigating with mouse and/or touch,
+	# notably when interacting with windows labeled "DesktopWindowXamlSource".
+	# WORKAROUND UNTIL A PERMANENT FIX IS FOUND ACROSS APPS
 	if (
 		currentWinVer >= winVersion.WIN11
+		# Traverse parents until arriving at the top-level window with the below class names.
+		# This is more so for the shell root (first class name), and for others, class name check would work
+		# since they are top-level windows for windows shown on screen such as Task View.
+		# However, look for the ancestor for consistency.
 		and winUser.getClassName(winUser.getAncestor(hwnd, winUser.GA_ROOT)) in (
 			# Windows 11 shell UI root, housing various shell elements shown on screen if enabled.
 			"Shell_TrayWnd",  # Start, Search, Widgets, other shell elements
