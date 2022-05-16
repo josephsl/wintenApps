@@ -64,7 +64,6 @@ def onInstall():
 	newW10CompatMessage = False
 	if currentWinVer < winVersion.WIN11 and newW10CompatMessage:
 		supportedBuilds = {
-			19043: "21H1",
 			19044: "21H2",
 			20348: "Windows Server 2022"
 		}
