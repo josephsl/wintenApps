@@ -4,5 +4,6 @@
 
 # This is similar to older Calculator app but was redesigned from ground up.
 # NVDA Core and Windows 10 Calculator from this add-on includes bulk of this app module.
+# App module part of NVDA 2022.1.
 from .calculator import AppModule, noCalculatorEntryAnnouncements
 __all__ = ["AppModule", "noCalculatorEntryAnnouncements"]
