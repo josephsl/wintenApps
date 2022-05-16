@@ -27,7 +27,7 @@ addonHandler.initTranslation()
 currentWinVer = winVersion.getWinVer()
 isAddonSupported = (
 	currentWinVer >= winVersion.WIN11 if currentWinVer > winVersion.WINSERVER_2022
-	else currentWinVer >= winVersion.WIN10_21H1
+	else currentWinVer >= winVersion.WIN10_21H2
 )
 
 
