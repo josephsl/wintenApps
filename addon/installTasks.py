@@ -36,7 +36,7 @@ def onInstall():
 	# a different strategy may need to be employed in 2022 to test feature update builds.
 	# For now assume minimum supported version is the one listed below unless this is Windows 11.
 	windowsReleaseSeries = "Windows 10"
-	minimumSupportedRelease = winVersion.WIN10_21H1
+	minimumSupportedRelease = winVersion.WIN10_21H2
 	minimumSupportedReleaseName = minimumSupportedRelease.releaseName
 	# Windows 11
 	# There is no known public release between Server 2022 (build 20348) and Windows 11 (build 22000).
