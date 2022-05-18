@@ -14,6 +14,7 @@ class AppModule(appModuleHandler.AppModule):
 		# NVDA Core issue 13688: Notepad 11 uses Windows 11 user interface,
 		# therefore status bar is harder to obtain.
 		# This does not affect earlier versions.
+		# Resolved in NVDA 2022.2.
 		notepadVersion = int(self.productVersion.split(".")[0])
 		if notepadVersion < 11:
 			raise NotImplementedError()
