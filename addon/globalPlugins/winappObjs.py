@@ -47,7 +47,8 @@ additionalPropertyEvents: dict[int, str] = {
 
 
 # #72: the following window classes should be recognized as good UIA windows in Windows 11.
-# Superseeded by app module method patching routine as all the class names come from File Explorer.
+# Superseeded by app module method patching routine as all the class names come from File Explorer,
+# and the latter method is now part of NVDA 2022.2.
 w11GoodUIAWindowClassNames: list[str] = [
 	# Windows 11 shell UI root, housing various shell elements shown on screen if enabled.
 	"Shell_TrayWnd",  # Start, Search, Widgets, other shell elements
@@ -65,6 +66,7 @@ w11GoodUIAWindowClassNames: list[str] = [
 
 
 # #72: patch File Explorer module to add more good UIA window class names.
+# Resolved in NVDA 2022.2.
 def isGoodUIAWindow(self, hwnd):
 	currentWinVer = winVersion.getWinVer()
 	# NVDA Core issue 9204: shell raises window open event for emoji panel in build 18305 and later.
@@ -77,6 +79,7 @@ def isGoodUIAWindow(self, hwnd):
 	# letting NVDA announce shell elements when navigating with mouse and/or touch,
 	# notably when interacting with windows labeled "DesktopWindowXamlSource".
 	# WORKAROUND UNTIL A PERMANENT FIX IS FOUND ACROSS APPS
+	# App module method included in NVDA 2022.2.
 	if (
 		currentWinVer >= winVersion.WIN11
 		# Traverse parents until arriving at the top-level window with the below class names.
@@ -117,6 +120,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #72: add additional good UIA window class names on Windows 11.
 		# Since the affected elements are shel objects, app module level solution should be part of Explorer.
 		# Patch appModules.explorer.AppModule.isGoodUIAWindow with the one defined in this global plugin.
+		# Resolved in NVDA 2022.2.
 		log.debug("winapps: patching File Explorer app module to add additional good uIA windows")
 		import appModules.explorer
 		appModules.explorer.AppModule.isGoodUIAWindow = isGoodUIAWindow
