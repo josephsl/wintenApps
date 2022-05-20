@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-04-01 16:34-0700\n"
+"PO-Revision-Date: 2022-05-14 02:38+0200\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -29,7 +29,7 @@ msgid ""
 "You are using an older version of Windows. This add-on requires Windows 10 "
 "or later."
 msgstr ""
-"Sie verwenden noch eine ältere Windows-Version. Diese Erweiterung benötigt "
+"Sie verwenden eine ältere Version von Windows. Diese Erweiterung benötigt "
 "Windows 10 oder neuer."
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
@@ -43,18 +43,18 @@ msgid ""
 "{minSupportedUpdate} or later."
 msgstr ""
 "Sie verwenden eine nicht unterstützte Version von {windowsRelease}. Diese "
-"Erweiterung benötigt {minSupportedUpdate} oder neuer."
+"Erweiterung benötigt mindestens {minSupportedUpdate}."
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows 10 release.
 #. Unlike Windows 11, Windows 10 releases from 21H2 are checked using a list of public builds.
 #. For example, if 21H1 and 21H2 are supported, the text will list supported releases at the end.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an unsupported {windowsRelease} release. Supported releases: "
 "{windowsReleasesList}."
 msgstr ""
-"Sie verwenden eine nicht unterstützte Version von {windowsRelease}. Diese "
-"Erweiterung benötigt {minSupportedUpdate} oder neuer."
+"Sie verwenden eine nicht unterstützte Version von {windowsRelease}. "
+"Unterstützte Versionen: {windowsReleasesList}."
 
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.

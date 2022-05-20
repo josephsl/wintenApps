@@ -23,8 +23,8 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 * Karten
 * Microsoft Solitaire Collection
 * Moderne Tastatur
-  (Emoji-Panel/Diktat/Spracheingabe/Hardware-Eingabevorschläge/Zwischenablageverlauf/moderne
-  Eingabemethoden-Editoren)
+  (Emoji-Bedienfeld/Diktat/Sprachsteuerung/Hardware-Eingabevorschläge/Zwischenablage-Verlauf/Vorgeschlagene
+  Aktionen (Vorschau) bzw. Moderne Eingabemethoden-Editoren)
 * Notepad (Windows 11)
 * Kontakte
 * Einstellungen (System-Einstellungen, Windows+I)
@@ -83,9 +83,10 @@ Versionen][3].
   nicht länger. Dies ist nun fester Bestandteil in NVDA 2022.1.
 * NVDA zeigt wieder Details zu Suchergebnissen im Startmenü an. Dies wird
   fester Bestandteil in NVDA 2022.2.
-* In Windows 11 werden Elemente der Taskleiste und andere Steuerelemente der
-  Benutzeroberfläche richtig erkannt, wenn Maus- bzw. Touch-Interaktion
-  verwendet werden.
+* In Windows 11 können Elemente der Taskleiste und andere Elemente der
+  Shell-Benutzeroberfläche bei der Verwendung von Maus- und/oder
+  Touch-Interaktion korrekt erkannt werden. Dies wird fester Bestandteil von
+  NVDA 2022.2 sein.
 
 ## Rechner
 
@@ -119,15 +120,14 @@ Versionen][3].
 
 ## Moderne virtuelle Tastaturen
 
-Dazu gehören Emoji-Panel, Zwischenablageverlauf, Diktat-/Spracheingabe,
-Hardware-Eingabevorschläge und moderne Eingabemethoden-Editoren für
-bestimmte Sprachen. Aktivieren Sie beim Anzeigen von Emojis für die beste
-Erfahrung die Unicode-Konsortium-Einstellung in den Spracheinstellungen von
-NVDA und stellen Sie die Symbolstufe auf "Einige" oder höher ein. Drücken
-Sie beim Einfügen aus dem Zwischenablageverlauf in Windows 10 die Leertaste
-anstelle der Eingabetaste, um das ausgewählte Element einzufügen. NVDA
-unterstützt auch das Panel für aktualisierte Eingabe-Erlebnisse in Windows
-11.
+Dazu gehören das Emoji-Bedienfeld, der Verlauf der Zwischenablage,
+Diktat-/Stimmeingabe, Hardware-Eingabevorschläge, vorgeschlagene Aktionen
+(Vorschau) und moderne Eingabemethoden-Editoren für bestimmte Sprachen in
+Windows 10 und 11. Aktivieren Sie bei der Anzeige von Emojis die Einstellung
+Unicode-Konsortium in den NVDA-Spracheinstellungen und setzen Sie die
+Symbolebene auf "Einige" oder höher. Drücken Sie beim Einfügen aus dem
+Zwischenablageverlauf in Windows 10 die Leertaste anstelle der Eingabetaste,
+um das ausgewählte Element einzufügen.
 
 * Wenn in Windows 10 eine Emoji-Gruppe (einschließlich Kaomoji- und
   Symbolgruppe) ausgewählt ist, verschiebt NVDA das Navigator-Objekt nicht
@@ -138,14 +138,18 @@ unterstützt auch das Panel für aktualisierte Eingabe-Erlebnisse in Windows
 * In der Zwischenablage von Windows 11 ist der Lesemodus standardmäßig
   ausgeschaltet, damit NVDA Menüeinträge für die Zwischenablage mitteilen
   kann.
+* In der Insider Preview Build 25115 wird NVDA vorgeschlagene Aktionen
+  mitteilen, wenn kompatible Daten wie Telefonnummern in die Zwischenablage
+  kopiert werden.
 
 ## Notepad
 
 Dies bezieht sich auf Windows 11 Notepad Version 11 oder neuer.
 
-* NVDA teilt die Status-Elemente wie Zeilen- und Spalteninformationen mit,
-  wenn der Befehl Statusleiste mitteilen (NVDA+Ende im Desktop-Layout,
-  NvDA+Umschalt+Ende im Laptop-Layout) ausgeführt wird.
+* NVDA teilt Status-Elemente wie Zeilen- und Spalteninformationen, wenn der
+  Befehl für die Statusleiste mitteilen (NVDA+Ende im Desktop-Layout,
+  NvDA+Umschalt+Ende im Laptop-Layout) ausgeführt wird. Dies wird nun fester
+  Bestandteil in NVDA 2022.2.
 
 ## Kontakte
 

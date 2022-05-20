@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-04-01 17:07-0700\n"
+"PO-Revision-Date: 2022-05-14 09:30+0200\n"
 "Last-Translator: José Manuel Delicado <jmdaweb@hotmail.com>\n"
 "Language-Team: add-ons spanihs translation team <oprisniki@gmail.com>\n"
 "Language: es\n"
@@ -47,13 +47,13 @@ msgstr ""
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows 10 release.
 #. Unlike Windows 11, Windows 10 releases from 21H2 are checked using a list of public builds.
 #. For example, if 21H1 and 21H2 are supported, the text will list supported releases at the end.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an unsupported {windowsRelease} release. Supported releases: "
 "{windowsReleasesList}."
 msgstr ""
-"Estás utilizando una versión {windowsRelease} no soportada. Este complemento "
-"requiere {minSupportedUpdate} o posterior."
+"Estás utilizando una versión {windowsRelease} no soportada. Versiones "
+"soportadas: {windowsReleasesList}."
 
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.

@@ -22,20 +22,20 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sähköposti
 * Kartat
 * Microsoft Solitaire -kokoelma
-* Moderni näppäimistö (emojipaneeli/sanelu/puhekirjoitus/fyysisen
-  näppäimistösyötteen ehdotukset/pilvileikepöydän historia/modernin
-  syöttömenetelmän muokkaimet)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/Suggested Actions (preview)/modern input
+  method editors)
 * Muistio (Windows 11)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
-* Voice access (Windows 11)
+* Puhekäyttö (Windows 11)
 * Sää
 * Sekalaisia moduuleita säätimille, esim. Käynnistä-valikon ruuduille.
 
 Huomautuksia:
 
-* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
-  22000) or later.
+* Tämä lisäosa edellyttää Windows 10:n versiota 21H1 (koontiversio 19043),
+  Windows 11:n versiota 21H2 (koontiversio 22000) tai uudempaa.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
 * Kaikkia Windowsin Insider-esiversioiden ominaisuuksia ei tueta.
@@ -75,20 +75,21 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   objektien lukemisen asetuksista.
 * Mikrofonin mykistyskytkimen (Win+Alt+K) tila ilmoitetaan nyt kaikkialta
   Windows 11:n Insider-esiversioissa.
-* NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
-  later. This is now part of NVDA 2022.1.
-* NVDA will once again announce search result details in Start menu. This is
+* NVDA ei enää toista tekstitulostetta Windows Terminal 1.12.10733:ssa ja
+  uudemmissa. Tämä sisältyy nyt NVDA 2022.1:een.
+* NVDA ilmoittaa jälleen hakutulosten tiedot Käynnistä-valikossa. Tämä
+  sisältyy nyt NVDA 2022.2:een.
+* In Windows 11, Taskbar items and other shell user interface elements can
+  be detected properly when using mouse and/or touch interaction. This is
   now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other user interface controls can be
-  detected properly when using mouse and/or touch interaction.
 
 ## Laskin
 
 * Historia- ja muistiluettelon kohteet nimetään oikein Windows 10:ssä. Tämä
   sisältyy NVDA 2022.1:een.
-* NVDA will announce calculator display content when performing scientific
-  mode commands such as trigonometry operations. This is now part of NVDA
-  2022.2.
+* NVDA ilmoittaa nyt laskimen näytön sisällön funktiotilan komentoja, kuten
+  trigonometrisiä laskutoimituksia, suoritettaessa. Tämä sisältyy nyt NVDA
+  2022.2:een.
 
 ## Cortana
 
@@ -111,14 +112,13 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Moderni näppäimistö
 
-Näitä ovat emojipaneeli, leikepöydän historia, sanelu/puhekirjoitus,
-ehdotukset syötettäessä tekstiä fyysisellä näppäimistöllä sekä modernin
-syöttömenetelmän editorit tietyille kielille. Ota käyttöön emojeita
-tarkasteltaessa Unicode-konsortion datan asetus NVDA:n puheasetuksista
-parhaan kokemuksen saamiseksi, ja aseta symbolitasoksi "jotain" tai
-korkeampi. Kun liität leikepöydän historiasta, liitä valittu kohde
-painamalla välilyöntinäppäintä Enterin sijaan. NVDA tukee lisäksi
-päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
+This includes emoji panel, clipboard history, dictation/voice typing,
+hardware input suggestions, suggested actions (preview), and modern input
+method editors for certain languages across Windows 10 and 11. When viewing
+emojis, for best experience, enable Unicode Consortium setting from NVDA's
+speech settings and set symbol level to "some" or higher. When pasting from
+clipboard history in Windows 10, press Space key instead of Enter key to
+paste the selected item.
 
 * Kun emojiryhmä (kaomoji ja symboliryhmä mukaan lukien) valitaan Windows
   10:ssä, NVDA ei enää siirrä navigointiobjektia tiettyihin emojeihin.
@@ -127,14 +127,16 @@ päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 * Selaustila poistetaan käytöstä oletusarvoisesti Windows 11:n leikepöydän
   historiassa, minkä tarkoituksena on mahdollistaa NVDA:lle historian
   valikkokohteiden lukeminen.
+* In Insider Preview build 25115, NVDA will announce suggested actions when
+  compatible data such as phone numbers is copied to the clipboard.
 
 ## Muistio
 
 Tämä viittaa Windows 11:n Muistion versioon 11 tai sitä uudempiin.
 
-* NVDA puhuu tilakohteet, kuten rivin ja sarakkeen tiedot, kun Puhu tilarivi
-  -komento (NVDA+End pöytäkoneissa, NVDA+Vaihto+End kannettavissa)
-  suoritetaan.
+* NVDA will announce status items such as line and column information when
+  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
+  laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## Ihmiset
 
@@ -149,17 +151,18 @@ Tämä viittaa Windows 11:n Muistion versioon 11 tai sitä uudempiin.
   nyt -linkki Windows 10:ssä, Lataa-painike Windows 11:ssä), mikäli
   sellainen on näkyvissä.
 * Navigointipolkupalkin kohteet tunnistetaan oikein Windows 11:ssä.
-* In Windows 10, NVDA will interupt speech and report updates to Windows
-  Update status as download and install progresses. This may result in
-  speech interruption when navigating Settings app while updates are being
-  downloaded and installed.
+* NVDA keskeyttää puheen ja ilmoittaa Windows 10:ssä Windows Updaten tilan
+  päivitykset latauksen ja asennuksen edistyessä. Tämä voi aiheuttaa puheen
+  keskeytymisen Asetukset-sovelluksessa navigoitaessa päivitysten lataamisen
+  ja asennuksen aikana.
 
-## Voice access
+## Puhekäyttö
 
-This refers to Voice access feature introduced in Windows 11 22H2 preview.
+Tämä viittaa Puhekäyttö-ominaisuuteen, joka esiteltiin Windows 11 22H2:n
+esiversiossa.
 
-* NVDA will announce microphone status when toggling microphone from Voice
-  access interface.
+* NVDA ilmoittaa mikrofonin tilan, kun sitä muutetaan Puhekäytön
+  käyttöliittymästä.
 
 ## Sää
 

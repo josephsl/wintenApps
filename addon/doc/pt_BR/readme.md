@@ -23,9 +23,9 @@ detalhes sobre o que está incluso):
 * Email
 * Mapas
 * Microsoft Solitaire Collection (Coleção de Paciência)
-* Teclado moderno (painel de emoji/ditado/digitação por voz/sugestões de
-  entrada de hardware/histórico da área de transferência/editores de métodos
-  de entrada modernos)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/Suggested Actions (preview)/modern input
+  method editors)
 * Bloco de Notas (Windows 11)
 * Pessoas
 * Configurações (configurações do sistema, Windows+I)
@@ -79,8 +79,9 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   later. This is now part of NVDA 2022.1.
 * NVDA will once again announce search result details in Start menu. This is
   now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other user interface controls can be
-  detected properly when using mouse and/or touch interaction.
+* In Windows 11, Taskbar items and other shell user interface elements can
+  be detected properly when using mouse and/or touch interaction. This is
+  now part of NVDA 2022.2.
 
 ## Calculadora
 
@@ -111,15 +112,13 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 ## Teclado moderno
 
-Isso inclui painel de emoji, histórico da área de transferência,
-ditado/digitação por voz, sugestões de entrada de hardware e editores de
-métodos de entrada modernos para determinados idiomas. Ao visualizar emojis,
-para melhor experiência, habilite a configuração de Consórcio Unicode das
-configurações de voz do NVDA e defina o nível do símbolo para "pouco" ou
-superior. Ao colar do histórico da área de transferência no Windows 10,
-pressione a tecla Espaço em vez da tecla Enter para colar o item
-selecionado. O NVDA também suporta painel de experiência de entrada
-atualizado no Windows 11.
+This includes emoji panel, clipboard history, dictation/voice typing,
+hardware input suggestions, suggested actions (preview), and modern input
+method editors for certain languages across Windows 10 and 11. When viewing
+emojis, for best experience, enable Unicode Consortium setting from NVDA's
+speech settings and set symbol level to "some" or higher. When pasting from
+clipboard history in Windows 10, press Space key instead of Enter key to
+paste the selected item.
 
 * No Windows 10, quando um grupo de emoji (incluindo kaomoji e grupo de
   símbolos) é selecionado, o NVDA não moverá mais a navegação de objeto para
@@ -128,15 +127,16 @@ atualizado no Windows 11.
   when emoji panel opens. This is now part of NVDA 2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
+* In Insider Preview build 25115, NVDA will announce suggested actions when
+  compatible data such as phone numbers is copied to the clipboard.
 
 ## Bloco de Notas
 
 Isso se refere à versão 11 ou posterior do Bloco de Notas do Windows 11.
 
-* O NVDA anunciará itens de status, como informações de linha e coluna
-  quando o comando de informar barra de status (NVDA+End no leiaute de
-  computador de mesa, NvDA+Shift+End no leiaute de computador portátil) for
-  executado.
+* NVDA will announce status items such as line and column information when
+  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
+  laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## Pessoas
 

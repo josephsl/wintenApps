@@ -17,7 +17,9 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 메일
 * 지도
 * Microsoft Solitaire Collection
-* 현대식 키보드(에모지 페널/받아쓰기/하드웨어 입력 구성/클립보드 히스토리/현대식 IME 입력기)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/Suggested Actions (preview)/modern input
+  method editors)
 * 메모장(윈도우 11)
 * People
 * 설정(시스템 설정 앱, Windows+I)
@@ -27,8 +29,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 사용시 주의 사항:
 
-* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
-  22000) or later.
+* 본 추가 기능은 윈도우 10 21H1(빌드 19043), 11 21H2(빌드 22000) 이상을 지원합니다.
 * 윈도우 Enterprise LTSC(Long-Term Servicing Channel)와 윈도우 서버 버전에 설치할 수 있으나 지원은
   하지 않습니다.
 * Not all features from Windows Insider Preview builds will be supported.
@@ -62,8 +63,9 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   later. This is now part of NVDA 2022.1.
 * NVDA will once again announce search result details in Start menu. This is
   now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other user interface controls can be
-  detected properly when using mouse and/or touch interaction.
+* In Windows 11, Taskbar items and other shell user interface elements can
+  be detected properly when using mouse and/or touch interaction. This is
+  now part of NVDA 2022.2.
 
 ## 계산기
 
@@ -93,12 +95,12 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 ## 현대식 키보드
 
 This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, and modern input method editors for certain
-languages. When viewing emojis, for best experience, enable Unicode
-Consortium setting from NVDA's speech settings and set symbol level to
-"some" or higher. When pasting from clipboard history in Windows 10, press
-Space key instead of Enter key to paste the selected item. NVDA also
-supports updated input experience panel in Windows 11.
+hardware input suggestions, suggested actions (preview), and modern input
+method editors for certain languages across Windows 10 and 11. When viewing
+emojis, for best experience, enable Unicode Consortium setting from NVDA's
+speech settings and set symbol level to "some" or higher. When pasting from
+clipboard history in Windows 10, press Space key instead of Enter key to
+paste the selected item.
 
 * In Windows 10, when an emoji group (including kaomoji and symbols group)
   is selected, NVDA will no longer move navigator object to certain emojis.
@@ -106,6 +108,8 @@ supports updated input experience panel in Windows 11.
   when emoji panel opens. This is now part of NVDA 2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
+* In Insider Preview build 25115, NVDA will announce suggested actions when
+  compatible data such as phone numbers is copied to the clipboard.
 
 ## 메모장
 
@@ -113,7 +117,7 @@ This refers to Windows 11 Notepad version 11 or later.
 
 * NVDA will announce status items such as line and column information when
   report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed.
+  laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## People
 

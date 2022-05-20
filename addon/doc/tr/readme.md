@@ -24,8 +24,9 @@ bakın):
 * Posta
 * Haritalar
 * Microsoft Solitaire Koleksiyonu
-* Modern klavye (emoji paneli/dikte/sesle yazma/donanım giriş önerileri/pano
-  geçmişi/modern giriş yöntemi düzenleyicileri)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/Suggested Actions (preview)/modern input
+  method editors)
 * Notepad (Windows 11)
 * Kişiler
 * Ayarlar (sistem ayarları, Windows+I)
@@ -78,8 +79,9 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
   later. This is now part of NVDA 2022.1.
 * NVDA will once again announce search result details in Start menu. This is
   now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other user interface controls can be
-  detected properly when using mouse and/or touch interaction.
+* In Windows 11, Taskbar items and other shell user interface elements can
+  be detected properly when using mouse and/or touch interaction. This is
+  now part of NVDA 2022.2.
 
 ## Hesap makinesi
 
@@ -110,13 +112,13 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 
 ## Modern klavye
 
-Buna emoji paneli, pano geçmişi, dikte, donanım giriş önerileri ve belirli
-diller için modern giriş yöntemi düzenleyicileri dahildir. Emojileri
-görüntülerken, en iyi deneyim için, NVDA'nın konuşma ayarlarından Unicode
-Consortium ayarını etkinleştirin ve imla seslendirme düzeyini  "bazıları"
-veya  çoğu olarak ayarlayın. Windows 10'da pano geçmişinden yapıştırırken,
-seçilen öğeyi yapıştırmak için Enter tuşu yerine Aralık tuşuna basın. Ayrıca
-NVDA, Windows 11'de güncellenmiş giriş deneyimi panelini destekler.
+This includes emoji panel, clipboard history, dictation/voice typing,
+hardware input suggestions, suggested actions (preview), and modern input
+method editors for certain languages across Windows 10 and 11. When viewing
+emojis, for best experience, enable Unicode Consortium setting from NVDA's
+speech settings and set symbol level to "some" or higher. When pasting from
+clipboard history in Windows 10, press Space key instead of Enter key to
+paste the selected item.
 
 * Windows 10'da bir emoji grubu (kaomoji ve semboller grubu dahil)
   seçildiğinde, NVDA artık nesne sunucusunu belirli emojilere
@@ -125,6 +127,8 @@ NVDA, Windows 11'de güncellenmiş giriş deneyimi panelini destekler.
   when emoji panel opens. This is now part of NVDA 2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
+* In Insider Preview build 25115, NVDA will announce suggested actions when
+  compatible data such as phone numbers is copied to the clipboard.
 
 ## Notepad
 
@@ -132,7 +136,7 @@ This refers to Windows 11 Notepad version 11 or later.
 
 * NVDA will announce status items such as line and column information when
   report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed.
+  laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## Kişiler
 
