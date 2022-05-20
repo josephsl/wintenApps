@@ -32,7 +32,7 @@ def onInstall():
 	# between feature updates/milestones and builds across clients and servers such as 1809/17763 (RS5).
 	# But 21H2 changes this: Windows 10 (19044), Windows Server 2022 (20348), and Windows 11 (22000)
 	# As these releases come from vibranium (vb), iron (fe), and cobalt (co) branches, respectively.
-	# Depending on the nature of Windows 10 22H2 (so far Windows 11 22H2 build number is higher than 21H2),
+	# Depending on the nature of Windows 10 22H2 (Windows 11 22H2 build number is higher than 21H2),
 	# a different strategy may need to be employed in 2022 to test feature update builds.
 	# For now assume minimum supported version is the one listed below unless this is Windows 11.
 	windowsReleaseSeries = "Windows 10"

@@ -45,7 +45,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * In Windows 11 Insider Preview builds, microphone mute toggle status (Windows+Alt+K) is announced from everywhere.
 * NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and later. This is now part of NVDA 2022.1.
 * NVDA will once again announce search result details in Start menu. This is now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other user interface controls can be detected properly when using mouse and/or touch interaction.
+* In Windows 11, Taskbar items and other shell user interface elements can be detected properly when using mouse and/or touch interaction. This is now part of NVDA 2022.2.
 
 ## Calculator
 
@@ -82,7 +82,7 @@ This includes emoji panel, clipboard history, dictation/voice typing, hardware i
 
 This refers to Windows 11 Notepad version 11 or later.
 
-* NVDA will announce status items such as line and column information when report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in laptop layout) is performed.
+* NVDA will announce status items such as line and column information when report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## People
 

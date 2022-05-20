@@ -1,9 +1,9 @@
 # Vigtige forbedringer til Windows apps (Windows App Essentials) #
 
-* Authors: Joseph Lee, Derek Riemer and others
+* Forfattere: Joseph Lee, Derek Riemer og andre
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2021.3 and later
+* NVDA-kompatibilitet: 2021.3 og nyere
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
 til Windows App Essentials i 2021 for at understøtte Windows 10 og
@@ -22,22 +22,24 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Kort
 * Microsoft Kabale Samling
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/modern input method editors)
-* Notepad (Windows 11)
+  suggestions/clipboard history/Suggested Actions (preview)/modern input
+  method editors)
+* Notesblok (Windows 11)
 * Personer
 * Indstillinger (systemindstillinger, Windows+I)
-* Voice access (Windows 11)
+* Stemmeadgang (Windows 11)
 * Vejr
 * Diverse moduler til kontrolelementer som Start Menu-felter.
 
 Bemærkninger:
 
-* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
-  22000) or later.
+* Denne tilføjelse kræver Windows 10 21H1 (build 19043), Windows 11 21H2
+  (build 22000) eller nyere.
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
-* Not all features from Windows Insider Preview builds will be supported.
+* Ikke alle funktioner fra Windows Insider Preview-builds vil blive
+  understøttet.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
 * For funktioner, der ikke er anført nedenfor, kan du antage, at funktioner
@@ -48,45 +50,48 @@ Bemærkninger:
 * Nogle apps understøtter kompakt overlejring (for eksempel Bevar Øverst i
   lommeregner), og denne tilstand fungerer ikke korrekt med flytbare kopier
   af NVDA.
-* For best experience with apps that embed web technologies and content such
-  as Start menu and its context menu, enable "Automatic focus mode for focus
-  changes" setting from NVDA's browse mode settings panel.
+* For at få den bedste oplevelse med apps, der integrerer webteknologier og
+  indhold som f.eks. Start-menuen og dens kontekstmenu, skal du aktivere
+  indstillingen "Automatisk fokustilstand ved ændring af fokus" fra NVDAs
+  indstillingspanel under "Gennemsynstilstand".
 
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Generelt
 
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag complete, drag drop effect,
-  drop target dropped. With NVDA's log level set to debug, these events will
-  be tracked and logged.
+* Udover UIA event handlers, der tilbydes af NVDA, vil følgende
+  UIA-hændelser og egenskaber blive genkendt: drag complete, drag drop
+  effect, drop target dropped. Hvis NVDAs logningsniveau indstilles til
+  "Fejlfinding", vil disse hændelser blive sporet og logført.
 * Når åbning, lukning, ændring af rækkefølge (Windows 11) eller Skift mellem
   virtuelle skrivebord forekommer, vil NVDA annoncere det aktuelle navn for
   det virtuelle skrivebord (f.eks. "Skrivebord 2").
-* When arranging pinned entries (tiles in Windows 10) in Start menu or
-  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
-  information on dragged items or new position of the dragged item.
+* Når du arrangerer fastgjorte elementer (fliser i Windows 10) på
+  start-menuen eller hurtige handlinger i Handlingscenter med
+  Alt+Shift+piletasterne, vil NVDA oplyse informationer om emner, når disse
+  flyttes.
 * Meddelelser, som ændringer i lydstyrke/lysstyrke i Stifinder og
   appopdateringsmeddelelser fra Microsoft Store, kan deaktiveres ved at
   deaktivere rapportering af meddelelserne i NVDAs
   objektpræsentationsindstillinger.
-* In Windows 11 Insider Preview builds, microphone mute toggle status
-  (Windows+Alt+K) is announced from everywhere.
-* NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
-  later. This is now part of NVDA 2022.1.
-* NVDA will once again announce search result details in Start menu. This is
+* I Windows 11 Insider Preview-builds annonceres mikrofonens status
+  (Windows+Alt+K) overalt, når du slår lyden til eller fra.
+* NVDA vil ikke længere gentage tekstoutput i Windows Terminal 1.12.10733 og
+  nyere. Dette er nu en del af NVDA 2022.1.
+* NVDA vil igen annoncere søgeresultatdetaljer i Start-menuen. Dette er nu
+  en del af NVDA 2022.2.
+* In Windows 11, Taskbar items and other shell user interface elements can
+  be detected properly when using mouse and/or touch interaction. This is
   now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other user interface controls can be
-  detected properly when using mouse and/or touch interaction.
 
 ## Lommeregner
 
-* In Windows 10, history and memory list items are properly labeled. This is
-  now part of NVDA 2022.1.
-* NVDA will announce calculator display content when performing scientific
-  mode commands such as trigonometry operations. This is now part of NVDA
-  2022.2.
+* I Windows 10 er historik- og hukommelseslisteelementer korrekt
+  navngivet. Dette er nu en del af NVDA 2022.1.
+* NVDA vil annoncere indholdet af lommeregnerens display, når du udfører
+  kommandoer i videnskabelig tilstand, såsom trigonometrioperationer. Dette
+  er nu en del af NVDA 2022.2.
 
 ## Cortana
 
@@ -110,29 +115,32 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Moderne tastatur
 
-Dette inkluderer emoji-panelet, historik for udklipsholderen, diktering,
-forslag i forhold til hardwareinput og moderne Input Methodf Editor for
-visse sprog. Når du ser emojier, skal du for at få den bedste oplevelse
-aktivere Unicode Consortium-indstillingen fra NvDAs taleindstillinger og
-indstille tegnsætningsniveauet til "nogle" eller højere. Når du skal
-indstille fra historikken i Windows 10, skal du bruge mellemrumstasten i
-stedet for enter. NVDA understøtter også det opdaterede inputoplevelsespanel
-i Windows 11.
+This includes emoji panel, clipboard history, dictation/voice typing,
+hardware input suggestions, suggested actions (preview), and modern input
+method editors for certain languages across Windows 10 and 11. When viewing
+emojis, for best experience, enable Unicode Consortium setting from NVDA's
+speech settings and set symbol level to "some" or higher. When pasting from
+clipboard history in Windows 10, press Space key instead of Enter key to
+paste the selected item.
 
-* In Windows 10, when an emoji group (including kaomoji and symbols group)
-  is selected, NVDA will no longer move navigator object to certain emojis.
-* In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens. This is now part of NVDA 2022.1.
-* In Windows 11 clipboard history, browse mode will be turned off by
-  default, designed to let NVDA announce clipboard history entry menu items.
+* Når en emoji-gruppe (inklusive kaomoji og symbolgrupper er valgt, vil NVDA
+  ikke længere flytte navigatorobjektet til bestemte emoji.
+* I Windows 11 er det igen muligt at bruge piletasterne til at gennemgå
+  listen over emoji, når emoji-panelet åbner. Dette er nu en del af NVDA
+  2022.1.
+* I Windows 11 udklipsholderhistorik er gennemsynstilstand slået fra som
+  standard, således NVDA kan annoncere menupunkter i
+  udklipsholderhistorikken.
+* In Insider Preview build 25115, NVDA will announce suggested actions when
+  compatible data such as phone numbers is copied to the clipboard.
 
-## Notepad
+## Notesblok
 
-This refers to Windows 11 Notepad version 11 or later.
+Dette henviser til Windows 11 Notepad version 11 eller nyere.
 
 * NVDA will announce status items such as line and column information when
   report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed.
+  laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## Personer
 
@@ -143,21 +151,22 @@ This refers to Windows 11 Notepad version 11 or later.
 
 * Bemærkelsesværdige kontroletiketter set i visse Windows-installationer er
   blevet løst.
-* NVDA will announce the name of the optional quality update control if
-  present (download and install now link in Windows 10, download button in
-  Windows 11).
-* In Windows 11, breadcrumb bar items are properly recognized.
-* In Windows 10, NVDA will interupt speech and report updates to Windows
-  Update status as download and install progresses. This may result in
-  speech interruption when navigating Settings app while updates are being
-  downloaded and installed.
+* NVDA vil annoncere navnet på den valgfrie kvalitetsopdateringskontrol,
+  hvis den findes (download og installer nu-link i Windows 10, download-knap
+  i Windows 11).
+* I Windows 11 genkendes brødkrumme-elementer korrekt.
+* I Windows 10 vil NVDA afbryde talen og oplyse status for opdateringer til
+  Windows Update, efterhånden som download og installation skrider
+  frem. Dette kan resultere i afbrydelse af talen, når du navigerer i appen
+  Indstillinger, mens opdateringer downloades og installeres.
 
-## Voice access
+## Stemmeadgang
 
-This refers to Voice access feature introduced in Windows 11 22H2 preview.
+Dette henviser til stemmeadgangsfunktionen introduceret i Windows 11 22H2
+preview.
 
-* NVDA will announce microphone status when toggling microphone from Voice
-  access interface.
+* NVDA vil annoncere mikrofonstatus, når mikrofonen skiftes fra
+  brugergrænsefladen i Stemmeadgang.
 
 ## Vejr
 

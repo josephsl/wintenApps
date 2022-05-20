@@ -24,8 +24,8 @@ qué se incluye):
 * Mapas
 * Microsoft Solitaire Collection
 * Teclado Moderno (panel de emojis / dictado / escritura por voz /
-  sugerencias de entrada hardware / historial del portapapeles / editores
-  modernos de método de entrada)
+  sugerencias de entrada hardware / historial del portapapeles / acciones
+  sugeridas (preview) / editores modernos de método de entrada)
 * Bloc de notas (Windows 11)
 * Gente
 * Opciones (opciones de sistema, Windows+I)
@@ -85,7 +85,7 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   menú Inicio. Esto ahora forma parte de NVDA 2022.2.
 * En Windows 11, se pueden detectar adecuadamente los elementos de la barra
   de tareas y otros controles de interfaz de usuario cuando se usa el ratón
-  o la interacción táctil.
+  o la interacción táctil. Esto ahora forma parte de NVDA 2022.2.
 
 ## Calculadora
 
@@ -118,12 +118,13 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 ## Teclado Moderno
 
 Esto incluye el panel de emojis, historial del portapapeles, dictado /
-escritura por voz, sugerencias de entrada por hardware, y los editores
-modernos de métodos de entrada para ciertos idiomas. Al visualizar emojis,
-para una mejor experiencia, activa la opción del consorcio Unicode desde las
-opciones de voz de NVDA y configura el nivel de símbolos en "alguno" o más
-alto. NVDA también soporta el panel actualizado de experiencia de entrada de
-Windows 11.
+escritura por voz, sugerencias de entrada por hardware, acciones sugeridas
+(preview) y los editores modernos de métodos de entrada para ciertos idiomas
+en Windows 10 y 11. Al visualizar emojis, para una mejor experiencia, activa
+la opción del consorcio Unicode desde las opciones de voz de NVDA y
+configura el nivel de símbolos en "alguno" o más alto. Al pegar desde el
+portapapeles en Windows 10, pulsa la barra espaciadora en vez de intro para
+pegar el elemento seleccionado.
 
 * En Windows 10, cuando se seleccione un grupo de emojis (incluyendo kaomoji
   y el grupo de símbolos), NVDA ya no moverá el navegador de objetos a
@@ -134,6 +135,9 @@ Windows 11.
 * En el historial del portapapeles de Windows 11, se desactivará el modo
   exploración por defecto, diseñado para permitir que NVDA anuncie los
   elementos de menú con las entradas del historial del portapapeles.
+* En la compilación Insider Preview 25115, NVDA anunciará las acciones
+  sugeridas cuando se copien al portapapeles datos compatibles, como números
+  de teléfono.
 
 ## Bloc de notas
 
@@ -142,7 +146,7 @@ Esto hace referencia al Bloc de notas de Windows 11, versión 11 o posterior.
 * NVDA anunciará elementos de estado, como la información de línea y
   columna, cuando se ejecute la orden para anunciar la barra de estado
   (NVDA+fin en disposición de escritorio, NVDA+shift+fin en disposición
-  portátil).
+  portátil). Esto ahora forma parte de NVDA 2022.2.
 
 ## Gente
 

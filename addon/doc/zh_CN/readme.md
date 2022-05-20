@@ -17,18 +17,17 @@
 * 邮件
 * 地图
 * Microsoft Solitaire Collection（微软纸牌游戏）
-* 现代键盘（包括表情符号面板、听写、语音输入、硬件输入建议、云剪贴板历史记录以及现代输入法编辑器）
+* 现代键盘（包括表情符号面板、听写、语音输入、硬件输入建议、云剪贴板历史记录、建议操作（预览）、现代输入法编辑器）
 * 记事本（Windows 11）
 * 人脉
 * 设置（Windows + I系统设置）
-* Voice access (Windows 11)
+* 语音访问（Windows 11）
 * 天气
 * 开始菜单中的瓷贴控件和其他模块
 
 注意:
 
-* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
-  22000) or later.
+* 此插件需要 Windows 10 21H1（内部版本 19043）、Windows 11 21H2（内部版本 22000）或更高版本。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
 * 并非支持 Windows Insider Preview 版本中的所有功能。
 * 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
@@ -53,7 +52,9 @@
 * 修复了 NVDA 在 Windows Terminal 1.12.10733 及更高版本中会重复朗读输出文本的错误，该修复已经包含在
   NVDA2022.1 中。
 * 修复了 NVDA 不朗读开始菜单搜索结果详情的错误，该修复已经包含在 NVDA2022.2 中。
-* 在 Windows 11 中，使用鼠标和/或触摸交互时可以正确读出任务栏项目和其他的用户界面控件。
+* In Windows 11, Taskbar items and other shell user interface elements can
+  be detected properly when using mouse and/or touch interaction. This is
+  now part of NVDA 2022.2.
 
 ## 计算器
 
@@ -79,19 +80,22 @@
 
 ## 系统键盘
 
-这包括表情符号面板、剪贴板历史记录、听写/语音输入、硬件输入建议以及某些语言的现代输入法编辑器。查看表情符号时，为了获得最佳体验，请从 NvDA
-的语音设置对话框中选中“处理字符和符号时包含 Unicode 数据（表情符号）”复选框，并将符号级别设置为“少数”或更高。在 Windows 10
-中从剪贴板历史记录粘贴时，请按空格键而非回车键来粘贴所选项目。此外，NVDA 在 Windows 11 中支持更新的输入体验面板。
+这包括表情符号面板、剪贴板历史记录、听写/语音输入、硬件输入建议、硬件输入建议、建议的操作（预览）、适用于 Windows10 /
+Windows11的某些语言的现代输入法编辑器。查看表情符号时，为了获得最佳体验，请从 NvDA 的语音设置对话框中选中“处理字符和符号时包含
+Unicode 数据（表情符号）”复选框，并将符号级别设置为“少数”或更高。在 Windows 10
+中从剪贴板历史记录粘贴时，请按空格键而非回车键来粘贴所选项目。
 
 * 在Windows 10中，选择Emoji组（包括Kaomoji和符号组）时，NVDA不会将导航对象移动到某些EMOJI上。
 * 在 Windows 11 中，当表情符号面板打开时，可以使用箭头键查看表情符号。该功能已是 NVDA2022.1 的一部分。
 * 在 Windows 11 剪贴板历史记录中，为了让 NVDA 宣布剪贴板历史记录条目菜单项，浏览模式将默认关闭。
+* 在 Insider Preview 版本 25115 中，当电话号码等兼容的数据复制到剪贴板时，NVDA 会读出建议的操作。
 
 ## 记事本
 
 这是指 Windows 11 或更高版本系统上的记事本。
 
-* NVDA在执行读出状态栏命令（台式机键盘方案为 NVDA+End，笔记本键盘方案为 NvDA+Shift+End）时会同时读出行列信息等状态条目。
+* NVDA在执行读出状态栏命令（台式机键盘方案为 NVDA+End，笔记本键盘方案为
+  NvDA+Shift+End）时会同时读出行列信息等状态条目。该修复已经包含在 NVDA2022.1 中。
 
 ## 人脉
 
@@ -104,12 +108,11 @@
 * 在 Windows 11 中，可以正确识别 breadcrumb 栏项目。
 * 在 Windows 10 中，NVDA 会在下载和安装更新过程中打断语音并读出 Windows 更新状态。这可能会导致在设置中导航时语音朗读被打断。
 
-## Voice access
+## 语音访问
 
-This refers to Voice access feature introduced in Windows 11 22H2 preview.
+这是指 Windows 11 22H2 预览版中加入的语音访问功能。
 
-* NVDA will announce microphone status when toggling microphone from Voice
-  access interface.
+* 在语音访问界面切换麦克风时，NVDA 会读出麦克风的状态。
 
 ## 天气
 

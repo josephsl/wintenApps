@@ -23,7 +23,8 @@ tiết của mỗi ứng dụng để biết them):
 * Maps
 * Microsoft Solitaire Collection
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/modern input method editors)
+  suggestions/clipboard history/Suggested Actions (preview)/modern input
+  method editors)
 * Notepad (Windows 11)
 * People
 * Settings (system settings, Windows+I)
@@ -78,8 +79,9 @@ for add-on releases][3] .
   later. This is now part of NVDA 2022.1.
 * NVDA will once again announce search result details in Start menu. This is
   now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other user interface controls can be
-  detected properly when using mouse and/or touch interaction.
+* In Windows 11, Taskbar items and other shell user interface elements can
+  be detected properly when using mouse and/or touch interaction. This is
+  now part of NVDA 2022.2.
 
 ## Calculator
 
@@ -111,12 +113,12 @@ for add-on releases][3] .
 ## Modern keyboard
 
 This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, and modern input method editors for certain
-languages. When viewing emojis, for best experience, enable Unicode
-Consortium setting from NVDA's speech settings and set symbol level to
-"some" or higher. When pasting from clipboard history in Windows 10, press
-Space key instead of Enter key to paste the selected item. NVDA also
-supports updated input experience panel in Windows 11.
+hardware input suggestions, suggested actions (preview), and modern input
+method editors for certain languages across Windows 10 and 11. When viewing
+emojis, for best experience, enable Unicode Consortium setting from NVDA's
+speech settings and set symbol level to "some" or higher. When pasting from
+clipboard history in Windows 10, press Space key instead of Enter key to
+paste the selected item.
 
 * In Windows 10, when an emoji group (including kaomoji and symbols group)
   is selected, NVDA will no longer move navigator object to certain emojis.
@@ -124,6 +126,8 @@ supports updated input experience panel in Windows 11.
   when emoji panel opens. This is now part of NVDA 2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
+* In Insider Preview build 25115, NVDA will announce suggested actions when
+  compatible data such as phone numbers is copied to the clipboard.
 
 ## Notepad
 
@@ -131,7 +135,7 @@ This refers to Windows 11 Notepad version 11 or later.
 
 * NVDA will announce status items such as line and column information when
   report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed.
+  laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## People
 

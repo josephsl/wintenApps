@@ -22,9 +22,9 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 * Mail
 * Karte
 * Microsoft Solitaire zbirka
-* Moderna tipkovnica (ploča emojija, diktatiranje, tipkanje glasom,
-  prijedlozi hardvera unosa, povijest međuspremnika, moderni uređivači za
-  unos)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/Suggested Actions (preview)/modern input
+  method editors)
 * Notepad (Windows 11)
 * Osobe
 * Postavke (postavke sustava, Windows+I)
@@ -77,8 +77,9 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   later. This is now part of NVDA 2022.1.
 * NVDA will once again announce search result details in Start menu. This is
   now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other user interface controls can be
-  detected properly when using mouse and/or touch interaction.
+* In Windows 11, Taskbar items and other shell user interface elements can
+  be detected properly when using mouse and/or touch interaction. This is
+  now part of NVDA 2022.2.
 
 ## Kalkulator
 
@@ -108,14 +109,13 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 
 ## Moderna tipkovnica
 
-To uključuje ploču s emojijima, povijest međuspremnika,
-diktatiranje/tipkanje govorom, prijedloge unosa hardvera i moderne uređivače
-načina unosa za određene jezike. Kad pregledavaš emojije, aktiviraj postavku
-Unicode Consortium u NVDA postavkama govora i postavi razinu simbola na
-„neki” ili višu. Prilikom umetanja iz povijesti međuspremnika u sustavu
-Windows 10, pritisni tipku za razmak umjesto tipke Enter za umetanje
-odabranog elementa. Također, NVDA podržava aktualiziranu ploču unosa u
-Windows 11.
+This includes emoji panel, clipboard history, dictation/voice typing,
+hardware input suggestions, suggested actions (preview), and modern input
+method editors for certain languages across Windows 10 and 11. When viewing
+emojis, for best experience, enable Unicode Consortium setting from NVDA's
+speech settings and set symbol level to "some" or higher. When pasting from
+clipboard history in Windows 10, press Space key instead of Enter key to
+paste the selected item.
 
 * U sustavu Windows 10, kad je odabrana grupa emojija (uključujući kaomoji i
   grupu simbola), NVDA više neće pomicati navigacijski objekt na određene
@@ -124,14 +124,16 @@ Windows 11.
   when emoji panel opens. This is now part of NVDA 2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
+* In Insider Preview build 25115, NVDA will announce suggested actions when
+  compatible data such as phone numbers is copied to the clipboard.
 
 ## Notepad
 
 Ovo se odnosi na Windows 11 Notepad verziju 11 ili noviju.
 
-* NVDA će najaviti elemente stanja kao što su informacije o retku i stupcu
-  kad se izvrši naredba statusne trake izvještaja (NVDA+Kraj u izgledu radne
-  površine, NvDA+Shift+Kraj u izgledu prijenosnog računala).
+* NVDA will announce status items such as line and column information when
+  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
+  laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## Osobe
 
