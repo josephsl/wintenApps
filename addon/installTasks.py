@@ -61,7 +61,7 @@ def onInstall():
 	# But since it is labeled 21H2, add-on support duration is tied to the client (build 19044).
 	# Only display the below message if the prerelease flag is on,
 	# to be switched to the new message (or not) when Version 22H2 is announced.
-	newW10CompatMessage = False
+	newW10CompatMessage = True
 	if currentWinVer < winVersion.WIN11 and newW10CompatMessage:
 		supportedBuilds = {
 			19043: "21H1",
