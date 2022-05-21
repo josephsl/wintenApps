@@ -46,25 +46,6 @@ additionalPropertyEvents: dict[int, str] = {
 }
 
 
-# #72: the following window classes should be recognized as good UIA windows in Windows 11.
-# Superseeded by app module method patching routine as all the class names come from File Explorer,
-# and the latter method is now part of NVDA 2022.2.
-w11GoodUIAWindowClassNames: list[str] = [
-	# Windows 11 shell UI root, housing various shell elements shown on screen if enabled.
-	"Shell_TrayWnd",  # Start, Search, Widgets, other shell elements
-	# Top-level window class names from Windows 11 shell features
-	"Shell_InputSwitchTopLevelWindow",  # Language switcher
-	"XamlExplorerHostIslandWindow",  # Task View and Snap Layouts
-	# Specific Windows 11 shell elements
-	"MSTaskSwWClass",  # Taskbar icons
-	"ReBarWindow32",  # Taskbar icons
-	"Button",  # Notification chevron button
-	"TIPBand",  # Touch keyboard button
-	"VirtualTouchpad",  # Virtual touchpad button
-	"TrayNotifyWnd",  # System tray
-]
-
-
 # #72: patch File Explorer module to add more good UIA window class names.
 # Resolved in NVDA 2022.2.
 def isGoodUIAWindow(self, hwnd):
