@@ -52,9 +52,7 @@
 * 修复了 NVDA 在 Windows Terminal 1.12.10733 及更高版本中会重复朗读输出文本的错误，该修复已经包含在
   NVDA2022.1 中。
 * 修复了 NVDA 不朗读开始菜单搜索结果详情的错误，该修复已经包含在 NVDA2022.2 中。
-* In Windows 11, Taskbar items and other shell user interface elements can
-  be detected properly when using mouse and/or touch interaction. This is
-  now part of NVDA 2022.2.
+* 在 Windows 11 中，使用鼠标和/或触摸交互时可以正确读出任务栏项目和其他的用户界面控件元素，该修复已经包含在 NVDA2022.2 中。
 
 ## 计算器
 

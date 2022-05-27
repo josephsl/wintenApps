@@ -22,9 +22,9 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Sähköposti
 * Kartat
 * Microsoft Solitaire -kokoelma
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/Suggested Actions (preview)/modern input
-  method editors)
+* Moderni näppäimistö (emojipaneeli/sanelu/puhekirjoitus/fyysisen
+  näppäimistösyötteen ehdotukset/leikepöydän historia/ehdotetut toiminnot
+  (esiversio)/modernin syöttömenetelmän muokkaimet)
 * Muistio (Windows 11)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
@@ -79,9 +79,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   uudemmissa. Tämä sisältyy nyt NVDA 2022.1:een.
 * NVDA ilmoittaa jälleen hakutulosten tiedot Käynnistä-valikossa. Tämä
   sisältyy nyt NVDA 2022.2:een.
-* In Windows 11, Taskbar items and other shell user interface elements can
-  be detected properly when using mouse and/or touch interaction. This is
-  now part of NVDA 2022.2.
+* Tehtäväpalkin kohteet ja muut käyttöliittymän säätimet tunnistetaan oikein
+  Windows 11:ssä hiirtä ja/tai kosketusvuorovaikutusta käytettäessä. Tämä
+  sisältyy nyt NVDA 2022.2:een.
 
 ## Laskin
 
@@ -112,13 +112,14 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Moderni näppäimistö
 
-This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, suggested actions (preview), and modern input
-method editors for certain languages across Windows 10 and 11. When viewing
-emojis, for best experience, enable Unicode Consortium setting from NVDA's
-speech settings and set symbol level to "some" or higher. When pasting from
-clipboard history in Windows 10, press Space key instead of Enter key to
-paste the selected item.
+Näitä ovat emojipaneeli, leikepöydän historia, sanelu/puhekirjoitus,
+ehdotukset syötettäessä tekstiä fyysisellä näppäimistöllä, ehdotetut
+toiminnot (esiversio) sekä modernin syöttömenetelmän editorit tietyille
+kielille. Ota käyttöön emojeita tarkasteltaessa Unicode-konsortion datan
+asetus NVDA:n puheasetuksista parhaan kokemuksen saamiseksi, ja aseta
+symbolitasoksi "jotain" tai korkeampi. Kun liität leikepöydän historiasta,
+liitä valittu kohde painamalla välilyöntinäppäintä Enterin sijaan. NVDA
+tukee lisäksi päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 
 * Kun emojiryhmä (kaomoji ja symboliryhmä mukaan lukien) valitaan Windows
   10:ssä, NVDA ei enää siirrä navigointiobjektia tiettyihin emojeihin.
@@ -127,16 +128,16 @@ paste the selected item.
 * Selaustila poistetaan käytöstä oletusarvoisesti Windows 11:n leikepöydän
   historiassa, minkä tarkoituksena on mahdollistaa NVDA:lle historian
   valikkokohteiden lukeminen.
-* In Insider Preview build 25115, NVDA will announce suggested actions when
-  compatible data such as phone numbers is copied to the clipboard.
+* Insider-esikoontiversiossa 25115 NVDA ilmoittaa ehdotetut toiminnot, kun
+  leikepöydälle kopioidaan yhteensopivaa dataa, kuten puhelinnumeroita.
 
 ## Muistio
 
 Tämä viittaa Windows 11:n Muistion versioon 11 tai sitä uudempiin.
 
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed. This is now part of NVDA 2022.2.
+* NVDA puhuu tilakohteet, kuten rivin ja sarakkeen tiedot, kun Puhu tilarivi
+  -komento (NVDA+End pöytäkoneissa, NVDA+Vaihto+End kannettavissa)
+  suoritetaan. Tämä sisältyy nyt NVDA 2022.2:een.
 
 ## Ihmiset
 
