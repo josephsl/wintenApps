@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-04-01 17:05-0700\n"
+"PO-Revision-Date: 2022-05-29 14:47+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
 "Language: hr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.0\n"
 
 #. Windows App Essentials requires Windows 10 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -45,19 +45,19 @@ msgid ""
 "You are using an unsupported {windowsRelease} release. This add-on requires "
 "{minSupportedUpdate} or later."
 msgstr ""
-"Koristiš nepodržano {windowsRelease} izdanje. Ovaj dodatak zahtijeva "
+"Koristiš nepodržano izdanje {windowsRelease}. Ovaj dodatak zahtijeva "
 "{minSupportedUpdate} ili noviju verziju."
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows 10 release.
 #. Unlike Windows 11, Windows 10 releases from 21H2 are checked using a list of public builds.
 #. For example, if 21H1 and 21H2 are supported, the text will list supported releases at the end.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using an unsupported {windowsRelease} release. Supported releases: "
 "{windowsReleasesList}."
 msgstr ""
-"Koristiš nepodržano {windowsRelease} izdanje. Ovaj dodatak zahtijeva "
-"{minSupportedUpdate} ili noviju verziju."
+"Koristiš nepodržano izdanje {windowsRelease}. Podržana izdanja: "
+"{windowsReleasesList}."
 
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.

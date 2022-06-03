@@ -3,7 +3,7 @@
 * Autorzy: Joseph Lee, Derek Riemer i inni
 * Pobierz [wersja stabilna][1]
 * Pobierz [wersja rozwojowa][2]
-* NVDA compatibility: 2021.3 and later
+* Zgodność z NVDA: 2021.3 i nowsze
 
 Uwaga: Pierwotniea nazwa tego dodatku była Windows 10 App Essentials, a
 potem została zmieniona na Windows App Essentials w 2021 roku, aby
@@ -23,23 +23,24 @@ dołączone, zobacz każdą sekcję aplikacji):
 * Mail
 * Mapy
 * Microsoft Solitaire Collection
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/Suggested Actions (preview)/modern input
-  method editors)
-* Notepad (Windows 11)
+* Nowoczesna klawiatura (panel emoji/dyktowanie/pisanie głosowe/sugestie
+  wprowadzania sprzętowego/historia schowka/Sugerowane działania
+  (podgląd)/nowoczesne edytory metod wprowadzania)
+* Notatnik (Windows 11)
 * Osoby
 * Ustawienia (ustawienia systemowe, Windows+I)
-* Voice access (Windows 11)
+* Dostęp głosowy (Windows 11)
 * Pogoda
 * Różne moduły dla kontrolek, takie jak kafelki menu Start
 
-uwagi: 
+Notatki:
 
-* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
-  22000) or later.
+* Ten dodatek wymaga systemu Windows 10 21H1 (kompilacja 19043), Windows 11
+  21H2 (kompilacja 22000) lub nowszego.
 * Chociaż instalacja jest możliwa, ten dodatek nie obsługuje wersji Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
-* Not all features from Windows Insider Preview builds will be supported.
+* Nie wszystkie funkcje kompilacji systemu Windows Insider Preview będą
+  obsługiwane.
 * Niektóre funkcje dodatkowe są lub będą częścią czytnika ekranu NVDA.
 * W przypadku wpisów niewymienionych poniżej można założyć, że funkcje są
   częścią NVDA, nie mają już zastosowania, ponieważ dodatek nie obsługuje
@@ -49,46 +50,48 @@ uwagi:
 * Niektóre aplikacje obsługują tryb kompaktowej nakładki (na przykład zawsze
   na górze w kalkulatorze), a ten tryb nie będzie działał poprawnie z
   przenośną wersją NVDA.
-* For best experience with apps that embed web technologies and content such
-  as Start menu and its context menu, enable "Automatic focus mode for focus
-  changes" setting from NVDA's browse mode settings panel.
+* Aby uzyskać najlepsze wrażenia z aplikacji, które osadzają technologie
+  internetowe i zawartość, taką jak menu Start i jego menu kontekstowe,
+  włącz ustawienie "Automatyczny tryb ustawiania ostrości dla zmian
+  ostrości" w panelu ustawień trybu przeglądania NVDA.
 
 Listę zmian wprowadzonych między poszczególnymi wersjami dodatków można
 znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 
 ## Ogólne
 
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag complete, drag drop effect,
-  drop target dropped. With NVDA's log level set to debug, these events will
-  be tracked and logged.
+* Oprócz programów obsługi zdarzeń UIA dostarczanych przez NVDA rozpoznawane
+  są następujące zdarzenia i właściwości UIA: przeciągnij zakończone, efekt
+  przeciągania, upuść cel upuszczony. Po ustawieniu poziomu dziennika NVDA
+  na debugowanie zdarzenia te będą śledzone i rejestrowane.
 * Podczas otwierania, zamykania, zmiany kolejności (Windows 11) lub
   przełączania się między pulpitami wirtualnymi NVDA ogłosi nazwę aktywnego
   pulpitu wirtualnego (na przykład pulpit 2).
-* When arranging pinned entries (tiles in Windows 10) in Start menu or
-  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
-  information on dragged items or new position of the dragged item.
+* Podczas rozmieszczania przypiętych wpisów (kafelków w systemie Windows 10)
+  w menu Start lub szybkich akcji Centrum akcji za pomocą Alt + Shift +
+  strzałek, NVDA ogłosi informacje o przeciągniętych elementach lub nowej
+  pozycji przeciągniętego elementu.
 * Anonsy, takie jak zmiany głośności/jasności w Eksploratorze plików i
   powiadomienia o aktualizacjach aplikacji ze sklepu Microsoft Store, można
   pominąć, wyłączając opcję Powiadomienia o raportach w ustawieniach
   prezentacji obiektów NVDA.
-* In Windows 11 Insider Preview builds, microphone mute toggle status
-  (Windows+Alt+K) is announced from everywhere.
-* NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
-  later. This is now part of NVDA 2022.1.
-* NVDA will once again announce search result details in Start menu. This is
-  now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other shell user interface elements can
-  be detected properly when using mouse and/or touch interaction. This is
-  now part of NVDA 2022.2.
+* W kompilacjach Systemu Windows 11 Insider Preview stan wyciszenia
+  mikrofonu (Windows + Alt + K) jest ogłaszany zewsząd.
+* NVDA nie będzie już powtarzać tekstu wyjściowego w Terminalu Windows
+  1.12.10733 i nowszych. Jest to teraz część NVDA 2022.1.
+* NVDA po raz kolejny ogłosi szczegóły wyników wyszukiwania w menu
+  Start. Jest to teraz część NVDA 2022.2.
+* W systemie Windows 11 elementy paska zadań i inne elementy interfejsu
+  użytkownika powłoki można wykryć poprawnie podczas korzystania z myszy i /
+  lub interakcji dotykowej. Jest to teraz część NVDA 2022.2.
 
 ## Kalkulator
 
-* In Windows 10, history and memory list items are properly labeled. This is
-  now part of NVDA 2022.1.
-* NVDA will announce calculator display content when performing scientific
-  mode commands such as trigonometry operations. This is now part of NVDA
-  2022.2.
+* W systemie Windows 10 elementy listy historii i pamięci są prawidłowo
+  oznaczone. Jest to teraz część NVDA 2022.1.
+* NVDA ogłosi wyświetlanie zawartości kalkulatora podczas wykonywania
+  poleceń trybu naukowego, takich jak operacje trygonometrii. Jest to teraz
+  część NVDA 2022.2.
 
 ## Cortana
 
@@ -112,30 +115,34 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 
 ## Klawiatura nowoczesna
 
-This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, suggested actions (preview), and modern input
-method editors for certain languages across Windows 10 and 11. When viewing
-emojis, for best experience, enable Unicode Consortium setting from NVDA's
-speech settings and set symbol level to "some" or higher. When pasting from
-clipboard history in Windows 10, press Space key instead of Enter key to
-paste the selected item.
+Obejmuje to panel emoji, historię schowka, dyktowanie / pisanie głosowe,
+sugestie wprowadzania sprzętu, sugerowane działania (podgląd) i nowoczesne
+edytory metod wprowadzania dla niektórych języków w systemach Windows 10 i
+11. Podczas przeglądania emotikonów, aby uzyskać najlepsze wrażenia, włącz
+ustawienie Unicode Consortium w ustawieniach mowy NVDA i ustaw poziom
+symbolu na "niektóre" lub wyższe. Podczas wklejania z historii schowka w
+systemie Windows 10 naciśnij spacji zamiast wchodzić, aby wkleić wybrany
+element.
 
-* In Windows 10, when an emoji group (including kaomoji and symbols group)
-  is selected, NVDA will no longer move navigator object to certain emojis.
-* In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens. This is now part of NVDA 2022.1.
-* In Windows 11 clipboard history, browse mode will be turned off by
-  default, designed to let NVDA announce clipboard history entry menu items.
-* In Insider Preview build 25115, NVDA will announce suggested actions when
-  compatible data such as phone numbers is copied to the clipboard.
+* W systemie Windows 10 po wybraniu grupy emoji (w tym grupy kaomoji i
+  symboli), NVDA nie będzie już przenosić obiektu nawigatora do określonych
+  emotikonów.
+* W systemie Windows 11 ponownie można używać strzałek do przeglądania
+  emotikonów po otwarciu panelu emoji. Jest to teraz część NVDA 2022.1.
+* W historii schowka systemu Windows 11 tryb przeglądania zostanie domyślnie
+  wyłączony, zaprojektowany tak, aby NVDA ogłaszała elementy menu
+  wprowadzania historii schowka.
+* W kompilacji Insider Preview 25115 NVDA ogłosi sugerowane działania, gdy
+  zgodne dane, takie jak numery telefonów, zostaną skopiowane do schowka.
 
-## Notepad
+## Notatnik
 
-This refers to Windows 11 Notepad version 11 or later.
+Odnosi się to do Notatnika systemu Windows 11 w wersji 11 lub nowszej.
 
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed. This is now part of NVDA 2022.2.
+* NVDA ogłosi elementy stanu, takie jak informacje o wierszu i kolumnie, gdy
+  zostanie wykonane polecenie paska stanu raportu (NVDA + End w układzie
+  pulpitu, NvDA + Shift + End w układzie laptopa). Jest to teraz część NVDA
+  2022.2.
 
 ## Osoby
 
@@ -146,21 +153,23 @@ This refers to Windows 11 Notepad version 11 or later.
 
 * Niezrozumiałe nazwy kontrolek obecne w niektórych oknach instalacji
   Windows 10 zostały poprawione.
-* NVDA will announce the name of the optional quality update control if
-  present (download and install now link in Windows 10, download button in
-  Windows 11).
-* In Windows 11, breadcrumb bar items are properly recognized.
-* In Windows 10, NVDA will interupt speech and report updates to Windows
-  Update status as download and install progresses. This may result in
-  speech interruption when navigating Settings app while updates are being
-  downloaded and installed.
+* NVDA ogłosi nazwę opcjonalnej kontroli jakości aktualizacji, jeśli jest
+  obecna (pobierz i zainstaluj teraz link w systemie Windows 10, przycisk
+  pobierania w systemie Windows 11).
+* W systemie Windows 11 elementy paska okruszków nawigacyjnych są prawidłowo
+  rozpoznawane.
+* W systemie Windows 10 NVDA będzie interuptować mowę i raportować
+  aktualizacje do stanu Windows Update w miarę postępu pobierania i
+  instalacji. Może to spowodować przerwy w słyszeniu podczas nawigacji po
+  aplikacji Ustawienia podczas pobierania i instalowania aktualizacji.
 
-## Voice access
+## Dostęp głosowy
 
-This refers to Voice access feature introduced in Windows 11 22H2 preview.
+Odnosi się to do funkcji dostępu głosowego wprowadzonej w systemie Windows
+11 22H2 Preview.
 
-* NVDA will announce microphone status when toggling microphone from Voice
-  access interface.
+* NVDA ogłosi stan mikrofonu podczas przełączania mikrofonu z interfejsu
+  dostępu głosowego.
 
 ## Pogoda
 
