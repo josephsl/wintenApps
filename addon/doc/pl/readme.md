@@ -75,8 +75,8 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
   powiadomienia o aktualizacjach aplikacji ze sklepu Microsoft Store, można
   pominąć, wyłączając opcję Powiadomienia o raportach w ustawieniach
   prezentacji obiektów NVDA.
-* W kompilacjach Systemu Windows 11 Insider Preview stan wyciszenia
-  mikrofonu (Windows + Alt + K) jest ogłaszany zewsząd.
+* In Windows 11 22H2 and later, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 * NVDA nie będzie już powtarzać tekstu wyjściowego w Terminalu Windows
   1.12.10733 i nowszych. Jest to teraz część NVDA 2022.1.
 * NVDA po raz kolejny ogłosi szczegóły wyników wyszukiwania w menu
@@ -165,8 +165,7 @@ Odnosi się to do Notatnika systemu Windows 11 w wersji 11 lub nowszej.
 
 ## Dostęp głosowy
 
-Odnosi się to do funkcji dostępu głosowego wprowadzonej w systemie Windows
-11 22H2 Preview.
+This refers to Voice access feature introduced in Windows 11 22H2.
 
 * NVDA ogłosi stan mikrofonu podczas przełączania mikrofonu z interfejsu
   dostępu głosowego.

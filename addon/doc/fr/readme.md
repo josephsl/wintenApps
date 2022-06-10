@@ -81,8 +81,8 @@ l'extension][3].
   l'application de Microsoft Store peuvent être supprimés en désactivant
   Annoncer les notifications dans les Paramètres de NVDA, Présentation des
   Objets.
-* Dans les versions de Windows 11 Insider Preview, l'état de la
-  désactivation du microphone (Windows + Alt + K) est annoncé de partout.
+* In Windows 11 22H2 and later, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 * NVDA ne répétera plus la sortie de texte dans Windows Terminal 1.12.10733
   et versions ultérieures. Cela fait maintenant partie de NVDA 2022.1.
 * NVDA annoncera à nouveau les détails des résultats de la recherche dans le
@@ -173,8 +173,7 @@ Ceci se rapporte à la version 11 ou ultérieure du Bloc-notes de Windows 11.
 
 ## Accès vocal
 
-Cela fait référence à la fonctionnalité d'accès vocal introduite dans
-l'aperçu de Windows 11 22H2.
+This refers to Voice access feature introduced in Windows 11 22H2.
 
 * NVDA annoncera l'état du microphone lors du basculement du microphone
   depuis l'interface d'accès vocal.

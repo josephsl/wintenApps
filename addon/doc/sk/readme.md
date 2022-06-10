@@ -69,7 +69,7 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
   Explorera a tiež upozornení z obchodu Microsoft store je možné pozastaviť
   odčiarknutím možnosti Oznamovať notifikácie v nastaveniach > prezentácia
   objektov.
-* In Windows 11 Insider Preview builds, microphone mute toggle status
+* In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
 * NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
   later. This is now part of NVDA 2022.1.
@@ -153,7 +153,7 @@ This refers to Windows 11 Notepad version 11 or later.
 
 ## Voice access
 
-This refers to Voice access feature introduced in Windows 11 22H2 preview.
+This refers to Voice access feature introduced in Windows 11 22H2.
 
 * NVDA will announce microphone status when toggling microphone from Voice
   access interface.

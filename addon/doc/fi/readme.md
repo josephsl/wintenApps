@@ -73,8 +73,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   resurssienhallinnassa sekä sovellusten päivitysilmoitukset Microsoft
   Storesta voidaan estää poistamalla käytöstä Lue ilmoitukset -asetus NVDA:n
   objektien lukemisen asetuksista.
-* Mikrofonin mykistyskytkimen (Win+Alt+K) tila ilmoitetaan nyt kaikkialta
-  Windows 11:n Insider-esiversioissa.
+* Mikrofonin mykistyksen (Win+Alt+K) tila ilmoitetaan nyt kaikkialta Windows
+  11:n versiossa 22H2 ja sitä uudemmissa.
 * NVDA ei enää toista tekstitulostetta Windows Terminal 1.12.10733:ssa ja
   uudemmissa. Tämä sisältyy nyt NVDA 2022.1:een.
 * NVDA ilmoittaa jälleen hakutulosten tiedot Käynnistä-valikossa. Tämä
@@ -159,8 +159,8 @@ Tämä viittaa Windows 11:n Muistion versioon 11 tai sitä uudempiin.
 
 ## Puhekäyttö
 
-Tämä viittaa Puhekäyttö-ominaisuuteen, joka esiteltiin Windows 11 22H2:n
-esiversiossa.
+Tämä viittaa Puhekäyttö-ominaisuuteen, joka esiteltiin Windows 11:n
+versiossa 22H2.
 
 * NVDA ilmoittaa mikrofonin tilan, kun sitä muutetaan Puhekäytön
   käyttöliittymästä.

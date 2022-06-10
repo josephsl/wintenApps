@@ -73,7 +73,7 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   notificações de atualização de aplicativos da Microsoft Store podem ser
   suprimidos desativando Anunciar Notificações nas configurações de
   apresentação de objetos do NVDA.
-* In Windows 11 Insider Preview builds, microphone mute toggle status
+* In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
 * NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
   later. This is now part of NVDA 2022.1.
@@ -159,7 +159,7 @@ Isso se refere à versão 11 ou posterior do Bloco de Notas do Windows 11.
 
 ## Voice access
 
-This refers to Voice access feature introduced in Windows 11 22H2 preview.
+This refers to Voice access feature introduced in Windows 11 22H2.
 
 * NVDA will announce microphone status when toggling microphone from Voice
   access interface.

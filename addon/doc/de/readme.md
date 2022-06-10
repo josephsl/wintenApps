@@ -77,8 +77,8 @@ Versionen][3].
   Datei-Explorer und App-Update-Benachrichtigungen aus dem Microsoft Store
   können unterdrückt werden, indem die Benachrichtigung über Berichte in den
   Objektpräsentationseinstellungen von NVDA deaktiviert wird.
-* In den Windows 11 Insider Preview-Builds wird der Status die
-  Stummschaltung für das Mikrofon (Win+Alt+K) von überall her angezeigt.
+* In Windows 11 Version 22H2 und neuer wird der Status der
+  Mikrofon-Stummschaltung (Windows+Alt+K) von überall her mitgeteilt.
 * NVDA wiederholt die Textausgabe in Windows-Terminal (1.12.10733 und neuer)
   nicht länger. Dies ist nun fester Bestandteil in NVDA 2022.1.
 * NVDA zeigt wieder Details zu Suchergebnissen im Startmenü an. Dies wird
@@ -172,8 +172,8 @@ Dies bezieht sich auf Windows 11 Notepad Version 11 oder neuer.
 
 ## Sprachlicher Zugang
 
-Dies bezieht sich auf die Vorschau in der Windows 11 Version 22H2
-eingeführte Sprachzugriffsfunktion.
+Dies bezieht sich auf die in Windows 11 Version 22H2 eingeführte
+Sprachzugriffsfunktion.
 
 * NVDA teilt den Mikrofon-Status mit, wenn das Mikrofon über die
   Sprachzugriffsoberfläche umgeschaltet wird.

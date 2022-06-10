@@ -76,9 +76,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   de archivos y las notificaciones de actualización de aplicaciones de la
   tienda Microsoft pueden suprimirse desactivando Anunciar notificaciones
   desde las opciones de presentación de objetos de NVDA.
-* En las compilaciones Insider Preview de Windows 11, el estado del
-  interruptor para silenciar el micrófono (Windows+alt+k) se anuncia desde
-  cualquier sitio.
+* En Windows 11 22H2 y posterior, el estado del interruptor para silenciar
+  el micrófono (Windows+alt+k) se anuncia desde cualquier sitio.
 * NVDA ya no repetirá la salida de texto en la terminal de Windows versión
   1.12.10733 y posteriores. Esto ahora forma parte de NVDA 2022.1.
 * NVDA anunciará una vez más los detalles del resultado de búsqueda en el
@@ -170,7 +169,7 @@ Esto hace referencia al Bloc de notas de Windows 11, versión 11 o posterior.
 ## Acceso por voz
 
 Esto hace referencia a la función de acceso por voz introducida en Windows
-11 22H2 preview.
+11 22H2.
 
 * NVDA anunciará el estado del micrófono al conmutarlo desde la interfaz del
   acceso por voz.

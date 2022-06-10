@@ -75,8 +75,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   appopdateringsmeddelelser fra Microsoft Store, kan deaktiveres ved at
   deaktivere rapportering af meddelelserne i NVDAs
   objektpræsentationsindstillinger.
-* I Windows 11 Insider Preview-builds annonceres mikrofonens status
-  (Windows+Alt+K) overalt, når du slår lyden til eller fra.
+* In Windows 11 22H2 and later, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 * NVDA vil ikke længere gentage tekstoutput i Windows Terminal 1.12.10733 og
   nyere. Dette er nu en del af NVDA 2022.1.
 * NVDA vil igen annoncere søgeresultatdetaljer i Start-menuen. Dette er nu
@@ -162,8 +162,7 @@ Dette henviser til Windows 11 Notepad version 11 eller nyere.
 
 ## Stemmeadgang
 
-Dette henviser til stemmeadgangsfunktionen introduceret i Windows 11 22H2
-preview.
+This refers to Voice access feature introduced in Windows 11 22H2.
 
 * NVDA vil annoncere mikrofonstatus, når mikrofonen skiftes fra
   brugergrænsefladen i Stemmeadgang.
