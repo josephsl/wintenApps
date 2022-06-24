@@ -28,7 +28,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Muistio (Windows 11)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
-* Puhekäyttö (Windows 11)
+* Puhekäyttö (Windows 11 22H2)
 * Sää
 * Sekalaisia moduuleita säätimille, esim. Käynnistä-valikon ruuduille.
 

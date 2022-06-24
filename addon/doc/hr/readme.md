@@ -28,7 +28,7 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 * Notepad (Windows 11)
 * Osobe
 * Postavke (postavke sustava, Windows+I)
-* Voice access (Windows 11)
+* Voice access (Windows 11 22H2)
 * Vrijeme
 * Dodatni moduli za kontrole kao što su pločice izbornika Start
 

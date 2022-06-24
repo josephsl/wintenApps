@@ -29,7 +29,7 @@ dołączone, zobacz każdą sekcję aplikacji):
 * Notatnik (Windows 11)
 * Osoby
 * Ustawienia (ustawienia systemowe, Windows+I)
-* Dostęp głosowy (Windows 11)
+* Voice access (Windows 11 22H2)
 * Pogoda
 * Różne moduły dla kontrolek, takie jak kafelki menu Start
 

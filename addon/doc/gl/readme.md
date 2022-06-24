@@ -28,7 +28,7 @@ se inclúe):
 * Bloc de notas (Windows 11)
 * Xente
 * Opcións (opcións do sistema, Windows+I)
-* Voice access (Windows 11)
+* Voice access (Windows 11 22H2)
 * O Tempo
 * Módulos misceláneos para controis como mosaicos do Menú Inicio
 

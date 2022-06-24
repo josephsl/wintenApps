@@ -29,7 +29,7 @@ detalhes sobre o que está incluído):
 * Notepad (Windows 11)
 * Pessoas.
 * Configurações (configurações do sistema, Windows + I)
-* Voice access (Windows 11)
+* Voice access (Windows 11 22H2)
 * Meteorologia
 * Módulos diversos para controlos, tais como painéis do menu iniciar.
 

@@ -30,7 +30,7 @@ est inclus) :
 * Bloc-notes (Windows 11)
 * Personnes
 * Paramètres (paramètres système, Windows+I)
-* Accès vocal (Windows 11)
+* Voice access (Windows 11 22H2)
 * Météo
 * Divers modules pour des contrôles tels que les tuiles du Menu Démarrer
 

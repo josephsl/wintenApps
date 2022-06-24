@@ -28,7 +28,7 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 * Notepad (Windows 11)
 * Kontakte
 * Einstellungen (System-Einstellungen, Windows+I)
-* Sprachlicher Zugang (Windows 11)
+* Sprachzugang (Windows 11 Version 22H2)
 * Wetter
 * Verschiedene Module für Bedienelemente wie Startmenü-Kacheln
 
@@ -62,10 +62,10 @@ Versionen][3].
 ## Allgemein
 
 * Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignis-Handlern werden
-  die folgenden UIA-Ereignisse und -Eigenschaften der Effekte erkannt: Drag
-  abgeschlossen, Drag & Drop, Drop Target. Wenn die Protokollstufe in NVDA
-  auf Debug eingestellt ist, werden diese Ereignisse verfolgt und
-  protokolliert.
+  die folgenden UIA-Ereignisse und -Eigenschaften erkannt: Ziehen
+  abgeschlossen, Ziehen-fallenlassen-Effekt, Ziel fallenlassen. Wenn die
+  NVDA-Protokollebene auf Debug eingestellt ist, werden diese Ereignisse
+  verfolgt und protokolliert.
 * Beim Öffnen, Schließen, Neuordnen (Windows 11) oder Wechseln zwischen
   virtuellen Desktops gibt NVDA den Namen des aktiven virtuellen Desktops an
   (z. B. Desktop 2).
@@ -170,10 +170,10 @@ Dies bezieht sich auf Windows 11 Notepad Version 11 oder neuer.
   Einstellungen-App navigieren, während Updates heruntergeladen und
   installiert werden.
 
-## Sprachlicher Zugang
+## Sprachzugang
 
-Dies bezieht sich auf die in Windows 11 Version 22H2 eingeführte
-Sprachzugriffsfunktion.
+Dies bezieht sich auf die in Windows 11 Version 22H2 eingeführte Funktion
+für den Sprachzugang.
 
 * NVDA teilt den Mikrofon-Status mit, wenn das Mikrofon über die
   Sprachzugriffsoberfläche umgeschaltet wird.

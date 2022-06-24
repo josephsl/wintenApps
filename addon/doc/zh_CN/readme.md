@@ -21,7 +21,7 @@
 * 记事本（Windows 11）
 * 人脉
 * 设置（Windows + I系统设置）
-* 语音访问（Windows 11）
+* Voice access (Windows 11 22H2)
 * 天气
 * 开始菜单中的瓷贴控件和其他模块
 

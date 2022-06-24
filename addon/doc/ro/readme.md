@@ -29,7 +29,7 @@ privire la ceea ce este inclus):
 * Notepad (Windows 11)
 * Persoane
 * Setări (setări de sistem, Windows+I)
-* Voice access (Windows 11)
+* Voice access (Windows 11 22H2)
 * Meteo
 * Miscellaneous modules for controls such as Start Menu tiles
 

@@ -23,7 +23,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 메모장(윈도우 11)
 * People
 * 설정(시스템 설정 앱, Windows+I)
-* Voice access (Windows 11)
+* 메모장(윈도우 11 22H2)
 * 날씨
 * 그 외 지원 모듈(시작 메뉴 타일 지원 등)
 

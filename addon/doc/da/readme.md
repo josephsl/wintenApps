@@ -27,7 +27,7 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Notesblok (Windows 11)
 * Personer
 * Indstillinger (systemindstillinger, Windows+I)
-* Stemmeadgang (Windows 11)
+* Voice access (Windows 11 22H2)
 * Vejr
 * Diverse moduler til kontrolelementer som Start Menu-felter.
 

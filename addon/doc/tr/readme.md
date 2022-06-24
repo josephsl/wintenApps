@@ -30,7 +30,7 @@ bakın):
 * Notepad (Windows 11)
 * Kişiler
 * Ayarlar (sistem ayarları, Windows+I)
-* Voice access (Windows 11)
+* Voice access (Windows 11 22H2)
 * Hava durumu
 * Başlat Menüsü kutucukları gibi kontroller için çeşitli modüller
 

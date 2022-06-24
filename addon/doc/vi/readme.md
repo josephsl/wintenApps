@@ -28,7 +28,7 @@ tiết của mỗi ứng dụng để biết them):
 * Notepad (Windows 11)
 * People
 * Settings (system settings, Windows+I)
-* Voice access (Windows 11)
+* Voice access (Windows 11 22H2)
 * Weather
 * Các module tổng hợp cho các điều khiển như Start Menu tiles
 

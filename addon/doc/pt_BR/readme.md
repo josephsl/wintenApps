@@ -29,7 +29,7 @@ detalhes sobre o que está incluso):
 * Bloco de Notas (Windows 11)
 * Pessoas
 * Configurações (configurações do sistema, Windows+I)
-* Voice access (Windows 11)
+* Voice access (Windows 11 22H2)
 * Clima
 * Módulos diversos para controles, como blocos do Menu Iniciar
 

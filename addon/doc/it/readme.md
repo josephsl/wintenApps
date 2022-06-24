@@ -28,7 +28,7 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 * Notepad (Windows 11)
 * Persone
 * Impostazioni (Impostazioni di Windows, Windows+i)
-* Voice access (Windows 11)
+* Voice access (Windows 11 22H2)
 * Meteo
 * Miscellaneous modules for controls such as Start Menu tiles
 
