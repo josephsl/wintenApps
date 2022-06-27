@@ -28,7 +28,7 @@ se inclúe):
 * Bloc de notas (Windows 11)
 * Xente
 * Opcións (opcións do sistema, Windows+I)
-* Voice access (Windows 11)
+* Voice access (Windows 11 22H2)
 * O Tempo
 * Módulos misceláneos para controis como mosaicos do Menú Inicio
 
@@ -75,8 +75,8 @@ documento [rexistros de trocos para publicacións de complementos][3].
   de notificacións de actualización de app da Microsoft Store pódense
   suprimir desactivando Anunciar Notificacións nas opcións de Presentación
   de Obxectos do NVDA.
-* En versións de Windows 11 Insider Preview, o estado do conmutador de
-  silencio do micrófono (Windows+Alt+K) anúnciase desde calquera sitio.
+* In Windows 11 22H2 and later, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 * NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
   later. This is now part of NVDA 2022.1.
 * NVDA will once again announce search result details in Start menu. This is
@@ -162,7 +162,7 @@ Isto refírese á versión 11 ou posterior do Bloc de Notas de Windows 11.
 
 ## Voice access
 
-This refers to Voice access feature introduced in Windows 11 22H2 preview.
+This refers to Voice access feature introduced in Windows 11 22H2.
 
 * NVDA will announce microphone status when toggling microphone from Voice
   access interface.

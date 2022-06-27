@@ -23,7 +23,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 메모장(윈도우 11)
 * People
 * 설정(시스템 설정 앱, Windows+I)
-* Voice access (Windows 11)
+* 메모장(윈도우 11 22H2)
 * 날씨
 * 그 외 지원 모듈(시작 메뉴 타일 지원 등)
 
@@ -57,7 +57,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * Announcements such as volume/brightness changes in File Explorer and app
   update notifications from Microsoft Store can be suppressed by turning off
   Report Notifications in NVDA's object presentation settings.
-* In Windows 11 Insider Preview builds, microphone mute toggle status
+* In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
 * NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
   later. This is now part of NVDA 2022.1.
@@ -139,7 +139,7 @@ This refers to Windows 11 Notepad version 11 or later.
 
 ## Voice access
 
-This refers to Voice access feature introduced in Windows 11 22H2 preview.
+This refers to Voice access feature introduced in Windows 11 22H2.
 
 * NVDA will announce microphone status when toggling microphone from Voice
   access interface.

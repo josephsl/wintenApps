@@ -21,7 +21,7 @@
 * 记事本（Windows 11）
 * 人脉
 * 设置（Windows + I系统设置）
-* 语音访问（Windows 11）
+* Voice access (Windows 11 22H2)
 * 天气
 * 开始菜单中的瓷贴控件和其他模块
 
@@ -48,13 +48,12 @@
   会读出已拖动项目的信息或已拖动项目的新位置。
 * 通过在 NVDA 的“对象提示”设置中关闭“读出通知提示”，可以禁止诸如文件资源管理器中的音量、亮度更改和来自 Microsoft Store
   的应用程序更新之类的通知。
-* 在 Windows 11 Insider Preview 版本中，可读出 Windows+Alt+K 的麦克风静音切换状态。
+* In Windows 11 22H2 and later, microphone mute toggle status
+  (Windows+Alt+K) is announced from everywhere.
 * 修复了 NVDA 在 Windows Terminal 1.12.10733 及更高版本中会重复朗读输出文本的错误，该修复已经包含在
   NVDA2022.1 中。
 * 修复了 NVDA 不朗读开始菜单搜索结果详情的错误，该修复已经包含在 NVDA2022.2 中。
-* In Windows 11, Taskbar items and other shell user interface elements can
-  be detected properly when using mouse and/or touch interaction. This is
-  now part of NVDA 2022.2.
+* 在 Windows 11 中，使用鼠标和/或触摸交互时可以正确读出任务栏项目和其他的用户界面控件元素，该修复已经包含在 NVDA2022.2 中。
 
 ## 计算器
 
@@ -110,7 +109,7 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 
 ## 语音访问
 
-这是指 Windows 11 22H2 预览版中加入的语音访问功能。
+This refers to Voice access feature introduced in Windows 11 22H2.
 
 * 在语音访问界面切换麦克风时，NVDA 会读出麦克风的状态。
 
