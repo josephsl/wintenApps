@@ -20,7 +20,7 @@ The following app modules or support modules for some apps are included (see eac
 * Notepad (Windows 11)
 * People
 * Settings (system settings, Windows+I)
-* Voice access (Windows 11)
+* Voice access (Windows 11 22H2)
 * Weather
 * Miscellaneous modules for controls such as Start Menu tiles
 
@@ -42,7 +42,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * When opening, closing, reordering (Windows 11), or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
 * When arranging pinned entries (tiles in Windows 10) in Start menu or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce information on dragged items or new position of the dragged item.
 * Announcements such as volume/brightness changes in File Explorer and app update notifications from Microsoft Store can be suppressed by turning off Report Notifications in NVDA's object presentation settings.
-* In Windows 11 Insider Preview builds, microphone mute toggle status (Windows+Alt+K) is announced from everywhere.
+* In Windows 11 22H2 and later, microphone mute toggle status (Windows+Alt+K) is announced from everywhere.
 * NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and later. This is now part of NVDA 2022.1.
 * NVDA will once again announce search result details in Start menu. This is now part of NVDA 2022.2.
 * In Windows 11, Taskbar items and other shell user interface elements can be detected properly when using mouse and/or touch interaction. This is now part of NVDA 2022.2.
@@ -97,7 +97,7 @@ This refers to Windows 11 Notepad version 11 or later.
 
 ## Voice access
 
-This refers to Voice access feature introduced in Windows 11 22H2 preview.
+This refers to Voice access feature introduced in Windows 11 22H2.
 
 * NVDA will announce microphone status when toggling microphone from Voice access interface.
 
