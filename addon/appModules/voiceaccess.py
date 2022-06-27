@@ -2,7 +2,7 @@
 # Part of Windows App Essentials collection
 # Copyright 2022 Joseph Lee, released under GPL
 
-# Support for Windows 11 Voice access (Version 22H2).
+# Support for Voice access on Windows 11 22H2 and later.
 
 import appModuleHandler
 import scriptHandler
