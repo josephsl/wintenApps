@@ -223,7 +223,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# some of them being quite anoying.
 		if obj.appModule.appName == "winword" and activityId == "AccSN1":
 			return
-		# Announce microphone mute status from anywhere in Windows 11.
+		# Announce microphone mute status from anywhere in Windows 11 22H2 and later.
 		if obj.appModule.appName == "explorer" and activityId == "Windows.Shell.CallMuteAnnouncement":
 			if api.getFocusObject().appModule != obj.appModule:
 				ui.message(displayString)
