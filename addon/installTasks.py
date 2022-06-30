@@ -65,6 +65,7 @@ def onInstall():
 	if currentWinVer < winVersion.WIN11 and newW10CompatMessage:
 		supportedBuilds = {
 			19044: "21H2",
+			19045: "22H2",
 			20348: "Windows Server 2022"
 		}
 		addonInstallPossible = currentWinVer.build in supportedBuilds
