@@ -138,7 +138,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Build 25115 uses modern keyboard interface to display Suggested Actions
 		# if data such as phone number is copied to the clipboard.
 		# Because keyboard interaction is not possible, just report suggested actions.
-		if firstChild.UIAAutomationId == "TitleIcon":
+		# In build 25145 and later (or possibly earlier builds), Automation Id is empty.
+		if not firstChild.UIAAutomationId and winVersion.getWinVer().build >= 25145:
 			import ui
 			suggestedActions = []
 			for suggestedAction in firstChild.parent.children:
