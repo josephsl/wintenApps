@@ -12,6 +12,7 @@ from NVDAObjects.behaviors import RowWithFakeNavigation
 import ui
 
 
+# Deprecated: for consistency with other lists and Narrator, table navigation commands are deprecated.
 class MailItemRow(RowWithFakeNavigation, UIA):
 
 	def _moveToRow(self, row):
@@ -24,6 +25,7 @@ class MailItemRow(RowWithFakeNavigation, UIA):
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+		# Deprecated: remove mail item overlay class chooser.
 		if isinstance(obj, UIA) and obj.UIAAutomationId == "MailItem":
 			clsList.insert(0, MailItemRow)
 		# NVDA Core takes care of the rest.
