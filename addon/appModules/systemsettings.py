@@ -63,7 +63,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			# Announce optional updates in Windows 11.
 			# Same as Windows 10 except it uses a different Automation Id.
 			if obj.UIAAutomationId == "SystemSettings_MusUpdate_SeekerUpdateUX_Button":
-				obj.name = ", ".join([obj.previous.previous.name, obj.name])
+				obj.name = " ".join([obj.previous.previous.name, obj.name])
 			# Windows 11's breadcrumb bar item uses a custom localized control type text.
 			# Although it is recognized as a heading, override role text to communicate what it actually is.
 			# This allows item label to be kept intact.
