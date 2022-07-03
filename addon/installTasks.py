@@ -38,16 +38,20 @@ def onInstall():
 	# This continues in 22H2 with Windows 10 (19045) and Windows 11 (22621).
 	# Therefore, use builds list and build range on Windows 10 and 11, respectively.
 	# For compatibility, assume minimum supported version is the one listed below unless this is Windows 11.
+	# Old NVDA versions do not include minimum Windows version defined.
+	# Note that the add-on does support NVDA releases with Windows 10, 11, and Server 2022 defined.
+	minWindowsRelease = winVersion.WinVersion(major=10, minor=0, build=19044, releaseName="Windows 10 21H2")
 	windowsReleaseSeries = "Windows 10"
-	minimumSupportedRelease = winVersion.WIN10_21H2
+	minimumSupportedRelease = getattr(winVersion, "WIN10_21H2", minWindowsRelease)
 	minimumSupportedReleaseName = minimumSupportedRelease.releaseName
 	# Windows 11
 	# There is no known public release between Server 2022 (build 20348) and Windows 11 (build 22000).
 	# Builds in this range (21000) are Insider builds and are branded as Windows 10 but later changed to 11.
 	# For simplicity, treat these builds as Windows 11 builds and installation will fail.
 	if currentWinVer > winVersion.WINSERVER_2022:
+		minWindowsRelease = winVersion.WinVersion(major=10, minor=0, build=22000, releaseName="Windows 11 21H2")
 		windowsReleaseSeries = "Windows 11"
-		minimumSupportedRelease = winVersion.WIN11
+		minimumSupportedRelease = getattr(winVersion, "WIN11", minWindowsRelease)
 		minimumSupportedReleaseName = minimumSupportedRelease.releaseName
 	addonInstallPossible = currentWinVer >= minimumSupportedRelease
 	unsupportedWindowsReleaseText = _(
