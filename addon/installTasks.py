@@ -14,18 +14,21 @@ def onInstall():
 	import gui
 	import wx
 	import winVersion
+	import globalVars
+	# Do not present dialogs if minimal mode is set.
 	currentWinVer = winVersion.getWinVer()
 	# Windows App Essentials requires Windows 10 or later.
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and old Windows 10 feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
 	if currentWinVer < winVersion.WIN10:
-		gui.messageBox(
-			_(
-				# Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
-				"You are using an older version of Windows. This add-on requires Windows 10 or later."
-			), unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR
-		)
+		if not globalVars.appArgs.minimal:
+			gui.messageBox(
+				_(
+					# Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
+					"You are using an older version of Windows. This add-on requires Windows 10 or later."
+				), unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR
+			)
 		raise RuntimeError("Attempting to install Windows App Essentials on Windows releases earlier than 10")
 	# Windows App Essentials does not support old feature updates.
 	# Until Windows 10 21H1 (19043), checking build range was acceptable because there was one to one mapping
@@ -77,7 +80,8 @@ def onInstall():
 			"Supported releases: {windowsReleasesList}."
 		).format(windowsRelease=windowsReleaseSeries, windowsReleasesList=", ".join(supportedBuilds.values()))
 	if not addonInstallPossible:
-		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
+		if not globalVars.appArgs.minimal:
+			gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
 		raise RuntimeError(
 			"Attempting to install Windows App Essentials "
 			f"on unsupported {windowsReleaseSeries} release"
