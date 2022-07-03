@@ -42,7 +42,8 @@ def onInstall():
 	# Note that the add-on does support NVDA releases with Windows 10, 11, and Server 2022 defined.
 	minWindowsRelease = winVersion.WinVersion(major=10, minor=0, build=19044, releaseName="Windows 10 21H2")
 	windowsReleaseSeries = "Windows 10"
-	minimumSupportedRelease = getattr(winVersion, "WIN10_21H2", minWindowsRelease)
+	minimumSupportedReleaseAttribute = "WIN10_21H2"
+	minimumSupportedRelease = getattr(winVersion, minimumSupportedReleaseAttribute, minWindowsRelease)
 	minimumSupportedReleaseName = minimumSupportedRelease.releaseName
 	# Windows 11
 	# There is no known public release between Server 2022 (build 20348) and Windows 11 (build 22000).
@@ -51,7 +52,8 @@ def onInstall():
 	if currentWinVer > winVersion.WINSERVER_2022:
 		minWindowsRelease = winVersion.WinVersion(major=10, minor=0, build=22000, releaseName="Windows 11 21H2")
 		windowsReleaseSeries = "Windows 11"
-		minimumSupportedRelease = getattr(winVersion, "WIN11", minWindowsRelease)
+		minimumSupportedReleaseAttribute = "WIN11"
+		minimumSupportedRelease = getattr(winVersion, minimumSupportedReleaseAttribute, minWindowsRelease)
 		minimumSupportedReleaseName = minimumSupportedRelease.releaseName
 	addonInstallPossible = currentWinVer >= minimumSupportedRelease
 	unsupportedWindowsReleaseText = _(
