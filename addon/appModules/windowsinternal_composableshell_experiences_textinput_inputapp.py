@@ -194,12 +194,5 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			):
 				clsList.insert(0, ImeCandidateUI)
 				return
-			# Newer revisions of Windows 11 build 22000 moves focus to what appears to be an edit field.
-			# However this means NVDA's own edit field scripts will override emoji panel commands.
-			# Therefore remove text field movement commands so emoji panel commands can be used directly.
-			# Resolved in NVDA 2022.1.
-			elif obj.UIAAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI.DelegationTextBox":
-				clsList.remove(EditableTextWithAutoSelectDetection)
-				return
 		# NVDA Core takes care of the rest.
 		super().chooseNVDAObjectOverlayClasses(obj, clsList)
