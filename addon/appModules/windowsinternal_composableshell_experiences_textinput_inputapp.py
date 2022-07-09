@@ -19,7 +19,6 @@ import controlTypes
 import api
 from logHandler import log
 from NVDAObjects.UIA import UIA
-from NVDAObjects.behaviors import EditableTextWithAutoSelectDetection
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
