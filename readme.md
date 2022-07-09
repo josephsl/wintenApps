@@ -13,7 +13,6 @@ The following app modules or support modules for some apps are included (see eac
 
 * Calculator
 * Cortana
-* Mail
 * Maps
 * Microsoft Solitaire Collection
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input suggestions/clipboard history/Suggested Actions (preview)/modern input method editors)
@@ -56,10 +55,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 * Textual responses from Cortana are announced in most situations.
 * NVDA will be silent when talking to Cortana via voice.
-
-## Mail
-
-* When reviewing items in messages list, you can now use table navigation commands to review message headers. Note that navigating between rows (messages) is not supported.
 
 ## Maps
 
