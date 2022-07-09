@@ -25,8 +25,5 @@ class MailItemRow(RowWithFakeNavigation, UIA):
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		# Deprecated: remove mail item overlay class chooser.
-		if isinstance(obj, UIA) and obj.UIAAutomationId == "MailItem":
-			clsList.insert(0, MailItemRow)
 		# NVDA Core takes care of the rest.
 		super().chooseNVDAObjectOverlayClasses(obj, clsList)
