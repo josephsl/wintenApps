@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-05-17 08:21-0700\n"
-"Last-Translator: Dong hui Park <hi@aheu.org>\n"
+"PO-Revision-Date: 2022-07-05 17:17+0900\n"
+"Last-Translator: Ungjin Park <ungjin312@kakao.com>\n"
 "Language-Team: \n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -57,11 +57,11 @@ msgstr ""
 #. Customized because there is no easy way to obtain column position info for this object yet.
 #. Therefore report that this is not supported yet.
 msgid "Cannot move between rows"
-msgstr "Cannot move between rows"
+msgstr "행 단위로 이동할 수 없음"
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
-msgstr "일기 예보 정보 없음"
+msgstr "일기 예보 정보 없음."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
