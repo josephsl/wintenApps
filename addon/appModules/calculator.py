@@ -8,20 +8,10 @@ from nvdaBuiltin.appModules.calculator import AppModule, noCalculatorEntryAnnoun
 import api
 import braille
 import scriptHandler
-from NVDAObjects.UIA import UIA
 
 
 # Mypy should be reminded that this app module is powered by built-in Calculator app module.
 class AppModule(AppModule):  # type: ignore[no-redef]
-
-	def event_NVDAObject_init(self, obj):
-		if not isinstance(obj, UIA):
-			return
-		# NVDA Core issue 11858: 10.2009 introduces a regression where history and memory items have no names
-		# but can be fetched through its children.
-		# Resolved in version 10.2109 which is exclusive to Windows 11, and a fix is included in NVDA 2022.1.
-		if not obj.name and obj.parent.UIAAutomationId in ("HistoryListView", "MemoryListView"):
-			obj.name = "".join([item.name for item in obj.children])
 
 	# NVDA Core issue 13383: For some commands (such as number row keys),
 	# NVDA should not announce calculator results.
