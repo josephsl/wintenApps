@@ -7,18 +7,6 @@
 # Borrows heavily from built-in Mail and Calendar app module.
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
 from nvdaBuiltin.appModules.hxmail import AppModule
-from NVDAObjects.UIA import UIA
-from NVDAObjects.behaviors import RowWithFakeNavigation
-import ui
-
-
-# Deprecated: for consistency with other lists and Narrator, table navigation commands are deprecated.
-class MailItemRow(RowWithFakeNavigation, UIA):
-
-	def _moveToRow(self, row):
-		# Customized because there is no easy way to obtain column position info for this object yet.
-		# Therefore report that this is not supported yet.
-		ui.message(_("Cannot move between rows"))
 
 
 # The below app module class inherits from built-in Mail and Calendar app module class, so inform Mypy.
