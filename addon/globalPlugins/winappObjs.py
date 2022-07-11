@@ -158,22 +158,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
 
-	# Record UIA property info about an object if told to do so.
-	# An add-on named Event Tracker (deriving from this add-on) will log event information for most events.
-	# However, because this add-on adds additional events, log them here.
-	def uiaDebugLogging(self, obj: Any, event: Optional[str] = None) -> None:
-		if isinstance(obj, UIA) and log.isEnabledFor(log.DEBUG):
-			info: list[str] = [f"object: {repr(obj)}"]
-			info.append(f"name: {obj.name}")
-			if not event:
-				event = "no event specified"
-			info.append(f"event: {event}")
-			info.append(f"app module: {obj.appModule}")
-			element = obj.UIAElement
-			info.append(f"Automation Id: {obj.UIAAutomationId}")
-			info.append(f"class name: {element.cachedClassName}")
-			log.debug("winapps: UIA {debuginfo}".format(debuginfo=", ".join(info)))
-
 	# Events defined in NVDA.
 
 	def event_nameChange(self, obj, nextHandler):
