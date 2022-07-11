@@ -5,7 +5,6 @@
 
 # Help Mypy and other static checkers for a time by using annotations from future Python releases.
 from __future__ import annotations
-from typing import Optional, Any
 import globalPluginHandler
 import ui
 from NVDAObjects.UIA import UIA, Dialog
