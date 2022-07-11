@@ -214,13 +214,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Events defined in this add-on.
 
 	def event_UIA_dragComplete(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "dragComplete")
+		log.debug(f"winapps: drag complete event from {obj}")
 		# Announce the new drop location by faking a gain focus event.
 		eventHandler.queueEvent("gainFocus", obj)
 		nextHandler()
 
 	def event_UIA_dropTargetDropped(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "dropTargetDropped")
+		log.debug(f"winapps: drop target dropped event from {obj}")
 		# Announce drop target effect such as item placement in Start menu and Action center if present.
 		dropTargetEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DropTargetDropTargetEffectPropertyId)
 		if dropTargetEffect:
@@ -231,7 +231,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_dragDropEffect(self, obj, nextHandler):
-		self.uiaDebugLogging(obj, "dragDropEffect")
+		log.debug(f"winapps: drag drop effect property event from {obj}")
 		# Report drag and drop effect as communicated by UIA.
 		dragDropEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DragDropEffectPropertyId)
 		ui.message(dragDropEffect)
