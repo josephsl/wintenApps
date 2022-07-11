@@ -138,7 +138,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# if data such as phone number is copied to the clipboard.
 		# Because keyboard interaction is not possible, just report suggested actions.
 		# In build 25145 and later (or possibly earlier builds), Automation Id is empty.
-		if not firstChild.UIAAutomationId and winVersion.getWinVer().build >= 25145:
+		# Suggested Actions was backported to Windows 11 22H2 beta (build 22622).
+		if not firstChild.UIAAutomationId and winVersion.getWinVer().build >= 22622:
 			import ui
 			suggestedActions = []
 			for suggestedAction in firstChild.parent.children:
@@ -170,7 +171,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
 		# Announce specific UIA notifications from other apps.
-		# This is more so when Suggestions Actions open in build 25115.
+		# This is more so when Suggestions Actions open in build 25115 and later backported to build 22622.
 		# For now keyboard accessibility is not present.
 		if api.getFocusObject().appModule != self and activityId == "Windows.Shell.InputApp.SmartActions.Popup":
 			import ui
