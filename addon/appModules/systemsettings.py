@@ -53,7 +53,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			# so tell NVDA to use something more meaningful.
 			elif obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
 				obj.name = obj.firstChild.name
-			# Developer mode label in Windows 10 2004/20H2/21H1/21H2.
+			# Developer mode label in Windows 10 Vibranium (2004 and later).
 			# The label itself is the name of the previous object.
 			# Resolved in Windows 11.
 			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
