@@ -43,8 +43,6 @@ def onInstall():
 	minWindowsRelease = winVersion.WinVersion(major=10, minor=0, build=19043, releaseName="Windows 10 21H1")
 	windowsReleaseSeries = "Windows 10"
 	minimumSupportedReleaseAttribute = "WIN10_21H1"
-	minimumSupportedRelease = getattr(winVersion, minimumSupportedReleaseAttribute, minWindowsRelease)
-	minimumSupportedReleaseName = minimumSupportedRelease.releaseName
 	# Windows 11
 	# There is no known public release between Server 2022 (build 20348) and Windows 11 (build 22000).
 	# Builds in this range (21000) are Insider builds and are branded as Windows 10 but later changed to 11.
@@ -53,8 +51,8 @@ def onInstall():
 		minWindowsRelease = winVersion.WinVersion(major=10, minor=0, build=22000, releaseName="Windows 11 21H2")
 		windowsReleaseSeries = "Windows 11"
 		minimumSupportedReleaseAttribute = "WIN11"
-		minimumSupportedRelease = getattr(winVersion, minimumSupportedReleaseAttribute, minWindowsRelease)
-		minimumSupportedReleaseName = minimumSupportedRelease.releaseName
+	minimumSupportedRelease = getattr(winVersion, minimumSupportedReleaseAttribute, minWindowsRelease)
+	minimumSupportedReleaseName = minimumSupportedRelease.releaseName
 	addonInstallPossible = currentWinVer >= minimumSupportedRelease
 	unsupportedWindowsReleaseText = _(
 		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
