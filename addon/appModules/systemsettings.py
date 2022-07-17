@@ -103,3 +103,14 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_appModule_loseFocus(self):
 		self._nameChangeCache = ""
+
+	def event_nameChange(self, obj, nextHandler):
+		# Only enter the below route if this is Windows 11 22H2 or later.
+		if isinstance(obj, UIA) and winVersion.getWinVer().build >= 22621:
+			if "ApplicableUpdate" in obj.UIAAutomationId:
+				import ui
+				try:
+					ui.message(" ".join([obj.previous.name, obj.name]))
+				except AttributeError:
+					pass
+		nextHandler()
