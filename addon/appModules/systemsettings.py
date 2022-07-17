@@ -114,3 +114,21 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				except AttributeError:
 					pass
 		nextHandler()
+
+	def event_focusEntered(self, obj, nextHandler):
+		# Only enter the below route if this is Windows 11 22H2 or later.
+		if isinstance(obj, UIA) and winVersion.getWinVer().build >= 22621:
+			if obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView":
+				import UIAHandler
+				for updateEntry in obj.children:
+					updateStatus = updateEntry.simpleFirstChild.simpleLastChild
+					try:
+						UIAHandler.handler.removeEventHandlerGroup(
+							updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
+						)
+						UIAHandler.handler.addEventHandlerGroup(
+							updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
+						)
+					except NotImplementedError:
+						pass
+		nextHandler()
