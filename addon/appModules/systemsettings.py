@@ -106,7 +106,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_nameChange(self, obj, nextHandler):
 		# Only enter the below route if this is Windows 11 22H2 or later.
-		if isinstance(obj, UIA) and winVersion.getWinVer().build >= 22621:
+		if isinstance(obj, UIA) and winVersion.getWinVer() > winVersion.WIN11:
 			if "ApplicableUpdate" in obj.UIAAutomationId:
 				import ui
 				try:
@@ -117,7 +117,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_focusEntered(self, obj, nextHandler):
 		# Only enter the below route if this is Windows 11 22H2 or later.
-		if isinstance(obj, UIA) and winVersion.getWinVer().build >= 22621:
+		if isinstance(obj, UIA) and winVersion.getWinVer() > winVersion.WIN11:
 			if obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView":
 				import UIAHandler
 				for updateEntry in obj.children:
