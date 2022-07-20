@@ -110,7 +110,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			if "ApplicableUpdate" in obj.UIAAutomationId:
 				import ui
 				try:
-					speech.cancelSpeech()
+					# Announce updated screen content as long as update action control is not shown.
+					# Simple previous object must be used as previous object returns an unusable button.
+					if "UpdateActionButton" not in obj.parent.parent.parent.simplePrevious.UIAAutomationId:
+						speech.cancelSpeech()
 					ui.message(" ".join([element.name for element in obj.parent.children]))
 				except AttributeError:
 					pass
