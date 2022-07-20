@@ -111,7 +111,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				import ui
 				try:
 					speech.cancelSpeech()
-					ui.message(" ".join([obj.previous.name, obj.name]))
+					ui.message(" ".join([element.name for element in obj.parent.children]))
 				except AttributeError:
 					pass
 		nextHandler()
