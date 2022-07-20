@@ -138,19 +138,16 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# if data such as phone number is copied to the clipboard.
 		# Because keyboard interaction is not possible, just report suggested actions.
 		# In build 25145 and later (or possibly earlier builds), Automation Id is empty.
-		# Audotmation Id has changed yet again in build 25158 (argh).
+		# Automation Id has changed yet again in build 25158 (argh).
 		# Suggested Actions was backported to Windows 11 22H2 beta (build 22622).
 		suggestedActionsIds = [
-			"",  # Build 22622
-			"Windows.Shell.InputApp.SmartActionsUX"  # Build 25158
+			"Windows.Shell.InputApp.SmartActionsUX"  # Build 25158 and 22622.436 and later
 		]
 		if firstChild.UIAAutomationId in suggestedActionsIds and winVersion.getWinVer().build >= 22622:
 			import ui
 			suggestedActions = []
-			# Build 25158 changes the UI once again, suggested actions is now a grouping.
-			for suggestedAction in (
-				firstChild.parent.children if firstChild.UIAAutomationId == "" else firstChild.children
-			):
+			# Build 25158 changes the UI once again, suggested actions is now a grouping, backported to 22622.
+			for suggestedAction in firstChild.children:
 				if suggestedAction.name:
 					suggestedActions.append(suggestedAction.name)
 			ui.message("; ".join(suggestedActions))
