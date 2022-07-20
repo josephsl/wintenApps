@@ -110,6 +110,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			if "ApplicableUpdate" in obj.UIAAutomationId:
 				import ui
 				try:
+					speech.cancelSpeech()
 					ui.message(" ".join([obj.previous.name, obj.name]))
 				except AttributeError:
 					pass
