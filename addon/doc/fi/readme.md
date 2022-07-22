@@ -19,7 +19,6 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 * Laskin
 * Cortana
-* Sähköposti
 * Kartat
 * Microsoft Solitaire -kokoelma
 * Moderni näppäimistö (emojipaneeli/sanelu/puhekirjoitus/fyysisen
@@ -96,12 +95,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * Cortanan tekstimuotoiset vastaukset puhutaan useimmissa tilanteissa.
 * NVDA on hiljaa puhuttaessa Cortanalle mikrofonin välityksellä.
 
-## Sähköposti
-
-* Voit nyt käyttää viestiluettelon kohteita tarkastellessasi
-  taulukkonavigointikomentoja viestiotsakkeiden lukemiseen. Huomaa, että
-  rivien (viestien) välillä liikkumista ei tueta.
-
 ## Kartat
 
 * NVDA toistaa äänimerkin karttasijainneille.
@@ -128,8 +121,10 @@ tukee lisäksi päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 * Selaustila poistetaan käytöstä oletusarvoisesti Windows 11:n leikepöydän
   historiassa, minkä tarkoituksena on mahdollistaa NVDA:lle historian
   valikkokohteiden lukeminen.
-* Insider-esikoontiversiossa 25115 NVDA ilmoittaa ehdotetut toiminnot, kun
-  leikepöydälle kopioidaan yhteensopivaa dataa, kuten puhelinnumeroita.
+* Insider-esikoontiversiossa 25115 ja sitä uudemmissa (taaksepäin sovitettu
+  Windows 11:n beeta-koontiversioon 22622) NVDA ilmoittaa ehdotetut
+  toiminnot, kun leikepöydälle kopioidaan yhteensopivaa dataa, kuten
+  puhelinnumeroita.
 
 ## Muistio
 
@@ -152,10 +147,14 @@ Tämä viittaa Windows 11:n Muistion versioon 11 tai sitä uudempiin.
   nyt -linkki Windows 10:ssä, Lataa-painike Windows 11:ssä), mikäli
   sellainen on näkyvissä.
 * Navigointipolkupalkin kohteet tunnistetaan oikein Windows 11:ssä.
-* NVDA keskeyttää puheen ja ilmoittaa Windows 10:ssä Windows Updaten tilan
-  päivitykset latauksen ja asennuksen edistyessä. Tämä voi aiheuttaa puheen
-  keskeytymisen Asetukset-sovelluksessa navigoitaessa päivitysten lataamisen
-  ja asennuksen aikana.
+* NVDA keskeyttää puheen ja ilmoittaa Windows 10 ja 11 22H2:ssa ja
+  uudemmissa Windows Updaten tilan päivitysten latauksen ja asennuksen
+  edistyessä. Tämä voi aiheuttaa puheen keskeytymisen
+  Asetukset-sovelluksessa navigoitaessa päivitysten lataamisen ja asennuksen
+  aikana. Mikäli käytetään Windows 11 22H2:ta tai sitä uudempaa ja
+  valikoivan UIA-tapahtumien rekisteröinti on käytössä, kohdistus on
+  siirrettävä päivitysten luetteloon heti niiden ilmestyessä, jotta NVDA voi
+  ilmoittaa päivityksen edistymisen.
 
 ## Puhekäyttö
 

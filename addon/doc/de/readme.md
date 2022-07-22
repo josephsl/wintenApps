@@ -19,7 +19,6 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 * Rechner
 * Cortana
-* Mail
 * Karten
 * Microsoft Solitaire Collection
 * Moderne Tastatur
@@ -104,12 +103,6 @@ Versionen][3].
 * NVDA verstummt bei der Verwendung von Cortana, so dass sich die Stimmen
   nicht mehr in die Quere kommen.
 
-## Mail
-
-* Beim Navigieren durch Elemente in der Nachrichtenliste können Sie nun
-  Tabellen-Navigationsbefehle verwenden, um Betreffzeilen zu überprüfen. Die
-  Navigation zwischen Zeilen (Nachrichten) wird noch nicht unterstützt.
-
 ## Karten
 
 * NVDA spielt einen Ortungston für Kartenstandorte ab.
@@ -138,9 +131,9 @@ um das ausgewählte Element einzufügen.
 * In der Zwischenablage von Windows 11 ist der Lesemodus standardmäßig
   ausgeschaltet, damit NVDA Menüeinträge für die Zwischenablage mitteilen
   kann.
-* In der Insider Preview Build 25115 wird NVDA vorgeschlagene Aktionen
-  mitteilen, wenn kompatible Daten wie Telefonnummern in die Zwischenablage
-  kopiert werden.
+* In Insider Preview build 25115 and later (backported to Windows 11 beta
+  build 22622), NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard.
 
 ## Notepad
 
@@ -164,11 +157,12 @@ Dies bezieht sich auf Windows 11 Notepad Version 11 oder neuer.
   (Link zum Download und Jetzt installieren in Windows 10,
   Download-Schaltfläche in Windows 11).
 * In Windows 11 werden die Breadcrumb-Leisten richtig erkannt.
-* In Windows 10 unterbricht NVDA die Sprachausgabe und meldet Updates an den
-  Windows Update-Status, während der Download und die Installation
-  fortschreiten. Dies kann zu Sprachunterbrechungen führen, wenn Sie in der
-  Einstellungen-App navigieren, während Updates heruntergeladen und
-  installiert werden.
+* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
+  updates to Windows Update status as download and install progresses. This
+  may result in speech interruption when navigating Settings app while
+  updates are being downloaded and installed. If using Windows 11 22H2 and
+  later, if selective UIA event registration is on, you must move focus to
+  updates list as soon as they appear so NVDA can announce update progress.
 
 ## Sprachzugang
 

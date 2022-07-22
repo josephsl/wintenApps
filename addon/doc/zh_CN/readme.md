@@ -14,7 +14,6 @@
 
 * 计算器
 * Cortana
-* 邮件
 * 地图
 * Microsoft Solitaire Collection（微软纸牌游戏）
 * 现代键盘（包括表情符号面板、听写、语音输入、硬件输入建议、云剪贴板历史记录、建议操作（预览）、现代输入法编辑器）
@@ -64,10 +63,6 @@
 * 现在，在大多数情况下，都会发布来自Cortana的文字回复。
 * 通过语音与Cortana互动时，NVDA会暂停朗读。
 
-## 邮件
-
-* 现在查看消息列表中的项目时，您现在可以使用表格导航命令来查看消息标题。请注意，不支持在行（消息）之间导航。
-
 ## 地图
 
 * NVDA为地图上的位置播放位置嘟嘟声。
@@ -86,7 +81,9 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 * 在Windows 10中，选择Emoji组（包括Kaomoji和符号组）时，NVDA不会将导航对象移动到某些EMOJI上。
 * 在 Windows 11 中，当表情符号面板打开时，可以使用箭头键查看表情符号。该功能已是 NVDA2022.1 的一部分。
 * 在 Windows 11 剪贴板历史记录中，为了让 NVDA 宣布剪贴板历史记录条目菜单项，浏览模式将默认关闭。
-* 在 Insider Preview 版本 25115 中，当电话号码等兼容的数据复制到剪贴板时，NVDA 会读出建议的操作。
+* In Insider Preview build 25115 and later (backported to Windows 11 beta
+  build 22622), NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard.
 
 ## 记事本
 
@@ -104,7 +101,12 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 * 在某些 Windows 安装中看到的奇怪的控件标签已得到更正。
 * NVDA 将公布可选质量更新控件的名称（如果存在）（Windows 10 中的立即下载和安装链接，Windows 11 中的下载按钮）。
 * 在 Windows 11 中，可以正确识别 breadcrumb 栏项目。
-* 在 Windows 10 中，NVDA 会在下载和安装更新过程中打断语音并读出 Windows 更新状态。这可能会导致在设置中导航时语音朗读被打断。
+* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
+  updates to Windows Update status as download and install progresses. This
+  may result in speech interruption when navigating Settings app while
+  updates are being downloaded and installed. If using Windows 11 22H2 and
+  later, if selective UIA event registration is on, you must move focus to
+  updates list as soon as they appear so NVDA can announce update progress.
 
 ## 语音访问
 
