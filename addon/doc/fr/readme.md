@@ -21,7 +21,6 @@ est inclus) :
 
 * Calculatrice
 * Cortana
-* Courrier
 * Cartes
 * Microsoft Solitaire Collection
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
@@ -106,13 +105,6 @@ l'extension][3].
 * NVDA sera silencieux quand vous vous adresserez vocalement à Cortana via
   la voix.
 
-## Courrier
-
-* Lorsque vous examinez les éléments dans la liste des messages, vous pouvez
-  maintenant utiliser les commandes de navigation dans les  tableaux pour
-  examiner les en-têtes des messages. Notez que la navigation entre les
-  lignes (messages) n'est pas prise en charge.
-
 ## Cartes
 
 * NVDA joue un bip du lieux pour les lieux sur la carte.
@@ -140,8 +132,9 @@ paste the selected item.
 * Dans l'historique du presse-papiers de Windows 11, le mode navigation sera
   désactivé par défaut, conçu pour permettre à NVDA d'annoncer les éléments
   du menu d'entrée de l'historique du presse-papiers.
-* In Insider Preview build 25115, NVDA will announce suggested actions when
-  compatible data such as phone numbers is copied to the clipboard.
+* In Insider Preview build 25115 and later (backported to Windows 11 beta
+  build 22622), NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard.
 
 ## Bloc-notes
 
@@ -165,11 +158,12 @@ Ceci se rapporte à la version 11 ou ultérieure du Bloc-notes de Windows 11.
   de téléchargement dans Windows 11).
 * Dans Windows 11, les éléments du fil d'Ariane des paramètres sont
   correctement reconnus.
-* Sous Windows 10, NVDA interrompra la parole et signalera les mises à jour
-  de l'état de Windows Update au fur et à mesure que le téléchargement et
-  l'installation progressent. Cela peut entraîner une interruption de la
-  parole lors de la navigation dans l'application Paramètres pendant le
-  téléchargement et l'installation des mises à jour.
+* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
+  updates to Windows Update status as download and install progresses. This
+  may result in speech interruption when navigating Settings app while
+  updates are being downloaded and installed. If using Windows 11 22H2 and
+  later, if selective UIA event registration is on, you must move focus to
+  updates list as soon as they appear so NVDA can announce update progress.
 
 ## Accès vocal
 

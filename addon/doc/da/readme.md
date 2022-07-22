@@ -18,7 +18,6 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 * Lommeregner
 * Cortana
-* Mail
 * Kort
 * Microsoft Kabale Samling
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
@@ -98,13 +97,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * Tekstlige svar fra Cortana annonceres i de fleste tilfælde.
 * NVDA vil forblive tavs, når du taler til Cortana med stemmen.
 
-## Mail
-
-* Når du gennemgår emner i meddelelseslisten, kan du nu bruge
-  tabelnavigationskommandoer til at gennemgå
-  meddelelsesoverskrifter. Bemærk, at navigering mellem rækker (meddelelser)
-  ikke understøttes.
-
 ## Kort
 
 * NVDA spiller placeringsbip for kortlokationer.
@@ -131,8 +123,9 @@ paste the selected item.
 * I Windows 11 udklipsholderhistorik er gennemsynstilstand slået fra som
   standard, således NVDA kan annoncere menupunkter i
   udklipsholderhistorikken.
-* In Insider Preview build 25115, NVDA will announce suggested actions when
-  compatible data such as phone numbers is copied to the clipboard.
+* In Insider Preview build 25115 and later (backported to Windows 11 beta
+  build 22622), NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard.
 
 ## Notesblok
 
@@ -155,10 +148,12 @@ Dette henviser til Windows 11 Notepad version 11 eller nyere.
   hvis den findes (download og installer nu-link i Windows 10, download-knap
   i Windows 11).
 * I Windows 11 genkendes brødkrumme-elementer korrekt.
-* I Windows 10 vil NVDA afbryde talen og oplyse status for opdateringer til
-  Windows Update, efterhånden som download og installation skrider
-  frem. Dette kan resultere i afbrydelse af talen, når du navigerer i appen
-  Indstillinger, mens opdateringer downloades og installeres.
+* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
+  updates to Windows Update status as download and install progresses. This
+  may result in speech interruption when navigating Settings app while
+  updates are being downloaded and installed. If using Windows 11 22H2 and
+  later, if selective UIA event registration is on, you must move focus to
+  updates list as soon as they appear so NVDA can announce update progress.
 
 ## Stemmeadgang
 

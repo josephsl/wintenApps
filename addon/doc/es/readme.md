@@ -20,7 +20,6 @@ qué se incluye):
 
 * Calculadora
 * Cortana
-* Correo
 * Mapas
 * Microsoft Solitaire Collection
 * Teclado Moderno (panel de emojis / dictado / escritura por voz /
@@ -100,12 +99,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   situaciones.
 * NVDA se silenciará cuando hables a Cortana a través de la voz.
 
-## Correo
-
-* Cuando se revisan elementos en la lista de mensajes, ahora puedes utilizar
-  órdenes de navegación de tablas para revisar los encabezados de
-  mensaje. Ten en cuenta que no está soportado navegar por filas (mensajes).
-
 ## Mapas
 
 * NVDA reproduce pitidos de localización para lugares en el mapa.
@@ -134,9 +127,9 @@ pegar el elemento seleccionado.
 * En el historial del portapapeles de Windows 11, se desactivará el modo
   exploración por defecto, diseñado para permitir que NVDA anuncie los
   elementos de menú con las entradas del historial del portapapeles.
-* En la compilación Insider Preview 25115, NVDA anunciará las acciones
-  sugeridas cuando se copien al portapapeles datos compatibles, como números
-  de teléfono.
+* En la compilación Insider Preview 25115 y posterior (traído a Windows 11
+  beta 22622), NVDA anunciará las acciones sugeridas cuando se copien al
+  portapapeles datos compatibles, como números de teléfono.
 
 ## Bloc de notas
 
@@ -161,10 +154,14 @@ Esto hace referencia al Bloc de notas de Windows 11, versión 11 o posterior.
   10, botón Descargar en Windows 11).
 * En Windows 11, los elementos de la barra de migas de pan se reconocen
   correctamente.
-* En Windows 10, NVDA interrumpirá la voz y anunciará las actualizaciones
-  del estado de Windows Update según avancen la descarga e instalación. Esto
-  puede resultar en interrupciones de voz al navegar por la aplicación de
-  configuración mientras las actualizaciones se descargan y se instalan.
+* En Windows 10 y 11 22H2 y posterior, NVDA interrumpirá la voz y anunciará
+  las actualizaciones del estado de Windows Update según avancen la descarga
+  e instalación. Esto puede resultar en interrupciones de voz al navegar por
+  la aplicación de configuración mientras las actualizaciones se descargan y
+  se instalan. Si usas Windows 11 22H2 y posterior y el registro selectivo
+  de eventos UIA está activado, debes mover el foco a la lista de
+  actualizaciones tan pronto como aparezcan para que NVDA pueda anunciar el
+  progreso de la actualización.
 
 ## Acceso por voz
 
