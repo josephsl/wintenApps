@@ -14,7 +14,6 @@ The following app modules or support modules for some apps are included (see eac
 * Calculator
 * Cortana
 * Maps
-* Microsoft Solitaire Collection
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input suggestions/clipboard history/Suggested Actions (preview)/modern input method editors)
 * Notepad (Windows 11)
 * People
@@ -58,10 +57,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## Maps
 
 * NVDA plays location beep for map locations.
-
-## Microsoft Solitaire Collection
-
-* NVDA will announce names of cards and card decks.
 
 ## Modern keyboard
 
