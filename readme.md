@@ -24,7 +24,7 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 21H2 (build 19044), Windows 11 21H2 (build 22000) or later.
+* This add-on requires Windows 10 21H2 (build 19044), Windows 11 21H2 (build 22000), or later releases.
 * Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * If Add-on Updater 22.08 or later is installed and background add-on updates is enabled, Windows App Essentials will not install at all on unsupported Windows releases.
 * Not all features from Windows Insider Preview builds will be supported.
