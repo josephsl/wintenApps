@@ -14,6 +14,10 @@ import speech
 from NVDAObjects.UIA import UIA
 
 
+# NVDA Core doesn't know about Windows 11 22H2 yet.
+WIN11_22H2 = winVersion.WinVersion(major=10, minor=0, build=22621, releaseName="Windows 11 22H2")
+
+
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
