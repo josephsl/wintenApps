@@ -146,7 +146,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		suggestedActionsIds = [
 			"Windows.Shell.InputApp.SmartActionsUX"  # Build 25158 and 22622.436 and later
 		]
-		if firstChild.UIAAutomationId in suggestedActionsIds and winVersion.getWinVer().build >= 22622:
+		# Better to use build 22621 as base build since beta increments it by 1.
+		if firstChild.UIAAutomationId in suggestedActionsIds and winVersion.getWinVer() > WIN11_22H2:
 			import ui
 			suggestedActions = []
 			# Build 25158 changes the UI once again, suggested actions is now a grouping, backported to 22622.
