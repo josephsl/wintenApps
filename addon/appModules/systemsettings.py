@@ -26,17 +26,17 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			# Workarounds for Windows Update links found in Windows 10.
 			if obj.role == controlTypes.Role.LINK:
 				nameList = [obj.name]
-				# Since Windows 10 1709, latest feature update entry in update history adds "what's new" link.
+				# Latest feature update entry in update history adds "what's new" link.
 				# Therefore fetch feature update title located two objects down.
 				# Update history has changed completely in Windows 11.
 				if obj.UIAAutomationId.startswith("HistoryEvent"):
 					eventID = obj.UIAAutomationId.split("_")[0]
 					possibleFeatureUpdateText = obj.previous.previous
-					# This Automation Id may change in a future Windows release.
+					# Automation Id is of the form "HistoryEvent_eventID_TitleTextBlock".
 					if possibleFeatureUpdateText.UIAAutomationId == "_".join([eventID, "TitleTextBlock"]):
 						nameList.insert(0, possibleFeatureUpdateText.name)
-				# In later revisions of Windows 10 1803 and later, optional update download link is provided
-				# and is initially called "download and install now", thus add the optional update title as well.
+				# Download link for an optional update is provided when preview updates are released.
+				# It is initially called "download and install now", thus add the optional update title as well.
 				elif obj.UIAAutomationId == "SystemSettings_MusUpdate_SeekerUpdateUX_HyperlinkButton":
 					# Unconditionally locate the new optional update title, skipping the link description.
 					# For feature updates, update title is next to description text,
@@ -55,7 +55,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				obj.name = obj.firstChild.name
 			# Developer mode label in Windows 10 Vibranium (2004 and later).
 			# The label itself is the name of the previous object.
-			# Resolved in Windows 11.
+			# Resolved in Windows 11 and Server 2022.
 			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name
 		# Windows 11
