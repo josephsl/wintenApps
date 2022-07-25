@@ -72,7 +72,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 					self._symbolsGroupSelected = True
 				return
 			if (
-				# When changing categories (emoji, kaomoji, symbols) in Windows 10 1903 or later,
+				# When changing categories (emoji, kaomoji, symbols),
 				# category items are selected when in fact they have no text labels.
 				obj.parent.UIAAutomationId == "TEMPLATE_PART_Sets_ListView"
 				# Specifically to suppress skin tone modifiers from being announced after an emoji group was selected.
@@ -112,13 +112,9 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_UIA_window_windowOpen(self, obj, nextHandler):
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
+		# This is more so on Windows 10.
 		firstChild = obj.firstChild
-		# Make sure to announce most recently used emoji first in post-1709 builds.
-		# Fake the announcement by locating 'most recently used" category and calling selected event on this.
-		# However, in build 17666 and later,
-		# child count is the same for both emoji panel and hardware keyboard candidates list.
-		# Thankfully first child Automation Id's are different for each modern input technology.
-		# However this event is raised when the input panel closes.
+		# Sometimes window open event is raised when the input panel closes.
 		if firstChild is None:
 			return
 		# Log which modern keyboard header is active.
@@ -171,7 +167,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		super().event_nameChange(obj, nextHandler)
 
 	def event_gainFocus(self, obj, nextHandler):
-		# An invisible edit field is focused when clipboard history is closed.
+		# Focus gets stuck in Modern keyboard when clipboard history closes in Windows 11.
 		if obj.parent.childCount == 0:
 			self._emojiPanelClosed(obj)
 		nextHandler()
