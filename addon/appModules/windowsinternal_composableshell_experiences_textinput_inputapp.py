@@ -21,6 +21,11 @@ from logHandler import log
 from NVDAObjects.UIA import UIA
 
 
+# NVDA Core doesn't know about Windows 11 22H2 yet.
+# This is more so as parts of the below app module needs to know if this is 22H2 beta (build 22622) or not.
+WIN11_22H2 = winVersion.WinVersion(major=10, minor=0, build=22621, releaseName="Windows 11 22H2")
+
+
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
