@@ -158,19 +158,21 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
-	def event_nameChange(self, obj, nextHandler):
-		if (
-			# Forget it if there is no Automation Id and class name set.
-			(obj.UIAElement.cachedClassName == "" and obj.UIAAutomationId == "")
-			# Clipboard entries fire name change event when opened.
-			or (obj.UIAElement.cachedClassName == "TextBlock" and obj.UIAAutomationId == "")
-			# Ignore useless clipboard entry scrolling announcements.
-			or obj.UIAAutomationId == "VerticalScrollBar"
-		):
-			return
-		self._symbolsGroupSelected = False
-		# NVDA Core takes care of the rest.
-		super().event_nameChange(obj, nextHandler)
+	# Only on Windows 10 and Server 2022.
+	if winVersion.getWinVer() < winVersion.WIN11:
+		def event_nameChange(self, obj, nextHandler):
+			if (
+				# Forget it if there is no Automation Id and class name set.
+				(obj.UIAElement.cachedClassName == "" and obj.UIAAutomationId == "")
+				# Clipboard entries fire name change event when opened.
+				or (obj.UIAElement.cachedClassName == "TextBlock" and obj.UIAAutomationId == "")
+				# Ignore useless clipboard entry scrolling announcements.
+				or obj.UIAAutomationId == "VerticalScrollBar"
+			):
+				return
+			self._symbolsGroupSelected = False
+			# NVDA Core takes care of the rest.
+			super().event_nameChange(obj, nextHandler)
 
 	def event_gainFocus(self, obj, nextHandler):
 		# Focus gets stuck in Modern keyboard when clipboard history closes in Windows 11.
