@@ -112,35 +112,35 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		def event_appModule_loseFocus(self):
 			self._nameChangeCache = ""
 
-	def event_nameChange(self, obj, nextHandler):
-		# Only enter the below route if this is Windows 11 22H2 or later.
-		if isinstance(obj, UIA) and winVersion.getWinVer() >= WIN11_22H2:
-			if "ApplicableUpdate" in obj.UIAAutomationId:
-				import ui
-				try:
-					# Announce updated screen content as long as update action control is not shown.
-					# Simple previous object must be used as previous object returns an unusable button.
-					if "UpdateActionButton" not in obj.parent.parent.parent.simplePrevious.UIAAutomationId:
-						speech.cancelSpeech()
-					ui.message(" ".join([element.name for element in obj.parent.children]))
-				except AttributeError:
-					pass
-		nextHandler()
-
-	def event_focusEntered(self, obj, nextHandler):
-		# Only enter the below route if this is Windows 11 22H2 or later.
-		if isinstance(obj, UIA) and winVersion.getWinVer() >= WIN11_22H2:
-			if obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView":
-				import UIAHandler
-				for updateEntry in obj.children:
-					updateStatus = updateEntry.simpleFirstChild.simpleLastChild
+	# Workarounds for Windows 11 22H2 or later.
+	elif winVersion.getWinVer() >= WIN11_22H2:
+		def event_nameChange(self, obj, nextHandler):
+			if isinstance(obj, UIA):
+				if "ApplicableUpdate" in obj.UIAAutomationId:
+					import ui
 					try:
-						UIAHandler.handler.removeEventHandlerGroup(
-							updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
-						)
-						UIAHandler.handler.addEventHandlerGroup(
-							updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
-						)
-					except NotImplementedError:
+						# Announce updated screen content as long as update action control is not shown.
+						# Simple previous object must be used as previous object returns an unusable button.
+						if "UpdateActionButton" not in obj.parent.parent.parent.simplePrevious.UIAAutomationId:
+							speech.cancelSpeech()
+						ui.message(" ".join([element.name for element in obj.parent.children]))
+					except AttributeError:
 						pass
-		nextHandler()
+			nextHandler()
+
+		def event_focusEntered(self, obj, nextHandler):
+			if isinstance(obj, UIA):
+				if obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView":
+					import UIAHandler
+					for updateEntry in obj.children:
+						updateStatus = updateEntry.simpleFirstChild.simpleLastChild
+						try:
+							UIAHandler.handler.removeEventHandlerGroup(
+								updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
+							)
+							UIAHandler.handler.addEventHandlerGroup(
+								updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
+							)
+						except NotImplementedError:
+							pass
+			nextHandler()
