@@ -77,39 +77,40 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			elif obj.UIAElement.cachedClassName.endswith("BreadcrumbBarItem"):
 				obj.roleText = obj.UIAElement.currentLocalizedControlType
 
-	# Sometimes, the same text is announced, so consult this cache.
-	_nameChangeCache: str = ""
+	# Workaronds for Windows 10 and Server 2022
+	if winVersion.getWinVer() < winVersion.WIN11:
+		# Sometimes, the same text is announced, so consult this cache.
+		_nameChangeCache: str = ""
 
-	def event_liveRegionChange(self, obj, nextHandler):
-		# Only enter the below route if this is Windows 10.
-		if isinstance(obj, UIA) and winVersion.getWinVer() < winVersion.WIN11:
-			# Except for specific cases, announce all live regions.
-			# Announce individual update progress in build 16215 and later preferably only once per update stage.
-			if "ApplicableUpdate" in obj.UIAAutomationId:
-				# Do not announce status text itself.
-				if obj.UIAAutomationId.endswith("_ContextDescriptionTextBlock"):
-					return
-				# Update title repeats while the update is downloaded and installed.
-				if obj.UIAAutomationId.endswith("_DescriptionTextBlock"):
-					# Keep announcing last status as long as object name is cached.
-					if obj.name and obj.name == self._nameChangeCache:
+		def event_liveRegionChange(self, obj, nextHandler):
+			if isinstance(obj, UIA):
+				# Except for specific cases, announce all live regions.
+				# Announce individual update progress in build 16215 and later preferably only once per update stage.
+				if "ApplicableUpdate" in obj.UIAAutomationId:
+					# Do not announce status text itself.
+					if obj.UIAAutomationId.endswith("_ContextDescriptionTextBlock"):
 						return
-					# #71: NVDA is told to announce live regions to the end by default,
-					# which results in screen content and speech getting out of sync.
-					# However do not cut off other live regions when action button appears next to updates list
-					# which is the sibling of the grandparent object (actual updates list element).
-					# Update action button appears if the system is up to date or an action is required.
-					# However attribute error may result if "update action" button is not a UIA element.
-					try:
-						if "UpdateActionButton" not in obj.parent.parent.next.UIAAutomationId:
-							speech.cancelSpeech()
-					except AttributeError:
-						pass
-				self._nameChangeCache = obj.name
-		nextHandler()
+					# Update title repeats while the update is downloaded and installed.
+					if obj.UIAAutomationId.endswith("_DescriptionTextBlock"):
+						# Keep announcing last status as long as object name is cached.
+						if obj.name and obj.name == self._nameChangeCache:
+							return
+						# #71: NVDA is told to announce live regions to the end by default,
+						# which results in screen content and speech getting out of sync.
+						# However do not cut off other live regions when action button appears next to updates list
+						# which is the sibling of the grandparent object (actual updates list element).
+						# Update action button appears if the system is up to date or an action is required.
+						# However attribute error may result if "update action" button is not a UIA element.
+						try:
+							if "UpdateActionButton" not in obj.parent.parent.next.UIAAutomationId:
+								speech.cancelSpeech()
+						except AttributeError:
+							pass
+					self._nameChangeCache = obj.name
+			nextHandler()
 
-	def event_appModule_loseFocus(self):
-		self._nameChangeCache = ""
+		def event_appModule_loseFocus(self):
+			self._nameChangeCache = ""
 
 	def event_nameChange(self, obj, nextHandler):
 		# Only enter the below route if this is Windows 11 22H2 or later.
