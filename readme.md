@@ -11,11 +11,9 @@ This add-on is a collection of app modules for various modern Windows apps, as w
 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
-* Calculator
 * Cortana
 * Maps
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input suggestions/clipboard history/Suggested Actions (preview)/modern input method editors)
-* Notepad (Windows 11)
 * People
 * Settings (system settings, Windows+I)
 * Voice access (Windows 11 22H2)
@@ -43,10 +41,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * Announcements such as volume/brightness changes in File Explorer and app update notifications from Microsoft Store can be suppressed by turning off Report Notifications in NVDA's object presentation settings.
 * In Windows 11 22H2 and later, microphone mute toggle status (Windows+Alt+K) is announced from everywhere.
 
-## Calculator
-
-* NVDA will announce calculator display content when performing scientific mode commands such as trigonometry operations. This is now part of NVDA 2022.2.
-
 ## Cortana
 
 * Textual responses from Cortana are announced in most situations.
@@ -63,12 +57,6 @@ This includes emoji panel, clipboard history, dictation/voice typing, hardware i
 * In Windows 10, when an emoji group (including kaomoji and symbols group) is selected, NVDA will no longer move navigator object to certain emojis.
 * In Windows 11 clipboard history, browse mode will be turned off by default, designed to let NVDA announce clipboard history entry menu items.
 * In Insider Preview build 25115 and later (backported to Windows 11 beta build 22622), NVDA will announce suggested actions when compatible data such as phone numbers is copied to the clipboard.
-
-## Notepad
-
-This refers to Windows 11 Notepad version 11 or later.
-
-* NVDA will announce status items such as line and column information when report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## People
 
