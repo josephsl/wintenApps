@@ -42,8 +42,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * When arranging pinned entries (tiles in Windows 10) in Start menu or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce information on dragged items or new position of the dragged item.
 * Announcements such as volume/brightness changes in File Explorer and app update notifications from Microsoft Store can be suppressed by turning off Report Notifications in NVDA's object presentation settings.
 * In Windows 11 22H2 and later, microphone mute toggle status (Windows+Alt+K) is announced from everywhere.
-* NVDA will once again announce search result details in Start menu. This is now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other shell user interface elements can be detected properly when using mouse and/or touch interaction. This is now part of NVDA 2022.2.
 
 ## Calculator
 
