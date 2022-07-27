@@ -100,16 +100,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except AttributeError:
 			log.debug("winapps: UIA handler not ready, delaying until NVDA is fully initialized")
 			queueHandler.queueFunction(queueHandler.eventQueue, self._addAdditionalUIAEvents, delay=True)
-		# #72: add additional good UIA window class names on Windows 11.
-		# Since the affected elements are shel objects, app module level solution should be part of Explorer.
-		# Patch appModules.explorer.AppModule.isGoodUIAWindow with the one defined in this global plugin
-		# if NVDA 2022.1 or earlier is in use to avoid additional imports.
-		# Resolved in NVDA 2022.2.
-		import versionInfo
-		if (versionInfo.version_year, versionInfo.version_major) < (2022, 2):
-			log.debug("winapps: patching File Explorer app module to add additional good uIA windows")
-			import appModules.explorer
-			appModules.explorer.AppModule.isGoodUIAWindow = isGoodUIAWindow
 
 	# Manually add events after root element is located.
 	def _addAdditionalUIAEvents(self, delay: bool = False) -> None:
