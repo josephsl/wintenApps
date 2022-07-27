@@ -16,7 +16,6 @@ import globalVars
 import UIAHandler
 from logHandler import log
 import winVersion
-import winUser
 import addonHandler
 addonHandler.initTranslation()
 
