@@ -66,10 +66,7 @@ def onInstall():
 	# Windows 10 and Server 2022
 	# Although Server 2022 has a higher build number (20348), it is still Windows 10.
 	# But since it is labeled 21H2, add-on support duration is tied to the client (build 19044).
-	# Only display the below message if the prerelease flag is on,
-	# to be switched to the new message (or not) when Version 22H2 is announced.
-	newW10CompatMessage = True
-	if currentWinVer < winVersion.WIN11 and newW10CompatMessage:
+	if currentWinVer < winVersion.WIN11:
 		supportedBuilds = {
 			19044: "21H2",
 			19045: "22H2",
