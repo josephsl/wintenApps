@@ -20,7 +20,6 @@ tiết của mỗi ứng dụng để biết them):
 * Calculator
 * Cortana
 * Maps
-* Microsoft Solitaire Collection
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/Suggested Actions (preview)/modern input
   method editors)
@@ -34,7 +33,7 @@ tiết của mỗi ứng dụng để biết them):
 Lưu ý:
 
 * This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
-  22000) or later.
+  22000), or later releases.
 * Dù vẫn có thể cài đặt được, add-on này không hỗ trợ Windows 10 Enterprise
   LTSC (Long-Term Servicing Channel) và các bản phát hành của Windows
   Server.
@@ -98,10 +97,6 @@ for add-on releases][3] .
 ## Maps
 
 * NVDA phát tiếng beep cho vị trí trên bản đồ.
-
-## Microsoft Solitaire Collection
-
-* NVDA sẽ đọc tên của các lá bài và bài trên sàn.
 
 ## Modern keyboard
 

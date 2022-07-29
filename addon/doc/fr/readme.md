@@ -22,7 +22,6 @@ est inclus) :
 * Calculatrice
 * Cortana
 * Cartes
-* Microsoft Solitaire Collection
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/Suggested Actions (preview)/modern input
   method editors)
@@ -35,8 +34,8 @@ est inclus) :
 
 Notes:
 
-* Cette extension nécessite Windows 10 21H1 (build 19043), Windows 11 21H2
-  (build 22000) ou version ultérieure.
+* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+  22000), or later releases.
 * Bien que l'installation soit possible, cette extension ne prend pas en
   charge les versions Windows Enterprise LTSC (Long-Term Servicing Channel)
   et Windows Server.
@@ -108,10 +107,6 @@ l'extension][3].
 ## Cartes
 
 * NVDA joue un bip du lieux pour les lieux sur la carte.
-
-## Microsoft Solitaire Collection
-
-* NVDA annoncera les noms des cartes et des jeux de cartes.
 
 ## Clavier moderne
 

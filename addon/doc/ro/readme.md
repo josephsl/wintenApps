@@ -20,9 +20,7 @@ privire la ceea ce este inclus):
 
 * Calculator
 * Cortana
-* Mail
 * Hărți
-* Microsoft Solitaire Collection
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/Suggested Actions (preview)/modern input
   method editors)
@@ -36,7 +34,7 @@ privire la ceea ce este inclus):
 Note:
 
 * This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
-  22000) or later.
+  22000), or later releases.
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Not all features from Windows Insider Preview builds will be supported.
@@ -95,19 +93,9 @@ versiunile suplimentului][3].
 * Textual responses from Cortana are announced in most situations.
 * NVDA va fi silențios atunci când vorbiți cu Cortana prin voce.
 
-## Mail
-
-* Când examinați elemente dinn lista de mesaje, puteți să folosiți comenzile
-  de navigare ale tabelului pentru a examina antetele mesajelor. Rețineți că
-  navigarea printre rânduri (mesaje) nu este suportată.
-
 ## Hărți
 
 * NVDA redă bipul locației pentru locațiile hărții.
-
-## Microsoft Solitaire Collection
-
-* NVDA will announce names of cards and card decks.
 
 ## Tastatură modernă
 
@@ -125,8 +113,9 @@ paste the selected item.
   when emoji panel opens. This is now part of NVDA 2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
-* In Insider Preview build 25115, NVDA will announce suggested actions when
-  compatible data such as phone numbers is copied to the clipboard.
+* In Insider Preview build 25115 and later (backported to Windows 11 beta
+  build 22622), NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard.
 
 ## Notepad
 
@@ -149,10 +138,12 @@ This refers to Windows 11 Notepad version 11 or later.
   present (download and install now link in Windows 10, download button in
   Windows 11).
 * In Windows 11, breadcrumb bar items are properly recognized.
-* In Windows 10, NVDA will interupt speech and report updates to Windows
-  Update status as download and install progresses. This may result in
-  speech interruption when navigating Settings app while updates are being
-  downloaded and installed.
+* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
+  updates to Windows Update status as download and install progresses. This
+  may result in speech interruption when navigating Settings app while
+  updates are being downloaded and installed. If using Windows 11 22H2 and
+  later, if selective UIA event registration is on, you must move focus to
+  updates list as soon as they appear so NVDA can announce update progress.
 
 ## Voice access
 

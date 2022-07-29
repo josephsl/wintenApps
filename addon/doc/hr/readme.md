@@ -20,7 +20,6 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 * Kalkulator
 * Cortana
 * Karte
-* Microsoft Solitaire zbirka
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/Suggested Actions (preview)/modern input
   method editors)
@@ -34,7 +33,7 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 Napomene:
 
 * This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
-  22000) or later.
+  22000), or later releases.
 * Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
 * Not all features from Windows Insider Preview builds will be supported.
@@ -96,10 +95,6 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 ## Karte
 
 * NVDA svira zvuk za lokacije za lokacije na karti.
-
-## Microsoft Solitaire zbirka
-
-* NVDA će najaviti imenta karata i setove karata.
 
 ## Moderna tipkovnica
 

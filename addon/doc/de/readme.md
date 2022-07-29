@@ -20,7 +20,6 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 * Rechner
 * Cortana
 * Karten
-* Microsoft Solitaire Collection
 * Moderne Tastatur
   (Emoji-Bedienfeld/Diktat/Sprachsteuerung/Hardware-Eingabevorschläge/Zwischenablage-Verlauf/Vorgeschlagene
   Aktionen (Vorschau) bzw. Moderne Eingabemethoden-Editoren)
@@ -33,8 +32,8 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* Diese Erweiterung benötigt Windows 10 Version 21H1 (Build 19043), Windows
-  11 Version 21H2 (Build 22000) oder neuer.
+* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+  22000), or later releases.
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
@@ -107,10 +106,6 @@ Versionen][3].
 
 * NVDA spielt einen Ortungston für Kartenstandorte ab.
 
-## Microsoft Solitaire Collection
-
-* NVDA sagt nun die Karten und den Kartenstapel an.
-
 ## Moderne virtuelle Tastaturen
 
 Dazu gehören das Emoji-Bedienfeld, der Verlauf der Zwischenablage,
@@ -131,9 +126,9 @@ um das ausgewählte Element einzufügen.
 * In der Zwischenablage von Windows 11 ist der Lesemodus standardmäßig
   ausgeschaltet, damit NVDA Menüeinträge für die Zwischenablage mitteilen
   kann.
-* In Insider Preview build 25115 and later (backported to Windows 11 beta
-  build 22622), NVDA will announce suggested actions when compatible data
-  such as phone numbers is copied to the clipboard.
+* In der Insider Preview Build 25115 (auch ab Windows 11 beta build 22622
+  verfügbar) wird NVDA vorgeschlagene Aktionen mitteilen, wenn kompatible
+  Daten wie Telefonnummern in die Zwischenablage kopiert werden.
 
 ## Notepad
 
@@ -157,12 +152,14 @@ Dies bezieht sich auf Windows 11 Notepad Version 11 oder neuer.
   (Link zum Download und Jetzt installieren in Windows 10,
   Download-Schaltfläche in Windows 11).
 * In Windows 11 werden die Breadcrumb-Leisten richtig erkannt.
-* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
-  updates to Windows Update status as download and install progresses. This
-  may result in speech interruption when navigating Settings app while
-  updates are being downloaded and installed. If using Windows 11 22H2 and
-  later, if selective UIA event registration is on, you must move focus to
-  updates list as soon as they appear so NVDA can announce update progress.
+* In Windows 10 und 11 22H2 unterbricht NVDA die Sprachausgabe und meldet
+  Updates an den Windows Update-Status, während der Download und die
+  Installation fortschreiten. Dies kann zu Sprachunterbrechungen führen,
+  wenn Sie in der Einstellungen-App navigieren, während Updates
+  heruntergeladen und installiert werden. Wenn Sie Windows 11 22H2 und neuer
+  mit aktivierter selektiver Eventregistrierung verwenden, müssen Sie den
+  Fokus in die Update-Liste bewegen, sobald diese erscheinen, damit NVDA den
+  Fortschritt lesen kann.
 
 ## Sprachzugang
 

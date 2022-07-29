@@ -21,7 +21,6 @@ dołączone, zobacz każdą sekcję aplikacji):
 * Kalkulator
 * Cortana
 * Mapy
-* Microsoft Solitaire Collection
 * Nowoczesna klawiatura (panel emoji/dyktowanie/pisanie głosowe/sugestie
   wprowadzania sprzętowego/historia schowka/Sugerowane działania
   (podgląd)/nowoczesne edytory metod wprowadzania)
@@ -34,8 +33,8 @@ dołączone, zobacz każdą sekcję aplikacji):
 
 Notatki:
 
-* Ten dodatek wymaga systemu Windows 10 21H1 (kompilacja 19043), Windows 11
-  21H2 (kompilacja 22000) lub nowszego.
+* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+  22000), or later releases.
 * Chociaż instalacja jest możliwa, ten dodatek nie obsługuje wersji Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
 * Nie wszystkie funkcje kompilacji systemu Windows Insider Preview będą
@@ -100,10 +99,6 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 ## Mapy
 
 * NVDA odtwarza sygnał dźwiękowy lokalizacji dla lokalizacji na mapie.
-
-## Microsoft Solitaire Collection
-
-* NVDA ogłosi nazwy kart i talii kart.
 
 ## Klawiatura nowoczesna
 

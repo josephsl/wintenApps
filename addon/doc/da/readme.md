@@ -19,7 +19,6 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Lommeregner
 * Cortana
 * Kort
-* Microsoft Kabale Samling
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/Suggested Actions (preview)/modern input
   method editors)
@@ -32,8 +31,8 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 Bemærkninger:
 
-* Denne tilføjelse kræver Windows 10 21H1 (build 19043), Windows 11 21H2
-  (build 22000) eller nyere.
+* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+  22000), or later releases.
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
@@ -100,10 +99,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 ## Kort
 
 * NVDA spiller placeringsbip for kortlokationer.
-
-## Microsoft Kabale Samling
-
-* NVDA vil annoncere navnene på kort og kortdæk.
 
 ## Moderne tastatur
 

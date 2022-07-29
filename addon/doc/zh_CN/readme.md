@@ -15,7 +15,6 @@
 * 计算器
 * Cortana
 * 地图
-* Microsoft Solitaire Collection（微软纸牌游戏）
 * 现代键盘（包括表情符号面板、听写、语音输入、硬件输入建议、云剪贴板历史记录、建议操作（预览）、现代输入法编辑器）
 * 记事本（Windows 11）
 * 人脉
@@ -26,7 +25,8 @@
 
 注意:
 
-* 此插件需要 Windows 10 21H1（内部版本 19043）、Windows 11 21H2（内部版本 22000）或更高版本。
+* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+  22000), or later releases.
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
 * 并非支持 Windows Insider Preview 版本中的所有功能。
 * 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
@@ -66,10 +66,6 @@
 ## 地图
 
 * NVDA为地图上的位置播放位置嘟嘟声。
-
-## Microsoft Solitaire Collection（微软纸牌游戏）
-
-* NVDA现在可读出卡片和卡片组的名称。
 
 ## 系统键盘
 

@@ -15,7 +15,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 계산기
 * Cortana
 * 지도
-* Microsoft Solitaire Collection
 * 현대식 키보드(에모지 페널/받아쓰기/하드웨어 입력 구성/클립보드 히스토리/추천 엑션(프리뷰)/현대식 IME 입력기)
 * 메모장(윈도우 11)
 * People
@@ -74,10 +73,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 ## 지도
 
 * NVDA plays location beep for map locations.
-
-## Microsoft Solitaire Collection
-
-* NVDA will announce names of cards and card decks.
 
 ## 현대식 키보드
 

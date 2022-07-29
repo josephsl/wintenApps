@@ -21,7 +21,6 @@ qué se incluye):
 * Calculadora
 * Cortana
 * Mapas
-* Microsoft Solitaire Collection
 * Teclado Moderno (panel de emojis / dictado / escritura por voz /
   sugerencias de entrada hardware / historial del portapapeles / acciones
   sugeridas (preview) / editores modernos de método de entrada)
@@ -35,7 +34,7 @@ qué se incluye):
 Notas:
 
 * Este complemento requiere Windows 10 Versión 21H1 (compilación 19043),
-  Windows 11 21H2 (compilación 22000) o posterior.
+  Windows 11 21H2 (compilación 22000) o versiones posteriores.
 * Aunque la instalación es posible, este complemento no soporta Windows
   Enterprise LTSC (canal de servicio a largo plazo) ni las versiones de
   Windows Server.
@@ -102,10 +101,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 ## Mapas
 
 * NVDA reproduce pitidos de localización para lugares en el mapa.
-
-## Microsoft Solitaire Collection
-
-* NVDA anunciará los nombres de las cartas y los montones de cartas.
 
 ## Teclado Moderno
 

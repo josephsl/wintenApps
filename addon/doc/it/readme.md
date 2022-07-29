@@ -20,7 +20,6 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 * Calcolatrice
 * Cortana
 * Mappe
-* Microsoft Solitaire Collection
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/Suggested Actions (preview)/modern input
   method editors)
@@ -34,7 +33,7 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 Note:
 
 * This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
-  22000) or later.
+  22000), or later releases.
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * Not all features from Windows Insider Preview builds will be supported.
@@ -97,10 +96,6 @@ riferimento al documento [changelogs for add-on releases][3].
 ## Mappe
 
 * NVDA emette dei segnali acustici per le posizioni presenti nella mappa.
-
-## Microsoft Solitaire Collection
-
-* NVDA vocalizzerà i nomi delle carte e dei mazzi di carte.
 
 ## Tastiera moderna
 

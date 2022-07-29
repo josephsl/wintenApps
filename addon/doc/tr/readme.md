@@ -22,7 +22,6 @@ bakın):
 * Hesap makinesi
 * Cortana
 * Haritalar
-* Microsoft Solitaire Koleksiyonu
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/Suggested Actions (preview)/modern input
   method editors)
@@ -36,7 +35,7 @@ bakın):
 Notlar:
 
 * This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
-  22000) or later.
+  22000), or later releases.
 * Ne kadar yüklenebilse de, bu eklenti Windows Enterprise LTSC (Uzun Süreli
   Hizmet Kanalı) ve Windows Server sürümlerini desteklemez.
 * Not all features from Windows Insider Preview builds will be supported.
@@ -98,10 +97,6 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 ## Haritalar
 
 * NVDA, harita konumları için konum bip sesi çıkarır.
-
-## Microsoft Solitaire Koleksiyonu
-
-* NVDA kartların ve kart destelerinin adlarını bildirir.
 
 ## Modern klavye
 

@@ -20,7 +20,6 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Laskin
 * Cortana
 * Kartat
-* Microsoft Solitaire -kokoelma
 * Moderni näppäimistö (emojipaneeli/sanelu/puhekirjoitus/fyysisen
   näppäimistösyötteen ehdotukset/leikepöydän historia/ehdotetut toiminnot
   (esiversio)/modernin syöttömenetelmän muokkaimet)
@@ -34,7 +33,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 Huomautuksia:
 
 * Tämä lisäosa edellyttää Windows 10:n versiota 21H1 (koontiversio 19043),
-  Windows 11:n versiota 21H2 (koontiversio 22000) tai uudempaa.
+  Windows 11:n versiota 21H2 (koontiversio 22000) tai uudempia.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
 * Kaikkia Windowsin Insider-esiversioiden ominaisuuksia ei tueta.
@@ -98,10 +97,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Kartat
 
 * NVDA toistaa äänimerkin karttasijainneille.
-
-## Microsoft Solitaire -kokoelma
-
-* NVDA sanoo korttien ja korttipakkojen nimet.
 
 ## Moderni näppäimistö
 
