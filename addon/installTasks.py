@@ -80,6 +80,19 @@ def onInstall():
 			"You are using an unsupported {windowsRelease} release. "
 			"Supported releases: {windowsReleasesList}."
 		).format(windowsRelease=windowsReleaseSeries, windowsReleasesList=", ".join(supportedBuilds.values()))
+	else:
+		supportedBuilds = {
+			22000: "21H2",
+			22621: "22H2"
+		}
+		addonInstallPossible = currentWinVer.build in supportedBuilds
+		unsupportedWindowsReleaseText = _(
+			# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows 10 release.
+			# Unlike Windows 11, Windows 10 releases from 21H2 are checked using a list of public builds.
+			# For example, if 21H1 and 21H2 are supported, the text will list supported releases at the end.
+			"You are using an unsupported {windowsRelease} release. "
+			"Supported releases: {windowsReleasesList}."
+		).format(windowsRelease=windowsReleaseSeries, windowsReleasesList=", ".join(supportedBuilds.values()))
 	if not addonInstallPossible:
 		if not globalVars.appArgs.minimal:
 			gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
