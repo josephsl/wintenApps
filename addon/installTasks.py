@@ -65,8 +65,7 @@ def onInstall():
 		"This add-on requires {minSupportedUpdate} or later."
 	).format(windowsRelease=windowsReleaseSeries, minSupportedUpdate=minimumSupportedReleaseName)
 	# Record supported builds.
-	# Windows Server 2022 (build 20348), despite a different code base, is still Windows 10.
-	# But since it is labeled 21H2, add-on support duration is tied to the client (build 19044).
+	# Windows Server 2022 reports itself as 21H2, thus add-on support duration is tied to the client (19044).
 	supportedBuilds = {
 		# Windows 10 (and Server 2022)
 		19044: "21H2",
