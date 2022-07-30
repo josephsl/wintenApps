@@ -79,6 +79,11 @@ def onInstall():
 		currentWinVer.build in supportedBuilds  # General availability channel
 		or currentWinVer.build >= max(supportedBuilds)  # Insider Preview
 	)
+	# Present different builds depending on Windows release.
+	if currentWinVer > winVersion.WINSERVER_2022:
+		supportedBuilds = {build:release for build, release in supportedBuilds.items() if build >= 22000}
+	else:
+		supportedBuilds = {build:release for build, release in supportedBuilds.items() if build < 22000}
 	unsupportedWindowsReleaseText = _(
 		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 		# winRelease can be Windows 10, Windows 11, or other release series name.
