@@ -47,8 +47,8 @@ def onInstall():
 	# Windows 11
 	# There is no known public release between Server 2022 (build 20348) and Windows 11 (build 22000).
 	# Builds in this range (21000) are Insider builds and are branded as Windows 10 but later changed to 11.
-	# For simplicity, treat these builds as Windows 11 builds and installation will fail.
-	if currentWinVer > winVersion.WINSERVER_2022:
+	# For simplicity, treat these builds as Windows 10 builds and installation will fail.
+	if currentWinVer < winVersion.WIN11:
 		minWindowsRelease = winVersion.WinVersion(major=10, minor=0, build=22000, releaseName="Windows 11 21H2")
 		windowsReleaseSeries = "Windows 11"
 		minimumSupportedReleaseAttribute = "WIN11"
@@ -81,10 +81,10 @@ def onInstall():
 		or currentWinVer.build >= max(supportedBuilds)  # Insider Preview
 	)
 	# Present different builds depending on Windows release.
-	if currentWinVer > winVersion.WINSERVER_2022:
-		supportedBuilds = {build: release for build, release in supportedBuilds.items() if build >= 22000}
-	else:
+	if currentWinVer < winVersion.WIN11:
 		supportedBuilds = {build: release for build, release in supportedBuilds.items() if build < 22000}
+	else:
+		supportedBuilds = {build: release for build, release in supportedBuilds.items() if build >= 22000}
 	unsupportedWindowsReleaseText = _(
 		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 		# winRelease can be Windows 10, Windows 11, or other release series name.
