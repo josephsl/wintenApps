@@ -75,10 +75,14 @@ def onInstall():
 		22000: "21H2",
 		22621: "22H2"
 	}
+	# Optimization: report success (return early) if running a supported release.
+	# Use a variable for compatibility with error presentation routine.
 	addonInstallPossible = (
 		currentWinVer.build in supportedBuilds  # General availability channel
 		or currentWinVer.build >= max(supportedBuilds)  # Insider Preview
 	)
+	if addonInstallPossible:
+		return
 	# Present different builds depending on Windows release.
 	if currentWinVer < winVersion.WIN11:
 		supportedBuilds = {build: release for build, release in supportedBuilds.items() if build < 22000}
