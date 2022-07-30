@@ -80,9 +80,10 @@ def onInstall():
 		or currentWinVer.build >= max(supportedBuilds)  # Insider Preview
 	)
 	unsupportedWindowsReleaseText = _(
-		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows 10 release.
-		# Unlike Windows 11, Windows 10 releases from 21H2 are checked using a list of public builds.
-		# For example, if 21H1 and 21H2 are supported, the text will list supported releases at the end.
+		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+		# winRelease can be Windows 10, Windows 11, or other release series name.
+		# windowsReleasesList records supported releases for a given Windows release series.
+		# For example, if 21H2 and 22H2 are supported, the text will list supported releases at the end.
 		"You are using an unsupported {windowsRelease} release. "
 		"Supported releases: {windowsReleasesList}."
 	).format(windowsRelease=windowsReleaseSeries, windowsReleasesList=", ".join(supportedBuilds.values()))
