@@ -77,8 +77,9 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			elif obj.UIAElement.cachedClassName.endswith("BreadcrumbBarItem"):
 				obj.roleText = obj.UIAElement.currentLocalizedControlType
 
-	# Workaronds for Windows 10 and Server 2022
-	if winVersion.getWinVer() < winVersion.WIN11:
+	# Workarounds for Windows 10 and Server 2022
+	# Exposing specific attributes made the app module more complex, therefore inform Flake8.
+	if winVersion.getWinVer() < winVersion.WIN11:  # NOQA: C901
 		# Sometimes, the same text is announced, so consult this cache.
 		_nameChangeCache: str = ""
 
