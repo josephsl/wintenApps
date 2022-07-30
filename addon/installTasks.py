@@ -67,7 +67,7 @@ def onInstall():
 	# Windows Server 2022 (build 20348), despite a different code base, is still Windows 10.
 	# But since it is labeled 21H2, add-on support duration is tied to the client (build 19044).
 	supportedBuilds = {
-		# Windows 10
+		# Windows 10 (and Server 2022)
 		19044: "21H2",
 		19045: "22H2",
 		20348: "Windows Server 2022",
