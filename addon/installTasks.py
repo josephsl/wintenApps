@@ -33,10 +33,10 @@ def onInstall():
 	# Windows App Essentials does not support old feature updates.
 	# Until Windows 10 21H1 (19043), checking build range was acceptable because there was one to one mapping
 	# between feature updates/milestones and builds across clients and servers such as 1809/17763 (RS5).
-	# But 21H2 changes this: Windows 10 (19044), Windows Server 2022 (20348), and Windows 11 (22000)
+	# But 21H2 changed this: Windows 10 (19044), Windows Server 2022 (20348), and Windows 11 (22000)
 	# As these releases come from vibranium (vb), iron (fe), and cobalt (co) branches, respectively.
 	# This continues in 22H2 with Windows 10 (19045) and Windows 11 (22621).
-	# Therefore, use builds list and build range on Windows 10 and 11, respectively.
+	# For consistency, display builds list across Windows releases.
 	# For compatibility, assume minimum supported version is the one listed below unless this is Windows 11.
 	# Old NVDA versions do not include minimum Windows version defined.
 	# Note that the add-on does support NVDA releases with Windows 10, 11, and Server 2022 defined.
