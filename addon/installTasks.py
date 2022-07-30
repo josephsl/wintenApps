@@ -85,7 +85,10 @@ def onInstall():
 			22000: "21H2",
 			22621: "22H2"
 		}
-		addonInstallPossible = currentWinVer.build in supportedBuilds
+		addonInstallPossible = (
+			currentWinVer.build in supportedBuilds
+			or currentWinVer.build >= max(supportedBuilds)
+		)
 		unsupportedWindowsReleaseText = _(
 			# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows 10 release.
 			# Unlike Windows 11, Windows 10 releases from 21H2 are checked using a list of public builds.
