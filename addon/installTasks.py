@@ -40,6 +40,7 @@ def onInstall():
 	# For compatibility, assume minimum supported version is the one listed below unless this is Windows 11.
 	# Old NVDA versions do not include minimum Windows version defined.
 	# Note that the add-on does support NVDA releases with Windows 10, 11, and Server 2022 defined.
+	# Deprecated: switch from minimum release check to builds list.
 	minWindowsRelease = winVersion.WinVersion(major=10, minor=0, build=19044, releaseName="Windows 10 21H2")
 	windowsReleaseSeries = "Windows 10"
 	minimumSupportedReleaseAttribute = "WIN10_21H2"
