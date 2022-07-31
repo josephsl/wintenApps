@@ -82,7 +82,7 @@ def onInstall():
 	# Use a variable for compatibility with error presentation routine.
 	addonInstallPossible = (
 		currentWinVer.build in supportedBuilds  # General availability channel
-		or currentWinVer.build >= max(supportedBuilds)  # Insider Preview
+		or (windowsReleaseSeries == "Windows 11" and currentWinVer.build >= max(supportedBuilds))  # Insider Preview
 	)
 	if addonInstallPossible:
 		return
