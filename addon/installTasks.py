@@ -48,7 +48,7 @@ def onInstall():
 	# There is no known public release between Server 2022 (build 20348) and Windows 11 (build 22000).
 	# Builds in this range (21000) are Insider builds and are branded as Windows 10 but later changed to 11.
 	# For simplicity, treat these builds as Windows 10 builds and installation will fail.
-	if currentWinVer < winVersion.WIN11:
+	if currentWinVer >= winVersion.WIN11:
 		minWindowsRelease = winVersion.WinVersion(major=10, minor=0, build=22000, releaseName="Windows 11 21H2")
 		windowsReleaseSeries = "Windows 11"
 		minimumSupportedReleaseAttribute = "WIN11"
