@@ -149,7 +149,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def event_UIA_itemStatus(self, obj, nextHandler):
 		# NVDA Core issue 13973: in addition to Windows 10 Action Center, other apps may raise this event.
-		ui.message(obj.UIAElement.currentItemStatus)
+		# A basic implementation is included in Windows 10 Action Center app module.
+		if obj.appModule.appName != "shellexperiencehost":
+			ui.message(obj.UIAElement.currentItemStatus)
 		nextHandler()
 
 	# Events defined in this add-on.
