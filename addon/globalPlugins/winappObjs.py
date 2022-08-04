@@ -154,7 +154,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# NVDA Core issue 13973: in addition to Windows 10 Action Center, other apps may raise this event.
 		# A basic implementation is included in Windows 10 Action Center app module.
 		if obj.appModule.appName != "shellexperiencehost":
-			ui.message(obj.UIAElement.currentItemStatus)
+			itemStatus = obj.UIAElement.currentItemStatus
+			itemStatusRuntimeID = obj.UIAElement.getRuntimeID()
+			if self._itemStatusRuntimeID == itemStatusRuntimeID and itemStatus == self._itemStatusCache:
+				return
+			self._itemStatusCache = itemStatus
+			self._itemStatusRuntimeID = itemStatusRuntimeID
+			ui.message(itemStatus)
 		nextHandler()
 
 	# Events defined in this add-on.
