@@ -147,19 +147,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				return
 		nextHandler()
 
-	_itemStatusCache = None
-	_itemStatusRuntimeID = None
-
 	def event_UIA_itemStatus(self, obj, nextHandler):
 		# NVDA Core issue 13973: in addition to Windows 10 Action Center, other apps may raise this event.
 		# A basic implementation is included in Windows 10 Action Center app module.
 		if obj.appModule.appName != "shellexperiencehost":
 			itemStatus = obj.UIAElement.currentItemStatus
-			itemStatusRuntimeID = obj.UIAElement.getRuntimeID()
-			if self._itemStatusRuntimeID == itemStatusRuntimeID and itemStatus == self._itemStatusCache:
+			# Filter duplicate events.
+			if (
+				eventHandler.isPendingEvents(eventName="UIA_itemStatus", obj=obj)
+				and itemStatus == obj.UIAElement.currentItemStatus
+			):
 				return
-			self._itemStatusCache = itemStatus
-			self._itemStatusRuntimeID = itemStatusRuntimeID
 			ui.message(itemStatus)
 		nextHandler()
 
