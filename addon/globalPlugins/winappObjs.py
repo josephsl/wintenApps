@@ -147,6 +147,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				return
 		nextHandler()
 
+	_itemStatusCache = None
+	_itemStatusRuntimeID = None
+
 	def event_UIA_itemStatus(self, obj, nextHandler):
 		# NVDA Core issue 13973: in addition to Windows 10 Action Center, other apps may raise this event.
 		# A basic implementation is included in Windows 10 Action Center app module.
