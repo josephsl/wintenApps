@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and others
 * Tải về [phiên bản chính thức][1]
 * Tải về [phiên bản thử nghiệm][2]
-* NVDA compatibility: 2021.3 and later
+* NVDA compatibility: 2022.2 and later
 
 Note: Originally called Windows 10 App Essentials, it was renamed to Windows
 App Essentials in 2021 to support Windows 10 and future releases such as
@@ -17,13 +17,11 @@ and later.
 Các module cho các ứng dụng sau đây đã được tích hợp (xem phần thông tin chi
 tiết của mỗi ứng dụng để biết them):
 
-* Calculator
 * Cortana
 * Maps
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/Suggested Actions (preview)/modern input
   method editors)
-* Notepad (Windows 11)
 * People
 * Settings (system settings, Windows+I)
 * Voice access (Windows 11 22H2)
@@ -32,11 +30,14 @@ tiết của mỗi ứng dụng để biết them):
 
 Lưu ý:
 
-* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+* This add-on requires Windows 10 21H2 (build 19044), Windows 11 21H2 (build
   22000), or later releases.
 * Dù vẫn có thể cài đặt được, add-on này không hỗ trợ Windows 10 Enterprise
   LTSC (Long-Term Servicing Channel) và các bản phát hành của Windows
   Server.
+* If Add-on Updater 22.08 or later is installed and background add-on
+  updates is enabled, Windows App Essentials will not install at all on
+  unsupported Windows releases.
 * Not all features from Windows Insider Preview builds will be supported.
 * Vài tính năng của add-on đã hoặc sẽ là một phần tính năng của trình đọc
   màn hình NVDA.
@@ -73,21 +74,8 @@ for add-on releases][3] .
   NVDA.
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
-* NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
-  later. This is now part of NVDA 2022.1.
-* NVDA will once again announce search result details in Start menu. This is
-  now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other shell user interface elements can
-  be detected properly when using mouse and/or touch interaction. This is
-  now part of NVDA 2022.2.
-
-## Calculator
-
-* In Windows 10, history and memory list items are properly labeled. This is
-  now part of NVDA 2022.1.
-* NVDA will announce calculator display content when performing scientific
-  mode commands such as trigonometry operations. This is now part of NVDA
-  2022.2.
+* Item status changes are announced in more apps including Visual Studio
+  Community 2022.
 
 ## Cortana
 
@@ -117,14 +105,6 @@ paste the selected item.
 * In Insider Preview build 25115 and later (backported to Windows 11 beta
   build 22622), NVDA will announce suggested actions when compatible data
   such as phone numbers is copied to the clipboard.
-
-## Notepad
-
-This refers to Windows 11 Notepad version 11 or later.
-
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## People
 

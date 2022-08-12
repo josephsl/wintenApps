@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2021.3 ja uudemmat
+* NVDA compatibility: 2022.2 and later
 
 Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
 nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows
@@ -17,13 +17,11 @@ Windows 10:ssä ja uudemmissa.
 Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
-* Laskin
 * Cortana
 * Kartat
 * Moderni näppäimistö (emojipaneeli/sanelu/puhekirjoitus/fyysisen
   näppäimistösyötteen ehdotukset/leikepöydän historia/ehdotetut toiminnot
   (esiversio)/modernin syöttömenetelmän muokkaimet)
-* Muistio (Windows 11)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Puhekäyttö (Windows 11 22H2)
@@ -32,10 +30,13 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Tämä lisäosa edellyttää Windows 10:n versiota 21H1 (koontiversio 19043),
-  Windows 11:n versiota 21H2 (koontiversio 22000) tai uudempia.
+* This add-on requires Windows 10 21H2 (build 19044), Windows 11 21H2 (build
+  22000), or later releases.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
+* If Add-on Updater 22.08 or later is installed and background add-on
+  updates is enabled, Windows App Essentials will not install at all on
+  unsupported Windows releases.
 * Kaikkia Windowsin Insider-esiversioiden ominaisuuksia ei tueta.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
@@ -73,21 +74,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   objektien lukemisen asetuksista.
 * Mikrofonin mykistyksen (Win+Alt+K) tila ilmoitetaan nyt kaikkialta Windows
   11:n versiossa 22H2 ja sitä uudemmissa.
-* NVDA ei enää toista tekstitulostetta Windows Terminal 1.12.10733:ssa ja
-  uudemmissa. Tämä sisältyy nyt NVDA 2022.1:een.
-* NVDA ilmoittaa jälleen hakutulosten tiedot Käynnistä-valikossa. Tämä
-  sisältyy nyt NVDA 2022.2:een.
-* Tehtäväpalkin kohteet ja muut käyttöliittymän säätimet tunnistetaan oikein
-  Windows 11:ssä hiirtä ja/tai kosketusvuorovaikutusta käytettäessä. Tämä
-  sisältyy nyt NVDA 2022.2:een.
-
-## Laskin
-
-* Historia- ja muistiluettelon kohteet nimetään oikein Windows 10:ssä. Tämä
-  sisältyy NVDA 2022.1:een.
-* NVDA ilmoittaa nyt laskimen näytön sisällön funktiotilan komentoja, kuten
-  trigonometrisiä laskutoimituksia, suoritettaessa. Tämä sisältyy nyt NVDA
-  2022.2:een.
+* Item status changes are announced in more apps including Visual Studio
+  Community 2022.
 
 ## Cortana
 
@@ -120,14 +108,6 @@ tukee lisäksi päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
   Windows 11:n beeta-koontiversioon 22622) NVDA ilmoittaa ehdotetut
   toiminnot, kun leikepöydälle kopioidaan yhteensopivaa dataa, kuten
   puhelinnumeroita.
-
-## Muistio
-
-Tämä viittaa Windows 11:n Muistion versioon 11 tai sitä uudempiin.
-
-* NVDA puhuu tilakohteet, kuten rivin ja sarakkeen tiedot, kun Puhu tilarivi
-  -komento (NVDA+End pöytäkoneissa, NVDA+Vaihto+End kannettavissa)
-  suoritetaan. Tämä sisältyy nyt NVDA 2022.2:een.
 
 ## Ihmiset
 

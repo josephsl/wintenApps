@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und weitere
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA-Kompatibilität: 2021.3 und neuer
+* NVDA-Kompatibilität: 2022.2 und neuer
 
 Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
 2021 in Windows App Essentials umbenannt, um Windows 10 und zukünftige
@@ -17,13 +17,11 @@ Steuerelemente in Windows 10 und neuer.
 Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
 Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
-* Rechner
 * Cortana
 * Karten
 * Moderne Tastatur
   (Emoji-Bedienfeld/Diktat/Sprachsteuerung/Hardware-Eingabevorschläge/Zwischenablage-Verlauf/Vorgeschlagene
   Aktionen (Vorschau) bzw. Moderne Eingabemethoden-Editoren)
-* Notepad (Windows 11)
 * Kontakte
 * Einstellungen (System-Einstellungen, Windows+I)
 * Sprachzugang (Windows 11 Version 22H2)
@@ -32,11 +30,15 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
-  22000), or later releases.
+* Diese Erweiterung benötigt Windows 10 Version 21H2 (Build 19044), Windows
+  11 Version 21H2 (Build 22000) oder neuere Releases.
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
+* Wenn der Updater für NVDA-Erweiterungen 22.08 oder neuer installiert ist
+  und Add-on-Updates im Hintergrund aktiviert sind, wird Windows App
+  Essentials auf nicht unterstützten Windows-Versionen überhaupt nicht
+  installiert.
 * Nicht alle Funktionen von Windows Insider Preview Builds werden
   unterstützt.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
@@ -77,23 +79,8 @@ Versionen][3].
   Objektpräsentationseinstellungen von NVDA deaktiviert wird.
 * In Windows 11 Version 22H2 und neuer wird der Status der
   Mikrofon-Stummschaltung (Windows+Alt+K) von überall her mitgeteilt.
-* NVDA wiederholt die Textausgabe in Windows-Terminal (1.12.10733 und neuer)
-  nicht länger. Dies ist nun fester Bestandteil in NVDA 2022.1.
-* NVDA zeigt wieder Details zu Suchergebnissen im Startmenü an. Dies wird
-  fester Bestandteil in NVDA 2022.2.
-* In Windows 11 können Elemente der Taskleiste und andere Elemente der
-  Shell-Benutzeroberfläche bei der Verwendung von Maus- und/oder
-  Touch-Interaktion korrekt erkannt werden. Dies wird fester Bestandteil von
-  NVDA 2022.2 sein.
-
-## Rechner
-
-* In Windows 10 sind Verlaufs- und Speicherlistenelemente richtig
-  beschriftet. Dies ist jetzt Teil von NVDA 2022.1.
-* NVDA zeigt den Inhalt der Anzeige im Taschenrechner an, wenn Befehle im
-  wissenschaftlichen Modus ausgeführt werden, wie
-  z. B. Trigonometrie-Operationen. Dies ist wird fester Bestandteil in NVDA
-  2022.2.
+* Änderungen des Elementstatus werden in weiteren Anwendungen,
+  einschließlich Visual Studio Community 2022 angezeigt.
 
 ## Cortana
 
@@ -129,15 +116,6 @@ um das ausgewählte Element einzufügen.
 * In der Insider Preview Build 25115 (auch ab Windows 11 beta build 22622
   verfügbar) wird NVDA vorgeschlagene Aktionen mitteilen, wenn kompatible
   Daten wie Telefonnummern in die Zwischenablage kopiert werden.
-
-## Notepad
-
-Dies bezieht sich auf Windows 11 Notepad Version 11 oder neuer.
-
-* NVDA teilt Status-Elemente wie Zeilen- und Spalteninformationen, wenn der
-  Befehl für die Statusleiste mitteilen (NVDA+Ende im Desktop-Layout,
-  NvDA+Umschalt+Ende im Laptop-Layout) ausgeführt wird. Dies wird nun fester
-  Bestandteil in NVDA 2022.2.
 
 ## Kontakte
 

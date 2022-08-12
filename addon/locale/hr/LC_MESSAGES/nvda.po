@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-05-29 14:47+0200\n"
+"PO-Revision-Date: 2022-08-09 09:34-0700\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
 "Language: hr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Windows App Essentials requires Windows 10 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
@@ -48,9 +48,10 @@ msgstr ""
 "Koristiš nepodržano izdanje {windowsRelease}. Ovaj dodatak zahtijeva "
 "{minSupportedUpdate} ili noviju verziju."
 
-#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows 10 release.
-#. Unlike Windows 11, Windows 10 releases from 21H2 are checked using a list of public builds.
-#. For example, if 21H1 and 21H2 are supported, the text will list supported releases at the end.
+#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+#. winRelease can be Windows 10, Windows 11, or other release series name.
+#. windowsReleasesList records supported releases for a given Windows release series.
+#. For example, if 21H2 and 22H2 are supported, the text will list supported releases at the end.
 #, python-brace-format
 msgid ""
 "You are using an unsupported {windowsRelease} release. Supported releases: "
@@ -58,11 +59,6 @@ msgid ""
 msgstr ""
 "Koristiš nepodržano izdanje {windowsRelease}. Podržana izdanja: "
 "{windowsReleasesList}."
-
-#. Customized because there is no easy way to obtain column position info for this object yet.
-#. Therefore report that this is not supported yet.
-msgid "Cannot move between rows"
-msgstr "Premještanje po redcima nije moguće"
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."

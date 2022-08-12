@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-05-14 02:38+0200\n"
+"PO-Revision-Date: 2022-08-09 09:28-0700\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -45,9 +45,10 @@ msgstr ""
 "Sie verwenden eine nicht unterstützte Version von {windowsRelease}. Diese "
 "Erweiterung benötigt mindestens {minSupportedUpdate}."
 
-#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows 10 release.
-#. Unlike Windows 11, Windows 10 releases from 21H2 are checked using a list of public builds.
-#. For example, if 21H1 and 21H2 are supported, the text will list supported releases at the end.
+#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+#. winRelease can be Windows 10, Windows 11, or other release series name.
+#. windowsReleasesList records supported releases for a given Windows release series.
+#. For example, if 21H2 and 22H2 are supported, the text will list supported releases at the end.
 #, python-brace-format
 msgid ""
 "You are using an unsupported {windowsRelease} release. Supported releases: "
@@ -55,11 +56,6 @@ msgid ""
 msgstr ""
 "Sie verwenden eine nicht unterstützte Version von {windowsRelease}. "
 "Unterstützte Versionen: {windowsReleasesList}."
-
-#. Customized because there is no easy way to obtain column position info for this object yet.
-#. Therefore report that this is not supported yet.
-msgid "Cannot move between rows"
-msgstr "Konnte nicht zwischen Zeilen wechseln"
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
@@ -77,21 +73,3 @@ msgid "Improving support for various apps and controls on Windows 10 and later"
 msgstr ""
 "Verbesserte Unterstützung für verschiedene Apps und Steuerelemente unter "
 "Windows 10 und neuer"
-
-#~ msgid ""
-#~ "This is a Windows Server system. Although you can install the add-on, not "
-#~ "all features will work as Windows Server does not include modern apps "
-#~ "such as Microsoft Store."
-#~ msgstr ""
-#~ "Dies ist ein Windows Server. Obwohl Sie die Erweiterung installieren "
-#~ "können, stehen vielleicht nicht alle Funktionen zur Verfügung, da Windows "
-#~ "Server keine modernen Apps wie den Microsoft Store enthält."
-
-#~ msgid "Windows App Essentials and Windows Server"
-#~ msgstr "Windows App Essentials und Windows Server"
-
-#~ msgid "1 suggestion"
-#~ msgstr "ein Vorschlag"
-
-#~ msgid "{} suggestions"
-#~ msgstr "{} Vorschläge"

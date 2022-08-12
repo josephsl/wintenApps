@@ -3,7 +3,7 @@
 * 作者：Joseph Lee、Derek Riemer 等
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA 兼容性：2021.3 及更高版本
+* NVDA 兼容性：2022.2 及更高版本
 
 注意：此插件最初称为 Windows 10 应用增强，在 2021 年更名为 Windows 应用增强，以支持 Windows 10 和 Windows
 11 等后续版本。此插件的部分内容仍将引用原始插件名称。
@@ -12,22 +12,21 @@
 
 包括以下应用程序的支持模块（有关所包含内容的详细信息，请参阅每个应用程序部分）：
 
-* 计算器
 * Cortana
 * 地图
 * 现代键盘（包括表情符号面板、听写、语音输入、硬件输入建议、云剪贴板历史记录、建议操作（预览）、现代输入法编辑器）
-* 记事本（Windows 11）
 * 人脉
 * 设置（Windows + I系统设置）
-* Voice access (Windows 11 22H2)
+* 语音访问（Windows 11 22H2）
 * 天气
 * 开始菜单中的瓷贴控件和其他模块
 
 注意:
 
-* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
-  22000), or later releases.
+* 此插件需要 Windows 10 21H2（内部版本 19044）、Windows 11 21H2（内部版本 22000）或更高版本。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
+* 如果安装了插件更新器 22.08 或更高版本并启用了后台插件更新，则 在不受支持的操作系统上 Windows App Essentials
+  不会被安装。
 * 并非支持 Windows Insider Preview 版本中的所有功能。
 * 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
 * 对于未在下方列出的条目，您可以假定功能已包含在 NVDA 核心中，或者不再适用，因为插件不支持旧版本的
@@ -48,15 +47,7 @@
 * 通过在 NVDA 的“对象提示”设置中关闭“读出通知提示”，可以禁止诸如文件资源管理器中的音量、亮度更改和来自 Microsoft Store
   的应用程序更新之类的通知。
 * 在 Windows 11 22H2 及更高版本中，可读出 Windows+Alt+K 的麦克风静音切换状态。
-* 修复了 NVDA 在 Windows Terminal 1.12.10733 及更高版本中会重复朗读输出文本的错误，该修复已经包含在
-  NVDA2022.1 中。
-* 修复了 NVDA 不朗读开始菜单搜索结果详情的错误，该修复已经包含在 NVDA2022.2 中。
-* 在 Windows 11 中，使用鼠标和/或触摸交互时可以正确读出任务栏项目和其他的用户界面控件元素，该修复已经包含在 NVDA2022.2 中。
-
-## 计算器
-
-* 在 Windows 10 中，可以正确读出历史记录和内存列表项标签。该功能已是 NVDA 2022.1 的一部分。
-* NVDA 现可以在执行三角运算等科学计算模式命令时读出计算器显示内容。该修复已经包含在 NVDA2022.2 中。
+* 项目状态变化在包括 Visual Studio Community 2022 在内的多款应用程序中被读出。
 
 ## Cortana
 
@@ -77,16 +68,8 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 * 在Windows 10中，选择Emoji组（包括Kaomoji和符号组）时，NVDA不会将导航对象移动到某些EMOJI上。
 * 在 Windows 11 中，当表情符号面板打开时，可以使用箭头键查看表情符号。该功能已是 NVDA2022.1 的一部分。
 * 在 Windows 11 剪贴板历史记录中，为了让 NVDA 宣布剪贴板历史记录条目菜单项，浏览模式将默认关闭。
-* In Insider Preview build 25115 and later (backported to Windows 11 beta
-  build 22622), NVDA will announce suggested actions when compatible data
-  such as phone numbers is copied to the clipboard.
-
-## 记事本
-
-这是指 Windows 11 或更高版本系统上的记事本。
-
-* NVDA在执行读出状态栏命令（台式机键盘方案为 NVDA+End，笔记本键盘方案为
-  NvDA+Shift+End）时会同时读出行列信息等状态条目。该修复已经包含在 NVDA2022.1 中。
+* 在 Insider Preview 版本 25115（及更高版本 Windows11 beta
+  build22622）中，当电话号码等兼容的数据复制到剪贴板时，NVDA 会读出建议的操作。
 
 ## 人脉
 
@@ -97,12 +80,9 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 * 在某些 Windows 安装中看到的奇怪的控件标签已得到更正。
 * NVDA 将公布可选质量更新控件的名称（如果存在）（Windows 10 中的立即下载和安装链接，Windows 11 中的下载按钮）。
 * 在 Windows 11 中，可以正确识别 breadcrumb 栏项目。
-* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
-  updates to Windows Update status as download and install progresses. This
-  may result in speech interruption when navigating Settings app while
-  updates are being downloaded and installed. If using Windows 11 22H2 and
-  later, if selective UIA event registration is on, you must move focus to
-  updates list as soon as they appear so NVDA can announce update progress.
+* 在 Windows 10 和 11 22H2 及更高版本中，在 Windows 下载和安装更新过程中 NVDA的朗读会被打断并读出下载或安装进度。
+  如果使用 Windows 11 22H2 及更高版本，且“启用选择性注册 UIA
+  事件和属性改变”的选项处于开启状态，则必须在更新列表出现时立即将焦点移至更新列表，以便 NVDA 可以读出更新进度。
 
 ## 语音访问
 

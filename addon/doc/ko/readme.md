@@ -3,7 +3,7 @@
 * 저자: Joseph Lee(이성원), Derek Riemer 외 다수
 * [출시 버전][1]
 * [개발 버전][2]
-* NVDA 호환: 2021.3 이상
+* NVDA 호환: 2022.2 이상
 
 참고: 윈도우 10 이상(특히 윈도우 11)을 지원하기 위해 2021년에 Windows 10 App Essentials에서 Windows
 App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름이 뜰 수 있습니다.
@@ -12,11 +12,9 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 다음 앱 모듈 및 지원 모듈을 포함합니다(각 앱 관련 엔트리를 참고 바람):
 
-* 계산기
 * Cortana
 * 지도
 * 현대식 키보드(에모지 페널/받아쓰기/하드웨어 입력 구성/클립보드 히스토리/추천 엑션(프리뷰)/현대식 IME 입력기)
-* 메모장(윈도우 11)
 * People
 * 설정(시스템 설정 앱, Windows+I)
 * Voice access(윈도우 11 22H2)
@@ -25,9 +23,12 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 사용시 주의 사항:
 
-* 본 추가 기능은 윈도우 10 21H1(빌드 19043), 11 21H2(빌드 22000) 이상을 지원합니다.
+* 본 추가 기능은 윈도우 10 21H2(빌드 19044), 11 21H2(빌드 22000) 이상을 지원합니다.
 * 윈도우 Enterprise LTSC(Long-Term Servicing Channel)와 윈도우 서버 버전에 설치할 수 있으나 지원은
   하지 않습니다.
+* If Add-on Updater 22.08 or later is installed and background add-on
+  updates is enabled, Windows App Essentials will not install at all on
+  unsupported Windows releases.
 * 윈도우 참가자 빌드에 탑제된 기능을 모두 지원하지 않습니다.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
 * 다음 중 하나 이상 발생시 본 추가 기능에 탑제된 기능중 몇이 삭제됩니다: NVDA가 그 기능을 탑제할때, 지원이 중단된 윈도우
@@ -52,18 +53,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   Report Notifications in NVDA's object presentation settings.
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
-* NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
-  later. This is now part of NVDA 2022.1.
-* NVDA will once again announce search result details in Start menu. This is
-  now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other shell user interface elements can
-  be detected properly when using mouse and/or touch interaction. This is
-  now part of NVDA 2022.2.
-
-## 계산기
-
-* 윈도우 10 사용시 히스토리 및 메모리 목록 이름이 제대로 출력됨(본 기능은 NVDA 2022.1에 추가됨).
-* 삼각 함수와 같은 공학 계산기 명령 실행시 결과가 출력되도록 함(본 기능은 NVDA 2022.2에 추가됨).
+* Item status changes are announced in more apps including Visual Studio
+  Community 2022.
 
 ## Cortana
 
@@ -85,14 +76,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 윈도우 11 클립보드 히스토리에서 항목 팝업 메뉴를 제대로 출력할 수 있도록 브라우즈 모드가 반영되지 않도록 함.
 * 참가자 빌드 25115 이상(윈도우 11 베타 빌드 22622로 백포팅됨)에서 전화번호와 같은 내용이 클립보드에 복사되었을때 나타나는
   추천 엑션을 출력하도록 함.
-
-## 메모장
-
-This refers to Windows 11 Notepad version 11 or later.
-
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## People
 

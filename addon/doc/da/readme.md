@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA-kompatibilitet: 2021.3 og nyere
+* NVDA compatibility: 2022.2 and later
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
 til Windows App Essentials i 2021 for at understøtte Windows 10 og
@@ -16,13 +16,11 @@ samt forbedringer og rettelser for visse windows 10 kontrolelementer.
 Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
 hver appsektion for detaljer om, hvad der er inkluderet):
 
-* Lommeregner
 * Cortana
 * Kort
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/Suggested Actions (preview)/modern input
   method editors)
-* Notesblok (Windows 11)
 * Personer
 * Indstillinger (systemindstillinger, Windows+I)
 * Voice access (Windows 11 22H2)
@@ -31,11 +29,14 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 Bemærkninger:
 
-* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+* This add-on requires Windows 10 21H2 (build 19044), Windows 11 21H2 (build
   22000), or later releases.
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
+* If Add-on Updater 22.08 or later is installed and background add-on
+  updates is enabled, Windows App Essentials will not install at all on
+  unsupported Windows releases.
 * Ikke alle funktioner fra Windows Insider Preview-builds vil blive
   understøttet.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
@@ -75,21 +76,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   objektpræsentationsindstillinger.
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
-* NVDA vil ikke længere gentage tekstoutput i Windows Terminal 1.12.10733 og
-  nyere. Dette er nu en del af NVDA 2022.1.
-* NVDA vil igen annoncere søgeresultatdetaljer i Start-menuen. Dette er nu
-  en del af NVDA 2022.2.
-* In Windows 11, Taskbar items and other shell user interface elements can
-  be detected properly when using mouse and/or touch interaction. This is
-  now part of NVDA 2022.2.
-
-## Lommeregner
-
-* I Windows 10 er historik- og hukommelseslisteelementer korrekt
-  navngivet. Dette er nu en del af NVDA 2022.1.
-* NVDA vil annoncere indholdet af lommeregnerens display, når du udfører
-  kommandoer i videnskabelig tilstand, såsom trigonometrioperationer. Dette
-  er nu en del af NVDA 2022.2.
+* Item status changes are announced in more apps including Visual Studio
+  Community 2022.
 
 ## Cortana
 
@@ -121,14 +109,6 @@ paste the selected item.
 * In Insider Preview build 25115 and later (backported to Windows 11 beta
   build 22622), NVDA will announce suggested actions when compatible data
   such as phone numbers is copied to the clipboard.
-
-## Notesblok
-
-Dette henviser til Windows 11 Notepad version 11 eller nyere.
-
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## Personer
 

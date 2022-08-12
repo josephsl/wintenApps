@@ -3,7 +3,7 @@
 * Auteurs: Joseph Lee, Derek Riemer et autres utilisateurs
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
-* Compatibilité NVDA: 2021.3 et ultérieure
+* NVDA compatibility: 2022.2 and later
 
 Remarque : à l'origine appelé Windows 10 App Essentials, elle a été renommée
 Windows App Essentials en 2021 pour prendre en charge Windows 10 et les
@@ -19,13 +19,11 @@ Les app modules suivants ou la prise en charge des modules pour certaines
 apps sont inclus (voir chaque section app pour plus de détails sur ce qui
 est inclus) :
 
-* Calculatrice
 * Cortana
 * Cartes
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/Suggested Actions (preview)/modern input
   method editors)
-* Bloc-notes (Windows 11)
 * Personnes
 * Paramètres (paramètres système, Windows+I)
 * Voice access (Windows 11 22H2)
@@ -34,11 +32,14 @@ est inclus) :
 
 Notes:
 
-* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
+* This add-on requires Windows 10 21H2 (build 19044), Windows 11 21H2 (build
   22000), or later releases.
 * Bien que l'installation soit possible, cette extension ne prend pas en
   charge les versions Windows Enterprise LTSC (Long-Term Servicing Channel)
   et Windows Server.
+* If Add-on Updater 22.08 or later is installed and background add-on
+  updates is enabled, Windows App Essentials will not install at all on
+  unsupported Windows releases.
 * Toutes les fonctionnalités des builds Windows Insider Preview ne seront
   pas prises en charge.
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
@@ -81,21 +82,8 @@ l'extension][3].
   Objets.
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
-* NVDA ne répétera plus la sortie de texte dans Windows Terminal 1.12.10733
-  et versions ultérieures. Cela fait maintenant partie de NVDA 2022.1.
-* NVDA annoncera à nouveau les détails des résultats de la recherche dans le
-  menu Démarrer. Cela fait maintenant partie de NVDA 2022.2.
-* In Windows 11, Taskbar items and other shell user interface elements can
-  be detected properly when using mouse and/or touch interaction. This is
-  now part of NVDA 2022.2.
-
-## Calculatrice
-
-* Dans Windows 10, les éléments de l'historique et de la liste de mémoire
-  sont correctement étiquetés. Cela fait maintenant partie de NVDA 2022.1.
-* NVDA annoncera le contenu de l'affichage de la calculatrice lors de
-  l'exécution de commandes en mode scientifique telles que des opérations de
-  trigonométrie. Cela fait maintenant partie de NVDA 2022.2.
+* Item status changes are announced in more apps including Visual Studio
+  Community 2022.
 
 ## Cortana
 
@@ -130,14 +118,6 @@ paste the selected item.
 * In Insider Preview build 25115 and later (backported to Windows 11 beta
   build 22622), NVDA will announce suggested actions when compatible data
   such as phone numbers is copied to the clipboard.
-
-## Bloc-notes
-
-Ceci se rapporte à la version 11 ou ultérieure du Bloc-notes de Windows 11.
-
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## Personnes
 

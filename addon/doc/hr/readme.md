@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer i drugi
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA compatibility: 2021.3 and later
+* NVDA kompatibilnost: 2022.2 i novije verzije
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
@@ -17,25 +17,26 @@ Windows 10 i novijim.
 Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 što je uključeno):
 
-* Kalkulator
 * Cortana
 * Karte
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/Suggested Actions (preview)/modern input
-  method editors)
-* Notepad (Windows 11)
+* Moderna tipkovnica (ploča emojija, diktatiranje, tipkanje glasom,
+  prijedlozi hardvera unosa, povijest međuspremnika, predložene radnje,
+  moderni uređivači za unos)
 * Osobe
 * Postavke (postavke sustava, Windows+I)
-* Voice access (Windows 11 22H2)
+* Pristup glasu (Windows 11 22H2)
 * Vrijeme
 * Dodatni moduli za kontrole kao što su pločice izbornika Start
 
 Napomene:
 
-* This add-on requires Windows 10 21H1 (build 19043), Windows 11 21H2 (build
-  22000), or later releases.
+* Ovaj dodatak zahtijeva Windows 10 21H1 (gradnja 19044), Windows 11 21H2
+  (gradnja 22000) ili novija izdanja.
 * Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
+* If Add-on Updater 22.08 or later is installed and background add-on
+  updates is enabled, Windows App Essentials will not install at all on
+  unsupported Windows releases.
 * Not all features from Windows Insider Preview builds will be supported.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Za unose koji niže dolje nisu navedeni, može se pretpostaviti da su te
@@ -71,21 +72,8 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   postavkama prikaza objekata.
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
-* NVDA will no longer repeat text output in Windows Terminal 1.12.10733 and
-  later. This is now part of NVDA 2022.1.
-* NVDA will once again announce search result details in Start menu. This is
-  now part of NVDA 2022.2.
-* In Windows 11, Taskbar items and other shell user interface elements can
-  be detected properly when using mouse and/or touch interaction. This is
-  now part of NVDA 2022.2.
-
-## Kalkulator
-
-* In Windows 10, history and memory list items are properly labeled. This is
-  now part of NVDA 2022.1.
-* NVDA will announce calculator display content when performing scientific
-  mode commands such as trigonometry operations. This is now part of NVDA
-  2022.2.
+* Item status changes are announced in more apps including Visual Studio
+  Community 2022.
 
 ## Cortana
 
@@ -109,21 +97,14 @@ paste the selected item.
 * U sustavu Windows 10, kad je odabrana grupa emojija (uključujući kaomoji i
   grupu simbola), NVDA više neće pomicati navigacijski objekt na određene
   emojije.
-* In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens. This is now part of NVDA 2022.1.
+* U sustavu Windows 11 ponovo je moguće koristiti tipke sa strelicama za
+  pregled emojija kad se otvori ploča s emojijima. Ovo je sada dio u NVDA
+  2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
 * In Insider Preview build 25115 and later (backported to Windows 11 beta
   build 22622), NVDA will announce suggested actions when compatible data
   such as phone numbers is copied to the clipboard.
-
-## Notepad
-
-Ovo se odnosi na Windows 11 Notepad verziju 11 ili noviju.
-
-* NVDA will announce status items such as line and column information when
-  report status bar command (NVDA+End in desktop layout, NvDA+Shift+End in
-  laptop layout) is performed. This is now part of NVDA 2022.2.
 
 ## Osobe
 
