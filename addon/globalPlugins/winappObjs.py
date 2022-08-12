@@ -158,7 +158,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				and itemStatus == obj.UIAElement.currentItemStatus
 			):
 				return
-			ui.message(itemStatus)
+			ui.message(itemStatus, brailleText=f"{obj.name} {itemStatus}")
 		nextHandler()
 
 	# Events defined in this add-on.
