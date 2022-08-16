@@ -54,16 +54,6 @@ def onInstall():
 		minimumSupportedReleaseAttribute = "WIN11"
 	minimumSupportedRelease = getattr(winVersion, minimumSupportedReleaseAttribute, minWindowsRelease)
 	minimumSupportedReleaseName = minimumSupportedRelease.releaseName
-	addonInstallPossible = currentWinVer >= minimumSupportedRelease
-	unsupportedWindowsReleaseText = _(
-		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
-		# winRelease can be Windows 10, Windows 11, or other release series name.
-		# minSupportedUpdate is the minimum update for a Windows release series required for this add-on.
-		# Example: an add-on release requiring Windows 10 May 2021 Update
-		# will set windowsRelease to Windows 10 and minSupportedUpdate to Windows 10 21H1.
-		"You are using an unsupported {windowsRelease} release. "
-		"This add-on requires {minSupportedUpdate} or later."
-	).format(windowsRelease=windowsReleaseSeries, minSupportedUpdate=minimumSupportedReleaseName)
 	# Record supported builds.
 	# Windows Server 2022 reports itself as 21H2, thus add-on support duration is tied to the client (19044).
 	supportedBuilds = {
