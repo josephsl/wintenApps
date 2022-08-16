@@ -79,12 +79,10 @@ def onInstall():
 	}
 	supportedBuilds = supportedBuilds[windowsReleaseSeries]
 	# Optimization: report success (return early) if running a supported release.
-	# Use a variable for compatibility with error presentation routine.
-	addonInstallPossible = (
+	if (
 		currentWinVer.build in supportedBuilds  # General availability channel
 		or (windowsReleaseSeries == "Windows 11" and currentWinVer.build >= max(supportedBuilds))  # Insider Preview
-	)
-	if addonInstallPossible:
+	):
 		return
 	unsupportedWindowsReleaseText = _(
 		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
