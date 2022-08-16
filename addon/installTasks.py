@@ -37,23 +37,6 @@ def onInstall():
 	# As these releases come from vibranium (vb), iron (fe), and cobalt (co) branches, respectively.
 	# This continues in 22H2 with Windows 10 (19045) and Windows 11 (22621).
 	# Therefore, display supported builds list across Windows releases.
-	# For compatibility, assume minimum supported version is the one listed below unless this is Windows 11.
-	# Old NVDA versions do not include minimum Windows version defined.
-	# Note that the add-on does support NVDA releases with Windows 10, 11, and Server 2022 defined.
-	# Deprecated: switch from minimum release check to builds list.
-	minWindowsRelease = winVersion.WinVersion(major=10, minor=0, build=19044, releaseName="Windows 10 21H2")
-	windowsReleaseSeries = "Windows 10"
-	minimumSupportedReleaseAttribute = "WIN10_21H2"
-	# Windows 11
-	# There is no known public release between Server 2022 (build 20348) and Windows 11 (build 22000).
-	# Builds in this range (21000) are Insider builds and are branded as Windows 10 but later changed to 11.
-	# For simplicity, treat these builds as Windows 10 builds and installation will fail.
-	if currentWinVer >= winVersion.WIN11:
-		minWindowsRelease = winVersion.WinVersion(major=10, minor=0, build=22000, releaseName="Windows 11 21H2")
-		windowsReleaseSeries = "Windows 11"
-		minimumSupportedReleaseAttribute = "WIN11"
-	minimumSupportedRelease = getattr(winVersion, minimumSupportedReleaseAttribute, minWindowsRelease)
-	minimumSupportedReleaseName = minimumSupportedRelease.releaseName
 	# Record supported builds.
 	# Windows Server 2022 reports itself as 21H2, thus add-on support duration is tied to the client (19044).
 	supportedBuilds = {
@@ -67,6 +50,9 @@ def onInstall():
 			22621: "22H2",
 		}
 	}
+	windowsReleaseSeries = "Windows 10"
+	if currentWinVer >= winVersion.WIN11:
+		windowsReleaseSeries = "Windows 11"
 	supportedBuilds = supportedBuilds[windowsReleaseSeries]
 	# Optimization: report success (return early) if running a supported release.
 	if (
