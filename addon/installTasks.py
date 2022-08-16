@@ -94,10 +94,9 @@ def onInstall():
 		"You are using an unsupported {windowsRelease} release. "
 		"Supported releases: {windowsReleasesList}."
 	).format(windowsRelease=windowsReleaseSeries, windowsReleasesList=", ".join(supportedBuilds.values()))
-	if not addonInstallPossible:
-		if not globalVars.appArgs.minimal:
-			gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
-		raise RuntimeError(
-			"Attempting to install Windows App Essentials "
-			f"on unsupported {windowsReleaseSeries} release"
-		)
+	if not globalVars.appArgs.minimal:
+		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
+	raise RuntimeError(
+		"Attempting to install Windows App Essentials "
+		f"on unsupported {windowsReleaseSeries} release"
+	)
