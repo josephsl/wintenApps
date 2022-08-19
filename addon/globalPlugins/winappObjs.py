@@ -153,10 +153,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if obj.appModule.appName != "shellexperiencehost":
 			itemStatus = obj.UIAElement.currentItemStatus
 			# Filter duplicate events.
-			if (
-				eventHandler.isPendingEvents(eventName="UIA_itemStatus", obj=obj)
-				and itemStatus == obj.UIAElement.currentItemStatus
-			):
+			if eventHandler.isPendingEvents(eventName="UIA_itemStatus", obj=obj):
 				return
 			ui.message(itemStatus, brailleText=f"{obj.name} {itemStatus}")
 		nextHandler()
