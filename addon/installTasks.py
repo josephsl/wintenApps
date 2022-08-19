@@ -35,7 +35,7 @@ def onInstall():
 	# between feature updates/milestones and builds across clients and servers such as 1809/17763 (RS5).
 	# But 21H2 changed this: Windows 10 (19044), Windows Server 2022 (20348), and Windows 11 (22000)
 	# As these releases come from vibranium (vb), iron (fe), and cobalt (co) branches, respectively.
-	# This continues in 22H2 with Windows 10 (19045) and Windows 11 (22621).
+	# This continues in 22H2 with Windows 10 (19045/vibranium) and Windows 11 (22621/nickel).
 	# Therefore, display supported builds list across Windows releases.
 	# For compatibility, assume minimum supported version is the one listed below unless this is Windows 11.
 	# Old NVDA versions do not include minimum Windows version defined.
