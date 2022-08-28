@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* NVDA compatibility: 2022.2 and later
+* Yhteensopivuus: NVDA 2022.2 ja uudemmat
 
 Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
 nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows
@@ -30,13 +30,13 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* This add-on requires Windows 10 21H2 (build 19044), Windows 11 21H2 (build
-  22000), or later releases.
+* Tämä lisäosa edellyttää Windows 10:n versiota 21H2 (koontiversio 19044),
+  Windows 11:n versiota 21H2 (koontiversio 22000) tai uudempaa.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
-* If Add-on Updater 22.08 or later is installed and background add-on
-  updates is enabled, Windows App Essentials will not install at all on
-  unsupported Windows releases.
+* Windows App Essentials ei asennu ei-tuetuissa Windows-versioissa, jos
+  Lisäosien päivittäjä 22.08 tai uudempi on asennettuna ja lisäosien
+  taustapäivitykset ovat käytössä.
 * Kaikkia Windowsin Insider-esiversioiden ominaisuuksia ei tueta.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
@@ -74,8 +74,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   objektien lukemisen asetuksista.
 * Mikrofonin mykistyksen (Win+Alt+K) tila ilmoitetaan nyt kaikkialta Windows
   11:n versiossa 22H2 ja sitä uudemmissa.
-* Item status changes are announced in more apps including Visual Studio
-  Community 2022.
+* Kohteiden tilamuutokset ilmoitetaan useammissa sovelluksissa, Visual
+  Studio Community 2022 mukaan lukien.
 
 ## Cortana
 

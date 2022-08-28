@@ -19,7 +19,7 @@ def onInstall():
 	currentWinVer = winVersion.getWinVer()
 	# Windows App Essentials requires Windows 10 or later.
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-	# Unsupported systems include Windows versions earlier than 10 and old Windows 10 feature updates.
+	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
 	if currentWinVer < winVersion.WIN10:
 		if not globalVars.appArgs.minimal:
@@ -35,7 +35,7 @@ def onInstall():
 	# between feature updates/milestones and builds across clients and servers such as 1809/17763 (RS5).
 	# But 21H2 changed this: Windows 10 (19044), Windows Server 2022 (20348), and Windows 11 (22000)
 	# As these releases come from vibranium (vb), iron (fe), and cobalt (co) branches, respectively.
-	# This continues in 22H2 with Windows 10 (19045) and Windows 11 (22621).
+	# This continues in 22H2 with Windows 10 (19045/vibranium) and Windows 11 (22621/nickel).
 	# Therefore, display supported builds list across Windows releases.
 	# Record supported builds.
 	# Windows Server 2022 reports itself as 21H2, thus add-on support duration is tied to the client (19044).
