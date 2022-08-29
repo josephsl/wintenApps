@@ -151,6 +151,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# NVDA Core issue 13973: in addition to Windows 10 Action Center, other apps may raise this event.
 		# A basic implementation is included in Windows 10 Action Center app module,
 		# and a future NVDA release brings it to base UIA NVDA object, so check attributes.
+		# Resolved in NVDA 2022.4.
 		if not hasattr(obj, "event_UIA_itemStatus"):
 			# Filter duplicate events.
 			if eventHandler.isPendingEvents(eventName="UIA_itemStatus", obj=obj):
