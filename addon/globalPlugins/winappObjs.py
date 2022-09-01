@@ -32,6 +32,7 @@ isAddonSupported = (
 # Add additional UIA events not included in NVDA Core.
 # Specifically to support drag and drop operations.
 additionalEvents: dict[int, str] = {
+	UIAHandler.UIA_Drag_DragStartEventId: "stateChange",
 	UIAHandler.UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
 	UIAHandler.UIA_DropTarget_DroppedEventId: "UIA_dropTargetDropped",
 }
@@ -157,6 +158,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if eventHandler.isPendingEvents(eventName="UIA_itemStatus", obj=obj):
 				return
 			ui.message(f"{obj.name} {obj.UIAElement.currentItemStatus}")
+		nextHandler()
+
+	def event_stateChange(self, obj, nextHandler):
+		# Specifically designed to detect drag start and UIA "is grabbed" state changes.
+		import controlTypes
+		if isinstance(obj, UIA) and obj._getUIACacheablePropertyValue(UIAHandler.UIA_DragIsGrabbedPropertyId):
+			obj.states.add(controlTypes.State.DRAGGING)
 		nextHandler()
 
 	# Events defined in this add-on.
