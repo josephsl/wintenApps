@@ -181,11 +181,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		dropTargetEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DropTargetDropTargetEffectPropertyId)
 		# Sometimes drop target effect text is empty as it comes from a different object.
 		if not dropTargetEffect:
-			obj = api.getFocusObject()
-			dropTargetEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DropTargetDropTargetEffectPropertyId)
-			while not dropTargetEffect:
-				obj = obj.parent
-				dropTargetEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DropTargetDropTargetEffectPropertyId)
+			for element in reversed(api.getFocusAncestors()):
+				if isinstance(element, UIA):
+					dropTargetEffect = element._getUIACacheablePropertyValue(UIAHandler.UIA_DropTargetDropTargetEffectPropertyId)
+					if dropTargetEffect:
+						break
 		ui.message(dropTargetEffect)
 		# Unlike drag complete event, it is something else that raises this event
 		# but NVDA records the correct focused element, so fake a gain focus event.
