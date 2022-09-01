@@ -179,8 +179,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		log.debug(f"winapps: drop target dropped event from {obj}")
 		# Announce drop target effect such as item placement in Start menu and Action center if present.
 		dropTargetEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DropTargetDropTargetEffectPropertyId)
-		if dropTargetEffect:
-			ui.message(dropTargetEffect)
+		# Sometimes drop target effect text is empty as it comes from a different object.
+		if not dropTargetEffect:
+			obj = api.getFocusObject()
+			dropTargetEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DropTargetDropTargetEffectPropertyId)
+			while not dropTargetEffect:
+				obj = obj.parent
+				dropTargetEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DropTargetDropTargetEffectPropertyId)
+		ui.message(dropTargetEffect)
 		# Unlike drag complete event, it is something else that raises this event
 		# but NVDA records the correct focused element, so fake a gain focus event.
 		eventHandler.queueEvent("gainFocus", api.getFocusObject())
