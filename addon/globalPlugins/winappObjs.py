@@ -24,14 +24,6 @@ additionalEvents: Dict[int, str] = {}
 
 # Add additional property events not included in NVDA Core.
 additionalPropertyEvents: Dict[int, str] = {}
-# #69: specifically to support drag drop effect property when Windows 10 Start menu tiles are rearranged.
-# Resolved in NVDA 2022.4.
-if not hasattr(UIA, "event_UIA_dragDropEffect"):
-	additionalPropertyEvents[UIAHandler.UIA_DragDropEffectPropertyId] = "UIA_dragDropEffect"
-# Add drop target effect property so it can be announced when reordering Action center/quick settings items.
-# Resolved in NVDA 2022.4.
-if not hasattr(UIA, "event_UIA_dropTargetEffect"):
-	additionalPropertyEvents[UIAHandler.UIA_DropTargetDropTargetEffectPropertyId] = "UIA_dropTargetEffect"
 
 
 # #20: don't even think about proceeding in secure screens.
