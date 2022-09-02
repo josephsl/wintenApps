@@ -22,7 +22,7 @@ The following app modules or support modules for some apps are included (see eac
 
 Notes:
 
-* This add-on requires Windows 10 21H2 (build 19044), Windows 11 21H2 (build 22000), or later releases.
+* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000), or later releases.
 * Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * If Add-on Updater 22.08 or later is installed and background add-on updates is enabled, Windows App Essentials will not install at all on unsupported Windows releases.
 * Not all features from Windows Insider Preview builds will be supported.
@@ -35,9 +35,9 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## General
 
-* In addition to UIA event handlers provided by NVDA, the following UIA events and properties are recognized: drag complete, drag drop effect, drop target dropped. With NVDA's log level set to debug, these events will be tracked and logged.
+* In addition to UIA event handlers provided by NVDA, the following UIA events and properties are recognized: drag start (recognized as state change event), drag drop effect, drag item is grabbed, drop target effect. With NVDA's log level set to debug, these events will be tracked and logged.
 * When opening, closing, reordering (Windows 11), or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
-* When arranging pinned entries (tiles in Windows 10) in Start menu or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce information on dragged items or new position of the dragged item.
+* When dragging and dropping items such as arranging pinned entries (tiles in Windows 10) in Start menu or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop effects before and while dragging items, respectively. NVDA announcing "dragging" is now part of NVDA 2022.4.
 * Announcements such as volume/brightness changes in File Explorer and app update notifications from Microsoft Store can be suppressed by turning off Report Notifications in NVDA's object presentation settings.
 * In Windows 11 22H2 and later, microphone mute toggle status (Windows+Alt+K) is announced from everywhere.
 * Item status changes are announced in more apps including Visual Studio Community 2022. This is now part of NVDA 2022.4.
