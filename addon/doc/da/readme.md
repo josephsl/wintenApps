@@ -29,8 +29,8 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 Bemærkninger:
 
-* This add-on requires Windows 10 21H2 (build 19044), Windows 11 21H2 (build
-  22000), or later releases.
+* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
+  or later releases.
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
@@ -66,10 +66,11 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * Når åbning, lukning, ændring af rækkefølge (Windows 11) eller Skift mellem
   virtuelle skrivebord forekommer, vil NVDA annoncere det aktuelle navn for
   det virtuelle skrivebord (f.eks. "Skrivebord 2").
-* Når du arrangerer fastgjorte elementer (fliser i Windows 10) på
-  start-menuen eller hurtige handlinger i Handlingscenter med
-  Alt+Shift+piletasterne, vil NVDA oplyse informationer om emner, når disse
-  flyttes.
+* When dragging and dropping items such as arranging pinned entries (tiles
+  in Windows 10) in Start menu or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
+  effects before and while dragging items, respectively. NVDA announcing
+  "dragging" is now part of NVDA 2022.4.
 * Meddelelser, som ændringer i lydstyrke/lysstyrke i Stifinder og
   appopdateringsmeddelelser fra Microsoft Store, kan deaktiveres ved at
   deaktivere rapportering af meddelelserne i NVDAs
@@ -77,7 +78,7 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
 * Item status changes are announced in more apps including Visual Studio
-  Community 2022.
+  Community 2022. This is now part of NVDA 2022.4.
 
 ## Cortana
 

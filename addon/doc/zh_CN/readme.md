@@ -23,7 +23,8 @@
 
 注意:
 
-* 此插件需要 Windows 10 21H2（内部版本 19044）、Windows 11 21H2（内部版本 22000）或更高版本。
+* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
+  or later releases.
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
 * 如果安装了插件更新器 22.08 或更高版本并启用了后台插件更新，则 在不受支持的操作系统上 Windows App Essentials
   不会被安装。
@@ -42,12 +43,16 @@
 * 除了 NVDA 提供的 UIA 事件处理程序以外，还可以识别以下 UIA 事件和属性：拖动完成、拖放效果、放置目标。将 NVDA
   的日志级别设置为调试，这些事件也会被跟踪和记录。
 * 打开、关闭、重新排序（Windows 11）或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
-* 当使用 Alt+Shift+箭头键在“开始”菜单（Windows 10 中的磁贴）或操作中心快速操作中排列固定条目时，NVDA
-  会读出已拖动项目的信息或已拖动项目的新位置。
+* When dragging and dropping items such as arranging pinned entries (tiles
+  in Windows 10) in Start menu or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
+  effects before and while dragging items, respectively. NVDA announcing
+  "dragging" is now part of NVDA 2022.4.
 * 通过在 NVDA 的“对象提示”设置中关闭“读出通知提示”，可以禁止诸如文件资源管理器中的音量、亮度更改和来自 Microsoft Store
   的应用程序更新之类的通知。
 * 在 Windows 11 22H2 及更高版本中，可读出 Windows+Alt+K 的麦克风静音切换状态。
-* 项目状态变化在包括 Visual Studio Community 2022 在内的多款应用程序中被读出。
+* Item status changes are announced in more apps including Visual Studio
+  Community 2022. This is now part of NVDA 2022.4.
 
 ## Cortana
 

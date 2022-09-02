@@ -31,8 +31,8 @@ qué se incluye):
 
 Notas:
 
-* Este complemento requiere Windows 10 Versión 21H2 (compilación 19044),
-  Windows 11 21H2 (compilación 22000) o versiones posteriores.
+* Este complemento requiere Windows 10 Versión 21H2 (compilación 19044), 11
+  21H2 (compilación 22000) o versiones posteriores.
 * Aunque la instalación es posible, este complemento no soporta Windows
   Enterprise LTSC (canal de servicio a largo plazo) ni las versiones de
   Windows Server.
@@ -68,9 +68,12 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * Al abrir, cerrar, reordenar (Windows 11) o cambiar entre escritorios
   virtuales, NVDA anunciará el nombre del escritorio virtual activo
   (escritorio 2, por ejemplo).
-* Al reordenar entradas ancladas (losas en Windows 10) del menú Inicio o
-  acciones rápidas del centro de actividades con alt+shift+flechas, NVDA
-  anunciará información de los elementos arrastrados o su nueva posición.
+* Al arrastrar y soltar elementos, como reordenar entradas ancladas (losas
+  en Windows 10) del menú Inicio o acciones rápidas del centro de
+  actividades con alt+shift+flechas, NVDA anunciará "arrastrando" o los
+  efectos de arrastrar y soltar antes y mientras se arrastran,
+  respectivamente. El anuncio "arrastrando" de NVDA forma parte ahora de
+  NVDA 2022.4.
 * Algunos anuncios, como los de cambio de brillo o volumen en el explorador
   de archivos y las notificaciones de actualización de aplicaciones de la
   tienda Microsoft pueden suprimirse desactivando Anunciar notificaciones
@@ -78,7 +81,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * En Windows 11 22H2 y posterior, el estado del interruptor para silenciar
   el micrófono (Windows+alt+k) se anuncia desde cualquier sitio.
 * Los cambios de estado de los elementos se anuncian en más aplicaciones,
-  incluyendo Visual Studio Community 2022.
+  incluyendo Visual Studio Community 2022. Esto ahora forma parte de NVDA
+  2022.4.
 
 ## Cortana
 
