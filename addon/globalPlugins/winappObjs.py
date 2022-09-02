@@ -33,7 +33,6 @@ isAddonSupported = (
 # Specifically to support drag and drop operations.
 additionalEvents: dict[int, str] = {
 	UIAHandler.UIA_Drag_DragStartEventId: "stateChange",
-	UIAHandler.UIA_DropTarget_DroppedEventId: "UIA_dropTargetDropped",
 }
 
 
@@ -168,13 +167,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	# Events defined in this add-on.
-
-	def event_UIA_dropTargetDropped(self, obj, nextHandler):
-		log.debug(f"winapps: drop target dropped event from {obj}")
-		# Unlike drag complete event, it is something else that raises this event
-		# but NVDA records the correct focused element, so fake a gain focus event.
-		eventHandler.queueEvent("gainFocus", api.getFocusObject())
-		nextHandler()
 
 	def event_UIA_dragDropEffect(self, obj, nextHandler):
 		log.debug(f"winapps: drag drop effect property event from {obj}")
