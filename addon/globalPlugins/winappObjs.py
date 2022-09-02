@@ -33,6 +33,8 @@ isAddonSupported = (
 # Specifically to support drag and drop operations.
 additionalEvents: dict[int, str] = {
 	UIAHandler.UIA_Drag_DragStartEventId: "stateChange",
+	UIAHandler.UIA_Drag_DragCancelEventId: "stateChange",
+	UIAHandler.UIA_Drag_DragCompleteEventId: "stateChange",
 }
 
 
