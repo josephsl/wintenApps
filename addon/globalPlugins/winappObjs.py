@@ -90,8 +90,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if event not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
 				UIAHandler.UIAPropertyIdsToNVDAEventNames[event] = name
 				log.debug(f"winapps: added property event ID {event}, assigned to {name}")
-		# Global property event handler group set must be updated, too.
-		UIAHandler.globalEventHandlerGroupUIAPropertyIds.add(event)
+				# Global property event handler group set must be updated, too.
+				UIAHandler.globalEventHandlerGroupUIAPropertyIds.add(event)
 		addonGlobalEventHandlerGroup.AddPropertyChangedEventHandler(
 			UIAHandler.TreeScope_Subtree,
 			UIAHandler.handler.baseCacheRequest,
