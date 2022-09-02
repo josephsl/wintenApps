@@ -181,12 +181,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		log.debug(f"winapps: drop target effect property event from {obj}")
 		# Announce drop target effect such as item placement in Start menu and Action center if present.
 		if not hasattr(obj, "event_UIA_dropTargetEffect"):
-			dropTargetEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DropTargetDropTargetEffectPropertyId)
+			dropTargetEffect = obj._getUIACacheablePropertyValue(
+				UIAHandler.UIA_DropTargetDropTargetEffectPropertyId
+			)
 			# Sometimes drop target effect text is empty as it comes from a different object.
 			if not dropTargetEffect:
 				for element in reversed(api.getFocusAncestors()):
 					if isinstance(element, UIA):
-						dropTargetEffect = element._getUIACacheablePropertyValue(UIAHandler.UIA_DropTargetDropTargetEffectPropertyId)
+						dropTargetEffect = element._getUIACacheablePropertyValue(
+							UIAHandler.UIA_DropTargetDropTargetEffectPropertyId
+						)
 						if dropTargetEffect:
 							break
 			ui.message(dropTargetEffect)
