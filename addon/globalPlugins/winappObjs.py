@@ -33,7 +33,6 @@ isAddonSupported = (
 # Specifically to support drag and drop operations.
 additionalEvents: dict[int, str] = {
 	UIAHandler.UIA_Drag_DragStartEventId: "stateChange",
-	UIAHandler.UIA_Drag_DragCompleteEventId: "UIA_dragComplete",
 	UIAHandler.UIA_DropTarget_DroppedEventId: "UIA_dropTargetDropped",
 }
 
@@ -169,12 +168,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	# Events defined in this add-on.
-
-	def event_UIA_dragComplete(self, obj, nextHandler):
-		log.debug(f"winapps: drag complete event from {obj}")
-		# Announce the new drop location by faking a gain focus event.
-		eventHandler.queueEvent("gainFocus", obj)
-		nextHandler()
 
 	def event_UIA_dropTargetDropped(self, obj, nextHandler):
 		log.debug(f"winapps: drop target dropped event from {obj}")
