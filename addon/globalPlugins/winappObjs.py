@@ -180,6 +180,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		log.debug(f"winapps: drag drop effect property event from {obj}")
 		# Report drag and drop effect as communicated by UIA.
 		dragDropEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DragDropEffectPropertyId)
-		ui.message(dragDropEffect)
+		if not hasattr(obj, "event_UIA_dragDropEffect"):
+			ui.message(dragDropEffect)
 		log.debug(f"Winapps: drag drop effect: {dragDropEffect}")
 		nextHandler()
