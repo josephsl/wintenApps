@@ -38,10 +38,10 @@ additionalEvents: dict[int, str] = {
 
 
 # Add additional property events not included in NVDA Core.
+additionalPropertyEvents: dict[int, str] = {}
 # #69: specifically to support drag drop effect property when Windows 10 Start menu tiles are rearranged.
-additionalPropertyEvents: dict[int, str] = {
-	UIAHandler.UIA_DragDropEffectPropertyId: "UIA_dragDropEffect"
-}
+if not hasattr(UIA, "event_UIA_dragDropEffect"):
+	additionalPropertyEvents[UIAHandler.UIA_DragDropEffectPropertyId] = "UIA_dragDropEffect"
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
