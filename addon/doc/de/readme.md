@@ -30,8 +30,8 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* Diese Erweiterung benötigt Windows 10 Version 21H2 (Build 19044), Windows
-  11 Version 21H2 (Build 22000) oder neuere Releases.
+* Diese Erweiterung erfordert Windows 10 Version 21H2 (Build 19044), Windows
+  11 Version 21H2 (Build 22000) oder neuere Versionen.
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
@@ -69,10 +69,11 @@ Versionen][3].
 * Beim Öffnen, Schließen, Neuordnen (Windows 11) oder Wechseln zwischen
   virtuellen Desktops gibt NVDA den Namen des aktiven virtuellen Desktops an
   (z. B. Desktop 2).
-* Beim Anordnen von angehefteten Einträgen (Kacheln in Windows 10) im
-  Startmenü oder in den Schnellaktionen des Action Centers mit
-  Alt+Umschalt+Pfeiltasten teilt NVDA Informationen über verschobene
-  Elemente oder die neue Position des verschobenen Elements mit.
+* Beim Ziehen und Ablegen von Objekten, z. B. beim Anordnen von angehefteten
+  Einträgen (Kacheln in Windows 10) im Startmenü oder bei Schnellaktionen im
+  Action Center mit Alt+Umschalt+Pfeiltasten, meldet NVDA vor bzw. während
+  des Ziehens von Objekten "Ziehen" und/oder Zieh- und Ablegeeffekte. Die
+  NVDA-Ansage "Ziehen" ist Teil von NVDA 2022.4.
 * Rückmeldungen wie z. B. Lautstärke-/Helligkeitsänderungen im
   Datei-Explorer und App-Update-Benachrichtigungen aus dem Microsoft Store
   können unterdrückt werden, indem die Benachrichtigung über Berichte in den
@@ -80,7 +81,8 @@ Versionen][3].
 * In Windows 11 Version 22H2 und neuer wird der Status der
   Mikrofon-Stummschaltung (Windows+Alt+K) von überall her mitgeteilt.
 * Änderungen des Elementstatus werden in weiteren Anwendungen,
-  einschließlich Visual Studio Community 2022 angezeigt.
+  einschließlich Visual Studio Community 2022, mitgeteilt. Dies ist Teil von
+  NVDA 2022.4.
 
 ## Cortana
 

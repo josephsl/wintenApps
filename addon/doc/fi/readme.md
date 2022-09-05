@@ -30,8 +30,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Tämä lisäosa edellyttää Windows 10:n versiota 21H2 (koontiversio 19044),
-  Windows 11:n versiota 21H2 (koontiversio 22000) tai uudempaa.
+* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
+  or later releases.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
 * Windows App Essentials ei asennu ei-tuetuissa Windows-versioissa, jos
@@ -64,18 +64,19 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
   avattaessa, suljettaessa, uudelleenjärjestettäessä (Windows 11) tai
   siirryttäessä niiden välillä.
-* NVDA puhuu raahattujen kohteiden tiedot tai raahatun kohteen uuden
-  sijainnin, kun Käynnistä-valikon kiinnitettyjä kohteita (ruutuja Windows
-  10:ssä) tai Toimintokeskuksen pikatoimintoja järjestellään
-  Alt+Vaihto+nuolinäppäimillä.
+* When dragging and dropping items such as arranging pinned entries (tiles
+  in Windows 10) in Start menu or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
+  effects before and while dragging items, respectively. NVDA announcing
+  "dragging" is now part of NVDA 2022.4.
 * Ilmoitukset, kuten äänenvoimakkuuden/kirkkauden muutokset
   resurssienhallinnassa sekä sovellusten päivitysilmoitukset Microsoft
   Storesta voidaan estää poistamalla käytöstä Lue ilmoitukset -asetus NVDA:n
   objektien lukemisen asetuksista.
 * Mikrofonin mykistyksen (Win+Alt+K) tila ilmoitetaan nyt kaikkialta Windows
   11:n versiossa 22H2 ja sitä uudemmissa.
-* Kohteiden tilamuutokset ilmoitetaan useammissa sovelluksissa, Visual
-  Studio Community 2022 mukaan lukien.
+* Item status changes are announced in more apps including Visual Studio
+  Community 2022. This is now part of NVDA 2022.4.
 
 ## Cortana
 

@@ -23,7 +23,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 사용시 주의 사항:
 
-* 본 추가 기능은 윈도우 10 21H2(빌드 19044), 11 21H2(빌드 22000) 이상을 지원합니다.
+* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
+  or later releases.
 * 윈도우 Enterprise LTSC(Long-Term Servicing Channel)와 윈도우 서버 버전에 설치할 수 있으나 지원은
   하지 않습니다.
 * If Add-on Updater 22.08 or later is installed and background add-on
@@ -46,15 +47,18 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   target dropped. NVDA 로깅 옵션을 디버그로 설정한 경우 위 이벤트가 추적되도록 함.
 * 가상 데스크탑을 열때/닫을때/위치 변경시(윈도우 11 한정)/변경시 NVDA가 데스크탑 이름(예: Desktop 2)를 출력하도록
   함.
-* 시작 메뉴에 고정된 타일(윈도우 10) 또는 액션 센터네 빠른 액션을 Alt+Shift+반향키로 조절시 드래그된 항목 또는 새 위치를
-  NVDA가 출력하도록 함.
+* When dragging and dropping items such as arranging pinned entries (tiles
+  in Windows 10) in Start menu or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
+  effects before and while dragging items, respectively. NVDA announcing
+  "dragging" is now part of NVDA 2022.4.
 * Announcements such as volume/brightness changes in File Explorer and app
   update notifications from Microsoft Store can be suppressed by turning off
   Report Notifications in NVDA's object presentation settings.
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
 * Item status changes are announced in more apps including Visual Studio
-  Community 2022.
+  Community 2022. This is now part of NVDA 2022.4.
 
 ## Cortana
 

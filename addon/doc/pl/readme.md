@@ -31,8 +31,8 @@ dołączone, zobacz każdą sekcję aplikacji):
 
 Notatki:
 
-* This add-on requires Windows 10 21H2 (build 19044), Windows 11 21H2 (build
-  22000), or later releases.
+* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
+  or later releases.
 * Chociaż instalacja jest możliwa, ten dodatek nie obsługuje wersji Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
 * If Add-on Updater 22.08 or later is installed and background add-on
@@ -66,10 +66,11 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 * Podczas otwierania, zamykania, zmiany kolejności (Windows 11) lub
   przełączania się między pulpitami wirtualnymi NVDA ogłosi nazwę aktywnego
   pulpitu wirtualnego (na przykład pulpit 2).
-* Podczas rozmieszczania przypiętych wpisów (kafelków w systemie Windows 10)
-  w menu Start lub szybkich akcji Centrum akcji za pomocą Alt + Shift +
-  strzałek, NVDA ogłosi informacje o przeciągniętych elementach lub nowej
-  pozycji przeciągniętego elementu.
+* When dragging and dropping items such as arranging pinned entries (tiles
+  in Windows 10) in Start menu or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
+  effects before and while dragging items, respectively. NVDA announcing
+  "dragging" is now part of NVDA 2022.4.
 * Anonsy, takie jak zmiany głośności/jasności w Eksploratorze plików i
   powiadomienia o aktualizacjach aplikacji ze sklepu Microsoft Store, można
   pominąć, wyłączając opcję Powiadomienia o raportach w ustawieniach
@@ -77,7 +78,7 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
 * Item status changes are announced in more apps including Visual Studio
-  Community 2022.
+  Community 2022. This is now part of NVDA 2022.4.
 
 ## Cortana
 

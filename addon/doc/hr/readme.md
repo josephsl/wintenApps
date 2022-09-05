@@ -30,8 +30,8 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* Ovaj dodatak zahtijeva Windows 10 21H1 (gradnja 19044), Windows 11 21H2
-  (gradnja 22000) ili novija izdanja.
+* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
+  or later releases.
 * Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
 * If Add-on Updater 22.08 or later is installed and background add-on
@@ -63,9 +63,11 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 * Prilikom otvaranja, zatvaranja, preraspoređivanja (Windows 11) ili
   prebacivanja između virtualnih radnih površina, NVDA će najaviti
   trenutačno ime radne površine (na primjer, desktop 2).
-* When arranging pinned entries (tiles in Windows 10) in Start menu or
-  Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce
-  information on dragged items or new position of the dragged item.
+* When dragging and dropping items such as arranging pinned entries (tiles
+  in Windows 10) in Start menu or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
+  effects before and while dragging items, respectively. NVDA announcing
+  "dragging" is now part of NVDA 2022.4.
 * Najave kao što su promjena glasnoće/svjetline u File Explorereru i
   obavijesti aktualiziranja programa s Microsoft Store stranica, mogu se
   potisnuti isključivanjem opcije „Izvijesti o obavijestima” u NVDA
@@ -73,7 +75,7 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
 * Item status changes are announced in more apps including Visual Studio
-  Community 2022.
+  Community 2022. This is now part of NVDA 2022.4.
 
 ## Cortana
 

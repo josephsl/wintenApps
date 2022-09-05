@@ -32,8 +32,8 @@ est inclus) :
 
 Notes:
 
-* This add-on requires Windows 10 21H2 (build 19044), Windows 11 21H2 (build
-  22000), or later releases.
+* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
+  or later releases.
 * Bien que l'installation soit possible, cette extension ne prend pas en
   charge les versions Windows Enterprise LTSC (Long-Term Servicing Channel)
   et Windows Server.
@@ -71,10 +71,11 @@ l'extension][3].
 * Lors de l'ouverture, de la fermeture, de la réorganisation (Windows 11)
   ou du basculement entre les bureaux virtuels (build 21337 ou ultérieure),
   , NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
-* Lorsque vous organisez les éléments épinglées (tuiles dans Windows 10) du
-  menu Démarrer ou des actions rapides du Centre de Notifications avec les
-  touches Alt+Maj+touches fléchées, NVDA annoncera des informations sur les
-  éléments déplacés ou la nouvelle position de l'élément déplacé.
+* When dragging and dropping items such as arranging pinned entries (tiles
+  in Windows 10) in Start menu or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
+  effects before and while dragging items, respectively. NVDA announcing
+  "dragging" is now part of NVDA 2022.4.
 * L'annonces tels que les changements de volume / luminosité dans
   l'Explorateur de fichiers et les notifications de mise à jour de
   l'application de Microsoft Store peuvent être supprimés en désactivant
@@ -83,7 +84,7 @@ l'extension][3].
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
 * Item status changes are announced in more apps including Visual Studio
-  Community 2022.
+  Community 2022. This is now part of NVDA 2022.4.
 
 ## Cortana
 
