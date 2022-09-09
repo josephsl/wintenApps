@@ -64,18 +64,19 @@ l'extension][3].
 
 ## Générale
 
-* En plus des gestionnaires d'événements UIA fournis par NVDA, les
-  événements et propriétés UIA suivants sont reconnus : drag complete, drag
-  drop effect, drop target dropped. Avec le niveau de journalisation de NVDA
-  défini sur débogage, ces événements seront suivis et enregistrés.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag start/cancel/complete
+  (recognized as state change event), drag drop effect, drag item is
+  grabbed, drop target effect. With NVDA's log level set to debug, these
+  events will be tracked and logged.
 * Lors de l'ouverture, de la fermeture, de la réorganisation (Windows 11)
   ou du basculement entre les bureaux virtuels (build 21337 ou ultérieure),
   , NVDA annonce l'ID de bureau actuel (bureau 2, par exemple).
 * When dragging and dropping items such as arranging pinned entries (tiles
   in Windows 10) in Start menu or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
-  effects before and while dragging items, respectively. NVDA announcing
-  "dragging" is now part of NVDA 2022.4.
+  effects before and while dragging items, respectively. This is now part of
+  NVDA 2022.4.
 * L'annonces tels que les changements de volume / luminosité dans
   l'Explorateur de fichiers et les notifications de mise à jour de
   l'application de Microsoft Store peuvent être supprimés en désactivant
@@ -110,9 +111,6 @@ paste the selected item.
 * Dans Windows 10, lorsqu'un groupe d'emojis (y compris le groupe Kaomoji et
   symboles) est sélectionné, NVDA ne déplacera plus l'objet navigateur vers
   certains emojis.
-* Dans Windows 11, il est à nouveau possible d'utiliser les touches fléchées
-  pour parcourir les emojis lorsque le panneau emoji s'ouvre. Cela fait
-  maintenant partie de NVDA 2022.1.
 * Dans l'historique du presse-papiers de Windows 11, le mode navigation sera
   désactivé par défaut, conçu pour permettre à NVDA d'annoncer les éléments
   du menu d'entrée de l'historique du presse-papiers.
@@ -127,8 +125,6 @@ paste the selected item.
 
 ## Paramètres
 
-* Les étiquettes de contrôle étranges vues dans certaines installations
-  Windows ont été corrigées.
 * NVDA annoncera le nom du contrôle de mise à jour facultative s'il est
   présent (lien télécharger et installer maintenant dans Windows 10, bouton
   de téléchargement dans Windows 11).

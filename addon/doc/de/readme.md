@@ -61,19 +61,19 @@ Versionen][3].
 
 ## Allgemein
 
-* Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignis-Handlern werden
-  die folgenden UIA-Ereignisse und -Eigenschaften erkannt: Ziehen
-  abgeschlossen, Ziehen-fallenlassen-Effekt, Ziel fallenlassen. Wenn die
-  NVDA-Protokollebene auf Debug eingestellt ist, werden diese Ereignisse
-  verfolgt und protokolliert.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag start/cancel/complete
+  (recognized as state change event), drag drop effect, drag item is
+  grabbed, drop target effect. With NVDA's log level set to debug, these
+  events will be tracked and logged.
 * Beim Öffnen, Schließen, Neuordnen (Windows 11) oder Wechseln zwischen
   virtuellen Desktops gibt NVDA den Namen des aktiven virtuellen Desktops an
   (z. B. Desktop 2).
-* Beim Ziehen und Ablegen von Objekten, z. B. beim Anordnen von angehefteten
-  Einträgen (Kacheln in Windows 10) im Startmenü oder bei Schnellaktionen im
-  Action Center mit Alt+Umschalt+Pfeiltasten, meldet NVDA vor bzw. während
-  des Ziehens von Objekten "Ziehen" und/oder Zieh- und Ablegeeffekte. Die
-  NVDA-Ansage "Ziehen" ist Teil von NVDA 2022.4.
+* When dragging and dropping items such as arranging pinned entries (tiles
+  in Windows 10) in Start menu or Action Center quick actions with
+  Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
+  effects before and while dragging items, respectively. This is now part of
+  NVDA 2022.4.
 * Rückmeldungen wie z. B. Lautstärke-/Helligkeitsänderungen im
   Datei-Explorer und App-Update-Benachrichtigungen aus dem Microsoft Store
   können unterdrückt werden, indem die Benachrichtigung über Berichte in den
@@ -109,9 +109,6 @@ um das ausgewählte Element einzufügen.
 * Wenn in Windows 10 eine Emoji-Gruppe (einschließlich Kaomoji- und
   Symbolgruppe) ausgewählt ist, verschiebt NVDA das Navigator-Objekt nicht
   mehr in bestimmte Emojis.
-* In Windows 11 ist es wieder möglich, die Pfeiltasten zu verwenden, um
-  Emojis zu überprüfen, wenn das Emoji-Panel geöffnet wird. Dies ist jetzt
-  Teil von NVDA 2022.1.
 * In der Zwischenablage von Windows 11 ist der Lesemodus standardmäßig
   ausgeschaltet, damit NVDA Menüeinträge für die Zwischenablage mitteilen
   kann.
@@ -126,8 +123,6 @@ um das ausgewählte Element einzufügen.
 
 ## Einstellungen
 
-* Ungerade Steuerelementbezeichnungen in bestimmten Windows-Installationen
-  wurden korrigiert.
 * NVDA teilt den Namen optionaler Qualitätsupdates mit, falls vorhanden
   (Link zum Download und Jetzt installieren in Windows 10,
   Download-Schaltfläche in Windows 11).

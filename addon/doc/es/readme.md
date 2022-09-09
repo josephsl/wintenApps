@@ -62,9 +62,11 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 ## General
 
 * Además de los manejadores de eventos UIA proporcionados por NVDA, se
-  reconocen los siguientes eventos y propiedades UIA: drag complete, drag
-  drop effect, drop target dropped. Con el nivel de registro de NVDA
-  configurado en depuración, estos eventos se rastrearán y se registrarán.
+  reconocen los siguientes eventos y propiedades UIA: drag
+  start/cancel/complete (reconocido como evento de cambio de estado), drag
+  drop effect, drag item is grabbed, drop target effect. Con el nivel de
+  registro de NVDA configurado en depuración, estos eventos se rastrearán y
+  se registrarán.
 * Al abrir, cerrar, reordenar (Windows 11) o cambiar entre escritorios
   virtuales, NVDA anunciará el nombre del escritorio virtual activo
   (escritorio 2, por ejemplo).
@@ -72,8 +74,7 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   en Windows 10) del menú Inicio o acciones rápidas del centro de
   actividades con alt+shift+flechas, NVDA anunciará "arrastrando" o los
   efectos de arrastrar y soltar antes y mientras se arrastran,
-  respectivamente. El anuncio "arrastrando" de NVDA forma parte ahora de
-  NVDA 2022.4.
+  respectivamente. Esto ahora forma parte de NVDA 2022.4.
 * Algunos anuncios, como los de cambio de brillo o volumen en el explorador
   de archivos y las notificaciones de actualización de aplicaciones de la
   tienda Microsoft pueden suprimirse desactivando Anunciar notificaciones
@@ -108,9 +109,6 @@ pegar el elemento seleccionado.
 * En Windows 10, cuando se seleccione un grupo de emojis (incluyendo kaomoji
   y el grupo de símbolos), NVDA ya no moverá el navegador de objetos a
   ciertos emojis.
-* En Windows 11, vuelve a ser posible usar las flechas para revisar los
-  emojis cuando se abre el panel de emojis. Esto ahora forma parte de NVDA
-  2022.1.
 * En el historial del portapapeles de Windows 11, se desactivará el modo
   exploración por defecto, diseñado para permitir que NVDA anuncie los
   elementos de menú con las entradas del historial del portapapeles.
@@ -125,8 +123,6 @@ pegar el elemento seleccionado.
 
 ## Opciones
 
-* Corregidas etiquetas de controles defectuosas advertidas en ciertas
-  instalaciones de Windows.
 * NVDA anunciará el nombre del enlace de la actualización de calidad
   opcional si está presente (enlace Descargar e instalar ahora en Windows
   10, botón Descargar en Windows 11).

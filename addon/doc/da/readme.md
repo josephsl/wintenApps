@@ -59,18 +59,19 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Generelt
 
-* Udover UIA event handlers, der tilbydes af NVDA, vil følgende
-  UIA-hændelser og egenskaber blive genkendt: drag complete, drag drop
-  effect, drop target dropped. Hvis NVDAs logningsniveau indstilles til
-  "Fejlfinding", vil disse hændelser blive sporet og logført.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag start/cancel/complete
+  (recognized as state change event), drag drop effect, drag item is
+  grabbed, drop target effect. With NVDA's log level set to debug, these
+  events will be tracked and logged.
 * Når åbning, lukning, ændring af rækkefølge (Windows 11) eller Skift mellem
   virtuelle skrivebord forekommer, vil NVDA annoncere det aktuelle navn for
   det virtuelle skrivebord (f.eks. "Skrivebord 2").
 * When dragging and dropping items such as arranging pinned entries (tiles
   in Windows 10) in Start menu or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
-  effects before and while dragging items, respectively. NVDA announcing
-  "dragging" is now part of NVDA 2022.4.
+  effects before and while dragging items, respectively. This is now part of
+  NVDA 2022.4.
 * Meddelelser, som ændringer i lydstyrke/lysstyrke i Stifinder og
   appopdateringsmeddelelser fra Microsoft Store, kan deaktiveres ved at
   deaktivere rapportering af meddelelserne i NVDAs
@@ -101,9 +102,6 @@ paste the selected item.
 
 * Når en emoji-gruppe (inklusive kaomoji og symbolgrupper er valgt, vil NVDA
   ikke længere flytte navigatorobjektet til bestemte emoji.
-* I Windows 11 er det igen muligt at bruge piletasterne til at gennemgå
-  listen over emoji, når emoji-panelet åbner. Dette er nu en del af NVDA
-  2022.1.
 * I Windows 11 udklipsholderhistorik er gennemsynstilstand slået fra som
   standard, således NVDA kan annoncere menupunkter i
   udklipsholderhistorikken.
@@ -118,8 +116,6 @@ paste the selected item.
 
 ## indstillinger
 
-* Bemærkelsesværdige kontroletiketter set i visse Windows-installationer er
-  blevet løst.
 * NVDA vil annoncere navnet på den valgfrie kvalitetsopdateringskontrol,
   hvis den findes (download og installer nu-link i Windows 10, download-knap
   i Windows 11).

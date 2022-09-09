@@ -30,8 +30,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
-  or later releases.
+* Tämä lisäosa edellyttää Windows 10:n versiota 21H2 (koontiversio 19044),
+  11:n versiota 21H2 (koontiversio 22000) tai uudempaa.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
 * Windows App Essentials ei asennu ei-tuetuissa Windows-versioissa, jos
@@ -57,26 +57,28 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Yleistä
 
 * NVDA:n tarjoamien UIA-tapahtumakäsittelijöiden lisäksi tunnistetaan
-  seuraavat UIA-tapahtumat ja -ominaisuudet: pudotus suoritettu, vetäminen
-  ja pudottaminen meneillään, pudotettu pudotuksen kohteeseen. Näitä
-  tapahtumia seurataan ja ne tallennetaan lokiin, kun NVDA:n lokitasoksi on
-  määritetty "virheenkorjaus".
+  seuraavat UIA-tapahtumat ja -ominaisuudet: vetäminen
+  aloitettu/peruutettu/suoritettu (tunnistetaan tilanmuutostapahtumaksi),
+  vetämisen ja pudottamisen vaikutus, vedettävä kohde on valittu, pudotuksen
+  kohteen vaikutus. Näitä tapahtumia seurataan ja ne tallennetaan lokiin,
+  kun NVDA:n lokitasoksi on määritetty "virheenkorjaus".
 * NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
   avattaessa, suljettaessa, uudelleenjärjestettäessä (Windows 11) tai
   siirryttäessä niiden välillä.
-* When dragging and dropping items such as arranging pinned entries (tiles
-  in Windows 10) in Start menu or Action Center quick actions with
-  Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
-  effects before and while dragging items, respectively. NVDA announcing
-  "dragging" is now part of NVDA 2022.4.
+* Kun kohteita vedetään ja pudotetaan, esim. järjesteltäessä kiinnitettyjä
+  kohteita (ruutuja Windows 10:ssä) Käynnistä-valikossa tai
+  Toimintokeskuksen pikatoimintoja Alt+Vaihto+nuolinäppäimillä, NVDA sanoo
+  "vedetään" ja/tai vetämisen ja pudottamisen  vaikutukset ennen kohteiden
+  vetämistä ja sen aikana. Tämän ilmoituksen puhuminen sisältyy NVDA
+  2022.4:ään.
 * Ilmoitukset, kuten äänenvoimakkuuden/kirkkauden muutokset
   resurssienhallinnassa sekä sovellusten päivitysilmoitukset Microsoft
   Storesta voidaan estää poistamalla käytöstä Lue ilmoitukset -asetus NVDA:n
   objektien lukemisen asetuksista.
 * Mikrofonin mykistyksen (Win+Alt+K) tila ilmoitetaan nyt kaikkialta Windows
   11:n versiossa 22H2 ja sitä uudemmissa.
-* Item status changes are announced in more apps including Visual Studio
-  Community 2022. This is now part of NVDA 2022.4.
+* Kohteiden tilamuutokset ilmoitetaan useammissa sovelluksissa, Visual
+  Studio Community 2022 mukaan lukien. Tämä sisältyy NVDA 2022.4:ään.
 
 ## Cortana
 
@@ -100,8 +102,6 @@ tukee lisäksi päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 
 * Kun emojiryhmä (kaomoji ja symboliryhmä mukaan lukien) valitaan Windows
   10:ssä, NVDA ei enää siirrä navigointiobjektia tiettyihin emojeihin.
-* Windows 11:ssä on jälleen mahdollista käyttää nuolinäppäimiä emojien
-  tarkasteluun, kun emojipaneeli avautuu. Tämä sisältyy NVDA 2022.1:een.
 * Selaustila poistetaan käytöstä oletusarvoisesti Windows 11:n leikepöydän
   historiassa, minkä tarkoituksena on mahdollistaa NVDA:lle historian
   valikkokohteiden lukeminen.
@@ -117,8 +117,6 @@ tukee lisäksi päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 
 ## Asetukset
 
-* Joissakin Windows-asennuksissa näkyvät erikoiset säädinten nimet on
-  korjattu.
 * NVDA puhuu valinnaisen laatupäivityksen säätimen nimen (Lataa ja asenna
   nyt -linkki Windows 10:ssä, Lataa-painike Windows 11:ssä), mikäli
   sellainen on näkyvissä.

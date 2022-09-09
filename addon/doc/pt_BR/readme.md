@@ -59,17 +59,18 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 ## Geral
 
 * In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag complete, drag drop effect,
-  drop target dropped. With NVDA's log level set to debug, these events will
-  be tracked and logged.
+  events and properties are recognized: drag start/cancel/complete
+  (recognized as state change event), drag drop effect, drag item is
+  grabbed, drop target effect. With NVDA's log level set to debug, these
+  events will be tracked and logged.
 * Ao abrir, fechar, reordenar (Windows 11) ou alternar entre áreas de
   trabalho virtuais, o NVDA anunciará o nome do desktop virtual ativo (área
   de trabalho 2, por exemplo).
 * When dragging and dropping items such as arranging pinned entries (tiles
   in Windows 10) in Start menu or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
-  effects before and while dragging items, respectively. NVDA announcing
-  "dragging" is now part of NVDA 2022.4.
+  effects before and while dragging items, respectively. This is now part of
+  NVDA 2022.4.
 * Anúncios como alterações de volume/brilho no Explorador de Arquivo e
   notificações de atualização de aplicativos da Microsoft Store podem ser
   suprimidos desativando Anunciar Notificações nas configurações de
@@ -101,8 +102,6 @@ paste the selected item.
 * No Windows 10, quando um grupo de emoji (incluindo kaomoji e grupo de
   símbolos) é selecionado, o NVDA não moverá mais a navegação de objeto para
   certos emojis.
-* In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens. This is now part of NVDA 2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
 * In Insider Preview build 25115 and later (backported to Windows 11 beta
@@ -116,8 +115,6 @@ paste the selected item.
 
 ## Configurações
 
-* Foram corrigidos Rótulos de controle estranhos vistos em certas
-  instalações do Windows.
 * O NVDA anunciará o nome do controle de atualização de qualidade opcional,
   se houver (link para baixar e instalar agora no Windows 10, botão de
   download no Windows 11).

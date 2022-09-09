@@ -59,18 +59,19 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 
 ## Ogólne
 
-* Oprócz programów obsługi zdarzeń UIA dostarczanych przez NVDA rozpoznawane
-  są następujące zdarzenia i właściwości UIA: przeciągnij zakończone, efekt
-  przeciągania, upuść cel upuszczony. Po ustawieniu poziomu dziennika NVDA
-  na debugowanie zdarzenia te będą śledzone i rejestrowane.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag start/cancel/complete
+  (recognized as state change event), drag drop effect, drag item is
+  grabbed, drop target effect. With NVDA's log level set to debug, these
+  events will be tracked and logged.
 * Podczas otwierania, zamykania, zmiany kolejności (Windows 11) lub
   przełączania się między pulpitami wirtualnymi NVDA ogłosi nazwę aktywnego
   pulpitu wirtualnego (na przykład pulpit 2).
 * When dragging and dropping items such as arranging pinned entries (tiles
   in Windows 10) in Start menu or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
-  effects before and while dragging items, respectively. NVDA announcing
-  "dragging" is now part of NVDA 2022.4.
+  effects before and while dragging items, respectively. This is now part of
+  NVDA 2022.4.
 * Anonsy, takie jak zmiany głośności/jasności w Eksploratorze plików i
   powiadomienia o aktualizacjach aplikacji ze sklepu Microsoft Store, można
   pominąć, wyłączając opcję Powiadomienia o raportach w ustawieniach
@@ -103,8 +104,6 @@ element.
 * W systemie Windows 10 po wybraniu grupy emoji (w tym grupy kaomoji i
   symboli), NVDA nie będzie już przenosić obiektu nawigatora do określonych
   emotikonów.
-* W systemie Windows 11 ponownie można używać strzałek do przeglądania
-  emotikonów po otwarciu panelu emoji. Jest to teraz część NVDA 2022.1.
 * W historii schowka systemu Windows 11 tryb przeglądania zostanie domyślnie
   wyłączony, zaprojektowany tak, aby NVDA ogłaszała elementy menu
   wprowadzania historii schowka.
@@ -119,8 +118,6 @@ element.
 
 ## Ustawienia
 
-* Niezrozumiałe nazwy kontrolek obecne w niektórych oknach instalacji
-  Windows 10 zostały poprawione.
 * NVDA ogłosi nazwę opcjonalnej kontroli jakości aktualizacji, jeśli jest
   obecna (pobierz i zainstaluj teraz link w systemie Windows 10, przycisk
   pobierania w systemie Windows 11).

@@ -23,8 +23,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 사용시 주의 사항:
 
-* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
-  or later releases.
+* 본 추가 기능은 윈도우 10 21H2(빌드 19044), 11 21H2(빌드 22000) 이상을 지원합니다.
 * 윈도우 Enterprise LTSC(Long-Term Servicing Channel)와 윈도우 서버 버전에 설치할 수 있으나 지원은
   하지 않습니다.
 * If Add-on Updater 22.08 or later is installed and background add-on
@@ -43,15 +42,13 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 일반
 
-* NVDA가 지원하는 UIA  이벤트 외의 다음 이벤트 추적 가능: drag complete, drag drop effect, drop
-  target dropped. NVDA 로깅 옵션을 디버그로 설정한 경우 위 이벤트가 추적되도록 함.
+* NVDA가 지원하는 UIA  이벤트 및 속성 외의 다음 이벤트 추적 가능: drag start/cancel/complete(state
+  change로 인식), drag drop effect, is grabbed, drop target effect. NVDA 로깅 옵션을
+  디버그로 설정한 경우 위 이벤트가 추적되도록 함.
 * 가상 데스크탑을 열때/닫을때/위치 변경시(윈도우 11 한정)/변경시 NVDA가 데스크탑 이름(예: Desktop 2)를 출력하도록
   함.
-* When dragging and dropping items such as arranging pinned entries (tiles
-  in Windows 10) in Start menu or Action Center quick actions with
-  Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
-  effects before and while dragging items, respectively. NVDA announcing
-  "dragging" is now part of NVDA 2022.4.
+* 시작 메뉴에 고정된 타일(윈도우 10) 또는 액션 센터네 빠른 액션을 Alt+Shift+반향키로 조절시 "드래그중" 또는 드래그
+  변화를 NVDA가 출력하도록 함(NVDA 2022.4에 본 기능이 추가됨).
 * Announcements such as volume/brightness changes in File Explorer and app
   update notifications from Microsoft Store can be suppressed by turning off
   Report Notifications in NVDA's object presentation settings.
@@ -76,7 +73,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 클립보드 히스토리 사용시 스페이스를 눌러 선택된 내용을 붙여넣으시기 바랍니다.
 
 * 윈도우 10에서 에모지 그룹(카오모지 및 기호 그룹 포함) 선택시 탐색 객체가 특정 에모지에 고정되는 문제 수정.
-* 윈도우 11 사용시 방향키를 사용하여 에모지 탐색 가능(본 기능은 NVDA 2022.1에 추가됨).
 * 윈도우 11 클립보드 히스토리에서 항목 팝업 메뉴를 제대로 출력할 수 있도록 브라우즈 모드가 반영되지 않도록 함.
 * 참가자 빌드 25115 이상(윈도우 11 베타 빌드 22622로 백포팅됨)에서 전화번호와 같은 내용이 클립보드에 복사되었을때 나타나는
   추천 엑션을 출력하도록 함.
@@ -88,8 +84,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 설정 앱
 
-* Odd control labels seen in certain Windows installations has been
-  corrected.
 * NVDA will announce the name of the optional quality update control if
   present (download and install now link in Windows 10, download button in
   Windows 11).

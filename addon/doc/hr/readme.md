@@ -30,8 +30,8 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
-  or later releases.
+* Ovaj dodatak zahtijeva Windows 10 21H2 (gradnja 19044), 11 21H2 (gradnja
+  22000) ili novija izdanja.
 * Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
 * If Add-on Updater 22.08 or later is installed and background add-on
@@ -57,17 +57,18 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 ## Opće
 
 * In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag complete, drag drop effect,
-  drop target dropped. With NVDA's log level set to debug, these events will
-  be tracked and logged.
+  events and properties are recognized: drag start/cancel/complete
+  (recognized as state change event), drag drop effect, drag item is
+  grabbed, drop target effect. With NVDA's log level set to debug, these
+  events will be tracked and logged.
 * Prilikom otvaranja, zatvaranja, preraspoređivanja (Windows 11) ili
   prebacivanja između virtualnih radnih površina, NVDA će najaviti
   trenutačno ime radne površine (na primjer, desktop 2).
 * When dragging and dropping items such as arranging pinned entries (tiles
   in Windows 10) in Start menu or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
-  effects before and while dragging items, respectively. NVDA announcing
-  "dragging" is now part of NVDA 2022.4.
+  effects before and while dragging items, respectively. This is now part of
+  NVDA 2022.4.
 * Najave kao što su promjena glasnoće/svjetline u File Explorereru i
   obavijesti aktualiziranja programa s Microsoft Store stranica, mogu se
   potisnuti isključivanjem opcije „Izvijesti o obavijestima” u NVDA
@@ -99,9 +100,6 @@ paste the selected item.
 * U sustavu Windows 10, kad je odabrana grupa emojija (uključujući kaomoji i
   grupu simbola), NVDA više neće pomicati navigacijski objekt na određene
   emojije.
-* U sustavu Windows 11 ponovo je moguće koristiti tipke sa strelicama za
-  pregled emojija kad se otvori ploča s emojijima. Ovo je sada dio u NVDA
-  2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
 * In Insider Preview build 25115 and later (backported to Windows 11 beta
@@ -115,8 +113,6 @@ paste the selected item.
 
 ## Postavke
 
-* Čudne kontrolne oznake viđene u određenim Windows instalacijama su
-  ispravljene.
 * NVDA će najaviti naziv opcionalne kontrole kvalitete aktualiziranja ako
   postoji (preuzimi i instaliraj poveznicu sada u Windows 10, gumb za
   preuzimanje u Windows 11).

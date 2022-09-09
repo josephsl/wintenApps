@@ -40,14 +40,17 @@
 
 ## 常规增强
 
-* 除了 NVDA 提供的 UIA 事件处理程序以外，还可以识别以下 UIA 事件和属性：拖动完成、拖放效果、放置目标。将 NVDA
-  的日志级别设置为调试，这些事件也会被跟踪和记录。
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag start/cancel/complete
+  (recognized as state change event), drag drop effect, drag item is
+  grabbed, drop target effect. With NVDA's log level set to debug, these
+  events will be tracked and logged.
 * 打开、关闭、重新排序（Windows 11）或切换虚拟桌面时，NVDA将朗读当前桌面名称（例如，桌面2）。
 * When dragging and dropping items such as arranging pinned entries (tiles
   in Windows 10) in Start menu or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
-  effects before and while dragging items, respectively. NVDA announcing
-  "dragging" is now part of NVDA 2022.4.
+  effects before and while dragging items, respectively. This is now part of
+  NVDA 2022.4.
 * 通过在 NVDA 的“对象提示”设置中关闭“读出通知提示”，可以禁止诸如文件资源管理器中的音量、亮度更改和来自 Microsoft Store
   的应用程序更新之类的通知。
 * 在 Windows 11 22H2 及更高版本中，可读出 Windows+Alt+K 的麦克风静音切换状态。
@@ -71,7 +74,6 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 中从剪贴板历史记录粘贴时，请按空格键而非回车键来粘贴所选项目。
 
 * 在Windows 10中，选择Emoji组（包括Kaomoji和符号组）时，NVDA不会将导航对象移动到某些EMOJI上。
-* 在 Windows 11 中，当表情符号面板打开时，可以使用箭头键查看表情符号。该功能已是 NVDA2022.1 的一部分。
 * 在 Windows 11 剪贴板历史记录中，为了让 NVDA 宣布剪贴板历史记录条目菜单项，浏览模式将默认关闭。
 * 在 Insider Preview 版本 25115（及更高版本 Windows11 beta
   build22622）中，当电话号码等兼容的数据复制到剪贴板时，NVDA 会读出建议的操作。
@@ -82,7 +84,6 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 
 ## 设置
 
-* 在某些 Windows 安装中看到的奇怪的控件标签已得到更正。
 * NVDA 将公布可选质量更新控件的名称（如果存在）（Windows 10 中的立即下载和安装链接，Windows 11 中的下载按钮）。
 * 在 Windows 11 中，可以正确识别 breadcrumb 栏项目。
 * 在 Windows 10 和 11 22H2 及更高版本中，在 Windows 下载和安装更新过程中 NVDA的朗读会被打断并读出下载或安装进度。

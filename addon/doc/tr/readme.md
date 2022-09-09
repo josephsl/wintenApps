@@ -60,17 +60,18 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 ## Genel
 
 * In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag complete, drag drop effect,
-  drop target dropped. With NVDA's log level set to debug, these events will
-  be tracked and logged.
+  events and properties are recognized: drag start/cancel/complete
+  (recognized as state change event), drag drop effect, drag item is
+  grabbed, drop target effect. With NVDA's log level set to debug, these
+  events will be tracked and logged.
 * NVDA, sanal masaüstlerini açarken, kapatırken, yeniden düzenlerken
   (Windows 11) veya sanal masaüstleri arasında geçiş yaparken etkin sanal
   masaüstü adını duyurur (örneğin, masaüstü 2).
 * When dragging and dropping items such as arranging pinned entries (tiles
   in Windows 10) in Start menu or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
-  effects before and while dragging items, respectively. NVDA announcing
-  "dragging" is now part of NVDA 2022.4.
+  effects before and while dragging items, respectively. This is now part of
+  NVDA 2022.4.
 * Dosya Gezgini'ndeki ses/parlaklık değişiklikleri ve Microsoft Store'dan
   gelen uygulama güncelleme bildirimleri gibi duyurular, NVDA'nın nesne
   sunumu ayarlarından Rapor Bildirimleri kapatılarak engellenebilir.
@@ -101,8 +102,6 @@ paste the selected item.
 * Windows 10'da bir emoji grubu (kaomoji ve semboller grubu dahil)
   seçildiğinde, NVDA artık nesne sunucusunu belirli emojilere
   taşımayacaktır.
-* In Windows 11, it is again possible to use the arrow keys to review emojis
-  when emoji panel opens. This is now part of NVDA 2022.1.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
 * In Insider Preview build 25115 and later (backported to Windows 11 beta
@@ -116,7 +115,6 @@ paste the selected item.
 
 ## Ayarlar
 
-* Bazı Windows kurulumlarında görülen garip kontrol etiketleri düzeltildi.
 * NVDA, varsa isteğe bağlı kalite güncelleme kontrolünün adını duyurur
   (Windows 10'da şimdi indir ve kur bağlantısı, Windows 11'de indir
   düğmesi).

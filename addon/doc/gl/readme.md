@@ -59,18 +59,19 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Xeral
 
-* Ademais dos manexadores de eventos UIA proporcionados por NVDA,
-  recoñécense os eventos e as propiedades UIA seguintes: drag complete, drag
-  drop effect, drop target dropped. co nivel de rexistro de NVDA establecido
-  en depuración, estes eventos seguiranse e rexistraranse.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag start/cancel/complete
+  (recognized as state change event), drag drop effect, drag item is
+  grabbed, drop target effect. With NVDA's log level set to debug, these
+  events will be tracked and logged.
 * Cando se abran, pechen, reordenen (Windows 11), ou se conmute entre
   escritorios virtuales, NVDA anunciará o nome do escritorio actual
   (escritorio 2, por exemplo).
 * When dragging and dropping items such as arranging pinned entries (tiles
   in Windows 10) in Start menu or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
-  effects before and while dragging items, respectively. NVDA announcing
-  "dragging" is now part of NVDA 2022.4.
+  effects before and while dragging items, respectively. This is now part of
+  NVDA 2022.4.
 * Anuncios como o de cambios no volume/brillo no Explorador de Arquivos e o
   de notificacións de actualización de app da Microsoft Store pódense
   suprimir desactivando Anunciar Notificacións nas opcións de Presentación
@@ -102,8 +103,6 @@ paste the selected item.
 * Cando se selecciona un grupo de emojis (incluindo kaomoji e grupos de
   símbolos en Windows 10), NVDA xa non moverá o navegador de obxectos a
   certos emojis.
-* En Windows 11,, volve a ser posible utilizar as frechas para revisar
-  emojis cando se abre o panel de emojis. Isto agora é parte de NVDA 2022.1.
 * No historial do portapapeis de Windows 11, o modo exploración
   desactivarase por defecto, deseñado para permitir que NVDA anuncie os
   elementos do menú de entradas do historial do portapapeis.
@@ -118,8 +117,6 @@ paste the selected item.
 
 ## Opcións
 
-* Corrixiuse as etiquetas de controis extrañas advertidas en certas
-  instalacións de Windows.
 * NVDA anunciará o nome do control para a actualización de calidade opcional
   se estiver presente (ligazón descargar e instalar agora en Windows 10 e
   botón descargar en Windows 11).
