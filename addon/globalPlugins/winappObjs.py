@@ -44,7 +44,7 @@ additionalPropertyEvents: dict[int, str] = {}
 if not hasattr(UIA, "event_UIA_dragDropEffect"):
 	additionalPropertyEvents[UIAHandler.UIA_DragDropEffectPropertyId] = "UIA_dragDropEffect"
 if not hasattr(UIA, "event_UIA_dropTargetEffect"):
-	additionalPropertyEvents[UIAHandler.UIA_DropTargetDropTargetEffectPropertyId] =  "UIA_dropTargetEffect"
+	additionalPropertyEvents[UIAHandler.UIA_DropTargetDropTargetEffectPropertyId] = "UIA_dropTargetEffect"
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
