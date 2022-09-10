@@ -30,8 +30,8 @@ isAddonSupported = (
 
 
 # Add additional UIA events not included in NVDA Core.
-# Specifically to support drag and drop operations.
 additionalEvents: dict[int, str] = {
+	# Specifically to support drag and drop operations.
 	UIAHandler.UIA_Drag_DragStartEventId: "stateChange",
 	UIAHandler.UIA_Drag_DragCancelEventId: "stateChange",
 	UIAHandler.UIA_Drag_DragCompleteEventId: "stateChange",
@@ -43,6 +43,7 @@ additionalPropertyEvents: dict[int, str] = {}
 # #69: specifically to support drag drop effect property when Windows 10 Start menu tiles are rearranged.
 if not hasattr(UIA, "event_UIA_dragDropEffect"):
 	additionalPropertyEvents[UIAHandler.UIA_DragDropEffectPropertyId] = "UIA_dragDropEffect"
+# Add drop target effect property so it can be announced when reordering Action center/quick settings items.
 if not hasattr(UIA, "event_UIA_dropTargetEffect"):
 	additionalPropertyEvents[UIAHandler.UIA_DropTargetDropTargetEffectPropertyId] = "UIA_dropTargetEffect"
 
