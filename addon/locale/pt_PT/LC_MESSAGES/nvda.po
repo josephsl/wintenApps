@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.10.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-08-09 09:39-0700\n"
+"PO-Revision-Date: 2022-09-10 09:58-0700\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; "
 "rui.fontes@tiflotecnia.com>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #. Windows App Essentials requires Windows 10 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-#. Unsupported systems include Windows versions earlier than 10 and old Windows 10 feature updates.
+#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
 msgstr "Versão do Windows não suportada"
 
@@ -32,19 +32,6 @@ msgid ""
 msgstr ""
 "Está a utilizar uma versão mais antiga do Windows. Este extra requer o "
 "Windows 10 ou posterior."
-
-#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
-#. winRelease can be Windows 10, Windows 11, or other release series name.
-#. minSupportedUpdate is the minimum update for a Windows release series required for this add-on.
-#. Example: an add-on release requiring Windows 10 May 2021 Update
-#. will set windowsRelease to Windows 10 and minSupportedUpdate to Windows 10 21H1.
-#, python-brace-format
-msgid ""
-"You are using an unsupported {windowsRelease} release. This add-on requires "
-"{minSupportedUpdate} or later."
-msgstr ""
-"Está a utilizar uma versão não suportada {windowsRelease}. Este extra requer "
-"{minSupportedUpdate} ou superior."
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 #. winRelease can be Windows 10, Windows 11, or other release series name.

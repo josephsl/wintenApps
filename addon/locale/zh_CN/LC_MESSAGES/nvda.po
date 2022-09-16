@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-08-12 08:37+0800\n"
+"PO-Revision-Date: 2022-09-10 09:53-0700\n"
 "Last-Translator: 完美很难 <1872265132@qq.com>\n"
 "Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
 "2010-2019>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Windows App Essentials requires Windows 10 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-#. Unsupported systems include Windows versions earlier than 10 and old Windows 10 feature updates.
+#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
 msgstr "不受支持的 Windows 版本"
 
@@ -30,19 +30,6 @@ msgid ""
 "You are using an older version of Windows. This add-on requires Windows 10 "
 "or later."
 msgstr "您正在使用较旧版本的 Windows。此插件需要 Windows 10 或更高版本。"
-
-#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
-#. winRelease can be Windows 10, Windows 11, or other release series name.
-#. minSupportedUpdate is the minimum update for a Windows release series required for this add-on.
-#. Example: an add-on release requiring Windows 10 May 2021 Update
-#. will set windowsRelease to Windows 10 and minSupportedUpdate to Windows 10 21H1.
-#, python-brace-format
-msgid ""
-"You are using an unsupported {windowsRelease} release. This add-on requires "
-"{minSupportedUpdate} or later."
-msgstr ""
-"您正在使用不受支持的 {windowsRelease} 版本。此插件需要 {minSupportedUpdate} "
-"或更高版本。"
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 #. winRelease can be Windows 10, Windows 11, or other release series name.

@@ -1,4 +1,4 @@
-# Osnovne Windows aplikacije (Windows App Essentials) #
+# Osnovni moduli za Windows aplikacije (Windows App Essentials) #
 
 * Autori: Joseph Lee, Derek Riemer i drugi
 * Preuzmi [stabilnu verziju][1]
@@ -73,10 +73,10 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   obavijesti aktualiziranja programa s Microsoft Store stranica, mogu se
   potisnuti isključivanjem opcije „Izvijesti o obavijestima” u NVDA
   postavkama prikaza objekata.
-* In Windows 11 22H2 and later, microphone mute toggle status
-  (Windows+Alt+K) is announced from everywhere.
-* Item status changes are announced in more apps including Visual Studio
-  Community 2022. This is now part of NVDA 2022.4.
+* U sustavu Windows 11 22H2 i novijem, stanje isključivanja/uključivanja
+  mikrofona (Windows+Alt+K) najavljuje se odasvud.
+* Promjene stanja elementa najavljuju se u više aplikacija uključujući
+  Visual Studio Community 2022. Ovo je sada dio NVDA verzije 2022.4.
 
 ## Cortana
 
@@ -124,12 +124,13 @@ paste the selected item.
   later, if selective UIA event registration is on, you must move focus to
   updates list as soon as they appear so NVDA can announce update progress.
 
-## Voice access
+## Pristup glasu
 
-This refers to Voice access feature introduced in Windows 11 22H2.
+Ovo se odnosi na značajku za pristup glasu koja je predstavljena u sustavu
+Windows 11 22H2.
 
-* NVDA will announce microphone status when toggling microphone from Voice
-  access interface.
+* NVDA će najaviti stanje mikrofona kad se mikrofon uključi ili isključi iz
+  sučelja za pristup glasu.
 
 ## Vrijeme
 
