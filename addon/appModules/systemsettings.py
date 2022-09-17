@@ -14,7 +14,7 @@ import speech
 from NVDAObjects.UIA import UIA
 
 
-# NVDA Core doesn't know about Windows 11 22H2 yet.
+# NVDA Core prior to 2022.4 doesn't know about Windows 11 22H2.
 WIN11_22H2 = winVersion.WinVersion(major=10, minor=0, build=22621, releaseName="Windows 11 22H2")
 
 
