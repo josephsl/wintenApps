@@ -151,20 +151,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				return
 		nextHandler()
 
-	def event_UIA_itemStatus(self, obj, nextHandler):
-		# NVDA Core issue 13973: in addition to Windows 10 Action Center, other apps may raise this event.
-		# A basic implementation is included in Windows 10 Action Center app module,
-		# and NVDA 2022.4 brings it to base UIA NVDA object, so check attributes.
-		if not hasattr(obj, "event_UIA_itemStatus"):
-			# Filter duplicate events and objects other than focused element.
-			if (
-				obj != api.getFocusObject()
-				or eventHandler.isPendingEvents(eventName="UIA_itemStatus", obj=obj)
-			):
-				return
-			ui.message(f"{obj.name} {obj.UIAElement.currentItemStatus}")
-		nextHandler()
-
 	def event_stateChange(self, obj, nextHandler):
 		# Specifically designed to detect drag start and UIA "is grabbed" state changes.
 		# Resolved in NVDA 2022.4.
