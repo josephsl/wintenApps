@@ -162,6 +162,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Events defined in this add-on.
 
 	def event_UIA_dragDropEffect(self, obj, nextHandler):
+		# Resolved in NVDA 2022.4.
 		log.debug(f"winapps: drag drop effect property event from {obj}")
 		# Report drag and drop effect as communicated by UIA.
 		if not hasattr(obj, "event_UIA_dragDropEffect"):
@@ -171,6 +172,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_dropTargetEffect(self, obj, nextHandler):
+		# Resolved in NVDA 2022.4.
 		log.debug(f"winapps: drop target effect property event from {obj}")
 		# Announce drop target effect such as item placement in Start menu and Action center if present.
 		if not hasattr(obj, "event_UIA_dropTargetEffect"):
