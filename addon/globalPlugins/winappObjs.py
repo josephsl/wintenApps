@@ -126,8 +126,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# This may degrade performance and/or cause NVDA to become verbose in situations other than
 		# virtual desktop switch, so exercise discretion.
 		if obj.windowClassName == "#32769":
-			if log.isEnabledFor(log.DEBUG):
-				log.debug(f"winapps: possible desktop name change from {obj}, app module: {obj.appModule}")
 			# CSRSS: Client/Server Runtime Subsystem (Windows subsystem process/desktop object)
 			if obj.appModule.appName == "csrss":
 				import wx
