@@ -48,6 +48,12 @@ if not hasattr(UIA, "event_UIA_dropTargetEffect"):
 	additionalPropertyEvents[UIAHandler.UIA_DropTargetDropTargetEffectPropertyId] = "UIA_dropTargetEffect"
 
 
+# #20: don't even think about proceeding in secure screens.
+def disableInSecureMode(cls):
+	return globalPluginHandler.GlobalPlugin if globalVars.appArgs.secure else cls
+
+
+@disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
@@ -55,9 +61,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Don't do anything unless this is Windows 10 or later.
 		# #52: and this is a supported build.
 		if not isAddonSupported:
-			return
-		# #20: don't even think about proceeding in secure screens.
-		if globalVars.appArgs.secure:
 			return
 		# Try adding additional events and properties in the constructor.
 		# If it fails, try again after NVDA is fully initialized.
