@@ -53,14 +53,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 						nameList.insert(0, obj.previous.name)
 						nameList.insert(0, obj.previous.previous.name)
 				obj.name = ", ".join(nameList)
-			# In some cases, Active Directory style name is the name of the window,
-			# so tell NVDA to use something more meaningful.
-			elif obj.name == "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US":
-				obj.name = obj.firstChild.name
 			# Developer mode label in Windows 10 Vibranium (2004 and later).
 			# The label itself is the name of the previous object.
 			# Resolved in Windows 11 and Server 2022.
-			elif obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
+			if obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
 				obj.name = obj.previous.name
 		# Windows 11
 		else:
