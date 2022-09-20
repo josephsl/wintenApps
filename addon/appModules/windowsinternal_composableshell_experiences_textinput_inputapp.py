@@ -180,16 +180,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			self._emojiPanelClosed(obj)
 		nextHandler()
 
-	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
-		# Announce specific UIA notifications from other apps.
-		# This is more so when Suggestions Actions open in build 25115 and later backported to build 22622.
-		# For now keyboard accessibility is not present.
-		if api.getFocusObject().appModule != self and activityId == "Windows.Shell.InputApp.SmartActions.Popup":
-			import ui
-			ui.message(displayString)
-			return
-		nextHandler()
-
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Recognize more candidate UI and item elements in Windows 11.
 		# Return after checking each item so candidate UI and items from Windows 10 can be recognized.
