@@ -61,10 +61,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
-		# Don't do anything unless this is Windows 10 or later.
-		# #52: and this is a supported build.
-		if not isAddonSupported:
-			return
 		# Try adding additional events and properties in the constructor.
 		# If it fails, try again after NVDA is fully initialized.
 		try:
