@@ -15,18 +15,8 @@ import eventHandler
 import globalVars
 import UIAHandler
 from logHandler import log
-import winVersion
 import addonHandler
 addonHandler.initTranslation()
-
-# #52: forget everything if the current release is not a supported version of Windows.
-# #66: Version 21H2 is divided into three releases: Windows 10, Server 2022, and Windows 11.
-# Make sure the build is one of the supported releases or recent Insider Preview build.
-currentWinVer = winVersion.getWinVer()
-supportedBuilds: list[int] = [19044, 19045, 20348, 22000, 22621]
-isAddonSupported = (
-	currentWinVer.build in supportedBuilds or currentWinVer.build > max(supportedBuilds)
-)
 
 
 # Add additional UIA events not included in NVDA Core.
