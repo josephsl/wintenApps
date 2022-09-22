@@ -11,7 +11,6 @@ from NVDAObjects.UIA import UIA, Dialog
 import api
 import config
 import queueHandler
-import eventHandler
 import globalVars
 import UIAHandler
 from logHandler import log
