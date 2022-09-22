@@ -126,8 +126,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# which will result in name change for the desktop object.
 		# CSRSS: Client/Server Runtime Subsystem (Windows subsystem process/desktop object)
 		if obj.windowClassName == "#32769" and obj.appModule.appName == "csrss":
-			import wx
-			wx.CallLater(250, ui.message, obj.name)
+			import core
+			core.callLater(250, ui.message, obj.name)
 		nextHandler()
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
