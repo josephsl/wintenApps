@@ -62,8 +62,7 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 * In addition to UIA event handlers provided by NVDA, the following UIA
   events and properties are recognized: drag start/cancel/complete
   (recognized as state change event), drag drop effect, drag item is
-  grabbed, drop target effect. With NVDA's log level set to debug, these
-  events will be tracked and logged.
+  grabbed, drop target effect.
 * Podczas otwierania, zamykania, zmiany kolejności (Windows 11) lub
   przełączania się między pulpitami wirtualnymi NVDA ogłosi nazwę aktywnego
   pulpitu wirtualnego (na przykład pulpit 2).
@@ -78,8 +77,6 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
   prezentacji obiektów NVDA.
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
-* Item status changes are announced in more apps including Visual Studio
-  Community 2022. This is now part of NVDA 2022.4.
 
 ## Cortana
 
@@ -101,9 +98,9 @@ symbolu na "niektóre" lub wyższe. Podczas wklejania z historii schowka w
 systemie Windows 10 naciśnij spacji zamiast wchodzić, aby wkleić wybrany
 element.
 
-* W systemie Windows 10 po wybraniu grupy emoji (w tym grupy kaomoji i
-  symboli), NVDA nie będzie już przenosić obiektu nawigatora do określonych
-  emotikonów.
+* In Windows 10 emoji panel, when an emoji group (including kaomoji and
+  symbols group) is selected, NVDA will no longer move navigator object to
+  certain emojis.
 * W historii schowka systemu Windows 11 tryb przeglądania zostanie domyślnie
   wyłączony, zaprojektowany tak, aby NVDA ogłaszała elementy menu
   wprowadzania historii schowka.
@@ -113,8 +110,7 @@ element.
 
 ## Osoby
 
-* Przy wyszukiwaniu kontaktów, dźwięk będzie ottwarzany, jeżeli istnieją
-  wyniki wyszukiwania.
+* When searching for contacts, first suggestion will be announced.
 
 ## Ustawienia
 

@@ -56,12 +56,10 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
-* NVDA:n tarjoamien UIA-tapahtumakäsittelijöiden lisäksi tunnistetaan
-  seuraavat UIA-tapahtumat ja -ominaisuudet: vetäminen
-  aloitettu/peruutettu/suoritettu (tunnistetaan tilanmuutostapahtumaksi),
-  vetämisen ja pudottamisen vaikutus, vedettävä kohde on valittu, pudotuksen
-  kohteen vaikutus. Näitä tapahtumia seurataan ja ne tallennetaan lokiin,
-  kun NVDA:n lokitasoksi on määritetty "virheenkorjaus".
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag start/cancel/complete
+  (recognized as state change event), drag drop effect, drag item is
+  grabbed, drop target effect.
 * NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
   avattaessa, suljettaessa, uudelleenjärjestettäessä (Windows 11) tai
   siirryttäessä niiden välillä.
@@ -77,8 +75,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   objektien lukemisen asetuksista.
 * Mikrofonin mykistyksen (Win+Alt+K) tila ilmoitetaan nyt kaikkialta Windows
   11:n versiossa 22H2 ja sitä uudemmissa.
-* Kohteiden tilamuutokset ilmoitetaan useammissa sovelluksissa, Visual
-  Studio Community 2022 mukaan lukien. Tämä sisältyy NVDA 2022.4:ään.
 
 ## Cortana
 
@@ -100,8 +96,9 @@ symbolitasoksi "jotain" tai korkeampi. Kun liität leikepöydän historiasta,
 liitä valittu kohde painamalla välilyöntinäppäintä Enterin sijaan. NVDA
 tukee lisäksi päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 
-* Kun emojiryhmä (kaomoji ja symboliryhmä mukaan lukien) valitaan Windows
-  10:ssä, NVDA ei enää siirrä navigointiobjektia tiettyihin emojeihin.
+* In Windows 10 emoji panel, when an emoji group (including kaomoji and
+  symbols group) is selected, NVDA will no longer move navigator object to
+  certain emojis.
 * Selaustila poistetaan käytöstä oletusarvoisesti Windows 11:n leikepöydän
   historiassa, minkä tarkoituksena on mahdollistaa NVDA:lle historian
   valikkokohteiden lukeminen.
@@ -112,8 +109,7 @@ tukee lisäksi päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
 
 ## Ihmiset
 
-* Ensimmäinen ehdotus puhutaan kontakteja etsittäessä, erityisesti uusimpia
-  sovellusversioita käytettäessä.
+* When searching for contacts, first suggestion will be announced.
 
 ## Asetukset
 

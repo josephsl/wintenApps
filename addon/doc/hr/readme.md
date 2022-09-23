@@ -59,8 +59,7 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 * In addition to UIA event handlers provided by NVDA, the following UIA
   events and properties are recognized: drag start/cancel/complete
   (recognized as state change event), drag drop effect, drag item is
-  grabbed, drop target effect. With NVDA's log level set to debug, these
-  events will be tracked and logged.
+  grabbed, drop target effect.
 * Prilikom otvaranja, zatvaranja, preraspoređivanja (Windows 11) ili
   prebacivanja između virtualnih radnih površina, NVDA će najaviti
   trenutačno ime radne površine (na primjer, desktop 2).
@@ -75,8 +74,6 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   postavkama prikaza objekata.
 * U sustavu Windows 11 22H2 i novijem, stanje isključivanja/uključivanja
   mikrofona (Windows+Alt+K) najavljuje se odasvud.
-* Promjene stanja elementa najavljuju se u više aplikacija uključujući
-  Visual Studio Community 2022. Ovo je sada dio NVDA verzije 2022.4.
 
 ## Cortana
 
@@ -97,9 +94,9 @@ speech settings and set symbol level to "some" or higher. When pasting from
 clipboard history in Windows 10, press Space key instead of Enter key to
 paste the selected item.
 
-* U sustavu Windows 10, kad je odabrana grupa emojija (uključujući kaomoji i
-  grupu simbola), NVDA više neće pomicati navigacijski objekt na određene
-  emojije.
+* In Windows 10 emoji panel, when an emoji group (including kaomoji and
+  symbols group) is selected, NVDA will no longer move navigator object to
+  certain emojis.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
 * In Insider Preview build 25115 and later (backported to Windows 11 beta
@@ -108,8 +105,7 @@ paste the selected item.
 
 ## Osobe
 
-* Prilikom pretraživanja kontakata najavit će se prvi prijedlog, posebice,
-  ako se koriste nedavna izdanja aplikacija.
+* When searching for contacts, first suggestion will be announced.
 
 ## Postavke
 

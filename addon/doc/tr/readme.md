@@ -62,8 +62,7 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 * In addition to UIA event handlers provided by NVDA, the following UIA
   events and properties are recognized: drag start/cancel/complete
   (recognized as state change event), drag drop effect, drag item is
-  grabbed, drop target effect. With NVDA's log level set to debug, these
-  events will be tracked and logged.
+  grabbed, drop target effect.
 * NVDA, sanal masaüstlerini açarken, kapatırken, yeniden düzenlerken
   (Windows 11) veya sanal masaüstleri arasında geçiş yaparken etkin sanal
   masaüstü adını duyurur (örneğin, masaüstü 2).
@@ -77,8 +76,6 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
   sunumu ayarlarından Rapor Bildirimleri kapatılarak engellenebilir.
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
-* Item status changes are announced in more apps including Visual Studio
-  Community 2022. This is now part of NVDA 2022.4.
 
 ## Cortana
 
@@ -99,9 +96,9 @@ speech settings and set symbol level to "some" or higher. When pasting from
 clipboard history in Windows 10, press Space key instead of Enter key to
 paste the selected item.
 
-* Windows 10'da bir emoji grubu (kaomoji ve semboller grubu dahil)
-  seçildiğinde, NVDA artık nesne sunucusunu belirli emojilere
-  taşımayacaktır.
+* In Windows 10 emoji panel, when an emoji group (including kaomoji and
+  symbols group) is selected, NVDA will no longer move navigator object to
+  certain emojis.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
 * In Insider Preview build 25115 and later (backported to Windows 11 beta
@@ -110,8 +107,7 @@ paste the selected item.
 
 ## Kişiler
 
-* Kişileri ararken, özellikle son uygulama sürümleri kullanılıyorsa, ilk
-  öneri duyurulacaktır.
+* When searching for contacts, first suggestion will be announced.
 
 ## Ayarlar
 

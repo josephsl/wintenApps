@@ -61,8 +61,7 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 * In addition to UIA event handlers provided by NVDA, the following UIA
   events and properties are recognized: drag start/cancel/complete
   (recognized as state change event), drag drop effect, drag item is
-  grabbed, drop target effect. With NVDA's log level set to debug, these
-  events will be tracked and logged.
+  grabbed, drop target effect.
 * Ao abrir, fechar, reordenar (Windows 11) ou alternar entre áreas de
   trabalho virtuais, o NVDA anunciará o nome do desktop virtual ativo (área
   de trabalho 2, por exemplo).
@@ -77,8 +76,6 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   apresentação de objetos do NVDA.
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
-* Item status changes are announced in more apps including Visual Studio
-  Community 2022. This is now part of NVDA 2022.4.
 
 ## Cortana
 
@@ -99,9 +96,9 @@ speech settings and set symbol level to "some" or higher. When pasting from
 clipboard history in Windows 10, press Space key instead of Enter key to
 paste the selected item.
 
-* No Windows 10, quando um grupo de emoji (incluindo kaomoji e grupo de
-  símbolos) é selecionado, o NVDA não moverá mais a navegação de objeto para
-  certos emojis.
+* In Windows 10 emoji panel, when an emoji group (including kaomoji and
+  symbols group) is selected, NVDA will no longer move navigator object to
+  certain emojis.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
 * In Insider Preview build 25115 and later (backported to Windows 11 beta
@@ -110,8 +107,7 @@ paste the selected item.
 
 ## Pessoas
 
-* Ao pesquisar contatos, a primeira sugestão será anunciada, principalmente
-  se estiver usando versões recentes do aplicativo.
+* When searching for contacts, first suggestion will be announced.
 
 ## Configurações
 

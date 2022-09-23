@@ -62,8 +62,7 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * In addition to UIA event handlers provided by NVDA, the following UIA
   events and properties are recognized: drag start/cancel/complete
   (recognized as state change event), drag drop effect, drag item is
-  grabbed, drop target effect. With NVDA's log level set to debug, these
-  events will be tracked and logged.
+  grabbed, drop target effect.
 * Når åbning, lukning, ændring af rækkefølge (Windows 11) eller Skift mellem
   virtuelle skrivebord forekommer, vil NVDA annoncere det aktuelle navn for
   det virtuelle skrivebord (f.eks. "Skrivebord 2").
@@ -78,8 +77,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   objektpræsentationsindstillinger.
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
-* Item status changes are announced in more apps including Visual Studio
-  Community 2022. This is now part of NVDA 2022.4.
 
 ## Cortana
 
@@ -100,8 +97,9 @@ speech settings and set symbol level to "some" or higher. When pasting from
 clipboard history in Windows 10, press Space key instead of Enter key to
 paste the selected item.
 
-* Når en emoji-gruppe (inklusive kaomoji og symbolgrupper er valgt, vil NVDA
-  ikke længere flytte navigatorobjektet til bestemte emoji.
+* In Windows 10 emoji panel, when an emoji group (including kaomoji and
+  symbols group) is selected, NVDA will no longer move navigator object to
+  certain emojis.
 * I Windows 11 udklipsholderhistorik er gennemsynstilstand slået fra som
   standard, således NVDA kan annoncere menupunkter i
   udklipsholderhistorikken.
@@ -111,8 +109,7 @@ paste the selected item.
 
 ## Personer
 
-* Når du søger efter kontakter, vil forslag blive annoncerede, særligt hvis
-  du kører de seneste app-udgivelser.
+* When searching for contacts, first suggestion will be announced.
 
 ## indstillinger
 
