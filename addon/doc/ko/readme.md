@@ -43,8 +43,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 ## 일반
 
 * NVDA가 지원하는 UIA  이벤트 및 속성 외의 다음 이벤트 추적 가능: drag start/cancel/complete(state
-  change로 인식), drag drop effect, is grabbed, drop target effect. NVDA 로깅 옵션을
-  디버그로 설정한 경우 위 이벤트가 추적되도록 함.
+  change로 인식), drag drop effect, is grabbed, drop target effect.
 * 가상 데스크탑을 열때/닫을때/위치 변경시(윈도우 11 한정)/변경시 NVDA가 데스크탑 이름(예: Desktop 2)를 출력하도록
   함.
 * 시작 메뉴에 고정된 타일(윈도우 10) 또는 액션 센터네 빠른 액션을 Alt+Shift+반향키로 조절시 "드래그중" 또는 드래그
@@ -54,8 +53,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   Report Notifications in NVDA's object presentation settings.
 * In Windows 11 22H2 and later, microphone mute toggle status
   (Windows+Alt+K) is announced from everywhere.
-* Item status changes are announced in more apps including Visual Studio
-  Community 2022. This is now part of NVDA 2022.4.
 
 ## Cortana
 
@@ -72,15 +69,14 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 말합니다. 에모지 탐색시 Unicode CLDR 설정을 활성하고 기호 읽기를 "일부" 이상으로 설정하시기 바랍니다. 윈도우 10에서
 클립보드 히스토리 사용시 스페이스를 눌러 선택된 내용을 붙여넣으시기 바랍니다.
 
-* 윈도우 10에서 에모지 그룹(카오모지 및 기호 그룹 포함) 선택시 탐색 객체가 특정 에모지에 고정되는 문제 수정.
+* 윈도우 10 에모지 페널에서 에모지 그룹(카오모지 및 기호 그룹 포함) 선택시 탐색 객체가 특정 에모지에 고정되는 문제 수정.
 * 윈도우 11 클립보드 히스토리에서 항목 팝업 메뉴를 제대로 출력할 수 있도록 브라우즈 모드가 반영되지 않도록 함.
 * 참가자 빌드 25115 이상(윈도우 11 베타 빌드 22622로 백포팅됨)에서 전화번호와 같은 내용이 클립보드에 복사되었을때 나타나는
   추천 엑션을 출력하도록 함.
 
 ## People
 
-* When searching for contacts, first suggestion will be announced,
-  particularly if using recent app releases.
+* When searching for contacts, first suggestion will be announced.
 
 ## 설정 앱
 

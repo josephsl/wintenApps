@@ -61,28 +61,25 @@ Versionen][3].
 
 ## Allgemein
 
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag start/cancel/complete
-  (recognized as state change event), drag drop effect, drag item is
-  grabbed, drop target effect. With NVDA's log level set to debug, these
-  events will be tracked and logged.
+* Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignis-Handlern werden
+  die folgenden UIA-Ereignisse und -Eigenschaften erkannt: Ziehen
+  starten/abbrechen/abschließen (wird als Zustandsänderungsereignis
+  erkannt), Drag-Drop-Effekt, Ziehen eines Elements wird erfasst,
+  Drop-Ziel-Effekt.
 * Beim Öffnen, Schließen, Neuordnen (Windows 11) oder Wechseln zwischen
   virtuellen Desktops gibt NVDA den Namen des aktiven virtuellen Desktops an
   (z. B. Desktop 2).
-* When dragging and dropping items such as arranging pinned entries (tiles
-  in Windows 10) in Start menu or Action Center quick actions with
-  Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
-  effects before and while dragging items, respectively. This is now part of
-  NVDA 2022.4.
+* Beim Ziehen und Ablegen von Elementen, z. B. beim Anordnen von
+  angehefteten Einträgen (Kacheln in Windows 10) im Startmenü oder bei
+  Schnellaktionen im Action Center mit Alt+Umschalt+Pfeiltasten, meldet NVDA
+  vor bzw. während des Ziehens von Elementen "Ziehen" und/oder Zieh- und
+  Ablegeeffekte. Dies ist nun Teil von NVDA 2022.4.
 * Rückmeldungen wie z. B. Lautstärke-/Helligkeitsänderungen im
   Datei-Explorer und App-Update-Benachrichtigungen aus dem Microsoft Store
   können unterdrückt werden, indem die Benachrichtigung über Berichte in den
   Objektpräsentationseinstellungen von NVDA deaktiviert wird.
 * In Windows 11 Version 22H2 und neuer wird der Status der
   Mikrofon-Stummschaltung (Windows+Alt+K) von überall her mitgeteilt.
-* Änderungen des Elementstatus werden in weiteren Anwendungen,
-  einschließlich Visual Studio Community 2022, mitgeteilt. Dies ist Teil von
-  NVDA 2022.4.
 
 ## Cortana
 
@@ -106,9 +103,9 @@ Symbolebene auf "Einige" oder höher. Drücken Sie beim Einfügen aus dem
 Zwischenablageverlauf in Windows 10 die Leertaste anstelle der Eingabetaste,
 um das ausgewählte Element einzufügen.
 
-* Wenn in Windows 10 eine Emoji-Gruppe (einschließlich Kaomoji- und
-  Symbolgruppe) ausgewählt ist, verschiebt NVDA das Navigator-Objekt nicht
-  mehr in bestimmte Emojis.
+* Wenn im Emoji-Panel von Windows 10 eine Emoji-Gruppe (einschließlich der
+  Kaomoji- und Symbolgruppe) ausgewählt wird, verschiebt NVDA das
+  Navigations-Objekt nicht mehr zu bestimmten Emojis.
 * In der Zwischenablage von Windows 11 ist der Lesemodus standardmäßig
   ausgeschaltet, damit NVDA Menüeinträge für die Zwischenablage mitteilen
   kann.
@@ -118,8 +115,7 @@ um das ausgewählte Element einzufügen.
 
 ## Kontakte
 
-* Bei der Suche nach Kontakten wird der erste Vorschlag angekündigt,
-  insbesondere bei Verwendung aktueller App-Veröffentlichungen.
+* Bei der Suche nach Kontakten wird der erste Vorschlag angezeigt.
 
 ## Einstellungen
 

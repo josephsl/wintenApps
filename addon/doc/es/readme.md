@@ -64,9 +64,7 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * Además de los manejadores de eventos UIA proporcionados por NVDA, se
   reconocen los siguientes eventos y propiedades UIA: drag
   start/cancel/complete (reconocido como evento de cambio de estado), drag
-  drop effect, drag item is grabbed, drop target effect. Con el nivel de
-  registro de NVDA configurado en depuración, estos eventos se rastrearán y
-  se registrarán.
+  drop effect, drag item is grabbed, drop target effect.
 * Al abrir, cerrar, reordenar (Windows 11) o cambiar entre escritorios
   virtuales, NVDA anunciará el nombre del escritorio virtual activo
   (escritorio 2, por ejemplo).
@@ -81,9 +79,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   desde las opciones de presentación de objetos de NVDA.
 * En Windows 11 22H2 y posterior, el estado del interruptor para silenciar
   el micrófono (Windows+alt+k) se anuncia desde cualquier sitio.
-* Los cambios de estado de los elementos se anuncian en más aplicaciones,
-  incluyendo Visual Studio Community 2022. Esto ahora forma parte de NVDA
-  2022.4.
 
 ## Cortana
 
@@ -106,9 +101,9 @@ configura el nivel de símbolos en "alguno" o más alto. Al pegar desde el
 portapapeles en Windows 10, pulsa la barra espaciadora en vez de intro para
 pegar el elemento seleccionado.
 
-* En Windows 10, cuando se seleccione un grupo de emojis (incluyendo kaomoji
-  y el grupo de símbolos), NVDA ya no moverá el navegador de objetos a
-  ciertos emojis.
+* En el panel de emojis de Windows 10, cuando se seleccione un grupo de
+  emojis (incluyendo kaomoji y el grupo de símbolos), NVDA ya no moverá el
+  navegador de objetos a ciertos emojis.
 * En el historial del portapapeles de Windows 11, se desactivará el modo
   exploración por defecto, diseñado para permitir que NVDA anuncie los
   elementos de menú con las entradas del historial del portapapeles.
@@ -118,8 +113,7 @@ pegar el elemento seleccionado.
 
 ## Gente
 
-* Cuando se busquen contactos, se verbalizará la primera sugerencia,
-  particularmente si se usan versiones recientes de las aplicaciones.
+* Cuando se busquen contactos, se verbalizará la primera sugerencia.
 
 ## Opciones
 
