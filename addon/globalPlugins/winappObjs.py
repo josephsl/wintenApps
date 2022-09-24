@@ -107,15 +107,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Events defined in NVDA.
 
-	def event_nameChange(self, obj, nextHandler):
-		# NVDA Core issue 5641: try catching virtual desktop switch event,
-		# which will result in name change for the desktop object.
-		# CSRSS: Client/Server Runtime Subsystem (Windows subsystem process/desktop object)
-		if obj.windowClassName == "#32769" and obj.appModule.appName == "csrss":
-			import core
-			core.callLater(250, ui.message, obj.name)
-		nextHandler()
-
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
 		# Do not allow notification to be announced if "report notifications" is off.
 		if not config.conf["presentation"]["reportHelpBalloons"]:
