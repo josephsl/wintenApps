@@ -111,10 +111,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Do not allow notification to be announced if "report notifications" is off.
 		if not config.conf["presentation"]["reportHelpBalloons"]:
 			return
-		# In recent versions of Word 365, notification event is used to announce editing functions,
-		# some of them being quite anoying.
-		if obj.appModule.appName == "winword" and activityId == "AccSN1":
-			return
 		# Announce microphone mute status from anywhere in Windows 11 22H2 and later.
 		if obj.appModule.appName == "explorer" and activityId == "Windows.Shell.CallMuteAnnouncement":
 			if api.getFocusObject().appModule != obj.appModule:
