@@ -130,7 +130,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			core.callLater(250, ui.message, obj.name)
 		nextHandler()
 
-	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
+	def event_UIA_notification(self, obj, nextHandler, **kwargs):
 		# Do not allow notification to be announced if "report notifications" is off.
 		if not config.conf["presentation"]["reportHelpBalloons"]:
 			return
