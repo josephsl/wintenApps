@@ -134,11 +134,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Do not allow notification to be announced if "report notifications" is off.
 		if not config.conf["presentation"]["reportHelpBalloons"]:
 			return
-		# Announce microphone mute status from anywhere in Windows 11 22H2 and later.
-		if obj.appModule.appName == "explorer" and activityId == "Windows.Shell.CallMuteAnnouncement":
-			if api.getFocusObject().appModule != obj.appModule:
-				ui.message(displayString)
-				return
 		nextHandler()
 
 	def event_stateChange(self, obj, nextHandler):
