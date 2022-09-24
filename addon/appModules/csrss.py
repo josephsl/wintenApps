@@ -6,6 +6,7 @@
 
 import appModuleHandler
 import ui
+import core
 
 
 class AppModule(appModuleHandler.AppModule):
@@ -14,6 +15,5 @@ class AppModule(appModuleHandler.AppModule):
 		# NVDA Core issue 5641: try catching virtual desktop switch event,
 		# which will result in name change for the desktop object.
 		if obj.windowClassName == "#32769":
-			import core
 			core.callLater(250, ui.message, obj.name)
 		nextHandler()
