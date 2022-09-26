@@ -149,11 +149,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Better to use build 22621 as base build since beta increments it by 1.
 		if firstChild.UIAAutomationId in suggestedActionsIds and winVersion.getWinVer() > WIN11_22H2:
 			import ui
-			suggestedActions = []
 			# Build 25158 changes the UI once again, suggested actions is now a grouping, backported to 22622.
-			for suggestedAction in firstChild.children:
-				if suggestedAction.name:
-					suggestedActions.append(suggestedAction.name)
+			suggestedActions = [
+				suggestedAction.name for suggestedAction in firstChild.children if suggestedAction.name
+			]
 			ui.message("; ".join(suggestedActions))
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
