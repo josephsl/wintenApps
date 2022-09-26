@@ -13,7 +13,7 @@ The following app modules or support modules for some apps are included (see eac
 
 * Cortana
 * Maps
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input suggestions/clipboard history/Suggested Actions (preview)/modern input method editors)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input suggestions/clipboard history/Suggested Actions/modern input method editors)
 * People
 * Settings (system settings, Windows+I)
 * Voice access (Windows 11 22H2)
@@ -51,11 +51,11 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## Modern keyboard
 
-This includes emoji panel, clipboard history, dictation/voice typing, hardware input suggestions, suggested actions (preview), and modern input method editors for certain languages across Windows 10 and 11. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher. When pasting from clipboard history in Windows 10, press Space key instead of Enter key to paste the selected item.
+This includes emoji panel, clipboard history, dictation/voice typing, hardware input suggestions, suggested actions, and modern input method editors for certain languages across Windows 10 and 11. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher. When pasting from clipboard history in Windows 10, press Space key instead of Enter key to paste the selected item.
 
 * In Windows 10 emoji panel, when an emoji group (including kaomoji and symbols group) is selected, NVDA will no longer move navigator object to certain emojis.
 * In Windows 11 clipboard history, browse mode will be turned off by default, designed to let NVDA announce clipboard history entry menu items.
-* In Insider Preview build 25115 and later (backported to Windows 11 beta build 22622), NVDA will announce suggested actions when compatible data such as phone numbers is copied to the clipboard.
+* In Windows 11 22H2 Moment 1 and later, NVDA will announce suggested actions when compatible data such as phone numbers is copied to the clipboard.
 
 ## People
 
