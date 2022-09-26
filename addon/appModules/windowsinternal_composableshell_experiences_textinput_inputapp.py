@@ -142,7 +142,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Because keyboard interaction is not possible, just report suggested actions.
 		# In build 25145 and later (or possibly earlier builds), Automation Id is empty.
 		# Automation Id has changed yet again in build 25158 (argh).
-		# Suggested Actions was backported to Windows 11 22H2 beta (build 22622).
+		# Suggested Actions was backported to Windows 11 22H2 Moment 1 (October 2022).
 		suggestedActionsIds = [
 			"Windows.Shell.InputApp.SmartActionsUX"  # Build 25158 and 22622.436 and later
 		]
