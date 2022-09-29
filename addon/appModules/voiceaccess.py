@@ -18,7 +18,8 @@ class MicrophoneButton(UIA):
 	def script_toggleMicrophone(self, gesture):
 		# Until NVDA gets a chance to handle UIA notifications when these commands are pressed...
 		gesture.send()
-		ui.message(self.name)
+		# There is no label for this button in build 25200 series, so consult its parent.
+		ui.message(self.name if self.name else self.parent.name)
 
 
 class AppModule(appModuleHandler.AppModule):
