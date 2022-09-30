@@ -19,9 +19,9 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 * Cortana
 * Karten
-* Moderne Tastatur
-  (Emoji-Bedienfeld/Diktat/Sprachsteuerung/Hardware-Eingabevorschläge/Zwischenablage-Verlauf/Vorgeschlagene
-  Aktionen (Vorschau) bzw. Moderne Eingabemethoden-Editoren)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/Suggested Actions/modern input method
+  editors)
 * Kontakte
 * Einstellungen (System-Einstellungen, Windows+I)
 * Sprachzugang (Windows 11 Version 22H2)
@@ -42,11 +42,10 @@ Hinweise:
 * Nicht alle Funktionen von Windows Insider Preview Builds werden
   unterstützt.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
-* Bei Einträgen, die unten nicht aufgeführt sind, können Sie davon ausgehen,
-  dass Funktionen Teil von NVDA sind und nicht mehr nutzbar sind, da die
-  Erweiterung nicht unterstützte Windows-Versionen wie alte Windows
-  10-Versionen nicht unterstützt oder Änderungen an Windows und Apps
-  vorgenommen wurden, die keine Einträge mehr vornehmen.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support unsupported
+  Windows releases such as old Windows 10 versions, or changes were made to
+  Windows, apps, and NVDA that makes entries no longer applicable.
 * Einige Apps unterstützen den kompakten Overlay-Modus (z. B. im
   Taschenrechner immer ganz oben). Dieser Modus funktioniert mit der
   portablen NVDA-Version nicht ordnungsgemäß.
@@ -66,9 +65,8 @@ Versionen][3].
   starten/abbrechen/abschließen (wird als Zustandsänderungsereignis
   erkannt), Drag-Drop-Effekt, Ziehen eines Elements wird erfasst,
   Drop-Ziel-Effekt.
-* Beim Öffnen, Schließen, Neuordnen (Windows 11) oder Wechseln zwischen
-  virtuellen Desktops gibt NVDA den Namen des aktiven virtuellen Desktops an
-  (z. B. Desktop 2).
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce active virtual desktop name (desktop 2, for example).
 * Beim Ziehen und Ablegen von Elementen, z. B. beim Anordnen von
   angehefteten Einträgen (Kacheln in Windows 10) im Startmenü oder bei
   Schnellaktionen im Action Center mit Alt+Umschalt+Pfeiltasten, meldet NVDA
@@ -94,14 +92,13 @@ Versionen][3].
 
 ## Moderne virtuelle Tastaturen
 
-Dazu gehören das Emoji-Bedienfeld, der Verlauf der Zwischenablage,
-Diktat-/Stimmeingabe, Hardware-Eingabevorschläge, vorgeschlagene Aktionen
-(Vorschau) und moderne Eingabemethoden-Editoren für bestimmte Sprachen in
-Windows 10 und 11. Aktivieren Sie bei der Anzeige von Emojis die Einstellung
-Unicode-Konsortium in den NVDA-Spracheinstellungen und setzen Sie die
-Symbolebene auf "Einige" oder höher. Drücken Sie beim Einfügen aus dem
-Zwischenablageverlauf in Windows 10 die Leertaste anstelle der Eingabetaste,
-um das ausgewählte Element einzufügen.
+This includes emoji panel, clipboard history, dictation/voice typing,
+hardware input suggestions, suggested actions, and modern input method
+editors for certain languages across Windows 10 and 11. When viewing emojis,
+for best experience, enable Unicode Consortium setting from NVDA's speech
+settings and set symbol level to "some" or higher. When pasting from
+clipboard history in Windows 10, press Space key instead of Enter key to
+paste the selected item.
 
 * Wenn im Emoji-Panel von Windows 10 eine Emoji-Gruppe (einschließlich der
   Kaomoji- und Symbolgruppe) ausgewählt wird, verschiebt NVDA das
@@ -109,9 +106,9 @@ um das ausgewählte Element einzufügen.
 * In der Zwischenablage von Windows 11 ist der Lesemodus standardmäßig
   ausgeschaltet, damit NVDA Menüeinträge für die Zwischenablage mitteilen
   kann.
-* In der Insider Preview Build 25115 (auch ab Windows 11 beta build 22622
-  verfügbar) wird NVDA vorgeschlagene Aktionen mitteilen, wenn kompatible
-  Daten wie Telefonnummern in die Zwischenablage kopiert werden.
+* In Windows 11 22H2 Moment 1 and later, NVDA will announce suggested
+  actions when compatible data such as phone numbers is copied to the
+  clipboard.
 
 ## Kontakte
 

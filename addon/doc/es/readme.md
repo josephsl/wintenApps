@@ -22,7 +22,7 @@ qué se incluye):
 * Mapas
 * Teclado Moderno (panel de emojis / dictado / escritura por voz /
   sugerencias de entrada hardware / historial del portapapeles / acciones
-  sugeridas (preview) / editores modernos de método de entrada)
+  sugeridas / editores modernos de método de entrada)
 * Gente
 * Opciones (opciones de sistema, Windows+I)
 * Acceso por voz (Windows 11 22H2)
@@ -44,10 +44,10 @@ Notas:
 * Algunas de las características del complemento son o serán parte del
   lector de pantalla NVDA.
 * Para las entradas que no se enumeren a continuación, puedes asumir que las
-  características son parte de NVDA, no se aplican porque el complemento no
-  da soporte a versiones de Windows no soportadas, como versiones antiguas
-  de Windows 10, o se han hecho cambios a las aplicaciones que permiten que
-  ya no sea necesario aplicarlas.
+  características son parte de NVDA, no se aplican porque el complemento ya
+  no da soporte a versiones de Windows no soportadas, como versiones
+  antiguas de Windows 10, o se han hecho cambios a Windows, las aplicaciones
+  y NVDA que permiten que ya no sea necesario aplicarlas.
 * Algunas aplicaciones soportan el modo de superposición compacta (siempre
   visible en la calculadora, por ejemplo), y este modo no funcionará
   adecuadamente con la versión portable de NVDA.
@@ -65,9 +65,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   reconocen los siguientes eventos y propiedades UIA: drag
   start/cancel/complete (reconocido como evento de cambio de estado), drag
   drop effect, drag item is grabbed, drop target effect.
-* Al abrir, cerrar, reordenar (Windows 11) o cambiar entre escritorios
-  virtuales, NVDA anunciará el nombre del escritorio virtual activo
-  (escritorio 2, por ejemplo).
+* Al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
+  nombre del escritorio virtual activo (escritorio 2, por ejemplo).
 * Al arrastrar y soltar elementos, como reordenar entradas ancladas (losas
   en Windows 10) del menú Inicio o acciones rápidas del centro de
   actividades con alt+shift+flechas, NVDA anunciará "arrastrando" o los
@@ -93,13 +92,13 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 ## Teclado Moderno
 
 Esto incluye el panel de emojis, historial del portapapeles, dictado /
-escritura por voz, sugerencias de entrada por hardware, acciones sugeridas
-(preview) y los editores modernos de métodos de entrada para ciertos idiomas
-en Windows 10 y 11. Al visualizar emojis, para una mejor experiencia, activa
-la opción del consorcio Unicode desde las opciones de voz de NVDA y
-configura el nivel de símbolos en "alguno" o más alto. Al pegar desde el
-portapapeles en Windows 10, pulsa la barra espaciadora en vez de intro para
-pegar el elemento seleccionado.
+escritura por voz, sugerencias de entrada por hardware, acciones sugeridas y
+los editores modernos de métodos de entrada para ciertos idiomas en Windows
+10 y 11. Al visualizar emojis, para una mejor experiencia, activa la opción
+del consorcio Unicode desde las opciones de voz de NVDA y configura el nivel
+de símbolos en "alguno" o más alto. Al pegar desde el portapapeles en
+Windows 10, pulsa la barra espaciadora en vez de intro para pegar el
+elemento seleccionado.
 
 * En el panel de emojis de Windows 10, cuando se seleccione un grupo de
   emojis (incluyendo kaomoji y el grupo de símbolos), NVDA ya no moverá el
@@ -107,9 +106,9 @@ pegar el elemento seleccionado.
 * En el historial del portapapeles de Windows 11, se desactivará el modo
   exploración por defecto, diseñado para permitir que NVDA anuncie los
   elementos de menú con las entradas del historial del portapapeles.
-* En la compilación Insider Preview 25115 y posterior (traído a Windows 11
-  beta 22622), NVDA anunciará las acciones sugeridas cuando se copien al
-  portapapeles datos compatibles, como números de teléfono.
+* En Windows 11 22H2 Moment 1 y posterior, NVDA anunciará las acciones
+  sugeridas cuando se copien al portapapeles datos compatibles, como números
+  de teléfono.
 
 ## Gente
 
