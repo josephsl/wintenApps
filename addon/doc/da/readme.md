@@ -19,8 +19,8 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Cortana
 * Kort
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/Suggested Actions (preview)/modern input
-  method editors)
+  suggestions/clipboard history/Suggested Actions/modern input method
+  editors)
 * Personer
 * Indstillinger (systemindstillinger, Windows+I)
 * Voice access (Windows 11 22H2)
@@ -41,11 +41,10 @@ Bemærkninger:
   understøttet.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
-* For funktioner, der ikke er anført nedenfor, kan du antage, at funktioner
-  er en del af NVDA, ikke længere kan anvendes, da tilføjelsesprogrammet
-  ikke understøtter udgåede Windows-udgivelser såsom gamle Windows
-  10-versioner, eller der blev foretaget ændringer i Windows og apps, der
-  gør at disse ikke længere er aktuelle.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support unsupported
+  Windows releases such as old Windows 10 versions, or changes were made to
+  Windows, apps, and NVDA that makes entries no longer applicable.
 * Nogle apps understøtter kompakt overlejring (for eksempel Bevar Øverst i
   lommeregner), og denne tilstand fungerer ikke korrekt med flytbare kopier
   af NVDA.
@@ -63,9 +62,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   events and properties are recognized: drag start/cancel/complete
   (recognized as state change event), drag drop effect, drag item is
   grabbed, drop target effect.
-* Når åbning, lukning, ændring af rækkefølge (Windows 11) eller Skift mellem
-  virtuelle skrivebord forekommer, vil NVDA annoncere det aktuelle navn for
-  det virtuelle skrivebord (f.eks. "Skrivebord 2").
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce active virtual desktop name (desktop 2, for example).
 * When dragging and dropping items such as arranging pinned entries (tiles
   in Windows 10) in Start menu or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
@@ -90,10 +88,10 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 ## Moderne tastatur
 
 This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, suggested actions (preview), and modern input
-method editors for certain languages across Windows 10 and 11. When viewing
-emojis, for best experience, enable Unicode Consortium setting from NVDA's
-speech settings and set symbol level to "some" or higher. When pasting from
+hardware input suggestions, suggested actions, and modern input method
+editors for certain languages across Windows 10 and 11. When viewing emojis,
+for best experience, enable Unicode Consortium setting from NVDA's speech
+settings and set symbol level to "some" or higher. When pasting from
 clipboard history in Windows 10, press Space key instead of Enter key to
 paste the selected item.
 
@@ -103,9 +101,9 @@ paste the selected item.
 * I Windows 11 udklipsholderhistorik er gennemsynstilstand slået fra som
   standard, således NVDA kan annoncere menupunkter i
   udklipsholderhistorikken.
-* In Insider Preview build 25115 and later (backported to Windows 11 beta
-  build 22622), NVDA will announce suggested actions when compatible data
-  such as phone numbers is copied to the clipboard.
+* In Windows 11 22H2 Moment 1 and later, NVDA will announce suggested
+  actions when compatible data such as phone numbers is copied to the
+  clipboard.
 
 ## Personer
 

@@ -20,9 +20,9 @@ dołączone, zobacz każdą sekcję aplikacji):
 
 * Cortana
 * Mapy
-* Nowoczesna klawiatura (panel emoji/dyktowanie/pisanie głosowe/sugestie
-  wprowadzania sprzętowego/historia schowka/Sugerowane działania
-  (podgląd)/nowoczesne edytory metod wprowadzania)
+* Modern keyboard (emoji panel/dictation/voice typing/hardware input
+  suggestions/clipboard history/Suggested Actions/modern input method
+  editors)
 * Osoby
 * Ustawienia (ustawienia systemowe, Windows+I)
 * Voice access (Windows 11 22H2)
@@ -41,11 +41,10 @@ Notatki:
 * Nie wszystkie funkcje kompilacji systemu Windows Insider Preview będą
   obsługiwane.
 * Niektóre funkcje dodatkowe są lub będą częścią czytnika ekranu NVDA.
-* W przypadku wpisów niewymienionych poniżej można założyć, że funkcje są
-  częścią NVDA, nie mają już zastosowania, ponieważ dodatek nie obsługuje
-  przestarzałe wersji systemu Windows, takich jak stare wersje systemu
-  Windows 10, lub wprowadzono zmiany w systemie Windows i aplikacjach, które
-  sprawiają, że wpisy nie mają już zastosowania.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support unsupported
+  Windows releases such as old Windows 10 versions, or changes were made to
+  Windows, apps, and NVDA that makes entries no longer applicable.
 * Niektóre aplikacje obsługują tryb kompaktowej nakładki (na przykład zawsze
   na górze w kalkulatorze), a ten tryb nie będzie działał poprawnie z
   przenośną wersją NVDA.
@@ -63,9 +62,8 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
   events and properties are recognized: drag start/cancel/complete
   (recognized as state change event), drag drop effect, drag item is
   grabbed, drop target effect.
-* Podczas otwierania, zamykania, zmiany kolejności (Windows 11) lub
-  przełączania się między pulpitami wirtualnymi NVDA ogłosi nazwę aktywnego
-  pulpitu wirtualnego (na przykład pulpit 2).
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce active virtual desktop name (desktop 2, for example).
 * When dragging and dropping items such as arranging pinned entries (tiles
   in Windows 10) in Start menu or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
@@ -89,14 +87,13 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 
 ## Klawiatura nowoczesna
 
-Obejmuje to panel emoji, historię schowka, dyktowanie / pisanie głosowe,
-sugestie wprowadzania sprzętu, sugerowane działania (podgląd) i nowoczesne
-edytory metod wprowadzania dla niektórych języków w systemach Windows 10 i
-11. Podczas przeglądania emotikonów, aby uzyskać najlepsze wrażenia, włącz
-ustawienie Unicode Consortium w ustawieniach mowy NVDA i ustaw poziom
-symbolu na "niektóre" lub wyższe. Podczas wklejania z historii schowka w
-systemie Windows 10 naciśnij spacji zamiast wchodzić, aby wkleić wybrany
-element.
+This includes emoji panel, clipboard history, dictation/voice typing,
+hardware input suggestions, suggested actions, and modern input method
+editors for certain languages across Windows 10 and 11. When viewing emojis,
+for best experience, enable Unicode Consortium setting from NVDA's speech
+settings and set symbol level to "some" or higher. When pasting from
+clipboard history in Windows 10, press Space key instead of Enter key to
+paste the selected item.
 
 * In Windows 10 emoji panel, when an emoji group (including kaomoji and
   symbols group) is selected, NVDA will no longer move navigator object to
@@ -104,9 +101,9 @@ element.
 * W historii schowka systemu Windows 11 tryb przeglądania zostanie domyślnie
   wyłączony, zaprojektowany tak, aby NVDA ogłaszała elementy menu
   wprowadzania historii schowka.
-* In Insider Preview build 25115 and later (backported to Windows 11 beta
-  build 22622), NVDA will announce suggested actions when compatible data
-  such as phone numbers is copied to the clipboard.
+* In Windows 11 22H2 Moment 1 and later, NVDA will announce suggested
+  actions when compatible data such as phone numbers is copied to the
+  clipboard.
 
 ## Osoby
 

@@ -20,8 +20,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Cortana
 * Kartat
 * Moderni näppäimistö (emojipaneeli/sanelu/puhekirjoitus/fyysisen
-  näppäimistösyötteen ehdotukset/leikepöydän historia/ehdotetut toiminnot
-  (esiversio)/modernin syöttömenetelmän muokkaimet)
+  näppäimistösyötteen ehdotukset/leikepöydän historia/ehdotetut
+  toiminnot/modernin syöttömenetelmän muokkaimet)
 * Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Puhekäyttö (Windows 11 22H2)
@@ -42,8 +42,8 @@ Huomautuksia:
 * Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
   sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue tuen
   piiristä poistuneita Windowseja, kuten vanhoja 10:n versioita, tai eivät
-  ole enää käyttökelpoisia Windowsiin ja sovelluksiin tehtyjen muutosten
-  vuoksi.
+  ole enää käyttökelpoisia Windowsiin, sovelluksiin ja NVDA:han tehtyjen
+  muutosten vuoksi.
 * Jotkin sovellukset tukevat kompaktia peitetilaa (esim. Laskimessa Aina
   päällimmäisenä), joka ei toimi oikein NVDA:n massamuistiversion kanssa.
 * Saat parhaan kokemuksen verkkotekniikoita ja -sisältöä hyödyntävistä
@@ -56,13 +56,13 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag start/cancel/complete
-  (recognized as state change event), drag drop effect, drag item is
-  grabbed, drop target effect.
+* NVDA:n tarjoamien UIA-tapahtumakäsittelijöiden lisäksi tunnistetaan
+  seuraavat UIA-tapahtumat ja -ominaisuudet: vetäminen
+  aloitettu/peruutettu/suoritettu (tunnistetaan tilanmuutostapahtumaksi),
+  vetämisen ja pudottamisen vaikutus, vedettävä kohde on valittu, pudotuksen
+  kohteen vaikutus.
 * NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
-  avattaessa, suljettaessa, uudelleenjärjestettäessä (Windows 11) tai
-  siirryttäessä niiden välillä.
+  avattaessa, suljettaessa tai siirryttäessä virtuaalityöpöytien välillä.
 * Kun kohteita vedetään ja pudotetaan, esim. järjesteltäessä kiinnitettyjä
   kohteita (ruutuja Windows 10:ssä) Käynnistä-valikossa tai
   Toimintokeskuksen pikatoimintoja Alt+Vaihto+nuolinäppäimillä, NVDA sanoo
@@ -89,27 +89,25 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 Näitä ovat emojipaneeli, leikepöydän historia, sanelu/puhekirjoitus,
 ehdotukset syötettäessä tekstiä fyysisellä näppäimistöllä, ehdotetut
-toiminnot (esiversio) sekä modernin syöttömenetelmän editorit tietyille
-kielille. Ota käyttöön emojeita tarkasteltaessa Unicode-konsortion datan
-asetus NVDA:n puheasetuksista parhaan kokemuksen saamiseksi, ja aseta
+toiminnot sekä modernin syöttömenetelmän editorit tietyille kielille Windows
+10:ssä ja 11:ssä. Ota käyttöön emojeita tarkasteltaessa Unicode-konsortion
+datan asetus NVDA:n puheasetuksista parhaan kokemuksen saamiseksi, ja aseta
 symbolitasoksi "jotain" tai korkeampi. Kun liität leikepöydän historiasta,
-liitä valittu kohde painamalla välilyöntinäppäintä Enterin sijaan. NVDA
-tukee lisäksi päivitettyä syöttökokemuksen paneelia Windows 11:ssä.
+liitä valittu kohde painamalla Välilyönti-näppäintä Enterin sijaan.
 
-* In Windows 10 emoji panel, when an emoji group (including kaomoji and
-  symbols group) is selected, NVDA will no longer move navigator object to
-  certain emojis.
+* Kun emojiryhmä (kaomoji ja symboliryhmä mukaan lukien) valitaan Windows
+  10:n emojipaneelissa, NVDA ei enää siirrä navigointiobjektia tiettyihin
+  emojeihin.
 * Selaustila poistetaan käytöstä oletusarvoisesti Windows 11:n leikepöydän
   historiassa, minkä tarkoituksena on mahdollistaa NVDA:lle historian
   valikkokohteiden lukeminen.
-* Insider-esikoontiversiossa 25115 ja sitä uudemmissa (taaksepäin sovitettu
-  Windows 11:n beeta-koontiversioon 22622) NVDA ilmoittaa ehdotetut
+* Windows 11 22H2 Moment 1:ssä ja sitä uudemmissa NVDA ilmoittaa ehdotetut
   toiminnot, kun leikepöydälle kopioidaan yhteensopivaa dataa, kuten
   puhelinnumeroita.
 
 ## Ihmiset
 
-* When searching for contacts, first suggestion will be announced.
+* Ensimmäinen ehdotus puhutaan yhteystietoja etsittäessä.
 
 ## Asetukset
 

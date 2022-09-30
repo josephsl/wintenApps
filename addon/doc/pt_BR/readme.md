@@ -21,8 +21,8 @@ detalhes sobre o que está incluso):
 * Cortana
 * Mapas
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/Suggested Actions (preview)/modern input
-  method editors)
+  suggestions/clipboard history/Suggested Actions/modern input method
+  editors)
 * Pessoas
 * Configurações (configurações do sistema, Windows+I)
 * Voice access (Windows 11 22H2)
@@ -41,11 +41,10 @@ Notas:
   unsupported Windows releases.
 * Not all features from Windows Insider Preview builds will be supported.
 * Alguns recursos do complemento são ou farão parte do leitor de tela NVDA.
-* * Para entradas não listadas abaixo, você pode presumir que os recursos
-  fazem parte do NVDA, não são mais aplicáveis, pois o complemento não
-  oferece suporte a versões não suportadas do Windows, como versões antigas
-  do Windows 10, ou alterações foram feitas no Windows e aplicativos que
-  tornam as entradas não mais aplicáveis.
+* For entries not listed below, you can assume that features are part of
+  NVDA, no longer applicable as the add-on does not support unsupported
+  Windows releases such as old Windows 10 versions, or changes were made to
+  Windows, apps, and NVDA that makes entries no longer applicable.
 * Alguns aplicativos suportam o modo de sobreposição compacta (sempre no
   topo da Calculadora, por exemplo), e este modo não funcionará corretamente
   com a versão portátil do NVDA.
@@ -62,9 +61,8 @@ complemento, consulte o documento [changelogs for add-on releases][3].
   events and properties are recognized: drag start/cancel/complete
   (recognized as state change event), drag drop effect, drag item is
   grabbed, drop target effect.
-* Ao abrir, fechar, reordenar (Windows 11) ou alternar entre áreas de
-  trabalho virtuais, o NVDA anunciará o nome do desktop virtual ativo (área
-  de trabalho 2, por exemplo).
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce active virtual desktop name (desktop 2, for example).
 * When dragging and dropping items such as arranging pinned entries (tiles
   in Windows 10) in Start menu or Action Center quick actions with
   Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
@@ -89,10 +87,10 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 ## Teclado moderno
 
 This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, suggested actions (preview), and modern input
-method editors for certain languages across Windows 10 and 11. When viewing
-emojis, for best experience, enable Unicode Consortium setting from NVDA's
-speech settings and set symbol level to "some" or higher. When pasting from
+hardware input suggestions, suggested actions, and modern input method
+editors for certain languages across Windows 10 and 11. When viewing emojis,
+for best experience, enable Unicode Consortium setting from NVDA's speech
+settings and set symbol level to "some" or higher. When pasting from
 clipboard history in Windows 10, press Space key instead of Enter key to
 paste the selected item.
 
@@ -101,9 +99,9 @@ paste the selected item.
   certain emojis.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
-* In Insider Preview build 25115 and later (backported to Windows 11 beta
-  build 22622), NVDA will announce suggested actions when compatible data
-  such as phone numbers is copied to the clipboard.
+* In Windows 11 22H2 Moment 1 and later, NVDA will announce suggested
+  actions when compatible data such as phone numbers is copied to the
+  clipboard.
 
 ## Pessoas
 
