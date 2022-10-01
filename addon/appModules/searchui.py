@@ -16,16 +16,6 @@ import queueHandler
 # Mypy should be reminded that this app module is powered by built-in SearchUI app module.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
-	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		if isinstance(obj, UIA):
-			# Start menu search result details are not announced due to UI redesign in 2019.
-			# This is applicable across Windows 10 and 11, thus fix it from the base app module.
-			# Resolved in NVDA 2022.2.
-			if obj.role == controlTypes.Role.LISTITEM and isinstance(obj.parent.parent, SuggestionListItem):
-				clsList.insert(0, SuggestionListItem)
-				return
-		super().chooseNVDAObjectOverlayClasses(obj, clsList)
-
 	def event_gainFocus(self, obj, nextHandler):
 		if isinstance(obj, StartMenuSearchField):
 			# Detect search highlights and anounce it.
