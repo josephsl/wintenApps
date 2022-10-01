@@ -9,6 +9,8 @@
 from nvdaBuiltin.appModules.searchui import AppModule, StartMenuSearchField  # NOQA: F401
 import controlTypes
 from NVDAObjects.UIA import UIA, SuggestionListItem
+import ui
+import queueHandler
 
 
 # Mypy should be reminded that this app module is powered by built-in SearchUI app module.
@@ -23,3 +25,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				clsList.insert(0, SuggestionListItem)
 				return
 		super().chooseNVDAObjectOverlayClasses(obj, clsList)
+
+	def event_gainFocus(self, obj, nextHandler):
+		if isinstance(obj, StartMenuSearchField):
+			# Detect search highlights and anounce it.
+			if obj.lastChild.UIAAutomationId == "PlaceholderTextContentPresenter":
+				queueHandler.queueFunction(queueHandler.eventQueue, ui.message, obj.lastChild.name)
+		nextHandler()
