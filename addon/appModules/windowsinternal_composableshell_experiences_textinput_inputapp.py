@@ -142,12 +142,11 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Because keyboard interaction is not possible, just report suggested actions.
 		# In build 25145 and later (or possibly earlier builds), Automation Id is empty.
 		# Automation Id has changed yet again in build 25158 (argh).
-		# Suggested Actions was backported to Windows 11 22H2 Moment 1 (October 2022).
 		suggestedActionsIds = [
-			"Windows.Shell.InputApp.SmartActionsUX"  # Build 25158 and 22622.436 and later
+			"Windows.Shell.InputApp.SmartActionsUX"  # Build 25158 (backported to 22621) and later
 		]
-		# Better to use build 22621 as base build since beta increments it by 1.
-		if firstChild.UIAAutomationId in suggestedActionsIds and winVersion.getWinVer() > WIN11_22H2:
+		# Suggested Actions was backported to Windows 11 22H2 Moment 1 (October 2022).
+		if firstChild.UIAAutomationId in suggestedActionsIds and winVersion.getWinVer() >= WIN11_22H2:
 			import ui
 			suggestedActions = []
 			# Build 25158 changes the UI once again, suggested actions is now a grouping, backported to 22622.
