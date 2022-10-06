@@ -19,7 +19,14 @@ def onInstall():
 	currentWinVer = winVersion.getWinVer()
 	# #78: test the old and new (combined) install error messages, initially set to "False" for compatibility.
 	presentCombinedErrorMessage = False
-	windowsReleasesList = "Windows 10 21H2 (19044), 22H2 (19045), Windows Server 2022 (20348), Windows 11 21H2 (22000), 22H2 (22621), Windows Insider Preview"
+	windowsReleasesList = ", ".join([
+		"Windows 10 21H2 (19044)",
+		"22H2 (19045)",
+		"Windows Server 2022 (20348)",
+		"Windows 11 21H2 (22000)",
+		"22H2 (22621)",
+		"Windows Insider Preview"
+	])
 	unsupportedWindowsReleaseText = _(
 		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 		# Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
