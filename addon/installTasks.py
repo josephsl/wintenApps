@@ -17,6 +17,8 @@ def onInstall():
 	import globalVars
 	# Do not present dialogs if minimal mode is set.
 	currentWinVer = winVersion.getWinVer()
+	# #78: test the old and new (combined) install error messages, initially set to "False" for compatibility.
+	presentCombinedErrorMessage = False
 	windowsReleasesList = "Windows 10 21H2 (19044), 22H2 (19045), Windows Server 2022 (20348), Windows 11 21H2 (22000), 22H2 (22621), Windows Insider Preview"
 	unsupportedWindowsReleaseText = _(
 		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
@@ -34,10 +36,11 @@ def onInstall():
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
-	unsupportedWindowsReleaseText = _(
-		# Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
-		"You are using an older version of Windows. This add-on requires Windows 10 or later."
-	)
+	if not presentCombinedErrorMessage:
+		unsupportedWindowsReleaseText = _(
+			# Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
+			"You are using an older version of Windows. This add-on requires Windows 10 or later."
+		)
 	if currentWinVer < winVersion.WIN10:
 		if not globalVars.appArgs.minimal:
 			gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
@@ -72,14 +75,15 @@ def onInstall():
 		or (windowsReleaseSeries == "Windows 11" and currentWinVer.build >= max(supportedBuilds))  # Insider Preview
 	):
 		return
-	unsupportedWindowsReleaseText = _(
-		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
-		# winRelease can be Windows 10, Windows 11, or other release series name.
-		# windowsReleasesList records supported releases for a given Windows release series.
-		# For example, if 21H2 and 22H2 are supported, the text will list supported releases at the end.
-		"You are using an unsupported {windowsRelease} release. "
-		"Supported releases: {windowsReleasesList}."
-	).format(windowsRelease=windowsReleaseSeries, windowsReleasesList=", ".join(supportedBuilds.values()))
+	if not presentCombinedErrorMessage:
+		unsupportedWindowsReleaseText = _(
+			# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+			# winRelease can be Windows 10, Windows 11, or other release series name.
+			# windowsReleasesList records supported releases for a given Windows release series.
+			# For example, if 21H2 and 22H2 are supported, the text will list supported releases at the end.
+			"You are using an unsupported {windowsRelease} release. "
+			"Supported releases: {windowsReleasesList}."
+		).format(windowsRelease=windowsReleaseSeries, windowsReleasesList=", ".join(supportedBuilds.values()))
 	if not globalVars.appArgs.minimal:
 		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
 	raise RuntimeError(
