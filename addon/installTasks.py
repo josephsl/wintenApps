@@ -62,7 +62,7 @@ def onInstall():
 		return
 	# #78: test the old and new (combined) install error messages, initially set to "False" for compatibility.
 	presentCombinedErrorMessage = False
-	windowsReleasesList = ", ".join([
+	windowsReleasesListText = ", ".join([
 		"Windows 10 21H2 (19044)",
 		"22H2 (19045)",
 		"Windows Server 2022 (20348)",
@@ -79,7 +79,7 @@ def onInstall():
 	).format(
 		releaseName=currentWinVer.releaseName,
 		build=currentWinVer.build,
-		supportedReleasesList=windowsReleasesList
+		supportedReleasesList=windowsReleasesListText
 	)
 	if not presentCombinedErrorMessage:
 		unsupportedWindowsReleaseText = _(
