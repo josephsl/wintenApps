@@ -35,7 +35,7 @@ def onInstall():
 		"Supported releases: {supportedReleasesList}."
 	).format(
 		releaseName=currentWinVer.releaseName,
-		releaseBuild=currentWinVer.build,
+		build=currentWinVer.build,
 		supportedReleasesList=windowsReleasesList
 	)
 	# Windows App Essentials requires Windows 10 or later.
@@ -43,11 +43,6 @@ def onInstall():
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
 	if currentWinVer < winVersion.WIN10:
-		if not presentCombinedErrorMessage:
-			unsupportedWindowsReleaseText = _(
-				# Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
-				"You are using an older version of Windows. This add-on requires Windows 10 or later."
-			)
 		if not globalVars.appArgs.minimal:
 			gui.messageBox(
 				_(
