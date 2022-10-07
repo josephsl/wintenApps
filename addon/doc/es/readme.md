@@ -72,12 +72,13 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   actividades con alt+shift+flechas, NVDA anunciará "arrastrando" o los
   efectos de arrastrar y soltar antes y mientras se arrastran,
   respectivamente. Esto ahora forma parte de NVDA 2022.4.
-* Algunos anuncios, como los de cambio de brillo o volumen en el explorador
-  de archivos y las notificaciones de actualización de aplicaciones de la
-  tienda Microsoft pueden suprimirse desactivando Anunciar notificaciones
-  desde las opciones de presentación de objetos de NVDA.
-* En Windows 11 22H2 y posterior, el estado del interruptor para silenciar
-  el micrófono (Windows+alt+k) se anuncia desde cualquier sitio.
+* Anuncios como los de cambio de brillo, volumen o silencio del micrófono
+  (Windows 11 22H2 y posterior) en el explorador de archivos y las
+  notificaciones de actualización de aplicaciones de la tienda Microsoft
+  pueden suprimirse desactivando Anunciar notificaciones desde las opciones
+  de presentación de objetos de NVDA.
+* En Windows 11, NVDA anunciará las búsquedas destacadas en el menú Inicio
+  cuando se abra.
 
 ## Cortana
 

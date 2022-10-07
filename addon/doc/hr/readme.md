@@ -19,9 +19,9 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 * Cortana
 * Karte
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/Suggested Actions/modern input method
-  editors)
+* Moderna tipkovnica (ploča emojija, diktatiranje, tipkanje glasom,
+  prijedlozi za unos hardverom, povijest međuspremnika, predložene radnje,
+  moderni uređivači za unos)
 * Osobe
 * Postavke (postavke sustava, Windows+I)
 * Pristup glasu (Windows 11 22H2)
@@ -39,10 +39,11 @@ Napomene:
   unsupported Windows releases.
 * Not all features from Windows Insider Preview builds will be supported.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support unsupported
-  Windows releases such as old Windows 10 versions, or changes were made to
-  Windows, apps, and NVDA that makes entries no longer applicable.
+* Za unose koji niže dolje nisu navedeni, može se pretpostaviti da su te
+  funkcije dio NVDA čitača. Više nisu primjenjive jer dodatak ne podržava
+  stara izdanja sustava poput stare Windows 10 verzije ili promjene u
+  Windowsu, aplikacijama i NVDA čitaču zbog čega unosi više nisu
+  primjenjivi.
 * Neke aplikacije podržavaju način kompaktnog preklapanja (na primjer,
   uvijek na vrhu u Kalkulatoru) i ovaj modus neće ispravno raditi s
   prijenosnom verzijom NVDA čitača.
@@ -59,19 +60,21 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   events and properties are recognized: drag start/cancel/complete
   (recognized as state change event), drag drop effect, drag item is
   grabbed, drop target effect.
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce active virtual desktop name (desktop 2, for example).
-* When dragging and dropping items such as arranging pinned entries (tiles
-  in Windows 10) in Start menu or Action Center quick actions with
-  Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
-  effects before and while dragging items, respectively. This is now part of
-  NVDA 2022.4.
-* Najave kao što su promjena glasnoće/svjetline u File Explorereru i
-  obavijesti aktualiziranja programa s Microsoft Store stranica, mogu se
-  potisnuti isključivanjem opcije „Izvijesti o obavijestima” u NVDA
-  postavkama prikaza objekata.
-* U sustavu Windows 11 22H2 i novijem, stanje isključivanja/uključivanja
-  mikrofona (Windows+Alt+K) najavljuje se odasvud.
+* Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
+  površina, NVDA će najaviti ime aktivne virtualne radne površine (na
+  primjer radna površina 2).
+* Prilikom povlačenja i ispuštanja stavki kao što je raspoređivanje
+  prikvačenih unosa (pločice u Windows 10) u izborniku Start ili brze radnje
+  za Action Center s Alt+Šift+tipke sa strelicama, NVDA će najaviti efekte
+  „povlačenja” i/ili povlačenja i ispuštanja prije i tijekom povlačenja
+  stavki. Ovo je sada dio NVDA čitača 2022.4.
+* Najave kao što su promjene glasnoće/svjetline/isključivanje mikrofona
+  (Windows 11 22H2 i novije verzije) u File Explorereru i obavijesti
+  aktualiziranja programa s Microsoft Store stranica, mogu se potisnuti
+  isključivanjem opcije „Izvijesti o obavijestima” u NVDA postavkama prikaza
+  objekata.
+* In Windows 11, NVDA will announce search highlights in Start menu when it
+  opens.
 
 ## Cortana
 
@@ -84,17 +87,17 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 
 ## Moderna tipkovnica
 
-This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, suggested actions, and modern input method
-editors for certain languages across Windows 10 and 11. When viewing emojis,
-for best experience, enable Unicode Consortium setting from NVDA's speech
-settings and set symbol level to "some" or higher. When pasting from
-clipboard history in Windows 10, press Space key instead of Enter key to
-paste the selected item.
+To uključuje ploču s emojijima, povijest međuspremnika,
+diktatiranje/tipkanje govorom, prijedloge unosa hardvera i moderne uređivače
+načina unosa za određene jezike u Windows verzijama 10 i 11. Kad pregledavaš
+emojije, aktiviraj postavku Unicode Consortium u NVDA postavkama govora i
+postavi razinu simbola na „neki” ili višu. Prilikom umetanja iz povijesti
+međuspremnika u sustavu Windows 10, pritisni tipku za razmak umjesto tipke
+Enter za umetanje odabranog elementa.
 
-* In Windows 10 emoji panel, when an emoji group (including kaomoji and
-  symbols group) is selected, NVDA will no longer move navigator object to
-  certain emojis.
+* U ploči emojija sustava Windows 10, kad je jedna grupa emojija odabrana
+  (uključujući kaomoji i grupa simbola), NVDA više neće pomicati
+  navigacijski objekt na određene emojije.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu items.
 * In Windows 11 22H2 Moment 1 and later, NVDA will announce suggested
@@ -103,7 +106,7 @@ paste the selected item.
 
 ## Osobe
 
-* When searching for contacts, first suggestion will be announced.
+* Prilikom pretraživanja kontakata najavit će se prvi prijedlog.
 
 ## Postavke
 

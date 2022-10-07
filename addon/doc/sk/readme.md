@@ -65,12 +65,12 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
   Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
   effects before and while dragging items, respectively. This is now part of
   NVDA 2022.4.
-* Oznamovanie zmeny hlasitosti a jasu v okne pracovnej plochy a iných oknách
-  Explorera a tiež upozornení z obchodu Microsoft store je možné pozastaviť
-  odčiarknutím možnosti Oznamovať notifikácie v nastaveniach > prezentácia
-  objektov.
-* In Windows 11 22H2 and later, microphone mute toggle status
-  (Windows+Alt+K) is announced from everywhere.
+* Announcements such as volume/brightness/microphone mute (Windows 11 22H2
+  and later) changes in File Explorer and app update notifications from
+  Microsoft Store can be suppressed by turning off Report Notifications in
+  NVDA's object presentation settings.
+* In Windows 11, NVDA will announce search highlights in Start menu when it
+  opens.
 
 ## Cortana
 

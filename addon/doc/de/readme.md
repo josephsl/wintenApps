@@ -19,9 +19,9 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 * Cortana
 * Karten
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/Suggested Actions/modern input method
-  editors)
+* Moderne Tastatur
+  (Emoji-Bedienfeld/Diktierfunktion/Sprachsteuerung/Hardware-Eingabevorschläge/Zwischenablage-Historie/Vorgeschlagene
+  Aktionen/Editoren für moderne Eingabemethoden)
 * Kontakte
 * Einstellungen (System-Einstellungen, Windows+I)
 * Sprachzugang (Windows 11 Version 22H2)
@@ -42,10 +42,12 @@ Hinweise:
 * Nicht alle Funktionen von Windows Insider Preview Builds werden
   unterstützt.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support unsupported
-  Windows releases such as old Windows 10 versions, or changes were made to
-  Windows, apps, and NVDA that makes entries no longer applicable.
+* Bei Einträgen, die unten nicht aufgeführt sind, können Sie davon ausgehen,
+  dass die Funktionen Teil von NVDA sind, nicht mehr anwendbar sind, da das
+  Add-on nicht unterstützte Windows-Versionen wie z. B. alte Windows
+  10-Versionen nicht unterstützt, oder dass Änderungen an Windows, Apps und
+  NVDA vorgenommen wurden, die dazu führen, dass die Einträge nicht mehr
+  anwendbar sind.
 * Einige Apps unterstützen den kompakten Overlay-Modus (z. B. im
   Taschenrechner immer ganz oben). Dieser Modus funktioniert mit der
   portablen NVDA-Version nicht ordnungsgemäß.
@@ -65,19 +67,20 @@ Versionen][3].
   starten/abbrechen/abschließen (wird als Zustandsänderungsereignis
   erkannt), Drag-Drop-Effekt, Ziehen eines Elements wird erfasst,
   Drop-Ziel-Effekt.
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce active virtual desktop name (desktop 2, for example).
+* Beim Öffnen, Schließen oder Umschalten zwischen virtuellen Desktops teilt
+  NVDA den Namen des aktiven virtuellen Desktops mit (z. B. Desktop 2).
 * Beim Ziehen und Ablegen von Elementen, z. B. beim Anordnen von
   angehefteten Einträgen (Kacheln in Windows 10) im Startmenü oder bei
   Schnellaktionen im Action Center mit Alt+Umschalt+Pfeiltasten, meldet NVDA
   vor bzw. während des Ziehens von Elementen "Ziehen" und/oder Zieh- und
   Ablegeeffekte. Dies ist nun Teil von NVDA 2022.4.
-* Rückmeldungen wie z. B. Lautstärke-/Helligkeitsänderungen im
-  Datei-Explorer und App-Update-Benachrichtigungen aus dem Microsoft Store
-  können unterdrückt werden, indem die Benachrichtigung über Berichte in den
-  Objektpräsentationseinstellungen von NVDA deaktiviert wird.
-* In Windows 11 Version 22H2 und neuer wird der Status der
-  Mikrofon-Stummschaltung (Windows+Alt+K) von überall her mitgeteilt.
+* Mitteilungen wie Lautstärke-/Helligkeits-/Mikrofonstummschaltung (Windows
+  11 Version 22H2 und neuer), Änderungen im Datei-Explorer und
+  App-Update-Benachrichtigungen aus dem Microsoft Store können unterdrückt
+  werden, indem Sie in den NVDA-Einstellungen für die Objekt-Darstellung
+  "Benachrichtigungen mitteilen" deaktivieren.
+* In Windows 11 zeigt NVDA beim Öffnen des Startmenüs die Such-Highlights
+  an.
 
 ## Cortana
 
@@ -92,13 +95,14 @@ Versionen][3].
 
 ## Moderne virtuelle Tastaturen
 
-This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, suggested actions, and modern input method
-editors for certain languages across Windows 10 and 11. When viewing emojis,
-for best experience, enable Unicode Consortium setting from NVDA's speech
-settings and set symbol level to "some" or higher. When pasting from
-clipboard history in Windows 10, press Space key instead of Enter key to
-paste the selected item.
+Dazu gehören das Emoji-Bedienfeld, der Verlauf der Zwischenablage,
+Diktier-/Stimmeingabe, Hardware-Eingabevorschläge, vorgeschlagene Aktionen
+und moderne Eingabemethoden-Editoren für bestimmte Sprachen in Windows 10
+und 11. Aktivieren Sie bei der Anzeige von Emojis die Einstellung
+Unicode-Konsortium in den Spracheinstellungen von NVDA und setzen Sie die
+Symbolebene auf "einige" oder höher. Drücken Sie beim Einfügen aus dem
+Zwischenablageverlauf in Windows 10 die Leertaste anstelle der Eingabetaste,
+um das ausgewählte Element einzufügen.
 
 * Wenn im Emoji-Panel von Windows 10 eine Emoji-Gruppe (einschließlich der
   Kaomoji- und Symbolgruppe) ausgewählt wird, verschiebt NVDA das
@@ -106,9 +110,9 @@ paste the selected item.
 * In der Zwischenablage von Windows 11 ist der Lesemodus standardmäßig
   ausgeschaltet, damit NVDA Menüeinträge für die Zwischenablage mitteilen
   kann.
-* In Windows 11 22H2 Moment 1 and later, NVDA will announce suggested
-  actions when compatible data such as phone numbers is copied to the
-  clipboard.
+* In Windows 11 Version 22H2 Moment 1 und neuer sagt NVDA vorgeschlagene
+  Aktionen an, wenn kompatible Daten wie Telefonnummern in die
+  Zwischenablage kopiert werden.
 
 ## Kontakte
 

@@ -69,12 +69,13 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   "vedetään" ja/tai vetämisen ja pudottamisen  vaikutukset ennen kohteiden
   vetämistä ja sen aikana. Tämän ilmoituksen puhuminen sisältyy NVDA
   2022.4:ään.
-* Ilmoitukset, kuten äänenvoimakkuuden/kirkkauden muutokset
-  resurssienhallinnassa sekä sovellusten päivitysilmoitukset Microsoft
-  Storesta voidaan estää poistamalla käytöstä Lue ilmoitukset -asetus NVDA:n
-  objektien lukemisen asetuksista.
-* Mikrofonin mykistyksen (Win+Alt+K) tila ilmoitetaan nyt kaikkialta Windows
-  11:n versiossa 22H2 ja sitä uudemmissa.
+* Ilmoitukset, kuten äänenvoimakkuuden/kirkkauden/mikrofonin mykistyksen
+  (Windows 11 22H2 ja sitä uudemmat) muutokset resurssienhallinnassa sekä
+  sovellusten päivitysilmoitukset Microsoft Storesta voidaan estää
+  poistamalla käytöstä Lue ilmoitukset -asetus NVDA:n objektien lukemisen
+  asetuksista.
+* NVDA ilmoittaa Windows 11:ssä haun kohokohdat Käynnistä-valikossa sen
+  avautuessa.
 
 ## Cortana
 

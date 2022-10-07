@@ -52,11 +52,12 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   announce active virtual desktop name (desktop 2, for example).
 * 시작 메뉴에 고정된 타일(윈도우 10) 또는 액션 센터네 빠른 액션을 Alt+Shift+반향키로 조절시 "드래그중" 또는 드래그
   변화를 NVDA가 출력하도록 함(NVDA 2022.4에 본 기능이 추가됨).
-* Announcements such as volume/brightness changes in File Explorer and app
-  update notifications from Microsoft Store can be suppressed by turning off
-  Report Notifications in NVDA's object presentation settings.
-* In Windows 11 22H2 and later, microphone mute toggle status
-  (Windows+Alt+K) is announced from everywhere.
+* Announcements such as volume/brightness/microphone mute (Windows 11 22H2
+  and later) changes in File Explorer and app update notifications from
+  Microsoft Store can be suppressed by turning off Report Notifications in
+  NVDA's object presentation settings.
+* In Windows 11, NVDA will announce search highlights in Start menu when it
+  opens.
 
 ## Cortana
 
