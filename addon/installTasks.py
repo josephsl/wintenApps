@@ -49,7 +49,12 @@ def onInstall():
 				"You are using an older version of Windows. This add-on requires Windows 10 or later."
 			)
 		if not globalVars.appArgs.minimal:
-			gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
+			gui.messageBox(
+				_(
+					# Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
+					"You are using an older version of Windows. This add-on requires Windows 10 or later."
+				), unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR
+			)
 		raise RuntimeError("Attempting to install Windows App Essentials on Windows releases earlier than 10")
 	# Windows App Essentials does not support unsupported feature updates.
 	# Until Windows 10 21H1 (19043), checking build range was acceptable because there was one to one mapping
