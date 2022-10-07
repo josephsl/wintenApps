@@ -31,8 +31,7 @@ def onInstall():
 		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 		# Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
 		# Supported releases list shows releases supported by the add-on.
-		"You are using an unsupported Windows release.\n"
-		"Current release: {releaseName} ({releaseBuild})\n"
+		"You are using {releaseName} ({releaseBuild}), a Windows release not supported by Windows App Essentials add-on.\n"
 		"Supported releases: {supportedReleasesList}."
 	).format(
 		releaseName=currentWinVer.releaseName,
