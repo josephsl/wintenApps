@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-09-10 09:22-0700\n"
+"PO-Revision-Date: 2022-10-07 15:24+0200\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -16,7 +16,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 1.6.11\n"
+
+#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+#. Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
+#. Supported releases list shows releases supported by the add-on.
+#, python-brace-format
+msgid ""
+"You are using {releaseName} ({build}), a Windows release not supported by "
+"Windows App Essentials add-on.\n"
+"Supported releases: {supportedReleasesList}."
+msgstr ""
+"Käytät Windowsin versiota {releaseName} ({build}), jota Windows App "
+"Essentials -lisäosa ei tue.\n"
+"Tuetut versiot: {supportedReleasesList}."
 
 #. Windows App Essentials requires Windows 10 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
