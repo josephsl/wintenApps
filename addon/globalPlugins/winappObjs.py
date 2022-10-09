@@ -3,8 +3,7 @@
 
 # Adds handlers for various UIA controls found in Windows 10 and later.
 
-# Help Mypy and other static checkers for a time by using annotations from future Python releases.
-from __future__ import annotations
+from typing import Dict
 import globalPluginHandler
 import ui
 from NVDAObjects.UIA import UIA, Dialog
@@ -19,7 +18,7 @@ addonHandler.initTranslation()
 
 
 # Add additional UIA events not included in NVDA Core.
-additionalEvents: dict[int, str] = {
+additionalEvents: Dict[int, str] = {
 	# Specifically to support drag and drop operations.
 	# Resolved in NVDA 2022.4.
 	UIAHandler.UIA_Drag_DragStartEventId: "stateChange",
@@ -29,7 +28,7 @@ additionalEvents: dict[int, str] = {
 
 
 # Add additional property events not included in NVDA Core.
-additionalPropertyEvents: dict[int, str] = {}
+additionalPropertyEvents: Dict[int, str] = {}
 # #69: specifically to support drag drop effect property when Windows 10 Start menu tiles are rearranged.
 # Resolved in NVDA 2022.4.
 if not hasattr(UIA, "event_UIA_dragDropEffect"):
