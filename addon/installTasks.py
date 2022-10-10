@@ -30,7 +30,7 @@ def onInstall():
 				), unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR
 			)
 		raise RuntimeError("Attempting to install Windows App Essentials on Windows releases earlier than 10")
-	# Windows App Essentials does not support unsupported feature updates.
+	# Windows App Essentials does not support unsupported Windows 10/11 feature updates.
 	# Until Windows 10 21H1 (19043), checking build range was acceptable because there was one to one mapping
 	# between feature updates/milestones and builds across clients and servers such as 1809/17763 (RS5).
 	# But 21H2 changed this: Windows 10 (19044), Windows Server 2022 (20348), and Windows 11 (22000)
@@ -38,7 +38,8 @@ def onInstall():
 	# This continues in 22H2 with Windows 10 (19045/vibranium) and Windows 11 (22621/nickel).
 	# Therefore, display supported builds list across Windows releases.
 	# Record supported builds.
-	# Windows Server 2022 reports itself as 21H2, thus add-on support duration is tied to the client (19044).
+	# Windows Server 2022 reports itself as Windows 10 21H2,
+	# thus add-on support duration is tied to the client (19044).
 	supportedBuilds = {
 		# Windows 10
 		19044: "Windows 10 21H2",
