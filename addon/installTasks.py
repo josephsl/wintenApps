@@ -40,20 +40,17 @@ def onInstall():
 	# Record supported builds.
 	# Windows Server 2022 reports itself as 21H2, thus add-on support duration is tied to the client (19044).
 	supportedBuilds = {
-		"Windows 10": {
-			19044: "21H2",
-			19045: "22H2",
-			20348: "Windows Server 2022",
-		},
-		"Windows 11": {
-			22000: "21H2",
-			22621: "22H2",
-		}
+		# Windows 10
+		19044: "Windows 10 21H2",
+		19045: "22H2",
+		20348: "Windows Server 2022",
+		# Windows 11
+		22000: "Windows 11 21H2",
+		22621: "22H2",
 	}
 	windowsReleaseSeries = "Windows 10"
 	if currentWinVer >= winVersion.WIN11:
 		windowsReleaseSeries = "Windows 11"
-	supportedBuilds = supportedBuilds[windowsReleaseSeries]
 	# Optimization: report success (return early) if running a supported release.
 	if (
 		currentWinVer.build in supportedBuilds  # General availability channel
