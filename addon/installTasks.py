@@ -74,7 +74,4 @@ def onInstall():
 	)
 	if not globalVars.appArgs.minimal:
 		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
-	raise RuntimeError(
-		"Attempting to install Windows App Essentials "
-		f"on unsupported {windowsReleaseSeries} release"
-	)
+	raise RuntimeError(f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentBuild})")
