@@ -12,8 +12,8 @@ from NVDAObjects.UIA import UIA
 
 class StartMenuSearchField(StartMenuSearchField):
 
-	def _get_description(self):
-		# Detect search highlights and anounce it.
+	def _get_description(self) -> str:
+		# NVDA Core issue 13841: detect search highlights and anounce it.
 		if self.lastChild.UIAAutomationId == "PlaceholderTextContentPresenter":
 			return self.lastChild.name
 		return super().description
