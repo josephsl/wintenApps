@@ -58,9 +58,7 @@ def onInstall():
 	):
 		return
 	# #78: obtain a list of all supported releases (and builds) from supported builds list.
-	windowsReleasesList = []
-	for build in supportedBuilds:
-		windowsReleasesList.append(f"{supportedBuilds[build]} ({build})")
+	windowsReleasesList = [f"{release} ({build})" for build, release in supportedBuilds.items()]
 	windowsReleasesList.append("Windows Insider Preview")
 	unsupportedWindowsReleaseText = _(
 		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
