@@ -57,14 +57,11 @@ def onInstall():
 		or (windowsReleaseSeries == "Windows 11" and currentWinVer.build >= max(supportedBuilds))  # Insider Preview
 	):
 		return
-	windowsReleasesListText = ", ".join([
-		"Windows 10 21H2 (19044)",
-		"22H2 (19045)",
-		"Windows Server 2022 (20348)",
-		"Windows 11 21H2 (22000)",
-		"22H2 (22621)",
-		"Windows Insider Preview"
-	])
+	# #78: obtain a list of all supported releases (and builds) from supported builds list.
+	windowsReleasesList = []
+	for build in supportedBuilds:
+		windowsReleasesList.append(f"{supportedBuilds[build]} ({build})")
+	windowsReleasesList.append("Windows Insider Preview")
 	unsupportedWindowsReleaseText = _(
 		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 		# Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
@@ -74,7 +71,7 @@ def onInstall():
 	).format(
 		releaseName=currentWinVer.releaseName,
 		build=currentWinVer.build,
-		supportedReleasesList=windowsReleasesListText
+		supportedReleasesList=", ".join(windowsReleasesList)
 	)
 	if not globalVars.appArgs.minimal:
 		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
