@@ -60,8 +60,6 @@ def onInstall():
 		or (windowsReleaseSeries == "Windows 11" and currentWinVer.build >= max(supportedBuilds))  # Insider Preview
 	):
 		return
-	# #78: test the old and new (combined) install error messages, initially set to "False" for compatibility.
-	presentCombinedErrorMessage = True
 	windowsReleasesListText = ", ".join([
 		"Windows 10 21H2 (19044)",
 		"22H2 (19045)",
