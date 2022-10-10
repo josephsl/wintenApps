@@ -69,7 +69,7 @@ def onInstall():
 		"Supported releases: {supportedReleasesList}."
 	).format(
 		releaseName=currentWinVer.releaseName,
-		build=currentWinVer.build,
+		build=currentBuild,
 		supportedReleasesList=", ".join(windowsReleasesList)
 	)
 	if not globalVars.appArgs.minimal:
