@@ -14,6 +14,7 @@ class StartMenuSearchField(StartMenuSearchField):
 
 	def _get_description(self) -> str:
 		# NVDA Core issue 13841: detect search highlights and anounce it.
+		# Resolved in NVDA 2023.1.
 		if self.lastChild.UIAAutomationId == "PlaceholderTextContentPresenter":
 			return self.lastChild.name
 		return super().description
