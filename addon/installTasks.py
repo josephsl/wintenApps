@@ -48,13 +48,10 @@ def onInstall():
 		22000: "Windows 11 21H2",
 		22621: "22H2",
 	}
-	windowsReleaseSeries = "Windows 10"
-	if currentWinVer >= winVersion.WIN11:
-		windowsReleaseSeries = "Windows 11"
 	# Optimization: report success (return early) if running a supported release.
 	if (
 		currentWinVer.build in supportedBuilds  # General availability channel
-		or (windowsReleaseSeries == "Windows 11" and currentWinVer.build >= max(supportedBuilds))  # Insider Preview
+		or currentWinVer.build >= max(supportedBuilds)  # Insider Preview
 	):
 		return
 	# #78: obtain a list of all supported releases (and builds) from supported builds list.
