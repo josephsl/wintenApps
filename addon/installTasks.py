@@ -55,7 +55,7 @@ def onInstall():
 	# Optimization: report success (return early) if running a supported release.
 	if (
 		currentBuild in supportedBuilds  # General availability channel
-		or (windowsReleaseSeries == "Windows 11" and currentBuild >= max(supportedBuilds))  # Insider Preview
+		or currentBuild >= max(supportedBuilds)  # Insider Preview
 	):
 		return
 	# #78: obtain a list of all supported releases (and builds) from supported builds list.
