@@ -74,7 +74,7 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
   Microsoft Store can be suppressed by turning off Report Notifications in
   NVDA's object presentation settings.
 * In Windows 11, NVDA will announce search highlights in Start menu when it
-  opens.
+  opens. This is now part of NVDA 2023.1.
 
 ## Cortana
 

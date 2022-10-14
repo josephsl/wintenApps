@@ -79,8 +79,8 @@ Versionen][3].
   App-Update-Benachrichtigungen aus dem Microsoft Store können unterdrückt
   werden, indem Sie in den NVDA-Einstellungen für die Objekt-Darstellung
   "Benachrichtigungen mitteilen" deaktivieren.
-* In Windows 11 zeigt NVDA beim Öffnen des Startmenüs die Such-Highlights
-  an.
+* In Windows 11, NVDA will announce search highlights in Start menu when it
+  opens. This is now part of NVDA 2023.1.
 
 ## Cortana
 

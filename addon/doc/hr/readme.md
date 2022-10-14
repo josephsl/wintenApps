@@ -74,7 +74,7 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   isključivanjem opcije „Izvijesti o obavijestima” u NVDA postavkama prikaza
   objekata.
 * In Windows 11, NVDA will announce search highlights in Start menu when it
-  opens.
+  opens. This is now part of NVDA 2023.1.
 
 ## Cortana
 

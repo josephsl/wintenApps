@@ -74,8 +74,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   sovellusten päivitysilmoitukset Microsoft Storesta voidaan estää
   poistamalla käytöstä Lue ilmoitukset -asetus NVDA:n objektien lukemisen
   asetuksista.
-* NVDA ilmoittaa Windows 11:ssä haun kohokohdat Käynnistä-valikossa sen
-  avautuessa.
+* In Windows 11, NVDA will announce search highlights in Start menu when it
+  opens. This is now part of NVDA 2023.1.
 
 ## Cortana
 
