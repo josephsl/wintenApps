@@ -78,7 +78,7 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   pueden suprimirse desactivando Anunciar notificaciones desde las opciones
   de presentación de objetos de NVDA.
 * En Windows 11, NVDA anunciará las búsquedas destacadas en el menú Inicio
-  cuando se abra.
+  cuando se abra. Esto ahora forma parte de NVDA 2023.1.
 
 ## Cortana
 
