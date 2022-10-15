@@ -146,7 +146,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			"Windows.Shell.InputApp.SmartActionsUX"  # Build 25158 (backported to 22621) and later
 		]
 		# Suggested Actions was backported to Windows 11 22H2 Moment 1 (October 2022).
-		if firstChild.UIAAutomationId in suggestedActionsIds and winVersion.getWinVer() >= WIN11_22H2:
+		if firstChild.UIAAutomationId in suggestedActionsIds and winVersion.getWinVer() >= winVersion.WIN11_22H2:
 			import ui
 			# Build 25158 changes the UI once again, suggested actions is now a grouping, backported to 22622.
 			suggestedActions = [
