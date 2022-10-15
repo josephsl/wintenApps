@@ -110,7 +110,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			self._nameChangeCache = ""
 
 	# Workarounds for Windows 11 22H2 or later.
-	elif winVersion.getWinVer() >= WIN11_22H2:
+	elif winVersion.getWinVer() >= winVersion.WIN11_22H2:
 		def event_nameChange(self, obj, nextHandler):
 			if isinstance(obj, UIA):
 				if "ApplicableUpdate" in obj.UIAAutomationId:
