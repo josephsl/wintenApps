@@ -106,24 +106,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not config.conf["presentation"]["reportHelpBalloons"]:
 			return
 		nextHandler()
-
-	# Events defined in this add-on.
-
-	def event_UIA_dropTargetEffect(self, obj, nextHandler):
-		# Announce drop target effect such as item placement in Start menu and Action center if present.
-		# Resolved in NVDA 2022.4.
-		if not hasattr(obj, "event_UIA_dropTargetEffect"):
-			dropTargetEffect = obj._getUIACacheablePropertyValue(
-				UIAHandler.UIA_DropTargetDropTargetEffectPropertyId
-			)
-			# Sometimes drop target effect text is empty as it comes from a different object.
-			if not dropTargetEffect:
-				for element in reversed(api.getFocusAncestors()):
-					if isinstance(element, UIA):
-						dropTargetEffect = element._getUIACacheablePropertyValue(
-							UIAHandler.UIA_DropTargetDropTargetEffectPropertyId
-						)
-						if dropTargetEffect:
-							break
-			ui.message(dropTargetEffect)
-		nextHandler()
