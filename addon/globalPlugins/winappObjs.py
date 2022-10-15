@@ -112,14 +112,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		nextHandler()
 
-	def event_stateChange(self, obj, nextHandler):
-		# Specifically designed to detect drag start and UIA "is grabbed" state changes.
-		# Resolved in NVDA 2022.4.
-		import controlTypes
-		if isinstance(obj, UIA) and obj._getUIACacheablePropertyValue(UIAHandler.UIA_DragIsGrabbedPropertyId):
-			obj.states.add(controlTypes.State.DRAGGING)
-		nextHandler()
-
 	# Events defined in this add-on.
 
 	def event_UIA_dragDropEffect(self, obj, nextHandler):
