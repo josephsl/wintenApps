@@ -18,7 +18,6 @@ addonHandler.initTranslation()
 
 
 # Add additional UIA events not included in NVDA Core.
-# Specifically to support drag and drop operations.
 additionalEvents: Dict[int, str] = {}
 
 
