@@ -109,14 +109,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Events defined in this add-on.
 
-	def event_UIA_dragDropEffect(self, obj, nextHandler):
-		# Report drag and drop effect as communicated by UIA.
-		# Resolved in NVDA 2022.4.
-		if not hasattr(obj, "event_UIA_dragDropEffect"):
-			dragDropEffect = obj._getUIACacheablePropertyValue(UIAHandler.UIA_DragDropEffectPropertyId)
-			ui.message(dragDropEffect)
-		nextHandler()
-
 	def event_UIA_dropTargetEffect(self, obj, nextHandler):
 		# Announce drop target effect such as item placement in Start menu and Action center if present.
 		# Resolved in NVDA 2022.4.
