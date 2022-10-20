@@ -38,7 +38,7 @@ def onInstall():
 	# This continues in 22H2 with Windows 10 (19045/vibranium) and Windows 11 (22621/nickel).
 	# Therefore, display supported builds list across Windows releases.
 	# Record supported builds.
-	# Windows Server 2022 reports itself as Windows 10 21H2,
+	# Note that Windows Server 2022 (20348) reports itself as Windows 10 21H2,
 	# thus add-on support duration is tied to the client (19044).
 	supportedBuilds = {
 		"Windows 10": {
