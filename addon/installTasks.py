@@ -15,11 +15,7 @@ def onInstall():
 	import wx
 	import winVersion
 	import globalVars
-	# Do not present dialogs if minimal mode is set.
 	currentWinVer = winVersion.getWinVer()
-	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
 	# Windows App Essentials requires supported Windows 10/11 feature updates.
 	# Support duration is tied to consumer-level support (18 months for Windows 10, 2 years for Windows 11)
 	# and the add-on may end support for a feature update prior to end of consumer support.
@@ -43,6 +39,9 @@ def onInstall():
 		or currentBuild >= max(supportedBuilds)  # Insider Preview
 	):
 		return
+	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
+	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
 	# #78: obtain a list of all supported releases (and builds) from supported builds list.
 	windowsReleasesList = [f"{release} ({build})" for build, release in supportedBuilds.items()]
 	windowsReleasesList.append("Windows Insider Preview")
@@ -57,6 +56,7 @@ def onInstall():
 		build=currentBuild,
 		supportedReleasesList=", ".join(windowsReleasesList)
 	)
+	# Do not present error dialog if minimal mode is set.
 	if not globalVars.appArgs.minimal:
 		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
 	raise RuntimeError(f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentBuild})")
