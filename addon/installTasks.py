@@ -11,10 +11,7 @@ addonHandler.initTranslation()
 
 
 def onInstall():
-	import gui
-	import wx
 	import winVersion
-	import globalVars
 	currentWinVer = winVersion.getWinVer()
 	# Windows App Essentials requires supported Windows 10/11 feature updates.
 	# Support duration is tied to consumer-level support (18 months for Windows 10, 2 years for Windows 11)
@@ -38,6 +35,9 @@ def onInstall():
 		or currentBuild >= max(supportedBuilds)  # Insider Preview
 	):
 		return
+	import gui
+	import wx
+	import globalVars
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
