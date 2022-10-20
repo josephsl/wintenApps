@@ -21,12 +21,9 @@ def onInstall():
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
 	# Windows App Essentials requires supported Windows 10/11 feature updates.
-	# Until Windows 10 21H1 (19043), checking build range was acceptable because there was one to one mapping
-	# between feature updates/milestones and builds across clients and servers such as 1809/17763 (RS5).
-	# But 21H2 changed this: Windows 10 (19044), Windows Server 2022 (20348), and Windows 11 (22000)
-	# As these releases come from vibranium (vb), iron (fe), and cobalt (co) branches, respectively.
-	# This continues in 22H2 with Windows 10 (19045/vibranium) and Windows 11 (22621/nickel).
-	# Therefore, display supported builds list across Windows releases.
+	# Support duration is tied to consumer-level support (18 months for Windows 10, 2 years for Windows 11)
+	# and the add-on may end support for a feature update prior to end of consumer support.
+	# Applicable to Home, Pro, Pro Education, Pro for Workstations (see aka.ms/WindowsTargetVersioninfo).
 	# Record supported builds.
 	# Windows Server 2022 reports itself as Windows 10 21H2,
 	# thus add-on support duration is tied to the client (19044).
