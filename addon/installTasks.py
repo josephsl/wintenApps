@@ -17,7 +17,6 @@ def onInstall():
 	import globalVars
 	# Do not present dialogs if minimal mode is set.
 	currentWinVer = winVersion.getWinVer()
-	# Windows App Essentials requires Windows 10 or later.
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
