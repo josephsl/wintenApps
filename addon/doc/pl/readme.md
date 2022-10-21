@@ -33,21 +33,22 @@ Notatki:
 
 * This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
   or later releases.
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  aka.ms/WindowsTargetVersioninfo for more information and support dates.
 * Chociaż instalacja jest możliwa, ten dodatek nie obsługuje wersji Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
-* If Add-on Updater 22.08 or later is installed and background add-on
-  updates is enabled, Windows App Essentials will not install at all on
-  unsupported Windows releases.
-* Nie wszystkie funkcje kompilacji systemu Windows Insider Preview będą
-  obsługiwane.
+* If Add-on Updater is installed and background add-on updates is enabled,
+  Windows App Essentials will not install at all on unsupported Windows
+  releases.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in dev
+  channel.
 * Niektóre funkcje dodatkowe są lub będą częścią czytnika ekranu NVDA.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support unsupported
-  Windows releases such as old Windows 10 versions, or changes were made to
-  Windows, apps, and NVDA that makes entries no longer applicable.
-* Niektóre aplikacje obsługują tryb kompaktowej nakładki (na przykład zawsze
-  na górze w kalkulatorze), a ten tryb nie będzie działał poprawnie z
-  przenośną wersją NVDA.
+* Some apps support compact overlay mode (always on top in Calculator, for
+  example), and this mode will not work properly with the portable version
+  of NVDA.
 * Aby uzyskać najlepsze wrażenia z aplikacji, które osadzają technologie
   internetowe i zawartość, taką jak menu Start i jego menu kontekstowe,
   włącz ustawienie "Automatyczny tryb ustawiania ostrości dla zmian

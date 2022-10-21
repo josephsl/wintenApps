@@ -32,25 +32,23 @@ Hinweise:
 
 * Diese Erweiterung erfordert Windows 10 Version 21H2 (Build 19044), Windows
   11 Version 21H2 (Build 22000) oder neuere Versionen.
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  aka.ms/WindowsTargetVersioninfo for more information and support dates.
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
-* Wenn der Updater für NVDA-Erweiterungen 22.08 oder neuer installiert ist
-  und Add-on-Updates im Hintergrund aktiviert sind, wird Windows App
-  Essentials auf nicht unterstützten Windows-Versionen überhaupt nicht
-  installiert.
-* Nicht alle Funktionen von Windows Insider Preview Builds werden
-  unterstützt.
+* If Add-on Updater is installed and background add-on updates is enabled,
+  Windows App Essentials will not install at all on unsupported Windows
+  releases.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in dev
+  channel.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
-* Bei Einträgen, die unten nicht aufgeführt sind, können Sie davon ausgehen,
-  dass die Funktionen Teil von NVDA sind, nicht mehr anwendbar sind, da das
-  Add-on nicht unterstützte Windows-Versionen wie z. B. alte Windows
-  10-Versionen nicht unterstützt, oder dass Änderungen an Windows, Apps und
-  NVDA vorgenommen wurden, die dazu führen, dass die Einträge nicht mehr
-  anwendbar sind.
-* Einige Apps unterstützen den kompakten Overlay-Modus (z. B. im
-  Taschenrechner immer ganz oben). Dieser Modus funktioniert mit der
-  portablen NVDA-Version nicht ordnungsgemäß.
+* Some apps support compact overlay mode (always on top in Calculator, for
+  example), and this mode will not work properly with the portable version
+  of NVDA.
 * Für eine optimale Nutzung von Anwendungen, die Webtechnologien und
   -inhalte einbetten, wie z. B. das Startmenü und sein Kontextmenü,
   aktivieren Sie die Einstellung "Automatischer Fokusmodus bei

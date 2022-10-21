@@ -17,31 +17,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#. Windows App Essentials requires Windows 10 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
 msgstr "Versiune nesuportată de Windows"
 
-#. Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
-msgid ""
-"You are using an older version of Windows. This add-on requires Windows 10 "
-"or later."
-msgstr ""
-"Utilizați o versiune veche de Windows. Acest supliment necesită Windows 10 "
-"sau mai nou."
-
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
-#. winRelease can be Windows 10, Windows 11, or other release series name.
-#. windowsReleasesList records supported releases for a given Windows release series.
-#. For example, if 21H2 and 22H2 are supported, the text will list supported releases at the end.
-#, python-brace-format
+#. Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
+#. Supported releases list shows releases supported by the add-on.
+#, fuzzy, python-brace-format
 msgid ""
-"You are using an unsupported {windowsRelease} release. Supported releases: "
-"{windowsReleasesList}."
+"You are using {releaseName} ({build}), a Windows release not supported by "
+"Windows App Essentials add-on.\n"
+"Supported releases: {supportedReleasesList}."
 msgstr ""
-"Utilizați o versiune nesuportată de {windowsRelease}. Versiunile suportate "
-"sunt: {windowsReleasesList}."
+"Utilizați o versiune nesuportată de {windowsRelease}. Acest supliment "
+"necesită {minSupportedUpdate} sau o versiune mai nouă."
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
@@ -60,11 +51,16 @@ msgstr ""
 "Îmbunătățește suportul pentru diverse aplicații și controale din Windows 10, "
 "precum și din versiunile mai noi de Windows"
 
-#, fuzzy
 #~ msgid ""
-#~ "You are using {releaseName} ({build}), a Windows release not supported by "
-#~ "Windows App Essentials add-on.\n"
-#~ "Supported releases: {supportedReleasesList}."
+#~ "You are using an older version of Windows. This add-on requires Windows "
+#~ "10 or later."
 #~ msgstr ""
-#~ "Utilizați o versiune nesuportată de {windowsRelease}. Acest supliment "
-#~ "necesită {minSupportedUpdate} sau o versiune mai nouă."
+#~ "Utilizați o versiune veche de Windows. Acest supliment necesită Windows "
+#~ "10 sau mai nou."
+
+#~ msgid ""
+#~ "You are using an unsupported {windowsRelease} release. Supported "
+#~ "releases: {windowsReleasesList}."
+#~ msgstr ""
+#~ "Utilizați o versiune nesuportată de {windowsRelease}. Versiunile "
+#~ "suportate sunt: {windowsReleasesList}."
