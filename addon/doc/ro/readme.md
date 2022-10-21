@@ -33,21 +33,23 @@ Note:
 
 * This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
   or later releases.
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  aka.ms/WindowsTargetVersioninfo for more information and support dates.
 * Although installation is possible, this add-on does not support Windows
   Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
-* If Add-on Updater 22.08 or later is installed and background add-on
-  updates is enabled, Windows App Essentials will not install at all on
-  unsupported Windows releases.
-* Not all features from Windows Insider Preview builds will be supported.
+* If Add-on Updater is installed and background add-on updates is enabled,
+  Windows App Essentials will not install at all on unsupported Windows
+  releases.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in dev
+  channel.
 * Unele caracteristici ale suplimentului fac sau vor face parte din
   cititorul de ecran NVDA.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support unsupported
-  Windows releases such as old Windows 10 versions, or changes were made to
-  Windows, apps, and NVDA that makes entries no longer applicable.
 * Some apps support compact overlay mode (always on top in Calculator, for
-  example), and this mode will not work properly with portable version of
-  NVDA.
+  example), and this mode will not work properly with the portable version
+  of NVDA.
 * For best experience with apps that embed web technologies and content such
   as Start menu and its context menu, enable "Automatic focus mode for focus
   changes" setting from NVDA's browse mode settings panel.

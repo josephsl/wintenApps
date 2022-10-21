@@ -32,20 +32,22 @@ Huomautuksia:
 
 * Tämä lisäosa edellyttää Windows 10:n versiota 21H2 (koontiversio 19044),
   11:n versiota 21H2 (koontiversio 22000) tai uudempaa.
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  aka.ms/WindowsTargetVersioninfo for more information and support dates.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
-* Windows App Essentials ei asennu ei-tuetuissa Windows-versioissa, jos
-  Lisäosien päivittäjä 22.08 tai uudempi on asennettuna ja lisäosien
-  taustapäivitykset ovat käytössä.
-* Kaikkia Windowsin Insider-esiversioiden ominaisuuksia ei tueta.
+* If Add-on Updater is installed and background add-on updates is enabled,
+  Windows App Essentials will not install at all on unsupported Windows
+  releases.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in dev
+  channel.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
-* Voidaan olettaa, että ominaisuudet, joita ei ole lueteltu alla, joko
-  sisältyvät NVDA:han, eivät ole enää käytössä, koska lisäosa ei tue tuen
-  piiristä poistuneita Windowseja, kuten vanhoja 10:n versioita, tai eivät
-  ole enää käyttökelpoisia Windowsiin, sovelluksiin ja NVDA:han tehtyjen
-  muutosten vuoksi.
-* Jotkin sovellukset tukevat kompaktia peitetilaa (esim. Laskimessa Aina
-  päällimmäisenä), joka ei toimi oikein NVDA:n massamuistiversion kanssa.
+* Some apps support compact overlay mode (always on top in Calculator, for
+  example), and this mode will not work properly with the portable version
+  of NVDA.
 * Saat parhaan kokemuksen verkkotekniikoita ja -sisältöä hyödyntävistä
   sovelluksista, kuten Käynnistä-valikosta ja sen pikavalikosta, ottamalla
   käyttöön "Automaattinen vuorovaikutustila kohdistuksen muuttuessa"

@@ -31,23 +31,24 @@ Bemærkninger:
 
 * This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
   or later releases.
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  aka.ms/WindowsTargetVersioninfo for more information and support dates.
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
-* If Add-on Updater 22.08 or later is installed and background add-on
-  updates is enabled, Windows App Essentials will not install at all on
-  unsupported Windows releases.
-* Ikke alle funktioner fra Windows Insider Preview-builds vil blive
-  understøttet.
+* If Add-on Updater is installed and background add-on updates is enabled,
+  Windows App Essentials will not install at all on unsupported Windows
+  releases.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in dev
+  channel.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support unsupported
-  Windows releases such as old Windows 10 versions, or changes were made to
-  Windows, apps, and NVDA that makes entries no longer applicable.
-* Nogle apps understøtter kompakt overlejring (for eksempel Bevar Øverst i
-  lommeregner), og denne tilstand fungerer ikke korrekt med flytbare kopier
-  af NVDA.
+* Some apps support compact overlay mode (always on top in Calculator, for
+  example), and this mode will not work properly with the portable version
+  of NVDA.
 * For at få den bedste oplevelse med apps, der integrerer webteknologier og
   indhold som f.eks. Start-menuen og dens kontekstmenu, skal du aktivere
   indstillingen "Automatisk fokustilstand ved ændring af fokus" fra NVDAs

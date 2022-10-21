@@ -32,23 +32,24 @@ Notas:
 
 * This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
   or later releases.
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  aka.ms/WindowsTargetVersioninfo for more information and support dates.
 * Aínda que a instalación é posible, este complemento non soporta Windows
   Enterprise LTSC (Long-Term Servicing Channel) nin versións de Windows
   Server.
-* If Add-on Updater 22.08 or later is installed and background add-on
-  updates is enabled, Windows App Essentials will not install at all on
-  unsupported Windows releases.
-* Non se soportarán todas as características de versións Windows Insider
-  Preview.
+* If Add-on Updater is installed and background add-on updates is enabled,
+  Windows App Essentials will not install at all on unsupported Windows
+  releases.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in dev
+  channel.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support unsupported
-  Windows releases such as old Windows 10 versions, or changes were made to
-  Windows, apps, and NVDA that makes entries no longer applicable.
-* Algunhas apps soportan o modo de capa compacto (sempre enriba na
-  Calculadora, por exemplo), e este modo non funcionará correctamente con
-  versións portables de NVDA.
+* Some apps support compact overlay mode (always on top in Calculator, for
+  example), and this mode will not work properly with the portable version
+  of NVDA.
 * Para a mellor experiencia con aplicacións que incrustan tecnoloxías web e
   con contido como o menú inicio e o seu menú de contexto, habilita a opción
   "Modo foco automático para cambios do foco" dende o panel de modo
