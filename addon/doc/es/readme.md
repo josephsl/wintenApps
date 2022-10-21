@@ -33,21 +33,23 @@ Notas:
 
 * Este complemento requiere Windows 10 Versión 21H2 (compilación 19044), 11
   21H2 (compilación 22000) o versiones posteriores.
+* La duración del soporte de las actualizaciones de características está
+  vinculada a la duración del soporte al cliente (ediciones Home, Pro, Pro
+  Education, Pro for Workstations), y el complemento podría finalizar el
+  soporte para una actualización de características antes del fin del
+  soporte al cliente. Consulta aka.ms/WindowsTargetVersioninfo para más
+  información y fechas de soporte.
 * Aunque la instalación es posible, este complemento no soporta Windows
   Enterprise LTSC (canal de servicio a largo plazo) ni las versiones de
   Windows Server.
-* Si está instalado Add-on Updater 22.08 o posterior y están activadas las
-  actualizaciones en segundo plano, Windows App Essentials no se instalará
-  en absoluto en versiones no soportadas de Windows.
+* Si está instalado Add-on Updater y están activadas las actualizaciones en
+  segundo plano, Windows App Essentials no se instalará en absoluto en
+  versiones no soportadas de Windows.
 * No se soportarán todas las funciones de las compilaciones Windows Insider
-  Preview.
+  Preview, más si se introducen en un subconjunto de insiders de Windows en
+  el canal de desarrollo.
 * Algunas de las características del complemento son o serán parte del
   lector de pantalla NVDA.
-* Para las entradas que no se enumeren a continuación, puedes asumir que las
-  características son parte de NVDA, no se aplican porque el complemento ya
-  no da soporte a versiones de Windows no soportadas, como versiones
-  antiguas de Windows 10, o se han hecho cambios a Windows, las aplicaciones
-  y NVDA que permiten que ya no sea necesario aplicarlas.
 * Algunas aplicaciones soportan el modo de superposición compacta (siempre
   visible en la calculadora, por ejemplo), y este modo no funcionará
   adecuadamente con la versión portable de NVDA.

@@ -26,19 +26,22 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 사용시 주의 사항:
 
 * 본 추가 기능은 윈도우 10 21H2(빌드 19044), 11 21H2(빌드 22000) 이상을 지원합니다.
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  aka.ms/WindowsTargetVersioninfo for more information and support dates.
 * 윈도우 Enterprise LTSC(Long-Term Servicing Channel)와 윈도우 서버 버전에 설치할 수 있으나 지원은
   하지 않습니다.
-* If Add-on Updater 22.08 or later is installed and background add-on
-  updates is enabled, Windows App Essentials will not install at all on
-  unsupported Windows releases.
-* 윈도우 참가자 빌드에 탑제된 기능을 모두 지원하지 않습니다.
+* If Add-on Updater is installed and background add-on updates is enabled,
+  Windows App Essentials will not install at all on unsupported Windows
+  releases.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in dev
+  channel.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
-* For entries not listed below, you can assume that features are part of
-  NVDA, no longer applicable as the add-on does not support unsupported
-  Windows releases such as old Windows 10 versions, or changes were made to
-  Windows, apps, and NVDA that makes entries no longer applicable.
-* 여러 앱은 미니(compact overlay) 모드(예: 계산기)를 지원하지만 이 모드는 휴대용 NVDA를 사용시 제대로 사용할 수
-  없습니다.
+* Some apps support compact overlay mode (always on top in Calculator, for
+  example), and this mode will not work properly with the portable version
+  of NVDA.
 * 시작 메뉴 팝업 메뉴와 같이 웹 기술이 적용된 앱 사용시 NVDA 브라우즈 모드에 있는 "포커스 이동 시 자동 포커스 모드 전환"
   기능을 활성화하시기 바랍니다.
 

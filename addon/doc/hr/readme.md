@@ -32,34 +32,37 @@ Napomene:
 
 * Ovaj dodatak zahtijeva Windows 10 21H2 (gradnja 19044), 11 21H2 (gradnja
   22000) ili novija izdanja.
+* Trajanje podrške za aktualiziranje značajki povezano je s trajanjem
+  korisničke podrške (izdanja Home, Pro, Pro Education, Pro for
+  Workstations) i dodatak može prekinuti podršku za aktualiziranje značajki
+  prije završetka korisničke podrške. Pogledaj
+  aka.ms/WindowsTargetVersioninfo za više informacija i datume podrške.
 * Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
-* If Add-on Updater 22.08 or later is installed and background add-on
-  updates is enabled, Windows App Essentials will not install at all on
-  unsupported Windows releases.
-* Not all features from Windows Insider Preview builds will be supported.
+* Ako je dodatak „Ažuriranje dodataka” instaliran i pozadinsko ažuriranje
+  dodataka aktivirano, dodatak „Osnovni moduli za Windows aplikacije” se
+  uopće neće instalirati na nepodržana izdanja sustava Windows.
+* Sve značajke iz Windows Insider Preview gradnji neće biti podržane,
+  pogotovo značajke koje su predstavljene u podskupu „Windows Insiders” u
+  kanalu razvoja.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
-* Za unose koji niže dolje nisu navedeni, može se pretpostaviti da su te
-  funkcije dio NVDA čitača. Više nisu primjenjive jer dodatak ne podržava
-  stara izdanja sustava poput stare Windows 10 verzije ili promjene u
-  Windowsu, aplikacijama i NVDA čitaču zbog čega unosi više nisu
-  primjenjivi.
 * Neke aplikacije podržavaju način kompaktnog preklapanja (na primjer,
   uvijek na vrhu u Kalkulatoru) i ovaj modus neće ispravno raditi s
   prijenosnom verzijom NVDA čitača.
-* For best experience with apps that embed web technologies and content such
-  as Start menu and its context menu, enable "Automatic focus mode for focus
-  changes" setting from NVDA's browse mode settings panel.
+* Za najbolje iskustvo s aplikacijama koje ugrađuju web tehnologije i
+  sadržaj kao što je izbornik Start i njegov kontekstni izbornik, aktiviraj
+  postavku „Automatski modus fokusa za promjene fokusa” u ploči postavki
+  modusa čitanja NVDA čitača.
 
 Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 [dokument s izmjenama izdanja dodatka][3].
 
 ## Opće
 
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag start/cancel/complete
-  (recognized as state change event), drag drop effect, drag item is
-  grabbed, drop target effect.
+* Pored UIA rukovateljima događajima koje nudi NVDA, prepoznaju se sljedeći
+  UIA događaji i svojstva: početak povlačenja/odustani/dovršeno (prepoznati
+  kao događaji promjene stanja), efekt povuci-i-ispusti, povlačenje prvog
+  odabranog elementa, efekt ispuštanja na cilj.
 * Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
   površina, NVDA će najaviti ime aktivne virtualne radne površine (na
   primjer radna površina 2).
@@ -73,8 +76,8 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   aktualiziranja programa s Microsoft Store stranica, mogu se potisnuti
   isključivanjem opcije „Izvijesti o obavijestima” u NVDA postavkama prikaza
   objekata.
-* In Windows 11, NVDA will announce search highlights in Start menu when it
-  opens. This is now part of NVDA 2023.1.
+* U sustavu Windows 11, NVDA će najaviti istaknute stavke pretraživanja u
+  izborniku Start kada se otvori. Ovo je sada dio u NVDA čitača 2023.1.
 
 ## Cortana
 
@@ -98,11 +101,12 @@ Enter za umetanje odabranog elementa.
 * U ploči emojija sustava Windows 10, kad je jedna grupa emojija odabrana
   (uključujući kaomoji i grupa simbola), NVDA više neće pomicati
   navigacijski objekt na određene emojije.
-* In Windows 11 clipboard history, browse mode will be turned off by
-  default, designed to let NVDA announce clipboard history entry menu items.
-* In Windows 11 22H2 Moment 1 and later, NVDA will announce suggested
-  actions when compatible data such as phone numbers is copied to the
-  clipboard.
+* U povijesti međuspremnika sustava Windows 11, način pregledavanja bit će
+  standardno isključen, kako bi NVDA najavio stavke izbornika unosa
+  povijesti međuspremnika.
+* U sustavu Windows 11 22H2 Moment 1 i novijim verzijama, NVDA će najaviti
+  predložene radnje kad se kompatibilni podaci poput telefonskih brojeva
+  kopiraju u međuspremnik.
 
 ## Osobe
 
@@ -114,12 +118,14 @@ Enter za umetanje odabranog elementa.
   postoji (preuzimi i instaliraj poveznicu sada u Windows 10, gumb za
   preuzimanje u Windows 11).
 * U sustavu Windows 11 elementi trake navigacije se ispravno prepoznaju.
-* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
-  updates to Windows Update status as download and install progresses. This
-  may result in speech interruption when navigating Settings app while
-  updates are being downloaded and installed. If using Windows 11 22H2 and
-  later, if selective UIA event registration is on, you must move focus to
-  updates list as soon as they appear so NVDA can announce update progress.
+* U sustavu Windows 10 i 11 22H2 i novijim verzijama, NVDA će prekinuti
+  govor i prijaviti ažuriranja stanja Windows Update kao preuzimanje i
+  napredovanje instaliranja. To može prouzročiti prekid govora prilikom
+  kretanja po aplikaciji „Postavke” dok se ažuriranja preuzimaju i
+  instaliraju. Ako koristiš Windows 11 22H2 i noviju verziju, ako je
+  selektivna registracija UIA događaja uključena, morađ premjestiti fokus na
+  popis ažuriranja čim se pojave kako bi NVDA mogao najaviti napredovanje
+  ažuriranja.
 
 ## Pristup glasu
 
