@@ -66,12 +66,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		# Try adding additional events and properties in the constructor.
 		# If it fails, try again after NVDA is fully initialized.
-		try:
-			log.debug("winapps: adding additional events and properties")
-			self._addAdditionalUIAEvents()
-		except AttributeError:
-			log.debug("winapps: UIA handler not ready, delaying until NVDA is fully initialized")
-			queueHandler.queueFunction(queueHandler.eventQueue, self._addAdditionalUIAEvents, delay=True)
+		# #81: but only do all this if additional events and properties are populated.
+		if len(additionalEvents) and len(additionalPropertyEvents):
+			try:
+				log.debug("winapps: adding additional events and properties")
+				self._addAdditionalUIAEvents()
+			except AttributeError:
+				log.debug("winapps: UIA handler not ready, delaying until NVDA is fully initialized")
+				queueHandler.queueFunction(queueHandler.eventQueue, self._addAdditionalUIAEvents, delay=True)
 
 	# Manually add events after root element is located.
 	def _addAdditionalUIAEvents(self, delay: bool = False) -> None:
