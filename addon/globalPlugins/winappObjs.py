@@ -133,7 +133,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_notification(self, obj, nextHandler, **kwargs):
-		# Do not allow notification to be announced if "report notifications" is off.
+		# Deprecated: do not allow notification to be announced if "report notifications" is off.
 		if not config.conf["presentation"]["reportHelpBalloons"]:
 			return
 		nextHandler()
