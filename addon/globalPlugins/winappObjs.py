@@ -6,7 +6,6 @@
 from typing import Dict
 import globalPluginHandler
 from NVDAObjects.UIA import UIA, Dialog
-import config
 import queueHandler
 import globalVars
 import UIAHandler
