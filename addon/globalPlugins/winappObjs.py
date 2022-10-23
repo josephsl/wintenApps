@@ -110,12 +110,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	# Events defined in NVDA.
 
-	def event_UIA_notification(self, obj, nextHandler, **kwargs):
-		# Deprecated: do not allow notification to be announced if "report notifications" is off.
-		if not config.conf["presentation"]["reportHelpBalloons"]:
-			return
-		nextHandler()
-
 	def event_stateChange(self, obj, nextHandler):
 		# Specifically designed to detect drag start and UIA "is grabbed" state changes.
 		# Resolved in NVDA 2022.4.
