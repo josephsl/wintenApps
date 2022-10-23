@@ -14,7 +14,6 @@ The following app modules or support modules for some apps are included (see eac
 * Cortana
 * Maps
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input suggestions/clipboard history/Suggested Actions/modern input method editors)
-* People
 * Settings (system settings, Windows+I)
 * Voice access (Windows 11 22H2)
 * Weather
@@ -38,7 +37,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * In addition to UIA event handlers provided by NVDA, the following UIA events and properties are recognized: drag start/cancel/complete (recognized as state change event), drag drop effect, drag item is grabbed, drop target effect. These events are now part of NVDA 2022.4.
 * When opening, closing, or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
 * When dragging and dropping items such as arranging pinned entries (tiles in Windows 10) in Start menu or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop effects before and while dragging items, respectively. This is now part of NVDA 2022.4.
-* Announcements such as volume/brightness/microphone mute (Windows 11 22H2 and later) changes in File Explorer and app update notifications from Microsoft Store can be suppressed by turning off Report Notifications in NVDA's object presentation settings.
 * In Windows 11, NVDA will announce search highlights in Start menu when it opens. This is now part of NVDA 2023.1.
 
 ## Cortana
@@ -57,10 +55,6 @@ This includes emoji panel, clipboard history, dictation/voice typing, hardware i
 * In Windows 10 emoji panel, when an emoji group (including kaomoji and symbols group) is selected, NVDA will no longer move navigator object to certain emojis.
 * In Windows 11 clipboard history, browse mode will be turned off by default, designed to let NVDA announce clipboard history entry menu items.
 * In Windows 11 22H2 Moment 1 and later, NVDA will announce suggested actions when compatible data such as phone numbers is copied to the clipboard.
-
-## People
-
-* When searching for contacts, first suggestion will be announced.
 
 ## Settings
 
