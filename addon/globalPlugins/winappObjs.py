@@ -8,7 +8,6 @@ import globalPluginHandler
 import ui
 from NVDAObjects.UIA import UIA, Dialog
 import api
-import config
 import queueHandler
 import globalVars
 import UIAHandler
