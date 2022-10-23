@@ -18,7 +18,7 @@ The following app modules or support modules for some apps are included (see eac
 * Settings (system settings, Windows+I)
 * Voice access (Windows 11 22H2)
 * Weather
-* Miscellaneous modules for controls such as Start Menu tiles
+* Miscellaneous modules for controls and features such as virtual desktops announcements
 
 Notes:
 
