@@ -137,18 +137,14 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		except NotImplementedError:
 			pass
 		self._symbolsGroupSelected = False
-		# Build 25115 uses modern keyboard interface to display Suggested Actions
-		# if data such as phone number is copied to the clipboard.
+		# Windows 11 22H2 Moment 1 (October 2022) and later uses modern keyboard interface to display
+		# Suggested Actions such as Skype calls if data such as phone number is copied to the clipboard.
 		# Because keyboard interaction is not possible, just report suggested actions.
-		# In build 25145 and later (or possibly earlier builds), Automation Id is empty.
-		# Automation Id has changed yet again in build 25158 (argh).
 		suggestedActionsIds = [
 			"Windows.Shell.InputApp.SmartActionsUX"  # Build 25158 (backported to 22621) and later
 		]
-		# Suggested Actions was backported to Windows 11 22H2 Moment 1 (October 2022).
 		if firstChild.UIAAutomationId in suggestedActionsIds and winVersion.getWinVer() >= WIN11_22H2:
 			import ui
-			# Build 25158 changes the UI once again, suggested actions is now a grouping, backported to 22622.
 			suggestedActions = [
 				suggestedAction.name for suggestedAction in firstChild.children if suggestedAction.name
 			]
