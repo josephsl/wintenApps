@@ -21,7 +21,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 설정(시스템 설정 앱, Windows+I)
 * Voice access(윈도우 11 22H2)
 * 날씨
-* 그 외 지원 모듈(시작 메뉴 타일 지원 등)
+* Miscellaneous modules for controls and features such as virtual desktops
+  announcements
 
 사용시 주의 사항:
 

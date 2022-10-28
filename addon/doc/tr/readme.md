@@ -28,7 +28,8 @@ bakın):
 * Ayarlar (sistem ayarları, Windows+I)
 * Voice access (Windows 11 22H2)
 * Hava durumu
-* Başlat Menüsü kutucukları gibi kontroller için çeşitli modüller
+* Miscellaneous modules for controls and features such as virtual desktops
+  announcements
 
 Notlar:
 

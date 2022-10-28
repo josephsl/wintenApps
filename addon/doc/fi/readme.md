@@ -26,7 +26,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Puhekäyttö (Windows 11 22H2)
 * Sää
-* Sekalaisia moduuleita säätimille, esim. Käynnistä-valikon ruuduille.
+* Miscellaneous modules for controls and features such as virtual desktops
+  announcements
 
 Huomautuksia:
 

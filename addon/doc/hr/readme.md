@@ -10,9 +10,8 @@ je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
 Windows 10 i buduća izdanja poput Windows 11. Dijelovi ovog dodatka će se i
 nadalje odnositi na izvorno ime dodatka.
 
-Ovaj NVDA dodatak je zbirka aplikacijskih modula za razne Windows
-aplikacije, kao i poboljšanja i ispravci određenih kontrola u sustavu
-Windows 10 i novijim.
+Ovaj NVDA dodatak je zbirka modula za razne moderne Windows aplikacije, kao
+i poboljšanja i ispravci određenih kontrola u sustavu Windows 10 i novijim.
 
 Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 što je uključeno):
@@ -26,7 +25,8 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 * Postavke (postavke sustava, Windows+I)
 * Pristup glasu (Windows 11 22H2)
 * Vrijeme
-* Dodatni moduli za kontrole kao što su pločice izbornika Start
+* Razni moduli za kontrole i značajke kao što su najave virtualnih radnih
+  površina
 
 Napomene:
 

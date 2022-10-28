@@ -26,7 +26,8 @@ tiết của mỗi ứng dụng để biết them):
 * Settings (system settings, Windows+I)
 * Voice access (Windows 11 22H2)
 * Weather
-* Các module tổng hợp cho các điều khiển như Start Menu tiles
+* Miscellaneous modules for controls and features such as virtual desktops
+  announcements
 
 Lưu ý:
 

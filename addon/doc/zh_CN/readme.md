@@ -19,7 +19,8 @@
 * 设置（Windows + I系统设置）
 * 语音访问（Windows 11 22H2）
 * 天气
-* 开始菜单中的瓷贴控件和其他模块
+* Miscellaneous modules for controls and features such as virtual desktops
+  announcements
 
 注意:
 
