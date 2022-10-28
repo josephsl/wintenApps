@@ -25,7 +25,8 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Indstillinger (systemindstillinger, Windows+I)
 * Voice access (Windows 11 22H2)
 * Vejr
-* Diverse moduler til kontrolelementer som Start Menu-felter.
+* Miscellaneous modules for controls and features such as virtual desktops
+  announcements
 
 Bemærkninger:
 

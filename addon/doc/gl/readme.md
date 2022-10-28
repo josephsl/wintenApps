@@ -26,7 +26,8 @@ se inclúe):
 * Opcións (opcións do sistema, Windows+I)
 * Voice access (Windows 11 22H2)
 * O Tempo
-* Módulos misceláneos para controis como mosaicos do Menú Inicio
+* Miscellaneous modules for controls and features such as virtual desktops
+  announcements
 
 Notas:
 

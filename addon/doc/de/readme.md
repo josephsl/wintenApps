@@ -26,7 +26,8 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 * Einstellungen (System-Einstellungen, Windows+I)
 * Sprachzugang (Windows 11 Version 22H2)
 * Wetter
-* Verschiedene Module für Bedienelemente wie Startmenü-Kacheln
+* Miscellaneous modules for controls and features such as virtual desktops
+  announcements
 
 Hinweise:
 

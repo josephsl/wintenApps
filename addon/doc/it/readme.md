@@ -26,7 +26,8 @@ aggiuntivo, si veda la relativa sezione per ulteriori informazioni:
 * Impostazioni (Impostazioni di Windows, Windows+i)
 * Voice access (Windows 11 22H2)
 * Meteo
-* Miscellaneous modules for controls such as Start Menu tiles
+* Miscellaneous modules for controls and features such as virtual desktops
+  announcements
 
 Note:
 

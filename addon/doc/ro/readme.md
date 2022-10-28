@@ -27,7 +27,8 @@ privire la ceea ce este inclus):
 * Setări (setări de sistem, Windows+I)
 * Voice access (Windows 11 22H2)
 * Meteo
-* Miscellaneous modules for controls such as Start Menu tiles
+* Miscellaneous modules for controls and features such as virtual desktops
+  announcements
 
 Note:
 

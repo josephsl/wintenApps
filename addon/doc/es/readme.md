@@ -27,7 +27,8 @@ qué se incluye):
 * Opciones (opciones de sistema, Windows+I)
 * Acceso por voz (Windows 11 22H2)
 * El Tiempo
-* Módulos varios para controles tales como los mosaicos del Menú Inicio
+* Módulos varios para controles y funciones tales como los anuncios de
+  escritorios virtuales
 
 Notas:
 

@@ -27,7 +27,8 @@ detalhes sobre o que está incluído):
 * Configurações (configurações do sistema, Windows + I)
 * Voice access (Windows 11 22H2)
 * Meteorologia
-* Módulos diversos para controlos, tais como painéis do menu iniciar.
+* Miscellaneous modules for controls and features such as virtual desktops
+  announcements
 
 Notas:
 

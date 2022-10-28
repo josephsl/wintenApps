@@ -10,8 +10,6 @@ import queueHandler
 import globalVars
 import UIAHandler
 from logHandler import log
-import addonHandler
-addonHandler.initTranslation()
 
 
 # Add additional UIA events not included in NVDA Core.

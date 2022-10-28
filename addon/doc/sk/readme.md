@@ -25,7 +25,8 @@ Zahrnuté sú nasledujúce moduly (podrobný popis nájdete nižšie):
 * Nastavenia (systémové nastavenia, Win+I)
 * Voice access (Windows 11 22H2)
 * Počasie
-* Miscellaneous modules for controls such as Start Menu tiles
+* Miscellaneous modules for controls and features such as virtual desktops
+  announcements
 
 Poznámky:
 

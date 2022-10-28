@@ -2,7 +2,7 @@
 # Part of Windows App Essentials collection
 # Copyright 2019-2022 Joseph Lee, released under GPL
 
-# Various workarounds for Cortana Conversations (in build 18922 and later)
+# Various workarounds for Cortana Conversations
 
 import appModuleHandler
 import api
@@ -22,8 +22,6 @@ class AppModule(appModuleHandler.AppModule):
 		# Thus respond to both and see what should be announced.
 		if displayString is None or "Cortana" not in displayString:
 			return
-		# Version 1.1910 (beta) changed UIA tree for responses list.
-		# 1.1911 (beta) and version 2 changed the tree yet again.
 		# Thankfully, Cortana's response is part of a grouping object.
 		# As long as conversation list uses the same UIA Automation Id,
 		# traversal will work across versions (code credit: Abdel)
@@ -45,7 +43,7 @@ class AppModule(appModuleHandler.AppModule):
 			return
 		try:
 			cortanaResponse = responses.children[-1]
-			# Since August 2020, different Automation Id's are used for Cortana responses versus Bing searches.
+			# Different Automation Id's are used for Cortana responses versus Bing searches.
 			if cortanaResponse.UIAAutomationId.startswith("CortanaResponseText"):
 				cortanaResponse = cortanaResponse.firstChild.name
 			elif cortanaResponse.UIAAutomationId.startswith("CardResponse"):

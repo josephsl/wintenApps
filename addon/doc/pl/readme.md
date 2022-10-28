@@ -27,7 +27,8 @@ dołączone, zobacz każdą sekcję aplikacji):
 * Ustawienia (ustawienia systemowe, Windows+I)
 * Voice access (Windows 11 22H2)
 * Pogoda
-* Różne moduły dla kontrolek, takie jak kafelki menu Start
+* Miscellaneous modules for controls and features such as virtual desktops
+  announcements
 
 Notatki:
 
