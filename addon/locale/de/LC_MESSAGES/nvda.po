@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-10-07 10:53+0200\n"
+"PO-Revision-Date: 2022-10-29 11:33-0700\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -16,15 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
+msgid "Unsupported Windows release"
+msgstr "Nicht unterstützte Windows-Version"
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 #. Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
 #. Supported releases list shows releases supported by the add-on.
 #, python-brace-format
-#| msgid ""
-#| "You are using an unsupported {windowsRelease} release. Supported "
-#| "releases: {windowsReleasesList}."
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
 "Windows App Essentials add-on.\n"
@@ -33,32 +35,6 @@ msgstr ""
 "Sie verwenden {releaseName} ({build}), eine Windows-Version, die vom Windows "
 "App Essentials nicht unterstützt wird.\n"
 "Unterstützte Versionen: {supportedReleasesList}."
-
-#. Windows App Essentials requires Windows 10 or later.
-#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-msgid "Unsupported Windows release"
-msgstr "Nicht unterstützte Windows-Version"
-
-#. Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
-msgid ""
-"You are using an older version of Windows. This add-on requires Windows 10 "
-"or later."
-msgstr ""
-"Sie verwenden eine ältere Version von Windows. Diese Erweiterung benötigt "
-"Windows 10 oder neuer."
-
-#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
-#. winRelease can be Windows 10, Windows 11, or other release series name.
-#. windowsReleasesList records supported releases for a given Windows release series.
-#. For example, if 21H2 and 22H2 are supported, the text will list supported releases at the end.
-#, python-brace-format
-msgid ""
-"You are using an unsupported {windowsRelease} release. Supported releases: "
-"{windowsReleasesList}."
-msgstr ""
-"Sie verwenden eine nicht unterstützte Version von {windowsRelease}. "
-"Unterstützte Versionen: {windowsReleasesList}."
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.10.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-10-07 13:57+0100\n"
+"PO-Revision-Date: 2022-10-29 11:45-0700\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; "
 "rui.fontes@tiflotecnia.com>\n"
@@ -17,7 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
+msgid "Unsupported Windows release"
+msgstr "Versão do Windows não suportada"
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 #. Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
@@ -31,32 +36,6 @@ msgstr ""
 "Está a utilizar {releaseName} ({build}), uma versão do Windows não suportada "
 "pelo extra Windows App Essentials.\n"
 "Versões suportadas: {supportedReleasesList}."
-
-#. Windows App Essentials requires Windows 10 or later.
-#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-msgid "Unsupported Windows release"
-msgstr "Versão do Windows não suportada"
-
-#. Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
-msgid ""
-"You are using an older version of Windows. This add-on requires Windows 10 "
-"or later."
-msgstr ""
-"Está a utilizar uma versão mais antiga do Windows. Este extra requer o "
-"Windows 10 ou posterior."
-
-#. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
-#. winRelease can be Windows 10, Windows 11, or other release series name.
-#. windowsReleasesList records supported releases for a given Windows release series.
-#. For example, if 21H2 and 22H2 are supported, the text will list supported releases at the end.
-#, python-brace-format
-msgid ""
-"You are using an unsupported {windowsRelease} release. Supported releases: "
-"{windowsReleasesList}."
-msgstr ""
-"Está a utilizar uma versão não apoiada {windowsRelease}. Lançamentos não "
-"suportados: {windowsReleasesList}."
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."

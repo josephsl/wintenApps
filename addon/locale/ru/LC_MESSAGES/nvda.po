@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-10-06 22:50-0700\n"
+"PO-Revision-Date: 2022-10-29 12:08-0700\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: Translators <LL@li.org>\n"
 "Language: ru\n"
@@ -17,28 +17,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#. Windows App Essentials requires Windows 10 or later.
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
 msgstr "Неподдерживаемая версия Windows"
 
-#. Translators: Dialog text shown when trying to install the add-on on releases earlier than Windows 10.
-msgid ""
-"You are using an older version of Windows. This add-on requires Windows 10 "
-"or later."
-msgstr ""
-"Вы используете более старую версию Windows. Для этого дополнения требуется "
-"Windows 10 или более поздняя версия."
-
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
-#. winRelease can be Windows 10, Windows 11, or other release series name.
-#. windowsReleasesList records supported releases for a given Windows release series.
-#. For example, if 21H2 and 22H2 are supported, the text will list supported releases at the end.
+#. Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
+#. Supported releases list shows releases supported by the add-on.
 #, fuzzy, python-brace-format
 msgid ""
-"You are using an unsupported {windowsRelease} release. Supported releases: "
-"{windowsReleasesList}."
+"You are using {releaseName} ({build}), a Windows release not supported by "
+"Windows App Essentials add-on.\n"
+"Supported releases: {supportedReleasesList}."
 msgstr ""
 "Используется неподдерживаемая версия {windowsRelease}. Для этого дополнения "
 "требуется {minSupportedUpdate} или более поздняя версия."
@@ -57,12 +48,3 @@ msgstr "Windows App Essentials"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Improving support for various apps and controls on Windows 10 and later"
 msgstr "Улучшает поддержкуразных приложений и контролей Windows"
-
-#, fuzzy
-#~ msgid ""
-#~ "You are using {releaseName} ({build}), a Windows release not supported by "
-#~ "Windows App Essentials add-on.\n"
-#~ "Supported releases: {supportedReleasesList}."
-#~ msgstr ""
-#~ "Используется неподдерживаемая версия {windowsRelease}. Для этого "
-#~ "дополнения требуется {minSupportedUpdate} или более поздняя версия."

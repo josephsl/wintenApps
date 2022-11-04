@@ -26,29 +26,29 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Puhekäyttö (Windows 11 22H2)
 * Sää
-* Miscellaneous modules for controls and features such as virtual desktops
-  announcements
+* Sekalaisia moduuleita säätimille ja ominaisuuksille, kuten
+  virtuaalityöpöytien ilmoitukset.
 
 Huomautuksia:
 
 * Tämä lisäosa edellyttää Windows 10:n versiota 21H2 (koontiversio 19044),
   11:n versiota 21H2 (koontiversio 22000) tai uudempaa.
-* Feature update support duration is tied to consumer support duration
-  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
-  may end support for a feature update prior to end of consumer support. See
-  aka.ms/WindowsTargetVersioninfo for more information and support dates.
+* Ominaisuuspäivityksen tuen kesto on sidottu kuluttajatuen kestoon (Home,
+  Pro, Pro Education, Pro for Workstations -versiot), ja lisäosa saattaa
+  lopettaa tuen ominaisuuspäivitykselle jo ennen kuluttajatuen
+  päättymistä. Katso lisätietoja ja tukipäivämäärät osoitteesta
+  aka.ms/WindowsTargetVersioninfo.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
-* If Add-on Updater is installed and background add-on updates is enabled,
-  Windows App Essentials will not install at all on unsupported Windows
-  releases.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel.
+* Windows App Essentials ei asennu ei-tuetuissa Windows-versioissa, jos
+  Lisäosien päivittäjä on asennettuna ja lisäosien taustapäivitykset ovat
+  käytössä.
+* Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
+  varsinkaan sellaisia, jotka esitellään vain osalle dev-kanavalla olevista
+  käyttäjistä.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
-* Some apps support compact overlay mode (always on top in Calculator, for
-  example), and this mode will not work properly with the portable version
-  of NVDA.
+* Jotkin sovellukset tukevat kompaktia peitetilaa (esim. Laskimen Aina
+  päällimmäisenä), joka ei toimi oikein NVDA:n massamuistiversion kanssa.
 * Saat parhaan kokemuksen verkkotekniikoita ja -sisältöä hyödyntävistä
   sovelluksista, kuten Käynnistä-valikosta ja sen pikavalikosta, ottamalla
   käyttöön "Automaattinen vuorovaikutustila kohdistuksen muuttuessa"
@@ -77,8 +77,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   sovellusten päivitysilmoitukset Microsoft Storesta voidaan estää
   poistamalla käytöstä Lue ilmoitukset -asetus NVDA:n objektien lukemisen
   asetuksista.
-* In Windows 11, NVDA will announce search highlights in Start menu when it
-  opens. This is now part of NVDA 2023.1.
+* NVDA ilmoittaa Windows 11:ssä haun kohokohdat Käynnistä-valikossa sen
+  avautuessa. Tämä sisältyy NVDA 2023.1:een.
 
 ## Cortana
 
