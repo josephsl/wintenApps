@@ -19,8 +19,7 @@
 * 设置（Windows + I系统设置）
 * 语音访问（Windows 11 22H2）
 * 天气
-* Miscellaneous modules for controls and features such as virtual desktops
-  announcements
+* 用于控件和功能的杂项模块，例如读出虚拟桌面名称。
 
 注意:
 

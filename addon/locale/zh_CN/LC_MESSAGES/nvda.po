@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-10-06 22:46-0700\n"
+"PO-Revision-Date: 2022-10-31 11:40+0800\n"
 "Last-Translator: 完美很难 <1872265132@qq.com>\n"
 "Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
 "2010-2019>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 2.4.3\n"
 
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
@@ -27,14 +27,15 @@ msgstr "不受支持的 Windows 版本"
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 #. Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
 #. Supported releases list shows releases supported by the add-on.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
 "Windows App Essentials add-on.\n"
 "Supported releases: {supportedReleasesList}."
 msgstr ""
-"您正在使用不受支持的 {windowsRelease} 版本。支持的版本："
-"{windowsReleasesList}。"
+"您正在使用 {releaseName} ({build})， Windows App Essentials 插件不支持该版"
+"本。\n"
+"支持的版本： {supportedReleasesList}。"
 
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
@@ -50,15 +51,3 @@ msgstr "Windows 应用增强"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Improving support for various apps and controls on Windows 10 and later"
 msgstr "改进对 Windows 10 及更高版本系统的各种应用程序和控件的支持"
-
-#~ msgid ""
-#~ "You are using an older version of Windows. This add-on requires Windows "
-#~ "10 or later."
-#~ msgstr "您正在使用较旧版本的 Windows。此插件需要 Windows 10 或更高版本。"
-
-#~ msgid ""
-#~ "You are using an unsupported {windowsRelease} release. Supported "
-#~ "releases: {windowsReleasesList}."
-#~ msgstr ""
-#~ "您正在使用不受支持的 {windowsRelease} 版本。支持的版本："
-#~ "{windowsReleasesList}。"

@@ -42,13 +42,17 @@ def onInstall():
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
 	# #78: obtain a list of all supported releases (and builds) from supported builds list.
-	windowsReleasesList = [f"{release} ({build})" for build, release in supportedBuilds.items()]
+	windowsReleasesList = [
+		# Translators: an entry in supported Windows releases list (release (build)).
+		_("{release} ({build})").format(release=release, build=build)
+		for build, release in supportedBuilds.items()
+	]
 	windowsReleasesList.append("Windows Insider Preview")
 	unsupportedWindowsReleaseText = _(
 		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 		# Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
 		# Supported releases list shows releases supported by the add-on.
-		"You are using {releaseName} ({build}), a Windows release not supported by Windows App Essentials add-on.\n"
+		"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
 		"Supported releases: {supportedReleasesList}."
 	).format(
 		releaseName=currentWinVer.releaseName,
