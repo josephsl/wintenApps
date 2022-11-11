@@ -47,6 +47,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
+		# Is this a Windows 11 22H2 beta build (2262x)?
+		import winVersion
+		if winVersion.getWinVer().build in (22622, 22623):
+			log.info("W10: Windows 11 22H2 beta detected")
 		# Try adding additional events and properties in the constructor.
 		# If it fails, try again after NVDA is fully initialized.
 		# #81: but only do all this if additional events and properties are populated.
