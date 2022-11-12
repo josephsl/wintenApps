@@ -35,7 +35,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## General
 
-* In addition to UIA event handlers provided by NVDA, the following UIA events and properties are recognized: drag start/cancel/complete (recognized as state change event), drag drop effect, drag item is grabbed, drop target effect.
+* In addition to UIA event handlers provided by NVDA, the following UIA events and properties are recognized: drag start/cancel/complete (recognized as state change event), drag drop effect, drag item is grabbed, drop target effect. These events are now part of NVDA 2022.4.
 * When opening, closing, or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
 * When dragging and dropping items such as arranging pinned entries (tiles in Windows 10) in Start menu or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop effects before and while dragging items, respectively. This is now part of NVDA 2022.4.
 * Announcements such as volume/brightness/microphone mute (Windows 11 22H2 and later) changes in File Explorer and app update notifications from Microsoft Store can be suppressed by turning off Report Notifications in NVDA's object presentation settings.
