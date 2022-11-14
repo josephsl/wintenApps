@@ -35,42 +35,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if winVersion.getWinVer().build in (22622, 22623):
 			log.info("winapps: Windows 11 22H2 beta detected")
 
-	# Manually add events after root element is located.
-	def _addAdditionalUIAEvents(self, delay: bool = False) -> None:
-		# Add a series of events and properties instead of doing it one at a time.
-		# Some events and properties are only available in a specific build range
-		# and/or while a specific version of IUIAutomation interface is in use.
-		if delay:
-			log.debug("winapps: adding additional events and properties after a delay")
-		# Use event handler group facility to add more events.
-		# Internally powered by IUIAutomation6 interface introduced in Windows 10 1809.
-		addonGlobalEventHandlerGroup = UIAHandler.handler.clientObject.CreateEventHandlerGroup()
-		for event, name in additionalEvents.items():
-			if event not in UIAHandler.UIAEventIdsToNVDAEventNames:
-				UIAHandler.UIAEventIdsToNVDAEventNames[event] = name
-				# Global event handler group set must be updated, too.
-				UIAHandler.globalEventHandlerGroupUIAEventIds.add(event)
-				addonGlobalEventHandlerGroup.addAutomationEventHandler(
-					event,
-					UIAHandler.TreeScope_Subtree,
-					UIAHandler.handler.baseCacheRequest,
-					UIAHandler.handler
-				)
-				log.debug(f"winapps: added event ID {event}, assigned to {name}")
-		for event, name in additionalPropertyEvents.items():
-			if event not in UIAHandler.UIAPropertyIdsToNVDAEventNames:
-				UIAHandler.UIAPropertyIdsToNVDAEventNames[event] = name
-				log.debug(f"winapps: added property event ID {event}, assigned to {name}")
-				# Global property event handler group set must be updated, too.
-				UIAHandler.globalEventHandlerGroupUIAPropertyIds.add(event)
-		addonGlobalEventHandlerGroup.AddPropertyChangedEventHandler(
-			UIAHandler.TreeScope_Subtree,
-			UIAHandler.handler.baseCacheRequest,
-			UIAHandler.handler,
-			*UIAHandler.handler.clientObject.IntSafeArrayToNativeArray(additionalPropertyEvents)
-		)
-		UIAHandler.handler.addEventHandlerGroup(UIAHandler.handler.rootElement, addonGlobalEventHandlerGroup)
-
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if not isinstance(obj, UIA):
 			return
