@@ -3,7 +3,6 @@
 
 # Adds handlers for various UIA controls found in Windows 10 and later.
 
-from typing import Dict
 import globalPluginHandler
 from NVDAObjects.UIA import UIA, Dialog
 import globalVars
