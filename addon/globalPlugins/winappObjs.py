@@ -12,14 +12,6 @@ import UIAHandler
 from logHandler import log
 
 
-# Add additional UIA events not included in NVDA Core.
-additionalEvents: Dict[int, str] = {}
-
-
-# Add additional property events not included in NVDA Core.
-additionalPropertyEvents: Dict[int, str] = {}
-
-
 # #20: don't even think about proceeding in secure screens.
 def disableInSecureMode(cls):
 	return globalPluginHandler.GlobalPlugin if globalVars.appArgs.secure else cls
