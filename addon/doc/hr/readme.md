@@ -44,7 +44,7 @@ Napomene:
   uopće neće instalirati na nepodržana izdanja sustava Windows.
 * Sve značajke iz Windows Insider Preview gradnji neće biti podržane,
   pogotovo značajke koje su predstavljene u podskupu „Windows Insiders” u
-  kanalu razvoja.
+  kanalu razvoja. Za beta kanal, podržava se samo najnovija gradnja (22623).
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Neke aplikacije podržavaju način kompaktnog preklapanja (na primjer,
   uvijek na vrhu u Kalkulatoru) i ovaj modus neće ispravno raditi s
@@ -62,7 +62,8 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 * Pored UIA rukovateljima događajima koje nudi NVDA, prepoznaju se sljedeći
   UIA događaji i svojstva: početak povlačenja/odustani/dovršeno (prepoznati
   kao događaji promjene stanja), efekt povuci-i-ispusti, povlačenje prvog
-  odabranog elementa, efekt ispuštanja na cilj.
+  odabranog elementa, efekt ispuštanja na cilj. Ovi događaji su sada dio
+  NVDA verzije 2022.4.
 * Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
   površina, NVDA će najaviti ime aktivne virtualne radne površine (na
   primjer radna površina 2).

@@ -47,7 +47,7 @@ Notes:
   releases.
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders in dev
-  channel.
+  channel. For beta channel, only the latest build (22623) is supported.
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
 * Some apps support compact overlay mode (always on top in Calculator, for
@@ -65,10 +65,10 @@ l'extension][3].
 
 ## Générale
 
-* En plus des gestionnaires d'événements UIA fournis par NVDA, les
-  événements et propriétés UIA suivants sont reconnus : drag
-  start/cancel/complete (reconnu comme événement de changement d'état),
-  effet drag drop, glisser l'élément est saisi, effet drop target.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag start/cancel/complete
+  (recognized as state change event), drag drop effect, drag item is
+  grabbed, drop target effect. These events are now part of NVDA 2022.4.
 * Lors de l'ouverture, de la fermeture ou du basculement entre les bureaux
   virtuels, NVDA annoncera le nom du bureau virtuel actif (bureau 2, par
   exemple).

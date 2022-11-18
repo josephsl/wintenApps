@@ -15,12 +15,17 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
 msgstr "Неподдържано издание на Windows"
+
+#. Translators: an entry in supported Windows releases list (release (build)).
+#, python-brace-format
+msgid "{release} ({build})"
+msgstr "{release} ({build})"
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 #. Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
@@ -28,11 +33,11 @@ msgstr "Неподдържано издание на Windows"
 #, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
-"Windows App Essentials add-on.\n"
+"this add-on.\n"
 "Supported releases: {supportedReleasesList}."
 msgstr ""
-"Използвате {releaseName} ({build}) – неподдържано от добавката \"Базов пакет "
-"за приложения в Windows\" издание на Windows.\n"
+"Използвате {releaseName} ({build}) – неподдържано от тази добавка издание на "
+"Windows.\n"
 "Поддържани издания: {supportedReleasesList}."
 
 #. Translators: Message presented when no more weather data is available for the current item.

@@ -48,7 +48,8 @@ Notas:
   versiones no soportadas de Windows.
 * No se soportarán todas las funciones de las compilaciones Windows Insider
   Preview, más si se introducen en un subconjunto de insiders de Windows en
-  el canal de desarrollo.
+  el canal de desarrollo. En el canal beta, sólo se soporta la última
+  compilación (22623).
 * Algunas de las características del complemento son o serán parte del
   lector de pantalla NVDA.
 * Algunas aplicaciones soportan el modo de superposición compacta (siempre
@@ -67,7 +68,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * Además de los manejadores de eventos UIA proporcionados por NVDA, se
   reconocen los siguientes eventos y propiedades UIA: drag
   start/cancel/complete (reconocido como evento de cambio de estado), drag
-  drop effect, drag item is grabbed, drop target effect.
+  drop effect, drag item is grabbed, drop target effect. Estos eventos ahora
+  forman parte de NVDA 2022.4.
 * Al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
   nombre del escritorio virtual activo (escritorio 2, por ejemplo).
 * Al arrastrar y soltar elementos, como reordenar entradas ancladas (losas
