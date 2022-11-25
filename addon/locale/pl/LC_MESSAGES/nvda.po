@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-10-30 09:44+0100\n"
+"PO-Revision-Date: 2022-11-23 10:27+0100\n"
 "Last-Translator: Zvonimir Stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: pl <LL@li.org>\n"
 "Language: pl\n"
@@ -22,17 +22,22 @@ msgstr ""
 msgid "Unsupported Windows release"
 msgstr "Nieobsługiwana wersja systemu Windows"
 
+#. Translators: an entry in supported Windows releases list (release (build)).
+#, python-brace-format
+msgid "{release} ({build})"
+msgstr "{release} ({build})"
+
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 #. Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
 #. Supported releases list shows releases supported by the add-on.
 #, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
-"Windows App Essentials add-on.\n"
+"this add-on.\n"
 "Supported releases: {supportedReleasesList}."
 msgstr ""
-"Używasz {releaseName} ({build}), wersji systemu Windows nieobsługiwanej "
-"przez dodatek Windows App Essentials.\n"
+"Używasz {releaseName} ({build}), wersji systemu Windows, która nie jest "
+"obsługiwana przez ten dodatek.\n"
 "Obsługiwane wersje: {supportedReleasesList}."
 
 #. Translators: Message presented when no more weather data is available for the current item.
