@@ -38,7 +38,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   releases.
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders in dev
-  channel.
+  channel. For beta channel, only the latest build (22623) is supported.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
 * Some apps support compact overlay mode (always on top in Calculator, for
   example), and this mode will not work properly with the portable version
@@ -50,8 +50,10 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 일반
 
-* NVDA가 지원하는 UIA  이벤트 및 속성 외의 다음 이벤트 추적 가능: drag start/cancel/complete(state
-  change로 인식), drag drop effect, is grabbed, drop target effect.
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag start/cancel/complete
+  (recognized as state change event), drag drop effect, drag item is
+  grabbed, drop target effect. These events are now part of NVDA 2022.4.
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce active virtual desktop name (desktop 2, for example).
 * 시작 메뉴에 고정된 타일(윈도우 10) 또는 액션 센터네 빠른 액션을 Alt+Shift+반향키로 조절시 "드래그중" 또는 드래그

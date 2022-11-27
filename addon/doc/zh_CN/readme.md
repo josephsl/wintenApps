@@ -28,7 +28,9 @@
   aka.ms/WindowsTargetVersioninfo。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
 * 如果安装了插件更新器并启用了后台插件更新， 在不受支持的操作系统上 Windows App Essentials 不会被安装。
-* 并非支持 Windows Insider Preview 版本中的所有功能，对于在开发频道中引入 Windows Insider 的功能也是如此。
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in dev
+  channel. For beta channel, only the latest build (22623) is supported.
 * 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
 * 某些应用程序支持紧凑叠加模式（例如，计算器中的始终置顶模式），该模式无法在 NVDA 的便携版中使用。
 * 为了获得内嵌 Web 试图（例如开始菜单及其上下文菜单）的应用程序的最佳体验，请在 NVDA
@@ -38,8 +40,10 @@
 
 ## 常规增强
 
-* 除了 NVDA 提供的 UIA 事件处理程序之外，还可以识别以下 UIA
-  事件和属性：拖动开始/取消/完成（识别为状态更改事件）、拖放效果、拖动项目被托起、放置目标。
+* In addition to UIA event handlers provided by NVDA, the following UIA
+  events and properties are recognized: drag start/cancel/complete
+  (recognized as state change event), drag drop effect, drag item is
+  grabbed, drop target effect. These events are now part of NVDA 2022.4.
 * 在新建、关闭、或切换虚拟桌面时，NVDA会读出当前桌面名称（例如，桌面2）。
 * 当使用 Alt+Shift+箭头键在“开始”菜单（Windows 10 中的磁贴）或操作中心快速操作中排列固定条目时，NVDA
   会读出已拖动项目的信息或已拖动项目的新位置。该特性已经包含在 NVDA2022.4 中。

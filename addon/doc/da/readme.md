@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2022.2 and later
+* NVDA-kompatibilitet: 2022.2 og nyere
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
 til Windows App Essentials i 2021 for at understøtte Windows 10 og
@@ -18,38 +18,40 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 * Cortana
 * Kort
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/Suggested Actions/modern input method
-  editors)
+* Moderne tastatur (Emoji-panel, diktering, stemmeskrivning, forslag til
+  hardwareinput, udklipshistorik og Editor til inputmetode)
 * Personer
 * Indstillinger (systemindstillinger, Windows+I)
-* Voice access (Windows 11 22H2)
+* Stemmeadgang (Windows 11 22H2)
 * Vejr
-* Miscellaneous modules for controls and features such as virtual desktops
-  announcements
+* Diverse moduler til kontrolelementer og funktioner som annoncering af
+  virtuelle skriveborde.
 
 Bemærkninger:
 
-* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
-  or later releases.
-* Feature update support duration is tied to consumer support duration
-  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
-  may end support for a feature update prior to end of consumer support. See
-  aka.ms/WindowsTargetVersioninfo for more information and support dates.
+* Denne tilføjelse kræver Windows 10 21H2 (build 19044), 11 21H2 (build
+  22000) eller nyere udgivelser.
+* Varigheden af understøttelse af funktionsopdateringer er bundet til
+  varigheden af forbrugersupport (Home, Pro, Pro Education, Pro for
+  Workstations-udgaver), og tilføjelsen kan afslutte understøttelsen af en
+  funktionsopdatering, før forbrugersupporten ophører. Se
+  aka.ms/WindowsTargetVersioninfo for mere information og supportdatoer.
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
-* If Add-on Updater is installed and background add-on updates is enabled,
-  Windows App Essentials will not install at all on unsupported Windows
-  releases.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel.
+* Hvis Opdateringsværktøj til Tilføjelsespakker er installeret, og
+  opdatering af tilføjelser i baggrunden er aktiveret, installeres Vigtige
+  Forbedringer til Windows Apps slet ikke på ikke-understøttede
+  Windows-udgivelser.
+* Ikke alle funktioner fra Windows Insider Preview-builds vil blive
+  understøttet. Dette er yderligere tilfældet for funktioner introduceret i
+  en undergruppe af Windows Insiders i udviklerkanalen. For betakanaler er
+  kun den seneste build (22623) understøttet.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
-* Some apps support compact overlay mode (always on top in Calculator, for
-  example), and this mode will not work properly with the portable version
-  of NVDA.
+* Nogle apps understøtter kompakt overlejring (for eksempel Bevar Øverst i
+  lommeregner), og denne tilstand fungerer ikke korrekt med flytbare kopier
+  af NVDA.
 * For at få den bedste oplevelse med apps, der integrerer webteknologier og
   indhold som f.eks. Start-menuen og dens kontekstmenu, skal du aktivere
   indstillingen "Automatisk fokustilstand ved ændring af fokus" fra NVDAs
@@ -60,23 +62,23 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Generelt
 
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag start/cancel/complete
-  (recognized as state change event), drag drop effect, drag item is
-  grabbed, drop target effect.
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce active virtual desktop name (desktop 2, for example).
-* When dragging and dropping items such as arranging pinned entries (tiles
-  in Windows 10) in Start menu or Action Center quick actions with
-  Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
-  effects before and while dragging items, respectively. This is now part of
-  NVDA 2022.4.
-* Announcements such as volume/brightness/microphone mute (Windows 11 22H2
-  and later) changes in File Explorer and app update notifications from
-  Microsoft Store can be suppressed by turning off Report Notifications in
-  NVDA's object presentation settings.
-* In Windows 11, NVDA will announce search highlights in Start menu when it
-  opens. This is now part of NVDA 2023.1.
+* Udover UIA event handlers, der tilbydes af NVDA, vil følgende
+  UIA-hændelser og egenskaber blive genkendt: drag start/cancel/complete
+  (genkendt som state change event), drag drop effect, drag item is grabbed,
+  drop target effect. Disse hændelser er nu en del af NVDA 2022.4.
+* Når åbning, lukning eller Skift mellem virtuelle skrivebord forekommer,
+  vil NVDA annoncere det aktuelle navn for det virtuelle skrivebord
+  (f.eks. "Skrivebord 2").
+* Når du arrangerer fastgjorte elementer (fliser i Windows 10) på
+  start-menuen eller hurtige handlinger i Handlingscenter med
+  Alt+Shift+piletasterne, vil NVDA oplyse informationer om emner, når disse
+  flyttes. Dette er nu en del af NVDA 2022.4.
+* Meddelelser, som ændringer i lydstyrke/lysstyrke (Windows 11 22H2 og
+  nyere), ændringer i Stifinder og appopdateringsmeddelelser fra Microsoft
+  Store, kan deaktiveres ved at deaktivere rapportering af meddelelserne i
+  NVDAs objektpræsentationsindstillinger.
+* I Windows 11 vil NVDA annoncere søgehøjdepunkter i Start-menuen, når den
+  åbnes. Dette er nu en del af NVDA 2023.1.
 
 ## Cortana
 
@@ -89,27 +91,26 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Moderne tastatur
 
-This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, suggested actions, and modern input method
-editors for certain languages across Windows 10 and 11. When viewing emojis,
-for best experience, enable Unicode Consortium setting from NVDA's speech
-settings and set symbol level to "some" or higher. When pasting from
-clipboard history in Windows 10, press Space key instead of Enter key to
-paste the selected item.
+Dette inkluderer emoji-panelet, historik for udklipsholderen, diktering,
+forslag i forhold til hardwareinput og moderne Input Methodf Editor for
+visse sprog. Når du ser emojier, skal du for at få den bedste oplevelse
+aktivere Unicode Consortium-indstillingen fra NvDAs taleindstillinger og
+indstille tegnsætningsniveauet til "nogle" eller højere. Når du skal
+indstille fra historikken i Windows 10, skal du bruge mellemrumstasten i
+stedet for enter.
 
-* In Windows 10 emoji panel, when an emoji group (including kaomoji and
-  symbols group) is selected, NVDA will no longer move navigator object to
-  certain emojis.
+* Når en emoji-gruppe (inklusive kaomoji og symbolgrupper er valgt i Windows
+  10, vil NVDA ikke længere flytte navigatorobjektet til bestemte emoji.
 * I Windows 11 udklipsholderhistorik er gennemsynstilstand slået fra som
   standard, således NVDA kan annoncere menupunkter i
   udklipsholderhistorikken.
-* In Windows 11 22H2 Moment 1 and later, NVDA will announce suggested
-  actions when compatible data such as phone numbers is copied to the
-  clipboard.
+* I Windows 11 22H2 Moment 1 og senere vil NVDA annoncere foreslåede
+  handlinger, når kompatible data såsom telefonnumre kopieres til
+  udklipsholderen.
 
 ## Personer
 
-* When searching for contacts, first suggestion will be announced.
+* Når du søger efter kontakter, vil det første forslag annonceres.
 
 ## indstillinger
 
@@ -117,16 +118,18 @@ paste the selected item.
   hvis den findes (download og installer nu-link i Windows 10, download-knap
   i Windows 11).
 * I Windows 11 genkendes brødkrumme-elementer korrekt.
-* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
-  updates to Windows Update status as download and install progresses. This
-  may result in speech interruption when navigating Settings app while
-  updates are being downloaded and installed. If using Windows 11 22H2 and
-  later, if selective UIA event registration is on, you must move focus to
-  updates list as soon as they appear so NVDA can announce update progress.
+* I Windows 10 og 11 22H2 og nyere vil NVDA afbryde talen og oplyse status
+  for opdateringer til Windows Update, efterhånden som download og
+  installation skrider frem. Dette kan resultere i afbrydelse af talen, når
+  du navigerer i appen Indstillinger, mens opdateringer downloades og
+  installeres. Hvis du bruger Windows 11 22H2 og nyere med indstillingen
+  "Registrer hændelser fra UI Automation samt egenskabsændringer" slået til,
+  skal du flytte fokus til listen opdateringer, så NVDA kan oplyse status
+  for opdateringerne.
 
 ## Stemmeadgang
 
-This refers to Voice access feature introduced in Windows 11 22H2.
+Dette henviser til stemmeadgangsfunktionen introduceret i Windows 11 22H2.
 
 * NVDA vil annoncere mikrofonstatus, når mikrofonen skiftes fra
   brugergrænsefladen i Stemmeadgang.

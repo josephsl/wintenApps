@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-10-29 11:40-0700\n"
+"PO-Revision-Date: 2022-11-11 14:19-0800\n"
 "Last-Translator: Ungjin Park <ungjin312@kakao.com>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -22,16 +22,21 @@ msgstr ""
 msgid "Unsupported Windows release"
 msgstr "지원하지 않는 윈도우 버전 사용중"
 
+#. Translators: an entry in supported Windows releases list (release (build)).
+#, python-brace-format
+msgid "{release} ({build})"
+msgstr "{release}({build})"
+
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 #. Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
 #. Supported releases list shows releases supported by the add-on.
 #, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
-"Windows App Essentials add-on.\n"
+"this add-on.\n"
 "Supported releases: {supportedReleasesList}."
 msgstr ""
-"본 추가 기능은 {releaseName} ({build}) 버전을 지원하지 않습니다.\n"
+"본 추가 기능은 {releaseName}({build}) 버전을 지원하지 않습니다.\n"
 "지원 버전:  {supportedReleasesList}."
 
 #. Translators: Message presented when no more weather data is available for the current item.

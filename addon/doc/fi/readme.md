@@ -45,7 +45,7 @@ Huomautuksia:
   käytössä.
 * Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
   varsinkaan sellaisia, jotka esitellään vain osalle dev-kanavalla olevista
-  käyttäjistä.
+  käyttäjistä. Beetakanavalla tuetaan vain uusinta koontiversiota (22623).
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Jotkin sovellukset tukevat kompaktia peitetilaa (esim. Laskimen Aina
   päällimmäisenä), joka ei toimi oikein NVDA:n massamuistiversion kanssa.
@@ -63,7 +63,7 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   seuraavat UIA-tapahtumat ja -ominaisuudet: vetäminen
   aloitettu/peruutettu/suoritettu (tunnistetaan tilanmuutostapahtumaksi),
   vetämisen ja pudottamisen vaikutus, vedettävä kohde on valittu, pudotuksen
-  kohteen vaikutus.
+  kohteen vaikutus. Nämä tapahtumat sisältyvät NVDA 2022.4:ään.
 * NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
   avattaessa, suljettaessa tai siirryttäessä virtuaalityöpöytien välillä.
 * Kun kohteita vedetään ja pudotetaan, esim. järjesteltäessä kiinnitettyjä
