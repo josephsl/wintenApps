@@ -22,7 +22,6 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 * Moderni näppäimistö (emojipaneeli/sanelu/puhekirjoitus/fyysisen
   näppäimistösyötteen ehdotukset/leikepöydän historia/ehdotetut
   toiminnot/modernin syöttömenetelmän muokkaimet)
-* Ihmiset
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Puhekäyttö (Windows 11 22H2)
 * Sää
@@ -72,11 +71,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   "vedetään" ja/tai vetämisen ja pudottamisen  vaikutukset ennen kohteiden
   vetämistä ja sen aikana. Tämän ilmoituksen puhuminen sisältyy NVDA
   2022.4:ään.
-* Ilmoitukset, kuten äänenvoimakkuuden/kirkkauden/mikrofonin mykistyksen
-  (Windows 11 22H2 ja sitä uudemmat) muutokset resurssienhallinnassa sekä
-  sovellusten päivitysilmoitukset Microsoft Storesta voidaan estää
-  poistamalla käytöstä Lue ilmoitukset -asetus NVDA:n objektien lukemisen
-  asetuksista.
 * NVDA ilmoittaa Windows 11:ssä haun kohokohdat Käynnistä-valikossa sen
   avautuessa. Tämä sisältyy NVDA 2023.1:een.
 
@@ -108,10 +102,6 @@ liitä valittu kohde painamalla Välilyönti-näppäintä Enterin sijaan.
 * Windows 11 22H2 Moment 1:ssä ja sitä uudemmissa NVDA ilmoittaa ehdotetut
   toiminnot, kun leikepöydälle kopioidaan yhteensopivaa dataa, kuten
   puhelinnumeroita.
-
-## Ihmiset
-
-* Ensimmäinen ehdotus puhutaan yhteystietoja etsittäessä.
 
 ## Asetukset
 

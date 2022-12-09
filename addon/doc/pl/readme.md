@@ -23,7 +23,6 @@ dołączone, zobacz każdą sekcję aplikacji):
 * Modern keyboard (emoji panel/dictation/voice typing/hardware input
   suggestions/clipboard history/Suggested Actions/modern input method
   editors)
-* Osoby
 * Ustawienia (ustawienia systemowe, Windows+I)
 * Voice access (Windows 11 22H2)
 * Pogoda
@@ -71,10 +70,6 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
   Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop
   effects before and while dragging items, respectively. This is now part of
   NVDA 2022.4.
-* Announcements such as volume/brightness/microphone mute (Windows 11 22H2
-  and later) changes in File Explorer and app update notifications from
-  Microsoft Store can be suppressed by turning off Report Notifications in
-  NVDA's object presentation settings.
 * In Windows 11, NVDA will announce search highlights in Start menu when it
   opens. This is now part of NVDA 2023.1.
 
@@ -106,10 +101,6 @@ paste the selected item.
 * In Windows 11 22H2 Moment 1 and later, NVDA will announce suggested
   actions when compatible data such as phone numbers is copied to the
   clipboard.
-
-## Osoby
-
-* When searching for contacts, first suggestion will be announced.
 
 ## Ustawienia
 

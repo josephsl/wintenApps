@@ -20,7 +20,6 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 * Kort
 * Moderne tastatur (Emoji-panel, diktering, stemmeskrivning, forslag til
   hardwareinput, udklipshistorik og Editor til inputmetode)
-* Personer
 * Indstillinger (systemindstillinger, Windows+I)
 * Stemmeadgang (Windows 11 22H2)
 * Vejr
@@ -73,10 +72,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   start-menuen eller hurtige handlinger i Handlingscenter med
   Alt+Shift+piletasterne, vil NVDA oplyse informationer om emner, når disse
   flyttes. Dette er nu en del af NVDA 2022.4.
-* Meddelelser, som ændringer i lydstyrke/lysstyrke (Windows 11 22H2 og
-  nyere), ændringer i Stifinder og appopdateringsmeddelelser fra Microsoft
-  Store, kan deaktiveres ved at deaktivere rapportering af meddelelserne i
-  NVDAs objektpræsentationsindstillinger.
 * I Windows 11 vil NVDA annoncere søgehøjdepunkter i Start-menuen, når den
   åbnes. Dette er nu en del af NVDA 2023.1.
 
@@ -107,10 +102,6 @@ stedet for enter.
 * I Windows 11 22H2 Moment 1 og senere vil NVDA annoncere foreslåede
   handlinger, når kompatible data såsom telefonnumre kopieres til
   udklipsholderen.
-
-## Personer
-
-* Når du søger efter kontakter, vil det første forslag annonceres.
 
 ## indstillinger
 

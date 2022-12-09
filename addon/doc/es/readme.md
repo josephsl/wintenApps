@@ -23,7 +23,6 @@ qué se incluye):
 * Teclado Moderno (panel de emojis / dictado / escritura por voz /
   sugerencias de entrada hardware / historial del portapapeles / acciones
   sugeridas / editores modernos de método de entrada)
-* Gente
 * Opciones (opciones de sistema, Windows+I)
 * Acceso por voz (Windows 11 22H2)
 * El Tiempo
@@ -77,11 +76,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   actividades con alt+shift+flechas, NVDA anunciará "arrastrando" o los
   efectos de arrastrar y soltar antes y mientras se arrastran,
   respectivamente. Esto ahora forma parte de NVDA 2022.4.
-* Anuncios como los de cambio de brillo, volumen o silencio del micrófono
-  (Windows 11 22H2 y posterior) en el explorador de archivos y las
-  notificaciones de actualización de aplicaciones de la tienda Microsoft
-  pueden suprimirse desactivando Anunciar notificaciones desde las opciones
-  de presentación de objetos de NVDA.
 * En Windows 11, NVDA anunciará las búsquedas destacadas en el menú Inicio
   cuando se abra. Esto ahora forma parte de NVDA 2023.1.
 
@@ -115,10 +109,6 @@ elemento seleccionado.
 * En Windows 11 22H2 Moment 1 y posterior, NVDA anunciará las acciones
   sugeridas cuando se copien al portapapeles datos compatibles, como números
   de teléfono.
-
-## Gente
-
-* Cuando se busquen contactos, se verbalizará la primera sugerencia.
 
 ## Opciones
 

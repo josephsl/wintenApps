@@ -21,7 +21,6 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 * Moderna tipkovnica (ploča emojija, diktatiranje, tipkanje glasom,
   prijedlozi za unos hardverom, povijest međuspremnika, predložene radnje,
   moderni uređivači za unos)
-* Osobe
 * Postavke (postavke sustava, Windows+I)
 * Pristup glasu (Windows 11 22H2)
 * Vrijeme
@@ -72,11 +71,6 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   za Action Center s Alt+Šift+tipke sa strelicama, NVDA će najaviti efekte
   „povlačenja” i/ili povlačenja i ispuštanja prije i tijekom povlačenja
   stavki. Ovo je sada dio NVDA čitača 2022.4.
-* Najave kao što su promjene glasnoće/svjetline/isključivanje mikrofona
-  (Windows 11 22H2 i novije verzije) u File Explorereru i obavijesti
-  aktualiziranja programa s Microsoft Store stranica, mogu se potisnuti
-  isključivanjem opcije „Izvijesti o obavijestima” u NVDA postavkama prikaza
-  objekata.
 * U sustavu Windows 11, NVDA će najaviti istaknute stavke pretraživanja u
   izborniku Start kada se otvori. Ovo je sada dio u NVDA čitača 2023.1.
 
@@ -108,10 +102,6 @@ Enter za umetanje odabranog elementa.
 * U sustavu Windows 11 22H2 Moment 1 i novijim verzijama, NVDA će najaviti
   predložene radnje kad se kompatibilni podaci poput telefonskih brojeva
   kopiraju u međuspremnik.
-
-## Osobe
-
-* Prilikom pretraživanja kontakata najavit će se prvi prijedlog.
 
 ## Postavke
 

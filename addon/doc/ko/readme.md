@@ -14,15 +14,11 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 * Cortana
 * 지도
-* Modern keyboard (emoji panel/dictation/voice typing/hardware input
-  suggestions/clipboard history/Suggested Actions/modern input method
-  editors)
-* People
+* 현대식 키보드(에모지 페널/받아쓰기/하드웨어 입력 구성/클립보드 히스토리/추천 엑션/현대식 IME 입력기)
 * 설정(시스템 설정 앱, Windows+I)
 * Voice access(윈도우 11 22H2)
 * 날씨
-* Miscellaneous modules for controls and features such as virtual desktops
-  announcements
+* 그 외 지원 모듈(가상 데스크탑 알림 등)
 
 사용시 주의 사항:
 
@@ -36,13 +32,11 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * If Add-on Updater is installed and background add-on updates is enabled,
   Windows App Essentials will not install at all on unsupported Windows
   releases.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel. For beta channel, only the latest build (22623) is supported.
+* 윈도우 참가자 빌드에 탑제된 기능을 모두 지원하지 않습니다(특히 개발자 빌드에서 일부에게만 공개된 경우). 베타 체널 사용시 최신
+  빌드(22623)만 지원합니다.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
-* Some apps support compact overlay mode (always on top in Calculator, for
-  example), and this mode will not work properly with the portable version
-  of NVDA.
+* 여러 앱은 미니(compact overlay) 모드(예: 계산기)를 지원하지만 이 모드는 휴대용 NVDA를 사용시 제대로 사용할 수
+  없습니다.
 * 시작 메뉴 팝업 메뉴와 같이 웹 기술이 적용된 앱 사용시 NVDA 브라우즈 모드에 있는 "포커스 이동 시 자동 포커스 모드 전환"
   기능을 활성화하시기 바랍니다.
 
@@ -50,18 +44,12 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 일반
 
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag start/cancel/complete
-  (recognized as state change event), drag drop effect, drag item is
-  grabbed, drop target effect. These events are now part of NVDA 2022.4.
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce active virtual desktop name (desktop 2, for example).
+* NVDA가 지원하는 UIA  이벤트 및 속성 외의 다음 이벤트 추적 가능: drag start/cancel/complete(state
+  change로 인식), drag drop effect, is grabbed, drop target effect. 이 이벤트들은
+  NVDA 2022.4에 추가됨.
+* 가상 데스크탑을 열때/닫을때/변경시 NVDA가 데스크탑 이름(예: Desktop 2)를 출력하도록 함.
 * 시작 메뉴에 고정된 타일(윈도우 10) 또는 액션 센터네 빠른 액션을 Alt+Shift+반향키로 조절시 "드래그중" 또는 드래그
   변화를 NVDA가 출력하도록 함(NVDA 2022.4에 본 기능이 추가됨).
-* Announcements such as volume/brightness/microphone mute (Windows 11 22H2
-  and later) changes in File Explorer and app update notifications from
-  Microsoft Store can be suppressed by turning off Report Notifications in
-  NVDA's object presentation settings.
 * In Windows 11, NVDA will announce search highlights in Start menu when it
   opens. This is now part of NVDA 2023.1.
 
@@ -76,23 +64,14 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 현대식 키보드
 
-This includes emoji panel, clipboard history, dictation/voice typing,
-hardware input suggestions, suggested actions, and modern input method
-editors for certain languages across Windows 10 and 11. When viewing emojis,
-for best experience, enable Unicode Consortium setting from NVDA's speech
-settings and set symbol level to "some" or higher. When pasting from
-clipboard history in Windows 10, press Space key instead of Enter key to
-paste the selected item.
+현대식 키보드란 에모지 페널, 클립보드 히스토리, 받아쓰기, 하드웨어 입력 구성, 추천 엑션 및 현대식 IME 입력기를 말합니다. 에모지
+탐색시 Unicode CLDR 설정을 활성하고 기호 읽기를 "일부" 이상으로 설정하시기 바랍니다. 윈도우 10에서 클립보드 히스토리
+사용시 스페이스를 눌러 선택된 내용을 붙여넣으시기 바랍니다.
 
 * 윈도우 10 에모지 페널에서 에모지 그룹(카오모지 및 기호 그룹 포함) 선택시 탐색 객체가 특정 에모지에 고정되는 문제 수정.
 * 윈도우 11 클립보드 히스토리에서 항목 팝업 메뉴를 제대로 출력할 수 있도록 브라우즈 모드가 반영되지 않도록 함.
-* In Windows 11 22H2 Moment 1 and later, NVDA will announce suggested
-  actions when compatible data such as phone numbers is copied to the
-  clipboard.
-
-## People
-
-* When searching for contacts, first suggestion will be announced.
+* 윈도우 11 22H2 Moment 1(10월) 이상에서 전화번호와 같은 내용이 클립보드에 복사되었을때 나타나는 추천 엑션을 출력하도록
+  함.
 
 ## 설정 앱
 
