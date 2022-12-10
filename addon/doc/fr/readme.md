@@ -24,7 +24,6 @@ est inclus) :
 * Clavier moderne (panneau des emojis/dictée/saisie vocale/suggestions de
   saisie matérielle/historique du presse-papiers/éditeurs de méthodes de
   saisie modernes)
-* Personnes
 * Paramètres (paramètres système, Windows+I)
 * Accès vocal (Windows 11 22H2)
 * Météo
@@ -77,11 +76,6 @@ l'extension][3].
   Maj + touches fléchées, NVDA annoncera des effets de "glisser" et/ou de
   glisser-déposer avant et pendant le déplacement des éléments ,
   respectivement. Cela fait maintenant partie de NVDA 2022.4.
-* Les annonces telles que les changements de volume/luminosité/coupure du
-  microphone (Windows 11 22H2 et versions ultérieures) dans l'Explorateur de
-  fichiers et les notifications de mise à jour d'application du Microsoft
-  Store peuvent être supprimées en désactivant les notifications de rapport
-  dans les paramètres de présentation des objets de NVDA.
 * In Windows 11, NVDA will announce search highlights in Start menu when it
   opens. This is now part of NVDA 2023.1.
 
@@ -117,10 +111,6 @@ l'élément sélectionné.
 * Sous Windows 11 22H2 Moment 1 et versions ultérieures, NVDA annoncera des
   actions suggérées lorsque des données compatibles telles que des numéros
   de téléphone sont copiées dans le presse-papiers.
-
-## Personnes
-
-* Lors de la recherche de contacts, la première suggestion sera annoncée.
 
 ## Paramètres
 

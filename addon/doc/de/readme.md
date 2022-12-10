@@ -22,7 +22,6 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 * Moderne Tastatur
   (Emoji-Bedienfeld/Diktierfunktion/Sprachsteuerung/Hardware-Eingabevorschläge/Zwischenablage-Historie/Vorgeschlagene
   Aktionen/Editoren für moderne Eingabemethoden)
-* Kontakte
 * Einstellungen (System-Einstellungen, Windows+I)
 * Sprachzugang (Windows 11 Version 22H2)
 * Wetter
@@ -72,11 +71,6 @@ Versionen][3].
   Schnellaktionen im Action Center mit Alt+Umschalt+Pfeiltasten, meldet NVDA
   vor bzw. während des Ziehens von Elementen "Ziehen" und/oder Zieh- und
   Ablegeeffekte. Dies ist nun Teil von NVDA 2022.4.
-* Mitteilungen wie Lautstärke-/Helligkeits-/Mikrofonstummschaltung (Windows
-  11 Version 22H2 und neuer), Änderungen im Datei-Explorer und
-  App-Update-Benachrichtigungen aus dem Microsoft Store können unterdrückt
-  werden, indem Sie in den NVDA-Einstellungen für die Objekt-Darstellung
-  "Benachrichtigungen mitteilen" deaktivieren.
 * In Windows 11, NVDA will announce search highlights in Start menu when it
   opens. This is now part of NVDA 2023.1.
 
@@ -111,10 +105,6 @@ um das ausgewählte Element einzufügen.
 * In Windows 11 Version 22H2 Moment 1 und neuer sagt NVDA vorgeschlagene
   Aktionen an, wenn kompatible Daten wie Telefonnummern in die
   Zwischenablage kopiert werden.
-
-## Kontakte
-
-* Bei der Suche nach Kontakten wird der erste Vorschlag angezeigt.
 
 ## Einstellungen
 
