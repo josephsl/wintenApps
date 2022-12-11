@@ -45,3 +45,11 @@ class AppModule(appModuleHandler.AppModule):
 					clsList.insert(0, MapLocation)
 			except AttributeError:
 				pass
+
+	def event_UIA_notification(self, obj, nextHandler, displayString=None, **kwargs):
+		import queueHandler
+		import ui
+		if api.getFocusObject() != obj:
+			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, displayString)
+			return
+		nextHandler()
