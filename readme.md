@@ -47,6 +47,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## Maps
 
 * NVDA plays location beep for map locations.
+* NVDA will no longer interupt speech when focused on items other than the map control in some cases.
 
 ## Modern keyboard
 
