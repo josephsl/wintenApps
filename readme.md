@@ -38,6 +38,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * When opening, closing, or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
 * When dragging and dropping items such as arranging pinned entries (tiles in Windows 10) in Start menu or Action Center quick actions with Alt+Shift+arrow keys, NVDA will announce "dragging" and/or drag and drop effects before and while dragging items, respectively. This is now part of NVDA 2022.4.
 * In Windows 11, NVDA will announce search highlights in Start menu when it opens. This is now part of NVDA 2023.1.
+* In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be detected properly when using mouse and/or touch interaction.
 
 ## Cortana
 
