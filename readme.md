@@ -36,6 +36,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 * When opening, closing, or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
 * In Windows 11, NVDA will announce search highlights in Start menu when it opens. This is now part of NVDA 2023.1.
+* In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be detected properly when using mouse and/or touch interaction.
 
 ## Cortana
 
