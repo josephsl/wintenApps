@@ -3,7 +3,7 @@
 * Yazarlar: Joseph Lee, Derek Riemer ve diğerleri
 * [kararlı sürüm][1]ü indir
 * [geliştirme sürümü][2]nü indir
-* NVDA compatibility: 2022.2 and later
+* NVDA compatibility: 2022.3 and later
 
 Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
 adlandırılırken, Windows 10 ve Windows 11 gibi gelecekteki windows
@@ -73,6 +73,8 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
   NVDA 2022.4.
 * In Windows 11, NVDA will announce search highlights in Start menu when it
   opens. This is now part of NVDA 2023.1.
+* In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
+  detected properly when using mouse and/or touch interaction.
 
 ## Cortana
 
@@ -82,6 +84,8 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 ## Haritalar
 
 * NVDA, harita konumları için konum bip sesi çıkarır.
+* NVDA will no longer interupt speech when focused on items other than the
+  map control in some cases.
 
 ## Modern klavye
 

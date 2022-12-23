@@ -3,7 +3,7 @@
 * 저자: Joseph Lee(이성원), Derek Riemer 외 다수
 * [출시 버전][1]
 * [개발 버전][2]
-* NVDA 호환: 2022.2 이상
+* NVDA compatibility: 2022.3 and later
 
 참고: 윈도우 10 이상(특히 윈도우 11)을 지원하기 위해 2021년에 Windows 10 App Essentials에서 Windows
 App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름이 뜰 수 있습니다.
@@ -52,6 +52,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   변화를 NVDA가 출력하도록 함(NVDA 2022.4에 본 기능이 추가됨).
 * In Windows 11, NVDA will announce search highlights in Start menu when it
   opens. This is now part of NVDA 2023.1.
+* In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
+  detected properly when using mouse and/or touch interaction.
 
 ## Cortana
 
@@ -61,6 +63,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 ## 지도
 
 * NVDA plays location beep for map locations.
+* NVDA will no longer interupt speech when focused on items other than the
+  map control in some cases.
 
 ## 현대식 키보드
 

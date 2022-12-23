@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2022.2 ja uudemmat
+* Yhteensopivuus: NVDA 2022.3 ja uudemmat
 
 Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
 nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows
@@ -73,6 +73,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   2022.4:ään.
 * NVDA ilmoittaa Windows 11:ssä haun kohokohdat Käynnistä-valikossa sen
   avautuessa. Tämä sisältyy NVDA 2023.1:een.
+* Uudelleensuunniteltu ilmaisinalueen ylivuotoalue tunnistetaan oikein
+  Windows 11 22H2 Moment 2:ssa hiirtä ja/tai kosketusvuorovaikutusta
+  käytettäessä.
 
 ## Cortana
 
@@ -82,6 +85,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Kartat
 
 * NVDA toistaa äänimerkin karttasijainneille.
+* NVDA ei enää keskeytä puhetta joissakin tapauksissa, kun kohdistus on
+  muissa kohteissa kuin karttasäätimessä.
 
 ## Moderni näppäimistö
 

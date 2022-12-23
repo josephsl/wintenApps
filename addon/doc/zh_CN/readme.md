@@ -3,7 +3,7 @@
 * 作者：Joseph Lee、Derek Riemer 等
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA 兼容性：2022.2 及更高版本
+* NVDA compatibility: 2022.3 and later
 
 注意：此插件最初称为 Windows 10 应用增强，在 2021 年更名为 Windows 应用增强，以支持 Windows 10 和 Windows
 11 等后续版本。此插件的部分内容仍将引用原始插件名称。
@@ -47,6 +47,8 @@
 * 当使用 Alt+Shift+箭头键在“开始”菜单（Windows 10 中的磁贴）或操作中心快速操作中排列固定条目时，NVDA
   会读出已拖动项目的信息或已拖动项目的新位置。该特性已经包含在 NVDA2022.4 中。
 * 在 Windows 11 中，NVDA 支持在打开“开始”菜单时读出显示的搜索高亮。该特性已经包含在 NVDA2023.1 中。
+* In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
+  detected properly when using mouse and/or touch interaction.
 
 ## Cortana
 
@@ -56,6 +58,8 @@
 ## 地图
 
 * NVDA为地图上的位置播放位置嘟嘟声。
+* NVDA will no longer interupt speech when focused on items other than the
+  map control in some cases.
 
 ## 系统键盘
 

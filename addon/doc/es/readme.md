@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer y otros
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
-* Compatibilidad con NVDA: de 2022.2 en adelante
+* Compatibilidad con NVDA: de 2022.3 en adelante
 
 Nota: originalmente llamado Windows 10 App Essentials, se renombró a Windows
 App Essentials en 2021 para soportar Windows 10 y versiones futuras, como
@@ -78,6 +78,9 @@ complemento, consulta el documento [changelogs for add-on releases][3].
   respectivamente. Esto ahora forma parte de NVDA 2022.4.
 * En Windows 11, NVDA anunciará las búsquedas destacadas en el menú Inicio
   cuando se abra. Esto ahora forma parte de NVDA 2023.1.
+* En Windows 11 22H2 Moment 2, el área flotante rediseñada de la bandeja del
+  sistema se puede detectar adecuadamente al usar interacción táctil o del
+  ratón.
 
 ## Cortana
 
@@ -88,6 +91,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 ## Mapas
 
 * NVDA reproduce pitidos de localización para lugares en el mapa.
+* NVDA ya no interrumpirá la voz al tener el foco en elementos distintos al
+  control del mapa en algunos casos.
 
 ## Teclado Moderno
 

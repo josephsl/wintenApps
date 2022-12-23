@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer i drugi
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA kompatibilnost: 2022.2 i novije verzije
+* NVDA compatibility: 2022.3 and later
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
@@ -73,6 +73,8 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   stavki. Ovo je sada dio NVDA čitača 2022.4.
 * U sustavu Windows 11, NVDA će najaviti istaknute stavke pretraživanja u
   izborniku Start kada se otvori. Ovo je sada dio u NVDA čitača 2023.1.
+* In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
+  detected properly when using mouse and/or touch interaction.
 
 ## Cortana
 
@@ -82,6 +84,8 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 ## Karte
 
 * NVDA svira zvuk za lokacije za lokacije na karti.
+* NVDA will no longer interupt speech when focused on items other than the
+  map control in some cases.
 
 ## Moderna tipkovnica
 
