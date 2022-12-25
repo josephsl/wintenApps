@@ -1,6 +1,6 @@
 # Voice access
 # Part of Windows App Essentials collection
-# Copyright 2022 Joseph Lee, released under GPL
+# Copyright 2022-2023 Joseph Lee, released under GPL
 
 # Support for Voice access on Windows 11 22H2 and later.
 

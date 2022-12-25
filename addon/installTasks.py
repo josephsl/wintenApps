@@ -1,5 +1,5 @@
 # WinApps/installTasks.py
-# Copyright 2016-2022 Joseph Lee, released under GPL.
+# Copyright 2016-2023 Joseph Lee, released under GPL.
 
 # Provides needed routines during add-on installation and removal.
 # Mostly checks compatibility.
