@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA-kompatibilitet: 2022.2 og nyere
+* NVDA compatibility: 2022.3 and later
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
 til Windows App Essentials i 2021 for at understøtte Windows 10 og
@@ -74,6 +74,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   flyttes. Dette er nu en del af NVDA 2022.4.
 * I Windows 11 vil NVDA annoncere søgehøjdepunkter i Start-menuen, når den
   åbnes. Dette er nu en del af NVDA 2023.1.
+* In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
+  detected properly when using mouse and/or touch interaction.
 
 ## Cortana
 
@@ -83,6 +85,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 ## Kort
 
 * NVDA spiller placeringsbip for kortlokationer.
+* NVDA will no longer interupt speech when focused on items other than the
+  map control in some cases.
 
 ## Moderne tastatur
 

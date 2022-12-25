@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and others
 * Tải về [phiên bản chính thức][1]
 * Tải về [phiên bản thử nghiệm][2]
-* NVDA compatibility: 2022.2 and later
+* NVDA compatibility: 2022.3 and later
 
 Note: Originally called Windows 10 App Essentials, it was renamed to Windows
 App Essentials in 2021 to support Windows 10 and future releases such as
@@ -72,6 +72,8 @@ for add-on releases][3] .
   NVDA 2022.4.
 * In Windows 11, NVDA will announce search highlights in Start menu when it
   opens. This is now part of NVDA 2023.1.
+* In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
+  detected properly when using mouse and/or touch interaction.
 
 ## Cortana
 
@@ -81,6 +83,8 @@ for add-on releases][3] .
 ## Maps
 
 * NVDA phát tiếng beep cho vị trí trên bản đồ.
+* NVDA will no longer interupt speech when focused on items other than the
+  map control in some cases.
 
 ## Modern keyboard
 
