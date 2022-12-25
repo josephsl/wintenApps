@@ -1,5 +1,5 @@
 # Client/Server Runtime Subsystem (Windows subsystem process)
-# Copyright 2022 Joseph Lee, released under GPL.
+# Copyright 2022-2023 Joseph Lee, released under GPL.
 
 # Specifically designed to handle virtual desktop switches.
 # Split from WinAppObjs global plugin in 2022.

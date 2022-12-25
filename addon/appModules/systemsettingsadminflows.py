@@ -1,6 +1,6 @@
 # Windows Settings/Reset This PC
 # Part of Windows App Essentials collection
-# Copyright 2018-2022 Joseph Lee, released under GPL
+# Copyright 2018-2023 Joseph Lee, released under GPL
 
 # Specific to Reset This PC window in Settings.
 
