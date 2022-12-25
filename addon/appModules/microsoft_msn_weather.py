@@ -1,4 +1,4 @@
-# WinTenApps/microsoft_msn_weather.py
+# MSN Weather
 # Part of Windows App Essentials collection
 # Copyright 2016-2023 Derek Riemer, released under GPL.
 
