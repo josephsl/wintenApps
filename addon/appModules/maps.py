@@ -1,4 +1,4 @@
-# WinTenApps/maps.py
+# Microsoft Maps
 # Part of Windows App Essentials collection
 # Copyright 2016-2023 Joseph Lee, released under GPL.
 
