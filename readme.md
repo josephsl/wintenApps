@@ -37,7 +37,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * When opening, closing, or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
 * In Windows 11, NVDA will announce search highlights in Start menu when it opens. This is now part of NVDA 2023.1.
 * In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be detected properly when using mouse and/or touch interaction.
-* NVDA will report processor architecture for the current Windows installation (x86/32-bit, AMD64, ARM64). This is now part of NVDA 2023.1.
+* NVDA will record processor architecture for the current Windows installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part of NVDA 2023.1.
 
 ## Cortana
 
@@ -47,7 +47,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## Maps
 
 * NVDA plays location beep for map locations.
-* NVDA will no longer interupt speech when focused on items other than the map control in some cases.
+* NVDA will no longer interrupt speech when focused on items other than the map control in some cases.
 
 ## Modern keyboard
 
