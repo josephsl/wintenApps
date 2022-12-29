@@ -65,9 +65,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			obj = obj.firstChild
 		# Logic for IME candidate items is handled all within its own object
 		# Therefore pass these events straight on.
-		# But not in Windows 11 because it also fires gain focus event.
 		if isinstance(obj, ImeCandidateItem):
-			return nextHandler() if winVersion.getWinVer() < winVersion.WIN11 else None
+			return nextHandler()
 		# The following is applicable on Windows 10 and Server 2022.
 		if winVersion.getWinVer() < winVersion.WIN11:
 			# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object
