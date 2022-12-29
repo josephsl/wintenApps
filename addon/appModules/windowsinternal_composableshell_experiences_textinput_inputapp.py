@@ -21,6 +21,15 @@ from logHandler import log
 from NVDAObjects.UIA import UIA
 
 
+class ImeCandidateItem(ImeCandidateItem):
+
+	def event_UIA_elementSelected(self):
+		# Focus event is fired when a candidate item receives focus, therefore ignore this event.
+		if winVersion.getWinVer() >= winVersion.WIN11:
+			return
+		super(ImeCandidateItem, self).event_UIA_elementSelected()
+
+
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
