@@ -21,9 +21,9 @@ est inclus) :
 
 * Cortana
 * Cartes
-* Clavier moderne (panneau des emojis/dictée/saisie vocale/suggestions de
-  saisie matérielle/historique du presse-papiers/éditeurs de méthodes de
-  saisie modernes)
+* Modern keyboard (emoji panel/touch keyboard/dictation/voice
+  typing/hardware input suggestions/clipboard history/Suggested
+  Actions/modern input method editors)
 * Paramètres (paramètres système, Windows+I)
 * Accès vocal (Windows 11 22H2)
 * Météo
@@ -80,6 +80,9 @@ l'extension][3].
   opens. This is now part of NVDA 2023.1.
 * In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
   detected properly when using mouse and/or touch interaction.
+* NVDA will record processor architecture for the current Windows
+  installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
+  of NVDA 2023.1.
 
 ## Cortana
 
@@ -91,20 +94,18 @@ l'extension][3].
 ## Cartes
 
 * NVDA joue un bip du lieux pour les lieux sur la carte.
-* NVDA will no longer interupt speech when focused on items other than the
+* NVDA will no longer interrupt speech when focused on items other than the
   map control in some cases.
 
 ## Clavier moderne
 
-Cela inclut le panneau emoji, l'historique du presse-papiers, la dictée/la
-saisie vocale, les suggestions d'entrée matérielle, les actions suggérées et
-les éditeurs de méthodes de saisie modernes pour certaines langues sur
-Windows 10 et 11. Lors de l'affichage des emojis, pour une meilleure
-expérience, activez le paramètre Unicode Consortium à partir des paramètres
-vocaux de NVDA et réglez le niveau de symbole sur "certains" ou plus. Lors
-du collage à partir de l'historique du presse-papiers dans Windows 10,
-appuyez sur la touche Espace au lieu de la touche Entrée pour coller
-l'élément sélectionné.
+This includes emoji panel, clipboard history, touch keyboard,
+dictation/voice typing, hardware input suggestions, suggested actions, and
+modern input method editors for certain languages across Windows 10 and
+11. When viewing emojis, for best experience, enable Unicode Consortium
+setting from NVDA's speech settings and set symbol level to "some" or
+higher. When pasting from clipboard history in Windows 10, press Space key
+instead of Enter key to paste the selected item.
 
 * Dans le panneau emoji de Windows 10, lorsqu'un groupe d'emoji (y compris
   le groupe kaomoji et symboles) est sélectionné, NVDA ne déplacera plus

@@ -19,7 +19,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 * Cortana
 * Kartat
-* Moderni näppäimistö (emojipaneeli/sanelu/puhekirjoitus/fyysisen
+* Moderni näppäimistö
+  (emojipaneeli/kosketusnäppäimistö/sanelu/puhekirjoitus/fyysisen
   näppäimistösyötteen ehdotukset/leikepöydän historia/ehdotetut
   toiminnot/modernin syöttömenetelmän muokkaimet)
 * Asetukset (järjestelmän asetukset, Windows+I)
@@ -76,6 +77,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * Uudelleensuunniteltu ilmaisinalueen ylivuotoalue tunnistetaan oikein
   Windows 11 22H2 Moment 2:ssa hiirtä ja/tai kosketusvuorovaikutusta
   käytettäessä.
+* NVDA tallentaa käynnistyessään nykyisen Windows-asennuksen
+  suoritinarkkitehtuurin (x86/32-bittinen, AMD64, ARM64). Tämä sisältyy nyt
+  NVDA 2023.1:een.
 
 ## Cortana
 
@@ -90,13 +94,14 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Moderni näppäimistö
 
-Näitä ovat emojipaneeli, leikepöydän historia, sanelu/puhekirjoitus,
-ehdotukset syötettäessä tekstiä fyysisellä näppäimistöllä, ehdotetut
-toiminnot sekä modernin syöttömenetelmän editorit tietyille kielille Windows
-10:ssä ja 11:ssä. Ota käyttöön emojeita tarkasteltaessa Unicode-konsortion
-datan asetus NVDA:n puheasetuksista parhaan kokemuksen saamiseksi, ja aseta
-symbolitasoksi "jotain" tai korkeampi. Kun liität leikepöydän historiasta,
-liitä valittu kohde painamalla Välilyönti-näppäintä Enterin sijaan.
+Näitä ovat emojipaneeli, leikepöydän historia, kosketusnäppäimistö,
+sanelu/puhekirjoitus, ehdotukset syötettäessä tekstiä fyysisellä
+näppäimistöllä, ehdotetut toiminnot sekä modernin syöttömenetelmän editorit
+tietyille kielille Windows 10:ssä ja 11:ssä. Ota käyttöön emojeita
+tarkasteltaessa Unicode-konsortion datan asetus NVDA:n puheasetuksista
+parhaan kokemuksen saamiseksi, ja aseta symbolitasoksi "jotain" tai
+korkeampi. Kun liität leikepöydän historiasta, liitä valittu kohde
+painamalla Välilyönti-näppäintä Enterin sijaan.
 
 * Kun emojiryhmä (kaomoji ja symboliryhmä mukaan lukien) valitaan Windows
   10:n emojipaneelissa, NVDA ei enää siirrä navigointiobjektia tiettyihin

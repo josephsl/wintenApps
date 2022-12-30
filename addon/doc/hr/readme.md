@@ -18,9 +18,9 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 * Cortana
 * Karte
-* Moderna tipkovnica (ploča emojija, diktatiranje, tipkanje glasom,
-  prijedlozi za unos hardverom, povijest međuspremnika, predložene radnje,
-  moderni uređivači za unos)
+* Modern keyboard (emoji panel/touch keyboard/dictation/voice
+  typing/hardware input suggestions/clipboard history/Suggested
+  Actions/modern input method editors)
 * Postavke (postavke sustava, Windows+I)
 * Pristup glasu (Windows 11 22H2)
 * Vrijeme
@@ -75,6 +75,9 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   izborniku Start kada se otvori. Ovo je sada dio u NVDA čitača 2023.1.
 * In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
   detected properly when using mouse and/or touch interaction.
+* NVDA will record processor architecture for the current Windows
+  installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
+  of NVDA 2023.1.
 
 ## Cortana
 
@@ -84,18 +87,18 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 ## Karte
 
 * NVDA svira zvuk za lokacije za lokacije na karti.
-* NVDA will no longer interupt speech when focused on items other than the
+* NVDA will no longer interrupt speech when focused on items other than the
   map control in some cases.
 
 ## Moderna tipkovnica
 
-To uključuje ploču s emojijima, povijest međuspremnika,
-diktatiranje/tipkanje govorom, prijedloge unosa hardvera i moderne uređivače
-načina unosa za određene jezike u Windows verzijama 10 i 11. Kad pregledavaš
-emojije, aktiviraj postavku Unicode Consortium u NVDA postavkama govora i
-postavi razinu simbola na „neki” ili višu. Prilikom umetanja iz povijesti
-međuspremnika u sustavu Windows 10, pritisni tipku za razmak umjesto tipke
-Enter za umetanje odabranog elementa.
+This includes emoji panel, clipboard history, touch keyboard,
+dictation/voice typing, hardware input suggestions, suggested actions, and
+modern input method editors for certain languages across Windows 10 and
+11. When viewing emojis, for best experience, enable Unicode Consortium
+setting from NVDA's speech settings and set symbol level to "some" or
+higher. When pasting from clipboard history in Windows 10, press Space key
+instead of Enter key to paste the selected item.
 
 * U ploči emojija sustava Windows 10, kad je jedna grupa emojija odabrana
   (uključujući kaomoji i grupa simbola), NVDA više neće pomicati

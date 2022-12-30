@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und weitere
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA compatibility: 2022.3 and later
+* NVDA-Kompatibilität: 2022.3 und neuer
 
 Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
 2021 in Windows App Essentials umbenannt, um Windows 10 und zukünftige
@@ -20,35 +20,38 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 * Cortana
 * Karten
 * Moderne Tastatur
-  (Emoji-Bedienfeld/Diktierfunktion/Sprachsteuerung/Hardware-Eingabevorschläge/Zwischenablage-Historie/Vorgeschlagene
+  (Emoji-Panel/Touch-Tastatur/Diktat/Sprachsteuerung/Hardware-Eingabevorschläge/Zwischenablage-Verlauf/Vorgeschlagene
   Aktionen/Editoren für moderne Eingabemethoden)
 * Einstellungen (System-Einstellungen, Windows+I)
 * Sprachzugang (Windows 11 Version 22H2)
 * Wetter
-* Miscellaneous modules for controls and features such as virtual desktops
-  announcements
+* Verschiedene Module für Steuerungen und Funktionen wie die Mitteilung
+  virtueller Desktops
 
 Hinweise:
 
 * Diese Erweiterung erfordert Windows 10 Version 21H2 (Build 19044), Windows
   11 Version 21H2 (Build 22000) oder neuere Versionen.
-* Feature update support duration is tied to consumer support duration
-  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
-  may end support for a feature update prior to end of consumer support. See
-  aka.ms/WindowsTargetVersioninfo for more information and support dates.
+* Die Dauer der Unterstützung für Feature-Updates ist an die Dauer des
+  Consumer-Supports (Home, Pro, Pro Education, Pro for Workstations
+  Editionen) gebunden und die Erweiterung kann den Support für ein
+  Feature-Update vor dem Ende des Consumer-Supports beenden. Unter
+  aka.ms/WindowsTargetVersioninfo finden Sie weitere Informationen und
+  Support-Informationen dazu.
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
-* If Add-on Updater is installed and background add-on updates is enabled,
-  Windows App Essentials will not install at all on unsupported Windows
-  releases.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel. For beta channel, only the latest build (22623) is supported.
+* Wenn der Updater für NVDA-Erweiterungen installiert ist und Add-on-Updates
+  im Hintergrund aktiviert sind, wird Windows App Essentials auf nicht
+  unterstützten Windows-Versionen überhaupt nicht installiert.
+* Nicht alle Funktionen der Vorschau-Builds des Windows-Insiders werden
+  unterstützt. Dies gilt insbesondere für Funktionen, die einer Untergruppe
+  von Windows-Insidern im Dev-Kanal zur Verfügung stehen. Für den Beta-Kanal
+  wird nur der neueste Build (22623) unterstützt.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
-* Some apps support compact overlay mode (always on top in Calculator, for
-  example), and this mode will not work properly with the portable version
-  of NVDA.
+* Einige Anwendungen unterstützen den kompakten Überlagerungsmodus
+  (z. B. "Immer oben" im Taschenrechner), und dieser Modus funktioniert
+  nicht ordnungsgemäß mit der portablen NVDA-Version.
 * Für eine optimale Nutzung von Anwendungen, die Webtechnologien und
   -inhalte einbetten, wie z. B. das Startmenü und sein Kontextmenü,
   aktivieren Sie die Einstellung "Automatischer Fokusmodus bei
@@ -60,10 +63,12 @@ Versionen][3].
 
 ## Allgemein
 
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag start/cancel/complete
-  (recognized as state change event), drag drop effect, drag item is
-  grabbed, drop target effect. These events are now part of NVDA 2022.4.
+* Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignis-Handlern werden
+  die folgenden UIA-Ereignisse und -Eigenschaften erkannt:
+  Start/Abbruch/Vervollständigen des Ziehens (wird als
+  Zustandsänderungsereignis erkannt), Drag-Drop-Effekt, Ziehen eines
+  Elements wird gegriffen, Drop-Ziel-Effekt. Diese Ereignisse sind jetzt
+  Bestandteil von NVDA 2022.4.
 * Beim Öffnen, Schließen oder Umschalten zwischen virtuellen Desktops teilt
   NVDA den Namen des aktiven virtuellen Desktops mit (z. B. Desktop 2).
 * Beim Ziehen und Ablegen von Elementen, z. B. beim Anordnen von
@@ -71,10 +76,14 @@ Versionen][3].
   Schnellaktionen im Action Center mit Alt+Umschalt+Pfeiltasten, meldet NVDA
   vor bzw. während des Ziehens von Elementen "Ziehen" und/oder Zieh- und
   Ablegeeffekte. Dies ist nun Teil von NVDA 2022.4.
-* In Windows 11, NVDA will announce search highlights in Start menu when it
-  opens. This is now part of NVDA 2023.1.
-* In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
-  detected properly when using mouse and/or touch interaction.
+* In Windows 11 zeigt NVDA beim Öffnen des Startmenüs die Highlights der
+  Suche an. Dies ist jetzt Teil von NVDA 2023.1.
+* Im Windows 11-Update von Moment 2 für 22H2 kann der neu gestaltete
+  Überlaufbereich der Taskleiste bei der Verwendung von Maus- und/oder
+  Touch-Interaktion korrekt erkannt werden.
+* NVDA zeichnet die Prozessor-Architektur für die aktuelle
+  Windows-Installation (x86/32-bit, AMD64, ARM64) auf, wenn es gestartet
+  wird. Dies ist nun Teil von NVDA 2023.1.
 
 ## Cortana
 
@@ -86,19 +95,19 @@ Versionen][3].
 ## Karten
 
 * NVDA spielt einen Ortungston für Kartenstandorte ab.
-* NVDA will no longer interupt speech when focused on items other than the
-  map control in some cases.
+* NVDA unterbricht in manchen Fällen die Sprachausgabe nicht mehr, wenn der
+  Fokus auf anderen Elementen als der Kartensteuerung liegt.
 
 ## Moderne virtuelle Tastaturen
 
-Dazu gehören das Emoji-Bedienfeld, der Verlauf der Zwischenablage,
-Diktier-/Stimmeingabe, Hardware-Eingabevorschläge, vorgeschlagene Aktionen
-und moderne Eingabemethoden-Editoren für bestimmte Sprachen in Windows 10
-und 11. Aktivieren Sie bei der Anzeige von Emojis die Einstellung
-Unicode-Konsortium in den Spracheinstellungen von NVDA und setzen Sie die
-Symbolebene auf "einige" oder höher. Drücken Sie beim Einfügen aus dem
-Zwischenablageverlauf in Windows 10 die Leertaste anstelle der Eingabetaste,
-um das ausgewählte Element einzufügen.
+Dazu gehören das Emoji-Bedienfeld, der Verlauf der Zwischenablage, die
+Touch-Tastatur, Diktat-/Spracheingabe, Hardware-Eingabevorschläge,
+vorgeschlagene Aktionen und moderne Eingabemethoden-Editoren für bestimmte
+Sprachen in Windows 10 und 11. Aktivieren Sie bei der Anzeige von Emojis die
+Unicode-Konsortium-Einstellung in den NVDA-Spracheinstellungen und setzen
+Sie die Symbolebene auf "Einige" oder höher. Drücken Sie beim Einfügen aus
+dem Verlauf der Zwischenablage in Windows 10 die Leertaste anstelle der
+Eingabetaste, um das ausgewählte Element einzufügen.
 
 * Wenn im Emoji-Panel von Windows 10 eine Emoji-Gruppe (einschließlich der
   Kaomoji- und Symbolgruppe) ausgewählt wird, verschiebt NVDA das

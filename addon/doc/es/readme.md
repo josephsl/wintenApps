@@ -20,9 +20,9 @@ qué se incluye):
 
 * Cortana
 * Mapas
-* Teclado Moderno (panel de emojis / dictado / escritura por voz /
-  sugerencias de entrada hardware / historial del portapapeles / acciones
-  sugeridas / editores modernos de método de entrada)
+* Teclado Moderno (panel de emojis / teclado táctil / dictado / escritura
+  por voz / sugerencias de entrada hardware / historial del portapapeles /
+  acciones sugeridas / editores modernos de método de entrada)
 * Opciones (opciones de sistema, Windows+I)
 * Acceso por voz (Windows 11 22H2)
 * El Tiempo
@@ -81,6 +81,9 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * En Windows 11 22H2 Moment 2, el área flotante rediseñada de la bandeja del
   sistema se puede detectar adecuadamente al usar interacción táctil o del
   ratón.
+* NVDA registrará la arquitectura del procesador de la instalación actual de
+  Windows (x86/32 bits, AMD64, ARM64) cuando se inicie. Esto ahora forma
+  parte de NVDA 2023.1.
 
 ## Cortana
 
@@ -96,14 +99,14 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 ## Teclado Moderno
 
-Esto incluye el panel de emojis, historial del portapapeles, dictado /
-escritura por voz, sugerencias de entrada por hardware, acciones sugeridas y
-los editores modernos de métodos de entrada para ciertos idiomas en Windows
-10 y 11. Al visualizar emojis, para una mejor experiencia, activa la opción
-del consorcio Unicode desde las opciones de voz de NVDA y configura el nivel
-de símbolos en "alguno" o más alto. Al pegar desde el portapapeles en
-Windows 10, pulsa la barra espaciadora en vez de intro para pegar el
-elemento seleccionado.
+Esto incluye el panel de emojis, historial del portapapeles, teclado táctil,
+dictado / escritura por voz, sugerencias de entrada por hardware, acciones
+sugeridas y los editores modernos de métodos de entrada para ciertos idiomas
+en Windows 10 y 11. Al visualizar emojis, para una mejor experiencia, activa
+la opción del consorcio Unicode desde las opciones de voz de NVDA y
+configura el nivel de símbolos en "alguno" o más alto. Al pegar desde el
+historial del portapapeles en Windows 10, pulsa la barra espaciadora en vez
+de intro para pegar el elemento seleccionado.
 
 * En el panel de emojis de Windows 10, cuando se seleccione un grupo de
   emojis (incluyendo kaomoji y el grupo de símbolos), NVDA ya no moverá el

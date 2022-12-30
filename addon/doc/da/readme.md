@@ -18,8 +18,9 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 * Cortana
 * Kort
-* Moderne tastatur (Emoji-panel, diktering, stemmeskrivning, forslag til
-  hardwareinput, udklipshistorik og Editor til inputmetode)
+* Modern keyboard (emoji panel/touch keyboard/dictation/voice
+  typing/hardware input suggestions/clipboard history/Suggested
+  Actions/modern input method editors)
 * Indstillinger (systemindstillinger, Windows+I)
 * Stemmeadgang (Windows 11 22H2)
 * Vejr
@@ -76,6 +77,9 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
   åbnes. Dette er nu en del af NVDA 2023.1.
 * In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
   detected properly when using mouse and/or touch interaction.
+* NVDA will record processor architecture for the current Windows
+  installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
+  of NVDA 2023.1.
 
 ## Cortana
 
@@ -85,18 +89,18 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 ## Kort
 
 * NVDA spiller placeringsbip for kortlokationer.
-* NVDA will no longer interupt speech when focused on items other than the
+* NVDA will no longer interrupt speech when focused on items other than the
   map control in some cases.
 
 ## Moderne tastatur
 
-Dette inkluderer emoji-panelet, historik for udklipsholderen, diktering,
-forslag i forhold til hardwareinput og moderne Input Methodf Editor for
-visse sprog. Når du ser emojier, skal du for at få den bedste oplevelse
-aktivere Unicode Consortium-indstillingen fra NvDAs taleindstillinger og
-indstille tegnsætningsniveauet til "nogle" eller højere. Når du skal
-indstille fra historikken i Windows 10, skal du bruge mellemrumstasten i
-stedet for enter.
+This includes emoji panel, clipboard history, touch keyboard,
+dictation/voice typing, hardware input suggestions, suggested actions, and
+modern input method editors for certain languages across Windows 10 and
+11. When viewing emojis, for best experience, enable Unicode Consortium
+setting from NVDA's speech settings and set symbol level to "some" or
+higher. When pasting from clipboard history in Windows 10, press Space key
+instead of Enter key to paste the selected item.
 
 * Når en emoji-gruppe (inklusive kaomoji og symbolgrupper er valgt i Windows
   10, vil NVDA ikke længere flytte navigatorobjektet til bestemte emoji.

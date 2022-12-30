@@ -14,7 +14,9 @@
 
 * Cortana
 * 地图
-* 现代键盘（包括表情符号面板、听写、语音输入、硬件输入建议、云剪贴板历史记录、建议操作（预览）、现代输入法编辑器）
+* Modern keyboard (emoji panel/touch keyboard/dictation/voice
+  typing/hardware input suggestions/clipboard history/Suggested
+  Actions/modern input method editors)
 * 设置（Windows + I系统设置）
 * 语音访问（Windows 11 22H2）
 * 天气
@@ -49,6 +51,9 @@
 * 在 Windows 11 中，NVDA 支持在打开“开始”菜单时读出显示的搜索高亮。该特性已经包含在 NVDA2023.1 中。
 * In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
   detected properly when using mouse and/or touch interaction.
+* NVDA will record processor architecture for the current Windows
+  installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
+  of NVDA 2023.1.
 
 ## Cortana
 
@@ -58,15 +63,18 @@
 ## 地图
 
 * NVDA为地图上的位置播放位置嘟嘟声。
-* NVDA will no longer interupt speech when focused on items other than the
+* NVDA will no longer interrupt speech when focused on items other than the
   map control in some cases.
 
 ## 系统键盘
 
-这包括表情符号面板、剪贴板历史记录、听写/语音输入、硬件输入建议、建议的操作（预览）、适用于 Windows10 /
-Windows11的某些语言的现代输入法编辑器。查看表情符号时，为了获得最佳体验，请从 NvDA 的语音设置对话框中选中“处理字符和符号时包含
-Unicode 数据（表情符号）”复选框，并将符号级别设置为“少数”或更高。在 Windows 10
-中从云剪贴板历史记录粘贴时，请按空格键而非回车键来粘贴所选项目。
+This includes emoji panel, clipboard history, touch keyboard,
+dictation/voice typing, hardware input suggestions, suggested actions, and
+modern input method editors for certain languages across Windows 10 and
+11. When viewing emojis, for best experience, enable Unicode Consortium
+setting from NVDA's speech settings and set symbol level to "some" or
+higher. When pasting from clipboard history in Windows 10, press Space key
+instead of Enter key to paste the selected item.
 
 * 在 Windows 10 中，选择 Emoji 组（包括Kaomoji和符号组）时，NVDA 不会将导航对象移动到某些EMOJI上。
 * 在 Windows 11 剪贴板历史记录中，为了让 NVDA 宣布剪贴板历史记录条目菜单项，浏览模式将默认关闭。
