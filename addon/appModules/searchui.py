@@ -10,7 +10,8 @@ from nvdaBuiltin.appModules.searchui import AppModule, StartMenuSearchField  # N
 from NVDAObjects.UIA import UIA
 
 
-class StartMenuSearchField(StartMenuSearchField):
+# Bulk of the below class comes from NVDA Core.
+class StartMenuSearchField(StartMenuSearchField):  # type: ignore[no-redef]
 
 	def _get_description(self) -> str:
 		# NVDA Core issue 13841: detect search highlights and anounce it.
