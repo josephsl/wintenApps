@@ -1,5 +1,5 @@
 # NVDA add-on template  SCONSTRUCT file
-# Copyright (C) 2012-2022 Rui Batista, Noelia Martinez, Joseph Lee
+# Copyright (C) 2012-2023 Rui Batista, Noelia Martinez, Joseph Lee
 # This file is covered by the GNU General Public License.
 # See the file COPYING.txt for more details.
 
@@ -75,8 +75,21 @@ def mdTool(env):
 	env['BUILDERS']['markdown'] = mdBuilder
 
 
+def validateVersionNumber(key, val, env):
+	# Used to make sure version major.minor.patch are integers to comply with NV Access add-on store.
+	# Ignore all this if version number is not specified, in which case json generator will validate this info.
+	if val == "0.0.0":
+		return
+	versionNumber = val.split(".")
+	if len(versionNumber) < 3:
+		raise ValueError("versionNumber must have three parts (major.minor.patch)")
+	if not all([part.isnumeric() for part in versionNumber]):
+		raise ValueError("versionNumber (major.minor.patch) must be integers")
+
+
 vars = Variables()
 vars.Add("version", "The version of this build", buildVars.addon_info["addon_version"])
+vars.Add("versionNumber", "Version number of the form major.minor.patch", "0.0.0", validateVersionNumber)
 vars.Add(BoolVariable("dev", "Whether this is a daily development version", False))
 vars.Add("channel", "Update channel for this build", buildVars.addon_info["addon_updateChannel"])
 
@@ -163,7 +176,23 @@ def createAddonStoreJson(bundle):
 	"""Creates add-on store JSON file from an add-on package and manifest data."""
 	import json
 	import hashlib
-	jsonFilename = f'{buildVars.addon_info["addon_name"]}-{buildVars.addon_info["addon_version"]}.json'
+	# Set different json file names and version number properties based on version number parsing results.
+	if env["versionNumber"] == "0.0.0":
+		env["versionNumber"] = buildVars.addon_info["addon_version"]
+	versionNumberParsed = env["versionNumber"].split(".")
+	if all([part.isnumeric() for part in versionNumberParsed]):
+		if len(versionNumberParsed) == 1:
+			versionNumberParsed += ["0", "0"]
+		elif len(versionNumberParsed) == 2:
+			versionNumberParsed.append("0")
+	else:
+		versionNumberParsed = []
+	if len(versionNumberParsed):
+		major, minor, patch = [int(part) for part in versionNumberParsed]
+		jsonFilename = f'{buildVars.addon_info["addon_name"]}-{major}.{minor}.{patch}.json'
+	else:
+		jsonFilename = f'{buildVars.addon_info["addon_name"]}-{buildVars.addon_info["addon_version"]}.json'
+		major, minor, patch = 0, 0, 0
 	print('Generating % s' % jsonFilename)
 	sha256 = hashlib.sha256()
 	with open(bundle, "rb") as f:
@@ -188,9 +217,9 @@ def createAddonStoreJson(bundle):
 		"homepage": buildVars.addon_info["addon_url"],
 		"addonVersionName": buildVars.addon_info["addon_version"],
 		"addonVersionNumber": {
-			"major": 0,
-			"minor": 0,
-			"patch": 0
+			"major": major,
+			"minor": minor,
+			"patch": patch
 		},
 		"minNVDAVersion": {
 			"major": int(minMajor),
