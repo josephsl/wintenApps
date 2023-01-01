@@ -40,7 +40,7 @@ class AppModule(appModuleHandler.AppModule):
 			try:
 				if (
 					obj.role == controlTypes.Role.BUTTON
-					and obj.parent.parent.UIAElement.cachedClassName == "Map"
+					and obj.parent.parent.UIAAutomationId == "MapControl"
 				):
 					clsList.insert(0, MapLocation)
 			except AttributeError:
