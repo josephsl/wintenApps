@@ -69,13 +69,12 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			elif obj.UIAElement.cachedClassName.endswith("BreadcrumbBarItem"):
 				obj.roleText = obj.UIAElement.currentLocalizedControlType
 
-	# Workarounds for Windows 10 and Server 2022
-	# Exposing specific attributes made the app module more complex, therefore inform Flake8.
-	if winVersion.getWinVer() < winVersion.WIN11:  # NOQA: C901
-		# Sometimes, the same text is announced, so consult this cache.
-		_nameChangeCache: str = ""
+	# Sometimes, the same text is announced, so consult this cache.
+	_nameChangeCache: str = ""
 
-		def event_liveRegionChange(self, obj, nextHandler):
+	def event_liveRegionChange(self, obj, nextHandler):
+		# Workarounds for Windows 10 and Server 2022
+		if winVersion.getWinVer() < winVersion.WIN11:
 			if isinstance(obj, UIA):
 				# Except for specific cases, announce all live regions.
 				# Announce individual update progress in build 16215 and later preferably only once per update stage.
@@ -100,14 +99,13 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 						except AttributeError:
 							pass
 					self._nameChangeCache = obj.name
-			nextHandler()
+		nextHandler()
 
-		def event_appModule_loseFocus(self):
-			self._nameChangeCache = ""
+	def event_appModule_loseFocus(self):
+		self._nameChangeCache = ""
 
-	# Workarounds for Windows 11 22H2 or later.
-	elif winVersion.getWinVer() >= winVersion.WIN11_22H2:
-		def event_nameChange(self, obj, nextHandler):
+	def event_nameChange(self, obj, nextHandler):
+		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
 			if isinstance(obj, UIA):
 				if "ApplicableUpdate" in obj.UIAAutomationId:
 					import ui
@@ -119,9 +117,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 						ui.message(" ".join([element.name for element in obj.parent.children]))
 					except AttributeError:
 						pass
-			nextHandler()
+		nextHandler()
 
-		def event_focusEntered(self, obj, nextHandler):
+	def event_focusEntered(self, obj, nextHandler):
+		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
 			if isinstance(obj, UIA):
 				if obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView":
 					import UIAHandler
@@ -136,4 +135,4 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 							)
 						except NotImplementedError:
 							pass
-			nextHandler()
+		nextHandler()
