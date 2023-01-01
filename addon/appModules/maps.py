@@ -39,7 +39,7 @@ class AppModule(appModuleHandler.AppModule):
 		if isinstance(obj, UIA):
 			try:
 				if (
-					obj.role in (controlTypes.Role.STATICTEXT, controlTypes.Role.BUTTON)
+					obj.role == controlTypes.Role.BUTTON
 					and obj.parent.parent.UIAElement.cachedClassName == "Map"
 				):
 					clsList.insert(0, MapLocation)
