@@ -72,7 +72,7 @@ class AppModule(appModuleHandler.AppModule):
 			theId = obj.UIAAutomationId
 		except AttributeError:
 			return
-		if obj.UIAAutomationId == "SideNavigationBar" and obj.role != controlTypes.Role.GROUPING:
+		if theId == "SideNavigationBar" and obj.role != controlTypes.Role.GROUPING:
 			obj.role = controlTypes.Role.TABCONTROL
 		if RE_TAB_AUTOMATION_MATCH.match(theId):
 			obj.role = controlTypes.Role.TAB
