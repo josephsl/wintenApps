@@ -6,7 +6,6 @@
 
 import appModuleHandler
 import api
-import controlTypes
 import config
 from NVDAObjects.UIA import UIA
 import tones
