@@ -38,10 +38,7 @@ class AppModule(appModuleHandler.AppModule):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, UIA):
 			try:
-				if (
-					obj.role == controlTypes.Role.BUTTON
-					and obj.parent.parent.UIAAutomationId == "MapControl"
-				):
+				if obj.parent.parent.UIAAutomationId == "MapControl":
 					clsList.insert(0, MapLocation)
 			except AttributeError:
 				pass
