@@ -8,6 +8,15 @@ from NVDAObjects.UIA import UIA, Dialog
 import globalVars
 import UIAHandler
 from logHandler import log
+import ui
+
+
+class TaskbarItem(UIA):
+
+	def announceDragPosition(self):
+		left = self.previous
+		right = self.next
+		ui.message("{} moved between {} and {}".format(self.name, left.name, right.name))
 
 
 # #20: don't even think about proceeding in secure screens.
