@@ -17,7 +17,12 @@ class TaskbarItem(UIA):
 	def announceDragPosition(self):
 		left = self.previous
 		right = self.next
-		ui.message("{} moved between {} and {}".format(self.name, left.name, right.name))
+		if left and right:
+			ui.message("{} moved between {} and {}".format(self.name, left.name, right.name))
+		elif left and not right:
+			ui.message("{} moved to end of the apps list".format(self.name))
+		elif right and not left:
+			ui.message("{} moved to beginning of the apps list".format(self.name))
 
 	@scriptHandler.script(gesture="kb:alt+shift+rightArrow")
 	def script_moveRight(self, gesture):
