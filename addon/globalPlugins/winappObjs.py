@@ -9,6 +9,7 @@ import globalVars
 import UIAHandler
 from logHandler import log
 import ui
+import scriptHandler
 
 
 class TaskbarItem(UIA):
@@ -17,6 +18,16 @@ class TaskbarItem(UIA):
 		left = self.previous
 		right = self.next
 		ui.message("{} moved between {} and {}".format(self.name, left.name, right.name))
+
+	@scriptHandler.script(gesture="kb:alt+shift+rightArrow")
+	def script_moveRight(self, gesture):
+		gesture.send()
+		self.announceDragPosition()
+
+	@scriptHandler.script(gesture="kb:alt+shift+leftArrow")
+	def script_moveLeft(self, gesture):
+		gesture.send()
+		self.announceDragPosition()
 
 
 # #20: don't even think about proceeding in secure screens.
