@@ -29,13 +29,17 @@ class TaskbarItem(UIA):
 
 	@scriptHandler.script(gesture="kb:alt+shift+rightArrow")
 	def script_moveRight(self, gesture):
+		announcePosition = self.next is not None
 		gesture.send()
-		self.announceDragPosition()
+		if announcePosition:
+			self.announceDragPosition()
 
 	@scriptHandler.script(gesture="kb:alt+shift+leftArrow")
 	def script_moveLeft(self, gesture):
+		announcePosition = isinstance(self.previous, TaskbarItem)
 		gesture.send()
-		self.announceDragPosition()
+		if announcePosition:
+			self.announceDragPosition()
 
 
 # #20: don't even think about proceeding in secure screens.
