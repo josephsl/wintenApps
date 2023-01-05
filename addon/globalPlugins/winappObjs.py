@@ -10,6 +10,7 @@ import UIAHandler
 from logHandler import log
 import ui
 import scriptHandler
+import wx
 
 
 class TaskbarItem(UIA):
@@ -32,14 +33,14 @@ class TaskbarItem(UIA):
 		announcePosition = self.next is not None
 		gesture.send()
 		if announcePosition:
-			self.announceDragPosition()
+			wx.CallAfter(self.announceDragPosition)
 
 	@scriptHandler.script(gesture="kb:alt+shift+leftArrow")
 	def script_moveLeft(self, gesture):
 		announcePosition = isinstance(self.previous, TaskbarItem)
 		gesture.send()
 		if announcePosition:
-			self.announceDragPosition()
+			wx.CallAfter(self.announceDragPosition)
 
 
 # #20: don't even think about proceeding in secure screens.
