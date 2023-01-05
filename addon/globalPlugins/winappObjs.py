@@ -15,7 +15,7 @@ import scriptHandler
 class TaskbarItem(UIA):
 
 	def announceDragPosition(self):
-		left = self.previous
+		left = self.previous if isinstance(self.previous, TaskbarItem) else None
 		right = self.next
 		if left and right:
 			ui.message("{} moved between {} and {}".format(self.name, left.name, right.name))
