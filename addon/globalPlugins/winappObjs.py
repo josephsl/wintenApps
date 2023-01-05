@@ -88,6 +88,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
 			return
+		# Announce rearranged taskbar icons in Windows 11 builds earlier than 25267.
 		import winVersion
 		if (
 			obj.appModule.appName == "explorer"
