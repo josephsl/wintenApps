@@ -11,6 +11,8 @@ from logHandler import log
 import ui
 import scriptHandler
 import wx
+import addonHandler
+addonHandler.initTranslation()
 
 
 # Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
@@ -24,11 +26,16 @@ class TaskbarItem(UIA):
 		left = self.previous if isinstance(self.previous, TaskbarItem) else None
 		right = self.next
 		if left and right:
-			ui.message("{} moved between {} and {}".format(self.itemName, left.itemName, right.itemName))
+			# Translators: announced when rearranging taskbar icons in Windows 11.
+			ui.message(_("{appName} moved between {previousAppName} and {nextAppName}").format(
+				appName=self.itemName, previousAppName=left.itemName, nextAppName=right.itemName
+			))
 		elif left and not right:
-			ui.message("{} moved to end of the apps list".format(self.itemName))
+			# Translators: announced when rearranging taskbar icons in Windows 11.
+			ui.message(_("{appName} moved to end of the apps list").format(appName=self.itemName))
 		elif right and not left:
-			ui.message("{} moved to beginning of the apps list".format(self.itemName))
+			# Translators: announced when rearranging taskbar icons in Windows 11.
+			ui.message(_("{appName} moved to beginning of the apps list").format(appName=self.itemName))
 
 	@scriptHandler.script(gesture="kb:alt+shift+rightArrow")
 	def script_moveRight(self, gesture):
