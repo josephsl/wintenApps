@@ -93,6 +93,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if (
 			obj.appModule.appName == "explorer"
 			and obj.UIAElement.cachedClassName == "Taskbar.TaskListButtonAutomationPeer"
+			and obj.parent.UIAAutomationId == "TaskbarFrameRepeater"
 			and winVersion.getWinVer().build < 25267
 		):
 			clsList.insert(0, TaskbarItem)
