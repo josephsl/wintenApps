@@ -81,6 +81,9 @@ Windows, а також удосконаленням та виправлення�
 * NVDA will record processor architecture for the current Windows
   installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
   of NVDA 2023.1.
+* In Windows 11 builds prior to Insider Preview build 25267, NVDA will
+  announce results of rearranging taskbar icons when pressing
+  Alt+Shift+left/right arrow keys.
 
 ## Cortana
 
@@ -106,8 +109,9 @@ instead of Enter key to paste the selected item.
 * На панелі емодзі Windows 10, коли вибрано групу емодзі (зокрема каомодзі
   та групу символів), NVDA більше не переміщуватиме об’єкт навігатора до
   певних емодзі.
-* В історії буфера обміну Windows 11 режим огляду початково буде вимкнено,
-  щоб дозволити NVDA зачитувати пункти меню записів буфера обміну.
+* In Windows 11 clipboard history, browse mode will be turned off by
+  default, designed to let NVDA announce clipboard history entry menu
+  items. This is now part of NVDA 2023.1.
 * У Windows 11 22H2 Момент 1 і пізніше NVDA буде оголошувати пропоновані
   дії, коли сумісні дані, такі як телефонні номери, копіюються в буфер
   обміну.

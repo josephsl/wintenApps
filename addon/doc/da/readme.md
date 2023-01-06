@@ -80,6 +80,9 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * NVDA will record processor architecture for the current Windows
   installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
   of NVDA 2023.1.
+* In Windows 11 builds prior to Insider Preview build 25267, NVDA will
+  announce results of rearranging taskbar icons when pressing
+  Alt+Shift+left/right arrow keys.
 
 ## Cortana
 
@@ -104,9 +107,9 @@ instead of Enter key to paste the selected item.
 
 * Når en emoji-gruppe (inklusive kaomoji og symbolgrupper er valgt i Windows
   10, vil NVDA ikke længere flytte navigatorobjektet til bestemte emoji.
-* I Windows 11 udklipsholderhistorik er gennemsynstilstand slået fra som
-  standard, således NVDA kan annoncere menupunkter i
-  udklipsholderhistorikken.
+* In Windows 11 clipboard history, browse mode will be turned off by
+  default, designed to let NVDA announce clipboard history entry menu
+  items. This is now part of NVDA 2023.1.
 * I Windows 11 22H2 Moment 1 og senere vil NVDA annoncere foreslåede
   handlinger, når kompatible data såsom telefonnumre kopieres til
   udklipsholderen.

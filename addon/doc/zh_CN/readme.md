@@ -3,7 +3,7 @@
 * 作者：Joseph Lee、Derek Riemer 等
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA compatibility: 2022.3 and later
+* NVDA 兼容性：2022.3 及更高版本
 
 注意：此插件最初称为 Windows 10 应用增强，在 2021 年更名为 Windows 应用增强，以支持 Windows 10 和 Windows
 11 等后续版本。此插件的部分内容仍将引用原始插件名称。
@@ -14,13 +14,11 @@
 
 * Cortana
 * 地图
-* Modern keyboard (emoji panel/touch keyboard/dictation/voice
-  typing/hardware input suggestions/clipboard history/Suggested
-  Actions/modern input method editors)
+* 现代键盘（表情符号面板/触摸键盘/听写/语音输入/硬件输入建议/剪贴板历史/建议操作/现代输入法编辑器）
 * 设置（Windows + I系统设置）
 * 语音访问（Windows 11 22H2）
 * 天气
-* 用于控件和功能的杂项模块，例如读出虚拟桌面名称。
+* 用于控件和功能的其他模块，例如读出虚拟桌面名称
 
 注意:
 
@@ -29,9 +27,8 @@
   aka.ms/WindowsTargetVersioninfo。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
 * 如果安装了插件更新器并启用了后台插件更新， 在不受支持的操作系统上 Windows App Essentials 不会被安装。
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel. For beta channel, only the latest build (22623) is supported.
+* 并非支持所有的 Windows Insider Preview 版本，而是更多的支持从开发通道引入 Windows Insider 的功能。对于
+  Beta 频道，则仅支持最新版本 (22623)。
 * 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
 * 某些应用程序支持紧凑叠加模式（例如，计算器中的始终置顶模式），该模式无法在 NVDA 的便携版中使用。
 * 为了获得内嵌 Web 试图（例如开始菜单及其上下文菜单）的应用程序的最佳体验，请在 NVDA
@@ -41,19 +38,16 @@
 
 ## 常规增强
 
-* In addition to UIA event handlers provided by NVDA, the following UIA
-  events and properties are recognized: drag start/cancel/complete
-  (recognized as state change event), drag drop effect, drag item is
-  grabbed, drop target effect. These events are now part of NVDA 2022.4.
+* 除了 NVDA 提供的 UIA 事件处理程序之外，还可以识别以下 UIA
+  事件和属性：拖动开始/取消/完成（识别为状态更改事件）、拖放效果、拖动项目被托起、放置目标。该特性已经包含在 NVDA2022.4 中。
 * 在新建、关闭、或切换虚拟桌面时，NVDA会读出当前桌面名称（例如，桌面2）。
 * 当使用 Alt+Shift+箭头键在“开始”菜单（Windows 10 中的磁贴）或操作中心快速操作中排列固定条目时，NVDA
   会读出已拖动项目的信息或已拖动项目的新位置。该特性已经包含在 NVDA2022.4 中。
 * 在 Windows 11 中，NVDA 支持在打开“开始”菜单时读出显示的搜索高亮。该特性已经包含在 NVDA2023.1 中。
-* In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
-  detected properly when using mouse and/or touch interaction.
-* NVDA will record processor architecture for the current Windows
-  installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
-  of NVDA 2023.1.
+* 在 Windows 11 22H2 Moment 2 中，可以在使用鼠标和/或触摸交互时正确识别新版的系统托盘溢出区域。
+* 启动时记录当前 Windows 安装（x86/32 位、AMD64、ARM64）的处理器架构。该特性已经包含在 NVDA2023.1 中。
+* 在 Insider Preview 版本 25267 之前的 Windows 11 版本中，NVDA 会读出使用
+  Alt+Shift+左/右箭头键，重新排列任务栏图标的结果。
 
 ## Cortana
 
@@ -63,26 +57,23 @@
 ## 地图
 
 * NVDA为地图上的位置播放位置嘟嘟声。
-* NVDA will no longer interrupt speech when focused on items other than the
-  map control in some cases.
+* 在某些情况下，NVDA 在聚焦于地图控件以外的项目时不会打断语音。
 
 ## 系统键盘
 
-This includes emoji panel, clipboard history, touch keyboard,
-dictation/voice typing, hardware input suggestions, suggested actions, and
-modern input method editors for certain languages across Windows 10 and
-11. When viewing emojis, for best experience, enable Unicode Consortium
-setting from NVDA's speech settings and set symbol level to "some" or
-higher. When pasting from clipboard history in Windows 10, press Space key
-instead of Enter key to paste the selected item.
+包括表情符号面板、剪贴板历史记录、触摸键盘、听写/语音输入、硬件输入建议、建议的操作（预览）、适用于 Windows10 /
+Windows11的某些语言的现代输入法编辑器。查看表情符号时，为了获得最佳体验，请从 NvDA 的语音设置对话框中选中“处理字符和符号时包含
+Unicode 数据（表情符号）”复选框，并将符号级别设置为“少数”或更高。在 Windows 10
+中从云剪贴板历史记录粘贴时，请按空格键而非回车键来粘贴所选项目。
 
 * 在 Windows 10 中，选择 Emoji 组（包括Kaomoji和符号组）时，NVDA 不会将导航对象移动到某些EMOJI上。
-* 在 Windows 11 剪贴板历史记录中，为了让 NVDA 宣布剪贴板历史记录条目菜单项，浏览模式将默认关闭。
+* 在 Windows 11 剪贴板历史记录中，为了让 NVDA 读出剪贴板历史记录条目菜单项，浏览模式将默认关闭。该特性已经包含在
+  NVDA2023.1 中。
 * 在 Windows 11 22H2 Moment 1 及更高版本中，当电话号码等兼容的数据复制到剪贴板时，NVDA 会读出建议的操作。
 
 ## 设置
 
-* NVDA 将公布可选质量更新控件的名称（如果存在）（Windows 10 中的立即下载和安装链接，Windows 11 中的下载按钮）。
+* NVDA 会读出可选质量更新控件的名称（如果存在）（Windows 10 中的立即下载和安装链接，Windows 11 中的下载按钮）。
 * 在 Windows 11 中，可以正确识别 breadcrumb 栏项目。
 * 在 Windows 10 和 11 22H2 及更高版本中，在 Windows 下载和安装更新过程中 NVDA的朗读会被打断并读出下载或安装进度。
   如果使用 Windows 11 22H2 及更高版本，且“启用选择性注册 UIA

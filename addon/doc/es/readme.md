@@ -84,6 +84,9 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * NVDA registrará la arquitectura del procesador de la instalación actual de
   Windows (x86/32 bits, AMD64, ARM64) cuando se inicie. Esto ahora forma
   parte de NVDA 2023.1.
+* En compilaciones de Windows 11 anteriores a la compilación Insider Preview
+  25267, NVDA anunciará el resultado al reordenar iconos de la barra de
+  tareas al pulsar las teclas alt+shift+flechas izquierda y derecha.
 
 ## Cortana
 
@@ -113,7 +116,8 @@ de intro para pegar el elemento seleccionado.
   navegador de objetos a ciertos emojis.
 * En el historial del portapapeles de Windows 11, se desactivará el modo
   exploración por defecto, diseñado para permitir que NVDA anuncie los
-  elementos de menú con las entradas del historial del portapapeles.
+  elementos de menú con las entradas del historial del portapapeles. Esto
+  ahora forma parte de NVDA 2023.1.
 * En Windows 11 22H2 Moment 1 y posterior, NVDA anunciará las acciones
   sugeridas cuando se copien al portapapeles datos compatibles, como números
   de teléfono.

@@ -84,6 +84,9 @@ Versionen][3].
 * NVDA zeichnet die Prozessor-Architektur für die aktuelle
   Windows-Installation (x86/32-bit, AMD64, ARM64) auf, wenn es gestartet
   wird. Dies ist nun Teil von NVDA 2023.1.
+* In Windows 11 builds prior to Insider Preview build 25267, NVDA will
+  announce results of rearranging taskbar icons when pressing
+  Alt+Shift+left/right arrow keys.
 
 ## Cortana
 
@@ -112,9 +115,9 @@ Eingabetaste, um das ausgewählte Element einzufügen.
 * Wenn im Emoji-Panel von Windows 10 eine Emoji-Gruppe (einschließlich der
   Kaomoji- und Symbolgruppe) ausgewählt wird, verschiebt NVDA das
   Navigations-Objekt nicht mehr zu bestimmten Emojis.
-* In der Zwischenablage von Windows 11 ist der Lesemodus standardmäßig
-  ausgeschaltet, damit NVDA Menüeinträge für die Zwischenablage mitteilen
-  kann.
+* In Windows 11 clipboard history, browse mode will be turned off by
+  default, designed to let NVDA announce clipboard history entry menu
+  items. This is now part of NVDA 2023.1.
 * In Windows 11 Version 22H2 Moment 1 und neuer sagt NVDA vorgeschlagene
   Aktionen an, wenn kompatible Daten wie Telefonnummern in die
   Zwischenablage kopiert werden.
