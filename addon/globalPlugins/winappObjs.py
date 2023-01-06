@@ -18,13 +18,13 @@ addonHandler.initTranslation()
 # Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
 class TaskbarItem(UIA):
 
-	def _get_itemName(self):
+	def initOverlayClass(self):
 		# Icon name contains open window count if windows are open after a hyphen (-).
-		return self.name.rpartition(" - ")[0] if " -" in self.name else self.name
+		self.itemName = self.name.rpartition(" - ")[0] if " -" in self.name else self.name
 
 	def announceDragPosition(self):
 		left = self.previous if isinstance(self.previous, TaskbarItem) else None
-		right = self.next
+		right = self.next if isinstance(self.next, TaskbarItem) else None
 		if left and right:
 			# Translators: announced when rearranging taskbar icons in Windows 11.
 			ui.message(_("{appName} moved between {previousAppName} and {nextAppName}").format(
@@ -39,7 +39,7 @@ class TaskbarItem(UIA):
 
 	@scriptHandler.script(gesture="kb:alt+shift+rightArrow")
 	def script_moveRight(self, gesture):
-		announcePosition = self.next is not None
+		announcePosition = isinstance(self.next, TaskbarItem)
 		gesture.send()
 		if announcePosition:
 			wx.CallAfter(self.announceDragPosition)
@@ -93,6 +93,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if (
 			obj.appModule.appName == "explorer"
 			and obj.UIAElement.cachedClassName == "Taskbar.TaskListButtonAutomationPeer"
+			and obj.parent.UIAAutomationId == "TaskbarFrameRepeater"
 			and winVersion.getWinVer().build < 25267
 		):
 			clsList.insert(0, TaskbarItem)

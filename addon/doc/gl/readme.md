@@ -83,6 +83,9 @@ documento [rexistros de trocos para publicacións de complementos][3].
 * NVDA gravará a arquitectura do procesador para a instalación actual de
   Windows (x86/32 bits, AMD64, ARM64) cando se inicie. Agora isto forma
   parte de NVDA 2023.1.
+* In Windows 11 builds prior to Insider Preview build 25267, NVDA will
+  announce results of rearranging taskbar icons when pressing
+  Alt+Shift+left/right arrow keys.
 
 ## Cortana
 
@@ -109,9 +112,9 @@ Intro para pegar o elemento seleccionado.
 * No panel de emoji de windows 10, cando se selecciona un grupo de emojis
   (incluindo kaomoji e grupos de símbolos), NVDA xa non moverá o navegador
   de obxectos a certos emojis.
-* No historial do portapapeis de Windows 11, o modo exploración
-  desactivarase por defecto, deseñado para permitir que NVDA anuncie os
-  elementos do menú de entradas do historial do portapapeis.
+* In Windows 11 clipboard history, browse mode will be turned off by
+  default, designed to let NVDA announce clipboard history entry menu
+  items. This is now part of NVDA 2023.1.
 * En Windows 11 22H2 Moment 1 e posterior, NVDA anunciará accións suxeridas
   cando se copien ó portapapeis datos compatibles como números de teléfono.
 

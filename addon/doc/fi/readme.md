@@ -80,6 +80,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA tallentaa käynnistyessään nykyisen Windows-asennuksen
   suoritinarkkitehtuurin (x86/32-bittinen, AMD64, ARM64). Tämä sisältyy nyt
   NVDA 2023.1:een.
+* Windows 11:n Insider-esikoontiversiota 25267 edeltävissä koontiversioissa
+  NVDA ilmoittaa tehtäväpalkin kuvakkeiden uudelleenjärjestämisen tulokset
+  painettaessa Alt+Vaihto+Nuolinäppäin vasemmalle/oikealle.
 
 ## Cortana
 
@@ -108,7 +111,7 @@ painamalla Välilyönti-näppäintä Enterin sijaan.
   emojeihin.
 * Selaustila poistetaan käytöstä oletusarvoisesti Windows 11:n leikepöydän
   historiassa, minkä tarkoituksena on mahdollistaa NVDA:lle historian
-  valikkokohteiden lukeminen.
+  valikkokohteiden lukeminen. Tämä sisältyy nyt NVDA 2023.1:een.
 * Windows 11 22H2 Moment 1:ssä ja sitä uudemmissa NVDA ilmoittaa ehdotetut
   toiminnot, kun leikepöydälle kopioidaan yhteensopivaa dataa, kuten
   puhelinnumeroita.

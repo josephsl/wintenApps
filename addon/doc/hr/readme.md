@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer i drugi
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA compatibility: 2022.3 and later
+* NVDA kompatibilnost: 2022.3 i novije verzije
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
@@ -18,9 +18,9 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 * Cortana
 * Karte
-* Modern keyboard (emoji panel/touch keyboard/dictation/voice
-  typing/hardware input suggestions/clipboard history/Suggested
-  Actions/modern input method editors)
+* Moderna tipkovnica (ploča emojija, diktatiranje, tipkanje glasom,
+  prijedlozi za unos hardverom, povijest međuspremnika, predložene radnje,
+  moderni uređivači za unos)
 * Postavke (postavke sustava, Windows+I)
 * Pristup glasu (Windows 11 22H2)
 * Vrijeme
@@ -73,11 +73,18 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   stavki. Ovo je sada dio NVDA čitača 2022.4.
 * U sustavu Windows 11, NVDA će najaviti istaknute stavke pretraživanja u
   izborniku Start kada se otvori. Ovo je sada dio u NVDA čitača 2023.1.
-* In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
-  detected properly when using mouse and/or touch interaction.
-* NVDA will record processor architecture for the current Windows
-  installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
-  of NVDA 2023.1.
+* U sustavu Windows 10, povijest i elementi popisa memorije ispravno su
+  označeni.
+  
+U Windows 11 22H2 Moment 2, redizajnirano područje prelijevanje trake
+  sustava može se pravilno otkriti kad se koristi interakcija miša i/ili
+  dodira.
+* NVDA će zabilježiti arhitekturu procesora za trenutačnu Windows
+  instalaciju (x86/32-bit, AMD64, ARM64) kad se pokrene. Ovo je sada dio
+  NVDA čitača 2023.1.
+* In Windows 11 builds prior to Insider Preview build 25267, NVDA will
+  announce results of rearranging taskbar icons when pressing
+  Alt+Shift+left/right arrow keys.
 
 ## Cortana
 
@@ -87,25 +94,25 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 ## Karte
 
 * NVDA svira zvuk za lokacije za lokacije na karti.
-* NVDA will no longer interrupt speech when focused on items other than the
-  map control in some cases.
+* NVDA više neće prekidati govor kada je fokusiran na stavke koje nisu
+  kontrole karte u nekim slučajevima.
 
 ## Moderna tipkovnica
 
-This includes emoji panel, clipboard history, touch keyboard,
-dictation/voice typing, hardware input suggestions, suggested actions, and
-modern input method editors for certain languages across Windows 10 and
-11. When viewing emojis, for best experience, enable Unicode Consortium
-setting from NVDA's speech settings and set symbol level to "some" or
-higher. When pasting from clipboard history in Windows 10, press Space key
-instead of Enter key to paste the selected item.
+To uključuje ploču s emojijima, povijest međuspremnika,
+diktatiranje/tipkanje govorom, prijedloge unosa hardvera i moderne uređivače
+načina unosa za određene jezike u Windows verzijama 10 i 11. Kad pregledavaš
+emojije, aktiviraj postavku Unicode Consortium u NVDA postavkama govora i
+postavi razinu simbola na „neki” ili višu. Prilikom umetanja iz povijesti
+međuspremnika u sustavu Windows 10, za umetanje odabranog elementa pritisni
+tipku za razmak umjesto tipke Enter.
 
 * U ploči emojija sustava Windows 10, kad je jedna grupa emojija odabrana
   (uključujući kaomoji i grupa simbola), NVDA više neće pomicati
   navigacijski objekt na određene emojije.
-* U povijesti međuspremnika sustava Windows 11, način pregledavanja bit će
-  standardno isključen, kako bi NVDA najavio stavke izbornika unosa
-  povijesti međuspremnika.
+* In Windows 11 clipboard history, browse mode will be turned off by
+  default, designed to let NVDA announce clipboard history entry menu
+  items. This is now part of NVDA 2023.1.
 * U sustavu Windows 11 22H2 Moment 1 i novijim verzijama, NVDA će najaviti
   predložene radnje kad se kompatibilni podaci poput telefonskih brojeva
   kopiraju u međuspremnik.
