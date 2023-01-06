@@ -8,7 +8,6 @@ import re
 import controlTypes
 import appModuleHandler
 import ui
-import wx
 from NVDAObjects import NVDAObject
 import scriptHandler
 import addonHandler
