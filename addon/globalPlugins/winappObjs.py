@@ -24,7 +24,7 @@ class TaskbarItem(UIA):
 
 	def announceDragPosition(self):
 		left = self.previous if isinstance(self.previous, TaskbarItem) else None
-		right = self.next
+		right = self.next if isinstance(self.next, TaskbarItem) else None
 		if left and right:
 			# Translators: announced when rearranging taskbar icons in Windows 11.
 			ui.message(_("{appName} moved between {previousAppName} and {nextAppName}").format(
@@ -39,7 +39,7 @@ class TaskbarItem(UIA):
 
 	@scriptHandler.script(gesture="kb:alt+shift+rightArrow")
 	def script_moveRight(self, gesture):
-		announcePosition = self.next is not None
+		announcePosition = isinstance(self.next, TaskbarItem)
 		gesture.send()
 		if announcePosition:
 			wx.CallAfter(self.announceDragPosition)
