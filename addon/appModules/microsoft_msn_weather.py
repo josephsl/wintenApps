@@ -10,8 +10,6 @@ import appModuleHandler
 import ui
 from NVDAObjects import NVDAObject
 import scriptHandler
-import addonHandler
-addonHandler.initTranslation()
 
 # Regexp for deciding whether this ID should be a tab control
 RE_TAB_AUTOMATION_MATCH = re.compile("|".join([
