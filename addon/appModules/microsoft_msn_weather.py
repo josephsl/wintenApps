@@ -42,20 +42,12 @@ class WeatherForecastItem(NVDAObject):
 		if self.curLine < len(self.lines) - 1:
 			self.curLine += 1
 			ui.message(self.lines[self.curLine])
-		else:
-			# Translators: Message presented when no more weather data is available for the current item.
-			ui.message(_("No more weather data for this item."))
-			wx.Bell()
 
 	@scriptHandler.script(gesture="kb:upArrow")
 	def script_previousLine(self, gesture):
 		if self.curLine > 0:
 			self.curLine -= 1
 			ui.message(self.lines[self.curLine])
-		else:
-			# Translators: Message presented when no more weather data is available for the current item.
-			ui.message(_("No more weather data for this item."))
-			wx.Bell()
 
 
 class AppModule(appModuleHandler.AppModule):
