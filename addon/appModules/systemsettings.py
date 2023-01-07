@@ -20,6 +20,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_NVDAObject_init(self, obj):
 		if not isinstance(obj, UIA):
 			return
+		automationId = obj.UIAAutomationId
 		# Perform different things based on Windows releases series.
 		# Windows 10 including Server 2022
 		if winVersion.getWinVer() < winVersion.WIN11:
@@ -29,15 +30,15 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				# Latest feature update entry in update history adds "what's new" link.
 				# Therefore fetch feature update title located two objects down.
 				# Update history has changed completely in Windows 11.
-				if obj.UIAAutomationId.startswith("HistoryEvent"):
-					eventID = obj.UIAAutomationId.split("_")[0]
+				if automationId.startswith("HistoryEvent"):
+					eventID = automationId.split("_")[0]
 					possibleFeatureUpdateText = obj.previous.previous
 					# Automation Id is of the form "HistoryEvent_eventID_TitleTextBlock".
 					if possibleFeatureUpdateText.UIAAutomationId == "_".join([eventID, "TitleTextBlock"]):
 						nameList.insert(0, possibleFeatureUpdateText.name)
 				# Download link for an optional update is provided when preview updates are released.
 				# It is initially called "download and install now", thus add the optional update title as well.
-				elif obj.UIAAutomationId == "SystemSettings_MusUpdate_SeekerUpdateUX_HyperlinkButton":
+				elif automationId == "SystemSettings_MusUpdate_SeekerUpdateUX_HyperlinkButton":
 					# Unconditionally locate the new optional update title, skipping the link description.
 					# For feature updates, update title is next to description text,
 					# and description text is next to the download link itself.
@@ -58,7 +59,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		else:
 			# Announce optional updates in Windows 11.
 			# Same as Windows 10 except it uses different Automation Id's.
-			if obj.UIAAutomationId in (
+			if automationId in (
 				"SystemSettings_MusUpdate_SeekerUpdateUX_Button",
 				"SystemSettings_MusUpdate_SeekerUpdateUX2_Button"
 			):
