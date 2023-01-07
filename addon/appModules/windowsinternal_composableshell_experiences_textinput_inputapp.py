@@ -164,13 +164,14 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_nameChange(self, obj, nextHandler):
 		# Only on Windows 10 and Server 2022.
 		if winVersion.getWinVer() < winVersion.WIN11:
+			automationId, className = obj.UIAAutomationId, obj.UIAElement.cachedClassName
 			if (
 				# Forget it if there is no Automation Id and class name set.
-				(obj.UIAElement.cachedClassName == "" and obj.UIAAutomationId == "")
+				(className == "" and automationId == "")
 				# Clipboard entries fire name change event when opened.
-				or (obj.UIAElement.cachedClassName == "TextBlock" and obj.UIAAutomationId == "")
+				or (className == "TextBlock" and automationId == "")
 				# Ignore useless clipboard entry scrolling announcements.
-				or obj.UIAAutomationId == "VerticalScrollBar"
+				or automationId == "VerticalScrollBar"
 			):
 				return
 			self._symbolsGroupSelected = False
