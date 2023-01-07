@@ -18,9 +18,9 @@ addonHandler.initTranslation()
 # Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
 class TaskbarItem(UIA):
 
-	def initOverlayClass(self):
+	def _get_itemName(self):
 		# Icon name contains open window count if windows are open after a hyphen (-).
-		self.itemName = self.name.rpartition(" - ")[0] if " -" in self.name else self.name
+		return self.name.rpartition(" - ")[0] if " -" in self.name else self.name
 
 	def announceDragPosition(self):
 		left = self.previous if isinstance(self.previous, TaskbarItem) else None
