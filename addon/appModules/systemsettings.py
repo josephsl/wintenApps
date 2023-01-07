@@ -77,14 +77,15 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Workarounds for Windows 10 and Server 2022
 		if winVersion.getWinVer() < winVersion.WIN11:
 			if isinstance(obj, UIA):
+				automationId = obj.UIAAutomationId
 				# Except for specific cases, announce all live regions.
 				# Announce individual update progress in build 16215 and later preferably only once per update stage.
-				if "ApplicableUpdate" in obj.UIAAutomationId:
+				if "ApplicableUpdate" in automationId:
 					# Do not announce status text itself.
-					if obj.UIAAutomationId.endswith("_ContextDescriptionTextBlock"):
+					if automationId.endswith("_ContextDescriptionTextBlock"):
 						return
 					# Update title repeats while the update is downloaded and installed.
-					if obj.UIAAutomationId.endswith("_DescriptionTextBlock"):
+					if automationId.endswith("_DescriptionTextBlock"):
 						# Keep announcing last status as long as object name is cached.
 						if obj.name and obj.name == self._nameChangeCache:
 							return
