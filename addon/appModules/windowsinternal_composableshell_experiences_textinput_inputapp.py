@@ -188,13 +188,14 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Recognize more candidate UI and item elements in Windows 11.
 		# Return after checking each item so candidate UI and items from Windows 10 can be recognized.
 		if isinstance(obj, UIA):
+			role = obj.role
 			# Candidate item.
-			if obj.role == controlTypes.Role.LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
+			if role == controlTypes.Role.LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
 				clsList.insert(0, ImeCandidateItem)
 				return
 			# Candidate UI.
 			elif (
-				obj.role in (controlTypes.Role.LIST, controlTypes.Role.POPUPMENU)
+				role in (controlTypes.Role.LIST, controlTypes.Role.POPUPMENU)
 				and obj.UIAAutomationId in ("TEMPLATE_PART_CandidatePanel", "IME_Prediction_Window")
 			):
 				clsList.insert(0, ImeCandidateUI)
