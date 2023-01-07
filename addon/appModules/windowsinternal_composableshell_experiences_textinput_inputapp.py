@@ -46,9 +46,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
+		automationId = obj.UIAAutomationId
 		# Do not proceed if emoji panel category item is selected when the panel itself is gone.
 		# This is the case when closing emoji panel portion in Windows 11.
-		if obj.UIAAutomationId.startswith("navigation-menu-item"):
+		if automationId.startswith("navigation-menu-item"):
 			emojiPanelAncestors = [
 				item.appModule for item in api.getFocusAncestors()
 				if item.appModule == self
@@ -63,7 +64,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				self._emojiPanelClosed(obj)
 				return
 		# In Windows 11, candidate panel houses candidate items, not the prediction window.
-		if obj.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
+		if automationId == "TEMPLATE_PART_CandidatePanel":
 			obj = obj.firstChild
 		# Logic for IME candidate items is handled all within its own object
 		# Therefore pass these events straight on.
