@@ -98,10 +98,11 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def _windowOpenEventInternalEventHandlerGroupRegistration(self, firstChild):
 		# Gather elements to be registered inside a list so they can be registered in one go.
 		localEventHandlerElements = [firstChild]
+		firstChildAutomationId = firstChild.UIAAutomationId
 		# For dictation, add elements manually so name change event can be handled.
 		# Object hierarchy is different in voice typing (Windows 11).
-		if firstChild.UIAAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
-			if firstChild.UIAAutomationId == "DictationMicrophoneButton":
+		if firstChildAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
+			if firstChildAutomationId == "DictationMicrophoneButton":
 				element = firstChild.next
 			else:
 				element = firstChild.firstChild.firstChild
@@ -129,17 +130,18 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Sometimes window open event is raised when the input panel closes.
 		if firstChild is None:
 			return
+		firstChildAutomationId =  firstChild.UIAAutomationId
 		# Log which modern keyboard header is active.
 		if log.isEnabledFor(log.DEBUG):
 			log.debug(
 				"winapps: Automation Id for currently opened modern keyboard feature "
-				f"is {firstChild.UIAAutomationId}"
+				f"is {firstChildAutomationId}"
 			)
 		# Originally part of this method, split into an internal function to reduce complexity.
 		# However, in Windows 11, combined emoji panel and clipboard history moves system focus to itself.
 		# Therefore there is no need to add UIA elements to local event handler group.
 		try:
-			if firstChild.UIAAutomationId != "Windows.Shell.InputApp.FloatingSuggestionUI":
+			if firstChildAutomationId != "Windows.Shell.InputApp.FloatingSuggestionUI":
 				self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
 		except NotImplementedError:
 			pass
@@ -148,7 +150,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Suggested Actions such as Skype calls if data such as phone number is copied to the clipboard.
 		# Because keyboard interaction is not possible, just report suggested actions.
 		if (
-			firstChild.UIAAutomationId == "Windows.Shell.InputApp.SmartActionsUX"
+			firstChildAutomationId == "Windows.Shell.InputApp.SmartActionsUX"
 			and winVersion.getWinVer() >= winVersion.WIN11_22H2
 		):
 			import ui
