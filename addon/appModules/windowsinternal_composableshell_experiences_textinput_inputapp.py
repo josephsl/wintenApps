@@ -130,7 +130,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Sometimes window open event is raised when the input panel closes.
 		if firstChild is None:
 			return
-		firstChildAutomationId =  firstChild.UIAAutomationId
+		firstChildAutomationId = firstChild.UIAAutomationId
 		# Log which modern keyboard header is active.
 		if log.isEnabledFor(log.DEBUG):
 			log.debug(
