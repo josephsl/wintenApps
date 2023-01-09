@@ -77,9 +77,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_liveRegionChange(self, obj, nextHandler):
 		# Workarounds for Windows 10 and Server 2022
 		if winVersion.getWinVer() < winVersion.WIN11:
-			if not isinstance(obj, UIA):
+			try:
+				automationId = obj.UIAAutomationId
+			except AttributeError:
 				return nextHandler()
-			automationId = obj.UIAAutomationId
 			# Except for specific cases, announce all live regions.
 			# Announce individual update progress in build 16215 and later preferably only once per update stage.
 			if "ApplicableUpdate" in automationId:
