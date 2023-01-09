@@ -18,9 +18,10 @@ from NVDAObjects.UIA import UIA
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_NVDAObject_init(self, obj):
-		if not isinstance(obj, UIA):
+		try:
+			automationId = obj.UIAAutomationId
+		except AttributeError:
 			return
-		automationId = obj.UIAAutomationId
 		# Perform different things based on Windows releases series.
 		# Windows 10 including Server 2022
 		if winVersion.getWinVer() < winVersion.WIN11:
