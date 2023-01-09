@@ -80,6 +80,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			try:
 				automationId = obj.UIAAutomationId
 			except AttributeError:
+				# Just in case a non-UIA object wants live region changes announced.
 				return nextHandler()
 			# Except for specific cases, announce all live regions.
 			# Announce individual update progress in build 16215 and later preferably only once per update stage.
