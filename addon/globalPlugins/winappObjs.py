@@ -79,9 +79,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		UIAHandler.goodUIAWindowClassNames = tuple(goodUIAWindowClassNames)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		if not isinstance(obj, UIA):
+		try:
+			UIAClassName = obj.UIAElement.cachedClassName
+		except AttributeError:
 			return
-		UIAClassName = obj.UIAElement.cachedClassName
 		# Windows that are really dialogs.
 		# Some dialogs, although listed as a dialog thanks to UIA class name,
 		# does not advertise the proper role of dialog.
