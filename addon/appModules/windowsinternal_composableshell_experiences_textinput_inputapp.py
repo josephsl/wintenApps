@@ -28,7 +28,7 @@ class ImeCandidateItem(ImeCandidateItem):  # type: ignore[no-redef]
 		# Focus event is fired when a candidate item receives focus, therefore ignore this event.
 		if winVersion.getWinVer() >= winVersion.WIN11:
 			return
-		super(ImeCandidateItem, self).event_UIA_elementSelected()
+		super().event_UIA_elementSelected()
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
