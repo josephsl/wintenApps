@@ -74,9 +74,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# However touch and mouse interaction does not work when systray overflow window is open.
 		# Therefore reclassify the new systray overflow window class name as a good UIA window class.
 		# A better solution is patching File Explorer app module but the below workaround will suffice.
-		goodUIAWindowClassNames = list(UIAHandler.goodUIAWindowClassNames)
-		goodUIAWindowClassNames.append("TopLevelWindowForOverflowXamlIsland")
-		UIAHandler.goodUIAWindowClassNames = tuple(goodUIAWindowClassNames)
+		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
+			goodUIAWindowClassNames = list(UIAHandler.goodUIAWindowClassNames)
+			goodUIAWindowClassNames.append("TopLevelWindowForOverflowXamlIsland")
+			UIAHandler.goodUIAWindowClassNames = tuple(goodUIAWindowClassNames)
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if not isinstance(obj, UIA):
