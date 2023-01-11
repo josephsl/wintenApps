@@ -15,7 +15,7 @@ Before reading further, please read this section to better understand specifics 
 
 You can contribute to Windows App Essentials in a number of ways:
 
-1. Testing: provided that you are using supported Windows releases (including latest Windows Insider Preview build) with latest NVDA and the add-on installed, you can help improve the add-on by testing and reporting feedback.
+1. Testing: provided that you are using supported Windows releases (including latest Windows Insider Preview build) with latest NVDA and the add-on installed, you can help improve the add-on by testing and providing feedback.
 2. Localization: you can translate add-on documentation and messages via NVDA translations workflow. The author (Joseph Lee) does not take pull requests involving localization data.
 3. Issues and pull requests: the author welcomes issues and pull requests submitted via GitHub (see the section on issues and pull requests for more information).
 
@@ -23,8 +23,8 @@ You can contribute to Windows App Essentials in a number of ways:
 
 You must:
 
-1. Be running the latest supported version of Windows 10 and later (as of August 2022, this means Windows 10 November 2021 Update (Version 21H2), Windows 11, and latest Insider Preview build).
-2. Be running the latest stable version of NVDA or later (as of August 2022, this means NVDA 2022.2 or latest alpha release).
+1. Be running the latest supported version of Windows 10 and later (as of January 2023, this means Windows 10 November 2021 Update (Version 21H2), Windows 11, and latest Insider Preview build).
+2. Be running the latest stable version of NVDA or later (as of January 2023, this means NVDA 2022.4 or latest alpha release).
 3. If you wish to offer pull requests, you must be running latest NVDA stable version or later.
 
 ## Contribution process
@@ -74,11 +74,11 @@ Windows App Essentials follows NVDA's own coding style (tabs for indentation, ca
 
 A given Windows App Essentials release is supported until the next version is released. For development snapshots, only the latest build is supported. A stable version is supported until the next stable version is released. Both major (milestone) and minor (backports and localizations) are grouped under stable versions.
 
-For NVDA releases, Windows App Essentials supports latest NVDA releases, including development builds. Unless noted otherwise, the immediate past stable NVDA release is also supported. As of August 2022, Windows App Essentials supports NVDA 2022.2, 2022.3 beta, and alpha snapshots.
+For NVDA releases, Windows App Essentials supports latest NVDA releases, including development builds. Unless noted otherwise, the immediate past stable NVDA release is also supported. As of January 2023, Windows App Essentials supports NVDA 2022.3, 2022.4, and alpha snapshots.
 
 For Windows releases, a stable Windows release (typically a feature update) is supported for at least 12 months (18 months for Windows 11 releases) and no more than consumer support duration (18 months for Windows 10, two years for Windows 11). Although the add-on will indicate support for a Windows release (or a feature update) months in advance, official support begins the moment a given release is made available to the general public. For example, although Windows 10 November 2021 Update was marked as supported since August 2021, official support duration is from November 2021 to at least December 2022 and no later than June 2023. For Windows 11 original release, preview (and experimental) support began in August 2021, and official support duration is from October 2021 to at least April 2023 and no later than October 2023. As a rule of thumb, Windows App Essentials uses consumer (Home, Pro, Pro for Workstations) support duration for a feature update to determine support duration. See release information page from Microsoft for details on support duration for Windows releases.
 
-Regarding end of support for a Windows release from the add-on, for stable Windows releases, support duration is tied to consumer support. Prior to end of support, a grace period (at least 30 days) will be given to let users upgrade to newer releases (for Windows 10 November 2021 Update, support ends in June 2023, therefore grace period will begin no earlier than April 2023). For Windows Insiders, only the latest Insider Preview build is supported, particularly if using dev channel builds. Consequently, there is no concept of grace period from the add-on for Windows Insider Preview builds.
+Regarding end of support for a Windows release from the add-on, for stable Windows releases, support duration is tied to consumer support. Prior to end of support, a grace period (at least 30 days) will be given to let users upgrade to newer releases (for Windows 10 November 2021 Update, support ends in June 2023, therefore grace period will begin no earlier than April 2023). For Windows Insiders, only the latest Insider Preview build is supported, particularly if using dev and beta channel builds. Consequently, there is no concept of grace period from the add-on for Windows Insider Preview builds.
 
 Note: the only exception to support duration policy is the very last Windows 10 feature update, which will be supported until December 2025 regardless of release date (official support until October 2025 followed by 60-day grace period).
 
@@ -105,4 +105,4 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 	* Copper 3: May 2022 to September 2022, official support for Windows 10 and 11 Version 22H2, end of support for Windows 10 May 2021 Update (Version 21H1), changes to installation mechanics and support message for Windows 11 releases, NVDA 2022.2 requirement, drag and dropt target announcement
 	* Copper 4: August 2022 to December 2022, Windows 11 Search Highlights, Suggested Actions, installation message changes, removing detection for old Windows releases, NVDA 2022.4 requirement
 * Zinc (2023):
-	* Zinc 1: December 2022 to March 2023, NVDA 2022.4 requirement, Windows apps
+	* Zinc 1: December 2022 to March 2023, Windows apps optimizations, removed 'no more weather data' message from Weather app
