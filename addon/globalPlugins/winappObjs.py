@@ -110,11 +110,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# #82: Windows 11 22H2 Moment 2 introduces a redesigned taskbar and systray powered by Win32.
 		# However touch and mouse interaction does not work when systray overflow window is open.
 		# Therefore reclassify the new systray overflow window class name as a good UIA window class.
-		# A better solution is patching File Explorer app module but the below workaround will suffice.
+		# Patch appModules.explorer.AppModule.isGoodUIAWindow with the one defined in this global plugin.
 		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
-			goodUIAWindowClassNames = list(UIAHandler.goodUIAWindowClassNames)
-			goodUIAWindowClassNames.append("TopLevelWindowForOverflowXamlIsland")
-			UIAHandler.goodUIAWindowClassNames = tuple(goodUIAWindowClassNames)
+			log.debug("winapps: patching File Explorer app module to add additional good uIA windows")
+			import appModules.explorer
+			appModules.explorer.AppModule.isGoodUIAWindow = isGoodUIAWindow
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		try:
