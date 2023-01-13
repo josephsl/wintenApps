@@ -48,6 +48,8 @@
 * 启动时记录当前 Windows 安装（x86/32 位、AMD64、ARM64）的处理器架构。该特性已经包含在 NVDA2023.1 中。
 * 在 Insider Preview 版本 25267 之前的 Windows 11 版本中，NVDA 会读出使用
   Alt+Shift+左/右箭头键，重新排列任务栏图标的结果。
+* In Windows 11 22H2, Open With dialog can be navigated using mouse and/or
+  touch interaction.
 
 ## Cortana
 

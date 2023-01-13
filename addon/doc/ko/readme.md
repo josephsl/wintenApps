@@ -60,6 +60,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * In Windows 11 builds prior to Insider Preview build 25267, NVDA will
   announce results of rearranging taskbar icons when pressing
   Alt+Shift+left/right arrow keys.
+* In Windows 11 22H2, Open With dialog can be navigated using mouse and/or
+  touch interaction.
 
 ## Cortana
 
