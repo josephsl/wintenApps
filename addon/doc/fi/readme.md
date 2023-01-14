@@ -83,6 +83,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * Windows 11:n Insider-esikoontiversiota 25267 edeltävissä koontiversioissa
   NVDA ilmoittaa tehtäväpalkin kuvakkeiden uudelleenjärjestämisen tulokset
   painettaessa Alt+Vaihto+Nuolinäppäin vasemmalle/oikealle.
+* Avaa sovelluksessa -valintaikkunassa voidaan liikkua Windows 11 22H2:ssa
+  hiirtä ja/tai kosketusvuorovaikutusta käyttäen.
 
 ## Cortana
 

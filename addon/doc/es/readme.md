@@ -87,6 +87,8 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * En compilaciones de Windows 11 anteriores a la compilación Insider Preview
   25267, NVDA anunciará el resultado al reordenar iconos de la barra de
   tareas al pulsar las teclas alt+shift+flechas izquierda y derecha.
+* In Windows 11 22H2, Open With dialog can be navigated using mouse and/or
+  touch interaction.
 
 ## Cortana
 
