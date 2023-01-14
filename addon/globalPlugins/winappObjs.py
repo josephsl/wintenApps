@@ -79,6 +79,7 @@ def isGoodUIAWindow(self, hwnd):
 			# Top-level window class names from Windows 11 shell features
 			"Shell_InputSwitchTopLevelWindow",  # Language switcher
 			"XamlExplorerHostIslandWindow",  # Task View and Snap Layouts
+			# NVDA Core issue 14539
 			"TopLevelWindowForOverflowXamlIsland",  # Redesigned systray overflow in 22H2 Moment 2
 		)
 		# NVDA Core issue 13717: on some systems, Windows 11 shell elements are reported as IAccessible,
