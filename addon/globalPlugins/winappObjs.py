@@ -76,6 +76,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Therefore reclassify the new systray overflow window class name as a good UIA window class.
 		# A better solution is patching File Explorer app module but the below workaround will suffice.
 		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
+			log.info("winapps: adding TopLevelWindowForOverflowXamlIsland to good UIA windows list")
 			goodUIAWindowClassNames = list(UIAHandler.goodUIAWindowClassNames)
 			goodUIAWindowClassNames.append("TopLevelWindowForOverflowXamlIsland")
 			UIAHandler.goodUIAWindowClassNames = tuple(goodUIAWindowClassNames)
