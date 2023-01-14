@@ -71,7 +71,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			import platform
 			log.info(f"winapps: processor architecture: {platform.machine()}")
 		# #82: Windows 11 22H2 Moment 2 introduces a redesigned taskbar and systray powered by Win32.
-		# However touch and mouse interaction does not work when systray overflow window is open.
+		# NVDA Core issue 14539: touch and mouse interaction does not work when systray overflow window is open.
 		# Therefore reclassify the new systray overflow window class name as a good UIA window class.
 		# A better solution is patching File Explorer app module but the below workaround will suffice.
 		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
