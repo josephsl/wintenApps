@@ -62,14 +62,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
-		# Is this a Windows 11 22H2 beta build (2262x)?
 		import winVersion
-		if winVersion.getWinVer().build in (22622, 22623):
-			log.info("winapps: Windows 11 22H2 beta detected")
-		# Report processor architecture if running NVDA 2022.4 and earlier.
+		# Report processor architecture at startup.
+		# Resolved in NVDA 2023.1.
 		if not hasattr(winVersion.getWinVer(), "processorArchitecture"):
 			import platform
 			log.info(f"winapps: processor architecture: {platform.machine()}")
+		# Is this a Windows 11 22H2 beta build (2262x)?
+		if winVersion.getWinVer().build in (22622, 22623):
+			log.info("winapps: Windows 11 22H2 beta detected")
 		# #82: Windows 11 22H2 Moment 2 introduces a redesigned taskbar and systray powered by Win32.
 		# NVDA Core issue 14539: touch and mouse interaction does not work when systray overflow window is open.
 		# Therefore reclassify the new systray overflow window class name as a good UIA window class.
