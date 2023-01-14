@@ -53,7 +53,7 @@ class TaskbarItem(UIA):
 
 
 # #82: patch File Explorer module to add more good UIA window class names in Windows 11 22H2 Moment 2.
-def isGoodUIAWindow(self, hwnd):
+def isGoodUIAWindow(self, hwnd: int) -> bool:
 	import winVersion
 	import winUser
 	currentWinVer = winVersion.getWinVer()
