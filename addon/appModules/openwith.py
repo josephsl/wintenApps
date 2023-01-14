@@ -10,7 +10,7 @@ import winUser
 # App module class comes from built-in Open With app module but Mypy doesn't know that.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
-	def isGoodUIAWindow(self, hwnd):
+	def isGoodUIAWindow(self, hwnd: int) -> bool:
 		if winUser.getClassName(hwnd) in (
 			# NVDA Core issue 11335: Open With dialog isn't read in Windows 10 Version 2004 (May 2020 Update).
 			# Note that treating the below window as a UIA window will make NVDA no longer announce "pane".
