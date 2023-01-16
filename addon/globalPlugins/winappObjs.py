@@ -63,6 +63,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super().__init__()
 		from logHandler import log
+		import versionInfo
 		# Report processor architecture at startup.
 		# Resolved in NVDA 2023.1.
 		if not hasattr(winVersion.getWinVer(), "processorArchitecture"):
@@ -76,7 +77,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Therefore reclassify the new systray overflow window class name as a good UIA window class.
 		# A better solution is patching File Explorer app module but the below workaround will suffice.
 		# Resolved in NVDA 2023.1.
-		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
+		if (
+			winVersion.getWinVer() >= winVersion.WIN11_22H2
+			and (versionInfo.version_year, versionInfo.version_major) < (2023, 1)
+		):
 			log.debug("winapps: adding TopLevelWindowForOverflowXamlIsland to good UIA windows list")
 			goodUIAWindowClassNames = list(UIAHandler.goodUIAWindowClassNames)
 			goodUIAWindowClassNames.append("TopLevelWindowForOverflowXamlIsland")
