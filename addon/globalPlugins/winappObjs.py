@@ -7,6 +7,7 @@ import globalPluginHandler
 from NVDAObjects.UIA import UIA, Dialog
 import globalVars
 import UIAHandler
+import winVersion
 import scriptHandler
 import wx
 import addonHandler
@@ -61,7 +62,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
-		import winVersion
 		from logHandler import log
 		# Report processor architecture at startup.
 		# Resolved in NVDA 2023.1.
@@ -92,7 +92,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			clsList.insert(0, Dialog)
 			return
 		# Announce rearranged taskbar icons in Windows 11 builds earlier than 25267.
-		import winVersion
 		if (
 			obj.appModule.appName == "explorer"
 			and obj.UIAElement.cachedClassName == "Taskbar.TaskListButtonAutomationPeer"
