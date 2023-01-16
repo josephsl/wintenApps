@@ -18,6 +18,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			"Shell_Flyout",
 			# NVDA Core issue 14538: Windows 11 22H2 comes with a modernized Open With dialog
 			# but prevents proper mouse and touch interaction.
+			# Resolved in NVDA 2023.1.
 			"Open With",
 		):
 			return True
