@@ -103,6 +103,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super().__init__()
 		from logHandler import log
+		import versionInfo
 		currentWinVer = winVersion.getWinVer()
 		# Report processor architecture at startup.
 		# Resolved in NVDA 2023.1.
@@ -117,7 +118,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Therefore reclassify the new systray overflow window class name as a good UIA window class.
 		# Patch appModules.explorer.AppModule.isGoodUIAWindow with the one defined in this global plugin.
 		# Resolved in NVDA 2023.1.
-		if currentWinVer >= winVersion.WIN11_22H2:
+		if (
+			currentWinVer >= winVersion.WIN11_22H2
+			and (versionInfo.version_year, versionInfo.version_major) < (2023, 1)
+		):
 			log.debug("winapps: patching File Explorer app module to add additional good uIA windows")
 			import appModules.explorer
 			appModules.explorer.AppModule.isGoodUIAWindow = isGoodUIAWindow
