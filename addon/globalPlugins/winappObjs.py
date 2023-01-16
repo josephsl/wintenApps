@@ -7,7 +7,6 @@ import globalPluginHandler
 from NVDAObjects.UIA import UIA, Dialog
 import globalVars
 import UIAHandler
-from logHandler import log
 import scriptHandler
 import wx
 import addonHandler
@@ -63,6 +62,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super().__init__()
 		import winVersion
+		from logHandler import log
 		# Report processor architecture at startup.
 		# Resolved in NVDA 2023.1.
 		if not hasattr(winVersion.getWinVer(), "processorArchitecture"):
