@@ -75,6 +75,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# NVDA Core issue 14539: touch and mouse interaction does not work when systray overflow window is open.
 		# Therefore reclassify the new systray overflow window class name as a good UIA window class.
 		# A better solution is patching File Explorer app module but the below workaround will suffice.
+		# Resolved in NVDA 2023.1.
 		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
 			log.debug("winapps: adding TopLevelWindowForOverflowXamlIsland to good UIA windows list")
 			goodUIAWindowClassNames = list(UIAHandler.goodUIAWindowClassNames)
