@@ -7,8 +7,7 @@ import globalPluginHandler
 from NVDAObjects.UIA import UIA, Dialog
 import globalVars
 import UIAHandler
-from logHandler import log
-import ui
+import winVersion
 import scriptHandler
 import wx
 import addonHandler
@@ -23,6 +22,7 @@ class TaskbarItem(UIA):
 		return self.name.rpartition(" - ")[0] if " -" in self.name else self.name
 
 	def announceDragPosition(self):
+		import ui
 		left = self.previous if isinstance(self.previous, TaskbarItem) else None
 		right = self.next if isinstance(self.next, TaskbarItem) else None
 		if left and right:
@@ -100,7 +100,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
-		import winVersion
+		from logHandler import log
 		currentWinVer = winVersion.getWinVer()
 		# Report processor architecture at startup.
 		# Resolved in NVDA 2023.1.
@@ -114,6 +114,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# NVDA Core issue 14539: touch and mouse interaction does not work when systray overflow window is open.
 		# Therefore reclassify the new systray overflow window class name as a good UIA window class.
 		# Patch appModules.explorer.AppModule.isGoodUIAWindow with the one defined in this global plugin.
+		# Resolved in NVDA 2023.1.
 		if currentWinVer >= winVersion.WIN11_22H2:
 			log.debug("winapps: patching File Explorer app module to add additional good uIA windows")
 			import appModules.explorer
@@ -132,7 +133,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			clsList.insert(0, Dialog)
 			return
 		# Announce rearranged taskbar icons in Windows 11 builds earlier than 25267.
-		import winVersion
 		if (
 			obj.appModule.appName == "explorer"
 			and UIAClassName == "Taskbar.TaskListButtonAutomationPeer"
