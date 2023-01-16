@@ -52,9 +52,9 @@ class TaskbarItem(UIA):
 			wx.CallAfter(self.announceDragPosition)
 
 
-# #82: patch File Explorer module to add more good UIA window class names in Windows 11 22H2 Moment 2.
+# #82: patch File Explorer app module to add more good UIA window class names in Windows 11 22H2 Moment 2.
+# Resolved in NVDA 2023.1.
 def isGoodUIAWindow(self, hwnd: int) -> bool:
-	import winVersion
 	import winUser
 	currentWinVer = winVersion.getWinVer()
 	# NVDA Core issue 9204: shell raises window open event for emoji panel in build 18305 and later.
@@ -80,6 +80,7 @@ def isGoodUIAWindow(self, hwnd: int) -> bool:
 			"Shell_InputSwitchTopLevelWindow",  # Language switcher
 			"XamlExplorerHostIslandWindow",  # Task View and Snap Layouts
 			# NVDA Core issue 14539
+			# Resolved in NVDA 2023.1.
 			"TopLevelWindowForOverflowXamlIsland",  # Redesigned systray overflow in 22H2 Moment 2
 		)
 		# NVDA Core issue 13717: on some systems, Windows 11 shell elements are reported as IAccessible,
