@@ -8,7 +8,6 @@ from NVDAObjects.UIA import UIA, Dialog
 import globalVars
 import UIAHandler
 from logHandler import log
-import ui
 import scriptHandler
 import wx
 import addonHandler
@@ -23,6 +22,7 @@ class TaskbarItem(UIA):
 		return self.name.rpartition(" - ")[0] if " -" in self.name else self.name
 
 	def announceDragPosition(self):
+		import ui
 		left = self.previous if isinstance(self.previous, TaskbarItem) else None
 		right = self.next if isinstance(self.next, TaskbarItem) else None
 		if left and right:
