@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-11-23 10:27+0100\n"
+"PO-Revision-Date: 2023-01-15 11:32+0100\n"
 "Last-Translator: Zvonimir Stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: pl <LL@li.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
@@ -43,6 +43,21 @@ msgstr ""
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "Nie ma więcej danych pogodowych dla tego elementu."
+
+#. Translators: announced when rearranging taskbar icons in Windows 11.
+#, python-brace-format
+msgid "{appName} moved between {previousAppName} and {nextAppName}"
+msgstr "{appName} przeniesiono między {previousAppName} a {nextAppName}"
+
+#. Translators: announced when rearranging taskbar icons in Windows 11.
+#, python-brace-format
+msgid "{appName} moved to end of the apps list"
+msgstr "{appName} przeniesiono na koniec listy aplikacji"
+
+#. Translators: announced when rearranging taskbar icons in Windows 11.
+#, python-brace-format
+msgid "{appName} moved to beginning of the apps list"
+msgstr "{appName} przeniesiono na początek listy aplikacji"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

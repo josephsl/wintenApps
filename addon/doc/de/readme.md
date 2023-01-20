@@ -3,7 +3,7 @@
 * Autoren: Joseph Lee, Derek Riemer und weitere
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
-* NVDA-Kompatibilität: 2022.3 und neuer
+* NVDA-Kompatibilität: 2022.4 und neuer
 
 Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
 2021 in Windows App Essentials umbenannt, um Windows 10 und zukünftige
@@ -63,32 +63,22 @@ Versionen][3].
 
 ## Allgemein
 
-* Zusätzlich zu den von NVDA bereitgestellten UIA-Ereignis-Handlern werden
-  die folgenden UIA-Ereignisse und -Eigenschaften erkannt:
-  Start/Abbruch/Vervollständigen des Ziehens (wird als
-  Zustandsänderungsereignis erkannt), Drag-Drop-Effekt, Ziehen eines
-  Elements wird gegriffen, Drop-Ziel-Effekt. Diese Ereignisse sind jetzt
-  Bestandteil von NVDA 2022.4.
 * Beim Öffnen, Schließen oder Umschalten zwischen virtuellen Desktops teilt
   NVDA den Namen des aktiven virtuellen Desktops mit (z. B. Desktop 2).
-* Beim Ziehen und Ablegen von Elementen, z. B. beim Anordnen von
-  angehefteten Einträgen (Kacheln in Windows 10) im Startmenü oder bei
-  Schnellaktionen im Action Center mit Alt+Umschalt+Pfeiltasten, meldet NVDA
-  vor bzw. während des Ziehens von Elementen "Ziehen" und/oder Zieh- und
-  Ablegeeffekte. Dies ist nun Teil von NVDA 2022.4.
 * In Windows 11 zeigt NVDA beim Öffnen des Startmenüs die Highlights der
   Suche an. Dies ist jetzt Teil von NVDA 2023.1.
-* Im Windows 11-Update von Moment 2 für 22H2 kann der neu gestaltete
-  Überlaufbereich der Taskleiste bei der Verwendung von Maus- und/oder
-  Touch-Interaktion korrekt erkannt werden.
+* In Windows 11 Version 22H2 und neuer kann die Maus- bzw. Touch-Interaktion
+  zur Interaktion mit dem neu gestalteten Überlauffenster der Taskleiste
+  (Moment 2) und dem Dialogfeld "Öffnen mit" verwendet werden. Dies ist nun
+  Teil von NVDA 2023.1.
 * NVDA zeichnet die Prozessor-Architektur für die aktuelle
   Windows-Installation (x86/32-bit, AMD64, ARM64) auf, wenn es gestartet
   wird. Dies ist nun Teil von NVDA 2023.1.
-* In Windows 11 builds prior to Insider Preview build 25267, NVDA will
-  announce results of rearranging taskbar icons when pressing
-  Alt+Shift+left/right arrow keys.
-* In Windows 11 22H2, Open With dialog can be navigated using mouse and/or
-  touch interaction.
+* Die Windows 11-Taskleiste wurde verbessert, u. a. durch die Anzeige der
+  Ergebnisse der Neuanordnung von Symbolen beim Drücken von
+  Alt+Umschalt+Pfeiltasten nach links/rechts (vor Build 25267) und durch die
+  Meldung der Elementposition beim Bewegen durch die Taskleistensymbole (vor
+  Build 25281).
 
 ## Cortana
 
@@ -117,12 +107,12 @@ Eingabetaste, um das ausgewählte Element einzufügen.
 * Wenn im Emoji-Panel von Windows 10 eine Emoji-Gruppe (einschließlich der
   Kaomoji- und Symbolgruppe) ausgewählt wird, verschiebt NVDA das
   Navigations-Objekt nicht mehr zu bestimmten Emojis.
-* In Windows 11 clipboard history, browse mode will be turned off by
-  default, designed to let NVDA announce clipboard history entry menu
-  items. This is now part of NVDA 2023.1.
-* In Windows 11 Version 22H2 Moment 1 und neuer sagt NVDA vorgeschlagene
-  Aktionen an, wenn kompatible Daten wie Telefonnummern in die
-  Zwischenablage kopiert werden.
+* In der Zwischenablage von Windows 11 wird der Durchsuchen-Modus
+  standardmäßig ausgeschaltet, damit NVDA Menü-Einträge für die
+  Zwischenablage mitteilen kann. Dies ist nun Teil von NVDA 2023.1.
+* In Windows 11 Version 22H2 und neuer zeigt NVDA vorgeschlagene Aktionen
+  an, wenn kompatible Daten wie Telefonnummern in die Zwischenablage kopiert
+  werden.
 
 ## Einstellungen
 

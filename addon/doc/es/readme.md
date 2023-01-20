@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer y otros
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
-* Compatibilidad con NVDA: de 2022.3 en adelante
+* Compatibilidad con NVDA: de 2022.4 en adelante
 
 Nota: originalmente llamado Windows 10 App Essentials, se renombró a Windows
 App Essentials en 2021 para soportar Windows 10 y versiones futuras, como
@@ -64,31 +64,22 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 ## General
 
-* Además de los manejadores de eventos UIA proporcionados por NVDA, se
-  reconocen los siguientes eventos y propiedades UIA: drag
-  start/cancel/complete (reconocido como evento de cambio de estado), drag
-  drop effect, drag item is grabbed, drop target effect. Estos eventos ahora
-  forman parte de NVDA 2022.4.
 * Al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
   nombre del escritorio virtual activo (escritorio 2, por ejemplo).
-* Al arrastrar y soltar elementos, como reordenar entradas ancladas (losas
-  en Windows 10) del menú Inicio o acciones rápidas del centro de
-  actividades con alt+shift+flechas, NVDA anunciará "arrastrando" o los
-  efectos de arrastrar y soltar antes y mientras se arrastran,
-  respectivamente. Esto ahora forma parte de NVDA 2022.4.
 * En Windows 11, NVDA anunciará las búsquedas destacadas en el menú Inicio
   cuando se abra. Esto ahora forma parte de NVDA 2023.1.
-* En Windows 11 22H2 Moment 2, el área flotante rediseñada de la bandeja del
-  sistema se puede detectar adecuadamente al usar interacción táctil o del
-  ratón.
+* En Windows 11 22H2 y posterior, se puede interactuar con la ventana
+  flotante rediseñada de la bandeja del sistema (Moment 2) y con el diálogo
+  Abrir con al usar interacción táctil o del ratón. Esto ahora forma parte
+  de NVDA 2023.1.
 * NVDA registrará la arquitectura del procesador de la instalación actual de
   Windows (x86/32 bits, AMD64, ARM64) cuando se inicie. Esto ahora forma
   parte de NVDA 2023.1.
-* En compilaciones de Windows 11 anteriores a la compilación Insider Preview
-  25267, NVDA anunciará el resultado al reordenar iconos de la barra de
-  tareas al pulsar las teclas alt+shift+flechas izquierda y derecha.
-* In Windows 11 22H2, Open With dialog can be navigated using mouse and/or
-  touch interaction.
+* Experiencia mejorada con la barra de tareas de Windows 11, incluyendo el
+  anuncio de los resultados al reordenar iconos pulsando las teclas
+  alt+shift+flechas izquierda y derecha (antes de la compilación 25267) e
+  indicando la posición del elemento al moverse por iconos de la barra de
+  tareas (antes de la compilación 25281).
 
 ## Cortana
 
@@ -120,9 +111,9 @@ de intro para pegar el elemento seleccionado.
   exploración por defecto, diseñado para permitir que NVDA anuncie los
   elementos de menú con las entradas del historial del portapapeles. Esto
   ahora forma parte de NVDA 2023.1.
-* En Windows 11 22H2 Moment 1 y posterior, NVDA anunciará las acciones
-  sugeridas cuando se copien al portapapeles datos compatibles, como números
-  de teléfono.
+* En Windows 11 22H2 y posterior, NVDA anunciará las acciones sugeridas
+  cuando se copien al portapapeles datos compatibles, como números de
+  teléfono.
 
 ## Opciones
 
