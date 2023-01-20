@@ -3,7 +3,7 @@
 * Tekijät: Joseph Lee, Derek Riemer sekä muut
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
-* Yhteensopivuus: NVDA 2022.3 ja uudemmat
+* Yhteensopivuus: NVDA 2022.4 ja uudemmat
 
 Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
 nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows
@@ -59,32 +59,22 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
-* NVDA:n tarjoamien UIA-tapahtumakäsittelijöiden lisäksi tunnistetaan
-  seuraavat UIA-tapahtumat ja -ominaisuudet: vetäminen
-  aloitettu/peruutettu/suoritettu (tunnistetaan tilanmuutostapahtumaksi),
-  vetämisen ja pudottamisen vaikutus, vedettävä kohde on valittu, pudotuksen
-  kohteen vaikutus. Nämä tapahtumat sisältyvät NVDA 2022.4:ään.
 * NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
   avattaessa, suljettaessa tai siirryttäessä virtuaalityöpöytien välillä.
-* Kun kohteita vedetään ja pudotetaan, esim. järjesteltäessä kiinnitettyjä
-  kohteita (ruutuja Windows 10:ssä) Käynnistä-valikossa tai
-  Toimintokeskuksen pikatoimintoja Alt+Vaihto+nuolinäppäimillä, NVDA sanoo
-  "vedetään" ja/tai vetämisen ja pudottamisen  vaikutukset ennen kohteiden
-  vetämistä ja sen aikana. Tämän ilmoituksen puhuminen sisältyy NVDA
-  2022.4:ään.
 * NVDA ilmoittaa Windows 11:ssä haun kohokohdat Käynnistä-valikossa sen
   avautuessa. Tämä sisältyy NVDA 2023.1:een.
-* Uudelleensuunniteltu ilmaisinalueen ylivuotoalue tunnistetaan oikein
-  Windows 11 22H2 Moment 2:ssa hiirtä ja/tai kosketusvuorovaikutusta
-  käytettäessä.
+* Windows 11 22H2:ssa ja uudemmissa voidaan nyt käyttää hiirtä ja/tai
+  kosketuseleitä vuorovaikutuksessa uudelleensuunnitellun ilmaisinalueen
+  ylivuotoikkunan (Moment 2) ja Avaa sovelluksessa -valintaikkunan
+  kanssa. Tämä sisältyy NVDA 2023.1:een.
 * NVDA tallentaa käynnistyessään nykyisen Windows-asennuksen
   suoritinarkkitehtuurin (x86/32-bittinen, AMD64, ARM64). Tämä sisältyy nyt
   NVDA 2023.1:een.
-* Windows 11:n Insider-esikoontiversiota 25267 edeltävissä koontiversioissa
-  NVDA ilmoittaa tehtäväpalkin kuvakkeiden uudelleenjärjestämisen tulokset
-  painettaessa Alt+Vaihto+Nuolinäppäin vasemmalle/oikealle.
-* Avaa sovelluksessa -valintaikkunassa voidaan liikkua Windows 11 22H2:ssa
-  hiirtä ja/tai kosketusvuorovaikutusta käyttäen.
+* Paranneltu Windows 11:n tehtäväpalkin kokemusta, mukaan lukien kuvakkeiden
+  uudelleenjärjestämisen tulosten puhuminen painettaessa
+  Alt+Vaihto+Vasen/Oikea nuolinäppäin (ennen koontiversiota 25267) ja
+  kohteen sijainnin ilmoittaminen tehtäväpalkin kuvakkeiden välillä
+  liikuttaessa (ennen koontiversiota 25281).
 
 ## Cortana
 
@@ -114,9 +104,8 @@ painamalla Välilyönti-näppäintä Enterin sijaan.
 * Selaustila poistetaan käytöstä oletusarvoisesti Windows 11:n leikepöydän
   historiassa, minkä tarkoituksena on mahdollistaa NVDA:lle historian
   valikkokohteiden lukeminen. Tämä sisältyy nyt NVDA 2023.1:een.
-* Windows 11 22H2 Moment 1:ssä ja sitä uudemmissa NVDA ilmoittaa ehdotetut
-  toiminnot, kun leikepöydälle kopioidaan yhteensopivaa dataa, kuten
-  puhelinnumeroita.
+* NVDA ilmoittaa ehdotetut toiminnot Windows 11 22H2:ssa ja uudemmissa, kun
+  leikepöydälle kopioidaan yhteensopivaa dataa, kuten puhelinnumeroita.
 
 ## Asetukset
 

@@ -3,7 +3,7 @@
 * Autori: Joseph Lee, Derek Riemer i drugi
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
-* NVDA kompatibilnost: 2022.3 i novije verzije
+* NVDA kompatibilnost: 2022.4 i novije verzije
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
@@ -58,35 +58,21 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 
 ## Opće
 
-* Pored UIA rukovateljima događajima koje nudi NVDA, prepoznaju se sljedeći
-  UIA događaji i svojstva: početak povlačenja/odustani/dovršeno (prepoznati
-  kao događaji promjene stanja), efekt povuci-i-ispusti, povlačenje prvog
-  odabranog elementa, efekt ispuštanja na cilj. Ovi događaji su sada dio
-  NVDA verzije 2022.4.
 * Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
   površina, NVDA će najaviti ime aktivne virtualne radne površine (na
   primjer radna površina 2).
-* Prilikom povlačenja i ispuštanja stavki kao što je raspoređivanje
-  prikvačenih unosa (pločice u Windows 10) u izborniku Start ili brze radnje
-  za Action Center s Alt+Šift+tipke sa strelicama, NVDA će najaviti efekte
-  „povlačenja” i/ili povlačenja i ispuštanja prije i tijekom povlačenja
-  stavki. Ovo je sada dio NVDA čitača 2022.4.
 * U sustavu Windows 11, NVDA će najaviti istaknute stavke pretraživanja u
   izborniku Start kada se otvori. Ovo je sada dio u NVDA čitača 2023.1.
-* U sustavu Windows 10, povijest i elementi popisa memorije ispravno su
-  označeni.
-  
-U Windows 11 22H2 Moment 2, redizajnirano područje prelijevanje trake
-  sustava može se pravilno otkriti kad se koristi interakcija miša i/ili
-  dodira.
+* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
+  to interact with redesigned system tray overflow window (Moment 2) and
+  Open With dialog. This is now part of NVDA 2023.1.
 * NVDA će zabilježiti arhitekturu procesora za trenutačnu Windows
   instalaciju (x86/32-bit, AMD64, ARM64) kad se pokrene. Ovo je sada dio
   NVDA čitača 2023.1.
-* In Windows 11 builds prior to Insider Preview build 25267, NVDA will
-  announce results of rearranging taskbar icons when pressing
-  Alt+Shift+left/right arrow keys.
-* In Windows 11 22H2, Open With dialog can be navigated using mouse and/or
-  touch interaction.
+* Improved Windows 11 taskbar experience, including announcing results of
+  rearranging icons when pressing Alt+Shift+left/right arrow keys (prior to
+  build 25267) and reporting item position when moving through taskbar icons
+  (prior to build 25281).
 
 ## Cortana
 
@@ -112,12 +98,11 @@ tipku za razmak umjesto tipke Enter.
 * U ploči emojija sustava Windows 10, kad je jedna grupa emojija odabrana
   (uključujući kaomoji i grupa simbola), NVDA više neće pomicati
   navigacijski objekt na određene emojije.
-* In Windows 11 clipboard history, browse mode will be turned off by
-  default, designed to let NVDA announce clipboard history entry menu
-  items. This is now part of NVDA 2023.1.
-* U sustavu Windows 11 22H2 Moment 1 i novijim verzijama, NVDA će najaviti
-  predložene radnje kad se kompatibilni podaci poput telefonskih brojeva
-  kopiraju u međuspremnik.
+* U povijesti međuspremnika sustava Windows 11, način pregledavanja bit će
+  standardno isključen, kako bi NVDA najavio stavke izbornika unosa
+  povijesti međuspremnika. Ovo je sada dio NVDA čitača 2023.1.
+* In Windows 11 22H2 and later, NVDA will announce suggested actions when
+  compatible data such as phone numbers is copied to the clipboard.
 
 ## Postavke
 

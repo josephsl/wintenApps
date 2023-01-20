@@ -22,6 +22,16 @@ class TaskbarItem(UIA):
 		# Icon name contains open window count if windows are open after a hyphen (-).
 		return self.name.rpartition(" - ")[0] if " -" in self.name else self.name
 
+	def _get_positionInfo(self):
+		# Position info is included in build 25281.
+		positionInfo = super().positionInfo
+		if not positionInfo:
+			taskbarItems = [item for item in self.parent.children if isinstance(item, TaskbarItem)]
+			positionInfo = {
+				"indexInGroup": taskbarItems.index(self) + 1, "similarItemsInGroup": len(taskbarItems)
+			}
+		return positionInfo
+
 	def announceDragPosition(self):
 		import ui
 		left = self.previous if isinstance(self.previous, TaskbarItem) else None

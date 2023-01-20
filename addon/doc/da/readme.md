@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2022.3 and later
+* NVDA compatibility: 2022.4 and later
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
 til Windows App Essentials i 2021 for at understøtte Windows 10 og
@@ -62,29 +62,21 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Generelt
 
-* Udover UIA event handlers, der tilbydes af NVDA, vil følgende
-  UIA-hændelser og egenskaber blive genkendt: drag start/cancel/complete
-  (genkendt som state change event), drag drop effect, drag item is grabbed,
-  drop target effect. Disse hændelser er nu en del af NVDA 2022.4.
 * Når åbning, lukning eller Skift mellem virtuelle skrivebord forekommer,
   vil NVDA annoncere det aktuelle navn for det virtuelle skrivebord
   (f.eks. "Skrivebord 2").
-* Når du arrangerer fastgjorte elementer (fliser i Windows 10) på
-  start-menuen eller hurtige handlinger i Handlingscenter med
-  Alt+Shift+piletasterne, vil NVDA oplyse informationer om emner, når disse
-  flyttes. Dette er nu en del af NVDA 2022.4.
 * I Windows 11 vil NVDA annoncere søgehøjdepunkter i Start-menuen, når den
   åbnes. Dette er nu en del af NVDA 2023.1.
-* In Windows 11 22H2 Moment 2, redesigned system tray overflow area can be
-  detected properly when using mouse and/or touch interaction.
+* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
+  to interact with redesigned system tray overflow window (Moment 2) and
+  Open With dialog. This is now part of NVDA 2023.1.
 * NVDA will record processor architecture for the current Windows
   installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
   of NVDA 2023.1.
-* In Windows 11 builds prior to Insider Preview build 25267, NVDA will
-  announce results of rearranging taskbar icons when pressing
-  Alt+Shift+left/right arrow keys.
-* In Windows 11 22H2, Open With dialog can be navigated using mouse and/or
-  touch interaction.
+* Improved Windows 11 taskbar experience, including announcing results of
+  rearranging icons when pressing Alt+Shift+left/right arrow keys (prior to
+  build 25267) and reporting item position when moving through taskbar icons
+  (prior to build 25281).
 
 ## Cortana
 
@@ -112,9 +104,8 @@ instead of Enter key to paste the selected item.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu
   items. This is now part of NVDA 2023.1.
-* I Windows 11 22H2 Moment 1 og senere vil NVDA annoncere foreslåede
-  handlinger, når kompatible data såsom telefonnumre kopieres til
-  udklipsholderen.
+* In Windows 11 22H2 and later, NVDA will announce suggested actions when
+  compatible data such as phone numbers is copied to the clipboard.
 
 ## indstillinger
 

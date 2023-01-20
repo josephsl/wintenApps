@@ -3,7 +3,7 @@
 * 作者：Joseph Lee、Derek Riemer 等
 * 下载[稳定版][1]
 * 下载[开发板][2]
-* NVDA 兼容性：2022.3 及更高版本
+* NVDA 兼容性：2022.4 及更高版本
 
 注意：此插件最初称为 Windows 10 应用增强，在 2021 年更名为 Windows 应用增强，以支持 Windows 10 和 Windows
 11 等后续版本。此插件的部分内容仍将引用原始插件名称。
@@ -38,18 +38,16 @@
 
 ## 常规增强
 
-* 除了 NVDA 提供的 UIA 事件处理程序之外，还可以识别以下 UIA
-  事件和属性：拖动开始/取消/完成（识别为状态更改事件）、拖放效果、拖动项目被托起、放置目标。该特性已经包含在 NVDA2022.4 中。
 * 在新建、关闭、或切换虚拟桌面时，NVDA会读出当前桌面名称（例如，桌面2）。
-* 当使用 Alt+Shift+箭头键在“开始”菜单（Windows 10 中的磁贴）或操作中心快速操作中排列固定条目时，NVDA
-  会读出已拖动项目的信息或已拖动项目的新位置。该特性已经包含在 NVDA2022.4 中。
 * 在 Windows 11 中，NVDA 支持在打开“开始”菜单时读出显示的搜索高亮。该特性已经包含在 NVDA2023.1 中。
-* 在 Windows 11 22H2 Moment 2 中，可以在使用鼠标和/或触摸交互时正确识别新版的系统托盘溢出区域。
+* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
+  to interact with redesigned system tray overflow window (Moment 2) and
+  Open With dialog. This is now part of NVDA 2023.1.
 * 启动时记录当前 Windows 安装（x86/32 位、AMD64、ARM64）的处理器架构。该特性已经包含在 NVDA2023.1 中。
-* 在 Insider Preview 版本 25267 之前的 Windows 11 版本中，NVDA 会读出使用
-  Alt+Shift+左/右箭头键，重新排列任务栏图标的结果。
-* In Windows 11 22H2, Open With dialog can be navigated using mouse and/or
-  touch interaction.
+* Improved Windows 11 taskbar experience, including announcing results of
+  rearranging icons when pressing Alt+Shift+left/right arrow keys (prior to
+  build 25267) and reporting item position when moving through taskbar icons
+  (prior to build 25281).
 
 ## Cortana
 
@@ -71,7 +69,8 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 * 在 Windows 10 中，选择 Emoji 组（包括Kaomoji和符号组）时，NVDA 不会将导航对象移动到某些EMOJI上。
 * 在 Windows 11 剪贴板历史记录中，为了让 NVDA 读出剪贴板历史记录条目菜单项，浏览模式将默认关闭。该特性已经包含在
   NVDA2023.1 中。
-* 在 Windows 11 22H2 Moment 1 及更高版本中，当电话号码等兼容的数据复制到剪贴板时，NVDA 会读出建议的操作。
+* In Windows 11 22H2 and later, NVDA will announce suggested actions when
+  compatible data such as phone numbers is copied to the clipboard.
 
 ## 设置
 
