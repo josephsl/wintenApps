@@ -517,7 +517,7 @@ class AppModule(appModuleHandler.AppModule):
 			and winUser.getClassName(hwnd) == "ApplicationFrameWindow"
 		):
 			return True
-		# #13506: Windows 11 UI elements such as Taskbar should be reclassified as UIA windows,
+		# NVDA Core issue 13506: Windows 11 UI elements such as Taskbar should be reclassified as UIA windows,
 		# letting NVDA announce shell elements when navigating with mouse and/or touch,
 		# notably when interacting with windows labeled "DesktopWindowXamlSource".
 		# WORKAROUND UNTIL A PERMANENT FIX IS FOUND ACROSS APPS
@@ -533,9 +533,11 @@ class AppModule(appModuleHandler.AppModule):
 				# Top-level window class names from Windows 11 shell features
 				"Shell_InputSwitchTopLevelWindow",  # Language switcher
 				"XamlExplorerHostIslandWindow",  # Task View and Snap Layouts
-				"TopLevelWindowForOverflowXamlIsland",  # #14539: redesigned systray overflow in 22H2
+				# NVDA Core issue 14539
+				# Resolved in NVDA 2023.1.
+				"TopLevelWindowForOverflowXamlIsland",  # Redesigned systray overflow in 22H2
 			)
-			# #13717: on some systems, Windows 11 shell elements are reported as IAccessible,
+			# NVDA Core issue 13717: on some systems, Windows 11 shell elements are reported as IAccessible,
 			# notably Start button, causing IAccessible handler to report attribute error when handling events.
 			and winUser.getClassName(hwnd) != "Start"
 		):
