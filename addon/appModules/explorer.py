@@ -319,6 +319,15 @@ class TaskbarItem(UIA):
 class AppModule(appModuleHandler.AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+		# Announce rearranged taskbar icons in Windows 11 builds earlier than 25267.
+		if (
+			isinstance(obj, UIA)
+			and obj.UIAElement.cachedClassName == "Taskbar.TaskListButtonAutomationPeer"
+			and obj.parent.UIAAutomationId == "TaskbarFrameRepeater"
+			and winVersion.getWinVer().build < 25267
+		):
+			clsList.insert(0, TaskbarItem)
+			return
 		windowClass = obj.windowClassName
 		role = obj.role
 
