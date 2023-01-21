@@ -8,9 +8,6 @@ from NVDAObjects.UIA import UIA, Dialog
 import globalVars
 import UIAHandler
 import winVersion
-import scriptHandler
-import wx
-from winAPI.types import HWNDValT
 
 
 # #20: don't even think about proceeding in secure screens.
@@ -24,7 +21,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super().__init__()
 		from logHandler import log
-		import versionInfo
 		currentWinVer = winVersion.getWinVer()
 		# Report processor architecture at startup.
 		# Resolved in NVDA 2023.1.

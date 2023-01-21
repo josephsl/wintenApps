@@ -7,21 +7,9 @@
 # Provides additional routines on top of the built-in File Explorer app module.
 
 from nvdaBuiltin.appModules.explorer import AppModule
-from comtypes import COMError
-import time
-import appModuleHandler
-import controlTypes
 import winUser
 import winVersion
-import api
-import speech
-import eventHandler
-import mouseHandler
-from NVDAObjects.IAccessible import IAccessible, List
 from NVDAObjects.UIA import UIA
-from NVDAObjects.behaviors import ToolTip
-from NVDAObjects.window.edit import RichEdit50, EditTextInfo
-import config
 from winAPI.types import HWNDValT
 import scriptHandler
 import wx
