@@ -123,18 +123,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Is this a Windows 11 22H2 beta build (2262x)?
 		if currentWinVer.build in (22622, 22623):
 			log.info("winapps: Windows 11 22H2 beta detected")
-		# #82: Windows 11 22H2 Moment 2 introduces a redesigned taskbar and systray powered by Win32.
-		# NVDA Core issue 14539: touch and mouse interaction does not work when systray overflow window is open.
-		# Therefore reclassify the new systray overflow window class name as a good UIA window class.
-		# Patch appModules.explorer.AppModule.isGoodUIAWindow with the one defined in this global plugin.
-		# Resolved in NVDA 2023.1.
-		if (
-			currentWinVer >= winVersion.WIN11_22H2
-			and (versionInfo.version_year, versionInfo.version_major) < (2023, 1)
-		):
-			log.debug("winapps: patching File Explorer app module to add additional good uIA windows")
-			import appModules.explorer
-			appModules.explorer.AppModule.isGoodUIAWindow = isGoodUIAWindow
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		try:
