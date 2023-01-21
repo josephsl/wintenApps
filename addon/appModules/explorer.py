@@ -506,6 +506,10 @@ class AppModule(appModuleHandler.AppModule):
 		nextHandler()
 
 	def isGoodUIAWindow(self, hwnd: HWNDValT) -> bool:
+		# #82: Windows 11 22H2 Moment 2 introduces a redesigned taskbar and systray powered by Win32.
+		# NVDA Core issue 14539: touch and mouse interaction does not work when systray overflow window is open.
+		# Therefore reclassify the new systray overflow window class name as a good UIA window class.
+		# Resolved in NVDA 2023.1.
 		currentWinVer = winVersion.getWinVer()
 		# #9204: shell raises window open event for emoji panel in build 18305 and later.
 		if (
