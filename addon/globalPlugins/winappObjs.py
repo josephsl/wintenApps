@@ -4,7 +4,7 @@
 # Adds handlers for various UIA controls found in Windows 10 and later.
 
 import globalPluginHandler
-from NVDAObjects.UIA import UIA, Dialog
+from NVDAObjects.UIA import Dialog
 import globalVars
 import UIAHandler
 import winVersion
