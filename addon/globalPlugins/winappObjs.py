@@ -11,8 +11,6 @@ import winVersion
 import scriptHandler
 import wx
 from winAPI.types import HWNDValT
-import addonHandler
-addonHandler.initTranslation()
 
 
 # #20: don't even think about proceeding in secure screens.
