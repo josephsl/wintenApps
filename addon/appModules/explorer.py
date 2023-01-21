@@ -88,35 +88,11 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# Therefore reclassify the new systray overflow window class name as a good UIA window class.
 		# Resolved in NVDA 2023.1.
 		currentWinVer = winVersion.getWinVer()
-		# #9204: shell raises window open event for emoji panel in build 18305 and later.
 		if (
-			currentWinVer >= winVersion.WIN10_1903
-			and winUser.getClassName(hwnd) == "ApplicationFrameWindow"
+			currentWinVer >= winVersion.WIN11_22H2
+			# Redesigned systray overflow in 22H2
+			and winUser.getClassName(hwnd) == "TopLevelWindowForOverflowXamlIsland"
 		):
 			return True
-		# NVDA Core issue 13506: Windows 11 UI elements such as Taskbar should be reclassified as UIA windows,
-		# letting NVDA announce shell elements when navigating with mouse and/or touch,
-		# notably when interacting with windows labeled "DesktopWindowXamlSource".
-		# WORKAROUND UNTIL A PERMANENT FIX IS FOUND ACROSS APPS
-		if (
-			currentWinVer >= winVersion.WIN11
-			# Traverse parents until arriving at the top-level window with the below class names.
-			# This is more so for the shell root (first class name), and for others, class name check would work
-			# since they are top-level windows for windows shown on screen such as Task View.
-			# However, look for the ancestor for consistency.
-			and winUser.getClassName(winUser.getAncestor(hwnd, winUser.GA_ROOT)) in (
-				# Windows 11 shell UI root, housing various shell elements shown on screen if enabled.
-				"Shell_TrayWnd",  # Start, Search, Widgets, other shell elements
-				# Top-level window class names from Windows 11 shell features
-				"Shell_InputSwitchTopLevelWindow",  # Language switcher
-				"XamlExplorerHostIslandWindow",  # Task View and Snap Layouts
-				# NVDA Core issue 14539
-				# Resolved in NVDA 2023.1.
-				"TopLevelWindowForOverflowXamlIsland",  # Redesigned systray overflow in 22H2
-			)
-			# NVDA Core issue 13717: on some systems, Windows 11 shell elements are reported as IAccessible,
-			# notably Start button, causing IAccessible handler to report attribute error when handling events.
-			and winUser.getClassName(hwnd) != "Start"
-		):
-			return True
-		return False
+		# NVDA Core takes care of the rest.
+		return super().isGoodUIAWindow(hwnd)
