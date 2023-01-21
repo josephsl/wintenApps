@@ -6,7 +6,8 @@
 
 # Provides additional routines on top of the built-in File Explorer app module.
 
-from nvdaBuiltin.appModules.explorer import AppModule
+# Flake8 F403: detect other add-ons that overrode File Explorer app module.
+from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
 import winUser
 import winVersion
 from NVDAObjects.UIA import UIA
@@ -64,7 +65,9 @@ class TaskbarItem(UIA):
 			wx.CallAfter(self.announceDragPosition)
 
 
-class AppModule(AppModule):
+# App module class comes from built-in File Explorer app module but Mypy doesn't know that.
+# Also tell Flake8 that the base AppModule class comes from NVDA Core.
+class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Announce rearranged taskbar icons in Windows 11 builds earlier than 25267.
