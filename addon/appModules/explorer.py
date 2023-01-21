@@ -8,6 +8,7 @@
 Provides workarounds for controls such as identifying Start button, notification area and others.
 """
 
+from nvdaBuiltin.appModules.explorer import AppModule
 from comtypes import COMError
 import time
 import appModuleHandler
@@ -316,7 +317,7 @@ class TaskbarItem(UIA):
 			wx.CallAfter(self.announceDragPosition)
 
 
-class AppModule(appModuleHandler.AppModule):
+class AppModule(AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		# Announce rearranged taskbar icons in Windows 11 builds earlier than 25267.
