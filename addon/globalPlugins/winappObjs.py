@@ -141,3 +141,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if isinstance(lastUIItem, UIA) and lastUIItem.role == controlTypes.Role.STATICTEXT and lastUIItem.UIAElement.currentClassName == "Element":
 				ui.message(lastUIItem.name)
 		nextHandler()
+
+	def event_focusEntered(self, obj, nextHandler):
+		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
+		import controlTypes
+		import ui
+		if obj.appModule.appName == "explorer" and isinstance(obj, UIA) and obj.role == controlTypes.Role.LIST and obj.UIAElement.currentClassName == "UIItemsView":
+			if isinstance(obj.lastChild, UIA) and obj.lastChild.role == controlTypes.Role.STATICTEXT and obj.lastChild.UIAElement.currentClassName == "Element":
+				ui.message(obj.lastChild.name)
+		nextHandler()
