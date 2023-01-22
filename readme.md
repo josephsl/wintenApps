@@ -38,8 +38,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * In Windows 11, NVDA will announce search highlights in Start menu when it opens. This is now part of NVDA 2023.1.
 * In Windows 11 22H2 and later, mouse and/or touch interaction can be used to interact with redesigned system tray overflow window (Moment 2) and Open With dialog. This is now part of NVDA 2023.1.
 * NVDA will record processor architecture for the current Windows installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part of NVDA 2023.1.
-* In Windows 11 builds prior to Insider Preview build 25267, NVDA will announce results of rearranging taskbar icons when pressing Alt+Shift+left/right arrow keys.
-* In Windows 11 builds prior to Insider Preview build 25281, NVDA will announce taskbar item position information when moving through taskbar icons.
+* Improved Windows 11 taskbar experience, including announcing results of rearranging icons when pressing Alt+Shift+left/right arrow keys (prior to build 25267) and reporting item position when moving through taskbar icons (prior to build 25281).
 * NVDA will announce empty folder text inside an empty folder in File Explorer.
 
 ## Cortana
