@@ -40,6 +40,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 * NVDA will record processor architecture for the current Windows installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part of NVDA 2023.1.
 * In Windows 11 builds prior to Insider Preview build 25267, NVDA will announce results of rearranging taskbar icons when pressing Alt+Shift+left/right arrow keys.
 * In Windows 11 builds prior to Insider Preview build 25281, NVDA will announce taskbar item position information when moving through taskbar icons.
+* NVDA will announce empty folder text inside an empty folder in File Explorer.
 
 ## Cortana
 
