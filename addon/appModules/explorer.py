@@ -10,6 +10,8 @@
 from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
 import winUser
 import winVersion
+import controlTypes
+import ui
 from NVDAObjects.UIA import UIA
 from winAPI.types import HWNDValT
 import scriptHandler
@@ -35,7 +37,6 @@ class TaskbarItem(UIA):
 		return positionInfo
 
 	def announceDragPosition(self):
-		import ui
 		left = self.previous if isinstance(self.previous, TaskbarItem) else None
 		right = self.next if isinstance(self.next, TaskbarItem) else None
 		if left and right:
@@ -99,8 +100,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def _detectEmptyFolder(self, obj):
 		import UIAHandler
-		import controlTypes
-		import ui
 		clientObject = UIAHandler.handler.clientObject
 		condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "UIItemsView")
 		uiItemWindow = clientObject.ElementFromHandleBuildCache(
@@ -133,7 +132,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def event_focusEntered(self, obj, nextHandler):
 		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
-		import controlTypes
 		if (
 			isinstance(obj, UIA)
 			and obj.role == controlTypes.Role.LIST
