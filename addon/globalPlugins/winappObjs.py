@@ -42,30 +42,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# This is still the case with some dialogs such as restart to install updates dialog in Windows 11.
 		if UIAClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
-
-	def event_nameChange(self, obj, nextHandler):
-		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
-		# Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
-		if obj.appModule.appName == "explorer" and obj.windowClassName == "ShellTabWindowClass":
-			import controlTypes
-			import ui
-			clientObject = UIAHandler.handler.clientObject
-			condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "UIItemsView")
-			uiItemWindow = clientObject.ElementFromHandleBuildCache(
-				obj.windowHandle, UIAHandler.handler.baseCacheRequest
-			)
-			# Instantiate UIA object directly.
-			# In order for this to work, a valid UIA pointer must be returned.
-			try:
-				uiItems = UIA(
-					UIAElement=uiItemWindow.FindFirstBuildCache(
-						UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest
-					)
-				)
-			except ValueError:
-				return nextHandler()
-			lastUIItem = uiItems.lastChild
-			# NVDA Core issue 5759: announce empty folder text.
-			if isinstance(lastUIItem, UIA) and lastUIItem.role == controlTypes.Role.STATICTEXT and lastUIItem.UIAElement.currentClassName == "Element":
-				ui.message(lastUIItem.name)
-		nextHandler()

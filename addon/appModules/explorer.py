@@ -96,3 +96,30 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			return True
 		# NVDA Core takes care of the rest.
 		return super().isGoodUIAWindow(hwnd)
+
+	def event_nameChange(self, obj, nextHandler):
+		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
+		if obj.windowClassName == "ShellTabWindowClass":
+			import UIAHandler
+			import controlTypes
+			import ui
+			clientObject = UIAHandler.handler.clientObject
+			condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "UIItemsView")
+			uiItemWindow = clientObject.ElementFromHandleBuildCache(
+				obj.windowHandle, UIAHandler.handler.baseCacheRequest
+			)
+			# Instantiate UIA object directly.
+			# In order for this to work, a valid UIA pointer must be returned.
+			try:
+				uiItems = UIA(
+					UIAElement=uiItemWindow.FindFirstBuildCache(
+						UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest
+					)
+				)
+			except ValueError:
+				return nextHandler()
+			lastUIItem = uiItems.lastChild
+			# NVDA Core issue 5759: announce empty folder text.
+			if isinstance(lastUIItem, UIA) and lastUIItem.role == controlTypes.Role.STATICTEXT and lastUIItem.UIAElement.currentClassName == "Element":
+				ui.message(lastUIItem.name)
+		nextHandler()
