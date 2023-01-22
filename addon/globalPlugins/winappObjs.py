@@ -7,8 +7,6 @@ import globalPluginHandler
 from NVDAObjects.UIA import Dialog
 import globalVars
 import UIAHandler
-import controlTypes
-import ui
 import winVersion
 
 
@@ -44,46 +42,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# This is still the case with some dialogs such as restart to install updates dialog in Windows 11.
 		if UIAClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
-
-	def _detectEmptyFolder(self, obj):
-		clientObject = UIAHandler.handler.clientObject
-		condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "UIItemsView")
-		uiItemWindow = clientObject.ElementFromHandleBuildCache(
-			obj.windowHandle, UIAHandler.handler.baseCacheRequest
-		)
-		# Instantiate UIA object directly.
-		# In order for this to work, a valid UIA pointer must be returned.
-		try:
-			uiItems = UIA(
-				UIAElement=uiItemWindow.FindFirstBuildCache(
-					UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest
-				)
-			)
-		except ValueError:
-			return
-		lastUIItem = uiItems.lastChild
-		if (
-			isinstance(lastUIItem, UIA)
-			and lastUIItem.role == controlTypes.Role.STATICTEXT
-			and lastUIItem.UIAElement.currentClassName == "Element"
-		):
-			ui.message(lastUIItem.name)
-
-	def event_nameChange(self, obj, nextHandler):
-		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
-		# Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
-		if obj.appModule.appName == "explorer" and obj.windowClassName == "ShellTabWindowClass":
-			self._detectEmptyFolder(obj)
-		nextHandler()
-
-	def event_focusEntered(self, obj, nextHandler):
-		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
-		# Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
-		if (
-			obj.appModule.appName == "explorer"
-			and isinstance(obj, UIA)
-			and obj.role == controlTypes.Role.LIST
-			and obj.UIAElement.currentClassName == "UIItemsView"
-		):
-			self._detectEmptyFolder(obj.parent.parent)
-		nextHandler()
