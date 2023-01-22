@@ -115,6 +115,28 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		):
 			clsList.insert(0, TaskbarItem)
 
+	def _detectEmptyFolder(self, obj):
+		import controlTypes
+		import ui
+		clientObject = UIAHandler.handler.clientObject
+		condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "UIItemsView")
+		uiItemWindow = clientObject.ElementFromHandleBuildCache(
+			obj.windowHandle, UIAHandler.handler.baseCacheRequest
+		)
+		# Instantiate UIA object directly.
+		# In order for this to work, a valid UIA pointer must be returned.
+		try:
+			uiItems = UIA(
+				UIAElement=uiItemWindow.FindFirstBuildCache(
+					UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest
+				)
+			)
+		except ValueError:
+			return
+		lastUIItem = uiItems.lastChild
+		if isinstance(lastUIItem, UIA) and lastUIItem.role == controlTypes.Role.STATICTEXT and lastUIItem.UIAElement.currentClassName == "Element":
+			ui.message(lastUIItem.name)
+
 	def event_nameChange(self, obj, nextHandler):
 		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
 		# Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
