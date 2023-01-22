@@ -134,7 +134,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except ValueError:
 			return
 		lastUIItem = uiItems.lastChild
-		if isinstance(lastUIItem, UIA) and lastUIItem.role == controlTypes.Role.STATICTEXT and lastUIItem.UIAElement.currentClassName == "Element":
+		if (
+			isinstance(lastUIItem, UIA)
+			and lastUIItem.role == controlTypes.Role.STATICTEXT
+			and lastUIItem.UIAElement.currentClassName == "Element"
+		):
 			ui.message(lastUIItem.name)
 
 	def event_nameChange(self, obj, nextHandler):
@@ -148,6 +152,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
 		# Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
 		import controlTypes
-		if obj.appModule.appName == "explorer" and isinstance(obj, UIA) and obj.role == controlTypes.Role.LIST and obj.UIAElement.currentClassName == "UIItemsView":
+		if (
+			obj.appModule.appName == "explorer"
+			and isinstance(obj, UIA)
+			and obj.role == controlTypes.Role.LIST
+			and obj.UIAElement.currentClassName == "UIItemsView"
+		):
 			self._detectEmptyFolder(obj.parent.parent)
 		nextHandler()
