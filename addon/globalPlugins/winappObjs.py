@@ -7,6 +7,8 @@ import globalPluginHandler
 from NVDAObjects.UIA import UIA, Dialog
 import globalVars
 import UIAHandler
+import controlTypes
+import ui
 import winVersion
 import scriptHandler
 import wx
@@ -32,7 +34,6 @@ class TaskbarItem(UIA):
 		return positionInfo
 
 	def announceDragPosition(self):
-		import ui
 		left = self.previous if isinstance(self.previous, TaskbarItem) else None
 		right = self.next if isinstance(self.next, TaskbarItem) else None
 		if left and right:
@@ -116,8 +117,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			clsList.insert(0, TaskbarItem)
 
 	def _detectEmptyFolder(self, obj):
-		import controlTypes
-		import ui
 		clientObject = UIAHandler.handler.clientObject
 		condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "UIItemsView")
 		uiItemWindow = clientObject.ElementFromHandleBuildCache(
@@ -151,7 +150,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def event_focusEntered(self, obj, nextHandler):
 		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
 		# Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
-		import controlTypes
 		if (
 			obj.appModule.appName == "explorer"
 			and isinstance(obj, UIA)
