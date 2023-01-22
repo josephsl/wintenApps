@@ -141,27 +141,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
 		# Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
 		if obj.appModule.appName == "explorer" and obj.windowClassName == "ShellTabWindowClass":
-			import controlTypes
-			import ui
-			clientObject = UIAHandler.handler.clientObject
-			condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "UIItemsView")
-			uiItemWindow = clientObject.ElementFromHandleBuildCache(
-				obj.windowHandle, UIAHandler.handler.baseCacheRequest
-			)
-			# Instantiate UIA object directly.
-			# In order for this to work, a valid UIA pointer must be returned.
-			try:
-				uiItems = UIA(
-					UIAElement=uiItemWindow.FindFirstBuildCache(
-						UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest
-					)
-				)
-			except ValueError:
-				return nextHandler()
-			lastUIItem = uiItems.lastChild
-			# NVDA Core issue 5759: announce empty folder text.
-			if isinstance(lastUIItem, UIA) and lastUIItem.role == controlTypes.Role.STATICTEXT and lastUIItem.UIAElement.currentClassName == "Element":
-				ui.message(lastUIItem.name)
+			self._detectEmptyFolder(obj)
 		nextHandler()
 
 	def event_focusEntered(self, obj, nextHandler):
