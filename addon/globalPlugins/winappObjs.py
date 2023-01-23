@@ -5,6 +5,7 @@
 
 import globalPluginHandler
 from NVDAObjects.UIA import UIA, Dialog
+import NVDAObjects
 import globalVars
 import UIAHandler
 import controlTypes
@@ -17,7 +18,7 @@ addonHandler.initTranslation()
 
 
 # Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
-class TaskbarItem(UIA):
+class TaskbarItem(NVDAObjects.NVDAObject):
 
 	def _get_itemName(self):
 		# Icon name contains open window count if windows are open after a hyphen (-).
