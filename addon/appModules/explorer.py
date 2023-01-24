@@ -13,6 +13,7 @@ import winVersion
 import controlTypes
 import ui
 from NVDAObjects.UIA import UIA
+import NVDAObjects
 from winAPI.types import HWNDValT
 import scriptHandler
 import wx
@@ -20,7 +21,7 @@ import addonHandler
 addonHandler.initTranslation()
 
 
-class TaskbarItem(UIA):
+class TaskbarItem(NVDAObjects.NVDAObject):
 
 	def _get_itemName(self):
 		# Icon name contains open window count if windows are open after a hyphen (-).
@@ -53,14 +54,14 @@ class TaskbarItem(UIA):
 
 	@scriptHandler.script(gesture="kb:alt+shift+rightArrow")
 	def script_moveRight(self, gesture):
-		announcePosition = isinstance(self.next, TaskbarItem)
+		announcePosition = winVersion.getWinVer() >= winVersion.WIN11 and isinstance(self.next, TaskbarItem)
 		gesture.send()
 		if announcePosition:
 			wx.CallAfter(self.announceDragPosition)
 
 	@scriptHandler.script(gesture="kb:alt+shift+leftArrow")
 	def script_moveLeft(self, gesture):
-		announcePosition = isinstance(self.previous, TaskbarItem)
+		announcePosition = winVersion.getWinVer() >= winVersion.WIN11 and isinstance(self.previous, TaskbarItem)
 		gesture.send()
 		if announcePosition:
 			wx.CallAfter(self.announceDragPosition)
