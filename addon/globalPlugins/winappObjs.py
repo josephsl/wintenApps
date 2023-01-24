@@ -103,7 +103,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if not isinstance(obj, UIA):
-			return
+			# Announce rearranged taskbar icons in Windows 10 (IAccessible objects).
+			# Temporary: do it separately from Windows 11 version for backward compatibility.
+			if (
+				obj.appModule.appName == "explorer"
+				and obj.role == controlTypes.Role.BUTTON
+				and obj.windowClassName == "MSTaskListWClass"
+				and all(obj.location)
+			):
+				clsList.insert(0, TaskbarItem)
 		else:
 			# Windows that are really dialogs.
 			# Some dialogs, although listed as a dialog thanks to UIA class name,
