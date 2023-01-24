@@ -51,14 +51,14 @@ class TaskbarItem(NVDAObjects.NVDAObject):
 
 	@scriptHandler.script(gesture="kb:alt+shift+rightArrow")
 	def script_moveRight(self, gesture):
-		announcePosition = isinstance(self.next, TaskbarItem)
+		announcePosition = winVersion.getWinVer() >= winVersion.WIN11 and isinstance(self.next, TaskbarItem)
 		gesture.send()
 		if announcePosition:
 			wx.CallAfter(self.announceDragPosition)
 
 	@scriptHandler.script(gesture="kb:alt+shift+leftArrow")
 	def script_moveLeft(self, gesture):
-		announcePosition = isinstance(self.previous, TaskbarItem)
+		announcePosition = winVersion.getWinVer() >= winVersion.WIN11 and isinstance(self.previous, TaskbarItem)
 		gesture.send()
 		if announcePosition:
 			wx.CallAfter(self.announceDragPosition)
