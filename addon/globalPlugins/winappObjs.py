@@ -104,21 +104,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if not isinstance(obj, UIA):
 			return
-		# Windows that are really dialogs.
-		# Some dialogs, although listed as a dialog thanks to UIA class name,
-		# does not advertise the proper role of dialog.
-		# This is still the case with some dialogs such as restart to install updates dialog in Windows 11.
-		if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
-			clsList.insert(0, Dialog)
-			return
-		# Announce rearranged taskbar icons in Windows 11 builds earlier than 25267.
-		if (
-			obj.appModule.appName == "explorer"
-			and obj.UIAElement.cachedClassName == "Taskbar.TaskListButtonAutomationPeer"
-			and obj.parent.UIAAutomationId == "TaskbarFrameRepeater"
-			and winVersion.getWinVer().build < 25267
-		):
-			clsList.insert(0, TaskbarItem)
+		else:
+			# Windows that are really dialogs.
+			# Some dialogs, although listed as a dialog thanks to UIA class name,
+			# does not advertise the proper role of dialog.
+			# This is still the case with some dialogs such as restart to install updates dialog in Windows 11.
+			if obj.UIAElement.cachedClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
+				clsList.insert(0, Dialog)
+				return
+			# Announce rearranged taskbar icons in Windows 11 builds earlier than 25267.
+			if (
+				obj.appModule.appName == "explorer"
+				and obj.UIAElement.cachedClassName == "Taskbar.TaskListButtonAutomationPeer"
+				and obj.parent.UIAAutomationId == "TaskbarFrameRepeater"
+				and winVersion.getWinVer().build < 25267
+			):
+				clsList.insert(0, TaskbarItem)
 
 	def _detectEmptyFolder(self, obj):
 		clientObject = UIAHandler.handler.clientObject
