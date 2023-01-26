@@ -41,3 +41,20 @@ class AppModule(appModuleHandler.AppModule):
 		if not any(statusBar.location):
 			raise NotImplementedError()
 		return statusBar
+
+	def event_UIA_elementSelected(self, obj, nextHandler):
+		import braille
+		import controlTypes
+		import eventHandler
+		# Element selected event fires multiple times due to state changes.
+		if (
+			controlTypes.State.SELECTED in obj.states
+			and not eventHandler.isPendingEvents(eventName="UIA_elementSelected")
+		):
+			obj.reportFocus()
+			braille.handler.message(braille.getPropertiesBraille(
+				name=obj.name,
+				role=obj.role,
+				positionInfo=obj.positionInfo
+			))
+		nextHandler()
