@@ -171,3 +171,23 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		):
 			self._detectEmptyFolder(obj.parent.parent)
 		nextHandler()
+
+	def event_UIA_elementSelected(self, obj, nextHandler):
+		# Announce File Explorer tab switches (Windows 11 22H2 and later).
+		# Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
+		import braille
+		import eventHandler
+		# Element selected event fires multiple times due to state changes.
+		if (
+			obj.appModule.appName == "explorer"
+			and obj.parent.UIAAutomationId == "TabListView"
+			and controlTypes.State.SELECTED in obj.states
+			and not eventHandler.isPendingEvents(eventName="UIA_elementSelected")
+		):
+			obj.reportFocus()
+			braille.handler.message(braille.getPropertiesBraille(
+				name=obj.name,
+				role=obj.role,
+				positionInfo=obj.positionInfo
+			))
+		nextHandler()
