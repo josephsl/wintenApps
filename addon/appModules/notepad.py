@@ -48,7 +48,8 @@ class AppModule(appModuleHandler.AppModule):
 		import eventHandler
 		# Element selected event fires multiple times due to state changes.
 		if (
-			controlTypes.State.SELECTED in obj.states
+			obj.role == controlTypes.Role.TAB
+			and controlTypes.State.SELECTED in obj.states
 			and not eventHandler.isPendingEvents(eventName="UIA_elementSelected")
 		):
 			obj.reportFocus()

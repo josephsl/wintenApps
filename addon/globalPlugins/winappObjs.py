@@ -180,8 +180,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Element selected event fires multiple times due to state changes.
 		if (
 			obj.appModule.appName == "explorer"
-			and obj.parent.UIAAutomationId == "TabListView"
+			and obj.role == controlTypes.Role.TAB
 			and controlTypes.State.SELECTED in obj.states
+			and obj.parent.UIAAutomationId == "TabListView"
 			and not eventHandler.isPendingEvents(eventName="UIA_elementSelected")
 		):
 			obj.reportFocus()
