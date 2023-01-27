@@ -40,14 +40,13 @@
 
 * 在新建、关闭、或切换虚拟桌面时，NVDA会读出当前桌面名称（例如，桌面2）。
 * 在 Windows 11 中，NVDA 支持在打开“开始”菜单时读出显示的搜索高亮。该特性已经包含在 NVDA2023.1 中。
-* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window (Moment 2) and
-  Open With dialog. This is now part of NVDA 2023.1.
+* 在 Windows 11 22H2 Moment 2 中，可以在使用鼠标和/或触摸交互时正确识别新版的系统托盘溢出区域。该特性已经包含在
+  NVDA2023.1 中。该特性已经包含在 NVDA2023.1 中。
 * 启动时记录当前 Windows 安装（x86/32 位、AMD64、ARM64）的处理器架构。该特性已经包含在 NVDA2023.1 中。
-* Improved Windows 11 taskbar experience, including announcing results of
-  rearranging icons when pressing Alt+Shift+left/right arrow keys (prior to
-  build 25267) and reporting item position when moving through taskbar icons
-  (prior to build 25281).
+* 改进了 Windows 10 和 11 任务栏的使用体验，包括在按 Alt+Shift+左/右箭头键时朗读重新排列图标的结果（Windows11
+  内部版本 25267）以及在任务栏图标间移动时读出项目位置（Windows10 和 11内部版本 25281）。
+* 在文件资源管理器中的空文件夹内会提示空文件夹。
+* 在文件资源管理器和记事本等支持标签式窗口的应用程序中，NVDA 会在标签间切换时读出标签的名称和位置。
 
 ## Cortana
 
@@ -69,8 +68,7 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 * 在 Windows 10 中，选择 Emoji 组（包括Kaomoji和符号组）时，NVDA 不会将导航对象移动到某些EMOJI上。
 * 在 Windows 11 剪贴板历史记录中，为了让 NVDA 读出剪贴板历史记录条目菜单项，浏览模式将默认关闭。该特性已经包含在
   NVDA2023.1 中。
-* In Windows 11 22H2 and later, NVDA will announce suggested actions when
-  compatible data such as phone numbers is copied to the clipboard.
+* 在 Windows 11 22H2 及更高版本中，当电话号码等兼容的数据复制到剪贴板时，NVDA 会读出建议的操作。
 
 ## 设置
 

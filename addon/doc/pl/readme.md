@@ -3,7 +3,7 @@
 * Autorzy: Joseph Lee, Derek Riemer i inni
 * Pobierz [wersja stabilna][1]
 * Pobierz [wersja rozwojowa][2]
-* NVDA compatibility: 2022.4 and later
+* Zgodność z NVDA: 2022.4 i nowsze
 
 Uwaga: Pierwotniea nazwa tego dodatku była Windows 10 App Essentials, a
 potem została zmieniona na Windows App Essentials w 2021 roku, aby
@@ -20,35 +20,39 @@ dołączone, zobacz każdą sekcję aplikacji):
 
 * Cortana
 * Mapy
-* Modern keyboard (emoji panel/touch keyboard/dictation/voice
-  typing/hardware input suggestions/clipboard history/Suggested
-  Actions/modern input method editors)
+* Nowoczesna klawiatura (panel emoji/klawiatura dotykowa/dyktowanie/pisanie
+  głosowe/sugestie dotyczące wprowadzania sprzętu/historia
+  schowka/sugerowane akcje/nowoczesne edytory metod wprowadzania)
 * Ustawienia (ustawienia systemowe, Windows+I)
-* Voice access (Windows 11 22H2)
+* Dostęp głosowy (Windows 11 22H2)
 * Pogoda
-* Miscellaneous modules for controls and features such as virtual desktops
-  announcements
+* Różne moduły sterowania i funkcji, takich jak ogłoszenia wirtualnych
+  pulpitów
 
 Notatki:
 
-* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
-  or later releases.
-* Feature update support duration is tied to consumer support duration
-  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
-  may end support for a feature update prior to end of consumer support. See
-  aka.ms/WindowsTargetVersioninfo for more information and support dates.
+* Ten dodatek wymaga systemu Windows 10 21H2 (kompilacja 19044), 11 21H2
+  (kompilacja 22000) lub nowszych wersji.
+* Czas trwania pomocy technicznej dotyczącej aktualizacji funkcji jest
+  powiązany z czasem trwania pomocy technicznej dla klientów (wersje Home,
+  Pro, Pro Education, Pro dla stacji roboczych), a dodatek może zakończyć
+  świadczenie pomocy technicznej dla aktualizacji funkcji przed zakończeniem
+  świadczenia pomocy technicznej dla klientów indywidualnych. Zobacz
+  aka.ms/WindowsTargetVersioninfo, aby uzyskać więcej informacji i daty
+  pomocy technicznej.
 * Chociaż instalacja jest możliwa, ten dodatek nie obsługuje wersji Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
-* If Add-on Updater is installed and background add-on updates is enabled,
-  Windows App Essentials will not install at all on unsupported Windows
-  releases.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel. For beta channel, only the latest build (22623) is supported.
+* Jeśli jest zainstalowany program Add-on Updater i włączone są aktualizacje
+  dodatków w tle, program Windows App Essentials nie zostanie w ogóle
+  zainstalowany w nieobsługiwanych wersjach systemu Windows.
+* Nie wszystkie funkcje z kompilacji Windows Insider Preview będą
+  obsługiwane, tym bardziej w przypadku funkcji wprowadzonych do podzbioru
+  niejawnych testerów systemu Windows w kanale deweloperskim. W przypadku
+  kanału beta obsługiwana jest tylko najnowsza kompilacja (22623).
 * Niektóre funkcje dodatkowe są lub będą częścią czytnika ekranu NVDA.
-* Some apps support compact overlay mode (always on top in Calculator, for
-  example), and this mode will not work properly with the portable version
-  of NVDA.
+* Niektóre aplikacje obsługują tryb kompaktowej nakładki (na przykład zawsze
+  na wierzchu w Kalkulatorze), a ten tryb nie będzie działał poprawnie z
+  przenośną wersją NVDA.
 * Aby uzyskać najlepsze wrażenia z aplikacji, które osadzają technologie
   internetowe i zawartość, taką jak menu Start i jego menu kontekstowe,
   włącz ustawienie "Automatyczny tryb ustawiania ostrości dla zmian
@@ -59,20 +63,27 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 
 ## Ogólne
 
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce active virtual desktop name (desktop 2, for example).
-* In Windows 11, NVDA will announce search highlights in Start menu when it
-  opens. This is now part of NVDA 2023.1.
-* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window (Moment 2) and
-  Open With dialog. This is now part of NVDA 2023.1.
-* NVDA will record processor architecture for the current Windows
-  installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
-  of NVDA 2023.1.
-* Improved Windows 11 taskbar experience, including announcing results of
-  rearranging icons when pressing Alt+Shift+left/right arrow keys (prior to
-  build 25267) and reporting item position when moving through taskbar icons
-  (prior to build 25281).
+* Podczas otwierania, zamykania lub przełączania się między wirtualnymi
+  pulpitami, NVDA ogłosi nazwę aktywnego wirtualnego pulpitu (na przykład
+  desktop 2).
+* W systemie Windows 11 NVDA ogłosi najważniejsze elementy wyszukiwania w
+  menu Start po jego otwarciu. Jest to teraz część NVDA 2023.1.
+* W systemie Windows 11 22H2 i nowszych interakcja myszy i/lub dotyku może
+  być używana do interakcji z przeprojektowanym oknem przepełnienia
+  zasobnika systemowego (moment 2) i oknem dialogowym Otwórz za pomocą. Jest
+  to teraz część NVDA 2023.1.
+* NVDA zapisze architekturę procesora dla bieżącej instalacji systemu
+  Windows (x86/32-bit, AMD64, ARM64) po jej uruchomieniu. Jest to teraz
+  część NVDA 2023.1.
+* Improved Windows 10 and 11 taskbar experience, including announcing
+  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
+  (Windows 11 prior to build 25267) and reporting item position when moving
+  through taskbar icons (Windows 10 and 11 prior to build 25281).
+* NVDA ogłosi komunikat o pustym folderze wewnątrz pustego folderu w
+  Eksploratorze plików.
+* In aps such as File Explorer and Notepad where tabbed windows are
+  supported, NVDA will announce the name and the position of tabs when
+  switching between them.
 
 ## Cortana
 
@@ -82,27 +93,29 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 ## Mapy
 
 * NVDA odtwarza sygnał dźwiękowy lokalizacji dla lokalizacji na mapie.
-* NVDA will no longer interrupt speech when focused on items other than the
-  map control in some cases.
+* W niektórych przypadkach NVDA nie będzie już przerywać mowy, gdy skupi się
+  na elementach innych niż sterowanie mapą.
 
 ## Klawiatura nowoczesna
 
-This includes emoji panel, clipboard history, touch keyboard,
-dictation/voice typing, hardware input suggestions, suggested actions, and
-modern input method editors for certain languages across Windows 10 and
-11. When viewing emojis, for best experience, enable Unicode Consortium
-setting from NVDA's speech settings and set symbol level to "some" or
-higher. When pasting from clipboard history in Windows 10, press Space key
-instead of Enter key to paste the selected item.
+Obejmuje to panel emoji, historię schowka, klawiaturę dotykową, dyktowanie /
+pisanie głosowe, sugestie dotyczące wprowadzania sprzętu, sugerowane
+działania i nowoczesne edytory metod wprowadzania dla niektórych języków w
+systemach Windows 10 i 11. Aby wyświetlić emotikony, aby uzyskać najlepsze
+wyniki, włącz ustawienie Unicode Consortium z ustawień mowy NVDA i ustaw
+poziom symbolu na "niektóre" lub wyższe. Podczas wklejania z historii
+schowka w systemie Windows 10 naciśnij spacji zamiast Enter, aby wkleić
+wybrany element.
 
-* In Windows 10 emoji panel, when an emoji group (including kaomoji and
-  symbols group) is selected, NVDA will no longer move navigator object to
-  certain emojis.
-* In Windows 11 clipboard history, browse mode will be turned off by
-  default, designed to let NVDA announce clipboard history entry menu
-  items. This is now part of NVDA 2023.1.
-* In Windows 11 22H2 and later, NVDA will announce suggested actions when
-  compatible data such as phone numbers is copied to the clipboard.
+* W panelu emoji systemu Windows 10, gdy wybrana jest grupa emoji (w tym
+  grupa kaomoji i symbole), NVDA nie będzie już przenosić obiektu nawigatora
+  do niektórych emotikonów.
+* W historii schowka systemu Windows 11 tryb przeglądania będzie domyślnie
+  wyłączony, zaprojektowany tak, aby umożliwić NVDA ogłaszanie elementów
+  menu wprowadzania historii schowka. Jest to teraz część NVDA 2023.1.
+* W systemie Windows 11 22H2 i nowszych NVDA poinformuje o sugerowanych
+  działaniach, gdy kompatybilne dane, takie jak numery telefonów, zostaną
+  skopiowane do schowka.
 
 ## Ustawienia
 
@@ -111,16 +124,19 @@ instead of Enter key to paste the selected item.
   pobierania w systemie Windows 11).
 * W systemie Windows 11 elementy paska okruszków nawigacyjnych są prawidłowo
   rozpoznawane.
-* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
-  updates to Windows Update status as download and install progresses. This
-  may result in speech interruption when navigating Settings app while
-  updates are being downloaded and installed. If using Windows 11 22H2 and
-  later, if selective UIA event registration is on, you must move focus to
-  updates list as soon as they appear so NVDA can announce update progress.
+* W systemach Windows 10 i 11 22H2 i nowszych NVDA będzie zakłócać mowę i
+  zgłaszać aktualizacje stanu usługi Windows Update w miarę postępu
+  pobierania i instalacji. Może to spowodować przerwanie mowy podczas
+  nawigowania po aplikacji Ustawienia podczas pobierania i instalowania
+  aktualizacji. Jeśli używasz systemu Windows 11 22H2 i nowszych, jeśli
+  selektywna rejestracja zdarzeń UIA jest włączona, musisz przenieść fokus
+  na listę aktualizacji, gdy tylko się pojawią, aby NVDA mogła ogłosić
+  postęp aktualizacji.
 
 ## Dostęp głosowy
 
-This refers to Voice access feature introduced in Windows 11 22H2.
+Odnosi się to do funkcji dostępu głosowego wprowadzonej w systemie Windows
+11 22H2.
 
 * NVDA ogłosi stan mikrofonu podczas przełączania mikrofonu z interfejsu
   dostępu głosowego.

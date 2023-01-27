@@ -72,9 +72,15 @@ Windows, а також удосконаленням та виправлення�
 * NVDA записуватиме архітектуру процесора для поточного встановлення Windows
   (x86/32-bit, AMD64, ARM64) під час її запуску. Зараз це частина NVDA
   2023.1.
-* У збірках Windows 11 до збірки Insider Preview 25267 NVDA оголошуватиме
-  результати перестановки іконок панелі завдань при натисканні
-  Alt+Shift+стрілка вліво/стрілка вправо.
+* Improved Windows 10 and 11 taskbar experience, including announcing
+  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
+  (Windows 11 prior to build 25267) and reporting item position when moving
+  through taskbar icons (Windows 10 and 11 prior to build 25281).
+* NVDA will announce empty folder text inside an empty folder in File
+  Explorer.
+* In aps such as File Explorer and Notepad where tabbed windows are
+  supported, NVDA will announce the name and the position of tabs when
+  switching between them.
 
 ## Cortana
 
