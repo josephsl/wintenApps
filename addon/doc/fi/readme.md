@@ -70,11 +70,16 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA tallentaa käynnistyessään nykyisen Windows-asennuksen
   suoritinarkkitehtuurin (x86/32-bittinen, AMD64, ARM64). Tämä sisältyy nyt
   NVDA 2023.1:een.
-* Paranneltu Windows 11:n tehtäväpalkin kokemusta, mukaan lukien kuvakkeiden
-  uudelleenjärjestämisen tulosten puhuminen painettaessa
-  Alt+Vaihto+Vasen/Oikea nuolinäppäin (ennen koontiversiota 25267) ja
-  kohteen sijainnin ilmoittaminen tehtäväpalkin kuvakkeiden välillä
-  liikuttaessa (ennen koontiversiota 25281).
+* Paranneltu Windows 10:n ja 11:n tehtäväpalkin kokemusta, mukaan lukien
+  kuvakkeiden uudelleenjärjestämisen tulosten puhuminen painettaessa
+  Alt+Vaihto+Vasen/Oikea nuolinäppäin (Windows 11 ennen koontiversiota
+  25267) ja kohteen sijainnin ilmoittaminen tehtäväpalkin kuvakkeiden
+  välillä liikuttaessa (Windows 10 ja 11 ennen koontiversiota 25281).
+* NVDA ilmoittaa tyhjästä kansiosta, kun sellainen avataan
+  Resurssienhallinnassa.
+* NVDA puhuu välilehtien nimen ja sijainnin niiden välillä vaihdettaessa
+  sellaisissa sovelluksissa, joissa välilehti-ikkunoita tuetaan
+  (esim. Resurssienhallinta ja Muistio).
 
 ## Cortana
 

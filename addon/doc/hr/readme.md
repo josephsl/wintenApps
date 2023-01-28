@@ -69,10 +69,15 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 * NVDA će zabilježiti arhitekturu procesora za trenutačnu Windows
   instalaciju (x86/32-bit, AMD64, ARM64) kad se pokrene. Ovo je sada dio
   NVDA čitača 2023.1.
-* Improved Windows 11 taskbar experience, including announcing results of
-  rearranging icons when pressing Alt+Shift+left/right arrow keys (prior to
-  build 25267) and reporting item position when moving through taskbar icons
-  (prior to build 25281).
+* Improved Windows 10 and 11 taskbar experience, including announcing
+  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
+  (Windows 11 prior to build 25267) and reporting item position when moving
+  through taskbar icons (Windows 10 and 11 prior to build 25281).
+* NVDA will announce empty folder text inside an empty folder in File
+  Explorer.
+* In aps such as File Explorer and Notepad where tabbed windows are
+  supported, NVDA will announce the name and the position of tabs when
+  switching between them.
 
 ## Cortana
 
