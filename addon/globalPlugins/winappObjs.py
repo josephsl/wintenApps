@@ -42,24 +42,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# This is still the case with some dialogs such as restart to install updates dialog in Windows 11.
 		if UIAClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
-
-	def event_UIA_elementSelected(self, obj, nextHandler):
-		# NVDA Core issue 14388: announce File Explorer tab switches (Windows 11 22H2 and later).
-		# Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
-		import braille
-		import eventHandler
-		# Element selected event fires multiple times due to state changes.
-		if (
-			obj.appModule.appName == "explorer"
-			and obj.role == controlTypes.Role.TAB
-			and controlTypes.State.SELECTED in obj.states
-			and obj.parent.UIAAutomationId == "TabListView"
-			and not eventHandler.isPendingEvents(eventName="UIA_elementSelected")
-		):
-			obj.reportFocus()
-			braille.handler.message(braille.getPropertiesBraille(
-				name=obj.name,
-				role=obj.role,
-				positionInfo=obj.positionInfo
-			))
-		nextHandler()
