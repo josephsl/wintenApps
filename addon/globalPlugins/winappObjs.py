@@ -173,7 +173,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nextHandler()
 
 	def event_UIA_elementSelected(self, obj, nextHandler):
-		# Announce File Explorer tab switches (Windows 11 22H2 and later).
+		# NVDA Core issue 14388: announce File Explorer tab switches (Windows 11 22H2 and later).
 		# Ideally this should be part of File Explorer app module but to avoid conflicts with other add-ons...
 		import braille
 		import eventHandler
