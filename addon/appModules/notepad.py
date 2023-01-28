@@ -9,9 +9,28 @@ this module provides workarounds for Windows 11 Notepad."""
 
 import appModuleHandler
 import api
+import braille
+import controlTypes
+import eventHandler
 
 
 class AppModule(appModuleHandler.AppModule):
+
+	def event_UIA_elementSelected(self, obj, nextHandler):
+		# NVDA Core issue 14587/PR 14588: announce tab switches in Notepad 11.2212 and later.
+		# Element selected event fires multiple times due to state changes.
+		if (
+			obj.role == controlTypes.Role.TAB
+			and controlTypes.State.SELECTED in obj.states
+			and not eventHandler.isPendingEvents(eventName="UIA_elementSelected")
+		):
+			obj.reportFocus()
+			braille.handler.message(braille.getPropertiesBraille(
+				name=obj.name,
+				role=obj.role,
+				positionInfo=obj.positionInfo
+			))
+		nextHandler()
 
 	def _get_statusBar(self):
 		"""Retrieves Windows 11 Notepad status bar.
@@ -41,21 +60,3 @@ class AppModule(appModuleHandler.AppModule):
 		if not any(statusBar.location):
 			raise NotImplementedError()
 		return statusBar
-
-	def event_UIA_elementSelected(self, obj, nextHandler):
-		import braille
-		import controlTypes
-		import eventHandler
-		# Element selected event fires multiple times due to state changes.
-		if (
-			obj.role == controlTypes.Role.TAB
-			and controlTypes.State.SELECTED in obj.states
-			and not eventHandler.isPendingEvents(eventName="UIA_elementSelected")
-		):
-			obj.reportFocus()
-			braille.handler.message(braille.getPropertiesBraille(
-				name=obj.name,
-				role=obj.role,
-				positionInfo=obj.positionInfo
-			))
-		nextHandler()
