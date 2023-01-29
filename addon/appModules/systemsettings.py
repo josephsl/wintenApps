@@ -19,7 +19,7 @@ from NVDAObjects import NVDAObject
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
-	def event_NVDAObject_init(self, obj):
+	def event_NVDAObject_init(self, obj: NVDAObject):
 		try:
 			automationId = obj.UIAAutomationId
 		except AttributeError:

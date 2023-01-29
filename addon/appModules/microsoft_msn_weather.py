@@ -59,7 +59,7 @@ class AppModule(appModuleHandler.AppModule):
 		):
 			clsList.insert(0, WeatherForecastItem)
 
-	def event_NVDAObject_init(self, obj):
+	def event_NVDAObject_init(self, obj: NVDAObject):
 		try:
 			theId = obj.UIAAutomationId
 		except AttributeError:
