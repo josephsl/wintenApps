@@ -6,7 +6,7 @@
 
 # Provides additional routines on top of the built-in File Explorer app module.
 
-from typing import List
+from typing import List, Dict
 # Flake8 F403: detect other add-ons that overrode File Explorer app module.
 from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
 import winUser
@@ -28,7 +28,7 @@ class TaskbarItem(NVDAObject):
 		# Icon name contains open window count if windows are open after a hyphen (-).
 		return self.name.rpartition(" - ")[0] if " -" in self.name else self.name
 
-	def _get_positionInfo(self):
+	def _get_positionInfo(self) -> Dict[str, int]:
 		# Position info is included in build 25281.
 		positionInfo = super().positionInfo
 		if not positionInfo:
