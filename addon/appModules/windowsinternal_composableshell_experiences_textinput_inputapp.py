@@ -6,6 +6,7 @@
 # The add-on version of this module will extend the one that comes with NVDA Core (2018.3 and later).
 # For IME candidate item/UI definition, Flake8 must be told to ignore it.
 
+from typing import List
 # Yes, this app module is powered by built-in modern keyboard (TextInputHost) app module
 # (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
@@ -19,6 +20,7 @@ import controlTypes
 import api
 from logHandler import log
 from NVDAObjects.UIA import UIA
+from NVDAObjects import NVDAObject
 
 
 # Bulk of the below class comes from NVDA Core.
@@ -184,7 +186,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			self._emojiPanelClosed(obj)
 		nextHandler()
 
-	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
 		# Recognize more candidate UI and item elements in Windows 11.
 		# Return after checking each item so candidate UI and items from Windows 10 can be recognized.
 		if isinstance(obj, UIA):

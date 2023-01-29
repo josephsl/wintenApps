@@ -4,10 +4,12 @@
 
 # Numerous enhancements for Bing Maps app.
 
+from typing import List
 import appModuleHandler
 import api
 import config
 from NVDAObjects.UIA import UIA
+from NVDAObjects import NVDAObject
 import tones
 
 
@@ -34,7 +36,7 @@ class MapLocation(UIA):
 
 class AppModule(appModuleHandler.AppModule):
 
-	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
 		if isinstance(obj, UIA):
 			try:
 				if obj.parent.parent.UIAAutomationId == "MapControl":

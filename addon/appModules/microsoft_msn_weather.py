@@ -5,6 +5,7 @@
 # Provides workarounds for the weather app.
 
 import re
+from typing import List
 import controlTypes
 import appModuleHandler
 import ui
@@ -51,7 +52,7 @@ class WeatherForecastItem(NVDAObject):
 
 class AppModule(appModuleHandler.AppModule):
 
-	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
 		if (
 			obj.role == controlTypes.Role.LISTITEM
 			and RE_PARENT_LISTS.match(obj.parent.UIAAutomationId)
