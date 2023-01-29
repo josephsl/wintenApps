@@ -9,8 +9,7 @@ import appModuleHandler
 import scriptHandler
 import ui
 import winUser
-from NVDAObjects.UIA import UIA
-from NVDAObjects.behaviors import Dialog
+from NVDAObjects.UIA import UIA, Dialog
 from NVDAObjects import NVDAObject
 
 
