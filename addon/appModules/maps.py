@@ -18,7 +18,7 @@ import tones
 class MapLocation(UIA):
 	"""Plays a tone indicating the current map position."""
 
-	def event_becomeNavigatorObject(self):
+	def event_becomeNavigatorObject(self) -> None:
 		l, t, w, h = self.location
 		x = l + (w / 2)
 		y = t + (h / 2)

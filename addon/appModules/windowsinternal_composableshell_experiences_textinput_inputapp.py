@@ -26,7 +26,7 @@ from NVDAObjects import NVDAObject
 # Bulk of the below class comes from NVDA Core.
 class ImeCandidateItem(ImeCandidateItem):  # type: ignore[no-redef]
 
-	def event_UIA_elementSelected(self):
+	def event_UIA_elementSelected(self) -> None:
 		# Focus event is fired when a candidate item receives focus, therefore ignore this event.
 		if winVersion.getWinVer() >= winVersion.WIN11:
 			return

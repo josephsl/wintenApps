@@ -17,7 +17,7 @@ from NVDAObjects import NVDAObject
 class MicrophoneButton(UIA):
 
 	@scriptHandler.script(gestures=["kb:space", "kb:enter", "kb:numpadEnter"])
-	def script_toggleMicrophone(self, gesture):
+	def script_toggleMicrophone(self, gesture) -> None:
 		# Until NVDA gets a chance to handle UIA notifications when these commands are pressed...
 		gesture.send()
 		# There is no label for this button in build 25200 series, so consult its parent.

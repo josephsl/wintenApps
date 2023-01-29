@@ -31,18 +31,18 @@ RE_PARENT_LISTS = re.compile("|".join([
 
 class WeatherForecastItem(NVDAObject):
 
-	def initOverlayClass(self):
+	def initOverlayClass(self) -> None:
 		self.curLine = -1  # Start out reading the first thing.
 		self.lines = self.name.split("\r\n")
 
 	@scriptHandler.script(gesture="kb:downArrow")
-	def script_nextLine(self, gesture):
+	def script_nextLine(self, gesture) -> None:
 		if self.curLine < len(self.lines) - 1:
 			self.curLine += 1
 		ui.message(self.lines[self.curLine])
 
 	@scriptHandler.script(gesture="kb:upArrow")
-	def script_previousLine(self, gesture):
+	def script_previousLine(self, gesture) -> None:
 		if self.curLine == -1:
 			self.curLine = 0
 		if self.curLine > 0:
