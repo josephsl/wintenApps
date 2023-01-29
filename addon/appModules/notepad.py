@@ -7,16 +7,18 @@
 While this app module also covers older Notepad releases,
 this module provides workarounds for Windows 11 Notepad."""
 
+from typing import Callable
 import appModuleHandler
 import api
 import braille
 import controlTypes
 import eventHandler
+from NVDAObjects import NVDAObject
 
 
 class AppModule(appModuleHandler.AppModule):
 
-	def event_UIA_elementSelected(self, obj, nextHandler):
+	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# NVDA Core issue 14587/PR 14588: announce tab switches in Notepad 11.2212 and later.
 		# Element selected event fires multiple times due to state changes.
 		if (

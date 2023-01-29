@@ -6,7 +6,7 @@
 # The add-on version of this module will extend the one that comes with NVDA Core (2018.3 and later).
 # For IME candidate item/UI definition, Flake8 must be told to ignore it.
 
-from typing import List
+from typing import List, Callable
 # Yes, this app module is powered by built-in modern keyboard (TextInputHost) app module
 # (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
@@ -47,7 +47,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# This is needed in Windows 11 when emoji panel closes.
 		eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 
-	def event_UIA_elementSelected(self, obj, nextHandler):
+	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		automationId = obj.UIAAutomationId
 		# Do not proceed if emoji panel category item is selected when the panel itself is gone.
 		# This is the case when closing emoji panel portion in Windows 11.
@@ -124,7 +124,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 			UIAHandler.handler.addEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 
-	def event_UIA_window_windowOpen(self, obj, nextHandler):
+	def event_UIA_window_windowOpen(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 		# This is more so on Windows 10.
@@ -163,7 +163,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
-	def event_nameChange(self, obj, nextHandler):
+	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Only on Windows 10 and Server 2022.
 		if winVersion.getWinVer() < winVersion.WIN11:
 			automationId, className = obj.UIAAutomationId, obj.UIAElement.cachedClassName
@@ -180,7 +180,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# NVDA Core takes care of the rest.
 		super().event_nameChange(obj, nextHandler)
 
-	def event_gainFocus(self, obj, nextHandler):
+	def event_gainFocus(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Focus gets stuck in Modern keyboard when clipboard history closes in Windows 11.
 		if obj.parent.childCount == 0:
 			self._emojiPanelClosed(obj)

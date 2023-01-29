@@ -6,7 +6,7 @@
 
 # Provides additional routines on top of the built-in File Explorer app module.
 
-from typing import List, Dict
+from typing import List, Dict, Callable
 # Flake8 F403: detect other add-ons that overrode File Explorer app module.
 from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
 import winUser
@@ -133,13 +133,13 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		):
 			ui.message(lastUIItem.name)
 
-	def event_nameChange(self, obj, nextHandler):
+	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
 		if obj.windowClassName == "ShellTabWindowClass":
 			self._detectEmptyFolder(obj)
 		nextHandler()
 
-	def event_focusEntered(self, obj, nextHandler):
+	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
 		if (
 			isinstance(obj, UIA)
@@ -149,7 +149,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			self._detectEmptyFolder(obj.parent.parent)
 		nextHandler()
 
-	def event_UIA_elementSelected(self, obj, nextHandler):
+	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# NVDA Core issue 14388: announce File Explorer tab switches (Windows 11 22H2 and later).
 		import braille
 		import eventHandler

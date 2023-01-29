@@ -6,12 +6,14 @@
 
 # Several hacks related to Settings app, some of which are part of NVDA Core.
 
+from typing import Callable
 # Extends NVDA Core's System Settings app module.
 from nvdaBuiltin.appModules.systemsettings import AppModule
 import controlTypes
 import winVersion
 import speech
 from NVDAObjects.UIA import UIA
+from NVDAObjects import NVDAObject
 
 
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
@@ -74,7 +76,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache: str = ""
 
-	def event_liveRegionChange(self, obj, nextHandler):
+	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Workarounds for Windows 10 and Server 2022
 		if winVersion.getWinVer() < winVersion.WIN11:
 			try:
@@ -110,7 +112,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_appModule_loseFocus(self):
 		self._nameChangeCache = ""
 
-	def event_nameChange(self, obj, nextHandler):
+	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
 			if isinstance(obj, UIA):
 				if "ApplicableUpdate" in obj.UIAAutomationId:
@@ -125,7 +127,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 						pass
 		nextHandler()
 
-	def event_focusEntered(self, obj, nextHandler):
+	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
 			if isinstance(obj, UIA):
 				if obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView":
