@@ -14,7 +14,7 @@ import winVersion
 import controlTypes
 import ui
 from NVDAObjects.UIA import UIA
-import NVDAObjects
+from NVDAObjects import NVDAObject
 from winAPI.types import HWNDValT
 import scriptHandler
 import wx
@@ -22,7 +22,7 @@ import addonHandler
 addonHandler.initTranslation()
 
 
-class TaskbarItem(NVDAObjects.NVDAObject):
+class TaskbarItem(NVDAObject):
 
 	def _get_itemName(self):
 		# Icon name contains open window count if windows are open after a hyphen (-).
@@ -72,7 +72,7 @@ class TaskbarItem(NVDAObjects.NVDAObject):
 # Also tell Flake8 that the base AppModule class comes from NVDA Core.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObjects.NVDAObject, clsList: List[NVDAObjects.NVDAObject]) -> None:
+	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
 		# Announce rearranged taskbar icons in Windows 10 and 11 builds earlier than 25267.
 		if obj.role == controlTypes.Role.BUTTON and (
 			(
