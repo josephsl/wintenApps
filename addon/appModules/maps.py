@@ -4,7 +4,7 @@
 
 # Numerous enhancements for Bing Maps app.
 
-from typing import List
+from typing import List, Callable, Optional
 import appModuleHandler
 import api
 import config
@@ -44,7 +44,9 @@ class AppModule(appModuleHandler.AppModule):
 			except AttributeError:
 				pass
 
-	def event_UIA_notification(self, obj, nextHandler, displayString=None, **kwargs):
+	def event_UIA_notification(
+			self, obj: NVDAObject, nextHandler: Callable[[], None], displayString: Optional[str] = None, **kwargs
+	):
 		import queueHandler
 		import ui
 		if api.getFocusObject() != obj:

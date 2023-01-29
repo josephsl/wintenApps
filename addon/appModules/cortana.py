@@ -4,11 +4,13 @@
 
 # Various workarounds for Cortana Conversations
 
+from typing import Callable, Optional
 import appModuleHandler
 import api
 import ui
 import UIAHandler
 from NVDAObjects.UIA import UIA
+from NVDAObjects import NVDAObject
 
 
 class AppModule(appModuleHandler.AppModule):
@@ -16,7 +18,9 @@ class AppModule(appModuleHandler.AppModule):
 	# Sometimes, Cortana's textual response is announced twice.
 	_cortanaResponse: str = ""
 
-	def event_UIA_notification(self, obj, nextHandler, displayString=None, **kwargs):
+	def event_UIA_notification(
+			self, obj: NVDAObject, nextHandler: Callable[[], None], displayString: Optional[str] = None, **kwargs
+	):
 		# For some reason Cortana fires this event whenever user types and an answer is received.
 		# Results are displayed inside a list.
 		# Thus respond to both and see what should be announced.
