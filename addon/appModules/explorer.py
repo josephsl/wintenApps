@@ -24,7 +24,7 @@ addonHandler.initTranslation()
 
 class TaskbarItem(NVDAObject):
 
-	def _get_itemName(self):
+	def _get_itemName(self) -> str:
 		# Icon name contains open window count if windows are open after a hyphen (-).
 		return self.name.rpartition(" - ")[0] if " -" in self.name else self.name
 
