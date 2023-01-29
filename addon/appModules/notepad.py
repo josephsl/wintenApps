@@ -34,7 +34,7 @@ class AppModule(appModuleHandler.AppModule):
 			))
 		nextHandler()
 
-	def _get_statusBar(self):
+	def _get_statusBar(self) -> NVDAObject:
 		"""Retrieves Windows 11 Notepad status bar.
 		In Windows 10 and earlier, status bar can be obtained by looking at the bottom of the screen.
 		Windows 11 Notepad uses Windows 11 UI design (top-level window is labeled "DesktopWindowXamlSource",
