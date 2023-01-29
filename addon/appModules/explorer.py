@@ -107,7 +107,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# NVDA Core takes care of the rest.
 		return super().isGoodUIAWindow(hwnd)
 
-	def _detectEmptyFolder(self, obj):
+	def _detectEmptyFolder(self, obj: NVDAObject):
 		import UIAHandler
 		clientObject = UIAHandler.handler.clientObject
 		condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "UIItemsView")

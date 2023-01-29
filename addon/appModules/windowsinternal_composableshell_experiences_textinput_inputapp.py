@@ -42,7 +42,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	# Resolved in NVDA 2023.1.
 	disableBrowseModeByDefault = True
 
-	def _emojiPanelClosed(self, obj):
+	def _emojiPanelClosed(self, obj: NVDAObject):
 		# Move NVDA's focus object to what is actually focused on screen.
 		# This is needed in Windows 11 when emoji panel closes.
 		eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
@@ -97,7 +97,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		super().event_UIA_elementSelected(obj, nextHandler)
 
 	# Register modern keyboard interface elements with local event handler group.
-	def _windowOpenEventInternalEventHandlerGroupRegistration(self, firstChild):
+	def _windowOpenEventInternalEventHandlerGroupRegistration(self, firstChild: NVDAObject):
 		# Gather elements to be registered inside a list so they can be registered in one go.
 		localEventHandlerElements = [firstChild]
 		firstChildAutomationId = firstChild.UIAAutomationId
