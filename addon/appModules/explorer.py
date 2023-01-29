@@ -6,7 +6,9 @@
 
 # Provides additional routines on top of the built-in File Explorer app module.
 
-from typing import List, Dict, Callable
+# Needed in overlay class chooser because just importing typing.List will cause type error to be raised.
+import typing
+from typing import Dict, Callable
 # Flake8 F403: detect other add-ons that overrode File Explorer app module.
 from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
 import winUser
@@ -72,7 +74,7 @@ class TaskbarItem(NVDAObject):
 # Also tell Flake8 that the base AppModule class comes from NVDA Core.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
+	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: typing.List[NVDAObject]) -> None:
 		# Announce rearranged taskbar icons in Windows 10 and 11 builds earlier than 25267.
 		if obj.role == controlTypes.Role.BUTTON and (
 			(
