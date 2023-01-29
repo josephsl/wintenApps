@@ -3,8 +3,10 @@
 
 # Adds handlers for various UIA controls found in Windows 10 and later.
 
+from typing import List
 import globalPluginHandler
 from NVDAObjects.UIA import Dialog
+from NVDAObjects import NVDAObject
 import globalVars
 import UIAHandler
 import winVersion
@@ -31,7 +33,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if currentWinVer.build in (22622, 22623):
 			log.info("winapps: Windows 11 22H2 beta detected")
 
-	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
+	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
 		try:
 			UIAClassName = obj.UIAElement.cachedClassName
 		except AttributeError:
