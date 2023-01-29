@@ -38,7 +38,7 @@ class TaskbarItem(NVDAObject):
 			}
 		return positionInfo
 
-	def announceDragPosition(self):
+	def announceDragPosition(self) -> None:
 		left = self.previous if isinstance(self.previous, TaskbarItem) else None
 		right = self.next if isinstance(self.next, TaskbarItem) else None
 		if left and right:
@@ -54,14 +54,14 @@ class TaskbarItem(NVDAObject):
 			ui.message(_("{appName} moved to beginning of the apps list").format(appName=self.itemName))
 
 	@scriptHandler.script(gesture="kb:alt+shift+rightArrow")
-	def script_moveRight(self, gesture):
+	def script_moveRight(self, gesture) -> None:
 		announcePosition = winVersion.getWinVer() >= winVersion.WIN11 and isinstance(self.next, TaskbarItem)
 		gesture.send()
 		if announcePosition:
 			wx.CallAfter(self.announceDragPosition)
 
 	@scriptHandler.script(gesture="kb:alt+shift+leftArrow")
-	def script_moveLeft(self, gesture):
+	def script_moveLeft(self, gesture) -> None:
 		announcePosition = winVersion.getWinVer() >= winVersion.WIN11 and isinstance(self.previous, TaskbarItem)
 		gesture.send()
 		if announcePosition:
