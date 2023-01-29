@@ -11,6 +11,7 @@ import ui
 import winUser
 from NVDAObjects.UIA import UIA, Dialog
 from NVDAObjects import NVDAObject
+from winAPI.types import HWNDValT
 
 
 class MicrophoneButton(UIA):
@@ -32,7 +33,7 @@ class AppModule(appModuleHandler.AppModule):
 			elif obj.UIAAutomationId == "MicrophoneButtonControl":
 				clsList.insert(0, MicrophoneButton)
 
-	def isGoodUIAWindow(self, hwnd):
+	def isGoodUIAWindow(self, hwnd: HWNDValT) -> bool:
 		# #72: allow proper mouse and touch interaction from main Voice access interface.
 		if winUser.getClassName(hwnd) == "Voice access":
 			return True
