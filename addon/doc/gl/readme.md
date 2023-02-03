@@ -74,15 +74,16 @@ documento [rexistros de trocos para publicacións de complementos][3].
 * NVDA gravará a arquitectura do procesador para a instalación actual de
   Windows (x86/32 bits, AMD64, ARM64) cando se inicie. Agora isto forma
   parte de NVDA 2023.1.
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11 prior to build 25267) and reporting item position when moving
-  through taskbar icons (Windows 10 and 11 prior to build 25281).
+* Mellorada a experiencia coa barra de tarefas en Windows 10 e 11, incluíndo
+  o anunciado dos resultados ó reordear iconos premendo as teclas
+  Alt+Shift+Frechas esquerda/dereita (Windows 11 antes da compilación 25267)
+  e o anunciado da posición do elemento ó moverse por iconos da barra de
+  tarefas (Windows 10 e 11 antes da compilación 25281).
 * NVDA anunciará o texto carpeta baleira dentro dunha carpeta baleira no
   Explorador de Arquivos.
-* In aps such as File Explorer and Notepad where tabbed windows are
-  supported, NVDA will announce the name and the position of tabs when
-  switching between them.
+* En aplicacións como o Explorador de Arquivos ou o Bloc de Notas onde se
+  soportan as xanelas en lapelas, NVDA anunciará o nome e a posición das
+  lapelas ó cambiar entre elas.
 
 ## Cortana
 

@@ -74,15 +74,16 @@ Versionen][3].
 * NVDA zeichnet die Prozessor-Architektur für die aktuelle
   Windows-Installation (x86/32-bit, AMD64, ARM64) auf, wenn es gestartet
   wird. Dies ist nun Teil von NVDA 2023.1.
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11 prior to build 25267) and reporting item position when moving
-  through taskbar icons (Windows 10 and 11 prior to build 25281).
-* NVDA will announce empty folder text inside an empty folder in File
-  Explorer.
-* In aps such as File Explorer and Notepad where tabbed windows are
-  supported, NVDA will announce the name and the position of tabs when
-  switching between them.
+* Die Taskleiste von Windows 10 und 11 wurde verbessert, u. a. durch die
+  Anzeige der Ergebnisse der Neuanordnung von Symbolen beim Drücken von
+  Alt+Umschalt+Pfeiltasten nach links/rechts (Windows 11 vor Build 25267)
+  und durch die Anzeige der Elementposition beim Bewegen durch die
+  Taskleistensymbole (Windows 10 und 11 vor Build 25281).
+* NVDA teilt leeren Ordnertext innerhalb eines leeren Ordners im
+  Datei-Explorer mit.
+* In Programmen wie Datei-Explorer und Notepad, Die Fenster mit
+  Registerkarten unterstützen, zeigt NVDA den Namen und die Position der
+  Registerkarten an, wenn Sie zwischen ihnen wechseln.
 
 ## Cortana
 
