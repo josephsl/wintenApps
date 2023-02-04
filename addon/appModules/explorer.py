@@ -35,9 +35,13 @@ class TaskbarItem(NVDAObject):
 		positionInfo = super().positionInfo
 		if not positionInfo:
 			taskbarItems = [item for item in self.parent.children if isinstance(item, TaskbarItem)]
-			positionInfo = {
-				"indexInGroup": taskbarItems.index(self) + 1, "similarItemsInGroup": len(taskbarItems)
-			}
+			# Sometimes an XAML control sits in the middle of the taskbar, making position info meaningless
+			# since the taskbar UIA tree will not reveal all of its children including this item.
+			# This is noticeable if using input devices other than the keyboard.
+			if self in taskbarItems:
+				positionInfo = {
+					"indexInGroup": taskbarItems.index(self) + 1, "similarItemsInGroup": len(taskbarItems)
+				}
 		return positionInfo
 
 	def announceDragPosition(self) -> None:
