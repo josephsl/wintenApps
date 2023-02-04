@@ -68,10 +68,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# In Windows 11, candidate panel houses candidate items, not the prediction window.
 		if automationId == "TEMPLATE_PART_CandidatePanel":
 			obj = obj.firstChild
-		# Logic for IME candidate items is handled all within its own object
-		# Therefore pass these events straight on.
-		if isinstance(obj, ImeCandidateItem):
-			return nextHandler()
 		# The following is applicable on Windows 10 and Server 2022.
 		if winVersion.getWinVer() < winVersion.WIN11:
 			parentAutomationId = obj.parent.UIAAutomationId
