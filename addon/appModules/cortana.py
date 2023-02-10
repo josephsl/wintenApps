@@ -30,7 +30,7 @@ class AppModule(appModuleHandler.AppModule):
 		# As long as conversation list uses the same UIA Automation Id,
 		# traversal will work across versions (code credit: Abdel)
 		clientObject = UIAHandler.handler.clientObject
-		condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_AutomationIdPropertyId, "ConversationList")
+		condition = clientObject.createPropertyCondition(UIAHandler.UIA_AutomationIdPropertyId, "ConversationList")
 		cortanaWindow = clientObject.ElementFromHandleBuildCache(
 			api.getForegroundObject().windowHandle, UIAHandler.handler.baseCacheRequest
 		)

@@ -116,7 +116,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	def _detectEmptyFolder(self, obj: NVDAObject):
 		import UIAHandler
 		clientObject = UIAHandler.handler.clientObject
-		condition = clientObject.CreatePropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "UIItemsView")
+		condition = clientObject.createPropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "UIItemsView")
 		uiItemWindow = clientObject.ElementFromHandleBuildCache(
 			obj.windowHandle, UIAHandler.handler.baseCacheRequest
 		)
