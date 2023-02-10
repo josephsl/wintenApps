@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-12-02 08:33+0100\n"
+"PO-Revision-Date: 2023-02-05 21:02+0100\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -44,6 +44,22 @@ msgstr ""
 #. Translators: Message presented when no more weather data is available for the current item.
 msgid "No more weather data for this item."
 msgstr "Keine weiteren Wetter-Informationen für diesen Eintrag."
+
+#. Translators: announced when rearranging taskbar icons in Windows 11.
+#, python-brace-format
+msgid "{appName} moved between {previousAppName} and {nextAppName}"
+msgstr ""
+"{appName} wurde zwischen {previousAppName} und {nextAppName} verschoben"
+
+#. Translators: announced when rearranging taskbar icons in Windows 11.
+#, python-brace-format
+msgid "{appName} moved to end of the apps list"
+msgstr "{appName} wurde an das Ende der Liste der Anwendungen verschoben"
+
+#. Translators: announced when rearranging taskbar icons in Windows 11.
+#, python-brace-format
+msgid "{appName} moved to beginning of the apps list"
+msgstr "{appName} wurde an den Anfang der Liste der Anwendungen verschoben"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

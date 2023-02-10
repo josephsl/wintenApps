@@ -68,8 +68,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   ylivuotoikkunan (Moment 2) ja Avaa sovelluksessa -valintaikkunan
   kanssa. Tämä sisältyy NVDA 2023.1:een.
 * NVDA tallentaa käynnistyessään nykyisen Windows-asennuksen
-  suoritinarkkitehtuurin (x86/32-bittinen, AMD64, ARM64). Tämä sisältyy nyt
-  NVDA 2023.1:een.
+  suoritinarkkitehtuurin (x86/32-bittinen, AMD64, ARM64). Tämä sisältyy NVDA
+  2023.1:een.
 * Paranneltu Windows 10:n ja 11:n tehtäväpalkin kokemusta, mukaan lukien
   kuvakkeiden uudelleenjärjestämisen tulosten puhuminen painettaessa
   Alt+Vaihto+Vasen/Oikea nuolinäppäin (Windows 11 ennen koontiversiota
@@ -108,7 +108,7 @@ painamalla Välilyönti-näppäintä Enterin sijaan.
   emojeihin.
 * Selaustila poistetaan käytöstä oletusarvoisesti Windows 11:n leikepöydän
   historiassa, minkä tarkoituksena on mahdollistaa NVDA:lle historian
-  valikkokohteiden lukeminen. Tämä sisältyy nyt NVDA 2023.1:een.
+  valikkokohteiden lukeminen. Tämä sisältyy NVDA 2023.1:een.
 * NVDA ilmoittaa ehdotetut toiminnot Windows 11 22H2:ssa ja uudemmissa, kun
   leikepöydälle kopioidaan yhteensopivaa dataa, kuten puhelinnumeroita.
 
