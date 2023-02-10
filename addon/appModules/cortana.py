@@ -26,25 +26,21 @@ class AppModule(appModuleHandler.AppModule):
 		# Thus respond to both and see what should be announced.
 		if displayString is None or "Cortana" not in displayString:
 			return
+		from comtypes import COMError
 		# Thankfully, Cortana's response is part of a grouping object.
 		# As long as conversation list uses the same UIA Automation Id,
-		# traversal will work across versions (code credit: Abdel)
+		# traversal will work across versions (code credit: Abdel with modifications)
 		clientObject = UIAHandler.handler.clientObject
 		condition = clientObject.createPropertyCondition(UIAHandler.UIA_AutomationIdPropertyId, "ConversationList")
-		cortanaWindow = clientObject.ElementFromHandleBuildCache(
-			api.getForegroundObject().windowHandle, UIAHandler.handler.baseCacheRequest
-		)
-		# Instantiate UIA object directly.
-		# In order for this to work, a valid UIA pointer must be returned
+		walker = clientObject.createTreeWalker(condition)
+		cortanaWindow = clientObject.elementFromHandle(api.getForegroundObject().windowHandle)
 		# (value error is seen when Cortana window closes).
 		try:
-			responses = UIA(
-				UIAElement=cortanaWindow.FindFirstBuildCache(
-					UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest
-				)
-			)
-		except ValueError:
+			element = walker.getFirstChildElement(cortanaWindow)
+			element = element.buildUpdatedCache(UIAHandler.handler.baseCacheRequest)
+		except (ValueError, COMError):
 			return
+		responses = UIA(UIAElement=element)
 		try:
 			cortanaResponse = responses.children[-1]
 			# Different Automation Id's are used for Cortana responses versus Bing searches.
