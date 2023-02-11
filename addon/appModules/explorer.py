@@ -115,22 +115,17 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def _detectEmptyFolder(self, obj: NVDAObject):
 		import UIAHandler
+		from comtypes import COMError
 		clientObject = UIAHandler.handler.clientObject
 		condition = clientObject.createPropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "UIItemsView")
-		uiItemWindow = clientObject.ElementFromHandleBuildCache(
-			obj.windowHandle, UIAHandler.handler.baseCacheRequest
-		)
-		# Instantiate UIA object directly.
-		# In order for this to work, a valid UIA pointer must be returned.
+		walker = clientObject.createTreeWalker(condition)
+		uiItemWindow = clientObject.elementFromHandle(obj.windowHandle)
 		try:
-			uiItems = UIA(
-				UIAElement=uiItemWindow.FindFirstBuildCache(
-					UIAHandler.TreeScope_Descendants, condition, UIAHandler.handler.baseCacheRequest
-				)
-			)
-		except ValueError:
+			element = walker.getFirstChildElement(uiItemWindow)
+			element = element.buildUpdatedCache(UIAHandler.handler.baseCacheRequest)
+		except (ValueError, COMError):
 			return
-		lastUIItem = uiItems.lastChild
+		lastUIItem = UIA(UIAElement=element).lastChild
 		# NVDA Core issue 5759: announce empty folder text.
 		if (
 			isinstance(lastUIItem, UIA)
