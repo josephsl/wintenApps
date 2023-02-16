@@ -68,7 +68,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# In Windows 11, candidate panel houses candidate items, not the prediction window.
 		if automationId == "TEMPLATE_PART_CandidatePanel":
 			obj = obj.firstChild
-		# The following is applicable on Windows 10 and Server 2022.
+		# The following is applicable on Windows 10 (including Server 2022).
 		if winVersion.getWinVer() < winVersion.WIN11:
 			parentAutomationId = obj.parent.UIAAutomationId
 			# If emoji/kaomoji/symbols group item gets selected, just tell NVDA to treat it as the new navigator object
@@ -160,7 +160,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
 	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Only on Windows 10 and Server 2022.
+		# Only on Windows 10 (including Server 2022).
 		if winVersion.getWinVer() < winVersion.WIN11:
 			automationId, className = obj.UIAAutomationId, obj.UIAElement.cachedClassName
 			if (

@@ -25,7 +25,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		except AttributeError:
 			return
 		# Perform different things based on Windows releases series.
-		# Windows 10 including Server 2022
+		# Windows 10 (including Server 2022)
 		if winVersion.getWinVer() < winVersion.WIN11:
 			# Workarounds for Windows Update links found in Windows 10.
 			if obj.role == controlTypes.Role.LINK:
@@ -80,7 +80,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	_nameChangeCache: str = ""
 
 	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Workarounds for Windows 10 and Server 2022
+		# Workarounds for Windows 10 (including Server 2022)
 		if winVersion.getWinVer() < winVersion.WIN11:
 			try:
 				automationId = obj.UIAAutomationId
