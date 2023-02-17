@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-02-05 21:02+0100\n"
+"PO-Revision-Date: 2023-02-16 04:17-0800\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
@@ -40,10 +40,6 @@ msgstr ""
 "Sie verwenden {releaseName} ({build}), eine Windows-Version, die von dieser "
 "Erweiterung nicht unterstützt wird.\n"
 "Unterstützte Versionen: {supportedReleasesList}."
-
-#. Translators: Message presented when no more weather data is available for the current item.
-msgid "No more weather data for this item."
-msgstr "Keine weiteren Wetter-Informationen für diesen Eintrag."
 
 #. Translators: announced when rearranging taskbar icons in Windows 11.
 #, python-brace-format
