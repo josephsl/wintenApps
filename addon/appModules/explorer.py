@@ -89,7 +89,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 				# Windows 11
 				isinstance(obj, UIA)
 				and obj.UIAElement.cachedClassName == "Taskbar.TaskListButtonAutomationPeer"
-				and obj.parent.UIAAutomationId == "TaskbarFrameRepeater"
 				and winVersion.getWinVer().build < 25267
 			)
 		):
