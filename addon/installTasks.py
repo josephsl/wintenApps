@@ -17,12 +17,9 @@ def onInstall():
 	# Support duration is tied to consumer-level support (18 months for Windows 10, 2 years for Windows 11)
 	# and the add-on may end support for a feature update prior to end of consumer support.
 	# Applicable to Home, Pro, Pro Education, Pro for Workstations (see aka.ms/WindowsTargetVersioninfo).
-	# Note that Windows Server 2022 (20348) reports itself as Windows 10 21H2,
-	# thus add-on support duration is tied to the client (19044).
 	supportedBuilds = {
 		# Windows 10
 		19045: "Windows 10 22H2",
-		20348: "Windows Server 2022",
 		# Windows 11
 		22000: "Windows 11 21H2",
 		22621: "22H2",
