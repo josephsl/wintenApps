@@ -21,8 +21,7 @@ def onInstall():
 	# thus add-on support duration is tied to the client (19044).
 	supportedBuilds = {
 		# Windows 10
-		19044: "Windows 10 21H2",
-		19045: "22H2",
+		19045: "Windows 10 22H2",
 		20348: "Windows Server 2022",
 		# Windows 11
 		22000: "Windows 11 21H2",
