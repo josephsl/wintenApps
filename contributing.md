@@ -106,3 +106,4 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 	* Copper 4: August 2022 to January 2023, Windows 11 Search Highlights, Suggested Actions, installation message changes, removing detection for old Windows releases, NVDA 2022.4 requirement
 * Zinc (2023):
 	* Zinc 1: December 2022 to March 2023, Windows apps optimizations, removed 'no more weather data' message from Weather app, type information
+	* Zinc 2: February 2023 to June 2023, end of support for Windows 10 November 2021 Update and Server 2022 (Version 21H2)
