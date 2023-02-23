@@ -27,8 +27,6 @@ def onInstall():
 		# Windows 11
 		22000: "Windows 11 21H2",
 		22621: "22H2",
-		# Latest Windows Insider beta channel build
-		22623: "22H2 beta",
 	}
 	currentBuild = currentWinVer.build
 	# Optimization: report success (return early) if running a supported release.
