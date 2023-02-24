@@ -98,7 +98,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		super().chooseNVDAObjectOverlayClasses(obj, clsList)
 
 	def isGoodUIAWindow(self, hwnd: HWNDValT) -> bool:
-		# #82: Windows 11 22H2 Moment 2 introduces a redesigned taskbar and systray powered by Win32.
+		# #82: Windows 11 22H2 Moment 2 (February 2023) introduces a redesigned taskbar and systray.
 		# NVDA Core issue 14539: touch and mouse interaction does not work when systray overflow window is open.
 		# Therefore reclassify the new systray overflow window class name as a good UIA window class.
 		# Resolved in NVDA 2023.1.

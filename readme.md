@@ -25,7 +25,7 @@ Notes:
 * Feature update support duration is tied to consumer support duration (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on may end support for a feature update prior to end of consumer support. See aka.ms/WindowsTargetVersioninfo for more information and support dates.
 * Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * If Add-on Updater is installed and background add-on updates is enabled, Windows App Essentials will not install at all on unsupported Windows releases.
-* Not all features from Windows Insider Preview builds will be supported, more so for features introduced to a subset of Windows Insiders in dev channel. For beta channel, only the latest build (22623) is supported.
+* Not all features from Windows Insider Preview builds will be supported, more so for features introduced to a subset of Windows Insiders in dev channel.
 * Some add-on features are or will be part of NVDA screen reader.
 * Some apps support compact overlay mode (always on top in Calculator, for example), and this mode will not work properly with the portable version of NVDA.
 * For best experience with apps that embed web technologies and content such as Start menu and its context menu, enable "Automatic focus mode for focus changes" setting from NVDA's browse mode settings panel.
@@ -36,7 +36,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 * When opening, closing, or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
 * In Windows 11, NVDA will announce search highlights in Start menu when it opens. This is now part of NVDA 2023.1.
-* In Windows 11 22H2 and later, mouse and/or touch interaction can be used to interact with redesigned system tray overflow window (Moment 2) and Open With dialog. This is now part of NVDA 2023.1.
+* In Windows 11 22H2 and later, mouse and/or touch interaction can be used to interact with redesigned system tray overflow window and Open With dialog. This is now part of NVDA 2023.1.
 * NVDA will record processor architecture for the current Windows installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part of NVDA 2023.1.
 * Improved Windows 10 and 11 taskbar experience, including announcing results of rearranging icons when pressing Alt+Shift+left/right arrow keys (Windows 11 prior to build 25267) and reporting item position when moving through taskbar icons (Windows 10 and 11 prior to build 25281).
 * NVDA will announce empty folder text inside an empty folder in File Explorer.

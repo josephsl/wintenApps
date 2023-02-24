@@ -29,9 +29,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not hasattr(currentWinVer, "processorArchitecture"):
 			import platform
 			log.info(f"winapps: processor architecture: {platform.machine()}")
-		# Is this a Windows 11 22H2 beta build (2262x)?
-		if currentWinVer.build in (22622, 22623):
-			log.info("winapps: Windows 11 22H2 beta detected")
 
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
 		try:

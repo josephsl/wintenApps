@@ -45,10 +45,9 @@ Notatki:
 * Jeśli jest zainstalowany program Add-on Updater i włączone są aktualizacje
   dodatków w tle, program Windows App Essentials nie zostanie w ogóle
   zainstalowany w nieobsługiwanych wersjach systemu Windows.
-* Nie wszystkie funkcje z kompilacji Windows Insider Preview będą
-  obsługiwane, tym bardziej w przypadku funkcji wprowadzonych do podzbioru
-  niejawnych testerów systemu Windows w kanale deweloperskim. W przypadku
-  kanału beta obsługiwana jest tylko najnowsza kompilacja (22623).
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in dev
+  channel.
 * Niektóre funkcje dodatkowe są lub będą częścią czytnika ekranu NVDA.
 * Niektóre aplikacje obsługują tryb kompaktowej nakładki (na przykład zawsze
   na wierzchu w Kalkulatorze), a ten tryb nie będzie działał poprawnie z
@@ -68,10 +67,9 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
   desktop 2).
 * W systemie Windows 11 NVDA ogłosi najważniejsze elementy wyszukiwania w
   menu Start po jego otwarciu. Jest to teraz część NVDA 2023.1.
-* W systemie Windows 11 22H2 i nowszych interakcja myszy i/lub dotyku może
-  być używana do interakcji z przeprojektowanym oknem przepełnienia
-  zasobnika systemowego (moment 2) i oknem dialogowym Otwórz za pomocą. Jest
-  to teraz część NVDA 2023.1.
+* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
+  to interact with redesigned system tray overflow window and Open With
+  dialog. This is now part of NVDA 2023.1.
 * NVDA zapisze architekturę procesora dla bieżącej instalacji systemu
   Windows (x86/32-bit, AMD64, ARM64) po jej uruchomieniu. Jest to teraz
   część NVDA 2023.1.

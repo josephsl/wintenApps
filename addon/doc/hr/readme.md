@@ -41,9 +41,9 @@ Napomene:
 * Ako je dodatak „Ažuriranje dodataka” instaliran i pozadinsko ažuriranje
   dodataka aktivirano, dodatak „Osnovni moduli za Windows aplikacije” se
   uopće neće instalirati na nepodržana izdanja sustava Windows.
-* Sve značajke iz Windows Insider Preview gradnji neće biti podržane,
-  pogotovo značajke koje su predstavljene u podskupu „Windows Insiders” u
-  kanalu razvoja. Za beta kanal, podržava se samo najnovija gradnja (22623).
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in dev
+  channel.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Neke aplikacije podržavaju način kompaktnog preklapanja (na primjer,
   uvijek na vrhu u Kalkulatoru) i ovaj modus neće ispravno raditi s
@@ -64,8 +64,8 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 * U sustavu Windows 11, NVDA će najaviti istaknute stavke pretraživanja u
   izborniku Start kada se otvori. Ovo je sada dio u NVDA čitača 2023.1.
 * In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window (Moment 2) and
-  Open With dialog. This is now part of NVDA 2023.1.
+  to interact with redesigned system tray overflow window and Open With
+  dialog. This is now part of NVDA 2023.1.
 * NVDA će zabilježiti arhitekturu procesora za trenutačnu Windows
   instalaciju (x86/32-bit, AMD64, ARM64) kad se pokrene. Ovo je sada dio
   NVDA čitača 2023.1.
@@ -106,8 +106,9 @@ tipku za razmak umjesto tipke Enter.
 * U povijesti međuspremnika sustava Windows 11, način pregledavanja bit će
   standardno isključen, kako bi NVDA najavio stavke izbornika unosa
   povijesti međuspremnika. Ovo je sada dio NVDA čitača 2023.1.
-* In Windows 11 22H2 and later, NVDA will announce suggested actions when
-  compatible data such as phone numbers is copied to the clipboard.
+* U sustavu Windows 11 22H2 i novijim verzijama, NVDA će najaviti predložene
+  radnje kad se kompatibilni podaci poput telefonskih brojeva kopiraju u
+  međuspremnik.
 
 ## Postavke
 

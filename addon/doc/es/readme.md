@@ -47,8 +47,7 @@ Notas:
   versiones no soportadas de Windows.
 * No se soportarán todas las funciones de las compilaciones Windows Insider
   Preview, más si se introducen en un subconjunto de insiders de Windows en
-  el canal de desarrollo. En el canal beta, sólo se soporta la última
-  compilación (22623).
+  el canal de desarrollo.
 * Algunas de las características del complemento son o serán parte del
   lector de pantalla NVDA.
 * Algunas aplicaciones soportan el modo de superposición compacta (siempre
@@ -69,9 +68,9 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 * En Windows 11, NVDA anunciará las búsquedas destacadas en el menú Inicio
   cuando se abra. Esto ahora forma parte de NVDA 2023.1.
 * En Windows 11 22H2 y posterior, se puede interactuar con la ventana
-  flotante rediseñada de la bandeja del sistema (Moment 2) y con el diálogo
-  Abrir con al usar interacción táctil o del ratón. Esto ahora forma parte
-  de NVDA 2023.1.
+  flotante rediseñada de la bandeja del sistema y con el diálogo Abrir con
+  al usar interacción táctil o del ratón. Esto ahora forma parte de NVDA
+  2023.1.
 * NVDA registrará la arquitectura del procesador de la instalación actual de
   Windows (x86/32 bits, AMD64, ARM64) cuando se inicie. Esto ahora forma
   parte de NVDA 2023.1.

@@ -45,7 +45,7 @@ Huomautuksia:
   käytössä.
 * Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
   varsinkaan sellaisia, jotka esitellään vain osalle dev-kanavalla olevista
-  käyttäjistä. Beetakanavalla tuetaan vain uusinta koontiversiota (22623).
+  käyttäjistä.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Jotkin sovellukset tukevat kompaktia peitetilaa (esim. Laskimen Aina
   päällimmäisenä), joka ei toimi oikein NVDA:n massamuistiversion kanssa.
@@ -65,8 +65,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   avautuessa. Tämä sisältyy NVDA 2023.1:een.
 * Windows 11 22H2:ssa ja uudemmissa voidaan nyt käyttää hiirtä ja/tai
   kosketuseleitä vuorovaikutuksessa uudelleensuunnitellun ilmaisinalueen
-  ylivuotoikkunan (Moment 2) ja Avaa sovelluksessa -valintaikkunan
-  kanssa. Tämä sisältyy NVDA 2023.1:een.
+  ylivuotoikkunan ja Avaa sovelluksessa -valintaikkunan kanssa. Tämä
+  sisältyy NVDA 2023.1:een.
 * NVDA tallentaa käynnistyessään nykyisen Windows-asennuksen
   suoritinarkkitehtuurin (x86/32-bittinen, AMD64, ARM64). Tämä sisältyy NVDA
   2023.1:een.

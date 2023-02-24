@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-11-17 20:32+0100\n"
+"PO-Revision-Date: 2023-02-22 15:40+0100\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
 "Language: hr\n"
@@ -44,9 +44,21 @@ msgstr ""
 "podržava.\n"
 "Podržana izdanja: {supportedReleasesList}."
 
-#. Translators: Message presented when no more weather data is available for the current item.
-msgid "No more weather data for this item."
-msgstr "Nema daljnjih vremenskih podataka za ovaj element."
+#. Translators: announced when rearranging taskbar icons in Windows 11.
+#, python-brace-format
+msgid "{appName} moved between {previousAppName} and {nextAppName}"
+msgstr ""
+"Aplikacija {appName} je postavljena između {previousAppName} i {nextAppName}"
+
+#. Translators: announced when rearranging taskbar icons in Windows 11.
+#, python-brace-format
+msgid "{appName} moved to end of the apps list"
+msgstr "Aplikacija {appName} je postavljena na kraj popisa aplikacija"
+
+#. Translators: announced when rearranging taskbar icons in Windows 11.
+#, python-brace-format
+msgid "{appName} moved to beginning of the apps list"
+msgstr "Aplikacija {appName} je postavljena na vrh popisa aplikacija"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
@@ -59,4 +71,4 @@ msgstr "Osnovni moduli za Windows aplikacije"
 msgid "Improving support for various apps and controls on Windows 10 and later"
 msgstr ""
 "Poboljšava podršku za razne aplikacije i kontrole u sustavu Windows 10 i "
-"novije verzije"
+"novija izdanja"

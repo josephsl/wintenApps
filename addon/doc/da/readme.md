@@ -43,10 +43,9 @@ Bemærkninger:
   opdatering af tilføjelser i baggrunden er aktiveret, installeres Vigtige
   Forbedringer til Windows Apps slet ikke på ikke-understøttede
   Windows-udgivelser.
-* Ikke alle funktioner fra Windows Insider Preview-builds vil blive
-  understøttet. Dette er yderligere tilfældet for funktioner introduceret i
-  en undergruppe af Windows Insiders i udviklerkanalen. For betakanaler er
-  kun den seneste build (22623) understøttet.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in dev
+  channel.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
 * Nogle apps understøtter kompakt overlejring (for eksempel Bevar Øverst i
@@ -68,8 +67,8 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 * I Windows 11 vil NVDA annoncere søgehøjdepunkter i Start-menuen, når den
   åbnes. Dette er nu en del af NVDA 2023.1.
 * In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window (Moment 2) and
-  Open With dialog. This is now part of NVDA 2023.1.
+  to interact with redesigned system tray overflow window and Open With
+  dialog. This is now part of NVDA 2023.1.
 * NVDA will record processor architecture for the current Windows
   installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
   of NVDA 2023.1.
