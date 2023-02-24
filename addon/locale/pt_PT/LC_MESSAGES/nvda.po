@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.10.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-10-29 11:45-0700\n"
+"PO-Revision-Date: 2023-02-20 19:52+0000\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; "
 "rui.fontes@tiflotecnia.com>\n"
@@ -17,12 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
 msgstr "Versão do Windows não suportada"
+
+#. Translators: an entry in supported Windows releases list (release (build)).
+#, python-brace-format
+msgid "{release} ({build})"
+msgstr "{release} ({build})"
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 #. Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
@@ -30,16 +35,27 @@ msgstr "Versão do Windows não suportada"
 #, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
-"Windows App Essentials add-on.\n"
+"this add-on.\n"
 "Supported releases: {supportedReleasesList}."
 msgstr ""
 "Está a utilizar {releaseName} ({build}), uma versão do Windows não suportada "
-"pelo extra Windows App Essentials.\n"
+"por este suplemento.\n"
 "Versões suportadas: {supportedReleasesList}."
 
-#. Translators: Message presented when no more weather data is available for the current item.
-msgid "No more weather data for this item."
-msgstr "Não há mais dados meteorológicos para este item."
+#. Translators: announced when rearranging taskbar icons in Windows 11.
+#, python-brace-format
+msgid "{appName} moved between {previousAppName} and {nextAppName}"
+msgstr "{appName} movido entre {previousAppName} e {nextAppName}"
+
+#. Translators: announced when rearranging taskbar icons in Windows 11.
+#, python-brace-format
+msgid "{appName} moved to end of the apps list"
+msgstr "{appName} passou para o fim da lista de aplicações"
+
+#. Translators: announced when rearranging taskbar icons in Windows 11.
+#, python-brace-format
+msgid "{appName} moved to beginning of the apps list"
+msgstr "{appName} passou para o início da lista de aplicações"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

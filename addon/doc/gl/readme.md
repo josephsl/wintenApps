@@ -44,10 +44,9 @@ Notas:
 * Se Add-on Updater está instalado e están activadas as actualizaciónes en
   segundo plano, Windows App Essentials non se instalará en absoluto en
   versións de Windows non soportadas.
-* Non se soportarán todas as características de versións Windows Insider
-  Preview, máis aínda para as características introducidas nun subconxunto
-  de Insiders Windows na canle de desenvolvemento (dev). Para a canle beta,
-  só se soporta a última compilación (22623).
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in dev
+  channel.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
 * Algunhas apps soportan o modo de capa compacto (sempre enriba na
@@ -67,10 +66,9 @@ documento [rexistros de trocos para publicacións de complementos][3].
   anunciará o nome do escritorio activo (escritorio 2, por exemplo).
 * En Windows 11,, NVDA anunciará os destaques da procura no Menú inicio
   cando se abra. Agora isto forma parte de NVDA 2023.1.
-* En Windows 11 22H2 e posterior, pódese utilizar rato e/ou interacción
-  táctil para interactuar coa área de desbordamento da bandexa do sistema
-  redeseñada (Moment 2) e o diálogo Abrir con. Agora isto forma parte de
-  NVDA 2023.1.
+* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
+  to interact with redesigned system tray overflow window and Open With
+  dialog. This is now part of NVDA 2023.1.
 * NVDA gravará a arquitectura do procesador para a instalación actual de
   Windows (x86/32 bits, AMD64, ARM64) cando se inicie. Agora isto forma
   parte de NVDA 2023.1.

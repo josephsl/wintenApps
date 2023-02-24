@@ -32,8 +32,9 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * If Add-on Updater is installed and background add-on updates is enabled,
   Windows App Essentials will not install at all on unsupported Windows
   releases.
-* 윈도우 참가자 빌드에 탑제된 기능을 모두 지원하지 않습니다(특히 개발자 빌드에서 일부에게만 공개된 경우). 베타 체널 사용시 최신
-  빌드(22623)만 지원합니다.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in dev
+  channel.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
 * 여러 앱은 미니(compact overlay) 모드(예: 계산기)를 지원하지만 이 모드는 휴대용 NVDA를 사용시 제대로 사용할 수
   없습니다.
@@ -48,8 +49,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * In Windows 11, NVDA will announce search highlights in Start menu when it
   opens. This is now part of NVDA 2023.1.
 * In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window (Moment 2) and
-  Open With dialog. This is now part of NVDA 2023.1.
+  to interact with redesigned system tray overflow window and Open With
+  dialog. This is now part of NVDA 2023.1.
 * NVDA will record processor architecture for the current Windows
   installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
   of NVDA 2023.1.

@@ -45,7 +45,7 @@ Notlar:
   releases.
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders in dev
-  channel. For beta channel, only the latest build (22623) is supported.
+  channel.
 * Bazı eklenti özellikleri, NVDA ekran okuyucusunun bir parçasıdır veya
   yakında olacaktır.
 * Some apps support compact overlay mode (always on top in Calculator, for
@@ -65,8 +65,8 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 * In Windows 11, NVDA will announce search highlights in Start menu when it
   opens. This is now part of NVDA 2023.1.
 * In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window (Moment 2) and
-  Open With dialog. This is now part of NVDA 2023.1.
+  to interact with redesigned system tray overflow window and Open With
+  dialog. This is now part of NVDA 2023.1.
 * NVDA will record processor architecture for the current Windows
   installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
   of NVDA 2023.1.
