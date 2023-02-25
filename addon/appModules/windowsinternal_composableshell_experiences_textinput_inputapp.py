@@ -122,7 +122,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
 		except NotImplementedError:
 			pass
-		self._symbolsGroupSelected = False
 		# Windows 11 22H2 Moment 1 (October 2022) and later uses modern keyboard interface to display
 		# Suggested Actions such as Skype calls if data such as phone number is copied to the clipboard.
 		# Because keyboard interaction is not possible, just report suggested actions.
@@ -151,7 +150,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				or automationId == "VerticalScrollBar"
 			):
 				return
-			self._symbolsGroupSelected = False
 		# NVDA Core takes care of the rest.
 		super().event_nameChange(obj, nextHandler)
 
