@@ -53,11 +53,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 						nameList.insert(0, obj.previous.name)
 						nameList.insert(0, obj.previous.previous.name)
 				obj.name = ", ".join(nameList)
-			# Developer mode label in Windows 10 Vibranium (2004 and later).
-			# The label itself is the name of the previous object.
-			# Resolved in Windows 11 and Server 2022.
-			if obj.name == "SystemSettings_Developer_Mode_Advanced_NarratorText":
-				obj.name = obj.previous.name
 		# Windows 11
 		else:
 			# Announce optional updates in Windows 11.
