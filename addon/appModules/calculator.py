@@ -6,7 +6,7 @@
 """App module for Windows 10 Calculator.
 This is also the base app module for Windows 11 Calculator."""
 
-import appModuleHandler
+from nvdaBuiltin.appModules.calculator import AppModule, noCalculatorEntryAnnouncements  # NOQA: F403
 import api
 from NVDAObjects.UIA import UIA
 import queueHandler
@@ -15,7 +15,7 @@ import scriptHandler
 import braille
 
 
-class AppModule(appModuleHandler.AppModule):
+class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
 		# When no results shortcuts such as number row keys are pressed, display content will be announced.
