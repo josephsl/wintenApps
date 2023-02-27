@@ -45,7 +45,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## Cortana
 
 * Textual responses from Cortana are announced in most situations.
-* NVDA will be silent when talking to Cortana via voice.
 
 ## Maps
 
