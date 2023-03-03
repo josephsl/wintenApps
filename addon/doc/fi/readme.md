@@ -84,7 +84,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Cortana
 
 * Cortanan tekstimuotoiset vastaukset puhutaan useimmissa tilanteissa.
-* NVDA on hiljaa puhuttaessa Cortanalle mikrofonin välityksellä.
 
 ## Kartat
 
@@ -149,7 +148,7 @@ versiossa 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

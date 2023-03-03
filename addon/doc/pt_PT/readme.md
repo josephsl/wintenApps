@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and others
 * Baixar [versão estável][1]
 * Baixar [versão de desenvolvimento][2]
-* NVDA compatibility: 2022.4 and later
+* Compatibilidade com o NVDA: 2022.4 e superiores
 
 Nota: Originalmente chamado Windows 10 App Essentials, foi renomeado para
 Windows App Essentials em 2021 para suportar o Windows 10 e futuros
@@ -31,8 +31,8 @@ detalhes sobre o que está incluído):
 
 Notas:
 
-* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
-  or later releases.
+* Este extra requer o Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
+  ou posterior.
 * Feature update support duration is tied to consumer support duration
   (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
   may end support for a feature update prior to end of consumer support. See
@@ -81,7 +81,6 @@ consulte o documento [changelogs for releases, release][3].
 ## Cortana
 
 * As respostas textuais da Cortana são anunciadas na maioria das situações.
-* O NVDA ficará em silêncio ao falar com Cortana via voz.
 
 ## Mapas.
 
@@ -142,7 +141,7 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

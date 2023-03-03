@@ -41,9 +41,9 @@ Napomene:
 * Ako je dodatak „Ažuriranje dodataka” instaliran i pozadinsko ažuriranje
   dodataka aktivirano, dodatak „Osnovni moduli za Windows aplikacije” se
   uopće neće instalirati na nepodržana izdanja sustava Windows.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel.
+* Windows Insider Preview gradnje neće podržati sve značajke, pogotovo
+  značajke koje su predstavljene u podskupu „Windows Insiders” u kanalu
+  razvoja.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Neke aplikacije podržavaju način kompaktnog preklapanja (na primjer,
   uvijek na vrhu u Kalkulatoru) i ovaj modus neće ispravno raditi s
@@ -63,26 +63,26 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
   primjer radna površina 2).
 * U sustavu Windows 11, NVDA će najaviti istaknute stavke pretraživanja u
   izborniku Start kada se otvori. Ovo je sada dio u NVDA čitača 2023.1.
-* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window and Open With
-  dialog. This is now part of NVDA 2023.1.
+* U sustavu Windows 11 22H2 i daljnjim izdanjima, interakcija mišem i/ili
+  dodirom može se koristiti za interakciju s redizajniranim prozorom trake
+  sustava i dijaloškim okvirom „Otvori pomoću”. Ovo je sada dio NVDA verzije
+  2023.1.
 * NVDA će zabilježiti arhitekturu procesora za trenutačnu Windows
   instalaciju (x86/32-bit, AMD64, ARM64) kad se pokrene. Ovo je sada dio
   NVDA čitača 2023.1.
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11 prior to build 25267) and reporting item position when moving
-  through taskbar icons (Windows 10 and 11 prior to build 25281).
-* NVDA will announce empty folder text inside an empty folder in File
-  Explorer.
-* In aps such as File Explorer and Notepad where tabbed windows are
-  supported, NVDA will announce the name and the position of tabs when
-  switching between them.
+* Poboljšana programska traka sustava Windows 10 i 11, uključujući
+  najavljivanje rezultata premještanja ikona kada se pritisne Alt+Šift+tipke
+  strelica lijevo/desno (Windows 11 prije izgradnje 25267) i izvještavanje o
+  položaju stavke prilikom kretanja kroz ikone programske trake (Windows 10
+  i 11 prije izgradnje 25281).
+* NVDA će najaviti tekst prazne mape unutar prazne mape u File Exploreru.
+* U aplikacijama kao što su File Explorer i Notepad gdje su podržani prozori
+  s karticama, NVDA će najaviti ime i položaj kartica prilikom prebacivanja
+  između njih.
 
 ## Cortana
 
 * Tekstualni odgovori Cortane najavljuju se u većini slučajeva.
-* NVDA neće govoriti kad pričaš sa Cortanom.
 
 ## Karte
 
@@ -147,7 +147,7 @@ Windows 11 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

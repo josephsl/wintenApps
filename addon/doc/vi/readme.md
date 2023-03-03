@@ -3,7 +3,7 @@
 * Authors: Joseph Lee, Derek Riemer and others
 * Tải về [phiên bản chính thức][1]
 * Tải về [phiên bản thử nghiệm][2]
-* NVDA compatibility: 2022.4 and later
+* NVDA tương thích: 2022.4 trở lên
 
 Note: Originally called Windows 10 App Essentials, it was renamed to Windows
 App Essentials in 2021 to support Windows 10 and future releases such as
@@ -82,7 +82,6 @@ for add-on releases][3] .
 ## Cortana
 
 * Phản hồi văn bản từ Cortana được thông báo trong hầu hết tình huống.
-* NVDA sẽ im lặng khi điều khiển Cortana bằng giọng nói.
 
 ## Maps
 
@@ -141,7 +140,7 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

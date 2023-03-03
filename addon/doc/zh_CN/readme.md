@@ -27,9 +27,7 @@
   aka.ms/WindowsTargetVersioninfo。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
 * 如果安装了插件更新器并启用了后台插件更新， 在不受支持的操作系统上 Windows App Essentials 不会被安装。
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel.
+* 并非支持所有的 Windows Insider Preview 版本，而是更多的支持从开发通道引入 Windows Insider 的功能。
 * 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
 * 某些应用程序支持紧凑叠加模式（例如，计算器中的始终置顶模式），该模式无法在 NVDA 的便携版中使用。
 * 为了获得内嵌 Web 试图（例如开始菜单及其上下文菜单）的应用程序的最佳体验，请在 NVDA
@@ -41,9 +39,8 @@
 
 * 在新建、关闭、或切换虚拟桌面时，NVDA会读出当前桌面名称（例如，桌面2）。
 * 在 Windows 11 中，NVDA 支持在打开“开始”菜单时读出显示的搜索高亮。该特性已经包含在 NVDA2023.1 中。
-* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window and Open With
-  dialog. This is now part of NVDA 2023.1.
+* 在 Windows 11 22H2 及更高版本中，可以在使用鼠标和/或触摸交互时正确识别新版的系统托盘溢出区域。该特性已经包含在
+  NVDA2023.1 中。该特性已经包含在 NVDA2023.1 中。
 * 启动时记录当前 Windows 安装（x86/32 位、AMD64、ARM64）的处理器架构。该特性已经包含在 NVDA2023.1 中。
 * 改进了 Windows 10 和 11 任务栏的使用体验，包括在按 Alt+Shift+左/右箭头键时朗读重新排列图标的结果（Windows11
   内部版本 25267）以及在任务栏图标间移动时读出项目位置（Windows10 和 11内部版本 25281）。
@@ -53,7 +50,6 @@
 ## Cortana
 
 * 现在，在大多数情况下，都会发布来自Cortana的文字回复。
-* 通过语音与Cortana互动时，NVDA会暂停朗读。
 
 ## 地图
 
@@ -93,7 +89,7 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

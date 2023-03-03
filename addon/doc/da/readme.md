@@ -3,7 +3,7 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
-* NVDA compatibility: 2022.4 and later
+* NVDA-kompatibilitet: 2022.4 og nyere
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
 til Windows App Essentials i 2021 for at understøtte Windows 10 og
@@ -85,7 +85,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 ## Cortana
 
 * Tekstlige svar fra Cortana annonceres i de fleste tilfælde.
-* NVDA vil forblive tavs, når du taler til Cortana med stemmen.
 
 ## Kort
 
@@ -111,7 +110,7 @@ instead of Enter key to paste the selected item.
 * In Windows 11 22H2 and later, NVDA will announce suggested actions when
   compatible data such as phone numbers is copied to the clipboard.
 
-## indstillinger
+## Indstillinger
 
 * NVDA vil annoncere navnet på den valgfrie kvalitetsopdateringskontrol,
   hvis den findes (download og installer nu-link i Windows 10, download-knap
@@ -147,7 +146,7 @@ Dette henviser til stemmeadgangsfunktionen introduceret i Windows 11 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
