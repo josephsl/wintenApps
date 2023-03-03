@@ -86,7 +86,6 @@ documento [rexistros de trocos para publicacións de complementos][3].
 ## Cortana
 
 * As respostas textuais de Cortana anúncianse na maioría de situacións.
-* NVDA silenciarase cando lle fales ao Cortana a través da voz.
 
 ## Mapas
 
@@ -153,7 +152,7 @@ Esto se refiere a la característica Acceso por voz introducida en Windows 11
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

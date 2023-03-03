@@ -3,7 +3,7 @@
 * Yazarlar: Joseph Lee, Derek Riemer ve diğerleri
 * [kararlı sürüm][1]ü indir
 * [geliştirme sürümü][2]nü indir
-* NVDA compatibility: 2022.4 and later
+* NVDA uyumluluğu: 2022.4 ve üstü
 
 Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
 adlandırılırken, Windows 10 ve Windows 11 gibi gelecekteki windows
@@ -83,7 +83,6 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 ## Cortana
 
 * Cortana'dan gelen metin içerikli yanıtlar çoğu durumda bildirilir.
-* Cortana ile sesli konuşurken NVDA konuşmayacaktır.
 
 ## Haritalar
 
@@ -101,9 +100,9 @@ setting from NVDA's speech settings and set symbol level to "some" or
 higher. When pasting from clipboard history in Windows 10, press Space key
 instead of Enter key to paste the selected item.
 
-* In Windows 10 emoji panel, when an emoji group (including kaomoji and
-  symbols group) is selected, NVDA will no longer move navigator object to
-  certain emojis.
+* Windows 10'da bir emoji grubu (kaomoji ve semboller grubu dahil)
+  seçildiğinde, NVDA artık nesne sunucusunu belirli emojilere
+  taşımayacaktır.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu
   items. This is now part of NVDA 2023.1.
@@ -142,7 +141,7 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

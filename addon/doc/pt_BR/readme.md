@@ -3,7 +3,7 @@
 * Autores: Joseph Lee, Derek Riemer e outros
 * Baixe a [versão estável][1]
 * Baixe a [versão em desenvolvimento][2]
-* NVDA compatibility: 2022.4 and later
+* Compatibilidade com NVDA: 2022.4 e posteriores
 
 Nota: Originalmente chamado de Windows 10 App Essentials, foi renomeado para
 Windows App Essentials em 2021 para oferecer suporte ao Windows 10 e versões
@@ -31,8 +31,8 @@ detalhes sobre o que está incluso):
 
 Notas:
 
-* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
-  or later releases.
+* Este complemento requer o Windows 10 21H2 (compilação 19044), 11 21H2
+  (compilação 22000), ou posteriors.
 * Feature update support duration is tied to consumer support duration
   (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
   may end support for a feature update prior to end of consumer support. See
@@ -82,7 +82,6 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 ## Cortana
 
 * As respostas textuais da Cortana são anunciadas na maioria das situações.
-* O NVDA ficará em silêncio ao falar com Cortana via voz.
 
 ## Mapas
 
@@ -100,9 +99,9 @@ setting from NVDA's speech settings and set symbol level to "some" or
 higher. When pasting from clipboard history in Windows 10, press Space key
 instead of Enter key to paste the selected item.
 
-* In Windows 10 emoji panel, when an emoji group (including kaomoji and
-  symbols group) is selected, NVDA will no longer move navigator object to
-  certain emojis.
+* No Windows 10, quando um grupo de emoji (incluindo kaomoji e grupo de
+  símbolos) é selecionado, o NVDA não moverá mais a navegação de objeto para
+  certos emojis.
 * In Windows 11 clipboard history, browse mode will be turned off by
   default, designed to let NVDA announce clipboard history entry menu
   items. This is now part of NVDA 2023.1.
@@ -144,7 +143,7 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

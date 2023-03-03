@@ -23,18 +23,14 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 사용시 주의 사항:
 
 * 본 추가 기능은 윈도우 10 21H2(빌드 19044), 11 21H2(빌드 22000) 이상을 지원합니다.
-* Feature update support duration is tied to consumer support duration
-  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
-  may end support for a feature update prior to end of consumer support. See
-  aka.ms/WindowsTargetVersioninfo for more information and support dates.
+* 기능 업데이트 지원일은 일반 사용자 버전(Home, Pro, Pro Education, Pro for Workstations)을
+  기준으로 하며 지원 종료전 추가 기능 자체에서 기능 업데이트 지원을 종료할 수 있습니다. 자세한 정보 및 기능 업데이트 지원에
+  대해서는 aka.ms/WindowsTargetVersioninfo를 참고하시기 바랍니다.
 * 윈도우 Enterprise LTSC(Long-Term Servicing Channel)와 윈도우 서버 버전에 설치할 수 있으나 지원은
   하지 않습니다.
-* If Add-on Updater is installed and background add-on updates is enabled,
-  Windows App Essentials will not install at all on unsupported Windows
-  releases.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel.
+* Windows App Essentials가 지원하지 않는 윈도우 버전에서 Add-on Updater에서 제공하는 추가 기능 자동
+  업데이트 기능 사용시 Windows App Essentials가 설치되지 않습니다.
+* 윈도우 참가자 빌드에 탑제된 기능을 모두 지원하지 않습니다(특히 개발자 빌드에서 일부에게만 공개된 경우).
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
 * 여러 앱은 미니(compact overlay) 모드(예: 계산기)를 지원하지만 이 모드는 휴대용 NVDA를 사용시 제대로 사용할 수
   없습니다.
@@ -67,7 +63,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 ## Cortana
 
 * Textual responses from Cortana are announced in most situations.
-* NVDA will be silent when talking to Cortana via voice.
 
 ## 지도
 
@@ -84,8 +79,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 윈도우 10 에모지 페널에서 에모지 그룹(카오모지 및 기호 그룹 포함) 선택시 탐색 객체가 특정 에모지에 고정되는 문제 수정.
 * 윈도우 11 클립보드 히스토리에서 항목 팝업 메뉴를 제대로 출력할 수 있도록 브라우즈 모드가 반영되지 않도록 함(NVDA
   2023.1에 본 기능이 추가됨).
-* In Windows 11 22H2 and later, NVDA will announce suggested actions when
-  compatible data such as phone numbers is copied to the clipboard.
+* 윈도우 11 22H2 이상에서 전화번호와 같은 내용이 클립보드에 복사되었을때 나타나는 추천 엑션을 출력하도록 함.
 
 ## 설정 앱
 
@@ -120,7 +114,7 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

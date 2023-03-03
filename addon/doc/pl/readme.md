@@ -86,7 +86,6 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 ## Cortana
 
 * Odpowiedzi tekstowe z Cortany są ogłaszane w większości sytuacji.
-* NVDA będzie milczeć podczas rozmowy z Cortaną za pomocą głosu.
 
 ## Mapy
 
@@ -153,7 +152,7 @@ Odnosi się to do funkcji dostępu głosowego wprowadzonej w systemie Windows
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

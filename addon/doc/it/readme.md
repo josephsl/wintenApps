@@ -82,7 +82,6 @@ riferimento al documento [changelogs for add-on releases][3].
 
 * Le risposte testuali di Cortana sono vocalizzate nella maggior parte dei
   casi.
-* NVDA rimarrà in silenzio mentre si parla a Cortana  con la voce.
 
 ## Mappe
 
@@ -143,7 +142,7 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

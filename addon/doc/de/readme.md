@@ -44,9 +44,9 @@ Hinweise:
 * Wenn der Updater für NVDA-Erweiterungen installiert ist und Add-on-Updates
   im Hintergrund aktiviert sind, wird Windows App Essentials auf nicht
   unterstützten Windows-Versionen überhaupt nicht installiert.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel.
+* Nicht alle Funktionen der Windows Insider Preview-Builds werden
+  unterstützt. Dies gilt vor allem für Funktionen, die einer Untergruppe von
+  Windows Insidern im Dev-Channel vorgestellt werden.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Einige Anwendungen unterstützen den kompakten Überlagerungsmodus
   (z. B. "Immer oben" im Taschenrechner), und dieser Modus funktioniert
@@ -66,9 +66,10 @@ Versionen][3].
   NVDA den Namen des aktiven virtuellen Desktops mit (z. B. Desktop 2).
 * In Windows 11 zeigt NVDA beim Öffnen des Startmenüs die Highlights der
   Suche an. Dies ist jetzt Teil von NVDA 2023.1.
-* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window and Open With
-  dialog. This is now part of NVDA 2023.1.
+* In Windows 11 Version 22H2 und neuer kann die Maus- bzw. Touch-Interaktion
+  zur Interaktion mit dem neu gestalteten Überlauffenster der Taskleiste und
+  dem Dialogfeld "Öffnen mit" verwendet werden. Dies ist nun Teil von NVDA
+  2023.1.
 * NVDA zeichnet die Prozessor-Architektur für die aktuelle
   Windows-Installation (x86/32-bit, AMD64, ARM64) auf, wenn es gestartet
   wird. Dies ist nun Teil von NVDA 2023.1.
@@ -87,8 +88,6 @@ Versionen][3].
 
 * Rückmeldungstexte von Cortana werden in den meisten Situationen
   angekündigt.
-* NVDA verstummt bei der Verwendung von Cortana, so dass sich die Stimmen
-  nicht mehr in die Quere kommen.
 
 ## Karten
 
@@ -155,7 +154,7 @@ für den Sprachzugang.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

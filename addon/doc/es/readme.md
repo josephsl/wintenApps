@@ -89,7 +89,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 * Las respuestas textuales de Cortana se verbalizan en la mayoría de
   situaciones.
-* NVDA se silenciará cuando hables a Cortana a través de la voz.
 
 ## Mapas
 
@@ -157,7 +156,7 @@ Esto hace referencia a la función de acceso por voz introducida en Windows
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

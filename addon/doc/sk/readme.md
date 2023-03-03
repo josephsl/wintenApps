@@ -1,4 +1,4 @@
-# Windows App Essentials #
+# Vylepšenia prístupnosti pre Windows #
 
 * Authors: Joseph Lee, Derek Riemer and others
 * Stiahnuť [stabilnú verziu][1]
@@ -79,7 +79,6 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 ## Cortana
 
 * Väčšinou sú oznamované textové odpovede z Cortany.
-* NVDA nevyrušuje, keď komunikujete s Cortanou.
 
 ## Mapy
 
@@ -138,7 +137,7 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 
