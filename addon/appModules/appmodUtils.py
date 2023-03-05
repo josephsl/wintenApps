@@ -10,7 +10,7 @@ from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
 
 
-def findUIADescendant(self, obj: NVDAObject, uiaProperty: Any, uiaCondition: Any):
+def findUIADescendant(obj: NVDAObject, uiaProperty: Any, uiaCondition: Any):
 	from comtypes import COMError
 	clientObject = UIAHandler.handler.clientObject
 	condition = clientObject.createPropertyCondition(uiaProperty, uiaCondition)
