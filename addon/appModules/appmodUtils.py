@@ -4,15 +4,16 @@
 
 # Adds routines used by various app modules.
 
+from typing import Any
 import UIAHandler
 from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
 
 
-def _detectEmptyFolder(self, obj: NVDAObject):
+def findUIADescendant(self, obj: NVDAObject, uiaProperty: Any, uiaCondition: Any):
 	from comtypes import COMError
 	clientObject = UIAHandler.handler.clientObject
-	condition = clientObject.createPropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "UIItemsView")
+	condition = clientObject.createPropertyCondition(uiaProperty, uiaCondition)
 	walker = clientObject.createTreeWalker(condition)
 	uiItemWindow = clientObject.elementFromHandle(obj.windowHandle)
 	try:
