@@ -20,5 +20,5 @@ def findUIADescendant(self, obj: NVDAObject, uiaProperty: Any, uiaCondition: Any
 		element = walker.getFirstChildElement(uiItemWindow)
 		element = element.buildUpdatedCache(UIAHandler.handler.baseCacheRequest)
 	except (ValueError, COMError):
-		return
+		raise LookupError("winapps: no UIA descendant found")
 	return UIA(UIAElement=element)
