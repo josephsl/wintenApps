@@ -29,17 +29,13 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			# Locate results via UIA tree traversal.
 			# Redesigned in 2019 due to introduction of "always on top" i.e. compact overlay mode.
 			import UIAHandler
-			from comtypes import COMError
-			clientObject = UIAHandler.handler.clientObject
-			condition = clientObject.createPropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "LandmarkTarget")
-			walker = clientObject.createTreeWalker(condition)
-			uiItemWindow = clientObject.elementFromHandle(obj.windowHandle)
+			from . import appmodUtils
 			try:
-				element = walker.getFirstChildElement(uiItemWindow)
-				element = element.buildUpdatedCache(UIAHandler.handler.baseCacheRequest)
-			except (ValueError, COMError):
-				return
-			resultElement = UIA(UIAElement=element)
+				resultElement = appmodUtils.findUIADescendant(
+					obj, UIAHandler.UIA_ClassNamePropertyId, "LandmarkTarget"
+				)
+			except LookupError:
+				resultElement = None
 			# Display string announcement is redundant if speak typed characters is on.
 			if (
 				resultElement
