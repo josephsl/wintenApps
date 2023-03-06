@@ -57,15 +57,11 @@ class AppModule(appModuleHandler.AppModule):
 		if api.getFocusObject().windowClassName != "RichEditD2DPT":
 			raise NotImplementedError()
 		# Obtain status bar text across Notepad 11 releases.
-		clientObject = UIAHandler.handler.clientObject
-		condition = clientObject.createPropertyCondition(UIAHandler.UIA_AutomationIdPropertyId, "ContentTextBlock")
-		walker = clientObject.createTreeWalker(condition)
-		notepadWindow = clientObject.elementFromHandle(api.getForegroundObject().windowHandle)
+		from . import appmodUtils
 		try:
-			element = walker.getFirstChildElement(notepadWindow)
-			# Is status bar showing?
-			element = element.buildUpdatedCache(UIAHandler.handler.baseCacheRequest)
-		except (ValueError, COMError):
+			statusBar = appmodUtils.findUIADescendant(
+				api.getForegroundObject(), UIAHandler.UIA_AutomationIdPropertyId, "ContentTextBlock"
+			).parent
+		except LookupError:
 			raise NotImplementedError
-		statusBar = UIA(UIAElement=element).parent
 		return statusBar
