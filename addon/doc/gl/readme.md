@@ -45,8 +45,8 @@ Notas:
   segundo plano, Windows App Essentials non se instalará en absoluto en
   versións de Windows non soportadas.
 * Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel.
+  more so for features introduced to a subset of Windows Insiders in canary
+  and dev channels.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
 * Algunhas apps soportan o modo de capa compacto (sempre enriba na

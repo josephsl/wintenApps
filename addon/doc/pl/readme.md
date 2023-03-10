@@ -46,8 +46,8 @@ Notatki:
   dodatków w tle, program Windows App Essentials nie zostanie w ogóle
   zainstalowany w nieobsługiwanych wersjach systemu Windows.
 * Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel.
+  more so for features introduced to a subset of Windows Insiders in canary
+  and dev channels.
 * Niektóre funkcje dodatkowe są lub będą częścią czytnika ekranu NVDA.
 * Niektóre aplikacje obsługują tryb kompaktowej nakładki (na przykład zawsze
   na wierzchu w Kalkulatorze), a ten tryb nie będzie działał poprawnie z

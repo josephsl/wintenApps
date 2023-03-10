@@ -44,8 +44,8 @@ Huomautuksia:
   Lisäosien päivittäjä on asennettuna ja lisäosien taustapäivitykset ovat
   käytössä.
 * Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
-  varsinkaan sellaisia, jotka esitellään vain osalle dev-kanavalla olevista
-  käyttäjistä.
+  varsinkaan sellaisia, jotka esitellään vain osalle canary- ja
+  dev-kanavilla olevista käyttäjistä.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Jotkin sovellukset tukevat kompaktia peitetilaa (esim. Laskimen Aina
   päällimmäisenä), joka ei toimi oikein NVDA:n massamuistiversion kanssa.

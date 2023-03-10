@@ -30,7 +30,9 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   하지 않습니다.
 * Windows App Essentials가 지원하지 않는 윈도우 버전에서 Add-on Updater에서 제공하는 추가 기능 자동
   업데이트 기능 사용시 Windows App Essentials가 설치되지 않습니다.
-* 윈도우 참가자 빌드에 탑제된 기능을 모두 지원하지 않습니다(특히 개발자 빌드에서 일부에게만 공개된 경우).
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in canary
+  and dev channels.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
 * 여러 앱은 미니(compact overlay) 모드(예: 계산기)를 지원하지만 이 모드는 휴대용 NVDA를 사용시 제대로 사용할 수
   없습니다.

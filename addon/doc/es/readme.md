@@ -47,7 +47,7 @@ Notas:
   versiones no soportadas de Windows.
 * No se soportarán todas las funciones de las compilaciones Windows Insider
   Preview, más si se introducen en un subconjunto de insiders de Windows en
-  el canal de desarrollo.
+  los canales dev y canary.
 * Algunas de las características del complemento son o serán parte del
   lector de pantalla NVDA.
 * Algunas aplicaciones soportan el modo de superposición compacta (siempre
