@@ -42,8 +42,8 @@ Napomene:
   dodataka aktivirano, dodatak „Osnovni moduli za Windows aplikacije” se
   uopće neće instalirati na nepodržana izdanja sustava Windows.
 * Windows Insider Preview gradnje neće podržati sve značajke, pogotovo
-  značajke koje su predstavljene u podskupu „Windows Insiders” u kanalu
-  razvoja.
+  značajke koje su predstavljene u podskupu „Windows Insiders” u kanalima
+  canary i razvoja.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Neke aplikacije podržavaju način kompaktnog preklapanja (na primjer,
   uvijek na vrhu u Kalkulatoru) i ovaj modus neće ispravno raditi s

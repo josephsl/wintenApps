@@ -44,8 +44,8 @@ Bemærkninger:
   Forbedringer til Windows Apps slet ikke på ikke-understøttede
   Windows-udgivelser.
 * Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel.
+  more so for features introduced to a subset of Windows Insiders in canary
+  and dev channels.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
 * Nogle apps understøtter kompakt overlejring (for eksempel Bevar Øverst i

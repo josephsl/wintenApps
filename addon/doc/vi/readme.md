@@ -43,8 +43,8 @@ Lưu ý:
   Windows App Essentials will not install at all on unsupported Windows
   releases.
 * Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel.
+  more so for features introduced to a subset of Windows Insiders in canary
+  and dev channels.
 * Vài tính năng của add-on đã hoặc sẽ là một phần tính năng của trình đọc
   màn hình NVDA.
 * Some apps support compact overlay mode (always on top in Calculator, for

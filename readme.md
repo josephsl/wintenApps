@@ -25,7 +25,7 @@ Notes:
 * Feature update support duration is tied to consumer support duration (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on may end support for a feature update prior to end of consumer support. See aka.ms/WindowsTargetVersioninfo for more information and support dates.
 * Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
 * If Add-on Updater is installed and background add-on updates is enabled, Windows App Essentials will not install at all on unsupported Windows releases.
-* Not all features from Windows Insider Preview builds will be supported, more so for features introduced to a subset of Windows Insiders in dev channel.
+* Not all features from Windows Insider Preview builds will be supported, more so for features introduced to a subset of Windows Insiders in canary and dev channels.
 * Some add-on features are or will be part of NVDA screen reader.
 * Some apps support compact overlay mode (always on top in Calculator, for example), and this mode will not work properly with the portable version of NVDA.
 * For best experience with apps that embed web technologies and content such as Start menu and its context menu, enable "Automatic focus mode for focus changes" setting from NVDA's browse mode settings panel.
@@ -75,7 +75,7 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 * Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by Derek Riemer).
 * When reading a forecast, use the left and right arrows to move between items. Use the up and down arrows to read the individual items. For example, pressing the right arrow might report "Monday: 79 degrees, partly cloudy, ..." pressing the down arrow will say "Monday" Then pressing it again will read the next item (Like the temperature). This currently works for daily and hourly forecasts.
 
-[1]: https://addons.nvda-project.org/files/get.php?file=w10
+[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
 [2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
 

@@ -44,9 +44,9 @@ Hinweise:
 * Wenn der Updater für NVDA-Erweiterungen installiert ist und Add-on-Updates
   im Hintergrund aktiviert sind, wird Windows App Essentials auf nicht
   unterstützten Windows-Versionen überhaupt nicht installiert.
-* Nicht alle Funktionen der Windows Insider Preview-Builds werden
-  unterstützt. Dies gilt vor allem für Funktionen, die einer Untergruppe von
-  Windows Insidern im Dev-Channel vorgestellt werden.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders in canary
+  and dev channels.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Einige Anwendungen unterstützen den kompakten Überlagerungsmodus
   (z. B. "Immer oben" im Taschenrechner), und dieser Modus funktioniert

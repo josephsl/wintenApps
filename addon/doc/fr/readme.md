@@ -45,8 +45,8 @@ Notes:
   Windows App Essentials will not install at all on unsupported Windows
   releases.
 * Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in dev
-  channel.
+  more so for features introduced to a subset of Windows Insiders in canary
+  and dev channels.
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
 * Some apps support compact overlay mode (always on top in Calculator, for
