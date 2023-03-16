@@ -13,7 +13,7 @@ from NVDAObjects import NVDAObject
 import tones
 
 
-# Map locations
+# Deprecated: map locations
 # A static text denoting where one is located on the map.
 class MapLocation(UIA):
 	"""Plays a tone indicating the current map position."""
@@ -37,6 +37,7 @@ class MapLocation(UIA):
 class AppModule(appModuleHandler.AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
+		# Map location lookup deprecated.
 		if isinstance(obj, UIA):
 			try:
 				if obj.parent.parent.UIAAutomationId == "MapControl":
