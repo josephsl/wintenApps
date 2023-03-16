@@ -36,15 +36,6 @@ class MapLocation(UIA):
 
 class AppModule(appModuleHandler.AppModule):
 
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
-		# Map location lookup deprecated.
-		if isinstance(obj, UIA):
-			try:
-				if obj.parent.parent.UIAAutomationId == "MapControl":
-					clsList.insert(0, MapLocation)
-			except AttributeError:
-				pass
-
 	def event_UIA_notification(
 			self, obj: NVDAObject, nextHandler: Callable[[], None], displayString: Optional[str] = None, **kwargs
 	):
