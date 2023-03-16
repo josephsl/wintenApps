@@ -4,13 +4,10 @@
 
 # Numerous enhancements for Bing Maps app.
 
-from typing import List, Callable, Optional
+from typing import Callable, Optional
 import appModuleHandler
 import api
-import config
-from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
-import tones
 
 
 class AppModule(appModuleHandler.AppModule):
