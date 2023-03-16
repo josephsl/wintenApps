@@ -13,27 +13,6 @@ from NVDAObjects import NVDAObject
 import tones
 
 
-# Deprecated: map locations
-# A static text denoting where one is located on the map.
-class MapLocation(UIA):
-	"""Plays a tone indicating the current map position."""
-
-	def event_becomeNavigatorObject(self) -> None:
-		l, t, w, h = self.location
-		x = l + (w / 2)
-		y = t + (h / 2)
-		screenWidth, screenHeight = api.getDesktopObject().location[2:]
-		if x <= screenWidth or y <= screenHeight:
-			minPitch = config.conf['mouse']['audioCoordinates_minPitch']
-			maxPitch = config.conf['mouse']['audioCoordinates_maxPitch']
-			curPitch = minPitch + ((maxPitch - minPitch) * ((screenHeight - y) / float(screenHeight)))
-			brightness = config.conf['mouse']['audioCoordinates_maxVolume']
-			leftVolume = int((85 * ((screenWidth - float(x)) / screenWidth)) * brightness)
-			rightVolume = int((85 * (float(x) / screenWidth)) * brightness)
-			tones.beep(curPitch, 40, left=leftVolume, right=rightVolume)
-		super().event_becomeNavigatorObject()
-
-
 class AppModule(appModuleHandler.AppModule):
 
 	def event_UIA_notification(
