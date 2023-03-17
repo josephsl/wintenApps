@@ -89,7 +89,6 @@ znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
 
 ## Mapy
 
-* NVDA odtwarza sygnał dźwiękowy lokalizacji dla lokalizacji na mapie.
 * W niektórych przypadkach NVDA nie będzie już przerywać mowy, gdy skupi się
   na elementach innych niż sterowanie mapą.
 

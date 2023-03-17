@@ -82,7 +82,6 @@ Podrobné úpravy medzi jednotlivými verziami nájdete v [Zozname zmien
 
 ## Mapy
 
-* NVDA zvukom indikuje polohu na mape.
 * NVDA will no longer interrupt speech when focused on items other than the
   map control in some cases.
 

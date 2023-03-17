@@ -87,7 +87,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Kartat
 
-* NVDA toistaa äänimerkin karttasijainneille.
 * NVDA ei enää keskeytä puhetta joissakin tapauksissa, kun kohdistus on
   muissa kohteissa kuin karttasäätimessä.
 

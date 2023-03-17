@@ -85,7 +85,6 @@ riferimento al documento [changelogs for add-on releases][3].
 
 ## Mappe
 
-* NVDA emette dei segnali acustici per le posizioni presenti nella mappa.
 * NVDA will no longer interrupt speech when focused on items other than the
   map control in some cases.
 

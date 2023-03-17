@@ -89,7 +89,6 @@ documento [rexistros de trocos para publicacións de complementos][3].
 
 ## Mapas
 
-* NVDA reproduce pitidos de localización para lugares no mapa.
 * NVDA xa non interromperá a fala cando estea enfocado en elementos
   distintos do control do mapa nalgúns casos.
 

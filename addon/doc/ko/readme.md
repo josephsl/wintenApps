@@ -68,7 +68,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 지도
 
-* NVDA plays location beep for map locations.
 * NVDA will no longer interrupt speech when focused on items other than the
   map control in some cases.
 

@@ -85,7 +85,6 @@ complemento, consulte o documento [changelogs for add-on releases][3].
 
 ## Mapas
 
-* NVDA reproduz sinal sonoro de localização para locais no mapa.
 * NVDA will no longer interrupt speech when focused on items other than the
   map control in some cases.
 

@@ -85,7 +85,6 @@ for add-on releases][3] .
 
 ## Maps
 
-* NVDA phát tiếng beep cho vị trí trên bản đồ.
 * NVDA will no longer interrupt speech when focused on items other than the
   map control in some cases.
 
