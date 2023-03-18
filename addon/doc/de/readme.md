@@ -91,7 +91,6 @@ Versionen][3].
 
 ## Karten
 
-* NVDA spielt einen Ortungston für Kartenstandorte ab.
 * NVDA unterbricht in manchen Fällen die Sprachausgabe nicht mehr, wenn der
   Fokus auf anderen Elementen als der Kartensteuerung liegt.
 

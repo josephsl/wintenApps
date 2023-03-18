@@ -88,7 +88,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
 
 ## Kort
 
-* NVDA spiller placeringsbip for kortlokationer.
 * NVDA will no longer interrupt speech when focused on items other than the
   map control in some cases.
 

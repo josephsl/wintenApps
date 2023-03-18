@@ -86,7 +86,6 @@ Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
 
 ## Haritalar
 
-* NVDA, harita konumları için konum bip sesi çıkarır.
 * NVDA will no longer interrupt speech when focused on items other than the
   map control in some cases.
 

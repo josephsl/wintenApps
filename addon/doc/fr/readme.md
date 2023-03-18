@@ -92,7 +92,6 @@ l'extension][3].
 
 ## Cartes
 
-* NVDA joue un bip du lieux pour les lieux sur la carte.
 * NVDA will no longer interrupt speech when focused on items other than the
   map control in some cases.
 

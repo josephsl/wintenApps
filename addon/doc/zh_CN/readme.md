@@ -27,9 +27,7 @@
   aka.ms/WindowsTargetVersioninfo。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
 * 如果安装了插件更新器并启用了后台插件更新， 在不受支持的操作系统上 Windows App Essentials 不会被安装。
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in canary
-  and dev channels.
+* 并非支持所有的 Windows Insider Preview 版本，更偏向于支持由开发或金丝雀通道引入 Windows Insider 的功能。
 * 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
 * 某些应用程序支持紧凑叠加模式（例如，计算器中的始终置顶模式），该模式无法在 NVDA 的便携版中使用。
 * 为了获得内嵌 Web 试图（例如开始菜单及其上下文菜单）的应用程序的最佳体验，请在 NVDA
@@ -55,7 +53,6 @@
 
 ## 地图
 
-* NVDA为地图上的位置播放位置嘟嘟声。
 * 在某些情况下，NVDA 在聚焦于地图控件以外的项目时不会打断语音。
 
 ## 系统键盘

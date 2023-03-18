@@ -86,7 +86,6 @@ Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
 
 ## Karte
 
-* NVDA svira zvuk za lokacije za lokacije na karti.
 * NVDA više neće prekidati govor kada je fokusiran na stavke koje nisu
   kontrole karte u nekim slučajevima.
 

@@ -92,7 +92,6 @@ complemento, consulta el documento [changelogs for add-on releases][3].
 
 ## Mapas
 
-* NVDA reproduce pitidos de localización para lugares en el mapa.
 * NVDA ya no interrumpirá la voz al tener el foco en elementos distintos al
   control del mapa en algunos casos.
 
