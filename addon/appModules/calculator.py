@@ -7,7 +7,6 @@
 This is also the base app module for Windows 11 Calculator."""
 
 from nvdaBuiltin.appModules.calculator import AppModule, noCalculatorEntryAnnouncements  # NOQA: F403
-from NVDAObjects.UIA import UIA
 import braille
 
 

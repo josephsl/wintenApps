@@ -9,7 +9,6 @@ import appModuleHandler
 import api
 import ui
 import UIAHandler
-from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
 
 

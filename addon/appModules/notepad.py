@@ -8,14 +8,12 @@ While this app module also covers older Notepad releases,
 this module provides workarounds for Windows 11 Notepad."""
 
 from typing import Callable
-from comtypes import COMError
 import appModuleHandler
 import api
 import braille
 import controlTypes
 import eventHandler
 import UIAHandler
-from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
 
 
