@@ -73,11 +73,12 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			elif obj.UIAElement.cachedClassName.endswith("BreadcrumbBarItem"):
 				obj.roleText = obj.UIAElement.currentLocalizedControlType
 			# Taskbar/search combo box in 22H2 Moment 2 (February 2023) has no label.
-			# Resolved in build 25309.
+			# Resolved in build 25309, eventually backported to build 22621.1483.
+			# Resolution involves search grouping (obj.parent) with a specific Automation Id.
 			elif (
 				automationId == "SystemSettings_DesktopTaskbar_Search_ComboBox"
 				and not obj.name
-				and winVersion.getWinVer().build < 25309
+				and obj.parent.UIAAutomationId != "SystemSettings_DesktopTaskbar_Search_EntityItem"
 			):
 				obj.name = obj.previous.name
 
