@@ -14,7 +14,8 @@ from NVDAObjects import NVDAObject
 
 class AppModule(appModuleHandler.AppModule):
 
-	# Sometimes, Cortana's textual response is announced twice.
+	# Responses will be announced twice if returning results from Bing
+	# as NVDA looks for last item in conversations list.
 	_cortanaResponse: str = ""
 
 	def event_UIA_notification(
@@ -46,6 +47,9 @@ class AppModule(appModuleHandler.AppModule):
 					cortanaResponse = ", ".join([response.name for response in cortanaResponse.firstChild.children])
 		except IndexError:
 			cortanaResponse = ""
+		# Notification event is fired whenever conversations list changes.
+		# When displaying results from Bing, Cortana's remark is on its own line (item)
+		# followed by actual result (last item).
 		if cortanaResponse != self._cortanaResponse:
 			try:
 				ui.message(cortanaResponse)
