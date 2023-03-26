@@ -76,6 +76,6 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 [1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://www.josephsl.net/files/nvdaaddons/getupdate.php?file=w10-dev
 
 [3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
