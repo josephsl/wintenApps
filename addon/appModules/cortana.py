@@ -14,10 +14,6 @@ from NVDAObjects import NVDAObject
 
 class AppModule(appModuleHandler.AppModule):
 
-	# Responses will be announced twice if returning results from Bing
-	# as NVDA looks for last item in conversations list.
-	_cortanaResponse: str = ""
-
 	def event_UIA_notification(
 			self, obj: NVDAObject, nextHandler: Callable[[], None], displayString: Optional[str] = None, **kwargs
 	):
