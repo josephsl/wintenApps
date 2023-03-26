@@ -50,11 +50,9 @@ class AppModule(appModuleHandler.AppModule):
 		# Notification event is fired whenever conversations list changes.
 		# When displaying results from Bing, Cortana's remark is on its own line (item)
 		# followed by actual result (last item).
-		if cortanaResponse != self._cortanaResponse:
-			try:
-				ui.message(cortanaResponse)
-				self._cortanaResponse = cortanaResponse
-			except (IndexError, TypeError):
-				# IndexError deals with multi-part mesage,
-				# while TypeError deals with a list item with users's message on it.
-				pass
+		try:
+			ui.message(cortanaResponse)
+		except (IndexError, TypeError):
+			# IndexError deals with multi-part mesage,
+			# while TypeError deals with a list item with users's message on it.
+			pass
