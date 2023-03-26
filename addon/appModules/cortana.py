@@ -26,6 +26,9 @@ class AppModule(appModuleHandler.AppModule):
 		# Thus respond to both and see what should be announced.
 		if displayString is None or "Cortana" not in displayString:
 			return
+		# Avoid duplicate speech, more so when Bing search results are returned.
+		import speech
+		speech.cancelSpeech()
 		from . import appmodUtils
 		# Thankfully, Cortana's response is part of a grouping object.
 		# As long as conversation list uses the same UIA Automation Id,
