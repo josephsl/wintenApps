@@ -44,7 +44,7 @@ class AppModule(appModuleHandler.AppModule):
 				# When searching through Bing, summary text shows up.
 				if cortanaResponse.firstChild.childCount > 1:
 					cortanaResponse = ", ".join([response.name for response in cortanaResponse.firstChild.children])
-		except IndexError:
+		except (IndexError, AttributeError):
 			cortanaResponse = ""
 		# Notification event is fired whenever conversations list changes.
 		# When displaying results from Bing, Cortana's remark is on its own line (item)
