@@ -28,6 +28,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			braille.handler.message(displayString)
 			# Locate results via UIA tree traversal.
 			# Redesigned in 2019 due to introduction of "always on top" i.e. compact overlay mode.
+			# Resolved in NVDA 2023.2 (remove this method completely).
 			import UIAHandler
 			from comtypes import COMError
 			clientObject = UIAHandler.handler.clientObject
