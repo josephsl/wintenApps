@@ -55,6 +55,7 @@ class AppModule(appModuleHandler.AppModule):
 		if api.getFocusObject().windowClassName != "RichEditD2DPT":
 			raise NotImplementedError()
 		# Obtain status bar text across Notepad 11 releases.
+		# Resolved in NVDA 2023.2 (remove this method completely).
 		from . import appmodUtils
 		try:
 			statusBar = appmodUtils.findUIADescendant(
