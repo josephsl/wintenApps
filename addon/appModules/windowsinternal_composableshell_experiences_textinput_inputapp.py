@@ -136,22 +136,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
-	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Only on Windows 10.
-		if winVersion.getWinVer() < winVersion.WIN11:
-			automationId, className = obj.UIAAutomationId, obj.UIAElement.cachedClassName
-			if (
-				# Forget it if there is no Automation Id and class name set.
-				(className == "" and automationId == "")
-				# Clipboard entries fire name change event when opened.
-				or (className == "TextBlock" and automationId == "")
-				# Ignore useless clipboard entry scrolling announcements.
-				or automationId == "VerticalScrollBar"
-			):
-				return
-		# NVDA Core takes care of the rest.
-		super().event_nameChange(obj, nextHandler)
-
 	def event_gainFocus(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Focus gets stuck in Modern keyboard when clipboard history closes in Windows 11.
 		if obj.parent.childCount == 0:
