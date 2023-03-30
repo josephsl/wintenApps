@@ -23,6 +23,7 @@ class AppModule(appModuleHandler.AppModule):
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# NVDA Core issue 14587/PR 14588: announce tab switches in Notepad 11.2212 and later.
 		# Element selected event fires multiple times due to state changes.
+		# Resolved in NVDA 2023.2 (remove this method completely).
 		if (
 			obj.role == controlTypes.Role.TAB
 			# this is done because 2 selection events are sent for the same object, so to prevent double speaking.
