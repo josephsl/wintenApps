@@ -9,7 +9,6 @@ from NVDAObjects.UIA import Dialog
 from NVDAObjects import NVDAObject
 import globalVars
 import UIAHandler
-import winVersion
 
 
 # #20: don't even think about proceeding in secure screens.
