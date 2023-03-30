@@ -20,16 +20,6 @@ def disableInSecureMode(cls):
 @disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
-	def __init__(self):
-		super().__init__()
-		from logHandler import log
-		currentWinVer = winVersion.getWinVer()
-		# Report processor architecture at startup.
-		# Resolved in NVDA 2023.1.
-		if not hasattr(currentWinVer, "processorArchitecture"):
-			import platform
-			log.info(f"winapps: processor architecture: {platform.machine()}")
-
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
 		try:
 			UIAClassName = obj.UIAElement.cachedClassName
