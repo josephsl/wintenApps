@@ -14,6 +14,7 @@ import api
 import braille
 import controlTypes
 import eventHandler
+import speech
 import UIAHandler
 from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
@@ -26,15 +27,20 @@ class AppModule(appModuleHandler.AppModule):
 		# Element selected event fires multiple times due to state changes.
 		if (
 			obj.role == controlTypes.Role.TAB
+			# this is done because 2 selection events are sent for the same object, so to prevent double speaking.
+			and not eventHandler.isPendingEvents("UIA_elementSelected")
 			and controlTypes.State.SELECTED in obj.states
-			and not eventHandler.isPendingEvents(eventName="UIA_elementSelected")
 		):
-			obj.reportFocus()
-			braille.handler.message(braille.getPropertiesBraille(
-				name=obj.name,
-				role=obj.role,
-				positionInfo=obj.positionInfo
-			))
+			speech.cancelSpeech()
+			speech.speakObject(obj, reason=controlTypes.OutputReason.FOCUS)
+			braille.handler.message(
+				braille.getPropertiesBraille(
+					name=obj.name,
+					role=obj.role,
+					states=obj.states,
+					positionInfo=obj.positionInfo
+				)
+			)
 		nextHandler()
 
 	def _get_statusBar(self) -> NVDAObject:
