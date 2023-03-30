@@ -130,6 +130,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# NVDA Core issue 14388: announce File Explorer tab switches (Windows 11 22H2 and later).
+		import speech
 		import braille
 		import eventHandler
 		# Element selected event fires multiple times due to state changes.
@@ -137,12 +138,16 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			obj.role == controlTypes.Role.TAB
 			and controlTypes.State.SELECTED in obj.states
 			and obj.parent.UIAAutomationId == "TabListView"
+			# this is done because 2 selection events are sent for the same object, so to prevent double speaking.
 			and not eventHandler.isPendingEvents(eventName="UIA_elementSelected")
 		):
-			obj.reportFocus()
-			braille.handler.message(braille.getPropertiesBraille(
-				name=obj.name,
-				role=obj.role,
-				positionInfo=obj.positionInfo
-			))
+			speech.speakObject(obj, reason=controlTypes.OutputReason.FOCUS)
+			braille.handler.message(
+				braille.getPropertiesBraille(
+					name=obj.name,
+					role=obj.role,
+					states=obj.states,
+					positionInfo=obj.positionInfo
+				)
+			)
 		nextHandler()
