@@ -4,7 +4,7 @@
 * Download [stable version][1]
 * Download [beta version][2]
 * Download [development version][3]
-* NVDA compatibility: 2022.4 and later
+* NVDA compatibility: 2023.1 and later
 
 Note: Originally called Windows 10 App Essentials, it was renamed to Windows App Essentials in 2021 to support Windows 10 and future releases such as Windows 11. Parts of this add-on will still refer to the original add-on name.
 
@@ -37,9 +37,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## General
 
 * When opening, closing, or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
-* In Windows 11, NVDA will announce search highlights in Start menu when it opens. This is now part of NVDA 2023.1.
-* In Windows 11 22H2 and later, mouse and/or touch interaction can be used to interact with redesigned system tray overflow window and Open With dialog. This is now part of NVDA 2023.1.
-* NVDA will record processor architecture for the current Windows installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part of NVDA 2023.1.
 * Improved Windows 10 and 11 taskbar experience, including announcing results of rearranging icons when pressing Alt+Shift+left/right arrow keys (Windows 11 prior to build 25267) and reporting item position when moving through taskbar icons (Windows 10 and 11 prior to build 25281).
 * NVDA will announce empty folder text inside an empty folder in File Explorer.
 * In aps such as File Explorer and Notepad where tabbed windows are supported, NVDA will announce the name and the position of tabs when switching between them.
@@ -56,7 +53,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 This includes emoji panel, clipboard history, touch keyboard, dictation/voice typing, hardware input suggestions, suggested actions, and modern input method editors for certain languages across Windows 10 and 11. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher. When pasting from clipboard history in Windows 10, press Space key instead of Enter key to paste the selected item.
 
-* In Windows 11 clipboard history, browse mode will be turned off by default, designed to let NVDA announce clipboard history entry menu items. This is now part of NVDA 2023.1.
 * In Windows 11 22H2 and later, NVDA will announce suggested actions when compatible data such as phone numbers is copied to the clipboard.
 
 ## Settings
