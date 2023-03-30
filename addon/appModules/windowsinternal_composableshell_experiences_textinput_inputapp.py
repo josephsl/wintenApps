@@ -36,11 +36,6 @@ class ImeCandidateItem(ImeCandidateItem):  # type: ignore[no-redef]
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
-	# In Windows 11, clipboard history is seen as a web document.
-	# Turn off browse mode by default so clipboard history entry menu items can be announced when tabbed to.
-	# Resolved in NVDA 2023.1.
-	disableBrowseModeByDefault = True
-
 	def _emojiPanelClosed(self, obj: NVDAObject):
 		# Move NVDA's focus object to what is actually focused on screen.
 		# This is needed in Windows 11 when emoji panel closes.
