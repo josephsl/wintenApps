@@ -2,7 +2,8 @@
 
 * Автори: Joseph Lee, Derek Riemer та інші
 * Завантажити [стабільну версію][1]
-* Завантажити [версію в розробці][2]
+* Download [beta version][2]
+* Download [development version][3]
 * Сумісність з NVDA: 2022.4 і новіші
 
 Примітка: спочатку додаток називався Windows 10 App Essentials, у 2021 році
@@ -46,6 +47,9 @@ Windows, а також удосконаленням та виправлення�
 * Не всі функції зі збірок Windows Insider Preview підтримуватимуться,
   особливо функції, представлені для підгруп Windows Insiders у каналах
   canary і dev.
+* Add-on dev channel will include changes including experimental content
+  that may or may not be included in beta and stable releases, and beta
+  channel will come with changes planned for future stable releases.
 * Деякі функції додатка є або будуть частиною NVDA.
 * Деякі програми підтримують компактний режим накладання (завжди зверху в
   Калькуляторі, наприклад), і цей режим не буде працювати належним чином з
@@ -55,8 +59,8 @@ Windows, а також удосконаленням та виправлення�
   «Автоматичний перехід в режим фокуса при зміні фокуса» у розділі "Режим
   огляду" налаштувань NVDA.
 
-Перелік змін, внесених між випусками додатка, наведено у документі [журнал
-змін випусків додатка][3].
+For a list of changes made between each add-on releases, refer to
+[changelogs for add-on releases][4] document.
 
 ## Загальне
 
@@ -151,6 +155,8 @@ Windows 10 натисніть клавішу пробілу замість кл�
 
 [1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
 
-[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+
+[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

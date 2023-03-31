@@ -2,7 +2,8 @@
 
 * Autores: Joseph Lee, Derek Riemer e outros
 * Descargar [versión estable][1]
-* Descargar [versión de desenvolvemento][2]
+* Download [beta version][2]
+* Download [development version][3]
 * Compatibilidade con NVDA: 2022.4 e posterior
 
 Nota: Orixinalmente chamado Windows 10 App Essentials, renomeouse a windows
@@ -47,6 +48,9 @@ Notas:
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders in canary
   and dev channels.
+* Add-on dev channel will include changes including experimental content
+  that may or may not be included in beta and stable releases, and beta
+  channel will come with changes planned for future stable releases.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
 * Algunhas apps soportan o modo de capa compacto (sempre enriba na
@@ -57,8 +61,8 @@ Notas:
   "Modo foco automático para cambios do foco" dende o panel de modo
   navegación das opcións de NVDA.
 
-Para unha lista de trocos feitos entre cada versión do complemento, visita o
-documento [rexistros de trocos para publicacións de complementos][3].
+For a list of changes made between each add-on releases, refer to
+[changelogs for add-on releases][4] document.
 
 ## Xeral
 
@@ -153,6 +157,8 @@ Esto se refiere a la característica Acceso por voz introducida en Windows 11
 
 [1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
 
-[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+
+[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
