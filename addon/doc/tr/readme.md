@@ -2,7 +2,8 @@
 
 * Yazarlar: Joseph Lee, Derek Riemer ve diğerleri
 * [kararlı sürüm][1]ü indir
-* [geliştirme sürümü][2]nü indir
+* Download [beta version][2]
+* Download [development version][3]
 * NVDA uyumluluğu: 2022.4 ve üstü
 
 Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
@@ -46,6 +47,9 @@ Notlar:
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders in canary
   and dev channels.
+* Add-on dev channel will include changes including experimental content
+  that may or may not be included in beta and stable releases, and beta
+  channel will come with changes planned for future stable releases.
 * Bazı eklenti özellikleri, NVDA ekran okuyucusunun bir parçasıdır veya
   yakında olacaktır.
 * Some apps support compact overlay mode (always on top in Calculator, for
@@ -55,8 +59,8 @@ Notlar:
   as Start menu and its context menu, enable "Automatic focus mode for focus
   changes" setting from NVDA's browse mode settings panel.
 
-Her eklenti sürümü arasında yapılan değişikliklerin bir listesi için
-[eklenti sürümleri değişiklik değişiklik listesi][3] dosyasına bakın.
+For a list of changes made between each add-on releases, refer to
+[changelogs for add-on releases][4] document.
 
 ## Genel
 
@@ -142,6 +146,8 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 [1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
 
-[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+
+[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

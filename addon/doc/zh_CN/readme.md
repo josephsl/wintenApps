@@ -2,7 +2,8 @@
 
 * 作者：Joseph Lee、Derek Riemer 等
 * 下载[稳定版][1]
-* 下载[开发板][2]
+* 下载[测试版][2]
+* 下载[开发板][3]
 * NVDA 兼容性：2022.4 及更高版本
 
 注意：此插件最初称为 Windows 10 应用增强，在 2021 年更名为 Windows 应用增强，以支持 Windows 10 和 Windows
@@ -28,12 +29,13 @@
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
 * 如果安装了插件更新器并启用了后台插件更新， 在不受支持的操作系统上 Windows App Essentials 不会被安装。
 * 并非支持所有的 Windows Insider Preview 版本，更偏向于支持由开发或金丝雀通道引入 Windows Insider 的功能。
+* 插件的 Dev 通道将包括可能包含或不包含在测试版和稳定版中的实验性内容，而Beta 通道将会包含为未来稳定版计划的更改。
 * 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
 * 某些应用程序支持紧凑叠加模式（例如，计算器中的始终置顶模式），该模式无法在 NVDA 的便携版中使用。
 * 为了获得内嵌 Web 试图（例如开始菜单及其上下文菜单）的应用程序的最佳体验，请在 NVDA
   的浏览模式设置面板启用“输入焦点移动时的自动焦点模式支持”。
 
-有关每个发行版之间所做的更改的详细信息，请参阅[另外发布的更新日志] [3]文档。
+有关每个版本之间所做的具体更改，请参阅[另外发布的更新日志][4]文档。
 
 ## 常规增强
 
@@ -90,6 +92,8 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 
 [1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
 
-[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+
+[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

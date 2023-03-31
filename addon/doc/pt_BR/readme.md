@@ -2,7 +2,8 @@
 
 * Autores: Joseph Lee, Derek Riemer e outros
 * Baixe a [versão estável][1]
-* Baixe a [versão em desenvolvimento][2]
+* Download [beta version][2]
+* Download [development version][3]
 * Compatibilidade com NVDA: 2022.4 e posteriores
 
 Nota: Originalmente chamado de Windows 10 App Essentials, foi renomeado para
@@ -46,6 +47,9 @@ Notas:
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders in canary
   and dev channels.
+* Add-on dev channel will include changes including experimental content
+  that may or may not be included in beta and stable releases, and beta
+  channel will come with changes planned for future stable releases.
 * Alguns recursos do complemento são ou farão parte do leitor de tela NVDA.
 * Some apps support compact overlay mode (always on top in Calculator, for
   example), and this mode will not work properly with the portable version
@@ -54,8 +58,8 @@ Notas:
   as Start menu and its context menu, enable "Automatic focus mode for focus
   changes" setting from NVDA's browse mode settings panel.
 
-Para obter uma lista de alterações feitas entre cada lançamento do
-complemento, consulte o documento [changelogs for add-on releases][3].
+For a list of changes made between each add-on releases, refer to
+[changelogs for add-on releases][4] document.
 
 ## Geral
 
@@ -144,6 +148,8 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 [1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
 
-[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+
+[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

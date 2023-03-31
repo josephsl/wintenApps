@@ -2,7 +2,8 @@
 
 * Forfattere: Joseph Lee, Derek Riemer og andre
 * Download [stabil version][1]
-* Download [udviklingsversion][2]
+* Download [beta version][2]
+* Download [development version][3]
 * NVDA-kompatibilitet: 2022.4 og nyere
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
@@ -46,6 +47,9 @@ Bemærkninger:
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders in canary
   and dev channels.
+* Add-on dev channel will include changes including experimental content
+  that may or may not be included in beta and stable releases, and beta
+  channel will come with changes planned for future stable releases.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
 * Nogle apps understøtter kompakt overlejring (for eksempel Bevar Øverst i
@@ -56,8 +60,8 @@ Bemærkninger:
   indstillingen "Automatisk fokustilstand ved ændring af fokus" fra NVDAs
   indstillingspanel under "Gennemsynstilstand".
 
-For en liste over ændringer, der er fremstillet mellem hver udgivelse af
-tilføjelsen, henvises til [ændringslog for tilføjelsen][3].
+For a list of changes made between each add-on releases, refer to
+[changelogs for add-on releases][4] document.
 
 ## Generelt
 
@@ -147,6 +151,8 @@ Dette henviser til stemmeadgangsfunktionen introduceret i Windows 11 22H2.
 
 [1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
 
-[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+
+[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
