@@ -2,14 +2,14 @@
 
 * Auteurs: Joseph Lee, Derek Riemer et autres utilisateurs
 * Télécharger [version stable][1]
-* Télécharger [version de développement][2]
+* Download [beta version][2]
+* Download [development version][3]
 * NVDA compatibility: 2022.4 and later
 
 Remarque : à l'origine appelé Windows 10 App Essentials, elle a été renommée
 Windows App Essentials en 2021 pour prendre en charge Windows 10 et les
-versions futures telles que Windows 11. Certaines parties de ce module
-complémentaire feront toujours référence au nom du module complémentaire
-d'origine.
+versions futures telles que Windows 11. Certaines parties de cette feront
+toujours référence au nom de l'extension d'origine.
 
 Cette extension est une collection d'app modules pour diverses apps de
 Windows 10, ainsi que des améliorations et des correctifs pour certains
@@ -47,6 +47,9 @@ Notes:
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders in canary
   and dev channels.
+* Add-on dev channel will include changes including experimental content
+  that may or may not be included in beta and stable releases, and beta
+  channel will come with changes planned for future stable releases.
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
 * Some apps support compact overlay mode (always on top in Calculator, for
@@ -58,9 +61,8 @@ Notes:
   changements de focus" dans le panneau des paramètres du Mode navigation de
   NVDA.
 
-Pour obtenir la liste des changements effectuées entre chaque version de
-l'extension, reportez-vous au document [changelogs pour les versions de
-l'extension][3].
+For a list of changes made between each add-on releases, refer to
+[changelogs for add-on releases][4] document.
 
 ## Générale
 
@@ -155,6 +157,8 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 [1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
 
-[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+
+[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

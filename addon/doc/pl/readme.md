@@ -2,7 +2,8 @@
 
 * Autorzy: Joseph Lee, Derek Riemer i inni
 * Pobierz [wersja stabilna][1]
-* Pobierz [wersja rozwojowa][2]
+* Download [beta version][2]
+* Download [development version][3]
 * Zgodność z NVDA: 2022.4 i nowsze
 
 Uwaga: Pierwotniea nazwa tego dodatku była Windows 10 App Essentials, a
@@ -48,6 +49,9 @@ Notatki:
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders in canary
   and dev channels.
+* Add-on dev channel will include changes including experimental content
+  that may or may not be included in beta and stable releases, and beta
+  channel will come with changes planned for future stable releases.
 * Niektóre funkcje dodatkowe są lub będą częścią czytnika ekranu NVDA.
 * Niektóre aplikacje obsługują tryb kompaktowej nakładki (na przykład zawsze
   na wierzchu w Kalkulatorze), a ten tryb nie będzie działał poprawnie z
@@ -57,8 +61,8 @@ Notatki:
   włącz ustawienie "Automatyczny tryb ustawiania ostrości dla zmian
   ostrości" w panelu ustawień trybu przeglądania NVDA.
 
-Listę zmian wprowadzonych między poszczególnymi wersjami dodatków można
-znaleźć w dokumencie [dzienniki zmian dla wydań dodatków][3].
+For a list of changes made between each add-on releases, refer to
+[changelogs for add-on releases][4] document.
 
 ## Ogólne
 
@@ -153,6 +157,8 @@ Odnosi się to do funkcji dostępu głosowego wprowadzonej w systemie Windows
 
 [1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
 
-[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+
+[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

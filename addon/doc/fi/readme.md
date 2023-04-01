@@ -2,7 +2,8 @@
 
 * Tekijät: Joseph Lee, Derek Riemer sekä muut
 * Lataa [vakaa versio][1]
-* Lataa [kehitysversio][2]
+* Lataa [beetaversio][2]
+* Lataa [kehitysversio][3]
 * Yhteensopivuus: NVDA 2022.4 ja uudemmat
 
 Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
@@ -46,6 +47,9 @@ Huomautuksia:
 * Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
   varsinkaan sellaisia, jotka esitellään vain osalle canary- ja
   dev-kanavilla olevista käyttäjistä.
+* Lisäosan dev-kanava sisältää muutoksia, mukaan lukien kokeellinen sisältö,
+  joka saatetaan sisällyttää beeta- ja vakaisiin versioihin, ja beta-kanava
+  sisältää tuleviin vakaisiin versioihin suunniteltuja muutoksia.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
 * Jotkin sovellukset tukevat kompaktia peitetilaa (esim. Laskimen Aina
   päällimmäisenä), joka ei toimi oikein NVDA:n massamuistiversion kanssa.
@@ -55,7 +59,7 @@ Huomautuksia:
   -asetuksen NVDA:n Selaustila-asetuspaneelista.
 
 Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
-[lisäosajulkaisujen muutoslokeista.][3]
+[lisäosajulkaisujen muutoslokit][4] -dokumentista.
 
 ## Yleistä
 
@@ -149,6 +153,8 @@ versiossa 22H2.
 
 [1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
 
-[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+
+[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

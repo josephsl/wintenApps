@@ -2,7 +2,8 @@
 
 * Autori: Joseph Lee, Derek Riemer i drugi
 * Preuzmi [stabilnu verziju][1]
-* Preuzmi [razvojnu verziju][2]
+* Preuzmi [beta verziju][2]
+* Preuzmi [razvojnu verziju][3]
 * NVDA kompatibilnost: 2022.4 i novije verzije
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
@@ -44,6 +45,9 @@ Napomene:
 * Windows Insider Preview gradnje neće podržati sve značajke, pogotovo
   značajke koje su predstavljene u podskupu „Windows Insiders” u kanalima
   canary i razvoja.
+* Add-on dev channel will include changes including experimental content
+  that may or may not be included in beta and stable releases, and beta
+  channel will come with changes planned for future stable releases.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 * Neke aplikacije podržavaju način kompaktnog preklapanja (na primjer,
   uvijek na vrhu u Kalkulatoru) i ovaj modus neće ispravno raditi s
@@ -53,8 +57,8 @@ Napomene:
   postavku „Automatski modus fokusa za promjene fokusa” u ploči postavki
   modusa čitanja NVDA čitača.
 
-Za popis promjena izvršenih između svakog izdanja dodatka, pogledaj
-[dokument s izmjenama izdanja dodatka][3].
+Za popis promjena između izdanja dodatka, pogledaj dokument [s izmjenama
+izdanja dodatka][4].
 
 ## Opće
 
@@ -148,6 +152,8 @@ Windows 11 22H2.
 
 [1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
 
-[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+
+[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

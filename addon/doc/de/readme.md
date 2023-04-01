@@ -2,7 +2,8 @@
 
 * Autoren: Joseph Lee, Derek Riemer und weitere
 * [Stabile Version herunterladen][1]
-* [Entwicklerversion herunterladen][2]
+* [Beta-Version herunterladen][2]
+* [Entwicklerversion herunterladen][3]
 * NVDA-Kompatibilität: 2022.4 und neuer
 
 Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
@@ -44,9 +45,14 @@ Hinweise:
 * Wenn der Updater für NVDA-Erweiterungen installiert ist und Add-on-Updates
   im Hintergrund aktiviert sind, wird Windows App Essentials auf nicht
   unterstützten Windows-Versionen überhaupt nicht installiert.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in canary
-  and dev channels.
+* Nicht alle Funktionen von Windows Insider Preview-Builds werden
+  unterstützt. Dies gilt vor allem für Funktionen, die einer Untergruppe von
+  Windows Insidern im Canary- und Dev-Channel vorgestellt werden.
+* Der Dev-Kanal der NVDA-Erweiterung wird Änderungen enthalten,
+  einschließlich experimenteller Inhalte, die in den Beta- und
+  Stable-Releases enthalten sein können oder auch nicht, und der Beta-Kanal
+  wird Änderungen enthalten, die für zukünftige Stable-Releases geplant
+  sind.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 * Einige Anwendungen unterstützen den kompakten Überlagerungsmodus
   (z. B. "Immer oben" im Taschenrechner), und dieser Modus funktioniert
@@ -56,9 +62,9 @@ Hinweise:
   aktivieren Sie die Einstellung "Automatischer Fokusmodus bei
   Fokusänderungen" im NVDA-Einstellungsdialogfeld für den Suchmodus.
 
-Eine Liste aller Änderungen in den einzelnen Versionen der Erweiterung
-finden Sie im Dokument [Änderungsprotokolle  der veröffentlichten
-Versionen][3].
+Eine Liste der Änderungen, die zwischen den einzelnen Versionen der
+NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
+[Änderungsprotokolle für Versionen der NVDA-Erweiterung][4].
 
 ## Allgemein
 
@@ -155,6 +161,8 @@ für den Sprachzugang.
 
 [1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=w10-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
 
-[3]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+
+[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
