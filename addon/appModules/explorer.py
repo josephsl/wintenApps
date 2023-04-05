@@ -130,6 +130,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# NVDA Core issue 14388: announce File Explorer tab switches (Windows 11 22H2 and later).
+		# Resolved in NVDA 2023.2 (remove this method completely).
 		import speech
 		import braille
 		import eventHandler
