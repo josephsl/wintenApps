@@ -52,9 +52,6 @@ Bemærkninger:
   channel will come with changes planned for future stable releases.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
-* Nogle apps understøtter kompakt overlejring (for eksempel Bevar Øverst i
-  lommeregner), og denne tilstand fungerer ikke korrekt med flytbare kopier
-  af NVDA.
 * For at få den bedste oplevelse med apps, der integrerer webteknologier og
   indhold som f.eks. Start-menuen og dens kontekstmenu, skal du aktivere
   indstillingen "Automatisk fokustilstand ved ændring af fokus" fra NVDAs
@@ -84,7 +81,7 @@ For a list of changes made between each add-on releases, refer to
   Explorer.
 * In aps such as File Explorer and Notepad where tabbed windows are
   supported, NVDA will announce the name and the position of tabs when
-  switching between them.
+  switching between them. This is now part of NVDA 2023.2.
 
 ## Cortana
 
@@ -149,10 +146,10 @@ Dette henviser til stemmeadgangsfunktionen introduceret i Windows 11 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
+[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
+[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
 
-[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
 
 [4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

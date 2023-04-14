@@ -31,7 +31,6 @@
 * 并非支持所有的 Windows Insider Preview 版本，更偏向于支持由开发或金丝雀通道引入 Windows Insider 的功能。
 * 插件的 Dev 通道将包括可能包含或不包含在测试版和稳定版中的实验性内容，而Beta 通道将会包含为未来稳定版计划的更改。
 * 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
-* 某些应用程序支持紧凑叠加模式（例如，计算器中的始终置顶模式），该模式无法在 NVDA 的便携版中使用。
 * 为了获得内嵌 Web 试图（例如开始菜单及其上下文菜单）的应用程序的最佳体验，请在 NVDA
   的浏览模式设置面板启用“输入焦点移动时的自动焦点模式支持”。
 
@@ -47,7 +46,7 @@
 * 改进了 Windows 10 和 11 任务栏的使用体验，包括在按 Alt+Shift+左/右箭头键时朗读重新排列图标的结果（Windows11
   内部版本 25267）以及在任务栏图标间移动时读出项目位置（Windows10 和 11内部版本 25281）。
 * 在文件资源管理器中的空文件夹内会提示空文件夹。
-* 在文件资源管理器和记事本等支持标签式窗口的应用程序中，NVDA 会在标签间切换时读出标签的名称和位置。
+* 在文件资源管理器和记事本等支持标签式窗口的应用程序中，NVDA 会在标签间切换时读出标签的名称和位置。该特性已经包含在 NVDA2023.1 中。
 
 ## Cortana
 
@@ -90,10 +89,10 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
+[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
+[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
 
-[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
 
 [4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

@@ -51,8 +51,6 @@ Huomautuksia:
   joka saatetaan sisällyttää beeta- ja vakaisiin versioihin, ja beta-kanava
   sisältää tuleviin vakaisiin versioihin suunniteltuja muutoksia.
 * Jotkin lisäosan ominaisuudet ovat tai tulevat olemaan osa NVDA:ta.
-* Jotkin sovellukset tukevat kompaktia peitetilaa (esim. Laskimen Aina
-  päällimmäisenä), joka ei toimi oikein NVDA:n massamuistiversion kanssa.
 * Saat parhaan kokemuksen verkkotekniikoita ja -sisältöä hyödyntävistä
   sovelluksista, kuten Käynnistä-valikosta ja sen pikavalikosta, ottamalla
   käyttöön "Automaattinen vuorovaikutustila kohdistuksen muuttuessa"
@@ -83,7 +81,7 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   Resurssienhallinnassa.
 * NVDA puhuu välilehtien nimen ja sijainnin niiden välillä vaihdettaessa
   sellaisissa sovelluksissa, joissa välilehti-ikkunoita tuetaan
-  (esim. Resurssienhallinta ja Muistio).
+  (esim. Resurssienhallinta ja Muistio). Tämä sisältyy NVDA 2023.2:een.
 
 ## Cortana
 
@@ -151,10 +149,10 @@ versiossa 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
+[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
+[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
 
-[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
 
 [4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

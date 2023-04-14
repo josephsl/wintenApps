@@ -54,9 +54,6 @@ Hinweise:
   wird Änderungen enthalten, die für zukünftige Stable-Releases geplant
   sind.
 * Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
-* Einige Anwendungen unterstützen den kompakten Überlagerungsmodus
-  (z. B. "Immer oben" im Taschenrechner), und dieser Modus funktioniert
-  nicht ordnungsgemäß mit der portablen NVDA-Version.
 * Für eine optimale Nutzung von Anwendungen, die Webtechnologien und
   -inhalte einbetten, wie z. B. das Startmenü und sein Kontextmenü,
   aktivieren Sie die Einstellung "Automatischer Fokusmodus bei
@@ -86,9 +83,10 @@ NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
   Taskleistensymbole (Windows 10 und 11 vor Build 25281).
 * NVDA teilt leeren Ordnertext innerhalb eines leeren Ordners im
   Datei-Explorer mit.
-* In Programmen wie Datei-Explorer und Notepad, Die Fenster mit
-  Registerkarten unterstützen, zeigt NVDA den Namen und die Position der
-  Registerkarten an, wenn Sie zwischen ihnen wechseln.
+* In Programmen wie dem Datei-Explorer und dem Notepad, in denen Fenster mit
+  Registerkarten unterstützt werden, zeigt NVDA den Namen und die Position
+  der Registerkarten an, wenn zwischen ihnen gewechselt wird. Dies ist nun
+  Teil in NVDA 2023.2.
 
 ## Cortana
 
@@ -159,10 +157,10 @@ für den Sprachzugang.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
+[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
+[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
 
-[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
 
 [4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
