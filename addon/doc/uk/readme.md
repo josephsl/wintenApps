@@ -51,9 +51,6 @@ Windows, а також удосконаленням та виправлення�
   that may or may not be included in beta and stable releases, and beta
   channel will come with changes planned for future stable releases.
 * Деякі функції додатка є або будуть частиною NVDA.
-* Деякі програми підтримують компактний режим накладання (завжди зверху в
-  Калькуляторі, наприклад), і цей режим не буде працювати належним чином з
-  переносною версією NVDA.
 * Для найкращого досвіду роботи з програмами, які включають веб-технології
   та вміст, наприклад меню «Пуск» і його контекстне меню, увімкніть параметр
   «Автоматичний перехід в режим фокуса при зміні фокуса» у розділі "Режим
@@ -82,9 +79,9 @@ For a list of changes made between each add-on releases, refer to
   збірки 25281).
 * NVDA оголосить текст «порожнья папка» всередині порожньої папки у
   «Файловому провіднику».
-* У таких програмах, як «Файловий провідник» та «Блокнот», де підтримуються
-  вікна з вкладками, NVDA оголошуватиме назву та положення вкладок під час
-  перемикання між ними.
+* In aps such as File Explorer and Notepad where tabbed windows are
+  supported, NVDA will announce the name and the position of tabs when
+  switching between them. This is now part of NVDA 2023.2.
 
 ## Cortana
 
@@ -153,10 +150,10 @@ Windows 10 натисніть клавішу пробілу замість кл�
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
+[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
+[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
 
-[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
 
 [4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

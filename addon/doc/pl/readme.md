@@ -2,8 +2,8 @@
 
 * Autorzy: Joseph Lee, Derek Riemer i inni
 * Pobierz [wersja stabilna][1]
-* Download [beta version][2]
-* Download [development version][3]
+* Pobierz [wersja beta][2]
+* Pobierz [wersja rozwojowa][3]
 * Zgodność z NVDA: 2022.4 i nowsze
 
 Uwaga: Pierwotniea nazwa tego dodatku była Windows 10 App Essentials, a
@@ -46,23 +46,21 @@ Notatki:
 * Jeśli jest zainstalowany program Add-on Updater i włączone są aktualizacje
   dodatków w tle, program Windows App Essentials nie zostanie w ogóle
   zainstalowany w nieobsługiwanych wersjach systemu Windows.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in canary
-  and dev channels.
-* Add-on dev channel will include changes including experimental content
-  that may or may not be included in beta and stable releases, and beta
-  channel will come with changes planned for future stable releases.
+* Nie wszystkie funkcje kompilacji Windows Insider Preview będą obsługiwane,
+  tym bardziej w przypadku funkcji wprowadzonych do podzbioru niejawnych
+  testerów systemu Windows w kanałach kanarkowych i deweloperskich.
+* Kanał deweloperski dodatków będzie zawierał zmiany, w tym zawartość
+  eksperymentalną, która może, ale nie musi być zawarta w wersjach beta i
+  stabilnych, a kanał beta będzie zawierał zmiany planowane dla przyszłych
+  stabilnych wydań.
 * Niektóre funkcje dodatkowe są lub będą częścią czytnika ekranu NVDA.
-* Niektóre aplikacje obsługują tryb kompaktowej nakładki (na przykład zawsze
-  na wierzchu w Kalkulatorze), a ten tryb nie będzie działał poprawnie z
-  przenośną wersją NVDA.
 * Aby uzyskać najlepsze wrażenia z aplikacji, które osadzają technologie
   internetowe i zawartość, taką jak menu Start i jego menu kontekstowe,
   włącz ustawienie "Automatyczny tryb ustawiania ostrości dla zmian
   ostrości" w panelu ustawień trybu przeglądania NVDA.
 
-For a list of changes made between each add-on releases, refer to
-[changelogs for add-on releases][4] document.
+Lista zmian wprowadzonych pomiędzy poszczególnymi wydaniami dodatków
+znajduje się w dokumencie [changelogs for add-on releases][4].
 
 ## Ogólne
 
@@ -71,21 +69,23 @@ For a list of changes made between each add-on releases, refer to
   desktop 2).
 * W systemie Windows 11 NVDA ogłosi najważniejsze elementy wyszukiwania w
   menu Start po jego otwarciu. Jest to teraz część NVDA 2023.1.
-* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window and Open With
-  dialog. This is now part of NVDA 2023.1.
+* W systemie Windows 11 22H2 i nowszych interakcja myszą i/lub dotykiem może
+  być używana do interakcji z przeprojektowanym oknem przepełnienia
+  zasobnika systemowego i oknem dialogowym Otwórz za pomocą. Jest to teraz
+  część NVDA 2023.1.
 * NVDA zapisze architekturę procesora dla bieżącej instalacji systemu
   Windows (x86/32-bit, AMD64, ARM64) po jej uruchomieniu. Jest to teraz
   część NVDA 2023.1.
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11 prior to build 25267) and reporting item position when moving
-  through taskbar icons (Windows 10 and 11 prior to build 25281).
+* Ulepszone działanie paska zadań systemu Windows 10 i 11, w tym ogłaszanie
+  wyników zmiany rozmieszczenia ikon po naciśnięciu Alt + Shift + strzałek w
+  lewo / w prawo (Windows 11 przed kompilacją 25267) i raportowanie pozycji
+  elementu podczas poruszania się po ikonach paska zadań (Windows 10 i 11
+  przed kompilacją 25281).
 * NVDA ogłosi komunikat o pustym folderze wewnątrz pustego folderu w
   Eksploratorze plików.
-* In aps such as File Explorer and Notepad where tabbed windows are
-  supported, NVDA will announce the name and the position of tabs when
-  switching between them.
+* W punktach takich jak Eksplorator plików i Notatnik, gdzie obsługiwane są
+  okna z zakładkami, NVDA ogłosi nazwę i pozycję kart podczas przełączania
+  między nimi. Jest to teraz część NVDA 2023.2.
 
 ## Cortana
 
@@ -155,10 +155,10 @@ Odnosi się to do funkcji dostępu głosowego wprowadzonej w systemie Windows
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
+[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
+[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
 
-[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
 
 [4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

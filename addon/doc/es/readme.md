@@ -55,9 +55,6 @@ Notas:
   futuras.
 * Algunas de las características del complemento son o serán parte del
   lector de pantalla NVDA.
-* Algunas aplicaciones soportan el modo de superposición compacta (siempre
-  visible en la calculadora, por ejemplo), y este modo no funcionará
-  adecuadamente con la versión portable de NVDA.
 * Para tener la mejor experiencia posible con aplicaciones que incrustan
   tecnologías y contenidos web, como el menú Inicio y su menú contextual,
   activa la opción "Modo Foco automático para cambios del foco" desde el
@@ -88,7 +85,8 @@ complemento, consulta el documento [changelogs for add-on releases][4].
   el explorador de archivos.
 * En aplicaciones como el explorador de archivos y el bloc de notas, donde
   se soportan ventanas con pestañas, NVDA anunciará el nombre y la posición
-  de las pestañas al pasar entre ellas.
+  de las pestañas al pasar entre ellas. Esto ahora forma parte de NVDA
+  2023.2.
 
 ## Cortana
 
@@ -160,10 +158,10 @@ Esto hace referencia a la función de acceso por voz introducida en Windows
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
+[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
+[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
 
-[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
 
 [4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
