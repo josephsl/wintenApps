@@ -53,9 +53,6 @@ Notas:
   channel will come with changes planned for future stable releases.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
-* Algunhas apps soportan o modo de capa compacto (sempre enriba na
-  Calculadora, por exemplo), e este modo non funcionará correctamente coa
-  versión portable de NVDA.
 * Para a mellor experiencia con aplicacións que incrustan tecnoloxías web e
   con contido como o menú inicio e o seu menú de contexto, habilita a opción
   "Modo foco automático para cambios do foco" dende o panel de modo
@@ -83,9 +80,9 @@ For a list of changes made between each add-on releases, refer to
   tarefas (Windows 10 e 11 antes da compilación 25281).
 * NVDA anunciará o texto carpeta baleira dentro dunha carpeta baleira no
   Explorador de Arquivos.
-* En aplicacións como o Explorador de Arquivos ou o Bloc de Notas onde se
-  soportan as xanelas en lapelas, NVDA anunciará o nome e a posición das
-  lapelas ó cambiar entre elas.
+* In aps such as File Explorer and Notepad where tabbed windows are
+  supported, NVDA will announce the name and the position of tabs when
+  switching between them. This is now part of NVDA 2023.2.
 
 ## Cortana
 
@@ -155,10 +152,10 @@ Esto se refiere a la característica Acceso por voz introducida en Windows 11
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
+[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
+[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
 
-[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
 
 [4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

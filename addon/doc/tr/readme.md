@@ -52,9 +52,6 @@ Notlar:
   channel will come with changes planned for future stable releases.
 * Bazı eklenti özellikleri, NVDA ekran okuyucusunun bir parçasıdır veya
   yakında olacaktır.
-* Some apps support compact overlay mode (always on top in Calculator, for
-  example), and this mode will not work properly with the portable version
-  of NVDA.
 * For best experience with apps that embed web technologies and content such
   as Start menu and its context menu, enable "Automatic focus mode for focus
   changes" setting from NVDA's browse mode settings panel.
@@ -82,7 +79,7 @@ For a list of changes made between each add-on releases, refer to
   Explorer.
 * In aps such as File Explorer and Notepad where tabbed windows are
   supported, NVDA will announce the name and the position of tabs when
-  switching between them.
+  switching between them. This is now part of NVDA 2023.2.
 
 ## Cortana
 
@@ -144,10 +141,10 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
+[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
+[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
 
-[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
 
 [4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

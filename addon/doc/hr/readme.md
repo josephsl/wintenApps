@@ -45,13 +45,11 @@ Napomene:
 * Windows Insider Preview gradnje neće podržati sve značajke, pogotovo
   značajke koje su predstavljene u podskupu „Windows Insiders” u kanalima
   canary i razvoja.
-* Add-on dev channel will include changes including experimental content
-  that may or may not be included in beta and stable releases, and beta
-  channel will come with changes planned for future stable releases.
+* Kanal dodataka u razvoju uključivat će promjene uključujući
+  eksperimentalni sadržaj koji može, ali ne mora biti uključen u beta i
+  stabilnim izdanjima, a beta kanal će sadržati promjene koje su planirane
+  za buduća stabilna izdanja.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
-* Neke aplikacije podržavaju način kompaktnog preklapanja (na primjer,
-  uvijek na vrhu u Kalkulatoru) i ovaj modus neće ispravno raditi s
-  prijenosnom verzijom NVDA čitača.
 * Za najbolje iskustvo s aplikacijama koje ugrađuju web tehnologije i
   sadržaj kao što je izbornik Start i njegov kontekstni izbornik, aktiviraj
   postavku „Automatski modus fokusa za promjene fokusa” u ploči postavki
@@ -82,7 +80,7 @@ izdanja dodatka][4].
 * NVDA će najaviti tekst prazne mape unutar prazne mape u File Exploreru.
 * U aplikacijama kao što su File Explorer i Notepad gdje su podržani prozori
   s karticama, NVDA će najaviti ime i položaj kartica prilikom prebacivanja
-  između njih.
+  između njih. Ovo je sada dio NVDA verzije 2023.2.
 
 ## Cortana
 
@@ -150,10 +148,10 @@ Windows 11 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
+[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
+[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
 
-[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
 
 [4]: https://github.com/josephsl/wintenapps/wiki/w10changelog

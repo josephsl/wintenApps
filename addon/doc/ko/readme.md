@@ -2,8 +2,8 @@
 
 * 저자: Joseph Lee(이성원), Derek Riemer 외 다수
 * [출시 버전][1]
-* Download [beta version][2]
-* Download [development version][3]
+* [베타 버전][2]
+* [개발 버전][3]
 * NVDA 호환: 2022.4 이상
 
 참고: 윈도우 10 이상(특히 윈도우 11)을 지원하기 위해 2021년에 Windows 10 App Essentials에서 Windows
@@ -36,13 +36,10 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   that may or may not be included in beta and stable releases, and beta
   channel will come with changes planned for future stable releases.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
-* 여러 앱은 미니(compact overlay) 모드(예: 계산기)를 지원하지만 이 모드는 휴대용 NVDA를 사용시 제대로 사용할 수
-  없습니다.
 * 시작 메뉴 팝업 메뉴와 같이 웹 기술이 적용된 앱 사용시 NVDA 브라우즈 모드에 있는 "포커스 이동 시 자동 포커스 모드 전환"
   기능을 활성화하시기 바랍니다.
 
-For a list of changes made between each add-on releases, refer to
-[changelogs for add-on releases][4] document.
+추가 기능 변경 내역은 [변경 내용 문서][4]에서 확인할 수 있습니다.
 
 ## 일반
 
@@ -63,7 +60,7 @@ For a list of changes made between each add-on releases, refer to
   Explorer.
 * In aps such as File Explorer and Notepad where tabbed windows are
   supported, NVDA will announce the name and the position of tabs when
-  switching between them.
+  switching between them. This is now part of NVDA 2023.2.
 
 ## Cortana
 
@@ -118,10 +115,10 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=wintenApps
+[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
-[2]: https://addons.nvda-project.org/files/get.php?file=wintenApps-beta
+[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
 
-[3]: https://addons.nvda-project.org/files/get.php?file=wintenApps-dev
+[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
 
 [4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
