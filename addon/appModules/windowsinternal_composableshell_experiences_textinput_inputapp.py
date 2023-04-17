@@ -3,7 +3,7 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
-# The add-on version of this module will extend the one that comes with NVDA Core (2018.3 and later).
+# The add-on version of this module will extend the one that comes with NVDA Core.
 # For IME candidate item/UI definition, Flake8 must be told to ignore it.
 
 from typing import List, Callable
