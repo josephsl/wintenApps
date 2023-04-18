@@ -95,39 +95,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# NVDA Core takes care of the rest.
 		super().chooseNVDAObjectOverlayClasses(obj, clsList)
 
-	def _detectEmptyFolder(self, obj: NVDAObject):
-		import UIAHandler
-		from . import appmodUtils
-		try:
-			lastUIItem = appmodUtils.findUIADescendant(
-				obj, UIAHandler.UIA_ClassNamePropertyId, "UIItemsView"
-			).lastChild
-		except LookupError:
-			return
-		# NVDA Core issue 5759: announce empty folder text.
-		if (
-			isinstance(lastUIItem, UIA)
-			and lastUIItem.role == controlTypes.Role.STATICTEXT
-			and lastUIItem.UIAElement.currentClassName == "Element"
-		):
-			ui.message(lastUIItem.name)
-
-	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
-		if obj.windowClassName == "ShellTabWindowClass":
-			self._detectEmptyFolder(obj)
-		nextHandler()
-
-	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Originally written by Javi Dominguez as part of Explorer Enhancements add-on.
-		if (
-			isinstance(obj, UIA)
-			and obj.role == controlTypes.Role.LIST
-			and obj.UIAElement.currentClassName == "UIItemsView"
-		):
-			self._detectEmptyFolder(obj.parent.parent)
-		nextHandler()
-
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# NVDA Core issue 14388: announce File Explorer tab switches (Windows 11 22H2 and later).
 		# Resolved in NVDA 2023.2 (remove this method completely).
