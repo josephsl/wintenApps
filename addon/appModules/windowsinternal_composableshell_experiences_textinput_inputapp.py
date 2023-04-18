@@ -57,7 +57,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				return
 			# NVDA is stuck in a nonexistent edit field.
 			elif focusLocation is not None and not any(focusLocation):
-				self._emojiPanelClosed(obj)
+				eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 				return
 		# In Windows 11, candidate panel houses candidate items, not the prediction window.
 		if automationId == "TEMPLATE_PART_CandidatePanel":
@@ -134,7 +134,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_gainFocus(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Focus gets stuck in Modern keyboard when clipboard history closes in Windows 11.
 		if obj.parent.childCount == 0:
-			self._emojiPanelClosed(obj)
+			eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 		nextHandler()
 
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
