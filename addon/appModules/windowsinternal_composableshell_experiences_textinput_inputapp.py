@@ -18,7 +18,6 @@ import eventHandler
 import UIAHandler
 import controlTypes
 import api
-from logHandler import log
 from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
 
