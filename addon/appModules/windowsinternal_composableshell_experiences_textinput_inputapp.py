@@ -97,12 +97,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		if firstChild is None:
 			return
 		firstChildAutomationId = firstChild.UIAAutomationId
-		# Log which modern keyboard header is active.
-		if log.isEnabledFor(log.DEBUG):
-			log.debug(
-				"winapps: Automation Id for currently opened modern keyboard feature "
-				f"is {firstChildAutomationId}"
-			)
 		# Originally part of this method, split into an internal function to reduce complexity.
 		# However, in Windows 11, combined emoji panel and clipboard history moves system focus to itself.
 		# Therefore there is no need to add UIA elements to local event handler group.
