@@ -36,11 +36,6 @@ class ImeCandidateItem(ImeCandidateItem):  # type: ignore[no-redef]
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
-	def _emojiPanelClosed(self, obj: NVDAObject):
-		# Move NVDA's focus object to what is actually focused on screen.
-		# This is needed in Windows 11 when emoji panel closes.
-		eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
-
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		automationId = obj.UIAAutomationId
 		# Do not proceed if emoji panel category item is selected when the panel itself is gone.
