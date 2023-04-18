@@ -28,6 +28,7 @@ class ImeCandidateItem(ImeCandidateItem):  # type: ignore[no-redef]
 
 	def event_UIA_elementSelected(self) -> None:
 		# Focus event is fired when a candidate item receives focus, therefore ignore this event.
+		# Resolved in NVDA 2023.2 (remove this method completely).
 		if winVersion.getWinVer() >= winVersion.WIN11:
 			return
 		super().event_UIA_elementSelected()
@@ -66,6 +67,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				self._emojiPanelClosed(obj)
 				return
 		# In Windows 11, candidate panel houses candidate items, not the prediction window.
+		# Resolved in NVDA 2023.2.
 		if automationId == "TEMPLATE_PART_CandidatePanel":
 			obj = obj.firstChild
 		# The following is applicable on Windows 10 (including Server 2022).
@@ -185,6 +187,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
 		# Recognize more candidate UI and item elements in Windows 11.
 		# Return after checking each item so candidate UI and items from Windows 10 can be recognized.
+		# Resolved in NVDA 2023.2 (remove this method completely).
 		if isinstance(obj, UIA):
 			role = obj.role
 			# Candidate item.
