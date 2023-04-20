@@ -27,8 +27,13 @@ def handlePossibleDesktopNameChange():
 		virtualDesktopName = None
 
 
-def doPreGainFocus(obj: "NVDAObjects.NVDAObject", sleepMode: bool = False) -> bool:
+def winapps_doPreGainFocus(obj: "NVDAObjects.NVDAObject", sleepMode: bool = False) -> bool:
 	from IAccessibleHandler import SecureDesktopNVDAObject
+	from utils.security import objectBelowLockScreenAndWindowsIsLocked
+	import config
+	from logHandler import log
+	import api
+	import speech
 
 	if objectBelowLockScreenAndWindowsIsLocked(
 		obj,
@@ -73,12 +78,12 @@ def doPreGainFocus(obj: "NVDAObjects.NVDAObject", sleepMode: bool = False) -> bo
 				newForeground=obj
 		if not api.setForegroundObject(newForeground):
 			return False
-		executeEvent('foreground', newForeground)
+		eventHandler.executeEvent('foreground', newForeground)
 	handlePossibleDesktopNameChange()
 	if sleepMode: return True
 	#Fire focus entered events for all new ancestors of the focus if this is a gainFocus event
 	for parent in api.getFocusAncestors()[api.getFocusDifferenceLevel():]:
-		executeEvent("focusEntered",parent)
+		eventHandler.executeEvent("focusEntered",parent)
 	if obj.treeInterceptor is not oldTreeInterceptor:
 		if hasattr(oldTreeInterceptor,"event_treeInterceptor_loseFocus"):
 			oldTreeInterceptor.event_treeInterceptor_loseFocus()
