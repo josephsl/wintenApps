@@ -17,5 +17,7 @@ class AppModule(appModuleHandler.AppModule):
 		# NVDA Core issue 5641: try catching virtual desktop switch event,
 		# which will result in name change for the desktop object.
 		if obj.windowClassName == "#32769":
-			core.callLater(100, ui.message, obj.name)
+			import globalPlugins.winappObjs
+			globalPlugins.winappObjs.virtualDesktopName = obj.name
+			core.callLater(100, globalPlugins.winappObjs.handlePossibleDesktopNameChange)
 		nextHandler()
