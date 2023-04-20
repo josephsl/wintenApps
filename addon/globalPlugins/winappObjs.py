@@ -27,6 +27,65 @@ def handlePossibleDesktopNameChange():
 		virtualDesktopName = None
 
 
+def doPreGainFocus(obj: "NVDAObjects.NVDAObject", sleepMode: bool = False) -> bool:
+	from IAccessibleHandler import SecureDesktopNVDAObject
+
+	if objectBelowLockScreenAndWindowsIsLocked(
+		obj,
+		shouldLog=config.conf["debugLog"]["events"],
+	):
+		return False
+	oldFocus=api.getFocusObject()
+	oldTreeInterceptor=oldFocus.treeInterceptor if oldFocus else None
+	if not api.setFocusObject(obj):
+		return False
+	if speech.manager._shouldCancelExpiredFocusEvents():
+		log._speechManagerDebug("executeEvent: Removing cancelled speech commands.")
+		# ask speechManager to check if any of it's queued utterances should be cancelled
+		# Note: Removing cancelled speech commands should happen after all dependencies for the isValid check
+		# have been updated:
+		# - obj.WAS_GAIN_FOCUS_OBJ_ATTR_NAME
+		# - api.setFocusObject()
+		# - api.getFocusAncestors()
+		# When these are updated:
+		# - obj.WAS_GAIN_FOCUS_OBJ_ATTR_NAME
+		#   - Set during creation of the _CancellableSpeechCommand.
+		# - api.getFocusAncestors() via api.setFocusObject() called in doPreGainFocus
+		speech._manager.removeCancelledSpeechCommands()
+
+	if (
+		api.getFocusDifferenceLevel() <= 1
+		# This object should not set off a foreground event.
+		# SecureDesktopNVDAObject uses a gainFocus event to trigger NVDA
+		# to sleep as the secure instance of NVDA starts for the
+		# secure desktop.
+		# The newForeground object fetches from the User Desktop,
+		# not the secure desktop.
+		and not isinstance(obj, SecureDesktopNVDAObject)
+	):
+		newForeground=api.getDesktopObject().objectInForeground()
+		if not newForeground:
+			log.debugWarning("Can not get real foreground, resorting to focus ancestors")
+			ancestors=api.getFocusAncestors()
+			if len(ancestors)>1:
+				newForeground=ancestors[1]
+			else:
+				newForeground=obj
+		if not api.setForegroundObject(newForeground):
+			return False
+		executeEvent('foreground', newForeground)
+	if sleepMode: return True
+	#Fire focus entered events for all new ancestors of the focus if this is a gainFocus event
+	for parent in api.getFocusAncestors()[api.getFocusDifferenceLevel():]:
+		executeEvent("focusEntered",parent)
+	if obj.treeInterceptor is not oldTreeInterceptor:
+		if hasattr(oldTreeInterceptor,"event_treeInterceptor_loseFocus"):
+			oldTreeInterceptor.event_treeInterceptor_loseFocus()
+		if obj.treeInterceptor and obj.treeInterceptor.isReady and hasattr(obj.treeInterceptor,"event_treeInterceptor_gainFocus"):
+			obj.treeInterceptor.event_treeInterceptor_gainFocus()
+	return True
+
+
 # #20: don't even think about proceeding in secure screens.
 def disableInSecureMode(cls):
 	return globalPluginHandler.GlobalPlugin if globalVars.appArgs.secure else cls
