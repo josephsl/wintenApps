@@ -9,6 +9,22 @@ from NVDAObjects.UIA import Dialog
 from NVDAObjects import NVDAObject
 import globalVars
 import UIAHandler
+import eventHandler
+
+
+virtualDesktopName = None
+
+
+def handlePossibleDesktopNameChange():
+	"""
+	Reports the new virtual desktop name if changed.
+	On Windows versions lower than Windows 10, this function does nothing.
+	"""
+	global virtualDesktopName
+	if virtualDesktopName:
+		import ui
+		ui.message(virtualDesktopName)
+		virtualDesktopName = None
 
 
 # #20: don't even think about proceeding in secure screens.
