@@ -77,8 +77,6 @@ For a list of changes made between each add-on releases, refer to
   вліво/вправо (Windows 11 до збірки 25267) і повідомлення про позицію
   елемента при переміщенні по піктограмах панелі завдань (Windows 10 і 11 до
   збірки 25281).
-* NVDA оголосить текст «порожнья папка» всередині порожньої папки у
-  «Файловому провіднику».
 * In aps such as File Explorer and Notepad where tabbed windows are
   supported, NVDA will announce the name and the position of tabs when
   switching between them. This is now part of NVDA 2023.2.

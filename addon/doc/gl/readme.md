@@ -78,8 +78,6 @@ For a list of changes made between each add-on releases, refer to
   Alt+Shift+Frechas esquerda/dereita (Windows 11 antes da compilación 25267)
   e o anunciado da posición do elemento ó moverse por iconos da barra de
   tarefas (Windows 10 e 11 antes da compilación 25281).
-* NVDA anunciará o texto carpeta baleira dentro dunha carpeta baleira no
-  Explorador de Arquivos.
 * In aps such as File Explorer and Notepad where tabbed windows are
   supported, NVDA will announce the name and the position of tabs when
   switching between them. This is now part of NVDA 2023.2.

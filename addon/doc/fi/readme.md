@@ -77,8 +77,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   Alt+Vaihto+Vasen/Oikea nuolinäppäin (Windows 11 ennen koontiversiota
   25267) ja kohteen sijainnin ilmoittaminen tehtäväpalkin kuvakkeiden
   välillä liikuttaessa (Windows 10 ja 11 ennen koontiversiota 25281).
-* NVDA ilmoittaa tyhjästä kansiosta, kun sellainen avataan
-  Resurssienhallinnassa.
 * NVDA puhuu välilehtien nimen ja sijainnin niiden välillä vaihdettaessa
   sellaisissa sovelluksissa, joissa välilehti-ikkunoita tuetaan
   (esim. Resurssienhallinta ja Muistio). Tämä sisältyy NVDA 2023.2:een.

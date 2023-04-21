@@ -81,8 +81,6 @@ znajduje się w dokumencie [changelogs for add-on releases][4].
   lewo / w prawo (Windows 11 przed kompilacją 25267) i raportowanie pozycji
   elementu podczas poruszania się po ikonach paska zadań (Windows 10 i 11
   przed kompilacją 25281).
-* NVDA ogłosi komunikat o pustym folderze wewnątrz pustego folderu w
-  Eksploratorze plików.
 * W punktach takich jak Eksplorator plików i Notatnik, gdzie obsługiwane są
   okna z zakładkami, NVDA ogłosi nazwę i pozycję kart podczas przełączania
   między nimi. Jest to teraz część NVDA 2023.2.
