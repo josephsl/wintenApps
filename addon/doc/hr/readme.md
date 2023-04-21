@@ -77,7 +77,6 @@ izdanja dodatka][4].
   strelica lijevo/desno (Windows 11 prije izgradnje 25267) i izvještavanje o
   položaju stavke prilikom kretanja kroz ikone programske trake (Windows 10
   i 11 prije izgradnje 25281).
-* NVDA će najaviti tekst prazne mape unutar prazne mape u File Exploreru.
 * U aplikacijama kao što su File Explorer i Notepad gdje su podržani prozori
   s karticama, NVDA će najaviti ime i položaj kartica prilikom prebacivanja
   između njih. Ovo je sada dio NVDA verzije 2023.2.

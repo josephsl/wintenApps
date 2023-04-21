@@ -81,8 +81,6 @@ NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
   Alt+Umschalt+Pfeiltasten nach links/rechts (Windows 11 vor Build 25267)
   und durch die Anzeige der Elementposition beim Bewegen durch die
   Taskleistensymbole (Windows 10 und 11 vor Build 25281).
-* NVDA teilt leeren Ordnertext innerhalb eines leeren Ordners im
-  Datei-Explorer mit.
 * In Programmen wie dem Datei-Explorer und dem Notepad, in denen Fenster mit
   Registerkarten unterstützt werden, zeigt NVDA den Namen und die Position
   der Registerkarten an, wenn zwischen ihnen gewechselt wird. Dies ist nun

@@ -81,8 +81,6 @@ complemento, consulta el documento [changelogs for add-on releases][4].
   alt+shift+flechas izquierda y derecha (antes de la compilación 25267) e
   indicando la posición del elemento al moverse por iconos de la barra de
   tareas (Windows 10 y 11 antes de la compilación 25281).
-* NVDA anunciará el texto de carpeta vacía dentro de las carpetas vacías en
-  el explorador de archivos.
 * En aplicaciones como el explorador de archivos y el bloc de notas, donde
   se soportan ventanas con pestañas, NVDA anunciará el nombre y la posición
   de las pestañas al pasar entre ellas. Esto ahora forma parte de NVDA
