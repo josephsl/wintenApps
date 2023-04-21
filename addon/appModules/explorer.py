@@ -19,7 +19,7 @@ from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
 from winAPI.types import HWNDValT
 import scriptHandler
-import wx
+import core
 import addonHandler
 addonHandler.initTranslation()
 
@@ -64,14 +64,14 @@ class TaskbarItem(NVDAObject):
 		announcePosition = winVersion.getWinVer() >= winVersion.WIN11 and isinstance(self.next, TaskbarItem)
 		gesture.send()
 		if announcePosition:
-			wx.CallLater(1, self.announceDragPosition)
+			core.callLater(1, self.announceDragPosition)
 
 	@scriptHandler.script(gesture="kb:alt+shift+leftArrow")
 	def script_moveLeft(self, gesture) -> None:
 		announcePosition = winVersion.getWinVer() >= winVersion.WIN11 and isinstance(self.previous, TaskbarItem)
 		gesture.send()
 		if announcePosition:
-			wx.CallLater(1, self.announceDragPosition)
+			core.callLater(1, self.announceDragPosition)
 
 
 # App module class comes from built-in File Explorer app module but Mypy doesn't know that.
