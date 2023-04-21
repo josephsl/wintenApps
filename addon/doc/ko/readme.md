@@ -56,8 +56,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11 prior to build 25267) and reporting item position when moving
   through taskbar icons (Windows 10 and 11 prior to build 25281).
-* NVDA will announce empty folder text inside an empty folder in File
-  Explorer.
 * In aps such as File Explorer and Notepad where tabbed windows are
   supported, NVDA will announce the name and the position of tabs when
   switching between them. This is now part of NVDA 2023.2.
