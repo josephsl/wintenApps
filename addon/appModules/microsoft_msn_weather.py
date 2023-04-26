@@ -1,6 +1,6 @@
 # MSN Weather
 # Part of Windows App Essentials collection
-# Copyright 2016-2023 Derek Riemer, released under GPL.
+# Copyright 2016-2023 Derek Riemer, Joseph Lee, released under GPL.
 
 # Provides workarounds for the weather app.
 
