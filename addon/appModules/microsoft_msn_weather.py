@@ -14,7 +14,7 @@ import scriptHandler
 
 # Regexp for deciding whether this ID should be a tab control
 RE_TAB_AUTOMATION_MATCH = re.compile("|".join([
-	r"L1NavigationButton_(Places|Home|Maps|Historical|News|Pollen|Life|HourlyForecast|MonthlyForecast)",
+	r"L1NavigationButton_(Places|Home|Maps|Historical|Pollen|Life|HourlyForecast|MonthlyForecast)",
 	r"L1NavigationButton_Feedback",
 ]))
 # Regexp for deciding if this should be a button
