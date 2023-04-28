@@ -4,7 +4,7 @@
 * Descargar [versión estable][1]
 * Download [beta version][2]
 * Download [development version][3]
-* Compatibilidade con NVDA: 2022.4 e posterior
+* NVDA compatibility: 2023.1 and later
 
 Nota: Orixinalmente chamado Windows 10 App Essentials, renomeouse a windows
 App Essentials en 2021 para soportar windows 10 e versións futuras como
@@ -31,8 +31,8 @@ se inclúe):
 
 Notas:
 
-* Este complemento require do Windows 10 21H2 (compilación 19044), 11 22H2
-  (compilación 22000), ou versións posteriores.
+* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
+  or later releases.
 * O soporte das actualizacións de características está vencellado á duración
   do soporte ó consumidor (edicións Home, Pro, Pro Education, Pro for
   Workstations) e o complemento podería rematar o soporte para unha
@@ -65,14 +65,6 @@ For a list of changes made between each add-on releases, refer to
 
 * Cando se abran, pechen ou se cambie entre escritorios virtuales, NVDA
   anunciará o nome do escritorio activo (escritorio 2, por exemplo).
-* En Windows 11,, NVDA anunciará os destaques da procura no Menú inicio
-  cando se abra. Agora isto forma parte de NVDA 2023.1.
-* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window and Open With
-  dialog. This is now part of NVDA 2023.1.
-* NVDA gravará a arquitectura do procesador para a instalación actual de
-  Windows (x86/32 bits, AMD64, ARM64) cando se inicie. Agora isto forma
-  parte de NVDA 2023.1.
 * Mellorada a experiencia coa barra de tarefas en Windows 10 e 11, incluíndo
   o anunciado dos resultados ó reordear iconos premendo as teclas
   Alt+Shift+Frechas esquerda/dereita (Windows 11 antes da compilación 25267)
@@ -102,13 +94,6 @@ e establece o nivel de símbolos en "algunha" ou superior. Ó pegar dende o
 historial do portapapeis en Windows 10, preme a tecla Espazo no canto de
 Intro para pegar o elemento seleccionado.
 
-* No panel de emoji de windows 10, cando se selecciona un grupo de emojis
-  (incluindo kaomoji e grupos de símbolos), NVDA xa non moverá o navegador
-  de obxectos a certos emojis.
-* No historial do portapapeis de Windows 11, o modo exploración
-  desactivarase por defecto, deseñado para permitir que NVDA anuncie os
-  elementos do menú de entradas do historial do portapapeis. Isto agora
-  forma parte de NVDA 2023.1.
 * En Windows 11 22H2 e posterior, NVDA anunciará accións suxeridas cando se
   copien ó portapapeis datos compatibles como números de teléfono.
 

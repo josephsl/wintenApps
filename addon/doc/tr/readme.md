@@ -4,7 +4,7 @@
 * [kararlı sürüm][1]ü indir
 * Download [beta version][2]
 * Download [development version][3]
-* NVDA uyumluluğu: 2022.4 ve üstü
+* NVDA compatibility: 2023.1 and later
 
 Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
 adlandırılırken, Windows 10 ve Windows 11 gibi gelecekteki windows
@@ -33,7 +33,7 @@ bakın):
 
 Notlar:
 
-* This add-on requires Windows 10 21H2 (build 19044), 11 21H2 (build 22000),
+* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
   or later releases.
 * Feature update support duration is tied to consumer support duration
   (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
@@ -63,14 +63,6 @@ For a list of changes made between each add-on releases, refer to
 
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce active virtual desktop name (desktop 2, for example).
-* In Windows 11, NVDA will announce search highlights in Start menu when it
-  opens. This is now part of NVDA 2023.1.
-* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window and Open With
-  dialog. This is now part of NVDA 2023.1.
-* NVDA will record processor architecture for the current Windows
-  installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
-  of NVDA 2023.1.
 * Improved Windows 10 and 11 taskbar experience, including announcing
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11 prior to build 25267) and reporting item position when moving
@@ -98,12 +90,6 @@ setting from NVDA's speech settings and set symbol level to "some" or
 higher. When pasting from clipboard history in Windows 10, press Space key
 instead of Enter key to paste the selected item.
 
-* Windows 10'da bir emoji grubu (kaomoji ve semboller grubu dahil)
-  seçildiğinde, NVDA artık nesne sunucusunu belirli emojilere
-  taşımayacaktır.
-* In Windows 11 clipboard history, browse mode will be turned off by
-  default, designed to let NVDA announce clipboard history entry menu
-  items. This is now part of NVDA 2023.1.
 * In Windows 11 22H2 and later, NVDA will announce suggested actions when
   compatible data such as phone numbers is copied to the clipboard.
 

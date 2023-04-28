@@ -4,7 +4,7 @@
 * Pobierz [wersja stabilna][1]
 * Pobierz [wersja beta][2]
 * Pobierz [wersja rozwojowa][3]
-* Zgodność z NVDA: 2022.4 i nowsze
+* NVDA compatibility: 2023.1 and later
 
 Uwaga: Pierwotniea nazwa tego dodatku była Windows 10 App Essentials, a
 potem została zmieniona na Windows App Essentials w 2021 roku, aby
@@ -32,8 +32,8 @@ dołączone, zobacz każdą sekcję aplikacji):
 
 Notatki:
 
-* Ten dodatek wymaga systemu Windows 10 21H2 (kompilacja 19044), 11 21H2
-  (kompilacja 22000) lub nowszych wersji.
+* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
+  or later releases.
 * Czas trwania pomocy technicznej dotyczącej aktualizacji funkcji jest
   powiązany z czasem trwania pomocy technicznej dla klientów (wersje Home,
   Pro, Pro Education, Pro dla stacji roboczych), a dodatek może zakończyć
@@ -67,15 +67,6 @@ znajduje się w dokumencie [changelogs for add-on releases][4].
 * Podczas otwierania, zamykania lub przełączania się między wirtualnymi
   pulpitami, NVDA ogłosi nazwę aktywnego wirtualnego pulpitu (na przykład
   desktop 2).
-* W systemie Windows 11 NVDA ogłosi najważniejsze elementy wyszukiwania w
-  menu Start po jego otwarciu. Jest to teraz część NVDA 2023.1.
-* W systemie Windows 11 22H2 i nowszych interakcja myszą i/lub dotykiem może
-  być używana do interakcji z przeprojektowanym oknem przepełnienia
-  zasobnika systemowego i oknem dialogowym Otwórz za pomocą. Jest to teraz
-  część NVDA 2023.1.
-* NVDA zapisze architekturę procesora dla bieżącej instalacji systemu
-  Windows (x86/32-bit, AMD64, ARM64) po jej uruchomieniu. Jest to teraz
-  część NVDA 2023.1.
 * Ulepszone działanie paska zadań systemu Windows 10 i 11, w tym ogłaszanie
   wyników zmiany rozmieszczenia ikon po naciśnięciu Alt + Shift + strzałek w
   lewo / w prawo (Windows 11 przed kompilacją 25267) i raportowanie pozycji
@@ -105,12 +96,6 @@ poziom symbolu na "niektóre" lub wyższe. Podczas wklejania z historii
 schowka w systemie Windows 10 naciśnij spacji zamiast Enter, aby wkleić
 wybrany element.
 
-* W panelu emoji systemu Windows 10, gdy wybrana jest grupa emoji (w tym
-  grupa kaomoji i symbole), NVDA nie będzie już przenosić obiektu nawigatora
-  do niektórych emotikonów.
-* W historii schowka systemu Windows 11 tryb przeglądania będzie domyślnie
-  wyłączony, zaprojektowany tak, aby umożliwić NVDA ogłaszanie elementów
-  menu wprowadzania historii schowka. Jest to teraz część NVDA 2023.1.
 * W systemie Windows 11 22H2 i nowszych NVDA poinformuje o sugerowanych
   działaniach, gdy kompatybilne dane, takie jak numery telefonów, zostaną
   skopiowane do schowka.

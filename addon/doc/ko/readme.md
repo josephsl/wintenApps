@@ -4,7 +4,7 @@
 * [출시 버전][1]
 * [베타 버전][2]
 * [개발 버전][3]
-* NVDA 호환: 2022.4 이상
+* NVDA compatibility: 2023.1 and later
 
 참고: 윈도우 10 이상(특히 윈도우 11)을 지원하기 위해 2021년에 Windows 10 App Essentials에서 Windows
 App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름이 뜰 수 있습니다.
@@ -23,7 +23,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 사용시 주의 사항:
 
-* 본 추가 기능은 윈도우 10 21H2(빌드 19044), 11 21H2(빌드 22000) 이상을 지원합니다.
+* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
+  or later releases.
 * 기능 업데이트 지원일은 일반 사용자 버전(Home, Pro, Pro Education, Pro for Workstations)을
   기준으로 하며 지원 종료전 추가 기능 자체에서 기능 업데이트 지원을 종료할 수 있습니다. 자세한 정보 및 기능 업데이트 지원에
   대해서는 aka.ms/WindowsTargetVersioninfo를 참고하시기 바랍니다.
@@ -44,14 +45,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 ## 일반
 
 * 가상 데스크탑을 열때/닫을때/변경시 NVDA가 데스크탑 이름(예: Desktop 2)를 출력하도록 함.
-* In Windows 11, NVDA will announce search highlights in Start menu when it
-  opens. This is now part of NVDA 2023.1.
-* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window and Open With
-  dialog. This is now part of NVDA 2023.1.
-* NVDA will record processor architecture for the current Windows
-  installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
-  of NVDA 2023.1.
 * Improved Windows 10 and 11 taskbar experience, including announcing
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11 prior to build 25267) and reporting item position when moving
@@ -75,9 +68,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 말합니다. 에모지 탐색시 Unicode CLDR 설정을 활성하고 기호 읽기를 "일부" 이상으로 설정하시기 바랍니다. 윈도우 10에서
 클립보드 히스토리 사용시 스페이스를 눌러 선택된 내용을 붙여넣으시기 바랍니다.
 
-* 윈도우 10 에모지 페널에서 에모지 그룹(카오모지 및 기호 그룹 포함) 선택시 탐색 객체가 특정 에모지에 고정되는 문제 수정.
-* 윈도우 11 클립보드 히스토리에서 항목 팝업 메뉴를 제대로 출력할 수 있도록 브라우즈 모드가 반영되지 않도록 함(NVDA
-  2023.1에 본 기능이 추가됨).
 * 윈도우 11 22H2 이상에서 전화번호와 같은 내용이 클립보드에 복사되었을때 나타나는 추천 엑션을 출력하도록 함.
 
 ## 설정 앱

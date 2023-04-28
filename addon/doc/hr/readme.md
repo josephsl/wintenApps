@@ -4,7 +4,7 @@
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [beta verziju][2]
 * Preuzmi [razvojnu verziju][3]
-* NVDA kompatibilnost: 2022.4 i novije verzije
+* NVDA compatibility: 2023.1 and later
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
@@ -30,8 +30,8 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* Ovaj dodatak zahtijeva Windows 10 21H2 (gradnja 19044), 11 21H2 (gradnja
-  22000) ili novija izdanja.
+* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
+  or later releases.
 * Trajanje podrške za aktualiziranje značajki povezano je s trajanjem
   korisničke podrške (izdanja Home, Pro, Pro Education, Pro for
   Workstations) i dodatak može prekinuti podršku za aktualiziranje značajki
@@ -63,15 +63,6 @@ izdanja dodatka][4].
 * Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
   površina, NVDA će najaviti ime aktivne virtualne radne površine (na
   primjer radna površina 2).
-* U sustavu Windows 11, NVDA će najaviti istaknute stavke pretraživanja u
-  izborniku Start kada se otvori. Ovo je sada dio u NVDA čitača 2023.1.
-* U sustavu Windows 11 22H2 i daljnjim izdanjima, interakcija mišem i/ili
-  dodirom može se koristiti za interakciju s redizajniranim prozorom trake
-  sustava i dijaloškim okvirom „Otvori pomoću”. Ovo je sada dio NVDA verzije
-  2023.1.
-* NVDA će zabilježiti arhitekturu procesora za trenutačnu Windows
-  instalaciju (x86/32-bit, AMD64, ARM64) kad se pokrene. Ovo je sada dio
-  NVDA čitača 2023.1.
 * Poboljšana programska traka sustava Windows 10 i 11, uključujući
   najavljivanje rezultata premještanja ikona kada se pritisne Alt+Šift+tipke
   strelica lijevo/desno (Windows 11 prije izgradnje 25267) i izvještavanje o
@@ -100,12 +91,6 @@ postavi razinu simbola na „neki” ili višu. Prilikom umetanja iz povijesti
 međuspremnika u sustavu Windows 10, za umetanje odabranog elementa pritisni
 tipku za razmak umjesto tipke Enter.
 
-* U ploči emojija sustava Windows 10, kad je jedna grupa emojija odabrana
-  (uključujući kaomoji i grupa simbola), NVDA više neće pomicati
-  navigacijski objekt na određene emojije.
-* U povijesti međuspremnika sustava Windows 11, način pregledavanja bit će
-  standardno isključen, kako bi NVDA najavio stavke izbornika unosa
-  povijesti međuspremnika. Ovo je sada dio NVDA čitača 2023.1.
 * U sustavu Windows 11 22H2 i novijim verzijama, NVDA će najaviti predložene
   radnje kad se kompatibilni podaci poput telefonskih brojeva kopiraju u
   međuspremnik.

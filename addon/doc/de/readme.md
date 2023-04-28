@@ -4,7 +4,7 @@
 * [Stabile Version herunterladen][1]
 * [Beta-Version herunterladen][2]
 * [Entwicklerversion herunterladen][3]
-* NVDA-Kompatibilität: 2022.4 und neuer
+* NVDA compatibility: 2023.1 and later
 
 Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
 2021 in Windows App Essentials umbenannt, um Windows 10 und zukünftige
@@ -31,8 +31,8 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* Diese Erweiterung erfordert Windows 10 Version 21H2 (Build 19044), Windows
-  11 Version 21H2 (Build 22000) oder neuere Versionen.
+* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
+  or later releases.
 * Die Dauer der Unterstützung für Feature-Updates ist an die Dauer des
   Consumer-Supports (Home, Pro, Pro Education, Pro for Workstations
   Editionen) gebunden und die Erweiterung kann den Support für ein
@@ -67,15 +67,6 @@ NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
 
 * Beim Öffnen, Schließen oder Umschalten zwischen virtuellen Desktops teilt
   NVDA den Namen des aktiven virtuellen Desktops mit (z. B. Desktop 2).
-* In Windows 11 zeigt NVDA beim Öffnen des Startmenüs die Highlights der
-  Suche an. Dies ist jetzt Teil von NVDA 2023.1.
-* In Windows 11 Version 22H2 und neuer kann die Maus- bzw. Touch-Interaktion
-  zur Interaktion mit dem neu gestalteten Überlauffenster der Taskleiste und
-  dem Dialogfeld "Öffnen mit" verwendet werden. Dies ist nun Teil von NVDA
-  2023.1.
-* NVDA zeichnet die Prozessor-Architektur für die aktuelle
-  Windows-Installation (x86/32-bit, AMD64, ARM64) auf, wenn es gestartet
-  wird. Dies ist nun Teil von NVDA 2023.1.
 * Die Taskleiste von Windows 10 und 11 wurde verbessert, u. a. durch die
   Anzeige der Ergebnisse der Neuanordnung von Symbolen beim Drücken von
   Alt+Umschalt+Pfeiltasten nach links/rechts (Windows 11 vor Build 25267)
@@ -107,12 +98,6 @@ Sie die Symbolebene auf "Einige" oder höher. Drücken Sie beim Einfügen aus
 dem Verlauf der Zwischenablage in Windows 10 die Leertaste anstelle der
 Eingabetaste, um das ausgewählte Element einzufügen.
 
-* Wenn im Emoji-Panel von Windows 10 eine Emoji-Gruppe (einschließlich der
-  Kaomoji- und Symbolgruppe) ausgewählt wird, verschiebt NVDA das
-  Navigations-Objekt nicht mehr zu bestimmten Emojis.
-* In der Zwischenablage von Windows 11 wird der Durchsuchen-Modus
-  standardmäßig ausgeschaltet, damit NVDA Menü-Einträge für die
-  Zwischenablage mitteilen kann. Dies ist nun Teil von NVDA 2023.1.
 * In Windows 11 Version 22H2 und neuer zeigt NVDA vorgeschlagene Aktionen
   an, wenn kompatible Daten wie Telefonnummern in die Zwischenablage kopiert
   werden.

@@ -4,7 +4,7 @@
 * Baixe a [versão estável][1]
 * Download [beta version][2]
 * Download [development version][3]
-* Compatibilidade com NVDA: 2022.4 e posteriores
+* NVDA compatibility: 2023.1 and later
 
 Nota: Originalmente chamado de Windows 10 App Essentials, foi renomeado para
 Windows App Essentials em 2021 para oferecer suporte ao Windows 10 e versões
@@ -32,8 +32,8 @@ detalhes sobre o que está incluso):
 
 Notas:
 
-* Este complemento requer o Windows 10 21H2 (compilação 19044), 11 21H2
-  (compilação 22000), ou posteriors.
+* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
+  or later releases.
 * Feature update support duration is tied to consumer support duration
   (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
   may end support for a feature update prior to end of consumer support. See
@@ -62,14 +62,6 @@ For a list of changes made between each add-on releases, refer to
 
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce active virtual desktop name (desktop 2, for example).
-* In Windows 11, NVDA will announce search highlights in Start menu when it
-  opens. This is now part of NVDA 2023.1.
-* In Windows 11 22H2 and later, mouse and/or touch interaction can be used
-  to interact with redesigned system tray overflow window and Open With
-  dialog. This is now part of NVDA 2023.1.
-* NVDA will record processor architecture for the current Windows
-  installation (x86/32-bit, AMD64, ARM64) when it starts. This is now part
-  of NVDA 2023.1.
 * Improved Windows 10 and 11 taskbar experience, including announcing
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11 prior to build 25267) and reporting item position when moving
@@ -97,12 +89,6 @@ setting from NVDA's speech settings and set symbol level to "some" or
 higher. When pasting from clipboard history in Windows 10, press Space key
 instead of Enter key to paste the selected item.
 
-* No Windows 10, quando um grupo de emoji (incluindo kaomoji e grupo de
-  símbolos) é selecionado, o NVDA não moverá mais a navegação de objeto para
-  certos emojis.
-* In Windows 11 clipboard history, browse mode will be turned off by
-  default, designed to let NVDA announce clipboard history entry menu
-  items. This is now part of NVDA 2023.1.
 * In Windows 11 22H2 and later, NVDA will announce suggested actions when
   compatible data such as phone numbers is copied to the clipboard.
 

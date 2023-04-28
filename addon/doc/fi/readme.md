@@ -4,7 +4,7 @@
 * Lataa [vakaa versio][1]
 * Lataa [beetaversio][2]
 * Lataa [kehitysversio][3]
-* Yhteensopivuus: NVDA 2022.4 ja uudemmat
+* Yhteensopivuus: NVDA 2023.1 ja uudemmat
 
 Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
 nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows
@@ -32,7 +32,7 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautuksia:
 
-* Tämä lisäosa edellyttää Windows 10:n versiota 21H2 (koontiversio 19044),
+* Tämä lisäosa edellyttää Windows 10:n versiota 22H2 (koontiversio 19045),
   11:n versiota 21H2 (koontiversio 22000) tai uudempaa.
 * Ominaisuuspäivityksen tuen kesto on sidottu kuluttajatuen kestoon (Home,
   Pro, Pro Education, Pro for Workstations -versiot), ja lisäosa saattaa
@@ -63,15 +63,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 * NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
   avattaessa, suljettaessa tai siirryttäessä virtuaalityöpöytien välillä.
-* NVDA ilmoittaa Windows 11:ssä haun kohokohdat Käynnistä-valikossa sen
-  avautuessa. Tämä sisältyy NVDA 2023.1:een.
-* Windows 11 22H2:ssa ja uudemmissa voidaan nyt käyttää hiirtä ja/tai
-  kosketuseleitä vuorovaikutuksessa uudelleensuunnitellun ilmaisinalueen
-  ylivuotoikkunan ja Avaa sovelluksessa -valintaikkunan kanssa. Tämä
-  sisältyy NVDA 2023.1:een.
-* NVDA tallentaa käynnistyessään nykyisen Windows-asennuksen
-  suoritinarkkitehtuurin (x86/32-bittinen, AMD64, ARM64). Tämä sisältyy NVDA
-  2023.1:een.
 * Paranneltu Windows 10:n ja 11:n tehtäväpalkin kokemusta, mukaan lukien
   kuvakkeiden uudelleenjärjestämisen tulosten puhuminen painettaessa
   Alt+Vaihto+Vasen/Oikea nuolinäppäin (Windows 11 ennen koontiversiota
@@ -101,12 +92,6 @@ parhaan kokemuksen saamiseksi, ja aseta symbolitasoksi "jotain" tai
 korkeampi. Kun liität leikepöydän historiasta, liitä valittu kohde
 painamalla Välilyönti-näppäintä Enterin sijaan.
 
-* Kun emojiryhmä (kaomoji ja symboliryhmä mukaan lukien) valitaan Windows
-  10:n emojipaneelissa, NVDA ei enää siirrä navigointiobjektia tiettyihin
-  emojeihin.
-* Selaustila poistetaan käytöstä oletusarvoisesti Windows 11:n leikepöydän
-  historiassa, minkä tarkoituksena on mahdollistaa NVDA:lle historian
-  valikkokohteiden lukeminen. Tämä sisältyy NVDA 2023.1:een.
 * NVDA ilmoittaa ehdotetut toiminnot Windows 11 22H2:ssa ja uudemmissa, kun
   leikepöydälle kopioidaan yhteensopivaa dataa, kuten puhelinnumeroita.
 
