@@ -17,6 +17,7 @@ def onInstall():
 	# Support duration is tied to consumer-level support (18 months for Windows 10, 2 years for Windows 11)
 	# and the add-on may end support for a feature update prior to end of consumer support.
 	# Applicable to Home, Pro, Pro Education, Pro for Workstations (see aka.ms/WindowsTargetVersioninfo).
+	# Windows 10 Version 22H2 is supported until October 2025 as this is the final feature update.
 	supportedBuilds = {
 		# Windows 10
 		19045: "Windows 10 22H2",
