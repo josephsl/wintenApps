@@ -11,7 +11,6 @@ import typing
 from typing import Dict, Callable
 # Flake8 F403: detect other add-ons that overrode File Explorer app module.
 from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
-import winVersion
 import controlTypes
 import ui
 from NVDAObjects.UIA import UIA
