@@ -77,7 +77,9 @@ class TaskbarItem(NVDAObject):
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: typing.List[NVDAObject]) -> None:
-		# Announce rearranged taskbar icons in Windows 10 and 11 builds earlier than 25267.
+		# Taskbar item enhancements.
+		# Windows 10 and 11: taskbar item position.
+		# Windows 11 (excluding 25267 to 25346): announced rearranged item position.
 		if obj.role == controlTypes.Role.BUTTON and (
 			(
 				# Windows 10
