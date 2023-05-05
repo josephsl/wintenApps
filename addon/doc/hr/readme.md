@@ -4,7 +4,7 @@
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [beta verziju][2]
 * Preuzmi [razvojnu verziju][3]
-* NVDA compatibility: 2023.1 and later
+* NVDA kompatibilnost: 2023.1 i novije verzije
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
@@ -30,8 +30,8 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
-  or later releases.
+* Ovaj dodatak zahtijeva Windows 10 21H2 (gradnja 19045), 11 21H2 (gradnja
+  22000) ili novija izdanja.
 * Trajanje podrške za aktualiziranje značajki povezano je s trajanjem
   korisničke podrške (izdanja Home, Pro, Pro Education, Pro for
   Workstations) i dodatak može prekinuti podršku za aktualiziranje značajki
@@ -63,11 +63,10 @@ izdanja dodatka][4].
 * Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
   površina, NVDA će najaviti ime aktivne virtualne radne površine (na
   primjer radna površina 2).
-* Poboljšana programska traka sustava Windows 10 i 11, uključujući
-  najavljivanje rezultata premještanja ikona kada se pritisne Alt+Šift+tipke
-  strelica lijevo/desno (Windows 11 prije izgradnje 25267) i izvještavanje o
-  položaju stavke prilikom kretanja kroz ikone programske trake (Windows 10
-  i 11 prije izgradnje 25281).
+* Improved Windows 10 and 11 taskbar experience, including announcing
+  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
+  (Windows 11) and reporting item position when moving through taskbar icons
+  (Windows 10 and 11).
 * U aplikacijama kao što su File Explorer i Notepad gdje su podržani prozori
   s karticama, NVDA će najaviti ime i položaj kartica prilikom prebacivanja
   između njih. Ovo je sada dio NVDA verzije 2023.2.

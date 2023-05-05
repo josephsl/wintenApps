@@ -2,9 +2,9 @@
 
 * Auteurs: Joseph Lee, Derek Riemer et autres utilisateurs
 * Télécharger [version stable][1]
-* Download [beta version][2]
-* Download [development version][3]
-* NVDA compatibility: 2023.1 and later
+* Télécharger [version béta][2]
+* Télécharger [version de développement][3]
+* Compatibilité NVDA: 2023.1 et ultérieure
 
 Remarque : à l'origine appelé Windows 10 App Essentials, elle a été renommée
 Windows App Essentials en 2021 pour prendre en charge Windows 10 et les
@@ -21,35 +21,38 @@ est inclus) :
 
 * Cortana
 * Cartes
-* Modern keyboard (emoji panel/touch keyboard/dictation/voice
-  typing/hardware input suggestions/clipboard history/Suggested
-  Actions/modern input method editors)
+* Clavier moderne (panneau des emojis/clavier tactile/dictée/saisie
+  vocale/suggestions de saisie matérielle/historique du
+  presse-papiers/éditeurs de méthodes de saisie modernes)
 * Paramètres (paramètres système, Windows+I)
 * Accès vocal (Windows 11 22H2)
 * Météo
-* Miscellaneous modules for controls and features such as virtual desktops
-  announcements
+* Divers modules pour des contrôles et des fonctionnalités tels que les
+  annonces de bureau virtuels
 
 Notes:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
-  or later releases.
-* Feature update support duration is tied to consumer support duration
-  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
-  may end support for a feature update prior to end of consumer support. See
-  aka.ms/WindowsTargetVersioninfo for more information and support dates.
+* Cette extension nécessite Windows 10 22H2 (build 19045), Windows 11 21H2
+  (build 22000) ou version ultérieure.
+* La durée du support de mise à jour des fonctionnalités est liée à la durée
+  du support des consommateurs (Home, Pro, Pro Education, Pro for
+  Workstations Editions) et l'extension peut mettre fin à la prise en charge
+  d'une mise à jour des fonctionnalités avant la fin du support des
+  consommateurs. Voir aka.ms/WindowsTargetVersioninfo pour plus
+  d'informations et les dates de support.
 * Bien que l'installation soit possible, cette extension ne prend pas en
   charge les versions Windows Enterprise LTSC (Long-Term Servicing Channel)
   et Windows Server.
-* If Add-on Updater is installed and background add-on updates is enabled,
-  Windows App Essentials will not install at all on unsupported Windows
-  releases.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in canary
-  and dev channels.
-* Add-on dev channel will include changes including experimental content
-  that may or may not be included in beta and stable releases, and beta
-  channel will come with changes planned for future stable releases.
+* Si Add-on Updater est installé et que les mises à jour des extensions en
+  arrière-plan sont activées, Windows App Essentials ne s'installera pas du
+  tout sur les versions Windows non prises en charge.
+* Toutes les fonctionnalités des builds Windows Insider Preview ne seront
+  pas prises en charge, plus encore pour les fonctionnalités introduites
+  dans Windows Insiders sous canary et dev channels.
+* Le canal de développement de l'extension comprendra des modifications, y
+  compris le contenu expérimental qui peut ou non être inclus dans les
+  versions béta et stables, et le canal béta sera livré avec des
+  modifications prévues pour les futures versions stables.
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
 * Pour une meilleure expérience avec les applications qui intègrent des
@@ -58,8 +61,9 @@ Notes:
   changements de focus" dans le panneau des paramètres du Mode navigation de
   NVDA.
 
-For a list of changes made between each add-on releases, refer to
-[changelogs for add-on releases][4] document.
+Pour obtenir la liste des changements effectuées entre chaque version de
+l'extension, reportez-vous au document [changelogs pour les versions de
+l'extension][4].
 
 ## Générale
 
@@ -68,11 +72,12 @@ For a list of changes made between each add-on releases, refer to
   exemple).
 * Improved Windows 10 and 11 taskbar experience, including announcing
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11 prior to build 25267) and reporting item position when moving
-  through taskbar icons (Windows 10 and 11 prior to build 25281).
-* In aps such as File Explorer and Notepad where tabbed windows are
-  supported, NVDA will announce the name and the position of tabs when
-  switching between them. This is now part of NVDA 2023.2.
+  (Windows 11) and reporting item position when moving through taskbar icons
+  (Windows 10 and 11).
+* Dans des aps  tels que File Explorer et Notepad  où les fenêtres à onglets
+  sont prises en charge, NVDA annoncera le nom et la position des onglets
+  lors de la commutation entre eux. Cela fait maintenant partie de NVDA
+  2023.2.
 
 ## Cortana
 
@@ -81,21 +86,24 @@ For a list of changes made between each add-on releases, refer to
 
 ## Cartes
 
-* NVDA will no longer interrupt speech when focused on items other than the
-  map control in some cases.
+* NVDA n'interrompra plus la parole lorsqu'il est focalisé  sur des éléments
+  autres que le contrôle de la carte dans certains cas.
 
 ## Clavier moderne
 
-This includes emoji panel, clipboard history, touch keyboard,
-dictation/voice typing, hardware input suggestions, suggested actions, and
-modern input method editors for certain languages across Windows 10 and
-11. When viewing emojis, for best experience, enable Unicode Consortium
-setting from NVDA's speech settings and set symbol level to "some" or
-higher. When pasting from clipboard history in Windows 10, press Space key
-instead of Enter key to paste the selected item.
+Cela inclut le panneau emoji, l'historique du presse-papiers, le clavier
+tactile, la dictée/la saisie vocale, les suggestions d'entrée matérielle,
+les actions suggérées et les éditeurs de méthodes de saisie modernes pour
+certaines langues sur Windows 10 et 11. Lors de l'affichage des emojis, pour
+une meilleure expérience, activez le paramètre Unicode Consortium à partir
+des paramètres vocaux de NVDA et réglez le niveau de symbole sur "certains"
+ou plus. Lors du collage à partir de l'historique du presse-papiers dans
+Windows 10, appuyez sur la touche Espace au lieu de la touche Entrée pour
+coller l'élément sélectionné.
 
-* In Windows 11 22H2 and later, NVDA will announce suggested actions when
-  compatible data such as phone numbers is copied to the clipboard.
+* Sous Windows 11 22H2 et versions ultérieures, NVDA annoncera des actions
+  suggérées lorsque des données compatibles telles que des numéros de
+  téléphone sont copiées dans le presse-papiers.
 
 ## Paramètres
 
@@ -116,7 +124,7 @@ instead of Enter key to paste the selected item.
 
 ## Accès vocal
 
-This refers to Voice access feature introduced in Windows 11 22H2.
+Il s'agit de la fonction d'accès vocal introduit dans Windows 11 22H2.
 
 * NVDA annoncera l'état du microphone lors du basculement du microphone
   depuis l'interface d'accès vocal.

@@ -40,8 +40,10 @@
 ## 常规增强
 
 * 在新建、关闭、或切换虚拟桌面时，NVDA会读出当前桌面名称（例如，桌面2）。
-* 改进了 Windows 10 和 11 任务栏的使用体验，包括在按 Alt+Shift+左/右箭头键时朗读重新排列图标的结果（Windows11
-  内部版本 25267）以及在任务栏图标间移动时读出项目位置（Windows10 和 11内部版本 25281）。
+* Improved Windows 10 and 11 taskbar experience, including announcing
+  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
+  (Windows 11) and reporting item position when moving through taskbar icons
+  (Windows 10 and 11).
 * 在文件资源管理器和记事本等支持标签式窗口的应用程序中，NVDA 会在标签间切换时读出标签的名称和位置。该特性已经包含在 NVDA2023.1 中。
 
 ## Cortana

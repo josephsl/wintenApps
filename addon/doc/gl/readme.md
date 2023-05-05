@@ -65,11 +65,10 @@ For a list of changes made between each add-on releases, refer to
 
 * Cando se abran, pechen ou se cambie entre escritorios virtuales, NVDA
   anunciará o nome do escritorio activo (escritorio 2, por exemplo).
-* Mellorada a experiencia coa barra de tarefas en Windows 10 e 11, incluíndo
-  o anunciado dos resultados ó reordear iconos premendo as teclas
-  Alt+Shift+Frechas esquerda/dereita (Windows 11 antes da compilación 25267)
-  e o anunciado da posición do elemento ó moverse por iconos da barra de
-  tarefas (Windows 10 e 11 antes da compilación 25281).
+* Improved Windows 10 and 11 taskbar experience, including announcing
+  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
+  (Windows 11) and reporting item position when moving through taskbar icons
+  (Windows 10 and 11).
 * In aps such as File Explorer and Notepad where tabbed windows are
   supported, NVDA will announce the name and the position of tabs when
   switching between them. This is now part of NVDA 2023.2.

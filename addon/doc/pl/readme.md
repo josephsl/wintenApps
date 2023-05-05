@@ -67,11 +67,10 @@ znajduje się w dokumencie [changelogs for add-on releases][4].
 * Podczas otwierania, zamykania lub przełączania się między wirtualnymi
   pulpitami, NVDA ogłosi nazwę aktywnego wirtualnego pulpitu (na przykład
   desktop 2).
-* Ulepszone działanie paska zadań systemu Windows 10 i 11, w tym ogłaszanie
-  wyników zmiany rozmieszczenia ikon po naciśnięciu Alt + Shift + strzałek w
-  lewo / w prawo (Windows 11 przed kompilacją 25267) i raportowanie pozycji
-  elementu podczas poruszania się po ikonach paska zadań (Windows 10 i 11
-  przed kompilacją 25281).
+* Improved Windows 10 and 11 taskbar experience, including announcing
+  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
+  (Windows 11) and reporting item position when moving through taskbar icons
+  (Windows 10 and 11).
 * W punktach takich jak Eksplorator plików i Notatnik, gdzie obsługiwane są
   okna z zakładkami, NVDA ogłosi nazwę i pozycję kart podczas przełączania
   między nimi. Jest to teraz część NVDA 2023.2.

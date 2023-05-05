@@ -63,11 +63,10 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 * NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
   avattaessa, suljettaessa tai siirryttäessä virtuaalityöpöytien välillä.
-* Paranneltu Windows 10:n ja 11:n tehtäväpalkin kokemusta, mukaan lukien
-  kuvakkeiden uudelleenjärjestämisen tulosten puhuminen painettaessa
-  Alt+Vaihto+Vasen/Oikea nuolinäppäin (Windows 11 ennen koontiversiota
-  25267) ja kohteen sijainnin ilmoittaminen tehtäväpalkin kuvakkeiden
-  välillä liikuttaessa (Windows 10 ja 11 ennen koontiversiota 25281).
+* Improved Windows 10 and 11 taskbar experience, including announcing
+  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
+  (Windows 11) and reporting item position when moving through taskbar icons
+  (Windows 10 and 11).
 * NVDA puhuu välilehtien nimen ja sijainnin niiden välillä vaihdettaessa
   sellaisissa sovelluksissa, joissa välilehti-ikkunoita tuetaan
   (esim. Resurssienhallinta ja Muistio). Tämä sisältyy NVDA 2023.2:een.

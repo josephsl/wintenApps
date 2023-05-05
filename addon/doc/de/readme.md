@@ -67,11 +67,10 @@ NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
 
 * Beim Öffnen, Schließen oder Umschalten zwischen virtuellen Desktops teilt
   NVDA den Namen des aktiven virtuellen Desktops mit (z. B. Desktop 2).
-* Die Taskleiste von Windows 10 und 11 wurde verbessert, u. a. durch die
-  Anzeige der Ergebnisse der Neuanordnung von Symbolen beim Drücken von
-  Alt+Umschalt+Pfeiltasten nach links/rechts (Windows 11 vor Build 25267)
-  und durch die Anzeige der Elementposition beim Bewegen durch die
-  Taskleistensymbole (Windows 10 und 11 vor Build 25281).
+* Improved Windows 10 and 11 taskbar experience, including announcing
+  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
+  (Windows 11) and reporting item position when moving through taskbar icons
+  (Windows 10 and 11).
 * In Programmen wie dem Datei-Explorer und dem Notepad, in denen Fenster mit
   Registerkarten unterstützt werden, zeigt NVDA den Namen und die Position
   der Registerkarten an, wenn zwischen ihnen gewechselt wird. Dies ist nun

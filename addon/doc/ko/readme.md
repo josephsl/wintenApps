@@ -4,7 +4,7 @@
 * [출시 버전][1]
 * [베타 버전][2]
 * [개발 버전][3]
-* NVDA compatibility: 2023.1 and later
+* NVDA 호환: 2023.1 이상
 
 참고: 윈도우 10 이상(특히 윈도우 11)을 지원하기 위해 2021년에 Windows 10 App Essentials에서 Windows
 App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름이 뜰 수 있습니다.
@@ -23,8 +23,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 사용시 주의 사항:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
-  or later releases.
+* 본 추가 기능은 윈도우 10 22H2(빌드 19045), 11 21H2(빌드 22000) 이상을 지원합니다.
 * 기능 업데이트 지원일은 일반 사용자 버전(Home, Pro, Pro Education, Pro for Workstations)을
   기준으로 하며 지원 종료전 추가 기능 자체에서 기능 업데이트 지원을 종료할 수 있습니다. 자세한 정보 및 기능 업데이트 지원에
   대해서는 aka.ms/WindowsTargetVersioninfo를 참고하시기 바랍니다.
@@ -47,8 +46,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 가상 데스크탑을 열때/닫을때/변경시 NVDA가 데스크탑 이름(예: Desktop 2)를 출력하도록 함.
 * Improved Windows 10 and 11 taskbar experience, including announcing
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11 prior to build 25267) and reporting item position when moving
-  through taskbar icons (Windows 10 and 11 prior to build 25281).
+  (Windows 11) and reporting item position when moving through taskbar icons
+  (Windows 10 and 11).
 * In aps such as File Explorer and Notepad where tabbed windows are
   supported, NVDA will announce the name and the position of tabs when
   switching between them. This is now part of NVDA 2023.2.
