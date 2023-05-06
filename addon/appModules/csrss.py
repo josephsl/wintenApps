@@ -6,7 +6,6 @@
 
 from typing import Callable
 import appModuleHandler
-import ui
 import core
 from NVDAObjects import NVDAObject
 
