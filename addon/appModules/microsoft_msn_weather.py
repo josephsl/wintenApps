@@ -54,7 +54,7 @@ class AppModule(appModuleHandler.AppModule):
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
 		if (
 			obj.role == controlTypes.Role.LISTITEM
-			and RE_PARENT_LISTS.match(obj.parent.UIAAutomationId)
+			and obj.parent.UIAAutomationId in ("DailyList", "HourlyList")
 		):
 			clsList.insert(0, WeatherForecastItem)
 
