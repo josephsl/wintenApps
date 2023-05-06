@@ -81,8 +81,9 @@ def winapps_doPreGainFocus(obj: "NVDAObjects.NVDAObject", sleepMode: bool = Fals
 			return False
 		eventHandler.executeEvent('foreground', newForeground)
 	handlePossibleDesktopNameChange()
-	if sleepMode: return True
-	#Fire focus entered events for all new ancestors of the focus if this is a gainFocus event
+	if sleepMode:
+		return True
+	# Fire focus entered events for all new ancestors of the focus if this is a gainFocus event
 	for parent in api.getFocusAncestors()[api.getFocusDifferenceLevel():]:
 		eventHandler.executeEvent("focusEntered", parent)
 	if obj.treeInterceptor is not oldTreeInterceptor:
