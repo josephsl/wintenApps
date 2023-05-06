@@ -7,6 +7,7 @@ from typing import List
 import globalPluginHandler
 from NVDAObjects.UIA import Dialog
 from NVDAObjects import NVDAObject
+import NVDAObjects
 import globalVars
 import UIAHandler
 import eventHandler
