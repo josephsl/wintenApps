@@ -125,7 +125,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
 			if isinstance(obj, UIA):
-				if obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView":
+				if obj.UIAAutomationId in (
+					"SystemSettings_MusUpdate_AvailableUpdatesList2_ListView",
+					"SystemSettings_MusUpdate_AvailableUpdatesList3_ListView"
+				):
 					import UIAHandler
 					for updateEntry in obj.children:
 						updateStatus = updateEntry.simpleFirstChild.simpleLastChild
