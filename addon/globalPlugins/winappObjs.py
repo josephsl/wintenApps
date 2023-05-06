@@ -41,8 +41,8 @@ def winapps_doPreGainFocus(obj: "NVDAObjects.NVDAObject", sleepMode: bool = Fals
 		shouldLog=config.conf["debugLog"]["events"],
 	):
 		return False
-	oldFocus=api.getFocusObject()
-	oldTreeInterceptor=oldFocus.treeInterceptor if oldFocus else None
+	oldFocus = api.getFocusObject()
+	oldTreeInterceptor = oldFocus.treeInterceptor if oldFocus else None
 	if not api.setFocusObject(obj):
 		return False
 	if speech.manager._shouldCancelExpiredFocusEvents():
@@ -69,14 +69,14 @@ def winapps_doPreGainFocus(obj: "NVDAObjects.NVDAObject", sleepMode: bool = Fals
 		# not the secure desktop.
 		and not isinstance(obj, SecureDesktopNVDAObject)
 	):
-		newForeground=api.getDesktopObject().objectInForeground()
+		newForeground = api.getDesktopObject().objectInForeground()
 		if not newForeground:
 			log.debugWarning("Can not get real foreground, resorting to focus ancestors")
-			ancestors=api.getFocusAncestors()
-			if len(ancestors)>1:
-				newForeground=ancestors[1]
+			ancestors = api.getFocusAncestors()
+			if len(ancestors) > 1:
+				newForeground = ancestors[1]
 			else:
-				newForeground=obj
+				newForeground = obj
 		if not api.setForegroundObject(newForeground):
 			return False
 		eventHandler.executeEvent('foreground', newForeground)
