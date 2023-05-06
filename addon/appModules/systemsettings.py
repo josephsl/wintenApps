@@ -108,7 +108,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		self._nameChangeCache = ""
 
 	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
+		if winVersion.getWinVer() >= winVersion.WIN11:
 			if isinstance(obj, UIA):
 				if "ApplicableUpdate" in obj.UIAAutomationId:
 					import ui
@@ -123,7 +123,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		nextHandler()
 
 	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
+		if winVersion.getWinVer() >= winVersion.WIN11:
 			if isinstance(obj, UIA):
 				if obj.UIAAutomationId in (
 					"SystemSettings_MusUpdate_AvailableUpdatesList2_ListView",
