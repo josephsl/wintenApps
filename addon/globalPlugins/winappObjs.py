@@ -89,7 +89,11 @@ def winapps_doPreGainFocus(obj: "NVDAObjects.NVDAObject", sleepMode: bool = Fals
 	if obj.treeInterceptor is not oldTreeInterceptor:
 		if hasattr(oldTreeInterceptor, "event_treeInterceptor_loseFocus"):
 			oldTreeInterceptor.event_treeInterceptor_loseFocus()
-		if obj.treeInterceptor and obj.treeInterceptor.isReady and hasattr(obj.treeInterceptor, "event_treeInterceptor_gainFocus"):
+		if (
+			obj.treeInterceptor
+			and obj.treeInterceptor.isReady
+			and hasattr(obj.treeInterceptor, "event_treeInterceptor_gainFocus")
+		):
 			obj.treeInterceptor.event_treeInterceptor_gainFocus()
 	return True
 
