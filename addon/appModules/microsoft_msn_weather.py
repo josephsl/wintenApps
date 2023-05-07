@@ -20,12 +20,6 @@ RE_TAB_AUTOMATION_MATCH = re.compile("|".join([
 RE_BUTTONCONTROL = re.compile("|".join([
 	r"L1NavigationButton_Settings",
 ]))
-# Regexp for multiLine List items, whos children need the list class added.
-# This is because the Automation Id for them is non-existent, so we check their parent.
-RE_PARENT_LISTS = re.compile("|".join([
-	r"DailyList",
-	r"HourlyList",
-]))
 
 
 class WeatherForecastItem(NVDAObject):
