@@ -109,10 +109,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Windows 11 22H2 Moment 1 (October 2022) and later uses modern keyboard interface to display
 		# Suggested Actions such as Skype calls if data such as phone number is copied to the clipboard.
 		# Because keyboard interaction is not possible, just report suggested actions.
-		if (
-			firstChildAutomationId == "Windows.Shell.InputApp.SmartActionsUX"
-			and winVersion.getWinVer() >= winVersion.WIN11_22H2
-		):
+		if firstChildAutomationId == "Windows.Shell.InputApp.SmartActionsUX":
 			import ui
 			suggestedActions = [
 				suggestedAction.name for suggestedAction in firstChild.children if suggestedAction.name
