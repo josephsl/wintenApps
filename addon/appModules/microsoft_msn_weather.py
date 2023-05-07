@@ -22,6 +22,7 @@ RE_BUTTONCONTROL = re.compile("|".join([
 ]))
 
 
+# Deprecated: Weather 4.53.51095 and later shows forecast info in a web document control.
 class WeatherForecastItem(NVDAObject):
 
 	def initOverlayClass(self) -> None:
@@ -46,6 +47,7 @@ class WeatherForecastItem(NVDAObject):
 class AppModule(appModuleHandler.AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
+		# Deprecated: Weather 4.53.51095 and later shows forecast info in a web document control.
 		if (
 			obj.role == controlTypes.Role.LISTITEM
 			and obj.parent.UIAAutomationId in ("DailyList", "HourlyList")
