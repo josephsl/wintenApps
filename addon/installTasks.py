@@ -22,8 +22,7 @@ def onInstall():
 		# Windows 10
 		19045: "Windows 10 22H2",
 		# Windows 11
-		22000: "Windows 11 21H2",
-		22621: "22H2",
+		22621: "Windows 11 22H2",
 	}
 	currentBuild = currentWinVer.build
 	# Optimization: report success (return early) if running a supported release.
