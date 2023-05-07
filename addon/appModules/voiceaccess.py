@@ -16,12 +16,16 @@ from winAPI.types import HWNDValT
 
 class MicrophoneButton(UIA):
 
+	def announceMicStatus(self):
+		# There is no label for this button in build 25200 series, so consult its parent.
+		ui.message(self.name if self.name else self.parent.name)
+
 	@scriptHandler.script(gestures=["kb:space", "kb:enter", "kb:numpadEnter"])
 	def script_toggleMicrophone(self, gesture) -> None:
 		# Until NVDA gets a chance to handle UIA notifications when these commands are pressed...
 		gesture.send()
-		# There is no label for this button in build 25200 series, so consult its parent.
-		ui.message(self.name if self.name else self.parent.name)
+		import core
+		core.callLater(1, self.announceMicStatus)
 
 
 class AppModule(appModuleHandler.AppModule):
