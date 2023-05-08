@@ -46,14 +46,6 @@ class WeatherForecastItem(NVDAObject):
 
 class AppModule(appModuleHandler.AppModule):
 
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
-		# Deprecated: Weather 4.53.51095 and later shows forecast info in a web document control.
-		if (
-			obj.role == controlTypes.Role.LISTITEM
-			and obj.parent.UIAAutomationId in ("DailyList", "HourlyList")
-		):
-			clsList.insert(0, WeatherForecastItem)
-
 	def event_NVDAObject_init(self, obj: NVDAObject):
 		try:
 			theId = obj.UIAAutomationId
