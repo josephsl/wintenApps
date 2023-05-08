@@ -68,7 +68,6 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 ## Weather
 
 * Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by Derek Riemer).
-* When reading a forecast, use the left and right arrows to move between items. Use the up and down arrows to read the individual items. For example, pressing the right arrow might report "Monday: 79 degrees, partly cloudy, ..." pressing the down arrow will say "Monday" Then pressing it again will read the next item (Like the temperature). This currently works for daily and hourly forecasts.
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
