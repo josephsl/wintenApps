@@ -5,12 +5,9 @@
 # Provides workarounds for the weather app.
 
 import re
-from typing import List
 import controlTypes
 import appModuleHandler
-import ui
 from NVDAObjects import NVDAObject
-import scriptHandler
 
 # Regexp for deciding whether this ID should be a tab control
 RE_TAB_AUTOMATION_MATCH = re.compile("|".join([
