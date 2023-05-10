@@ -5,12 +5,9 @@
 # Provides workarounds for the weather app.
 
 import re
-from typing import List
 import controlTypes
 import appModuleHandler
-import ui
 from NVDAObjects import NVDAObject
-import scriptHandler
 
 # Regexp for deciding whether this ID should be a tab control
 RE_TAB_AUTOMATION_MATCH = re.compile("|".join([
@@ -22,37 +19,7 @@ RE_BUTTONCONTROL = re.compile("|".join([
 ]))
 
 
-# Deprecated: Weather 4.53.51095 and later shows forecast info in a web document control.
-class WeatherForecastItem(NVDAObject):
-
-	def initOverlayClass(self) -> None:
-		self.curLine = -1  # Start out reading the first thing.
-		self.lines = self.name.split("\r\n")
-
-	@scriptHandler.script(gesture="kb:downArrow")
-	def script_nextLine(self, gesture) -> None:
-		if self.curLine < len(self.lines) - 1:
-			self.curLine += 1
-		ui.message(self.lines[self.curLine])
-
-	@scriptHandler.script(gesture="kb:upArrow")
-	def script_previousLine(self, gesture) -> None:
-		if self.curLine == -1:
-			self.curLine = 0
-		if self.curLine > 0:
-			self.curLine -= 1
-		ui.message(self.lines[self.curLine])
-
-
 class AppModule(appModuleHandler.AppModule):
-
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
-		# Deprecated: Weather 4.53.51095 and later shows forecast info in a web document control.
-		if (
-			obj.role == controlTypes.Role.LISTITEM
-			and obj.parent.UIAAutomationId in ("DailyList", "HourlyList")
-		):
-			clsList.insert(0, WeatherForecastItem)
 
 	def event_NVDAObject_init(self, obj: NVDAObject):
 		try:
