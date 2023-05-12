@@ -4,7 +4,7 @@
 * 下载[稳定版][1]
 * 下载[测试版][2]
 * 下载[开发板][3]
-* NVDA compatibility: 2023.1 and later
+* NVDA 兼容性：2023.1 及更高版本
 
 注意：此插件最初称为 Windows 10 应用增强，在 2021 年更名为 Windows 应用增强，以支持 Windows 10 和 Windows
 11 等后续版本。此插件的部分内容仍将引用原始插件名称。
@@ -23,8 +23,7 @@
 
 注意:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
-  or later releases.
+* 此插件需要 Windows 10 22H2（内部版本 19045）、11 21H2（内部版本 22000）或更高版本。
 * 功能更新支持期限与消费者支持期限（家庭版、专业版、专业教育版、工作站专业版）相关联，并且插件可能会在消费者支持结束之前终止对功能更新的支持。有关更多信息和支持日期，请参阅
   aka.ms/WindowsTargetVersioninfo。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
@@ -67,9 +66,12 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 
 * NVDA 会读出可选质量更新控件的名称（如果存在）（Windows 10 中的立即下载和安装链接，Windows 11 中的下载按钮）。
 * 在 Windows 11 中，可以正确识别 breadcrumb 栏项目。
-* 在 Windows 10 和 11 22H2 及更高版本中，在 Windows 下载和安装更新过程中 NVDA的朗读会被打断并读出下载或安装进度。
-  如果使用 Windows 11 22H2 及更高版本，且“启用选择性注册 UIA
-  事件和属性改变”的选项处于开启状态，则必须在更新列表出现时立即将焦点移至更新列表，以便 NVDA 可以读出更新进度。
+* NVDA will report updates to Windows Update status as download and install
+  progresses. This may result in speech interruption when navigating
+  Settings app while updates are being downloaded and installed. If using
+  Windows 11 and selective UIA event registration is on or set to selective,
+  you must move focus to updates list as soon as they appear so NVDA can
+  announce update progress.
 
 ## 语音访问
 
@@ -80,7 +82,6 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 ## 天气
 
 * 诸如“预测”和“地图”之类的选项卡被识别为适当的选项卡（来自Derek Riemer的补充修复）。
-* 阅读预测时，请使用左右光标在项目之间移动。使用上下光标读取单个项目。例如，按右光标可能会报告“星期一：79度，间中多云，...”。按向下光标将显示“星期一”，然后再次按将读取下一项（如温度）。目前，该功能可用于每日和每小时预测。
 
 [[!tag dev stable]]
 

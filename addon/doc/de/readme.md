@@ -4,7 +4,7 @@
 * [Stabile Version herunterladen][1]
 * [Beta-Version herunterladen][2]
 * [Entwicklerversion herunterladen][3]
-* NVDA compatibility: 2023.1 and later
+* NVDA-Kompatibilität: 2023.1 und neuer
 
 Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
 2021 in Windows App Essentials umbenannt, um Windows 10 und zukünftige
@@ -31,8 +31,8 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 Hinweise:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
-  or later releases.
+* Diese NVDA-Erweiterung benötigt Windows 10 Version 22H2 (Build 19045),
+  Windows 11 Version 21H2 (Build 22000) oder neuere Versionen.
 * Die Dauer der Unterstützung für Feature-Updates ist an die Dauer des
   Consumer-Supports (Home, Pro, Pro Education, Pro for Workstations
   Editionen) gebunden und die Erweiterung kann den Support für ein
@@ -107,14 +107,12 @@ Eingabetaste, um das ausgewählte Element einzufügen.
   (Link zum Download und Jetzt installieren in Windows 10,
   Download-Schaltfläche in Windows 11).
 * In Windows 11 werden die Breadcrumb-Leisten richtig erkannt.
-* In Windows 10 und 11 22H2 unterbricht NVDA die Sprachausgabe und meldet
-  Updates an den Windows Update-Status, während der Download und die
-  Installation fortschreiten. Dies kann zu Sprachunterbrechungen führen,
-  wenn Sie in der Einstellungen-App navigieren, während Updates
-  heruntergeladen und installiert werden. Wenn Sie Windows 11 22H2 und neuer
-  mit aktivierter selektiver Eventregistrierung verwenden, müssen Sie den
-  Fokus in die Update-Liste bewegen, sobald diese erscheinen, damit NVDA den
-  Fortschritt lesen kann.
+* NVDA will report updates to Windows Update status as download and install
+  progresses. This may result in speech interruption when navigating
+  Settings app while updates are being downloaded and installed. If using
+  Windows 11 and selective UIA event registration is on or set to selective,
+  you must move focus to updates list as soon as they appear so NVDA can
+  announce update progress.
 
 ## Sprachzugang
 
@@ -128,14 +126,6 @@ für den Sprachzugang.
 
 * Registerkarten wie"Prognose" und"Karten" werden als richtige
   Registerkarten erkannt (Patch von Derek Riemer).
-* Beim Lesen einer Vorhersage können Sie mit den Pfeiltasten nach links und
-  rechts zwischen den Elementen wechseln. Verwenden Sie die Aufwärts- und
-  Abwärtspfeile, um die einzelnen Teile eines Elements zu lesen. Zum
-  Beispiel könnte ein Druck auf den Pfeil nach rechts den Bericht "Montag:
-  33 Grad, teilweise bewölkt, ..." anzeigen. Wenn man den Pfeil nach unten
-  drückt, heißt es"Montag", dann wird ein erneuter Druck auf den Pfeil den
-  nächsten Punkt anzeigen (wie z.B. die Temperatur). Dies funktioniert
-  derzeit für Tages- und Stundenvorhersagen.
 
 [[!tag dev stable]]
 

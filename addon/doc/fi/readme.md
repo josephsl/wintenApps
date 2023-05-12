@@ -100,14 +100,12 @@ painamalla Välilyönti-näppäintä Enterin sijaan.
   nyt -linkki Windows 10:ssä, Lataa-painike Windows 11:ssä), mikäli
   sellainen on näkyvissä.
 * Navigointipolkupalkin kohteet tunnistetaan oikein Windows 11:ssä.
-* NVDA keskeyttää puheen ja ilmoittaa Windows 10 ja 11 22H2:ssa ja
-  uudemmissa Windows Updaten tilan päivitysten latauksen ja asennuksen
-  edistyessä. Tämä voi aiheuttaa puheen keskeytymisen
-  Asetukset-sovelluksessa navigoitaessa päivitysten lataamisen ja asennuksen
-  aikana. Mikäli käytetään Windows 11 22H2:ta tai sitä uudempaa ja
-  valikoivan UIA-tapahtumien rekisteröinti on käytössä, kohdistus on
-  siirrettävä päivitysten luetteloon heti niiden ilmestyessä, jotta NVDA voi
-  ilmoittaa päivityksen edistymisen.
+* NVDA will report updates to Windows Update status as download and install
+  progresses. This may result in speech interruption when navigating
+  Settings app while updates are being downloaded and installed. If using
+  Windows 11 and selective UIA event registration is on or set to selective,
+  you must move focus to updates list as soon as they appear so NVDA can
+  announce update progress.
 
 ## Puhekäyttö
 
@@ -121,13 +119,6 @@ versiossa 22H2.
 
 * Sellaiset välilehdet kuten "ennuste" ja "kartat" tunnistetaan oikeiksi
   välilehdiksi (korjauksen tehnyt Derek Riemer).
-* Käytä ennustetta lukiessasi vasenta ja oikeaa nuolta kohteiden välillä
-  liikkumiseen. Käytä nuolta ylös ja alas yksittäisten kohteiden
-  lukemiseen. Esim.  oikeaa nuolta painettaessa saatetaan sanoa "Maanantai:
-  26,1 astetta, puolipilvistä, ...", ja nuolta alas painettaessa
-  "Maanantai". Uudelleen painaminen lukee seuraavan kohteen (kuten
-  lämpötilan). Toimii tällä hetkellä päivittäisiin ja tunnin välein
-  tehtäviin ennusteisiin.
 
 [[!tag dev stable]]
 

@@ -30,7 +30,7 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* Ovaj dodatak zahtijeva Windows 10 21H2 (gradnja 19045), 11 21H2 (gradnja
+* Ovaj dodatak zahtijeva Windows 10 22H2 (gradnja 19045), 11 21H2 (gradnja
   22000) ili novija izdanja.
 * Trajanje podrške za aktualiziranje značajki povezano je s trajanjem
   korisničke podrške (izdanja Home, Pro, Pro Education, Pro for
@@ -100,14 +100,12 @@ tipku za razmak umjesto tipke Enter.
   postoji (preuzimi i instaliraj poveznicu sada u Windows 10, gumb za
   preuzimanje u Windows 11).
 * U sustavu Windows 11 elementi trake navigacije se ispravno prepoznaju.
-* U sustavu Windows 10 i 11 22H2 i novijim verzijama, NVDA će prekinuti
-  govor i prijaviti ažuriranja stanja Windows Update kao preuzimanje i
-  napredovanje instaliranja. To može prouzročiti prekid govora prilikom
-  kretanja po aplikaciji „Postavke” dok se ažuriranja preuzimaju i
-  instaliraju. Ako koristiš Windows 11 22H2 i noviju verziju, ako je
-  selektivna registracija UIA događaja uključena, morađ premjestiti fokus na
-  popis ažuriranja čim se pojave kako bi NVDA mogao najaviti napredovanje
-  ažuriranja.
+* NVDA will report updates to Windows Update status as download and install
+  progresses. This may result in speech interruption when navigating
+  Settings app while updates are being downloaded and installed. If using
+  Windows 11 and selective UIA event registration is on or set to selective,
+  you must move focus to updates list as soon as they appear so NVDA can
+  announce update progress.
 
 ## Pristup glasu
 
@@ -121,13 +119,6 @@ Windows 11 22H2.
 
 * Kartice poput „prognoza” i „karte” prepoznaju se kao ispravne kartice
   (zakrpu je napravio Derek Riemer).
-* Prilikom čitanja prognoze, pritišćite strelice kako biste se kretali
-  između stavaka. Pritišćite gornju ili donju strelicu kako biste se
-  premještali između individualnih stavaka. Na primjer, pritiskom desne
-  strelice čitač izgovara „Ponedjeljak: 79 stupnjeva, djelomično oblačno,
-  …”, pritiskom na strelicu dolje izgovara „Ponedjeljak”. Ponovnim pritiskom
-  čita sljedeću stavku (poput temperature). Ovo trenutačno radi za dnevnu i
-  svakosatnu vremensku prognozu.
 
 [[!tag dev stable]]
 

@@ -97,12 +97,12 @@ instead of Enter key to paste the selected item.
   present (download and install now link in Windows 10, download button in
   Windows 11).
 * In Windows 11, breadcrumb bar items are properly recognized.
-* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
-  updates to Windows Update status as download and install progresses. This
-  may result in speech interruption when navigating Settings app while
-  updates are being downloaded and installed. If using Windows 11 22H2 and
-  later, if selective UIA event registration is on, you must move focus to
-  updates list as soon as they appear so NVDA can announce update progress.
+* NVDA will report updates to Windows Update status as download and install
+  progresses. This may result in speech interruption when navigating
+  Settings app while updates are being downloaded and installed. If using
+  Windows 11 and selective UIA event registration is on or set to selective,
+  you must move focus to updates list as soon as they appear so NVDA can
+  announce update progress.
 
 ## Voice access
 
@@ -115,13 +115,6 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 * Separadores como "previsão" e "mapas" são reconhecidos como separadores
   adequados (patch de Derek Riemer).
-* Ao ler uma previsão, use as setas esquerda e direita para se mover entre
-  os itens. Use as setas para cima e para baixo para ler os itens
-  individuais. Por exemplo, se pressionar a seta para a direita, poderá ler
-  "Segunda-feira: 20 graus, parcialmente nublado, ...", se pressionar a seta
-  para baixo, dirá "Segunda-feira" e, em seguida, se pressionar novamente,
-  lerá o próximo item (Como a temperatura). Isto funciona actualmente para
-  previsões diárias e horárias.
 
 [[!tag dev stable]]
 
