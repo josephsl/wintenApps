@@ -17,8 +17,7 @@ from winAPI.types import HWNDValT
 class MicrophoneButton(UIA):
 
 	def announceMicStatus(self):
-		# There is no label for this button in build 25200 series, so consult its parent.
-		ui.message(self.name if self.name else self.parent.name)
+		ui.message(self.name)
 
 	@scriptHandler.script(gestures=["kb:space", "kb:enter", "kb:numpadEnter"])
 	def script_toggleMicrophone(self, gesture) -> None:
