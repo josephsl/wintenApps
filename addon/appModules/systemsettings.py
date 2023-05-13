@@ -127,7 +127,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			if isinstance(obj, UIA):
 				if obj.UIAAutomationId in (
 					"SystemSettings_MusUpdate_AvailableUpdatesList2_ListView",  # Windows 11 22H2
-					"SystemSettings_MusUpdate_AvailableUpdatesList3_ListView"  # Windows 11 21H2
 				):
 					import UIAHandler
 					for updateEntry in obj.children:
