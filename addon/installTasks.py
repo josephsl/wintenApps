@@ -32,9 +32,12 @@ def onInstall():
 		or currentBuild >= max(supportedBuilds)  # Insider Preview
 	):
 		return
+	import globalVars
+	# Do not present error dialog if minimal mode is set.
+	if globalVars.appArgs.minimal:
+		raise RuntimeError(f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentBuild})")
 	import gui
 	import wx
-	import globalVars
 	# Only present Windows 11 builds if this is a build above Windows 10 22H2.
 	if currentBuild > 19045:
 		del supportedBuilds[19045]
@@ -64,7 +67,5 @@ def onInstall():
 		build=currentBuild,
 		supportedReleasesList=", ".join(windowsReleasesList)
 	)
-	# Do not present error dialog if minimal mode is set.
-	if not globalVars.appArgs.minimal:
-		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
+	gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
 	raise RuntimeError(f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentBuild})")
