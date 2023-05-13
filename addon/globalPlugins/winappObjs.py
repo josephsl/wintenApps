@@ -13,6 +13,7 @@ import UIAHandler
 import eventHandler
 
 
+# Virtual desktop announcements come from a combination of this add-on and an NVDA Core pull request.
 virtualDesktopName = None
 
 
