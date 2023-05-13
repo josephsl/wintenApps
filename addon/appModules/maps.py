@@ -17,6 +17,7 @@ class AppModule(appModuleHandler.AppModule):
 	):
 		import queueHandler
 		import ui
+		# Seen when navigating "see more" menu while the app window is snapped to the side.
 		if api.getFocusObject() != obj:
 			queueHandler.queueFunction(queueHandler.eventQueue, ui.message, displayString)
 			return
