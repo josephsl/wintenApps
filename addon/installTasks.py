@@ -41,10 +41,6 @@ def onInstall():
 	# Insider builds released between stable Windows 11 builds are also unsupported by the add-on.
 	if currentBuild > 19045:
 		del supportedBuilds[19045]
-		# Nickel development builds (22000 < build < 22621).
-		if 22000 < currentBuild < 22621:
-			del supportedBuilds[22000]
-			supportedBuilds[22621] = "Windows 11 22H2"
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
