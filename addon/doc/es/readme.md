@@ -67,10 +67,11 @@ complemento, consulta el documento [changelogs for add-on releases][4].
 
 * Al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
   nombre del escritorio virtual activo (escritorio 2, por ejemplo).
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11) and reporting item position when moving through taskbar icons
-  (Windows 10 and 11).
+* Experiencia mejorada con la barra de tareas de Windows 10 y 11, incluyendo
+  el anuncio de los resultados al reordenar iconos pulsando las teclas
+  alt+shift+flechas izquierda y derecha (Windows 11) e indicando la posición
+  del elemento al moverse por iconos de la barra de tareas (Windows 10 y
+  11).
 * En aplicaciones como el explorador de archivos y el bloc de notas, donde
   se soportan ventanas con pestañas, NVDA anunciará el nombre y la posición
   de las pestañas al pasar entre ellas. Esto ahora forma parte de NVDA
@@ -108,14 +109,14 @@ de intro para pegar el elemento seleccionado.
   10, botón Descargar en Windows 11).
 * En Windows 11, los elementos de la barra de migas de pan se reconocen
   correctamente.
-* En Windows 10 y 11 22H2 y posterior, NVDA interrumpirá la voz y anunciará
-  las actualizaciones del estado de Windows Update según avancen la descarga
-  e instalación. Esto puede resultar en interrupciones de voz al navegar por
-  la aplicación de configuración mientras las actualizaciones se descargan y
-  se instalan. Si usas Windows 11 22H2 y posterior y el registro selectivo
-  de eventos UIA está activado, debes mover el foco a la lista de
-  actualizaciones tan pronto como aparezcan para que NVDA pueda anunciar el
-  progreso de la actualización.
+* NVDA anunciará las actualizaciones del estado de Windows Update según
+  avancen la descarga e instalación. Esto puede resultar en interrupciones
+  de voz al navegar por la aplicación de configuración mientras las
+  actualizaciones se descargan y se instalan. Si usas Windows 11 y el
+  registro selectivo de eventos UIA está activado o configurado en
+  selectivo, debes mover el foco a la lista de actualizaciones tan pronto
+  como aparezcan para que NVDA pueda anunciar el progreso de la
+  actualización.
 
 ## Acceso por voz
 
@@ -129,13 +130,6 @@ Esto hace referencia a la función de acceso por voz introducida en Windows
 
 * Pestañas tales como "pronósticos" y "mapas" se reconocen como propias
   pestañas (parche de Derek Riemer).
-* Cuando se lea un pronóstico, utiliza las flechas izquierda y derecha para
-  moverte entre elementos. Utiliza flechas arriba y abajo para leer los
-  elementos individuales. Por ejemplo, pulsando la flecha derecha anunciaría
-  "Lunes: 79 grados, parcialmente nublado, ..." pulsando flecha abajo dirá
-  "lunes" entonces pulsándola de nuevo leerá el siguiente elemento (como la
-  temperatura). Actualmente esto funciona para los pronósticos diarios y
-  horarios.
 
 [[!tag dev stable]]
 

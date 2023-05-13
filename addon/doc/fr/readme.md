@@ -70,10 +70,11 @@ l'extension][4].
 * Lors de l'ouverture, de la fermeture ou du basculement entre les bureaux
   virtuels, NVDA annoncera le nom du bureau virtuel actif (bureau 2, par
   exemple).
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11) and reporting item position when moving through taskbar icons
-  (Windows 10 and 11).
+* Amélioration de l'expérience de la barre des tâches de Windows 10 et 11,
+  notamment en annonçant les résultats de réorganisation des icônes lors de
+  l'appui sur Alt+Shift+les touches flèche gauche / droite (Windows 11) et
+  en rapportant la position de l'élément lors du déplacement des icônes de
+  la barre des tâches  (Windows 10 et 11).
 * Dans des aps  tels que File Explorer et Notepad  où les fenêtres à onglets
   sont prises en charge, NVDA annoncera le nom et la position des onglets
   lors de la commutation entre eux. Cela fait maintenant partie de NVDA
@@ -112,15 +113,14 @@ coller l'élément sélectionné.
   de téléchargement dans Windows 11).
 * Dans Windows 11, les éléments du fil d'Ariane des paramètres sont
   correctement reconnus.
-* Sous Windows 10 et 11 22H2 et versions ultérieures, NVDA interrompra la
-  parole et signalera les mises à jour de l'état de Windows Update au fur et
-  à mesure que le téléchargement et l'installation progressent. Cela peut
+* NVDA signalera les mises à jour de l'état de Windows Update au fur et à
+  mesure que le téléchargement et l'installation progressent. Cela peut
   entraîner une interruption de la parole lors de la navigation dans
   l'application Paramètres pendant le téléchargement et l'installation des
-  mises à jour. Si vous utilisez Windows 11 22H2 et versions ultérieures, si
-  l'enregistrement sélectif des événements UIA est activé, vous devez
-  déplacer le focus sur la liste des mises à jour dès qu'elles apparaissent
-  afin que NVDA puisse annoncer la progression de la mise à jour.
+  mises à jour. Si vous utilisez Windows 11 si l'enregistrement sélectif des
+  événements UIA est activé ou défini sur sélectif, vous devez déplacer le
+  focus sur la liste des mises à jour dès qu'elles apparaissent afin que
+  NVDA puisse annoncer la progression de la mise à jour.
 
 ## Accès vocal
 
@@ -133,14 +133,6 @@ Il s'agit de la fonction d'accès vocal introduit dans Windows 11 22H2.
 
 * Les onglets tels que "prévisions" et "cartes" sont reconnus comme des
   onglets propres (patch par Derek Riemer).
-* Lorsque vous lisez une prévision, utilisez les flèches gauche et droite
-  pour vous déplacer entre les éléments. Utilisez les flèches haut et bas
-  pour lire les éléments individuels. Par exemple, en appuyant sur la flèche
-  droite peut annoncer "Lundi: 79 degrés, partiellement nuageux, ..." en
-  appuyant sur la flèche bas il va dire "Lundi" Puis en appuyant à nouveau
-  sur celle-ci il va lire l'élément suivant (Comme la température). Ceci
-  fonctionne actuellement pour les prévisions quotidienne,  et toutes les
-  heures.
 
 [[!tag dev stable]]
 

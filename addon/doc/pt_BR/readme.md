@@ -99,12 +99,12 @@ instead of Enter key to paste the selected item.
   download no Windows 11).
 * No Windows 11, os itens da barra de localização atual são reconhecidos
   corretamente.
-* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
-  updates to Windows Update status as download and install progresses. This
-  may result in speech interruption when navigating Settings app while
-  updates are being downloaded and installed. If using Windows 11 22H2 and
-  later, if selective UIA event registration is on, you must move focus to
-  updates list as soon as they appear so NVDA can announce update progress.
+* NVDA will report updates to Windows Update status as download and install
+  progresses. This may result in speech interruption when navigating
+  Settings app while updates are being downloaded and installed. If using
+  Windows 11 and selective UIA event registration is on or set to selective,
+  you must move focus to updates list as soon as they appear so NVDA can
+  announce update progress.
 
 ## Voice access
 
@@ -117,13 +117,6 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 * Abas como "previsão" e "mapas" são reconhecidas como guias adequadas
   (patch de Derek Riemer).
-* Ao ler uma previsão, use as setas esquerda e direita para se mover entre
-  os itens. Use as setas para cima e para baixo para ler os itens
-  individuais. Por exemplo, pressionar a seta para a direita pode indicar
-  "Segunda-feira: 79 graus, parcialmente nublado, ..." pressionar a seta
-  para baixo dirá "Segunda-feira". Em seguida, pressionar novamente lerá o
-  próximo item (como a temperatura). Atualmente, isso funciona para
-  previsões diárias e horárias.
 
 [[!tag dev stable]]
 

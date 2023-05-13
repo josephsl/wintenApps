@@ -3,8 +3,8 @@
 * Autores: Joseph Lee, Derek Riemer e outros
 * Descargar [versión estable][1]
 * Download [beta version][2]
-* Download [development version][3]
-* NVDA compatibility: 2023.1 and later
+* Descargar [versión de desenvolvemento][3]
+* Compatibilidade con NVDA: 2023.1 e posterior
 
 Nota: Orixinalmente chamado Windows 10 App Essentials, renomeouse a windows
 App Essentials en 2021 para soportar windows 10 e versións futuras como
@@ -31,8 +31,8 @@ se inclúe):
 
 Notas:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
-  or later releases.
+* Este complemento require do Windows 10 22H2 (compilación 19045), 11 21H2
+  (compilación 22000), ou versións posteriores.
 * O soporte das actualizacións de características está vencellado á duración
   do soporte ó consumidor (edicións Home, Pro, Pro Education, Pro for
   Workstations) e o complemento podería rematar o soporte para unha
@@ -58,8 +58,8 @@ Notas:
   "Modo foco automático para cambios do foco" dende o panel de modo
   navegación das opcións de NVDA.
 
-For a list of changes made between each add-on releases, refer to
-[changelogs for add-on releases][4] document.
+Para unha lista de trocos feitos entre cada versión do complemento, visita o
+documento [rexistros de trocos para publicacións de complementos][4].
 
 ## Xeral
 
@@ -103,14 +103,12 @@ Intro para pegar o elemento seleccionado.
   botón descargar en Windows 11).
 * En Windows 11, os elementos da barra de faragullas de pan recoñécense
   correctamente.
-* En Windows 10 e 11 22H2 e posterior, NVDA interrumpirá a voz e anunciará
-  actualizacións ós estados de windows Update como progresos de descarga e
-  instalación. Isto podería conlevar interrupcións da voz ó navegar pola
-  aplicación Configuración cando se estean a descargar e instalar
-  actualizacións. Se usas Windows 11 22H2 e posterior, se está activado o
-  rexistro selectivo de eventos UIA, tes que mover o foco á lista de
-  actualizacións tan pronto apareza para que NVDA poida anunciar o progreso
-  de actualización.
+* NVDA will report updates to Windows Update status as download and install
+  progresses. This may result in speech interruption when navigating
+  Settings app while updates are being downloaded and installed. If using
+  Windows 11 and selective UIA event registration is on or set to selective,
+  you must move focus to updates list as soon as they appear so NVDA can
+  announce update progress.
 
 ## Acceso por voz
 
@@ -124,13 +122,6 @@ Esto se refiere a la característica Acceso por voz introducida en Windows 11
 
 * As pestanas como "pronósticos" e "mapas" recoñécense coma pestanas en si
   (parche de Derek Riemer).
-* Cando se lea un pronóstico, usa as frechas esquerda e dereita para moverte
-  entre elementos. Usa as frechas arriba e abaixo para ler os elementos
-  individuais. Por exemplo, premendo a frecha dereita anunciaría "luns: 79
-  graos, parcialmente nublado, ..." premendo a frecha abaixo dirá "luns"
-  logo preméndoo de novo lerá o seguinte elemento (como a
-  temperatura). Actualmente esto traballa para pronósticos diarios e
-  horarios.
 
 [[!tag dev stable]]
 

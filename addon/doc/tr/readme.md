@@ -99,12 +99,12 @@ instead of Enter key to paste the selected item.
   (Windows 10'da şimdi indir ve kur bağlantısı, Windows 11'de indir
   düğmesi).
 * Windows 11'de içerik haritası çubuğu öğeleri düzgün bir şekilde tanınır.
-* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
-  updates to Windows Update status as download and install progresses. This
-  may result in speech interruption when navigating Settings app while
-  updates are being downloaded and installed. If using Windows 11 22H2 and
-  later, if selective UIA event registration is on, you must move focus to
-  updates list as soon as they appear so NVDA can announce update progress.
+* NVDA will report updates to Windows Update status as download and install
+  progresses. This may result in speech interruption when navigating
+  Settings app while updates are being downloaded and installed. If using
+  Windows 11 and selective UIA event registration is on or set to selective,
+  you must move focus to updates list as soon as they appear so NVDA can
+  announce update progress.
 
 ## Voice access
 
@@ -117,11 +117,6 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 * "Hava Durumu Tahmini" ve "haritalar" gibi sekmeler, uygun sekmeler olarak
   tanınır (Derek Riemer tarafından yamalanmıştır).
-* Bir hava durumu tahminini okurken, öğeler arasında hareket etmek için sol
-  ve sağ okları kullanın. Tek tek öğeleri okumak için yukarı ve aşağı okları
-  kullanın. Örneğin, sağ oka basıldığında "Pazartesi: 79 derece, parçalı
-  bulutlu, ..." bildirilebilir. Bu şu anda günlük ve saatlik tahminler için
-  çalışıyor.
 
 [[!tag dev stable]]
 

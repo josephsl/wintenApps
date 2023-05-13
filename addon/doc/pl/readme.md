@@ -4,7 +4,7 @@
 * Pobierz [wersja stabilna][1]
 * Pobierz [wersja beta][2]
 * Pobierz [wersja rozwojowa][3]
-* NVDA compatibility: 2023.1 and later
+* Zgodność z NVDA: 2023.1 i nowsze
 
 Uwaga: Pierwotniea nazwa tego dodatku była Windows 10 App Essentials, a
 potem została zmieniona na Windows App Essentials w 2021 roku, aby
@@ -32,8 +32,8 @@ dołączone, zobacz każdą sekcję aplikacji):
 
 Notatki:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
-  or later releases.
+* Ten dodatek wymaga systemu Windows 10 22H2 (kompilacja 19045), 11 21H2
+  (kompilacja 22000) lub nowszych wersji.
 * Czas trwania pomocy technicznej dotyczącej aktualizacji funkcji jest
   powiązany z czasem trwania pomocy technicznej dla klientów (wersje Home,
   Pro, Pro Education, Pro dla stacji roboczych), a dodatek może zakończyć
@@ -106,14 +106,12 @@ wybrany element.
   pobierania w systemie Windows 11).
 * W systemie Windows 11 elementy paska okruszków nawigacyjnych są prawidłowo
   rozpoznawane.
-* W systemach Windows 10 i 11 22H2 i nowszych NVDA będzie zakłócać mowę i
-  zgłaszać aktualizacje stanu usługi Windows Update w miarę postępu
-  pobierania i instalacji. Może to spowodować przerwanie mowy podczas
-  nawigowania po aplikacji Ustawienia podczas pobierania i instalowania
-  aktualizacji. Jeśli używasz systemu Windows 11 22H2 i nowszych, jeśli
-  selektywna rejestracja zdarzeń UIA jest włączona, musisz przenieść fokus
-  na listę aktualizacji, gdy tylko się pojawią, aby NVDA mogła ogłosić
-  postęp aktualizacji.
+* NVDA will report updates to Windows Update status as download and install
+  progresses. This may result in speech interruption when navigating
+  Settings app while updates are being downloaded and installed. If using
+  Windows 11 and selective UIA event registration is on or set to selective,
+  you must move focus to updates list as soon as they appear so NVDA can
+  announce update progress.
 
 ## Dostęp głosowy
 
@@ -127,13 +125,6 @@ Odnosi się to do funkcji dostępu głosowego wprowadzonej w systemie Windows
 
 * Karty właściwości, takie jak "prognoza" i "mapy" są rospoznane jak
   prawidłowe karty właściwości (poprawił Derek Riemer).
-* Przy czytaniu pogody, użyj strzałek w lewo i w prawo aby się przemieszczać
-  pomiędzy elementami. Użyj strzałki w górę lub w dół, aby przeczytać
-  pojedynczy element. Na przykład, wciskając strzałke w prawo może wymówić
-  "Poniedziałek: 79 stopni, częściowo pochmurno, ..." wciskając strzałkę w
-  dół powie "Poniedziałek" wciskając ję jeszcze raz wypowie następujący
-  element (jak temperaturę). Teraz to działą dla prognozy pogody dzienniej i
-  godzinnej.
 
 [[!tag dev stable]]
 

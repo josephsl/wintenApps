@@ -3,8 +3,8 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre
 * Download [stabil version][1]
 * Download [beta version][2]
-* Download [development version][3]
-* NVDA compatibility: 2023.1 and later
+* Download [udviklingsversion][3]
+* NVDA-kompatibilitet: 2023.1 og nyere
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
 til Windows App Essentials i 2021 for at understøtte Windows 10 og
@@ -30,8 +30,8 @@ hver appsektion for detaljer om, hvad der er inkluderet):
 
 Bemærkninger:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
-  or later releases.
+* Denne tilføjelse kræver Windows 10 22H2 (build 19045), 11 21H2 (build
+  22000) eller nyere udgivelser.
 * Varigheden af understøttelse af funktionsopdateringer er bundet til
   varigheden af forbrugersupport (Home, Pro, Pro Education, Pro for
   Workstations-udgaver), og tilføjelsen kan afslutte understøttelsen af en
@@ -57,8 +57,8 @@ Bemærkninger:
   indstillingen "Automatisk fokustilstand ved ændring af fokus" fra NVDAs
   indstillingspanel under "Gennemsynstilstand".
 
-For a list of changes made between each add-on releases, refer to
-[changelogs for add-on releases][4] document.
+For en liste over ændringer, der er fremstillet mellem hver udgivelse af
+tilføjelsen, henvises til [ændringslog for tilføjelsen][4].
 
 ## Generelt
 
@@ -101,14 +101,12 @@ instead of Enter key to paste the selected item.
   hvis den findes (download og installer nu-link i Windows 10, download-knap
   i Windows 11).
 * I Windows 11 genkendes brødkrumme-elementer korrekt.
-* I Windows 10 og 11 22H2 og nyere vil NVDA afbryde talen og oplyse status
-  for opdateringer til Windows Update, efterhånden som download og
-  installation skrider frem. Dette kan resultere i afbrydelse af talen, når
-  du navigerer i appen Indstillinger, mens opdateringer downloades og
-  installeres. Hvis du bruger Windows 11 22H2 og nyere med indstillingen
-  "Registrer hændelser fra UI Automation samt egenskabsændringer" slået til,
-  skal du flytte fokus til listen opdateringer, så NVDA kan oplyse status
-  for opdateringerne.
+* NVDA will report updates to Windows Update status as download and install
+  progresses. This may result in speech interruption when navigating
+  Settings app while updates are being downloaded and installed. If using
+  Windows 11 and selective UIA event registration is on or set to selective,
+  you must move focus to updates list as soon as they appear so NVDA can
+  announce update progress.
 
 ## Stemmeadgang
 
@@ -121,13 +119,6 @@ Dette henviser til stemmeadgangsfunktionen introduceret i Windows 11 22H2.
 
 * Faner som "Vejrudsigt" og "Kort" er nu genkendt korrekt som faner (patch
   af Derek Riemer).
-* Når du læser en vejrudsigt, skal du bruge venstre og højre pil til at
-  flytte mellem emner. Brug pilene op og ned for at læse de enkelte
-  elementer. For eksempel, ved at trykke på højre pil vil du måske høre
-  "mandag: 79 grader, delvist skyet,..." ved at trykke på pil ned vil NVDA
-  sige "Mandag". Ved et yderligere tryk vil du gå videre til næste element
-  (som temperatur). Dette virker i øjeblikket for daglig og vejrudsigt for
-  hver time.
 
 [[!tag dev stable]]
 

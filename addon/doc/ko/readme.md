@@ -75,12 +75,12 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   present (download and install now link in Windows 10, download button in
   Windows 11).
 * In Windows 11, breadcrumb bar items are properly recognized.
-* In Windows 10 and 11 22H2 and later, NVDA will interupt speech and report
-  updates to Windows Update status as download and install progresses. This
-  may result in speech interruption when navigating Settings app while
-  updates are being downloaded and installed. If using Windows 11 22H2 and
-  later, if selective UIA event registration is on, you must move focus to
-  updates list as soon as they appear so NVDA can announce update progress.
+* NVDA will report updates to Windows Update status as download and install
+  progresses. This may result in speech interruption when navigating
+  Settings app while updates are being downloaded and installed. If using
+  Windows 11 and selective UIA event registration is on or set to selective,
+  you must move focus to updates list as soon as they appear so NVDA can
+  announce update progress.
 
 ## Voice access
 
@@ -93,12 +93,6 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 * Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by
   Derek Riemer).
-* When reading a forecast, use the left and right arrows to move between
-  items. Use the up and down arrows to read the individual items. For
-  example, pressing the right arrow might report "Monday: 79 degrees, partly
-  cloudy, ..." pressing the down arrow will say "Monday" Then pressing it
-  again will read the next item (Like the temperature). This currently works
-  for daily and hourly forecasts.
 
 [[!tag dev stable]]
 

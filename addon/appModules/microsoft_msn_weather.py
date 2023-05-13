@@ -9,11 +9,11 @@ import controlTypes
 import appModuleHandler
 from NVDAObjects import NVDAObject
 
-# Regexp for deciding whether this ID should be a tab control
+# Deprecated: regexp for deciding whether this ID should be a tab control
 RE_TAB_AUTOMATION_MATCH = re.compile("|".join([
 	r"L1NavigationButton_(Places|Home|Maps|Historical|Pollen|Life|HourlyForecast|MonthlyForecast|Feedback)",
 ]))
-# Regexp for deciding if this should be a button
+# Deprecated: regexp for deciding if this should be a button
 RE_BUTTONCONTROL = re.compile("|".join([
 	r"L1NavigationButton_Settings",
 ]))
@@ -22,6 +22,7 @@ RE_BUTTONCONTROL = re.compile("|".join([
 class AppModule(appModuleHandler.AppModule):
 
 	def event_NVDAObject_init(self, obj: NVDAObject):
+		# Deprecated: role reclassifications no longer make sense as UIA class name is radio button.
 		try:
 			theId = obj.UIAAutomationId
 		except AttributeError:
