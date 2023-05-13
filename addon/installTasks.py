@@ -26,6 +26,9 @@ def onInstall():
 		22621: "22H2",
 	}
 	currentBuild = currentWinVer.build
+	# Only present Windows 11 builds if this is a build between Windows 10 22H2 and 11 21H2.
+	if 19045 < currentBuild < 22000:
+		del supportedBuilds[19045]
 	# Optimization: report success (return early) if running a supported release.
 	if (
 		currentBuild in supportedBuilds  # General availability channel
