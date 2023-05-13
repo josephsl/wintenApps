@@ -31,9 +31,20 @@ def onInstall():
 		or currentBuild >= max(supportedBuilds)  # Insider Preview
 	):
 		return
+	import globalVars
+	# Do not present error dialog if minimal mode is set.
+	if globalVars.appArgs.minimal:
+		raise RuntimeError(f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentBuild})")
 	import gui
 	import wx
-	import globalVars
+	# Only present Windows 11 builds if this is a build above Windows 10 22H2.
+	if currentBuild > 19045:
+		del supportedBuilds[19045]
+		# Insider builds released between stable Windows 11 builds are also unsupported by the add-on.
+		# For now this includes nickel development builds (22000 < build < 22621).
+		if 22000 < currentBuild < 22621:
+			del supportedBuilds[22000]
+			supportedBuilds[22621] = "Windows 11 22H2"
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
@@ -55,7 +66,5 @@ def onInstall():
 		build=currentBuild,
 		supportedReleasesList=", ".join(windowsReleasesList)
 	)
-	# Do not present error dialog if minimal mode is set.
-	if not globalVars.appArgs.minimal:
-		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
+	gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
 	raise RuntimeError(f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentBuild})")
