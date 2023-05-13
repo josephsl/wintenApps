@@ -26,9 +26,6 @@ def onInstall():
 		22621: "22H2",
 	}
 	currentBuild = currentWinVer.build
-	# Only present Windows 11 builds if this is a build above Windows 10 22H2.
-	if currentBuild > 19045:
-		del supportedBuilds[19045]
 	# Optimization: report success (return early) if running a supported release.
 	if (
 		currentBuild in supportedBuilds  # General availability channel
@@ -38,6 +35,9 @@ def onInstall():
 	import gui
 	import wx
 	import globalVars
+	# Only present Windows 11 builds if this is a build above Windows 10 22H2.
+	if currentBuild > 19045:
+		del supportedBuilds[19045]
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
