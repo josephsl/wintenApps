@@ -3,7 +3,7 @@
 
 # Adds handlers for various UIA controls found in Windows 10 and later.
 
-from typing import List
+from typing import List, Optional
 import globalPluginHandler
 from NVDAObjects.UIA import Dialog
 from NVDAObjects import NVDAObject
@@ -14,7 +14,7 @@ import eventHandler
 
 
 # Virtual desktop announcements come from a combination of this add-on and an NVDA Core pull request.
-virtualDesktopName = None
+virtualDesktopName: Optional[str] = None
 
 
 def handlePossibleDesktopNameChange():

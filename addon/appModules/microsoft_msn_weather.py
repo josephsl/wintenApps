@@ -13,10 +13,6 @@ from NVDAObjects import NVDAObject
 RE_TAB_AUTOMATION_MATCH = re.compile("|".join([
 	r"L1NavigationButton_(Places|Home|Maps|Historical|Pollen|Life|HourlyForecast|MonthlyForecast|Feedback)",
 ]))
-# Deprecated: regexp for deciding if this should be a button
-RE_BUTTONCONTROL = re.compile("|".join([
-	r"L1NavigationButton_Settings",
-]))
 
 
 class AppModule(appModuleHandler.AppModule):
@@ -31,5 +27,5 @@ class AppModule(appModuleHandler.AppModule):
 			obj.role = controlTypes.Role.TABCONTROL
 		if RE_TAB_AUTOMATION_MATCH.match(theId):
 			obj.role = controlTypes.Role.TAB
-		elif RE_BUTTONCONTROL.match(theId):
+		elif theId == "L1NavigationButton_Settings":
 			obj.role = controlTypes.Role.BUTTON
