@@ -10,7 +10,7 @@ from nvdaBuiltin.appModules.calculator import AppModule, noCalculatorEntryAnnoun
 import braille
 
 
-class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
+class AppModule(AppModule):  # type: ignore[no-redef]  # NOQA: F405
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
 		# When no results shortcuts such as number row keys are pressed, display content will be announced.
