@@ -20,10 +20,10 @@ def onInstall():
 	# Windows 10 22H2 (19045) is supported until October 2025 as this is the final feature update.
 	supportedBuilds = {
 		# Windows 10
-		19045: "Windows 10 22H2",
+		19045: "10 22H2",
 		# Windows 11
-		22000: "Windows 11 21H2",
-		22621: "22H2",
+		22000: "11 21H2",
+		22621: "11 22H2",
 	}
 	currentBuild = currentWinVer.build
 	# Optimization: report success (return early) if running a supported release.
