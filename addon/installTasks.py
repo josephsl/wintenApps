@@ -18,6 +18,7 @@ def onInstall():
 	# and the add-on may end support for a feature update prior to end of consumer support.
 	# Applicable to Home, Pro, Pro Education, Pro for Workstations (see aka.ms/WindowsTargetVersioninfo).
 	# Windows 10 22H2 (19045) is supported until October 2025 as this is the final feature update.
+	# Note that Insider Preview builds between public builds are not supported.
 	supportedBuilds = {
 		# Windows 10
 		19045: "10 22H2",
@@ -28,8 +29,8 @@ def onInstall():
 	currentBuild = currentWinVer.build
 	# Optimization: report success (return early) if running a supported release.
 	if (
-		currentBuild in supportedBuilds  # General availability channel
-		or currentBuild >= max(supportedBuilds)  # Insider Preview
+		currentBuild in supportedBuilds  # General availability channel and Insider release preview
+		or currentBuild >= max(supportedBuilds)  # Insider Preview canary/dev/beta
 	):
 		return
 	import globalVars
@@ -40,7 +41,6 @@ def onInstall():
 	import wx
 	# Present builds above the current build if possible.
 	# For example, present Windows 11 builds if this is a build above Windows 10 22H2 (19045).
-	# Insider builds released between stable Windows 11 builds are also unsupported by the add-on.
 	for entry in supportedBuilds.keys():
 		if currentBuild > entry:
 			del supportedBuilds[entry]
