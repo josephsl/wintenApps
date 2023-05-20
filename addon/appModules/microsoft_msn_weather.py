@@ -4,8 +4,6 @@
 
 # Provides workarounds for the weather app.
 
-import re
-import controlTypes
 import appModuleHandler
 from NVDAObjects import NVDAObject
 
