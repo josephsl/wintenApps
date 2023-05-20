@@ -13,11 +13,9 @@ This add-on is a collection of app modules for various modern Windows apps, as w
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
 * Cortana
-* Maps
 * Modern keyboard (emoji panel/touch keyboard/dictation/voice typing/hardware input suggestions/clipboard history/Suggested Actions/modern input method editors)
 * Settings (system settings, Windows+I)
 * Voice access (Windows 11 22H2)
-* Weather
 * Miscellaneous modules for controls and features such as virtual desktops announcements
 
 Notes:
@@ -43,10 +41,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 * Textual responses from Cortana are announced in most situations.
 
-## Maps
-
-* NVDA will no longer interrupt speech when focused on items other than the map control in some cases.
-
 ## Modern keyboard
 
 This includes emoji panel, clipboard history, touch keyboard, dictation/voice typing, hardware input suggestions, suggested actions, and modern input method editors for certain languages across Windows 10 and 11. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher. When pasting from clipboard history in Windows 10, press Space key instead of Enter key to paste the selected item.
@@ -64,10 +58,6 @@ This includes emoji panel, clipboard history, touch keyboard, dictation/voice ty
 This refers to Voice access feature introduced in Windows 11 22H2.
 
 * NVDA will announce microphone status when toggling microphone from Voice access interface.
-
-## Weather
-
-* Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by Derek Riemer).
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
