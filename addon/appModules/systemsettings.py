@@ -108,36 +108,36 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		self._nameChangeCache = ""
 
 	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
-			if isinstance(obj, UIA):
-				if "ApplicableUpdate" in obj.UIAAutomationId:
-					import ui
-					try:
-						# Announce updated screen content as long as update action control is not shown.
-						# Simple previous object must be used as previous object returns an unusable button.
-						if "UpdateActionButton" not in obj.parent.parent.parent.simplePrevious.UIAAutomationId:
-							speech.cancelSpeech()
-						ui.message(" ".join([element.name for element in obj.parent.children]))
-					except AttributeError:
-						pass
+		# Applies to Windows 11
+		if isinstance(obj, UIA):
+			if "ApplicableUpdate" in obj.UIAAutomationId:
+				import ui
+				try:
+					# Announce updated screen content as long as update action control is not shown.
+					# Simple previous object must be used as previous object returns an unusable button.
+					if "UpdateActionButton" not in obj.parent.parent.parent.simplePrevious.UIAAutomationId:
+						speech.cancelSpeech()
+					ui.message(" ".join([element.name for element in obj.parent.children]))
+				except AttributeError:
+					pass
 		nextHandler()
 
 	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		if winVersion.getWinVer() >= winVersion.WIN11_22H2:
-			if isinstance(obj, UIA):
-				if obj.UIAAutomationId in (
-					"SystemSettings_MusUpdate_AvailableUpdatesList2_ListView",  # Windows 11 22H2
-				):
-					import UIAHandler
-					for updateEntry in obj.children:
-						updateStatus = updateEntry.simpleFirstChild.simpleLastChild
-						try:
-							UIAHandler.handler.removeEventHandlerGroup(
-								updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
-							)
-							UIAHandler.handler.addEventHandlerGroup(
-								updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
-							)
-						except NotImplementedError:
-							pass
+		# Applies to Windows 11
+		if isinstance(obj, UIA):
+			if obj.UIAAutomationId in (
+				"SystemSettings_MusUpdate_AvailableUpdatesList2_ListView",  # Windows 11 22H2
+			):
+				import UIAHandler
+				for updateEntry in obj.children:
+					updateStatus = updateEntry.simpleFirstChild.simpleLastChild
+					try:
+						UIAHandler.handler.removeEventHandlerGroup(
+							updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
+						)
+						UIAHandler.handler.addEventHandlerGroup(
+							updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
+						)
+					except NotImplementedError:
+						pass
 		nextHandler()
