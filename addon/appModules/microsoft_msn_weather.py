@@ -9,11 +9,6 @@ import controlTypes
 import appModuleHandler
 from NVDAObjects import NVDAObject
 
-# Deprecated: regexp for deciding whether this ID should be a tab control
-RE_TAB_AUTOMATION_MATCH = re.compile("|".join([
-	r"L1NavigationButton_(Places|Home|Maps|Historical|Pollen|Life|HourlyForecast|MonthlyForecast|Feedback)",
-]))
-
 
 class AppModule(appModuleHandler.AppModule):
 
