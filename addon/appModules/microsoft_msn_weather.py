@@ -27,5 +27,3 @@ class AppModule(appModuleHandler.AppModule):
 			obj.role = controlTypes.Role.TABCONTROL
 		if RE_TAB_AUTOMATION_MATCH.match(theId):
 			obj.role = controlTypes.Role.TAB
-		elif theId == "L1NavigationButton_Settings":
-			obj.role = controlTypes.Role.BUTTON
