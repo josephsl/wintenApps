@@ -10,6 +10,7 @@ from nvdaBuiltin.appModules.calculator import AppModule, noCalculatorEntryAnnoun
 import braille
 
 
+# App module class comes from built-in Calculator app module but Mypy doesn't know that.
 class AppModule(AppModule):  # type: ignore[no-redef]  # NOQA: F405
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):

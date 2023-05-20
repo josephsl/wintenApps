@@ -45,9 +45,9 @@ Notas:
 * Se Add-on Updater está instalado e están activadas as actualizaciónes en
   segundo plano, Windows App Essentials non se instalará en absoluto en
   versións de Windows non soportadas.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in canary
-  and dev channels.
+* Non se soportarán todas as características de versións Windows Insider
+  Preview, máis aínda para as características introducidas nun subconxunto
+  de Insiders Windows na canle de desenvolvemento (dev).
 * Add-on dev channel will include changes including experimental content
   that may or may not be included in beta and stable releases, and beta
   channel will come with changes planned for future stable releases.
