@@ -13,7 +13,8 @@ from NVDAObjects.UIA import UIA
 import controlTypes
 
 
-class AppModule(AppModule):
+# App module class comes from built-in Shell Experience Host app module but Mypy doesn't know that.
+class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):
