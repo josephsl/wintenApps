@@ -1,9 +1,9 @@
 # A part of NonVisual Desktop Access (NVDA)
-# Copyright (C) 2015-2022 NV Access Limited, Joseph Lee
+# Copyright (C) 2015-2023 NV Access Limited, Joseph Lee
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
-"""App module for Shell Experience Host, part of Windows 10.
+"""App module for Shell Experience Host, part of Windows 10 and later.
 Shell Experience Host is home to a number of things, including Action Center and other shell features.
 """
 
