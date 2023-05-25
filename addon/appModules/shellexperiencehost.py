@@ -54,6 +54,15 @@ class AppModule(appModuleHandler.AppModule):
 			if obj.UIAAutomationId == "Microsoft.QuickAction.Brightness":
 				obj.role = controlTypes.Role.BUTTON
 				obj.states.discard(controlTypes.State.CHECKABLE)
+			# Volume mixer list items in canary build 25300 series have no label.
+			# There is no Automation Id but a generic class name is used, so locate items via its children.
+			# Interestingly, item label is the description text for volume slider control.
+			if (
+				obj.role == controlTypes.Role.LISTITEM
+				and not obj.name
+				and obj.lastChild.UIAAutomationId == "AppVolumeLevel"
+			):
+				obj.name = obj.lastChild.description
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		if isinstance(obj, IAccessible):
