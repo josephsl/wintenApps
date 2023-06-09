@@ -64,8 +64,9 @@ Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
 
 ## Genel
 
-* Sanal masaüstlerini açarken, kapatırken veya aralarında geçiş yaparken,
-  NVDA aktif sanal masaüstü adını (örneğin masaüstü 2) duyurur.
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce active virtual desktop name (desktop 2, for example). This is now
+  part of NVDA 2023.2.
 * Alt+Shift+sol/sağ ok tuşlarına basıldığında simgelerin yeniden
   düzenlenmesinin sonuçlarının duyurulması (Windows 11) ve görev çubuğu
   simgeleri arasında gezinirken öğe konumunun bildirilmesi (Windows 10 ve

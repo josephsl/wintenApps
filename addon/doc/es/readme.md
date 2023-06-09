@@ -66,7 +66,8 @@ complemento, consulta el documento [changelogs for add-on releases][4].
 ## General
 
 * Al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
-  nombre del escritorio virtual activo (escritorio 2, por ejemplo).
+  nombre del escritorio virtual activo (escritorio 2, por ejemplo). Esto
+  ahora forma parte de NVDA 2023.2.
 * Experiencia mejorada con la barra de tareas de Windows 10 y 11, incluyendo
   el anuncio de los resultados al reordenar iconos pulsando las teclas
   alt+shift+flechas izquierda y derecha (Windows 11) e indicando la posición

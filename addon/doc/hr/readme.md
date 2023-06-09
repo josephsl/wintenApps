@@ -60,9 +60,9 @@ izdanja dodatka][4].
 
 ## Opće
 
-* Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
-  površina, NVDA će najaviti ime aktivne virtualne radne površine (na
-  primjer radna površina 2).
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce active virtual desktop name (desktop 2, for example). This is now
+  part of NVDA 2023.2.
 * Improved Windows 10 and 11 taskbar experience, including announcing
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11) and reporting item position when moving through taskbar icons
