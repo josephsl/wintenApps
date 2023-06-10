@@ -16,6 +16,7 @@ class AppModule(appModuleHandler.AppModule):
 		# NVDA Core issue 5641: try catching virtual desktop switch event,
 		# which will result in name change for the desktop object.
 		# Do this while NVDA Core itself does not include virtual desktop switch announcement facility.
+		# Resolved in NVDA 2023.2 (remove this method completely).
 		import eventHandler
 		if obj.windowClassName == "#32769" and not hasattr(eventHandler, "handlePossibleDesktopNameChange"):
 			import globalPlugins.winappObjs
