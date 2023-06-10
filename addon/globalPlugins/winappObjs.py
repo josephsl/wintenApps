@@ -14,6 +14,7 @@ import eventHandler
 
 
 # Virtual desktop announcements come from a combination of this add-on and an NVDA Core pull request.
+# Resolved in NVDA 2023.2.
 virtualDesktopName: Optional[str] = None
 
 
@@ -110,6 +111,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super().__init__()
 		# Patch event handler if NVDA does not support virtual desktop switch announcements.
+		# Resolved in NVDA 2023.2.
 		if not hasattr(eventHandler, "handlePossibleDesktopNameChange"):
 			eventHandler.doPreGainFocus = winapps_doPreGainFocus
 
