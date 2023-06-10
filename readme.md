@@ -35,7 +35,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## General
 
-* When opening, closing, or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example).
+* When opening, closing, or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example). This is now part of NVDA 2023.2.
 * Improved Windows 10 and 11 taskbar experience, including announcing results of rearranging icons when pressing Alt+Shift+left/right arrow keys (Windows 11) and reporting item position when moving through taskbar icons (Windows 10 and 11).
 * In aps such as File Explorer and Notepad where tabbed windows are supported, NVDA will announce the name and the position of tabs when switching between them. This is now part of NVDA 2023.2.
 
