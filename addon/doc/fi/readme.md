@@ -61,8 +61,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
-* NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
-  avattaessa, suljettaessa tai siirryttäessä virtuaalityöpöytien välillä.
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce active virtual desktop name (desktop 2, for example). This is now
+  part of NVDA 2023.2.
 * Paranneltu Windows 10:n ja 11:n tehtäväpalkin kokemusta, mukaan lukien
   kuvakkeiden uudelleenjärjestämisen tulosten puhuminen painettaessa
   Alt+Vaihto+Vasen/Oikea nuolinäppäin (Windows 11) ja kohteen sijainnin

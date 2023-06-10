@@ -2,9 +2,9 @@
 
 * Yazarlar: Joseph Lee, Derek Riemer ve diğerleri
 * [kararlı sürüm][1]ü indir
-* Download [beta version][2]
-* Download [development version][3]
-* NVDA compatibility: 2023.1 and later
+* [Beta sürümünü indirin][2]
+* [Geliştirme sürümünü indirin][3]
+* NVDA uyumluluğu: 2023.1 ve üstü
 
 Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
 adlandırılırken, Windows 10 ve Windows 11 gibi gelecekteki windows
@@ -22,54 +22,59 @@ bakın):
 
 * Cortana
 * Haritalar
-* Modern keyboard (emoji panel/touch keyboard/dictation/voice
-  typing/hardware input suggestions/clipboard history/Suggested
-  Actions/modern input method editors)
+* Modern klavye (emoji paneli/dokunmatik klavye/dikte/sesle yazma/donanım
+  giriş önerileri/pano geçmişi/Önerilen Eylemler/modern giriş yöntemi
+  düzenleyicileri)
 * Ayarlar (sistem ayarları, Windows+I)
-* Voice access (Windows 11 22H2)
+* Sesli erişim (Windows 11 22H2)
 * Hava durumu
-* Miscellaneous modules for controls and features such as virtual desktops
-  announcements
+* Sanal masaüstleri duyuruları gibi kontroller ve özellikler için çeşitli
+  modüller
 
 Notlar:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
-  or later releases.
-* Feature update support duration is tied to consumer support duration
-  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
-  may end support for a feature update prior to end of consumer support. See
-  aka.ms/WindowsTargetVersioninfo for more information and support dates.
+* Bu eklenti, Windows 10 22H2 (yapı 19045), 11 21H2 (yapı 22000) veya
+  sonraki sürümleri gerektirir.
+* Özellik güncelleme destek süresi, tüketici destek süresine (Ev, Pro, Pro
+  Education, Pro for Workstations sürümleri) bağlıdır ve eklenti, tüketici
+  desteği sona ermeden önce özellik güncellemesi desteğini
+  sonlandırabilir. Daha fazla bilgi ve destek tarihleri ​​için
+  aka.ms/WindowsTargetVersioninfo adresine bakın.
 * Ne kadar yüklenebilse de, bu eklenti Windows Enterprise LTSC (Uzun Süreli
   Hizmet Kanalı) ve Windows Server sürümlerini desteklemez.
-* If Add-on Updater is installed and background add-on updates is enabled,
-  Windows App Essentials will not install at all on unsupported Windows
-  releases.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in canary
-  and dev channels.
-* Add-on dev channel will include changes including experimental content
-  that may or may not be included in beta and stable releases, and beta
-  channel will come with changes planned for future stable releases.
+* Eklenti Güncelleyici kuruluysa ve arka planda eklenti güncellemeleri
+  etkinleştirildiyse, Windows App Essentials, desteklenmeyen Windows
+  sürümlerine hiç yüklenmez.
+* Windows Insider Önizleme yapılarındaki tüm özellikler desteklenmeyecek,
+  özellikle canary ve dev kanallarında Windows Insiders alt kümesine sunulan
+  özellikler için.
+* Eklenti geliştirme kanalı, beta ve kararlı sürümlere dahil edilebilecek
+  veya edilmeyebilecek deneysel içerik de dahil olmak üzere değişiklikleri
+  içerecek ve beta kanalı, gelecekteki kararlı sürümler için planlanan
+  değişikliklerle birlikte gelecek.
 * Bazı eklenti özellikleri, NVDA ekran okuyucusunun bir parçasıdır veya
   yakında olacaktır.
-* For best experience with apps that embed web technologies and content such
-  as Start menu and its context menu, enable "Automatic focus mode for focus
-  changes" setting from NVDA's browse mode settings panel.
+* Başlat menüsü ve içerik menüsü gibi web teknolojilerini ve içeriği içeren
+  uygulamalarla en iyi deneyimi elde etmek için, NVDA'nın göz atma modu
+  ayarları panelinden "Odak değişiklikleri için otomatik odak modu" ayarını
+  etkinleştirin.
 
-For a list of changes made between each add-on releases, refer to
-[changelogs for add-on releases][4] document.
+Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
+[eklenti sürümleri için değişiklik günlükleri][4] belgesine bakın.
 
 ## Genel
 
 * When opening, closing, or switching between virtual desktops, NVDA will
-  announce active virtual desktop name (desktop 2, for example).
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11) and reporting item position when moving through taskbar icons
-  (Windows 10 and 11).
-* In aps such as File Explorer and Notepad where tabbed windows are
-  supported, NVDA will announce the name and the position of tabs when
-  switching between them. This is now part of NVDA 2023.2.
+  announce active virtual desktop name (desktop 2, for example). This is now
+  part of NVDA 2023.2.
+* Alt+Shift+sol/sağ ok tuşlarına basıldığında simgelerin yeniden
+  düzenlenmesinin sonuçlarının duyurulması (Windows 11) ve görev çubuğu
+  simgeleri arasında gezinirken öğe konumunun bildirilmesi (Windows 10 ve
+  11) dahil olmak üzere iyileştirilmiş Windows 10 ve 11 görev çubuğu
+  deneyimi.
+* Sekmeli pencerelerin desteklendiği Dosya Gezgini ve Not Defteri gibi
+  uygulamalarda, NVDA aralarında geçiş yaparken sekmelerin adını ve konumunu
+  duyurur. Bu artık NVDA 2023.2'nin bir parçasıdır.
 
 ## Cortana
 
@@ -77,21 +82,21 @@ For a list of changes made between each add-on releases, refer to
 
 ## Haritalar
 
-* NVDA will no longer interrupt speech when focused on items other than the
-  map control in some cases.
+* NVDA, bazı durumlarda harita kontrolü dışındaki öğelere odaklanıldığında
+  artık konuşmayı kesintiye uğratmayacaktır.
 
 ## Modern klavye
 
-This includes emoji panel, clipboard history, touch keyboard,
-dictation/voice typing, hardware input suggestions, suggested actions, and
-modern input method editors for certain languages across Windows 10 and
-11. When viewing emojis, for best experience, enable Unicode Consortium
-setting from NVDA's speech settings and set symbol level to "some" or
-higher. When pasting from clipboard history in Windows 10, press Space key
-instead of Enter key to paste the selected item.
+Buna emoji paneli, pano geçmişi, dokunmatik klavye, dikte/sesle yazma,
+donanım giriş önerileri, önerilen eylemler ve Windows 10 ve 11'deki belirli
+diller için modern giriş yöntemi düzenleyicileri dahildir. Emojileri
+görüntülerken, en iyi deneyim için Unicode Konsorsiyum ayarını şu adresten
+etkinleştirin: NVDA'nın konuşma ayarları ve sembol seviyesini "bazı" veya
+daha yükseğe ayarlayın. Windows 10'da pano geçmişinden yapıştırırken, seçili
+öğeyi yapıştırmak için Enter tuşu yerine Boşluk Çubuğuna tuşuna basın.
 
-* In Windows 11 22H2 and later, NVDA will announce suggested actions when
-  compatible data such as phone numbers is copied to the clipboard.
+* Windows 11 22H2 ve sonrasında, telefon numaraları gibi uyumlu veriler
+  panoya kopyalandığında NVDA önerilen eylemleri duyurur.
 
 ## Ayarlar
 
@@ -99,19 +104,20 @@ instead of Enter key to paste the selected item.
   (Windows 10'da şimdi indir ve kur bağlantısı, Windows 11'de indir
   düğmesi).
 * Windows 11'de içerik haritası çubuğu öğeleri düzgün bir şekilde tanınır.
-* NVDA will report updates to Windows Update status as download and install
-  progresses. This may result in speech interruption when navigating
-  Settings app while updates are being downloaded and installed. If using
-  Windows 11 and selective UIA event registration is on or set to selective,
-  you must move focus to updates list as soon as they appear so NVDA can
-  announce update progress.
+* NVDA, indirme ve yükleme ilerledikçe Windows Update durumuyla ilgili
+  güncellemeleri bildirir. Bu, güncellemeler indirilirken ve kurulurken
+  Ayarlar uygulamasında gezinirken konuşmanın kesilmesine neden
+  olabilir. Windows 11 kullanılıyorsa ve seçici UIA olay kaydı açıksa veya
+  seçici olarak ayarlanmışsa, NVDA'nın güncelleme ilerleyişini duyurabilmesi
+  için, güncellemeler görünür görünmez odağı güncellemeler listesine
+  taşımanız gerekir.
 
-## Voice access
+## Sesli erişim
 
-This refers to Voice access feature introduced in Windows 11 22H2.
+Bu, Windows 11 22H2'de tanıtılan Sesli erişim özelliğini ifade eder.
 
-* NVDA will announce microphone status when toggling microphone from Voice
-  access interface.
+* NVDA, Ses erişim arayüzünden mikrofonu değiştirirken mikrofon durumunu
+  duyurur.
 
 ## Hava durumu
 

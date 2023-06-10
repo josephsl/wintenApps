@@ -63,8 +63,9 @@ documento [rexistros de trocos para publicacións de complementos][4].
 
 ## Xeral
 
-* Cando se abran, pechen ou se cambie entre escritorios virtuales, NVDA
-  anunciará o nome do escritorio activo (escritorio 2, por exemplo).
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce active virtual desktop name (desktop 2, for example). This is now
+  part of NVDA 2023.2.
 * Improved Windows 10 and 11 taskbar experience, including announcing
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11) and reporting item position when moving through taskbar icons

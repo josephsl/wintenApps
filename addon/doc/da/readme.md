@@ -62,9 +62,9 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][4].
 
 ## Generelt
 
-* Når åbning, lukning eller Skift mellem virtuelle skrivebord forekommer,
-  vil NVDA annoncere det aktuelle navn for det virtuelle skrivebord
-  (f.eks. "Skrivebord 2").
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce active virtual desktop name (desktop 2, for example). This is now
+  part of NVDA 2023.2.
 * Improved Windows 10 and 11 taskbar experience, including announcing
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11) and reporting item position when moving through taskbar icons

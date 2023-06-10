@@ -66,11 +66,13 @@ NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
 ## Allgemein
 
 * Beim Öffnen, Schließen oder Umschalten zwischen virtuellen Desktops teilt
-  NVDA den Namen des aktiven virtuellen Desktops mit (z. B. Desktop 2).
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11) and reporting item position when moving through taskbar icons
-  (Windows 10 and 11).
+  NVDA nun den Namen des aktiven virtuellen Desktops mit (z. B. Desktop
+  2). Dies ist nun fester Bestandteil in NVDA 2023.2.
+* Die Taskleiste von Windows 10 und 11 wurde verbessert, u. a. durch die
+  Anzeige der Ergebnisse der Neuanordnung von Symbolen beim Drücken von
+  Alt+Umschalt+Pfeiltasten links/rechts (Windows 11) und durch die Anzeige
+  der Position von Elementen beim Bewegen durch die Taskleistensymbole
+  (Windows 10 und 11).
 * In Programmen wie dem Datei-Explorer und dem Notepad, in denen Fenster mit
   Registerkarten unterstützt werden, zeigt NVDA den Namen und die Position
   der Registerkarten an, wenn zwischen ihnen gewechselt wird. Dies ist nun
@@ -107,12 +109,13 @@ Eingabetaste, um das ausgewählte Element einzufügen.
   (Link zum Download und Jetzt installieren in Windows 10,
   Download-Schaltfläche in Windows 11).
 * In Windows 11 werden die Breadcrumb-Leisten richtig erkannt.
-* NVDA will report updates to Windows Update status as download and install
-  progresses. This may result in speech interruption when navigating
-  Settings app while updates are being downloaded and installed. If using
-  Windows 11 and selective UIA event registration is on or set to selective,
-  you must move focus to updates list as soon as they appear so NVDA can
-  announce update progress.
+* NVDA teilt Updates an den Windows Update-Status mit, während der Download
+  und die Installation fortschreiten. Dies kann zu Sprachunterbrechungen bei
+  der Navigation in der App Einstellungen führen, während Updates
+  heruntergeladen und installiert werden. Wenn Sie Windows 11 verwenden und
+  die selektive UIA-Ereignisregistrierung aktiviert oder auf selektiv
+  eingestellt ist, müssen Sie die Update-Liste fokussiert haben, sobald
+  diese erscheint, damit NVDA auch den Update-Fortschritt mitteilt.
 
 ## Sprachzugang
 

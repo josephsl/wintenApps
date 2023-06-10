@@ -67,9 +67,9 @@ l'extension][4].
 
 ## Générale
 
-* Lors de l'ouverture, de la fermeture ou du basculement entre les bureaux
-  virtuels, NVDA annoncera le nom du bureau virtuel actif (bureau 2, par
-  exemple).
+* When opening, closing, or switching between virtual desktops, NVDA will
+  announce active virtual desktop name (desktop 2, for example). This is now
+  part of NVDA 2023.2.
 * Amélioration de l'expérience de la barre des tâches de Windows 10 et 11,
   notamment en annonçant les résultats de réorganisation des icônes lors de
   l'appui sur Alt+Shift+les touches flèche gauche / droite (Windows 11) et
