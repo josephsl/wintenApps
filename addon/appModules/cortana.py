@@ -2,7 +2,7 @@
 # Part of Windows App Essentials collection
 # Copyright 2019-2023 Joseph Lee, released under GPL
 
-# Various workarounds for Cortana Conversations
+# Various workarounds for Cortana Conversations, replaced by Windows Copilot in 2023
 
 from typing import Callable, Optional
 import appModuleHandler
