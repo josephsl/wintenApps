@@ -18,11 +18,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_NVDAObject_init(self, obj):
 		if isinstance(obj, UIA):
-			# #8845: Brightness button in Action Center is a button, not a toggle button.
-			# Brightness control is now a slider in build 18277.
-			if obj.UIAAutomationId == "Microsoft.QuickAction.Brightness":
-				obj.role = controlTypes.Role.BUTTON
-				obj.states.discard(controlTypes.State.CHECKABLE)
 			# Volume mixer list items in canary build 25300 series have no label.
 			# There is no Automation Id but a generic class name is used, so locate items via its children.
 			# Interestingly, item label is the description text for volume slider control.
@@ -32,3 +27,4 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				and obj.lastChild.UIAAutomationId == "AppVolumeLevel"
 			):
 				obj.name = obj.lastChild.description
+		super().event_NVDAObject_init(obj)
