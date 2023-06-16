@@ -13,7 +13,6 @@ This add-on is a collection of app modules for various modern Windows apps, as w
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
 * Cortana
-* Maps
 * Modern keyboard (emoji panel/touch keyboard/dictation/voice typing/hardware input suggestions/clipboard history/Suggested Actions/modern input method editors)
 * Settings (system settings, Windows+I)
 * Voice access (Windows 11 22H2)
@@ -42,10 +41,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## Cortana
 
 * Textual responses from Cortana are announced in most situations.
-
-## Maps
-
-* NVDA will no longer interrupt speech when focused on items other than the map control in some cases.
 
 ## Modern keyboard
 
