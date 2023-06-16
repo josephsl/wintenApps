@@ -25,6 +25,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			if (
 				obj.role == controlTypes.Role.LISTITEM
 				and not obj.name
+				and obj.lastChild
 				and obj.lastChild.UIAAutomationId == "AppVolumeLevel"
 			):
 				obj.name = obj.lastChild.description
