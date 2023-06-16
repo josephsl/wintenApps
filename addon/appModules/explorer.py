@@ -21,6 +21,10 @@ import addonHandler
 addonHandler.initTranslation()
 
 
+# Insider Preview (dev/canary) introduced enhancements to taskbar item position reporting,
+# including rearranged position reporting (25267) and item position (25281), both removed in 25352.
+# Therefore emulate these changes on other Windows 11 builds via the below overlay class.
+# On Windows 10, taskbar item rearrangement is unavailable.
 class TaskbarItem(NVDAObject):
 
 	def _get_itemName(self) -> str:
@@ -77,8 +81,6 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: typing.List[NVDAObject]) -> None:
 		# Taskbar item enhancements.
-		# Windows 10 and 11: taskbar item position.
-		# Windows 11 (excluding 25267 to 25346): announced rearranged item position.
 		if obj.role == controlTypes.Role.BUTTON and (
 			(
 				# Windows 10
