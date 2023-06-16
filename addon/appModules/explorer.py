@@ -32,7 +32,7 @@ class TaskbarItem(NVDAObject):
 		return self.name.rpartition(" - ")[0] if " -" in self.name else self.name
 
 	def _get_positionInfo(self) -> Dict[str, int]:
-		# Position info is included in build 25281.
+		# Position info is included in build 25281 and removed in 25352.
 		positionInfo = super().positionInfo
 		if not positionInfo:
 			taskbarItems = [item for item in self.parent.children if isinstance(item, TaskbarItem)]
@@ -46,6 +46,8 @@ class TaskbarItem(NVDAObject):
 		return positionInfo
 
 	def announceDragPosition(self) -> None:
+		# Rearranging taskbar items with the keyboard is included in Windows 11.
+		# Reporting this info is included in build 25267 and removed in 25352.
 		left = self.previous if isinstance(self.previous, TaskbarItem) else None
 		right = self.next if isinstance(self.next, TaskbarItem) else None
 		if left and right:
