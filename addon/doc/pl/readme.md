@@ -20,7 +20,6 @@ niektórych aplikacji (szczegółowe informacje na temat tego, co jest
 dołączone, zobacz każdą sekcję aplikacji):
 
 * Cortana
-* Mapy
 * Nowoczesna klawiatura (panel emoji/klawiatura dotykowa/dyktowanie/pisanie
   głosowe/sugestie dotyczące wprowadzania sprzętu/historia
   schowka/sugerowane akcje/nowoczesne edytory metod wprowadzania)
@@ -71,18 +70,13 @@ znajduje się w dokumencie [changelogs for add-on releases][4].
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11) and reporting item position when moving through taskbar icons
   (Windows 10 and 11).
-* W punktach takich jak Eksplorator plików i Notatnik, gdzie obsługiwane są
-  okna z zakładkami, NVDA ogłosi nazwę i pozycję kart podczas przełączania
-  między nimi. Jest to teraz część NVDA 2023.2.
+* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
+  windows are supported, NVDA will announce the name and the position of
+  tabs when switching between them. This is now part of NVDA 2023.2.
 
 ## Cortana
 
 * Odpowiedzi tekstowe z Cortany są ogłaszane w większości sytuacji.
-
-## Mapy
-
-* W niektórych przypadkach NVDA nie będzie już przerywać mowy, gdy skupi się
-  na elementach innych niż sterowanie mapą.
 
 ## Klawiatura nowoczesna
 
@@ -109,9 +103,9 @@ wybrany element.
 * NVDA will report updates to Windows Update status as download and install
   progresses. This may result in speech interruption when navigating
   Settings app while updates are being downloaded and installed. If using
-  Windows 11 and selective UIA event registration is on or set to selective,
-  you must move focus to updates list as soon as they appear so NVDA can
-  announce update progress.
+  Windows 11 and UIA event registration is set to selective from NVDA
+  advanced settings panel, you must move focus to updates list as soon as
+  they appear so NVDA can announce update progress.
 
 ## Dostęp głosowy
 

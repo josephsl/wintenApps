@@ -19,7 +19,6 @@ aplicacións (consulta cada sección para a aplicación para detalles sobre que
 se inclúe):
 
 * Cortana
-* Mapas
 * Teclado Moderno (panel de emoji/teclado táctil/ditado/escritura por
   voz/suxestións de entrada por hardware/historial do portapapeis/Accións
   Suxeridas/editores co método de entrada moderna)
@@ -70,18 +69,13 @@ documento [rexistros de trocos para publicacións de complementos][4].
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11) and reporting item position when moving through taskbar icons
   (Windows 10 and 11).
-* In aps such as File Explorer and Notepad where tabbed windows are
-  supported, NVDA will announce the name and the position of tabs when
-  switching between them. This is now part of NVDA 2023.2.
+* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
+  windows are supported, NVDA will announce the name and the position of
+  tabs when switching between them. This is now part of NVDA 2023.2.
 
 ## Cortana
 
 * As respostas textuais de Cortana anúncianse na maioría de situacións.
-
-## Mapas
-
-* NVDA xa non interromperá a fala cando estea enfocado en elementos
-  distintos do control do mapa nalgúns casos.
 
 ## Teclado Moderno
 
@@ -107,9 +101,9 @@ Intro para pegar o elemento seleccionado.
 * NVDA will report updates to Windows Update status as download and install
   progresses. This may result in speech interruption when navigating
   Settings app while updates are being downloaded and installed. If using
-  Windows 11 and selective UIA event registration is on or set to selective,
-  you must move focus to updates list as soon as they appear so NVDA can
-  announce update progress.
+  Windows 11 and UIA event registration is set to selective from NVDA
+  advanced settings panel, you must move focus to updates list as soon as
+  they appear so NVDA can announce update progress.
 
 ## Acceso por voz
 

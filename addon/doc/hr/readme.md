@@ -18,7 +18,6 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 što je uključeno):
 
 * Cortana
-* Karte
 * Moderna tipkovnica (ploča emojija, diktatiranje, tipkanje glasom,
   prijedlozi za unos hardverom, povijest međuspremnika, predložene radnje,
   moderni uređivači za unos)
@@ -67,18 +66,13 @@ izdanja dodatka][4].
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11) and reporting item position when moving through taskbar icons
   (Windows 10 and 11).
-* U aplikacijama kao što su File Explorer i Notepad gdje su podržani prozori
-  s karticama, NVDA će najaviti ime i položaj kartica prilikom prebacivanja
-  između njih. Ovo je sada dio NVDA verzije 2023.2.
+* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
+  windows are supported, NVDA will announce the name and the position of
+  tabs when switching between them. This is now part of NVDA 2023.2.
 
 ## Cortana
 
 * Tekstualni odgovori Cortane najavljuju se u većini slučajeva.
-
-## Karte
-
-* NVDA više neće prekidati govor kada je fokusiran na stavke koje nisu
-  kontrole karte u nekim slučajevima.
 
 ## Moderna tipkovnica
 
@@ -103,9 +97,9 @@ tipku za razmak umjesto tipke Enter.
 * NVDA will report updates to Windows Update status as download and install
   progresses. This may result in speech interruption when navigating
   Settings app while updates are being downloaded and installed. If using
-  Windows 11 and selective UIA event registration is on or set to selective,
-  you must move focus to updates list as soon as they appear so NVDA can
-  announce update progress.
+  Windows 11 and UIA event registration is set to selective from NVDA
+  advanced settings panel, you must move focus to updates list as soon as
+  they appear so NVDA can announce update progress.
 
 ## Pristup glasu
 
