@@ -19,7 +19,6 @@ Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
 Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 * Cortana
-* Karten
 * Moderne Tastatur
   (Emoji-Panel/Touch-Tastatur/Diktat/Sprachsteuerung/Hardware-Eingabevorschläge/Zwischenablage-Verlauf/Vorgeschlagene
   Aktionen/Editoren für moderne Eingabemethoden)
@@ -73,20 +72,15 @@ NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
   Alt+Umschalt+Pfeiltasten links/rechts (Windows 11) und durch die Anzeige
   der Position von Elementen beim Bewegen durch die Taskleistensymbole
   (Windows 10 und 11).
-* In Programmen wie dem Datei-Explorer und dem Notepad, in denen Fenster mit
-  Registerkarten unterstützt werden, zeigt NVDA den Namen und die Position
-  der Registerkarten an, wenn zwischen ihnen gewechselt wird. Dies ist nun
-  Teil in NVDA 2023.2.
+* In Apps wie der Datei-Explorer oder Notepad (Editor) in Windows 11 Version
+  22H2, in denen Fenster mit Registerkarten unterstützt werden, zeigt NVDA
+  den Namen und die Position der Registerkarten an, wenn zwischen ihnen
+  gewechselt wird. Dies ist nun fester Bestandteil in NVDA 2023.2.
 
 ## Cortana
 
 * Rückmeldungstexte von Cortana werden in den meisten Situationen
   angekündigt.
-
-## Karten
-
-* NVDA unterbricht in manchen Fällen die Sprachausgabe nicht mehr, wenn der
-  Fokus auf anderen Elementen als der Kartensteuerung liegt.
 
 ## Moderne virtuelle Tastaturen
 
@@ -110,12 +104,12 @@ Eingabetaste, um das ausgewählte Element einzufügen.
   Download-Schaltfläche in Windows 11).
 * In Windows 11 werden die Breadcrumb-Leisten richtig erkannt.
 * NVDA teilt Updates an den Windows Update-Status mit, während der Download
-  und die Installation fortschreiten. Dies kann zu Sprachunterbrechungen bei
-  der Navigation in der App Einstellungen führen, während Updates
+  und die Installation fortschreiten. Dies kann zu Sprachunterbrechungen
+  führen, wenn Sie in den Einstellungen navigieren, während die Updates
   heruntergeladen und installiert werden. Wenn Sie Windows 11 verwenden und
-  die selektive UIA-Ereignisregistrierung aktiviert oder auf selektiv
-  eingestellt ist, müssen Sie die Update-Liste fokussiert haben, sobald
-  diese erscheint, damit NVDA auch den Update-Fortschritt mitteilt.
+  die UIA-Ereignisregistrierung in den erweiterten Einstellungen von NVDA
+  auf Selektiv eingestellt ist, müssen Sie die Update-Liste fokussieren,
+  sobald diese erscheint, damit NVDA den Update-Fortschritt mitteilen kann.
 
 ## Sprachzugang
 

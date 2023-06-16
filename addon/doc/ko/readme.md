@@ -14,7 +14,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 다음 앱 모듈 및 지원 모듈을 포함합니다(각 앱 관련 엔트리를 참고 바람):
 
 * Cortana
-* 지도
 * 현대식 키보드(에모지 페널/터치 키보드/받아쓰기/하드웨어 입력 구성/클립보드 히스토리/추천 엑션/현대식 IME 입력기)
 * 설정(시스템 설정 앱, Windows+I)
 * Voice access(윈도우 11 22H2)
@@ -32,9 +31,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * Windows App Essentials가 지원하지 않는 윈도우 버전에서 Add-on Updater에서 제공하는 추가 기능 자동
   업데이트 기능 사용시 Windows App Essentials가 설치되지 않습니다.
 * 윈도우 참가자 빌드에 탑제된 기능을 모두 지원하지 않습니다(특히 카나리아 및 개발자 빌드에서 일부에게만 공개된 경우).
-* Add-on dev channel will include changes including experimental content
-  that may or may not be included in beta and stable releases, and beta
-  channel will come with changes planned for future stable releases.
+* 추가 기능 개발자(dev)체널은 베타 및 일반 업데이트 체널에 포함되지 않을 실험적 기능을 포함할 수 있으며 베타 체널 사용시 일반
+  사용자 체널에 포함될 기능을 미리 체험할 수 있습니다.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
 * 시작 메뉴 팝업 메뉴와 같이 웹 기술이 적용된 앱 사용시 NVDA 브라우즈 모드에 있는 "포커스 이동 시 자동 포커스 모드 전환"
   기능을 활성화하시기 바랍니다.
@@ -43,25 +41,19 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 일반
 
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce active virtual desktop name (desktop 2, for example). This is now
-  part of NVDA 2023.2.
+* 가상 데스크탑을 열때/닫을때/변경시 NVDA가 데스크탑 이름(예: Desktop 2)를 출력하도록 함(NVDA 2023.2에서
+  해결됨).
 * Improved Windows 10 and 11 taskbar experience, including announcing
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11) and reporting item position when moving through taskbar icons
   (Windows 10 and 11).
-* In aps such as File Explorer and Notepad where tabbed windows are
-  supported, NVDA will announce the name and the position of tabs when
-  switching between them. This is now part of NVDA 2023.2.
+* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
+  windows are supported, NVDA will announce the name and the position of
+  tabs when switching between them. This is now part of NVDA 2023.2.
 
 ## Cortana
 
 * Textual responses from Cortana are announced in most situations.
-
-## 지도
-
-* NVDA will no longer interrupt speech when focused on items other than the
-  map control in some cases.
 
 ## 현대식 키보드
 
@@ -80,9 +72,9 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * NVDA will report updates to Windows Update status as download and install
   progresses. This may result in speech interruption when navigating
   Settings app while updates are being downloaded and installed. If using
-  Windows 11 and selective UIA event registration is on or set to selective,
-  you must move focus to updates list as soon as they appear so NVDA can
-  announce update progress.
+  Windows 11 and UIA event registration is set to selective from NVDA
+  advanced settings panel, you must move focus to updates list as soon as
+  they appear so NVDA can announce update progress.
 
 ## Voice access
 

@@ -18,7 +18,6 @@ Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
 hver appsektion for detaljer om, hvad der er inkluderet):
 
 * Cortana
-* Kort
 * Modern keyboard (emoji panel/touch keyboard/dictation/voice
   typing/hardware input suggestions/clipboard history/Suggested
   Actions/modern input method editors)
@@ -69,18 +68,13 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][4].
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11) and reporting item position when moving through taskbar icons
   (Windows 10 and 11).
-* In aps such as File Explorer and Notepad where tabbed windows are
-  supported, NVDA will announce the name and the position of tabs when
-  switching between them. This is now part of NVDA 2023.2.
+* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
+  windows are supported, NVDA will announce the name and the position of
+  tabs when switching between them. This is now part of NVDA 2023.2.
 
 ## Cortana
 
 * Tekstlige svar fra Cortana annonceres i de fleste tilfælde.
-
-## Kort
-
-* NVDA will no longer interrupt speech when focused on items other than the
-  map control in some cases.
 
 ## Moderne tastatur
 
@@ -104,9 +98,9 @@ instead of Enter key to paste the selected item.
 * NVDA will report updates to Windows Update status as download and install
   progresses. This may result in speech interruption when navigating
   Settings app while updates are being downloaded and installed. If using
-  Windows 11 and selective UIA event registration is on or set to selective,
-  you must move focus to updates list as soon as they appear so NVDA can
-  announce update progress.
+  Windows 11 and UIA event registration is set to selective from NVDA
+  advanced settings panel, you must move focus to updates list as soon as
+  they appear so NVDA can announce update progress.
 
 ## Stemmeadgang
 

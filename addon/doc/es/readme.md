@@ -20,7 +20,6 @@ aplicaciones (consulta cada sección para la aplicación para detalles sobre
 qué se incluye):
 
 * Cortana
-* Mapas
 * Teclado Moderno (panel de emojis / teclado táctil / dictado / escritura
   por voz / sugerencias de entrada hardware / historial del portapapeles /
   acciones sugeridas / editores modernos de método de entrada)
@@ -73,20 +72,15 @@ complemento, consulta el documento [changelogs for add-on releases][4].
   alt+shift+flechas izquierda y derecha (Windows 11) e indicando la posición
   del elemento al moverse por iconos de la barra de tareas (Windows 10 y
   11).
-* En aplicaciones como el explorador de archivos y el bloc de notas, donde
-  se soportan ventanas con pestañas, NVDA anunciará el nombre y la posición
-  de las pestañas al pasar entre ellas. Esto ahora forma parte de NVDA
-  2023.2.
+* En aplicaciones de Windows 11 22H2 como el explorador de archivos y el
+  bloc de notas, donde se soportan ventanas con pestañas, NVDA anunciará el
+  nombre y la posición de las pestañas al pasar entre ellas. Esto ahora
+  forma parte de NVDA 2023.2.
 
 ## Cortana
 
 * Las respuestas textuales de Cortana se verbalizan en la mayoría de
   situaciones.
-
-## Mapas
-
-* NVDA ya no interrumpirá la voz al tener el foco en elementos distintos al
-  control del mapa en algunos casos.
 
 ## Teclado Moderno
 
@@ -114,10 +108,10 @@ de intro para pegar el elemento seleccionado.
   avancen la descarga e instalación. Esto puede resultar en interrupciones
   de voz al navegar por la aplicación de configuración mientras las
   actualizaciones se descargan y se instalan. Si usas Windows 11 y el
-  registro selectivo de eventos UIA está activado o configurado en
-  selectivo, debes mover el foco a la lista de actualizaciones tan pronto
-  como aparezcan para que NVDA pueda anunciar el progreso de la
-  actualización.
+  registro de eventos UIA está configurado en selectivo en el panel de
+  opciones avanzadas de NVDA, debes mover el foco a la lista de
+  actualizaciones tan pronto como aparezcan para que NVDA pueda anunciar el
+  progreso de la actualización.
 
 ## Acceso por voz
 
