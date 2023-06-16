@@ -35,7 +35,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 * When opening, closing, or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example). This is now part of NVDA 2023.2.
 * Improved Windows 10 and 11 taskbar experience, including announcing results of rearranging icons when pressing Alt+Shift+left/right arrow keys (Windows 11) and reporting item position when moving through taskbar icons (Windows 10 and 11).
-* In aps such as File Explorer and Notepad where tabbed windows are supported, NVDA will announce the name and the position of tabs when switching between them. This is now part of NVDA 2023.2.
+* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed windows are supported, NVDA will announce the name and the position of tabs when switching between them. This is now part of NVDA 2023.2.
 
 ## Cortana
 
@@ -51,7 +51,7 @@ This includes emoji panel, clipboard history, touch keyboard, dictation/voice ty
 
 * NVDA will announce the name of the optional quality update control if present (download and install now link in Windows 10, download button in Windows 11).
 * In Windows 11, breadcrumb bar items are properly recognized.
-* NVDA will report updates to Windows Update status as download and install progresses. This may result in speech interruption when navigating Settings app while updates are being downloaded and installed. If using Windows 11 and selective UIA event registration is on or set to selective, you must move focus to updates list as soon as they appear so NVDA can announce update progress.
+* NVDA will report updates to Windows Update status as download and install progresses. This may result in speech interruption when navigating Settings app while updates are being downloaded and installed. If using Windows 11 and UIA event registration is set to selective from NVDA advanced settings panel, you must move focus to updates list as soon as they appear so NVDA can announce update progress.
 
 ## Voice access
 
