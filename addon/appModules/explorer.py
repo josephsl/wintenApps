@@ -24,7 +24,7 @@ addonHandler.initTranslation()
 # Insider Preview (dev/canary) introduced enhancements to taskbar item position reporting,
 # including rearranged position reporting (25267) and item position (25281), both removed in 25352.
 # Therefore emulate these changes on other Windows 11 builds via the below overlay class.
-# On Windows 10, taskbar item rearrangement is unavailable.
+# On Windows 10, taskbar item rearrangement via keyboard is unavailable.
 class TaskbarItem(NVDAObject):
 
 	def _get_itemName(self) -> str:
@@ -46,7 +46,7 @@ class TaskbarItem(NVDAObject):
 		return positionInfo
 
 	def announceDragPosition(self) -> None:
-		# Rearranging taskbar items with the keyboard is included in Windows 11.
+		# Rearranging taskbar items with the keyboard is possible in Windows 11.
 		# Reporting this info is included in build 25267 and removed in 25352.
 		left = self.previous if isinstance(self.previous, TaskbarItem) else None
 		right = self.next if isinstance(self.next, TaskbarItem) else None
