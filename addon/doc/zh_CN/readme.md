@@ -14,7 +14,6 @@
 包括以下应用程序的支持模块（有关所包含内容的详细信息，请参阅每个应用程序部分）：
 
 * Cortana
-* 地图
 * 现代键盘（表情符号面板/触摸键盘/听写/语音输入/硬件输入建议/剪贴板历史/建议操作/现代输入法编辑器）
 * 设置（Windows + I系统设置）
 * 语音访问（Windows 11 22H2）
@@ -38,22 +37,16 @@
 
 ## 常规增强
 
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce active virtual desktop name (desktop 2, for example). This is now
-  part of NVDA 2023.2.
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11) and reporting item position when moving through taskbar icons
-  (Windows 10 and 11).
-* 在文件资源管理器和记事本等支持标签式窗口的应用程序中，NVDA 会在标签间切换时读出标签的名称和位置。该特性已经包含在 NVDA2023.1 中。
+* 当打开、关闭或在虚拟桌面之间切换时，NVDA 会读出当前的虚拟桌面名称（例如桌面 2）。该特性已经包含在 NVDA2023.2 中。
+* 改进了 Windows 10 和 11 任务栏的使用体验，包括在按
+  Alt+Shift+左/右箭头键时朗读重新排列图标的结果（Windows11）以及在任务栏图标间移动时读出项目位置（Windows10 和 11）。
+* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
+  windows are supported, NVDA will announce the name and the position of
+  tabs when switching between them. This is now part of NVDA 2023.2.
 
 ## Cortana
 
 * 现在，在大多数情况下，都会发布来自Cortana的文字回复。
-
-## 地图
-
-* 在某些情况下，NVDA 在聚焦于地图控件以外的项目时不会打断语音。
 
 ## 系统键盘
 
@@ -71,9 +64,9 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 * NVDA will report updates to Windows Update status as download and install
   progresses. This may result in speech interruption when navigating
   Settings app while updates are being downloaded and installed. If using
-  Windows 11 and selective UIA event registration is on or set to selective,
-  you must move focus to updates list as soon as they appear so NVDA can
-  announce update progress.
+  Windows 11 and UIA event registration is set to selective from NVDA
+  advanced settings panel, you must move focus to updates list as soon as
+  they appear so NVDA can announce update progress.
 
 ## 语音访问
 

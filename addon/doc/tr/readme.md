@@ -1,7 +1,7 @@
 # Windows Temel Uygulamalar #
 
 * Yazarlar: Joseph Lee, Derek Riemer ve diğerleri
-* [kararlı sürüm][1]ü indir
+* [Kararlı sürümü indirin][1]
 * [Beta sürümünü indirin][2]
 * [Geliştirme sürümünü indirin][3]
 * NVDA uyumluluğu: 2023.1 ve üstü
@@ -21,7 +21,6 @@ Bazı uygulamalar için aşağıdaki uygulama veya destek modülleri  mevcuttur
 bakın):
 
 * Cortana
-* Haritalar
 * Modern klavye (emoji paneli/dokunmatik klavye/dikte/sesle yazma/donanım
   giriş önerileri/pano geçmişi/Önerilen Eylemler/modern giriş yöntemi
   düzenleyicileri)
@@ -64,26 +63,21 @@ Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
 
 ## Genel
 
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce active virtual desktop name (desktop 2, for example). This is now
-  part of NVDA 2023.2.
+* Sanal masaüstlerini açarken, kapatırken veya aralarında geçiş yaparken,
+  NVDA aktif sanal masaüstü adını (örneğin masaüstü 2) duyurur. Bu artık
+  NVDA 2023.2'nin bir parçasıdır.
 * Alt+Shift+sol/sağ ok tuşlarına basıldığında simgelerin yeniden
   düzenlenmesinin sonuçlarının duyurulması (Windows 11) ve görev çubuğu
   simgeleri arasında gezinirken öğe konumunun bildirilmesi (Windows 10 ve
   11) dahil olmak üzere iyileştirilmiş Windows 10 ve 11 görev çubuğu
   deneyimi.
-* Sekmeli pencerelerin desteklendiği Dosya Gezgini ve Not Defteri gibi
-  uygulamalarda, NVDA aralarında geçiş yaparken sekmelerin adını ve konumunu
-  duyurur. Bu artık NVDA 2023.2'nin bir parçasıdır.
+* Sekmeli pencerelerin desteklendiği Windows 11 22H2 Dosya Gezgini ve Not
+  Defteri gibi uygulamalarda NVDA, bunlar arasında geçiş yaparken sekmelerin
+  adını ve konumunu duyurur. Bu artık NVDA 2023.2'nin bir parçasıdır.
 
 ## Cortana
 
 * Cortana'dan gelen metin içerikli yanıtlar çoğu durumda bildirilir.
-
-## Haritalar
-
-* NVDA, bazı durumlarda harita kontrolü dışındaki öğelere odaklanıldığında
-  artık konuşmayı kesintiye uğratmayacaktır.
 
 ## Modern klavye
 
@@ -105,12 +99,12 @@ daha yükseğe ayarlayın. Windows 10'da pano geçmişinden yapıştırırken, s
   düğmesi).
 * Windows 11'de içerik haritası çubuğu öğeleri düzgün bir şekilde tanınır.
 * NVDA, indirme ve yükleme ilerledikçe Windows Update durumuyla ilgili
-  güncellemeleri bildirir. Bu, güncellemeler indirilirken ve kurulurken
+  güncellemeleri bildirir. Bu, güncellemeler indirilirken ve yüklenirken
   Ayarlar uygulamasında gezinirken konuşmanın kesilmesine neden
-  olabilir. Windows 11 kullanılıyorsa ve seçici UIA olay kaydı açıksa veya
-  seçici olarak ayarlanmışsa, NVDA'nın güncelleme ilerleyişini duyurabilmesi
-  için, güncellemeler görünür görünmez odağı güncellemeler listesine
-  taşımanız gerekir.
+  olabilir. Windows 11 kullanıyorsanız ve UIA etkinlik kaydı NVDA gelişmiş
+  ayarlar panelinden seçmeli olarak ayarlanmışsa, NVDA'nın güncelleme
+  ilerlemesini duyurabilmesi için göründükleri anda odağı güncellemeler
+  listesine taşımalısınız.
 
 ## Sesli erişim
 
