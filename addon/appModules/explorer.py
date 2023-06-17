@@ -25,6 +25,7 @@ addonHandler.initTranslation()
 # including rearranged position reporting (25267) and item position (25281), both removed in 25352.
 # Therefore emulate these changes on other Windows 11 builds via the below overlay class.
 # On Windows 10, taskbar item rearrangement via keyboard is unavailable.
+# Emulated feature, might be disabled or removed in the future.
 class TaskbarItem(NVDAObject):
 
 	def _get_itemName(self) -> str:
