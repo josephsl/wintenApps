@@ -46,6 +46,9 @@ Windows, а також удосконаленням та виправлення�
 * Не всі функції зі збірок Windows Insider Preview підтримуватимуться,
   особливо функції, представлені для підгруп Windows Insiders у каналах
   canary і dev.
+* The add-on may emulate fixes included in Insider Preview builds which are
+  subsequently removed, and for these changes, the add-on may remove them in
+  future releases.
 * Канал розробників доповнень міститиме зміни, включаючи експериментальний
   контент, який може бути включений або не включений до бета- та стабільних
   випусків, а канал бета-версій міститиме зміни, заплановані для майбутніх
@@ -64,10 +67,12 @@ Windows, а також удосконаленням та виправлення�
 * При відкритті, закритті або перемиканні між віртуальними робочими столами
   NVDA називатиме ім'я активного віртуального робочого столу (наприклад,
   робочий стіл 2). Тепер це є частиною NVDA 2023.2.
-* Поліпшено роботу з панеллю завдань у Windows 10 і 11, зокрема оголошення
-  результатів перестановки піктограм при натисканні клавіш Alt+Shift+стрілка
-  вліво/вправо (Windows 11) і повідомлення про позицію елемента при
-  переміщенні по піктограмах панелі завдань (Windows 10 і 11).
+* Improved Windows 10 and 11 taskbar experience, including announcing
+  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
+  (Windows 11) and reporting item position when moving through taskbar icons
+  (Windows 10 and 11). Note that these are emulated workarounds for features
+  introduced and then subsequently removed in Insider Preview builds and may
+  be removed from the add-on in the future.
 * In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
   windows are supported, NVDA will announce the name and the position of
   tabs when switching between them. This is now part of NVDA 2023.2.

@@ -47,6 +47,9 @@ Notlar:
 * Windows Insider Önizleme yapılarındaki tüm özellikler desteklenmeyecek,
   özellikle canary ve dev kanallarında Windows Insiders alt kümesine sunulan
   özellikler için.
+* Eklenti, daha sonra kaldırılan Insider Preview yapılarında yer alan
+  düzeltmeleri taklit edebilir ve bu değişiklikler için, eklenti bunları
+  gelecekteki sürümlerde kaldırabilir.
 * Eklenti geliştirme kanalı, beta ve kararlı sürümlere dahil edilebilecek
   veya edilmeyebilecek deneysel içerik de dahil olmak üzere değişiklikleri
   içerecek ve beta kanalı, gelecekteki kararlı sürümler için planlanan
@@ -70,7 +73,9 @@ Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
   düzenlenmesinin sonuçlarının duyurulması (Windows 11) ve görev çubuğu
   simgeleri arasında gezinirken öğe konumunun bildirilmesi (Windows 10 ve
   11) dahil olmak üzere iyileştirilmiş Windows 10 ve 11 görev çubuğu
-  deneyimi.
+  deneyimi. Bunların, sunulan ve ardından Insider Preview yapılarında
+  kaldırılan özellikler için benzetilmiş geçici çözümler olduğunu ve
+  gelecekte eklentiden kaldırılabileceğini unutmayın.
 * Sekmeli pencerelerin desteklendiği Windows 11 22H2 Dosya Gezgini ve Not
   Defteri gibi uygulamalarda NVDA, bunlar arasında geçiş yaparken sekmelerin
   adını ve konumunu duyurur. Bu artık NVDA 2023.2'nin bir parçasıdır.

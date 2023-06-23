@@ -28,6 +28,9 @@
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
 * 如果安装了插件更新器并启用了后台插件更新， 在不受支持的操作系统上 Windows App Essentials 不会被安装。
 * 并非支持所有的 Windows Insider Preview 版本，更偏向于支持由开发或金丝雀通道引入 Windows Insider 的功能。
+* The add-on may emulate fixes included in Insider Preview builds which are
+  subsequently removed, and for these changes, the add-on may remove them in
+  future releases.
 * 插件的 Dev 通道将包括可能包含或不包含在测试版和稳定版中的实验性内容，而Beta 通道将会包含为未来稳定版计划的更改。
 * 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
 * 为了获得内嵌 Web 试图（例如开始菜单及其上下文菜单）的应用程序的最佳体验，请在 NVDA
@@ -38,8 +41,12 @@
 ## 常规增强
 
 * 当打开、关闭或在虚拟桌面之间切换时，NVDA 会读出当前的虚拟桌面名称（例如桌面 2）。该特性已经包含在 NVDA2023.2 中。
-* 改进了 Windows 10 和 11 任务栏的使用体验，包括在按
-  Alt+Shift+左/右箭头键时朗读重新排列图标的结果（Windows11）以及在任务栏图标间移动时读出项目位置（Windows10 和 11）。
+* Improved Windows 10 and 11 taskbar experience, including announcing
+  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
+  (Windows 11) and reporting item position when moving through taskbar icons
+  (Windows 10 and 11). Note that these are emulated workarounds for features
+  introduced and then subsequently removed in Insider Preview builds and may
+  be removed from the add-on in the future.
 * In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
   windows are supported, NVDA will announce the name and the position of
   tabs when switching between them. This is now part of NVDA 2023.2.

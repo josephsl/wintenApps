@@ -48,6 +48,9 @@ Notas:
 * No se soportarán todas las funciones de las compilaciones Windows Insider
   Preview, más si se introducen en un subconjunto de insiders de Windows en
   los canales dev y canary.
+* El complemento puede emular correcciones incluidas en compilaciones
+  preliminares de Insider que posteriormente se eliminan, y en estos casos,
+  el complemento podría eliminarlas en versiones futuras.
 * El canal de desarrollo del complemento incluirá entre sus cambios
   contenido experimental que podrá ir o no en las versiones beta y estables,
   y el canal beta vendrá con cambios planeados para versiones estables
@@ -71,7 +74,9 @@ complemento, consulta el documento [changelogs for add-on releases][4].
   el anuncio de los resultados al reordenar iconos pulsando las teclas
   alt+shift+flechas izquierda y derecha (Windows 11) e indicando la posición
   del elemento al moverse por iconos de la barra de tareas (Windows 10 y
-  11).
+  11). Ten en cuenta que son parches emulados para funciones introducidas y
+  eliminadas a continuación en compilaciones preliminares de Insider y se
+  podrían eliminar del complemento en el futuro.
 * En aplicaciones de Windows 11 22H2 como el explorador de archivos y el
   bloc de notas, donde se soportan ventanas con pestañas, NVDA anunciará el
   nombre y la posición de las pestañas al pasar entre ellas. Esto ahora

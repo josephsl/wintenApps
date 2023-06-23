@@ -47,6 +47,9 @@ Notas:
 * Nem todas as funcionalidades das compilações do Windows Insider Preview
   serão suportadas, sobretudo as funcionalidades apresentadas a um
   subconjunto de Windows Insiders nos canais Canary e Dev.
+* The add-on may emulate fixes included in Insider Preview builds which are
+  subsequently removed, and for these changes, the add-on may remove them in
+  future releases.
 * O canal de desenvolvimento de complementos incluirá alterações, incluindo
   conteúdos experimentais que podem ou não ser incluídos nas versões beta e
   estável, e o canal beta incluirá alterações planeadas para futuras versões
@@ -65,11 +68,12 @@ consulte o documento [changelogs for add-on releases][4].
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
   anunciará o nome da área de trabalho virtual ativa (área de trabalho 2,
   por exemplo). Isso agora faz parte do NVDA 2023.2.
-* Melhoria da experiência da barra de tarefas do Windows 10 e 11, incluindo
-  o anúncio dos resultados da reorganização de ícones ao premir
-  Alt+Shift+teclas de seta para a esquerda/direita (Windows 11) e a
-  comunicação da posição do item ao mover-se pelos ícones da barra de
-  tarefas (Windows 10 e 11).
+* Improved Windows 10 and 11 taskbar experience, including announcing
+  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
+  (Windows 11) and reporting item position when moving through taskbar icons
+  (Windows 10 and 11). Note that these are emulated workarounds for features
+  introduced and then subsequently removed in Insider Preview builds and may
+  be removed from the add-on in the future.
 * In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
   windows are supported, NVDA will announce the name and the position of
   tabs when switching between them. This is now part of NVDA 2023.2.
