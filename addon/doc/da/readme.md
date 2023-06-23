@@ -46,6 +46,9 @@ Bemærkninger:
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders in canary
   and dev channels.
+* The add-on may emulate fixes included in Insider Preview builds which are
+  subsequently removed, and for these changes, the add-on may remove them in
+  future releases.
 * Add-on dev channel will include changes including experimental content
   that may or may not be included in beta and stable releases, and beta
   channel will come with changes planned for future stable releases.
@@ -67,7 +70,9 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][4].
 * Improved Windows 10 and 11 taskbar experience, including announcing
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11) and reporting item position when moving through taskbar icons
-  (Windows 10 and 11).
+  (Windows 10 and 11). Note that these are emulated workarounds for features
+  introduced and then subsequently removed in Insider Preview builds and may
+  be removed from the add-on in the future.
 * In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
   windows are supported, NVDA will announce the name and the position of
   tabs when switching between them. This is now part of NVDA 2023.2.
