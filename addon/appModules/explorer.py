@@ -6,19 +6,11 @@
 
 # Provides additional routines on top of the built-in File Explorer app module.
 
-# Needed in overlay class chooser because just importing typing.List will cause type error to be raised.
-import typing
-from typing import Dict, Callable
+from typing import Callable
 # Flake8 F403: detect other add-ons that overrode File Explorer app module.
 from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
 import controlTypes
-import ui
-from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
-import scriptHandler
-import core
-import addonHandler
-addonHandler.initTranslation()
 
 
 # App module class comes from built-in File Explorer app module but Mypy doesn't know that.
