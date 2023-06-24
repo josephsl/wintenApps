@@ -191,8 +191,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if UIAClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
 			return
-		# Taskbar item enhancements.
-		if obj.role == controlTypes.Role.BUTTON and (
+		# File Explorer taskbar item enhancements in.
+		if obj.role == controlTypes.Role.BUTTON and obj.appModule.appName == "explorer" and (
 			(
 				# Windows 10
 				obj.windowClassName == "MSTaskListWClass"
