@@ -11,6 +11,7 @@ import NVDAObjects
 import globalVars
 import UIAHandler
 import eventHandler
+import controlTypes
 import ui
 import scriptHandler
 import core
