@@ -25,24 +25,6 @@ addonHandler.initTranslation()
 # Also tell Flake8 that the base AppModule class comes from NVDA Core.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: typing.List[NVDAObject]) -> None:
-		# Taskbar item enhancements.
-		if obj.role == controlTypes.Role.BUTTON and (
-			(
-				# Windows 10
-				obj.windowClassName == "MSTaskListWClass"
-				and all(obj.location)
-			) or (
-				# Windows 11
-				isinstance(obj, UIA)
-				and obj.UIAElement.cachedClassName == "Taskbar.TaskListButtonAutomationPeer"
-			)
-		):
-			clsList.insert(0, TaskbarItem)
-			return
-		# NVDA Core takes care of the rest.
-		super().chooseNVDAObjectOverlayClasses(obj, clsList)
-
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# NVDA Core issue 14388: announce File Explorer tab switches (Windows 11 22H2 and later).
 		# Resolved in NVDA 2023.2 (remove this method completely).
