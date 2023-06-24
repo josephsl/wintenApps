@@ -15,6 +15,8 @@ import controlTypes
 import ui
 import scriptHandler
 import core
+import addonHandler
+addonHandler.initTranslation()
 
 
 # Virtual desktop announcements come from a combination of this add-on and an NVDA Core pull request.
