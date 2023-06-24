@@ -21,63 +21,6 @@ import addonHandler
 addonHandler.initTranslation()
 
 
-# Insider Preview (dev/canary) introduced enhancements to taskbar item position reporting,
-# including rearranged position reporting (25267) and item position (25281), both removed in 25352.
-# Therefore emulate these changes on other Windows 11 builds via the below overlay class.
-# On Windows 10, taskbar item rearrangement via keyboard is unavailable.
-# Emulated feature, might be disabled or removed in the future.
-class TaskbarItem(NVDAObject):
-
-	def _get_itemName(self) -> str:
-		# Icon name contains open window count if windows are open after a hyphen (-).
-		return self.name.rpartition(" - ")[0] if " -" in self.name else self.name
-
-	def _get_positionInfo(self) -> Dict[str, int]:
-		# Position info is included in build 25281 and removed in 25352.
-		positionInfo = super().positionInfo
-		if not positionInfo:
-			taskbarItems = [item for item in self.parent.children if isinstance(item, TaskbarItem)]
-			# Sometimes an XAML control sits in the middle of the taskbar, making position info meaningless
-			# since the taskbar UIA tree will not reveal all of its children including this item.
-			# This is noticeable if using input devices other than the keyboard.
-			if self in taskbarItems:
-				positionInfo = {
-					"indexInGroup": taskbarItems.index(self) + 1, "similarItemsInGroup": len(taskbarItems)
-				}
-		return positionInfo
-
-	def announceDragPosition(self) -> None:
-		# Rearranging taskbar items with the keyboard is possible in Windows 11.
-		# Reporting this info is included in build 25267 and removed in 25352.
-		left = self.previous if isinstance(self.previous, TaskbarItem) else None
-		right = self.next if isinstance(self.next, TaskbarItem) else None
-		if left and right:
-			# Translators: announced when rearranging taskbar icons in Windows 11.
-			ui.message(_("{appName} moved between {previousAppName} and {nextAppName}").format(
-				appName=self.itemName, previousAppName=left.itemName, nextAppName=right.itemName
-			))
-		elif left and not right:
-			# Translators: announced when rearranging taskbar icons in Windows 11.
-			ui.message(_("{appName} moved to end of the apps list").format(appName=self.itemName))
-		elif right and not left:
-			# Translators: announced when rearranging taskbar icons in Windows 11.
-			ui.message(_("{appName} moved to beginning of the apps list").format(appName=self.itemName))
-
-	@scriptHandler.script(gesture="kb:alt+shift+rightArrow")
-	def script_moveRight(self, gesture) -> None:
-		announcePosition = isinstance(self, UIA) and isinstance(self.next, TaskbarItem)
-		gesture.send()
-		if announcePosition:
-			core.callLater(1, self.announceDragPosition)
-
-	@scriptHandler.script(gesture="kb:alt+shift+leftArrow")
-	def script_moveLeft(self, gesture) -> None:
-		announcePosition = isinstance(self, UIA) and isinstance(self.previous, TaskbarItem)
-		gesture.send()
-		if announcePosition:
-			core.callLater(1, self.announceDragPosition)
-
-
 # App module class comes from built-in File Explorer app module but Mypy doesn't know that.
 # Also tell Flake8 that the base AppModule class comes from NVDA Core.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
