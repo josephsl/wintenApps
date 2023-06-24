@@ -187,3 +187,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# This is still the case with some dialogs such as restart to install updates dialog in Windows 11.
 		if UIAClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
+			return
+		# Taskbar item enhancements.
+		if obj.role == controlTypes.Role.BUTTON and (
+			(
+				# Windows 10
+				obj.windowClassName == "MSTaskListWClass"
+				and all(obj.location)
+			) or (
+				# Windows 11
+				isinstance(obj, UIA)
+				and obj.UIAElement.cachedClassName == "Taskbar.TaskListButtonAutomationPeer"
+			)
+		):
+			clsList.insert(0, TaskbarItem)
