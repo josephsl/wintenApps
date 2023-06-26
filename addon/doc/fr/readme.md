@@ -48,6 +48,9 @@ Notes:
 * Toutes les fonctionnalités des builds Windows Insider Preview ne seront
   pas prises en charge, plus encore pour les fonctionnalités introduites
   dans Windows Insiders sous canary et dev channels.
+* L'extension peut émuler les correctifs inclus dans les builds Insider
+  Preview qui sont ensuite supprimées, et pour ces modifications,
+  l'extension peut les supprimer dans des versions futures.
 * Le canal de développement de l'extension comprendra des modifications, y
   compris le contenu expérimental qui peut ou non être inclus dans les
   versions béta et stables, et le canal béta sera livré avec des
@@ -73,10 +76,14 @@ l'extension][4].
   notamment en annonçant les résultats de réorganisation des icônes lors de
   l'appui sur Alt+Shift+les touches flèche gauche / droite (Windows 11) et
   en rapportant la position de l'élément lors du déplacement des icônes de
-  la barre des tâches  (Windows 10 et 11).
-* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
-  windows are supported, NVDA will announce the name and the position of
-  tabs when switching between them. This is now part of NVDA 2023.2.
+  la barre des tâches  (Windows 10 et 11). Notez que ce sont des solutions
+  de contournement émulées pour les fonctionnalités introduites, puis
+  supprimées par la suite dans les builds Insider Preview et peuvent être
+  supprimées de l'extension à l'avenir.
+* Dans des aps  tels que Windows 11 22H2 File Explorer et Notepad  où les
+  fenêtres à onglets sont prises en charge, NVDA annoncera le nom et la
+  position des onglets lors de la commutation entre eux. Cela fait
+  maintenant partie de NVDA 2023.2.
 
 ## Cortana
 
@@ -106,12 +113,14 @@ coller l'élément sélectionné.
   de téléchargement dans Windows 11).
 * Dans Windows 11, les éléments du fil d'Ariane des paramètres sont
   correctement reconnus.
-* NVDA will report updates to Windows Update status as download and install
-  progresses. This may result in speech interruption when navigating
-  Settings app while updates are being downloaded and installed. If using
-  Windows 11 and UIA event registration is set to selective from NVDA
-  advanced settings panel, you must move focus to updates list as soon as
-  they appear so NVDA can announce update progress.
+* NVDA signalera les mises à jour de l'état de Windows Update au fur et à
+  mesure que le téléchargement et l'installation progressent. Cela peut
+  entraîner une interruption de la parole lors de la navigation dans
+  l'application Paramètres pendant le téléchargement et l'installation des
+  mises à jour. Si vous utilisez Windows 11 si l'enregistrement sélectif des
+  événements UIA est défini sur sélectif, vous devez déplacer le focus sur
+  la liste des mises à jour dès qu'elles apparaissent afin que NVDA puisse
+  annoncer la progression de la mise à jour.
 
 ## Accès vocal
 

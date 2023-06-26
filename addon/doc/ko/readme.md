@@ -31,6 +31,9 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * Windows App Essentials가 지원하지 않는 윈도우 버전에서 Add-on Updater에서 제공하는 추가 기능 자동
   업데이트 기능 사용시 Windows App Essentials가 설치되지 않습니다.
 * 윈도우 참가자 빌드에 탑제된 기능을 모두 지원하지 않습니다(특히 카나리아 및 개발자 빌드에서 일부에게만 공개된 경우).
+* The add-on may emulate fixes included in Insider Preview builds which are
+  subsequently removed, and for these changes, the add-on may remove them in
+  future releases.
 * 추가 기능 개발자(dev)체널은 베타 및 일반 업데이트 체널에 포함되지 않을 실험적 기능을 포함할 수 있으며 베타 체널 사용시 일반
   사용자 체널에 포함될 기능을 미리 체험할 수 있습니다.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
@@ -46,7 +49,9 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * Improved Windows 10 and 11 taskbar experience, including announcing
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11) and reporting item position when moving through taskbar icons
-  (Windows 10 and 11).
+  (Windows 10 and 11). Note that these are emulated workarounds for features
+  introduced and then subsequently removed in Insider Preview builds and may
+  be removed from the add-on in the future.
 * In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
   windows are supported, NVDA will announce the name and the position of
   tabs when switching between them. This is now part of NVDA 2023.2.

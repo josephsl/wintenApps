@@ -46,6 +46,9 @@ Huomautukset:
 * Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
   varsinkaan sellaisia, jotka esitellään vain osalle canary- ja
   dev-kanavilla olevista käyttäjistä.
+* Lisäosa saattaa jäljitellä Insider-esikoontikäännösversioihin
+  sisällytettyjä korjauksia, jotka poistetaan myöhemmin. Näihin muutoksiin
+  liittyen korjaukset saatetaan poistaa lisäosan tulevissa versioissa.
 * Lisäosan dev-kanava sisältää muutoksia, mukaan lukien kokeellinen sisältö,
   joka saatetaan sisällyttää beeta- ja vakaisiin versioihin, ja beta-kanava
   sisältää tuleviin vakaisiin versioihin suunniteltuja muutoksia.
@@ -63,14 +66,19 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 * NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
   avattaessa, suljettaessa tai siirryttäessä virtuaalityöpöytien
   välillä. Tämä sisältyy NVDA 2023.2:een.
-* Paranneltu Windows 10:n ja 11:n tehtäväpalkin kokemusta, mukaan lukien
-  kuvakkeiden uudelleenjärjestämisen tulosten puhuminen painettaessa
+* Paranneltu Windows 10:n ja 11:n tehtäväpalkin käyttökokemusta, mukaan
+  lukien kuvakkeiden uudelleenjärjestämisen tulosten puhuminen painettaessa
   Alt+Vaihto+Vasen/Oikea nuolinäppäin (Windows 11) ja kohteen sijainnin
   ilmoittaminen tehtäväpalkin kuvakkeiden välillä liikuttaessa (Windows 10
-  ja 11).
-* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
-  windows are supported, NVDA will announce the name and the position of
-  tabs when switching between them. This is now part of NVDA 2023.2.
+  ja 11). Huom: Nämä ovat jäljiteltyjä ongelmien kiertämismenetelmiä
+  ominaisuuksille, jotka on alun perin otettu käyttöön
+  Insider-esikoontiversioissa ja myöhemmin poistettu. Nämä ongelmien
+  kiertämismenetelmien jäljitelmät saatetaan poistaa lisäosasta
+  tulevaisuudessa.
+* NVDA puhuu välilehtien nimen ja sijainnin niiden välillä vaihdettaessa
+  sellaisissa sovelluksissa, joissa välilehti-ikkunoita tuetaan
+  (esim. Windows 11 22H2:n Resurssienhallinta ja Muistio). Tämä sisältyy
+  NVDA 2023.2:een.
 
 ## Cortana
 
@@ -96,12 +104,13 @@ painamalla Välilyönti-näppäintä Enterin sijaan.
   nyt -linkki Windows 10:ssä, Lataa-painike Windows 11:ssä), mikäli
   sellainen on näkyvissä.
 * Navigointipolkupalkin kohteet tunnistetaan oikein Windows 11:ssä.
-* NVDA will report updates to Windows Update status as download and install
-  progresses. This may result in speech interruption when navigating
-  Settings app while updates are being downloaded and installed. If using
-  Windows 11 and UIA event registration is set to selective from NVDA
-  advanced settings panel, you must move focus to updates list as soon as
-  they appear so NVDA can announce update progress.
+* NVDA ilmoittaa Windows Updaten tilan päivitysten latauksen ja asennuksen
+  edistyessä. Tästä voi olla seurauksena puheen keskeytyminen navigoitaessa
+  Asetukset-sovelluksessa päivitysten lataamisen ja asennuksen
+  aikana. Mikäli käytetään Windows 11:tä ja UIA-tapahtumien rekisteröinti on
+  määritetty valikoivaksi NVDA:n Lisäasetukset-paneelissa, kohdistus on
+  siirrettävä päivitysten luetteloon heti niiden ilmestyessä, jotta NVDA voi
+  ilmoittaa päivityksen edistymisen.
 
 ## Puhekäyttö
 

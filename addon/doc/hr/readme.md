@@ -44,6 +44,9 @@ Napomene:
 * Windows Insider Preview gradnje neće podržati sve značajke, pogotovo
   značajke koje su predstavljene u podskupu „Windows Insiders” u kanalima
   canary i razvoja.
+* The add-on may emulate fixes included in Insider Preview builds which are
+  subsequently removed, and for these changes, the add-on may remove them in
+  future releases.
 * Kanal dodataka u razvoju uključivat će promjene uključujući
   eksperimentalni sadržaj koji može, ali ne mora biti uključen u beta i
   stabilnim izdanjima, a beta kanal će sadržati promjene koje su planirane
@@ -65,7 +68,9 @@ izdanja dodatka][4].
 * Improved Windows 10 and 11 taskbar experience, including announcing
   results of rearranging icons when pressing Alt+Shift+left/right arrow keys
   (Windows 11) and reporting item position when moving through taskbar icons
-  (Windows 10 and 11).
+  (Windows 10 and 11). Note that these are emulated workarounds for features
+  introduced and then subsequently removed in Insider Preview builds and may
+  be removed from the add-on in the future.
 * In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
   windows are supported, NVDA will announce the name and the position of
   tabs when switching between them. This is now part of NVDA 2023.2.

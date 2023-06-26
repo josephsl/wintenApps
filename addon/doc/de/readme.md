@@ -47,6 +47,9 @@ Hinweise:
 * Nicht alle Funktionen von Windows Insider Preview-Builds werden
   unterstützt. Dies gilt vor allem für Funktionen, die einer Untergruppe von
   Windows Insidern im Canary- und Dev-Channel vorgestellt werden.
+* The add-on may emulate fixes included in Insider Preview builds which are
+  subsequently removed, and for these changes, the add-on may remove them in
+  future releases.
 * Der Dev-Kanal der NVDA-Erweiterung wird Änderungen enthalten,
   einschließlich experimenteller Inhalte, die in den Beta- und
   Stable-Releases enthalten sein können oder auch nicht, und der Beta-Kanal
@@ -67,11 +70,12 @@ NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
 * Beim Öffnen, Schließen oder Umschalten zwischen virtuellen Desktops teilt
   NVDA nun den Namen des aktiven virtuellen Desktops mit (z. B. Desktop
   2). Dies ist nun fester Bestandteil in NVDA 2023.2.
-* Die Taskleiste von Windows 10 und 11 wurde verbessert, u. a. durch die
-  Anzeige der Ergebnisse der Neuanordnung von Symbolen beim Drücken von
-  Alt+Umschalt+Pfeiltasten links/rechts (Windows 11) und durch die Anzeige
-  der Position von Elementen beim Bewegen durch die Taskleistensymbole
-  (Windows 10 und 11).
+* Improved Windows 10 and 11 taskbar experience, including announcing
+  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
+  (Windows 11) and reporting item position when moving through taskbar icons
+  (Windows 10 and 11). Note that these are emulated workarounds for features
+  introduced and then subsequently removed in Insider Preview builds and may
+  be removed from the add-on in the future.
 * In Apps wie der Datei-Explorer oder Notepad (Editor) in Windows 11 Version
   22H2, in denen Fenster mit Registerkarten unterstützt werden, zeigt NVDA
   den Namen und die Position der Registerkarten an, wenn zwischen ihnen
