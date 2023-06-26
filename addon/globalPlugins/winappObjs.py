@@ -31,7 +31,6 @@ def handlePossibleDesktopNameChange():
 	"""
 	global virtualDesktopName
 	if virtualDesktopName:
-		import ui
 		ui.message(virtualDesktopName)
 		virtualDesktopName = None
 
