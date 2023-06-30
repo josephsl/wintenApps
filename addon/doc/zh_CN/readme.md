@@ -17,7 +17,6 @@
 * 现代键盘（表情符号面板/触摸键盘/听写/语音输入/硬件输入建议/剪贴板历史/建议操作/现代输入法编辑器）
 * 设置（Windows + I系统设置）
 * 语音访问（Windows 11 22H2）
-* 天气
 * 用于控件和功能的其他模块，例如读出虚拟桌面名称
 
 注意:
@@ -28,9 +27,7 @@
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
 * 如果安装了插件更新器并启用了后台插件更新， 在不受支持的操作系统上 Windows App Essentials 不会被安装。
 * 并非支持所有的 Windows Insider Preview 版本，更偏向于支持由开发或金丝雀通道引入 Windows Insider 的功能。
-* The add-on may emulate fixes included in Insider Preview builds which are
-  subsequently removed, and for these changes, the add-on may remove them in
-  future releases.
+* 该插件可能会模拟 Insider Preview 版本中的功能修复，这些修复随后会被删除，并且对于这些更改，该插件可能会在未来版本中删除。
 * 插件的 Dev 通道将包括可能包含或不包含在测试版和稳定版中的实验性内容，而Beta 通道将会包含为未来稳定版计划的更改。
 * 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
 * 为了获得内嵌 Web 试图（例如开始菜单及其上下文菜单）的应用程序的最佳体验，请在 NVDA
@@ -41,15 +38,11 @@
 ## 常规增强
 
 * 当打开、关闭或在虚拟桌面之间切换时，NVDA 会读出当前的虚拟桌面名称（例如桌面 2）。该特性已经包含在 NVDA2023.2 中。
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11) and reporting item position when moving through taskbar icons
-  (Windows 10 and 11). Note that these are emulated workarounds for features
-  introduced and then subsequently removed in Insider Preview builds and may
-  be removed from the add-on in the future.
-* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
-  windows are supported, NVDA will announce the name and the position of
-  tabs when switching between them. This is now part of NVDA 2023.2.
+* 改进了 Windows 10 和 11 任务栏的使用体验，包括在按
+  Alt+Shift+左/右箭头键时朗读重新排列图标的结果（Windows11）以及在任务栏图标间移动时读出项目位置（Windows10 和
+  11）。这些是针对引入的新功能模拟解决方案，随后会在 Insider Preview 中删除，并且将来也可能会在插件中删除。
+* 在 Windows11 22H2 的文件资源管理器和记事本等支持标签式窗口的应用程序中，NVDA
+  会在标签间切换时读出标签的名称和位置。该特性已经包含在 NVDA2023.2 中。
 
 ## Cortana
 
@@ -68,22 +61,15 @@ Unicode 数据（表情符号）”复选框，并将符号级别设置为“少
 
 * NVDA 会读出可选质量更新控件的名称（如果存在）（Windows 10 中的立即下载和安装链接，Windows 11 中的下载按钮）。
 * 在 Windows 11 中，可以正确识别 breadcrumb 栏项目。
-* NVDA will report updates to Windows Update status as download and install
-  progresses. This may result in speech interruption when navigating
-  Settings app while updates are being downloaded and installed. If using
-  Windows 11 and UIA event registration is set to selective from NVDA
-  advanced settings panel, you must move focus to updates list as soon as
-  they appear so NVDA can announce update progress.
+* 在 Windows 下载和安装更新过程中 NVDA的朗读会被下载或安装进度打断。
+  如果使用 Windows 11，且“启用选择性注册 UIA 事件和属性改变”的选项处于开启状态，则必须在更新列表出现时立即将焦点移至更新列表，以便
+  NVDA 可以读出更新进度。
 
 ## 语音访问
 
 这是指 Windows 11 22H2 中加入的语音访问功能。
 
 * 在语音访问界面切换麦克风时，NVDA 会读出麦克风的状态。
-
-## 天气
-
-* 诸如“预测”和“地图”之类的选项卡被识别为适当的选项卡（来自Derek Riemer的补充修复）。
 
 [[!tag dev stable]]
 

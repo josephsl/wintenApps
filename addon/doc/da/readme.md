@@ -23,7 +23,6 @@ hver appsektion for detaljer om, hvad der er inkluderet):
   Actions/modern input method editors)
 * Indstillinger (systemindstillinger, Windows+I)
 * Stemmeadgang (Windows 11 22H2)
-* Vejr
 * Diverse moduler til kontrolelementer og funktioner som annoncering af
   virtuelle skriveborde.
 
@@ -113,11 +112,6 @@ Dette henviser til stemmeadgangsfunktionen introduceret i Windows 11 22H2.
 
 * NVDA vil annoncere mikrofonstatus, når mikrofonen skiftes fra
   brugergrænsefladen i Stemmeadgang.
-
-## Vejr
-
-* Faner som "Vejrudsigt" og "Kort" er nu genkendt korrekt som faner (patch
-  af Derek Riemer).
 
 [[!tag dev stable]]
 

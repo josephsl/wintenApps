@@ -24,7 +24,6 @@ se inclúe):
   Suxeridas/editores co método de entrada moderna)
 * Opcións (opcións do sistema, Windows+I)
 * Acceso por voz (Windows 11 22H2)
-* O Tempo
 * Módulos misceláneos para controis e características como os anuncios dos
   escritorios virtuais
 
@@ -117,11 +116,6 @@ Esto se refiere a la característica Acceso por voz introducida en Windows 11
 
 * NVDA anunciará o estado do micrófono cando se active ou desactive o
   micrófono dende a interface de Acceso por voz.
-
-## O Tempo
-
-* As pestanas como "pronósticos" e "mapas" recoñécense coma pestanas en si
-  (parche de Derek Riemer).
 
 [[!tag dev stable]]
 

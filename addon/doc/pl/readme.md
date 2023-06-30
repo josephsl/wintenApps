@@ -25,7 +25,6 @@ dołączone, zobacz każdą sekcję aplikacji):
   schowka/sugerowane akcje/nowoczesne edytory metod wprowadzania)
 * Ustawienia (ustawienia systemowe, Windows+I)
 * Dostęp głosowy (Windows 11 22H2)
-* Pogoda
 * Różne moduły sterowania i funkcji, takich jak ogłoszenia wirtualnych
   pulpitów
 
@@ -119,11 +118,6 @@ Odnosi się to do funkcji dostępu głosowego wprowadzonej w systemie Windows
 
 * NVDA ogłosi stan mikrofonu podczas przełączania mikrofonu z interfejsu
   dostępu głosowego.
-
-## Pogoda
-
-* Karty właściwości, takie jak "prognoza" i "mapy" są rospoznane jak
-  prawidłowe karty właściwości (poprawił Derek Riemer).
 
 [[!tag dev stable]]
 

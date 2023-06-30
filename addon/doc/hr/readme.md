@@ -23,7 +23,6 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
   moderni uređivači za unos)
 * Postavke (postavke sustava, Windows+I)
 * Pristup glasu (Windows 11 22H2)
-* Vrijeme
 * Razni moduli za kontrole i značajke kao što su najave virtualnih radnih
   površina
 
@@ -113,11 +112,6 @@ Windows 11 22H2.
 
 * NVDA će najaviti stanje mikrofona kad se mikrofon uključi ili isključi iz
   sučelja za pristup glasu.
-
-## Vrijeme
-
-* Kartice poput „prognoza” i „karte” prepoznaju se kao ispravne kartice
-  (zakrpu je napravio Derek Riemer).
 
 [[!tag dev stable]]
 

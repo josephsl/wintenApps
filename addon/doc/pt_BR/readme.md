@@ -25,7 +25,6 @@ detalhes sobre o que está incluso):
   Actions/modern input method editors)
 * Configurações (configurações do sistema, Windows+I)
 * Voice access (Windows 11 22H2)
-* Clima
 * Miscellaneous modules for controls and features such as virtual desktops
   announcements
 
@@ -112,11 +111,6 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 * NVDA will announce microphone status when toggling microphone from Voice
   access interface.
-
-## Clima
-
-* Abas como "previsão" e "mapas" são reconhecidas como guias adequadas
-  (patch de Derek Riemer).
 
 [[!tag dev stable]]
 

@@ -17,7 +17,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 현대식 키보드(에모지 페널/터치 키보드/받아쓰기/하드웨어 입력 구성/클립보드 히스토리/추천 엑션/현대식 IME 입력기)
 * 설정(시스템 설정 앱, Windows+I)
 * Voice access(윈도우 11 22H2)
-* 날씨
 * 그 외 지원 모듈(가상 데스크탑 알림 등)
 
 사용시 주의 사항:
@@ -87,11 +86,6 @@ This refers to Voice access feature introduced in Windows 11 22H2.
 
 * NVDA will announce microphone status when toggling microphone from Voice
   access interface.
-
-## 날씨
-
-* Tabs such as "forecast" and "maps" are recognized as proper tabs (patch by
-  Derek Riemer).
 
 [[!tag dev stable]]
 

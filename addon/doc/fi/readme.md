@@ -25,7 +25,6 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
   toiminnot/modernin syöttömenetelmän muokkaimet)
 * Asetukset (järjestelmän asetukset, Windows+I)
 * Puhekäyttö (Windows 11 22H2)
-* Sää
 * Sekalaisia moduuleita säätimille ja ominaisuuksille, kuten
   virtuaalityöpöytien ilmoitukset.
 
@@ -119,11 +118,6 @@ versiossa 22H2.
 
 * NVDA ilmoittaa mikrofonin tilan, kun sitä muutetaan Puhekäytön
   käyttöliittymästä.
-
-## Sää
-
-* Sellaiset välilehdet kuten "ennuste" ja "kartat" tunnistetaan oikeiksi
-  välilehdiksi (korjauksen tehnyt Derek Riemer).
 
 [[!tag dev stable]]
 

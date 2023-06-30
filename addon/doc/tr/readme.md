@@ -26,7 +26,6 @@ bakın):
   düzenleyicileri)
 * Ayarlar (sistem ayarları, Windows+I)
 * Sesli erişim (Windows 11 22H2)
-* Hava durumu
 * Sanal masaüstleri duyuruları gibi kontroller ve özellikler için çeşitli
   modüller
 
@@ -117,11 +116,6 @@ Bu, Windows 11 22H2'de tanıtılan Sesli erişim özelliğini ifade eder.
 
 * NVDA, Ses erişim arayüzünden mikrofonu değiştirirken mikrofon durumunu
   duyurur.
-
-## Hava durumu
-
-* "Hava Durumu Tahmini" ve "haritalar" gibi sekmeler, uygun sekmeler olarak
-  tanınır (Derek Riemer tarafından yamalanmıştır).
 
 [[!tag dev stable]]
 

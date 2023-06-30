@@ -25,7 +25,6 @@ est inclus) :
   presse-papiers/éditeurs de méthodes de saisie modernes)
 * Paramètres (paramètres système, Windows+I)
 * Accès vocal (Windows 11 22H2)
-* Météo
 * Divers modules pour des contrôles et des fonctionnalités tels que les
   annonces de bureau virtuels
 
@@ -128,11 +127,6 @@ Il s'agit de la fonction d'accès vocal introduit dans Windows 11 22H2.
 
 * NVDA annoncera l'état du microphone lors du basculement du microphone
   depuis l'interface d'accès vocal.
-
-## Météo
-
-* Les onglets tels que "prévisions" et "cartes" sont reconnus comme des
-  onglets propres (patch par Derek Riemer).
 
 [[!tag dev stable]]
 

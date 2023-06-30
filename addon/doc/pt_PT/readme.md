@@ -25,7 +25,6 @@ detalhes sobre o que está incluído):
   sugeridas/editores de métodos de entrada modernos)
 * Configurações (configurações do sistema, Windows + I)
 * Acesso por voz (Windows 11 22H2)
-* Meteorologia
 * Módulos diversos para controlos e funcionalidades, tais como anúncios de
   ambientes de trabalho virtuais
 
@@ -118,11 +117,6 @@ Isto refere-se à funcionalidade de acesso por voz introduzida no Windows 11
 
 * O NVDA anunciará o estado do microfone quando alternar entre o microfone e
   a interface de acesso por voz.
-
-## Meteorologia
-
-* Separadores como "previsão" e "mapas" são reconhecidos como separadores
-  adequados (patch de Derek Riemer).
 
 [[!tag dev stable]]
 

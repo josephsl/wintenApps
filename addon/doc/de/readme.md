@@ -24,7 +24,6 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
   Aktionen/Editoren für moderne Eingabemethoden)
 * Einstellungen (System-Einstellungen, Windows+I)
 * Sprachzugang (Windows 11 Version 22H2)
-* Wetter
 * Verschiedene Module für Steuerungen und Funktionen wie die Mitteilung
   virtueller Desktops
 
@@ -122,11 +121,6 @@ für den Sprachzugang.
 
 * NVDA teilt den Mikrofon-Status mit, wenn das Mikrofon über die
   Sprachzugriffsoberfläche umgeschaltet wird.
-
-## Wetter
-
-* Registerkarten wie"Prognose" und"Karten" werden als richtige
-  Registerkarten erkannt (Patch von Derek Riemer).
 
 [[!tag dev stable]]
 
