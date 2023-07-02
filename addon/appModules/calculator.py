@@ -11,7 +11,7 @@ import braille
 
 
 # App module class comes from built-in Calculator app module but Mypy doesn't know that.
-class AppModule(AppModule):  # type: ignore[no-redef]  # NOQA: F405
+class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
 		# When no results shortcuts such as number row keys are pressed, display content will be announced.
