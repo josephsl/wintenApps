@@ -7,6 +7,7 @@
 This is also the base app module for Windows 11 Calculator."""
 
 from nvdaBuiltin.appModules.calculator import AppModule, noCalculatorEntryAnnouncements  # NOQA: F403
+from NVDAObjects.UIA import UIA
 import braille
 
 
@@ -30,13 +31,17 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			# Redesigned in 2019 due to introduction of "always on top" i.e. compact overlay mode.
 			# Resolved in NVDA 2023.2 (remove this method completely).
 			import UIAHandler
-			from . import appmodUtils
+			from comtypes import COMError
+			clientObject = UIAHandler.handler.clientObject
+			condition = clientObject.createPropertyCondition(UIAHandler.UIA_ClassNamePropertyId, "LandmarkTarget")
+			walker = clientObject.createTreeWalker(condition)
+			uiItemWindow = clientObject.elementFromHandle(obj.windowHandle)
 			try:
-				resultElement = appmodUtils.findUIADescendant(
-					obj, UIAHandler.UIA_ClassNamePropertyId, "LandmarkTarget"
-				)
-			except LookupError:
-				resultElement = None
+				element = walker.getFirstChildElement(uiItemWindow)
+				element = element.buildUpdatedCache(UIAHandler.handler.baseCacheRequest)
+			except (ValueError, COMError):
+				return
+			resultElement = UIA(UIAElement=element)
 			# Display string announcement is redundant if speak typed characters is on.
 			if (
 				resultElement
