@@ -3,6 +3,7 @@
 # Copyright 2019-2023 Joseph Lee, released under GPL
 
 # Various workarounds for Cortana Conversations, replaced by Windows Copilot in 2023
+# Windows Copilot (preview) is powered by Bing Chat with the Microsoft Edge interface.
 
 from typing import Callable, Optional
 import appModuleHandler
