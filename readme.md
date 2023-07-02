@@ -15,7 +15,7 @@ The following app modules or support modules for some apps are included (see eac
 * Cortana (to be replaced by Windows Copilot)
 * Modern keyboard (emoji panel/touch keyboard/dictation/voice typing/hardware input suggestions/clipboard history/Suggested Actions/modern input method editors)
 * Settings (system settings, Windows+I)
-* Voice access (Windows 11 22H2)
+* Voice access
 * Miscellaneous modules for controls and features such as virtual desktops announcements
 
 Notes:
