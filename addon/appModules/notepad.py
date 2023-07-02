@@ -8,6 +8,7 @@ While this app module also covers older Notepad releases,
 this module provides workarounds for Windows 11 Notepad."""
 
 from typing import Callable
+from comtypes import COMError
 import appModuleHandler
 import api
 import braille
@@ -15,6 +16,7 @@ import controlTypes
 import eventHandler
 import speech
 import UIAHandler
+from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
 
 
@@ -63,11 +65,15 @@ class AppModule(appModuleHandler.AppModule):
 			raise NotImplementedError()
 		# Obtain status bar text across Notepad 11 releases.
 		# Resolved in NVDA 2023.2 (remove this method completely).
-		from . import appmodUtils
+		clientObject = UIAHandler.handler.clientObject
+		condition = clientObject.createPropertyCondition(UIAHandler.UIA_AutomationIdPropertyId, "ContentTextBlock")
+		walker = clientObject.createTreeWalker(condition)
+		notepadWindow = clientObject.elementFromHandle(api.getForegroundObject().windowHandle)
 		try:
-			statusBar = appmodUtils.findUIADescendant(
-				api.getForegroundObject(), UIAHandler.UIA_AutomationIdPropertyId, "ContentTextBlock"
-			).parent
-		except LookupError:
+			element = walker.getFirstChildElement(notepadWindow)
+			# Is status bar showing?
+			element = element.buildUpdatedCache(UIAHandler.handler.baseCacheRequest)
+		except (ValueError, COMError):
 			raise NotImplementedError
+		statusBar = UIA(UIAElement=element).parent
 		return statusBar
