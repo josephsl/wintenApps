@@ -12,7 +12,7 @@ This add-on is a collection of app modules for various modern Windows apps, as w
 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
-* Cortana
+* Cortana (to be replaced by Windows Copilot)
 * Modern keyboard (emoji panel/touch keyboard/dictation/voice typing/hardware input suggestions/clipboard history/Suggested Actions/modern input method editors)
 * Settings (system settings, Windows+I)
 * Voice access (Windows 11 22H2)
