@@ -10,6 +10,7 @@ import appModuleHandler
 import api
 import ui
 import UIAHandler
+from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
 
 
@@ -26,16 +27,21 @@ class AppModule(appModuleHandler.AppModule):
 		# Avoid duplicate speech, more so when Bing search results are returned.
 		import speech
 		speech.cancelSpeech()
-		from . import appmodUtils
+		from comtypes import COMError
 		# Thankfully, Cortana's response is part of a grouping object.
 		# As long as conversation list uses the same UIA Automation Id,
 		# traversal will work across versions (code credit: Abdel with modifications)
+		clientObject = UIAHandler.handler.clientObject
+		condition = clientObject.createPropertyCondition(UIAHandler.UIA_AutomationIdPropertyId, "ConversationList")
+		walker = clientObject.createTreeWalker(condition)
+		cortanaWindow = clientObject.elementFromHandle(api.getForegroundObject().windowHandle)
+		# (value error is seen when Cortana window closes).
 		try:
-			responses = appmodUtils.findUIADescendant(
-				api.getForegroundObject(), UIAHandler.UIA_AutomationIdPropertyId, "ConversationList"
-			)
-		except LookupError:
+			element = walker.getFirstChildElement(cortanaWindow)
+			element = element.buildUpdatedCache(UIAHandler.handler.baseCacheRequest)
+		except (ValueError, COMError):
 			return
+		responses = UIA(UIAElement=element)
 		try:
 			cortanaResponse = responses.children[-1]
 			# Different Automation Id's are used for Cortana responses versus Bing searches.
