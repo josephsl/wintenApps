@@ -134,6 +134,9 @@ class TaskbarItem(NVDAObject):
 	def announceDragPosition(self) -> None:
 		# Rearranging taskbar items with the keyboard is possible in Windows 11.
 		# Reporting this info is included in build 25267 and removed in 25352.
+		# Inform mypy about gettext call.
+		import gettext
+		_ = gettext.gettext
 		left = self.previous if isinstance(self.previous, TaskbarItem) else None
 		right = self.next if isinstance(self.next, TaskbarItem) else None
 		if left and right:
