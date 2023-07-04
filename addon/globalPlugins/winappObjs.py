@@ -202,7 +202,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			) or (
 				# Windows 11
 				isinstance(obj, UIA)
-				and obj.UIAElement.cachedClassName == "Taskbar.TaskListButtonAutomationPeer"
+				and UIAClassName == "Taskbar.TaskListButtonAutomationPeer"
 			)
 		):
 			clsList.insert(0, TaskbarItem)
