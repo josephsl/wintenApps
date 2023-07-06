@@ -40,9 +40,7 @@ def onInstall():
 	import wx
 	# Present builds above the current build if possible.
 	# For example, present Windows 11 builds if this is a build above Windows 10 22H2 (19045).
-	for entry in supportedBuilds.keys():
-		if currentBuild > entry:
-			del supportedBuilds[entry]
+	supportedBuilds = {entry: release for entry, release in supportedBuilds.items() if entry > currentBuild}
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
