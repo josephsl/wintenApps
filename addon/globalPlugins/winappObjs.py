@@ -3,7 +3,7 @@
 
 # Adds handlers for various UIA controls found in Windows 10 and later.
 
-from typing import List, Optional, Dict
+from typing import List, Optional, Dict, Callable
 import globalPluginHandler
 from NVDAObjects.UIA import UIA, Dialog
 from NVDAObjects import NVDAObject
@@ -206,3 +206,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			)
 		):
 			clsList.insert(0, TaskbarItem)
+
+	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
+		# NVDA Core issue 5641: try catching virtual desktop switch event,
+		# which will result in name change for the desktop object.
+		# Do this while NVDA Core itself does not include virtual desktop switch announcement facility.
+		# Resolved in NVDA 2023.2 (remove this method completely).
+		if (
+			obj.appModule.appName == "csrss"
+			and obj.windowClassName == "#32769"
+			and not hasattr(eventHandler, "handlePossibleDesktopNameChange")
+		):
+			global virtualDesktopName
+			virtualDesktopName = obj.name
+			core.callLater(100, handlePossibleDesktopNameChange)
+		nextHandler()
