@@ -18,20 +18,18 @@ Windows 10:ssä ja uudemmissa.
 Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
-* Cortana
+* Cortana (korvataan Windows Copilotilla)
 * Moderni näppäimistö
   (emojipaneeli/kosketusnäppäimistö/sanelu/puhekirjoitus/fyysisen
   näppäimistösyötteen ehdotukset/leikepöydän historia/ehdotetut
   toiminnot/modernin syöttömenetelmän muokkaimet)
 * Asetukset (järjestelmän asetukset, Windows+I)
-* Puhekäyttö (Windows 11 22H2)
-* Sekalaisia moduuleita säätimille ja ominaisuuksille, kuten
-  virtuaalityöpöytien ilmoitukset.
+* Puhekäyttö
 
 Huomautukset:
 
 * Tämä lisäosa edellyttää Windows 10:n versiota 22H2 (koontiversio 19045),
-  11:n versiota 21H2 (koontiversio 22000) tai uudempaa.
+  11:n versiota 22H2 (koontiversio 22621) tai uudempaa.
 * Ominaisuuspäivityksen tuen kesto on sidottu kuluttajatuen kestoon (Home,
   Pro, Pro Education, Pro for Workstations -versiot), ja lisäosa saattaa
   lopettaa tuen ominaisuuspäivitykselle jo ennen kuluttajatuen

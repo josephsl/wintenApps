@@ -13,15 +13,15 @@
 
 包括以下应用程序的支持模块（有关所包含内容的详细信息，请参阅每个应用程序部分）：
 
-* Cortana
+* Cortana (to be replaced by Windows Copilot)
 * 现代键盘（表情符号面板/触摸键盘/听写/语音输入/硬件输入建议/剪贴板历史/建议操作/现代输入法编辑器）
 * 设置（Windows + I系统设置）
-* 语音访问（Windows 11 22H2）
-* 用于控件和功能的其他模块，例如读出虚拟桌面名称
+* 语音访问
 
 注意:
 
-* 此插件需要 Windows 10 22H2（内部版本 19045）、11 21H2（内部版本 22000）或更高版本。
+* This add-on requires Windows 10 22H2 (build 19045), 11 22H2 (build 22621),
+  or later releases.
 * 功能更新支持期限与消费者支持期限（家庭版、专业版、专业教育版、工作站专业版）相关联，并且插件可能会在消费者支持结束之前终止对功能更新的支持。有关更多信息和支持日期，请参阅
   aka.ms/WindowsTargetVersioninfo。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。

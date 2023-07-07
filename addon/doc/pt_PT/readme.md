@@ -19,19 +19,17 @@ Os seguintes módulos de aplicações ou módulos de suporte para algumas
 aplicações estão incluídos (consulte a secção de cada aplicação para obter
 detalhes sobre o que está incluído):
 
-* Cortana
+* Cortana (to be replaced by Windows Copilot)
 * Teclado moderno (painel de emojis/teclado táctil/ditado/digitação por
   voz/sugestões de entrada de hardware/histórico do clipboard/acções
   sugeridas/editores de métodos de entrada modernos)
 * Configurações (configurações do sistema, Windows + I)
-* Acesso por voz (Windows 11 22H2)
-* Módulos diversos para controlos e funcionalidades, tais como anúncios de
-  ambientes de trabalho virtuais
+* Acesso por voz
 
 Notas:
 
-* Este add-on requer o Windows 10 22H2 (build 19045), 11 21H2 (build 22000)
-  ou versões posteriores.
+* This add-on requires Windows 10 22H2 (build 19045), 11 22H2 (build 22621),
+  or later releases.
 * A duração do suporte da actualização de funcionalidades está associada à
   duração do suporte ao consumidor (edições Home, Pro, Pro Education, Pro
   para Estações de Trabalho) e o suplemento pode terminar o suporte para uma

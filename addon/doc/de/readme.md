@@ -18,19 +18,17 @@ Steuerelemente in Windows 10 und neuer.
 Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
 Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
-* Cortana
+* Cortana (zu ersetzen durch Windows Co-Pilot)
 * Moderne Tastatur
   (Emoji-Panel/Touch-Tastatur/Diktat/Sprachsteuerung/Hardware-Eingabevorschläge/Zwischenablage-Verlauf/Vorgeschlagene
   Aktionen/Editoren für moderne Eingabemethoden)
 * Einstellungen (System-Einstellungen, Windows+I)
-* Sprachzugang (Windows 11 Version 22H2)
-* Verschiedene Module für Steuerungen und Funktionen wie die Mitteilung
-  virtueller Desktops
+* Sprachzugang
 
 Hinweise:
 
 * Diese NVDA-Erweiterung benötigt Windows 10 Version 22H2 (Build 19045),
-  Windows 11 Version 21H2 (Build 22000) oder neuere Versionen.
+  Windows 11 Version 22H2 (Build 22621) oder neuere Versionen.
 * Die Dauer der Unterstützung für Feature-Updates ist an die Dauer des
   Consumer-Supports (Home, Pro, Pro Education, Pro for Workstations
   Editionen) gebunden und die Erweiterung kann den Support für ein
@@ -46,9 +44,10 @@ Hinweise:
 * Nicht alle Funktionen von Windows Insider Preview-Builds werden
   unterstützt. Dies gilt vor allem für Funktionen, die einer Untergruppe von
   Windows Insidern im Canary- und Dev-Channel vorgestellt werden.
-* The add-on may emulate fixes included in Insider Preview builds which are
-  subsequently removed, and for these changes, the add-on may remove them in
-  future releases.
+* Die NVDA-Erweiterung kann Korrekturen emulieren, die in Insider
+  Preview-Builds enthalten sind, die später entfernt werden, und für diese
+  Änderungen kann die NVDA-Erweiterung sie in zukünftigen Versionen
+  entfernen.
 * Der Dev-Kanal der NVDA-Erweiterung wird Änderungen enthalten,
   einschließlich experimenteller Inhalte, die in den Beta- und
   Stable-Releases enthalten sein können oder auch nicht, und der Beta-Kanal
@@ -69,12 +68,13 @@ NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
 * Beim Öffnen, Schließen oder Umschalten zwischen virtuellen Desktops teilt
   NVDA nun den Namen des aktiven virtuellen Desktops mit (z. B. Desktop
   2). Dies ist nun fester Bestandteil in NVDA 2023.2.
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11) and reporting item position when moving through taskbar icons
-  (Windows 10 and 11). Note that these are emulated workarounds for features
-  introduced and then subsequently removed in Insider Preview builds and may
-  be removed from the add-on in the future.
+* Verbesserte Erfahrung für Windows 10 und 11 Taskleiste, einschließlich der
+  Bekanntgabe der Ergebnisse der Neuanordnung von Symbolen beim Drücken von
+  Alt+Umschalt+Pfeiltasten nach links/rechts (Windows 11) und die Mitteilung
+  von Element-Position beim Navigieren durch Taskleisten-Symbole (Windows 10
+  und 11). Beachten Sie, dass es sich hierbei um emulierte Workarounds für
+  Funktionen handelt, die in Insider Preview-Builds eingeführt und
+  anschließend entfernt wurden.
 * In Apps wie der Datei-Explorer oder Notepad (Editor) in Windows 11 Version
   22H2, in denen Fenster mit Registerkarten unterstützt werden, zeigt NVDA
   den Namen und die Position der Registerkarten an, wenn zwischen ihnen

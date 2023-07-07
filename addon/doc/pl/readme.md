@@ -19,19 +19,17 @@ Dołączone są następujące moduły aplikacji lub moduły pomocy technicznej d
 niektórych aplikacji (szczegółowe informacje na temat tego, co jest
 dołączone, zobacz każdą sekcję aplikacji):
 
-* Cortana
+* Cortana (to be replaced by Windows Copilot)
 * Nowoczesna klawiatura (panel emoji/klawiatura dotykowa/dyktowanie/pisanie
   głosowe/sugestie dotyczące wprowadzania sprzętu/historia
   schowka/sugerowane akcje/nowoczesne edytory metod wprowadzania)
 * Ustawienia (ustawienia systemowe, Windows+I)
-* Dostęp głosowy (Windows 11 22H2)
-* Różne moduły sterowania i funkcji, takich jak ogłoszenia wirtualnych
-  pulpitów
+* Dostęp głosowy
 
 Notatki:
 
-* Ten dodatek wymaga systemu Windows 10 22H2 (kompilacja 19045), 11 21H2
-  (kompilacja 22000) lub nowszych wersji.
+* This add-on requires Windows 10 22H2 (build 19045), 11 22H2 (build 22621),
+  or later releases.
 * Czas trwania pomocy technicznej dotyczącej aktualizacji funkcji jest
   powiązany z czasem trwania pomocy technicznej dla klientów (wersje Home,
   Pro, Pro Education, Pro dla stacji roboczych), a dodatek może zakończyć

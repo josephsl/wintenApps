@@ -13,15 +13,15 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 다음 앱 모듈 및 지원 모듈을 포함합니다(각 앱 관련 엔트리를 참고 바람):
 
-* Cortana
+* Cortana (to be replaced by Windows Copilot)
 * 현대식 키보드(에모지 페널/터치 키보드/받아쓰기/하드웨어 입력 구성/클립보드 히스토리/추천 엑션/현대식 IME 입력기)
 * 설정(시스템 설정 앱, Windows+I)
-* Voice access(윈도우 11 22H2)
-* 그 외 지원 모듈(가상 데스크탑 알림 등)
+* Voice access
 
 사용시 주의 사항:
 
-* 본 추가 기능은 윈도우 10 22H2(빌드 19045), 11 21H2(빌드 22000) 이상을 지원합니다.
+* This add-on requires Windows 10 22H2 (build 19045), 11 22H2 (build 22621),
+  or later releases.
 * 기능 업데이트 지원일은 일반 사용자 버전(Home, Pro, Pro Education, Pro for Workstations)을
   기준으로 하며 지원 종료전 추가 기능 자체에서 기능 업데이트 지원을 종료할 수 있습니다. 자세한 정보 및 기능 업데이트 지원에
   대해서는 aka.ms/WindowsTargetVersioninfo를 참고하시기 바랍니다.

@@ -17,19 +17,17 @@ samt forbedringer og rettelser for visse windows 10 kontrolelementer.
 Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
 hver appsektion for detaljer om, hvad der er inkluderet):
 
-* Cortana
+* Cortana (to be replaced by Windows Copilot)
 * Modern keyboard (emoji panel/touch keyboard/dictation/voice
   typing/hardware input suggestions/clipboard history/Suggested
   Actions/modern input method editors)
 * Indstillinger (systemindstillinger, Windows+I)
-* Stemmeadgang (Windows 11 22H2)
-* Diverse moduler til kontrolelementer og funktioner som annoncering af
-  virtuelle skriveborde.
+* Stemmeadgang
 
 Bemærkninger:
 
-* Denne tilføjelse kræver Windows 10 22H2 (build 19045), 11 21H2 (build
-  22000) eller nyere udgivelser.
+* This add-on requires Windows 10 22H2 (build 19045), 11 22H2 (build 22621),
+  or later releases.
 * Varigheden af understøttelse af funktionsopdateringer er bundet til
   varigheden af forbrugersupport (Home, Pro, Pro Education, Pro for
   Workstations-udgaver), og tilføjelsen kan afslutte understøttelsen af en

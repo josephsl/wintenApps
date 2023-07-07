@@ -19,19 +19,17 @@ Se incluyen Los siguientes app modules o el apoyo para módulos para algunas
 aplicaciones (consulta cada sección para la aplicación para detalles sobre
 qué se incluye):
 
-* Cortana
+* Cortana (sustituida pronto por Windows Copilot)
 * Teclado Moderno (panel de emojis / teclado táctil / dictado / escritura
   por voz / sugerencias de entrada hardware / historial del portapapeles /
   acciones sugeridas / editores modernos de método de entrada)
 * Opciones (opciones de sistema, Windows+I)
-* Acceso por voz (Windows 11 22H2)
-* Módulos varios para controles y funciones tales como los anuncios de
-  escritorios virtuales
+* Acceso por voz
 
 Notas:
 
 * Este complemento requiere Windows 10 Versión 22H2 (compilación 19045), 11
-  21H2 (compilación 22000) o versiones posteriores.
+  22H2 (compilación 22621) o versiones posteriores.
 * La duración del soporte de las actualizaciones de características está
   vinculada a la duración del soporte al cliente (ediciones Home, Pro, Pro
   Education, Pro for Workstations), y el complemento podría finalizar el

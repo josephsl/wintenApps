@@ -19,18 +19,16 @@ Os seguintes módulos de aplicativos ou módulos de suporte para alguns
 aplicativos estão incluídos (consulte a seção de cada aplicativo para obter
 detalhes sobre o que está incluso):
 
-* Cortana
+* Cortana (to be replaced by Windows Copilot)
 * Modern keyboard (emoji panel/touch keyboard/dictation/voice
   typing/hardware input suggestions/clipboard history/Suggested
   Actions/modern input method editors)
 * Configurações (configurações do sistema, Windows+I)
-* Voice access (Windows 11 22H2)
-* Miscellaneous modules for controls and features such as virtual desktops
-  announcements
+* Voice access
 
 Notas:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 21H2 (build 22000),
+* This add-on requires Windows 10 22H2 (build 19045), 11 22H2 (build 22621),
   or later releases.
 * Feature update support duration is tied to consumer support duration
   (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on

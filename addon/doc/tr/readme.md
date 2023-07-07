@@ -20,18 +20,16 @@ Bazı uygulamalar için aşağıdaki uygulama veya destek modülleri  mevcuttur
 (nelerin dahil olduğuyla ilgili ayrıntılar için her bir uygulama bölümüne
 bakın):
 
-* Cortana
+* Cortana (Windows Yardımcı Pilot ile değiştirilecek)
 * Modern klavye (emoji paneli/dokunmatik klavye/dikte/sesle yazma/donanım
   giriş önerileri/pano geçmişi/Önerilen Eylemler/modern giriş yöntemi
   düzenleyicileri)
 * Ayarlar (sistem ayarları, Windows+I)
-* Sesli erişim (Windows 11 22H2)
-* Sanal masaüstleri duyuruları gibi kontroller ve özellikler için çeşitli
-  modüller
+* Sesli erişim
 
 Notlar:
 
-* Bu eklenti, Windows 10 22H2 (yapı 19045), 11 21H2 (yapı 22000) veya
+* Bu eklenti, Windows 10 22H2 (yapı 19045), 11 22H2 (yapı 22621) veya
   sonraki sürümleri gerektirir.
 * Özellik güncelleme destek süresi, tüketici destek süresine (Ev, Pro, Pro
   Education, Pro for Workstations sürümleri) bağlıdır ve eklenti, tüketici

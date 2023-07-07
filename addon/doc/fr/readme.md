@@ -19,19 +19,17 @@ Les app modules suivants ou la prise en charge des modules pour certaines
 apps sont inclus (voir chaque section app pour plus de détails sur ce qui
 est inclus) :
 
-* Cortana
+* Cortana (à remplacer par Windows Copilot)
 * Clavier moderne (panneau des emojis/clavier tactile/dictée/saisie
   vocale/suggestions de saisie matérielle/historique du
   presse-papiers/éditeurs de méthodes de saisie modernes)
 * Paramètres (paramètres système, Windows+I)
-* Accès vocal (Windows 11 22H2)
-* Divers modules pour des contrôles et des fonctionnalités tels que les
-  annonces de bureau virtuels
+* Accès vocal
 
 Notes:
 
-* Cette extension nécessite Windows 10 22H2 (build 19045), Windows 11 21H2
-  (build 22000) ou version ultérieure.
+* Cette extension nécessite Windows 10 22H2 (build 19045), 11 22H2 (build
+  22621) ou version ultérieure.
 * La durée du support de mise à jour des fonctionnalités est liée à la durée
   du support des consommateurs (Home, Pro, Pro Education, Pro for
   Workstations Editions) et l'extension peut mettre fin à la prise en charge
