@@ -38,17 +38,16 @@ def onInstall():
 		raise RuntimeError(f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentBuild})")
 	import gui
 	import wx
-	# Present builds above the current build if possible.
-	# For example, present Windows 11 builds if this is a build above Windows 10 22H2 (19045).
-	supportedBuilds = {entry: release for entry, release in supportedBuilds.items() if entry > currentBuild}
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
 	# #78: obtain a list of all supported releases (and builds) from supported builds list.
+	# Present builds above the current build if possible.
+	# For example, present Windows 11 builds if this is a build above Windows 10 22H2 (19045).
 	windowsReleasesList = [
 		# Translators: an entry in supported Windows releases list (release (build)).
 		_("{release} ({build})").format(release=release, build=build)
-		for build, release in supportedBuilds.items()
+		for build, release in supportedBuilds.items() if build > currentBuild
 	]
 	windowsReleasesList.append("Windows Insider Preview")
 	unsupportedWindowsReleaseText = _(
