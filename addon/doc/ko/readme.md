@@ -20,8 +20,7 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 사용시 주의 사항:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 22H2 (build 22621),
-  or later releases.
+* 본 추가 기능은 윈도우 10 22H2(빌드 19045), 11 22H2(빌드 22621) 이상을 지원합니다.
 * 기능 업데이트 지원일은 일반 사용자 버전(Home, Pro, Pro Education, Pro for Workstations)을
   기준으로 하며 지원 종료전 추가 기능 자체에서 기능 업데이트 지원을 종료할 수 있습니다. 자세한 정보 및 기능 업데이트 지원에
   대해서는 aka.ms/WindowsTargetVersioninfo를 참고하시기 바랍니다.
