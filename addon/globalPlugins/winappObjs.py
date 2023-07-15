@@ -117,26 +117,6 @@ class TaskbarItem(NVDAObject):
 		# Icon name contains open window count if windows are open after a hyphen (-).
 		return self.name.rpartition(" - ")[0] if " -" in self.name else self.name
 
-	def announceDragPosition(self) -> None:
-		# Rearranging taskbar items with the keyboard is possible in Windows 11.
-		# Reporting this info is included in build 25267 and removed in 25352.
-		# Inform mypy about gettext call.
-		import gettext
-		_ = gettext.gettext
-		left = self.previous if isinstance(self.previous, TaskbarItem) else None
-		right = self.next if isinstance(self.next, TaskbarItem) else None
-		if left and right:
-			# Translators: announced when rearranging taskbar icons in Windows 11.
-			ui.message(_("{appName} moved between {previousAppName} and {nextAppName}").format(
-				appName=self.itemName, previousAppName=left.itemName, nextAppName=right.itemName
-			))
-		elif left and not right:
-			# Translators: announced when rearranging taskbar icons in Windows 11.
-			ui.message(_("{appName} moved to end of the apps list").format(appName=self.itemName))
-		elif right and not left:
-			# Translators: announced when rearranging taskbar icons in Windows 11.
-			ui.message(_("{appName} moved to beginning of the apps list").format(appName=self.itemName))
-
 
 # #20: don't even think about proceeding in secure screens.
 def disableInSecureMode(cls):
