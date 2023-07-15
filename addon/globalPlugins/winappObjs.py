@@ -137,20 +137,6 @@ class TaskbarItem(NVDAObject):
 			# Translators: announced when rearranging taskbar icons in Windows 11.
 			ui.message(_("{appName} moved to beginning of the apps list").format(appName=self.itemName))
 
-	@scriptHandler.script(gesture="kb:alt+shift+rightArrow")
-	def script_moveRight(self, gesture) -> None:
-		announcePosition = isinstance(self, UIA) and isinstance(self.next, TaskbarItem)
-		gesture.send()
-		if announcePosition:
-			core.callLater(1, self.announceDragPosition)
-
-	@scriptHandler.script(gesture="kb:alt+shift+leftArrow")
-	def script_moveLeft(self, gesture) -> None:
-		announcePosition = isinstance(self, UIA) and isinstance(self.previous, TaskbarItem)
-		gesture.send()
-		if announcePosition:
-			core.callLater(1, self.announceDragPosition)
-
 
 # #20: don't even think about proceeding in secure screens.
 def disableInSecureMode(cls):
