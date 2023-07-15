@@ -117,20 +117,6 @@ class TaskbarItem(NVDAObject):
 		# Icon name contains open window count if windows are open after a hyphen (-).
 		return self.name.rpartition(" - ")[0] if " -" in self.name else self.name
 
-	def _get_positionInfo(self) -> Dict[str, int]:
-		# Position info is included in build 25281 and removed in 25352.
-		positionInfo = super().positionInfo
-		if not positionInfo:
-			taskbarItems = [item for item in self.parent.children if isinstance(item, TaskbarItem)]
-			# Sometimes an XAML control sits in the middle of the taskbar, making position info meaningless
-			# since the taskbar UIA tree will not reveal all of its children including this item.
-			# This is noticeable if using input devices other than the keyboard.
-			if self in taskbarItems:
-				positionInfo = {
-					"indexInGroup": taskbarItems.index(self) + 1, "similarItemsInGroup": len(taskbarItems)
-				}
-		return positionInfo
-
 	def announceDragPosition(self) -> None:
 		# Rearranging taskbar items with the keyboard is possible in Windows 11.
 		# Reporting this info is included in build 25267 and removed in 25352.
