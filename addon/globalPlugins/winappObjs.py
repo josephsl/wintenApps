@@ -192,20 +192,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# This is still the case with some dialogs such as restart to install updates dialog in Windows 11.
 		if UIAClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
-			return
-		# File Explorer taskbar item enhancements.
-		if obj.role == controlTypes.Role.BUTTON and obj.appModule.appName == "explorer" and (
-			(
-				# Windows 10
-				obj.windowClassName == "MSTaskListWClass"
-				and all(obj.location)
-			) or (
-				# Windows 11
-				isinstance(obj, UIA)
-				and UIAClassName == "Taskbar.TaskListButtonAutomationPeer"
-			)
-		):
-			clsList.insert(0, TaskbarItem)
 
 	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# NVDA Core issue 5641: try catching virtual desktop switch event,
