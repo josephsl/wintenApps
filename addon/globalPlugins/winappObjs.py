@@ -3,20 +3,16 @@
 
 # Adds handlers for various UIA controls found in Windows 10 and later.
 
-from typing import List, Optional, Dict, Callable
+from typing import List, Optional, Callable
 import globalPluginHandler
-from NVDAObjects.UIA import UIA, Dialog
+from NVDAObjects.UIA import Dialog
 from NVDAObjects import NVDAObject
 import NVDAObjects
 import globalVars
 import UIAHandler
 import eventHandler
-import controlTypes
 import ui
-import scriptHandler
 import core
-import addonHandler
-addonHandler.initTranslation()
 
 
 # Virtual desktop announcements come from a combination of this add-on and an NVDA Core pull request.
