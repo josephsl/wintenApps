@@ -105,19 +105,6 @@ def winapps_doPreGainFocus(obj: "NVDAObjects.NVDAObject", sleepMode: bool = Fals
 	return True
 
 
-# Transferred from File Explorer app module in 2023.
-# Insider Preview (dev/canary) introduced enhancements to taskbar item position reporting,
-# including rearranged position reporting (25267) and item position (25281), both removed in 25352.
-# Therefore emulate these changes on other Windows 11 builds via the below overlay class.
-# On Windows 10, taskbar item rearrangement via keyboard is unavailable.
-# Emulated feature, might be disabled or removed in the future.
-class TaskbarItem(NVDAObject):
-
-	def _get_itemName(self) -> str:
-		# Icon name contains open window count if windows are open after a hyphen (-).
-		return self.name.rpartition(" - ")[0] if " -" in self.name else self.name
-
-
 # #20: don't even think about proceeding in secure screens.
 def disableInSecureMode(cls):
 	return globalPluginHandler.GlobalPlugin if globalVars.appArgs.secure else cls
