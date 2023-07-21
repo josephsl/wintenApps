@@ -146,3 +146,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			virtualDesktopName = obj.name
 			core.callLater(100, handlePossibleDesktopNameChange)
 		nextHandler()
+
+	def event_UIA_notification(
+			self, obj: NVDAObject, nextHandler: Callable[[], None],
+			displayString: Optional[str] = None, activityId: Optional[str] = None, **kwargs
+	):
+		# In Windows Insider build 23493 (dev)/25905 (canary) and later,
+		# UIA notification event form File Explorer is used to report virtual desktop names.
+		# Handle this event in the global plugin so announcements can be made regardless of focused app.
+		if obj.appModule.appName == "explorer" and activityId == "Windows.Shell.TextAnnouncement":
+			ui.message(displayString)
+			return
+		nextHandler()
