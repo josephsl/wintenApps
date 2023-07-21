@@ -26,7 +26,7 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* Ovaj dodatak zahtijeva Windows 10 22H2 (gradnja 19045), 11 21H2 (gradnja
+* Ovaj dodatak zahtijeva Windows 10 22H2 (gradnja 19045), 11 22H2 (gradnja
   22621) ili novija izdanja.
 * Trajanje podrške za aktualiziranje značajki povezano je s trajanjem
   korisničke podrške (izdanja Home, Pro, Pro Education, Pro for
@@ -62,12 +62,6 @@ izdanja dodatka][4].
 * Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
   površina, NVDA će najaviti ime aktivne virtualne radne površine (na
   primjer radna površina 2). Ovo sada podržava NVDA verzija 2023.2.
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11) and reporting item position when moving through taskbar icons
-  (Windows 10 and 11). Note that these are emulated workarounds for features
-  introduced and then subsequently removed in Insider Preview builds and may
-  be removed from the add-on in the future.
 * U aplikacijama kao što su Windows 11 22H2 File Explorer i Notepad gdje su
   podržani prozori s karticama, NVDA će najaviti ime i položaj kartica
   prilikom prebacivanja između njih. Ovo je sada dio NVDA verzije 2023.2.

@@ -13,15 +13,14 @@
 
 包括以下应用程序的支持模块（有关所包含内容的详细信息，请参阅每个应用程序部分）：
 
-* Cortana (to be replaced by Windows Copilot)
+* Cortana（将被 Windows Copilot 取代）
 * 现代键盘（表情符号面板/触摸键盘/听写/语音输入/硬件输入建议/剪贴板历史/建议操作/现代输入法编辑器）
 * 设置（Windows + I系统设置）
 * 语音访问
 
 注意:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 22H2 (build 22621),
-  or later releases.
+* 此插件需要 Windows 10 22H2（内部版本 19045）、11 22H2（内部版本 22621）或更高版本。
 * 功能更新支持期限与消费者支持期限（家庭版、专业版、专业教育版、工作站专业版）相关联，并且插件可能会在消费者支持结束之前终止对功能更新的支持。有关更多信息和支持日期，请参阅
   aka.ms/WindowsTargetVersioninfo。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
@@ -38,9 +37,6 @@
 ## 常规增强
 
 * 当打开、关闭或在虚拟桌面之间切换时，NVDA 会读出当前的虚拟桌面名称（例如桌面 2）。该特性已经包含在 NVDA2023.2 中。
-* 改进了 Windows 10 和 11 任务栏的使用体验，包括在按
-  Alt+Shift+左/右箭头键时朗读重新排列图标的结果（Windows11）以及在任务栏图标间移动时读出项目位置（Windows10 和
-  11）。这些是针对引入的新功能模拟解决方案，随后会在 Insider Preview 中删除，并且将来也可能会在插件中删除。
 * 在 Windows11 22H2 的文件资源管理器和记事本等支持标签式窗口的应用程序中，NVDA
   会在标签间切换时读出标签的名称和位置。该特性已经包含在 NVDA2023.2 中。
 

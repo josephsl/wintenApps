@@ -40,21 +40,6 @@ msgstr ""
 "Windows.\n"
 "Поддържани издания: {supportedReleasesList}."
 
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved between {previousAppName} and {nextAppName}"
-msgstr "{appName} преместено между {previousAppName} и {nextAppName}"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to end of the apps list"
-msgstr "{appName} преместено в края на списъка с приложения"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to beginning of the apps list"
-msgstr "{appName} преместено в началото на списъка с приложения"
-
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information.

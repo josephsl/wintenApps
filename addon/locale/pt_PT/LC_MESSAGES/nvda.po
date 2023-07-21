@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.10.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-02-20 19:52+0000\n"
+"PO-Revision-Date: 2023-07-18 07:26-0700\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa Portuguesa do NVDA <angelomiguelabrantes@gmail.com; "
 "rui.fontes@tiflotecnia.com>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
@@ -41,21 +41,6 @@ msgstr ""
 "Está a utilizar {releaseName} ({build}), uma versão do Windows não suportada "
 "por este suplemento.\n"
 "Versões suportadas: {supportedReleasesList}."
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved between {previousAppName} and {nextAppName}"
-msgstr "{appName} movido entre {previousAppName} e {nextAppName}"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to end of the apps list"
-msgstr "{appName} passou para o fim da lista de aplicações"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to beginning of the apps list"
-msgstr "{appName} passou para o início da lista de aplicações"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

@@ -66,13 +66,6 @@ Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
 * Sanal masaüstlerini açarken, kapatırken veya aralarında geçiş yaparken,
   NVDA aktif sanal masaüstü adını (örneğin masaüstü 2) duyurur. Bu artık
   NVDA 2023.2'nin bir parçasıdır.
-* Alt+Shift+sol/sağ ok tuşlarına basıldığında simgelerin yeniden
-  düzenlenmesinin sonuçlarının duyurulması (Windows 11) ve görev çubuğu
-  simgeleri arasında gezinirken öğe konumunun bildirilmesi (Windows 10 ve
-  11) dahil olmak üzere iyileştirilmiş Windows 10 ve 11 görev çubuğu
-  deneyimi. Bunların, sunulan ve ardından Insider Preview yapılarında
-  kaldırılan özellikler için benzetilmiş geçici çözümler olduğunu ve
-  gelecekte eklentiden kaldırılabileceğini unutmayın.
 * Sekmeli pencerelerin desteklendiği Windows 11 22H2 Dosya Gezgini ve Not
   Defteri gibi uygulamalarda NVDA, bunlar arasında geçiş yaparken sekmelerin
   adını ve konumunu duyurur. Bu artık NVDA 2023.2'nin bir parçasıdır.

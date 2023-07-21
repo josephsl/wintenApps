@@ -68,13 +68,6 @@ NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
 * Beim Öffnen, Schließen oder Umschalten zwischen virtuellen Desktops teilt
   NVDA nun den Namen des aktiven virtuellen Desktops mit (z. B. Desktop
   2). Dies ist nun fester Bestandteil in NVDA 2023.2.
-* Verbesserte Erfahrung für Windows 10 und 11 Taskleiste, einschließlich der
-  Bekanntgabe der Ergebnisse der Neuanordnung von Symbolen beim Drücken von
-  Alt+Umschalt+Pfeiltasten nach links/rechts (Windows 11) und die Mitteilung
-  von Element-Position beim Navigieren durch Taskleisten-Symbole (Windows 10
-  und 11). Beachten Sie, dass es sich hierbei um emulierte Workarounds für
-  Funktionen handelt, die in Insider Preview-Builds eingeführt und
-  anschließend entfernt wurden.
 * In Apps wie der Datei-Explorer oder Notepad (Editor) in Windows 11 Version
   22H2, in denen Fenster mit Registerkarten unterstützt werden, zeigt NVDA
   den Namen und die Position der Registerkarten an, wenn zwischen ihnen

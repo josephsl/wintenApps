@@ -8,19 +8,24 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.10\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-10-29 11:45-0700\n"
+"PO-Revision-Date: 2023-07-18 07:30-0700\n"
 "Last-Translator: Artin Dekker <vertalen@artindekker.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 msgid "Unsupported Windows release"
 msgstr "Niet ondersteunde Windows versie"
+
+#. Translators: an entry in supported Windows releases list (release (build)).
+#, python-brace-format
+msgid "{release} ({build})"
+msgstr "{release} ({build})"
 
 #. Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 #. Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
@@ -28,15 +33,11 @@ msgstr "Niet ondersteunde Windows versie"
 #, fuzzy, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
-"Windows App Essentials add-on.\n"
+"this add-on.\n"
 "Supported releases: {supportedReleasesList}."
 msgstr ""
 "U gebruikt een niet ondersteunde versie van {windowsRelease}. Deze add-on "
 "vereist {minSupportedUpdate} of later."
-
-#. Translators: Message presented when no more weather data is available for the current item.
-msgid "No more weather data for this item."
-msgstr "Geen weergegevens meer voor dit item."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

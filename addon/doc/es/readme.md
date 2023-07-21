@@ -67,13 +67,6 @@ complemento, consulta el documento [changelogs for add-on releases][4].
 * Al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
   nombre del escritorio virtual activo (escritorio 2, por ejemplo). Esto
   ahora forma parte de NVDA 2023.2.
-* Experiencia mejorada con la barra de tareas de Windows 10 y 11, incluyendo
-  el anuncio de los resultados al reordenar iconos pulsando las teclas
-  alt+shift+flechas izquierda y derecha (Windows 11) e indicando la posición
-  del elemento al moverse por iconos de la barra de tareas (Windows 10 y
-  11). Ten en cuenta que son parches emulados para funciones introducidas y
-  eliminadas a continuación en compilaciones preliminares de Insider y se
-  podrían eliminar del complemento en el futuro.
 * En aplicaciones de Windows 11 22H2 como el explorador de archivos y el
   bloc de notas, donde se soportan ventanas con pestañas, NVDA anunciará el
   nombre y la posición de las pestañas al pasar entre ellas. Esto ahora

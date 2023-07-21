@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-02-16 04:33-0800\n"
+"PO-Revision-Date: 2023-07-18 07:28-0700\n"
 "Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
@@ -42,21 +42,6 @@ msgstr ""
 "Bu eklenti tarafından desteklenmeyen bir Windows sürümü olan {releaseName} "
 "({build}) kullanıyorsunuz.\n"
 "Desteklenen sürümler: {supportedReleasesList}."
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved between {previousAppName} and {nextAppName}"
-msgstr "{appName}, {previousAppName} ile {nextAppName} arasında taşındı"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to end of the apps list"
-msgstr "{appName}, uygulama listesinin sonuna taşındı"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to beginning of the apps list"
-msgstr "{appName}, uygulama listesinin başına taşındı"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

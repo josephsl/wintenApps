@@ -28,8 +28,8 @@ detalhes sobre o que está incluído):
 
 Notas:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 22H2 (build 22621),
-  or later releases.
+* Este add-on requer o Windows 10 22H2 (build 19045), 11 22H2 (build 22621)
+  ou versões posteriores.
 * A duração do suporte da actualização de funcionalidades está associada à
   duração do suporte ao consumidor (edições Home, Pro, Pro Education, Pro
   para Estações de Trabalho) e o suplemento pode terminar o suporte para uma
@@ -65,12 +65,6 @@ consulte o documento [changelogs for add-on releases][4].
 * Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
   anunciará o nome da área de trabalho virtual ativa (área de trabalho 2,
   por exemplo). Isso agora faz parte do NVDA 2023.2.
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11) and reporting item position when moving through taskbar icons
-  (Windows 10 and 11). Note that these are emulated workarounds for features
-  introduced and then subsequently removed in Insider Preview builds and may
-  be removed from the add-on in the future.
 * In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
   windows are supported, NVDA will announce the name and the position of
   tabs when switching between them. This is now part of NVDA 2023.2.

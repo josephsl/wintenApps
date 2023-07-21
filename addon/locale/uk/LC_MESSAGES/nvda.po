@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.01\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-02-16 04:33-0800\n"
+"PO-Revision-Date: 2023-07-18 07:28-0700\n"
 "Last-Translator: Ukrainian NVDA Community <vp88.mobile@gmail.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -39,21 +39,6 @@ msgstr ""
 "Ви використовуєте версію Windows {releaseName} ({build}), яку додаток "
 "Windows App Essentials не підтримує.\n"
 "Підтримуються версії: {supportedReleasesList}."
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved between {previousAppName} and {nextAppName}"
-msgstr "{appName} переміщено між {previousAppName} і {nextAppName}"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to end of the apps list"
-msgstr "{appName} переміщено в кінець списку програм"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to beginning of the apps list"
-msgstr "{appName} переміщено на початок списку програм"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

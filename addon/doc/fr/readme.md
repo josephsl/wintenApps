@@ -69,14 +69,6 @@ l'extension][4].
 * Lors de l'ouverture, de la fermeture ou du basculement entre les bureaux
   virtuels, NVDA annoncera le nom du bureau virtuel actif (bureau 2, par
   exemple). Cela fait maintenant partie de NVDA 2023.2.
-* Amélioration de l'expérience de la barre des tâches de Windows 10 et 11,
-  notamment en annonçant les résultats de réorganisation des icônes lors de
-  l'appui sur Alt+Shift+les touches flèche gauche / droite (Windows 11) et
-  en rapportant la position de l'élément lors du déplacement des icônes de
-  la barre des tâches  (Windows 10 et 11). Notez que ce sont des solutions
-  de contournement émulées pour les fonctionnalités introduites, puis
-  supprimées par la suite dans les builds Insider Preview et peuvent être
-  supprimées de l'extension à l'avenir.
 * Dans des aps  tels que Windows 11 22H2 File Explorer et Notepad  où les
   fenêtres à onglets sont prises en charge, NVDA annoncera le nom et la
   position des onglets lors de la commutation entre eux. Cela fait

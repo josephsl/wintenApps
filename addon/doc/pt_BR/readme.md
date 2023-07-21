@@ -3,8 +3,8 @@
 * Autores: Joseph Lee, Derek Riemer e outros
 * Baixe a [versão estável][1]
 * Download [beta version][2]
-* Download [development version][3]
-* NVDA compatibility: 2023.1 and later
+* Baixe a [versão em desenvolvimento][3]
+* Compatibilidade com NVDA: 2023.1 e posteriores
 
 Nota: Originalmente chamado de Windows 10 App Essentials, foi renomeado para
 Windows App Essentials em 2021 para oferecer suporte ao Windows 10 e versões
@@ -28,8 +28,8 @@ detalhes sobre o que está incluso):
 
 Notas:
 
-* This add-on requires Windows 10 22H2 (build 19045), 11 22H2 (build 22621),
-  or later releases.
+* Este complemento requer o Windows 10 22H2 (compilação 19045), 11 22H2
+  (compilação 22621), ou posteriors.
 * Feature update support duration is tied to consumer support duration
   (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
   may end support for a feature update prior to end of consumer support. See
@@ -54,20 +54,14 @@ Notas:
   as Start menu and its context menu, enable "Automatic focus mode for focus
   changes" setting from NVDA's browse mode settings panel.
 
-For a list of changes made between each add-on releases, refer to
-[changelogs for add-on releases][4] document.
+Para obter uma lista de alterações feitas entre cada lançamento do
+complemento, consulte o documento [changelogs for add-on releases][4].
 
 ## Geral
 
 * When opening, closing, or switching between virtual desktops, NVDA will
   announce active virtual desktop name (desktop 2, for example). This is now
   part of NVDA 2023.2.
-* Improved Windows 10 and 11 taskbar experience, including announcing
-  results of rearranging icons when pressing Alt+Shift+left/right arrow keys
-  (Windows 11) and reporting item position when moving through taskbar icons
-  (Windows 10 and 11). Note that these are emulated workarounds for features
-  introduced and then subsequently removed in Insider Preview builds and may
-  be removed from the add-on in the future.
 * In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
   windows are supported, NVDA will announce the name and the position of
   tabs when switching between them. This is now part of NVDA 2023.2.

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-02-16 04:30-0800\n"
+"PO-Revision-Date: 2023-07-18 07:25-0700\n"
 "Last-Translator: Ungjin Park <ungjin312@kakao.com>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -38,21 +38,6 @@ msgid ""
 msgstr ""
 "본 추가 기능은 {releaseName}({build}) 버전을 지원하지 않습니다.\n"
 "지원 버전:  {supportedReleasesList}."
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved between {previousAppName} and {nextAppName}"
-msgstr "{appName}이(가) {previousAppName}에서 {nextAppName} 사이로 이동됨"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to end of the apps list"
-msgstr "{appName} 앱 목록의 끝으로 이동됨"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to beginning of the apps list"
-msgstr "{appName} 앱 목록의 시작으로 이동됨"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

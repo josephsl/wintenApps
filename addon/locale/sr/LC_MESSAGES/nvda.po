@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.03\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-03-03 17:34+0100\n"
+"PO-Revision-Date: 2023-07-18 07:28-0700\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: \n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 #. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
@@ -39,21 +39,6 @@ msgstr ""
 "Koristite {releaseName} ({build}), verziju Windowsa koju ovaj dodatak ne "
 "podržava.\n"
 "Podržane verzije: {supportedReleasesList}."
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved between {previousAppName} and {nextAppName}"
-msgstr "{appName} aplikacija pomerena između {previousAppName} i {nextAppName}"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to end of the apps list"
-msgstr "{appName} aplikacija pomerena na kraj liste"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to beginning of the apps list"
-msgstr "{appName} aplikacija pomerena na početak liste"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

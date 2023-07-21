@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-02-16 04:34-0800\n"
+"PO-Revision-Date: 2023-07-18 07:27-0700\n"
 "Last-Translator: 完美很难 <1872265132@qq.com>\n"
 "Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
 "2010-2019>\n"
@@ -40,21 +40,6 @@ msgid ""
 msgstr ""
 "您正在使用 {releaseName} ({build})，本插件不支持此版本的操作系统。\n"
 "支持的版本： {supportedReleasesList}。"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved between {previousAppName} and {nextAppName}"
-msgstr "{appName} 在 {previousAppName} 和 {nextAppName} 之间移动"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to end of the apps list"
-msgstr "已将 {appName} 移至应用列表的末尾"
-
-#. Translators: announced when rearranging taskbar icons in Windows 11.
-#, python-brace-format
-msgid "{appName} moved to beginning of the apps list"
-msgstr "已将 {appName} 移至应用列表的开头"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
