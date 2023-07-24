@@ -111,10 +111,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
-		# Patch event handler if NVDA does not support virtual desktop switch announcements.
-		# Resolved in NVDA 2023.2.
-		if not hasattr(eventHandler, "handlePossibleDesktopNameChange"):
-			eventHandler.doPreGainFocus = winapps_doPreGainFocus
 
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
 		try:
