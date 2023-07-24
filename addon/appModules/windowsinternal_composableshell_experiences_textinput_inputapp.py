@@ -6,19 +6,17 @@
 # The add-on version of this module will extend the one that comes with NVDA Core.
 # For IME candidate item/UI definition, Flake8 must be told to ignore it.
 
-from typing import List, Callable
+from typing import Callable
 # Yes, this app module is powered by built-in modern keyboard (TextInputHost) app module
 # (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import (
-	AppModule, ImeCandidateItem, ImeCandidateUI
+	AppModule, ImeCandidateUI
 )
 import winVersion
 import eventHandler
 import UIAHandler
-import controlTypes
 import api
-from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
 
 
