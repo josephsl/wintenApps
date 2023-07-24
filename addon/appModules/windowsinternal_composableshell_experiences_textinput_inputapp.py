@@ -43,10 +43,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			elif focusLocation is not None and not any(focusLocation):
 				eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 				return
-		# In Windows 11, candidate panel houses candidate items, not the prediction window.
-		# Resolved in NVDA 2023.2.
-		if automationId == "TEMPLATE_PART_CandidatePanel":
-			obj = obj.firstChild
 		# NVDA Core takes care of the rest.
 		super().event_UIA_elementSelected(obj, nextHandler)
 
