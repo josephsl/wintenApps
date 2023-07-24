@@ -4,7 +4,7 @@
 * Download [stable version][1]
 * Download [beta version][2]
 * Download [development version][3]
-* NVDA compatibility: 2023.1 and later
+* NVDA compatibility: 2023.2 and later
 
 Note: Originally called Windows 10 App Essentials, it was renamed to Windows App Essentials in 2021 to support Windows 10 and future releases such as Windows 11. Parts of this add-on will still refer to the original add-on name.
 
@@ -30,11 +30,6 @@ Notes:
 * For best experience with apps that embed web technologies and content such as Start menu and its context menu, enable "Automatic focus mode for focus changes" setting from NVDA's browse mode settings panel.
 
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][4] document.
-
-## General
-
-* When opening, closing, or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example). This is now part of NVDA 2023.2.
-* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed windows are supported, NVDA will announce the name and the position of tabs when switching between them. This is now part of NVDA 2023.2.
 
 ## Cortana
 
