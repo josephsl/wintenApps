@@ -123,23 +123,3 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		if obj.parent.childCount == 0:
 			eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 		nextHandler()
-
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
-		# Recognize more candidate UI and item elements in Windows 11.
-		# Return after checking each item so candidate UI and items from Windows 10 can be recognized.
-		# Resolved in NVDA 2023.2 (remove this method completely).
-		if isinstance(obj, UIA):
-			role = obj.role
-			# Candidate item.
-			if role == controlTypes.Role.LISTITEM and obj.parent.UIAAutomationId == "TEMPLATE_PART_CandidatePanel":
-				clsList.insert(0, ImeCandidateItem)
-				return
-			# Candidate UI.
-			elif (
-				role in (controlTypes.Role.LIST, controlTypes.Role.POPUPMENU)
-				and obj.UIAAutomationId in ("TEMPLATE_PART_CandidatePanel", "IME_Prediction_Window")
-			):
-				clsList.insert(0, ImeCandidateUI)
-				return
-		# NVDA Core takes care of the rest.
-		super().chooseNVDAObjectOverlayClasses(obj, clsList)
