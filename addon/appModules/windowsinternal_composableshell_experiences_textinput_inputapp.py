@@ -22,17 +22,6 @@ from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
 
 
-# Bulk of the below class comes from NVDA Core.
-class ImeCandidateItem(ImeCandidateItem):  # type: ignore[no-redef]
-
-	def event_UIA_elementSelected(self) -> None:
-		# Focus event is fired when a candidate item receives focus, therefore ignore this event.
-		# Resolved in NVDA 2023.2 (remove this method completely).
-		if winVersion.getWinVer() >= winVersion.WIN11:
-			return
-		super().event_UIA_elementSelected()
-
-
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
