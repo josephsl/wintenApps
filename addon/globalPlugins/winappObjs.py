@@ -137,6 +137,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# as UIA notification event is fired by File Explorer instead (no longer the case in 23511 (dev)).
 		# In canary build 25905 and later, CSRSS fires name change event only when creating virtual desktops,
 		# resulting in duplicate announcement (CSRSS/name change and File Explorer/UIA notification).
+		# Resolved in build 25921 - canary is aligned with beta channel.
 		if (
 			obj.appModule.appName == "csrss"
 			and obj.windowClassName == "#32769"
