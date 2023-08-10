@@ -12,7 +12,6 @@ This add-on is a collection of app modules for various modern Windows apps, as w
 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
-* Cortana (to be replaced by Windows Copilot)
 * Modern keyboard (emoji panel/touch keyboard/dictation/voice typing/hardware input suggestions/clipboard history/Suggested Actions/modern input method editors)
 * Settings (system settings, Windows+I)
 * Voice access
@@ -35,10 +34,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 * When opening, closing, or switching between virtual desktops, NVDA will announce active virtual desktop name (desktop 2, for example). This is now part of NVDA 2023.2.
 * In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed windows are supported, NVDA will announce the name and the position of tabs when switching between them. This is now part of NVDA 2023.2.
-
-## Cortana
-
-* Textual responses from Cortana are announced in most situations.
 
 ## Modern keyboard
 
