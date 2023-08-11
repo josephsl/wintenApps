@@ -17,7 +17,6 @@ i poboljšanja i ispravci određenih kontrola u sustavu Windows 10 i novijim.
 Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 što je uključeno):
 
-* Cortana (zamijenit će se s Windows Copilot)
 * Moderna tipkovnica (ploča emojija, diktatiranje, tipkanje glasom,
   prijedlozi za unos hardverom, povijest međuspremnika, predložene radnje,
   moderni uređivači za unos)
@@ -65,10 +64,6 @@ izdanja dodatka][4].
 * U aplikacijama kao što su Windows 11 22H2 File Explorer i Notepad gdje su
   podržani prozori s karticama, NVDA će najaviti ime i položaj kartica
   prilikom prebacivanja između njih. Ovo je sada dio NVDA verzije 2023.2.
-
-## Cortana
-
-* Tekstualni odgovori Cortane najavljuju se u većini slučajeva.
 
 ## Moderna tipkovnica
 

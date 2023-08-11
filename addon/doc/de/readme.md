@@ -18,7 +18,6 @@ Steuerelemente in Windows 10 und neuer.
 Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
 Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
-* Cortana (zu ersetzen durch Windows Co-Pilot)
 * Moderne Tastatur
   (Emoji-Panel/Touch-Tastatur/Diktat/Sprachsteuerung/Hardware-Eingabevorschläge/Zwischenablage-Verlauf/Vorgeschlagene
   Aktionen/Editoren für moderne Eingabemethoden)
@@ -72,11 +71,6 @@ NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
   22H2, in denen Fenster mit Registerkarten unterstützt werden, zeigt NVDA
   den Namen und die Position der Registerkarten an, wenn zwischen ihnen
   gewechselt wird. Dies ist nun fester Bestandteil in NVDA 2023.2.
-
-## Cortana
-
-* Rückmeldungstexte von Cortana werden in den meisten Situationen
-  angekündigt.
 
 ## Moderne virtuelle Tastaturen
 

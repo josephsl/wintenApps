@@ -20,7 +20,6 @@ Bazı uygulamalar için aşağıdaki uygulama veya destek modülleri  mevcuttur
 (nelerin dahil olduğuyla ilgili ayrıntılar için her bir uygulama bölümüne
 bakın):
 
-* Cortana (Windows Yardımcı Pilot ile değiştirilecek)
 * Modern klavye (emoji paneli/dokunmatik klavye/dikte/sesle yazma/donanım
   giriş önerileri/pano geçmişi/Önerilen Eylemler/modern giriş yöntemi
   düzenleyicileri)
@@ -69,10 +68,6 @@ Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
 * Sekmeli pencerelerin desteklendiği Windows 11 22H2 Dosya Gezgini ve Not
   Defteri gibi uygulamalarda NVDA, bunlar arasında geçiş yaparken sekmelerin
   adını ve konumunu duyurur. Bu artık NVDA 2023.2'nin bir parçasıdır.
-
-## Cortana
-
-* Cortana'dan gelen metin içerikli yanıtlar çoğu durumda bildirilir.
 
 ## Modern klavye
 

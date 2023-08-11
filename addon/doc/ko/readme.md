@@ -13,7 +13,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 다음 앱 모듈 및 지원 모듈을 포함합니다(각 앱 관련 엔트리를 참고 바람):
 
-* Cortana (to be replaced by Windows Copilot)
 * 현대식 키보드(에모지 페널/터치 키보드/받아쓰기/하드웨어 입력 구성/클립보드 히스토리/추천 엑션/현대식 IME 입력기)
 * 설정(시스템 설정 앱, Windows+I)
 * Voice access
@@ -47,10 +46,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
   windows are supported, NVDA will announce the name and the position of
   tabs when switching between them. This is now part of NVDA 2023.2.
-
-## Cortana
-
-* Textual responses from Cortana are announced in most situations.
 
 ## 현대식 키보드
 
