@@ -18,7 +18,6 @@ Windows 10:ssä ja uudemmissa.
 Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
-* Cortana (korvataan Windows Copilotilla)
 * Moderni näppäimistö
   (emojipaneeli/kosketusnäppäimistö/sanelu/puhekirjoitus/fyysisen
   näppäimistösyötteen ehdotukset/leikepöydän historia/ehdotetut
@@ -67,10 +66,6 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
   sellaisissa sovelluksissa, joissa välilehti-ikkunoita tuetaan
   (esim. Windows 11 22H2:n Resurssienhallinta ja Muistio). Tämä sisältyy
   NVDA 2023.2:een.
-
-## Cortana
-
-* Cortanan tekstimuotoiset vastaukset puhutaan useimmissa tilanteissa.
 
 ## Moderni näppäimistö
 

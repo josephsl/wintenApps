@@ -17,7 +17,6 @@ samt forbedringer og rettelser for visse windows 10 kontrolelementer.
 Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
 hver appsektion for detaljer om, hvad der er inkluderet):
 
-* Cortana (to be replaced by Windows Copilot)
 * Modern keyboard (emoji panel/touch keyboard/dictation/voice
   typing/hardware input suggestions/clipboard history/Suggested
   Actions/modern input method editors)
@@ -67,10 +66,6 @@ tilføjelsen, henvises til [ændringslog for tilføjelsen][4].
 * In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
   windows are supported, NVDA will announce the name and the position of
   tabs when switching between them. This is now part of NVDA 2023.2.
-
-## Cortana
-
-* Tekstlige svar fra Cortana annonceres i de fleste tilfælde.
 
 ## Moderne tastatur
 

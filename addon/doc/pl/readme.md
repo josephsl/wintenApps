@@ -19,7 +19,6 @@ Dołączone są następujące moduły aplikacji lub moduły pomocy technicznej d
 niektórych aplikacji (szczegółowe informacje na temat tego, co jest
 dołączone, zobacz każdą sekcję aplikacji):
 
-* Cortana (to be replaced by Windows Copilot)
 * Nowoczesna klawiatura (panel emoji/klawiatura dotykowa/dyktowanie/pisanie
   głosowe/sugestie dotyczące wprowadzania sprzętu/historia
   schowka/sugerowane akcje/nowoczesne edytory metod wprowadzania)
@@ -69,10 +68,6 @@ znajduje się w dokumencie [changelogs for add-on releases][4].
 * In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
   windows are supported, NVDA will announce the name and the position of
   tabs when switching between them. This is now part of NVDA 2023.2.
-
-## Cortana
-
-* Odpowiedzi tekstowe z Cortany są ogłaszane w większości sytuacji.
 
 ## Klawiatura nowoczesna
 

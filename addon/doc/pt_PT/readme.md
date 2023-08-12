@@ -19,7 +19,6 @@ Os seguintes módulos de aplicações ou módulos de suporte para algumas
 aplicações estão incluídos (consulte a secção de cada aplicação para obter
 detalhes sobre o que está incluído):
 
-* Cortana (to be replaced by Windows Copilot)
 * Teclado moderno (painel de emojis/teclado táctil/ditado/digitação por
   voz/sugestões de entrada de hardware/histórico do clipboard/acções
   sugeridas/editores de métodos de entrada modernos)
@@ -68,10 +67,6 @@ consulte o documento [changelogs for add-on releases][4].
 * In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
   windows are supported, NVDA will announce the name and the position of
   tabs when switching between them. This is now part of NVDA 2023.2.
-
-## Cortana
-
-* As respostas textuais da Cortana são anunciadas na maioria das situações.
 
 ## Teclado moderno
 

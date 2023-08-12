@@ -19,7 +19,6 @@ Les app modules suivants ou la prise en charge des modules pour certaines
 apps sont inclus (voir chaque section app pour plus de détails sur ce qui
 est inclus) :
 
-* Cortana (à remplacer par Windows Copilot)
 * Clavier moderne (panneau des emojis/clavier tactile/dictée/saisie
   vocale/suggestions de saisie matérielle/historique du
   presse-papiers/éditeurs de méthodes de saisie modernes)
@@ -73,11 +72,6 @@ l'extension][4].
   fenêtres à onglets sont prises en charge, NVDA annoncera le nom et la
   position des onglets lors de la commutation entre eux. Cela fait
   maintenant partie de NVDA 2023.2.
-
-## Cortana
-
-* Les réponses textuelles de Cortana sont annoncées dans la plupart des
-  situations.
 
 ## Clavier moderne
 

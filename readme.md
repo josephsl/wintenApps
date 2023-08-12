@@ -12,7 +12,6 @@ This add-on is a collection of app modules for various modern Windows apps, as w
 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
-* Cortana (to be replaced by Windows Copilot)
 * Modern keyboard (emoji panel/touch keyboard/dictation/voice typing/hardware input suggestions/clipboard history/Suggested Actions/modern input method editors)
 * Settings (system settings, Windows+I)
 * Voice access
@@ -30,10 +29,6 @@ Notes:
 * For best experience with apps that embed web technologies and content such as Start menu and its context menu, enable "Automatic focus mode for focus changes" setting from NVDA's browse mode settings panel.
 
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][4] document.
-
-## Cortana
-
-* Textual responses from Cortana are announced in most situations.
 
 ## Modern keyboard
 

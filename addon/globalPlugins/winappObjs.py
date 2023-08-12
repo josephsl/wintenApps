@@ -41,7 +41,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	):
 		# In Windows Insider build 22631 (beta)/23493 (dev)/25905 (canary) and later,
 		# UIA notification event from File Explorer is used to report virtual desktop names.
-		# Reverted to CSRSS name change event in build 23511 (dev).
+		# Reverted to CSRSS name change event in build 23511 (dev) but uses UIA notification in 23521.
 		# Handle this event in the global plugin so announcements can be made regardless of focused app.
 		if obj.appModule.appName == "explorer" and activityId == "Windows.Shell.TextAnnouncement":
 			ui.message(displayString)

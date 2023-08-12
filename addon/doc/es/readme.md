@@ -19,7 +19,6 @@ Se incluyen Los siguientes app modules o el apoyo para módulos para algunas
 aplicaciones (consulta cada sección para la aplicación para detalles sobre
 qué se incluye):
 
-* Cortana (sustituida pronto por Windows Copilot)
 * Teclado Moderno (panel de emojis / teclado táctil / dictado / escritura
   por voz / sugerencias de entrada hardware / historial del portapapeles /
   acciones sugeridas / editores modernos de método de entrada)
@@ -71,11 +70,6 @@ complemento, consulta el documento [changelogs for add-on releases][4].
   bloc de notas, donde se soportan ventanas con pestañas, NVDA anunciará el
   nombre y la posición de las pestañas al pasar entre ellas. Esto ahora
   forma parte de NVDA 2023.2.
-
-## Cortana
-
-* Las respuestas textuales de Cortana se verbalizan en la mayoría de
-  situaciones.
 
 ## Teclado Moderno
 
