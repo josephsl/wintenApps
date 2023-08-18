@@ -133,11 +133,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# which will result in name change for the desktop object.
 		# Do this while NVDA Core itself does not include virtual desktop switch announcement facility.
 		# Resolved in NVDA 2023.2 (remove this method completely).
-		# Note: not used in Insider Preview build 22631 (beta)
-		# as UIA notification event is fired by File Explorer instead (also applicable in 23521 (dev)).
-		# In canary build 25905 and later, CSRSS fires name change event only when creating virtual desktops,
-		# resulting in duplicate announcement (CSRSS/name change and File Explorer/UIA notification).
-		# Resolved in build 25921 - canary is aligned with beta channel.
+		# Note: not used (for the most part) in Insider Preview build 22631 (beta) and later
+		# as UIA notification event is fired by File Explorer instead.
+		# CSRSS name change is fired when creating virtual desktops from task view.
 		if (
 			obj.appModule.appName == "csrss"
 			and obj.windowClassName == "#32769"
