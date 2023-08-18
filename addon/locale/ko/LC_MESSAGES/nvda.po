@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-07-18 07:25-0700\n"
+"PO-Revision-Date: 2023-08-13 05:17-0600\n"
 "Last-Translator: Ungjin Park <ungjin312@kakao.com>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -37,7 +37,7 @@ msgid ""
 "Supported releases: {supportedReleasesList}."
 msgstr ""
 "본 추가 기능은 {releaseName}({build}) 버전을 지원하지 않습니다.\n"
-"지원 버전:  {supportedReleasesList}."
+"지원 버전: {supportedReleasesList}."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
