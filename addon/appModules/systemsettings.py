@@ -67,6 +67,9 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			# This allows item label to be kept intact.
 			elif obj.UIAElement.cachedClassName.endswith("BreadcrumbBarItem"):
 				obj.roleText = obj.UIAElement.currentLocalizedControlType
+			# Windows 11 23H2 Copilot toggle is not labeld in beta build 22631.2199 (argh)!
+			elif automationId == "SystemSettings_DesktopTaskbar_Copilot_ToggleSwitch" and not obj.name:
+				obj.name = "Copilot (preview)"
 
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache: str = ""
