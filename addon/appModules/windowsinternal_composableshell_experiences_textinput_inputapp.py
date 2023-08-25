@@ -69,8 +69,13 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				imeCandidateItem = imeCandidateItem.lastChild
 			localEventHandlerElements.append(imeCandidateItem)
 		for element in localEventHandlerElements:
-			UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
-			UIAHandler.handler.addEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+			try:
+				# Sometimes traversal fails, resulting in a null element being added.
+				# Noticeable when opening Voice Access suggestions in Windows 11 22H2 and later.
+				UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+				UIAHandler.handler.addEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+			except AttributeError:
+				pass
 
 	def event_UIA_window_windowOpen(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
