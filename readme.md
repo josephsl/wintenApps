@@ -21,7 +21,6 @@ Notes:
 * This add-on requires Windows 10 22H2 (build 19045), 11 22H2 (build 22621), or later releases.
 * Feature update support duration is tied to consumer support duration (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on may end support for a feature update prior to end of consumer support. See aka.ms/WindowsTargetVersioninfo for more information and support dates.
 * Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
-* If Add-on Updater is installed and background add-on updates is enabled, Windows App Essentials will not install at all on unsupported Windows releases.
 * Not all features from Windows Insider Preview builds will be supported, more so for features introduced to a subset of Windows Insiders in canary and dev channels.
 * The add-on may emulate fixes included in Insider Preview builds which are subsequently removed, and for these changes, the add-on may remove them in future releases.
 * Add-on dev channel will include changes including experimental content that may or may not be included in beta and stable releases, and beta channel will come with changes planned for future stable releases.
