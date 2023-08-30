@@ -33,10 +33,6 @@ def onInstall():
 		or currentBuild >= max(supportedBuilds)  # Insider Preview canary/dev/beta
 	):
 		return
-	import globalVars
-	# Do not present error dialog if minimal mode is set.
-	if globalVars.appArgs.minimal:
-		raise RuntimeError(f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentBuild})")
 	import gui
 	import wx
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
