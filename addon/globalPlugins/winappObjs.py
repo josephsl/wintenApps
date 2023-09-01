@@ -3,13 +3,12 @@
 
 # Adds handlers for various UIA controls found in Windows 10 and later.
 
-from typing import List, Optional, Callable
+from typing import List
 import globalPluginHandler
 from NVDAObjects.UIA import Dialog
 from NVDAObjects import NVDAObject
 import globalVars
 import UIAHandler
-import ui
 
 
 # #20: don't even think about proceeding in secure screens.
