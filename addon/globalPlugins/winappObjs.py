@@ -34,16 +34,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# This is still the case with some dialogs such as restart to install updates dialog in Windows 11.
 		if UIAClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)
-
-	def event_UIA_notification(
-			self, obj: NVDAObject, nextHandler: Callable[[], None],
-			displayString: Optional[str] = None, activityId: Optional[str] = None, **kwargs
-	):
-		# In Windows Insider build 22631 (beta)/23493 (dev)/25905 (canary) and later,
-		# UIA notification event from File Explorer is used to report virtual desktop names.
-		# Reverted to CSRSS name change event in build 23511 (dev) but uses UIA notification in 23521.
-		# Handle this event in the global plugin so announcements can be made regardless of focused app.
-		if obj.appModule.appName == "explorer" and activityId == "Windows.Shell.TextAnnouncement":
-			ui.message(displayString)
-			return
-		nextHandler()
