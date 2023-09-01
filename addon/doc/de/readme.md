@@ -4,7 +4,7 @@
 * [Stabile Version herunterladen][1]
 * [Beta-Version herunterladen][2]
 * [Entwicklerversion herunterladen][3]
-* NVDA-Kompatibilität: 2023.1 und neuer
+* NVDA-Kompatibilität: 2023.2 und neuer
 
 Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
 2021 in Windows App Essentials umbenannt, um Windows 10 und zukünftige
@@ -37,15 +37,12 @@ Hinweise:
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
-* Wenn der Updater für NVDA-Erweiterungen installiert ist und Add-on-Updates
-  im Hintergrund aktiviert sind, wird Windows App Essentials auf nicht
-  unterstützten Windows-Versionen überhaupt nicht installiert.
 * Nicht alle Funktionen von Windows Insider Preview-Builds werden
   unterstützt. Dies gilt vor allem für Funktionen, die einer Untergruppe von
   Windows Insidern im Canary- und Dev-Channel vorgestellt werden.
-* Die NVDA-Erweiterung kann Korrekturen emulieren, die in Insider
-  Preview-Builds enthalten sind, die später entfernt werden, und für diese
-  Änderungen kann die NVDA-Erweiterung sie in zukünftigen Versionen
+* Die NVDA-Erweiterung kann Änderungen emulieren, die in
+  Insider-Preview-Builds enthalten sind, die später entfernt werden, und für
+  diese Änderungen kann die NVDA-Erweiterung sie in zukünftigen Versionen
   entfernen.
 * Der Dev-Kanal der NVDA-Erweiterung wird Änderungen enthalten,
   einschließlich experimenteller Inhalte, die in den Beta- und
@@ -61,16 +58,6 @@ Hinweise:
 Eine Liste der Änderungen, die zwischen den einzelnen Versionen der
 NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
 [Änderungsprotokolle für Versionen der NVDA-Erweiterung][4].
-
-## Allgemein
-
-* Beim Öffnen, Schließen oder Umschalten zwischen virtuellen Desktops teilt
-  NVDA nun den Namen des aktiven virtuellen Desktops mit (z. B. Desktop
-  2). Dies ist nun fester Bestandteil in NVDA 2023.2.
-* In Apps wie der Datei-Explorer oder Notepad (Editor) in Windows 11 Version
-  22H2, in denen Fenster mit Registerkarten unterstützt werden, zeigt NVDA
-  den Namen und die Position der Registerkarten an, wenn zwischen ihnen
-  gewechselt wird. Dies ist nun fester Bestandteil in NVDA 2023.2.
 
 ## Moderne virtuelle Tastaturen
 

@@ -4,7 +4,7 @@
 * Pobierz [wersja stabilna][1]
 * Pobierz [wersja beta][2]
 * Pobierz [wersja rozwojowa][3]
-* Zgodność z NVDA: 2023.1 i nowsze
+* Zgodność z NVDA: 2023.2 i nowsze
 
 Uwaga: Pierwotniea nazwa tego dodatku była Windows 10 App Essentials, a
 potem została zmieniona na Windows App Essentials w 2021 roku, aby
@@ -38,15 +38,12 @@ Notatki:
   pomocy technicznej.
 * Chociaż instalacja jest możliwa, ten dodatek nie obsługuje wersji Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
-* Jeśli jest zainstalowany program Add-on Updater i włączone są aktualizacje
-  dodatków w tle, program Windows App Essentials nie zostanie w ogóle
-  zainstalowany w nieobsługiwanych wersjach systemu Windows.
 * Nie wszystkie funkcje kompilacji Windows Insider Preview będą obsługiwane,
   tym bardziej w przypadku funkcji wprowadzonych do podzbioru niejawnych
   testerów systemu Windows w kanałach kanarkowych i deweloperskich.
-* The add-on may emulate fixes included in Insider Preview builds which are
-  subsequently removed, and for these changes, the add-on may remove them in
-  future releases.
+* The add-on may emulate changes included in Insider Preview builds which
+  are subsequently removed, and for these changes, the add-on may remove
+  them in future releases.
 * Kanał deweloperski dodatków będzie zawierał zmiany, w tym zawartość
   eksperymentalną, która może, ale nie musi być zawarta w wersjach beta i
   stabilnych, a kanał beta będzie zawierał zmiany planowane dla przyszłych
@@ -59,15 +56,6 @@ Notatki:
 
 Lista zmian wprowadzonych pomiędzy poszczególnymi wydaniami dodatków
 znajduje się w dokumencie [changelogs for add-on releases][4].
-
-## Ogólne
-
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce active virtual desktop name (desktop 2, for example). This is now
-  part of NVDA 2023.2.
-* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
-  windows are supported, NVDA will announce the name and the position of
-  tabs when switching between them. This is now part of NVDA 2023.2.
 
 ## Klawiatura nowoczesna
 

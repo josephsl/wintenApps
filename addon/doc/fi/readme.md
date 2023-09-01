@@ -4,7 +4,7 @@
 * Lataa [vakaa versio][1]
 * Lataa [beetaversio][2]
 * Lataa [kehitysversio][3]
-* Yhteensopivuus: NVDA 2023.1 ja uudemmat
+* Yhteensopivuus: NVDA 2023.2 ja uudemmat
 
 Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
 nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows
@@ -36,15 +36,12 @@ Huomautukset:
   aka.ms/WindowsTargetVersioninfo.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
-* Windows App Essentials ei asennu ei-tuetuissa Windows-versioissa, jos
-  Lisäosien päivittäjä on asennettuna ja lisäosien taustapäivitykset ovat
-  käytössä.
 * Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
   varsinkaan sellaisia, jotka esitellään vain osalle canary- ja
   dev-kanavilla olevista käyttäjistä.
-* Lisäosa saattaa jäljitellä Insider-esikoontikäännösversioihin
-  sisällytettyjä korjauksia, jotka poistetaan myöhemmin. Näihin muutoksiin
-  liittyen korjaukset saatetaan poistaa lisäosan tulevissa versioissa.
+* Lisäosa saattaa jäljitellä Insider-esiversioihin sisällytettyjä
+  korjauksia, jotka poistetaan myöhemmin. Näihin muutoksiin liittyen
+  korjaukset saatetaan poistaa lisäosan tulevissa versioissa.
 * Lisäosan dev-kanava sisältää muutoksia, mukaan lukien kokeellinen sisältö,
   joka saatetaan sisällyttää beeta- ja vakaisiin versioihin, ja beta-kanava
   sisältää tuleviin vakaisiin versioihin suunniteltuja muutoksia.
@@ -56,16 +53,6 @@ Huomautukset:
 
 Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 [lisäosajulkaisujen muutoslokit][4] -dokumentista.
-
-## Yleistä
-
-* NVDA ilmoittaa aktiivisen virtuaalityöpöydän nimen (esim. työpöytä 2)
-  avattaessa, suljettaessa tai siirryttäessä virtuaalityöpöytien
-  välillä. Tämä sisältyy NVDA 2023.2:een.
-* NVDA puhuu välilehtien nimen ja sijainnin niiden välillä vaihdettaessa
-  sellaisissa sovelluksissa, joissa välilehti-ikkunoita tuetaan
-  (esim. Windows 11 22H2:n Resurssienhallinta ja Muistio). Tämä sisältyy
-  NVDA 2023.2:een.
 
 ## Moderni näppäimistö
 

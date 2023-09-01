@@ -2,9 +2,9 @@
 
 * Forfattere: Joseph Lee, Derek Riemer og andre
 * Download [stabil version][1]
-* Download [beta version][2]
+* Download [betaversion][2]
 * Download [udviklingsversion][3]
-* NVDA-kompatibilitet: 2023.1 og nyere
+* NVDA-kompatibilitet: 2023.2 og nyere
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
 til Windows App Essentials i 2021 for at understøtte Windows 10 og
@@ -17,9 +17,9 @@ samt forbedringer og rettelser for visse windows 10 kontrolelementer.
 Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
 hver appsektion for detaljer om, hvad der er inkluderet):
 
-* Modern keyboard (emoji panel/touch keyboard/dictation/voice
-  typing/hardware input suggestions/clipboard history/Suggested
-  Actions/modern input method editors)
+* Moderne tastatur (Emoji-panel, berøringstastatur, diktering,
+  stemmeskrivning, forslag til hardwareinput, udklipshistorik og Editor til
+  inputmetode)
 * Indstillinger (systemindstillinger, Windows+I)
 * Stemmeadgang
 
@@ -35,19 +35,16 @@ Bemærkninger:
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
-* Hvis Opdateringsværktøj til Tilføjelsespakker er installeret, og
-  opdatering af tilføjelser i baggrunden er aktiveret, installeres Vigtige
-  Forbedringer til Windows Apps slet ikke på ikke-understøttede
-  Windows-udgivelser.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in canary
-  and dev channels.
-* The add-on may emulate fixes included in Insider Preview builds which are
-  subsequently removed, and for these changes, the add-on may remove them in
-  future releases.
-* Add-on dev channel will include changes including experimental content
-  that may or may not be included in beta and stable releases, and beta
-  channel will come with changes planned for future stable releases.
+* Ikke alle funktioner fra Windows Insider Preview-builds vil blive
+  understøttet. Dette er yderligere tilfældet for funktioner introduceret i
+  en undergruppe af Windows Insiders i udviklerkanalen.
+* The add-on may emulate changes included in Insider Preview builds which
+  are subsequently removed, and for these changes, the add-on may remove
+  them in future releases.
+* Tilføjelsesudviklerkanal vil inkludere ændringer, herunder eksperimentelt
+  indhold, der muligvis er inkluderet i beta- og stabile versioner, og
+  betakanalen vil komme med ændringer, der er planlagt for fremtidige
+  stabile versioner.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
 * For at få den bedste oplevelse med apps, der integrerer webteknologier og
@@ -58,27 +55,18 @@ Bemærkninger:
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][4].
 
-## Generelt
-
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce active virtual desktop name (desktop 2, for example). This is now
-  part of NVDA 2023.2.
-* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
-  windows are supported, NVDA will announce the name and the position of
-  tabs when switching between them. This is now part of NVDA 2023.2.
-
 ## Moderne tastatur
 
-This includes emoji panel, clipboard history, touch keyboard,
-dictation/voice typing, hardware input suggestions, suggested actions, and
-modern input method editors for certain languages across Windows 10 and
-11. When viewing emojis, for best experience, enable Unicode Consortium
-setting from NVDA's speech settings and set symbol level to "some" or
-higher. When pasting from clipboard history in Windows 10, press Space key
-instead of Enter key to paste the selected item.
+Dette inkluderer emoji-panelet, historik for udklipsholderen,
+berøringstastatur, diktering, forslag i forhold til hardwareinput og moderne
+Input Methodf Editor for visse sprog. Når du ser emojier, skal du for at få
+den bedste oplevelse aktivere Unicode Consortium-indstillingen fra NvDAs
+taleindstillinger og indstille tegnsætningsniveauet til "nogle" eller
+højere. Når du skal indstille fra historikken i Windows 10, skal du bruge
+mellemrumstasten i stedet for enter.
 
-* In Windows 11 22H2 and later, NVDA will announce suggested actions when
-  compatible data such as phone numbers is copied to the clipboard.
+* I Windows 11 22H2 og senere vil NVDA annoncere foreslåede handlinger, når
+  kompatible data såsom telefonnumre kopieres til udklipsholderen.
 
 ## Indstillinger
 
@@ -86,12 +74,13 @@ instead of Enter key to paste the selected item.
   hvis den findes (download og installer nu-link i Windows 10, download-knap
   i Windows 11).
 * I Windows 11 genkendes brødkrumme-elementer korrekt.
-* NVDA will report updates to Windows Update status as download and install
-  progresses. This may result in speech interruption when navigating
-  Settings app while updates are being downloaded and installed. If using
-  Windows 11 and UIA event registration is set to selective from NVDA
-  advanced settings panel, you must move focus to updates list as soon as
-  they appear so NVDA can announce update progress.
+* NVDA vil afbryde talen og oplyse status for opdateringer til Windows
+  Update, efterhånden som download og installation skrider frem. Dette kan
+  resultere i afbrydelse af talen, når du navigerer i appen Indstillinger,
+  mens opdateringer downloades og installeres. Hvis du bruger Windows 11
+  22H2 og nyere med indstillingen "Registrer hændelser fra UI Automation
+  samt egenskabsændringer" slået til, skal du flytte fokus til listen
+  opdateringer, så NVDA kan oplyse status for opdateringerne.
 
 ## Stemmeadgang
 

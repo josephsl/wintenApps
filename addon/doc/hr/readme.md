@@ -4,7 +4,7 @@
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [beta verziju][2]
 * Preuzmi [razvojnu verziju][3]
-* NVDA kompatibilnost: 2023.1 i novije verzije
+* NVDA kompatibilnost: 2023.2 i novije verzije
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
@@ -34,15 +34,12 @@ Napomene:
   aka.ms/WindowsTargetVersioninfo za više informacija i datume podrške.
 * Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
-* Ako je dodatak „Ažuriranje dodataka” instaliran i pozadinsko ažuriranje
-  dodataka aktivirano, dodatak „Osnovni moduli za Windows aplikacije” se
-  uopće neće instalirati na nepodržana izdanja sustava Windows.
 * Windows Insider Preview gradnje neće podržati sve značajke, pogotovo
   značajke koje su predstavljene u podskupu „Windows Insiders” u kanalima
   canary i razvoja.
-* The add-on may emulate fixes included in Insider Preview builds which are
-  subsequently removed, and for these changes, the add-on may remove them in
-  future releases.
+* The add-on may emulate changes included in Insider Preview builds which
+  are subsequently removed, and for these changes, the add-on may remove
+  them in future releases.
 * Kanal dodataka u razvoju uključivat će promjene uključujući
   eksperimentalni sadržaj koji može, ali ne mora biti uključen u beta i
   stabilnim izdanjima, a beta kanal će sadržati promjene koje su planirane
@@ -55,15 +52,6 @@ Napomene:
 
 Za popis promjena između izdanja dodatka, pogledaj dokument [s izmjenama
 izdanja dodatka][4].
-
-## Opće
-
-* Prilikom otvaranja, zatvaranja ili prebacivanja između virtualnih radnih
-  površina, NVDA će najaviti ime aktivne virtualne radne površine (na
-  primjer radna površina 2). Ovo sada podržava NVDA verzija 2023.2.
-* U aplikacijama kao što su Windows 11 22H2 File Explorer i Notepad gdje su
-  podržani prozori s karticama, NVDA će najaviti ime i položaj kartica
-  prilikom prebacivanja između njih. Ovo je sada dio NVDA verzije 2023.2.
 
 ## Moderna tipkovnica
 

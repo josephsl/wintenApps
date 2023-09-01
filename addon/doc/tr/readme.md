@@ -4,7 +4,7 @@
 * [Kararlı sürümü indirin][1]
 * [Beta sürümünü indirin][2]
 * [Geliştirme sürümünü indirin][3]
-* NVDA uyumluluğu: 2023.1 ve üstü
+* NVDA uyumluluğu: 2023.2 ve sonrası
 
 Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
 adlandırılırken, Windows 10 ve Windows 11 gibi gelecekteki windows
@@ -37,15 +37,12 @@ Notlar:
   aka.ms/WindowsTargetVersioninfo adresine bakın.
 * Ne kadar yüklenebilse de, bu eklenti Windows Enterprise LTSC (Uzun Süreli
   Hizmet Kanalı) ve Windows Server sürümlerini desteklemez.
-* Eklenti Güncelleyici kuruluysa ve arka planda eklenti güncellemeleri
-  etkinleştirildiyse, Windows App Essentials, desteklenmeyen Windows
-  sürümlerine hiç yüklenmez.
 * Windows Insider Önizleme yapılarındaki tüm özellikler desteklenmeyecek,
   özellikle canary ve dev kanallarında Windows Insiders alt kümesine sunulan
   özellikler için.
-* Eklenti, daha sonra kaldırılan Insider Preview yapılarında yer alan
-  düzeltmeleri taklit edebilir ve bu değişiklikler için, eklenti bunları
-  gelecekteki sürümlerde kaldırabilir.
+* Eklenti, Insider Preview derlemelerine dahil edilen ve daha sonra
+  kaldırılan değişiklikleri taklit edebilir ve bu değişiklikler için eklenti
+  bunları gelecekteki sürümlerde kaldırabilir.
 * Eklenti geliştirme kanalı, beta ve kararlı sürümlere dahil edilebilecek
   veya edilmeyebilecek deneysel içerik de dahil olmak üzere değişiklikleri
   içerecek ve beta kanalı, gelecekteki kararlı sürümler için planlanan
@@ -59,15 +56,6 @@ Notlar:
 
 Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
 [eklenti sürümleri için değişiklik günlükleri][4] belgesine bakın.
-
-## Genel
-
-* Sanal masaüstlerini açarken, kapatırken veya aralarında geçiş yaparken,
-  NVDA aktif sanal masaüstü adını (örneğin masaüstü 2) duyurur. Bu artık
-  NVDA 2023.2'nin bir parçasıdır.
-* Sekmeli pencerelerin desteklendiği Windows 11 22H2 Dosya Gezgini ve Not
-  Defteri gibi uygulamalarda NVDA, bunlar arasında geçiş yaparken sekmelerin
-  adını ve konumunu duyurur. Bu artık NVDA 2023.2'nin bir parçasıdır.
 
 ## Modern klavye
 

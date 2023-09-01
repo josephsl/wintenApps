@@ -4,7 +4,7 @@
 * 下载[稳定版][1]
 * 下载[测试版][2]
 * 下载[开发板][3]
-* NVDA 兼容性：2023.1 及更高版本
+* NVDA 兼容性：2023.2 及更高版本
 
 注意：此插件最初称为 Windows 10 应用增强，在 2021 年更名为 Windows 应用增强，以支持 Windows 10 和 Windows
 11 等后续版本。此插件的部分内容仍将引用原始插件名称。
@@ -23,21 +23,16 @@
 * 功能更新支持期限与消费者支持期限（家庭版、专业版、专业教育版、工作站专业版）相关联，并且插件可能会在消费者支持结束之前终止对功能更新的支持。有关更多信息和支持日期，请参阅
   aka.ms/WindowsTargetVersioninfo。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
-* 如果安装了插件更新器并启用了后台插件更新， 在不受支持的操作系统上 Windows App Essentials 不会被安装。
 * 并非支持所有的 Windows Insider Preview 版本，更偏向于支持由开发或金丝雀通道引入 Windows Insider 的功能。
-* 该插件可能会模拟 Insider Preview 版本中的功能修复，这些修复随后会被删除，并且对于这些更改，该插件可能会在未来版本中删除。
+* The add-on may emulate changes included in Insider Preview builds which
+  are subsequently removed, and for these changes, the add-on may remove
+  them in future releases.
 * 插件的 Dev 通道将包括可能包含或不包含在测试版和稳定版中的实验性内容，而Beta 通道将会包含为未来稳定版计划的更改。
 * 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
 * 为了获得内嵌 Web 试图（例如开始菜单及其上下文菜单）的应用程序的最佳体验，请在 NVDA
   的浏览模式设置面板启用“输入焦点移动时的自动焦点模式支持”。
 
 有关每个版本之间所做的具体更改，请参阅[另外发布的更新日志][4]文档。
-
-## 常规增强
-
-* 当打开、关闭或在虚拟桌面之间切换时，NVDA 会读出当前的虚拟桌面名称（例如桌面 2）。该特性已经包含在 NVDA2023.2 中。
-* 在 Windows11 22H2 的文件资源管理器和记事本等支持标签式窗口的应用程序中，NVDA
-  会在标签间切换时读出标签的名称和位置。该特性已经包含在 NVDA2023.2 中。
 
 ## 系统键盘
 

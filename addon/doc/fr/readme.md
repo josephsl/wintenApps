@@ -4,7 +4,7 @@
 * Télécharger [version stable][1]
 * Télécharger [version béta][2]
 * Télécharger [version de développement][3]
-* Compatibilité NVDA: 2023.1 et ultérieure
+* Compatibilité NVDA : 2023.2 et ultérieure
 
 Remarque : à l'origine appelé Windows 10 App Essentials, elle a été renommée
 Windows App Essentials en 2021 pour prendre en charge Windows 10 et les
@@ -38,13 +38,10 @@ Notes:
 * Bien que l'installation soit possible, cette extension ne prend pas en
   charge les versions Windows Enterprise LTSC (Long-Term Servicing Channel)
   et Windows Server.
-* Si Add-on Updater est installé et que les mises à jour des extensions en
-  arrière-plan sont activées, Windows App Essentials ne s'installera pas du
-  tout sur les versions Windows non prises en charge.
 * Toutes les fonctionnalités des builds Windows Insider Preview ne seront
   pas prises en charge, plus encore pour les fonctionnalités introduites
   dans Windows Insiders sous canary et dev channels.
-* L'extension peut émuler les correctifs inclus dans les builds Insider
+* L'extension peut émuler les modifications incluses dans les builds Insider
   Preview qui sont ensuite supprimées, et pour ces modifications,
   l'extension peut les supprimer dans des versions futures.
 * Le canal de développement de l'extension comprendra des modifications, y
@@ -62,16 +59,6 @@ Notes:
 Pour obtenir la liste des changements effectuées entre chaque version de
 l'extension, reportez-vous au document [changelogs pour les versions de
 l'extension][4].
-
-## Générale
-
-* Lors de l'ouverture, de la fermeture ou du basculement entre les bureaux
-  virtuels, NVDA annoncera le nom du bureau virtuel actif (bureau 2, par
-  exemple). Cela fait maintenant partie de NVDA 2023.2.
-* Dans des aps  tels que Windows 11 22H2 File Explorer et Notepad  où les
-  fenêtres à onglets sont prises en charge, NVDA annoncera le nom et la
-  position des onglets lors de la commutation entre eux. Cela fait
-  maintenant partie de NVDA 2023.2.
 
 ## Clavier moderne
 

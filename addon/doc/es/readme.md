@@ -4,7 +4,7 @@
 * Descargar [versión estable][1]
 * Descargar [versión beta][2]
 * Descargar [versión de desarrollo][3]
-* Compatibilidad con NVDA: de 2023.1 en adelante
+* Compatibilidad con NVDA: de 2023.2 en adelante
 
 Nota: originalmente llamado Windows 10 App Essentials, se renombró a Windows
 App Essentials en 2021 para soportar Windows 10 y versiones futuras, como
@@ -38,9 +38,6 @@ Notas:
 * Aunque la instalación es posible, este complemento no soporta Windows
   Enterprise LTSC (canal de servicio a largo plazo) ni las versiones de
   Windows Server.
-* Si está instalado Add-on Updater y están activadas las actualizaciones en
-  segundo plano, Windows App Essentials no se instalará en absoluto en
-  versiones no soportadas de Windows.
 * No se soportarán todas las funciones de las compilaciones Windows Insider
   Preview, más si se introducen en un subconjunto de insiders de Windows en
   los canales dev y canary.
@@ -60,16 +57,6 @@ Notas:
 
 Para ver una lista de cambios hechos entre cada actualización del
 complemento, consulta el documento [changelogs for add-on releases][4].
-
-## General
-
-* Al abrir, cerrar o cambiar entre escritorios virtuales, NVDA anunciará el
-  nombre del escritorio virtual activo (escritorio 2, por ejemplo). Esto
-  ahora forma parte de NVDA 2023.2.
-* En aplicaciones de Windows 11 22H2 como el explorador de archivos y el
-  bloc de notas, donde se soportan ventanas con pestañas, NVDA anunciará el
-  nombre y la posición de las pestañas al pasar entre ellas. Esto ahora
-  forma parte de NVDA 2023.2.
 
 ## Teclado Moderno
 

@@ -4,7 +4,7 @@
 * Baixe a [versão estável][1]
 * Download [beta version][2]
 * Baixe a [versão em desenvolvimento][3]
-* Compatibilidade com NVDA: 2023.1 e posteriores
+* Compatibilidade com NVDA: 2023.2 e posteriores
 
 Nota: Originalmente chamado de Windows 10 App Essentials, foi renomeado para
 Windows App Essentials em 2021 para oferecer suporte ao Windows 10 e versões
@@ -36,15 +36,12 @@ Notas:
 * Embora a instalação seja possível, este complemento não oferece suporte
   para Windows Enterprise LTSC (Long-Term Servicing Channel — Canal de
   Manutenção de Longo Prazo) e versões do Windows Server.
-* If Add-on Updater is installed and background add-on updates is enabled,
-  Windows App Essentials will not install at all on unsupported Windows
-  releases.
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders in canary
   and dev channels.
-* The add-on may emulate fixes included in Insider Preview builds which are
-  subsequently removed, and for these changes, the add-on may remove them in
-  future releases.
+* The add-on may emulate changes included in Insider Preview builds which
+  are subsequently removed, and for these changes, the add-on may remove
+  them in future releases.
 * Add-on dev channel will include changes including experimental content
   that may or may not be included in beta and stable releases, and beta
   channel will come with changes planned for future stable releases.
@@ -55,15 +52,6 @@ Notas:
 
 Para obter uma lista de alterações feitas entre cada lançamento do
 complemento, consulte o documento [changelogs for add-on releases][4].
-
-## Geral
-
-* When opening, closing, or switching between virtual desktops, NVDA will
-  announce active virtual desktop name (desktop 2, for example). This is now
-  part of NVDA 2023.2.
-* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
-  windows are supported, NVDA will announce the name and the position of
-  tabs when switching between them. This is now part of NVDA 2023.2.
 
 ## Teclado moderno
 

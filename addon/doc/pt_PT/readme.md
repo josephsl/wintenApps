@@ -4,7 +4,7 @@
 * Baixar [versão estável][1]
 * Descarregar [versão beta][2]
 * Baixar a [versão de desenvolvimento][3]
-* Compatibilidade com NVDA: 2023.1 e posterior
+* Compatibilidade com NVDA: 2023.2 e posterior
 
 Nota: Originalmente chamado Windows 10 App Essentials, foi renomeado para
 Windows App Essentials em 2021 para suportar o Windows 10 e futuros
@@ -37,15 +37,12 @@ Notas:
   informações e datas de suporte.
 * Embora a instalação seja possível, este suplemento não suporta Windows
   Enterprise LTSC (Long-Term Servicing Channel) e versões Windows Server.
-* Se o Atualizador de Complementos estiver instalado e as atualizações de
-  complementos em segundo plano estiverem ativadas, o Windows App Essentials
-  não será instalado em versões não suportadas do Windows.
 * Nem todas as funcionalidades das compilações do Windows Insider Preview
   serão suportadas, sobretudo as funcionalidades apresentadas a um
   subconjunto de Windows Insiders nos canais Canary e Dev.
-* The add-on may emulate fixes included in Insider Preview builds which are
-  subsequently removed, and for these changes, the add-on may remove them in
-  future releases.
+* The add-on may emulate changes included in Insider Preview builds which
+  are subsequently removed, and for these changes, the add-on may remove
+  them in future releases.
 * O canal de desenvolvimento de complementos incluirá alterações, incluindo
   conteúdos experimentais que podem ou não ser incluídos nas versões beta e
   estável, e o canal beta incluirá alterações planeadas para futuras versões
@@ -58,15 +55,6 @@ Notas:
 
 Para obter uma lista das alterações efectuadas entre cada versão do extra,
 consulte o documento [changelogs for add-on releases][4].
-
-## Geral
-
-* Ao abrir, fechar ou alternar entre áreas de trabalho virtuais, o NVDA
-  anunciará o nome da área de trabalho virtual ativa (área de trabalho 2,
-  por exemplo). Isso agora faz parte do NVDA 2023.2.
-* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
-  windows are supported, NVDA will announce the name and the position of
-  tabs when switching between them. This is now part of NVDA 2023.2.
 
 ## Teclado moderno
 

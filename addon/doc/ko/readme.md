@@ -4,7 +4,7 @@
 * [출시 버전][1]
 * [베타 버전][2]
 * [개발 버전][3]
-* NVDA 호환: 2023.1 이상
+* NVDA 호환: 2023.2 이상
 
 참고: 윈도우 10 이상(특히 윈도우 11)을 지원하기 위해 2021년에 Windows 10 App Essentials에서 Windows
 App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름이 뜰 수 있습니다.
@@ -25,12 +25,10 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   대해서는 aka.ms/WindowsTargetVersioninfo를 참고하시기 바랍니다.
 * 윈도우 Enterprise LTSC(Long-Term Servicing Channel)와 윈도우 서버 버전에 설치할 수 있으나 지원은
   하지 않습니다.
-* Windows App Essentials가 지원하지 않는 윈도우 버전에서 Add-on Updater에서 제공하는 추가 기능 자동
-  업데이트 기능 사용시 Windows App Essentials가 설치되지 않습니다.
 * 윈도우 참가자 빌드에 탑제된 기능을 모두 지원하지 않습니다(특히 카나리아 및 개발자 빌드에서 일부에게만 공개된 경우).
-* The add-on may emulate fixes included in Insider Preview builds which are
-  subsequently removed, and for these changes, the add-on may remove them in
-  future releases.
+* The add-on may emulate changes included in Insider Preview builds which
+  are subsequently removed, and for these changes, the add-on may remove
+  them in future releases.
 * 추가 기능 개발자(dev)체널은 베타 및 일반 업데이트 체널에 포함되지 않을 실험적 기능을 포함할 수 있으며 베타 체널 사용시 일반
   사용자 체널에 포함될 기능을 미리 체험할 수 있습니다.
 * 일부 추가 기능은 NVDA에 포함되었거나 추후 스크린 리더 버전에 반영될 수 있습니다.
@@ -38,14 +36,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
   기능을 활성화하시기 바랍니다.
 
 추가 기능 변경 내역은 [변경 내용 문서][4]에서 확인할 수 있습니다.
-
-## 일반
-
-* 가상 데스크탑을 열때/닫을때/변경시 NVDA가 데스크탑 이름(예: Desktop 2)를 출력하도록 함(NVDA 2023.2에서
-  해결됨).
-* In aps such as Windows 11 22H2 File Explorer and Notepad where tabbed
-  windows are supported, NVDA will announce the name and the position of
-  tabs when switching between them. This is now part of NVDA 2023.2.
 
 ## 현대식 키보드
 
