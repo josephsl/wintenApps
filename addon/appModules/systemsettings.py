@@ -30,18 +30,9 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			# Workarounds for Windows Update links found in Windows 10.
 			if obj.role == controlTypes.Role.LINK:
 				nameList = [obj.name]
-				# Latest feature update entry in update history adds "what's new" link.
-				# Therefore fetch feature update title located two objects down.
-				# Update history has changed completely in Windows 11.
-				if automationId.startswith("HistoryEvent"):
-					eventID = automationId.split("_")[0]
-					possibleFeatureUpdateText = obj.previous.previous
-					# Automation Id is of the form "HistoryEvent_eventID_TitleTextBlock".
-					if possibleFeatureUpdateText.UIAAutomationId == "_".join([eventID, "TitleTextBlock"]):
-						nameList.insert(0, possibleFeatureUpdateText.name)
 				# Download link for an optional update is provided when preview updates are released.
 				# It is initially called "download and install now", thus add the optional update title as well.
-				elif automationId == "SystemSettings_MusUpdate_SeekerUpdateUX_HyperlinkButton":
+				if automationId == "SystemSettings_MusUpdate_SeekerUpdateUX_HyperlinkButton":
 					# Unconditionally locate the new optional update title, skipping the link description.
 					# For feature updates, update title is next to description text,
 					# and description text is next to the download link itself.
