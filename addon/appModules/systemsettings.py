@@ -24,33 +24,11 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			automationId = obj.UIAAutomationId
 		except AttributeError:
 			return
-		# Perform different things based on Windows releases series.
-		# Windows 10
-		if winVersion.getWinVer() < winVersion.WIN11:
-			# Workarounds for Windows Update links found in Windows 10.
-			if obj.role == controlTypes.Role.LINK:
-				nameList = [obj.name]
-				# Download link for an optional update is provided when preview updates are released.
-				# It is initially called "download and install now", thus add the optional update title as well.
-				if automationId == "SystemSettings_MusUpdate_SeekerUpdateUX_HyperlinkButton":
-					# Unconditionally locate the new optional update title, skipping the link description.
-					# For feature updates, update title is next to description text,
-					# and description text is next to the download link itself.
-					# For optional cumulative updates, the actual update title is next to this link,
-					# so one must fetch all of these.
-					# Ignore all this if there is "View all optional updates" link,
-					# seen when there is one or more driver updates on top of feature/quality updates.
-					if obj.previous.UIAElement.cachedClassName == "TextBlock":
-						nameList.insert(0, obj.previous.name)
-						nameList.insert(0, obj.previous.previous.name)
-				obj.name = ", ".join(nameList)
-		# Windows 11
-		else:
-			# Windows 11's breadcrumb bar item uses a custom localized control type text.
-			# Although it is recognized as a heading, override role text to communicate what it actually is.
-			# This allows item label to be kept intact.
-			if obj.UIAElement.cachedClassName.endswith("BreadcrumbBarItem"):
-				obj.roleText = obj.UIAElement.currentLocalizedControlType
+		# Windows 11's breadcrumb bar item uses a custom localized control type text.
+		# Although it is recognized as a heading, override role text to communicate what it actually is.
+		# This allows item label to be kept intact.
+		if obj.UIAElement.cachedClassName.endswith("BreadcrumbBarItem"):
+			obj.roleText = obj.UIAElement.currentLocalizedControlType
 
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache: str = ""
