@@ -20,10 +20,6 @@ from NVDAObjects import NVDAObject
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_NVDAObject_init(self, obj: NVDAObject):
-		try:
-			automationId = obj.UIAAutomationId
-		except AttributeError:
-			return
 		# Windows 11's breadcrumb bar item uses a custom localized control type text.
 		# Although it is recognized as a heading, override role text to communicate what it actually is.
 		# This allows item label to be kept intact.
