@@ -33,15 +33,18 @@ You must:
 
 You can contribute by testing the add-on. To facilitate this, a development snapshot of this add-on is released from time to time so people can test latest changes.
 
-To test the add-on, you must be running the latest stable or development build of Windows App Essentials, latest stable or development build of NVDA, and Add-on Updater (Add-on Updater is needed to download Windows App Essentials add-on updates). For effective testing, you must also be running latest Windows release (public release or latest Insider Preview build).
+To test the add-on, you must be running the latest stable or development build of NVDA and latest stable or development build of Windows App Essentials. You can obtain latest Windows App Essentials via NV Access add-on store (NVDA 2023.2, NVDA menu/Tools/add-on store, available or updatable add-ons tab). For effective testing, you must also be running latest Windows release (public release or latest Insider Preview build).
 
 Before testing the add-on:
 
-1. Install Add-on Updater add-on from community add-ons website (https://addons.nvda-project.org).
-2. Open NVDA menu/Preferences/Settings, then select Add-on Updater.
-3. Select Windows App Essentials from "Prefer development releases" list and click OK.
-4. Restart NvDA, and Add-on Updater will offer the latest Windows App Essentials development snapshot (typically the version will be of the form "YYYYMMDD-dev").
-5. Install the offered development snapshot and restart NVDA.
+1. Install the latest avaiblel NVDA release.
+2. Visit NV Access add-on store (NVDA menu/tools/add-on store).
+3. Check Windows App Essentials add-on version from installed add-ons tab. If the version is of the form yyyymmdd.x.y, you do not have to perform dev channel installation step but do try updating to the latest version (see below).
+4. To switch to dev channel, from add-on store, press Control+Tab to go to either updatable or available add-ons tabs.
+5. Select "all" or "dev" from channel list.
+6. Press Tab several times until arriving at updatable/available add-ons list, then select Windows App Essentials add-on version of the form yyyymmdd.x.y e.g. 20230905.0.0.
+7. Press Enter, then from the context menu, select "update" or "install" depending on  if Windows Ap Essentials is installed or not.
+8. Close add-on store, and installation will begin, then restart NVDA when prompted.
 
 Testing the add-on simply involves using NVDA as usual. If you do encounter issues:
 
