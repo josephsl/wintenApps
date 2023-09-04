@@ -110,4 +110,4 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 * Zinc (2023):
 	* Zinc 1: December 2022 to March 2023, Windows apps optimizations, removed 'no more weather data' message from Weather app, type information
 	* Zinc 2: February 2023 to June 2023, end of support for Windows 10 November 2021 Update and Server 2022 (Version 21H2), reimagined virtual desktops announcement internals, Weather app changes, NVDA 2023.1 requirement, some Windows 10 workarounds removed
-	* Zinc 3: May 2023 to September 2023, end of support for Windows 11 original release (Version 21H2)
+	* Zinc 3: May 2023 to October 2023, end of support for Windows 11 original release (Version 21H2), NVDA 2023.2 requirement, removed Cortana support
