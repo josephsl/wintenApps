@@ -4,7 +4,6 @@
 # See the file COPYING for more details.
 
 # The add-on version of this module will extend the one that comes with NVDA Core.
-# For IME candidate item/UI definition, Flake8 must be told to ignore it.
 
 from typing import Callable
 # Yes, this app module is powered by built-in modern keyboard (TextInputHost) app module
