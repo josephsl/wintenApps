@@ -6,11 +6,12 @@
 # Routines are partly based on other add-ons,
 # particularly Place Markers by Noelia Martinez (thanks add-on authors).
 
+from typing import Dict, List
 import addonHandler
 addonHandler.initTranslation()
 
 
-def onInstall():
+def onInstall() -> None:
 	import winVersion
 	currentWinVer = winVersion.getWinVer()
 	# Windows App Essentials requires supported Windows 10/11 feature updates.
@@ -19,14 +20,14 @@ def onInstall():
 	# Applicable to Home, Pro, Pro Education, Pro for Workstations (see aka.ms/WindowsTargetVersioninfo).
 	# Windows 10 22H2 (19045) is supported until October 2025 as this is the final feature update.
 	# Note that Insider Preview builds between public builds are not supported.
-	supportedBuilds = {
+	supportedBuilds: Dict[int, str] = {
 		# Windows 10
 		19045: "10 22H2",
 		# Windows 11
 		22621: "11 22H2",
 		22631: "11 23H2",
 	}
-	currentBuild = currentWinVer.build
+	currentBuild: int = currentWinVer.build
 	# Optimization: report success (return early) if running a supported release.
 	if (
 		currentBuild in supportedBuilds  # General availability channel and Insider release preview
@@ -37,17 +38,17 @@ def onInstall():
 	import wx
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-	unsupportedWindowsReleaseTitle = _("Unsupported Windows release")
+	unsupportedWindowsReleaseTitle: str = _("Unsupported Windows release")
 	# #78: obtain a list of all supported releases (and builds) from supported builds list.
 	# Present builds above the current build if possible.
 	# For example, present Windows 11 builds if this is a build above Windows 10 22H2 (19045).
-	windowsReleasesList = [
+	windowsReleasesList: List[str] = [
 		# Translators: an entry in supported Windows releases list (release (build)).
 		_("{release} ({build})").format(release=release, build=build)
 		for build, release in supportedBuilds.items() if build > currentBuild
 	]
 	windowsReleasesList.append("Windows Insider Preview")
-	unsupportedWindowsReleaseText = _(
+	unsupportedWindowsReleaseText: str = _(
 		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 		# Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
 		# Supported releases list shows releases supported by the add-on.
