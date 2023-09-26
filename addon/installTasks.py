@@ -31,7 +31,7 @@ def onInstall() -> None:
 	# Optimization: report success (return early) if running a supported release.
 	if (
 		currentBuild in supportedBuilds  # General availability channel and Insider release preview
-		or currentBuild >= max(supportedBuilds)  # Insider Preview canary/dev/beta
+		or currentBuild > max(supportedBuilds)  # Insider Preview canary/dev/beta
 	):
 		return
 	import gui
