@@ -9,7 +9,6 @@
 from typing import Callable
 # Extends NVDA Core's System Settings app module.
 from nvdaBuiltin.appModules.systemsettings import AppModule
-import controlTypes
 import winVersion
 import speech
 from NVDAObjects.UIA import UIA
@@ -84,7 +83,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Applies to Windows 11
 		if isinstance(obj, UIA):
 			if obj.UIAAutomationId in (
-				"SystemSettings_MusUpdate_AvailableUpdatesList2_ListView",  # Windows 11 22H2
+				"SystemSettings_MusUpdate_AvailableUpdatesList2_ListView",  # Windows 11 22H2/23H2
 			):
 				import UIAHandler
 				for updateEntry in obj.children:
