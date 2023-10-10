@@ -44,10 +44,11 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		super().event_UIA_elementSelected(obj, nextHandler)
 
 	# Register modern keyboard interface elements with local event handler group.
-	def _windowOpenEventInternalEventHandlerGroupRegistration(self, firstChild: NVDAObject) -> None:
+	def _windowOpenEventInternalEventHandlerGroupRegistration(
+			self, firstChild: NVDAObject, firstChildAutomationId: str
+	) -> None:
 		# Gather elements to be registered inside a list so they can be registered in one go.
 		localEventHandlerElements = [firstChild]
-		firstChildAutomationId = firstChild.UIAAutomationId
 		# For dictation, add elements manually so name change event can be handled.
 		# Object hierarchy is different in voice typing (Windows 11).
 		if firstChildAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
