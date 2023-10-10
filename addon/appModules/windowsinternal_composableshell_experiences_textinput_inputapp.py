@@ -91,7 +91,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Therefore there is no need to add UIA elements to local event handler group.
 		try:
 			if firstChildAutomationId != "Windows.Shell.InputApp.FloatingSuggestionUI":
-				self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
+				self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild, firstChildAutomationId)
 		except NotImplementedError:
 			pass
 		# Windows 11 22H2 Moment 1 (October 2022) and later uses modern keyboard interface to display
