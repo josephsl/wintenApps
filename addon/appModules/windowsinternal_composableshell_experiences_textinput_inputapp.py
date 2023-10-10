@@ -44,10 +44,11 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		super().event_UIA_elementSelected(obj, nextHandler)
 
 	# Register modern keyboard interface elements with local event handler group.
-	def _windowOpenEventInternalEventHandlerGroupRegistration(self, firstChild: NVDAObject):
+	def _windowOpenEventInternalEventHandlerGroupRegistration(
+			self, firstChild: NVDAObject, firstChildAutomationId: str
+	) -> None:
 		# Gather elements to be registered inside a list so they can be registered in one go.
 		localEventHandlerElements = [firstChild]
-		firstChildAutomationId = firstChild.UIAAutomationId
 		# For dictation, add elements manually so name change event can be handled.
 		# Object hierarchy is different in voice typing (Windows 11).
 		if firstChildAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
@@ -90,7 +91,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Therefore there is no need to add UIA elements to local event handler group.
 		try:
 			if firstChildAutomationId != "Windows.Shell.InputApp.FloatingSuggestionUI":
-				self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
+				self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild, firstChildAutomationId)
 		except NotImplementedError:
 			pass
 		# Windows 11 22H2 Moment 1 (October 2022) and later uses modern keyboard interface to display
