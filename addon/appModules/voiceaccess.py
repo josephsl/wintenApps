@@ -4,7 +4,8 @@
 
 # Support for Voice access on Windows 11 22H2 and later.
 
-from typing import List
+# Keep the following import until Python 3.11 (NVDA 2024.1) requirement is fully in effect.
+from __future__ import annotations
 import appModuleHandler
 import scriptHandler
 import ui
@@ -30,7 +31,7 @@ class MicrophoneButton(UIA):
 
 class AppModule(appModuleHandler.AppModule):
 
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
+	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
 		if isinstance(obj, UIA):
 			if obj.UIAElement.cachedClassName == "Popup":
 				clsList.insert(0, Dialog)
