@@ -62,7 +62,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				"SystemSettings_MusUpdate_SeekerUpdateUX2_Button"
 			):
 				obj.name = " ".join([obj.previous.previous.name, obj.name])
-			# Windows 11's breadcrumb bar item uses a custom localized control type text.
+			# Deprecated: Windows 11's breadcrumb bar item uses a custom localized control type text.
 			# Although it is recognized as a heading, override role text to communicate what it actually is.
 			# This allows item label to be kept intact.
 			elif obj.UIAElement.cachedClassName.endswith("BreadcrumbBarItem"):
