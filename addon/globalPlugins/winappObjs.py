@@ -3,7 +3,8 @@
 
 # Adds handlers for various UIA controls found in Windows 10 and later.
 
-from typing import List
+# Keep the following import until Python 3.11 (NVDA 2024.1) requirement is fully in effect.
+from __future__ import annotations
 import globalPluginHandler
 from NVDAObjects.UIA import Dialog
 from NVDAObjects import NVDAObject
@@ -22,7 +23,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super().__init__()
 
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
+	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
 		try:
 			UIAClassName = obj.UIAElement.cachedClassName
 		except AttributeError:
