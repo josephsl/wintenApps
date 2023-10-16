@@ -6,7 +6,8 @@
 # Routines are partly based on other add-ons,
 # particularly Place Markers by Noelia Martinez (thanks add-on authors).
 
-from typing import Dict, List
+# Keep the following import until Python 3.11 (NVDA 2024.1) requirement is fully in effect.
+from __future__ import annotations
 import addonHandler
 addonHandler.initTranslation()
 
@@ -20,7 +21,7 @@ def onInstall() -> None:
 	# Applicable to Home, Pro, Pro Education, Pro for Workstations (see aka.ms/WindowsTargetVersioninfo).
 	# Windows 10 22H2 (19045) is supported until October 2025 as this is the final feature update.
 	# Note that Insider Preview builds between public builds are not supported.
-	supportedBuilds: Dict[int, str] = {
+	supportedBuilds: dict[int, str] = {
 		# Windows 10
 		19045: "10 22H2",
 		# Windows 11
@@ -44,7 +45,7 @@ def onInstall() -> None:
 	# #78: obtain a list of all supported releases (and builds) from supported builds list.
 	# Present builds above the current build if possible.
 	# For example, present Windows 11 builds if this is a build above Windows 10 22H2 (19045).
-	windowsReleasesList: List[str] = [
+	windowsReleasesList: list[str] = [
 		# Translators: an entry in supported Windows releases list (release (build)).
 		_("{release} ({build})").format(release=release, build=build)
 		for build, release in supportedBuilds.items() if build > currentBuild
