@@ -15,7 +15,8 @@ from NVDAObjects import NVDAObject
 from winAPI.types import HWNDValT
 
 
-# Deprecated: inaccurate announcements (perhaps due to input timing) and cannot be toggled using mouse/touch.
+# Deprecated: inaccurate announcements (perhaps due to input timing)
+# and cannot be toggled via object navigation/touch (can be toggled using keyboard and mouse, however).
 class MicrophoneButton(UIA):
 
 	def announceMicStatus(self):
