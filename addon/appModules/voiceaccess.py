@@ -15,11 +15,6 @@ from winAPI.types import HWNDValT
 
 class AppModule(appModuleHandler.AppModule):
 
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
-		if isinstance(obj, UIA):
-			if obj.UIAElement.cachedClassName == "Popup":
-				clsList.insert(0, Dialog)
-
 	def isGoodUIAWindow(self, hwnd: HWNDValT) -> bool:
 		# #72: allow proper mouse and touch interaction from main Voice access interface.
 		if winUser.getClassName(hwnd) == "Voice access":
