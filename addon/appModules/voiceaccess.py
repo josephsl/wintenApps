@@ -5,6 +5,7 @@
 # Support for Voice access on Windows 11 22H2 and later.
 
 # Keep the following import until Python 3.11 (NVDA 2024.1) requirement is fully in effect.
+# Note: the place where this would apply (overlay class chooser/classes list) is gone.
 from __future__ import annotations
 import appModuleHandler
 import winUser
