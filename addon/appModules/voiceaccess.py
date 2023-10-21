@@ -7,8 +7,6 @@
 # Keep the following import until Python 3.11 (NVDA 2024.1) requirement is fully in effect.
 from __future__ import annotations
 import appModuleHandler
-import scriptHandler
-import ui
 import winUser
 from NVDAObjects.UIA import UIA, Dialog
 from NVDAObjects import NVDAObject
