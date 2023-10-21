@@ -18,13 +18,6 @@ from NVDAObjects import NVDAObject
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
-	def event_NVDAObject_init(self, obj: NVDAObject):
-		# Deprecated: Windows 11's breadcrumb bar item uses a custom localized control type text.
-		# Although it is recognized as a heading, override role text to communicate what it actually is.
-		# This allows item label to be kept intact.
-		if obj.UIAElement.cachedClassName.endswith("BreadcrumbBarItem"):
-			obj.roleText = obj.UIAElement.currentLocalizedControlType
-
 	# Sometimes, the same text is announced, so consult this cache.
 	_nameChangeCache: str = ""
 
