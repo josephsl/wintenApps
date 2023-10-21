@@ -15,21 +15,6 @@ from NVDAObjects import NVDAObject
 from winAPI.types import HWNDValT
 
 
-# Deprecated: inaccurate announcements (perhaps due to input timing)
-# and cannot be toggled via object navigation/touch (can be toggled using keyboard and mouse, however).
-class MicrophoneButton(UIA):
-
-	def announceMicStatus(self):
-		ui.message(self.name)
-
-	@scriptHandler.script(gestures=["kb:space", "kb:enter", "kb:numpadEnter"])
-	def script_toggleMicrophone(self, gesture) -> None:
-		# Until NVDA gets a chance to handle UIA notifications when these commands are pressed...
-		gesture.send()
-		import core
-		core.callLater(1, self.announceMicStatus)
-
-
 class AppModule(appModuleHandler.AppModule):
 
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
