@@ -8,8 +8,6 @@
 from __future__ import annotations
 import appModuleHandler
 import winUser
-from NVDAObjects.UIA import UIA, Dialog
-from NVDAObjects import NVDAObject
 from winAPI.types import HWNDValT
 
 
