@@ -14,7 +14,6 @@ The following app modules or support modules for some apps are included (see eac
 
 * Modern keyboard (emoji panel/touch keyboard/dictation/voice typing/hardware input suggestions/clipboard history/Suggested Actions/modern input method editors)
 * Settings (system settings, Windows+I)
-* Voice access
 
 Notes:
 
@@ -39,12 +38,6 @@ This includes emoji panel, clipboard history, touch keyboard, dictation/voice ty
 
 * In Windows 11, breadcrumb bar items are properly recognized.
 * NVDA will report updates to Windows Update status as download and install progresses. This may result in speech interruption when navigating Settings app while updates are being downloaded and installed. If using Windows 11 and UIA event registration is set to selective from NVDA advanced settings panel, you must move focus to updates list as soon as they appear so NVDA can announce update progress.
-
-## Voice access
-
-This refers to Voice access feature introduced in Windows 11 22H2.
-
-* NVDA will announce microphone status when toggling microphone from Voice access interface.
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
 
