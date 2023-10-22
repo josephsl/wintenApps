@@ -5,20 +5,14 @@
 # Support for Voice access on Windows 11 22H2 and later.
 
 # Keep the following import until Python 3.11 (NVDA 2024.1) requirement is fully in effect.
+# Note: the place where this would apply (overlay class chooser/classes list) is gone.
 from __future__ import annotations
 import appModuleHandler
 import winUser
-from NVDAObjects.UIA import UIA, Dialog
-from NVDAObjects import NVDAObject
 from winAPI.types import HWNDValT
 
 
 class AppModule(appModuleHandler.AppModule):
-
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
-		if isinstance(obj, UIA):
-			if obj.UIAElement.cachedClassName == "Popup":
-				clsList.insert(0, Dialog)
 
 	def isGoodUIAWindow(self, hwnd: HWNDValT) -> bool:
 		# #72: allow proper mouse and touch interaction from main Voice access interface.
