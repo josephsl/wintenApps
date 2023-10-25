@@ -31,13 +31,13 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				item.appModule for item in api.getFocusAncestors()
 				if item.appModule == self
 			]
-			# Focus object location can be None sometimes.
-			focusLocation = api.getFocusObject().location
 			# System focus restored.
 			if not len(emojiPanelAncestors):
 				return
 			# NVDA is stuck in a nonexistent edit field.
-			elif focusLocation is not None and not any(focusLocation):
+			# Focus object location can be None sometimes.
+			focusLocation = api.getFocusObject().location
+			if focusLocation is not None and not any(focusLocation):
 				eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 				return
 		# NVDA Core takes care of the rest.
