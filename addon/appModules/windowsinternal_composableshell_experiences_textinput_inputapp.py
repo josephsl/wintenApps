@@ -112,4 +112,5 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			# Do not queue events if events are pending.
 			if not eventHandler.isPendingEvents():
 				eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
+			return
 		nextHandler()
