@@ -21,7 +21,6 @@ hver appsektion for detaljer om, hvad der er inkluderet):
   stemmeskrivning, forslag til hardwareinput, udklipshistorik og Editor til
   inputmetode)
 * Indstillinger (systemindstillinger, Windows+I)
-* Stemmeadgang
 
 Bemærkninger:
 
@@ -70,10 +69,6 @@ mellemrumstasten i stedet for enter.
 
 ## Indstillinger
 
-* NVDA vil annoncere navnet på den valgfrie kvalitetsopdateringskontrol,
-  hvis den findes (download og installer nu-link i Windows 10, download-knap
-  i Windows 11).
-* I Windows 11 genkendes brødkrumme-elementer korrekt.
 * NVDA vil afbryde talen og oplyse status for opdateringer til Windows
   Update, efterhånden som download og installation skrider frem. Dette kan
   resultere i afbrydelse af talen, når du navigerer i appen Indstillinger,
@@ -81,13 +76,6 @@ mellemrumstasten i stedet for enter.
   22H2 og nyere med indstillingen "Registrer hændelser fra UI Automation
   samt egenskabsændringer" slået til, skal du flytte fokus til listen
   opdateringer, så NVDA kan oplyse status for opdateringerne.
-
-## Stemmeadgang
-
-Dette henviser til stemmeadgangsfunktionen introduceret i Windows 11 22H2.
-
-* NVDA vil annoncere mikrofonstatus, når mikrofonen skiftes fra
-  brugergrænsefladen i Stemmeadgang.
 
 [[!tag dev stable]]
 

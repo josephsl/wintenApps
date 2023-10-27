@@ -23,7 +23,6 @@ dołączone, zobacz każdą sekcję aplikacji):
   głosowe/sugestie dotyczące wprowadzania sprzętu/historia
   schowka/sugerowane akcje/nowoczesne edytory metod wprowadzania)
 * Ustawienia (ustawienia systemowe, Windows+I)
-* Dostęp głosowy
 
 Notatki:
 
@@ -74,25 +73,12 @@ wybrany element.
 
 ## Ustawienia
 
-* NVDA ogłosi nazwę opcjonalnej kontroli jakości aktualizacji, jeśli jest
-  obecna (pobierz i zainstaluj teraz link w systemie Windows 10, przycisk
-  pobierania w systemie Windows 11).
-* W systemie Windows 11 elementy paska okruszków nawigacyjnych są prawidłowo
-  rozpoznawane.
 * NVDA will report updates to Windows Update status as download and install
   progresses. This may result in speech interruption when navigating
   Settings app while updates are being downloaded and installed. If using
   Windows 11 and UIA event registration is set to selective from NVDA
   advanced settings panel, you must move focus to updates list as soon as
   they appear so NVDA can announce update progress.
-
-## Dostęp głosowy
-
-Odnosi się to do funkcji dostępu głosowego wprowadzonej w systemie Windows
-11 22H2.
-
-* NVDA ogłosi stan mikrofonu podczas przełączania mikrofonu z interfejsu
-  dostępu głosowego.
 
 [[!tag dev stable]]
 

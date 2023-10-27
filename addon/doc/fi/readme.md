@@ -23,7 +23,6 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
   näppäimistösyötteen ehdotukset/leikepöydän historia/ehdotetut
   toiminnot/modernin syöttömenetelmän muokkaimet)
 * Asetukset (järjestelmän asetukset, Windows+I)
-* Puhekäyttö
 
 Huomautukset:
 
@@ -70,10 +69,6 @@ painamalla Välilyönti-näppäintä Enterin sijaan.
 
 ## Asetukset
 
-* NVDA puhuu valinnaisen laatupäivityksen säätimen nimen (Lataa ja asenna
-  nyt -linkki Windows 10:ssä, Lataa-painike Windows 11:ssä), mikäli
-  sellainen on näkyvissä.
-* Navigointipolkupalkin kohteet tunnistetaan oikein Windows 11:ssä.
 * NVDA ilmoittaa Windows Updaten tilan päivitysten latauksen ja asennuksen
   edistyessä. Tästä voi olla seurauksena puheen keskeytyminen navigoitaessa
   Asetukset-sovelluksessa päivitysten lataamisen ja asennuksen
@@ -81,14 +76,6 @@ painamalla Välilyönti-näppäintä Enterin sijaan.
   määritetty valikoivaksi NVDA:n Lisäasetukset-paneelissa, kohdistus on
   siirrettävä päivitysten luetteloon heti niiden ilmestyessä, jotta NVDA voi
   ilmoittaa päivityksen edistymisen.
-
-## Puhekäyttö
-
-Tämä viittaa Puhekäyttö-ominaisuuteen, joka esiteltiin Windows 11:n
-versiossa 22H2.
-
-* NVDA ilmoittaa mikrofonin tilan, kun sitä muutetaan Puhekäytön
-  käyttöliittymästä.
 
 [[!tag dev stable]]
 

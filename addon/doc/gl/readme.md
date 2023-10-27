@@ -22,7 +22,6 @@ se inclúe):
   voz/suxestións de entrada por hardware/historial do portapapeis/Accións
   Suxeridas/editores co método de entrada moderna)
 * Opcións (opcións do sistema, Windows+I)
-* Acceso por voz
 
 Notas:
 
@@ -72,25 +71,12 @@ Intro para pegar o elemento seleccionado.
 
 ## Opcións
 
-* NVDA anunciará o nome do control para a actualización de calidade opcional
-  se estiver presente (ligazón descargar e instalar agora en Windows 10 e
-  botón descargar en Windows 11).
-* En Windows 11, os elementos da barra de faragullas de pan recoñécense
-  correctamente.
 * NVDA will report updates to Windows Update status as download and install
   progresses. This may result in speech interruption when navigating
   Settings app while updates are being downloaded and installed. If using
   Windows 11 and UIA event registration is set to selective from NVDA
   advanced settings panel, you must move focus to updates list as soon as
   they appear so NVDA can announce update progress.
-
-## Acceso por voz
-
-Esto se refiere a la característica Acceso por voz introducida en Windows 11
-22H2.
-
-* NVDA anunciará o estado do micrófono cando se active ou desactive o
-  micrófono dende a interface de Acceso por voz.
 
 [[!tag dev stable]]
 

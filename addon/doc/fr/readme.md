@@ -23,7 +23,6 @@ est inclus) :
   vocale/suggestions de saisie matérielle/historique du
   presse-papiers/éditeurs de méthodes de saisie modernes)
 * Paramètres (paramètres système, Windows+I)
-* Accès vocal
 
 Notes:
 
@@ -78,11 +77,6 @@ coller l'élément sélectionné.
 
 ## Paramètres
 
-* NVDA annoncera le nom du contrôle de mise à jour facultative s'il est
-  présent (lien télécharger et installer maintenant dans Windows 10, bouton
-  de téléchargement dans Windows 11).
-* Dans Windows 11, les éléments du fil d'Ariane des paramètres sont
-  correctement reconnus.
 * NVDA signalera les mises à jour de l'état de Windows Update au fur et à
   mesure que le téléchargement et l'installation progressent. Cela peut
   entraîner une interruption de la parole lors de la navigation dans
@@ -91,13 +85,6 @@ coller l'élément sélectionné.
   événements UIA est défini sur sélectif, vous devez déplacer le focus sur
   la liste des mises à jour dès qu'elles apparaissent afin que NVDA puisse
   annoncer la progression de la mise à jour.
-
-## Accès vocal
-
-Il s'agit de la fonction d'accès vocal introduit dans Windows 11 22H2.
-
-* NVDA annoncera l'état du microphone lors du basculement du microphone
-  depuis l'interface d'accès vocal.
 
 [[!tag dev stable]]
 
