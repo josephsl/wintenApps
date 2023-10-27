@@ -22,7 +22,6 @@ Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
   (Emoji-Panel/Touch-Tastatur/Diktat/Sprachsteuerung/Hardware-Eingabevorschläge/Zwischenablage-Verlauf/Vorgeschlagene
   Aktionen/Editoren für moderne Eingabemethoden)
 * Einstellungen (System-Einstellungen, Windows+I)
-* Sprachzugang
 
 Hinweise:
 
@@ -76,10 +75,6 @@ Eingabetaste, um das ausgewählte Element einzufügen.
 
 ## Einstellungen
 
-* NVDA teilt den Namen optionaler Qualitätsupdates mit, falls vorhanden
-  (Link zum Download und Jetzt installieren in Windows 10,
-  Download-Schaltfläche in Windows 11).
-* In Windows 11 werden die Breadcrumb-Leisten richtig erkannt.
 * NVDA teilt Updates an den Windows Update-Status mit, während der Download
   und die Installation fortschreiten. Dies kann zu Sprachunterbrechungen
   führen, wenn Sie in den Einstellungen navigieren, während die Updates
@@ -87,14 +82,6 @@ Eingabetaste, um das ausgewählte Element einzufügen.
   die UIA-Ereignisregistrierung in den erweiterten Einstellungen von NVDA
   auf Selektiv eingestellt ist, müssen Sie die Update-Liste fokussieren,
   sobald diese erscheint, damit NVDA den Update-Fortschritt mitteilen kann.
-
-## Sprachzugang
-
-Dies bezieht sich auf die in Windows 11 Version 22H2 eingeführte Funktion
-für den Sprachzugang.
-
-* NVDA teilt den Mikrofon-Status mit, wenn das Mikrofon über die
-  Sprachzugriffsoberfläche umgeschaltet wird.
 
 [[!tag dev stable]]
 

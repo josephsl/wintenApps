@@ -23,7 +23,6 @@ detalhes sobre o que está incluso):
   typing/hardware input suggestions/clipboard history/Suggested
   Actions/modern input method editors)
 * Configurações (configurações do sistema, Windows+I)
-* Voice access
 
 Notas:
 
@@ -68,24 +67,12 @@ instead of Enter key to paste the selected item.
 
 ## Configurações
 
-* O NVDA anunciará o nome do controle de atualização de qualidade opcional,
-  se houver (link para baixar e instalar agora no Windows 10, botão de
-  download no Windows 11).
-* No Windows 11, os itens da barra de localização atual são reconhecidos
-  corretamente.
 * NVDA will report updates to Windows Update status as download and install
   progresses. This may result in speech interruption when navigating
   Settings app while updates are being downloaded and installed. If using
   Windows 11 and UIA event registration is set to selective from NVDA
   advanced settings panel, you must move focus to updates list as soon as
   they appear so NVDA can announce update progress.
-
-## Voice access
-
-This refers to Voice access feature introduced in Windows 11 22H2.
-
-* NVDA will announce microphone status when toggling microphone from Voice
-  access interface.
 
 [[!tag dev stable]]
 

@@ -24,7 +24,6 @@ bakın):
   giriş önerileri/pano geçmişi/Önerilen Eylemler/modern giriş yöntemi
   düzenleyicileri)
 * Ayarlar (sistem ayarları, Windows+I)
-* Sesli erişim
 
 Notlar:
 
@@ -72,10 +71,6 @@ daha yükseğe ayarlayın. Windows 10'da pano geçmişinden yapıştırırken, s
 
 ## Ayarlar
 
-* NVDA, varsa isteğe bağlı kalite güncelleme kontrolünün adını duyurur
-  (Windows 10'da şimdi indir ve kur bağlantısı, Windows 11'de indir
-  düğmesi).
-* Windows 11'de içerik haritası çubuğu öğeleri düzgün bir şekilde tanınır.
 * NVDA, indirme ve yükleme ilerledikçe Windows Update durumuyla ilgili
   güncellemeleri bildirir. Bu, güncellemeler indirilirken ve yüklenirken
   Ayarlar uygulamasında gezinirken konuşmanın kesilmesine neden
@@ -83,13 +78,6 @@ daha yükseğe ayarlayın. Windows 10'da pano geçmişinden yapıştırırken, s
   ayarlar panelinden seçmeli olarak ayarlanmışsa, NVDA'nın güncelleme
   ilerlemesini duyurabilmesi için göründükleri anda odağı güncellemeler
   listesine taşımalısınız.
-
-## Sesli erişim
-
-Bu, Windows 11 22H2'de tanıtılan Sesli erişim özelliğini ifade eder.
-
-* NVDA, Ses erişim arayüzünden mikrofonu değiştirirken mikrofon durumunu
-  duyurur.
 
 [[!tag dev stable]]
 

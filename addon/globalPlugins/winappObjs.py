@@ -20,9 +20,6 @@ def disableInSecureMode(cls):
 @disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
-	def __init__(self):
-		super().__init__()
-
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
 		try:
 			UIAClassName = obj.UIAElement.cachedClassName

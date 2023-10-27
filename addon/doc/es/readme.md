@@ -23,7 +23,6 @@ qué se incluye):
   por voz / sugerencias de entrada hardware / historial del portapapeles /
   acciones sugeridas / editores modernos de método de entrada)
 * Opciones (opciones de sistema, Windows+I)
-* Acceso por voz
 
 Notas:
 
@@ -75,11 +74,6 @@ de intro para pegar el elemento seleccionado.
 
 ## Opciones
 
-* NVDA anunciará el nombre del enlace de la actualización de calidad
-  opcional si está presente (enlace Descargar e instalar ahora en Windows
-  10, botón Descargar en Windows 11).
-* En Windows 11, los elementos de la barra de migas de pan se reconocen
-  correctamente.
 * NVDA anunciará las actualizaciones del estado de Windows Update según
   avancen la descarga e instalación. Esto puede resultar en interrupciones
   de voz al navegar por la aplicación de configuración mientras las
@@ -88,14 +82,6 @@ de intro para pegar el elemento seleccionado.
   opciones avanzadas de NVDA, debes mover el foco a la lista de
   actualizaciones tan pronto como aparezcan para que NVDA pueda anunciar el
   progreso de la actualización.
-
-## Acceso por voz
-
-Esto hace referencia a la función de acceso por voz introducida en Windows
-11 22H2.
-
-* NVDA anunciará el estado del micrófono al conmutarlo desde la interfaz del
-  acceso por voz.
 
 [[!tag dev stable]]
 

@@ -21,7 +21,6 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
   prijedlozi za unos hardverom, povijest međuspremnika, predložene radnje,
   moderni uređivači za unos)
 * Postavke (postavke sustava, Windows+I)
-* Pristup glasu
 
 Napomene:
 
@@ -69,24 +68,12 @@ tipku za razmak umjesto tipke Enter.
 
 ## Postavke
 
-* NVDA će najaviti naziv opcionalne kontrole kvalitete aktualiziranja ako
-  postoji (preuzimi i instaliraj poveznicu sada u Windows 10, gumb za
-  preuzimanje u Windows 11).
-* U sustavu Windows 11 elementi trake navigacije se ispravno prepoznaju.
 * NVDA will report updates to Windows Update status as download and install
   progresses. This may result in speech interruption when navigating
   Settings app while updates are being downloaded and installed. If using
   Windows 11 and UIA event registration is set to selective from NVDA
   advanced settings panel, you must move focus to updates list as soon as
   they appear so NVDA can announce update progress.
-
-## Pristup glasu
-
-Ovo se odnosi na značajku za pristup glasu koja je predstavljena u sustavu
-Windows 11 22H2.
-
-* NVDA će najaviti stanje mikrofona kad se mikrofon uključi ili isključi iz
-  sučelja za pristup glasu.
 
 [[!tag dev stable]]
 

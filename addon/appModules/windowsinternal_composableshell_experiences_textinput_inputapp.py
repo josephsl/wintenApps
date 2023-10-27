@@ -27,17 +27,13 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Do not proceed if emoji panel category item is selected when the panel itself is gone.
 		# This is the case when closing emoji panel portion in Windows 11.
 		if automationId.startswith("navigation-menu-item"):
-			emojiPanelAncestors = [
-				item.appModule for item in api.getFocusAncestors()
-				if item.appModule == self
-			]
-			# Focus object location can be None sometimes.
-			focusLocation = api.getFocusObject().location
+			focus = api.getFocusObject()
 			# System focus restored.
-			if not len(emojiPanelAncestors):
+			if focus.appModule != self:
 				return
 			# NVDA is stuck in a nonexistent edit field.
-			elif focusLocation is not None and not any(focusLocation):
+			# Focus object location can be None sometimes.
+			if not any(focus.location):
 				eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 				return
 		# NVDA Core takes care of the rest.
@@ -109,5 +105,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_gainFocus(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Focus gets stuck in Modern keyboard when clipboard history closes in Windows 11.
 		if obj.parent.childCount == 0:
-			eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
+			# Do not queue events if events are pending.
+			if not eventHandler.isPendingEvents():
+				eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
+			return
 		nextHandler()
