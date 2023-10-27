@@ -27,12 +27,9 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Do not proceed if emoji panel category item is selected when the panel itself is gone.
 		# This is the case when closing emoji panel portion in Windows 11.
 		if automationId.startswith("navigation-menu-item"):
-			emojiPanelAncestors = [
-				item.appModule for item in api.getFocusAncestors()
-				if item.appModule == self
-			]
+			focus = api.getFocusObject()
 			# System focus restored.
-			if not len(emojiPanelAncestors):
+			if focus.appModule != self:
 				return
 			# NVDA is stuck in a nonexistent edit field.
 			# Focus object location can be None sometimes.
