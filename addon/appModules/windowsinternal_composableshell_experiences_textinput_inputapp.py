@@ -33,8 +33,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				return
 			# NVDA is stuck in a nonexistent edit field.
 			# Focus object location can be None sometimes.
-			focusLocation = api.getFocusObject().location
-			if not any(focusLocation):
+			if not any(focus.location):
 				eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 				return
 		# NVDA Core takes care of the rest.
