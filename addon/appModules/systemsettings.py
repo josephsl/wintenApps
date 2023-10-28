@@ -26,11 +26,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Just in case a non-UIA object wants live region changes announced.
 		if winVersion.getWinVer() >= winVersion.WIN11 or not isinstance(obj, UIA):
 			return nextHandler()
-		try:
-			automationId = obj.UIAAutomationId
-		except AttributeError:
-			# Just in case a non-UIA object wants live region changes announced.
-			return nextHandler()
+		automationId = obj.UIAAutomationId
 		# Except for specific cases, announce all live regions.
 		# Announce individual update progress in build 16215 and later preferably only once per update stage.
 		if "ApplicableUpdate" in automationId:
