@@ -23,11 +23,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Workarounds for Windows 10
-		# Just in case a non-UIA object wants live region changes announced.
 		if winVersion.getWinVer() < winVersion.WIN11 and isinstance(obj, UIA):
 			automationId = obj.UIAAutomationId
 			# Except for specific cases, announce all live regions.
-			# Announce individual update progress in build 16215 and later preferably only once per update stage.
+			# Announce individual update progress (preferably only once per update stage).
 			if "ApplicableUpdate" in automationId:
 				# Do not announce status text itself.
 				if automationId.endswith("_ContextDescriptionTextBlock"):
