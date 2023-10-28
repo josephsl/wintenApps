@@ -26,34 +26,34 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Just in case a non-UIA object wants live region changes announced.
 		if winVersion.getWinVer() >= winVersion.WIN11 or not isinstance(obj, UIA):
 			return nextHandler()
-			try:
-				automationId = obj.UIAAutomationId
-			except AttributeError:
-				# Just in case a non-UIA object wants live region changes announced.
-				return nextHandler()
-			# Except for specific cases, announce all live regions.
-			# Announce individual update progress in build 16215 and later preferably only once per update stage.
-			if "ApplicableUpdate" in automationId:
-				# Do not announce status text itself.
-				if automationId.endswith("_ContextDescriptionTextBlock"):
+		try:
+			automationId = obj.UIAAutomationId
+		except AttributeError:
+			# Just in case a non-UIA object wants live region changes announced.
+			return nextHandler()
+		# Except for specific cases, announce all live regions.
+		# Announce individual update progress in build 16215 and later preferably only once per update stage.
+		if "ApplicableUpdate" in automationId:
+			# Do not announce status text itself.
+			if automationId.endswith("_ContextDescriptionTextBlock"):
+				return
+			# Update title repeats while the update is downloaded and installed.
+			if automationId.endswith("_DescriptionTextBlock"):
+				# Keep announcing last status as long as object name is cached.
+				if obj.name and obj.name == self._nameChangeCache:
 					return
-				# Update title repeats while the update is downloaded and installed.
-				if automationId.endswith("_DescriptionTextBlock"):
-					# Keep announcing last status as long as object name is cached.
-					if obj.name and obj.name == self._nameChangeCache:
-						return
-					# #71: NVDA is told to announce live regions to the end by default,
-					# which results in screen content and speech getting out of sync.
-					# However do not cut off other live regions when action button appears next to updates list
-					# which is the sibling of the grandparent object (actual updates list element).
-					# Update action button appears if the system is up to date or an action is required.
-					# However attribute error may result if "update action" button is not a UIA element.
-					try:
-						if "UpdateActionButton" not in obj.parent.parent.next.UIAAutomationId:
-							speech.cancelSpeech()
-					except AttributeError:
-						pass
-				self._nameChangeCache = obj.name
+				# #71: NVDA is told to announce live regions to the end by default,
+				# which results in screen content and speech getting out of sync.
+				# However do not cut off other live regions when action button appears next to updates list
+				# which is the sibling of the grandparent object (actual updates list element).
+				# Update action button appears if the system is up to date or an action is required.
+				# However attribute error may result if "update action" button is not a UIA element.
+				try:
+					if "UpdateActionButton" not in obj.parent.parent.next.UIAAutomationId:
+						speech.cancelSpeech()
+				except AttributeError:
+					pass
+			self._nameChangeCache = obj.name
 		nextHandler()
 
 	def event_appModule_loseFocus(self):
