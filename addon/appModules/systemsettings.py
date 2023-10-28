@@ -22,8 +22,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	_nameChangeCache: str = ""
 
 	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Workarounds for Windows 10
-		if winVersion.getWinVer() < winVersion.WIN11:
+		# Not applicable on Windows 11.
+		# Just in case a non-UIA object wants live region changes announced.
+		if winVersion.getWinVer() >= winVersion.WIN11 or not isinstance(obj, UIA):
+			return nextHandler()
 			try:
 				automationId = obj.UIAAutomationId
 			except AttributeError:
