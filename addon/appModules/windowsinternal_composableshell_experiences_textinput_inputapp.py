@@ -23,10 +23,9 @@ from NVDAObjects import NVDAObject
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		automationId = obj.UIAAutomationId
 		# Do not proceed if emoji panel category item is selected when the panel itself is gone.
 		# This is the case when closing emoji panel portion in Windows 11.
-		if automationId.startswith("navigation-menu-item"):
+		if obj.UIAAutomationId.startswith("navigation-menu-item"):
 			focus = api.getFocusObject()
 			# System focus restored.
 			if focus.appModule != self:
