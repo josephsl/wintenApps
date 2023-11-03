@@ -33,9 +33,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 					return
 				# Update title repeats while the update is downloaded and installed.
 				if automationId.endswith("_DescriptionTextBlock"):
-					# Keep announcing last status as long as object name is cached.
-					if obj.name and obj.name == self._nameChangeCache:
-						return
 					# #71: NVDA is told to announce live regions to the end by default,
 					# which results in screen content and speech getting out of sync.
 					# However do not cut off other live regions when action button appears next to updates list
@@ -47,7 +44,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 							speech.cancelSpeech()
 					except AttributeError:
 						pass
-				self._nameChangeCache = obj.name
 		nextHandler()
 
 	def event_appModule_loseFocus(self):
