@@ -46,9 +46,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 						pass
 		nextHandler()
 
-	def event_appModule_loseFocus(self):
-		self._nameChangeCache = ""
-
 	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Applies to Windows 11
 		if isinstance(obj, UIA):
