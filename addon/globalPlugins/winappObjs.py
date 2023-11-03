@@ -29,5 +29,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Some dialogs, although listed as a dialog thanks to UIA class name,
 		# does not advertise the proper role of dialog.
 		# This is still the case with some dialogs such as restart to install updates dialog in Windows 11.
+		# Resolved in NVDA 2024.1 (turns out there was a flaw with IsDialog property check in NVDA Core).
 		if UIAClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
 			clsList.insert(0, Dialog)

@@ -18,9 +18,6 @@ from NVDAObjects import NVDAObject
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
-	# Sometimes, the same text is announced, so consult this cache.
-	_nameChangeCache: str = ""
-
 	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Workarounds for Windows 10
 		if winVersion.getWinVer() < winVersion.WIN11 and isinstance(obj, UIA):
@@ -33,9 +30,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 					return
 				# Update title repeats while the update is downloaded and installed.
 				if automationId.endswith("_DescriptionTextBlock"):
-					# Keep announcing last status as long as object name is cached.
-					if obj.name and obj.name == self._nameChangeCache:
-						return
 					# #71: NVDA is told to announce live regions to the end by default,
 					# which results in screen content and speech getting out of sync.
 					# However do not cut off other live regions when action button appears next to updates list
@@ -47,11 +41,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 							speech.cancelSpeech()
 					except AttributeError:
 						pass
-				self._nameChangeCache = obj.name
 		nextHandler()
-
-	def event_appModule_loseFocus(self):
-		self._nameChangeCache = ""
 
 	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Applies to Windows 11
