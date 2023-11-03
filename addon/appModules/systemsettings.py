@@ -18,9 +18,6 @@ from NVDAObjects import NVDAObject
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
-	# Sometimes, the same text is announced, so consult this cache.
-	_nameChangeCache: str = ""
-
 	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Workarounds for Windows 10
 		if winVersion.getWinVer() < winVersion.WIN11 and isinstance(obj, UIA):
