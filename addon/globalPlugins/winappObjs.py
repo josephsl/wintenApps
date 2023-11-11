@@ -24,7 +24,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		try:
 			UIAClassName = obj.UIAElement.cachedClassName
 		except AttributeError:
-			UIAClassName = ""
+			return
 		# Windows that are really dialogs.
 		# Some dialogs, although listed as a dialog thanks to UIA class name,
 		# does not advertise the proper role of dialog.

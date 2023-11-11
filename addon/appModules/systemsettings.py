@@ -5,13 +5,13 @@
 # Originally copyright 2016-2021 Joseph Lee, released under GPL
 
 # Several hacks related to Settings app, some of which are part of NVDA Core.
+# Settings app is a UIA world, hence no instance checks.
 
 from typing import Callable
 # Extends NVDA Core's System Settings app module.
 from nvdaBuiltin.appModules.systemsettings import AppModule
 import winVersion
 import speech
-from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
 
 
@@ -20,7 +20,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Workarounds for Windows 10
-		if winVersion.getWinVer() < winVersion.WIN11 and isinstance(obj, UIA):
+		if winVersion.getWinVer() < winVersion.WIN11:
 			automationId = obj.UIAAutomationId
 			# Except for specific cases, announce all live regions.
 			# Announce individual update progress (preferably only once per update stage).
@@ -45,35 +45,31 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Applies to Windows 11
-		if isinstance(obj, UIA):
-			if "ApplicableUpdate" in obj.UIAAutomationId:
-				import ui
-				try:
-					# Announce updated screen content as long as update action control is not shown.
-					# Simple previous object must be used as previous object returns an unusable button.
-					if "UpdateActionButton" not in obj.parent.parent.parent.simplePrevious.UIAAutomationId:
-						speech.cancelSpeech()
-					ui.message(" ".join([element.name for element in obj.parent.children]))
-				except AttributeError:
-					pass
+		if "ApplicableUpdate" in obj.UIAAutomationId:
+			import ui
+			try:
+				# Announce updated screen content as long as update action control is not shown.
+				# Simple previous object must be used as previous object returns an unusable button.
+				if "UpdateActionButton" not in obj.parent.parent.parent.simplePrevious.UIAAutomationId:
+					speech.cancelSpeech()
+				ui.message(" ".join([element.name for element in obj.parent.children]))
+			except AttributeError:
+				pass
 		nextHandler()
 
 	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Applies to Windows 11
-		if isinstance(obj, UIA):
-			if obj.UIAAutomationId in (
-				"SystemSettings_MusUpdate_AvailableUpdatesList2_ListView",  # Windows 11 22H2/23H2
-			):
-				import UIAHandler
-				for updateEntry in obj.children:
-					updateStatus = updateEntry.simpleFirstChild.simpleLastChild
-					try:
-						UIAHandler.handler.removeEventHandlerGroup(
-							updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
-						)
-						UIAHandler.handler.addEventHandlerGroup(
-							updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
-						)
-					except NotImplementedError:
-						pass
+		if obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView":
+			import UIAHandler
+			for updateEntry in obj.children:
+				updateStatus = updateEntry.simpleFirstChild.simpleLastChild
+				try:
+					UIAHandler.handler.removeEventHandlerGroup(
+						updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
+					)
+					UIAHandler.handler.addEventHandlerGroup(
+						updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
+					)
+				except NotImplementedError:
+					pass
 		nextHandler()
