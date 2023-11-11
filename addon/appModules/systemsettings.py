@@ -12,7 +12,6 @@ from typing import Callable
 from nvdaBuiltin.appModules.systemsettings import AppModule
 import winVersion
 import speech
-from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
 
 
