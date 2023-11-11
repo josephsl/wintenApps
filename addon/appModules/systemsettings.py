@@ -5,6 +5,7 @@
 # Originally copyright 2016-2021 Joseph Lee, released under GPL
 
 # Several hacks related to Settings app, some of which are part of NVDA Core.
+# Settings app is a UIA world, hence no instance checks.
 
 from typing import Callable
 # Extends NVDA Core's System Settings app module.
