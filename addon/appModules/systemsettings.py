@@ -20,25 +20,24 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Applies to Windows 10
-		if winVersion.getWinVer() < winVersion.WIN11:
-			# Except for specific cases, announce all live regions.
-			# Announce individual update progress (preferably only once per update stage).
-			if "ApplicableUpdate" in obj.UIAAutomationId:
-				# Do not announce status text itself.
-				if obj.UIAAutomationId.endswith("_ContextDescriptionTextBlock"):
-					return
-				# Update title repeats while the update is downloaded and installed.
-				# #71: NVDA is told to announce live regions to the end by default,
-				# which results in screen content and speech getting out of sync.
-				# However do not cut off other live regions when action button appears next to updates list
-				# which is the sibling of the grandparent object (actual updates list element).
-				# Update action button appears if the system is up to date or an action is required.
-				# However attribute error may result if "update action" button is not a UIA element.
-				try:
-					if "UpdateActionButton" not in obj.parent.parent.next.UIAAutomationId:
-						speech.cancelSpeech()
-				except AttributeError:
-					pass
+		# Except for specific cases, announce all live regions.
+		# Announce individual update progress (preferably only once per update stage).
+		if "ApplicableUpdate" in obj.UIAAutomationId:
+			# Do not announce status text itself.
+			if obj.UIAAutomationId.endswith("_ContextDescriptionTextBlock"):
+				return
+			# Update title repeats while the update is downloaded and installed.
+			# #71: NVDA is told to announce live regions to the end by default,
+			# which results in screen content and speech getting out of sync.
+			# However do not cut off other live regions when action button appears next to updates list
+			# which is the sibling of the grandparent object (actual updates list element).
+			# Update action button appears if the system is up to date or an action is required.
+			# However attribute error may result if "update action" button is not a UIA element.
+			try:
+				if "UpdateActionButton" not in obj.parent.parent.next.UIAAutomationId:
+					speech.cancelSpeech()
+			except AttributeError:
+				pass
 		nextHandler()
 
 	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
