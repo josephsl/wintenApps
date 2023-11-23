@@ -19,7 +19,7 @@ from NVDAObjects import NVDAObject
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Workarounds for Windows 10
+		# Applies to Windows 10
 		if winVersion.getWinVer() < winVersion.WIN11:
 			automationId = obj.UIAAutomationId
 			# Except for specific cases, announce all live regions.
