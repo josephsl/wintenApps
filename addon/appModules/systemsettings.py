@@ -10,7 +10,6 @@
 from typing import Callable
 # Extends NVDA Core's System Settings app module.
 from nvdaBuiltin.appModules.systemsettings import AppModule
-import winVersion
 import speech
 from NVDAObjects import NVDAObject
 
