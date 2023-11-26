@@ -23,8 +23,7 @@ from NVDAObjects import NVDAObject
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Do not proceed if emoji panel category item is selected when the panel itself is gone.
-		# This is the case when closing emoji panel portion in Windows 11.
+		# Do not proceed if emoji panel category item is selected when the panel is closed in Windows 11.
 		if obj.UIAAutomationId.startswith("navigation-menu-item"):
 			focus = api.getFocusObject()
 			# System focus restored.
@@ -47,9 +46,9 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# For dictation, add elements manually so name change event can be handled.
 		# Object hierarchy is different in voice typing (Windows 11).
 		if firstChildAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
-			if firstChildAutomationId == "DictationMicrophoneButton":
+			if firstChildAutomationId == "DictationMicrophoneButton":  # Windows 10
 				element = firstChild.next
-			else:
+			else:  # Windows 11
 				element = firstChild.firstChild.firstChild
 			while element.next is not None:
 				localEventHandlerElements.append(element)
