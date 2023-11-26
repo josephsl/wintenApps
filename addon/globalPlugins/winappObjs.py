@@ -10,6 +10,7 @@ from NVDAObjects.UIA import Dialog
 from NVDAObjects import NVDAObject
 import globalVars
 import UIAHandler
+import versionInfo
 
 
 # #20: don't even think about proceeding in secure screens.
@@ -21,6 +22,8 @@ def disableInSecureMode(cls):
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
+		if versionInfo.version_year >= 2024:
+			return
 		try:
 			UIAClassName = obj.UIAElement.cachedClassName
 		except AttributeError:

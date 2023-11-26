@@ -2,9 +2,9 @@
 # Copyright (C) 2019-2023 NV Access Limited, Joseph Lee
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
-# Originally copyright 2016-2021 Joseph Lee, released under GPL
+# Originally copyright 2016-2023 Joseph Lee, released under GPL
 
-# Several hacks related to Settings app, some of which are part of NVDA Core.
+# Several hacks related to Settings app
 # Settings app is a UIA world, hence no instance checks.
 
 from typing import Callable
@@ -19,8 +19,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Applies to Windows 10
-		# Except for specific cases, announce all live regions.
-		# Announce individual update progress (preferably only once per update stage).
+		# Announce individual update progress except as noted below.
 		if "ApplicableUpdate" in obj.UIAAutomationId:
 			# Do not announce status text itself.
 			if obj.UIAAutomationId.endswith("_ContextDescriptionTextBlock"):
