@@ -20,7 +20,7 @@ def onInstall() -> None:
 	# and the add-on may end support for a feature update prior to end of consumer support.
 	# Applicable to Home, Pro, Pro Education, Pro for Workstations (see aka.ms/WindowsTargetVersioninfo).
 	# Windows 10 22H2 (19045) is supported until October 2025 as this is the final feature update.
-	# Note that Insider Preview builds between public builds are not supported.
+	# For Insider Preview builds, only the latest build for each channel (canary/dev/beta) are supported.
 	supportedBuilds: dict[int, str] = {
 		# Windows 10
 		19045: "10 22H2",
