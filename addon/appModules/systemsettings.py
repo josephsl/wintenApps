@@ -43,8 +43,9 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		if "ApplicableUpdate" in obj.UIAAutomationId:
 			import ui
 			try:
-				# Announce updated screen content as long as update action control is not shown.
-				# Simple previous object must be used as previous object returns an unusable button.
+				# Announce updated screen content as long as update action control is disabled.
+				# Simple previous object must be used as previous object returns a disabled button.
+				# NVDA 2024.1 does present disabled button when simple previous object is fetched.
 				if "UpdateActionButton" not in obj.parent.parent.parent.simplePrevious.UIAAutomationId:
 					speech.cancelSpeech()
 				ui.message(" ".join([element.name for element in obj.parent.children]))
