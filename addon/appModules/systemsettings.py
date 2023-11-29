@@ -42,11 +42,13 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Applies to Windows 11
 		if "ApplicableUpdate" in obj.UIAAutomationId:
 			import ui
+			import controlTypes
 			try:
 				# Announce updated screen content as long as update action control is disabled.
 				# Simple previous object must be used as previous object returns a disabled button.
 				# NVDA 2024.1 does present disabled button when simple previous object is fetched.
-				if "UpdateActionButton" not in obj.parent.parent.parent.simplePrevious.UIAAutomationId:
+				# Therefore, use "unavailable" state check.
+				if controlTypes.State.UNAVAILABLE in obj.parent.parent.parent.previous.states:
 					speech.cancelSpeech()
 				ui.message(" ".join([element.name for element in obj.parent.children]))
 			except AttributeError:
