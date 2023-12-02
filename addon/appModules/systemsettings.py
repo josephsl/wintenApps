@@ -65,13 +65,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		):
 			for updateEntry in obj.children:
 				updateStatus = updateEntry.simpleFirstChild.simpleLastChild
-				try:
-					UIAHandler.handler.removeEventHandlerGroup(
-						updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
-					)
-					UIAHandler.handler.addEventHandlerGroup(
-						updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
-					)
-				except NotImplementedError:
-					pass
+				UIAHandler.handler.removeEventHandlerGroup(
+					updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
+				)
+				UIAHandler.handler.addEventHandlerGroup(
+					updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
+				)
 		nextHandler()
