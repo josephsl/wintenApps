@@ -57,8 +57,12 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Applies to Windows 11
-		if obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView":
-			import UIAHandler
+		import UIAHandler
+		if (
+			obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView"
+			# Do not run the below loop if UIA event registration is set to global.
+			and UIAHandler.handler.localEventHandlerGroup is not None
+		):
 			for updateEntry in obj.children:
 				updateStatus = updateEntry.simpleFirstChild.simpleLastChild
 				try:
