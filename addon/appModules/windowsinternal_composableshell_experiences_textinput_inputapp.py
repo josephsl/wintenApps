@@ -83,11 +83,12 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Originally part of this method, split into an internal function to reduce complexity.
 		# However, in Windows 11, combined emoji panel and clipboard history moves system focus to itself.
 		# Therefore there is no need to add UIA elements to local event handler group.
-		try:
-			if firstChildAutomationId != "Windows.Shell.InputApp.FloatingSuggestionUI":
-				self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild, firstChildAutomationId)
-		except NotImplementedError:
-			pass
+		if (
+			firstChildAutomationId != "Windows.Shell.InputApp.FloatingSuggestionUI"
+			# Do not call the below function if UIA event registration is set to global.
+			and UIAHandler.handler.localEventHandlerGroup is not None
+		):
+			self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild, firstChildAutomationId)
 		# Windows 11 22H2 Moment 1 (October 2022) and later uses modern keyboard interface to display
 		# Suggested Actions such as Skype calls if data such as phone number is copied to the clipboard.
 		# Because keyboard interaction is not possible, just report suggested actions.

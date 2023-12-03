@@ -42,10 +42,13 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Applies to Windows 11
 		if "ApplicableUpdate" in obj.UIAAutomationId:
 			import ui
+			import controlTypes
 			try:
-				# Announce updated screen content as long as update action control is not shown.
-				# Simple previous object must be used as previous object returns an unusable button.
-				if "UpdateActionButton" not in obj.parent.parent.parent.simplePrevious.UIAAutomationId:
+				# Announce updated screen content as long as update action control is disabled.
+				# Simple previous object must be used as previous object returns a disabled button.
+				# NVDA 2024.1 does present disabled button when simple previous object is fetched.
+				# Therefore, use "unavailable" state check.
+				if controlTypes.State.UNAVAILABLE in obj.parent.parent.parent.previous.states:
 					speech.cancelSpeech()
 				ui.message(" ".join([element.name for element in obj.parent.children]))
 			except AttributeError:
@@ -54,17 +57,18 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Applies to Windows 11
-		if obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView":
-			import UIAHandler
+		import UIAHandler
+		if (
+			obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView"
+			# Do not run the below loop if UIA event registration is set to global.
+			and UIAHandler.handler.localEventHandlerGroup is not None
+		):
 			for updateEntry in obj.children:
 				updateStatus = updateEntry.simpleFirstChild.simpleLastChild
-				try:
-					UIAHandler.handler.removeEventHandlerGroup(
-						updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
-					)
-					UIAHandler.handler.addEventHandlerGroup(
-						updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
-					)
-				except NotImplementedError:
-					pass
+				UIAHandler.handler.removeEventHandlerGroup(
+					updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
+				)
+				UIAHandler.handler.addEventHandlerGroup(
+					updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
+				)
 		nextHandler()
