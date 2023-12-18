@@ -40,7 +40,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Applies to Windows 11
-		if "ApplicableUpdate" in obj.UIAAutomationId:
+		if obj.UIAAutomationId.endswith("_UpdateStatusDescriptionTextBlock"):
 			import ui
 			import controlTypes
 			try:
