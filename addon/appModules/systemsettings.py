@@ -45,9 +45,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			import controlTypes
 			try:
 				# Announce updated screen content as long as update action control is disabled.
-				# Simple previous object must be used as previous object returns a disabled button.
-				# NVDA 2024.1 does present disabled button when simple previous object is fetched.
-				# Therefore, use "unavailable" state check.
 				if controlTypes.State.UNAVAILABLE in obj.parent.parent.parent.previous.states:
 					speech.cancelSpeech()
 				ui.message(" ".join([element.name for element in obj.parent.children]))
