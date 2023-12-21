@@ -5,11 +5,12 @@
 
 # Additional hacks on top of NVDA Core Calculator app module.
 
+# Import the base app module as something else to avoid runtime issues.
 from nvdaBuiltin.appModules.calculator import AppModule as CoreAppModule
 import scriptHandler
 
 
-class AppModule(CoreAppModule):  # type: ignore[no-redef]
+class AppModule(CoreAppModule):
 
 	@scriptHandler.script(gestures=CoreAppModule._calculatorResultGestures)
 	def script_calculatorResult(self, gesture):
