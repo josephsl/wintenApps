@@ -15,6 +15,6 @@ class AppModule(CoreAppModule):
 	@scriptHandler.script(gestures=CoreAppModule._calculatorResultGestures)
 	def script_calculatorResult(self, gesture):
 		# NVDA Core issue 15923/Microsoft Calcuilator issue 2097:
-		# Force results announcement if results comamnds are performed.
+		# Force results announcement if results commands are performed.
 		self._noCalculatorResultsGesturePressed = False
 		super().script_calculatorResult(gesture)
