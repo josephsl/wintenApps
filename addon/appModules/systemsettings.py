@@ -1,8 +1,8 @@
 # A part of NonVisual Desktop Access (NVDA)
-# Copyright (C) 2019-2023 NV Access Limited, Joseph Lee
+# Copyright (C) 2019-2024 NV Access Limited, Joseph Lee
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
-# Originally copyright 2016-2023 Joseph Lee, released under GPL
+# Originally copyright 2016-2024 Joseph Lee, released under GPL
 
 # Several hacks related to Settings app
 # Settings app is a UIA world, hence no instance checks.
