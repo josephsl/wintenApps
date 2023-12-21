@@ -14,8 +14,9 @@ import sys
 # Linters aren't aware about them.
 # To avoid Flake8 F821 warnings about them they are imported explicitly.
 # When using other  Scons functions please add them to the line below.
-from SCons.Script import BoolVariable, Builder, Copy, Environment, Variables
+from SCons.Script import BoolVariable, Builder, Copy, Environment, Variables, EnsurePythonVersion
 
+EnsurePythonVersion(3, 11)
 sys.dont_write_bytecode = True
 
 # Bytecode should not be written for build vars module to keep the repository root folder clean.
