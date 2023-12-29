@@ -13,8 +13,6 @@ addonHandler.initTranslation()
 
 
 def onInstall() -> None:
-	import winVersion
-	currentWinVer = winVersion.getWinVer()
 	# Windows App Essentials requires supported Windows 10/11 feature updates.
 	# Support duration is tied to consumer-level support (18 months for Windows 10, 2 years for Windows 11)
 	# and the add-on may end support for a feature update prior to end of consumer support.
@@ -28,6 +26,8 @@ def onInstall() -> None:
 		22621: "11 22H2",
 		22631: "11 23H2",
 	}
+	import winVersion
+	currentWinVer = winVersion.getWinVer()
 	currentBuild: int = currentWinVer.build
 	# Optimization: report success (return early) if running a supported release.
 	if (
