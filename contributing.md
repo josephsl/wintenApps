@@ -23,9 +23,10 @@ You can contribute to Windows App Essentials in a number of ways:
 
 You must:
 
-1. Be running the latest supported version of Windows 10 and later (as of September 2023, this means Windows 10 2022 Update (Version 22H2), Windows 11, and latest Insider Preview (canary/dev/beta/release preview) build).
-2. Be running the latest stable version of NVDA or later (as of September 2023, this means NVDA 2023.2 or latest alpha release).
+1. Be running the latest supported version of Windows 10 and later (as of January 2024, this means Windows 10 2022 Update (Version 22H2), Windows 11 2023 Update (Version 23H2), and latest Insider Preview (canary/dev/beta/release preview) build).
+2. Be running the latest stable version of NVDA or later (as of January 2024, this means NVDA 2023.3, 2024.1 beta, or latest alpha release).
 3. If you wish to offer pull requests, you must be running latest NVDA stable version or later.
+4. To package your modifications into an add-on build, you must be using Python 3.11 or later.
 
 ## Contribution process
 
@@ -37,7 +38,7 @@ To test the add-on, you must be running the latest stable or development build o
 
 Before testing the add-on:
 
-1. Install the latest avaiblel NVDA release.
+1. Install the latest availible NVDA release.
 2. Visit NV Access add-on store (NVDA menu/tools/add-on store).
 3. Check Windows App Essentials add-on version from installed add-ons tab. If the version is of the form yyyymmdd.x.y, you do not have to perform dev channel installation step but do try updating to the latest version (see below).
 4. To switch to dev channel, from add-on store, press Control+Tab to go to either updatable or available add-ons tabs.
@@ -77,9 +78,9 @@ Windows App Essentials follows NVDA's own coding style (tabs for indentation, ca
 
 A given Windows App Essentials release is supported until the next version is released. For development snapshots, only the latest build is supported. A stable version is supported until the next stable version is released. Both major (milestone) and minor (backports and localizations) are grouped under stable versions.
 
-For NVDA releases, Windows App Essentials supports latest NVDA releases, including development builds. Unless noted otherwise, the immediate past stable NVDA release is also supported. As of September 2023, Windows App Essentials supports NVDA 2023.1, 2023.2, and alpha snapshots.
+For NVDA releases, Windows App Essentials supports latest NVDA releases, including development builds. Unless noted otherwise, the immediate past stable NVDA release is also supported. As of January 2024, Windows App Essentials supports NVDA 2023.3, 2024.1 beta (development builds), and alpha snapshots.
 
-For Windows releases, a stable Windows release (typically a feature update) is supported for at least 12 months (18 months for Windows 11 releases) and no more than consumer support duration (18 months for Windows 10, two years for Windows 11); the exception is final Windows 10 release. Although the add-on will indicate support for a Windows release (or a feature update) months in advance, official support begins the moment a given release is made available to the general public. For example, although Windows 10 November 2021 Update was marked as supported since August 2021, official support duration is from November 2021 to at least December 2022 and no later than June 2023. For Windows 11 original release, preview (and experimental) support began in August 2021, and official support duration is from October 2021 to at least April 2023 and no later than October 2023. As a rule of thumb, Windows App Essentials uses consumer (Home, Pro, Pro for Workstations) support duration for a feature update to determine support duration. See release information page from Microsoft for details on support duration for Windows releases.
+For Windows releases, a stable Windows release (typically a feature update) is supported for at least 12 months (18 months for Windows 11 releases) and no more than consumer support duration (18 months for Windows 10, two years for Windows 11); the exception is final Windows 10 release (Version 22H2). Although the add-on will indicate support for a Windows release (or a feature update) months in advance, official support begins the moment a given release is made available to the general public. For example, although Windows 10 November 2021 Update was marked as supported since August 2021, official support duration is from November 2021 to at least December 2022 and no later than June 2023. For Windows 11 original release, preview (and experimental) support began in August 2021, and official support duration is from October 2021 to at least April 2023 and no later than October 2023. As a rule of thumb, Windows App Essentials uses consumer (Home, Pro, Pro for Workstations) support duration for a feature update to determine support duration. See release information page from Microsoft for details on support duration for Windows releases.
 
 Regarding end of support for a Windows release from the add-on, for stable Windows releases, support duration is tied to consumer support. Prior to end of support, a grace period (at least 30 days) will be given to let users upgrade to newer releases (for Windows 11 original release, support from the add-on ended in August 2023, and the grace period was from June 2023 to August 2023). For Windows Insiders, only the latest Insider Preview build is supported, particularly if using canary and dev channel builds. Consequently, there is no concept of grace period from the add-on for Windows Insider Preview builds.
 
@@ -89,7 +90,7 @@ Note: the only exception to support duration policy is the very last Windows 10 
 
 Windows App Essentials uses continuous, iterative development process. This means a given feature or a change can take up to several weeks to months to be implemented and refined based on user feedback (this can take several milestones), along with being sensitive to changes to NVDA, Windows, and apps. To facilitate this, development snapshots are released whenever changes are made to the add-on source code and data, including when localizations are updated.
 
-For project management, the add-on uses "development milestones" lasting about a year. These milestones, named after a chemical element to align with Windows development cycle, are further divided into "development quarters" lasting about three months each. These quarterly releases are termed "milestone" or major releases dedicated to a specific theme or activity such as adding or dropping support for Windows and/or NVDA releases. One or more minor releases, consisting of backports from the next development quarter and responding to changes in Windows and apps, can be released between milestone releases, typically on a monthly basis. Localization updates can also trigger minor releases.
+For project management, the add-on uses "development milestones" lasting between six months to a year. These milestones, named after a chemical element to align with Windows development cycle, are further divided into "development quarters" lasting about three months each. These quarterly releases are termed "milestone" or major releases dedicated to a specific theme or activity such as adding or dropping support for Windows and/or NVDA releases. One or more minor releases, consisting of backports from the next development quarter and responding to changes in Windows and apps, can be released between milestone releases, typically on a monthly basis. Localization updates can also trigger minor releases.
 
 The main development branch is named "main". This branch holds code for the upcoming milestone release. Although quality may vary, the aim is to house code that can ship as a stable version at anytime and can be backported to maintenance branches easily.
 
@@ -97,7 +98,7 @@ At least two weeks prior to end of a milestone, code from the main branch is mer
 
 #### Recent and upcoming development milestones and quarters
 
-Originally development semesters in 2021 but changed to annual milestones in 2022.
+Originally development semesters in 2021 but changed to annual milestones in 2022, then reverted to semesters in 2024.
 
 * Nickel (2021):
 	* Nickel 1: June 2021 to September 2021, dedicated to refining Windows 11 support and introduction of control types refactor from NVDA 2021.2
@@ -111,6 +112,6 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 	* Zinc 1: December 2022 to March 2023, Windows apps optimizations, removed 'no more weather data' message from Weather app, type information
 	* Zinc 2: February 2023 to June 2023, end of support for Windows 10 November 2021 Update and Server 2022 (Version 21H2), reimagined virtual desktops announcement internals, Weather app changes, NVDA 2023.1 requirement, some Windows 10 workarounds removed
 	* Zinc 3: May 2023 to October 2023, end of support for Windows 11 original release (Version 21H2), NVDA 2023.2 requirement, removed Cortana support
-	* Zinc 4: September 2023 to January 2024, restructuring Settings app support in preparation for freezing Windows 10 support code, NVDA 2023.3 requirement, removed Voice Access support, initial suport for NVDA 2024.1
+	* Zinc 4: September 2023 to January 2024, restructuring Settings app support in preparation for freezing Windows 10 support code, NVDA 2023.3 requirement, removed Voice Access support, initial support for NVDA 2024.1
 * Gallium (2024):
 	* Gallium 1: December 2023 to March 2024, NVDA 2024.1 official support
