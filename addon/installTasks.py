@@ -29,17 +29,17 @@ SUPPORTED_BUILDS: dict[int, str] = {
 
 
 def onInstall() -> None:
-	def canInstallWinAppsAddon() -> bool:
-		currentWinVer = winVersion.getWinVer()
+	def canInstallWinAppsAddon(currentWinVer: winVersion.WinVersion) -> bool:
 		currentBuild: int = currentWinVer.build
 		return (
 			currentBuild in SUPPORTED_BUILDS  # General availability channel and Insider release preview
 			or currentBuild > max(SUPPORTED_BUILDS)  # Insider Preview canary/dev/beta
 		)
-	def presentInstallError() -> None:
+	def presentInstallError(currentWinVer: winVersion.WinVer) -> None:
 		import gui
 		import wx
 		import gettext
+		currentBuild: int = currentWinVer.build
 		_ = gettext.gettext
 		# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 		# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
