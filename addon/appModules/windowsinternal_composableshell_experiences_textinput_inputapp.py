@@ -50,9 +50,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				localEventHandlerElements += firstChild.parent.children[1:]
 			else:  # Windows 11
 				localEventHandlerElements += firstChild.firstChild.children
-			while element.next is not None:
-				localEventHandlerElements.append(element)
-				element = element.next
 		# Don't forget to add actual candidate item element so name change event can be handled
 		# (mostly for hardware keyboard input suggestions).
 		if isinstance(firstChild, ImeCandidateUI):
