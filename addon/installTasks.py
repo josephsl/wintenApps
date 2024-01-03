@@ -29,10 +29,9 @@ SUPPORTED_BUILDS: dict[int, str] = {
 
 
 def canInstallWinAppsAddon(currentWinVer: winVersion.WinVersion) -> bool:
-	currentBuild: int = currentWinVer.build
 	return (
-		currentBuild in SUPPORTED_BUILDS  # General availability channel and Insider release preview
-		or currentBuild > max(SUPPORTED_BUILDS)  # Insider Preview canary/dev/beta
+		currentWinVer.build in SUPPORTED_BUILDS  # General availability channel and Insider release preview
+		or currentWinVer.build > max(SUPPORTED_BUILDS)  # Insider Preview canary/dev/beta
 	)
 
 
@@ -40,7 +39,6 @@ def presentInstallError(currentWinVer: winVersion.WinVer) -> None:
 	import gui
 	import wx
 	import gettext
-	currentBuild: int = currentWinVer.build
 	_ = gettext.gettext
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
@@ -51,7 +49,7 @@ def presentInstallError(currentWinVer: winVersion.WinVer) -> None:
 	windowsReleasesList: list[str] = [
 		# Translators: an entry in supported Windows releases list (release (build)).
 		_("{release} ({build})").format(release=release, build=build)
-		for build, release in SUPPORTED_BUILDS.items() if build > currentBuild
+		for build, release in SUPPORTED_BUILDS.items() if build > currentWinVer.build
 	]
 	windowsReleasesList.append("Windows Insider Preview")
 	unsupportedWindowsReleaseText: str = _(
@@ -62,7 +60,7 @@ def presentInstallError(currentWinVer: winVersion.WinVer) -> None:
 		"Supported releases: {supportedReleasesList}."
 	).format(
 		releaseName=currentWinVer.releaseName,
-		build=currentBuild,
+		build=currentWinVer.build,
 		supportedReleasesList=", ".join(windowsReleasesList)
 	)
 	gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
