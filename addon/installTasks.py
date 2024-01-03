@@ -65,8 +65,10 @@ def onInstall() -> None:
 			supportedReleasesList=", ".join(windowsReleasesList)
 		)
 		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
+	currentWinVer = winVersion.getWinVer()
+	currentBuild: int = currentWinVer.build
 	# Optimization: report success (return early) if running a supported release.
-	if canInstallWinAppsAddon():
+	if canInstallWinAppsAddon(currentWinVer):
 		return
-	presentInstallError()
+	presentInstallError(currentWinVer)
 	raise RuntimeError(f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentBuild})")
