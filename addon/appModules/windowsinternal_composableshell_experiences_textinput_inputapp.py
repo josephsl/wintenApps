@@ -47,9 +47,9 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Object hierarchy is different in voice typing (Windows 11).
 		if firstChildAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
 			if firstChildAutomationId == "DictationMicrophoneButton":  # Windows 10
-				element = firstChild.next
+				localEventHandlerElements += firstChild.parent.children[1:]
 			else:  # Windows 11
-				element = firstChild.firstChild.firstChild
+				localEventHandlerElements += firstChild.firstChild.children
 			while element.next is not None:
 				localEventHandlerElements.append(element)
 				element = element.next
