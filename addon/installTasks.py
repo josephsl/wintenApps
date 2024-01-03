@@ -29,42 +29,43 @@ SUPPORTED_BUILDS: dict[int, str] = {
 
 def onInstall() -> None:
 	def canInstallWinAppsAddon() -> bool:
-		import winVersion
 		currentWinVer = winVersion.getWinVer()
 		currentBuild: int = currentWinVer.build
 		return (
 			currentBuild in SUPPORTED_BUILDS  # General availability channel and Insider release preview
 			or currentBuild > max(SUPPORTED_BUILDS)  # Insider Preview canary/dev/beta
 		)
+	def presentInstallError() -> None:
+		import gui
+		import wx
+		import gettext
+		_ = gettext.gettext
+		# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+		# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
+		unsupportedWindowsReleaseTitle: str = _("Unsupported Windows release")
+		# #78: obtain a list of all supported releases (and builds) from supported builds list.
+		# Present builds above the current build if possible.
+		# For example, present Windows 11 builds if this is a build above Windows 10 22H2 (19045).
+		windowsReleasesList: list[str] = [
+			# Translators: an entry in supported Windows releases list (release (build)).
+			_("{release} ({build})").format(release=release, build=build)
+			for build, release in SUPPORTED_BUILDS.items() if build > currentBuild
+		]
+		windowsReleasesList.append("Windows Insider Preview")
+		unsupportedWindowsReleaseText: str = _(
+			# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+			# Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
+			# Supported releases list shows releases supported by the add-on.
+			"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
+			"Supported releases: {supportedReleasesList}."
+		).format(
+			releaseName=currentWinVer.releaseName,
+			build=currentBuild,
+			supportedReleasesList=", ".join(windowsReleasesList)
+		)
+		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
 	# Optimization: report success (return early) if running a supported release.
 	if canInstallWinAppsAddon():
 		return
-	import gui
-	import wx
-	import gettext
-	_ = gettext.gettext
-	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
-	unsupportedWindowsReleaseTitle: str = _("Unsupported Windows release")
-	# #78: obtain a list of all supported releases (and builds) from supported builds list.
-	# Present builds above the current build if possible.
-	# For example, present Windows 11 builds if this is a build above Windows 10 22H2 (19045).
-	windowsReleasesList: list[str] = [
-		# Translators: an entry in supported Windows releases list (release (build)).
-		_("{release} ({build})").format(release=release, build=build)
-		for build, release in SUPPORTED_BUILDS.items() if build > currentBuild
-	]
-	windowsReleasesList.append("Windows Insider Preview")
-	unsupportedWindowsReleaseText: str = _(
-		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
-		# Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
-		# Supported releases list shows releases supported by the add-on.
-		"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
-		"Supported releases: {supportedReleasesList}."
-	).format(
-		releaseName=currentWinVer.releaseName,
-		build=currentBuild,
-		supportedReleasesList=", ".join(windowsReleasesList)
-	)
-	gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
+	presentInstallError()
 	raise RuntimeError(f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentBuild})")
