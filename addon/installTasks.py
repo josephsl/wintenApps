@@ -71,8 +71,6 @@ def presentInstallError(currentWinVer: winVersion.WinVer) -> None:
 def onInstall() -> None:
 	currentWinVer = winVersion.getWinVer()
 	currentBuild: int = currentWinVer.build
-	# Optimization: report success (return early) if running a supported release.
-	if canInstallWinAppsAddon(currentWinVer):
-		return
-	presentInstallError(currentWinVer)
-	raise RuntimeError(f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentBuild})")
+	if not canInstallWinAppsAddon(currentWinVer):
+		presentInstallError(currentWinVer)
+		raise RuntimeError(f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentBuild})")
