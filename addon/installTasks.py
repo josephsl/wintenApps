@@ -28,14 +28,16 @@ SUPPORTED_BUILDS: dict[int, str] = {
 
 
 def onInstall() -> None:
-	import winVersion
-	currentWinVer = winVersion.getWinVer()
-	currentBuild: int = currentWinVer.build
+	def canInstallWinAppsAddon() -> bool:
+		import winVersion
+		currentWinVer = winVersion.getWinVer()
+		currentBuild: int = currentWinVer.build
+		return (
+			currentBuild in SUPPORTED_BUILDS  # General availability channel and Insider release preview
+			or currentBuild > max(SUPPORTED_BUILDS)  # Insider Preview canary/dev/beta
+		)
 	# Optimization: report success (return early) if running a supported release.
-	if (
-		currentBuild in SUPPORTED_BUILDS  # General availability channel and Insider release preview
-		or currentBuild > max(SUPPORTED_BUILDS)  # Insider Preview canary/dev/beta
-	):
+	if canInstallWinAppsAddon():
 		return
 	import gui
 	import wx
