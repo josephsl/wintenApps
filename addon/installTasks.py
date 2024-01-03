@@ -18,7 +18,7 @@ addonHandler.initTranslation()
 # Applicable to Home, Pro, Pro Education, Pro for Workstations (see aka.ms/WindowsTargetVersioninfo).
 # Windows 10 22H2 (19045) is supported until October 2025 as this is the final feature update.
 # For Insider Preview builds, only the latest build for each channel (canary/dev/beta) are supported.
-supportedBuilds: dict[int, str] = {
+SUPPORTED_BUILDS: dict[int, str] = {
 	# Windows 10
 	19045: "10 22H2",
 	# Windows 11
@@ -33,8 +33,8 @@ def onInstall() -> None:
 	currentBuild: int = currentWinVer.build
 	# Optimization: report success (return early) if running a supported release.
 	if (
-		currentBuild in supportedBuilds  # General availability channel and Insider release preview
-		or currentBuild > max(supportedBuilds)  # Insider Preview canary/dev/beta
+		currentBuild in SUPPORTED_BUILDS  # General availability channel and Insider release preview
+		or currentBuild > max(SUPPORTED_BUILDS)  # Insider Preview canary/dev/beta
 	):
 		return
 	import gui
@@ -50,7 +50,7 @@ def onInstall() -> None:
 	windowsReleasesList: list[str] = [
 		# Translators: an entry in supported Windows releases list (release (build)).
 		_("{release} ({build})").format(release=release, build=build)
-		for build, release in supportedBuilds.items() if build > currentBuild
+		for build, release in SUPPORTED_BUILDS.items() if build > currentBuild
 	]
 	windowsReleasesList.append("Windows Insider Preview")
 	unsupportedWindowsReleaseText: str = _(
