@@ -13,10 +13,10 @@ addonHandler.initTranslation()
 
 
 # Windows App Essentials requires supported Windows 10/11 feature updates.
-# Support duration is tied to consumer-level support (18 months for Windows 10, 2 years for Windows 11)
+# Support duration is tied to consumer-level support (Home, Pro, Pro Education, Pro for Workstations)
 # and the add-on may end support for a feature update prior to end of consumer support.
-# Applicable to Home, Pro, Pro Education, Pro for Workstations (see aka.ms/WindowsTargetVersioninfo).
-# Windows 10 22H2 (19045) is supported until October 2025 as this is the final feature update.
+# See aka.ms/WindowsTargetVersioninfo.
+# Windows 10 22H2 (19045) is supported until October 2025 as this is the final Windows 10 feature update.
 # For Insider Preview builds, only the latest build for each channel (canary/dev/beta) are supported.
 SUPPORTED_BUILDS: dict[int, str] = {
 	# Windows 10
