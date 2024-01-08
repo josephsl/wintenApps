@@ -99,8 +99,12 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		nextHandler()
 
 	def event_UIA_notification(
-			self, obj: NVDAObject, nextHandler: Callable[[], None],
-			displayString: Optional[str] = None, activityId: Optional[str] = None, **kwargs
+			self,
+			obj: NVDAObject,
+			nextHandler: Callable[[], None],
+			displayString: Optional[str] = None,
+			activityId: Optional[str] = None,
+			**kwargs
 	):
 		# Windows 11 uses modern keyboard interface to display Suggested Actions such as Skype calls
 		# when data such as phone number is copied to the clipboard.
