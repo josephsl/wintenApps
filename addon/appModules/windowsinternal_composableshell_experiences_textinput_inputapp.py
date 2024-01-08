@@ -38,9 +38,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		super().event_UIA_elementSelected(obj, nextHandler)
 
 	# Register modern keyboard interface elements with local event handler group.
-	def _windowOpenEventInternalEventHandlerGroupRegistration(
-			self, firstChild: NVDAObject, firstChildAutomationId: str
-	) -> None:
+	def _windowOpenEventInternalEventHandlerGroupRegistration(self, firstChild: NVDAObject) -> None:
 		# Gather elements to be registered inside a list so they can be registered in one go.
 		localEventHandlerElements = [firstChild]
 		firstChildAutomationId = firstChild.UIAAutomationId
@@ -84,7 +82,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			# Do not call the below function if UIA event registration is set to global.
 			and UIAHandler.handler.localEventHandlerGroup is not None
 		):
-			self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild, firstChild.UIAAutomationId)
+			self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
