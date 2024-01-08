@@ -5,7 +5,7 @@
 
 # The add-on version of this module will extend the one that comes with NVDA Core.
 
-from typing import Callable
+from typing import Callable, Optional
 # Yes, this app module is powered by built-in modern keyboard (TextInputHost) app module
 # (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
@@ -98,7 +98,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			return
 		nextHandler()
 
-	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
+	def event_UIA_notification(
+			self, obj: NVDAObject, nextHandler: Callable[[], None],
+			displayString: Optional[str] = None, activityId: Optional[str] = None, **kwargs
+	):
 		# Windows 11 uses modern keyboard interface to display Suggested Actions such as Skype calls
 		# when data such as phone number is copied to the clipboard.
 		# Because keyboard interaction is not possible, just report the top suggested action.
