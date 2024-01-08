@@ -86,15 +86,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			and UIAHandler.handler.localEventHandlerGroup is not None
 		):
 			self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild, firstChildAutomationId)
-		# Windows 11 uses modern keyboard interface to display Suggested Actions such as Skype calls
-		# when data such as phone number is copied to the clipboard.
-		# Because keyboard interaction is not possible, just report suggested actions.
-		if firstChildAutomationId == "Windows.Shell.InputApp.SmartActionsUX":
-			import ui
-			suggestedActions = [
-				suggestedAction.name for suggestedAction in firstChild.children if suggestedAction.name
-			]
-			ui.message("; ".join(suggestedActions))
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
@@ -108,5 +99,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		nextHandler()
 
 	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
+		# Windows 11 uses modern keyboard interface to display Suggested Actions such as Skype calls
+		# when data such as phone number is copied to the clipboard.
+		# Because keyboard interaction is not possible, just report the top suggested action.
 		import ui
+		if activityId == "Windows.Shell.InputApp.SmartActions.Popup":
+			displayString = obj.name
 		ui.message(displayString)
