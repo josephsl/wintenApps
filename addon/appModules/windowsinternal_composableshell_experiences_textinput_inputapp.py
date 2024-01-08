@@ -106,3 +106,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 			return
 		nextHandler()
+
+	def event_UIA_notification(self, obj, nextHandler, displayString=None, activityId=None, **kwargs):
+		import ui
+		ui.message(displayString)
