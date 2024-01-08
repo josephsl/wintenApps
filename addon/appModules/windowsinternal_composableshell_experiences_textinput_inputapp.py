@@ -45,11 +45,10 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		localEventHandlerElements = [firstChild]
 		# For dictation, add elements manually so name change event can be handled.
 		# Object hierarchy is different in voice typing (Windows 11).
-		if firstChildAutomationId in ("DictationMicrophoneButton", "FloatyTip"):
-			if firstChildAutomationId == "DictationMicrophoneButton":  # Windows 10
-				localEventHandlerElements += firstChild.parent.children[1:]
-			else:  # Windows 11
-				localEventHandlerElements += firstChild.firstChild.children
+		if firstChildAutomationId == "DictationMicrophoneButton":  # Windows 10
+			localEventHandlerElements += firstChild.parent.children[1:]
+		elif firstChildAutomationId == "FloatyTip":  # Windows 11
+			localEventHandlerElements += firstChild.firstChild.children
 		# Don't forget to add actual candidate item element so name change event can be handled
 		# (mostly for hardware keyboard input suggestions).
 		if isinstance(firstChild, ImeCandidateUI):
