@@ -43,6 +43,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	) -> None:
 		# Gather elements to be registered inside a list so they can be registered in one go.
 		localEventHandlerElements = [firstChild]
+		firstChildAutomationId = firstChild.UIAAutomationId
 		# For dictation, add elements manually so name change event can be handled.
 		# Object hierarchy is different in voice typing (Windows 11).
 		if firstChildAutomationId == "DictationMicrophoneButton":  # Windows 10
