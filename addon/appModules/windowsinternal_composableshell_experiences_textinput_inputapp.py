@@ -76,16 +76,15 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Sometimes window open event is raised when the input panel closes.
 		if firstChild is None:
 			return
-		firstChildAutomationId = firstChild.UIAAutomationId
 		# Originally part of this method, split into an internal function to reduce complexity.
 		# However, in Windows 11, combined emoji panel and clipboard history moves system focus to itself.
 		# Therefore there is no need to add UIA elements to local event handler group.
 		if (
-			firstChildAutomationId != "Windows.Shell.InputApp.FloatingSuggestionUI"
+			firstChild.UIAAutomationId != "Windows.Shell.InputApp.FloatingSuggestionUI"
 			# Do not call the below function if UIA event registration is set to global.
 			and UIAHandler.handler.localEventHandlerGroup is not None
 		):
-			self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild, firstChildAutomationId)
+			self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild, firstChild.UIAAutomationId)
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
