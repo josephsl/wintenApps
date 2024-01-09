@@ -32,7 +32,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 This includes emoji panel, clipboard history, touch keyboard, dictation/voice typing, hardware input suggestions, suggested actions, and modern input method editors for certain languages across Windows 10 and 11. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher. When pasting from clipboard history in Windows 10, press Space key instead of Enter key to paste the selected item.
 
-* In Windows 11, NVDA will announce suggested actions when compatible data such as phone numbers is copied to the clipboard.
+* In Windows 11, NVDA will announce suggested actions when compatible data such as phone numbers is copied to the clipboard. This is now part of NVDA 2024.2.
 
 ## Settings
 
