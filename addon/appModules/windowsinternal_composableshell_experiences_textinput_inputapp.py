@@ -105,6 +105,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# NVDA Core issue 16009: Windows 11 uses modern keyboard interface to display Suggested Actions
 		# such as Skype calls when data such as phone number is copied to the clipboard.
 		# Because keyboard interaction is not possible, just report the top suggested action.
+		# Resolved in NVDA 2024.2.
 		import ui
 		if activityId == "Windows.Shell.InputApp.SmartActions.Popup":
 			displayString = obj.name
