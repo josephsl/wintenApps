@@ -35,7 +35,7 @@ def canInstallWinAppsAddon(currentWinVer: winVersion.WinVersion) -> bool:
 	)
 
 
-def presentInstallError(currentWinVer: winVersion.WinVer) -> None:
+def presentInstallError(currentWinVer: winVersion.WinVersion) -> None:
 	import gui
 	import wx
 	import gettext
