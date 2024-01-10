@@ -41,12 +41,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def _windowOpenEventInternalEventHandlerGroupRegistration(self, firstChild: NVDAObject) -> None:
 		# Gather elements to be registered inside a list so they can be registered in one go.
 		localEventHandlerElements = [firstChild]
-		# Deprecated: for dictation, add elements manually so name change event can be handled.
-		# Object hierarchy is different in voice typing (Windows 11).
-		if firstChild.UIAAutomationId == "DictationMicrophoneButton":  # Windows 10
-			localEventHandlerElements += firstChild.parent.children[1:]
-		elif firstChild.UIAAutomationId == "FloatyTip":  # Windows 11
-			localEventHandlerElements += firstChild.firstChild.children
 		# Don't forget to add actual candidate item element so name change event can be handled
 		# (mostly for hardware keyboard input suggestions).
 		if isinstance(firstChild, ImeCandidateUI):
