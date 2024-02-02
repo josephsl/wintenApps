@@ -24,11 +24,6 @@ SUPPORTED_RELEASES: list[winVersion.WinVersion] = [
 	winVersion.WIN11_22H2,
 	winVersion.WIN11_23H2,
 ]
-SUPPORTED_BUILDS: dict[int, str] = {
-	19045: "10 22H2",
-	22621: "11 22H2",
-	22631: "11 23H2",
-}
 
 
 def canInstallWinAppsAddon(currentWinVer: winVersion.WinVersion) -> bool:
