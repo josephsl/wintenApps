@@ -33,8 +33,8 @@ SUPPORTED_BUILDS: dict[int, str] = {
 
 def canInstallWinAppsAddon(currentWinVer: winVersion.WinVersion) -> bool:
 	return (
-		currentWinVer.build in SUPPORTED_BUILDS  # General availability channel and Insider release preview
-		or currentWinVer.build > max(SUPPORTED_BUILDS)  # Insider Preview canary/dev/beta
+		currentWinVer in SUPPORTED_RELEASES  # General availability channel and Insider release preview
+		or currentWinVer > max(SUPPORTED_RELEASES)  # Insider Preview canary/dev/beta
 	)
 
 
