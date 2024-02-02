@@ -19,6 +19,11 @@ addonHandler.initTranslation()
 # See aka.ms/WindowsTargetVersioninfo.
 # Windows 10 22H2 (19045) is supported until October 2025 as this is the final Windows 10 feature update.
 # For Insider Preview builds, only the latest build for each channel (canary/dev/beta) are supported.
+SUPPORTED_RELEASES: list[winVersion.WinVersion] = [
+	winVersion.WIN10_22H2,
+	winVersion.WIN11_22H2,
+	winVersion.WIN11_23H2,
+]
 SUPPORTED_BUILDS: dict[int, str] = {
 	19045: "10 22H2",
 	22621: "11 22H2",
