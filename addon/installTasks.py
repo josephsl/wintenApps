@@ -46,12 +46,10 @@ def presentInstallError(currentWinVer: winVersion.WinVersion) -> None:
 		# #78: obtain a list of all supported releases (and builds) from supported releases list.
 		# Present releases above the current release if possible.
 		# For example, present Windows 11 releases if this is a release above Windows 10 22H2 (19045).
-		windowsReleasesList: list[str] = [
-			"{release} ({build})".format(release=entry.releaseName.partition("Windows ")[-1], build=entry.build)
-			for entry in SUPPORTED_RELEASES if entry > currentWinVer
+		windowsReleasesList: list[winVersion.WinVersion] = [
+			entry for entry in SUPPORTED_RELEASES if entry > currentWinVer
 		]
-		windowsReleasesList.append("Windows Insider Preview")
-		minimumWinVer = winVersion.WIN10_22H2
+		minimumWinVer = windowsReleasesList[0]
 		unsupportedWindowsReleaseText: str = _(
 			# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
 			# Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
