@@ -41,25 +41,47 @@ def presentInstallError(currentWinVer: winVersion.WinVersion) -> None:
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle: str = _("Unsupported Windows release")
-	# #78: obtain a list of all supported releases (and builds) from supported releases list.
-	# Present releases above the current release if possible.
-	# For example, present Windows 11 releases if this is a release above Windows 10 22H2 (19045).
-	windowsReleasesList: list[str] = [
-		"{release} ({build})".format(release=entry.releaseName.partition("Windows ")[-1], build=entry.build)
-		for entry in SUPPORTED_RELEASES if entry > currentWinVer
-	]
-	windowsReleasesList.append("Windows Insider Preview")
-	unsupportedWindowsReleaseText: str = _(
-		# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
-		# Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
-		# Supported releases list shows releases supported by the add-on.
-		"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
-		"Supported releases: {supportedReleasesList}."
-	).format(
-		releaseName=currentWinVer.releaseName,
-		build=currentWinVer.build,
-		supportedReleasesList=", ".join(windowsReleasesList)
-	)
+	refinedInstallationMessage: bool = False
+	if refinedInstallationMessage:
+		# #78: obtain a list of all supported releases (and builds) from supported releases list.
+		# Present releases above the current release if possible.
+		# For example, present Windows 11 releases if this is a release above Windows 10 22H2 (19045).
+		windowsReleasesList: list[str] = [
+			"{release} ({build})".format(release=entry.releaseName.partition("Windows ")[-1], build=entry.build)
+			for entry in SUPPORTED_RELEASES if entry > currentWinVer
+		]
+		windowsReleasesList.append("Windows Insider Preview")
+		unsupportedWindowsReleaseText: str = _(
+			# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+			# Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
+			# Supported releases list shows releases supported by the add-on.
+			"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
+			"Supported releases: {supportedReleasesList}."
+		).format(
+			releaseName=currentWinVer.releaseName,
+			build=currentWinVer.build,
+			supportedReleasesList=", ".join(windowsReleasesList)
+		)
+	else:
+		# #78: obtain a list of all supported releases (and builds) from supported releases list.
+		# Present releases above the current release if possible.
+		# For example, present Windows 11 releases if this is a release above Windows 10 22H2 (19045).
+		windowsReleasesList: list[str] = [
+			"{release} ({build})".format(release=entry.releaseName.partition("Windows ")[-1], build=entry.build)
+			for entry in SUPPORTED_RELEASES if entry > currentWinVer
+		]
+		windowsReleasesList.append("Windows Insider Preview")
+		unsupportedWindowsReleaseText: str = _(
+			# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+			# Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
+			# Supported releases list shows releases supported by the add-on.
+			"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
+			"Supported releases: {supportedReleasesList}."
+		).format(
+			releaseName=currentWinVer.releaseName,
+			build=currentWinVer.build,
+			supportedReleasesList=", ".join(windowsReleasesList)
+		)
 	gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
 
 
