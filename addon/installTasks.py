@@ -41,7 +41,7 @@ def presentInstallError(currentWinVer: winVersion.WinVersion) -> None:
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
 	unsupportedWindowsReleaseTitle: str = _("Unsupported Windows release")
-	refinedInstallationMessage: bool = False
+	refinedInstallationMessage: bool = True
 	if refinedInstallationMessage:
 		# #78: obtain a list of all supported releases (and builds) from supported releases list.
 		# Present releases above the current release if possible.
