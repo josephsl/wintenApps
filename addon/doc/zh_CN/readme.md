@@ -4,7 +4,7 @@
 * 下载[稳定版][1]
 * 下载[测试版][2]
 * 下载[开发板][3]
-* NVDA 兼容性：2023.2 及更高版本
+* NVDA 兼容性：2023.3.3 及更高版本
 
 注意：此插件最初称为 Windows 10 应用增强，在 2021 年更名为 Windows 应用增强，以支持 Windows 10 和 Windows
 11 等后续版本。此插件的部分内容仍将引用原始插件名称。
@@ -13,14 +13,17 @@
 
 包括以下应用程序的支持模块（有关所包含内容的详细信息，请参阅每个应用程序部分）：
 
-* 现代键盘（表情符号面板/触摸键盘/听写/语音输入/硬件输入建议/剪贴板历史/建议操作/现代输入法编辑器）
+* 系统键盘
 * 设置（Windows + I系统设置）
 
 注意:
 
 * 此插件需要 Windows 10 22H2（内部版本 19045）、11 22H2（内部版本 22621）或更高版本。
-* 功能更新支持期限与消费者支持期限（家庭版、专业版、专业教育版、工作站专业版）相关联，并且插件可能会在消费者支持结束之前终止对功能更新的支持。有关更多信息和支持日期，请参阅
-  aka.ms/WindowsTargetVersioninfo。
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  <https://aka.ms/WindowsTargetVersioninfo> for more information and support
+  dates.
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
 * 并非支持所有的 Windows Insider Preview 版本，更偏向于支持由开发或金丝雀通道引入 Windows Insider 的功能。
 * The add-on may emulate changes included in Insider Preview builds which
@@ -40,7 +43,9 @@ Windows11的某些语言的现代输入法编辑器。查看表情符号时，�
 Unicode 数据（表情符号）”复选框，并将符号级别设置为“少数”或更高。在 Windows 10
 中从云剪贴板历史记录粘贴时，请按空格键而非回车键来粘贴所选项目。
 
-* 在 Windows 11 22H2 及更高版本中，当电话号码等兼容的数据复制到剪贴板时，NVDA 会读出建议的操作。
+* In Windows 11, NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard. This is now part of NVDA
+  2024.2.
 
 ## 设置
 

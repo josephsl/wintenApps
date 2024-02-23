@@ -4,7 +4,7 @@
 * Pobierz [wersja stabilna][1]
 * Pobierz [wersja beta][2]
 * Pobierz [wersja rozwojowa][3]
-* Zgodność z NVDA: 2023.2 i nowsze
+* Zgodność z NVDA: 2023.3.3 i nowsze
 
 Uwaga: Pierwotniea nazwa tego dodatku była Windows 10 App Essentials, a
 potem została zmieniona na Windows App Essentials w 2021 roku, aby
@@ -19,22 +19,18 @@ Dołączone są następujące moduły aplikacji lub moduły pomocy technicznej d
 niektórych aplikacji (szczegółowe informacje na temat tego, co jest
 dołączone, zobacz każdą sekcję aplikacji):
 
-* Nowoczesna klawiatura (panel emoji/klawiatura dotykowa/dyktowanie/pisanie
-  głosowe/sugestie dotyczące wprowadzania sprzętu/historia
-  schowka/sugerowane akcje/nowoczesne edytory metod wprowadzania)
+* Klawiatura nowoczesna
 * Ustawienia (ustawienia systemowe, Windows+I)
 
 Notatki:
 
 * Ten dodatek wymaga systemu Windows 10 22H2 (kompilacja 19045), 11 22H2
   (kompilacja 22621) lub nowszych wersji.
-* Czas trwania pomocy technicznej dotyczącej aktualizacji funkcji jest
-  powiązany z czasem trwania pomocy technicznej dla klientów (wersje Home,
-  Pro, Pro Education, Pro dla stacji roboczych), a dodatek może zakończyć
-  świadczenie pomocy technicznej dla aktualizacji funkcji przed zakończeniem
-  świadczenia pomocy technicznej dla klientów indywidualnych. Zobacz
-  aka.ms/WindowsTargetVersioninfo, aby uzyskać więcej informacji i daty
-  pomocy technicznej.
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  <https://aka.ms/WindowsTargetVersioninfo> for more information and support
+  dates.
 * Chociaż instalacja jest możliwa, ten dodatek nie obsługuje wersji Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
 * Nie wszystkie funkcje kompilacji Windows Insider Preview będą obsługiwane,
@@ -67,9 +63,9 @@ poziom symbolu na "niektóre" lub wyższe. Podczas wklejania z historii
 schowka w systemie Windows 10 naciśnij spacji zamiast Enter, aby wkleić
 wybrany element.
 
-* W systemie Windows 11 22H2 i nowszych NVDA poinformuje o sugerowanych
-  działaniach, gdy kompatybilne dane, takie jak numery telefonów, zostaną
-  skopiowane do schowka.
+* In Windows 11, NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard. This is now part of NVDA
+  2024.2.
 
 ## Ustawienia
 

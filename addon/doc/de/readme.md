@@ -4,7 +4,7 @@
 * [Stabile Version herunterladen][1]
 * [Beta-Version herunterladen][2]
 * [Entwicklerversion herunterladen][3]
-* NVDA-Kompatibilität: 2023.2 und neuer
+* NVDA-Kompatibilität: 2023.3.3 und neuer
 
 Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
 2021 in Windows App Essentials umbenannt, um Windows 10 und zukünftige
@@ -18,21 +18,18 @@ Steuerelemente in Windows 10 und neuer.
 Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
 Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
-* Moderne Tastatur
-  (Emoji-Panel/Touch-Tastatur/Diktat/Sprachsteuerung/Hardware-Eingabevorschläge/Zwischenablage-Verlauf/Vorgeschlagene
-  Aktionen/Editoren für moderne Eingabemethoden)
+* Moderne virtuelle Tastaturen
 * Einstellungen (System-Einstellungen, Windows+I)
 
 Hinweise:
 
 * Diese NVDA-Erweiterung benötigt Windows 10 Version 22H2 (Build 19045),
   Windows 11 Version 22H2 (Build 22621) oder neuere Versionen.
-* Die Dauer der Unterstützung für Feature-Updates ist an die Dauer des
-  Consumer-Supports (Home, Pro, Pro Education, Pro for Workstations
-  Editionen) gebunden und die Erweiterung kann den Support für ein
-  Feature-Update vor dem Ende des Consumer-Supports beenden. Unter
-  aka.ms/WindowsTargetVersioninfo finden Sie weitere Informationen und
-  Support-Informationen dazu.
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  <https://aka.ms/WindowsTargetVersioninfo> for more information and support
+  dates.
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
@@ -69,9 +66,9 @@ Sie die Symbolebene auf "Einige" oder höher. Drücken Sie beim Einfügen aus
 dem Verlauf der Zwischenablage in Windows 10 die Leertaste anstelle der
 Eingabetaste, um das ausgewählte Element einzufügen.
 
-* In Windows 11 Version 22H2 und neuer zeigt NVDA vorgeschlagene Aktionen
-  an, wenn kompatible Daten wie Telefonnummern in die Zwischenablage kopiert
-  werden.
+* In Windows 11, NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard. This is now part of NVDA
+  2024.2.
 
 ## Einstellungen
 

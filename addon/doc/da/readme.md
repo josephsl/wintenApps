@@ -4,7 +4,7 @@
 * Download [stabil version][1]
 * Download [betaversion][2]
 * Download [udviklingsversion][3]
-* NVDA-kompatibilitet: 2023.2 og nyere
+* NVDA-kompatibilitet: 2023.3.3 og nyere
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
 til Windows App Essentials i 2021 for at understøtte Windows 10 og
@@ -17,20 +17,18 @@ samt forbedringer og rettelser for visse windows 10 kontrolelementer.
 Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
 hver appsektion for detaljer om, hvad der er inkluderet):
 
-* Moderne tastatur (Emoji-panel, berøringstastatur, diktering,
-  stemmeskrivning, forslag til hardwareinput, udklipshistorik og Editor til
-  inputmetode)
+* Moderne tastatur
 * Indstillinger (systemindstillinger, Windows+I)
 
 Bemærkninger:
 
 * Denne tilføjelse kræver Windows 10 22H2 (build 19045), 11 22H2 (build
   22621) eller nyere udgivelser.
-* Varigheden af understøttelse af funktionsopdateringer er bundet til
-  varigheden af forbrugersupport (Home, Pro, Pro Education, Pro for
-  Workstations-udgaver), og tilføjelsen kan afslutte understøttelsen af en
-  funktionsopdatering, før forbrugersupporten ophører. Se
-  aka.ms/WindowsTargetVersioninfo for mere information og supportdatoer.
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  <https://aka.ms/WindowsTargetVersioninfo> for more information and support
+  dates.
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
@@ -64,8 +62,9 @@ taleindstillinger og indstille tegnsætningsniveauet til "nogle" eller
 højere. Når du skal indstille fra historikken i Windows 10, skal du bruge
 mellemrumstasten i stedet for enter.
 
-* I Windows 11 22H2 og senere vil NVDA annoncere foreslåede handlinger, når
-  kompatible data såsom telefonnumre kopieres til udklipsholderen.
+* In Windows 11, NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard. This is now part of NVDA
+  2024.2.
 
 ## Indstillinger
 

@@ -4,7 +4,7 @@
 * Lataa [vakaa versio][1]
 * Lataa [beetaversio][2]
 * Lataa [kehitysversio][3]
-* Yhteensopivuus: NVDA 2023.2 ja uudemmat
+* Yhteensopivuus: NVDA 2023.3.3 ja uudemmat
 
 Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
 nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows
@@ -19,20 +19,17 @@ Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 * Moderni näppäimistö
-  (emojipaneeli/kosketusnäppäimistö/sanelu/puhekirjoitus/fyysisen
-  näppäimistösyötteen ehdotukset/leikepöydän historia/ehdotetut
-  toiminnot/modernin syöttömenetelmän muokkaimet)
 * Asetukset (järjestelmän asetukset, Windows+I)
 
 Huomautukset:
 
 * Tämä lisäosa edellyttää Windows 10:n versiota 22H2 (koontiversio 19045),
   11:n versiota 22H2 (koontiversio 22621) tai uudempaa.
-* Ominaisuuspäivityksen tuen kesto on sidottu kuluttajatuen kestoon (Home,
-  Pro, Pro Education, Pro for Workstations -versiot), ja lisäosa saattaa
-  lopettaa tuen ominaisuuspäivitykselle jo ennen kuluttajatuen
+* Ominaisuuspäivityksen tuen kesto on sidoksissa kuluttajatuen kestoon
+  (Home, Pro, Pro Education, Pro for Workstations -versiot), ja lisäosa
+  saattaa lopettaa tuen ominaisuuspäivitykselle jo ennen kuluttajatuen
   päättymistä. Katso lisätietoja ja tukipäivämäärät osoitteesta
-  aka.ms/WindowsTargetVersioninfo.
+  <https://aka.ms/WindowsTargetVersioninfo>.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
 * Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
@@ -64,8 +61,9 @@ parhaan kokemuksen saamiseksi, ja aseta symbolitasoksi "jotain" tai
 korkeampi. Kun liität leikepöydän historiasta, liitä valittu kohde
 painamalla Välilyönti-näppäintä Enterin sijaan.
 
-* NVDA ilmoittaa ehdotetut toiminnot Windows 11 22H2:ssa ja uudemmissa, kun
-  leikepöydälle kopioidaan yhteensopivaa dataa, kuten puhelinnumeroita.
+* NVDA ilmoittaa ehdotetut toiminnot Windows 11:ssä, kun leikepöydälle
+  kopioidaan yhteensopivaa dataa, kuten puhelinnumeroita. Tämä sisältyy NVDA
+  2024.2:een.
 
 ## Asetukset
 

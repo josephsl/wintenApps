@@ -4,7 +4,7 @@
 * Télécharger [version stable][1]
 * Télécharger [version béta][2]
 * Télécharger [version de développement][3]
-* Compatibilité NVDA : 2023.2 et ultérieure
+* Compatibilité NVDA : 2023.3.3 et ultérieure
 
 Remarque : à l'origine appelé Windows 10 App Essentials, elle a été renommée
 Windows App Essentials en 2021 pour prendre en charge Windows 10 et les
@@ -19,9 +19,7 @@ Les app modules suivants ou la prise en charge des modules pour certaines
 apps sont inclus (voir chaque section app pour plus de détails sur ce qui
 est inclus) :
 
-* Clavier moderne (panneau des emojis/clavier tactile/dictée/saisie
-  vocale/suggestions de saisie matérielle/historique du
-  presse-papiers/éditeurs de méthodes de saisie modernes)
+* Clavier moderne
 * Paramètres (paramètres système, Windows+I)
 
 Notes:
@@ -32,7 +30,7 @@ Notes:
   du support des consommateurs (Home, Pro, Pro Education, Pro for
   Workstations Editions) et l'extension peut mettre fin à la prise en charge
   d'une mise à jour des fonctionnalités avant la fin du support des
-  consommateurs. Voir aka.ms/WindowsTargetVersioninfo pour plus
+  consommateurs. Voir <https://aka.ms/WindowsTargetVersioninfo> pour plus
   d'informations et les dates de support.
 * Bien que l'installation soit possible, cette extension ne prend pas en
   charge les versions Windows Enterprise LTSC (Long-Term Servicing Channel)
@@ -71,9 +69,9 @@ ou plus. Lors du collage à partir de l'historique du presse-papiers dans
 Windows 10, appuyez sur la touche Espace au lieu de la touche Entrée pour
 coller l'élément sélectionné.
 
-* Sous Windows 11 22H2 et versions ultérieures, NVDA annoncera des actions
-  suggérées lorsque des données compatibles telles que des numéros de
-  téléphone sont copiées dans le presse-papiers.
+* Sous Windows 11, NVDA annoncera des actions suggérées lorsque des données
+  compatibles telles que des numéros de téléphone sont copiées dans le
+  presse-papiers. Cela fait désormais partie de NVDA 2024.2.
 
 ## Paramètres
 

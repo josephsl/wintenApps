@@ -4,7 +4,7 @@
 * Baixar [versão estável][1]
 * Descarregar [versão beta][2]
 * Baixar a [versão de desenvolvimento][3]
-* Compatibilidade com NVDA: 2023.2 e posterior
+* Compatibilidade com NVDA: 2023.3.3 e posterior
 
 Nota: Originalmente chamado Windows 10 App Essentials, foi renomeado para
 Windows App Essentials em 2021 para suportar o Windows 10 e futuros
@@ -19,21 +19,18 @@ Os seguintes módulos de aplicações ou módulos de suporte para algumas
 aplicações estão incluídos (consulte a secção de cada aplicação para obter
 detalhes sobre o que está incluído):
 
-* Teclado moderno (painel de emojis/teclado táctil/ditado/digitação por
-  voz/sugestões de entrada de hardware/histórico do clipboard/acções
-  sugeridas/editores de métodos de entrada modernos)
+* Teclado moderno
 * Configurações (configurações do sistema, Windows + I)
 
 Notas:
 
 * Este add-on requer o Windows 10 22H2 (build 19045), 11 22H2 (build 22621)
   ou versões posteriores.
-* A duração do suporte da actualização de funcionalidades está associada à
-  duração do suporte ao consumidor (edições Home, Pro, Pro Education, Pro
-  para Estações de Trabalho) e o suplemento pode terminar o suporte para uma
-  actualização de funcionalidades antes do fim do suporte ao
-  consumidor. Consulte aka.ms/WindowsTargetVersioninfo para obter mais
-  informações e datas de suporte.
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  <https://aka.ms/WindowsTargetVersioninfo> for more information and support
+  dates.
 * Embora a instalação seja possível, este suplemento não suporta Windows
   Enterprise LTSC (Long-Term Servicing Channel) e versões Windows Server.
 * Nem todas as funcionalidades das compilações do Windows Insider Preview
@@ -66,9 +63,9 @@ NVDA e defina o nível de símbolo para "alguns" ou superior. Ao colar do
 histórico da área de transferência no Windows 10, prima a tecla Espaço em
 vez da tecla Enter para colar o item seleccionado.
 
-* No Windows 11 22H2 e posterior, o NVDA anunciará acções sugeridas quando
-  dados compatíveis, como números de telefone, forem copiados para a área de
-  transferência.
+* In Windows 11, NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard. This is now part of NVDA
+  2024.2.
 
 ## Configurações
 

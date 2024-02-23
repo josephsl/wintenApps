@@ -4,7 +4,7 @@
 * Descargar [versión estable][1]
 * Descargar [versión beta][2]
 * Descargar [versión de desarrollo][3]
-* Compatibilidad con NVDA: de 2023.2 en adelante
+* Compatibilidad con NVDA: de 2023.3.3 en adelante
 
 Nota: originalmente llamado Windows 10 App Essentials, se renombró a Windows
 App Essentials en 2021 para soportar Windows 10 y versiones futuras, como
@@ -19,9 +19,7 @@ Se incluyen Los siguientes app modules o el apoyo para módulos para algunas
 aplicaciones (consulta cada sección para la aplicación para detalles sobre
 qué se incluye):
 
-* Teclado Moderno (panel de emojis / teclado táctil / dictado / escritura
-  por voz / sugerencias de entrada hardware / historial del portapapeles /
-  acciones sugeridas / editores modernos de método de entrada)
+* Teclado Moderno
 * Opciones (opciones de sistema, Windows+I)
 
 Notas:
@@ -32,8 +30,8 @@ Notas:
   vinculada a la duración del soporte al cliente (ediciones Home, Pro, Pro
   Education, Pro for Workstations), y el complemento podría finalizar el
   soporte para una actualización de características antes del fin del
-  soporte al cliente. Consulta aka.ms/WindowsTargetVersioninfo para más
-  información y fechas de soporte.
+  soporte al cliente. Consulta <https://aka.ms/WindowsTargetVersioninfo>
+  para más información y fechas de soporte.
 * Aunque la instalación es posible, este complemento no soporta Windows
   Enterprise LTSC (canal de servicio a largo plazo) ni las versiones de
   Windows Server.
@@ -68,9 +66,9 @@ configura el nivel de símbolos en "alguno" o más alto. Al pegar desde el
 historial del portapapeles en Windows 10, pulsa la barra espaciadora en vez
 de intro para pegar el elemento seleccionado.
 
-* En Windows 11 22H2 y posterior, NVDA anunciará las acciones sugeridas
-  cuando se copien al portapapeles datos compatibles, como números de
-  teléfono.
+* En Windows 11, NVDA anunciará las acciones sugeridas cuando se copien al
+  portapapeles datos compatibles, como números de teléfono. Esto ahora forma
+  parte de NVDA 2024.2.
 
 ## Opciones
 

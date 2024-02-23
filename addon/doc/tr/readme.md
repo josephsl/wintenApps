@@ -4,7 +4,7 @@
 * [Kararlı sürümü indirin][1]
 * [Beta sürümünü indirin][2]
 * [Geliştirme sürümünü indirin][3]
-* NVDA uyumluluğu: 2023.2 ve sonrası
+* NVDA uyumluluğu: 2023.3.3 ve sonrası
 
 Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
 adlandırılırken, Windows 10 ve Windows 11 gibi gelecekteki windows
@@ -20,9 +20,7 @@ Bazı uygulamalar için aşağıdaki uygulama veya destek modülleri  mevcuttur
 (nelerin dahil olduğuyla ilgili ayrıntılar için her bir uygulama bölümüne
 bakın):
 
-* Modern klavye (emoji paneli/dokunmatik klavye/dikte/sesle yazma/donanım
-  giriş önerileri/pano geçmişi/Önerilen Eylemler/modern giriş yöntemi
-  düzenleyicileri)
+* Modern klavye
 * Ayarlar (sistem ayarları, Windows+I)
 
 Notlar:
@@ -33,7 +31,7 @@ Notlar:
   Education, Pro for Workstations sürümleri) bağlıdır ve eklenti, tüketici
   desteği sona ermeden önce özellik güncellemesi desteğini
   sonlandırabilir. Daha fazla bilgi ve destek tarihleri ​​için
-  aka.ms/WindowsTargetVersioninfo adresine bakın.
+  <https://aka.ms/WindowsTargetVersioninfo> adresine bakın.
 * Ne kadar yüklenebilse de, bu eklenti Windows Enterprise LTSC (Uzun Süreli
   Hizmet Kanalı) ve Windows Server sürümlerini desteklemez.
 * Windows Insider Önizleme yapılarındaki tüm özellikler desteklenmeyecek,
@@ -66,8 +64,9 @@ etkinleştirin: NVDA'nın konuşma ayarları ve sembol seviyesini "bazı" veya
 daha yükseğe ayarlayın. Windows 10'da pano geçmişinden yapıştırırken, seçili
 öğeyi yapıştırmak için Enter tuşu yerine Boşluk Çubuğuna tuşuna basın.
 
-* Windows 11 22H2 ve sonrasında, telefon numaraları gibi uyumlu veriler
-  panoya kopyalandığında NVDA önerilen eylemleri duyurur.
+* Windows 11'de, telefon numaraları gibi uyumlu veriler panoya
+  kopyalandığında NVDA önerilen eylemleri duyuracaktır. Bu artık NVDA
+  2024.2'nin bir parçasıdır.
 
 ## Ayarlar
 

@@ -4,7 +4,7 @@
 * Baixe a [versão estável][1]
 * Download [beta version][2]
 * Baixe a [versão em desenvolvimento][3]
-* Compatibilidade com NVDA: 2023.2 e posteriores
+* Compatibilidade com NVDA: 2023.3.3 e posteriores
 
 Nota: Originalmente chamado de Windows 10 App Essentials, foi renomeado para
 Windows App Essentials em 2021 para oferecer suporte ao Windows 10 e versões
@@ -19,9 +19,7 @@ Os seguintes módulos de aplicativos ou módulos de suporte para alguns
 aplicativos estão incluídos (consulte a seção de cada aplicativo para obter
 detalhes sobre o que está incluso):
 
-* Modern keyboard (emoji panel/touch keyboard/dictation/voice
-  typing/hardware input suggestions/clipboard history/Suggested
-  Actions/modern input method editors)
+* Teclado moderno
 * Configurações (configurações do sistema, Windows+I)
 
 Notas:
@@ -31,7 +29,8 @@ Notas:
 * Feature update support duration is tied to consumer support duration
   (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
   may end support for a feature update prior to end of consumer support. See
-  aka.ms/WindowsTargetVersioninfo for more information and support dates.
+  <https://aka.ms/WindowsTargetVersioninfo> for more information and support
+  dates.
 * Embora a instalação seja possível, este complemento não oferece suporte
   para Windows Enterprise LTSC (Long-Term Servicing Channel — Canal de
   Manutenção de Longo Prazo) e versões do Windows Server.
@@ -62,8 +61,9 @@ setting from NVDA's speech settings and set symbol level to "some" or
 higher. When pasting from clipboard history in Windows 10, press Space key
 instead of Enter key to paste the selected item.
 
-* In Windows 11 22H2 and later, NVDA will announce suggested actions when
-  compatible data such as phone numbers is copied to the clipboard.
+* In Windows 11, NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard. This is now part of NVDA
+  2024.2.
 
 ## Configurações
 

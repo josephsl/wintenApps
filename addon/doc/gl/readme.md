@@ -4,7 +4,7 @@
 * Descargar [versión estable][1]
 * Download [beta version][2]
 * Descargar [versión de desenvolvemento][3]
-* Compatibilidade con NVDA: 2023.2 e posterior
+* Compatibilidade con NVDA: 2023.3.3 e posterior
 
 Nota: Orixinalmente chamado Windows 10 App Essentials, renomeouse a windows
 App Essentials en 2021 para soportar windows 10 e versións futuras como
@@ -18,21 +18,18 @@ Inclúense os seguintes app modules ou o apoio para módulos para algunhas
 aplicacións (consulta cada sección para a aplicación para detalles sobre que
 se inclúe):
 
-* Teclado Moderno (panel de emoji/teclado táctil/ditado/escritura por
-  voz/suxestións de entrada por hardware/historial do portapapeis/Accións
-  Suxeridas/editores co método de entrada moderna)
+* Teclado Moderno
 * Opcións (opcións do sistema, Windows+I)
 
 Notas:
 
 * Este complemento require do Windows 10 22H2 (compilación 19045), 11 22H2
   (compilación 22621), ou versións posteriores.
-* O soporte das actualizacións de características está vencellado á duración
-  do soporte ó consumidor (edicións Home, Pro, Pro Education, Pro for
-  Workstations) e o complemento podería rematar o soporte para unha
-  actualización de características antes do final do soporte ó
-  consumidor. Consulta aka.ms/WindowsTargetVersioninfo para máis información
-  e datas de soporte.
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  <https://aka.ms/WindowsTargetVersioninfo> for more information and support
+  dates.
 * Aínda que a instalación é posible, este complemento non soporta Windows
   Enterprise LTSC (Long-Term Servicing Channel) nin versións de Windows
   Server.
@@ -66,8 +63,9 @@ e establece o nivel de símbolos en "algunha" ou superior. Ó pegar dende o
 historial do portapapeis en Windows 10, preme a tecla Espazo no canto de
 Intro para pegar o elemento seleccionado.
 
-* En Windows 11 22H2 e posterior, NVDA anunciará accións suxeridas cando se
-  copien ó portapapeis datos compatibles como números de teléfono.
+* In Windows 11, NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard. This is now part of NVDA
+  2024.2.
 
 ## Opcións
 

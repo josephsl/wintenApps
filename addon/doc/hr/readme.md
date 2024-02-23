@@ -4,7 +4,7 @@
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [beta verziju][2]
 * Preuzmi [razvojnu verziju][3]
-* NVDA kompatibilnost: 2023.2 i novije verzije
+* NVDA kompatibilnost: 2023.3.3 i novije verzije
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
@@ -17,20 +17,18 @@ i poboljšanja i ispravci određenih kontrola u sustavu Windows 10 i novijim.
 Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 što je uključeno):
 
-* Moderna tipkovnica (ploča emojija, diktatiranje, tipkanje glasom,
-  prijedlozi za unos hardverom, povijest međuspremnika, predložene radnje,
-  moderni uređivači za unos)
+* Moderna tipkovnica
 * Postavke (postavke sustava, Windows+I)
 
 Napomene:
 
 * Ovaj dodatak zahtijeva Windows 10 22H2 (gradnja 19045), 11 22H2 (gradnja
   22621) ili novija izdanja.
-* Trajanje podrške za aktualiziranje značajki povezano je s trajanjem
-  korisničke podrške (izdanja Home, Pro, Pro Education, Pro for
-  Workstations) i dodatak može prekinuti podršku za aktualiziranje značajki
-  prije završetka korisničke podrške. Pogledaj
-  aka.ms/WindowsTargetVersioninfo za više informacija i datume podrške.
+* Feature update support duration is tied to consumer support duration
+  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
+  may end support for a feature update prior to end of consumer support. See
+  <https://aka.ms/WindowsTargetVersioninfo> for more information and support
+  dates.
 * Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
 * Windows Insider Preview gradnje neće podržati sve značajke, pogotovo
@@ -62,9 +60,9 @@ postavi razinu simbola na „neki” ili višu. Prilikom umetanja iz povijesti
 međuspremnika u sustavu Windows 10, za umetanje odabranog elementa pritisni
 tipku za razmak umjesto tipke Enter.
 
-* U sustavu Windows 11 22H2 i novijim verzijama, NVDA će najaviti predložene
-  radnje kad se kompatibilni podaci poput telefonskih brojeva kopiraju u
-  međuspremnik.
+* In Windows 11, NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard. This is now part of NVDA
+  2024.2.
 
 ## Postavke
 
