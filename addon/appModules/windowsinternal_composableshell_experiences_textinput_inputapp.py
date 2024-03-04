@@ -40,7 +40,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	# Register modern keyboard interface elements with local event handler group.
 	def _windowOpenEventInternalEventHandlerGroupRegistration(self, firstChild: NVDAObject) -> None:
 		# Gather elements to be registered inside a list so they can be registered in one go.
-		localEventHandlerElements = [firstChild]
+		localEventHandlerElements = []
 		# Don't forget to add actual candidate item element so name change event can be handled
 		# (mostly for hardware keyboard input suggestions).
 		if isinstance(firstChild, ImeCandidateUI):
