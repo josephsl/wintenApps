@@ -60,17 +60,15 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			if winVersion.getWinVer() >= winVersion.WIN11:
 				# For some odd reason, suggested text is the last element.
 				imeCandidateItem = imeCandidateItem.lastChild
-			try:
-				# Sometimes traversal fails, resulting in a null element being added.
-				# Noticeable when opening Voice Access suggestions in Windows 11.
+			# Sometimes traversal fails, resulting in a null element being added.
+			# Noticeable when opening Voice Access suggestions in Windows 11.
+			if imeCandidateItem is not None:
 				UIAHandler.handler.removeEventHandlerGroup(
 					imeCandidateItem.UIAElement, UIAHandler.handler.localEventHandlerGroup
 				)
 				UIAHandler.handler.addEventHandlerGroup(
 					imeCandidateItem.UIAElement, UIAHandler.handler.localEventHandlerGroup
 				)
-			except AttributeError:
-				pass
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
