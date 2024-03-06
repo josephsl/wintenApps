@@ -47,23 +47,22 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			return
 		# Register modern keyboard interface elements with local event handler group.
 		# Used to handle name change event from non-focused elements.
+		# (mostly for hardware keyboard input suggestions).
 		# In Windows 11, combined emoji panel and clipboard history moves system focus to itself.
 		if (
-			firstChild.UIAAutomationId != "Windows.Shell.InputApp.FloatingSuggestionUI"
+			isinstance(firstChild, ImeCandidateUI)
 			# Do not call the below function if UIA event registration is set to global.
 			and UIAHandler.handler.localEventHandlerGroup is not None
 		):
 			# Gather elements to be registered inside a list so they can be registered in one go.
 			localEventHandlerElements = []
 			# Add actual candidate item element so name change event can be handled
-			# (mostly for hardware keyboard input suggestions).
-			if isinstance(firstChild, ImeCandidateUI):
-				imeCandidateItem = firstChild.firstChild.firstChild
-				# In Windows 11, an extra element is located between candidate UI window and items themselves.
-				if winVersion.getWinVer() >= winVersion.WIN11:
-					# For some odd reason, suggested text is the last element.
-					imeCandidateItem = imeCandidateItem.lastChild
-				localEventHandlerElements.append(imeCandidateItem)
+			imeCandidateItem = firstChild.firstChild.firstChild
+			# In Windows 11, an extra element is located between candidate UI window and items themselves.
+			if winVersion.getWinVer() >= winVersion.WIN11:
+				# For some odd reason, suggested text is the last element.
+				imeCandidateItem = imeCandidateItem.lastChild
+			localEventHandlerElements.append(imeCandidateItem)
 			for element in localEventHandlerElements:
 				try:
 					# Sometimes traversal fails, resulting in a null element being added.
