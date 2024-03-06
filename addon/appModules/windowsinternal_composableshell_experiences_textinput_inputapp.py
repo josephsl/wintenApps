@@ -46,7 +46,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		if firstChild is None:
 			return
 		# Register modern keyboard interface elements with local event handler group.
-		# Used to handle name change event from non-focused elements.
+		# Used to handle events from non-focused elements.
 		# (mostly for hardware keyboard input suggestions).
 		# In Windows 11, combined emoji panel and clipboard history moves system focus to itself.
 		if (
