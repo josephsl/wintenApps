@@ -75,7 +75,26 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			# Do not call the below function if UIA event registration is set to global.
 			and UIAHandler.handler.localEventHandlerGroup is not None
 		):
-			self._windowOpenEventInternalEventHandlerGroupRegistration(firstChild)
+			# Register modern keyboard interface elements with local event handler group.
+			# Gather elements to be registered inside a list so they can be registered in one go.
+			localEventHandlerElements = []
+			# Don't forget to add actual candidate item element so name change event can be handled
+			# (mostly for hardware keyboard input suggestions).
+			if isinstance(firstChild, ImeCandidateUI):
+				imeCandidateItem = firstChild.firstChild.firstChild
+				# In Windows 11, an extra element is located between candidate UI window and items themselves.
+				if winVersion.getWinVer() >= winVersion.WIN11:
+					# For some odd reason, suggested text is the last element.
+					imeCandidateItem = imeCandidateItem.lastChild
+				localEventHandlerElements.append(imeCandidateItem)
+			for element in localEventHandlerElements:
+				try:
+					# Sometimes traversal fails, resulting in a null element being added.
+					# Noticeable when opening Voice Access suggestions in Windows 11 22H2 and later.
+					UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+					UIAHandler.handler.addEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+				except AttributeError:
+					pass
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
