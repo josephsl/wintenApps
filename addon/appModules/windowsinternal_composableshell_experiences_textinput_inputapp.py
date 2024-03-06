@@ -63,8 +63,12 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			try:
 				# Sometimes traversal fails, resulting in a null element being added.
 				# Noticeable when opening Voice Access suggestions in Windows 11.
-				UIAHandler.handler.removeEventHandlerGroup(imeCandidateItem.UIAElement, UIAHandler.handler.localEventHandlerGroup)
-				UIAHandler.handler.addEventHandlerGroup(imeCandidateItem.UIAElement, UIAHandler.handler.localEventHandlerGroup)
+				UIAHandler.handler.removeEventHandlerGroup(
+					imeCandidateItem.UIAElement, UIAHandler.handler.localEventHandlerGroup
+				)
+				UIAHandler.handler.addEventHandlerGroup(
+					imeCandidateItem.UIAElement, UIAHandler.handler.localEventHandlerGroup
+				)
 			except AttributeError:
 				pass
 		# NVDA Core takes care of the rest.
