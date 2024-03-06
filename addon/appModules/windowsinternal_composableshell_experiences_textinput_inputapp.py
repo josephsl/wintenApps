@@ -37,28 +37,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# NVDA Core takes care of the rest.
 		super().event_UIA_elementSelected(obj, nextHandler)
 
-	# Register modern keyboard interface elements with local event handler group.
-	def _windowOpenEventInternalEventHandlerGroupRegistration(self, firstChild: NVDAObject) -> None:
-		# Gather elements to be registered inside a list so they can be registered in one go.
-		localEventHandlerElements = []
-		# Don't forget to add actual candidate item element so name change event can be handled
-		# (mostly for hardware keyboard input suggestions).
-		if isinstance(firstChild, ImeCandidateUI):
-			imeCandidateItem = firstChild.firstChild.firstChild
-			# In Windows 11, an extra element is located between candidate UI window and items themselves.
-			if winVersion.getWinVer() >= winVersion.WIN11:
-				# For some odd reason, suggested text is the last element.
-				imeCandidateItem = imeCandidateItem.lastChild
-			localEventHandlerElements.append(imeCandidateItem)
-		for element in localEventHandlerElements:
-			try:
-				# Sometimes traversal fails, resulting in a null element being added.
-				# Noticeable when opening Voice Access suggestions in Windows 11 22H2 and later.
-				UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
-				UIAHandler.handler.addEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
-			except AttributeError:
-				pass
-
 	def event_UIA_window_windowOpen(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
