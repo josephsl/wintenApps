@@ -45,18 +45,17 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Sometimes window open event is raised when the input panel closes.
 		if firstChild is None:
 			return
-		# Originally part of this method, split into an internal function to reduce complexity.
-		# However, in Windows 11, combined emoji panel and clipboard history moves system focus to itself.
-		# Therefore there is no need to add UIA elements to local event handler group.
+		# Register modern keyboard interface elements with local event handler group.
+		# Used to handle name change event from non-focused elements.
+		# In Windows 11, combined emoji panel and clipboard history moves system focus to itself.
 		if (
 			firstChild.UIAAutomationId != "Windows.Shell.InputApp.FloatingSuggestionUI"
 			# Do not call the below function if UIA event registration is set to global.
 			and UIAHandler.handler.localEventHandlerGroup is not None
 		):
-			# Register modern keyboard interface elements with local event handler group.
 			# Gather elements to be registered inside a list so they can be registered in one go.
 			localEventHandlerElements = []
-			# Don't forget to add actual candidate item element so name change event can be handled
+			# Add actual candidate item element so name change event can be handled
 			# (mostly for hardware keyboard input suggestions).
 			if isinstance(firstChild, ImeCandidateUI):
 				imeCandidateItem = firstChild.firstChild.firstChild
@@ -68,7 +67,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			for element in localEventHandlerElements:
 				try:
 					# Sometimes traversal fails, resulting in a null element being added.
-					# Noticeable when opening Voice Access suggestions in Windows 11 22H2 and later.
+					# Noticeable when opening Voice Access suggestions in Windows 11.
 					UIAHandler.handler.removeEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 					UIAHandler.handler.addEventHandlerGroup(element.UIAElement, UIAHandler.handler.localEventHandlerGroup)
 				except AttributeError:
