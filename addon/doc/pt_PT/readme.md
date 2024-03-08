@@ -4,7 +4,7 @@
 * Baixar [versão estável][1]
 * Descarregar [versão beta][2]
 * Baixar a [versão de desenvolvimento][3]
-* Compatibilidade com NVDA: 2023.3.3 e posterior
+* Compatibilidade com NVDA: 2023.3.4 e posterior
 
 Nota: Originalmente chamado Windows 10 App Essentials, foi renomeado para
 Windows App Essentials em 2021 para suportar o Windows 10 e futuros

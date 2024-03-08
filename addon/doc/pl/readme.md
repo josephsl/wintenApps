@@ -4,7 +4,7 @@
 * Pobierz [wersja stabilna][1]
 * Pobierz [wersja beta][2]
 * Pobierz [wersja rozwojowa][3]
-* Zgodność z NVDA: 2023.3.3 i nowsze
+* Zgodność z NVDA: 2023.3.4 i nowsze
 
 Uwaga: Pierwotniea nazwa tego dodatku była Windows 10 App Essentials, a
 potem została zmieniona na Windows App Essentials w 2021 roku, aby

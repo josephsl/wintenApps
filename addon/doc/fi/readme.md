@@ -4,7 +4,7 @@
 * Lataa [vakaa versio][1]
 * Lataa [beetaversio][2]
 * Lataa [kehitysversio][3]
-* Yhteensopivuus: NVDA 2023.3.3 ja uudemmat
+* Yhteensopivuus: NVDA 2023.3.4 ja uudemmat
 
 Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
 nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows

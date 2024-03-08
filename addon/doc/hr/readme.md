@@ -4,7 +4,7 @@
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [beta verziju][2]
 * Preuzmi [razvojnu verziju][3]
-* NVDA kompatibilnost: 2023.3.3 i novije verzije
+* NVDA kompatibilnost: 2023.3.4 i novije verzije
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao

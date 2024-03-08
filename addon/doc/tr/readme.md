@@ -4,7 +4,7 @@
 * [Kararlı sürümü indirin][1]
 * [Beta sürümünü indirin][2]
 * [Geliştirme sürümünü indirin][3]
-* NVDA uyumluluğu: 2023.3.3 ve sonrası
+* NVDA uyumluluğu: 2023.3.4 ve sonrası
 
 Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
 adlandırılırken, Windows 10 ve Windows 11 gibi gelecekteki windows
