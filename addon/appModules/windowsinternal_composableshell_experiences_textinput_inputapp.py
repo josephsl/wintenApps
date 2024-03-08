@@ -10,7 +10,7 @@ from typing import Callable, Optional
 # (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import (
-	AppModule, ImeCandidateUI, ImeCandidateItem
+	AppModule, ImeCandidateItem
 )
 import winVersion
 import eventHandler
@@ -50,7 +50,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# (mostly for hardware keyboard input suggestions).
 		# In Windows 11, combined emoji panel and clipboard history moves system focus to itself.
 		if (
-			isinstance(firstChild, ImeCandidateUI)
+			firstChild.UIAAutomationId == "IME_Prediction_Window"
 			# Do not call the below function if UIA event registration is set to global.
 			and UIAHandler.handler.localEventHandlerGroup is not None
 		):
