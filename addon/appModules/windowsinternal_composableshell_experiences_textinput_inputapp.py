@@ -12,6 +12,7 @@ from typing import Callable, Optional
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import (
 	AppModule, ImeCandidateItem
 )
+import winVersion
 import eventHandler
 import UIAHandler
 import api
@@ -53,18 +54,13 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			# Do not call the below function if UIA event registration is set to global.
 			and UIAHandler.handler.localEventHandlerGroup is not None
 		):
-			# Add actual candidate item element so name change event can be handled
+			# Announce the first candidate (hardware keyboard input suggestion or IME candidate).
 			imeCandidateItem = firstChild.firstChild.firstChild
 			# In Windows 11, an extra element is located between candidate UI window and items themselves.
 			if isinstance(imeCandidateItem, ImeCandidateItem):
 				# For some odd reason, suggested text is the last element.
 				imeCandidateItem = imeCandidateItem.lastChild
-			UIAHandler.handler.removeEventHandlerGroup(
-				imeCandidateItem.UIAElement, UIAHandler.handler.localEventHandlerGroup
-			)
-			UIAHandler.handler.addEventHandlerGroup(
-				imeCandidateItem.UIAElement, UIAHandler.handler.localEventHandlerGroup
-			)
+			imeCandidateItem.reportFocus()
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
