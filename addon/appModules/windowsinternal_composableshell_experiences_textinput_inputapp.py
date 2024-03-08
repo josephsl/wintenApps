@@ -14,7 +14,6 @@ from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinpu
 )
 import winVersion
 import eventHandler
-import UIAHandler
 import api
 from NVDAObjects import NVDAObject
 
@@ -51,8 +50,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# In Windows 11, combined emoji panel and clipboard history moves system focus to itself.
 		if (
 			firstChild.UIAAutomationId == "IME_Prediction_Window"
-			# Do not call the below function if UIA event registration is set to global.
-			and UIAHandler.handler.localEventHandlerGroup is not None
 		):
 			# Announce the first candidate (hardware keyboard input suggestion or IME candidate).
 			imeCandidateItem = firstChild.firstChild.firstChild
