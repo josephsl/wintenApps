@@ -10,7 +10,7 @@ from typing import Callable, Optional
 # (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import (
-	AppModule, ImeCandidateUI
+	AppModule, ImeCandidateUI, ImeCandidateItem
 )
 import winVersion
 import eventHandler
@@ -57,7 +57,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			# Add actual candidate item element so name change event can be handled
 			imeCandidateItem = firstChild.firstChild.firstChild
 			# In Windows 11, an extra element is located between candidate UI window and items themselves.
-			if winVersion.getWinVer() >= winVersion.WIN11:
+			if winVersion.getWinVer() >= winVersion.WIN11 and isinstance(imeCandidateItem, ImeCandidateItem):
 				# For some odd reason, suggested text is the last element.
 				imeCandidateItem = imeCandidateItem.lastChild
 			# Sometimes traversal fails, resulting in a null element being added.
