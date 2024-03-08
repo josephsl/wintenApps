@@ -49,7 +49,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# (mostly for hardware keyboard input suggestions).
 		# In Windows 11, combined emoji panel and clipboard history moves system focus to itself.
 		if (
-			firstChild.UIAAutomationId == "IME_Prediction_Window"
+			winVersion.getWinVer() >= winVersion.WIN11
+			and firstChild.UIAAutomationId == "IME_Prediction_Window"
 		):
 			# Announce the first candidate (hardware keyboard input suggestion or IME candidate).
 			imeCandidateItem = firstChild.firstChild.firstChild
