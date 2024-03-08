@@ -44,19 +44,13 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Sometimes window open event is raised when the input panel closes.
 		if firstChild is None:
 			return
-		# Register modern keyboard interface elements with local event handler group.
-		# Used to handle events from non-focused elements.
-		# (mostly for hardware keyboard input suggestions).
-		# In Windows 11, combined emoji panel and clipboard history moves system focus to itself.
+		# Announce the first candidate (hardware keyboard input suggestion or IME candidate) in Windows 11.
 		if (
 			winVersion.getWinVer() >= winVersion.WIN11
 			and firstChild.UIAAutomationId == "IME_Prediction_Window"
 		):
-			# Announce the first candidate (hardware keyboard input suggestion or IME candidate).
 			imeCandidateItem = firstChild.firstChild.firstChild
-			# In Windows 11, an extra element is located between candidate UI window and items themselves.
 			if isinstance(imeCandidateItem, ImeCandidateItem):
-				# For some odd reason, suggested text is the last element.
 				imeCandidateItem = imeCandidateItem.lastChild
 			imeCandidateItem.reportFocus()
 		# NVDA Core takes care of the rest.
