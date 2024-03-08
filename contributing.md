@@ -114,4 +114,4 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 	* Zinc 3: May 2023 to October 2023, end of support for Windows 11 original release (Version 21H2), NVDA 2023.2 requirement, removed Cortana support
 	* Zinc 4: September 2023 to January 2024, restructuring Settings app support in preparation for freezing Windows 10 support code, NVDA 2023.3 requirement, removed Voice Access support, initial support for NVDA 2024.1
 * Gallium/Germanium/Arsenic (2024):
-	* Gallium 1: December 2023 to March 2024, revert to older installation error message, no more dictation/voice typing detection in modern keyboard, restructured install tasks
+	* Gallium 1: December 2023 to April 2024, revert to older installation error message, no more dictation/voice typing detection in modern keyboard, restructured install tasks, refactored modern keyboard window open event handler
