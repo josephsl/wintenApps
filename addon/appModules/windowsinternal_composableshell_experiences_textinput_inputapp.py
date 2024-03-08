@@ -50,8 +50,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			and firstChild.UIAAutomationId == "IME_Prediction_Window"
 		):
 			imeCandidateItem = firstChild.firstChild.firstChild
-			if isinstance(imeCandidateItem, ImeCandidateItem):
-				imeCandidateItem = imeCandidateItem.lastChild
 			imeCandidateItem.reportFocus()
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
