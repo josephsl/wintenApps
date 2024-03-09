@@ -35,17 +35,13 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		super().event_UIA_elementSelected(obj, nextHandler)
 
 	def event_UIA_window_windowOpen(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Ask NVDA to respond to UIA events coming from modern keyboard interface.
-		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
-		# This is more so on Windows 10.
-		firstChild = obj.firstChild
 		# NVDA Core issue 16283: announce the first candidate
 		# (hardware keyboard input suggestion or IME candidate) in Windows 11.
 		if (
 			winVersion.getWinVer() >= winVersion.WIN11
-			and firstChild.UIAAutomationId == "IME_Prediction_Window"
+			and obj.firstChild.UIAAutomationId == "IME_Prediction_Window"
 		):
-			imeCandidateItem = firstChild.firstChild.firstChild
+			imeCandidateItem = obj.firstChild.firstChild.firstChild
 			imeCandidateItem.reportFocus()
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
