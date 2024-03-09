@@ -39,9 +39,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 		# This is more so on Windows 10.
 		firstChild = obj.firstChild
-		# Sometimes window open event is raised when the input panel closes.
-		if firstChild is None:
-			return
 		# Announce the first candidate (hardware keyboard input suggestion or IME candidate) in Windows 11.
 		if (
 			winVersion.getWinVer() >= winVersion.WIN11
