@@ -39,7 +39,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Focus change event will not work, as it'll cause focus to be lost when the panel closes.
 		# This is more so on Windows 10.
 		firstChild = obj.firstChild
-		# Announce the first candidate (hardware keyboard input suggestion or IME candidate) in Windows 11.
+		# NVDA Core issue 16283: announce the first candidate
+		# (hardware keyboard input suggestion or IME candidate) in Windows 11.
 		if (
 			winVersion.getWinVer() >= winVersion.WIN11
 			and firstChild.UIAAutomationId == "IME_Prediction_Window"
