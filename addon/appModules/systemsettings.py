@@ -43,7 +43,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		nextHandler()
 
 	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Applies to Windows 11
+		# Deprecated: applies to Windows 11
 		if obj.UIAAutomationId.endswith("_UpdateStatusDescriptionTextBlock"):
 			import ui
 			import controlTypes
@@ -57,7 +57,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		nextHandler()
 
 	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Applies to Windows 11
+		# Deprecated: applies to Windows 11
 		import UIAHandler
 		if (
 			obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView"
