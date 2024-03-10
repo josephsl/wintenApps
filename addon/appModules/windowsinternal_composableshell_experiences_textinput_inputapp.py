@@ -22,9 +22,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Do not proceed if emoji panel category item is selected when the panel is closed in Windows 11.
 		if obj.UIAAutomationId.startswith("navigation-menu-item"):
-			focus = api.getFocusObject()
 			# System focus restored.
-			if focus.appModule != self:
+			if (focus := api.getFocusObject()).appModule != self:
 				return
 			# NVDA is stuck in a nonexistent edit field.
 			# Focus object location can be None sometimes.
