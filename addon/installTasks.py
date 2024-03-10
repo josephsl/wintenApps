@@ -6,8 +6,6 @@
 # Routines are partly based on other add-ons,
 # particularly Place Markers by Noelia Martinez (thanks add-on authors).
 
-# Keep the following import until Python 3.11 (NVDA 2024.1) requirement is fully in effect.
-from __future__ import annotations
 import winVersion
 import addonHandler
 addonHandler.initTranslation()
