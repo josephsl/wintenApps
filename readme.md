@@ -1,10 +1,6 @@
 # Windows App Essentials
 
 * Authors: Joseph Lee, Derek Riemer and others
-* Download [stable version][1]
-* Download [beta version][2]
-* Download [development version][3]
-* NVDA compatibility: 2023.3.4 and later
 
 Note: Originally called Windows 10 App Essentials, it was renamed to Windows App Essentials in 2021 to support Windows 10 and future releases such as Windows 11. Parts of this add-on will still refer to the original add-on name.
 
@@ -26,7 +22,7 @@ Notes:
 * Some add-on features are or will be part of NVDA screen reader.
 * For best experience with apps that embed web technologies and content such as Start menu and its context menu, enable "Automatic focus mode for focus changes" setting from NVDA's browse mode settings panel.
 
-For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][4] document.
+For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.
 
 ## Modern keyboard
 
@@ -38,10 +34,4 @@ This includes emoji panel, clipboard history, touch keyboard, dictation/voice ty
 
 * NVDA will report updates to Windows Update status as download and install progresses. This may result in speech interruption when navigating Settings app while updates are being downloaded and installed. If using Windows 11 and UIA event registration is set to selective from NVDA advanced settings panel, you must move focus to updates list as soon as they appear so NVDA can announce update progress.
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
-
-[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
-
-[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[1]: https://github.com/josephsl/wintenapps/wiki/w10changelog
