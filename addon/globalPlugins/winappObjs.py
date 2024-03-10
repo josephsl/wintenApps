@@ -6,11 +6,7 @@
 # Keep the following import until Python 3.11 (NVDA 2024.1) requirement is fully in effect.
 from __future__ import annotations
 import globalPluginHandler
-from NVDAObjects.UIA import Dialog
-from NVDAObjects import NVDAObject
 import globalVars
-import UIAHandler
-import versionInfo
 
 
 # #20: don't even think about proceeding in secure screens.
