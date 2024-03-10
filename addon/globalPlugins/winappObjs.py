@@ -6,12 +6,6 @@
 # Keep the following import until Python 3.11 (NVDA 2024.1) requirement is fully in effect.
 from __future__ import annotations
 import globalPluginHandler
-import globalVars
-
-
-# #20: don't even think about proceeding in secure screens.
-def disableInSecureMode(cls):
-	return globalPluginHandler.GlobalPlugin if globalVars.appArgs.secure else cls
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
