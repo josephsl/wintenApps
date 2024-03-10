@@ -12,7 +12,6 @@ def disableInSecureMode(cls):
 	return globalPluginHandler.GlobalPlugin if globalVars.appArgs.secure else cls
 
 
-@disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Placeholder global plugin class in case it is needed in the future.
 	pass
