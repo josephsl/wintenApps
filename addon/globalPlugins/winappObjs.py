@@ -3,8 +3,6 @@
 
 # Adds handlers for various UIA controls found in Windows 10 and later.
 
-# Keep the following import until Python 3.11 (NVDA 2024.1) requirement is fully in effect.
-from __future__ import annotations
 import globalPluginHandler
 from NVDAObjects.UIA import Dialog
 from NVDAObjects import NVDAObject
