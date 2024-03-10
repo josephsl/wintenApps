@@ -5,7 +5,7 @@
 
 # The add-on version of this module will extend the one that comes with NVDA Core.
 
-from typing import Callable, Optional
+from typing import Callable
 # Yes, this app module is powered by built-in modern keyboard (TextInputHost) app module
 # (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
