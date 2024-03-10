@@ -18,18 +18,3 @@ def disableInSecureMode(cls):
 
 @disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
-		if versionInfo.version_year >= 2024:
-			return
-		try:
-			UIAClassName = obj.UIAElement.cachedClassName
-		except AttributeError:
-			return
-		# Windows that are really dialogs.
-		# Some dialogs, although listed as a dialog thanks to UIA class name,
-		# does not advertise the proper role of dialog.
-		# This is still the case with some dialogs such as restart to install updates dialog in Windows 11.
-		# Resolved in NVDA 2024.1 (turns out there was a flaw with IsDialog property check in NVDA Core).
-		if UIAClassName in UIAHandler.UIADialogClassNames and Dialog not in clsList:
-			clsList.insert(0, Dialog)
