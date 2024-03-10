@@ -59,8 +59,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			self,
 			obj: NVDAObject,
 			nextHandler: Callable[[], None],
-			displayString: Optional[str] = None,
-			activityId: Optional[str] = None,
+			displayString: str | None = None,
+			activityId: str | None = None,
 			**kwargs
 	):
 		# NVDA Core issue 16009: Windows 11 uses modern keyboard interface to display Suggested Actions
