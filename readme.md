@@ -9,7 +9,7 @@ This add-on is a collection of app modules for various modern Windows apps, as w
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
 * Modern keyboard
-* Settings (system settings, Windows+I)
+* Settings (Windows+I)
 
 Notes:
 
@@ -30,8 +30,8 @@ This includes emoji panel, clipboard history, touch keyboard, dictation/voice ty
 
 * In Windows 11, NVDA will announce suggested actions when compatible data such as phone numbers is copied to the clipboard. This is now part of NVDA 2024.2.
 
-## Settings
+## Settings (Windows+I)
 
-* NVDA will report updates to Windows Update status as download and install progresses. This may result in speech interruption when navigating Settings app while updates are being downloaded and installed. If using Windows 11 and UIA event registration is set to selective from NVDA advanced settings panel, you must move focus to updates list as soon as they appear so NVDA can announce update progress.
+* NVDA will report updates to Windows Update status as download and install progresses. In Windows 10, this may result in speech interruption when navigating Settings app while updates are being downloaded and installed. In Windows 11, object navigation can be used in updates list to review update status for individual entries.
 
 [1]: https://github.com/josephsl/wintenapps/wiki/w10changelog
