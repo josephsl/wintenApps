@@ -9,7 +9,9 @@ from typing import Callable, Optional
 # Yes, this app module is powered by built-in modern keyboard (TextInputHost) app module
 # (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
-from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import AppModule
+from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import (
+	AppModule, ImeCandidateUI
+)
 import winVersion
 import eventHandler
 import api
