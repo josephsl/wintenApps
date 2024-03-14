@@ -15,6 +15,8 @@ from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinpu
 import winVersion
 import eventHandler
 import api
+import ui
+import config
 from NVDAObjects import NVDAObject
 
 
@@ -59,8 +61,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_focusEntered(self, obj, nextHandler):
 		# Announce visible IME candidates.
-		import ui
-		import config
 		if (
 			isinstance(obj, ImeCandidateUI)
 			and obj.parent.UIAAutomationId == "IME_Candidate_Window"
@@ -81,7 +81,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# such as Skype calls when data such as phone number is copied to the clipboard.
 		# Because keyboard interaction is not possible, just report the top suggested action.
 		# Resolved in NVDA 2024.2.
-		import ui
 		if activityId == "Windows.Shell.InputApp.SmartActions.Popup":
 			displayString = obj.name
 		ui.message(displayString)
