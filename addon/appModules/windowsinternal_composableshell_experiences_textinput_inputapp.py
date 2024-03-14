@@ -59,7 +59,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			return
 		nextHandler()
 
-	def event_focusEntered(self, obj, nextHandler):
+	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Announce visible IME candidates.
 		if (
 			isinstance(obj, ImeCandidateUI)
