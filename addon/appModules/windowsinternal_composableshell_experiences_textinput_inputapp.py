@@ -57,6 +57,18 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			return
 		nextHandler()
 
+	def event_focusEntered(self, obj, nextHandler):
+		# Announce visible IME candidates.
+		import ui
+		import config
+		if (
+			isinstance(obj, ImeCandidateUI)
+			and obj.parent.UIAAutomationId == "IME_Candidate_Window"
+			and config.conf["inputComposition"]["autoReportAllCandidates"]
+		):
+			ui.message(obj.firstChild.visibleCandidateItemsText)
+		nextHandler()
+
 	def event_UIA_notification(
 			self,
 			obj: NVDAObject,
