@@ -39,7 +39,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# (hardware keyboard input suggestion or IME candidate) in Windows 11.
 		if (
 			winVersion.getWinVer() >= winVersion.WIN11
-			and obj.firstChild.UIAAutomationId == "IME_Prediction_Window"
+			and obj.firstChild and obj.firstChild.UIAAutomationId == "IME_Prediction_Window"
 		):
 			imeCandidateItem = obj.firstChild.firstChild.firstChild
 			imeCandidateItem.reportFocus()
