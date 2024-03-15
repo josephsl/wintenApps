@@ -1,10 +1,6 @@
 # Windows App Essentials #
 
 * Auteurs: Joseph Lee, Derek Riemer et autres utilisateurs
-* Télécharger [version stable][1]
-* Télécharger [version béta][2]
-* Télécharger [version de développement][3]
-* Compatibilité NVDA : 2023.3.4 et ultérieure
 
 Remarque : à l'origine appelé Windows 10 App Essentials, elle a été renommée
 Windows App Essentials en 2021 pour prendre en charge Windows 10 et les
@@ -20,12 +16,12 @@ apps sont inclus (voir chaque section app pour plus de détails sur ce qui
 est inclus) :
 
 * Clavier moderne
-* Paramètres (paramètres système, Windows+I)
+* Paramètres (Windows+I)
 
 Notes:
 
-* Cette extension nécessite Windows 10 22H2 (build 19045), 11 22H2 (build
-  22621) ou version ultérieure.
+* Cette extension nécessite Windows 10 22H2 64 bits (build 19045), 11 22H2
+  (build 22621), ou des versions ultérieures.
 * La durée du support de mise à jour des fonctionnalités est liée à la durée
   du support des consommateurs (Home, Pro, Pro Education, Pro for
   Workstations Editions) et l'extension peut mettre fin à la prise en charge
@@ -55,7 +51,7 @@ Notes:
 
 Pour obtenir la liste des changements effectuées entre chaque version de
 l'extension, reportez-vous au document [changelogs pour les versions de
-l'extension][4].
+l'extension][1].
 
 ## Clavier moderne
 
@@ -73,23 +69,16 @@ coller l'élément sélectionné.
   compatibles telles que des numéros de téléphone sont copiées dans le
   presse-papiers. Cela fait désormais partie de NVDA 2024.2.
 
-## Paramètres
+## Paramètres (Windows+I)
 
 * NVDA signalera les mises à jour de l'état de Windows Update au fur et à
-  mesure que le téléchargement et l'installation progressent. Cela peut
-  entraîner une interruption de la parole lors de la navigation dans
-  l'application Paramètres pendant le téléchargement et l'installation des
-  mises à jour. Si vous utilisez Windows 11 si l'enregistrement sélectif des
-  événements UIA est défini sur sélectif, vous devez déplacer le focus sur
-  la liste des mises à jour dès qu'elles apparaissent afin que NVDA puisse
-  annoncer la progression de la mise à jour.
+  mesure que le téléchargement et l'installation progressent. Sous Windows
+  10, cela peut entraîner une interruption de la parole lors de la
+  navigation dans l'application Paramètres pendant le téléchargement et
+  l'installation des mises à jour. Sous Windows 11, la navigation par objets
+  peut être utilisée dans la liste des mises à jour pour vérifier l'état de
+  mise à jour des entrées individuelles.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
-
-[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
-
-[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[1]: https://github.com/josephsl/wintenapps/wiki/w10changelog

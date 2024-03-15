@@ -1,10 +1,6 @@
 # Windows App Essentials #
 
 * Autores: Joseph Lee, Derek Riemer e outros
-* Baixar [versão estável][1]
-* Descarregar [versão beta][2]
-* Baixar a [versão de desenvolvimento][3]
-* Compatibilidade com NVDA: 2023.3.4 e posterior
 
 Nota: Originalmente chamado Windows 10 App Essentials, foi renomeado para
 Windows App Essentials em 2021 para suportar o Windows 10 e futuros
@@ -20,17 +16,18 @@ aplicações estão incluídos (consulte a secção de cada aplicação para obt
 detalhes sobre o que está incluído):
 
 * Teclado moderno
-* Configurações (configurações do sistema, Windows + I)
+* Configurações (Windows + I)
 
 Notas:
 
-* Este add-on requer o Windows 10 22H2 (build 19045), 11 22H2 (build 22621)
-  ou versões posteriores.
-* Feature update support duration is tied to consumer support duration
-  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
-  may end support for a feature update prior to end of consumer support. See
-  <https://aka.ms/WindowsTargetVersioninfo> for more information and support
-  dates.
+* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
+  22621), or later releases.
+* A duração do suporte da actualização de funcionalidades está associada à
+  duração do suporte ao consumidor (edições Home, Pro, Pro Education, Pro
+  para Estações de Trabalho) e o suplemento pode terminar o suporte para uma
+  actualização de funcionalidades antes do fim do suporte ao
+  consumidor. Consulte <https://aka.ms/WindowsTargetVersioninfo> para obter
+  mais informações e datas de suporte.
 * Embora a instalação seja possível, este suplemento não suporta Windows
   Enterprise LTSC (Long-Term Servicing Channel) e versões Windows Server.
 * Nem todas as funcionalidades das compilações do Windows Insider Preview
@@ -50,7 +47,7 @@ Notas:
   painel de configurações do modo de navegação da NVDA.
 
 Para obter uma lista das alterações efectuadas entre cada versão do extra,
-consulte o documento [changelogs for add-on releases][4].
+consulte o documento [changelogs for add-on releases][1].
 
 ## Teclado moderno
 
@@ -67,21 +64,14 @@ vez da tecla Enter para colar o item seleccionado.
   such as phone numbers is copied to the clipboard. This is now part of NVDA
   2024.2.
 
-## Configurações
+## Configurações (Windows + I)
 
 * NVDA will report updates to Windows Update status as download and install
-  progresses. This may result in speech interruption when navigating
-  Settings app while updates are being downloaded and installed. If using
-  Windows 11 and UIA event registration is set to selective from NVDA
-  advanced settings panel, you must move focus to updates list as soon as
-  they appear so NVDA can announce update progress.
+  progresses. In Windows 10, this may result in speech interruption when
+  navigating Settings app while updates are being downloaded and
+  installed. In Windows 11, object navigation can be used in updates list to
+  review update status for individual entries.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
-
-[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
-
-[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[1]: https://github.com/josephsl/wintenapps/wiki/w10changelog

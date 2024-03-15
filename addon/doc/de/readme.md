@@ -1,10 +1,6 @@
 # Windows App Essentials #
 
 * Autoren: Joseph Lee, Derek Riemer und weitere
-* [Stabile Version herunterladen][1]
-* [Beta-Version herunterladen][2]
-* [Entwicklerversion herunterladen][3]
-* NVDA-Kompatibilität: 2023.3.4 und neuer
 
 Hinweis: Ursprünglich als Windows 10 App Essentials bezeichnet, wurde es
 2021 in Windows App Essentials umbenannt, um Windows 10 und zukünftige
@@ -19,17 +15,18 @@ Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
 Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
 
 * Moderne virtuelle Tastaturen
-* Einstellungen (System-Einstellungen, Windows+I)
+* Einstellungen (Windows+I)
 
 Hinweise:
 
-* Diese NVDA-Erweiterung benötigt Windows 10 Version 22H2 (Build 19045),
-  Windows 11 Version 22H2 (Build 22621) oder neuere Versionen.
-* Feature update support duration is tied to consumer support duration
-  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
-  may end support for a feature update prior to end of consumer support. See
-  <https://aka.ms/WindowsTargetVersioninfo> for more information and support
-  dates.
+* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
+  22621), or later releases.
+* Die Dauer der Unterstützung für Feature-Updates ist an die Dauer des
+  Consumer-Supports (Home, Pro, Pro Education, Pro for Workstations
+  Editionen) gebunden und die Erweiterung kann den Support für ein
+  Feature-Update vor dem Ende des Consumer-Supports beenden. Unter
+  <https://aka.ms/WindowsTargetVersioninfo> finden Sie weitere Informationen
+  und Support-Informationen dazu.
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
@@ -53,7 +50,7 @@ Hinweise:
 
 Eine Liste der Änderungen, die zwischen den einzelnen Versionen der
 NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
-[Änderungsprotokolle für Versionen der NVDA-Erweiterung][4].
+[Änderungsprotokolle für Versionen der NVDA-Erweiterung][1].
 
 ## Moderne virtuelle Tastaturen
 
@@ -70,22 +67,14 @@ Eingabetaste, um das ausgewählte Element einzufügen.
   such as phone numbers is copied to the clipboard. This is now part of NVDA
   2024.2.
 
-## Einstellungen
+## Einstellungen (Windows+I)
 
-* NVDA teilt Updates an den Windows Update-Status mit, während der Download
-  und die Installation fortschreiten. Dies kann zu Sprachunterbrechungen
-  führen, wenn Sie in den Einstellungen navigieren, während die Updates
-  heruntergeladen und installiert werden. Wenn Sie Windows 11 verwenden und
-  die UIA-Ereignisregistrierung in den erweiterten Einstellungen von NVDA
-  auf Selektiv eingestellt ist, müssen Sie die Update-Liste fokussieren,
-  sobald diese erscheint, damit NVDA den Update-Fortschritt mitteilen kann.
+* NVDA will report updates to Windows Update status as download and install
+  progresses. In Windows 10, this may result in speech interruption when
+  navigating Settings app while updates are being downloaded and
+  installed. In Windows 11, object navigation can be used in updates list to
+  review update status for individual entries.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
-
-[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
-
-[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[1]: https://github.com/josephsl/wintenapps/wiki/w10changelog

@@ -1,10 +1,6 @@
 # Windows Temel Uygulamalar #
 
 * Yazarlar: Joseph Lee, Derek Riemer ve diğerleri
-* [Kararlı sürümü indirin][1]
-* [Beta sürümünü indirin][2]
-* [Geliştirme sürümünü indirin][3]
-* NVDA uyumluluğu: 2023.3.4 ve sonrası
 
 Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
 adlandırılırken, Windows 10 ve Windows 11 gibi gelecekteki windows
@@ -21,12 +17,12 @@ Bazı uygulamalar için aşağıdaki uygulama veya destek modülleri  mevcuttur
 bakın):
 
 * Modern klavye
-* Ayarlar (sistem ayarları, Windows+I)
+* Ayarlar (Windows+I)
 
 Notlar:
 
-* Bu eklenti, Windows 10 22H2 (yapı 19045), 11 22H2 (yapı 22621) veya
-  sonraki sürümleri gerektirir.
+* Bu eklenti için 64 bit Windows 10 22H2 (derleme 19045), 11 22H2 (derleme
+  22621) veya sonraki sürümler gerekir.
 * Özellik güncelleme destek süresi, tüketici destek süresine (Ev, Pro, Pro
   Education, Pro for Workstations sürümleri) bağlıdır ve eklenti, tüketici
   desteği sona ermeden önce özellik güncellemesi desteğini
@@ -52,7 +48,7 @@ Notlar:
   etkinleştirin.
 
 Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
-[eklenti sürümleri için değişiklik günlükleri][4] belgesine bakın.
+[eklenti sürümleri için değişiklik günlükleri][1] belgesine bakın.
 
 ## Modern klavye
 
@@ -68,22 +64,15 @@ daha yükseğe ayarlayın. Windows 10'da pano geçmişinden yapıştırırken, s
   kopyalandığında NVDA önerilen eylemleri duyuracaktır. Bu artık NVDA
   2024.2'nin bir parçasıdır.
 
-## Ayarlar
+## Ayarlar (Windows+I)
 
-* NVDA, indirme ve yükleme ilerledikçe Windows Update durumuyla ilgili
-  güncellemeleri bildirir. Bu, güncellemeler indirilirken ve yüklenirken
-  Ayarlar uygulamasında gezinirken konuşmanın kesilmesine neden
-  olabilir. Windows 11 kullanıyorsanız ve UIA etkinlik kaydı NVDA gelişmiş
-  ayarlar panelinden seçmeli olarak ayarlanmışsa, NVDA'nın güncelleme
-  ilerlemesini duyurabilmesi için göründükleri anda odağı güncellemeler
-  listesine taşımalısınız.
+* NVDA, indirme ve yükleme işlemleri ilerledikçe Windows Update durumuna
+  yönelik güncellemeleri bildirecektir. Windows 10'da bu, güncellemeler
+  indirilirken ve yüklenirken Ayarlar uygulamasında gezinirken konuşmanın
+  kesilmesine neden olabilir. Windows 11'de, tek tek girişlerin güncelleme
+  durumunu gözden geçirmek için güncellemeler listesinde nesne dolaşımı
+  kullanılabilir.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
-
-[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
-
-[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[1]: https://github.com/josephsl/wintenapps/wiki/w10changelog
