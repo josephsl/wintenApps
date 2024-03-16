@@ -1,10 +1,6 @@
 # Windows App Essentials #
 
 * Autores: Joseph Lee, Derek Riemer e outros
-* Baixe a [versão estável][1]
-* Download [beta version][2]
-* Baixe a [versão em desenvolvimento][3]
-* Compatibilidade com NVDA: 2023.3.4 e posteriores
 
 Nota: Originalmente chamado de Windows 10 App Essentials, foi renomeado para
 Windows App Essentials em 2021 para oferecer suporte ao Windows 10 e versões
@@ -20,12 +16,12 @@ aplicativos estão incluídos (consulte a seção de cada aplicativo para obter
 detalhes sobre o que está incluso):
 
 * Teclado moderno
-* Configurações (configurações do sistema, Windows+I)
+* Settings (Windows+I)
 
 Notas:
 
-* Este complemento requer o Windows 10 22H2 (compilação 19045), 11 22H2
-  (compilação 22621), ou posteriors.
+* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
+  22621), or later releases.
 * Feature update support duration is tied to consumer support duration
   (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
   may end support for a feature update prior to end of consumer support. See
@@ -48,8 +44,8 @@ Notas:
   as Start menu and its context menu, enable "Automatic focus mode for focus
   changes" setting from NVDA's browse mode settings panel.
 
-Para obter uma lista de alterações feitas entre cada lançamento do
-complemento, consulte o documento [changelogs for add-on releases][4].
+For a list of changes made between each add-on releases, refer to
+[changelogs for add-on releases][1] document.
 
 ## Teclado moderno
 
@@ -65,21 +61,14 @@ instead of Enter key to paste the selected item.
   such as phone numbers is copied to the clipboard. This is now part of NVDA
   2024.2.
 
-## Configurações
+## Settings (Windows+I)
 
 * NVDA will report updates to Windows Update status as download and install
-  progresses. This may result in speech interruption when navigating
-  Settings app while updates are being downloaded and installed. If using
-  Windows 11 and UIA event registration is set to selective from NVDA
-  advanced settings panel, you must move focus to updates list as soon as
-  they appear so NVDA can announce update progress.
+  progresses. In Windows 10, this may result in speech interruption when
+  navigating Settings app while updates are being downloaded and
+  installed. In Windows 11, object navigation can be used in updates list to
+  review update status for individual entries.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
-
-[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
-
-[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[1]: https://github.com/josephsl/wintenapps/wiki/w10changelog

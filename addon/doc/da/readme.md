@@ -1,10 +1,6 @@
 # Vigtige forbedringer til Windows apps (Windows App Essentials) #
 
 * Forfattere: Joseph Lee, Derek Riemer og andre
-* Download [stabil version][1]
-* Download [betaversion][2]
-* Download [udviklingsversion][3]
-* NVDA-kompatibilitet: 2023.3.4 og nyere
 
 Bemærk: Denne tilføjelse hed Windows 10 App Essentials, men er blevet omdøbt
 til Windows App Essentials i 2021 for at understøtte Windows 10 og
@@ -18,17 +14,18 @@ Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
 hver appsektion for detaljer om, hvad der er inkluderet):
 
 * Moderne tastatur
-* Indstillinger (systemindstillinger, Windows+I)
+* Indstillinger (Windows+I)
 
 Bemærkninger:
 
-* Denne tilføjelse kræver Windows 10 22H2 (build 19045), 11 22H2 (build
-  22621) eller nyere udgivelser.
-* Feature update support duration is tied to consumer support duration
-  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
-  may end support for a feature update prior to end of consumer support. See
-  <https://aka.ms/WindowsTargetVersioninfo> for more information and support
-  dates.
+* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
+  22621), or later releases.
+* Varigheden af understøttelse af funktionsopdateringer er bundet til
+  varigheden af forbrugersupport (Home, Pro, Pro Education, Pro for
+  Workstations-udgaver), og tilføjelsen kan afslutte understøttelsen af en
+  funktionsopdatering, før forbrugersupporten ophører. Se
+  <https://aka.ms/WindowsTargetVersioninfo> for mere information og
+  supportdatoer.
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
@@ -50,7 +47,7 @@ Bemærkninger:
   indstillingspanel under "Gennemsynstilstand".
 
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
-tilføjelsen, henvises til [ændringslog for tilføjelsen][4].
+tilføjelsen, henvises til [ændringslog for tilføjelsen][1].
 
 ## Moderne tastatur
 
@@ -66,22 +63,14 @@ mellemrumstasten i stedet for enter.
   such as phone numbers is copied to the clipboard. This is now part of NVDA
   2024.2.
 
-## Indstillinger
+## Indstillinger (Windows+I)
 
-* NVDA vil afbryde talen og oplyse status for opdateringer til Windows
-  Update, efterhånden som download og installation skrider frem. Dette kan
-  resultere i afbrydelse af talen, når du navigerer i appen Indstillinger,
-  mens opdateringer downloades og installeres. Hvis du bruger Windows 11
-  22H2 og nyere med indstillingen "Registrer hændelser fra UI Automation
-  samt egenskabsændringer" slået til, skal du flytte fokus til listen
-  opdateringer, så NVDA kan oplyse status for opdateringerne.
+* NVDA will report updates to Windows Update status as download and install
+  progresses. In Windows 10, this may result in speech interruption when
+  navigating Settings app while updates are being downloaded and
+  installed. In Windows 11, object navigation can be used in updates list to
+  review update status for individual entries.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
-
-[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
-
-[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[1]: https://github.com/josephsl/wintenapps/wiki/w10changelog

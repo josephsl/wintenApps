@@ -1,10 +1,6 @@
 # Osnovni moduli za Windows aplikacije (Windows App Essentials) #
 
 * Autori: Joseph Lee, Derek Riemer i drugi
-* Preuzmi [stabilnu verziju][1]
-* Preuzmi [beta verziju][2]
-* Preuzmi [razvojnu verziju][3]
-* NVDA kompatibilnost: 2023.3.4 i novije verzije
 
 Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
 je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
@@ -18,17 +14,18 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 što je uključeno):
 
 * Moderna tipkovnica
-* Postavke (postavke sustava, Windows+I)
+* Postavke (Windows+I)
 
 Napomene:
 
-* Ovaj dodatak zahtijeva Windows 10 22H2 (gradnja 19045), 11 22H2 (gradnja
-  22621) ili novija izdanja.
-* Feature update support duration is tied to consumer support duration
-  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
-  may end support for a feature update prior to end of consumer support. See
-  <https://aka.ms/WindowsTargetVersioninfo> for more information and support
-  dates.
+* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
+  22621), or later releases.
+* Trajanje podrške za aktualiziranje značajki povezano je s trajanjem
+  korisničke podrške (izdanja Home, Pro, Pro Education, Pro for
+  Workstations) i dodatak može prekinuti podršku za aktualiziranje značajki
+  prije završetka korisničke podrške. Pogledaj
+  <https://aka.ms/WindowsTargetVersioninfo> za više informacija i datume
+  podrške.
 * Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
 * Windows Insider Preview gradnje neće podržati sve značajke, pogotovo
@@ -48,7 +45,7 @@ Napomene:
   modusa čitanja NVDA čitača.
 
 Za popis promjena između izdanja dodatka, pogledaj dokument [s izmjenama
-izdanja dodatka][4].
+izdanja dodatka][1].
 
 ## Moderna tipkovnica
 
@@ -64,21 +61,14 @@ tipku za razmak umjesto tipke Enter.
   such as phone numbers is copied to the clipboard. This is now part of NVDA
   2024.2.
 
-## Postavke
+## Postavke (Windows+I)
 
 * NVDA will report updates to Windows Update status as download and install
-  progresses. This may result in speech interruption when navigating
-  Settings app while updates are being downloaded and installed. If using
-  Windows 11 and UIA event registration is set to selective from NVDA
-  advanced settings panel, you must move focus to updates list as soon as
-  they appear so NVDA can announce update progress.
+  progresses. In Windows 10, this may result in speech interruption when
+  navigating Settings app while updates are being downloaded and
+  installed. In Windows 11, object navigation can be used in updates list to
+  review update status for individual entries.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
-
-[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
-
-[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[1]: https://github.com/josephsl/wintenapps/wiki/w10changelog

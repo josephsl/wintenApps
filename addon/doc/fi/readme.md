@@ -1,10 +1,6 @@
 # Windows App Essentials #
 
 * Tekijät: Joseph Lee, Derek Riemer sekä muut
-* Lataa [vakaa versio][1]
-* Lataa [beetaversio][2]
-* Lataa [kehitysversio][3]
-* Yhteensopivuus: NVDA 2023.3.4 ja uudemmat
 
 Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
 nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows
@@ -19,12 +15,12 @@ Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 * Moderni näppäimistö
-* Asetukset (järjestelmän asetukset, Windows+I)
+* Asetukset (Windows+I)
 
 Huomautukset:
 
-* Tämä lisäosa edellyttää Windows 10:n versiota 22H2 (koontiversio 19045),
-  11:n versiota 22H2 (koontiversio 22621) tai uudempaa.
+* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
+  22621), or later releases.
 * Ominaisuuspäivityksen tuen kesto on sidoksissa kuluttajatuen kestoon
   (Home, Pro, Pro Education, Pro for Workstations -versiot), ja lisäosa
   saattaa lopettaa tuen ominaisuuspäivitykselle jo ennen kuluttajatuen
@@ -48,7 +44,7 @@ Huomautukset:
   -asetuksen NVDA:n Selaustila-asetuspaneelista.
 
 Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
-[lisäosajulkaisujen muutoslokit][4] -dokumentista.
+[lisäosajulkaisujen muutoslokit][1] -dokumentista.
 
 ## Moderni näppäimistö
 
@@ -65,22 +61,14 @@ painamalla Välilyönti-näppäintä Enterin sijaan.
   kopioidaan yhteensopivaa dataa, kuten puhelinnumeroita. Tämä sisältyy NVDA
   2024.2:een.
 
-## Asetukset
+## Asetukset (Windows+I)
 
-* NVDA ilmoittaa Windows Updaten tilan päivitysten latauksen ja asennuksen
-  edistyessä. Tästä voi olla seurauksena puheen keskeytyminen navigoitaessa
-  Asetukset-sovelluksessa päivitysten lataamisen ja asennuksen
-  aikana. Mikäli käytetään Windows 11:tä ja UIA-tapahtumien rekisteröinti on
-  määritetty valikoivaksi NVDA:n Lisäasetukset-paneelissa, kohdistus on
-  siirrettävä päivitysten luetteloon heti niiden ilmestyessä, jotta NVDA voi
-  ilmoittaa päivityksen edistymisen.
+* NVDA will report updates to Windows Update status as download and install
+  progresses. In Windows 10, this may result in speech interruption when
+  navigating Settings app while updates are being downloaded and
+  installed. In Windows 11, object navigation can be used in updates list to
+  review update status for individual entries.
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-beta
-
-[3]: https://www.nvaccess.org/addonStore/legacy?file=wintenApps-dev
-
-[4]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[1]: https://github.com/josephsl/wintenapps/wiki/w10changelog

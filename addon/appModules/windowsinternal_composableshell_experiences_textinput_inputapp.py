@@ -9,10 +9,14 @@ from typing import Callable
 # Yes, this app module is powered by built-in modern keyboard (TextInputHost) app module
 # (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
-from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import AppModule
+from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import (
+	AppModule, ImeCandidateUI
+)
 import winVersion
 import eventHandler
 import api
+import ui
+import config
 from NVDAObjects import NVDAObject
 
 
@@ -38,7 +42,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# (hardware keyboard input suggestion or IME candidate) in Windows 11.
 		if (
 			winVersion.getWinVer() >= winVersion.WIN11
-			and obj.firstChild.UIAAutomationId == "IME_Prediction_Window"
+			and obj.firstChild and obj.firstChild.UIAAutomationId == "IME_Prediction_Window"
 		):
 			imeCandidateItem = obj.firstChild.firstChild.firstChild
 			imeCandidateItem.reportFocus()
@@ -54,6 +58,16 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			return
 		nextHandler()
 
+	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
+		# Announce visible IME candidates.
+		if (
+			isinstance(obj, ImeCandidateUI)
+			and obj.parent.UIAAutomationId == "IME_Candidate_Window"
+			and config.conf["inputComposition"]["autoReportAllCandidates"]
+		):
+			ui.message(obj.firstChild.visibleCandidateItemsText)
+		nextHandler()
+
 	def event_UIA_notification(
 			self,
 			obj: NVDAObject,
@@ -66,7 +80,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# such as Skype calls when data such as phone number is copied to the clipboard.
 		# Because keyboard interaction is not possible, just report the top suggested action.
 		# Resolved in NVDA 2024.2.
-		import ui
 		if activityId == "Windows.Shell.InputApp.SmartActions.Popup":
 			displayString = obj.name
 		ui.message(displayString)
