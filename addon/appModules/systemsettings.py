@@ -49,17 +49,3 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			except AttributeError:
 				pass
 		nextHandler()
-
-	def event_nameChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Deprecated: applies to Windows 11
-		if obj.UIAAutomationId.endswith("_UpdateStatusDescriptionTextBlock"):
-			import ui
-			import controlTypes
-			try:
-				# Announce updated screen content as long as update action control is disabled.
-				if controlTypes.State.UNAVAILABLE in obj.parent.parent.parent.previous.states:
-					speech.cancelSpeech()
-				ui.message(" ".join([element.name for element in obj.parent.children]))
-			except AttributeError:
-				pass
-		nextHandler()
