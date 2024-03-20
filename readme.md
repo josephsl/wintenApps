@@ -24,6 +24,10 @@ Notes:
 
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.
 
+## General
+
+* In Windows 11 24H2 Insider Preview builds, Action Center interface elements can be navigated using mouse and/or touch interaction.
+
 ## Modern keyboard
 
 This includes emoji panel, clipboard history, touch keyboard, dictation/voice typing, hardware input suggestions, suggested actions, and modern input method editors for certain languages across Windows 10 and 11. When viewing emojis, for best experience, enable Unicode Consortium setting from NVDA's speech settings and set symbol level to "some" or higher. When pasting from clipboard history in Windows 10, press Space key instead of Enter key to paste the selected item.
