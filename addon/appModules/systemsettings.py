@@ -63,21 +63,3 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			except AttributeError:
 				pass
 		nextHandler()
-
-	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Deprecated: applies to Windows 11
-		import UIAHandler
-		if (
-			obj.UIAAutomationId == "SystemSettings_MusUpdate_AvailableUpdatesList2_ListView"
-			# Do not run the below loop if UIA event registration is set to global.
-			and UIAHandler.handler.localEventHandlerGroup is not None
-		):
-			for updateEntry in obj.children:
-				updateStatus = updateEntry.simpleFirstChild.simpleLastChild
-				UIAHandler.handler.removeEventHandlerGroup(
-					updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
-				)
-				UIAHandler.handler.addEventHandlerGroup(
-					updateStatus.UIAElement, UIAHandler.handler.localEventHandlerGroup
-				)
-		nextHandler()
