@@ -60,6 +60,9 @@ def presentInstallError(currentWinVer: winVersion.WinVersion) -> None:
 
 def onInstall() -> None:
 	currentWinVer = winVersion.getWinVer()
+	if currentWinVer < winVersion.WIN11 and not currentWinVer.processorArchitecture.endswith("64"):
+		presentInstallError(currentWinVer)
+		raise RuntimeError("Windows App Essentials does not support 32-bit Windows 10 systems")
 	if not canInstallWinAppsAddon(currentWinVer):
 		presentInstallError(currentWinVer)
 		raise RuntimeError(
