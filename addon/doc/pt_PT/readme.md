@@ -49,6 +49,11 @@ Notas:
 Para obter uma lista das alterações efectuadas entre cada versão do extra,
 consulte o documento [changelogs for add-on releases][1].
 
+## Geral
+
+* In Windows 11 24H2 Insider Preview builds, Action Center interface
+  elements can be navigated using mouse and/or touch interaction.
+
 ## Teclado moderno
 
 Isto inclui o painel de emoji, histórico da área de transferência, teclado

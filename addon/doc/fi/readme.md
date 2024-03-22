@@ -46,6 +46,11 @@ Huomautukset:
 Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 [lisäosajulkaisujen muutoslokit][1] -dokumentista.
 
+## Yleistä
+
+* In Windows 11 24H2 Insider Preview builds, Action Center interface
+  elements can be navigated using mouse and/or touch interaction.
+
 ## Moderni näppäimistö
 
 Näitä ovat emojipaneeli, leikepöydän historia, kosketusnäppäimistö,

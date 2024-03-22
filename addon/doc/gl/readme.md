@@ -49,6 +49,11 @@ Notas:
 Para unha lista de trocos feitos entre cada versión do complemento, visita o
 documento [rexistros de trocos para publicacións de complementos][1].
 
+## Xeral
+
+* In Windows 11 24H2 Insider Preview builds, Action Center interface
+  elements can be navigated using mouse and/or touch interaction.
+
 ## Teclado Moderno
 
 Isto inclúe o panel de Emoji, o historial do portapapeis, o teclado táctil,

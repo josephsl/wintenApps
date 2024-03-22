@@ -47,6 +47,11 @@ Napomene:
 Za popis promjena između izdanja dodatka, pogledaj dokument [s izmjenama
 izdanja dodatka][1].
 
+## Opće
+
+* In Windows 11 24H2 Insider Preview builds, Action Center interface
+  elements can be navigated using mouse and/or touch interaction.
+
 ## Moderna tipkovnica
 
 To uključuje ploču s emojijima, povijest međuspremnika,

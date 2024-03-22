@@ -50,6 +50,11 @@ Notatki:
 Lista zmian wprowadzonych pomiędzy poszczególnymi wydaniami dodatków
 znajduje się w dokumencie [changelogs for add-on releases][1].
 
+## Ogólne
+
+* In Windows 11 24H2 Insider Preview builds, Action Center interface
+  elements can be navigated using mouse and/or touch interaction.
+
 ## Klawiatura nowoczesna
 
 Obejmuje to panel emoji, historię schowka, klawiaturę dotykową, dyktowanie /

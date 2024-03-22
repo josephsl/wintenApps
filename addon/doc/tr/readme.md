@@ -50,6 +50,11 @@ Notlar:
 Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
 [eklenti sürümleri için değişiklik günlükleri][1] belgesine bakın.
 
+## Genel
+
+* Windows 11 24H2 Insider Preview sürümlerinde, Eylem Merkezi arayüz
+  öğelerinde fare /veya dokunma etkileşimi kullanılarak gezinilebilir.
+
 ## Modern klavye
 
 Buna emoji paneli, pano geçmişi, dokunmatik klavye, dikte/sesle yazma,
