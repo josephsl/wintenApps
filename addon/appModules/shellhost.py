@@ -1,7 +1,7 @@
-# Shell Host/Action Center
+# Shell Host/quick settings
 # Copyright 2024 Joseph Lee, released under GPL
 
-# Workarounds for Windows 11 24H2 action center
+# Workarounds for Windows 11 24H2 quick settings interface
 
 import appModuleHandler
 import winUser
