@@ -49,6 +49,11 @@ Bemærkninger:
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][1].
 
+## Generelt
+
+* In Windows 11 24H2 Insider Preview builds, Action Center interface
+  elements can be navigated using mouse and/or touch interaction.
+
 ## Moderne tastatur
 
 Dette inkluderer emoji-panelet, historik for udklipsholderen,

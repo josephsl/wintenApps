@@ -47,6 +47,11 @@ Notas:
 For a list of changes made between each add-on releases, refer to
 [changelogs for add-on releases][1] document.
 
+## Geral
+
+* In Windows 11 24H2 Insider Preview builds, Action Center interface
+  elements can be navigated using mouse and/or touch interaction.
+
 ## Teclado moderno
 
 This includes emoji panel, clipboard history, touch keyboard,

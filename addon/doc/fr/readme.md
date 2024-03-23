@@ -53,6 +53,11 @@ Pour obtenir la liste des changements effectuées entre chaque version de
 l'extension, reportez-vous au document [changelogs pour les versions de
 l'extension][1].
 
+## Générale
+
+* In Windows 11 24H2 Insider Preview builds, Action Center interface
+  elements can be navigated using mouse and/or touch interaction.
+
 ## Clavier moderne
 
 Cela inclut le panneau emoji, l'historique du presse-papiers, le clavier

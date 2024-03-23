@@ -52,6 +52,11 @@ Eine Liste der Änderungen, die zwischen den einzelnen Versionen der
 NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
 [Änderungsprotokolle für Versionen der NVDA-Erweiterung][1].
 
+## Allgemein
+
+* In Windows 11 24H2 Insider Preview builds, Action Center interface
+  elements can be navigated using mouse and/or touch interaction.
+
 ## Moderne virtuelle Tastaturen
 
 Dazu gehören das Emoji-Bedienfeld, der Verlauf der Zwischenablage, die

@@ -20,8 +20,8 @@ qué se incluye):
 
 Notas:
 
-* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
-  22621), or later releases.
+* Este complemento requiere Windows 10 Versión 22H2 (compilación 19045) de
+  64 bits, 11 22H2 (compilación 22621) o versiones posteriores.
 * La duración del soporte de las actualizaciones de características está
   vinculada a la duración del soporte al cliente (ediciones Home, Pro, Pro
   Education, Pro for Workstations), y el complemento podría finalizar el
@@ -51,6 +51,12 @@ Notas:
 Para ver una lista de cambios hechos entre cada actualización del
 complemento, consulta el documento [Registros de cambios de versiones del
 complemento (en inglés)][1].
+
+## General
+
+* En las compilaciones insider de Windows 11 24H2, se puede navegar con el
+  ratón o con interacción táctil por los elementos de la interfaz del centro
+  de acciones.
 
 ## Teclado Moderno
 

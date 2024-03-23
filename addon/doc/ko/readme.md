@@ -32,6 +32,11 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 추가 기능 변경 내역은 [변경 내용 문서][1]에서 확인할 수 있습니다.
 
+## 일반
+
+* In Windows 11 24H2 Insider Preview builds, Action Center interface
+  elements can be navigated using mouse and/or touch interaction.
+
 ## 현대식 키보드
 
 현대식 키보드란 에모지 페널, 클립보드 히스토리, 터치 키보드, 받아쓰기, 하드웨어 입력 구성, 추천 엑션 및 현대식 IME 입력기를

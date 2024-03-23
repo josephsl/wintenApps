@@ -30,6 +30,11 @@
 
 有关每个版本之间所做的具体更改，请参阅[另外发布的更新日志][1]文档。
 
+## 常规增强
+
+* In Windows 11 24H2 Insider Preview builds, Action Center interface
+  elements can be navigated using mouse and/or touch interaction.
+
 ## 系统键盘
 
 包括表情符号面板、剪贴板历史记录、触摸键盘、听写/语音输入、硬件输入建议、建议的操作（预览）、适用于 Windows10 /
