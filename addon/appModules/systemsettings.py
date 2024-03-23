@@ -17,14 +17,6 @@ from NVDAObjects import NVDAObject
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
-	def event_NVDAObject_init(self, obj: NVDAObject):
-		# In Windows 11 24H2 (preview), bluetooth devices have odd names.
-		if (
-			obj.name == "SystemSettings.ViewModel.SettingEntry"
-			and obj.parent.UIAAutomationId == "DevicesHeroControlList"
-		):
-			obj.name = obj.firstChild.name
-
 	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Applies mostly to Windows 10
 		# In Windows 11, name change event raised by individual update entry announces update status,
