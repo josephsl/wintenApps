@@ -73,7 +73,11 @@ def onInstall() -> None:
 		raise RuntimeError(
 			f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentWinVer.build})"
 		)
-	if currentWinVer < winVersion.WIN11 and not currentWinVer.processorArchitecture.endswith("64"):
+	if (
+		currentWinVer < winVersion.WIN11
+		and not currentWinVer.processorArchitecture.endswith("64")
+		and addonChannel() in ["dev"]
+	):
 		import gui
 		import wx
 		gui.messageBox(
