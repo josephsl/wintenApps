@@ -25,6 +25,13 @@ SUPPORTED_RELEASES: list[winVersion.WinVersion] = [
 ]
 
 
+def addonChannel() -> str | None:
+	# Obtains the current add-on install channel (default is None, indicating stable channel).
+	import os.path
+	updateChannel = addonHandler.Addon(os.path.dirname(__file__)).manifest.get("updateChannel")
+	return None if updateChannel == "None" else updateChannel
+
+
 def canInstallWinAppsAddon(currentWinVer: winVersion.WinVersion) -> bool:
 	return (
 		currentWinVer in SUPPORTED_RELEASES  # General availability channel and Insider release preview
