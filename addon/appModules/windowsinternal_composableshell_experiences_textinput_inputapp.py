@@ -60,7 +60,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		nextHandler()
 
 	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Announce visible IME candidates.
+		# NVDA Core issue 14023: announce visible IME candidates.
 		if (
 			isinstance(obj, ImeCandidateUI)
 			and obj.parent.UIAAutomationId == "IME_Candidate_Window"
