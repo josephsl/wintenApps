@@ -44,8 +44,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			winVersion.getWinVer() >= winVersion.WIN11
 			and obj.firstChild and obj.firstChild.UIAAutomationId == "IME_Prediction_Window"
 		):
-			imeCandidateItem = obj.firstChild.firstChild.firstChild
-			imeCandidateItem.reportFocus()
+			obj.firstChild.firstChild.firstChild.reportFocus()
 		# NVDA Core takes care of the rest.
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
