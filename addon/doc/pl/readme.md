@@ -52,8 +52,8 @@ znajduje się w dokumencie [changelogs for add-on releases][1].
 
 ## Ogólne
 
-* In Windows 11 24H2 Insider Preview builds, Action Center interface
-  elements can be navigated using mouse and/or touch interaction.
+* In Windows 11 24H2 Insider Preview builds, quick settings (shellhost.exe)
+  interface elements can be navigated using mouse and/or touch interaction.
 
 ## Klawiatura nowoczesna
 

@@ -52,8 +52,9 @@ Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
 
 ## Genel
 
-* Windows 11 24H2 Insider Preview sürümlerinde, Eylem Merkezi arayüz
-  öğelerinde fare /veya dokunma etkileşimi kullanılarak gezinilebilir.
+* Windows 11 24H2 Insider Preview sürümlerinde, hızlı ayarlar
+  (shellhost.exe) arayüz öğelerinde fare ve/veya dokunma etkileşimi
+  kullanılarak gezinilebilir.
 
 ## Modern klavye
 

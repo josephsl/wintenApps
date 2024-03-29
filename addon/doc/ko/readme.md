@@ -34,8 +34,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 ## 일반
 
-* In Windows 11 24H2 Insider Preview builds, Action Center interface
-  elements can be navigated using mouse and/or touch interaction.
+* In Windows 11 24H2 Insider Preview builds, quick settings (shellhost.exe)
+  interface elements can be navigated using mouse and/or touch interaction.
 
 ## 현대식 키보드
 

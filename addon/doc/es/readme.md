@@ -55,8 +55,8 @@ complemento (en inglés)][1].
 ## General
 
 * En las compilaciones insider de Windows 11 24H2, se puede navegar con el
-  ratón o con interacción táctil por los elementos de la interfaz del centro
-  de acciones.
+  ratón o con interacción táctil por los elementos de la interfaz de los
+  ajustes rápidos (shellhost.exe).
 
 ## Teclado Moderno
 

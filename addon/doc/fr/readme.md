@@ -55,8 +55,9 @@ l'extension][1].
 
 ## Générale
 
-* In Windows 11 24H2 Insider Preview builds, Action Center interface
-  elements can be navigated using mouse and/or touch interaction.
+* Dans les versions Windows 11 24H2 Insider Preview, les éléments
+  d’interface des paramètres rapides (shellhost.exe) peuvent être parcourus
+  à l’aide de la souris et/ou d’une interaction tactile.
 
 ## Clavier moderne
 

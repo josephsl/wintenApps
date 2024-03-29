@@ -19,8 +19,9 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautukset:
 
-* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
-  22621), or later releases.
+* Tämä lisäosa edellyttää 64-bittistä Windows 10:n versiota 22H2
+  (koontiversio 19045), 11:n versiota 22H2 (koontiversio 22621) tai
+  uudempaa.
 * Ominaisuuspäivityksen tuen kesto on sidoksissa kuluttajatuen kestoon
   (Home, Pro, Pro Education, Pro for Workstations -versiot), ja lisäosa
   saattaa lopettaa tuen ominaisuuspäivitykselle jo ennen kuluttajatuen
@@ -48,8 +49,9 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 
 ## Yleistä
 
-* In Windows 11 24H2 Insider Preview builds, Action Center interface
-  elements can be navigated using mouse and/or touch interaction.
+* Pika-asetusten (shellhost.exe) käyttöliittymäelementeissä voidaan liikkua
+  Windows 11 24H2:n Insider-esikoontiversioissa hiirtä ja/tai
+  kosketusvuorovaikutusta käyttäen.
 
 ## Moderni näppäimistö
 
@@ -68,11 +70,11 @@ painamalla Välilyönti-näppäintä Enterin sijaan.
 
 ## Asetukset (Windows+I)
 
-* NVDA will report updates to Windows Update status as download and install
-  progresses. In Windows 10, this may result in speech interruption when
-  navigating Settings app while updates are being downloaded and
-  installed. In Windows 11, object navigation can be used in updates list to
-  review update status for individual entries.
+* NVDA ilmoittaa Windows Updaten tilan päivitysten latauksen ja asennuksen
+  edistyessä. Tästä voi olla seurauksena puheen keskeytyminen navigoitaessa
+  Asetukset-sovelluksessa päivitysten lataamisen ja asennuksen
+  aikana. Windows 11:ssä päivitysluettelossa voidaan käyttää
+  objektinavigointia yksittäisten päivitysten tilan tarkasteluun.
 
 [[!tag dev stable]]
 
