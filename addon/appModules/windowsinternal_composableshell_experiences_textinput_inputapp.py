@@ -24,7 +24,8 @@ from NVDAObjects import NVDAObject
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Do not proceed if emoji panel category item is selected when the panel is closed in Windows 11.
+		# NVDA Core issue 16346: do not proceed if emoji panel category item is selected
+		# when the panel is closed in Windows 11.
 		if obj.UIAAutomationId.startswith("navigation-menu-item"):
 			# System focus restored.
 			if (focus := api.getFocusObject()).appModule != self:
@@ -49,7 +50,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		super().event_UIA_window_windowOpen(obj, nextHandler)
 
 	def event_gainFocus(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Focus gets stuck in Modern keyboard when clipboard history closes in Windows 11.
+		# NVDA Core issue 16347: focus gets stuck in Modern keyboard
+		# when clipboard history closes in Windows 11.
 		if obj.parent.childCount == 0:
 			# Do not queue events if events are pending.
 			if not eventHandler.isPendingEvents():
