@@ -36,6 +36,8 @@ def canInstallWinAppsAddon(currentWinVer: winVersion.WinVersion) -> bool:
 	return (
 		currentWinVer in SUPPORTED_RELEASES  # General availability channel and Insider release preview
 		or currentWinVer > max(SUPPORTED_RELEASES)  # Insider Preview canary/dev/beta
+		# The next condition will be removed once Insider Preview beta channel moves to 24H2.
+		or currentWinVer.build == 22635  # Windows 11 23H2 beta
 	)
 
 
