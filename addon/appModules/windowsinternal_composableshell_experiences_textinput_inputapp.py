@@ -17,6 +17,7 @@ import eventHandler
 import api
 import ui
 import config
+import versionInfo
 from NVDAObjects import NVDAObject
 
 
@@ -58,30 +59,32 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			ui.message(obj.firstChild.visibleCandidateItemsText)
 		nextHandler()
 
-	def event_UIA_window_windowOpen(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# NVDA Core issue 16283: announce the first candidate
-		# (hardware keyboard input suggestion or IME candidate) in Windows 11.
-		# Resolved in NVDA 2024.2.
-		if (
-			winVersion.getWinVer() >= winVersion.WIN11
-			and obj.firstChild and obj.firstChild.UIAAutomationId == "IME_Prediction_Window"
-		):
-			obj.firstChild.firstChild.firstChild.reportFocus()
-		# NVDA Core takes care of the rest.
-		super().event_UIA_window_windowOpen(obj, nextHandler)
+	# The following event handlers are hidden if NVDA 2024.2 or later is running.
+	if (versionInfo.version_year, versionInfo.version_major) < (2024, 2):
+		def event_UIA_window_windowOpen(self, obj: NVDAObject, nextHandler: Callable[[], None]):
+			# NVDA Core issue 16283: announce the first candidate
+			# (hardware keyboard input suggestion or IME candidate) in Windows 11.
+			# Resolved in NVDA 2024.2.
+			if (
+				winVersion.getWinVer() >= winVersion.WIN11
+				and obj.firstChild and obj.firstChild.UIAAutomationId == "IME_Prediction_Window"
+			):
+				obj.firstChild.firstChild.firstChild.reportFocus()
+			# NVDA Core takes care of the rest.
+			super().event_UIA_window_windowOpen(obj, nextHandler)
 
-	def event_UIA_notification(
-			self,
-			obj: NVDAObject,
-			nextHandler: Callable[[], None],
-			displayString: str | None = None,
-			activityId: str | None = None,
-			**kwargs
-	):
-		# NVDA Core issue 16009: Windows 11 uses modern keyboard interface to display Suggested Actions
-		# such as Skype calls when data such as phone number is copied to the clipboard.
-		# Because keyboard interaction is not possible, just report the top suggested action.
-		# Resolved in NVDA 2024.2.
-		if activityId == "Windows.Shell.InputApp.SmartActions.Popup":
-			displayString = obj.name
-		ui.message(displayString)
+		def event_UIA_notification(
+				self,
+				obj: NVDAObject,
+				nextHandler: Callable[[], None],
+				displayString: str | None = None,
+				activityId: str | None = None,
+				**kwargs
+		):
+			# NVDA Core issue 16009: Windows 11 uses modern keyboard interface to display Suggested Actions
+			# such as Skype calls when data such as phone number is copied to the clipboard.
+			# Because keyboard interaction is not possible, just report the top suggested action.
+			# Resolved in NVDA 2024.2.
+			if activityId == "Windows.Shell.InputApp.SmartActions.Popup":
+				displayString = obj.name
+			ui.message(displayString)
