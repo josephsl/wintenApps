@@ -41,6 +41,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_UIA_window_windowOpen(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# NVDA Core issue 16283: announce the first candidate
 		# (hardware keyboard input suggestion or IME candidate) in Windows 11.
+		# Resolved in NVDA 2024.2.
 		if (
 			winVersion.getWinVer() >= winVersion.WIN11
 			and obj.firstChild and obj.firstChild.UIAAutomationId == "IME_Prediction_Window"
