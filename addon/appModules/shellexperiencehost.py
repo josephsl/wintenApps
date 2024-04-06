@@ -16,6 +16,8 @@ from NVDAObjects.UIA import UIA
 from UIAHandler import IUIAutomationElement, UIA_NamePropertyId
 import controlTypes
 import ui
+import winUser
+from winAPI.types import HWNDValT
 
 
 class CalendarViewDayItem(UIA):
