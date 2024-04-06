@@ -3,10 +3,7 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
-"""App module for Shell Experience Host, part of Windows 10 and later.
-Shell Experience Host is home to a number of things, including Action Center and other shell features.
-In Windows 11 24H2 (2024 Update and Server 2025), quick settings component is part of ShellHost.exe.
-"""
+# Workarounds for Windows 11 24H2 quick settings interface (ShellHost)
 
 # Extends NVDA Core's Shell Experience Host app module.
 from nvdaBuiltin.appModules.shellexperiencehost import AppModule
