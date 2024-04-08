@@ -26,7 +26,7 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## General
 
-* In Windows 11 24H2 Insider Preview builds, quick settings (shellhost.exe) interface elements can be navigated using mouse and/or touch interaction.
+* In Windows 11 24H2, quick settings (shellhost.exe) interface elements can be navigated using mouse and/or touch interaction. This is now part of NVDA 2024.2.
 
 ## Modern keyboard
 
