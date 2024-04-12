@@ -22,6 +22,7 @@ SUPPORTED_RELEASES: list[winVersion.WinVersion] = [
 	winVersion.WIN10_22H2,
 	winVersion.WIN11_22H2,
 	winVersion.WIN11_23H2,
+	winVersion.WinVersion(major=10, minor=0, build=26100, releaseName="Windows 11 24H2"),
 ]
 
 
