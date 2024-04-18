@@ -76,11 +76,3 @@ def onInstall() -> None:
 		raise RuntimeError(
 			f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentWinVer.build})"
 		)
-	# Present a message if installing on 32-bit Windows 10 22H2 systems.
-	if not currentWinVer.processorArchitecture.endswith("64"):
-		import gui
-		import wx
-		gui.messageBox(
-			"You are using 32-bit Windows 10. This add-on requires 64-bit Windows 10 or later.",
-			"32-bit Windows 10 system detected", wx.OK | wx.ICON_INFORMATION
-		)
