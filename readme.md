@@ -8,7 +8,6 @@ This add-on is a collection of app modules for various modern Windows apps, as w
 
 The following app modules or support modules for some apps are included (see each app section for details on what is included):
 
-* Modern keyboard
 * Settings (Windows+I)
 
 Notes:
@@ -25,11 +24,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 ## General
 
 * In Windows 11 24H2, quick settings (shellhost.exe) interface elements can be navigated using mouse and/or touch interaction. This is now part of NVDA 2024.2.
-
-## Modern keyboard
-
-This includes emoji panel, clipboard history, touch keyboard, dictation/voice typing, hardware input suggestions, suggested actions, and modern input method editors for certain languages across Windows 10 and 11.
-
 * In Windows 11, NVDA will announce suggested actions when compatible data such as phone numbers is copied to the clipboard. This is now part of NVDA 2024.2.
 
 ## Settings (Windows+I)
