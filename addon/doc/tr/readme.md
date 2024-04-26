@@ -16,7 +16,6 @@ Bazı uygulamalar için aşağıdaki uygulama veya destek modülleri  mevcuttur
 (nelerin dahil olduğuyla ilgili ayrıntılar için her bir uygulama bölümüne
 bakın):
 
-* Modern klavye
 * Ayarlar (Windows+I)
 
 Notlar:
@@ -33,39 +32,21 @@ Notlar:
 * Windows Insider Önizleme yapılarındaki tüm özellikler desteklenmeyecek,
   özellikle canary ve dev kanallarında Windows Insiders alt kümesine sunulan
   özellikler için.
-* Eklenti, Insider Preview derlemelerine dahil edilen ve daha sonra
-  kaldırılan değişiklikleri taklit edebilir ve bu değişiklikler için eklenti
-  bunları gelecekteki sürümlerde kaldırabilir.
 * Eklenti geliştirme kanalı, beta ve kararlı sürümlere dahil edilebilecek
   veya edilmeyebilecek deneysel içerik de dahil olmak üzere değişiklikleri
   içerecek ve beta kanalı, gelecekteki kararlı sürümler için planlanan
   değişikliklerle birlikte gelecek.
 * Bazı eklenti özellikleri, NVDA ekran okuyucusunun bir parçasıdır veya
   yakında olacaktır.
-* Başlat menüsü ve içerik menüsü gibi web teknolojilerini ve içeriği içeren
-  uygulamalarla en iyi deneyimi elde etmek için, NVDA'nın göz atma modu
-  ayarları panelinden "Odak değişiklikleri için otomatik odak modu" ayarını
-  etkinleştirin.
 
 Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
 [eklenti sürümleri için değişiklik günlükleri][1] belgesine bakın.
 
 ## Genel
 
-* Windows 11 24H2 Insider Preview sürümlerinde, hızlı ayarlar
-  (shellhost.exe) arayüz öğelerinde fare ve/veya dokunma etkileşimi
-  kullanılarak gezinilebilir.
-
-## Modern klavye
-
-Buna emoji paneli, pano geçmişi, dokunmatik klavye, dikte/sesle yazma,
-donanım giriş önerileri, önerilen eylemler ve Windows 10 ve 11'deki belirli
-diller için modern giriş yöntemi düzenleyicileri dahildir. Emojileri
-görüntülerken, en iyi deneyim için Unicode Konsorsiyum ayarını şu adresten
-etkinleştirin: NVDA'nın konuşma ayarları ve sembol seviyesini "bazı" veya
-daha yükseğe ayarlayın. Windows 10'da pano geçmişinden yapıştırırken, seçili
-öğeyi yapıştırmak için Enter tuşu yerine Boşluk Çubuğuna tuşuna basın.
-
+* Windows 11 24H2'de, hızlı ayarlar (shellhost.exe) arayüz öğelerinde fare
+  ve/veya dokunma etkileşimi kullanılarak gezinilebilir. Bu artık NVDA
+  2024.2'nin bir parçası.
 * Windows 11'de, telefon numaraları gibi uyumlu veriler panoya
   kopyalandığında NVDA önerilen eylemleri duyuracaktır. Bu artık NVDA
   2024.2'nin bir parçasıdır.

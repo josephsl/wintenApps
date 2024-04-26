@@ -14,7 +14,6 @@ Windows 10:ssä ja uudemmissa.
 Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
 käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
-* Moderni näppäimistö
 * Asetukset (Windows+I)
 
 Huomautukset:
@@ -32,17 +31,10 @@ Huomautukset:
 * Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
   varsinkaan sellaisia, jotka esitellään vain osalle canary- ja
   dev-kanavilla olevista käyttäjistä.
-* Lisäosa saattaa jäljitellä Insider-esiversioihin sisällytettyjä
-  korjauksia, jotka poistetaan myöhemmin. Näihin muutoksiin liittyen
-  korjaukset saatetaan poistaa lisäosan tulevissa versioissa.
 * Lisäosan dev-kanava sisältää muutoksia, mukaan lukien kokeellinen sisältö,
   joka saatetaan sisällyttää beeta- ja vakaisiin versioihin, ja beta-kanava
   sisältää tuleviin vakaisiin versioihin suunniteltuja muutoksia.
 * Jotkin lisäosan ominaisuudet sisältyvät tai tulevat sisältymään NVDA:han.
-* Saat parhaan kokemuksen verkkotekniikoita ja -sisältöä hyödyntävistä
-  sovelluksista, kuten Käynnistä-valikosta ja sen pikavalikosta, ottamalla
-  käyttöön "Automaattinen vuorovaikutustila kohdistuksen muuttuessa"
-  -asetuksen NVDA:n Selaustila-asetuspaneelista.
 
 Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 [lisäosajulkaisujen muutoslokit][1] -dokumentista.
@@ -50,20 +42,8 @@ Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 ## Yleistä
 
 * Pika-asetusten (shellhost.exe) käyttöliittymäelementeissä voidaan liikkua
-  Windows 11 24H2:n Insider-esikoontiversioissa hiirtä ja/tai
-  kosketusvuorovaikutusta käyttäen.
-
-## Moderni näppäimistö
-
-Näitä ovat emojipaneeli, leikepöydän historia, kosketusnäppäimistö,
-sanelu/puhekirjoitus, ehdotukset syötettäessä tekstiä fyysisellä
-näppäimistöllä, ehdotetut toiminnot sekä modernin syöttömenetelmän editorit
-tietyille kielille Windows 10:ssä ja 11:ssä. Ota käyttöön emojeita
-tarkasteltaessa Unicode-konsortion datan asetus NVDA:n puheasetuksista
-parhaan kokemuksen saamiseksi, ja aseta symbolitasoksi "jotain" tai
-korkeampi. Kun liität leikepöydän historiasta, liitä valittu kohde
-painamalla Välilyönti-näppäintä Enterin sijaan.
-
+  Windows 11 24H2:ssa hiirtä ja/tai kosketusvuorovaikutusta käyttäen. Tämä
+  sisältyy NVDA 2024.2:een.
 * NVDA ilmoittaa ehdotetut toiminnot Windows 11:ssä, kun leikepöydälle
   kopioidaan yhteensopivaa dataa, kuten puhelinnumeroita. Tämä sisältyy NVDA
   2024.2:een.

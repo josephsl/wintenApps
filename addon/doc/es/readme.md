@@ -15,7 +15,6 @@ Se incluyen Los siguientes app modules o el apoyo para módulos para algunas
 aplicaciones (consulta cada sección para la aplicación para detalles sobre
 qué se incluye):
 
-* Teclado Moderno
 * Configuración (Windows+I)
 
 Notas:
@@ -34,19 +33,12 @@ Notas:
 * No se soportarán todas las funciones de las compilaciones Windows Insider
   Preview, más si se introducen en un subconjunto de insiders de Windows en
   los canales dev y canary.
-* El complemento puede emular correcciones incluidas en compilaciones
-  preliminares de Insider que posteriormente se eliminan, y en estos casos,
-  el complemento podría eliminarlas en versiones futuras.
 * El canal de desarrollo del complemento incluirá entre sus cambios
   contenido experimental que podrá ir o no en las versiones beta y estables,
   y el canal beta vendrá con cambios planeados para versiones estables
   futuras.
 * Algunas de las características del complemento son o serán parte del
   lector de pantalla NVDA.
-* Para tener la mejor experiencia posible con aplicaciones que incrustan
-  tecnologías y contenidos web, como el menú Inicio y su menú contextual,
-  activa la opción "Modo Foco automático para cambios del foco" desde el
-  panel de opciones Modo exploración de NVDA.
 
 Para ver una lista de cambios hechos entre cada actualización del
 complemento, consulta el documento [Registros de cambios de versiones del
@@ -56,19 +48,7 @@ complemento (en inglés)][1].
 
 * En las compilaciones insider de Windows 11 24H2, se puede navegar con el
   ratón o con interacción táctil por los elementos de la interfaz de los
-  ajustes rápidos (shellhost.exe).
-
-## Teclado Moderno
-
-Esto incluye el panel de emojis, historial del portapapeles, teclado táctil,
-dictado / escritura por voz, sugerencias de entrada por hardware, acciones
-sugeridas y los editores modernos de métodos de entrada para ciertos idiomas
-en Windows 10 y 11. Al visualizar emojis, para una mejor experiencia, activa
-la opción del consorcio Unicode desde las opciones de voz de NVDA y
-configura el nivel de símbolos en "alguno" o más alto. Al pegar desde el
-historial del portapapeles en Windows 10, pulsa la barra espaciadora en vez
-de intro para pegar el elemento seleccionado.
-
+  ajustes rápidos (shellhost.exe). Esto ahora forma parte de NVDA 2024.2.
 * En Windows 11, NVDA anunciará las acciones sugeridas cuando se copien al
   portapapeles datos compatibles, como números de teléfono. Esto ahora forma
   parte de NVDA 2024.2.

@@ -15,7 +15,6 @@ Os seguintes módulos de aplicativos ou módulos de suporte para alguns
 aplicativos estão incluídos (consulte a seção de cada aplicativo para obter
 detalhes sobre o que está incluso):
 
-* Teclado moderno
 * Settings (Windows+I)
 
 Notas:
@@ -33,35 +32,19 @@ Notas:
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders in canary
   and dev channels.
-* The add-on may emulate changes included in Insider Preview builds which
-  are subsequently removed, and for these changes, the add-on may remove
-  them in future releases.
 * Add-on dev channel will include changes including experimental content
   that may or may not be included in beta and stable releases, and beta
   channel will come with changes planned for future stable releases.
 * Alguns recursos do complemento são ou farão parte do leitor de tela NVDA.
-* For best experience with apps that embed web technologies and content such
-  as Start menu and its context menu, enable "Automatic focus mode for focus
-  changes" setting from NVDA's browse mode settings panel.
 
 For a list of changes made between each add-on releases, refer to
 [changelogs for add-on releases][1] document.
 
 ## Geral
 
-* In Windows 11 24H2 Insider Preview builds, quick settings (shellhost.exe)
-  interface elements can be navigated using mouse and/or touch interaction.
-
-## Teclado moderno
-
-This includes emoji panel, clipboard history, touch keyboard,
-dictation/voice typing, hardware input suggestions, suggested actions, and
-modern input method editors for certain languages across Windows 10 and
-11. When viewing emojis, for best experience, enable Unicode Consortium
-setting from NVDA's speech settings and set symbol level to "some" or
-higher. When pasting from clipboard history in Windows 10, press Space key
-instead of Enter key to paste the selected item.
-
+* In Windows 11 24H2, quick settings (shellhost.exe) interface elements can
+  be navigated using mouse and/or touch interaction. This is now part of
+  NVDA 2024.2.
 * In Windows 11, NVDA will announce suggested actions when compatible data
   such as phone numbers is copied to the clipboard. This is now part of NVDA
   2024.2.

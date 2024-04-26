@@ -13,7 +13,6 @@ samt forbedringer og rettelser for visse windows 10 kontrolelementer.
 Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
 hver appsektion for detaljer om, hvad der er inkluderet):
 
-* Moderne tastatur
 * Indstillinger (Windows+I)
 
 Bemærkninger:
@@ -32,38 +31,21 @@ Bemærkninger:
 * Ikke alle funktioner fra Windows Insider Preview-builds vil blive
   understøttet. Dette er yderligere tilfældet for funktioner introduceret i
   en undergruppe af Windows Insiders i udviklerkanalen.
-* The add-on may emulate changes included in Insider Preview builds which
-  are subsequently removed, and for these changes, the add-on may remove
-  them in future releases.
 * Tilføjelsesudviklerkanal vil inkludere ændringer, herunder eksperimentelt
   indhold, der muligvis er inkluderet i beta- og stabile versioner, og
   betakanalen vil komme med ændringer, der er planlagt for fremtidige
   stabile versioner.
 * Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
   NVDA skærmlæser.
-* For at få den bedste oplevelse med apps, der integrerer webteknologier og
-  indhold som f.eks. Start-menuen og dens kontekstmenu, skal du aktivere
-  indstillingen "Automatisk fokustilstand ved ændring af fokus" fra NVDAs
-  indstillingspanel under "Gennemsynstilstand".
 
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][1].
 
 ## Generelt
 
-* In Windows 11 24H2 Insider Preview builds, quick settings (shellhost.exe)
-  interface elements can be navigated using mouse and/or touch interaction.
-
-## Moderne tastatur
-
-Dette inkluderer emoji-panelet, historik for udklipsholderen,
-berøringstastatur, diktering, forslag i forhold til hardwareinput og moderne
-Input Methodf Editor for visse sprog. Når du ser emojier, skal du for at få
-den bedste oplevelse aktivere Unicode Consortium-indstillingen fra NvDAs
-taleindstillinger og indstille tegnsætningsniveauet til "nogle" eller
-højere. Når du skal indstille fra historikken i Windows 10, skal du bruge
-mellemrumstasten i stedet for enter.
-
+* In Windows 11 24H2, quick settings (shellhost.exe) interface elements can
+  be navigated using mouse and/or touch interaction. This is now part of
+  NVDA 2024.2.
 * In Windows 11, NVDA will announce suggested actions when compatible data
   such as phone numbers is copied to the clipboard. This is now part of NVDA
   2024.2.

@@ -13,7 +13,6 @@ i poboljšanja i ispravci određenih kontrola u sustavu Windows 10 i novijim.
 Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 što je uključeno):
 
-* Moderna tipkovnica
 * Postavke (Windows+I)
 
 Napomene:
@@ -31,37 +30,20 @@ Napomene:
 * Windows Insider Preview gradnje neće podržati sve značajke, pogotovo
   značajke koje su predstavljene u podskupu „Windows Insiders” u kanalima
   canary i razvoja.
-* The add-on may emulate changes included in Insider Preview builds which
-  are subsequently removed, and for these changes, the add-on may remove
-  them in future releases.
 * Kanal dodataka u razvoju uključivat će promjene uključujući
   eksperimentalni sadržaj koji može, ali ne mora biti uključen u beta i
   stabilnim izdanjima, a beta kanal će sadržati promjene koje su planirane
   za buduća stabilna izdanja.
 * Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
-* Za najbolje iskustvo s aplikacijama koje ugrađuju web tehnologije i
-  sadržaj kao što je izbornik Start i njegov kontekstni izbornik, aktiviraj
-  postavku „Automatski modus fokusa za promjene fokusa” u ploči postavki
-  modusa čitanja NVDA čitača.
 
 Za popis promjena između izdanja dodatka, pogledaj dokument [s izmjenama
 izdanja dodatka][1].
 
 ## Opće
 
-* In Windows 11 24H2 Insider Preview builds, quick settings (shellhost.exe)
-  interface elements can be navigated using mouse and/or touch interaction.
-
-## Moderna tipkovnica
-
-To uključuje ploču s emojijima, povijest međuspremnika,
-diktatiranje/tipkanje govorom, prijedloge unosa hardvera i moderne uređivače
-načina unosa za određene jezike u Windows verzijama 10 i 11. Kad pregledavaš
-emojije, aktiviraj postavku Unicode Consortium u NVDA postavkama govora i
-postavi razinu simbola na „neki” ili višu. Prilikom umetanja iz povijesti
-međuspremnika u sustavu Windows 10, za umetanje odabranog elementa pritisni
-tipku za razmak umjesto tipke Enter.
-
+* In Windows 11 24H2, quick settings (shellhost.exe) interface elements can
+  be navigated using mouse and/or touch interaction. This is now part of
+  NVDA 2024.2.
 * In Windows 11, NVDA will announce suggested actions when compatible data
   such as phone numbers is copied to the clipboard. This is now part of NVDA
   2024.2.

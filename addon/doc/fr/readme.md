@@ -15,7 +15,6 @@ Les app modules suivants ou la prise en charge des modules pour certaines
 apps sont inclus (voir chaque section app pour plus de détails sur ce qui
 est inclus) :
 
-* Clavier moderne
 * Paramètres (Windows+I)
 
 Notes:
@@ -34,20 +33,12 @@ Notes:
 * Toutes les fonctionnalités des builds Windows Insider Preview ne seront
   pas prises en charge, plus encore pour les fonctionnalités introduites
   dans Windows Insiders sous canary et dev channels.
-* L'extension peut émuler les modifications incluses dans les builds Insider
-  Preview qui sont ensuite supprimées, et pour ces modifications,
-  l'extension peut les supprimer dans des versions futures.
 * Le canal de développement de l'extension comprendra des modifications, y
   compris le contenu expérimental qui peut ou non être inclus dans les
   versions béta et stables, et le canal béta sera livré avec des
   modifications prévues pour les futures versions stables.
 * Certaines fonctionnalités de l'extension font ou feront partie du lecteur
   d'écran NVDA.
-* Pour une meilleure expérience avec les applications qui intègrent des
-  technologies et du contenu Web tels que le menu Démarrer et son menu
-  contextuel, activez le paramètre "Mode formulaire automatique lors des
-  changements de focus" dans le panneau des paramètres du Mode navigation de
-  NVDA.
 
 Pour obtenir la liste des changements effectuées entre chaque version de
 l'extension, reportez-vous au document [changelogs pour les versions de
@@ -55,22 +46,9 @@ l'extension][1].
 
 ## Générale
 
-* Dans les versions Windows 11 24H2 Insider Preview, les éléments
-  d’interface des paramètres rapides (shellhost.exe) peuvent être parcourus
-  à l’aide de la souris et/ou d’une interaction tactile.
-
-## Clavier moderne
-
-Cela inclut le panneau emoji, l'historique du presse-papiers, le clavier
-tactile, la dictée/la saisie vocale, les suggestions d'entrée matérielle,
-les actions suggérées et les éditeurs de méthodes de saisie modernes pour
-certaines langues sur Windows 10 et 11. Lors de l'affichage des emojis, pour
-une meilleure expérience, activez le paramètre Unicode Consortium à partir
-des paramètres vocaux de NVDA et réglez le niveau de symbole sur "certains"
-ou plus. Lors du collage à partir de l'historique du presse-papiers dans
-Windows 10, appuyez sur la touche Espace au lieu de la touche Entrée pour
-coller l'élément sélectionné.
-
+* Dans Windows 11 24H2, les éléments d'interface des paramètres rapides
+  (shellhost.exe) peuvent être parcourus à l'aide de la souris et/ou d'une
+  interaction tactile. Cela fait désormais partie de NVDA 2024.2.
 * Sous Windows 11, NVDA annoncera des actions suggérées lorsque des données
   compatibles telles que des numéros de téléphone sont copiées dans le
   presse-papiers. Cela fait désormais partie de NVDA 2024.2.

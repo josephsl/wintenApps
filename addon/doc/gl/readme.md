@@ -14,7 +14,6 @@ Inclúense os seguintes app modules ou o apoio para módulos para algunhas
 aplicacións (consulta cada sección para a aplicación para detalles sobre que
 se inclúe):
 
-* Teclado Moderno
 * Opcións (Windows+I)
 
 Notas:
@@ -33,38 +32,20 @@ Notas:
 * Non se soportarán todas as características de versións Windows Insider
   Preview, máis aínda para as características introducidas nun subconxunto
   de Insiders Windows na canle de desenvolvemento (dev).
-* The add-on may emulate changes included in Insider Preview builds which
-  are subsequently removed, and for these changes, the add-on may remove
-  them in future releases.
 * Add-on dev channel will include changes including experimental content
   that may or may not be included in beta and stable releases, and beta
   channel will come with changes planned for future stable releases.
 * Algunhas das características do complemento son ou serán parte do lector
   de pantalla NVDA.
-* Para a mellor experiencia con aplicacións que incrustan tecnoloxías web e
-  con contido como o menú inicio e o seu menú de contexto, habilita a opción
-  "Modo foco automático para cambios do foco" dende o panel de modo
-  navegación das opcións de NVDA.
 
 Para unha lista de trocos feitos entre cada versión do complemento, visita o
 documento [rexistros de trocos para publicacións de complementos][1].
 
 ## Xeral
 
-* In Windows 11 24H2 Insider Preview builds, quick settings (shellhost.exe)
-  interface elements can be navigated using mouse and/or touch interaction.
-
-## Teclado Moderno
-
-Isto inclúe o panel de Emoji, o historial do portapapeis, o teclado táctil,
-o dictado/escritura por voz, as suxestións de entrada por hardware, as
-accións suxeridas, e os editores co método de entrada moderna para certas
-linguas tanto en windows 10 como 11. Ó ver emojis, para unha mellor
-experiencia, habilita a opción Unicode Consortium nos axustes de voz do NvDA
-e establece o nivel de símbolos en "algunha" ou superior. Ó pegar dende o
-historial do portapapeis en Windows 10, preme a tecla Espazo no canto de
-Intro para pegar o elemento seleccionado.
-
+* In Windows 11 24H2, quick settings (shellhost.exe) interface elements can
+  be navigated using mouse and/or touch interaction. This is now part of
+  NVDA 2024.2.
 * In Windows 11, NVDA will announce suggested actions when compatible data
   such as phone numbers is copied to the clipboard. This is now part of NVDA
   2024.2.
