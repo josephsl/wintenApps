@@ -28,8 +28,12 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# NVDA Core issue 16346: do not proceed if emoji panel category item is selected
 		# when the panel is closed in Windows 11.
 		if obj.UIAAutomationId.startswith("navigation-menu-item"):
-			# System focus restored.
-			if (focus := api.getFocusObject()).appModule != self:
+			if (
+				# System focus restored.
+				(focus := api.getFocusObject()).appModule != self
+				# A different part of emoji panel is selected.
+				or api.getNavigatorObject() == obj
+			):
 				return
 			# NVDA is stuck in a nonexistent edit field.
 			# Focus object location can be None sometimes.
