@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
+"Last-Translator: Kostadin Kolev <k.kolev1985@gmail.com>\n"
 "Language-Team: \n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgstr ""
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information.
 msgid "Windows App Essentials"
-msgstr "Базов пакет за приложения в Windows"
+msgstr "Базов пакет за приложения в Windows (Windows App Essentials)"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager

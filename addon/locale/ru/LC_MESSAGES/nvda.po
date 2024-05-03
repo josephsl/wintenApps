@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-02-14 08:30-0700\n"
+"PO-Revision-Date: 2024-05-01 18:58+0500\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: Translators <LL@li.org>\n"
 "Language: ru\n"
@@ -30,6 +30,10 @@ msgid ""
 "this add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
+"Вы используете {releaseName} ({build}), версия Windows, не поддерживаемая "
+"этим дополнением.\n"
+"Для этого дополнения требуется {supportedReleaseName} ({supportedBuild}) или "
+"более поздняя версия."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
@@ -40,4 +44,6 @@ msgstr "Windows App Essentials"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Improving support for various apps and controls on Windows 10 and later"
-msgstr "Улучшает поддержкуразных приложений и контролей Windows"
+msgstr ""
+"Улучшает поддержку различных приложений и элементов управления в Windows 10 "
+"и более поздних версиях"
