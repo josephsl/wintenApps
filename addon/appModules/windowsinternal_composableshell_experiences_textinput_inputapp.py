@@ -37,7 +37,12 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				return
 			# NVDA is stuck in a nonexistent edit field.
 			# Focus object location can be None sometimes.
-			if not any(focus.location):
+			if (
+				not any(focus.location)
+				# Focus is once again stuck in top-level modern keyboard window
+				# after switching to clipboard history from other emoji panel screens.
+				or focus.parent.childCount == 0
+			):
 				eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 				return
 		# NVDA Core takes care of the rest.
