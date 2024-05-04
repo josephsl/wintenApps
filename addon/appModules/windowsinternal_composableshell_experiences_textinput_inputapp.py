@@ -41,7 +41,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				not any(focus.location)
 				# Focus is once again stuck in top-level modern keyboard window
 				# after switching to clipboard history from other emoji panel screens.
-				or focus.parent.childCount == 0
+				or focus.firstChild and focus.firstChild.UIAAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI"
 			):
 				eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 				return
