@@ -35,9 +35,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				or api.getNavigatorObject() == obj
 			):
 				return
-			# NVDA is stuck in a nonexistent edit field.
-			# Focus object location can be None sometimes.
 			if (
+				# NVDA is stuck in a nonexistent edit field (location is None).
 				not any(focus.location)
 				# Focus is once again stuck in top-level modern keyboard window
 				# after switching to clipboard history from other emoji panel screens.
