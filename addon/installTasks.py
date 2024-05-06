@@ -24,9 +24,9 @@ def onInstall() -> None:
 	currentWinVer = winVersion.getWinVer()
 	# At a minimum, Windows App Essentials requires 64-bit Windows 10 22H2.
 	minimumWinVer = winVersion.WIN10_22H2
-	# Windows App Essentials supports Windows 11 22H2 or later.
+	# Windows App Essentials supports Windows 11 23H2 or later.
 	if currentWinVer > minimumWinVer:
-		minimumWinVer = winVersion.WIN11_22H2
+		minimumWinVer = winVersion.WIN11_23H2
 	if currentWinVer < minimumWinVer:
 		gui.messageBox(
 			_(
