@@ -40,7 +40,7 @@ def onInstall() -> None:
 				supportedBuild=minimumWinVer.build,
 			),
 			# Translators: dialog title shown when trying to install the add-on on
-			# unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
+			# unsupported Windows systems (earlier than 11 and unsupported feature updates).
 			_("Unsupported Windows release"),  # type: ignore[name-defined]
 		)
 		raise RuntimeError(
