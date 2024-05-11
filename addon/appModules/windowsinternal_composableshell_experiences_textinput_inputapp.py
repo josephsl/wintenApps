@@ -35,6 +35,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				or api.getNavigatorObject() == obj
 				# Repeat announcement due to pending gain focus event on category entries.
 				or eventHandler.isPendingEvents("gainFocus")
+				# System focus is located in GIF/kaomoji/symbol entry.
+				or focus.appModule == self and focus.UIAAutomationId.startswith("item-")
 			):
 				return
 			if (
