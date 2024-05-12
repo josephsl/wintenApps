@@ -25,9 +25,9 @@ from NVDAObjects import NVDAObject
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# NVDA Core issue 16346: do not proceed if emoji panel category item is selected
-		# when the panel is closed in Windows 11.
+		# NVDA Core issue 16346: workarounds for emoji panel category items.
 		if obj.UIAAutomationId.startswith("navigation-menu-item"):
+			# Ignore the event altogether.
 			if (
 				# System focus restored.
 				(focus := api.getFocusObject()).appModule != self
@@ -37,6 +37,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				or focus.UIAAutomationId.startswith("item-")
 			):
 				return
+			# Manipulate NVDA's focus object.
 			if (
 				# NVDA is stuck in a nonexistent edit field (location is None).
 				not any(focus.location)
