@@ -31,8 +31,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			if (
 				# System focus restored.
 				(focus := api.getFocusObject()).appModule != self
-				# A different part of emoji panel is selected.
-				or api.getNavigatorObject() == obj
 				# Repeat announcement due to pending gain focus event on category entries.
 				or eventHandler.isPendingEvents("gainFocus")
 				# System focus is located in GIF/kaomoji/symbol entry.
