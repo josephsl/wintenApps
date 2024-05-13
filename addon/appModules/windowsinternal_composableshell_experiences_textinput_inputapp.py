@@ -50,20 +50,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# NVDA Core takes care of the rest.
 		super().event_UIA_elementSelected(obj, nextHandler)
 
-	def event_gainFocus(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# NVDA Core issue 16347: focus gets stuck in Modern keyboard
-		# when clipboard history closes in Windows 11.
-		if (
-			winVersion.getWinVer() >= winVersion.WIN11
-			and obj.firstChild
-			and obj.firstChild.UIAAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI"
-		):
-			# Do not queue events if events are pending, otherwise move to system focus.
-			if not eventHandler.isPendingEvents():
-				eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
-			return
-		nextHandler()
-
 	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# NVDA Core issue 14023: announce visible IME candidates.
 		if (
@@ -73,6 +59,23 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		):
 			ui.message(obj.firstChild.visibleCandidateItemsText)
 		nextHandler()
+
+	# Hide gain focus event handler if NVDA 2024.3 or later is running.
+	if (versionInfo.version_year, versionInfo.version_major) < (2024, 3):
+		def event_gainFocus(self, obj: NVDAObject, nextHandler: Callable[[], None]):
+			# NVDA Core issue 16347: focus gets stuck in Modern keyboard
+			# when clipboard history closes in Windows 11.
+			# Resolved in NVDA 2024.3.
+			if (
+				winVersion.getWinVer() >= winVersion.WIN11
+				and obj.firstChild
+				and obj.firstChild.UIAAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI"
+			):
+				# Do not queue events if events are pending, otherwise move to system focus.
+				if not eventHandler.isPendingEvents():
+					eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
+				return
+			nextHandler()
 
 	# The following event handlers are hidden if NVDA 2024.2 or later is running.
 	if (versionInfo.version_year, versionInfo.version_major) < (2024, 2):
