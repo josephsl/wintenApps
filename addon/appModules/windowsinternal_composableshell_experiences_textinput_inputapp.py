@@ -53,8 +53,12 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_gainFocus(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# NVDA Core issue 16347: focus gets stuck in Modern keyboard
 		# when clipboard history closes in Windows 11.
-		if obj.firstChild and obj.firstChild.UIAAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI":
-			# Do not queue events if events are pending.
+		if (
+			winVersion.getWinVer() >= winVersion.WIN11
+			and obj.firstChild
+			and obj.firstChild.UIAAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI"
+		):
+			# Do not queue events if events are pending, otherwise move to system focus.
 			if not eventHandler.isPendingEvents():
 				eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 			return
