@@ -50,7 +50,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# NVDA Core takes care of the rest.
 		super().event_UIA_elementSelected(obj, nextHandler)
 
-	# Hide gain focus event handler if NVDA 2024.3 or later is running.
+	# The following event handlers are hidden if NVDA 2024.3 or later is running.
 	if (versionInfo.version_year, versionInfo.version_major) < (2024, 3):
 		def event_gainFocus(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 			# NVDA Core issue 16347: focus gets stuck in Modern keyboard
