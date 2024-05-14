@@ -50,17 +50,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# NVDA Core takes care of the rest.
 		super().event_UIA_elementSelected(obj, nextHandler)
 
-	def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# NVDA Core issue 14023: announce visible IME candidates.
-		if (
-			isinstance(obj, ImeCandidateUI)
-			and obj.parent.UIAAutomationId == "IME_Candidate_Window"
-			and config.conf["inputComposition"]["autoReportAllCandidates"]
-		):
-			ui.message(obj.firstChild.visibleCandidateItemsText)
-		nextHandler()
-
-	# Hide gain focus event handler if NVDA 2024.3 or later is running.
+	# The following event handlers are hidden if NVDA 2024.3 or later is running.
 	if (versionInfo.version_year, versionInfo.version_major) < (2024, 3):
 		def event_gainFocus(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 			# NVDA Core issue 16347: focus gets stuck in Modern keyboard
@@ -75,6 +65,17 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				if not eventHandler.isPendingEvents():
 					eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
 				return
+			nextHandler()
+
+		def event_focusEntered(self, obj: NVDAObject, nextHandler: Callable[[], None]):
+			# NVDA Core issue 14023: announce visible IME candidates.
+			# Resolved in NVDA 2024.3.
+			if (
+				isinstance(obj, ImeCandidateUI)
+				and obj.parent.UIAAutomationId == "IME_Candidate_Window"
+				and config.conf["inputComposition"]["autoReportAllCandidates"]
+			):
+				ui.message(obj.firstChild.visibleCandidateItemsText)
 			nextHandler()
 
 	# The following event handlers are hidden if NVDA 2024.2 or later is running.
