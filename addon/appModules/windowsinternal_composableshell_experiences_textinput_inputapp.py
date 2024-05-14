@@ -19,6 +19,34 @@ import ui
 import config
 import versionInfo
 from NVDAObjects import NVDAObject
+from NVDAObjects.UIA import UIA, ListItem
+
+
+# NVDA Core issue 16346: handle Windows 11 emoji panel navigation menu items.
+class NavigationMenuItem(ListItem):
+
+	def event_UIA_elementSelected(self):
+		# NVDA Core issue 16346: workarounds for emoji panel category items.
+		# Ignore the event altogether.
+		if (
+			# System focus restored.
+			(focus := api.getFocusObject()).appModule != self.appModule
+			# Repeat announcement due to pending gain focus event on category entries.
+			or eventHandler.isPendingEvents("gainFocus")
+			# System focus is located in GIF/kaomoji/symbol entry.
+			or focus.UIAAutomationId.startswith("item-")
+		):
+			return
+		# Manipulate NVDA's focus object.
+		if (
+			# NVDA is stuck in a nonexistent edit field (location is None).
+			not any(focus.location)
+			# Focus is once again stuck in top-level modern keyboard window
+			# after switching to clipboard history from other emoji panel screens.
+			or focus.firstChild and focus.firstChild.UIAAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI"
+		):
+			eventHandler.queueEvent("gainFocus", self.objectWithFocus())
+			return
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
@@ -107,3 +135,16 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			if activityId == "Windows.Shell.InputApp.SmartActions.Popup":
 				displayString = obj.name
 			ui.message(displayString)
+
+	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
+		import controlTypes
+		# NVDA Core issue 16346: recognize Windows 11 emoji panel navigation menu items.
+		if (
+			isinstance(obj, UIA)
+			and obj.role == controlTypes.Role.LISTITEM
+			and obj.UIAAutomationId.startswith("navigation-menu-item")
+		):
+			clsList.insert(0, NavigationMenuItem)
+			return
+		# NVDA Core takes care of the rest.
+		super().chooseNVDAObjectOverlayClasses(obj, clsList)
