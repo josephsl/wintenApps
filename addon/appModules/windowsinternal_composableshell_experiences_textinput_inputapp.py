@@ -77,17 +77,3 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			):
 				ui.message(obj.firstChild.visibleCandidateItemsText)
 			nextHandler()
-
-	# The following event handlers are hidden if NVDA 2024.2 or later is running.
-	if (versionInfo.version_year, versionInfo.version_major) < (2024, 2):
-		def event_UIA_window_windowOpen(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-			# NVDA Core issue 16283: announce the first candidate
-			# (hardware keyboard input suggestion or IME candidate) in Windows 11.
-			# Resolved in NVDA 2024.2.
-			if (
-				winVersion.getWinVer() >= winVersion.WIN11
-				and obj.firstChild and obj.firstChild.UIAAutomationId == "IME_Prediction_Window"
-			):
-				obj.firstChild.firstChild.firstChild.reportFocus()
-			# NVDA Core takes care of the rest.
-			super().event_UIA_window_windowOpen(obj, nextHandler)
