@@ -53,28 +53,10 @@ class NavigationMenuItem(ListItem):
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# NVDA Core issue 16346: workarounds for emoji panel category items.
-		if obj.UIAAutomationId.startswith("navigation-menu-item"):
-			# Ignore the event altogether.
-			if (
-				# System focus restored.
-				(focus := api.getFocusObject()).appModule != self
-				# Repeat announcement due to pending gain focus event on category entries.
-				or eventHandler.isPendingEvents("gainFocus")
-				# System focus is located in GIF/kaomoji/symbol entry.
-				or focus.UIAAutomationId.startswith("item-")
-			):
-				return
-			# Manipulate NVDA's focus object.
-			if (
-				# NVDA is stuck in a nonexistent edit field (location is None).
-				not any(focus.location)
-				# Focus is once again stuck in top-level modern keyboard window
-				# after switching to clipboard history from other emoji panel screens.
-				or focus.firstChild and focus.firstChild.UIAAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI"
-			):
-				eventHandler.queueEvent("gainFocus", obj.objectWithFocus())
-				return
+		# NVDA Core issue 16346: logic for navigation menu items is handled all within its own object
+		# Therefore pass these events straight on.
+		if isinstance(obj, NavigationMenuItem):
+			return nextHandler()
 		# NVDA Core takes care of the rest.
 		super().event_UIA_elementSelected(obj, nextHandler)
 
