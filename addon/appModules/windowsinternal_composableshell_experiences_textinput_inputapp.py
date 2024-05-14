@@ -60,6 +60,19 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# NVDA Core takes care of the rest.
 		super().event_UIA_elementSelected(obj, nextHandler)
 
+	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
+		import controlTypes
+		# NVDA Core issue 16346: recognize Windows 11 emoji panel navigation menu items.
+		if (
+			isinstance(obj, UIA)
+			and obj.role == controlTypes.Role.LISTITEM
+			and obj.UIAAutomationId.startswith("navigation-menu-item")
+		):
+			clsList.insert(0, NavigationMenuItem)
+			return
+		# NVDA Core takes care of the rest.
+		super().chooseNVDAObjectOverlayClasses(obj, clsList)
+
 	# The following event handlers are hidden if NVDA 2024.3 or later is running.
 	if (versionInfo.version_year, versionInfo.version_major) < (2024, 3):
 		def event_gainFocus(self, obj: NVDAObject, nextHandler: Callable[[], None]):
@@ -117,16 +130,3 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 			if activityId == "Windows.Shell.InputApp.SmartActions.Popup":
 				displayString = obj.name
 			ui.message(displayString)
-
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
-		import controlTypes
-		# NVDA Core issue 16346: recognize Windows 11 emoji panel navigation menu items.
-		if (
-			isinstance(obj, UIA)
-			and obj.role == controlTypes.Role.LISTITEM
-			and obj.UIAAutomationId.startswith("navigation-menu-item")
-		):
-			clsList.insert(0, NavigationMenuItem)
-			return
-		# NVDA Core takes care of the rest.
-		super().chooseNVDAObjectOverlayClasses(obj, clsList)
