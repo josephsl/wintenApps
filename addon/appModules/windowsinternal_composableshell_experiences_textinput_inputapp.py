@@ -26,22 +26,21 @@ from NVDAObjects.UIA import UIA, ListItem
 class NavigationMenuItem(ListItem):
 
 	def event_UIA_elementSelected(self):
-		# NVDA Core issue 16346: workarounds for emoji panel category items.
 		# Ignore the event altogether.
 		if (
-			# System focus restored.
+			# NVDA Core issue 16346: system focus restored.
 			(focus := api.getFocusObject()).appModule != self.appModule
-			# Repeat announcement due to pending gain focus event on category entries.
+			# NVDA Core issue 16532: repeat announcement due to pending gain focus event on category entries.
 			or eventHandler.isPendingEvents("gainFocus")
-			# System focus is located in GIF/kaomoji/symbol entry.
+			# NVDA Core issue 16533: system focus is located in GIF/kaomoji/symbol entry.
 			or focus.UIAAutomationId.startswith("item-")
 		):
 			return
 		# Manipulate NVDA's focus object.
 		if (
-			# NVDA is stuck in a nonexistent edit field (location is None).
+			# NVDA Core issue 16346: NVDA is stuck in a nonexistent edit field (location is None).
 			not any(focus.location)
-			# Focus is once again stuck in top-level modern keyboard window
+			# NVDA Core issue 16347: Focus is once again stuck in top-level modern keyboard window
 			# after switching to clipboard history from other emoji panel screens.
 			or focus.firstChild and focus.firstChild.UIAAutomationId == "Windows.Shell.InputApp.FloatingSuggestionUI"
 		):
