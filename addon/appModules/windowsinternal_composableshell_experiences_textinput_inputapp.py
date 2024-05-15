@@ -47,6 +47,8 @@ class NavigationMenuItem(ListItem):
 		):
 			eventHandler.queueEvent("gainFocus", self.objectWithFocus())
 			return
+		# Report the selected navigation menu item.
+		super().event_UIA_elementSelected()
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
