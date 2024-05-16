@@ -18,6 +18,7 @@ import api
 import ui
 import config
 import versionInfo
+import controlTypes
 from NVDAObjects import NVDAObject
 from NVDAObjects.UIA import UIA, ListItem
 
@@ -62,7 +63,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		super().event_UIA_elementSelected(obj, nextHandler)
 
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
-		import controlTypes
 		# NVDA Core issue 16346: recognize Windows 11 emoji panel navigation menu items.
 		if (
 			isinstance(obj, UIA)
