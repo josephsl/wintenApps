@@ -60,7 +60,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# NVDA Core issue 16346: recognize Windows 11 emoji panel navigation menu items.
 		# Resolved in NVDA 2024.3.
 		if (
-			if (versionInfo.version_year, versionInfo.version_major) < (2024, 3)
+			(versionInfo.version_year, versionInfo.version_major) < (2024, 3)
 			and isinstance(obj, UIA)
 			and obj.role == controlTypes.Role.LISTITEM
 			and obj.UIAAutomationId.startswith("navigation-menu-item")
