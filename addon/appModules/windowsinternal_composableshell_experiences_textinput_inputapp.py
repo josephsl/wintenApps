@@ -26,7 +26,7 @@ from NVDAObjects.UIA import UIA, ListItem
 # NVDA Core issue 16346: handle Windows 11 emoji panel navigation menu items.
 class NavigationMenuItem(ListItem):
 
-	def event_UIA_elementSelected(self):
+	def event_UIA_elementSelected(self) -> None:
 		# Ignore the event altogether.
 		if (
 			# NVDA Core issue 16346: system focus restored.
