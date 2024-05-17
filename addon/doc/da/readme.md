@@ -31,12 +31,6 @@ Bemærkninger:
 * Ikke alle funktioner fra Windows Insider Preview-builds vil blive
   understøttet. Dette er yderligere tilfældet for funktioner introduceret i
   en undergruppe af Windows Insiders i udviklerkanalen.
-* Tilføjelsesudviklerkanal vil inkludere ændringer, herunder eksperimentelt
-  indhold, der muligvis er inkluderet i beta- og stabile versioner, og
-  betakanalen vil komme med ændringer, der er planlagt for fremtidige
-  stabile versioner.
-* Nogle funktioner tilføjelsespakken indeholder er eller bliver en del af
-  NVDA skærmlæser.
 
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][1].

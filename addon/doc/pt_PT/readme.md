@@ -32,11 +32,6 @@ Notas:
 * Nem todas as funcionalidades das compilações do Windows Insider Preview
   serão suportadas, sobretudo as funcionalidades apresentadas a um
   subconjunto de Windows Insiders nos canais Canary e Dev.
-* O canal de desenvolvimento de complementos incluirá alterações, incluindo
-  conteúdos experimentais que podem ou não ser incluídos nas versões beta e
-  estável, e o canal beta incluirá alterações planeadas para futuras versões
-  estáveis.
-* Alguns recursos adicionais são ou farão parte do leitor de tela do NVDA.
 
 Para obter uma lista das alterações efectuadas entre cada versão do extra,
 consulte o documento [changelogs for add-on releases][1].

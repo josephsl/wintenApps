@@ -33,12 +33,6 @@ Notes:
 * Toutes les fonctionnalités des builds Windows Insider Preview ne seront
   pas prises en charge, plus encore pour les fonctionnalités introduites
   dans Windows Insiders sous canary et dev channels.
-* Le canal de développement de l'extension comprendra des modifications, y
-  compris le contenu expérimental qui peut ou non être inclus dans les
-  versions béta et stables, et le canal béta sera livré avec des
-  modifications prévues pour les futures versions stables.
-* Certaines fonctionnalités de l'extension font ou feront partie du lecteur
-  d'écran NVDA.
 
 Pour obtenir la liste des changements effectuées entre chaque version de
 l'extension, reportez-vous au document [changelogs pour les versions de

@@ -32,12 +32,6 @@ Notlar:
 * Windows Insider Önizleme yapılarındaki tüm özellikler desteklenmeyecek,
   özellikle canary ve dev kanallarında Windows Insiders alt kümesine sunulan
   özellikler için.
-* Eklenti geliştirme kanalı, beta ve kararlı sürümlere dahil edilebilecek
-  veya edilmeyebilecek deneysel içerik de dahil olmak üzere değişiklikleri
-  içerecek ve beta kanalı, gelecekteki kararlı sürümler için planlanan
-  değişikliklerle birlikte gelecek.
-* Bazı eklenti özellikleri, NVDA ekran okuyucusunun bir parçasıdır veya
-  yakında olacaktır.
 
 Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
 [eklenti sürümleri için değişiklik günlükleri][1] belgesine bakın.

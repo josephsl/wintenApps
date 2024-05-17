@@ -31,10 +31,6 @@ Huomautukset:
 * Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
   varsinkaan sellaisia, jotka esitellään vain osalle canary- ja
   dev-kanavilla olevista käyttäjistä.
-* Lisäosan dev-kanava sisältää muutoksia, mukaan lukien kokeellinen sisältö,
-  joka saatetaan sisällyttää beeta- ja vakaisiin versioihin, ja beta-kanava
-  sisältää tuleviin vakaisiin versioihin suunniteltuja muutoksia.
-* Jotkin lisäosan ominaisuudet sisältyvät tai tulevat sisältymään NVDA:han.
 
 Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
 [lisäosajulkaisujen muutoslokit][1] -dokumentista.
