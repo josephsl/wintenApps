@@ -20,20 +20,17 @@ Windows, а также улучшения и исправления для не�
 
 * Для этого дополнения требуется 64-разрядная версия Windows 10 22H2 (сборка
   19045), 11 22H2 (сборка 22621) или более поздние версии.
-* Feature update support duration is tied to consumer support duration
-  (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
-  may end support for a feature update prior to end of consumer support. See
-  <https://aka.ms/WindowsTargetVersioninfo> for more information and support
-  dates.
-* Although installation is possible, this add-on does not support Windows
-  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in canary
-  and dev channels.
-* Add-on dev channel will include changes including experimental content
-  that may or may not be included in beta and stable releases, and beta
-  channel will come with changes planned for future stable releases.
-* Некоторые функции дополнения являются или будут частью программы NVDA.
+* Продолжительность поддержки обновлений функций привязана к
+  продолжительности поддержки потребителей (выпуски Home, Pro, Pro
+  Education, Pro для рабочих станций), и дополнение может прекратить
+  поддержку обновления функций до окончания поддержки
+  потребителей. См. <https://aka.ms/WindowsTargetVersioninfo> для получения
+  дополнительной информации и дат поддержки.
+* Хотя установка возможна, это дополнение не поддерживает выпуски Windows
+  Enterprise LTSC (канал долгосрочного обслуживания) и Windows Server.
+* Не все функции из сборок Windows Insider Preview будут поддерживаться,
+  особенно функции, представленные некоторым участникам программы
+  предварительной оценки Windows в каналах canary и dev.
 
 Список изменений, внесённых между выпусками каждого дополнения, приведён в
 документе [списки изменений для выпусков дополнения][1].

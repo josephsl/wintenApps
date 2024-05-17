@@ -32,11 +32,6 @@ Notas:
 * Non se soportarán todas as características de versións Windows Insider
   Preview, máis aínda para as características introducidas nun subconxunto
   de Insiders Windows na canle de desenvolvemento (dev).
-* Add-on dev channel will include changes including experimental content
-  that may or may not be included in beta and stable releases, and beta
-  channel will come with changes planned for future stable releases.
-* Algunhas das características do complemento son ou serán parte do lector
-  de pantalla NVDA.
 
 Para unha lista de trocos feitos entre cada versión do complemento, visita o
 documento [rexistros de trocos para publicacións de complementos][1].

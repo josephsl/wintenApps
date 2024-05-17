@@ -30,11 +30,6 @@ Napomene:
 * Windows Insider Preview gradnje neće podržati sve značajke, pogotovo
   značajke koje su predstavljene u podskupu „Windows Insiders” u kanalima
   canary i razvoja.
-* Kanal dodataka u razvoju uključivat će promjene uključujući
-  eksperimentalni sadržaj koji može, ali ne mora biti uključen u beta i
-  stabilnim izdanjima, a beta kanal će sadržati promjene koje su planirane
-  za buduća stabilna izdanja.
-* Neke funkcije dodatka već jesu ili će postati dio NVDA čitača ekrana.
 
 Za popis promjena između izdanja dodatka, pogledaj dokument [s izmjenama
 izdanja dodatka][1].

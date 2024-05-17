@@ -33,11 +33,6 @@ Notatki:
 * Nie wszystkie funkcje kompilacji Windows Insider Preview będą obsługiwane,
   tym bardziej w przypadku funkcji wprowadzonych do podzbioru niejawnych
   testerów systemu Windows w kanałach kanarkowych i deweloperskich.
-* Kanał deweloperski dodatków będzie zawierał zmiany, w tym zawartość
-  eksperymentalną, która może, ale nie musi być zawarta w wersjach beta i
-  stabilnych, a kanał beta będzie zawierał zmiany planowane dla przyszłych
-  stabilnych wydań.
-* Niektóre funkcje dodatkowe są lub będą częścią czytnika ekranu NVDA.
 
 Lista zmian wprowadzonych pomiędzy poszczególnymi wydaniami dodatków
 znajduje się w dokumencie [changelogs for add-on releases][1].

@@ -33,12 +33,6 @@ Notas:
 * No se soportarán todas las funciones de las compilaciones Windows Insider
   Preview, más si se introducen en un subconjunto de insiders de Windows en
   los canales dev y canary.
-* El canal de desarrollo del complemento incluirá entre sus cambios
-  contenido experimental que podrá ir o no en las versiones beta y estables,
-  y el canal beta vendrá con cambios planeados para versiones estables
-  futuras.
-* Algunas de las características del complemento son o serán parte del
-  lector de pantalla NVDA.
 
 Para ver una lista de cambios hechos entre cada actualización del
 complemento, consulta el documento [Registros de cambios de versiones del

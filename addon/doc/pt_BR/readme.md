@@ -32,10 +32,6 @@ Notas:
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders in canary
   and dev channels.
-* Add-on dev channel will include changes including experimental content
-  that may or may not be included in beta and stable releases, and beta
-  channel will come with changes planned for future stable releases.
-* Alguns recursos do complemento são ou farão parte do leitor de tela NVDA.
 
 For a list of changes made between each add-on releases, refer to
 [changelogs for add-on releases][1] document.

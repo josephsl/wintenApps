@@ -32,12 +32,6 @@ Hinweise:
 * Nicht alle Funktionen von Windows Insider Preview-Builds werden
   unterstützt. Dies gilt vor allem für Funktionen, die einer Untergruppe von
   Windows Insidern im Canary- und Dev-Channel vorgestellt werden.
-* Der Dev-Kanal der NVDA-Erweiterung wird Änderungen enthalten,
-  einschließlich experimenteller Inhalte, die in den Beta- und
-  Stable-Releases enthalten sein können oder auch nicht, und der Beta-Kanal
-  wird Änderungen enthalten, die für zukünftige Stable-Releases geplant
-  sind.
-* Einige Zusatzfunktionen sind oder werden Teil von NVDA sein.
 
 Eine Liste der Änderungen, die zwischen den einzelnen Versionen der
 NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument

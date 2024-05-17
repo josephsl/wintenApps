@@ -19,8 +19,6 @@
   <https://aka.ms/WindowsTargetVersioninfo>。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
 * 并非支持所有的 Windows Insider Preview 版本，更偏向于支持由开发或金丝雀通道引入 Windows Insider 的功能。
-* 插件的 Dev 通道将包括可能包含或不包含在测试版和稳定版中的实验性内容，而Beta 通道将会包含为未来稳定版计划的更改。
-* 插件中的某些功能或将成为NVDA屏幕阅读器的一部分。
 
 有关每个版本之间所做的具体更改，请参阅[另外发布的更新日志][1]文档。
 
