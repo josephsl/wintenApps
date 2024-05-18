@@ -21,10 +21,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Windows 10 Settings/Update and Security/Windows Update
 		# Announce individual update progress except as noted below.
 		if "ApplicableUpdate" in obj.UIAAutomationId:
-			# Do not announce status text itself.
-			if obj.UIAAutomationId.endswith("_ContextDescriptionTextBlock"):
-				return
-			# Update title repeats while the update is downloaded and installed.
+			# Update title and status repeats while the update is downloaded and installed.
 			# #71: NVDA is told to announce live regions to the end by default,
 			# which results in screen content and speech getting out of sync.
 			# Therefore, announce live region changes whenever possible despite constant speech interruption.
