@@ -60,7 +60,28 @@ def presentInstallError(currentWinVer: winVersion.WinVersion) -> None:
 def onInstall() -> None:
 	currentWinVer = winVersion.getWinVer()
 	if not canInstallWinAppsAddon(currentWinVer):
-		presentInstallError(currentWinVer)
+		import gui
+		import wx
+		# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+		# Unsupported systems include Windows versions earlier than 10, 32-bit Windows 10,
+		# and unsupported feature updates.
+		unsupportedWindowsReleaseTitle: str = _("Unsupported Windows release")
+		# #78: obtain a list of all supported releases (and builds) from supported releases list.
+		# Present releases above the current release if possible.
+		# For example, present Windows 11 releases if this is a release above Windows 10 22H2 (19045).
+		minimumWinVer: winVersion.WinVersion = min(entry for entry in SUPPORTED_RELEASES if entry > currentWinVer)
+		unsupportedWindowsReleaseText: str = _(
+			# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
+			# Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
+			"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
+			"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
+		).format(
+			releaseName=currentWinVer.releaseName,
+			build=currentWinVer.build,
+			supportedReleaseName=minimumWinVer.releaseName,
+			supportedBuild=minimumWinVer.build
+		)
+		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
 		raise RuntimeError(
 			f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentWinVer.build})"
 		)
