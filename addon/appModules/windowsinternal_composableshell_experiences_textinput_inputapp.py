@@ -4,6 +4,7 @@
 # See the file COPYING for more details.
 
 # The add-on version of this module will extend the one that comes with NVDA Core.
+# As of NVDA 2024.3, contents of this module are part of NVDA Core.
 
 from typing import Callable
 # Yes, this app module is powered by built-in modern keyboard (TextInputHost) app module
