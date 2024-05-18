@@ -26,35 +26,6 @@ SUPPORTED_RELEASES: list[winVersion.WinVersion] = [
 ]
 
 
-def canInstallWinAppsAddon(currentWinVer: winVersion.WinVersion) -> bool:
-	return (
-		currentWinVer in SUPPORTED_RELEASES  # General availability channel and Insider release preview
-		or currentWinVer > max(SUPPORTED_RELEASES)  # Insider Preview canary/dev/beta
-	)
-
-
-def presentInstallError(currentWinVer: winVersion.WinVersion) -> None:
-	import gui
-	import wx
-	# Translators: title of the error dialog shown when trying to install the add-on in
-	# unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
-	unsupportedWindowsReleaseTitle: str = _("Unsupported Windows release")
-	# #78: present the supported version above the current release.
-	minimumWinVer: winVersion.WinVersion = min(entry for entry in SUPPORTED_RELEASES if entry > currentWinVer)
-	unsupportedWindowsReleaseText: str = _(
-		# Translators: Dialog text shown when trying to install the add-on on
-		# releases earlier than minimum supported release.
-		"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
-		"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-	).format(
-		releaseName=currentWinVer.releaseName,
-		build=currentWinVer.build,
-		supportedReleaseName=minimumWinVer.releaseName,
-		supportedBuild=minimumWinVer.build
-	)
-	gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
-
-
 def onInstall() -> None:
 	currentWinVer = winVersion.getWinVer()
 	if not (
