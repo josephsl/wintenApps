@@ -57,7 +57,10 @@ def presentInstallError(currentWinVer: winVersion.WinVersion) -> None:
 
 def onInstall() -> None:
 	currentWinVer = winVersion.getWinVer()
-	if not canInstallWinAppsAddon(currentWinVer):
+	if not (
+		currentWinVer in SUPPORTED_RELEASES  # General availability channel and Insider release preview
+		or currentWinVer > max(SUPPORTED_RELEASES)  # Insider Preview canary/dev/beta
+	):
 		import gui
 		import wx
 		# Translators: title of the error dialog shown when trying to install the add-on in
