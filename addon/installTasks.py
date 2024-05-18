@@ -37,8 +37,6 @@ def canInstallWinAppsAddon(currentWinVer: winVersion.WinVersion) -> bool:
 def presentInstallError(currentWinVer: winVersion.WinVersion) -> None:
 	import gui
 	import wx
-	import gettext
-	_ = gettext.gettext
 	# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 	# Unsupported systems include Windows versions earlier than 10, 32-bit Windows 10,
 	# and unsupported feature updates.

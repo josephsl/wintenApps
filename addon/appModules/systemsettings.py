@@ -18,17 +18,10 @@ from NVDAObjects import NVDAObject
 class AppModule(AppModule):  # type: ignore[no-redef]
 
 	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# Applies mostly to Windows 10
-		# In Windows 11, name change event raised by individual update entry announces update status,
-		# and the updates list stays up once completed so they can be reviewed via object navigation.
-		# In Windows 10, updates list is gone once applied, so update history must be used to review updates.
-		# The overall update progress is reported in Windows 11 just as in 10.
-		# In Windows 10, announce individual update progress except as noted below.
+		# Windows 10 Settings/Update and Security/Windows Update
+		# Announce individual update progress except as noted below.
 		if "ApplicableUpdate" in obj.UIAAutomationId:
-			# Do not announce status text itself.
-			if obj.UIAAutomationId.endswith("_ContextDescriptionTextBlock"):
-				return
-			# Update title repeats while the update is downloaded and installed.
+			# Update title and status repeats while the update is downloaded and installed.
 			# #71: NVDA is told to announce live regions to the end by default,
 			# which results in screen content and speech getting out of sync.
 			# Therefore, announce live region changes whenever possible despite constant speech interruption.
