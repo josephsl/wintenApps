@@ -22,6 +22,7 @@ SUPPORTED_RELEASES: list[winVersion.WinVersion] = [
 	winVersion.WIN10_22H2,
 	winVersion.WIN11_22H2,
 	winVersion.WIN11_23H2,
+	# Windows 11 24H2 (10.0.26100) is supported.
 ]
 
 
