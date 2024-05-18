@@ -21,7 +21,7 @@ addonHandler.initTranslation()
 SUPPORTED_RELEASES: list[winVersion.WinVersion] = [
 	winVersion.WIN10_22H2,
 	winVersion.WIN11_23H2,
-	winVersion.WinVersion(major=10, minor=0, build=26100, releaseName="Windows 11 24H2"),
+	# Windows 11 24H2 (10.0.26100) is supported.
 ]
 
 
@@ -29,8 +29,6 @@ def canInstallWinAppsAddon(currentWinVer: winVersion.WinVersion) -> bool:
 	return (
 		currentWinVer in SUPPORTED_RELEASES  # General availability channel and Insider release preview
 		or currentWinVer > max(SUPPORTED_RELEASES)  # Insider Preview canary/dev/beta
-		# The next condition will be removed once Insider Preview beta channel moves to 24H2.
-		or currentWinVer.build == 22635  # Windows 11 23H2 beta
 	)
 
 
