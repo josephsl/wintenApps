@@ -32,10 +32,7 @@ def onInstall() -> None:
 	# Windows App Essentials support Windows 11 23H2 or later.
 	if currentWinVer > minimumWinVer:
 		minimumWinVer = winVersion.WIN11_23H2
-	if not (
-		currentWinVer in SUPPORTED_RELEASES  # General availability channel and Insider release preview
-		or currentWinVer > max(SUPPORTED_RELEASES)  # Insider Preview canary/dev/beta
-	)
+	if currentWinVer < minimumWinVer:
 		import gui
 		import wx
 		# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
