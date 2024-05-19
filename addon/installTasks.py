@@ -33,10 +33,7 @@ def onInstall() -> None:
 	# Windows App Essentials support Windows 11 22H2 or later.
 	if currentWinVer > minimumWinVer:
 		minimumWinVer = winVersion.WIN11_22H2
-	if not (
-		currentWinVer in SUPPORTED_RELEASES  # General availability channel and Insider release preview
-		or currentWinVer > max(SUPPORTED_RELEASES)  # Insider Preview canary/dev/beta
-	):
+	if currentWinVer < minimumWinVer:
 		gui.messageBox(
 			_(
 				# Translators: Dialog text shown when trying to install the add-on on
