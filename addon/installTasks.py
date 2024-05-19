@@ -27,6 +27,11 @@ SUPPORTED_RELEASES: list[winVersion.WinVersion] = [
 
 def onInstall() -> None:
 	currentWinVer = winVersion.getWinVer()
+	# At a minimum, Windows App Essentials requires Windows 10 22H2.
+	minimumWinVer = winVersion.WIN10_22H2
+	# Windows App Essentials support Windows 11 23H2 or later.
+	if currentWinVer > minimumWinVer:
+		minimumWinVer = winVersion.WIN11_23H2
 	if not (
 		currentWinVer in SUPPORTED_RELEASES  # General availability channel and Insider release preview
 		or currentWinVer > max(SUPPORTED_RELEASES)  # Insider Preview canary/dev/beta
