@@ -14,8 +14,9 @@ def onInstall() -> None:
 	import winVersion
 	import gui
 	import wx
-	# Windows App Essentials requires supported Windows feature updates (see the list below).
-	# Support duration is tied to consumer-level support (Home, Pro, Pro Education, Pro for Workstations)
+	# Windows App Essentials requires supported Windows feature updates (see minimum Windows version below).
+	# For each feature update, support duration is tied to consumer-level support
+	# (Home, Pro, Pro Education, Pro for Workstations, supported for 18 to 24 months with exceptions)
 	# and the add-on may end support for a feature update prior to end of consumer support.
 	# See aka.ms/WindowsTargetVersioninfo.
 	# Windows 10 22H2 (19045) is supported until October 2025 as this is the final Windows 10 feature update.
@@ -24,7 +25,7 @@ def onInstall() -> None:
 	currentWinVer = winVersion.getWinVer()
 	# At a minimum, Windows App Essentials requires Windows 10 22H2.
 	minimumWinVer = winVersion.WIN10_22H2
-	# Windows App Essentials support Windows 11 22H2 or later.
+	# Windows App Essentials supports Windows 11 22H2 or later.
 	if currentWinVer > minimumWinVer:
 		minimumWinVer = winVersion.WIN11_22H2
 	if currentWinVer < minimumWinVer:
