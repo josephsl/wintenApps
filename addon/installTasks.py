@@ -6,12 +6,15 @@
 # Routines are partly based on other add-ons,
 # particularly Place Markers by Noelia Martinez (thanks add-on authors).
 
-import winVersion
 import addonHandler
 addonHandler.initTranslation()
 
 
 def onInstall() -> None:
+	import winVersion
+	import gui
+	import wx
+
 	# Windows App Essentials requires supported Windows feature updates (see the list below).
 	# Support duration is tied to consumer-level support (Home, Pro, Pro Education, Pro for Workstations)
 	# and the add-on may end support for a feature update prior to end of consumer support.
@@ -26,8 +29,6 @@ def onInstall() -> None:
 	if currentWinVer > minimumWinVer:
 		minimumWinVer = winVersion.WIN11_23H2
 	if currentWinVer < minimumWinVer:
-		import gui
-		import wx
 		# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
 		# Unsupported systems include Windows versions earlier than 10, 32-bit Windows 10,
 		# and unsupported feature updates.
