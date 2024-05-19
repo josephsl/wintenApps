@@ -19,11 +19,6 @@ def onInstall() -> None:
 	# Windows 10 22H2 (19045) is supported until October 2025 as this is the final Windows 10 feature update.
 	# Note that Windows App Essentials add-on does not support 32-bit Windows 10 systems.
 	# For Insider Preview builds, only the latest build for each channel (canary/dev/beta) are supported.
-	SUPPORTED_RELEASES: list[winVersion.WinVersion] = [
-		winVersion.WIN10_22H2,
-		winVersion.WIN11_23H2,
-		# Windows 11 24H2 (10.0.26100) is supported.
-	]
 	currentWinVer = winVersion.getWinVer()
 	# At a minimum, Windows App Essentials requires Windows 10 22H2.
 	minimumWinVer = winVersion.WIN10_22H2
