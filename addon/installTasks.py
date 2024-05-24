@@ -32,9 +32,6 @@ def onInstall() -> None:
 		currentWinVer in SUPPORTED_RELEASES  # General availability channel and Insider release preview
 		or currentWinVer > max(SUPPORTED_RELEASES)  # Insider Preview canary/dev/beta
 	):
-		# Translators: title of the error dialog shown when trying to install the add-on in
-		# unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
-		unsupportedWindowsReleaseTitle: str = _("Unsupported Windows release")
 		# #78: present the supported version above the current release.
 		minimumWinVer: winVersion.WinVersion = min(entry for entry in SUPPORTED_RELEASES if entry > currentWinVer)
 		unsupportedWindowsReleaseText: str = _(
@@ -48,7 +45,12 @@ def onInstall() -> None:
 			supportedReleaseName=minimumWinVer.releaseName,
 			supportedBuild=minimumWinVer.build
 		)
-		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
+		gui.messageBox(
+			unsupportedWindowsReleaseText,
+			# Translators: title of the error dialog shown when trying to install the add-on in
+			# unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
+			_("Unsupported Windows release"), wx.OK | wx.ICON_ERROR
+		)
 		raise RuntimeError(
 			f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentWinVer.build})"
 		)
