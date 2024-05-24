@@ -34,7 +34,7 @@ You must:
 
 You can contribute by testing the add-on. To facilitate this, a development snapshot of this add-on is released from time to time so people can test latest changes.
 
-To test the add-on, you must be running the latest stable or development build of NVDA and latest stable or development build of Windows App Essentials. You can obtain latest Windows App Essentials via NV Access add-on store (NVDA 2023.2, NVDA menu/Tools/add-on store, available or updatable add-ons tab). For effective testing, you must also be running latest Windows release (public release or latest Insider Preview build).
+To test the add-on, you must be running the latest stable or development build of NVDA and latest stable or development build of Windows App Essentials. You can obtain latest Windows App Essentials via NV Access add-on store (NVDA menu/Tools/add-on store, available or updatable add-ons tab). For effective testing, you must also be running latest Windows release (public release or latest Insider Preview build).
 
 Before testing the add-on:
 
@@ -51,7 +51,7 @@ Testing the add-on simply involves using NVDA as usual. If you do encounter issu
 
 1. Restart NVDA with add-ons disabled.
 2. Enable one add-on at a time to make sure the issue is not related to add-ons other than Windows App Essentials.
-3. If the issue occurs after enabling Windows App Essentials, note steps to reproduce the issue.
+3. If the issue occurs after enabling Windows App Essentials, note the steps to reproduce the issue.
 4. Use GitHub and submit a new issue (https://github.com/josephsl/wintenapps/issues/new). Be sure to include NVDA version, add-on version, Windows version, and steps to reproduce the problem.
 5. Sometimes the author will ask for a debug log. If so, restart NvDA with debug logging enabled, try reproducing the issue, then either attach the debug log as part of the GitHub issue or copy and paste the relevant log fragment from the log viewer (NVDA+F1).
 

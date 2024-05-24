@@ -28,13 +28,12 @@ def onInstall() -> None:
 	if currentWinVer > minimumWinVer:
 		minimumWinVer = winVersion.WIN11_23H2
 	if currentWinVer < minimumWinVer:
-		# Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
-		# Unsupported systems include Windows versions earlier than 10, 32-bit Windows 10,
-		# and unsupported feature updates.
+		# Translators: title of the error dialog shown when trying to install the add-on in
+		# unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
 		unsupportedWindowsReleaseTitle: str = _("Unsupported Windows release")
 		unsupportedWindowsReleaseText: str = _(
-			# Translators: Dialog text shown when trying to install the add-on on an unsupported Windows release.
-			# Release name and build refer to Windows release in use (example: Windows 10 21H2 (19044)).
+			# Translators: Dialog text shown when trying to install the add-on on
+			# releases earlier than minimum supported release.
 			"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
 			"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 		).format(
