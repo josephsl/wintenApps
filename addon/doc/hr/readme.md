@@ -17,8 +17,8 @@ Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
 
 Napomene:
 
-* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
-  22621), or later releases.
+* Ovaj dodatak zahtijeva 64-bitni Windows 10 22H2 (gradnja 19045), 11 22H2
+  (gradnja 22621) ili novija izdanja.
 * Trajanje podrške za aktualiziranje značajki povezano je s trajanjem
   korisničke podrške (izdanja Home, Pro, Pro Education, Pro for
   Workstations) i dodatak može prekinuti podršku za aktualiziranje značajki
@@ -36,20 +36,21 @@ izdanja dodatka][1].
 
 ## Opće
 
-* In Windows 11 24H2, quick settings (shellhost.exe) interface elements can
-  be navigated using mouse and/or touch interaction. This is now part of
-  NVDA 2024.2.
-* In Windows 11, NVDA will announce suggested actions when compatible data
-  such as phone numbers is copied to the clipboard. This is now part of NVDA
-  2024.2.
+* U sustavu Windows 11 24H2, elementima sučelja za brze postavke
+  (shellhost.exe) se može kretati pomoću interakcije mišem i/ili
+  dodirom. Ovo je sada dio NVDA čitača 2024.2.
+* U sustavu Windows 11, NVDA će najaviti predložene radnje kad se
+  kompatibilni podaci poput telefonskih brojeva kopiraju u međuspremnik. Ovo
+  je sada dio NVDA čitača 2024.2.
 
 ## Postavke (Windows+I)
 
-* NVDA will report updates to Windows Update status as download and install
-  progresses. In Windows 10, this may result in speech interruption when
-  navigating Settings app while updates are being downloaded and
-  installed. In Windows 11, object navigation can be used in updates list to
-  review update status for individual entries.
+* NVDA će izvjestiti o napretku preuzimanja i instalacije nove Windows
+  verzije. U sustavu Windows 10 to može rezultirati prekidom govora tijekom
+  kretanja u aplikaciji Postavke tijekom aktualiziranja preuzimanja i
+  instaliranja novih verzija. U sustavu Windows 11, kretanje po objektima se
+  može koristiti u popisu novih verzija za pregled stanja aktualiziranja za
+  pojedinačne unose.
 
 [[!tag dev stable]]
 
