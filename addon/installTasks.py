@@ -34,19 +34,18 @@ def onInstall() -> None:
 	):
 		# #78: present the supported version above the current release.
 		minimumWinVer: winVersion.WinVersion = min(entry for entry in SUPPORTED_RELEASES if entry > currentWinVer)
-		unsupportedWindowsReleaseText: str = _(
-			# Translators: Dialog text shown when trying to install the add-on on
-			# releases earlier than minimum supported release.
-			"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
-			"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-		).format(
-			releaseName=currentWinVer.releaseName,
-			build=currentWinVer.build,
-			supportedReleaseName=minimumWinVer.releaseName,
-			supportedBuild=minimumWinVer.build
-		)
 		gui.messageBox(
-			unsupportedWindowsReleaseText,
+			_(
+				# Translators: Dialog text shown when trying to install the add-on on
+				# releases earlier than minimum supported release.
+				"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
+				"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
+			).format(
+				releaseName=currentWinVer.releaseName,
+				build=currentWinVer.build,
+				supportedReleaseName=minimumWinVer.releaseName,
+				supportedBuild=minimumWinVer.build
+			),
 			# Translators: title of the error dialog shown when trying to install the add-on in
 			# unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
 			_("Unsupported Windows release"), wx.OK | wx.ICON_ERROR
