@@ -28,9 +28,6 @@ def onInstall() -> None:
 	if currentWinVer > minimumWinVer:
 		minimumWinVer = winVersion.WIN11_23H2
 	if currentWinVer < minimumWinVer:
-		# Translators: title of the error dialog shown when trying to install the add-on in
-		# unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
-		unsupportedWindowsReleaseTitle: str = _("Unsupported Windows release")
 		unsupportedWindowsReleaseText: str = _(
 			# Translators: Dialog text shown when trying to install the add-on on
 			# releases earlier than minimum supported release.
@@ -42,7 +39,12 @@ def onInstall() -> None:
 			supportedReleaseName=minimumWinVer.releaseName,
 			supportedBuild=minimumWinVer.build
 		)
-		gui.messageBox(unsupportedWindowsReleaseText, unsupportedWindowsReleaseTitle, wx.OK | wx.ICON_ERROR)
+		gui.messageBox(
+			unsupportedWindowsReleaseText,
+			# Translators: title of the error dialog shown when trying to install the add-on in
+			# unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
+			_("Unsupported Windows release"), wx.OK | wx.ICON_ERROR
+		)
 		raise RuntimeError(
 			f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentWinVer.build})"
 		)
