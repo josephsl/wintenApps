@@ -4,14 +4,11 @@
 """Support for apps employing Edge Web View 2 runtime interface.
 """
 
-import os
-import shlex
 import appModuleHandler
-from appModuleHandler import AppModule
 
 
 def getAppNameFromHost(processId):
-	# Some apps have launcher executables which launch javaw.exe to run the app.
+	# Some apps have launcher executables which launch msedgewebview2.exe to display the interface.
 	# In this case, the parent process will usually be the launcher.
 	proc = appModuleHandler.getWmiProcessInfo(processId)
 	parent = proc.parentProcessId
