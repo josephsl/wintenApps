@@ -1,7 +1,7 @@
-# Edge Web View 2
+# Edge WebView2
 # Copyright 2024 Joseph Lee, released under GPL
 
-"""Support for apps employing Edge Web View 2 runtime interface.
+"""Support for apps employing Edge WebView2 runtime interface.
 """
 
 import appModuleHandler
