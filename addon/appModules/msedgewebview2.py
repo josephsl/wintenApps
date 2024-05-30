@@ -16,7 +16,6 @@ def getAppNameFromHost(processId):
 	proc = appModuleHandler.getWmiProcessInfo(processId)
 	parent = proc.parentProcessId
 	if parent:
-		name = appModuleHandler.getAppNameFromProcessID(parent)
-		if name and name not in ("explorer", "cmd"):
-			# The parent isn't a shell, so it's probably a launcher.
-			return name
+		return appModuleHandler.getAppNameFromProcessID(parent)
+	else:
+		raise LookupError
