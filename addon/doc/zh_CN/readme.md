@@ -9,12 +9,11 @@
 
 包括以下应用程序的支持模块（有关所包含内容的详细信息，请参阅每个应用程序部分）：
 
-* Settings (Windows+I)
+* 设置（Windows + I）
 
 注意:
 
-* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
-  22621), or later releases.
+* 此插件需要 64 位 Windows 10 22H2（内部版本 19045）、11 22H2（内部版本 22621）或更高版本。
 * 功能更新支持期限与消费者支持期限（家庭版、专业版、专业教育版、工作站专业版）相关联，并且插件可能会在消费者支持结束之前终止对功能更新的支持。有关更多信息和支持日期，请参阅
   <https://aka.ms/WindowsTargetVersioninfo>。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
@@ -24,20 +23,15 @@
 
 ## 常规增强
 
-* In Windows 11 24H2, quick settings (shellhost.exe) interface elements can
-  be navigated using mouse and/or touch interaction. This is now part of
-  NVDA 2024.2.
-* In Windows 11, NVDA will announce suggested actions when compatible data
-  such as phone numbers is copied to the clipboard. This is now part of NVDA
-  2024.2.
+* 在 Windows 11 24H2 中，可以使用鼠标和/或触摸屏来导航快速设置(shellhost.exe)中的界面元素。该特性已经包含在
+  NVDA2024.2 中。
+* 在 Windows 11 22H2 及更高版本中，当电话号码等兼容的数据复制到剪贴板时，NVDA 会读出建议的操作。该特性已经包含在
+  NVDA2024.2 中。
 
-## Settings (Windows+I)
+## 设置（Windows + I）
 
-* NVDA will report updates to Windows Update status as download and install
-  progresses. In Windows 10, this may result in speech interruption when
-  navigating Settings app while updates are being downloaded and
-  installed. In Windows 11, object navigation can be used in updates list to
-  review update status for individual entries.
+* 在 Windows 下载和安装更新过程中会不断朗读进度，在 Windows10 中 NVDA 导航过程中的朗读可能会被下载或安装进度打断。
+  如果使用 Windows 11 可以用对象导航查看各个条目的更新状态信息。
 
 [[!tag dev stable]]
 
