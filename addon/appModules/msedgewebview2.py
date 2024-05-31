@@ -11,7 +11,7 @@ def getAppNameFromHost(processId):
 	# Some apps have launcher executables which launch msedgewebview2.exe to display the interface.
 	# In this case, the parent process will usually be the launcher.
 	proc = appModuleHandler.getWmiProcessInfo(processId)
-	if (parent := proc.parentProcessId):
-		return appModuleHandler.getAppNameFromProcessID(parent)
-	else:
+	# Unlikely but react to undefined parent process ID.
+	if not (parent := proc.parentProcessId):
 		raise LookupError
+	return appModuleHandler.getAppNameFromProcessID(parent)
