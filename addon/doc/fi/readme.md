@@ -18,9 +18,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautukset:
 
-* Tämä lisäosa edellyttää 64-bittistä Windows 10:n versiota 22H2
-  (koontiversio 19045), 11:n versiota 22H2 (koontiversio 22621) tai
-  uudempaa.
+* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
+  22621), or later releases.
 * Ominaisuuspäivityksen tuen kesto on sidoksissa kuluttajatuen kestoon
   (Home, Pro, Pro Education, Pro for Workstations -versiot), ja lisäosa
   saattaa lopettaa tuen ominaisuuspäivitykselle jo ennen kuluttajatuen
@@ -32,17 +31,17 @@ Huomautukset:
   varsinkaan sellaisia, jotka esitellään vain osalle canary- ja
   dev-kanavilla olevista käyttäjistä.
 
-Katso luettelo lisäosan kaikkiin versioihin tehdyistä muutoksista
-[lisäosajulkaisujen muutoslokit][1] -dokumentista.
+For a list of changes made between each add-on releases, refer to
+[changelogs for add-on releases][1] document.
 
 ## Yleistä
 
-* Pika-asetusten (shellhost.exe) käyttöliittymäelementeissä voidaan liikkua
-  Windows 11 24H2:ssa hiirtä ja/tai kosketusvuorovaikutusta käyttäen. Tämä
-  sisältyy NVDA 2024.2:een.
-* NVDA ilmoittaa ehdotetut toiminnot Windows 11:ssä, kun leikepöydälle
-  kopioidaan yhteensopivaa dataa, kuten puhelinnumeroita. Tämä sisältyy NVDA
-  2024.2:een.
+* In Windows 11 24H2, quick settings (shellhost.exe) interface elements can
+  be navigated using mouse and/or touch interaction. This is now part of
+  NVDA 2024.2.
+* In Windows 11, NVDA will announce suggested actions when compatible data
+  such as phone numbers is copied to the clipboard. This is now part of NVDA
+  2024.2.
 
 ## Asetukset (Windows+I)
 
