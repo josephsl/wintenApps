@@ -1,5 +1,7 @@
-# Edge WebView2
-# Copyright 2024 Joseph Lee, released under GPL
+# A part of NonVisual Desktop Access (NVDA)
+# Copyright (C) 2024 NV Access Limited, Joseph Lee
+# This file is covered by the GNU General Public License.
+# See the file COPYING for more details.
 
 """Support for apps employing Edge WebView2 runtime interface.
 """
