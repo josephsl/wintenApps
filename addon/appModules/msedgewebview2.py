@@ -14,6 +14,7 @@ def getAppNameFromHost(processId: int) -> str:
 	# NVDA Core issue 16705: some apps have launcher executables
 	# which launch msedgewebview2.exe to display the interface.
 	# In this case, the parent process will usually be the launcher.
+	# Resolved in NVDA 2024.3.
 	proc = appModuleHandler.getWmiProcessInfo(processId)
 	# Unlikely but react to undefined parent process ID.
 	if not (parent := proc.parentProcessId):
