@@ -38,15 +38,6 @@ Para ver una lista de cambios hechos entre cada actualización del
 complemento, consulta el documento [Registros de cambios de versiones del
 complemento (en inglés)][1].
 
-## General
-
-* En las compilaciones insider de Windows 11 24H2, se puede navegar con el
-  ratón o con interacción táctil por los elementos de la interfaz de los
-  ajustes rápidos (shellhost.exe). Esto ahora forma parte de NVDA 2024.2.
-* En Windows 11, NVDA anunciará las acciones sugeridas cuando se copien al
-  portapapeles datos compatibles, como números de teléfono. Esto ahora forma
-  parte de NVDA 2024.2.
-
 ## Configuración (Windows+I)
 
 * NVDA anunciará las actualizaciones del estado de Windows Update según

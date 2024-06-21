@@ -36,15 +36,6 @@ Notlar:
 Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
 [eklenti sürümleri için değişiklik günlükleri][1] belgesine bakın.
 
-## Genel
-
-* Windows 11 24H2'de, hızlı ayarlar (shellhost.exe) arayüz öğelerinde fare
-  ve/veya dokunma etkileşimi kullanılarak gezinilebilir. Bu artık NVDA
-  2024.2'nin bir parçası.
-* Windows 11'de, telefon numaraları gibi uyumlu veriler panoya
-  kopyalandığında NVDA önerilen eylemleri duyuracaktır. Bu artık NVDA
-  2024.2'nin bir parçasıdır.
-
 ## Ayarlar (Windows+I)
 
 * NVDA, indirme ve yükleme işlemleri ilerledikçe Windows Update durumuna

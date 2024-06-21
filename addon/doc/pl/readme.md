@@ -37,15 +37,6 @@ Notatki:
 Lista zmian wprowadzonych pomiędzy poszczególnymi wydaniami dodatków
 znajduje się w dokumencie [changelogs for add-on releases][1].
 
-## Ogólne
-
-* In Windows 11 24H2, quick settings (shellhost.exe) interface elements can
-  be navigated using mouse and/or touch interaction. This is now part of
-  NVDA 2024.2.
-* In Windows 11, NVDA will announce suggested actions when compatible data
-  such as phone numbers is copied to the clipboard. This is now part of NVDA
-  2024.2.
-
 ## Ustawienia (Windows+I)
 
 * NVDA will report updates to Windows Update status as download and install
