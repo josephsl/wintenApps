@@ -23,13 +23,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 추가 기능 변경 내역은 [변경 내용 문서][1]에서 확인할 수 있습니다.
 
-## 일반
-
-* In Windows 11 24H2, quick settings (shellhost.exe) interface elements can
-  be navigated using mouse and/or touch interaction. This is now part of
-  NVDA 2024.2.
-* 윈도우 11에서 전화번호와 같은 내용이 클립보드에 복사되었을때 나타나는 추천 엑션을 출력하도록 함(NVDA 2024.2에 포함됨).
-
 ## 설정(Windows+I)
 
 * NVDA will report updates to Windows Update status as download and install

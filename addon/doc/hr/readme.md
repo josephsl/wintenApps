@@ -34,15 +34,6 @@ Napomene:
 Za popis promjena između izdanja dodatka, pogledaj dokument [s izmjenama
 izdanja dodatka][1].
 
-## Opće
-
-* U sustavu Windows 11 24H2, elementima sučelja za brze postavke
-  (shellhost.exe) se može kretati pomoću interakcije mišem i/ili
-  dodirom. Ovo je sada dio NVDA čitača 2024.2.
-* U sustavu Windows 11, NVDA će najaviti predložene radnje kad se
-  kompatibilni podaci poput telefonskih brojeva kopiraju u međuspremnik. Ovo
-  je sada dio NVDA čitača 2024.2.
-
 ## Postavke (Windows+I)
 
 * NVDA će izvjestiti o napretku preuzimanja i instalacije nove Windows

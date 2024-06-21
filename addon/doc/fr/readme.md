@@ -38,15 +38,6 @@ Pour obtenir la liste des changements effectuées entre chaque version de
 l'extension, reportez-vous au document [changelogs pour les versions de
 l'extension][1].
 
-## Générale
-
-* Dans Windows 11 24H2, les éléments d'interface des paramètres rapides
-  (shellhost.exe) peuvent être parcourus à l'aide de la souris et/ou d'une
-  interaction tactile. Cela fait désormais partie de NVDA 2024.2.
-* Sous Windows 11, NVDA annoncera des actions suggérées lorsque des données
-  compatibles telles que des numéros de téléphone sont copiées dans le
-  presse-papiers. Cela fait désormais partie de NVDA 2024.2.
-
 ## Paramètres (Windows+I)
 
 * NVDA signalera les mises à jour de l'état de Windows Update au fur et à
