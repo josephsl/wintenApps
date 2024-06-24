@@ -23,8 +23,8 @@ You can contribute to Windows App Essentials in a number of ways:
 
 You must:
 
-1. Be running the latest supported version of Windows 10 and later (as of June 2024, this means Windows 10 2022 Update (Version 22H2), Windows 11 2023 Update (Version 23H2), and latest Insider Preview (canary/dev/beta/release preview) build).
-2. Be running the latest stable version of NVDA or later (as of June 2024, this means NVDA 2024.1, 2024.2 beta, or latest alpha release).
+1. Be running the latest supported version of Windows 10 and later (as of July 2024, this means Windows 10 2022 Update (Version 22H2), Windows 11 2023 Update (Version 23H2), and latest Insider Preview (canary/dev/beta/release preview) build).
+2. Be running the latest stable version of NVDA or later (as of July 2024, this means NVDA 2024.2 or latest alpha release).
 3. If you wish to offer pull requests, you must be running latest NVDA stable version or later.
 4. To package your modifications into an add-on build, you must be using Python 3.11 or later.
 
@@ -78,7 +78,7 @@ Windows App Essentials follows NVDA's own coding style (tabs for indentation, ca
 
 A given Windows App Essentials release is supported until the next version is released. For development snapshots, only the latest build is supported. A stable version is supported until the next stable version is released. Both major (milestone) and minor (backports and localizations) are grouped under stable versions.
 
-For NVDA releases, Windows App Essentials supports latest NVDA releases, including development builds. Unless noted otherwise, the immediate past stable NVDA release is also supported. As of June 2024, Windows App Essentials supports NVDA 2024.1, 2024.2 beta (development builds), and alpha snapshots.
+For NVDA releases, Windows App Essentials supports latest NVDA releases, including development builds. Unless noted otherwise, the immediate past stable NVDA release is also supported. As of July 2024, Windows App Essentials supports NVDA 2024.1 (immediate past stable), 2024.2 (latest stable),  and alpha snapshots.
 
 For Windows releases, a stable Windows release (typically a feature update) is supported for at least 12 months (18 months for Windows 11 releases) and no more than consumer support duration (18 months for Windows 10, two years for Windows 11); the exception is final Windows 10 release (Version 22H2). Although the add-on will indicate support for a Windows release (or a feature update) months in advance, official support begins the moment a given release is made available to the general public. For example, although Windows 10 November 2021 Update was marked as supported since August 2021, official support duration is from November 2021 to at least December 2022 and no later than June 2023. For Windows 11 original release, preview (and experimental) support began in August 2021, and official support duration is from October 2021 to at least April 2023 and no later than October 2023. As a rule of thumb, Windows App Essentials uses consumer (Home, Pro, Pro for Workstations) support duration for a feature update to determine support duration. See release information page from Microsoft for details on support duration for Windows releases.
 
@@ -116,4 +116,4 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 * Gallium/Germanium/Arsenic (2024):
 	* Gallium 1: December 2023 to April 2024, official support for Windows 11 Version 24H2, revert to older installation error message, no more dictation/voice typing detection in modern keyboard, restructured install tasks, refactored modern keyboard window open event handler
 	* Gallium 2: March 2024 to June 2024, NVDA 2024.1 requirement, deprecate 32-bit Windows 10 support, Windows 11 Windows Update status update announcement removed, reorganized modern keyboard support and added dedicated overlay class for navigation menu items
-	* Germanium: May 2024 to September 2024, NVDA 2024.2 requirement, end of support for Windows 11 2022 Update (Version 22H2) and 32-bit Windows 10, restructured install tasks
+	* Germanium: May 2024 to September 2024, NVDA 2024.2 requirement, end of support for Windows 11 2022 Update (Version 22H2) and 32-bit Windows 10, restructured install tasks, WinApps global plugin no longer included in add-on installation package (remains in source code repo)
