@@ -29,9 +29,8 @@ Notas:
   mais informações e datas de suporte.
 * Embora a instalação seja possível, este suplemento não suporta Windows
   Enterprise LTSC (Long-Term Servicing Channel) e versões Windows Server.
-* Nem todas as funcionalidades das compilações do Windows Insider Preview
-  serão suportadas, sobretudo as funcionalidades apresentadas a um
-  subconjunto de Windows Insiders nos canais Canary e Dev.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders.
 
 Para obter uma lista das alterações efectuadas entre cada versão do extra,
 consulte o documento [changelogs for add-on releases][1].

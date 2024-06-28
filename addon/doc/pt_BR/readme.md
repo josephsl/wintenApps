@@ -30,8 +30,7 @@ Notas:
   para Windows Enterprise LTSC (Long-Term Servicing Channel — Canal de
   Manutenção de Longo Prazo) e versões do Windows Server.
 * Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders in canary
-  and dev channels.
+  more so for features introduced to a subset of Windows Insiders.
 
 For a list of changes made between each add-on releases, refer to
 [changelogs for add-on releases][1] document.

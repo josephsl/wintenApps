@@ -27,9 +27,8 @@ Napomene:
   podrške.
 * Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
-* Windows Insider Preview gradnje neće podržati sve značajke, pogotovo
-  značajke koje su predstavljene u podskupu „Windows Insiders” u kanalima
-  canary i razvoja.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders.
 
 Za popis promjena između izdanja dodatka, pogledaj dokument [s izmjenama
 izdanja dodatka][1].
