@@ -29,9 +29,8 @@ Hinweise:
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
-* Nicht alle Funktionen von Windows Insider Preview-Builds werden
-  unterstützt. Dies gilt vor allem für Funktionen, die einer Untergruppe von
-  Windows Insidern im Canary- und Dev-Channel vorgestellt werden.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders.
 
 Eine Liste der Änderungen, die zwischen den einzelnen Versionen der
 NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument

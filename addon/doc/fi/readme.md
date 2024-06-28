@@ -18,8 +18,8 @@ käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
 
 Huomautukset:
 
-* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
-  22621), or later releases.
+* Tämä lisäosa edellyttää 64-bittistä Windows 10 22H2:ta (koontiversio
+  19045), 11 22H2:ta (koontiversio 22621) tai uudempaa.
 * Ominaisuuspäivityksen tuen kesto on sidoksissa kuluttajatuen kestoon
   (Home, Pro, Pro Education, Pro for Workstations -versiot), ja lisäosa
   saattaa lopettaa tuen ominaisuuspäivitykselle jo ennen kuluttajatuen
@@ -28,11 +28,10 @@ Huomautukset:
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
   Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
 * Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
-  varsinkaan sellaisia, jotka esitellään vain osalle canary- ja
-  dev-kanavilla olevista käyttäjistä.
+  varsinkaan sellaisia, jotka esitellään vain osalle Insider-käyttäjistä.
 
-For a list of changes made between each add-on releases, refer to
-[changelogs for add-on releases][1] document.
+Katso [muutoslokeista][1] luettelo lisäosan kaikkiin versioihin tehdyistä
+muutoksista.
 
 ## Asetukset (Windows+I)
 

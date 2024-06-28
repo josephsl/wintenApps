@@ -29,9 +29,8 @@ Notas:
 * Aínda que a instalación é posible, este complemento non soporta Windows
   Enterprise LTSC (Long-Term Servicing Channel) nin versións de Windows
   Server.
-* Non se soportarán todas as características de versións Windows Insider
-  Preview, máis aínda para as características introducidas nun subconxunto
-  de Insiders Windows na canle de desenvolvemento (dev).
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders.
 
 Para unha lista de trocos feitos entre cada versión do complemento, visita o
 documento [rexistros de trocos para publicacións de complementos][1].

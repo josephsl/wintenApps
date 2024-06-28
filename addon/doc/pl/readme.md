@@ -30,9 +30,8 @@ Notatki:
   daty pomocy technicznej.
 * Chociaż instalacja jest możliwa, ten dodatek nie obsługuje wersji Windows
   Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
-* Nie wszystkie funkcje kompilacji Windows Insider Preview będą obsługiwane,
-  tym bardziej w przypadku funkcji wprowadzonych do podzbioru niejawnych
-  testerów systemu Windows w kanałach kanarkowych i deweloperskich.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders.
 
 Lista zmian wprowadzonych pomiędzy poszczególnymi wydaniami dodatków
 znajduje się w dokumencie [changelogs for add-on releases][1].

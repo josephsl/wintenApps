@@ -29,9 +29,9 @@ Notlar:
   <https://aka.ms/WindowsTargetVersioninfo> adresine bakın.
 * Ne kadar yüklenebilse de, bu eklenti Windows Enterprise LTSC (Uzun Süreli
   Hizmet Kanalı) ve Windows Server sürümlerini desteklemez.
-* Windows Insider Önizleme yapılarındaki tüm özellikler desteklenmeyecek,
-  özellikle canary ve dev kanallarında Windows Insiders alt kümesine sunulan
-  özellikler için.
+* Windows Insider Preview derlemelerindeki tüm özellikler
+  desteklenmeyecektir; özellikle Windows Insider'ların bir alt kümesine
+  sunulan özellikler için desteklenecektir.
 
 Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
 [eklenti sürümleri için değişiklik günlükleri][1] belgesine bakın.

@@ -17,7 +17,8 @@
 * 功能更新支持期限与消费者支持期限（家庭版、专业版、专业教育版、工作站专业版）相关联，并且插件可能会在消费者支持结束之前终止对功能更新的支持。有关更多信息和支持日期，请参阅
   <https://aka.ms/WindowsTargetVersioninfo>。
 * 尽管可以安装，但此插件不支持 Windows Enterprise LTSC（长期服务版）和 Windows Server 版本。
-* 并非支持所有的 Windows Insider Preview 版本，更偏向于支持由开发或金丝雀通道引入 Windows Insider 的功能。
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders.
 
 有关每个版本之间所做的具体更改，请参阅[另外发布的更新日志][1]文档。
 

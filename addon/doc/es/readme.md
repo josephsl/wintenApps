@@ -31,8 +31,7 @@ Notas:
   Enterprise LTSC (canal de servicio a largo plazo) ni las versiones de
   Windows Server.
 * No se soportarán todas las funciones de las compilaciones Windows Insider
-  Preview, más si se introducen en un subconjunto de insiders de Windows en
-  los canales dev y canary.
+  Preview, más si se introducen en un subconjunto de insiders de Windows.
 
 Para ver una lista de cambios hechos entre cada actualización del
 complemento, consulta el documento [Registros de cambios de versiones del

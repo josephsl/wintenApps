@@ -32,7 +32,7 @@ Notes:
   et Windows Server.
 * Toutes les fonctionnalités des builds Windows Insider Preview ne seront
   pas prises en charge, plus encore pour les fonctionnalités introduites
-  dans Windows Insiders sous canary et dev channels.
+  dans un sous-ensemble de Windows Insiders.
 
 Pour obtenir la liste des changements effectuées entre chaque version de
 l'extension, reportez-vous au document [changelogs pour les versions de

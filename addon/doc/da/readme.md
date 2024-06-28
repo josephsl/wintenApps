@@ -28,9 +28,8 @@ Bemærkninger:
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
   Enterprise LTSC (Long-Term Servicing Channel) og Windows
   Server-udgivelser.
-* Ikke alle funktioner fra Windows Insider Preview-builds vil blive
-  understøttet. Dette er yderligere tilfældet for funktioner introduceret i
-  en undergruppe af Windows Insiders i udviklerkanalen.
+* Not all features from Windows Insider Preview builds will be supported,
+  more so for features introduced to a subset of Windows Insiders.
 
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][1].
