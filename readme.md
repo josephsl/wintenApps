@@ -6,10 +6,6 @@ Note: Originally called Windows 10 App Essentials, it was renamed to Windows App
 
 This add-on is a collection of app modules for various modern Windows apps, as well as enhancements and fixes for certain controls found in Windows 10 and later.
 
-The following app modules or support modules for some apps are included (see each app section for details on what is included):
-
-* Settings (Windows+I)
-
 Notes:
 
 * This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 23H2 (build 22631), or later releases.
@@ -18,9 +14,5 @@ Notes:
 * Not all features from Windows Insider Preview builds will be supported, more so for features introduced to a subset of Windows Insiders.
 
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.
-
-## Settings (Windows+I)
-
-* NVDA will report updates to Windows Update status as download and install progresses. In Windows 10, this may result in speech interruption when navigating Settings app while updates are being downloaded and installed. In Windows 11, object navigation can be used in updates list to review update status for individual entries.
 
 [1]: https://github.com/josephsl/wintenapps/wiki/w10changelog
