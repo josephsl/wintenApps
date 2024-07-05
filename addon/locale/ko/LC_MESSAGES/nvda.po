@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-05-21 21:23-0600\n"
+"PO-Revision-Date: 2024-06-28 22:27-0600\n"
 "Last-Translator: Ungjin Park <ungjin312@kakao.com>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -16,11 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.3\n"
-
-#. Translators: title of the error dialog shown when trying to install the add-on in
-#. unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
-msgid "Unsupported Windows release"
-msgstr "지원하지 않는 윈도우 버전 사용중"
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
@@ -32,6 +27,11 @@ msgid ""
 msgstr ""
 "본 추가 기능은 {releaseName}({build}) 버전을 지원하지 않습니다.\n"
 "{supportedReleaseName}({supportedBuild}) 이상으로 업그레이드하십시오."
+
+#. Translators: title of the error dialog shown when trying to install the add-on in
+#. unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
+msgid "Unsupported Windows release"
+msgstr "지원하지 않는 윈도우 버전 사용중"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

@@ -17,11 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.3\n"
 
-#. Translators: title of the error dialog shown when trying to install the add-on in
-#. unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
-msgid "Unsupported Windows release"
-msgstr "Неподдържано издание на Windows"
-
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
 #, python-brace-format
@@ -34,6 +29,11 @@ msgstr ""
 "от тази добавка.\n"
 "Тази добавка изисква {supportedReleaseName} ({supportedBuild}) или по-нова "
 "версия."
+
+#. Translators: title of the error dialog shown when trying to install the add-on in
+#. unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
+msgid "Unsupported Windows release"
+msgstr "Неподдържано издание на Windows"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

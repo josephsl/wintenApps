@@ -11,12 +11,6 @@ Este extra é uma colecção de módulos de aplicação para várias aplicaçõe
 modernas do Windows, bem como melhorias e correcções para certos controlos
 encontrados no Windows 10 e posteriores.
 
-Os seguintes módulos de aplicações ou módulos de suporte para algumas
-aplicações estão incluídos (consulte a secção de cada aplicação para obter
-detalhes sobre o que está incluído):
-
-* Configurações (Windows + I)
-
 Notas:
 
 * This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
@@ -34,14 +28,6 @@ Notas:
 
 Para obter uma lista das alterações efectuadas entre cada versão do extra,
 consulte o documento [changelogs for add-on releases][1].
-
-## Configurações (Windows + I)
-
-* NVDA will report updates to Windows Update status as download and install
-  progresses. In Windows 10, this may result in speech interruption when
-  navigating Settings app while updates are being downloaded and
-  installed. In Windows 11, object navigation can be used in updates list to
-  review update status for individual entries.
 
 [[!tag dev stable]]
 

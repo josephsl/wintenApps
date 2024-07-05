@@ -11,12 +11,6 @@ Cette extension est une collection d'app modules pour diverses apps de
 Windows 10, ainsi que des améliorations et des correctifs pour certains
 contrôles de Windows 10 et versions ultérieures.
 
-Les app modules suivants ou la prise en charge des modules pour certaines
-apps sont inclus (voir chaque section app pour plus de détails sur ce qui
-est inclus) :
-
-* Paramètres (Windows+I)
-
 Notes:
 
 * Cette extension nécessite Windows 10 22H2 64 bits (build 19045), 11 22H2
@@ -37,16 +31,6 @@ Notes:
 Pour obtenir la liste des changements effectuées entre chaque version de
 l'extension, reportez-vous au document [changelogs pour les versions de
 l'extension][1].
-
-## Paramètres (Windows+I)
-
-* NVDA signalera les mises à jour de l'état de Windows Update au fur et à
-  mesure que le téléchargement et l'installation progressent. Sous Windows
-  10, cela peut entraîner une interruption de la parole lors de la
-  navigation dans l'application Paramètres pendant le téléchargement et
-  l'installation des mises à jour. Sous Windows 11, la navigation par objets
-  peut être utilisée dans la liste des mises à jour pour vérifier l'état de
-  mise à jour des entrées individuelles.
 
 [[!tag dev stable]]
 

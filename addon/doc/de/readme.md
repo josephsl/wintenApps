@@ -11,15 +11,11 @@ Diese Erweiterung ist eine Sammlung von App-Modulen für verschiedene moderne
 Windows-Apps sowie Verbesserungen und Korrekturen für bestimmte
 Steuerelemente in Windows 10 und neuer.
 
-Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
-Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
-
-* Einstellungen (Windows+I)
-
 Hinweise:
 
-* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
-  22621), or later releases.
+* Für diese NVDA-Erweiterung wird Windows 10 Version 22H2 (Build 19045)
+  64-Bit, Windows 11 Version 22H2 (Build 22621) oder neuere Versionen
+  benötigt.
 * Die Dauer der Unterstützung für Feature-Updates ist an die Dauer des
   Consumer-Supports (Home, Pro, Pro Education, Pro for Workstations
   Editionen) gebunden und die Erweiterung kann den Support für ein
@@ -29,20 +25,13 @@ Hinweise:
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
   Windows Server.
-* Not all features from Windows Insider Preview builds will be supported,
-  more so for features introduced to a subset of Windows Insiders.
+* Nicht alle Funktionen der Windows Insider Preview-Builds werden
+  unterstützt. Dies gilt vor allem für Funktionen, die für eine Untergruppe
+  von Windows Insidern eingeführt wurden.
 
 Eine Liste der Änderungen, die zwischen den einzelnen Versionen der
 NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
 [Änderungsprotokolle für Versionen der NVDA-Erweiterung][1].
-
-## Einstellungen (Windows+I)
-
-* NVDA will report updates to Windows Update status as download and install
-  progresses. In Windows 10, this may result in speech interruption when
-  navigating Settings app while updates are being downloaded and
-  installed. In Windows 11, object navigation can be used in updates list to
-  review update status for individual entries.
 
 [[!tag dev stable]]
 

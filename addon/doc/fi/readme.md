@@ -11,11 +11,6 @@ Tämä lisäosa on kokoelma sovellusmoduuleita moderneille
 Windows-sovelluksille sekä laajennuksia ja korjauksia tietyille säätimille
 Windows 10:ssä ja uudemmissa.
 
-Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
-käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
-
-* Asetukset (Windows+I)
-
 Huomautukset:
 
 * Tämä lisäosa edellyttää 64-bittistä Windows 10 22H2:ta (koontiversio
@@ -32,14 +27,6 @@ Huomautukset:
 
 Katso [muutoslokeista][1] luettelo lisäosan kaikkiin versioihin tehdyistä
 muutoksista.
-
-## Asetukset (Windows+I)
-
-* NVDA ilmoittaa Windows Updaten tilan päivitysten latauksen ja asennuksen
-  edistyessä. Tästä voi olla seurauksena puheen keskeytyminen navigoitaessa
-  Asetukset-sovelluksessa päivitysten lataamisen ja asennuksen
-  aikana. Windows 11:ssä päivitysluettelossa voidaan käyttää
-  objektinavigointia yksittäisten päivitysten tilan tarkasteluun.
 
 [[!tag dev stable]]
 

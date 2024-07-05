@@ -7,10 +7,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 본 추가 기능은 여러 UWP 윈도우 앱 지원 모듈 및 윈도우 10 이상에서 제공하는 컨트롤 지원 기능 향상 및 버그 수정을 포함합니다.
 
-다음 앱 모듈 및 지원 모듈을 포함합니다(각 앱 관련 엔트리를 참고 바람):
-
-* 설정(Windows+I)
-
 사용시 주의 사항:
 
 * 본 추가 기능은 64비트 윈도우 10 22H2(빌드 19045), 11 22H2(빌드 22621) 이상을 지원합니다.
@@ -22,14 +18,6 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 윈도우 참가자 빌드에 탑제된 기능을 모두 지원하지 않습니다(특히 일부 사용자에게만 공개된 경우).
 
 추가 기능 변경 내역은 [변경 내용 문서][1]에서 확인할 수 있습니다.
-
-## 설정(Windows+I)
-
-* NVDA will report updates to Windows Update status as download and install
-  progresses. In Windows 10, this may result in speech interruption when
-  navigating Settings app while updates are being downloaded and
-  installed. In Windows 11, object navigation can be used in updates list to
-  review update status for individual entries.
 
 [[!tag dev stable]]
 

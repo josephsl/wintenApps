@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.02\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-05-21 21:10-0600\n"
+"PO-Revision-Date: 2024-06-28 22:29-0600\n"
 "Last-Translator: Nicolai Svendsen <dansk@nvda.dk>\n"
 "Language-Team: \n"
 "Language: da\n"
@@ -17,11 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.3\n"
-
-#. Translators: title of the error dialog shown when trying to install the add-on in
-#. unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
-msgid "Unsupported Windows release"
-msgstr "Ikke -understøttet Windows -udgivelse"
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
@@ -35,6 +30,11 @@ msgstr ""
 "af denne tilføjelse.\n"
 "Denne tilføjelse kræver {supportedReleaseName} ({supportedBuild}) eller "
 "nyere."
+
+#. Translators: title of the error dialog shown when trying to install the add-on in
+#. unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
+msgid "Unsupported Windows release"
+msgstr "Ikke -understøttet Windows -udgivelse"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on

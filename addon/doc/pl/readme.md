@@ -11,12 +11,6 @@ Ten dodatek to zbiór modułów aplikacji dla różnych nowoczesnych aplikacji
 systemu Windows, a także ulepszeń i poprawek dla niektórych kontrolek
 znajdujących się w systemie Windows 10 i nowszych.
 
-Dołączone są następujące moduły aplikacji lub moduły pomocy technicznej dla
-niektórych aplikacji (szczegółowe informacje na temat tego, co jest
-dołączone, zobacz każdą sekcję aplikacji):
-
-* Ustawienia (Windows+I)
-
 Notatki:
 
 * This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
@@ -35,14 +29,6 @@ Notatki:
 
 Lista zmian wprowadzonych pomiędzy poszczególnymi wydaniami dodatków
 znajduje się w dokumencie [changelogs for add-on releases][1].
-
-## Ustawienia (Windows+I)
-
-* NVDA will report updates to Windows Update status as download and install
-  progresses. In Windows 10, this may result in speech interruption when
-  navigating Settings app while updates are being downloaded and
-  installed. In Windows 11, object navigation can be used in updates list to
-  review update status for individual entries.
 
 [[!tag dev stable]]
 
