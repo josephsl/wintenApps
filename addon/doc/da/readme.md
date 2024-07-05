@@ -10,11 +10,6 @@ stadig henvise til det originale navn for tilføjelsen.
 Denne tilføjelse er en samling af app-moduler til forskellige Windows-apps,
 samt forbedringer og rettelser for visse windows 10 kontrolelementer.
 
-Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
-hver appsektion for detaljer om, hvad der er inkluderet):
-
-* Indstillinger (Windows+I)
-
 Bemærkninger:
 
 * This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
@@ -33,14 +28,6 @@ Bemærkninger:
 
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][1].
-
-## Indstillinger (Windows+I)
-
-* NVDA will report updates to Windows Update status as download and install
-  progresses. In Windows 10, this may result in speech interruption when
-  navigating Settings app while updates are being downloaded and
-  installed. In Windows 11, object navigation can be used in updates list to
-  review update status for individual entries.
 
 [[!tag dev stable]]
 

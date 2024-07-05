@@ -11,12 +11,6 @@ Este complemento é uma coleção de módulos de aplicativos (app modules) para
 vários aplicativos modernos do Windows, bem como aprimoramentos e correções
 para determinados controles encontrados no Windows 10 e posteriores.
 
-Os seguintes módulos de aplicativos ou módulos de suporte para alguns
-aplicativos estão incluídos (consulte a seção de cada aplicativo para obter
-detalhes sobre o que está incluso):
-
-* Settings (Windows+I)
-
 Notas:
 
 * This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
@@ -34,14 +28,6 @@ Notas:
 
 For a list of changes made between each add-on releases, refer to
 [changelogs for add-on releases][1] document.
-
-## Settings (Windows+I)
-
-* NVDA will report updates to Windows Update status as download and install
-  progresses. In Windows 10, this may result in speech interruption when
-  navigating Settings app while updates are being downloaded and
-  installed. In Windows 11, object navigation can be used in updates list to
-  review update status for individual entries.
 
 [[!tag dev stable]]
 

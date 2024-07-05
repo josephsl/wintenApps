@@ -11,11 +11,6 @@
 Windows, а також удосконаленням та виправленням певних елементів керування,
 доступних у Windows 10 і вище.
 
-Включено наведені нижче модулі додатків або модулі підтримки для деяких
-додатків (перегляньте розділ кожного додатка, щоб дізнатися, що включено):
-
-* Settings (Windows+I)
-
 Примітки:
 
 * This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
@@ -33,14 +28,6 @@ Windows, а також удосконаленням та виправлення�
 
 Перелік змін, внесених між випусками додатка, наведено у документі [журнал
 змін випусків додатка][1].
-
-## Settings (Windows+I)
-
-* NVDA will report updates to Windows Update status as download and install
-  progresses. In Windows 10, this may result in speech interruption when
-  navigating Settings app while updates are being downloaded and
-  installed. In Windows 11, object navigation can be used in updates list to
-  review update status for individual entries.
 
 [[!tag dev stable]]
 

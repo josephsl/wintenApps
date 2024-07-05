@@ -11,12 +11,6 @@ Este complemento es una colección de módulos de aplicación para varias
 aplicaciones de Windows, así como Mejoras y correcciones para ciertos
 controles de windows 10 o posterior.
 
-Se incluyen Los siguientes app modules o el apoyo para módulos para algunas
-aplicaciones (consulta cada sección para la aplicación para detalles sobre
-qué se incluye):
-
-* Configuración (Windows+I)
-
 Notas:
 
 * Este complemento requiere Windows 10 Versión 22H2 (compilación 19045) de
@@ -36,15 +30,6 @@ Notas:
 Para ver una lista de cambios hechos entre cada actualización del
 complemento, consulta el documento [Registros de cambios de versiones del
 complemento (en inglés)][1].
-
-## Configuración (Windows+I)
-
-* NVDA anunciará las actualizaciones del estado de Windows Update según
-  avancen la descarga e instalación. En Windows 10, esto puede resultar en
-  interrupciones de voz al navegar por la aplicación de configuración
-  mientras las actualizaciones se descargan y se instalan. En Windows 11, se
-  puede usar el navegador de objetos en la lista de actualizaciones para
-  revisar el estado de actualización de entradas individuales.
 
 [[!tag dev stable]]
 

@@ -10,11 +10,6 @@ nadalje odnositi na izvorno ime dodatka.
 Ovaj NVDA dodatak je zbirka modula za razne moderne Windows aplikacije, kao
 i poboljšanja i ispravci određenih kontrola u sustavu Windows 10 i novijim.
 
-Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
-što je uključeno):
-
-* Postavke (Windows+I)
-
 Napomene:
 
 * Ovaj dodatak zahtijeva 64-bitni Windows 10 22H2 (gradnja 19045), 11 22H2
@@ -32,15 +27,6 @@ Napomene:
 
 Za popis promjena između izdanja dodatka, pogledaj dokument [s izmjenama
 izdanja dodatka][1].
-
-## Postavke (Windows+I)
-
-* NVDA će izvjestiti o napretku preuzimanja i instalacije nove Windows
-  verzije. U sustavu Windows 10 to može rezultirati prekidom govora tijekom
-  kretanja u aplikaciji Postavke tijekom aktualiziranja preuzimanja i
-  instaliranja novih verzija. U sustavu Windows 11, kretanje po objektima se
-  može koristiti u popisu novih verzija za pregled stanja aktualiziranja za
-  pojedinačne unose.
 
 [[!tag dev stable]]
 
