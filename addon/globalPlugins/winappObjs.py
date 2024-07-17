@@ -38,7 +38,7 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 			return
 		import NVDAObjects.UIA
 
-		# Some elements do not report native window handle when in fact
+		# NVDA Core issue 16871: some elements do not report native window handle when in fact
 		# native window handle is shown via runtime ID.
 		# This is seen when handling Windows 11 Voice Access notifications.
 		if not (window := self.getNearestWindowHandle(sender)):
