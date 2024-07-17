@@ -30,13 +30,6 @@ class MicrophoneButton(UIA):
 
 class AppModule(appModuleHandler.AppModule):
 
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
-		if isinstance(obj, UIA):
-			if obj.UIAElement.cachedClassName == "Popup":
-				clsList.insert(0, Dialog)
-			elif obj.UIAAutomationId == "MicrophoneButtonControl":
-				clsList.insert(0, MicrophoneButton)
-
 	def isGoodUIAWindow(self, hwnd: HWNDValT) -> bool:
 		# #72: allow proper mouse and touch interaction from main Voice access interface.
 		if winUser.getClassName(hwnd) == "Voice access":
