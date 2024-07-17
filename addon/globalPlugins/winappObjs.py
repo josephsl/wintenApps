@@ -123,5 +123,6 @@ def _isDebug():
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-	# Placeholder global plugin class in case it is needed in the future.
-	pass
+
+	def __init__(self):
+		super().__init__()
