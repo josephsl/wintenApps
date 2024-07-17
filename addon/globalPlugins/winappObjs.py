@@ -6,11 +6,6 @@
 
 import globalPluginHandler
 import UIAHandler
-from typing import Optional
-from comtypes import (
-	COMError,
-	COMObject,
-)
 import config
 import eventHandler
 from logHandler import log
