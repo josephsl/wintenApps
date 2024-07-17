@@ -97,27 +97,6 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 		)
 
 
-handler: Optional[UIAHandler] = None
-
-
-def initialize():
-	global handler
-	if not config.conf["UIA"]["enabled"]:
-		raise RuntimeError("UIA forcefully disabled in configuration")
-	try:
-		handler = UIAHandler()
-	except COMError:
-		handler = None
-		raise
-
-
-def terminate():
-	global handler
-	if handler:
-		handler.terminate()
-		handler = None
-
-
 def _isDebug():
 	return config.conf["debugLog"]["UIA"]
 
@@ -126,3 +105,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
+		# Add extra things for UIA support if required.
+		UIAHandler.terminate()
+		# Hack: add extra events and such via an extended UIAHandler class.
+		if not config.conf["UIA"]["enabled"]:
+			raise RuntimeError("UIA forcefully disabled in configuration")
+		try:
+			UIAHandler.handler = UIAHandlerEx()
+		except UIAHandler.COMError:
+			UIAHandler.handler = None
+			raise
