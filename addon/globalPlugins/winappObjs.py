@@ -5,6 +5,7 @@
 # No longer included in the add-on package but kept in code repository.
 
 import globalPluginHandler
+import UIAHandler
 from typing import Optional
 from comtypes import (
 	COMError,
@@ -15,7 +16,8 @@ import eventHandler
 from logHandler import log
 
 
-class UIAHandler(COMObject):
+# Extended UIA handler to handle notification events from apps without objects.
+class UIAHandlerEx(UIAHandler.UIAHandler):
 
 	def IUIAutomationNotificationEventHandler_HandleNotificationEvent(
 		self,
