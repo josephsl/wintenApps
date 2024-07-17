@@ -27,5 +27,5 @@ class AppModule(appModuleHandler.AppModule):
 		displayString: str | None = None,
 		**kwargs,
 	):
-		# report Voice access messages such as microphone toggle from everywhere.
+		# NVDA Core issue 16862: report Voice access messages such as microphone toggle from everywhere.
 		ui.message(displayString)
