@@ -5,6 +5,7 @@
 # No longer included in the add-on package but kept in code repository.
 
 import globalPluginHandler
+import globalVars
 import UIAHandler
 import config
 import eventHandler
@@ -92,6 +93,12 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 		)
 
 
+# #20: don't even think about proceeding in secure screens.
+def disableInSecureMode(cls):
+	return globalPluginHandler.GlobalPlugin if globalVars.appArgs.secure else cls
+
+
+@disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
