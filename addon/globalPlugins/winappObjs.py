@@ -61,7 +61,7 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 					)
 					return
 		try:
-			obj = NVDAObjects.UIA.UIA(UIAElement=sender)
+			obj = NVDAObjects.UIA.UIA(windowHandle=window, UIAElement=sender)
 		except Exception:
 			if _isDebug():
 				log.debugWarning(
