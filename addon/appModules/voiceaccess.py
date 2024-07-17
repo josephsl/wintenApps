@@ -4,6 +4,7 @@
 
 # Support for Voice access on Windows 11.
 
+from typing import Callable
 import appModuleHandler
 import scriptHandler
 import ui
@@ -20,3 +21,13 @@ class AppModule(appModuleHandler.AppModule):
 		if winUser.getClassName(hwnd) == "Voice access":
 			return True
 		return False
+
+	def event_UIA_notification(
+		self,
+		obj: NVDAObject,
+		nextHandler: Callable[[], None],
+		displayString: str | None = None,
+		**kwargs,
+	):
+		# report Voice access messages such as microphone toggle from everywhere.
+		ui.message(displayString)
