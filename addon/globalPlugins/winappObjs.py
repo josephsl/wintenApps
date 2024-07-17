@@ -96,6 +96,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
+		import winVersion
+		if winVersion.getWinVer() < winVersion.WIN11_23H2:
+			return
 		# Add extra things for UIA support if required.
 		UIAHandler.terminate()
 		# Hack: add extra events and such via an extended UIAHandler class.
