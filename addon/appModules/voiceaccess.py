@@ -6,10 +6,8 @@
 
 from typing import Callable
 import appModuleHandler
-import scriptHandler
 import ui
 import winUser
-from NVDAObjects.UIA import UIA, Dialog
 from NVDAObjects import NVDAObject
 from winAPI.types import HWNDValT
 
