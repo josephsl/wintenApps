@@ -42,7 +42,9 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 		# native window handle is shown via runtime ID.
 		# This is seen when handling Windows 11 Voice Access notifications.
 		if not (window := self.getNearestWindowHandle(sender)):
-			if any(runtimeID := sender.getRuntimeID()):
+			# Some runtime ID array has four elements, while others do not, and for Voice Access, it is four.
+			# Therefore, handle runtime ID tuple of four elements.
+			if len(runtimeID := sender.getRuntimeID()) == 4:
 				# Second item in runtime ID array is native window handle.
 				window = runtimeID[1]
 			else:
