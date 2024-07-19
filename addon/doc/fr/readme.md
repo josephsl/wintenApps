@@ -11,6 +11,12 @@ Cette extension est une collection d'app modules pour diverses apps de
 Windows 10, ainsi que des améliorations et des correctifs pour certains
 contrôles de Windows 10 et versions ultérieures.
 
+Les app modules suivants ou la prise en charge des modules pour certaines
+apps sont inclus (voir chaque section app pour plus de détails sur ce qui
+est inclus) :
+
+* Voice access (Windows 11)
+
 Notes:
 
 * Cette extension nécessite Windows 10 22H2 64 bits (build 19045), 11 22H2
@@ -31,6 +37,11 @@ Notes:
 Pour obtenir la liste des changements effectuées entre chaque version de
 l'extension, reportez-vous au document [changelogs pour les versions de
 l'extension][1].
+
+## Voice access (Windows 11)
+
+* NVDA will announce Voice access messages such as microphone toggle from
+  everywhere.
 
 [[!tag dev stable]]
 
