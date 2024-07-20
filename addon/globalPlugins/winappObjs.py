@@ -107,9 +107,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		import winVersion
 		if winVersion.getWinVer() < winVersion.WIN11_23H2:
 			return
-		# Add extra things for UIA support if required.
-		UIAHandler.terminate()
-		# Hack: add extra events and such via an extended UIAHandler class.
+		# Hack: add extra things for UIA support if required and uIA is enabled.
 		if not config.conf["UIA"]["enabled"]:
 			raise RuntimeError("UIA forcefully disabled in configuration")
 		# Add support for enhanced notification events (to handle apps such as Windows 11 Voice Access).
