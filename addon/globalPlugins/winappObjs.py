@@ -112,8 +112,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Hack: add extra events and such via an extended UIAHandler class.
 		if not config.conf["UIA"]["enabled"]:
 			raise RuntimeError("UIA forcefully disabled in configuration")
+		# Add support for enhanced notification events (to handle apps such as Windows 11 Voice Access).
+		log.debug("winapps: restarting UIA handler to add additional events")
+		UIAHandler.terminate()
 		try:
 			UIAHandler.handler = UIAHandlerEx()
+			log.debug("winapps: UIA handler restarted")
 		except UIAHandler.COMError:
 			UIAHandler.handler = None
 			raise
