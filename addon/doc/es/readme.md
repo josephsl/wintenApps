@@ -11,6 +11,12 @@ Este complemento es una colección de módulos de aplicación para varias
 aplicaciones de Windows, así como Mejoras y correcciones para ciertos
 controles de windows 10 o posterior.
 
+Se incluyen Los siguientes app modules o el apoyo para módulos para algunas
+aplicaciones (consulta cada sección para la aplicación para detalles sobre
+qué se incluye):
+
+* Voice access (Windows 11)
+
 Notas:
 
 * Este complemento requiere Windows 10 Versión 22H2 (compilación 19045) de
@@ -30,6 +36,11 @@ Notas:
 Para ver una lista de cambios hechos entre cada actualización del
 complemento, consulta el documento [Registros de cambios de versiones del
 complemento (en inglés)][1].
+
+## Voice access (Windows 11)
+
+* NVDA will announce Voice access messages such as microphone toggle from
+  everywhere.
 
 [[!tag dev stable]]
 
