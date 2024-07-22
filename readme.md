@@ -21,6 +21,6 @@ For a list of changes made between each add-on releases, refer to [changelogs fo
 
 ## Voice access (Windows 11)
 
-* NVDA will announce Voice access messages such as microphone toggle from everywhere.
+* NVDA will announce Voice access messages such as microphone toggle from everywhere (if NVDA is installed).
 
 [1]: https://github.com/josephsl/wintenapps/wiki/w10changelog
