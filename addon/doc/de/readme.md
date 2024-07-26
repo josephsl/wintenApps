@@ -11,11 +11,6 @@ Diese Erweiterung ist eine Sammlung von App-Modulen für verschiedene moderne
 Windows-Apps sowie Verbesserungen und Korrekturen für bestimmte
 Steuerelemente in Windows 10 und neuer.
 
-Nachfolgend die beinhalteten App Module oder Unterstützungen für Module von
-Windows-10-Apps (dazu weiter unten Deteils für jeden App Bereich)
-
-* Voice access (Windows 11)
-
 Hinweise:
 
 * Für diese NVDA-Erweiterung wird Windows 10 Version 22H2 (Build 19045)
@@ -37,11 +32,6 @@ Hinweise:
 Eine Liste der Änderungen, die zwischen den einzelnen Versionen der
 NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
 [Änderungsprotokolle für Versionen der NVDA-Erweiterung][1].
-
-## Voice access (Windows 11)
-
-* NVDA will announce Voice access messages such as microphone toggle from
-  everywhere.
 
 [[!tag dev stable]]
 

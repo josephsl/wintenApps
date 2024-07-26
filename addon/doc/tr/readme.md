@@ -12,12 +12,6 @@ Bu eklenti, çeşitli modern Windows uygulamaları için bir uygulama modül
 koleksiyonunun yanı sıra Windows 10 ve sonraki sürümlerde bulunan belirli
 kontroller için geliştirmeler ve düzeltmeler içerir.
 
-Bazı uygulamalar için aşağıdaki uygulama veya destek modülleri  mevcuttur
-(nelerin dahil olduğuyla ilgili ayrıntılar için her bir uygulama bölümüne
-bakın):
-
-* Sesli erişim (Windows 11)
-
 Notlar:
 
 * Bu eklenti için 64 bit Windows 10 22H2 (derleme 19045), 11 22H2 (derleme
@@ -35,11 +29,6 @@ Notlar:
 
 Her bir eklenti sürümü arasında yapılan değişikliklerin listesi için
 [eklenti sürümleri için değişiklik günlükleri][1] belgesine bakın.
-
-## Sesli erişim (Windows 11)
-
-* NVDA, mikrofon geçişi gibi Sesli erişim mesajlarını her yerden
-  duyuracaktır.
 
 [[!tag dev stable]]
 
