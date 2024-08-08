@@ -10,11 +10,6 @@ stadig henvise til det originale navn for tilføjelsen.
 Denne tilføjelse er en samling af app-moduler til forskellige Windows-apps,
 samt forbedringer og rettelser for visse windows 10 kontrolelementer.
 
-Følgende app moduler eller støttemoduler for nogle apps er inkluderet (Se
-hver appsektion for detaljer om, hvad der er inkluderet):
-
-* Voice access (Windows 11)
-
 Bemærkninger:
 
 * This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
@@ -33,11 +28,6 @@ Bemærkninger:
 
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][1].
-
-## Voice access (Windows 11)
-
-* NVDA will announce Voice access messages such as microphone toggle from
-  everywhere.
 
 [[!tag dev stable]]
 

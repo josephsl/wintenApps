@@ -10,11 +10,6 @@ nadalje odnositi na izvorno ime dodatka.
 Ovaj NVDA dodatak je zbirka modula za razne moderne Windows aplikacije, kao
 i poboljšanja i ispravci određenih kontrola u sustavu Windows 10 i novijim.
 
-Uključeni su sljedeći moduli (za svaku aplikaciju postoji odlomak, gdje piše
-što je uključeno):
-
-* Voice access (Windows 11)
-
 Napomene:
 
 * Ovaj dodatak zahtijeva 64-bitni Windows 10 22H2 (gradnja 19045), 11 22H2
@@ -32,11 +27,6 @@ Napomene:
 
 Za popis promjena između izdanja dodatka, pogledaj dokument [s izmjenama
 izdanja dodatka][1].
-
-## Voice access (Windows 11)
-
-* NVDA will announce Voice access messages such as microphone toggle from
-  everywhere.
 
 [[!tag dev stable]]
 

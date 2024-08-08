@@ -11,11 +11,6 @@ Tämä lisäosa on kokoelma sovellusmoduuleita moderneille
 Windows-sovelluksille sekä laajennuksia ja korjauksia tietyille säätimille
 Windows 10:ssä ja uudemmissa.
 
-Kokoelmaan sisältyvät seuraavat sovellus- tai tukimoduulit (katso tiedot
-käytettävissä olevista ominaisuuksista kunkin sovelluksen kappaleesta):
-
-* Äänikäyttötoiminnot (Windows 11 22H2)
-
 Huomautukset:
 
 * Tämä lisäosa edellyttää 64-bittistä Windows 10 22H2:ta (koontiversio
@@ -32,11 +27,6 @@ Huomautukset:
 
 Katso [muutoslokeista][1] luettelo lisäosan kaikkiin versioihin tehdyistä
 muutoksista.
-
-## Äänikäyttötoiminnot (Windows 11 22H2)
-
-* NVDA puhuu kaikkialta Äänikäyttötoimintojen ilmoitukset, kuten mikrofonin
-  tilan.
 
 [[!tag dev stable]]
 
