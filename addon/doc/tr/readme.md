@@ -14,8 +14,8 @@ kontroller için geliştirmeler ve düzeltmeler içerir.
 
 Notlar:
 
-* Bu eklenti için 64 bit Windows 10 22H2 (derleme 19045), 11 22H2 (derleme
-  22621) veya sonraki sürümler gerekir.
+* Bu eklenti, 64 bit Windows 10 22H2 (derleme 19045)/11 23H2 (derleme 22631)
+  veya sonraki sürümleri gerektirir.
 * Özellik güncelleme destek süresi, tüketici destek süresine (Ev, Pro, Pro
   Education, Pro for Workstations sürümleri) bağlıdır ve eklenti, tüketici
   desteği sona ermeden önce özellik güncellemesi desteğini

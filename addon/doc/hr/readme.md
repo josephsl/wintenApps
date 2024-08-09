@@ -12,8 +12,8 @@ i poboljšanja i ispravci određenih kontrola u sustavu Windows 10 i novijim.
 
 Napomene:
 
-* Ovaj dodatak zahtijeva 64-bitni Windows 10 22H2 (gradnja 19045), 11 22H2
-  (gradnja 22621) ili novija izdanja.
+* Ovaj dodatak zahtijeva 64-bitni Windows 10 22H2 (gradnja 19045), 11 23H2
+  (gradnja 22631) ili novija izdanja.
 * Trajanje podrške za aktualiziranje značajki povezano je s trajanjem
   korisničke podrške (izdanja Home, Pro, Pro Education, Pro for
   Workstations) i dodatak može prekinuti podršku za aktualiziranje značajki

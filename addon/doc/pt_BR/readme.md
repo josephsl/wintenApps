@@ -13,8 +13,8 @@ para determinados controles encontrados no Windows 10 e posteriores.
 
 Notas:
 
-* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
-  22621), or later releases.
+* Este complemento requer o Windows 10 22H2 (compilação 19045), 11 23H2
+  (compilação 22631), ou posteriors.
 * Feature update support duration is tied to consumer support duration
   (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on
   may end support for a feature update prior to end of consumer support. See
@@ -26,8 +26,8 @@ Notas:
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders.
 
-For a list of changes made between each add-on releases, refer to
-[changelogs for add-on releases][1] document.
+Para obter uma lista de alterações feitas entre cada lançamento do
+complemento, consulte o documento [changelogs for add-on releases][1].
 
 [[!tag dev stable]]
 

@@ -12,8 +12,8 @@ e posteriores.
 
 Notas:
 
-* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
-  22621), or later releases.
+* Este complemento require do Windows 10 22H2 (compilación 19045), 11 23H2
+  (compilación 22631), ou versións posteriores.
 * O soporte das actualizacións de características está vencellado á duración
   do soporte ó consumidor (edicións Home, Pro, Pro Education, Pro for
   Workstations) e o complemento podería rematar o soporte para unha

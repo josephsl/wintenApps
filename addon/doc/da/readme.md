@@ -12,8 +12,8 @@ samt forbedringer og rettelser for visse windows 10 kontrolelementer.
 
 Bemærkninger:
 
-* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
-  22621), or later releases.
+* Denne tilføjelse kræver Windows 10 22H2 (build 19045), 11 23H2 (build
+  22631) eller nyere udgivelser.
 * Varigheden af understøttelse af funktionsopdateringer er bundet til
   varigheden af forbrugersupport (Home, Pro, Pro Education, Pro for
   Workstations-udgaver), og tilføjelsen kan afslutte understøttelsen af en
