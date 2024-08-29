@@ -14,7 +14,7 @@ Steuerelemente in Windows 10 und neuer.
 Hinweise:
 
 * Für diese NVDA-Erweiterung wird Windows 10 Version 22H2 (Build 19045)
-  64-Bit, Windows 11 Version 22H2 (Build 22621) oder neuere Versionen
+  64-Bit, Windows 11 Version 23H2 (Build 22631) oder neuere Versionen
   benötigt.
 * Die Dauer der Unterstützung für Feature-Updates ist an die Dauer des
   Consumer-Supports (Home, Pro, Pro Education, Pro for Workstations

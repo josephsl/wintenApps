@@ -13,8 +13,8 @@ znajdujących się w systemie Windows 10 i nowszych.
 
 Notatki:
 
-* This add-on requires 64-bit Windows 10 22H2 (build 19045), 11 22H2 (build
-  22621), or later releases.
+* Ten dodatek wymaga systemu Windows 10 22H2 (kompilacja 19045), 11 23H2
+  (kompilacja 22631) lub nowszych wersji.
 * Czas trwania pomocy technicznej dotyczącej aktualizacji funkcji jest
   powiązany z czasem trwania pomocy technicznej dla klientów (wersje Home,
   Pro, Pro Education, Pro dla stacji roboczych), a dodatek może zakończyć
