@@ -57,6 +57,14 @@ class NavigationMenuItem(ListItem):
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
 class AppModule(AppModule):  # type: ignore[no-redef]
 
+	def event_NVDAObject_init(self, obj: NVDAObject) -> None:
+		# Recent Windows 11 builds raise live region change event when clipboard history closes,
+		# causing NVDA to announce data item text such as clipboard history entries.
+		# Therefore, tell NVDA to veto this event at the object level, otherwise focus change handling breaks
+		# due to live region change event being recorded as an impending event.
+		if obj.role in (controlTypes.Role.LIST, controlTypes.Role.DATAITEM):
+			obj._shouldAllowUIALiveRegionChangeEvent = False
+
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
 		# NVDA Core issue 16346: recognize Windows 11 emoji panel navigation menu items.
 		# Resolved in NVDA 2024.3.
