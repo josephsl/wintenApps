@@ -20,11 +20,10 @@ def onInstall() -> None:
 	# and the add-on may end support for a feature update prior to end of consumer support.
 	# See aka.ms/WindowsTargetVersioninfo.
 	# For Insider Preview, only the latest canary/dev/beta/release preview builds are supported
-	currentWinVer = winVersion.getWinVer()
 	# At a minimum, Windows App Essentials requires 64-bit Windows 10 22H2
 	# (Version 22H2 (19045), the final Windows 10 feature update, is supported until October 2025).
 	minimumWinVer = winVersion.WIN10_22H2
-	if currentWinVer > minimumWinVer:
+	if (currentWinVer := winVersion.getWinVer()) > minimumWinVer:
 		# Windows App Essentials supports Windows 11 23H2 or later.
 		minimumWinVer = winVersion.WIN11_23H2
 	if currentWinVer < minimumWinVer:
