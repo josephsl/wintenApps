@@ -19,7 +19,7 @@ def onInstall() -> None:
 	# (Home, Pro, Pro Education, Pro for Workstations, supported for 18 to 24 months with exceptions)
 	# and the add-on may end support for a feature update prior to end of consumer support.
 	# See aka.ms/WindowsTargetVersioninfo.
-	# For Insider Preview, only the latest canary/dev/beta/release preview builds are supported
+	# For Insider Preview, only the latest canary/dev/beta/release preview builds are supported.
 	currentWinVer = winVersion.getWinVer()
 	# At a minimum, Windows App Essentials requires 64-bit Windows 10 22H2
 	# (Version 22H2 (19045), the final Windows 10 feature update, is supported until October 2025).
@@ -40,7 +40,7 @@ def onInstall() -> None:
 				supportedReleaseName=minimumWinVer.releaseName,
 				supportedBuild=minimumWinVer.build
 			),
-			# Translators: title of the error dialog shown when trying to install the add-on in
+			# Translators: title of the error dialog shown when trying to install the add-on on
 			# unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
 			_("Unsupported Windows release"), wx.OK | wx.ICON_ERROR
 		)
