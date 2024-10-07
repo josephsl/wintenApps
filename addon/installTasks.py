@@ -21,7 +21,9 @@ def onInstall() -> None:
 	# See aka.ms/WindowsTargetVersioninfo.
 	# For Insider Preview, only the latest canary/dev/beta/release preview builds are supported.
 	# Minimum: 64-bit Windows 10 22H2 (final feature update, supported until October 2025), 11 23H2.
-	minimumWinVer = winVersion.WIN11_23H2 if (currentWinVer := winVersion.getWinVer()) > winVersion.WIN10_22H2 else winVersion.WIN10_22H2
+	minimumWinVer = winVersion.WIN11_23H2 if (
+		(currentWinVer := winVersion.getWinVer()) > winVersion.WIN10_22H2
+	) else winVersion.WIN10_22H2
 	if currentWinVer < minimumWinVer:
 		gui.messageBox(
 			_(
