@@ -22,7 +22,7 @@ Notas:
   consumidor. Consulte <https://aka.ms/WindowsTargetVersioninfo> para obter
   mais informações e datas de suporte.
 * Embora a instalação seja possível, este suplemento não suporta Windows
-  Enterprise LTSC (Long-Term Servicing Channel) e versões Windows Server.
+  Enterprise LTSC (Long-Term Servicing Channel) e versões Server.
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders.
 

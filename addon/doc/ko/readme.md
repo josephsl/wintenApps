@@ -13,8 +13,8 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 * 기능 업데이트 지원일은 일반 사용자 버전(Home, Pro, Pro Education, Pro for Workstations)을
   기준으로 하며 지원 종료전 추가 기능 자체에서 기능 업데이트 지원을 종료할 수 있습니다. 자세한 정보 및 기능 업데이트 지원에
   대해서는 <https://aka.ms/WindowsTargetVersioninfo>를 참고하시기 바랍니다.
-* 윈도우 Enterprise LTSC(Long-Term Servicing Channel)와 윈도우 서버 버전에 설치할 수 있으나 지원은
-  하지 않습니다.
+* 윈도우 Enterprise LTSC(Long-Term Servicing Channel)와 서버 버전에 설치할 수 있으나 지원은 하지
+  않습니다.
 * 윈도우 참가자 빌드에 탑제된 기능을 모두 지원하지 않습니다(특히 일부 사용자에게만 공개된 경우).
 
 추가 기능 변경 내역은 [변경 내용 문서][1]에서 확인할 수 있습니다.
