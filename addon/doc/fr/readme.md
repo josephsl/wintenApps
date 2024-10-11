@@ -23,7 +23,7 @@ Notes:
   d'informations et les dates de support.
 * Bien que l'installation soit possible, cette extension ne prend pas en
   charge les versions Windows Enterprise LTSC (Long-Term Servicing Channel)
-  et Windows Server.
+  et Server.
 * Toutes les fonctionnalités des builds Windows Insider Preview ne seront
   pas prises en charge, plus encore pour les fonctionnalités introduites
   dans un sous-ensemble de Windows Insiders.

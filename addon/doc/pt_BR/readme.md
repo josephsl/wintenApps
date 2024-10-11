@@ -22,7 +22,7 @@ Notas:
   dates.
 * Embora a instalação seja possível, este complemento não oferece suporte
   para Windows Enterprise LTSC (Long-Term Servicing Channel — Canal de
-  Manutenção de Longo Prazo) e versões do Windows Server.
+  Manutenção de Longo Prazo) e versões do Server.
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders.
 
