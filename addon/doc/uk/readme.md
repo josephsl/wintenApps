@@ -21,8 +21,7 @@ Windows, а також удосконаленням та виправлення�
   користувачів. Додаткову інформацію й дати підтримки див. на
   <https://aka.ms/WindowsTargetVersioninfo>.
 * Цей додаток не підтримує версії Windows Enterprise LTSC (Long-Term
-  Servicing Channel) і Windows Server, Хоча встановлення на ці версії
-  можливе.
+  Servicing Channel) і Server, Хоча встановлення на ці версії можливе.
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders.
 

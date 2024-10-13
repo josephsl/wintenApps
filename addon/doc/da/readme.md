@@ -21,8 +21,7 @@ Bemærkninger:
   <https://aka.ms/WindowsTargetVersioninfo> for mere information og
   supportdatoer.
 * Selvom installation er mulig, understøtter denne tilføjelse ikke Windows
-  Enterprise LTSC (Long-Term Servicing Channel) og Windows
-  Server-udgivelser.
+  Enterprise LTSC (Long-Term Servicing Channel) og Server-udgivelser.
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders.
 

@@ -24,7 +24,7 @@ Hinweise:
   und Support-Informationen dazu.
 * Obwohl eine Installation möglich ist, unterstützt diese Erweiterung keine
   Versionen von Windows Enterprise LTSC (Long-Term Servicing Channel) und
-  Windows Server.
+  Server.
 * Nicht alle Funktionen der Windows Insider Preview-Builds werden
   unterstützt. Dies gilt vor allem für Funktionen, die für eine Untergruppe
   von Windows Insidern eingeführt wurden.

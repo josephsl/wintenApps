@@ -21,7 +21,7 @@ Huomautukset:
   päättymistä. Katso lisätietoja ja tukipäivämäärät osoitteesta
   <https://aka.ms/WindowsTargetVersioninfo>.
 * Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
-  Channel) eikä Windows Server -versioita, vaikka asennus onkin mahdollista.
+  Channel) eikä Server -versioita, vaikka asennus onkin mahdollista.
 * Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
   varsinkaan sellaisia, jotka esitellään vain osalle Insider-käyttäjistä.
 

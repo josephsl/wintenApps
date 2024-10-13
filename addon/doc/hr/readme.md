@@ -21,7 +21,7 @@ Napomene:
   <https://aka.ms/WindowsTargetVersioninfo> za više informacija i datume
   podrške.
 * Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
-  Enterprise LTSC (Long-Term Servicing Channel) i Windows Server.
+  Enterprise LTSC (Long-Term Servicing Channel) i Server.
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders.
 
