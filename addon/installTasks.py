@@ -7,13 +7,13 @@
 # particularly Place Markers by Noelia Martinez (thanks add-on authors).
 
 import addonHandler
+import winVersion
+import gui
+import wx
 addonHandler.initTranslation()
 
 
 def onInstall() -> None:
-	import winVersion
-	import gui
-	import wx
 	# Windows App Essentials requires supported Windows releases (see minimum Windows version below).
 	# For general availability channel (feature updates), support duration is tied to consumer-level support
 	# (Home, Pro, Pro Education, Pro for Workstations, supported for 18 to 24 months with exceptions)
