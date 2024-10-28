@@ -10,7 +10,7 @@
 # (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import AppModule
-import api
+import controlTypes
 from NVDAObjects import NVDAObject
 
 
@@ -22,4 +22,5 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# clipboard history closes, causing NVDA to report data item text such as clipboard history entries.
 		# Therefore, tell NVDA to veto this event at the object level, otherwise focus change handling breaks
 		# due to live region change event being recorded as an impending event.
-		obj._shouldAllowUIALiveRegionChangeEvent = api.getForegroundObject().appModule == self
+		if obj.role in (controlTypes.Role.LIST, controlTypes.Role.DATAITEM):
+			obj._shouldAllowUIALiveRegionChangeEvent = False
