@@ -25,8 +25,8 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		if (
 			obj.role == controlTypes.Role.DATAITEM
 			and obj.parent.role in (
-				controlTypes.Role.LIST,
-				controlTypes.Role.TABLEROW
+				controlTypes.Role.TABLEROW,  # Clipboard history item
+				controlTypes.Role.LIST  # Clipboard history item actions list
 			)
 		):
 			obj._shouldAllowUIALiveRegionChangeEvent = False
