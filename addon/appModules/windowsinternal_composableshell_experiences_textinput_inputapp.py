@@ -22,5 +22,11 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# clipboard history closes, causing NVDA to report data item text such as clipboard history entries.
 		# Therefore, tell NVDA to veto this event at the object level, otherwise focus change handling breaks
 		# due to live region change event being recorded as an impending event.
-		if obj.role in (controlTypes.Role.LIST, controlTypes.Role.DATAITEM):
+		if (
+			obj.role == controlTypes.Role.DATAITEM
+			and obj.parent.role in (
+				controlTypes.Role.LIST,
+				controlTypes.Role.TABLEROW
+			)
+		):
 			obj._shouldAllowUIALiveRegionChangeEvent = False
