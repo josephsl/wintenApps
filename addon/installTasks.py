@@ -23,6 +23,9 @@ def onInstall() -> None:
 	# Minimum: 64-bit Windows 10 22H2 (final feature update, supported until October 2025)/11 23H2.
 	minimumWinVer = winVersion.WIN11_23H2 if (
 		(currentWinVer := winVersion.getWinVer()) > winVersion.WIN10_22H2
+		# Detect add-on dev channel (specifically to prevent installation on Windows 10).
+		# To be removed once add-on stable channel asks for Windows 11.
+		or addonHandler.getCodeAddon().manifest.get("updateChannel") == "dev"
 	) else winVersion.WIN10_22H2
 	if currentWinVer < minimumWinVer:
 		gui.messageBox(
