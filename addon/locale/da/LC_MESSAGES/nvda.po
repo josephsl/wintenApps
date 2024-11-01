@@ -31,7 +31,7 @@ msgstr ""
 "Denne tilføjelse kræver {supportedReleaseName} ({supportedBuild}) eller "
 "nyere."
 
-#. Translators: title of the error dialog shown when trying to install the add-on in
+#. Translators: title of the error dialog shown when trying to install the add-on on
 #. unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
 msgid "Unsupported Windows release"
 msgstr "Ikke -understøttet Windows -udgivelse"

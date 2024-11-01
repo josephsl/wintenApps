@@ -30,7 +30,7 @@ msgstr ""
 "NVDA-Erweiterung nicht unterstützt wird.\n"
 "Es wird {supportedReleaseName} ({supportedBuild}) oder neuer benötigt."
 
-#. Translators: title of the error dialog shown when trying to install the add-on in
+#. Translators: title of the error dialog shown when trying to install the add-on on
 #. unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
 msgid "Unsupported Windows release"
 msgstr "Nicht unterstützte Windows-Version"
