@@ -8,6 +8,7 @@
 # Settings app is a UIA world, hence no instance checks.
 
 from typing import Callable
+
 # Extends NVDA Core's System Settings app module.
 from nvdaBuiltin.appModules.systemsettings import AppModule
 import speech
@@ -16,7 +17,6 @@ from NVDAObjects import NVDAObject
 
 # App module class comes from built-in System Settings app module but Mypy doesn't know that.
 class AppModule(AppModule):  # type: ignore[no-redef]
-
 	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# Windows 10 Settings/Update and Security/Windows Update
 		# Announce individual update progress except as noted below.
