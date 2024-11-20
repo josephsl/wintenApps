@@ -21,7 +21,7 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		# Windows 10 Settings/Update and Security/Windows Update
 		# Announce individual update progress except as noted below.
 		if "ApplicableUpdate" in obj.UIAAutomationId:
-			# Update title and status repeats while the update is downloaded and installed.
+			# NVDA Core issue 14931: update title/status repeats while downloading and installing updates.
 			# #71: NVDA is told to announce live regions to the end by default,
 			# which results in screen content and speech getting out of sync.
 			# Therefore, announce live region changes whenever possible despite constant speech interruption.
