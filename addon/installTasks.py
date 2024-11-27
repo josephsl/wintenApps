@@ -48,7 +48,6 @@ def onInstall() -> None:
 			# Translators: title of the error dialog shown when trying to install the add-on on
 			# unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
 			_("Unsupported Windows release"),
-			wx.OK | wx.ICON_ERROR,
 		)
 		raise RuntimeError(
 			f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentWinVer.build})"
