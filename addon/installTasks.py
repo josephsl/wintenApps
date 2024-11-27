@@ -9,7 +9,6 @@
 import addonHandler
 import winVersion
 import gui
-import wx
 
 addonHandler.initTranslation()
 
