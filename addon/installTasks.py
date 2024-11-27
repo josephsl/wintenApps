@@ -45,7 +45,7 @@ def onInstall() -> None:
 				supportedReleaseName=minimumWinVer.releaseName,
 				supportedBuild=minimumWinVer.build,
 			),
-			# Translators: title of the error dialog shown when trying to install the add-on on
+			# Translators: dialog title shown when trying to install the add-on on
 			# unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
 			_("Unsupported Windows release"),
 		)
