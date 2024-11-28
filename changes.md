@@ -4,40 +4,6 @@ This document lists release changelogs for Windows App Essentials add-on.
 
 Note: originally called Windows 10 App Essentials, this add-on was renamed to Windows App Essentials in 2021 to reflect support for future Windows releases such as Windows 11. Internally, it is still called Windows 10 App Essentials or WinTenApps to reflect the ad-on's origins and to denote actual Windows system version in use (10.0).
 
-## Supported Windows releases
-
-For each Windows release, Windows App Essentials provides support for at least twelve months and up to end of consumer support (18 months for Windows 10, two years for Windows 11) except Windows Insider Preview where the add-on supports latest build. Windows Server support duration is tied to client releases (for example, Windows Server 2019 support duration is tied to Windows 10 Version 1809) whether or not client and server releases have the same build. Windows Enterprise LTSC (long-term servicing channel), as well as Windows Server Core and semi-annual and annual container channel server releases are not supported.
-
-Note: support duration also depends on add-on maintenance - duration can be shortened if the add-on becomes unsupported prior to end of consumer support for a Windows release.
-
-### Windows 10
-
-Also corresponds to Windows 10 App Essentials era. The add-on supports a given Windows 10 feature update for at least 12 months. Windows 10 Version 22H2, the final feature update, is supported until October 2025 (no support for extended security updates).
-
-* Version 1507 (build 10240): September 2015-November 2016
-* Version 1511 (build 10586): December 2015-June 2017
-* Version 1607 and Windows Server 2016 (build 14393): July 2016-December 2017
-* Version 1703 (build 15063): March 2017-June 2018
-* Version 1709 (build 16299): August 2017-January 2019
-* Version 1803 (build 17134): March 2018-July 2019
-* Version 1809 and Windows Server 2019 (build 17763): September 2018-January 2020
-* Version 1903 (build 18362): March 2019-June 2020
-* Version 1909 (build 18363): August 2019-January 2021
-* Version 2004 (build 19041): February 2020-July 2021
-* Version 20H2 (build 19042): August 2020-January 2022
-* Version 21H1 (build 19043): March 2021-August 2022
-* Version 21H2 and Windows Server 2022 (build 19044/Windows 10, 20348/Server 2022): August 2021-May 2023
-* Version 22H2/final (build 19045): August 2022-October 2025
-
-### Windows 11
-
-Renamed from Windows 10 App Essentials in 2021 with the "10" dropped from add-on name with the introduction of Windows 11. The add-on supports a given Windows 11 feature update for at least 18 months.
-
-* Version 21H2 (build 22000): October 2021-July 2023
-* Version 22H2 (build 22621): July 2022-August 2024
-* Version 23H2 (build 22631): July 2023-July 2025
-* Version 24H2 and Windows Server 2025 (build 26100): April 2024-present
-
 For each add-on version entry, minor versions (such as 18.06.1) are included under major release (18.06, for example).
 
 ## Version preview
