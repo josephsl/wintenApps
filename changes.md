@@ -10,6 +10,7 @@ For each add-on version entry, minor versions (such as 18.06.1) are included und
 
 This section lists changes planned for future add-on releases. Items in this section are not tied to specific releases and may or may not appear in stable add-on releases. See below sections for items included in past stable releases.
 
+* Moved ad-on wiki documents such as add-on changelog to the main code repository.
 * NVDA 2025.1 or later is required.
 * Removed app module for modern keyboard.
 * Modern keyboard: Removed Windows 11 clipboard history content announcements workaround as it is part of NVDA 2025.1.
