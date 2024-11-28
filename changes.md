@@ -1,6 +1,6 @@
 # Windows App Essentials Changelog
 
-This page lists release changelogs for Windows App Essentials add-on.
+This document lists release changelogs for Windows App Essentials add-on.
 
 Note: originally called Windows 10 App Essentials, this add-on was renamed to Windows App Essentials in 2021 to reflect support for future Windows releases such as Windows 11. Internally, it is still called Windows 10 App Essentials or WinTenApps to reflect the ad-on's origins and to denote actual Windows system version in use (10.0).
 
