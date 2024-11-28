@@ -15,4 +15,4 @@ Notes:
 
 For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.
 
-[1]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[1]: https://github.com/josephsl/wintenapps/blob/main/changes.md
