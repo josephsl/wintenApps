@@ -10,7 +10,7 @@ Note: originally called Windows 10 App Essentials, the add-on was renamed to Win
 
 If one add-on can define my passion for NVDA, it would be Windows App Essentials, a soon to be discontinued add-on. What started out as a small app module for Insider Hub became one of the most recognizable add-ons in NVDA community, offering needed fixes and features to make Windows 10 and 11 more accessible and usable for NVDA users along with communicating accessibility needs to app developers. Since September 2015, the add-on has changed a lot, and so did Windows, apps, NVDA, and my own life. For the past nine years, I and Windows App Essentials were inseparable, but the time has come to let the add-on go.
 
-When I started development of Windows App Essentials in 2015, I knew that the lifetime of the add-on was limited. While I promised to support the add-on as long as Windows Insider Program was a thing, deep down I knew that the lifetime of the add-on depended on add-on features and bug fixes being integrated into NVDA. Throughout 2024, the last pieces of this add-on became part of NVDA, with the final part being a bug fix for modern keyboard included in NVDA 2025.1. Afterwards, the only thing the add-on will do is reduce verbosity when announcing Windows Update status in Windows 10 Settings app, and in October 2025 (Windows 10's end of life), that, too, will become history.
+When I started development of Windows App Essentials in 2015, I knew that the lifetime of the add-on was limited. While I promised to support the add-on as long as Windows Insider Program was a thing, deep down I knew that the lifetime of the add-on depended on add-on features and bug fixes being integrated into NVDA. Throughout 2024, the last pieces of this add-on became part of NVDA, with the final part being a bug fix for modern keyboard included in NVDA 2025.1. Afterwards, the only thing the add-on will do is reduce verbosity when announcing Windows Update status in Windows 10 Settings app unless additional accessibility issues must be addressed, and in October 2025 (Windows 10's end of life), that, too, will become history.
 
 The upcoming Windows 10 end of life and my current status as an up and coming researcher led to the decision to discontinue the add-on in late 2025. I felt bittersweet when announcing my decision in 2024, knowing that there was no other add-on like it where I can pour out my advocacy skills through programming. However, I knew that add-on development can become a distraction as I learn to practice research, so I decided to take the necessary step to wind down this activity. Although the add-on is fading into history in 2025, I still dream of accessible apps and opportunities to advocate for it in different forms.
 
@@ -22,11 +22,11 @@ Supporting new technologies can be fun and challenging, especially a new operati
 
 In NVDA Add-on Internals: Windows App Essentials, we'll look at how this add-on came about, how it works, its development, and go over recommendations from the add-on author (me) regarding accessibility practices. You'll also glimpse how UI Automation works at a high level, how features start out as an add-on component and end up as an NVDA feature and so on.
 
-To download the add-on, visit https://addons.nvda-project.org/addons/wintenApps.en.html. The source code for this add-on can be found at https://github.com/josephsl/wintenApps. As Windows (10 and later, more so for Windows 11) and universal apps are UI Automation universes, it is essential that you know some things about UIA, which are covered later.
+To download the add-on, visit NV Access add-on store (introduced in NVDA 2023.2). The source code for this add-on can be found at https://github.com/josephsl/wintenApps. As Windows (10 and later, more so for Windows 11) and universal apps are UI Automation universes, it is essential that you know some things about UIA, which are covered later.
 
 Disclaimer: Despite the article text and knowledge that's contained within, I (Joseph Lee, the add-on author) do not work for NV Access nor Microsoft.
 
-Note: some of the features described may change as Windows and NVDA development progresses. As of December 2024 revision, features from NVDA 2024.4.1 and 2025.1 preview releases and recent Windows Insider Preview builds are documented for reference purposes. Also, when refering to Windows releases (in particularly, Windows 10 feature updates), release Id (YYMM/YYHn) is used instead of using marketing label unless specified (for example, 1709 instead of Fall Creators Update, or 20H2 instead of 2009). To account for Windows 11, releases will be denoted as "Windows release YYMM/YYHn" e.g. Windows 10 21H1 for Windows 10 May 2021 Update or Windows 11 22H2 for Windows 11 2022 Update.
+Note: some of the features described may change as Windows and NVDA development progresses. As of December 2024 revision, features from NVDA 2024.4.1 and 2025.1 preview releases and recent Windows Insider Preview builds are documented for reference purposes. Also, when refering to Windows releases (in particularly, Windows 10 feature updates), release Id (YYMM/YYHn) is used instead of using marketing label unless specified (for example, 1709 instead of Fall Creators Update, or 20H2 instead of 2009). To account for Windows 11, releases will be denoted as "Windows release YYMM/YYHn" e.g. Windows 10 21H1 for Windows 10 May 2021 Update or Windows 11 24H2 for Windows 11 2024 Update.
 
 Copyright: Microsoft Windows, Windows API, UI Automation, Microsoft Edge, Universal Windows Platform (UWP) and related technologies are copyright Microsoft Corporation. NVDA is copyright NV Access. Windows App Essentials add-on is copyright 2015-2024 Joseph Lee and contributors, released under GPL 2.
 
@@ -50,7 +50,7 @@ There is another, more personal reason for calling October 2014 release a maiden
 
 ### Windows 11
 
-Windows 11 is described as the next generation of Windows. It introduced user interface tweaks, combined input experience panel where users can select from emojis and clipboard history, a revamped Store, support for Android apps distributed through Amazon Appstore, and other under the hood system tweaks. Despite its name, Windows 11's internal system version is 10.0.
+Windows 11 is described as the next generation of Windows. It introduced user interface tweaks, combined input experience panel where users can select from emojis and clipboard history, a revamped Store, support for Android apps distributed through Amazon Appstore (deprecated), File Explorer tabs, Windows Recall to show snapshots of user's activities with help from hardware features (if allowed), and other under the hood system tweaks. Despite its name, Windows 11's internal system version is 10.0.
 
 Windows 11 development could be best described as a reaction to changes to Windows ecosystem around 2020. First, Microsoft announced in December 2019 that Windows Insiders on fast ring (now dev channel) wil receive builds that are not tied to upcoming Windows releases. Six months later, Windows Insiders were notified that the "Insider ring" model was being replaced by "Insider channels" that clarified the quality of a Windows build. For example, people subscribed to slow ring were redirected to beta channel where the next feature update build was released for testing in advance.
 
@@ -75,7 +75,7 @@ There is a fifth pillar that has emerged in recent years: providing a testing gr
 
 ## Add-on contents
 
-The Windows App Essentials add-on consists of a global plugin and app modules for various universal apps included with Windows 10 and later. The Windows App Objects (shortened to WinAppObjs), the global plugin portion of this add-on, provides foundations such as overlay classes for frequently encountered controls in Windows an universal apps. Until 2022, UIA event tracking and logger facility was also part of the add-on, replaced by Event Tracker add-on. Until 2018, the global plugin was also responsible for add-on update feature, documented here for sake of completeness. With the integration of updated dialog detection in NVDA 2024.1, the global plugin is empty but kept to remind people about the add-on scope.
+The Windows App Essentials add-on consists of a global plugin and app modules for various universal apps included with Windows 10 and later. The Windows App Objects (shortened to WinAppObjs), the global plugin portion of this add-on, provides foundations such as overlay classes for frequently encountered controls in Windows an universal apps. Until 2022, UIA event tracking and logger facility was also part of the add-on, replaced by Event Tracker add-on. Until 2018, the global plugin was also responsible for add-on update feature, documented here for sake of completeness. With the integration of updated dialog detection in NVDA 2024.1, the global plugin is empty but kept in the add-on source code repository to remind people about the add-on scope.
 
 In regards to app modules, these were included to either provide workarounds or enhance the user experience. For example, the app module for Settings app (systemsettings) allows NVDA to announce Windows Update download and installation progress, and app module for modern keyboard (windowsinternal_composableshell_experiences_textinput_inputapp) provides support for more modern input facilities such as enhanced dictation and suggested actions. We'll meet some of these app modules in subsequent sections.
 
@@ -85,7 +85,7 @@ As noted above, some features discussed in this article (such as UIA notificatio
 
 ### Information on add-on update feature
 
-This article will sometimes reference add-on update feature, which is gone in 2019. Information about it is kept here for reference purposes. An add-on appropriately named "Add-on Updater" is used to update windows App Essentials and other add-ons, and a major feature in NVDA 2023.2 is add-on store, allowing NVDA itself to check for and install add-on updates including Windows App Essentials.
+This article will sometimes reference add-on update feature, which is gone in 2019. Information about it is kept here for reference purposes. An add-on appropriately named "Add-on Updater" is used to update windows App Essentials and other add-ons, and a major feature introduced in NVDA 2023.2 is add-on store, allowing NVDA itself to check for and install add-on updates including Windows App Essentials.
 
 ### Special note on feature updates support on Windows 10 and later
 
@@ -124,7 +124,7 @@ The Windows App Essentials add-on includes the following additions, fixes and wo
 
 * Search suggestions: NVDA now plays a sound to indicate appearance of search suggestions, incorporated into NVDA 2017.3 and later expanded in 2021.3 to include suggestion count announcement. More on this below.
 * Live region change announcements in various apps. In the global plugin portion, a way to define and track this event is included. As of 2022, live region change event is fully tracked by NVDA itself.
-* Floating suggestions such as Emoji panel in Windows 10 1709 (Fall Creators Update) and hardware keyboard suggestions in 1803 (April 2018 Update). This has been incorporated into NVDA 2018.3 release, but more recent changes do require support from this add-on.
+* Floating suggestions such as Emoji panel in Windows 10 1709 (Fall Creators Update) and hardware keyboard suggestions in 1803 (April 2018 Update). This has been incorporated into NVDA 2018.3 with refinements since then.
 * Support for UIA notification event introduced in Windows 10 1709. This became part of NVDA in 2018.2, and refined in 2019.2 to interupt users when important notifications are pending.
 * Providing more meaningful labels for certain controls such as update history in Settings/Update and Security/Windows Update, sensitive to changes in Insider Preview builds.
 * Announcing tooltips from universal apps, incorporated into NVDA 2019.3.
@@ -152,7 +152,7 @@ The main global plugin is housed inside winappObjs.py and is laid out thus:
 1. Usual add-on header such as copyright information.
 2. UIA constants not included in NVDA, including property ID's such as controller for event. Most are now part of NVDA itself.
 3. Classes defining various Windows and universal app controls, including search suggestions, looping selectors and so on. As of 2023, there are no classes defined in the global plugin.
-4. The actual global plugin class, consisting of overlay class finder and tracking routines for various UIA events (only available if NVDA is restarted with debug logging enabled). UIA events definition and tracking became part of Event Tracker in 2022. As of 2023, the class includes overlay class finder for detecting UIA dialogs.
+4. The actual global plugin class, consisting of overlay class finder and tracking routines for various UIA events (only available if NVDA is restarted with debug logging enabled). UIA events definition and tracking became part of Event Tracker in 2022. Prior to 2024, the class included overlay class finder for detecting UIA dialogs.
 
 ### Startup and shutdown
 
@@ -301,7 +301,7 @@ Historically, the following modules and enhancers/fixers were included in the ad
 * Mail: table navigation commands in message list, suppress read-only announcement in email content, app alias for hxmail.exe and hxoutlook.exe (the latter for updates released in May 2017).
 * Maps: play location coordinates for map items, suppress repeated live region announcements, aliases to support old and new Maps releases (the old alias, maps_windows, is gone).
 * Microsoft Store: announce needed information when live region changed event is fired by some controls, aliases to support old and new Store versions (the old alias, winstore_mobile, is no more).
-* Modern keyboard/text input host: support for emoji panel, dictation, hardware input suggestions, pasting clipboard items (Version 1809), and modern IME's, part of NVDA since 2018.3.
+* Modern keyboard/text input host: support for emoji panel, dictation, hardware input suggestions, pasting clipboard items (Version 1809), Suggested Actions (Windows 11 22H2), and modern IME's, part of NVDA since 2018.3.
 * MSN Weather: use up or down arrow keys to read forecast information.
 * Notepad: announcing status bar content in Windows 11 Notepad.
 * People: announcing first suggestion when looking for a contact.
