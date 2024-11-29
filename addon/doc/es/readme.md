@@ -33,4 +33,4 @@ complemento (en inglés)][1].
 
 [[!tag dev stable]]
 
-[1]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[1]: https://github.com/josephsl/wintenapps/blob/main/changes.md

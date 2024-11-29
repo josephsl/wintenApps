@@ -31,4 +31,4 @@ complemento, consulte o documento [changelogs for add-on releases][1].
 
 [[!tag dev stable]]
 
-[1]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[1]: https://github.com/josephsl/wintenapps/blob/main/changes.md
