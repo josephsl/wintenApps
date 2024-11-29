@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 16.07\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-06-28 22:21-0600\n"
+"PO-Revision-Date: 2024-11-27 06:22-0700\n"
 "Last-Translator: 完美很难 <1872265132@qq.com>\n"
 "Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
 "2010-2019>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.3\n"
+"X-Generator: Poedit 3.5\n"
 
 #. Translators: Dialog text shown when trying to install the add-on on
 #. releases earlier than minimum supported release.
@@ -30,7 +30,7 @@ msgstr ""
 "您正在使用 {releaseName} ({build})，插件不支持此版本。\n"
 "此插件需要 {supportedReleaseName} ({supportedBuild}) 或更高版本。"
 
-#. Translators: title of the error dialog shown when trying to install the add-on on
+#. Translators: dialog title shown when trying to install the add-on on
 #. unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
 msgid "Unsupported Windows release"
 msgstr "不受支持的 Windows 版本"

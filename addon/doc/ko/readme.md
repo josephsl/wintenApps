@@ -21,4 +21,4 @@ App Essentials로 변경되었습니다. 단 특정 부분에서는 옛 이름�
 
 [[!tag dev stable]]
 
-[1]: https://github.com/josephsl/wintenapps/wiki/w10changelog
+[1]: https://github.com/josephsl/wintenapps/blob/main/changes.md
