@@ -88,17 +88,15 @@ For Windows releases, a stable Windows release (typically a feature update) is s
 
 Regarding end of support for a Windows release from the add-on, for stable Windows releases, support duration is tied to consumer support. Prior to end of support, a grace period (at least 30 days) will be given to let users upgrade to newer releases (for Windows 11 original release, support from the add-on ended in August 2023, and the grace period was from June 2023 to August 2023). For Windows Insiders, only the latest Insider Preview build is supported, particularly if using canary and dev channel builds. Consequently, there is no concept of grace period from the add-on for Windows Insider Preview builds.
 
-Note: the only exception to support duration policy is the very last Windows 10 feature update (2022 Update/Version 22H2), which will be supported until December 2025 (official support until October 2025 followed by 60-day grace period).
+Note: the only exception to support duration policy is the very last Windows 10 feature update (2022 Update/Version 22H2), which will be supported until December 2025 (official support until October 2025 followed by 60-day grace period; no support for extended security updates).
 
 #### Supported Windows releases
 
-For each Windows release, Windows App Essentials provides support for at least twelve months and up to end of consumer support (18 months for Windows 10, two years for Windows 11) except Windows Insider Preview where the add-on supports latest build. Windows Server support duration is tied to client releases (for example, Windows Server 2025 support duration is tied to Windows 11 Version 24H2) whether or not client and server releases have the same build. Windows Enterprise LTSC (long-term servicing channel), as well as Windows Server Core and semi-annual and annual container channel server releases are not supported.
+For each Windows release, Windows App Essentials provides support for at least twelve months (18 months for Windows 11) and up to end of consumer support (18 months for Windows 10, two years for Windows 11) except Windows Insider Preview where the add-on supports latest build. Windows Server support duration is tied to client releases (for example, Windows Server 2025 support duration is tied to Windows 11 Version 24H2) whether or not client and server releases have the same build. Windows Enterprise LTSC (long-term servicing channel), as well as Windows Server Core and semi-annual and annual container channel server releases are not supported.
 
 Note: support duration also depends on add-on maintenance - duration can be shortened if the add-on becomes unsupported prior to end of consumer support for a Windows release.
 
 ##### Windows 10
-
-Also corresponds to Windows 10 App Essentials era. The add-on supports a given Windows 10 feature update for at least 12 months. Windows 10 Version 22H2, the final feature update, is supported until October 2025 (no support for extended security updates).
 
 * Version 1507 (build 10240): September 2015-November 2016
 * Version 1511 (build 10586): December 2015-June 2017
@@ -116,8 +114,6 @@ Also corresponds to Windows 10 App Essentials era. The add-on supports a given W
 * Version 22H2/final (build 19045): August 2022-October 2025
 
 ##### Windows 11
-
-Renamed from Windows 10 App Essentials in 2021 with the "10" dropped from add-on name with the introduction of Windows 11. The add-on supports a given Windows 11 feature update for at least 18 months.
 
 * Version 21H2 (build 22000): October 2021-July 2023
 * Version 22H2 (build 22621): July 2022-August 2024
