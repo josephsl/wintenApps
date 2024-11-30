@@ -25,7 +25,7 @@ You must:
 
 1. Be running the latest supported version of Windows 10 and later (as of December 2024, this means Windows 10 2022 Update (Version 22H2), Windows 11 2024 Update (Version 24H2), and latest Insider Preview (canary/dev/beta/release preview) build).
 2. Be running the latest stable version of NVDA or later (as of December 2024, this means NVDA 2024.4.1 or latest alpha release).
-3. If you wish to offer pull requests, you must be running latest NVDA stable version or later.
+3. If you wish to offer code/pull requests, you must be running latest stable NVDA (2024.4.1) and Windows 10 (22H2)/11 (24H2) release or later.
 4. To package your modifications into an add-on build, you must be using Python 3.11 or later.
 
 ## Contribution process
@@ -59,7 +59,11 @@ Testing the add-on simply involves using NVDA as usual. If you do encounter issu
 
 You must do this through NVDA translations workflow, not through pull requests.
 
-### Offering pull requests
+### Offering code and pull requests
+
+#### Windows release requirement
+
+To contribute code and pull requests, you must use latest stable Windows 10 (22H2)/11 (24H2) release.
 
 #### Coding style
 
