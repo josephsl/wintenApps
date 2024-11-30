@@ -25,7 +25,7 @@ You must:
 
 1. Be running the latest supported version of Windows 10 and later (as of December 2024, this means Windows 10 2022 Update (Version 22H2), Windows 11 2024 Update (Version 24H2), and latest Insider Preview (canary/dev/beta/release preview) build).
 2. Be running the latest stable version of NVDA or later (as of December 2024, this means NVDA 2024.4.1 or latest alpha release).
-3. If you wish to offer pull requests, you must be running latest NVDA stable version or later.
+3. If you wish to offer code/pull requests, you must be running latest stable NVDA (2024.4.1) and Windows 10 (22H2)/11 (24H2) release or later.
 4. To package your modifications into an add-on build, you must be using Python 3.11 or later.
 
 ## Contribution process
@@ -59,7 +59,11 @@ Testing the add-on simply involves using NVDA as usual. If you do encounter issu
 
 You must do this through NVDA translations workflow, not through pull requests.
 
-### Offering pull requests
+### Offering code and pull requests
+
+#### Windows release requirement
+
+To contribute code and pull requests, you must use latest stable Windows 10 (22H2)/11 (24H2) release.
 
 #### Coding style
 
@@ -84,17 +88,15 @@ For Windows releases, a stable Windows release (typically a feature update) is s
 
 Regarding end of support for a Windows release from the add-on, for stable Windows releases, support duration is tied to consumer support. Prior to end of support, a grace period (at least 30 days) will be given to let users upgrade to newer releases (for Windows 11 original release, support from the add-on ended in August 2023, and the grace period was from June 2023 to August 2023). For Windows Insiders, only the latest Insider Preview build is supported, particularly if using canary and dev channel builds. Consequently, there is no concept of grace period from the add-on for Windows Insider Preview builds.
 
-Note: the only exception to support duration policy is the very last Windows 10 feature update (2022 Update/Version 22H2), which will be supported until December 2025 (official support until October 2025 followed by 60-day grace period).
+Note: the only exception to support duration policy is the very last Windows 10 feature update (2022 Update/Version 22H2), which will be supported until December 2025 (official support until October 2025 followed by 60-day grace period; no support for extended security updates).
 
 #### Supported Windows releases
 
-For each Windows release, Windows App Essentials provides support for at least twelve months and up to end of consumer support (18 months for Windows 10, two years for Windows 11) except Windows Insider Preview where the add-on supports latest build. Windows Server support duration is tied to client releases (for example, Windows Server 2025 support duration is tied to Windows 11 Version 24H2) whether or not client and server releases have the same build. Windows Enterprise LTSC (long-term servicing channel), as well as Windows Server Core and semi-annual and annual container channel server releases are not supported.
+For each Windows release, Windows App Essentials provides support for at least twelve months (18 months for Windows 11) and up to end of consumer support (18 months for Windows 10, two years for Windows 11) except Windows Insider Preview where the add-on supports latest build. Windows Server support duration is tied to client releases (for example, Windows Server 2025 support duration is tied to Windows 11 Version 24H2) whether or not client and server releases have the same build. Windows Enterprise LTSC (long-term servicing channel), as well as Windows Server Core and semi-annual and annual container channel server releases are not supported.
 
 Note: support duration also depends on add-on maintenance - duration can be shortened if the add-on becomes unsupported prior to end of consumer support for a Windows release.
 
 ##### Windows 10
-
-Also corresponds to Windows 10 App Essentials era. The add-on supports a given Windows 10 feature update for at least 12 months. Windows 10 Version 22H2, the final feature update, is supported until October 2025 (no support for extended security updates).
 
 * Version 1507 (build 10240): September 2015-November 2016
 * Version 1511 (build 10586): December 2015-June 2017
@@ -112,8 +114,6 @@ Also corresponds to Windows 10 App Essentials era. The add-on supports a given W
 * Version 22H2/final (build 19045): August 2022-October 2025
 
 ##### Windows 11
-
-Renamed from Windows 10 App Essentials in 2021 with the "10" dropped from add-on name with the introduction of Windows 11. The add-on supports a given Windows 11 feature update for at least 18 months.
 
 * Version 21H2 (build 22000): October 2021-July 2023
 * Version 22H2 (build 22621): July 2022-August 2024
@@ -151,8 +151,8 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 	* Gallium 1: December 2023 to April 2024, official support for Windows 11 Version 24H2, revert to older installation error message, no more dictation/voice typing detection in modern keyboard, restructured install tasks, refactored modern keyboard window open event handler
 	* Gallium 2: March 2024 to June 2024, NVDA 2024.1 requirement, deprecate 32-bit Windows 10 support, Windows 11 Windows Update status update announcement removed, reorganized modern keyboard support and added dedicated overlay class for navigation menu items
 	* Germanium: May 2024 to September 2024, NVDA 2024.2 requirement, end of support for Windows 11 2022 Update (Version 22H2) and 32-bit Windows 10, restructured install tasks, WinApps global plugin no longer included in add-on installation package (remains in source code repo), Ruff replaces Flake8 as linter, minimal readme with removal of app support notes, resolve live region change event handling in modern keyboard
-	* Arsenic: August 2024 to January 2025, NVDA 2024.3.1 and 2024.4.1 requirements, initial support for NVDA 2025.1, minimum Windows version detection routine rewrite to emphasize Windows 11, Windows 11 is required to contribute to add-on development, reformatted add-on module contents using Ruff, transferred wiki docs to main repo
+	* Arsenic: August 2024 to January 2025, NVDA 2024.3.1 and 2024.4.1 requirements, initial support for NVDA 2025.1, minimum Windows version detection routine rewrite to emphasize Windows 11, reformatted add-on module contents using Ruff, transferred wiki docs to main repo
 * Selenium (2025):
-	* Selenium 1: December 2024 to April 2025, NVDA 2025.1 requirement
+	* Selenium 1: December 2024 to April 2025, NVDA 2025.1 requirement, Windows 11 is required to contribute to add-on development
 	* Selenium 2: February 2025 to July 2025, NVDA 2025.2 requirement, end of support for Windows 11 2023 Update (Version 23H2)
 	* Selenium 3: June 2025 to December 2025, end of support for Windows 10
