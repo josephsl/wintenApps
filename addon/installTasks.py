@@ -14,13 +14,12 @@ addonHandler.initTranslation()
 
 
 def onInstall() -> None:
-	# Windows App Essentials requires supported Windows releases (see minimum Windows version below).
+	# Windows App Essentials requires supported Windows releases on or above the minimum version.
 	# For general availability channel (feature updates), support duration is tied to consumer-level support
 	# (Home, Pro, Pro Education, Pro for Workstations, supported for 18 to 24 months with exceptions)
 	# and the add-on may end support for a feature update prior to end of consumer support.
 	# See aka.ms/WindowsTargetVersioninfo.
 	# For Insider Preview, only the latest canary/dev/beta/release preview builds are supported.
-	# Minimum: 64-bit Windows 10 22H2 (final feature update, supported until October 2025)/11 23H2.
 	minimumWinVer = (
 		winVersion.WIN11_23H2
 		if (
@@ -29,7 +28,7 @@ def onInstall() -> None:
 			# To be removed once add-on stable channel asks for Windows 11.
 			or addonHandler.getCodeAddon().manifest.get("updateChannel") == "dev"
 		)
-		else winVersion.WIN10_22H2
+		else winVersion.WIN10_22H2  # 64-bit only, final feature update (supported until October 2025)
 	)
 	if currentWinVer < minimumWinVer:
 		gui.messageBox(
