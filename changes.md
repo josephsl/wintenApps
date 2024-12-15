@@ -22,6 +22,8 @@ Starting from this release, only critical changes will be applied to Windows 10 
 * Windows 10: Add-on dev channel releases no longer support Windows 10.
 * Reformatted add-on modules using Ruff to better align with NVDA coding standards.
 * Moved ad-on wiki documents such as add-on changelog to the main code repository.
+* Added support for Copilot WebView2 app.
+* Copilot: Textual responses from Copilot are announced.
 
 ## Version 24.10
 
