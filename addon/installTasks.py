@@ -24,7 +24,7 @@ def onInstall() -> None:
 		winVersion.WIN11_23H2
 		if (
 			(currentWinVer := winVersion.getWinVer()) > winVersion.WIN10_22H2
-			# Detect add-on update channels (specifically to prevent installation on Windows 10).
+			# Detect add-on update channels (specifically to prevent dev channel installation on Windows 10).
 			# To be removed once add-on stable channel asks for Windows 11.
 			or addonHandler.getCodeAddon().manifest.get("updateChannel") != "None"
 		)
