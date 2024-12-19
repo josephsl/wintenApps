@@ -8,7 +8,9 @@ For each add-on version entry, minor versions (such as 18.06.1) are included und
 
 ## Version preview
 
-This section lists changes planned for future add-on releases. Items in this section are not tied to specific releases and may or may not appear in stable add-on releases. See below sections for items included in stable releases.
+This section lists changes planned for future add-on releases. Items in this section are not tied to specific releases and may or may not appear in stable add-on releases. See below sections for items included in past or planned stable releases.
+
+## Version 25.04
 
 * NVDA 2025.1 or later is required.
 * Removed app module for modern keyboard.
