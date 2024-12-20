@@ -31,7 +31,7 @@ def onInstall() -> None:
 		else winVersion.WIN10_22H2  # 64-bit only, final feature update (supported until October 2025)
 	)
 	if currentWinVer < minimumWinVer:
-		gui.MessageDialog.alert(
+		gui.messageBox(
 			# Tell mypy that it is okay to ignore gettext calls.
 			_(  # type: ignore[name-defined]
 				# Translators: Dialog text shown when trying to install the add-on on
