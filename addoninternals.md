@@ -2,13 +2,13 @@
 
 Author: Joseph Lee
 
-Revision: December 2024
+Revision: January 2025
 
 Note: originally called Windows 10 App Essentials, the add-on was renamed to Windows App Essentials in 2021 with the introduction of Windows 11. Parts of this document will refer to the original add-on name or Windows 10.
 
 ## Preface
 
-If one add-on can define my passion for NVDA, it would be Windows App Essentials, a soon to be discontinued add-on. What started out as a small app module for Insider Hub became one of the most recognizable add-ons in NVDA community, offering needed fixes and features to make Windows 10 and 11 more accessible and usable for NVDA users along with communicating accessibility needs to app developers. Since September 2015, the add-on has changed a lot, and so did Windows, apps, NVDA, and my own life. For the past nine years, I and Windows App Essentials were inseparable, but the time has come to let the add-on go.
+If one add-on can define my passion for NVDA, it would be Windows App Essentials, a soon to be discontinued add-on. What started out as a small app module for Insider Hub became one of the most recognizable add-ons in NVDA community, offering needed fixes and features to make Windows 10 and 11 more accessible and usable for NVDA users along with communicating accessibility needs to app developers. Since September 2015, the add-on has changed a lot, and so did Windows, apps, NVDA, and my own life. For almost a decade, I and Windows App Essentials were inseparable, but the time has come to let the add-on go.
 
 When I started development of Windows App Essentials in 2015, I knew that the lifetime of the add-on was limited. While I promised to support the add-on as long as Windows Insider Program was a thing, deep down I knew that the lifetime of the add-on depended on add-on features and bug fixes being integrated into NVDA. Throughout 2024, the last pieces of this add-on became part of NVDA, with the final part being a bug fix for modern keyboard included in NVDA 2025.1. Afterwards, the only thing the add-on will do is reduce verbosity when announcing Windows Update status in Windows 10 Settings app unless additional accessibility issues must be addressed, and in October 2025 (Windows 10's end of life), that, too, will become history.
 
@@ -26,9 +26,9 @@ To download the add-on, visit NV Access add-on store (introduced in NVDA 2023.2)
 
 Disclaimer: Despite the article text and knowledge that's contained within, I (Joseph Lee, the add-on author) do not work for NV Access nor Microsoft.
 
-Note: some of the features described may change as Windows and NVDA development progresses. As of December 2024 revision, features from NVDA 2024.4.1 and 2025.1 preview releases and recent Windows Insider Preview builds are documented for reference purposes. Also, when refering to Windows releases (in particularly, Windows 10 feature updates), release Id (YYMM/YYHn) is used instead of using marketing label unless specified (for example, 1709 instead of Fall Creators Update, or 20H2 instead of 2009). To account for Windows 11, releases will be denoted as "Windows release YYMM/YYHn" e.g. Windows 10 21H1 for Windows 10 May 2021 Update or Windows 11 24H2 for Windows 11 2024 Update.
+Note: some of the features described may change as Windows and NVDA development progresses. As of January 2025 revision, features from NVDA 2024.4.1 and 2025.1 preview releases and recent Windows Insider Preview builds are documented for reference purposes. Also, when refering to Windows releases (in particularly, Windows 10 feature updates), release Id (YYMM/YYHn) is used instead of using marketing label unless specified (for example, 1709 instead of Fall Creators Update, or 20H2 instead of 2009). To account for Windows 11, releases will be denoted as "Windows release YYMM/YYHn" e.g. Windows 10 21H1 for Windows 10 May 2021 Update or Windows 11 24H2 for Windows 11 2024 Update.
 
-Copyright: Microsoft Windows, Windows API, UI Automation, Microsoft Edge, Universal Windows Platform (UWP) and related technologies are copyright Microsoft Corporation. NVDA is copyright NV Access. Windows App Essentials add-on is copyright 2015-2024 Joseph Lee and contributors, released under GPL 2.
+Copyright: Microsoft Windows, Windows API, UI Automation, Microsoft Edge, Universal Windows Platform (UWP) and related technologies are copyright Microsoft Corporation. NVDA is copyright NV Access. Windows App Essentials add-on is copyright 2015-2025 Joseph Lee and contributors, released under GPL 2.
 
 ## Windows releases and Windows App Essentials
 
@@ -60,7 +60,7 @@ Most significantly, the COVID-19 (Coronavirus Disease 2019) pandemic brought cha
 
 The first Windows 11 Insider Preview build (22000.51) was released on June 28, 2021. The biggest difference from Windows 10 era was how the user interface was presented and coded. For example, Settings app was reorganized, and many File Explorer controls and Shell elements such as buttons on the taskbar are UIA controls. Just like old Windows 10 Insider Preview builds, accessibility regressions were found, the most significant being inability to activate items with shortcut keys in quick menu (Windows+X), resolved a few weeks later.
 
-Just like first Windows 10 Insider Preview build (9841), build 22000 is personal. Although I was disappointed that the main add-on development machine at that time wasn't compatible with Windows 11, Windows 11 preview ran well as a virtual machine. At least this gave me a head start on bringing experimental support for Windows 11 user interface through Windows App Essentials, made easier as I have learned a lot during Windows 10 era. Many add-on snapshots were released days following the availability of the first preview build, and as of time of this writing (December 2024), Windows 11 provides a solid experience for NVDA users.
+Just like first Windows 10 Insider Preview build (9841), build 22000 is personal. Although I was disappointed that the main add-on development machine at that time wasn't compatible with Windows 11, Windows 11 preview ran well as a virtual machine. At least this gave me a head start on bringing experimental support for Windows 11 user interface through Windows App Essentials, made easier as I have learned a lot during Windows 10 era. Many add-on snapshots were released days following the availability of the first preview build, and as of time of this writing (January 2025), Windows 11 provides a solid experience for NVDA users.
 
 ## Purposes of Windows App Essentials
 
@@ -135,15 +135,13 @@ We'll meet various UIA controls and workarounds (including notable changes intro
 
 ## Windows App Objects
 
-Note: as of December 2024, Windows App Objects global plugin module is empty and not included in the redistributable add-on package itself. Previous module contents are documented below to provide notes on add-on scope and features.
+Note: as of January 2025, Windows App Objects global plugin module is empty and not included in the redistributable add-on package itself. Previous module contents are documented below to provide notes on add-on scope and features.
 
 Windows App Essentials add-on comes with Windows App Objects (WinAppObjs; formerly Windows 10 Objects or WinTenObjs for short), a global plugin that contains definitions of common controls encountered in Windows and various universal apps. In its infancy, this global plugin was home to a variety of event handlers, overlay classes, and workarounds, but its scale has gone down significantly in 2023 when virtual desktops announcement became part of NVDA 2023.2. The scale has gone down even more in 2024 with updated dialog detection transferred to NVDA, thus the global plugin module is empty (does nothing).
 
 Historically, Windows App Objects global plugin included handlers for some UIA events such as virtual desktop switch announcements, search suggestions, among other things. In older add-on releases, the global plugin was also home for add-on update checks (removed in 2019) and handled more modern controls (most were transferred to NVDA in recent years).
 
-### 2024 note
-
-As of December 2024, the global plugin module is empty. The module description below applies to 2023 and earlier.
+Note: as of January 2025, the global plugin module is empty with the last major feature (UIA dialog detection) integrated into NVDA in 2024. The module description below applies to 2023 and earlier.
 
 ### Source code layout
 
@@ -297,7 +295,7 @@ Historically, the following modules and enhancers/fixers were included in the ad
 * Calculator: selectively announce calculator display.
 * Calendar: suppress read-only state announcement in various controls.
 * Cortana/Start menu/Windows Search (classic Cortana): suppress double announcement of suggestion result item in some cases, staying silent when user is dictating to Cortana, handling bad UIA implementations.
-* Cortana/conversations (new Cortana): announcing Cortana's responses.
+* Cortana/conversations (new Cortana) and Copilot: announcing text responses from Cortana or Copilot.
 * Mail: table navigation commands in message list, suppress read-only announcement in email content, app alias for hxmail.exe and hxoutlook.exe (the latter for updates released in May 2017).
 * Maps: play location coordinates for map items, suppress repeated live region announcements, aliases to support old and new Maps releases (the old alias, maps_windows, is gone).
 * Microsoft Store: announce needed information when live region changed event is fired by some controls, aliases to support old and new Store versions (the old alias, winstore_mobile, is no more).
@@ -308,7 +306,7 @@ Historically, the following modules and enhancers/fixers were included in the ad
 * Settings: selectively announce various status information, provide correct labels for certain controls.
 * Shell Experience Host (action center/quick settings): suppress extraneous status announcements, enable touch and mouse interaction in Windows 11 24H2 (2024 Update) quick settings.
 
-As of December 2024, only settings and modern keyboard with their enhancers and fixers remain, and with NVDA 2025.1 (under development), contents from modern keyboard app module are part of NVDA, making the app module redundant. Therefore, the following sections describe what the add-on did in the past for the most part.
+As of January 2025, only Copilot, settings, and modern keyboard with their enhancers and fixers remain, and with NVDA 2025.1 (under development), contents from modern keyboard app module are part of NVDA, making the app module redundant. Therefore, the following sections describe what the add-on did in the past for the most part.
 
 ### Adding useful features in apps
 
@@ -338,7 +336,7 @@ Similar to emoji panel (or expanded input panel in build 18305 and later), in bu
 
 The above mechanism for selecting input suggestions is also employed when pasting items from cloud clipboard. In build 17666 and later, one can copy text and small images to the clipboard to be pasted later, and Windows will keep a history of items copied to the clipboard. When Windows+V is pressed, a list of clipboard items will be displayed, and one can use left or right arrows to select the desired item.
 
-In NVDA 2018.3, support for all of these (modern keyboard features) plus dictation window (also part of modern keyboard) have become part of NVDA, with modern IME support coming with NVDA 2020.4. Subsequent NVDA releases brought changes from the add-on such as dictation notification and suggested actions handling. As of NVDA 2024.3, all changes from the add-on can be found in NVDA itself and the modern keyboard app module will be removed from the add-on.
+In NVDA 2018.3, support for all of these (modern keyboard features) plus dictation window (also part of modern keyboard) have become part of NVDA, with modern IME support coming with NVDA 2020.4. Subsequent NVDA releases brought changes from the add-on such as dictation notification and suggested actions handling. As of NVDA 2025.1, all changes from the add-on can be found in NVDA itself and the modern keyboard app module will be removed from the add-on in 2025.
 
 ### What to announce, what not to announce
 
@@ -350,6 +348,7 @@ The app modules (and for one in particular, more than an app module) in question
 * People (peopleapp.py): NVDA will announce first suggestion when looking for a contact. Unlike other search fields, there is no controller for event. However, the suggestion raises item selected event.
 * Cortana (searchui.py)/new Start menu and Windows Search experience (searchapp.py in Windows 10, searchhost.py in Windows 11): classic Cortana uses name change events and specific Automation Id's to convey text messages. Name change event is also employed when Cortana tries to understand the text a user is dictating, which in old releases of the add-on meant NVDA would announce gibberish, subsequently resolved in later add-on releases. In recent Windows 10 releases, due to Windows Search redesign (which also involve changing executable for Windows Search to searchapp), search box content instead of result details is announced, or if results are announced, they are announced twice.
 * Cortana conversations (cortana.py): similar to classic Cortana, Cortana's responses are announced.
+* Copilot (copilotnative.py): a WebView2 implementation of Microsoft Copilot, live region based textual responses are reported. Unlike other aps, an IAccessible (MSAA) event is handled.
 * Settings (systemsettings.py): NVDA will announce messages such as Windows Update notifications, and this is done through live region changed event (name change event in older add-on releases).
 * Microsoft Store (winstore_app.py): just like Settings app, status messages are announced, this time dealing with product downloads such as apps and multimedia content. This is applicable in Store version 1 (old Windows 10 releases) ae version 2 (Windows 11 and newer Windows 10 releases) does a better job of letting NVDA announce download progress.
 * Notepad (notepad.py): in Windows 11, Notepad is updated through Microsoft Store, thus changes can happen more frequently. This is more so with Notepad adopting Windows 11 look and feel, with a problem being inability to announce certain screen content, notably status bar content. A specific method is defined inside the app module to let NVDA retrieve status bar content in Windows 11 Notepad.
@@ -400,7 +399,7 @@ One big change in 2021 is milestone-based development. It is still an iterative 
 
 The quarterly milestone process derives from Windows development milestones. As part of Windows development, Microsoft divides development phases into milestones - semesters until 2021, development year in 2022, returned to semesters in 2023. Each development milestone is named according to a chemical element, specifically named after elements in the periodic table. This is done for Microsoft Azure, but also was adopted for Windows development recently and is designed to set milestones for long-running features. Near the end of a milestone, Microsoft chooses features that will be part of the next release (either a full build or an enablement package) and creates a maintenance branch from these features, with others pushed to the next development milestone for further refinements.
 
-The quarterly development cycle for Windows App Essentials (adopted in June 2021) is named after Windows development milestones, divided into quarters. This was based on semesters in 2021 (two quarters or halves for each semester) and year-based milestones in 2022 (up to four quarters). For example, as of December 2024, the latest development cycle inside Microsoft is "Selenium", and the internal development cycle for Windows App Essentials is "germanium" running from May 2024 to September 2024. Each quarter is dedicated to one or more long-running features or themes - for example, "nickel1" (June to September 2021), named after "nickel" development year (formerly a development semester but became a year-long milestone inside Microsoft in 2022), was dedicated to refining Windows 11 support and preparing the add-on for control types refactor from NVDA 2021.2. I tend to do a code sprint early and refine code as time goes on - as of June 204, "germanium" milestone is ongoing, mostly introducing significant changes and responding to NVDA 2024.2 features such as inclusino of parts of this add-on. This is just one of the activities I perform as I go on in life (the priority at the moment is graduate school).
+The quarterly development cycle for Windows App Essentials (adopted in June 2021) is named after Windows development milestones, divided into quarters. This was based on semesters in 2021 (two quarters or halves for each semester) and year-based milestones in 2022 (up to four quarters). For example, as of January 2025, the latest development cycle inside Microsoft is "Selenium", and the internal development cycle for Windows App Essentials is "selenium1" running from December 2024 to April 2025. Each milestone is dedicated to one or more long-running features or themes - for example, "nickel1" (June to September 2021), named after "nickel" development year (formerly a development semester but became a year-long milestone inside Microsoft in 2022), was dedicated to refining Windows 11 support and preparing the add-on for control types refactor from NVDA 2021.2. I tend to do a code sprint early and refine code as time goes on - as of January 2025, "selenium1" milestone is ongoing, mostly introducing significant changes and responding to NVDA 2025.1 features such as inclusion of parts of this add-on. This is just one of the activities I perform as I go on in life (the priority at the moment is graduate school).
 
 In between milestone releases, a dedicated branch is used to backport key changes from the upcoming quarter. These are initially named after a chemical compound or an alloy involving the base element which is the base for the backport branch. For example, a branch named "alnico" (an alloy of aluminum, nickel, and cobalt) is used to backport key changes from "nickel2" to "nickel1" branch. These serve not only as maintenance branches, but also introduce features that will be part of the next milestone release provided that they do not involve massive rewrites such as requiring newer NVDA or Windows releases. Eventually the "alloy" branches are merged into milestone branches such as "nickel1".
 
