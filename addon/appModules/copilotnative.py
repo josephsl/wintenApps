@@ -3,14 +3,14 @@
 
 # Workarounds for Windows Copilot interface
 
-from typing import Callable
 import appModuleHandler
+import typing
 import ui
-from NVDAObjects import NVDAObject
+import NVDAObjects
 
 
 class AppModule(appModuleHandler.AppModule):  # type: ignore[no-redef]
-	def event_liveRegionChange(self, obj: NVDAObject, nextHandler: Callable[[], None]):
+	def event_liveRegionChange(self, obj: NVDAObjects.NVDAObject, nextHandler: typing.Callable[[], None]):
 		# Announce first child object name (actual Copilot response) as the live region name is empty.
 		ui.message(obj.firstChild.name)
 		nextHandler()
