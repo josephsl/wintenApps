@@ -2,7 +2,7 @@
 # Copyright 2015-2025 Joseph Lee, released under GPL.
 
 # Adds handlers for various UIA controls found in Windows 10 and later.
-# No longer included in the add-on package but kept in code repository.
+# No longer included in the add-on package but kept in the add-on code repository.
 
 import globalPluginHandler
 
