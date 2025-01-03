@@ -2,8 +2,6 @@
 
 * Authors: Joseph Lee, Derek Riemer and others
 
-Note: Originally called Windows 10 App Essentials, it was renamed to Windows App Essentials in 2021 to support Windows 10 and future releases such as Windows 11. Parts of this add-on will still refer to the original add-on name.
-
 This add-on is a collection of app modules for various modern Windows apps, as well as enhancements and fixes for certain controls found in Windows 10 and later.
 
 Notes:
