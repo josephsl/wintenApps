@@ -2,11 +2,6 @@
 
 * Autorzy: Joseph Lee, Derek Riemer i inni
 
-Uwaga: Pierwotniea nazwa tego dodatku była Windows 10 App Essentials, a
-potem została zmieniona na Windows App Essentials w 2021 roku, aby
-obsługiwać Windows 10 i przyszłe wersje, takie jak Windows 11. Części tego
-dodatku nadal będą odnosić się do oryginalnej nazwy dodatku.
-
 Ten dodatek to zbiór modułów aplikacji dla różnych nowoczesnych aplikacji
 systemu Windows, a także ulepszeń i poprawek dla niektórych kontrolek
 znajdujących się w systemie Windows 10 i nowszych.
@@ -22,8 +17,9 @@ Notatki:
   świadczenia pomocy technicznej dla klientów indywidualnych. Zobacz
   <https://aka.ms/WindowsTargetVersioninfo>, aby uzyskać więcej informacji i
   daty pomocy technicznej.
-* Chociaż instalacja jest możliwa, ten dodatek nie obsługuje wersji Windows
-  Enterprise LTSC (Long-Term Servicing Channel) i Server.
+* Although installation is possible, this add-on does not support 32-bit
+  Windows 10, Windows Enterprise LTSC (Long-Term Servicing Channel), and
+  Windows Server releases.
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders.
 

@@ -2,11 +2,6 @@
 
 * Autori: Joseph Lee, Derek Riemer i drugi
 
-Napomena: Izvorno ime „Osnovni moduli za Windows 10 aplikacije”, preimenovan
-je 2021. godine u „Osnovni moduli za Windows aplikacije” kako bi podržao
-Windows 10 i buduća izdanja poput Windows 11. Dijelovi ovog dodatka će se i
-nadalje odnositi na izvorno ime dodatka.
-
 Ovaj NVDA dodatak je zbirka modula za razne moderne Windows aplikacije, kao
 i poboljšanja i ispravci određenih kontrola u sustavu Windows 10 i novijim.
 
@@ -20,8 +15,9 @@ Napomene:
   prije završetka korisničke podrške. Pogledaj
   <https://aka.ms/WindowsTargetVersioninfo> za više informacija i datume
   podrške.
-* Mada je instalacija moguća, ovaj dodatak ne podržava izdanja Windows
-  Enterprise LTSC (Long-Term Servicing Channel) i Server.
+* Although installation is possible, this add-on does not support 32-bit
+  Windows 10, Windows Enterprise LTSC (Long-Term Servicing Channel), and
+  Windows Server releases.
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders.
 

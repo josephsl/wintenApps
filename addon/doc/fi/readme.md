@@ -2,11 +2,6 @@
 
 * Tekijät: Joseph Lee, Derek Riemer sekä muut
 
-Huom: Tämä lisäosa (alkuperäiseltä nimeltään Windows 10 App Essentials) on
-nimetty uudelleen Windows App Essentialsiksi vuonna 2021 tukemaan Windows
-10:tä sekä tulevia versioita, kuten Windows 11:tä. Lisäosassa viitataan
-vielä osittain vanhaan nimeen.
-
 Tämä lisäosa on kokoelma sovellusmoduuleita moderneille
 Windows-sovelluksille sekä laajennuksia ja korjauksia tietyille säätimille
 Windows 10:ssä ja uudemmissa.
@@ -20,8 +15,9 @@ Huomautukset:
   saattaa lopettaa tuen ominaisuuspäivitykselle jo ennen kuluttajatuen
   päättymistä. Katso lisätietoja ja tukipäivämäärät osoitteesta
   <https://aka.ms/WindowsTargetVersioninfo>.
-* Tämä lisäosa ei tue Windows 10 Enterprise LTSC:tä (Long-Term Servicing
-  Channel) eikä Server -versioita, vaikka asennus onkin mahdollista.
+* Although installation is possible, this add-on does not support 32-bit
+  Windows 10, Windows Enterprise LTSC (Long-Term Servicing Channel), and
+  Windows Server releases.
 * Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
   varsinkaan sellaisia, jotka esitellään vain osalle Insider-käyttäjistä.
 

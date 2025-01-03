@@ -2,10 +2,6 @@
 
 * Autores: Joseph Lee, Derek Riemer e outros
 
-Nota: Orixinalmente chamado Windows 10 App Essentials, renomeouse a windows
-App Essentials en 2021 para soportar windows 10 e versións futuras como
-Windows 11. Parte deste complemento aínda se referirá ó seu nome antigo.
-
 Este complemento é unha coleción de app modules para varias aplicacións de
 Windows, así como melloras e correccións para certos controis de windows 10
 e posteriores.
@@ -20,8 +16,9 @@ Notas:
   actualización de características antes do final do soporte ó
   consumidor. Consulta <https://aka.ms/WindowsTargetVersioninfo> para máis
   información e datas de soporte.
-* Aínda que a instalación é posible, este complemento non soporta Windows
-  Enterprise LTSC (Long-Term Servicing Channel) nin versións de Server.
+* Although installation is possible, this add-on does not support 32-bit
+  Windows 10, Windows Enterprise LTSC (Long-Term Servicing Channel), and
+  Windows Server releases.
 * Not all features from Windows Insider Preview builds will be supported,
   more so for features introduced to a subset of Windows Insiders.
 

@@ -2,12 +2,6 @@
 
 * Yazarlar: Joseph Lee, Derek Riemer ve diğerleri
 
-Not: Eklenti başlangıçta Windows 10 Temel Uygulamalar olarak
-adlandırılırken, Windows 10 ve Windows 11 gibi gelecekteki windows
-sürümlerini desteklemek için 2021'de Windows Temel Uygulamalar olarak
-yeniden adlandırıldı. Bu eklentinin bazı kısımları yine de orijinal eklenti
-adına atıfta bulunacaktır.
-
 Bu eklenti, çeşitli modern Windows uygulamaları için bir uygulama modül
 koleksiyonunun yanı sıra Windows 10 ve sonraki sürümlerde bulunan belirli
 kontroller için geliştirmeler ve düzeltmeler içerir.
@@ -21,8 +15,9 @@ Notlar:
   desteği sona ermeden önce özellik güncellemesi desteğini
   sonlandırabilir. Daha fazla bilgi ve destek tarihleri ​​için
   <https://aka.ms/WindowsTargetVersioninfo> adresine bakın.
-* Ne kadar yüklenebilse de, bu eklenti Windows Enterprise LTSC (Uzun Süreli
-  Hizmet Kanalı) ve Server sürümlerini desteklemez.
+* Kurulum mümkün olsa da, bu eklenti 32 bit Windows 10, Windows Enterprise
+  LTSC (Uzun Süreli Hizmet Kanalı) ve Windows Server sürümlerini
+  desteklemez.
 * Windows Insider Preview derlemelerindeki tüm özellikler
   desteklenmeyecektir; özellikle Windows Insider'ların bir alt kümesine
   sunulan özellikler için desteklenecektir.
