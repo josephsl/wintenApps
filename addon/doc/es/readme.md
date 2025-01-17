@@ -16,9 +16,9 @@ Notas:
   soporte para una actualización de características antes del fin del
   soporte al cliente. Consulta <https://aka.ms/WindowsTargetVersioninfo>
   para más información y fechas de soporte.
-* Although installation is possible, this add-on does not support 32-bit
-  Windows 10, Windows Enterprise LTSC (Long-Term Servicing Channel), and
-  Windows Server releases.
+* Aunque la instalación es posible, este complemento no soporta Windows 10
+  de 32 bits, Windows Enterprise LTSC (canal de servicio a largo plazo) ni
+  las versiones de Server.
 * No se soportarán todas las funciones de las compilaciones Windows Insider
   Preview, más si se introducen en un subconjunto de insiders de Windows.
 
