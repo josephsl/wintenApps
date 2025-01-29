@@ -14,6 +14,10 @@ This section lists changes planned for future add-on releases. Items in this sec
 * Removed app module for modern keyboard.
 * Modern keyboard: Removed Windows 11 clipboard history content announcements workaround as it is part of NVDA 2025.1.
 
+## Version 25.02
+
+* Settings: The workaround to announce Windows Update status for individual updates with speech interruption in Windows 10 is deprecated and will be removed in a future add-on release as live region change is no longer announced as of 22H2 build 19045.5440 (KB5050081).
+
 ## Version 25.01 (Windows 10 end of support countdown)
 
 Starting from this release, only critical changes will be applied to Windows 10 support features.
