@@ -19,6 +19,7 @@ class AppModule(BuiltinAppModule):
 	def event_liveRegionChange(self, obj: NVDAObjects.NVDAObject, nextHandler: typing.Callable[[], None]):
 		# Windows 10 Settings/Update and Security/Windows Update
 		# Announce individual update progress except as noted below.
+		# This event is no longer raised as of 22H2 build 19045.5440 (KB5050081), therefore deprecate it.
 		if "ApplicableUpdate" in obj.UIAAutomationId:
 			# NVDA Core issue 14931: update title/status repeats while downloading and installing updates.
 			# #71: NVDA is told to announce live regions to the end by default,
