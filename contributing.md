@@ -153,6 +153,6 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 	* Germanium: May 2024 to September 2024, NVDA 2024.2 requirement, end of support for Windows 11 2022 Update (Version 22H2) and 32-bit Windows 10, restructured install tasks, WinApps global plugin no longer included in add-on installation package (remains in source code repo), Ruff replaces Flake8 as linter, minimal readme with removal of app support notes, resolve live region change event handling in modern keyboard
 	* Arsenic: August 2024 to January 2025, NVDA 2024.3.1 and 2024.4.1 requirements, initial support for NVDA 2025.1, minimum Windows version detection routine rewrite to emphasize Windows 11, reformatted add-on module contents using Ruff, transferred wiki docs to main repo, support for Copilot WebView2 (native) app
 * Selenium (2025):
-	* Selenium 1: December 2024 to April 2025, NVDA 2025.1 requirement, Windows 11 is required to contribute to add-on development, removed modern keyboard app module
+	* Selenium 1: December 2024 to April 2025, NVDA 2025.1 requirement, Windows 11 is required to contribute to add-on development, removed modern keyboard app module, deprecate Windows 10 Windows Update announcement as it is resolved by Microsoft
 	* Selenium 2: February 2025 to July 2025, NVDA 2025.2 requirement, end of support for Windows 11 2023 Update (Version 23H2)
 	* Selenium 3: June 2025 to December 2025, end of support for Windows 10
