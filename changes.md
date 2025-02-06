@@ -10,6 +10,8 @@ For each add-on version entry, minor versions (such as 18.06.1) are included und
 
 This section lists changes planned for future add-on releases. Items in this section are not tied to specific releases and may or may not appear in stable add-on releases. See below sections for items included in stable releases.
 
+* Removed app module for Settings app.
+* Settings: Suppression of verbose Windows 10 Windows Update live region announcements is removed as live region change event is no longer raised for individual updates.
 * NVDA 2025.1 or later is required.
 * Removed app module for modern keyboard.
 * Modern keyboard: Removed Windows 11 clipboard history content announcements workaround as it is part of NVDA 2025.1.
