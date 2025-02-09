@@ -155,4 +155,4 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 * Selenium (2025):
 	* Selenium 1: December 2024 to April 2025, NVDA 2025.1 requirement, Windows 11 is required to contribute to add-on development, removed modern keyboard and Settings app modules
 	* Selenium 2: February 2025 to July 2025, NVDA 2025.2 requirement
-	* Selenium 3 (final ad-on development milestone): June 2025 to October 2025, end of support for Windows 10 series and Windows 11 2023 Update (Version 23H2)
+	* Selenium 3 (final ad-on development milestone): June 2025 to October 2025, end of support for Windows 10 series (Version 22H2) and Windows 11 2023 Update (Version 23H2)
