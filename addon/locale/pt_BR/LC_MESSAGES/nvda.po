@@ -1,17 +1,18 @@
 # Brazilian Portuguese translation of wintenApps.
-# Copyright (C) 2017-2021 NVDA Contributors.
+# Copyright (C) 2017-2025 NVDA Contributors.
 # This file is distributed under the same license as the NVDA package.
 # Ângelo Abrantes <ampa4374@gmail.com>, 2017-2018.
 # Rui Fontes <rui.fontes@tiflotecnia.com>, 2017.
 # Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>, 2018, 2021.
+# Josevan Barbosa Fernandes <josevanfernandes@yahoo.com.br>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: wintenApps\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-11-27 06:39-0700\n"
-"Last-Translator: Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>\n"
+"PO-Revision-Date: 2025-02-08 18:31-0300\n"
+"Last-Translator: Josevan Fernandes <josevanfernandes@yahoo.com.br>\n"
 "Language-Team: NVDA Brazilian Portuguese translation team (Equipe de "
 "tradução do NVDA para Português Brasileiro) <clever97@gmail.com>\n"
 "Language: pt_BR\n"
@@ -29,6 +30,10 @@ msgid ""
 "this add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
+"Você está usando {releaseName} ({build}), uma versão do Windows não "
+"suportada por este complemento.\n"
+"Este complemento requer {supportedReleaseName} ({supportedBuild}) ou "
+"posterior."
 
 #. Translators: dialog title shown when trying to install the add-on on
 #. unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
