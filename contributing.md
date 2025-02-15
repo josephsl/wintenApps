@@ -88,7 +88,7 @@ For Windows releases, a stable Windows release (typically a feature update) is s
 
 Regarding end of support for a Windows release from the add-on, for stable Windows releases, support duration is tied to consumer support. Prior to end of support, a grace period (at least 30 days) will be given to let users upgrade to newer releases (for Windows 11 original release, support from the add-on ended in August 2023, and the grace period was from June 2023 to August 2023). For Windows Insiders, only the latest Insider Preview build is supported, particularly if using canary and dev channel builds. Consequently, there is no concept of grace period from the add-on for Windows Insider Preview builds.
 
-Note: the only exception to support duration policy is the very last Windows 10 feature update (2022 Update/Version 22H2), which will be supported until December 2025 (official support until October 2025 followed by 60-day grace period; no support for extended security updates).
+Note: the only exception to support duration policy is the very last Windows 10 feature update (2022 Update/Version 22H2), which will be supported until October 2025 (official support until August 2025 followed by 60-day grace period; no support for extended security updates).
 
 #### Supported Windows releases
 
@@ -118,7 +118,7 @@ Note: support duration also depends on add-on maintenance - duration can be shor
 * Version 21H2 (build 22000): October 2021-July 2023
 * Version 22H2 (build 22621): July 2022-August 2024
 * Version 23H2 (build 22631): July 2023-July 2025
-* Version 24H2 and Windows Server 2025 (build 26100): April 2024-present
+* Version 24H2 and Windows Server 2025 (build 26100): April 2024-October 2025
 
 ### Development process and milestone releases
 
