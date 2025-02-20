@@ -34,8 +34,7 @@ def onInstall() -> None:
 		gui.MessageDialog.alert(
 			# Tell mypy that it is okay to ignore gettext calls.
 			_(  # type: ignore[name-defined]
-				# Translators: Dialog text shown when trying to install the add-on on
-				# releases earlier than minimum supported release.
+				# Translators: dialog text shown when trying to install the add-on on unsupported systems.
 				"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
 				"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 			).format(
@@ -44,8 +43,7 @@ def onInstall() -> None:
 				supportedReleaseName=minimumWinVer.releaseName,
 				supportedBuild=minimumWinVer.build,
 			),
-			# Translators: dialog title shown when trying to install the add-on on
-			# unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
+			# Translators: dialog title shown when trying to install the add-on on unsupported systems.
 			_("Unsupported Windows release"),  # type: ignore[name-defined]
 		)
 		raise RuntimeError(
