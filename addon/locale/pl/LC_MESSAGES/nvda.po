@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-11-27 06:40-0700\n"
+"PO-Revision-Date: 2025-02-19 01:14-0700\n"
 "Last-Translator: Zvonimir Stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: pl <LL@li.org>\n"
 "Language: pl\n"
@@ -17,8 +17,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.5\n"
 
-#. Translators: Dialog text shown when trying to install the add-on on
-#. releases earlier than minimum supported release.
+#. Tell mypy that it is okay to ignore gettext calls.
+#. type: ignore[name-defined]
+#. Translators: dialog text shown when trying to install the add-on on unsupported systems.
 #, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
@@ -29,8 +30,7 @@ msgstr ""
 "obsługiwana przez ten dodatek.\n"
 "Ten dodatek wymaga {supportedReleaseName} ({supportedBuild}) lub nowszej."
 
-#. Translators: dialog title shown when trying to install the add-on on
-#. unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
+#. Translators: dialog title shown when trying to install the add-on on unsupported systems.
 msgid "Unsupported Windows release"
 msgstr "Nieobsługiwana wersja systemu Windows"
 

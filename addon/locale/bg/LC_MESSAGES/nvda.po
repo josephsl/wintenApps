@@ -17,8 +17,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.5\n"
 
-#. Translators: Dialog text shown when trying to install the add-on on
-#. releases earlier than minimum supported release.
+#. Tell mypy that it is okay to ignore gettext calls.
+#. type: ignore[name-defined]
+#. Translators: dialog text shown when trying to install the add-on on unsupported systems.
 #, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
@@ -30,8 +31,7 @@ msgstr ""
 "Тази добавка изисква {supportedReleaseName} ({supportedBuild}) или по-нова "
 "версия."
 
-#. Translators: dialog title shown when trying to install the add-on on
-#. unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
+#. Translators: dialog title shown when trying to install the add-on on unsupported systems.
 msgid "Unsupported Windows release"
 msgstr "Неподдържано издание на Windows"
 

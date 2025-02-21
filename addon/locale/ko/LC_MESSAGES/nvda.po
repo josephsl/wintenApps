@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps 17.04.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-11-27 06:41-0700\n"
+"PO-Revision-Date: 2025-02-19 01:13-0700\n"
 "Last-Translator: Ungjin Park <ungjin312@kakao.com>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -17,8 +17,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.5\n"
 
-#. Translators: Dialog text shown when trying to install the add-on on
-#. releases earlier than minimum supported release.
+#. Tell mypy that it is okay to ignore gettext calls.
+#. type: ignore[name-defined]
+#. Translators: dialog text shown when trying to install the add-on on unsupported systems.
 #, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
@@ -28,8 +29,7 @@ msgstr ""
 "본 추가 기능은 {releaseName}({build}) 버전을 지원하지 않습니다.\n"
 "{supportedReleaseName}({supportedBuild}) 이상으로 업그레이드하십시오."
 
-#. Translators: dialog title shown when trying to install the add-on on
-#. unsupported Windows systems (earlier than 10, 32-bit Windows 10, unsupported feature updates).
+#. Translators: dialog title shown when trying to install the add-on on unsupported systems.
 msgid "Unsupported Windows release"
 msgstr "지원하지 않는 윈도우 버전 사용중"
 
