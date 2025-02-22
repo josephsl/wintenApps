@@ -18,7 +18,7 @@ This section lists changes planned for future add-on releases. Items in this sec
 
 ## Version 25.03 (Crossing a bridge)
 
-As of this release, Windows 10 support features are removed.
+As of this release, Windows 10 support features are removed apart from system requirement checks.
 
 * Removed app module for Settings app.
 * Settings: Suppression of verbose Windows 10 Windows Update live region announcements is removed as live region change event is no longer raised for individual updates.
