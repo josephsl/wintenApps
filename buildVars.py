@@ -17,12 +17,12 @@ def _(arg):
 addon_info = {
 	# add-on Name/identifier, internal for NVDA
 	"addon_name": "wintenApps",
-	# Add-on summary, usually the user visible name of the addon.
-	# Translators: Summary for this add-on
-	# to be shown on installation and add-on information.
+	# Add-on summary/title, usually the user visible name of the add-on
+	# Translators: Summary/title for this add-on
+	# to be shown on installation and add-on information found in add-on store
 	"addon_summary": _("Windows App Essentials"),
 	# Add-on description
-	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+	# Translators: Long description to be shown for this add-on on add-on information from add-on store
 	"addon_description": _("""Improving support for various apps and controls on Windows 10 and later"""),
 	# version
 	"addon_version": "25.01",
@@ -34,9 +34,9 @@ addon_info = {
 	"addon_sourceURL": "https://github.com/josephsl/wintenApps",
 	# Documentation file name
 	"addon_docFileName": "readme.html",
-	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
+	# Minimum NVDA version supported (e.g. "2019.3.0", minor version is optional)
 	"addon_minimumNVDAVersion": "2025.1",
-	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
+	# Last NVDA version supported/tested (e.g. "2024.4.0", ideally more recent than minimum version)
 	"addon_lastTestedNVDAVersion": "2025.1",
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
