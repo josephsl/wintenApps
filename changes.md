@@ -12,6 +12,7 @@ This section lists changes planned for future add-on releases. Items in this sec
 
 * Removed support for Windows 10 series, requiring Windows 11 series or later.
 * Windows 11: Requires Version 24H2 or later.
+* Removed app module for Copilot.
 * NVDA 2025.1 or later is required.
 * Removed app module for modern keyboard.
 * Modern keyboard: Removed Windows 11 clipboard history content announcements workaround as it is part of NVDA 2025.1.
@@ -126,7 +127,7 @@ As of this release, Windows 10 support features are frozen.
 ## Version 23.09 (From Cortana to Copilot)
 
 * Removed app module for Cortana.
-* Cortana:  Deprecated and replaced by Windows Copilot with the interface powered by Microsoft Edge. As a result, textual responses from Cortana will no longer be announced.
+* Cortana: Deprecated and replaced by Windows Copilot with the interface powered by Microsoft Edge. As a result, textual responses from Cortana will no longer be announced.
 * Modern keyboard/Voice Access (Windows 11 22H2 and later): When "correct that" voice command is issued, NVDA will announce appearance of dictation suggestions instead of just announcing the selected text.
 
 ## Version 23.08 (Scaling up and down)
