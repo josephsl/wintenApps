@@ -154,5 +154,5 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 	* Arsenic: August 2024 to January 2025, NVDA 2024.3.1 and 2024.4.1 requirements, initial support for NVDA 2025.1, minimum Windows version detection routine rewrite to emphasize Windows 11, reformatted add-on module contents using Ruff, transferred wiki docs to main repo, support for Copilot WebView2 (native) app
 * Selenium (2025):
 	* Selenium 1: December 2024 to April 2025, NVDA 2025.1 requirement, Windows 11 is required to contribute to add-on development, removed modern keyboard and Settings app modules
-	* Selenium 2: March 2025 to July 2025, NVDA 2025.2 requirement, end of support for Windows 11 2023 Update (Version 23H2), deprecate Windows 10 support
+	* Selenium 2: March 2025 to July 2025, NVDA 2025.2 requirement, end of support for Windows 11 2023 Update (Version 23H2), remove Copilot app module, deprecate Windows 10 support
 	* Selenium 3 (final ad-on development milestone): June 2025 to October 2025, end of support for Windows 10 series (Version 22H2)
