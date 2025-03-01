@@ -22,12 +22,7 @@ def onInstall() -> None:
 	# For Insider Preview, only the latest canary/dev/beta/release preview builds are supported.
 	minimumWinVer = (
 		winVersion.WIN11_23H2
-		if (
-			(currentWinVer := winVersion.getWinVer()) > winVersion.WIN10_22H2
-			# Detect add-on update channels (specifically to prevent dev channel installation on Windows 10).
-			# To be removed once add-on stable channel asks for Windows 11.
-			or addonHandler.getCodeAddon().manifest.get("updateChannel") == "dev"
-		)
+		if ((currentWinVer := winVersion.getWinVer()) > winVersion.WIN10_22H2)
 		else winVersion.WIN10_22H2  # 64-bit only, final feature update (supported until October 2025)
 	)
 	if currentWinVer < minimumWinVer:
