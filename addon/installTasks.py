@@ -20,8 +20,17 @@ def onInstall() -> None:
 	# and the add-on may end support for a feature update prior to end of consumer support.
 	# See aka.ms/WindowsTargetVersioninfo.
 	# For Insider Preview, only the latest canary/dev/beta/release preview builds are supported.
-	minimumWinVer = winVersion.WIN11_23H2
-	if (currentWinVer := winVersion.getWinVer()) < minimumWinVer:
+	minimumWinVer = (
+		winVersion.WIN11_23H2
+		if (
+			(currentWinVer := winVersion.getWinVer()) > winVersion.WIN10_22H2
+			# Detect add-on update channels (specifically to prevent dev channel installation on Windows 10).
+			# To be removed once add-on stable channel asks for Windows 11.
+			or addonHandler.getCodeAddon().manifest.get("updateChannel") == "dev"
+		)
+		else winVersion.WIN10_22H2  # 64-bit only, final feature update (supported until October 2025)
+	)
+	if currentWinVer < minimumWinVer:
 		gui.MessageDialog.alert(
 			# Tell mypy that it is okay to ignore gettext calls.
 			_(  # type: ignore[name-defined]
