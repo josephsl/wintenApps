@@ -17,6 +17,11 @@ This section lists changes planned for future add-on releases. Items in this sec
 * Removed app module for modern keyboard.
 * Modern keyboard: Removed Windows 11 clipboard history content announcements workaround as it is part of NVDA 2025.1.
 
+## Version 25.04 (A resurrected global plugin)
+
+* WinAppObjs global plugin is once again included in the add-on install package.
+* Mouse and touch navigation can now be used to navigate apps such as Windows 11 File Explorer's quick access interface and Copilot native app preview.
+
 ## Version 25.03 (Crossing a bridge)
 
 As of this release, Windows 10 support features are removed apart from system requirement checks.
