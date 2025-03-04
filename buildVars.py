@@ -67,10 +67,7 @@ i18nSources = pythonSources + ["buildVars.py"]
 
 # Files that will be ignored when building the nvda-addon file
 # Paths are relative to the addon directory, not to the root directory of your addon sources.
-excludedFiles = [
-	# WinApps (global plugin): kept in the repo in case needed in the future.
-	"globalPlugins/winappObjs.py"
-]
+excludedFiles = []
 
 # Base language for the NVDA add-on
 # If your add-on is written in a language other than english, modify this variable.
