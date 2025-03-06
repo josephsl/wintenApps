@@ -1,7 +1,7 @@
-# Windows Copilot
+# Windows Copilot (WebView2)
 # Copyright 2025 Joseph Lee, released under GPL
 
-# Workarounds for Windows Copilot interface
+# Workarounds for Windows Copilot WebView2 app interface
 
 import appModuleHandler
 import typing
