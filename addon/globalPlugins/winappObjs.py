@@ -18,6 +18,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super().__init__()
 		# NVDA Core issue 17771 (hack): add WinUI3 top-level class name to good UIA window class names tuple.
-		goodUIAWindowClassNames = set(UIAHandler.goodUIAWindowClassNames)
-		goodUIAWindowClassNames.add("Microsoft.UI.Content.DesktopChildSiteBridge")
-		UIAHandler.goodUIAWindowClassNames = tuple(goodUIAWindowClassNames)
+		if "Microsoft.UI.Content.DesktopChildSiteBridge" not in UIAHandler.goodUIAWindowClassNames:
+			goodUIAWindowClassNames = set(UIAHandler.goodUIAWindowClassNames)
+			goodUIAWindowClassNames.add("Microsoft.UI.Content.DesktopChildSiteBridge")
+			UIAHandler.goodUIAWindowClassNames = tuple(goodUIAWindowClassNames)
