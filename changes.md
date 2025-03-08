@@ -12,6 +12,9 @@ This section lists changes planned for future add-on releases. Items in this sec
 
 * Removed support for Windows 10 series, requiring Windows 11 series or later.
 * Windows 11: Requires Version 24H2 or later.
+
+## Version Selenium.1
+
 * NVDA 2025.1 or later is required.
 * Removed app module for modern keyboard.
 * Modern keyboard: Removed Windows 11 clipboard history content announcements workaround as it is part of NVDA 2025.1.
