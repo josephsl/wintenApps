@@ -59,7 +59,6 @@ addon_info = {
 # https://scons.org/doc/production/HTML/scons-user/apd.html
 pythonSources = [
 	"addon/*.py",
-	"addon/appModules/*.py",
 ]
 
 # Files that contain strings for translation. Usually your python sources
@@ -67,7 +66,11 @@ i18nSources = pythonSources + ["buildVars.py"]
 
 # Files that will be ignored when building the nvda-addon file
 # Paths are relative to the addon directory, not to the root directory of your addon sources.
-excludedFiles = []
+excludedFiles = [
+	# Empty app module/__init__.py: kept in the repo in case needed in the future.
+	"appModules/__init__.py"
+]
+
 
 # Base language for the NVDA add-on
 # If your add-on is written in a language other than english, modify this variable.
