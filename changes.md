@@ -20,7 +20,8 @@ This section lists changes planned for future add-on releases. Items in this sec
 ## Version 25.04 (A resurrected global plugin)
 
 * WinAppObjs global plugin is once again included in the add-on install package.
-* Mouse and touch navigation can now be used to navigate apps such as Windows 11 File Explorer's quick access interface and Copilot native app preview.
+* Mouse and touch navigation can now be used to navigate apps such as Windows 11 File Explorer's quick access interface and Copilot WinUI 3 (native) app preview.
+* Copilot (WebView2): The ability to announce Copilot responses is deprecated and will be removed in a future release.
 
 ## Version 25.03 (Crossing a bridge)
 
