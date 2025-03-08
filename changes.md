@@ -12,9 +12,12 @@ This section lists changes planned for future add-on releases. Items in this sec
 
 * Removed support for Windows 10 series, requiring Windows 11 series or later.
 * Windows 11: Requires Version 24H2 or later.
+
+## Version Selenium.1
+
 * NVDA 2025.1 or later is required.
 * Removed app modules for Copilot WebView2 app and modern keyboard.
-* Copilot (WebView2): NVDA will no longer announce Copilot responses.
+* Copilot (WebView2): Replaced by WinUI 3 (native) app, NVDA will no longer announce Copilot responses.
 * Modern keyboard: Removed Windows 11 clipboard history content announcements workaround as it is part of NVDA 2025.1.
 
 ## Version 25.04 (A resurrected global plugin)
