@@ -6,6 +6,7 @@
 import globalPluginHandler
 import globalVars
 import UIAHandler
+from logHandler import log
 
 
 # Don't even think about proceeding in secure screens.
@@ -19,6 +20,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super().__init__()
 		# NVDA Core issue 17771 (hack): add WinUI3 top-level class name to good UIA window class names tuple.
 		if "Microsoft.UI.Content.DesktopChildSiteBridge" not in UIAHandler.goodUIAWindowClassNames:
+			log.debug(
+				"winapps: adding Microsoft.UI.Content.DesktopChildSiteBridge to good UIA window class names"
+			)
 			goodUIAWindowClassNames = set(UIAHandler.goodUIAWindowClassNames)
 			goodUIAWindowClassNames.add("Microsoft.UI.Content.DesktopChildSiteBridge")
 			UIAHandler.goodUIAWindowClassNames = tuple(goodUIAWindowClassNames)
