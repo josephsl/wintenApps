@@ -12,15 +12,16 @@ This section lists changes planned for future add-on releases. Items in this sec
 
 * Removed support for Windows 10 series, requiring Windows 11 series or later.
 * Windows 11: Requires Version 24H2 or later.
-* Removed app module for Copilot.
 * NVDA 2025.1 or later is required.
-* Removed app module for modern keyboard.
+* Removed app modules for Copilot WebView2 app and modern keyboard.
+* Copilot (WebView2): NVDA will no longer announce Copilot responses.
 * Modern keyboard: Removed Windows 11 clipboard history content announcements workaround as it is part of NVDA 2025.1.
 
 ## Version 25.04 (A resurrected global plugin)
 
 * WinAppObjs global plugin is once again included in the add-on install package.
-* Mouse and touch navigation can now be used to navigate apps such as Windows 11 File Explorer's quick access interface and Copilot native app preview.
+* Mouse and touch navigation can now be used to navigate apps such as Windows 11 File Explorer's quick access interface and Copilot WinUI 3 (native) app preview.
+* Copilot (WebView2): The ability to announce Copilot responses is deprecated and will be removed in a future release.
 
 ## Version 25.03 (Crossing a bridge)
 
