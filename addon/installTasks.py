@@ -26,9 +26,7 @@ def onInstall() -> None:
 		else winVersion.WIN10_22H2  # 64-bit only, final feature update (supported until October 2025)
 	)
 	if currentWinVer < minimumWinVer:
-		# Call gui.MessageDialog.alert (2025.1) or gui.messageBox (2024.4).
-		messageAlert = gui.MessageDialog.alert if hasattr(gui, "MessageDialog") else gui.messageBox
-		messageAlert(
+		gui.MessageDialog.alert(
 			_( # Translators: dialog text shown when trying to install the add-on on unsupported systems.
 				"You are using {releaseName} ({build}), "
 				"a Windows release not supported by Windows App Essentials NVDA add-on.\n"
