@@ -11,7 +11,6 @@
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import AppModule
 from typing import Callable
-import controlTypes
 import api
 from NVDAObjects import NVDAObject
 
@@ -27,15 +26,3 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 		if api.getFocusObject().appModule == self:
 			return nextHandler()
 		super().event_UIA_elementSelected(obj, nextHandler)
-
-	def event_NVDAObject_init(self, obj: NVDAObject) -> None:
-		# NVDA Core issue 17308: recent Windows 11 builds raise live region change event when
-		# clipboard history closes, causing NVDA to report data item text such as clipboard history entries.
-		# Therefore, tell NVDA to veto this event at the object level, otherwise focus change handling breaks
-		# due to live region change event being queued.
-		# Resolved in NVDA 2025.1.
-		if obj.role == controlTypes.Role.DATAITEM and obj.parent.role in (
-			controlTypes.Role.TABLEROW,  # Clipboard history item
-			controlTypes.Role.LIST,  # Clipboard history item actions list
-		):
-			obj._shouldAllowUIALiveRegionChangeEvent = False
