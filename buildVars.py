@@ -60,6 +60,7 @@ addon_info = {
 pythonSources = [
 	"addon/*.py",
 	"addon/appModules/*.py",
+	"addon/globalPlugins/winappObjs.py",
 ]
 
 # Files that contain strings for translation. Usually your python sources
