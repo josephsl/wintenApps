@@ -46,7 +46,7 @@ Before testing the add-on:
 4. To switch to dev channel, from add-on store, press Control+Tab to go to either updatable or available add-ons tabs.
 5. Select "all" or "dev" from channel list.
 6. Press Tab several times until arriving at updatable/available add-ons list, then select Windows App Essentials add-on version of the form yyyymmdd.x.y e.g. 20230905.0.0.
-7. Press Enter, then from the context menu, select "update" or "install" depending on  if Windows Ap Essentials is installed or not.
+7. Press Enter, then from the context menu, select "update" or "install" depending on if Windows Ap Essentials is installed or not.
 8. Close add-on store, and installation will begin, then restart NVDA when prompted.
 
 Testing the add-on simply involves using NVDA as usual. If you do encounter issues:
@@ -84,7 +84,7 @@ Windows App Essentials follows NVDA's own coding style (tabs for indentation, ca
 
 A given Windows App Essentials release is supported until the next version is released. For development snapshots, only the latest build is supported. A stable version is supported until the next stable version is released. Both major (milestone) and minor (backports and localizations) are grouped under stable versions.
 
-For NVDA releases, Windows App Essentials supports latest NVDA releases, including development builds. Unless noted otherwise, the immediate past stable NVDA release is also supported. As of March 2025, Windows App Essentials supports NVDA 2024.4.1 (immediate past stable), 2024.4.2 (latest stable),  and alpha snapshots.
+For NVDA releases, Windows App Essentials supports latest NVDA releases, including development builds. Unless noted otherwise, the immediate past stable NVDA release is also supported. As of March 2025, Windows App Essentials supports NVDA 2024.4.1 (immediate past stable), 2024.4.2 (latest stable), and alpha snapshots.
 
 For Windows releases, a stable Windows release (typically a feature update) is supported for at least 12 months (18 months for Windows 11 releases) and no more than consumer support duration (18 months for Windows 10, two years for Windows 11); the exception is final Windows 10 release (Version 22H2). Although the add-on will indicate support for a Windows release (or a feature update) months in advance, official support begins the moment a given release is made available to the general public. For example, although Windows 10 November 2021 Update was marked as supported since August 2021, official support duration is from November 2021 to at least December 2022 and no later than June 2023. For Windows 11 2023 Update, preview (and experimental) support began in July 2023, and official support duration is from October 2023 to at least April 2025 and no later than November 2025. As a rule of thumb, Windows App Essentials uses consumer (Home, Pro, Pro for Workstations) support duration for a feature update to determine support duration. See release information page from Microsoft for details on support duration for Windows releases, and see below for support duration for Windows releases across add-on releases.
 
@@ -156,5 +156,5 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 	* Arsenic: August 2024 to January 2025, NVDA 2024.3.1 and 2024.4.1 requirements, initial support for NVDA 2025.1, minimum Windows version detection routine rewrite to emphasize Windows 11, reformatted add-on module contents using Ruff, transferred wiki docs to main repo, support for Copilot WebView2 app
 * Selenium (2025):
 	* Selenium 1: December 2024 to April 2025, Windows 11 is required to contribute to add-on development, removed Settings app module with the removal of Windows 10 Windows Update live region change workaround, restore WinApps global plugin to handle WinUI 3 top-level window UIA reclassification across apps to enable mouse and touch navigation
-	* Selenium 2: March 2025 to July 2025, NVDA 2025.1 and 2025.2 requirements, end of support for Windows 11 2023 Update (Version 23H2), removed Copilot WebView2 and  modern keyboard app modules, deprecate Windows 10 support
+	* Selenium 2: March 2025 to July 2025, NVDA 2025.1 and 2025.2 requirements, end of support for Windows 11 2023 Update (Version 23H2), removed Copilot WebView2 and modern keyboard app modules, deprecate Windows 10 support
 	* Selenium 3 (final ad-on development milestone): June 2025 to October 2025, end of support for Windows 10 series (Version 22H2)

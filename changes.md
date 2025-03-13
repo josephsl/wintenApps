@@ -246,7 +246,7 @@ As of this release, Windows 10 support features are frozen.
 
 * Initial support for Windows 10 Version 22H2 (2022 Update), not to be confused with Windows 11 Version 22H2. This is the final Windows 10 feature update.
 * Added support for automatic add-on updates feature from Add-on Updater add-on. In particular, the add-on will not install if using unsupported Windows releases.
-* Event debug log for events added by this add-on (drag complete, drag drop effect, drop target dropped) are logged from event handlers themselves rather than  through a dedicated method. This makes debug log for events more concise.
+* Event debug log for events added by this add-on (drag complete, drag drop effect, drop target dropped) are logged from event handlers themselves rather than through a dedicated method. This makes debug log for events more concise.
 * Microsoft Solitaire Collection: In version 4.13 and later, NVDA will announce card (suit and rank) labels provided by the app itself. As a result, support for Solitaire Collection is deprecated and will be removed in a future add-on release.
 * Modern keyboard: Added support for Suggested Actions backported to build 22622 (Windows 11 22H2 beta).
 * Settings: In Windows 11 22H2 and later, NVDA will announce the name of the update being downloaded from Windows Update. This works best with selective UIA event registration off, but if this setting is enabled, move to updates list as soon as it appears so NVDA can detect and announce update progress.
