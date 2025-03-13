@@ -18,7 +18,8 @@ def disableInSecureMode(cls):
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super().__init__()
-		# NVDA Core issue 17771 (hack): add WinUI3 top-level class name to good UIA window class names tuple.
+		# NVDA Core issues 17407 and 17771 (hack):
+		# add WinUI3 top-level class name to good UIA window classes tuple to enable mouse/touch navigation.
 		if "Microsoft.UI.Content.DesktopChildSiteBridge" not in UIAHandler.goodUIAWindowClassNames:
 			log.debug(
 				"winapps: adding Microsoft.UI.Content.DesktopChildSiteBridge to good UIA window class names"

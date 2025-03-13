@@ -1,5 +1,5 @@
-# NVDA add-on template  SCONSTRUCT file
-# Copyright (C) 2012-2024 Rui Batista, Noelia Martinez, Joseph Lee
+# NVDA add-on template SCONSTRUCT file
+# Copyright (C) 2012-2025 Rui Batista, Noelia Martinez, Joseph Lee
 # This file is covered by the GNU General Public License.
 # See the file COPYING.txt for more details.
 
@@ -51,7 +51,8 @@ def md2html(source, dest):
 			"<!DOCTYPE html>",
 			f'<html lang="{lang}">',
 			"<head>",
-			'<meta charset="UTF-8">' '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+			'<meta charset="UTF-8">',
+			'<meta name="viewport" content="width=device-width, initial-scale=1.0">',
 			'<link rel="stylesheet" type="text/css" href="../style.css" media="screen">',
 			f"<title>{title}</title>",
 			"</head>\n<body>",

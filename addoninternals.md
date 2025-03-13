@@ -208,7 +208,7 @@ As of October 2018, NVDA itself announces notifications for all apps (especially
 
 #### Tracking UIA events for controls
 
-Until 2022, Windows App Objects global plugin had ability to track UIA events for controls and log info  about them, executed via `uiaDebugLogging` function that takes an object and the event name. This function recorded the following if NVDA is started with debug logging enabled or told to monitor specific events and/or events from specific apps:
+Until 2022, Windows App Objects global plugin had ability to track UIA events for controls and log info about them, executed via `uiaDebugLogging` function that takes an object and the event name. This function recorded the following if NVDA is started with debug logging enabled or told to monitor specific events and/or events from specific apps:
 
 * What the object actually is.
 * Object name.
