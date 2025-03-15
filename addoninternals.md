@@ -8,9 +8,9 @@ Note: originally called Windows 10 App Essentials, the add-on was renamed to Win
 
 ## Preface
 
-If one add-on can define my passion for NVDA, it would be Windows App Essentials, a soon to be discontinued add-on. What started out as a small app module for Insider Hub became one of the most recognizable add-ons in NVDA community, offering needed fixes and features to make Windows 10 and 11 more accessible and usable for NVDA users along with communicating accessibility needs to app developers. Since September 2015, the add-on has changed a lot, and so did Windows, apps, NVDA, and my own life. For almost a decade, I and Windows App Essentials were inseparable, but the time has come to let the add-on go.
+If one add-on can define my passion for NVDA, it would be Windows App Essentials, a soon to be discontinued add-on. What started out as a small app module for Insider Hub became one of the most recognizable add-ons in NVDA community, offering needed fixes and features to make Windows 10 and 11 more accessible and usable for NVDA users along with communicating accessibility needs to app developers.
 
-When I started development of Windows App Essentials in 2015, I knew that the lifetime of the add-on was limited. While I promised to support the add-on as long as Windows Insider Program was a thing, deep down I knew that the lifetime of the add-on depended on add-on features and bug fixes being integrated into NVDA. Throughout 2024, the last pieces of this add-on became part of NVDA, with the final part being a bug fix for modern keyboard included in NVDA 2025.1.
+When I started development of Windows App Essentials in 2015, I knew that the lifetime of the add-on was limited. While I promised to support the add-on as long as Windows Insider Program was a thing, deep down I knew that the lifetime of the add-on depended on add-on features and bug fixes being integrated into NVDA. Throughout 2024 and 2025, the last pieces of this add-on became part of NVDA, with the final parts being a bug fix for modern keyboard included in NVDA 2025.1 and global support for mouse and touch navigation in WinUI 3 apps.
 
 Originally, I planned to support Windows 10 series until October 2025 but a fix from Microsoft in February 2025 changed this. Prior to February 2025, NVDA would be verbose when announcing update installation status in Settings app, therefore the add-on resolved it by silencing some update announcements. However, in February 2025, the live region change event responsible for announcing update status changes is no longer raised, making the workaround unnecessary. With this change, the last remaining anchor to Windows 10 (Settings app module) was removed in February 2025, but to fulfill the promise to support it until its end of life, Windows 10 support will be kept in install tasks module (checking minimum supported Windows version) until late 2025.
 
@@ -24,11 +24,11 @@ Supporting new technologies can be fun and challenging, especially a new operati
 
 In NVDA Add-on Internals: Windows App Essentials, we'll look at how this add-on came about, how it works, its development, and go over recommendations from the add-on author (me) regarding accessibility practices. You'll also glimpse how UI Automation works at a high level, how features start out as an add-on component and end up as an NVDA feature and so on.
 
-To download the add-on, visit NV Access add-on store (introduced in NVDA 2023.2). The source code for this add-on can be found at https://github.com/josephsl/wintenApps. As Windows (10 and later, more so for Windows 11) and universal apps are UI Automation universes, it is essential that you know some things about UIA, which are covered later.
+To download the add-on, visit NV Access add-on store. The source code for this add-on can be found at https://github.com/josephsl/wintenApps. As Windows (10 and later, more so for Windows 11) and universal apps are UI Automation universes, it is essential that you know some things about UIA, which are covered later.
 
 Disclaimer: Despite the article text and knowledge that's contained within, I (Joseph Lee, the add-on author) do not work for NV Access nor Microsoft.
 
-Note: some of the features described may change as Windows and NVDA development progresses. As of March 2025 revision, features from NVDA 2024.4.2 and 2025.1 preview releases and recent Windows Insider Preview builds are documented for reference purposes. Also, when refering to Windows releases (in particularly, Windows 10 feature updates), release Id (YYMM/YYHn) is used instead of using marketing label unless specified (for example, 1709 instead of Fall Creators Update, or 20H2 instead of 2009). To account for Windows 11, releases will be denoted as "Windows release YYMM/YYHn" e.g. Windows 10 21H1 for Windows 10 May 2021 Update or Windows 11 24H2 for Windows 11 2024 Update.
+Note: some of the features described may change as Windows and NVDA development progresses. As of April 2025 revision, features from NVDA 2025.1 preview and recent Windows Insider Preview builds are documented for reference purposes. Also, when refering to Windows releases (in particularly, Windows 10 feature updates), release Id (YYMM/YYHn) is used instead of using marketing label unless specified (for example, 1709 instead of Fall Creators Update, or 20H2 instead of 2009). To account for Windows 11, releases will be denoted as "Windows release YYMM/YYHn" e.g. Windows 10 21H1 for Windows 10 May 2021 Update or Windows 11 24H2 for Windows 11 2024 Update.
 
 Copyright: Microsoft Windows, Windows API, UI Automation, Microsoft Edge, Universal Windows Platform (UWP) and related technologies are copyright Microsoft Corporation. NVDA is copyright NV Access. Windows App Essentials add-on is copyright 2015-2025 Joseph Lee and contributors, released under GPL 2.
 
@@ -87,7 +87,7 @@ As noted above, some features discussed in this article (such as UIA notificatio
 
 ### Information on add-on update feature
 
-This article will sometimes reference add-on update feature, which is gone in 2019. Information about it is kept here for reference purposes. An add-on appropriately named "Add-on Updater" is used to update windows App Essentials and other add-ons, and a major feature introduced in NVDA 2023.2 is add-on store, allowing NVDA itself to check for and install add-on updates including Windows App Essentials.
+This article will sometimes reference add-on update feature, which is gone in 2019. Information about it is kept here for reference purposes. An add-on appropriately named "Add-on Updater" is used to update windows App Essentials and other add-ons, and with the opening of the NV Access add-on store in 2023, NVDA itself can update add-ons includin Windows App Essentials.
 
 ### Special note on feature updates support on Windows 10 and later
 
@@ -270,7 +270,7 @@ One of Windows 10's highlights is virtual desktops. This is used to group variou
 
 While older Windows 10 releases do provide a way to query currently active virtual desktop, it wasn't until Windows 10 1703 (Creators Update) that virtual desktop name reporting became more efficient for screen readers other than Narrator. This is done through CSRSS (client/server runtime subsystem), sometimes known as Windows subsystem process in Microsoft documentation, with it raising a name change event whenever virtual desktops are created, changed, and closed. Newer Windows 10 and 11 releases brought visible and internal changes, the most significant being internal changes for Windows desktop representation introduced in Windows 10 1903, and Windows Insider builds in 2023 brought a different approach to virtual desktop reporting as explained below.
 
-Depending on Windows release, the following happens when virtual desktops are created (Control+Windows+D), changed (Control+Windows+left/right arrows, and closed (Control+Windows+F4):
+Depending on Windows release, the following happens when virtual desktops are created (Control+Windows+D), switched to (Control+Windows+left/right arrows, and closed (Control+Windows+F4):
 
 * Windows 10 1703 to 11 22H2: as soon as virtual desktop commands are pressed, CSRSS sends a name change event.
 * Windows Insider preview: UIA notification event is raised by File Explorer to report virtual desktop name as display string.
@@ -308,7 +308,7 @@ Historically, the following modules and enhancers/fixers were included in the ad
 * Calculator: selectively announce calculator display.
 * Calendar: suppress read-only state announcement in various controls.
 * Cortana/Start menu/Windows Search (classic Cortana): suppress double announcement of suggestion result item in some cases, staying silent when user is dictating to Cortana, handling bad UIA implementations.
-* Cortana/conversations (new Cortana) and Copilot: announcing text responses from Cortana or Copilot.
+* Cortana/conversations (new Cortana) and Copilot (web app based): announcing text responses from Cortana or Copilot.
 * Mail: table navigation commands in message list, suppress read-only announcement in email content, app alias for hxmail.exe and hxoutlook.exe (the latter for updates released in May 2017).
 * Maps: play location coordinates for map items, suppress repeated live region announcements, aliases to support old and new Maps releases (the old alias, maps_windows, is gone).
 * Microsoft Store: announce needed information when live region changed event is fired by some controls, aliases to support old and new Store versions (the old alias, winstore_mobile, is no more).
