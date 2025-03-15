@@ -79,7 +79,7 @@ There is a fifth pillar that has emerged in recent years: providing a testing gr
 
 The Windows App Essentials add-on consists of a global plugin and app modules for various universal apps included with Windows 10 and later. The Windows App Objects (shortened to WinAppObjs), the global plugin portion of this add-on, provides foundations such as overlay classes for frequently encountered controls in Windows an universal apps. Until 2022, UIA event tracking and logger facility was also part of the add-on, replaced by Event Tracker add-on. Until 2018, the global plugin was also responsible for add-on update feature, documented here for sake of completeness. With the integration of updated dialog detection in NVDA 2024.1, the global plugin became empty until March 2025 when a global yet hacky mechanism to enable mouse and touchscreen navigation in WinUI 3 apps such as Copilot and parts of Windows 11 File Explorer was introduced.
 
-In regards to app modules, these were included to either provide workarounds or enhance the user experience. For example, the app module for Settings app (systemsettings) allows NVDA to announce Windows Update download and installation progress, and app module for modern keyboard (windowsinternal_composableshell_experiences_textinput_inputapp) provides support for more modern input facilities such as enhanced dictation and suggested actions. We'll meet some of these app modules in subsequent sections.
+In regards to app modules, these were included to either provide workarounds or enhance the user experience. For example, the app module for Settings app (systemsettings) allows NVDA to announce Windows Update download and installation progress, and app module for modern keyboard (windowsinternal_composableshell_experiences_textinput_inputapp) provides support for more modern input facilities such as enhanced dictation and suggested actions. In March 2025, the last two app modules - modern keyboard and Copilot WebView2 version - were removed, therefore there are no app modules included with the add-on code repository apart from an empty app module in case app modules are needed in the future. We'll meet some of these app modules (no longer included but documented) in subsequent sections.
 
 ### A note on feature parity with NVDA screen reader
 
@@ -232,7 +232,7 @@ Some controls are live regions - that is, a control whose content denotes live t
 
 The Windows App Objects goes one step further by recording instances of this event and providing workarounds for specific cases. These include announcing correct text for Edge alerts (see below), preventing repeat announcements in some apps and so on.
 
-As of 2022, no live region change event workaround exists in the add-on at the global plugin level (still exists at the app module level). The last remaining workaround (preventing NVDA from announcing live region from Start menu when changing screen resolution) is no longer needed in newer Windows 10 and 11 releases.
+As of 2022, no live region change event workaround exists in the add-on at the global plugin level (still exists at the app module level). The last remaining workaround (preventing NVDA from announcing live region from Start menu when changing screen resolution) at the global plugin level is no longer needed in newer Windows 10 and 11 releases. The last app module with known live region implementation issues - Windows 10 Settings app - was removed in 2025 with a fixe from Microsoft.
 
 #### Recognizing various dialogs
 
@@ -319,7 +319,7 @@ Historically, the following modules and enhancers/fixers were included in the ad
 * Settings: selectively announce various status information, provide correct labels for certain controls.
 * Shell Experience Host (action center/quick settings): suppress extraneous status announcements, enable touch and mouse interaction in Windows 11 24H2 (2024 Update) quick settings.
 
-As of March 2025, only Copilot and modern keyboard with their enhancers and fixers remain. Settings ap module was removed in February 2025 with live region change bug fix from Microsoft, and with NVDA 2025.1 (under development), contents from modern keyboard app module are part of NVDA, making the app module redundant. Therefore, the following sections describe what the add-on did in the past for the most part.
+As of March 2025, no app modules remain apart from an empty template module. Settings ap module was removed in February 2025 with live region change bug fix from Microsoft, and Copilot WebView2 app module was removed in March 2025 with the change to WinUI 3 framework. With NVDA 2025.1 (under development), contents from modern keyboard app module are part of NVDA. Therefore, the following sections describe what the add-on did in the past for the most part.
 
 ### Adding useful features in apps
 
