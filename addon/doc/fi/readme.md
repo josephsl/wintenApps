@@ -15,9 +15,9 @@ Huomautukset:
   saattaa lopettaa tuen ominaisuuspäivitykselle jo ennen kuluttajatuen
   päättymistä. Katso lisätietoja ja tukipäivämäärät osoitteesta
   <https://aka.ms/WindowsTargetVersioninfo>.
-* Although installation is possible, this add-on does not support 32-bit
-  Windows 10, Windows Enterprise LTSC (Long-Term Servicing Channel), and
-  Windows Server releases.
+* Tämä lisäosa ei tue 32-bittistä Windows 10:tä, Windows 10 Enterprise
+  LTSC:tä (Long-Term Servicing Channel) eikä Server -versioita, vaikka
+  asennus onkin mahdollista.
 * Kaikkia Windowsin Insider-esikoontiversioiden ominaisuuksia ei tueta,
   varsinkaan sellaisia, jotka esitellään vain osalle Insider-käyttäjistä.
 
