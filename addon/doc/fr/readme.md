@@ -8,8 +8,8 @@ contrôles de Windows 10 et versions ultérieures.
 
 Notes:
 
-* Cette extension nécessite Windows 10 22H2 (build 19045)/11 23H2 (build
-  22631) 64 bits ou version ultérieure.
+* Cette extension nécessite Windows 10 22H2 (build 19045)/11 24H2 (build
+  26100) 64 bits ou version ultérieure.
 * La durée du support de mise à jour des fonctionnalités est liée à la durée
   du support des consommateurs (Home, Pro, Pro Education, Pro for
   Workstations Editions) et l'extension peut mettre fin à la prise en charge
