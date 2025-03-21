@@ -8,8 +8,8 @@ para determinados controles encontrados no Windows 10 e posteriores.
 
 Notas:
 
-* Este complemento requer o Windows 10 22H2 (compilação 19045), 11 23H2
-  (compilação 22631), ou posteriors.
+* Este complemento requer o Windows 10 22H2 (compilação 19045), 11 24H2
+  (compilação 26100), ou posteriors.
 * A duração do suporte à atualização de recursos está vinculada à duração do
   suporte ao consumidor (edições Home, Pro, Pro Education, Pro for
   Workstations) e o complemento pode encerrar o suporte a uma atualização de

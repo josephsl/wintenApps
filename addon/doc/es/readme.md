@@ -9,7 +9,7 @@ controles de windows 10 o posterior.
 Notas:
 
 * Este complemento requiere Windows 10 Versión 22H2 (compilación 19045) de
-  64 bits, 11 23H2 (compilación 22631) o versiones posteriores.
+  64 bits, 11 24H2 (compilación 26100) o versiones posteriores.
 * La duración del soporte de las actualizaciones de características está
   vinculada a la duración del soporte al cliente (ediciones Home, Pro, Pro
   Education, Pro for Workstations), y el complemento podría finalizar el

@@ -9,7 +9,7 @@ Windows 10:ssä ja uudemmissa.
 Huomautukset:
 
 * Tämä lisäosa edellyttää 64-bittistä Windows 10 22H2:ta (koontiversio
-  19045), 11 23H2:ta (koontiversio 22631) tai uudempaa.
+  19045), 11 24H2:ta (koontiversio 26100) tai uudempaa.
 * Ominaisuuspäivityksen tuen kesto on sidoksissa kuluttajatuen kestoon
   (Home, Pro, Pro Education, Pro for Workstations -versiot), ja lisäosa
   saattaa lopettaa tuen ominaisuuspäivitykselle jo ennen kuluttajatuen

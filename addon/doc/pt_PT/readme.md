@@ -8,7 +8,7 @@ encontrados no Windows 10 e posteriores.
 
 Notas:
 
-* Este add-on requer o Windows 10 22H2 (build 19045), 11 23H2 (build 22631)
+* Este add-on requer o Windows 10 22H2 (build 19045), 11 24H2 (build 26100)
   ou versões posteriores.
 * A duração do suporte da actualização de funcionalidades está associada à
   duração do suporte ao consumidor (edições Home, Pro, Pro Education, Pro
