@@ -8,8 +8,8 @@ e posteriores.
 
 Notas:
 
-* Este complemento require do Windows 10 22H2 (compilación 19045), 11 23H2
-  (compilación 22631), ou versións posteriores.
+* Este complemento require do Windows 10 22H2 (compilación 19045), 11 24H2
+  (compilación 26100), ou versións posteriores.
 * O soporte das actualizacións de características está vencellado á duración
   do soporte ó consumidor (edicións Home, Pro, Pro Education, Pro for
   Workstations) e o complemento podería rematar o soporte para unha

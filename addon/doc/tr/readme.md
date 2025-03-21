@@ -8,7 +8,7 @@ kontroller için geliştirmeler ve düzeltmeler içerir.
 
 Notlar:
 
-* Bu eklenti, 64 bit Windows 10 22H2 (derleme 19045)/11 23H2 (derleme 22631)
+* Bu eklenti, 64 bit Windows 10 22H2 (derleme 19045)/11 24H2 (derleme 26100)
   veya sonraki sürümleri gerektirir.
 * Özellik güncelleme destek süresi, tüketici destek süresine (Ev, Pro, Pro
   Education, Pro for Workstations sürümleri) bağlıdır ve eklenti, tüketici
