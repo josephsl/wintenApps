@@ -6,7 +6,7 @@
 
 注意:
 
-* 此插件需要 64 位 Windows 10 22H2（内部版本 19045）、11 23H2（内部版本 22631）或更高版本。
+* 此插件需要 64 位 Windows 10 22H2（内部版本 19045）、11 24H2（内部版本 26100）或更高版本。
 * 功能更新支持期限与消费者支持期限（家庭版、专业版、专业教育版、工作站专业版）相关联，并且插件可能会在消费者支持结束之前终止对功能更新的支持。有关更多信息和支持日期，请参阅
   <https://aka.ms/WindowsTargetVersioninfo>。
 * Although installation is possible, this add-on does not support 32-bit
