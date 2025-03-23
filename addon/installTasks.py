@@ -16,7 +16,7 @@ addonHandler.initTranslation()
 def onInstall() -> None:
 	# Windows App Essentials requires supported Windows releases on or above the minimum version.
 	# For general availability channel (feature updates), support duration is tied to consumer-level support
-	# (Home, Pro, Pro Education, Pro for Workstations, supported for 18 to 24 months with exceptions)
+	# (Home, Pro, Pro Education, Pro for Workstations)
 	# and the add-on may end support for a feature update prior to end of consumer support.
 	# See aka.ms/WindowsTargetVersioninfo.
 	# For Insider Preview, only the latest canary/dev/beta/release preview builds are supported.
