@@ -23,9 +23,7 @@ def onInstall() -> None:
 	minimumWinVer = winVersion.WIN11_24H2
 	if (currentWinVer := winVersion.getWinVer()) < minimumWinVer:
 		gui.MessageDialog.alert(
-			# Tell mypy that it is okay to ignore gettext calls.
-			_(  # type: ignore[name-defined]
-				# Translators: dialog text shown when trying to install the add-on on unsupported systems.
+			_( # Translators: dialog text shown when trying to install the add-on on unsupported systems.
 				"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
 				"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 			).format(
@@ -35,7 +33,7 @@ def onInstall() -> None:
 				supportedBuild=minimumWinVer.build,
 			),
 			# Translators: dialog title shown when trying to install the add-on on unsupported systems.
-			_("Unsupported Windows release"),  # type: ignore[name-defined]
+			_("Unsupported Windows release"),
 		)
 		raise RuntimeError(
 			f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentWinVer.build})"
