@@ -29,9 +29,7 @@ def onInstall() -> None:
 		# Call gui.MessageDialog.alert (2025.1) or gui.messageBox (2024.4).
 		messageAlert = gui.MessageDialog.alert if hasattr(gui, "MessageDialog") else gui.messageBox
 		messageAlert(
-			# Tell mypy that it is okay to ignore gettext calls.
-			_(  # type: ignore[name-defined]
-				# Translators: dialog text shown when trying to install the add-on on unsupported systems.
+			_( # Translators: dialog text shown when trying to install the add-on on unsupported systems.
 				"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
 				"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 			).format(
@@ -41,7 +39,7 @@ def onInstall() -> None:
 				supportedBuild=minimumWinVer.build,
 			),
 			# Translators: dialog title shown when trying to install the add-on on unsupported systems.
-			_("Unsupported Windows release"),  # type: ignore[name-defined]
+			_("Unsupported Windows release"),
 		)
 		raise RuntimeError(
 			f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentWinVer.build})"
