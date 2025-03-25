@@ -24,7 +24,8 @@ def onInstall() -> None:
 	if (currentWinVer := winVersion.getWinVer()) < minimumWinVer:
 		gui.MessageDialog.alert(
 			_( # Translators: dialog text shown when trying to install the add-on on unsupported systems.
-				"You are using {releaseName} ({build}), a Windows release not supported by this add-on.\n"
+				"You are using {releaseName} ({build}), "
+				"a Windows release not supported by Windows App Essentials NVDA add-on.\n"
 				"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 			).format(
 				releaseName=currentWinVer.releaseName,
@@ -33,7 +34,7 @@ def onInstall() -> None:
 				supportedBuild=minimumWinVer.build,
 			),
 			# Translators: dialog title shown when trying to install the add-on on unsupported systems.
-			_("Unsupported Windows release"),
+			_("Windows App Essentials install error"),
 		)
 		raise RuntimeError(
 			f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentWinVer.build})"
