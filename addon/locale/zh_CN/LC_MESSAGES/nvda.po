@@ -19,8 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.5\n"
 
-#. Tell mypy that it is okay to ignore gettext calls.
-#. type: ignore[name-defined]
 #. Translators: dialog text shown when trying to install the add-on on unsupported systems.
 #, python-brace-format
 msgid ""
@@ -35,13 +33,13 @@ msgstr ""
 msgid "Unsupported Windows release"
 msgstr "不受支持的 Windows 版本"
 
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Windows App Essentials"
 msgstr "Windows 应用增强"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
 msgid "Improving support for various apps and controls on Windows 10 and later"
 msgstr "改进对 Windows 10 及更高版本系统的各种应用程序和控件的支持"

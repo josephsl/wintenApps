@@ -17,8 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.5\n"
 
-#. Tell mypy that it is okay to ignore gettext calls.
-#. type: ignore[name-defined]
 #. Translators: dialog text shown when trying to install the add-on on unsupported systems.
 #, python-brace-format
 msgid ""
@@ -31,14 +29,14 @@ msgstr ""
 msgid "Unsupported Windows release"
 msgstr "Дэмжигдээгүй Windows үйлдлийн системийн хувилбар"
 
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Windows App Essentials"
 msgstr "Windows App Essentials аппуудыг хүртээмжтэй болгох add-on нэмэлт"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
 msgid "Improving support for various apps and controls on Windows 10 and later"
 msgstr ""
 "Windows 10 үйлдлийн систем болон үүнээс хойш гарах хувилбаруудад хамаарах "
