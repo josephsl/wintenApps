@@ -24,6 +24,6 @@ Bemærkninger:
 For en liste over ændringer, der er fremstillet mellem hver udgivelse af
 tilføjelsen, henvises til [ændringslog for tilføjelsen][1].
 
-[[!tag dev stable]]
+[[!tag stable legacy]]
 
 [1]: https://github.com/josephsl/wintenapps/blob/main/changes.md

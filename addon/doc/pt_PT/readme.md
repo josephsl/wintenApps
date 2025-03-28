@@ -25,6 +25,6 @@ Notas:
 Para obter uma lista das alterações efectuadas entre cada versão do extra,
 consulte o documento [changelogs for add-on releases][1].
 
-[[!tag dev stable]]
+[[!tag stable legacy]]
 
 [1]: https://github.com/josephsl/wintenapps/blob/main/changes.md

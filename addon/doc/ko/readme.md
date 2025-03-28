@@ -16,6 +16,6 @@
 
 추가 기능 변경 내역은 [변경 내용 문서][1]에서 확인할 수 있습니다.
 
-[[!tag dev stable]]
+[[!tag stable legacy]]
 
 [1]: https://github.com/josephsl/wintenapps/blob/main/changes.md

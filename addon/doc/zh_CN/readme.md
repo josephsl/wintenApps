@@ -17,6 +17,6 @@
 
 有关每个版本之间所做的具体更改，请参阅[另外发布的更新日志][1]文档。
 
-[[!tag dev stable]]
+[[!tag stable legacy]]
 
 [1]: https://github.com/josephsl/wintenapps/blob/main/changes.md

@@ -24,6 +24,6 @@ Napomene:
 Za popis promjena između izdanja dodatka, pogledaj dokument [s izmjenama
 izdanja dodatka][1].
 
-[[!tag dev stable]]
+[[!tag stable legacy]]
 
 [1]: https://github.com/josephsl/wintenapps/blob/main/changes.md
