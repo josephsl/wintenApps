@@ -31,7 +31,6 @@ This is the last add-on release to support Windows 10.
 ## Version 25.05
 
 * Removed app module for Copilot WebView2 app.
-* Copilot (WebView2): Replaced by WinUI 3 (native) app, NVDA will no longer announce Copilot responses.
 
 ## Version 25.04 (A resurrected global plugin)
 
