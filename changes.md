@@ -16,7 +16,6 @@ This section lists changes planned for future add-on releases. Items in this sec
 * Windows 11: Requires Version 24H2 or later.
 * NVDA 2025.1 or later is required.
 * Removed app modules for Copilot WebView2 app and modern keyboard.
-* Copilot (WebView2): NVDA will no longer announce Copilot responses.
 * Modern keyboard: Removed Windows 11 clipboard history content announcements workaround as it is part of NVDA 2025.1.
 
 ## Version 25.04 (A resurrected global plugin)
