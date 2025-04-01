@@ -19,7 +19,6 @@ This section lists changes planned for future add-on releases. Items in this sec
 ## Version 25.05
 
 * Removed app module for Copilot WebView2 app.
-* Copilot (WebView2): Replaced by WinUI 3 (native) app, NVDA will no longer announce Copilot responses.
 
 ## Version 25.04 (A resurrected global plugin)
 
