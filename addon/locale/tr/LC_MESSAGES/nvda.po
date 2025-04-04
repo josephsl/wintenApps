@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Windows Temel Uygulamalar\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-19 01:11-0700\n"
+"PO-Revision-Date: 2025-04-02 14:20-0600\n"
 "Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr_TR\n"
@@ -20,33 +20,30 @@ msgstr ""
 "X-Poedit-SearchPath-0: appModules\n"
 "X-Poedit-SearchPath-1: globalPlugins\n"
 
-#. Tell mypy that it is okay to ignore gettext calls.
-#. type: ignore[name-defined]
 #. Translators: dialog text shown when trying to install the add-on on unsupported systems.
 #, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
+"Windows App Essentials NVDA add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
-"Bu eklenti tarafından desteklenmeyen bir Windows sürümü olan {releaseName} "
-"({build}) kullanıyorsunuz.\n"
-"Bu eklenti, {supportedReleaseName} ({supportedBuild}) veya sonraki bir "
-"sürümünü gerektirir."
+"Windows Temel Uygulamalar NVDA eklentisi tarafından desteklenmeyen bir "
+"Windows sürümü olan {releaseName} ({build}) kullanıyorsunuz.\n"
+"Bu eklenti {supportedReleaseName} ({supportedBuild}) veya sonraki sürümleri "
+"gerektirir."
 
 #. Translators: dialog title shown when trying to install the add-on on unsupported systems.
-msgid "Unsupported Windows release"
-msgstr "Desteklenmeyen Windows sürümü"
+msgid "Windows App Essentials install error"
+msgstr "Windows Temel Uygulamalar Yükleme Hatası"
 
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Windows App Essentials"
 msgstr "Windows Temel Uygulamalar"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "Improving support for various apps and controls on Windows 10 and later"
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
+msgid "Improving support for various apps and controls on Windows 11"
 msgstr ""
-"Windows 10 ve sonraki Windows sürümlerinde çeşitli uygulamalar ve kontroller "
-"için desteği iyileştirir"
+"Windows 11'deki çeşitli uygulamalar ve denetimler için desteği geliştirir"

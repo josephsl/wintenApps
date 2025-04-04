@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-19 01:13-0700\n"
+"PO-Revision-Date: 2025-03-28 18:01-0600\n"
 "Last-Translator: Ungjin Park <ungjin312@kakao.com>\n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -17,29 +17,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.5\n"
 
-#. Tell mypy that it is okay to ignore gettext calls.
-#. type: ignore[name-defined]
 #. Translators: dialog text shown when trying to install the add-on on unsupported systems.
 #, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
+"Windows App Essentials NVDA add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
-"본 추가 기능은 {releaseName}({build}) 버전을 지원하지 않습니다.\n"
+"이 NVDA 추가 기능(Windows App Essentials)은 {releaseName}({build}) 버전을 "
+"지원하지 않습니다.\n"
 "{supportedReleaseName}({supportedBuild}) 이상으로 업그레이드하십시오."
 
 #. Translators: dialog title shown when trying to install the add-on on unsupported systems.
-msgid "Unsupported Windows release"
-msgstr "지원하지 않는 윈도우 버전 사용중"
+msgid "Windows App Essentials install error"
+msgstr "Windows App Essentials 설치 오류"
 
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on
-#. to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
 msgid "Windows App Essentials"
 msgstr "Windows App Essentials"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "Improving support for various apps and controls on Windows 10 and later"
-msgstr "윈도우 10 이상에서의 앱 지원 기능 향상"
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
+msgid "Improving support for various apps and controls on Windows 11"
+msgstr "윈도우 11에서의 앱 지원 기능 향상"
