@@ -23,6 +23,4 @@ Napomene:
 Za listu promena izvršenih u različitim verzijama dodatka, pogledajte
 dokument [changelogs for add-on releases][1].
 
-[[!tag stable legacy]]
-
 [1]: https://github.com/josephsl/wintenapps/blob/main/changes.md
