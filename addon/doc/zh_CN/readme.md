@@ -14,6 +14,4 @@
 
 有关各插件版本间的具体更改，请参阅[更新日志][1]。
 
-[[!tag stable legacy]]
-
 [1]: https://github.com/josephsl/wintenapps/blob/main/changes.md

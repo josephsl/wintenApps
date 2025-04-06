@@ -21,6 +21,4 @@ as well as enhancements and fixes for certain controls found in Windows 11.
 Перелік змін, внесених між випусками додатка, наведено у документі [журнал
 змін випусків додатка][1].
 
-[[!tag stable legacy]]
-
 [1]: https://github.com/josephsl/wintenapps/blob/main/changes.md
