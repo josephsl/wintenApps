@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-19 01:11-0700\n"
+"PO-Revision-Date: 2025-03-28 23:18+0100\n"
 "Last-Translator: José Manuel Delicado <jmdaweb@hotmail.com>\n"
 "Language-Team: add-ons spanihs translation team <oprisniki@gmail.com>\n"
 "Language: es\n"
@@ -21,17 +21,17 @@ msgstr ""
 #, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
+"Windows App Essentials NVDA add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
 "Estás usando {releaseName} ({build}), una versión de Windows no soportada "
-"por este complemento.\n"
+"por el complemento Windows App Essentials para NVDA.\n"
 "Este complemento necesita {supportedReleaseName} ({supportedBuild}) o "
 "posterior."
 
 #. Translators: dialog title shown when trying to install the add-on on unsupported systems.
-msgid "Unsupported Windows release"
-msgstr "Versión de Windows no soportada"
+msgid "Windows App Essentials install error"
+msgstr "Error de instalación de Windows App Essentials"
 
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
