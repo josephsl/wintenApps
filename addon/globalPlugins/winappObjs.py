@@ -20,6 +20,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super().__init__()
 		# NVDA Core issues 17407 and 17771 (hack):
 		# add WinUI3 top-level class name to good UIA window classes tuple to enable mouse/touch navigation.
+		# Resolved in NVDA 2025.2.
 		if "Microsoft.UI.Content.DesktopChildSiteBridge" not in UIAHandler.goodUIAWindowClassNames:
 			log.debug(
 				"winapps: adding Microsoft.UI.Content.DesktopChildSiteBridge to good UIA window class names"
