@@ -34,6 +34,7 @@ This is the last add-on release to support Windows 10.
 ## Version 25.05
 
 * Removed app module for Copilot WebView2 app.
+* Changed the unsupported Windows release message shown when installing the add-on by specifying the add-on name, used to improve the installation experience as part of automatic add-on updates introduced in NVDA 2025.1.
 
 ## Version 25.04 (A resurrected global plugin)
 
