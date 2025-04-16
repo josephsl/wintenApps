@@ -18,7 +18,7 @@ This is the final planned add-on release and requires Windows 11 series or later
 
 ## Version 25.08 (goodbye, Windows 10)
 
-This is the last add-on release to support Windows 10.
+This is the last add-on release to support Windows 10. While the user interface and documentation will refer to Windows 11, installing the add-on on Windows 10 remains supported.
 
 * Windows 11: Requires Version 24H2 or later.
 * Removed WinUI 3 app mouse and touch navigation workaround as it is resolved in NVDA 2025.2.
