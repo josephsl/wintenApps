@@ -18,7 +18,7 @@ Before reading further, please read this section to better understand specifics 
 You can contribute to Windows App Essentials in a number of ways:
 
 1. Testing: provided that you are using supported Windows releases (including latest Windows Insider Preview build) with latest NVDA and the add-on installed, you can help improve the add-on by testing and providing feedback.
-2. Localization: you can translate add-on documentation and messages via NVDA translations workflow. The author (Joseph Lee) does not take pull requests involving localization data.
+2. Localization: you can translate add-on documentation and messages via NVDA translations workflow (Subversion or Crowdin). The author (Joseph Lee) does not take pull requests involving localization data.
 3. Issues and pull requests: the author welcomes issues and pull requests submitted via GitHub (see the section on issues and pull requests for more information).
 
 ## Contribution requirements
@@ -59,7 +59,7 @@ Testing the add-on simply involves using NVDA as usual. If you do encounter issu
 
 ### Localizing add-on documentation and messages
 
-You must do this through NVDA translations workflow, not through pull requests.
+You must do this through NVDA translations workflow (Subversion or Crowdin), not through pull requests.
 
 ### Offering code and pull requests
 
