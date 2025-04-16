@@ -13,19 +13,19 @@ This section lists changes planned for future add-on releases. Items in this sec
 * NVDA 2025.2 or later is required.
 * Removed WinUI 3 app mouse and touch navigation workaround as it is resolved in NVDA 2025.2.
 
-## Version Selenium.3 (farewell, for now)
+## Version 25.10 (farewell, for now)
 
 This is the final planned add-on release and requires Windows 11 series or later.
 
 * Removed support for Windows 10 series, requiring Windows 11 series or later.
 
-## Version Selenium.2 (goodbye, Windows 10)
+## Version 25.08 (goodbye, Windows 10)
 
 This is the last add-on release to support Windows 10.
 
 * Windows 11: Requires Version 24H2 or later.
 
-## Version Selenium.1
+## Version 25.07
 
 * NVDA 2025.1 or later is required.
 * Removed app module for modern keyboard.
@@ -34,6 +34,7 @@ This is the last add-on release to support Windows 10.
 ## Version 25.05
 
 * Removed app module for Copilot WebView2 app.
+* Changed the unsupported Windows release message shown when installing the add-on by specifying the add-on name, used to improve the installation experience as part of automatic add-on updates introduced in NVDA 2025.1.
 
 ## Version 25.04 (A resurrected global plugin)
 
