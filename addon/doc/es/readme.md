@@ -2,20 +2,23 @@
 
 * Autores: Joseph Lee, Derek Riemer y otros
 
-This add-on is a collection of app modules for various modern Windows apps,
-as well as enhancements and fixes for certain controls found in Windows 11.
+Este complemento es una colección de módulos de aplicación para varias
+aplicaciones modernas de Windows, así como Mejoras y correcciones para
+ciertos controles encontrados en Windows 11.
 
 Notas:
 
-* This add-on requires Windows 11 24H2 (build 26100) or later.
+* Este complemento requiere Windows 11 Versión 24H2 (compilación 26100) o
+  posterior.
 * La duración del soporte de las actualizaciones de características está
   vinculada a la duración del soporte al cliente (ediciones Home, Pro, Pro
   Education, Pro for Workstations), y el complemento podría finalizar el
   soporte para una actualización de características antes del fin del
   soporte al cliente. Consulta <https://aka.ms/WindowsTargetVersioninfo>
   para más información y fechas de soporte.
-* Although installation is possible, this add-on does not support Windows
-  Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Aunque la instalación es posible, este complemento no soporta Windows
+  Enterprise LTSC (canal de servicio a largo plazo) ni las versiones de
+  Server.
 * No se soportarán todas las funciones de las compilaciones Windows Insider
   Preview, más si se introducen en un subconjunto de insiders de Windows.
 
