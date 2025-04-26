@@ -21,17 +21,17 @@ msgstr ""
 #, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
+"Windows App Essentials NVDA add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
 "Използвате {releaseName} ({build}), версия на Windows, която не се поддържа "
-"от тази добавка.\n"
+"от добавката \"Базов пакет за приложения в Windows\" за NVDA.\n"
 "Тази добавка изисква {supportedReleaseName} ({supportedBuild}) или по-нова "
 "версия."
 
 #. Translators: dialog title shown when trying to install the add-on on unsupported systems.
-msgid "Unsupported Windows release"
-msgstr "Неподдържано издание на Windows"
+msgid "Windows App Essentials install error"
+msgstr "Неуспешно инсталиране на Базов пакет за приложения в Windows"
 
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
