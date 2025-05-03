@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wintenApps\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-02-19 01:10-0700\n"
+"PO-Revision-Date: 2025-05-02 15:27-0600\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -16,22 +16,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #. Translators: dialog text shown when trying to install the add-on on unsupported systems.
 #, python-brace-format
 msgid ""
 "You are using {releaseName} ({build}), a Windows release not supported by "
-"this add-on.\n"
+"Windows App Essentials NVDA add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
-"Sie verwenden {releaseName} ({build}), eine Windows-Version, die von dieser "
-"NVDA-Erweiterung nicht unterstützt wird.\n"
-"Es wird {supportedReleaseName} ({supportedBuild}) oder neuer benötigt."
+"Sie verwenden {releaseName} ({build}), das von Windows App Essentials nicht "
+"unterstützt wird.\n"
+"Diese NVDA-Erweiterung benötigt {supportedReleaseName} ({supportedBuild}) "
+"oder neuer."
 
 #. Translators: dialog title shown when trying to install the add-on on unsupported systems.
-msgid "Unsupported Windows release"
-msgstr "Nicht unterstützte Windows-Version"
+msgid "Windows App Essentials install error"
+msgstr "Installationsfehler von Windows App Essentials"
 
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
