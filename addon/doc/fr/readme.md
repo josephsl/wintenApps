@@ -27,6 +27,4 @@ Pour obtenir la liste des changements effectuées entre chaque version de
 l'extension, reportez-vous au document [changelogs pour les versions de
 l'extension][1].
 
-[[!tag stable legacy]]
-
 [1]: https://github.com/josephsl/wintenapps/blob/main/changes.md

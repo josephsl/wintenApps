@@ -26,6 +26,4 @@ Para ver una lista de cambios hechos entre cada actualización del
 complemento, consulta el documento [Registros de cambios de versiones del
 complemento (en inglés)][1].
 
-[[!tag stable legacy]]
-
 [1]: https://github.com/josephsl/wintenapps/blob/main/changes.md
