@@ -26,6 +26,4 @@ Notatki:
 Lista zmian wprowadzonych pomiędzy poszczególnymi wydaniami dodatków
 znajduje się w dokumencie [changelogs for add-on releases][1].
 
-[[!tag stable legacy]]
-
 [1]: https://github.com/josephsl/wintenapps/blob/main/changes.md

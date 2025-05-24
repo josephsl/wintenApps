@@ -28,6 +28,4 @@ Eine Liste der Änderungen, die zwischen den einzelnen Versionen der
 NVDA-Erweiterung vorgenommen wurden, finden Sie im Dokument
 [Änderungsprotokolle für Versionen der NVDA-Erweiterung][1].
 
-[[!tag stable legacy]]
-
 [1]: https://github.com/josephsl/wintenapps/blob/main/changes.md

@@ -24,6 +24,4 @@ Huomautukset:
 Katso [muutoslokeista][1] luettelo lisäosan kaikkiin versioihin tehdyistä
 muutoksista.
 
-[[!tag stable legacy]]
-
 [1]: https://github.com/josephsl/wintenapps/blob/main/changes.md
