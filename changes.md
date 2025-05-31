@@ -6,10 +6,6 @@ Note: originally called Windows 10 App Essentials, this add-on was renamed to Wi
 
 For each add-on version entry, minor versions (such as 18.06.1) are included under major release (18.06, for example).
 
-## Version preview
-
-This section lists changes planned for future add-on releases. Items in this section are not tied to specific releases and may or may not appear in stable add-on releases. See below sections for items included in past or upcoming stable releases.
-
 ## Version 25.10 (farewell, for now)
 
 This is the final planned add-on release and requires Windows 11 series or later.
