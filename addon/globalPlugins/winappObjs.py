@@ -4,9 +4,10 @@
 # Adds handlers for various UIA controls found in Windows 11.
 
 import globalPluginHandler
+import appModuleHandler
 import globalVars
 import UIAHandler
-from UIAHandler import _isDebug
+from UIAHandler import _isDebug, COMError
 import config
 import eventHandler
 from logHandler import log
@@ -46,18 +47,47 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 		import ui
 		if activityId == "Windows.Shell.SnapComponent.SnapHotKeyResults":
 			ui.message(displayString)
-		# NVDA Core issue 16871: some elements do not report native window handle when in fact
-		# native window handle is shown via runtime ID.
-		# This is seen when handling Windows 11 Voice Access notifications.
+		# NVDA Core issues 16871 and 18220: some elements do not report native window handle.
+		# Yet messages such as window state should be announced from everywhere.
+		# Therefore, ask app modules if notifications from these elements should be processed.
 		if not (window := self.getNearestWindowHandle(sender)):
-			if _isDebug():
-				log.debugWarning(
-					"HandleNotificationEvent: native window handle not found in runtime ID: "
-					f"NotificationProcessing={NotificationProcessing} "
-					f"displayString={displayString} "
-					f"activityId={activityId}"
-				)
-			return
+			try:
+				processId = sender.CachedProcessID
+			except COMError:
+				pass
+			else:
+				appMod = appModuleHandler.getAppModuleFromProcessID(processId)
+				if hasattr(appMod, "shouldProcessUIANotificationEventNoNativeWindowHandle"):
+					processNotification = appMod.shouldProcessUIANotificationEventNoNativeWindowHandle(
+						sender=sender,
+						NotificationKind=NotificationKind,
+						NotificationProcessing=NotificationProcessing,
+						displayString=displayString,
+						activityId=activityId
+					)
+				else:
+					processNotification = False
+				if processNotification:
+					# Take foreground window handle as a substitute.
+					import api
+					window = api.getForegroundObject().windowHandle
+					if _isDebug():
+						log.debugWarning(
+							"HandleNotificationEvent: processing notification event without native window handle: "
+							f"NotificationProcessing={NotificationProcessing} "
+							f"displayString={displayString} "
+							f"activityId={activityId} "
+							f"using foreground window handle with handle value {window}"
+						)
+				else:
+					if _isDebug():
+						log.debugWarning(
+							"HandleNotificationEvent: native window handle not found: "
+							f"NotificationProcessing={NotificationProcessing} "
+							f"displayString={displayString} "
+							f"activityId={activityId}"
+						)
+					return
 		try:
 			obj = NVDAObjects.UIA.UIA(windowHandle=window, UIAElement=sender)
 		except Exception:
