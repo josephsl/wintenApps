@@ -17,6 +17,12 @@ This section lists changes planned for future add-on releases. Items in this sec
 * Removed app module for modern keyboard.
 * Modern keyboard: Removed Windows 11 clipboard history content announcements workaround as it is part of NVDA 2025.1.
 
+## Version 25.06
+
+* Reintroduced Windows 11 Voice Access app module.
+* Windows 11: In Version 24H2 and later, NVDA will announce window state such as maximize and snap when Windows+arrow keys are pressed.
+* Voice access: In addition to microphone status changes, messages such as dictation error will be reported from everywhere.
+
 ## Version 25.05
 
 * Removed app module for Copilot WebView2 app.
