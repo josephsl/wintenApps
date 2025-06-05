@@ -6,6 +6,7 @@
 import globalPluginHandler
 import globalVars
 import UIAHandler
+from UIAHandler import _isDebug
 import config
 import eventHandler
 from logHandler import log
@@ -22,7 +23,7 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 		displayString: str,
 		activityId: str,
 	) -> None:
-		if UIAHandler._isDebug():
+		if _isDebug():
 			log.debug(
 				"handleNotificationEvent called "
 				f"with notificationKind {self.getUIANotificationKindDebugString(NotificationKind)}, "
@@ -33,7 +34,7 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 			)
 		if not self.MTAThreadInitEvent.is_set():
 			# UIAHandler hasn't finished initialising yet, so just ignore this event.
-			if UIAHandler._isDebug():
+			if _isDebug():
 				log.debug("HandleNotificationEvent: event received while not fully initialized")
 			return
 		import NVDAObjects.UIA
@@ -49,7 +50,7 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 		# native window handle is shown via runtime ID.
 		# This is seen when handling Windows 11 Voice Access notifications.
 		if not (window := self.getNearestWindowHandle(sender)):
-			if UIAHandler._isDebug():
+			if _isDebug():
 				log.debugWarning(
 					"HandleNotificationEvent: native window handle not found in runtime ID: "
 					f"NotificationProcessing={NotificationProcessing} "
@@ -60,7 +61,7 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 		try:
 			obj = NVDAObjects.UIA.UIA(windowHandle=window, UIAElement=sender)
 		except Exception:
-			if UIAHandler._isDebug():
+			if _isDebug():
 				log.debugWarning(
 					"HandleNotificationEvent: Exception while creating object: "
 					f"NotificationProcessing={NotificationProcessing} "
@@ -72,7 +73,7 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 		if not obj:
 			# Sometimes notification events can be fired on a UIAElement that has no windowHandle and does not connect through parents back to the desktop.
 			# There is nothing we can do with these.
-			if UIAHandler._isDebug():
+			if _isDebug():
 				log.debug(
 					"HandleNotificationEvent: Ignoring because no object: "
 					f"NotificationProcessing={NotificationProcessing} "
@@ -80,7 +81,7 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 					f"activityId={activityId}",
 				)
 			return
-		if UIAHandler._isDebug():
+		if _isDebug():
 			log.debug(
 				"Queuing UIA_notification NVDA event " f"for NVDAObject {obj}",
 			)
