@@ -67,10 +67,7 @@ i18nSources = pythonSources + ["buildVars.py"]
 
 # Files that will be ignored when building the nvda-addon file
 # Paths are relative to the addon directory, not to the root directory of your addon sources.
-excludedFiles = [
-	# Empty app module/__init__.py: kept in the repo in case needed in the future.
-	"appModules/__init__.py"
-]
+excludedFiles = []
 
 
 # Base language for the NVDA add-on
