@@ -10,6 +10,7 @@ import UIAHandler
 from UIAHandler import _isDebug, COMError
 import config
 import eventHandler
+import winVersion
 from logHandler import log
 
 
@@ -134,6 +135,9 @@ def disableInSecureMode(cls):
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super().__init__()
+		#The following hack applies to Windows 11 (24H2) and later.
+		if winVersion.getWinVer() < winVersion.WIN11_24H2:
+			return
 		# Hack: add extra things for UIA support if required and uIA is enabled.
 		if not config.conf["UIA"]["enabled"]:
 			raise RuntimeError("UIA forcefully disabled in configuration")
