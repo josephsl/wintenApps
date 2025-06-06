@@ -40,7 +40,7 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 			return
 		import NVDAObjects.UIA
 
-		# NVDA Core issues 17841 and 18175: announce window states across apps.
+		# NVDA Core issues 17841 and 18175: announce window states across apps (Windows 11 24H2 and later).
 		# These messages come from a File Explorer (shell) element and there is no native window handle.
 		# Report it here rather than from File Explorer app module
 		# to avoid patching possibly patched app module across add-ons.
