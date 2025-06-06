@@ -2,7 +2,7 @@
 
 Author: Joseph Lee
 
-Revision: March 2025
+Revision: June 2025
 
 Note: originally called Windows 10 App Essentials, the add-on was renamed to Windows App Essentials in 2021 with the introduction of Windows 11. Parts of this document will refer to the original add-on name or Windows 10.
 
@@ -319,7 +319,7 @@ Historically, the following modules and enhancers/fixers were included in the ad
 * Settings: selectively announce various status information, provide correct labels for certain controls.
 * Shell Experience Host (action center/quick settings): suppress extraneous status announcements, enable touch and mouse interaction in Windows 11 24H2 (2024 Update) quick settings.
 
-As of March 2025, no app modules remain apart from an empty template module. Settings ap module was removed in February 2025 with live region change bug fix from Microsoft, and Copilot WebView2 app module was removed in March 2025 with the change to WinUI 3 framework. With NVDA 2025.1 (under development), contents from modern keyboard app module are part of NVDA. Therefore, the following sections describe what the add-on did in the past for the most part.
+App modules have seen major changes thorughout 2025. Settings ap module was removed in February 2025 with live region change bug fix from Microsoft, and Copilot WebView2 app module was removed in March 2025 with the change to WinUI 3 framework. With NVDA 2025.1 (under development), contents from modern keyboard app module are part of NVDA. In June 2025, Notepad and Voice Access app modules made a comeback to fix issues. Even then, most of the below content describe what the add-on did in the past for the most part.
 
 ### Adding useful features in apps
 
