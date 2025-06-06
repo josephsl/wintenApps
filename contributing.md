@@ -157,4 +157,4 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 * Selenium (2025):
 	* Selenium 1: December 2024 to April 2025, Windows 11 is required to contribute to add-on development, removed Settings app module with the removal of Windows 10 Windows Update live region change workaround, restore WinApps global plugin to handle WinUI 3 top-level window UIA reclassification across apps to enable mouse and touch navigation
 	* Selenium 2: March 2025 to August 2025, NVDA 2025.1 requirement, end of support for Windows 10 series (Version 22H2) and 11 2023 Update (Version 23H2), removed Copilot WebView2 and modern keyboard app modules, removed WinUI 3 app mouse and touch navigation workaround
-	* Selenium 3 (final ad-on development milestone): June 2025 to October 2025, NVDA 2025.2 requirement, freezing localization data
+	* Selenium 3 (final ad-on development milestone): June 2025 to October 2025, NVDA 2025.2 requirement, freezing localization data, UIA notification event handling for elements without native window handle set, reintroduced Voice Access support, go to line control reclassification in Notepad
