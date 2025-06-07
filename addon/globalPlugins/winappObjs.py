@@ -41,13 +41,6 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 			return
 		import NVDAObjects.UIA
 
-		# NVDA Core issues 17841 and 18175: announce window states across apps (Windows 11 24H2 and later).
-		# These messages come from a File Explorer (shell) element and there is no native window handle.
-		# Report it here rather than from File Explorer app module
-		# to avoid patching possibly patched app module across add-ons.
-		import ui
-		if activityId == "Windows.Shell.SnapComponent.SnapHotKeyResults":
-			ui.message(displayString)
 		# NVDA Core issues 16871 and 18220: some elements do not report native window handle.
 		# Yet messages such as window state should be announced from everywhere.
 		# Therefore, ask app modules if notifications from these elements should be processed.
