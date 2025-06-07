@@ -16,7 +16,6 @@ from logHandler import log
 
 # Extended UIA handler to handle notification events from apps without objects.
 class UIAHandlerEx(UIAHandler.UIAHandler):
-
 	def IUIAutomationNotificationEventHandler_HandleNotificationEvent(
 		self,
 		sender: UIAHandler.UIA.IUIAutomationElement,
@@ -55,7 +54,7 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 						NotificationKind=NotificationKind,
 						NotificationProcessing=NotificationProcessing,
 						displayString=displayString,
-						activityId=activityId
+						activityId=activityId,
 					)
 				else:
 					processNotification = False
@@ -65,19 +64,14 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 					window = api.getForegroundObject().windowHandle
 					if _isDebug():
 						log.debugWarning(
-							"HandleNotificationEvent: processing notification event without native window handle: "
-							f"NotificationProcessing={NotificationProcessing} "
-							f"displayString={displayString} "
-							f"activityId={activityId} "
-							f"using foreground window handle with handle value {window}"
+							"HandleNotificationEvent: processing element without native window handle "
+							f"at request of appModule {appMod.appName} "
+							f"using foreground window handle with handle value {window}",
 						)
 				else:
 					if _isDebug():
 						log.debugWarning(
-							"HandleNotificationEvent: native window handle not found: "
-							f"NotificationProcessing={NotificationProcessing} "
-							f"displayString={displayString} "
-							f"activityId={activityId}"
+							"HandleNotificationEvent: native window handle not found",
 						)
 					return
 		import NVDAObjects.UIA
