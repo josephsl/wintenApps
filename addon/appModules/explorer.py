@@ -19,8 +19,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 	def shouldProcessUIANotificationEventNoWindowHandle(
 		self,
 		sender,
-		activityId: str="",
-		**kwargs
+		activityId: str = "",
+		**kwargs,
 	) -> bool:
 		# NVDA Core issue 17841: announce window restore/maximize/snap states.
 		if activityId == "Windows.Shell.SnapComponent.SnapHotKeyResults":
@@ -33,7 +33,7 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		nextHandler: Callable[[], None],
 		displayString: str | None = None,
 		activityId: str | None = None,
-		**kwargs
+		**kwargs,
 	) -> None:
 		# NVDA Core issues 17841 and 18175: announce window states across apps (Windows 11 24H2 and later).
 		# These messages come from a File Explorer (shell) element and there is no native window handle.
