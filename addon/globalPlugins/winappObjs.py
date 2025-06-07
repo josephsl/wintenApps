@@ -39,8 +39,6 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 			if _isDebug():
 				log.debug("HandleNotificationEvent: event received while not fully initialized")
 			return
-		import NVDAObjects.UIA
-
 		# NVDA Core issues 16871 and 18220: some elements do not report native window handle.
 		# Yet messages such as window state should be announced from everywhere.
 		# Therefore, ask app modules if notifications from these elements should be processed.
@@ -82,6 +80,8 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 							f"activityId={activityId}"
 						)
 					return
+		import NVDAObjects.UIA
+
 		try:
 			obj = NVDAObjects.UIA.UIA(windowHandle=window, UIAElement=sender)
 		except Exception:
