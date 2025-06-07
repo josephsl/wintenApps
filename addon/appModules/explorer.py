@@ -42,6 +42,17 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 			)
 		nextHandler()
 
+	def shouldProcessUIANotificationEventNoWindowHandle(
+		self,
+		sender,
+		activityId: str="",
+		**kwargs
+	) -> bool:
+		# NVDA Core issue 17841: announce window restore/maximize/snap states.
+		if activityId == "Windows.Shell.SnapComponent.SnapHotKeyResults":
+			return True
+		return False
+
 	def event_UIA_notification(
 		self,
 		obj: NVDAObject,
