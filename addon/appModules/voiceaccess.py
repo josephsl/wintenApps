@@ -19,7 +19,7 @@ class AppModule(appModuleHandler.AppModule):
 			return True
 		return False
 
-	def shouldProcessUIANotificationEventNoWindowHandle(self, sender, **kwargs):
+	def shouldProcessUIANotificationEvent(self, sender, **kwargs):
 		# Say "yes" so microphone status, entered text, and others can be announced.
 		return True
 
