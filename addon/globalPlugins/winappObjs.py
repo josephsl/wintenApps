@@ -58,22 +58,21 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 					)
 				else:
 					processNotification = False
-				if processNotification:
-					# Take foreground window handle as a substitute.
-					import api
-					window = api.getForegroundObject().windowHandle
+				if not processNotification:
 					if _isDebug():
 						log.debugWarning(
-							"HandleNotificationEvent: processing element without native window handle "
+							"HandleNotificationEvent: dropping notification event "
 							f"at request of appModule {appMod.appName} "
-							f"using foreground window handle with handle value {window}",
-						)
-				else:
-					if _isDebug():
-						log.debugWarning(
-							"HandleNotificationEvent: native window handle not found",
 						)
 					return
+				# Take foreground window handle as a substitute.
+				import api
+				window = api.getForegroundObject().windowHandle
+				if _isDebug():
+					log.debugWarning(
+						"HandleNotificationEvent: native window handle not found, "
+						f"using foreground window handle {window}",
+					)
 		import NVDAObjects.UIA
 
 		try:
