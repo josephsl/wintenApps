@@ -41,38 +41,38 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 		# NVDA Core issues 16871 and 18220: some elements do not report native window handle.
 		# Yet messages such as window state should be announced from everywhere.
 		# Therefore, ask app modules if notifications from these elements should be processed.
-		if not (window := self.getNearestWindowHandle(sender)):
-			try:
-				processId = sender.CachedProcessID
-			except COMError:
-				pass
+		try:
+			processId = sender.CachedProcessID
+		except COMError:
+			pass
+		else:
+			appMod = appModuleHandler.getAppModuleFromProcessID(processId)
+			if hasattr(appMod, "shouldProcessUIANotificationEvent"):
+				processNotification = appMod.shouldProcessUIANotificationEvent(
+					sender,
+					NotificationKind=NotificationKind,
+					NotificationProcessing=NotificationProcessing,
+					displayString=displayString,
+					activityId=activityId,
+				)
 			else:
-				appMod = appModuleHandler.getAppModuleFromProcessID(processId)
-				if hasattr(appMod, "shouldProcessUIANotificationEvent"):
-					processNotification = appMod.shouldProcessUIANotificationEvent(
-						sender,
-						NotificationKind=NotificationKind,
-						NotificationProcessing=NotificationProcessing,
-						displayString=displayString,
-						activityId=activityId,
-					)
-				else:
-					processNotification = False
-				if not processNotification:
-					if _isDebug():
-						log.debugWarning(
-							"HandleNotificationEvent: dropping notification event "
-							f"at request of appModule {appMod.appName} "
-						)
-					return
-				# Take foreground window handle as a substitute.
-				import api
-				window = api.getForegroundObject().windowHandle
+				processNotification = False
+			if not processNotification:
 				if _isDebug():
 					log.debugWarning(
-						"HandleNotificationEvent: native window handle not found, "
-						f"using foreground window handle {window}",
+						"HandleNotificationEvent: dropping notification event "
+						f"at request of appModule {appMod.appName}",
 					)
+				return
+		# Take foreground window handle as a substitute if window handle is not set.
+		import api
+		if not (window := self.getNearestWindowHandle(sender)):
+			window = api.getForegroundObject().windowHandle
+			if _isDebug():
+				log.debugWarning(
+					"HandleNotificationEvent: native window handle not found, "
+					f"using foreground window handle {window}",
+				)
 		import NVDAObjects.UIA
 
 		try:
