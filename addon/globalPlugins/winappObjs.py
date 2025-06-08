@@ -38,9 +38,11 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 			if _isDebug():
 				log.debug("HandleNotificationEvent: event received while not fully initialized")
 			return
+		# Sometimes notification events can be fired on a UIAElement that has no windowHandle
+		# and does not connect through parents back to the desktop.
 		# NVDA Core issues 16871 and 18220: some elements do not report native window handle.
 		# Yet messages such as window state should be announced from everywhere.
-		# Therefore, ask app modules if notifications from these elements should be processed.
+		# Therefore, ask app modules if notifications (including from these elements) should be processed.
 		try:
 			processId = sender.CachedProcessID
 		except COMError:
@@ -77,7 +79,7 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 		import NVDAObjects.UIA
 
 		try:
-			obj = NVDAObjects.UIA.UIA(windowHandle=window, UIAElement=sender)
+			obj = NVDAObjects.UIA.UIA(UIAElement=sender, windowHandle=window)
 		except Exception:
 			if _isDebug():
 				log.debugWarning(
@@ -89,8 +91,7 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 				)
 			return
 		if not obj:
-			# Sometimes notification events can be fired on a UIAElement that has no windowHandle and does not connect through parents back to the desktop.
-			# There is nothing we can do with these.
+			# Sometimes UIA object can be None despite setting window handle to something else.
 			if _isDebug():
 				log.debug(
 					"HandleNotificationEvent: Ignoring because no object: "
