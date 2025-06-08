@@ -47,17 +47,18 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 			pass
 		else:
 			appMod = appModuleHandler.getAppModuleFromProcessID(processId)
-			if hasattr(appMod, "shouldProcessUIANotificationEvent"):
-				processNotification = appMod.shouldProcessUIANotificationEvent(
-					sender,
-					NotificationKind=NotificationKind,
-					NotificationProcessing=NotificationProcessing,
-					displayString=displayString,
-					activityId=activityId,
-				)
-			else:
-				processNotification = False
-			if not processNotification:
+			shouldProcessUIANotificationEvent = getattr(
+				appMod,
+				"shouldProcessUIANotificationEvent",
+				winapps_shouldProcessUIANotificationEvent
+			)
+			if not shouldProcessUIANotificationEvent(
+				sender,
+				NotificationKind=NotificationKind,
+				NotificationProcessing=NotificationProcessing,
+				displayString=displayString,
+				activityId=activityId,
+			):
 				if _isDebug():
 					log.debugWarning(
 						"HandleNotificationEvent: dropping notification event "
