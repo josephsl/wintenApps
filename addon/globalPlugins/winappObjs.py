@@ -48,8 +48,8 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 				pass
 			else:
 				appMod = appModuleHandler.getAppModuleFromProcessID(processId)
-				if hasattr(appMod, "shouldProcessUIANotificationEventNoWindowHandle"):
-					processNotification = appMod.shouldProcessUIANotificationEventNoWindowHandle(
+				if hasattr(appMod, "shouldProcessUIANotificationEvent"):
+					processNotification = appMod.shouldProcessUIANotificationEvent(
 						sender,
 						NotificationKind=NotificationKind,
 						NotificationProcessing=NotificationProcessing,

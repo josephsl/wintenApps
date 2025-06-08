@@ -16,7 +16,7 @@ from NVDAObjects import NVDAObject
 # App module class comes from built-in File Explorer app module but Mypy doesn't know that.
 # Also tell Flake8 that the base AppModule class comes from NVDA Core.
 class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
-	def shouldProcessUIANotificationEventNoWindowHandle(
+	def shouldProcessUIANotificationEvent(
 		self,
 		sender,
 		activityId: str = "",
@@ -25,7 +25,8 @@ class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
 		# NVDA Core issue 17841: announce window restore/maximize/snap states.
 		if activityId == "Windows.Shell.SnapComponent.SnapHotKeyResults":
 			return True
-		return False
+		import UIAHandler
+		return bool(UIAHandler.handler.getNearestWindowHandle(sender))
 
 	def event_UIA_notification(
 		self,
