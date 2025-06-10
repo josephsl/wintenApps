@@ -14,7 +14,6 @@ This section lists changes planned for future add-on releases. Items in this sec
 * Windows 11: Requires Version 24H2 or later.
 * Removed WinUI 3 app mouse and touch navigation workaround as it is resolved in NVDA 2025.2.
 * NVDA 2025.1 or later is required.
-* Removed app module for modern keyboard.
 * Modern keyboard: Removed Windows 11 clipboard history content announcements workaround as it is part of NVDA 2025.1.
 
 ## Version 25.06
