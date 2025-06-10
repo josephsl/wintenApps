@@ -17,5 +17,6 @@ from NVDAObjects import NVDAObject
 class AppModule(CoreAppModule):
 	def event_NVDAObject_init(self, obj: NVDAObject):
 		# NVDA Core issue 18208: "go to line" edit field is classified as a dialog.
+		# Resolved in NVDA 2025.2.
 		if isinstance(obj, UIA) and obj.UIAAutomationId == "LineNumberBox":
 			obj.role = controlTypes.Role.EDITABLETEXT
