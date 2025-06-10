@@ -22,7 +22,6 @@ This is the last add-on release to support Windows 10. While the user interface 
 ## Version 25.07
 
 * NVDA 2025.1 or later is required.
-* Removed app module for modern keyboard.
 * Modern keyboard: Removed Windows 11 clipboard history content announcements workaround as it is part of NVDA 2025.1.
 
 ## Version 25.06
