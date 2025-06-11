@@ -17,6 +17,7 @@ from logHandler import log
 
 
 # Code credit: Jamie Teh (Mozilla)
+# Resolved in NVDA 2025.2.
 class StartChromiumObj(IAccessible):
 	def _get_shouldAllowIAccessibleFocusEvent(self) -> bool:
 		if self.role == controlTypes.Role.DOCUMENT:
