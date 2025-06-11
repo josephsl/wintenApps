@@ -18,6 +18,11 @@ from NVDAObjects import NVDAObject
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
 class AppModule(AppModule):  # type: ignore[no-redef]
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
+		# NVDA Core issue 18236: NVDA reports selected emoji panel twice in Windows 11.
+		# Because base NVDA object will announce selected item, this causes speech repetition
+		# if the event handler is allowed to run through its course.
+		# Therefore, let the base implementation report selected item and no more.
+		# Resolved in NVDA 2025.2.
 		if api.getFocusObject().appModule == self:
 			return nextHandler()
 		super().event_UIA_elementSelected(obj, nextHandler)
