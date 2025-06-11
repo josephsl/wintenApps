@@ -11,13 +11,14 @@ For each add-on version entry, minor versions (such as 18.06.1) are included und
 This is the final planned add-on release and requires Windows 11 series or later.
 
 * Removed support for Windows 10 series, requiring Windows 11 series or later.
+* NVDA 2025.2 or later is required.
+* Various features and fixes that were included with the add-on are now part of NVDA, all of them for Windows 11. These include mouse and touch interaction in WinUI3 apps, improved Start menu interaction reliability (fix from Jamie Teh), "go to line" edit field recognition in Notepad, and speech repetition fix in emoji panel.
 
 ## Version 25.08 (goodbye, Windows 10)
 
 This is the last add-on release to support Windows 10. While the user interface and documentation will refer to Windows 11, installing the add-on on Windows 10 remains supported.
 
 * Windows 11: Requires Version 24H2 or later.
-* Removed WinUI 3 app mouse and touch navigation workaround as it is resolved in NVDA 2025.2.
 
 ## Version 25.07
 
