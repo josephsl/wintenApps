@@ -16,17 +16,6 @@ import winUser
 from logHandler import log
 
 
-# Bulk of the below class comes from NVDA Core.
-class StartMenuSearchField(StartMenuSearchField):  # type: ignore[no-redef]
-
-	def _get_description(self) -> str:
-		# NVDA Core issue 13841: detect search highlights and anounce it.
-		# Resolved in NVDA 2023.1.
-		if self.lastChild.UIAAutomationId == "PlaceholderTextContentPresenter":
-			return self.lastChild.name
-		return super().description
-
-
 # Code credit: Jamie Teh (Mozilla)
 class StartChromiumObj(IAccessible):
 	def _get_shouldAllowIAccessibleFocusEvent(self) -> bool:
@@ -62,9 +51,6 @@ class AppModule(AppModule):  # type: ignore[no-redef]
 				pass
 			if obj.windowClassName.startswith("Chrome_"):
 				clsList.insert(0, StartChromiumObj)
-		elif isinstance(obj, UIA):
-			if obj.UIAAutomationId == "SearchTextBox":
-				clsList.insert(0, StartMenuSearchField)
 				return
 		super().chooseNVDAObjectOverlayClasses(obj, clsList)
 
