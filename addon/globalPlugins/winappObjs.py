@@ -115,14 +115,14 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 
 
 def winapps_shouldProcessUIANotificationEvent(
-	sender,
+	sender: UIAHandler.UIA.IUIAutomationElement,
 	NotificationKind: int | None = None,
 	NotificationProcessing: int | None = None,
 	displayString: str = "",
 	activityId: str = "",
 ) -> bool:
 	"""
-	Determines whether NVDA should process a UIA notification event
+	Determines whether NVDA should process a UIA notification event.
 	By default, events from elements with window handle value set
 	and traversable back to the desktop will be accepted.
 	Returning False will cause the event to be dropped completely.
