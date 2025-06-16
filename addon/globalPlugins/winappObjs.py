@@ -67,14 +67,14 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 						f"at request of appModule {appMod.appName}",
 					)
 				return
-		# Take foreground window handle as a substitute if window handle is not set.
+		# Take desktop window handle as a substitute if window handle is not set.
 		import api
 		if not (window := self.getNearestWindowHandle(sender)):
-			window = api.getForegroundObject().windowHandle
+			window = api.getDesktopObject().windowHandle
 			if _isDebug():
 				log.debugWarning(
 					"HandleNotificationEvent: native window handle not found, "
-					f"using foreground window handle {window}",
+					f"using desktop window handle {window}",
 				)
 		import NVDAObjects.UIA
 
