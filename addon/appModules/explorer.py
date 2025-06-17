@@ -13,9 +13,8 @@ import ui
 from NVDAObjects import NVDAObject
 
 
-# App module class comes from built-in File Explorer app module but Mypy doesn't know that.
-# Also tell Flake8 that the base AppModule class comes from NVDA Core.
-class AppModule(AppModule):  # type: ignore[misc]  # NOQA: F405
+# App module class comes from built-in File Explorer app module but Ruff doesn't know that.
+class AppModule(AppModule):  # NOQA: F405
 	def shouldProcessUIANotificationEvent(
 		self,
 		sender,
