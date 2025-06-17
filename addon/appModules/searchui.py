@@ -6,8 +6,7 @@
 # Reintroduced in 2025, extends SearchUI ap module from NVDA Core
 
 from typing import List
-# Start menu search field is not used here but must be imported as it causes error when the app module loads.
-from nvdaBuiltin.appModules.searchui import AppModule, StartMenuSearchField  # NOQA: F401
+from nvdaBuiltin.appModules.searchui import AppModule
 import controlTypes
 from NVDAObjects.UIA import UIA
 from NVDAObjects.IAccessible import IAccessible, ContentGenericClient
