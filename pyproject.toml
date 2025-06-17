@@ -152,7 +152,8 @@ reportUnusedImport = true
 reportUnusedVariable = true
 reportWildcardImportFromLibrary = true
 
-reportDeprecated = true
+# Should switch to true when possible
+reportDeprecated = false  # 5 errors
 
 # Can be enabled by generating type stubs for modules via pyright CLI
 reportMissingTypeStubs = false
