@@ -135,7 +135,8 @@ def winapps_shouldProcessUIANotificationEvent(
 
 
 # Don't even think about proceeding in secure screens.
-def disableInSecureMode(cls):
+# Don't worry about "cls" type.
+def disableInSecureMode(cls):  # type: ignore
 	return globalPluginHandler.GlobalPlugin if globalVars.appArgs.secure else cls
 
 
