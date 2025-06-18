@@ -5,7 +5,6 @@
 
 # Reintroduced in 2025, extends SearchUI ap module from NVDA Core
 
-from typing import List
 from nvdaBuiltin.appModules.searchui import AppModule
 import controlTypes
 from NVDAObjects.UIA import UIA
@@ -41,7 +40,7 @@ class StartChromiumObj(IAccessible):
 
 # Mypy should be reminded that this app module is powered by built-in SearchUI app module.
 class AppModule(AppModule):  # type: ignore[no-redef]
-	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: List[NVDAObject]) -> None:
+	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
 		if isinstance(obj, IAccessible):
 			try:
 				# #5288: Never use ContentGenericClient, as this uses displayModel
