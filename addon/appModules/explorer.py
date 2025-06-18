@@ -11,29 +11,32 @@ from typing import Callable
 from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
 import ui
 from NVDAObjects import NVDAObject
+import UIAHandler
 
 
 # App module class comes from built-in File Explorer app module but Ruff doesn't know that.
 class AppModule(AppModule):  # NOQA: F405
 	def shouldProcessUIANotificationEvent(
 		self,
-		sender,
+		sender: UIAHandler.UIA.IUIAutomationElement,
+		NotificationKind: int | None = None,
+		NotificationProcessing: int | None = None,
+		displayString: str = "",
 		activityId: str = "",
-		**kwargs,
 	) -> bool:
 		# NVDA Core issue 17841: announce window restore/maximize/snap states.
 		if activityId == "Windows.Shell.SnapComponent.SnapHotKeyResults":
 			return True
-		import UIAHandler
 		return bool(UIAHandler.handler.getNearestWindowHandle(sender))
 
 	def event_UIA_notification(
 		self,
 		obj: NVDAObject,
 		nextHandler: Callable[[], None],
+		NotificationKind: int | None = None,
+		NotificationProcessing: int | None = None,
 		displayString: str | None = None,
 		activityId: str | None = None,
-		**kwargs,
 	) -> None:
 		# NVDA Core issues 17841 and 18175: announce window states across apps (Windows 11 24H2 and later).
 		# These messages come from a File Explorer (shell) element and there is no native window handle.

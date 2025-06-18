@@ -10,6 +10,7 @@ import ui
 import winUser
 from NVDAObjects import NVDAObject
 from winAPI.types import HWNDValT
+import UIAHandler
 
 
 class AppModule(appModuleHandler.AppModule):
@@ -19,7 +20,14 @@ class AppModule(appModuleHandler.AppModule):
 			return True
 		return False
 
-	def shouldProcessUIANotificationEvent(self, sender, **kwargs):
+	def shouldProcessUIANotificationEvent(
+		self,
+		sender: UIAHandler.UIA.IUIAutomationElement,
+		NotificationKind: int | None = None,
+		NotificationProcessing: int | None = None,
+		displayString: str = "",
+		activityId: str = "",
+	) -> bool:
 		# Say "yes" so microphone status, entered text, and others can be announced.
 		return True
 
@@ -27,8 +35,10 @@ class AppModule(appModuleHandler.AppModule):
 		self,
 		obj: NVDAObject,
 		nextHandler: Callable[[], None],
+		NotificationKind: int | None = None,
+		NotificationProcessing: int | None = None,
 		displayString: str | None = None,
-		**kwargs,
+		activityId: str | None = None,
 	):
 		# NVDA Core issue 16862: report Voice access messages such as microphone toggle from everywhere.
 		ui.message(displayString)
