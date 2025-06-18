@@ -99,6 +99,7 @@ reportInvalidTypeForm = true
 reportInvalidTypeVarUse = true
 reportMatchNotExhaustive = true
 reportMissingModuleSource = true
+reportMissingParameterType = true
 reportMissingSuperCall = true
 reportMissingTypeArgument = true
 reportNoOverloadImplementation = true
@@ -128,6 +129,7 @@ reportUnnecessaryCast = true
 reportUnnecessaryComparison = true
 reportUnnecessaryContains = true
 reportUnnecessaryIsInstance = true
+reportUnnecessaryTypeIgnoreComment = true
 reportUnsupportedDunderAll = true
 reportUntypedClassDecorator = true
 reportUntypedFunctionDecorator = true
@@ -138,6 +140,7 @@ reportUnusedCoroutine = true
 reportUnusedExcept = true
 reportUnusedExpression = true
 reportUnusedFunction = true
+reportUnusedImport = true
 reportUnusedVariable = true
 reportWildcardImportFromLibrary = true
 
@@ -149,14 +152,11 @@ reportMissingTypeStubs = false
 
 # Bad rules
 # These are sorted alphabetically and should be enabled and moved to compliant rules section when resolved.
-reportImplicitStringConcatenation = false  # 7 errors
-reportMissingImports = false  # 37 errors
-reportMissingParameterType = false  # 7 errors
-reportUndefinedVariable = false  # 2 errors
-reportUnknownArgumentType = false  # 8 errors
-reportUnknownMemberType = false  # 85 errors
-reportUnknownParameterType = false  # 18 errors
-reportUnknownVariableType = false  # 32 errors
-reportUnnecessaryTypeIgnoreComment = false  # 1 error
-reportUntypedBaseClass = false  # 5 errors
-reportUnusedImport = false  # 1 error
+reportImplicitStringConcatenation = false  # Lengthy debug strings and UI messages
+reportMissingImports = false  # Mostly NVDA Core modules
+reportUndefinedVariable = false  # Mostly gettext.gettext call
+reportUnknownArgumentType = false  # Function calls and returns
+reportUnknownMemberType = false  # Attributes and classes coming from NVDA Core
+reportUnknownParameterType = false  # Classes and types coming from NVDA Core
+reportUnknownVariableType = false  # Types coming from NVDA Core
+reportUntypedBaseClass = false  # Derives from classes defined in NVDA Core such as base app module class
