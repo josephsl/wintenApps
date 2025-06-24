@@ -33,7 +33,7 @@ This is the last add-on release to support Windows 10. While the user interface 
 * Windows 11: NVDA will no longer switch to browse mode when Start menu is opened the first time and search is initiated (credit: Jamie Teh).
 * Modern keyboard: NVDA will no longer announce items in the emoji panel twice.
 * Notepad (Windows 11): Go to line (Control+G) edit field is no longer misrecognized as a dialog control, allowing speak typed characters setting (off/on/only in edit controls (NVDA 2025.1)) to be honored.
-* Voice access: In addition to microphone status changes, messages such as dictation error will be reported from everywhere.
+* Voice access: In addition to microphone status changes, messages such as dictation error will be reported from everywhere (NVDA must be installed).
 
 ## Version 25.05
 
