@@ -25,6 +25,7 @@ class AppModule(AppModule):  # NOQA: F405
 		activityId: str = "",
 	) -> bool:
 		# NVDA Core issue 17841: announce window restore/maximize/snap states.
+		# Resolved in NVDA 2025.2.
 		if activityId == "Windows.Shell.SnapComponent.SnapHotKeyResults":
 			return True
 		return bool(UIAHandler.handler.getNearestWindowHandle(sender))
@@ -40,6 +41,7 @@ class AppModule(AppModule):  # NOQA: F405
 	) -> None:
 		# NVDA Core issues 17841 and 18175: announce window states across apps (Windows 11 24H2 and later).
 		# These messages come from a File Explorer (shell) element and there is no native window handle.
+		# Resolved in NVDA 2025.2.
 		if activityId == "Windows.Shell.SnapComponent.SnapHotKeyResults":
 			ui.message(displayString)
 			return
