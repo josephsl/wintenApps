@@ -15,6 +15,7 @@ from logHandler import log
 
 
 # Extended UIA handler to handle notification events from apps without objects.
+# Resolved in NVDA 2025.2.
 class UIAHandlerEx(UIAHandler.UIAHandler):
 	def IUIAutomationNotificationEventHandler_HandleNotificationEvent(
 		self,
@@ -43,6 +44,7 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 		# NVDA Core issues 16871 and 18220: some elements do not report native window handle.
 		# Yet messages such as window state should be announced from everywhere.
 		# Therefore, ask app modules if notifications (including from these elements) should be processed.
+		# Resolved in NVDA 2025.2.
 		try:
 			processId = sender.CachedProcessID
 		except COMError:
@@ -114,6 +116,8 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 		)
 
 
+# Determine UIA notification processing on behalf of app modules.
+# Resolved in NVDA 2025.2 (part of app modules).
 def winapps_shouldProcessUIANotificationEvent(
 	sender: UIAHandler.UIA.IUIAutomationElement,
 	NotificationKind: int | None = None,
@@ -161,6 +165,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not config.conf["UIA"]["enabled"]:
 			raise RuntimeError("UIA forcefully disabled in configuration")
 		# Add support for enhanced notification events (to handle apps such as Windows 11 Voice Access).
+		# Restart UIA handler if notification event process request isn't found in app modules.
+		# Resolved in NVDA 2025.2.
+		if hasattr(appModuleHandler.AppModule, "shouldProcessUIANotificationEvent"):
+			return
 		log.debug("winapps: restarting UIA handler to add additional events")
 		UIAHandler.terminate()
 		try:
