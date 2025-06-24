@@ -34,8 +34,8 @@ class AppModule(AppModule):  # NOQA: F405
 		self,
 		obj: NVDAObject,
 		nextHandler: Callable[[], None],
-		NotificationKind: int | None = None,
-		NotificationProcessing: int | None = None,
+		notificationKind: int | None = None,
+		notificationProcessing: int | None = None,
 		displayString: str | None = None,
 		activityId: str | None = None,
 	) -> None:
