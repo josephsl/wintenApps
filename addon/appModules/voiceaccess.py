@@ -16,6 +16,7 @@ import UIAHandler
 class AppModule(appModuleHandler.AppModule):
 	def isGoodUIAWindow(self, hwnd: HWNDValT) -> bool:
 		# #72: allow proper mouse and touch interaction from main Voice access interface.
+		# Resolved in NVDA 2025.2.
 		if winUser.getClassName(hwnd) == "Voice access":
 			return True
 		return False
@@ -28,7 +29,8 @@ class AppModule(appModuleHandler.AppModule):
 		displayString: str = "",
 		activityId: str = "",
 	) -> bool:
-		# Say "yes" so microphone status, entered text, and others can be announced.
+		# Say "yes" so microphone status, dictated text, and others can be announced.
+		# Resolved in NVDA 2025.2.
 		return True
 
 	def event_UIA_notification(
@@ -41,5 +43,6 @@ class AppModule(appModuleHandler.AppModule):
 		activityId: str | None = None,
 	):
 		# NVDA Core issue 16862: report Voice access messages such as microphone toggle from everywhere.
+		# Resolved in NVDA 2025.2.
 		if displayString is not None:
 			ui.message(displayString)
