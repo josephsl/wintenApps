@@ -6,7 +6,7 @@
 
 # Provides additional routines on top of the built-in File Explorer app module.
 
-from typing import Callable
+from collections.abc import Callable
 # Flake8 F403: detect other add-ons that overrode File Explorer app module.
 from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
 import ui

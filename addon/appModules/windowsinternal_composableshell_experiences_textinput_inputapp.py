@@ -10,7 +10,7 @@
 # (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
 from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import AppModule
-from typing import Callable
+from collections.abc import Callable
 import api
 from NVDAObjects import NVDAObject
 

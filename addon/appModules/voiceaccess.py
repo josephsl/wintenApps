@@ -4,7 +4,7 @@
 
 # Support for Voice access on Windows 11.
 
-from typing import Callable
+from collections.abc import Callable
 import appModuleHandler
 import ui
 import winUser
