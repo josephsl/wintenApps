@@ -13,6 +13,7 @@ This is the final planned add-on release and requires Windows 11 series or later
 * Removed support for Windows 10 series, requiring Windows 11 series or later.
 * NVDA 2025.2 or later is required.
 * Various features and fixes that were included with the add-on are now part of NVDA, all of them for Windows 11. These include mouse and touch interaction in WinUI3 apps, improved Start menu interaction reliability (fix from Jamie Teh), "go to line" edit field recognition in Notepad, speech repetition fix in emoji panel, announcing window maximize/restore/snap status when Windows+arrow keys are pressed, and announcing Voice Access notifications and dictated text from everywhere.
+* Removed all app modules included with the add-on, including File Explorer, modern keyboard, Notepad, Start menu (SearchUI), and Voice Access.
 
 ## Version 25.08 (goodbye, Windows 10)
 
