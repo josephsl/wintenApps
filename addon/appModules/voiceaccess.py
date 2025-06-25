@@ -23,8 +23,8 @@ class AppModule(appModuleHandler.AppModule):
 	def shouldProcessUIANotificationEvent(
 		self,
 		sender: UIAHandler.UIA.IUIAutomationElement,
-		NotificationKind: int | None = None,
-		NotificationProcessing: int | None = None,
+		notificationKind: int | None = None,
+		notificationProcessing: int | None = None,
 		displayString: str = "",
 		activityId: str = "",
 	) -> bool:

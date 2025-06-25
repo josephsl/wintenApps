@@ -58,8 +58,8 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 			)
 			if not shouldProcessUIANotificationEvent(
 				sender,
-				NotificationKind=NotificationKind,
-				NotificationProcessing=NotificationProcessing,
+				notificationKind=NotificationKind,
+				notificationProcessing=NotificationProcessing,
 				displayString=displayString,
 				activityId=activityId,
 			):
@@ -120,8 +120,8 @@ class UIAHandlerEx(UIAHandler.UIAHandler):
 # Resolved in NVDA 2025.2 (part of app modules).
 def winapps_shouldProcessUIANotificationEvent(
 	sender: UIAHandler.UIA.IUIAutomationElement,
-	NotificationKind: int | None = None,
-	NotificationProcessing: int | None = None,
+	notificationKind: int | None = None,
+	notificationProcessing: int | None = None,
 	displayString: str = "",
 	activityId: str = "",
 ) -> bool:
