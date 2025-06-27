@@ -121,6 +121,7 @@ Note: support duration also depends on add-on maintenance - duration can be shor
 * Version 22H2 (build 22621): July 2022-August 2024
 * Version 23H2 (build 22631): July 2023-July 2025
 * Version 24H2 and Windows Server 2025 (build 26100): April 2024-October 2025
+* Version 25H2 (build 26200): July 2025-October 2025
 
 ### Development process and milestone releases
 
