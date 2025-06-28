@@ -152,7 +152,7 @@ reportMissingTypeStubs = false
 # These are sorted alphabetically and should be enabled and moved to compliant rules section when resolved.
 reportImplicitStringConcatenation = false  # Lengthy debug strings and UI messages
 reportMissingImports = false  # Mostly NVDA Core modules
-reportUndefinedVariable = false  # Mostly gettext.gettext call
+reportUndefinedVariable = false  # _ = gettext.gettext call
 reportUnknownArgumentType = false  # Function calls and returns
 reportUnknownMemberType = false  # Attributes and classes coming from NVDA Core
 reportUnknownParameterType = false  # Classes and types coming from NVDA Core
