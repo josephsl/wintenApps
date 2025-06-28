@@ -7,5 +7,5 @@ import globalPluginHandler
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-	def __init__(self):
-		super().__init__()
+	# Placeholder global plugin class in case it is needed in the future.
+	pass
