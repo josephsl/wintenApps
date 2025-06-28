@@ -2,14 +2,14 @@
 
 * Yazarlar: Joseph Lee, Derek Riemer ve diğerleri
 
-Bu eklenti, çeşitli modern Windows uygulamaları için uygulama modüllerinin
-yanı sıra Windows 11'de bulunan belirli kontroller için geliştirmeler ve
-düzeltmelerden oluşan bir koleksiyondur.
+Bu eklenti, çeşitli modern Windows uygulamaları için bir uygulama modül
+koleksiyonunun yanı sıra Windows 10 ve sonraki sürümlerde bulunan belirli
+kontroller için geliştirmeler ve düzeltmeler içerir.
 
 Notlar:
 
-* Bu eklenti, Windows 11 24H2 (Build 26100) veya daha üst sürümleri
-  gerektirir.
+* Bu eklenti, 64 bit Windows 10 22H2 (derleme 19045)/11 23H2 (derleme 22631)
+  veya sonraki sürümleri gerektirir.
 * Özellik güncelleme destek süresi, tüketici destek süresine (Ev, Pro, Pro
   Education, Pro for Workstations sürümleri) bağlıdır ve eklenti, tüketici
   desteği sona ermeden önce özellik güncellemesi desteğini

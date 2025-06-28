@@ -6,19 +6,14 @@ Note: originally called Windows 10 App Essentials, this add-on was renamed to Wi
 
 For each add-on version entry, minor versions (such as 18.06.1) are included under major release (18.06, for example).
 
-## Version 25.10 (farewell, for now)
+## Version preview
 
-This is the final planned add-on release and requires Windows 11 series or later.
+This section lists changes planned for future add-on releases. Items in this section are not tied to specific releases and may or may not appear in stable add-on releases. See below sections for items included in past or upcoming stable releases.
 
 * Removed support for Windows 10 series, requiring Windows 11 series or later.
 * NVDA 2025.2 or later is required.
 * Various features and fixes that were included with the add-on are now part of NVDA, all of them for Windows 11. These include mouse and touch interaction in WinUI3 apps, improved Start menu interaction reliability (fix from Jamie Teh), "go to line" edit field recognition in Notepad, speech repetition fix in emoji panel, announcing window maximize/restore/snap status when Windows+arrow keys are pressed, and announcing Voice Access notifications and dictated text from everywhere.
 * Removed all app modules included with the add-on, including File Explorer, modern keyboard, Notepad, Start menu (SearchUI), and Voice Access.
-
-## Version 25.08 (goodbye, Windows 10)
-
-This is the last add-on release to support Windows 10. While the user interface and documentation will refer to Windows 11, installing the add-on on Windows 10 remains supported.
-
 * Windows 11: Requires Version 24H2 or later.
 
 ## Version 25.07

@@ -4,11 +4,12 @@
 
 Este extra é uma colecção de módulos de aplicação para várias aplicações
 modernas do Windows, bem como melhorias e correcções para certos controlos
-encontrados no Windows 11.
+encontrados no Windows 10 e posteriores.
 
 Notas:
 
-* Este add-on requer o Windows 11 24H2 (build 26100) ou versões posteriores.
+* Este add-on requer o Windows 10 22H2 (build 19045), 11 23H2 (build 22631)
+  ou versões posteriores.
 * A duração do suporte da actualização de funcionalidades está associada à
   duração do suporte ao consumidor (edições Home, Pro, Pro Education, Pro
   para Estações de Trabalho) e o suplemento pode terminar o suporte para uma
