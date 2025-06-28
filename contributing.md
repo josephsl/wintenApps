@@ -90,7 +90,7 @@ For Windows releases, a stable Windows release (typically a feature update) is s
 
 Regarding end of support for a Windows release from the add-on, for stable Windows releases, support duration is tied to consumer support. Prior to end of support, a grace period (at least 30 days) will be given to let users upgrade to newer releases (for Windows 11 original release, support from the add-on ended in August 2023, and the grace period was from June 2023 to August 2023). For Windows Insiders, only the latest Insider Preview build is supported, particularly if using canary and dev channel builds. Consequently, there is no concept of grace period from the add-on for Windows Insider Preview builds.
 
-Note: the only exception to support duration policy was the very last Windows 10 feature update (2022 Update/Version 22H2), which was supported until October 2025 (official support until August 2025 followed by 60-day grace period; no support for extended security updates).
+Note: until July 2025, the only exception to support duration policy was the very last Windows 10 feature update (2022 Update/Version 22H2), which was supported until October 2025 (official support until August 2025 followed by 60-day grace period; no support for extended security updates). Subsequently, Windows 11 24H2 and 25H2 were added as support for these releases depend on overall add-on maintenance duration (24H2 support did meet the minimum support duration requirement).
 
 #### Supported Windows releases
 
@@ -158,4 +158,4 @@ Originally development semesters in 2021 but changed to annual milestones in 202
 * Selenium (2025):
 	* Selenium 1: December 2024 to April 2025, Windows 11 is required to contribute to add-on development, removed Settings app module with the removal of Windows 10 Windows Update live region change workaround, restore WinApps global plugin to handle WinUI 3 top-level window UIA reclassification across apps to enable mouse and touch navigation
 	* Selenium 2: March 2025 to August 2025, NVDA 2025.1 requirement, end of support for Windows 10 series (Version 22H2) and 11 2023 Update (Version 23H2), removed Copilot WebView2 and modern keyboard app modules, removed WinUI 3 app mouse and touch navigation workaround
-	* Selenium 3 (final ad-on development milestone): June 2025 to October 2025, NVDA 2025.2 requirement, freezing localization data, UIA notification event handling for elements without native window handle set, reintroduced Voice Access support, go to line control reclassification in Notepad
+	* Selenium 3 (final ad-on development milestone): June 2025 to October 2025, NVDA 2025.2 requirement, brief support for Windows 11 25H2, freezing localization data, UIA notification event handling for elements without native window handle set, reintroduced Voice Access support, go to line control reclassification in Notepad
