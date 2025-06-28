@@ -22,7 +22,6 @@ def nvda251applicable(cls):  # type: ignore
 	return CoreAppModule if (versionInfo.version_year, versionInfo.version_major) >= (2025, 2) else cls
 
 
-# App module class comes from built-in File Explorer app module but Ruff doesn't know that.
 @nvda251applicable
 class AppModule(CoreAppModule):
 	def shouldProcessUIANotificationEvent(

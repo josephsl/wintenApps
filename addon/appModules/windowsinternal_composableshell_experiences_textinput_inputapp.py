@@ -24,7 +24,6 @@ def nvda251applicable(cls):  # type: ignore
 	return CoreAppModule if (versionInfo.version_year, versionInfo.version_major) >= (2025, 2) else cls
 
 
-# Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
 @nvda251applicable
 class AppModule(CoreAppModule):
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):

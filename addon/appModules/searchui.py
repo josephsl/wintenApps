@@ -5,6 +5,7 @@
 
 # Reintroduced in 2025, extends SearchUI ap module from NVDA Core
 
+# Import the base Search UI app module as something else to avoid runtime issues.
 from nvdaBuiltin.appModules.searchui import AppModule as CoreAppModule
 import controlTypes
 from NVDAObjects.UIA import UIA
@@ -45,7 +46,6 @@ def nvda251applicable(cls):  # type: ignore
 	return CoreAppModule if (versionInfo.version_year, versionInfo.version_major) >= (2025, 2) else cls
 
 
-# Mypy should be reminded that this app module is powered by built-in SearchUI app module.
 @nvda251applicable
 class AppModule(CoreAppModule):
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
