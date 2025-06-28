@@ -12,8 +12,16 @@ from nvdaBuiltin.appModules.notepad import AppModule as CoreAppModule
 import controlTypes
 from NVDAObjects.UIA import UIA
 from NVDAObjects import NVDAObject
+import versionInfo
 
 
+# Let NVDA work with its own Notepad app module in 2025.2.
+# Don't worry about "cls" type.
+def nvda251applicable(cls):  # type: ignore
+	return CoreAppModule if (versionInfo.version_year, versionInfo.version_major) >= (2025, 2) else cls
+
+
+@nvda251applicable
 class AppModule(CoreAppModule):
 	def event_NVDAObject_init(self, obj: NVDAObject):
 		# NVDA Core issue 18208: "go to line" edit field is classified as a dialog.

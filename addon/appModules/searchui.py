@@ -12,6 +12,7 @@ from NVDAObjects.IAccessible import IAccessible, ContentGenericClient
 from NVDAObjects import NVDAObject
 import winUser
 from logHandler import log
+import versionInfo
 
 
 # Code credit: Jamie Teh (Mozilla)
@@ -38,7 +39,14 @@ class StartChromiumObj(IAccessible):
 		)
 
 
+# Let NVDA work with its own Search UI app module in 2025.2.
+# Don't worry about "cls" type.
+def nvda251applicable(cls):  # type: ignore
+	return AppModule if (versionInfo.version_year, versionInfo.version_major) >= (2025, 2) else cls
+
+
 # Mypy should be reminded that this app module is powered by built-in SearchUI app module.
+@nvda251applicable
 class AppModule(AppModule):  # type: ignore[no-redef]
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
 		if isinstance(obj, IAccessible):
