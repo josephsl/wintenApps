@@ -2,17 +2,17 @@
 
 Author: Joseph Lee
 
-Revision: June 2025
+Revision: July 2025
 
 Note: originally called Windows 10 App Essentials, the add-on was renamed to Windows App Essentials in 2021 with the introduction of Windows 11. Parts of this document will refer to the original add-on name or Windows 10.
 
 ## Preface
 
-If one add-on can define my passion for NVDA, it would be Windows App Essentials, a soon to be discontinued add-on. What started out as a small app module for Insider Hub became one of the most recognizable add-ons in NVDA community, offering needed fixes and features to make Windows 10 and 11 more accessible and usable for NVDA users along with communicating accessibility needs to app developers.
+If one add-on can define my passion for NVDA, it would be Windows App Essentials. What started out as a small app module for Insider Hub became one of the most recognizable add-ons in NVDA community, offering needed fixes and features to make Windows 10 and 11 more accessible and usable for NVDA users along with communicating accessibility needs to app developers.
 
-When I started development of Windows App Essentials in 2015, I knew that the lifetime of the add-on was limited. While I promised to support the add-on as long as Windows Insider Program was a thing, deep down I knew that the lifetime of the add-on depended on add-on features and bug fixes being integrated into NVDA. Throughout 2024 and 2025, the last pieces of this add-on became part of NVDA, with the final parts being a bug fix for modern keyboard included in NVDA 2025.1 and global support for mouse and touch navigation in WinUI 3 apps (NVDA 2025.2).
+When I started development of Windows App Essentials in 2015, I knew that the lifetime of the add-on was limited. While I promised to support the add-on as long as Windows Insider Program was a thing, deep down I knew that the lifetime of the add-on depended on add-on features and bug fixes being integrated into NVDA. Throughout 2024 and 2025, the last pieces of this add-on became part of NVDA, with the final parts being NVDA 2025.2 changes, namely handling UIA notifications for elements without window handles, Windows 11 Voice Access support, and global support for mouse and touch navigation in WinUI 3 apps.
 
-Originally, I planned to support Windows 10 series until October 2025 but a fix from Microsoft in February 2025 changed this. Prior to February 2025, NVDA would be verbose when announcing update installation status in Settings app, therefore the add-on resolved it by silencing some update announcements. However, in February 2025, the live region change event responsible for announcing update status changes is no longer raised, making the workaround unnecessary. With this change, the last remaining anchor to Windows 10 (Settings app module) was removed in February 2025, but to fulfill the promise to support it until its end of life, Windows 10 support will be kept in install tasks module (checking minimum supported Windows version) until late 2025.
+Originally, I planned to support Windows 10 series until October 2025 but a fix from Microsoft in February 2025 changed this. Prior to February 2025, NVDA would be verbose when announcing update installation status in Settings app, therefore the add-on resolved it by silencing some update announcements. However, in February 2025, the live region change event responsible for announcing update status changes is no longer raised, making the workaround unnecessary. With this change, the last remaining anchor to Windows 10 (Settings app module) was removed in February 2025, but to fulfill the promise to support it until its end of life, Windows 10 support will be kept in install tasks module (checking minimum supported Windows version) until late 2025. Although users can opt into extended security updates, the add-on ends support for Windows 10 in October 2025.
 
 The upcoming Windows 10 end of life and my current status as an up and coming researcher led to the decision to discontinue the add-on in late 2025. I felt bittersweet when announcing my decision in 2024, knowing that there was no other add-on like it where I can pour out my advocacy skills through programming. However, I knew that add-on development can become a distraction as I learn to practice research, so I decided to take the necessary step to wind down this activity. Although the add-on is fading into history in 2025, I still dream of accessible apps and opportunities to advocate for it in different forms.
 
@@ -77,9 +77,11 @@ There is a fifth pillar that has emerged in recent years: providing a testing gr
 
 ## Add-on contents
 
-The Windows App Essentials add-on consists of a global plugin and app modules for various universal apps included with Windows 10 and later. The Windows App Objects (shortened to WinAppObjs), the global plugin portion of this add-on, provides foundations such as overlay classes for frequently encountered controls in Windows an universal apps. Until 2022, UIA event tracking and logger facility was also part of the add-on, replaced by Event Tracker add-on. Until 2018, the global plugin was also responsible for add-on update feature, documented here for sake of completeness. With the integration of updated dialog detection in NVDA 2024.1, the global plugin became empty until March 2025 when a global yet hacky mechanism to enable mouse and touchscreen navigation in WinUI 3 apps such as Copilot and parts of Windows 11 File Explorer was introduced and subsequently removed in April 2025 when it became part of NVDA 2025.2.
+The Windows App Essentials add-on consists of a global plugin and app modules for various universal apps included with Windows 10 and later. The Windows App Objects (shortened to WinAppObjs), the global plugin portion of this add-on, provides foundations such as overlay classes for frequently encountered controls in Windows an universal apps. Until 2022, UIA event tracking and logger facility was also part of the add-on, replaced by Event Tracker add-on. Until 2018, the global plugin was also responsible for add-on update feature, documented here for sake of completeness. With the integration of updated dialog detection in NVDA 2024.1, the global plugin became empty.
 
-In regards to app modules, these were included to either provide workarounds or enhance the user experience. For example, the app module for Settings app (systemsettings) allows NVDA to announce Windows Update download and installation progress, and app module for modern keyboard (windowsinternal_composableshell_experiences_textinput_inputapp) provides support for more modern input facilities such as enhanced dictation and suggested actions. In March 2025, the last two app modules - modern keyboard and Copilot WebView2 version - were removed, therefore there are no app modules included with the add-on code repository apart from an empty app module in case app modules are needed in the future. We'll meet some of these app modules (no longer included but documented) in subsequent sections.
+The empty global plugin module saw renewed activity throughout 2025. In March,  a global yet hacky mechanism to enable mouse and touchscreen navigation in WinUI 3 apps such as Copilot and parts of Windows 11 File Explorer was introduced. In June, a mechanism to handle UIA notifications from elements with native window handle was added by patching NVDA's own UIA handler (patching NVDA itself was and still is possible); among other things, this change introduces proper support for Windows 11 Voice Access and allows window restore/maximize/snap to be reported when Windows+arrow keys are pressed in Windows 11 24H2 and later. These additions became part of NVDA 2025.2.
+
+In regards to app modules, these were included to either provide workarounds or enhance the user experience. For example, the app module for Settings app (systemsettings) allows NVDA to announce Windows Update download and installation progress, and app module for modern keyboard (windowsinternal_composableshell_experiences_textinput_inputapp) provides support for more modern input facilities such as enhanced dictation and suggested actions. Sometimes app modules relied on NVDA patching mechanism from the global plugin, a notable example is announcing dictated text while using Windows 11 Voice Access (voiceaccess). We'll meet some of these app modules in subsequent sections.
 
 ### A note on feature parity with NVDA screen reader
 
@@ -87,11 +89,11 @@ As noted above, some features discussed in this article (such as UIA notificatio
 
 ### Information on add-on update feature
 
-This article will sometimes reference add-on update feature, which is gone in 2019. Information about it is kept here for reference purposes. An add-on appropriately named "Add-on Updater" is used to update windows App Essentials and other add-ons, and with the opening of the NV Access add-on store in 2023, NVDA itself can update add-ons includin Windows App Essentials.
+This article will sometimes reference add-on update feature, which is gone in 2019. Information about it is kept here for reference purposes. Between 2019 and 2023, an add-on appropriately named "Add-on Updater" was used to update windows App Essentials and other add-ons, and with the opening of the NV Access add-on store in 2023, NVDA itself can update add-ons including Windows App Essentials.
 
 ### Special note on feature updates support on Windows 10 and later
 
-Windows App Essentials add-on supports a given Windows feature update (release) for at least one year and no more than end of consumer level support (Home, Pro, Pro Education, Pro for Workstations); the exception is Windows 10 22H2, the final Windows 10 feature update which will be supported until October 2025. In addition, it comes with support for features found in Windows Insider Preview (WIP) builds, including features that may not appear in subsequent feature updates.
+Windows App Essentials add-on supports a given Windows feature update (release) for at least one year and no more than end of consumer level support (Home, Pro, Pro Education, Pro for Workstations); exceptions are Windows 10 22H2 (the final Windows 10 feature update which will be supported until October 2025) and 11 24H2/25H2 (supported until the add-on is discontinued in late 2025; 24H2 support did fulfill minimum one year support criteria). In addition, it comes with support for features found in Windows Insider Preview (WIP) builds, including features that may not appear in subsequent feature updates.
 
 ## Fun with UI Automation
 
@@ -127,18 +129,18 @@ The Windows App Essentials add-on includes the following additions, fixes and wo
 * Search suggestions: NVDA now plays a sound to indicate appearance of search suggestions, incorporated into NVDA 2017.3 and later expanded in 2021.3 to include suggestion count announcement. More on this below.
 * Live region change announcements in various apps. In the global plugin portion, a way to define and track this event is included. As of 2022, live region change event is fully tracked by NVDA itself.
 * Floating suggestions such as Emoji panel in Windows 10 1709 (Fall Creators Update) and hardware keyboard suggestions in 1803 (April 2018 Update). This has been incorporated into NVDA 2018.3 with refinements since then.
-* Support for UIA notification event introduced in Windows 10 1709. This became part of NVDA in 2018.2, and refined in 2019.2 to interupt users when important notifications are pending.
+* Support for UIA notification event introduced in Windows 10 1709. This became part of NVDA in 2018.2, refined in 2019.2 to interupt users when important notifications are pending, and overhauled in 2025.2 to handle notifications from elements without window handle if allowed by app modules.
 * Providing more meaningful labels for certain controls such as update history in Settings/Update and Security/Windows Update, sensitive to changes in Insider Preview builds.
 * Announcing tooltips from universal apps, incorporated into NVDA 2019.3.
 * Recognizing dialogs powered by XAML and various frameworks. Since NVDA 2018.3, NVDA itself takes care of this in most situations, with an updated procedure introduced in NVDA 2024.1.
-* Announcements on accessible (keyboard based) drag and drop if the element supports it. These include rearranging tiles in Windows 10 Start menu, reordering virtual desktops in Windows 11 task view, and other places where drag and drop operations are possible. NVDA 2022.4 and later includes drag and drop announcements powered entirely by code from this add-on.
+* Announcements on accessible (keyboard based) drag and drop if the element supports it. These include rearranging tiles in Windows 10 Start menu, reordering virtual desktops in Windows 11 task view, repositioning pinned items in Windows 11 taskbar, and other places where drag and drop operations are possible. NVDA 2022.4 and later includes drag and drop announcements powered entirely by code from this add-on.
 * Reclassifying some top-level window elements as UIA to allow mouse and touch navigation in recent app releases and parts of Windows interface.
 
 We'll meet various UIA controls and workarounds (including notable changes introduced and then removed in past releases) throughout this article.
 
 ## Windows App Objects
 
-Windows App Essentials add-on comes with Windows App Objects (WinAppObjs; formerly Windows 10 Objects or WinTenObjs for short), a global plugin that contains definitions of common controls encountered in Windows and various universal apps. In its infancy, this global plugin was home to a variety of event handlers, overlay classes, and workarounds, but its scale has gone down significantly in 2023 when virtual desktops announcement became part of NVDA 2023.2. The scale has gone down even more in 2024 with updated dialog detection transferred to NVDA, and remained an empty module until March 2025 when a global mechanism to support mouse and touch navigation in WinUI 3 apps was introduced. With WinUI 3 fix included in NVDA 2025.2, the global plugin once again became empty in April 2025.
+Windows App Essentials add-on comes with Windows App Objects (WinAppObjs; formerly Windows 10 Objects or WinTenObjs for short), a global plugin that contains definitions of common controls encountered in Windows and various universal apps. In its infancy, this global plugin was home to a variety of event handlers, overlay classes, and workarounds, but its scale has gone down significantly in 2023 when virtual desktops announcement became part of NVDA 2023.2. The scale has gone down even more in 2024 with updated dialog detection transferred to NVDA, and remained an empty module until March 2025 when a global mechanism to support mouse and touch navigation in WinUI 3 apps was introduced. With WinUI 3 fix included in NVDA 2025.2, the global plugin once again became empty in April 2025 until an improved UIA notification event handler made its debut in June, and that, to, was incorporated into NVDA 2025.2.
 
 Historically, Windows App Objects global plugin included handlers for some UIA events such as virtual desktop switch announcements, search suggestions, among other things. In older add-on releases, the global plugin was also home for add-on update checks (removed in 2019) and handled more modern controls (most were transferred to NVDA in recent years).
 
@@ -201,7 +203,7 @@ The notification event handler takes five keyword arguments:
 * Display string: notification text.
 * Activity Id: the unique identifier for the notification.
 
-As of October 2018, NVDA itself announces notifications for all apps (especially for the currently active app) except one or two apps where this would cause issues, thus the add-on is no longer involved in announcing many notifications except those that could cause issues.
+As of October 2018, NVDA itself announces notifications for all apps (especially for the currently active app) except one or two apps where this would cause issues, thus the add-on is no longer involved in announcing many notifications except those that could cause issues. However, not all notifications are handled, especially if an element does not define a window handle, and notification event handler was overhauled in 2025 to support these elements.
 
 #### Tracking UIA events for controls
 
@@ -309,6 +311,7 @@ Historically, the following modules and enhancers/fixers were included in the ad
 * Calendar: suppress read-only state announcement in various controls.
 * Cortana/Start menu/Windows Search (classic Cortana): suppress double announcement of suggestion result item in some cases, staying silent when user is dictating to Cortana, handling bad UIA implementations.
 * Cortana/conversations (new Cortana) and Copilot (web app based): announcing text responses from Cortana or Copilot.
+* File Explorer: empty folder detection, window visual state reporting
 * Mail: table navigation commands in message list, suppress read-only announcement in email content, app alias for hxmail.exe and hxoutlook.exe (the latter for updates released in May 2017).
 * Maps: play location coordinates for map items, suppress repeated live region announcements, aliases to support old and new Maps releases (the old alias, maps_windows, is gone).
 * Microsoft Store: announce needed information when live region changed event is fired by some controls, aliases to support old and new Store versions (the old alias, winstore_mobile, is no more).
@@ -318,8 +321,9 @@ Historically, the following modules and enhancers/fixers were included in the ad
 * People: announcing first suggestion when looking for a contact.
 * Settings: selectively announce various status information, provide correct labels for certain controls.
 * Shell Experience Host (action center/quick settings): suppress extraneous status announcements, enable touch and mouse interaction in Windows 11 24H2 (2024 Update) quick settings.
+* Voice Access: announcing microphone status and dictated text.
 
-App modules have seen major changes thorughout 2025. Settings ap module was removed in February 2025 with live region change bug fix from Microsoft, and Copilot WebView2 app module was removed in March 2025 with the change to WinUI 3 framework. With NVDA 2025.1 (under development), contents from modern keyboard app module are part of NVDA. In June 2025, Notepad and Voice Access app modules made a comeback to fix issues. Even then, most of the below content describe what the add-on did in the past for the most part.
+App modules have seen major changes throughout 2025. Settings ap module was removed in February 2025 with live region change bug fix from Microsoft, and Copilot WebView2 app module was removed in March 2025 with the change to WinUI 3 framework. With NVDA 2025.1, contents from modern keyboard app module are part of NVDA. In June 2025, Notepad and Voice Access app modules made a comeback to fix issues. Even then, most of the below content describe what the add-on did in the past for the most part.
 
 ### Adding useful features in apps
 
@@ -358,13 +362,15 @@ It is sometimes helpful to let users know what's going on by announcing various 
 The app modules (and for one in particular, more than an app module) in question are:
 
 * Calculator (calculator.py): while entering calculations, entered expression will be announced via name change and notification event handlers. Because this may interfere with typed character announcement in NVDA, the calculator display will be announced only when actual results appear or when the display is cleared.
-* People (peopleapp.py): NVDA will announce first suggestion when looking for a contact. Unlike other search fields, there is no controller for event. However, the suggestion raises item selected event.
 * Cortana (searchui.py)/new Start menu and Windows Search experience (searchapp.py in Windows 10, searchhost.py in Windows 11): classic Cortana uses name change events and specific Automation Id's to convey text messages. Name change event is also employed when Cortana tries to understand the text a user is dictating, which in old releases of the add-on meant NVDA would announce gibberish, subsequently resolved in later add-on releases. In recent Windows 10 releases, due to Windows Search redesign (which also involve changing executable for Windows Search to searchapp), search box content instead of result details is announced, or if results are announced, they are announced twice.
 * Cortana conversations (cortana.py): similar to classic Cortana, Cortana's responses are announced.
 * Copilot (copilotnative.py): a WebView2 implementation of Microsoft Copilot, live region based textual responses are reported. Unlike other aps, an IAccessible (MSAA) event is handled.
-* Settings (systemsettings.py): NVDA will announce messages such as Windows Update notifications, and this is done through live region changed event (name change event in older add-on releases).
-* Microsoft Store (winstore_app.py): just like Settings app, status messages are announced, this time dealing with product downloads such as apps and multimedia content. This is applicable in Store version 1 (old Windows 10 releases) ae version 2 (Windows 11 and newer Windows 10 releases) does a better job of letting NVDA announce download progress.
+* File Explorer (explorer.py): announces window visual state changes such as restore, maximize, and snap. This is raised by the Windows shell portion of File Explorer.
+* Microsoft Store (winstore_app.py): status messages are announced, this time dealing with product downloads such as apps and multimedia content. This is applicable in Store version 1 (old Windows 10 releases) ae version 2 (Windows 11 and newer Windows 10 releases) does a better job of letting NVDA announce download progress.
 * Notepad (notepad.py): in Windows 11, Notepad is updated through Microsoft Store, thus changes can happen more frequently. This is more so with Notepad adopting Windows 11 look and feel, with a problem being inability to announce certain screen content, notably status bar content. A specific method is defined inside the app module to let NVDA retrieve status bar content in Windows 11 Notepad.
+* People (peopleapp.py): NVDA will announce first suggestion when looking for a contact. Unlike other search fields, there is no controller for event. However, the suggestion raises item selected event.
+* Settings (systemsettings.py): NVDA will announce messages such as Windows Update notifications, and this is done through live region changed event (name change event in older add-on releases).
+* Voice Access (voiceaccess.py, Windows 11): notifications such as microphone toggle status and dictated text are reported.
 
 ### Hunting for UIA implementation issues
 
@@ -373,6 +379,7 @@ As noted above, some controls ship with odd or bad UIA implementations, and univ
 * Calendar (hxcalendarappimm.py) and Mail (hxoutlook.py): some edit fields, such as appointment title and others are shown as read-only when they are not, and removing this state from states set for these controls resolved this problem. As of 2022, this workaround is no longer present in the add-on.
 * Cortana: some search suggestions expose same text for name and description, which results in repeats for suggestion result text. This was corrected by comparing name and description and nullifying the description (obj.description = None). This workaround is no longer applicable due to Windows Search redesign in Version 1903. Also, when opening Sets version of Cortana search box (builds 17666 and 17692), wrong controller for event is fired, which prevents NVDA from announcing suggestions, and this has been corrected.
 * Maps: despite no changes to the app, live region changed event is fired by map title control, so NVDA includes a way to suppress repetitions. AS of 2022, this workaround is gone from the add-on.
+* Notepad: some controls (notably go to line edit field) report wrong control roles.
 * Settings and Store: for some controls (such as when downloading content from Store), a specific status control fires live region changed event. Unfortunately, the text for them are generic (for example, "downloading some percent" as opposed to announcing the product one is downloading), thus NVDA will locate information such as product names when this happens to make this easier to follow. Also, in Settings app, some controls in older versions of this app have no label, thus NVDA is told to look for labels to traversing sibling (next/previous) objects, and in case of certain Windows 10 1809 installations, the correct label is the name of the first child.
 
 ### A tale on app module and executable names
