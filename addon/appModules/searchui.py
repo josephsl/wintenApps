@@ -5,7 +5,7 @@
 
 # Reintroduced in 2025, extends SearchUI ap module from NVDA Core
 
-from nvdaBuiltin.appModules.searchui import AppModule
+from nvdaBuiltin.appModules.searchui import AppModule as CoreAppModule
 import controlTypes
 from NVDAObjects.UIA import UIA
 from NVDAObjects.IAccessible import IAccessible, ContentGenericClient
@@ -42,12 +42,12 @@ class StartChromiumObj(IAccessible):
 # Let NVDA work with its own Search UI app module in 2025.2.
 # Don't worry about "cls" type.
 def nvda251applicable(cls):  # type: ignore
-	return AppModule if (versionInfo.version_year, versionInfo.version_major) >= (2025, 2) else cls
+	return CoreAppModule if (versionInfo.version_year, versionInfo.version_major) >= (2025, 2) else cls
 
 
 # Mypy should be reminded that this app module is powered by built-in SearchUI app module.
 @nvda251applicable
-class AppModule(AppModule):  # type: ignore[no-redef]
+class AppModule(CoreAppModule):
 	def chooseNVDAObjectOverlayClasses(self, obj: NVDAObject, clsList: list[NVDAObject]) -> None:
 		if isinstance(obj, IAccessible):
 			try:

@@ -9,7 +9,9 @@
 # Yes, this app module is powered by built-in modern keyboard (TextInputHost) app module
 # (formerly WindowsInternal.ComposableShell.Experiences.TextInput.InputApp).
 # #70: NVDA Core pull requests are made using the core app module, not alias modules.
-from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import AppModule
+from nvdaBuiltin.appModules.windowsinternal_composableshell_experiences_textinput_inputapp import (
+	AppModule as CoreAppModule
+)
 from collections.abc import Callable
 import api
 from NVDAObjects import NVDAObject
@@ -19,12 +21,12 @@ import versionInfo
 # Let NVDA work with its own modern keyboard app module in 2025.2.
 # Don't worry about "cls" type.
 def nvda251applicable(cls):  # type: ignore
-	return AppModule if (versionInfo.version_year, versionInfo.version_major) >= (2025, 2) else cls
+	return CoreAppModule if (versionInfo.version_year, versionInfo.version_major) >= (2025, 2) else cls
 
 
 # Built-in modern keyboard app module powers bulk of the below app module class, so inform Mypy.
 @nvda251applicable
-class AppModule(AppModule):  # type: ignore[no-redef]
+class AppModule(CoreAppModule):
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
 		# NVDA Core issue 18236: NVDA reports selected emoji panel twice in Windows 11.
 		# Because base NVDA object will announce selected item, this causes speech repetition

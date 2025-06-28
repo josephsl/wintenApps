@@ -9,6 +9,7 @@
 from collections.abc import Callable
 # Flake8 F403: detect other add-ons that overrode File Explorer app module.
 from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
+from nvdaBuiltin.appModules.explorer import AppModule as CoreAppModule
 import ui
 from NVDAObjects import NVDAObject
 import UIAHandler
@@ -18,12 +19,12 @@ import versionInfo
 # Let NVDA work with its own File Explorer app module in 2025.2.
 # Don't worry about "cls" type.
 def nvda251applicable(cls):  # type: ignore
-	return AppModule if (versionInfo.version_year, versionInfo.version_major) >= (2025, 2) else cls
+	return CoreAppModule if (versionInfo.version_year, versionInfo.version_major) >= (2025, 2) else cls
 
 
 # App module class comes from built-in File Explorer app module but Ruff doesn't know that.
 @nvda251applicable
-class AppModule(AppModule):  # NOQA: F405
+class AppModule(CoreAppModule):
 	def shouldProcessUIANotificationEvent(
 		self,
 		sender: UIAHandler.UIA.IUIAutomationElement,
