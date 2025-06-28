@@ -4,13 +4,12 @@
 
 Diese Erweiterung ist eine Sammlung von App-Modulen für verschiedene moderne
 Windows-Apps sowie Verbesserungen und Korrekturen für bestimmte
-Steuerelemente in Windows 10 und neuer.
+Steuerelemente in Windows 11.
 
 Hinweise:
 
-* Für diese NVDA-Erweiterung wird Windows 10 Version 22H2 (Build 19045)
-  64-Bit, Windows 11 Version 23H2 (Build 22631) oder neuere Versionen
-  benötigt.
+* Für diese NVDA-Erweiterung wird Windows 11 Version 24H2 (Build 26100) oder
+  neuere Versionen benötigt.
 * Die Dauer der Unterstützung für Feature-Updates ist an die Dauer des
   Consumer-Supports (Home, Pro, Pro Education, Pro for Workstations
   Editionen) gebunden und die Erweiterung kann den Support für ein

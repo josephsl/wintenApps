@@ -44,7 +44,6 @@ msgstr "Windows Temel Uygulamalar"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
-msgid "Improving support for various apps and controls on Windows 10 and later"
+msgid "Improving support for various apps and controls on Windows 11"
 msgstr ""
-"Windows 10 ve sonraki Windows sürümlerinde çeşitli uygulamalar ve kontroller "
-"için desteği iyileştirir"
+"Windows 11'deki çeşitli uygulamalar ve denetimler için desteği geliştirir"
