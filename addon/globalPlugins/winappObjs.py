@@ -14,7 +14,7 @@ import winVersion
 from logHandler import log
 
 
-# Extended UIA handler to handle notification events from apps without objects.
+# Extended UIA handler to handle notification events from apps with elements without window handle defined.
 # Resolved in NVDA 2025.2.
 class UIAHandlerEx(UIAHandler.UIAHandler):
 	def IUIAutomationNotificationEventHandler_HandleNotificationEvent(
