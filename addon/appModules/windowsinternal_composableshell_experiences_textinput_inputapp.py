@@ -27,7 +27,7 @@ def nvda251applicable(cls):  # type: ignore
 @nvda251applicable
 class AppModule(CoreAppModule):
 	def event_UIA_elementSelected(self, obj: NVDAObject, nextHandler: Callable[[], None]):
-		# NVDA Core issue 18236: NVDA reports selected emoji panel twice in Windows 11.
+		# NVDA Core issue 18236: NVDA reports selected emoji panel item twice in Windows 11.
 		# Because base NVDA object will announce selected item, this causes speech repetition
 		# if the event handler is allowed to run through its course.
 		# Therefore, let the base implementation report selected item and no more.
