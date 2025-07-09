@@ -9,9 +9,11 @@
 import addonHandler
 import winVersion
 import gui
+import gettext
 
 addonHandler.initTranslation()
-
+# To satisfy type checkers
+_ = gettext.gettext
 
 def onInstall() -> None:
 	# Windows App Essentials requires supported Windows releases on or above the minimum version.
