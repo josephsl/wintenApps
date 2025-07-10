@@ -41,7 +41,6 @@ msgstr "Базов пакет за приложения в Windows (Windows App 
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
-msgid "Improving support for various apps and controls on Windows 10 and later"
+msgid "Improving support for various apps and controls on Windows 11"
 msgstr ""
-"Подобряване на поддръжката за различни приложения и контроли в Windows 10 и "
-"по-нови версии"
+"Подобряване на поддръжката за различни приложения и контроли в Windows 11"

@@ -1,7 +1,7 @@
 # Windows app controls repository
 # Copyright 2015-2025 Joseph Lee, released under GPL.
 
-# Adds handlers for various UIA controls found in Windows 10 and later.
+# Adds handlers for various UIA controls found in Windows 11.
 
 import globalPluginHandler
 import appModuleHandler
@@ -158,8 +158,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			goodUIAWindowClassNames = set(UIAHandler.goodUIAWindowClassNames)
 			goodUIAWindowClassNames.add("Microsoft.UI.Content.DesktopChildSiteBridge")
 			UIAHandler.goodUIAWindowClassNames = tuple(goodUIAWindowClassNames)
-		#The following hack applies to Windows 11 (23H2) and later.
-		if winVersion.getWinVer() < winVersion.WIN11_23H2:
+		#The following hack applies to Windows 11 (24H2) and later.
+		if winVersion.getWinVer() < winVersion.WIN11_24H2:
 			return
 		# Hack: add extra things for UIA support if required and uIA is enabled.
 		if not config.conf["UIA"]["enabled"]:

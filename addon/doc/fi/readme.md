@@ -2,14 +2,13 @@
 
 * Tekijät: Joseph Lee, Derek Riemer sekä muut
 
-Tämä lisäosa on kokoelma sovellusmoduuleita moderneille
-Windows-sovelluksille sekä laajennuksia ja korjauksia tietyille säätimille
-Windows 10:ssä ja uudemmissa.
+Tämä lisäosa koostuu modernien Windows-sovellusten sovellusmoduuleista sekä
+tiettyjen Windows 11:n säädinten laajennuksista ja korjauksista.
 
 Huomautukset:
 
-* Tämä lisäosa edellyttää 64-bittistä Windows 10 22H2:ta (koontiversio
-  19045), 11 23H2:ta (koontiversio 22631) tai uudempaa.
+* Tämä lisäosa edellyttää 64-bittistä Windows 11 24H2:ta (koontiversio
+  26100) tai uudempaa.
 * Ominaisuuspäivityksen tuen kesto on sidoksissa kuluttajatuen kestoon
   (Home, Pro, Pro Education, Pro for Workstations -versiot), ja lisäosa
   saattaa lopettaa tuen ominaisuuspäivitykselle jo ennen kuluttajatuen

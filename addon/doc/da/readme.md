@@ -3,12 +3,12 @@
 * Forfattere: Joseph Lee, Derek Riemer og andre
 
 Denne tilføjelse er en samling af app-moduler til forskellige Windows-apps,
-samt forbedringer og rettelser for visse windows 10 kontrolelementer.
+samt forbedringer og rettelser for visse windows 11.
 
 Bemærkninger:
 
-* Denne tilføjelse kræver Windows 10 22H2 (build 19045), 11 23H2 (build
-  22631) eller nyere udgivelser.
+* Denne tilføjelse kræver Windows 11 24H2 (build 26100) eller nyere
+  udgivelser.
 * Varigheden af understøttelse af funktionsopdateringer er bundet til
   varigheden af forbrugersupport (Home, Pro, Pro Education, Pro for
   Workstations-udgaver), og tilføjelsen kan afslutte understøttelsen af en

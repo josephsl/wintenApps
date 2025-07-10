@@ -40,5 +40,5 @@ msgstr "Windows App Essentials"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
-msgid "Improving support for various apps and controls on Windows 10 and later"
-msgstr "윈도우 10 이상에서의 앱 지원 기능 향상"
+msgid "Improving support for various apps and controls on Windows 11"
+msgstr "윈도우 11에서의 앱 지원 기능 향상"
