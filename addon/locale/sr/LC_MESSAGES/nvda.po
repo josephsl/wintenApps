@@ -24,8 +24,8 @@ msgid ""
 "Windows App Essentials NVDA add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
 msgstr ""
-"Koristite {releaseName} ({build}), Windows verziju koju NVDA dodatak "
-"Windows App Essentials ne podržava.\n"
+"Koristite {releaseName} ({build}), Windows verziju koju NVDA dodatak Windows "
+"App Essentials ne podržava.\n"
 "Ovaj dodatak zahteva {supportedReleaseName} ({supportedBuild}) ili noviji."
 
 #. Translators: dialog title shown when trying to install the add-on on unsupported systems.
