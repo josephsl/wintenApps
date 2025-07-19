@@ -19,6 +19,7 @@ This section lists changes planned for future add-on releases. Items in this sec
 
 * Windows 11: Requires Version 24H2 or later.
 * Changed Windows 10 references found in add-on description and documentation to Windows 11 (installing the add-on on Windows 10 is still supported).
+* Removed unmaintained localizations (add-on messages).
 * Removed app module for modern keyboard.
 * Removed WinUI 3 app mouse and touch navigation workaround.
 * Modern keyboard: Removed Windows 11 emoji panel item repetition workaround.
