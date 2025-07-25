@@ -148,22 +148,3 @@ def disableInSecureMode(cls):  # type: ignore
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super().__init__()
-		#The following hack applies to Windows 11 (24H2) and later.
-		if winVersion.getWinVer() < winVersion.WIN11_24H2:
-			return
-		# Hack: add extra things for UIA support if required and uIA is enabled.
-		if not config.conf["UIA"]["enabled"]:
-			raise RuntimeError("UIA forcefully disabled in configuration")
-		# Add support for enhanced notification events (to handle apps such as Windows 11 Voice Access).
-		# Restart UIA handler if notification event process request isn't found in app modules.
-		# Resolved in NVDA 2025.2.
-		if hasattr(appModuleHandler.AppModule, "shouldProcessUIANotificationEvent"):
-			return
-		log.debug("winapps: restarting UIA handler to add additional events")
-		UIAHandler.terminate()
-		try:
-			UIAHandler.handler = UIAHandlerEx()
-			log.debug("winapps: UIA handler restarted")
-		except UIAHandler.COMError:
-			UIAHandler.handler = None
-			raise
