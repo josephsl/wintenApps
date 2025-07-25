@@ -4,14 +4,7 @@
 # Adds handlers for various UIA controls found in Windows 11.
 
 import globalPluginHandler
-import appModuleHandler
 import globalVars
-import UIAHandler
-from UIAHandler import _isDebug, COMError
-import config
-import eventHandler
-import winVersion
-from logHandler import log
 
 
 # Don't even think about proceeding in secure screens.
