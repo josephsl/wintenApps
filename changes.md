@@ -18,7 +18,7 @@ This is the last add-on release to support Windows 10.
 
 * NVDA 2025.2 or later is required.
 * Various features and fixes that were included with the add-on are now part of NVDA, all of them for Windows 11. These include improved Start menu interaction reliability (fix from Jamie Teh), "go to line" edit field recognition in Notepad, announcing window maximize/restore/snap status when Windows+arrow keys are pressed, and announcing Voice Access notifications and dictated text from everywhere.
-* Removed all app modules included with the add-on, including File Explorer, Notepad, Start menu (SearchUI), and Voice Access.
+* Removed all app modules included with the add-on, including File Explorer, Notepad, Start menu (SearchUI), and Voice Access. Contents of these modules are included in NVDA 2025.2.
 
 ## Version 25.08 (From 10 to 11)
 
