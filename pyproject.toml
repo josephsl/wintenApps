@@ -152,9 +152,9 @@ reportMissingTypeStubs = false
 
 # Bad rules
 # These are sorted alphabetically and should be enabled and moved to compliant rules section when resolved.
-reportImplicitStringConcatenation = false  # Lengthy debug strings and UI messages
+reportImplicitStringConcatenation = false  # Windows release error message
 reportMissingImports = false  # Mostly NVDA Core modules
 reportUndefinedVariable = false  # _ = gettext.gettext call
 reportUnknownMemberType = false  # Attributes and classes coming from NVDA Core
 reportUnknownVariableType = false  # Types coming from NVDA Core
-reportUntypedBaseClass = false  # Derives from classes defined in NVDA Core such as base app module class
+reportUntypedBaseClass = false  # Derives from classes defined in NVDA Core such as base global plugin class
