@@ -1,6 +1,6 @@
 # Contributing to Windows App Essentials NVDA add-on
 
-IMPORTANT: effective March 2025, Windows App Essentials add-on is in deep maintenance mode. Therefore, third party contributions are no longer accepted. This document remains in the add-on code repository to provide historical information.
+IMPORTANT: Windows App Essentials will be discontinued in October 2025. This document remains in the add-on code repository to provide historical information on contribution process.
 
 Thank you for your interest in contributing to Windows App Essentials NVDA add-on. The purpose of this document is to outline the overall add-on contribution requirements, development process, and offer tips when contributing.
 
