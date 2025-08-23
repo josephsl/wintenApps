@@ -2,7 +2,7 @@
 
 Author: Joseph Lee
 
-Revision: August 2025
+Revision: September 2025
 
 IMPORTANT: Windows App Essentials will be discontinued in October 2025.
 
@@ -14,7 +14,7 @@ If one add-on can define my passion for NVDA, it would be Windows App Essentials
 
 When I started development of Windows App Essentials in 2015, I knew that the lifetime of the add-on was limited. While I promised to support the add-on as long as Windows Insider Program was a thing, deep down I knew that the lifetime of the add-on depended on add-on features and bug fixes being integrated into NVDA. Throughout 2024 and 2025, the last pieces of this add-on became part of NVDA, with the final parts being NVDA 2025.2 changes, namely handling UIA notifications for elements without window handles, Windows 11 Voice Access support, and global support for mouse and touch navigation in WinUI 3 apps.
 
-Originally, I planned to support Windows 10 series until October 2025 but a fix from Microsoft in February 2025 changed this. Prior to February 2025, NVDA would be verbose when announcing update installation status in Settings app, therefore the add-on resolved it by silencing some update announcements. However, in February 2025, the live region change event responsible for announcing update status changes is no longer raised, making the workaround unnecessary. With this change, the last remaining anchor to Windows 10 (Settings app module) was removed in February 2025, but to fulfill the promise to support it until its end of life, Windows 10 support will be kept in install tasks module (checking minimum supported Windows version) until October 2025. Although users can opt into extended security updates, the add-on ends support for Windows 10 in October 2025.
+Originally, I planned to support Windows 10 series until October 2025 but a fix from Microsoft in February 2025 changed this. Prior to February 2025, NVDA would be verbose when announcing update installation status in Settings app, therefore the add-on resolved it by silencing some update announcements. However, in February 2025, the live region change event responsible for announcing update status changes is no longer raised, making the workaround unnecessary. With this change, the last remaining anchor to Windows 10 (Settings app module) was removed in February 2025, but to fulfill the promise to support it until its end of life, Windows 10 support will be kept in install tasks module (checking minimum supported Windows version) until October 2025. Although users can opt into extended security updates, the add-on ends support for Windows 10 in October 2025 i.e. no support for Windows 10 extended security updates.
 
 The upcoming Windows 10 end of life and my current status as an up and coming researcher led to the decision to discontinue the add-on in October 2025. I felt bittersweet when announcing my decision in 2024, knowing that there was no other add-on like it where I can pour out my advocacy skills through programming. However, I knew that add-on development can become a distraction as I learn to practice research, so I decided to take the necessary step to wind down this activity. Although the add-on is fading into history in 2025, I still dream of accessible apps and opportunities to advocate for it in different forms.
 
