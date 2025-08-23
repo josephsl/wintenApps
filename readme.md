@@ -2,8 +2,6 @@
 
 * Authors: Joseph Lee, Derek Riemer and others
 
-IMPORTANT: Windows App Essentials will be discontinued in October 2025.
-
 This add-on is a collection of app modules for various modern Windows apps, as well as enhancements and fixes for certain controls found in Windows 11.
 
 Notes:
