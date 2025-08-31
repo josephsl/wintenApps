@@ -21,7 +21,9 @@ addon_info = AddonInfo(
 	addon_summary=_("Windows App Essentials"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-on store
-	addon_description=_("""Improving support for various apps and controls on Windows 11"""),
+	addon_description=_("""Improving support for various apps and controls on Windows 11
+
+IMPORTANT: this add-on is discontinued."""),
 	# version
 	addon_version="25.09",
 	# Brief changelog for this version
