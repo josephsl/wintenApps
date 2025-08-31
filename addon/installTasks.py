@@ -20,12 +20,8 @@ def onInstall() -> None:
 	# and the add-on may end support for a feature update prior to end of consumer support.
 	# See aka.ms/WindowsTargetVersioninfo.
 	# For Insider Preview, only the latest canary/dev/beta/release preview builds are supported.
-	minimumWinVer = (
-		winVersion.WIN11_24H2
-		if (currentWinVer := winVersion.getWinVer()) > winVersion.WIN10_22H2
-		else winVersion.WIN10_22H2  # 64-bit only, final feature update (supported until October 2025)
-	)
-	if currentWinVer < minimumWinVer:
+	minimumWinVer = winVersion.WIN11_24H2
+	if (currentWinVer := winVersion.getWinVer()) < minimumWinVer:
 		gui.MessageDialog.alert(
 			_( # Translators: dialog text shown when trying to install the add-on on unsupported systems.
 				"You are using {releaseName} ({build}), "
