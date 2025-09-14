@@ -8,7 +8,7 @@ For each add-on version entry, minor versions (such as 18.06.1) are included und
 
 ## Version 25.10 (farewell, for now)
 
-This is the final planned add-on release and requires Windows 11 series or later.
+This is the final add-on release and requires Windows 11 series or later.
 
 * Removed support for Windows 10 series, requiring Windows 11 series or later.
 
