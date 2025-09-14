@@ -25,10 +25,10 @@ You can contribute to Windows App Essentials in a number of ways:
 
 You must:
 
-1. Be running the latest supported version of Windows 11 (as of July 2025, this means Windows 11 2024 Update (Version 24H2) and latest Insider Preview (canary/dev/beta/release preview) build).
-2. Be running the latest stable version of NVDA or later (as of July 2025, this means NVDA 2025.1.2 or latest alpha release).
-3. If you wish to offer code/pull requests, you must be running latest stable NVDA (2024.4.2) and Windows 11 (24H2) release or later.
-4. To package your modifications into an add-on build, you must be using Python 3.11 or later.
+1. Be running the latest supported version of Windows 11 (as of September 2025, this means Windows 11 2024 Update (Version 24H2) and latest Insider Preview (canary/dev/beta/release preview) build).
+2. Be running the latest stable version of NVDA or later (as of September 2025, this means NVDA 2025.3 or latest alpha release).
+3. If you wish to offer code/pull requests, you must be running latest stable NVDA (2025.3) and Windows 11 (24H2) release or later.
+4. To package your modifications into an add-on build, you must be using Python 3.13 or later.
 
 ## Contribution process
 
@@ -59,7 +59,7 @@ Testing the add-on simply involves using NVDA as usual. If you do encounter issu
 
 ### Localizing add-on documentation and messages
 
-You must do this through NVDA translations workflow (Subversion or Crowdin), not through pull requests.
+You must do this through NVDA translations workflow (Crowdin), not through pull requests.
 
 ### Offering code and pull requests
 
@@ -84,7 +84,7 @@ Windows App Essentials follows NVDA's own coding style (tabs for indentation, ca
 
 A given Windows App Essentials release is supported until the next version is released. For development snapshots, only the latest build is supported. A stable version is supported until the next stable version is released. Both major (milestone) and minor (backports and localizations) are grouped under stable versions.
 
-For NVDA releases, Windows App Essentials supports latest NVDA releases, including development builds. Unless noted otherwise, the immediate past stable NVDA release is also supported. As of July 2025, Windows App Essentials supports NVDA 2025.1.2 (latest stable) and alpha snapshots.
+For NVDA releases, Windows App Essentials supports latest NVDA releases, including development builds. Unless noted otherwise, the immediate past stable NVDA release is also supported. As of September 2025, Windows App Essentials supports NVDA 2025.3 (latest stable), 2025.2 (immediate past stable), and alpha snapshots.
 
 For Windows releases, a stable Windows release (typically a feature update) is supported for at least 12 months and no more than consumer support duration (typically two years). Although the add-on will indicate support for a Windows release (or a feature update) months in advance, official support begins the moment a given release is made available to the general public. For example, although Windows 10 November 2021 Update was marked as supported since August 2021, official support duration is from November 2021 to at least December 2022 and no later than June 2023. For Windows 11 2023 Update, preview (and experimental) support began in July 2023, and official support duration is from October 2023 to at least April 2025 and no later than November 2025. As a rule of thumb, Windows App Essentials uses consumer (Home, Pro, Pro for Workstations) support duration for a feature update to determine support duration. See release information page from Microsoft for details on support duration for Windows releases, and see below for support duration for Windows releases across add-on releases.
 
