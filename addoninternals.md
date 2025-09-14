@@ -83,13 +83,13 @@ Note: the last add-on release to include the components described below is 25.08
 
 Prior to August 2025, Windows App Essentials add-on contained a global plugin and app modules for various universal apps included with Windows 10 and later. The Windows App Objects (shortened to WinAppObjs), the global plugin portion of this add-on, provided foundations such as overlay classes for frequently encountered controls in Windows an universal apps. Until 2022, UIA event tracking and logger facility was also part of the add-on, replaced by Event Tracker add-on. Until 2018, the global plugin was also responsible for add-on update feature, documented here for sake of completeness. With the integration of updated dialog detection in NVDA 2024.1, the global plugin became empty.
 
-The empty global plugin module saw renewed activity throughout 2025. In March,  a global yet hacky mechanism to enable mouse and touchscreen navigation in WinUI 3 apps such as Copilot and parts of Windows 11 File Explorer was introduced. In June, a mechanism to handle UIA notifications from elements with native window handle was added by patching NVDA's own UIA handler (patching NVDA itself was and still is possible); among other things, this change introduces proper support for Windows 11 Voice Access and allows window restore/maximize/snap to be reported when Windows+arrow keys are pressed in Windows 11 24H2 and later. These additions became part of NVDA 2025.2, and thus, the global plugin became empty once again in August.
+The empty global plugin module saw renewed activity throughout 2025. In March,  a global yet hacky mechanism to enable mouse and touchscreen navigation in WinUI 3 apps such as Copilot and parts of Windows 11 File Explorer was introduced. In June, a mechanism to handle UIA notifications from elements without native window handle defined was added by patching NVDA's own UIA handler (patching NVDA itself was and still is possible); among other things, this change introduces proper support for Windows 11 Voice Access and allows window restore/maximize/snap to be reported when Windows+arrow keys are pressed in Windows 11 24H2 and later. These additions became part of NVDA 2025.2, and thus, the global plugin became empty once again in August.
 
 In regards to app modules, these were included to either provide workarounds or enhance the user experience. For example, the app module for Settings app (systemsettings) allows NVDA to announce Windows Update download and installation progress, and app module for modern keyboard (windowsinternal_composableshell_experiences_textinput_inputapp) provides support for more modern input facilities such as enhanced dictation and suggested actions. Sometimes app modules relied on NVDA patching mechanism from the global plugin, a notable example is announcing dictated text while using Windows 11 Voice Access (voiceaccess). As of August 2025, no app modules are included with the add-on. We'll meet some of these past app modules in subsequent sections.
 
 ### A note on feature parity with NVDA screen reader
 
-As noted above, some features discussed in this article (such as UIA notification event handler and UIA-based drag and drop announcements) were integrated into recent NVDA releases. I will point out some of these, as well as provide how these were integrated, including planning involved and some tips on modifying add-on features to fit into NVDA's code base.
+As noted above, some features discussed in this article (such as UIA notification event handler and UIA-based drag and drop announcements) were integrated into recent NVDA releases, with the feature parity work complete as of NVDA 2025.2. I will point out some of these, as well as provide how these were integrated, including planning involved and some tips on modifying add-on features to fit into NVDA's code base.
 
 ### Information on add-on update feature
 
@@ -98,6 +98,10 @@ This article will sometimes reference add-on update feature, which is gone in 20
 ### Special note on feature updates support on Windows 10 and later
 
 Windows App Essentials add-on supports a given Windows feature update (release) for at least one year and no more than end of consumer level support (Home, Pro, Pro Education, Pro for Workstations); exceptions are Windows 10 22H2 (the final Windows 10 feature update which will be supported until October 2025) and 11 24H2/25H2 (supported until the add-on is discontinued in October 2025; 24H2 support did fulfill minimum one year support criteria). In addition, it comes with support for features found in Windows Insider Preview (WIP) builds, including features that may not appear in subsequent feature updates.
+
+### Important note on add-on end of life
+
+Windows App Essentials add-on will be discontinued in October 2025 with no replacement. Therefore, contents of this document will describe what the add-on did for the most part.
 
 ## Fun with UI Automation
 
