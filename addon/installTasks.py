@@ -41,7 +41,6 @@ def onInstall() -> None:
 		)
 	# Display add-on end of life notice.
 	gui.MessageDialog.alert(
-		"""IMPORTANT: Windows App Essentials add-on will be discontinued in October 2025. Please uninstall the add-on before then.\n
-Note: all add-on features have become part of NVDA as of 2025.2.""",
-		"Windows App Essentials end of life"
+		"""Thank you for using Windows App Essentials NVDA add-on. This add-on is discontinued. Please uninstall the add-on.""",
+		"Windows App Essentials add-on end of life"
 	)
