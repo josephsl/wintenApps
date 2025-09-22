@@ -30,6 +30,7 @@ IMPORTANT: this add-on is discontinued."""),
 	# Translators: what's new content for the add-on version to be shown in the add-on store
 	addon_changelog=_("""This is the final add-on release and requires Windows 11 series or later.
 
+* NVDA 2025.3 is required.
 * Removed support for Windows 10 series, requiring Windows 11 series or later."""),
 	# Author(s)
 	addon_author="Joseph Lee <joseph.lee22590@gmail.com>, Derek Riemer <driemer.riemer@gmail.com> and others",
