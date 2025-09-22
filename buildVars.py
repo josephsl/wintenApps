@@ -28,7 +28,7 @@ IMPORTANT: this add-on is discontinued."""),
 	addon_version="25.09",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""This is the final planned add-on release and requires Windows 11 series or later.
+	addon_changelog=_("""This is the final add-on release and requires Windows 11 series or later.
 
 * Removed support for Windows 10 series, requiring Windows 11 series or later."""),
 	# Author(s)
