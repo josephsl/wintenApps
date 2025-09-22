@@ -12,6 +12,7 @@ For each add-on version entry, minor versions (such as 18.06.1) are included und
 
 This is the final add-on release and requires Windows 11 series or later.
 
+* NVDA 2025.3 is required.
 * Removed support for Windows 10 series, requiring Windows 11 series or later.
 
 ## Version 25.09 (goodbye, Windows 10)
