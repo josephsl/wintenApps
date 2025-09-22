@@ -4,7 +4,7 @@ Author: Joseph Lee
 
 Revision: September 2025
 
-IMPORTANT: Windows App Essentials will be discontinued in October 2025.
+IMPORTANT: Windows App Essentials add-on is end of life.
 
 Note: originally called Windows 10 App Essentials, the add-on was renamed to Windows App Essentials in 2021 with the introduction of Windows 11. Parts of this document will refer to the original add-on name or Windows 10.
 
