@@ -25,7 +25,7 @@ addon_info = AddonInfo(
 
 IMPORTANT: this add-on is discontinued."""),
 	# version
-	addon_version="25.09",
+	addon_version="25.10",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
 	addon_changelog=_("""This is the final add-on release and requires Windows 11 series or later.
