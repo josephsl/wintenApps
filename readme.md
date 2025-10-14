@@ -2,7 +2,7 @@
 
 * Authors: Joseph Lee, Derek Riemer and others
 
-IMPORTANT: Windows App Essentials add-on is end of life.
+IMPORTANT: Windows App Essentials add-on is end of life as of October 14, 2025.
 
 This add-on is a collection of app modules for various modern Windows apps, as well as enhancements and fixes for certain controls found in Windows 11.
 

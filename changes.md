@@ -1,6 +1,6 @@
 # Windows App Essentials Changelog
 
-IMPORTANT: Windows App Essentials add-on is end of life.
+IMPORTANT: Windows App Essentials add-on is end of life as of October 14, 2025.
 
 This document lists release changelogs for Windows App Essentials add-on.
 
