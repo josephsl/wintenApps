@@ -119,7 +119,6 @@ reportPropertyTypeMismatch = true
 reportRedeclaration = true
 reportReturnType = true
 reportSelfClsParameterName = true
-reportShadowedImports = true
 reportTypeCommentUsage = true
 reportTypedDictNotRequiredAccess = true
 reportUnboundVariable = true
