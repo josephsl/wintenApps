@@ -8,6 +8,12 @@ Note: originally called Windows 10 App Essentials, this add-on was renamed to Wi
 
 For each add-on version entry, minor versions (such as 18.06.1) are included under major release (18.06, for example).
 
+## Version 26.04 (return of the add-on)
+
+Windows App Essentials has returned in April 2026 to provide important fixes for Windows 11 and update Windows release support duration.
+
+* File Explorer: Product version for File Explorer will reflect actual Windows version including correct build and revision numbers. This is more noticeable for Windows releases which are enablement packages on top of an earlier release such as Windows 11 2025 Update based on Windows 11 2024 Update.
+
 ## Version 25.10 (farewell, for now)
 
 This is the final add-on release and requires Windows 11 series or later.
