@@ -5,14 +5,11 @@
 
 # Provides additional routines on top of the built-in File Explorer app module.
 
-from collections.abc import Callable
 # Flake8 F403: detect other add-ons that overrode File Explorer app module.
 from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
 from nvdaBuiltin.appModules.explorer import AppModule as CoreAppModule
-import ui
-from NVDAObjects import NVDAObject
-import UIAHandler
 import versionInfo
+import winVersion
 
 
 # Let NVDA work with its own File Explorer app module in 2025.2.
@@ -23,33 +20,17 @@ def nvda251applicable(cls):  # type: ignore
 
 @nvda251applicable
 class AppModule(CoreAppModule):
-	def shouldProcessUIANotificationEvent(
-		self,
-		sender: UIAHandler.UIA.IUIAutomationElement,
-		notificationKind: int | None = None,
-		notificationProcessing: int | None = None,
-		displayString: str = "",
-		activityId: str = "",
-	) -> bool:
-		# NVDA Core issue 17841: announce window restore/maximize/snap states.
-		# Resolved in NVDA 2025.2.
-		if activityId == "Windows.Shell.SnapComponent.SnapHotKeyResults":
-			return True
-		return bool(UIAHandler.handler.getNearestWindowHandle(sender))
-
-	def event_UIA_notification(
-		self,
-		obj: NVDAObject,
-		nextHandler: Callable[[], None],
-		notificationKind: int | None = None,
-		notificationProcessing: int | None = None,
-		displayString: str | None = None,
-		activityId: str | None = None,
-	) -> None:
-		# NVDA Core issues 17841 and 18175: announce window states across apps (Windows 11 24H2 and later).
-		# These messages come from a File Explorer (shell) element and there is no native window handle.
-		# Resolved in NVDA 2025.2.
-		if activityId == "Windows.Shell.SnapComponent.SnapHotKeyResults":
-			ui.message(displayString)
-			return
-		nextHandler()
+	def _setProductInfo(self) -> None:
+		# NVDA Core issue 19802: customized for File Explorer as product version is wrong
+		# (looks at explorer.exe.mui).
+		# Resolved in NVDA 2026.2.
+		if not self.processHandle:
+			raise RuntimeError("processHandle is 0")
+		# Even though product version is wrong, use product name supplied by File Explorer.
+		productInfo = self._getExecutableFileInfo()
+		self.productName = productInfo[0]
+		# NVDA claims executable name is "explorer.exe" when in fact it is "explorer.exe.mui".
+		# This means file information would not be accurate, returning the base Windows build.revision.
+		# Therefore, set product version to Windows major.minor.build.revision.
+		winVer = winVersion.getWinVer()
+		self.productVersion = f"{winVer.major}.{winVer.minor}.{winVer.build}.{winVer.revision}"
