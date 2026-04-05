@@ -12,6 +12,7 @@ For each add-on version entry, minor versions (such as 18.06.1) are included und
 
 Windows App Essentials has returned in April 2026 to provide important fixes for Windows 11 and update Windows release support duration.
 
+* Removed add-on end of life notice for the time being.
 * Initial (experimental) support for Windows 11 Version 26H1 (for new ARM64 devices).
 * File Explorer: Product version for File Explorer will reflect actual Windows version including correct build and revision numbers. This is more noticeable for Windows releases which are enablement packages on top of an earlier release such as Windows 11 Version 25H2 based on Windows 11 Version 24H2.
 
