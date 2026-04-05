@@ -4,7 +4,7 @@ Author: Joseph Lee
 
 Revision: October 2025
 
-IMPORTANT: Windows App Essentials add-on is end of life as of October 14, 2025.
+IMPORTANT: Windows App Essentials add-on is officially end of life as of October 14, 2025. No changes except to improve NVDA's support and compatibility with Windows features and releases.
 
 Note: originally called Windows 10 App Essentials, the add-on was renamed to Windows App Essentials in 2021 with the introduction of Windows 11. Parts of this document will refer to the original add-on name or Windows 10.
 
