@@ -125,6 +125,8 @@ Note: support duration also depends on add-on maintenance - duration can be shor
 
 ### Development process and milestone releases
 
+IMPORTANT: changed significantly in 2026 with the removal of the "stable" branch. The below information is keept for historical reasons.
+
 Windows App Essentials uses continuous, iterative development process. This means a given feature or a change can take up to several weeks to months to be implemented and refined based on user feedback (this can take several milestones), along with being sensitive to changes to NVDA, Windows, and apps. To facilitate this, development snapshots are released whenever changes are made to the add-on source code and data, including when localizations are updated.
 
 For project management, the add-on uses "development milestones" lasting between six months to a year. These milestones, named after a chemical element to align with Windows development cycle, are further divided into "development quarters" lasting about three months each. These quarterly releases are termed "milestone" or major releases dedicated to a specific theme or activity such as adding or dropping support for Windows and/or NVDA releases. One or more minor releases, consisting of backports from the next development quarter and responding to changes in Windows and apps, can be released between milestone releases, typically on a monthly basis. Localization updates can also trigger minor releases.
