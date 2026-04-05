@@ -8,17 +8,17 @@
 # Flake8 F403: detect other add-ons that overrode File Explorer app module.
 from nvdaBuiltin.appModules.explorer import *  # NOQA: F403
 from nvdaBuiltin.appModules.explorer import AppModule as CoreAppModule
-import versionInfo
+import buildVersion
 import winVersion
 
 
-# Let NVDA work with its own File Explorer app module in 2025.2.
+# Let NVDA work with its own File Explorer app module in 2026.2.
 # Don't worry about "cls" type.
-def nvda251applicable(cls):  # type: ignore
-	return CoreAppModule if (versionInfo.version_year, versionInfo.version_major) >= (2025, 2) else cls
+def nvda261applicable(cls):  # type: ignore
+	return CoreAppModule if (buildVersion.version_year, buildVersion.version_major) >= (2026, 2) else cls
 
 
-@nvda251applicable
+@nvda261applicable
 class AppModule(CoreAppModule):
 	def _setProductInfo(self) -> None:
 		# NVDA Core issue 19802: customized for File Explorer as product version is wrong
