@@ -25,7 +25,7 @@ addon_info = AddonInfo(
 
 IMPORTANT: this add-on is discontinued."""),
 	# version
-	addon_version="25.10",
+	addon_version="26.04",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
 	addon_changelog=_("""* Initial (experimental) support for Windows 11 Version 26H1 (for new ARM64 devices).
