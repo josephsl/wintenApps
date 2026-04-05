@@ -28,10 +28,8 @@ IMPORTANT: this add-on is discontinued."""),
 	addon_version="25.10",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""This is the final add-on release and requires Windows 11 series or later.
-
-* NVDA 2025.3 is required.
-* Removed support for Windows 10 series, requiring Windows 11 series or later."""),
+	addon_changelog=_("""* Initial (experimental) support for Windows 11 Version 26H1 (for new ARM64 devices).
+* File Explorer: Product version for File Explorer will reflect actual Windows version including correct build and revision numbers. This is more noticeable for Windows releases which are enablement packages on top of an earlier release such as Windows 11 2025 Update based on Windows 11 2024 Update."""),
 	# Author(s)
 	addon_author="Joseph Lee <joseph.lee22590@gmail.com>, Derek Riemer <driemer.riemer@gmail.com> and others",
 	# URL for the add-on documentation support
