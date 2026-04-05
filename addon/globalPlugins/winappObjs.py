@@ -1,5 +1,5 @@
 # Windows app controls repository
-# Copyright 2015-2025 Joseph Lee, released under GPL.
+# Copyright 2015-2026 Joseph Lee, released under GPL.
 
 # Adds handlers for various UIA controls found in Windows 11.
 
