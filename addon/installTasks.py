@@ -39,8 +39,3 @@ def onInstall() -> None:
 		raise RuntimeError(
 			f"Windows App Essentials does not support {currentWinVer.releaseName} ({currentWinVer.build})"
 		)
-	# Display add-on end of life notice.
-	gui.MessageDialog.alert(
-		"""Thank you for using Windows App Essentials NVDA add-on. This add-on is discontinued. Please uninstall the add-on.""",
-		"Windows App Essentials add-on end of life"
-	)
