@@ -8,6 +8,10 @@ Note: originally called Windows 10 App Essentials, this add-on was renamed to Wi
 
 For each add-on version entry, minor versions (such as 18.06.1) are included under major release (18.06, for example).
 
+## Version 26.05
+
+* NVDA 2025.3.3 or later is required.
+
 ## Version 26.04 (return of the add-on)
 
 Windows App Essentials has returned in April 2026 to provide important fixes for Windows 11 and update Windows release support duration.
