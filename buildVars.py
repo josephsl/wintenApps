@@ -26,9 +26,7 @@ addon_info = AddonInfo(
 	addon_version="26.04",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""* Removed add-on end of life notice for the time being.
-* Initial (experimental) support for Windows 11 Version 26H1 (for new ARM64 devices).
-* File Explorer: Product version for File Explorer will reflect actual Windows version including correct build and revision numbers. This is more noticeable for Windows releases which are enablement packages on top of an earlier release such as Windows 11 2025 Update based on Windows 11 2024 Update."""),
+	addon_changelog=_("""* NVDA 2025.3.3 or later is required."""),
 	# Author(s)
 	addon_author="Joseph Lee <joseph.lee22590@gmail.com>, Derek Riemer <driemer.riemer@gmail.com> and others",
 	# URL for the add-on documentation support
