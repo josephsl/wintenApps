@@ -6,7 +6,7 @@ Este complemento es una colección de módulos de aplicación para varias aplica
 
 Notas:
 
-* Este complemento requiere Windows 11 Versión 24H2 (compilación 26100) o posterior.
+* Este complemento requiere Windows 11 Versión 25H2 (compilación 26200) o posterior.
 * La duración del soporte de las actualizaciones de características está vinculada a la duración del soporte al cliente (ediciones Home, Pro, Pro Education, Pro for Workstations), y el complemento podría finalizar el soporte para una actualización de características antes del fin del soporte al cliente. Consulta <https://aka.ms/WindowsTargetVersioninfo> para más información y fechas de soporte.
 * Aunque la instalación es posible, este complemento no soporta Windows Enterprise LTSC (canal de servicio a largo plazo) ni las versiones de Server.
 * No se soportarán todas las funciones de las compilaciones Windows Insider Preview, más si se introducen en un subconjunto de insiders de Windows.

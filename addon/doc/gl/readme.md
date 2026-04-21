@@ -6,7 +6,7 @@ Este complemento é unha coleción de app modules para varias aplicacións de Wi
 
 Notas:
 
-* Este complemento require do Windows 11 24H2 (compilación 26100) ou versións posteriores.
+* Este complemento require do Windows 11 25H2 (compilación 26200) ou versións posteriores.
 * O soporte das actualizacións de características está vencellado á duración do soporte ó consumidor (edicións Home, Pro, Pro Education, Pro for Workstations) e o complemento podería rematar o soporte para unha actualización de características antes do final do soporte ó consumidor. Consulta <https://aka.ms/WindowsTargetVersioninfo> para máis información e datas de soporte.
 * Aínda que a instalación é posible, este complemento non soporta Windows Enterprise LTSC (Long-Term Servicing Channel) nin versións de Server.
 * Non se soportarán todas as características de versións Windows Insider Preview, máis aínda para as características introducidas nun subconxunto de Insiders Windows na canle de desenvolvemento (dev).

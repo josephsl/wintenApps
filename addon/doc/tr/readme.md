@@ -6,7 +6,7 @@ Bu eklenti, çeşitli modern Windows uygulamaları için uygulama modüllerinin 
 
 Notlar:
 
-* Bu eklenti, Windows 11 24H2 (Build 26100) veya daha üst sürümleri gerektirir.
+* Bu eklenti, Windows 11 25H2 (Build 26200) veya daha üst sürümleri gerektirir.
 * Özellik güncelleme destek süresi, tüketici destek süresine (Ev, Pro, Pro Education, Pro for Workstations sürümleri) bağlıdır ve eklenti, tüketici desteği sona ermeden önce özellik güncellemesi desteğini sonlandırabilir. Daha fazla bilgi ve destek tarihleri ​​için <https://aka.ms/WindowsTargetVersioninfo> adresine bakın.
 * Kurulum mümkün olsa da, bu eklenti Windows Enterprise LTSC'yi (uzun süreli servis kanalı) ve Windows Server sürümlerini desteklemez.
 * Windows Insider Preview derlemelerindeki tüm özellikler desteklenmeyecektir; özellikle Windows Insider'ların bir alt kümesine sunulan özellikler için desteklenecektir.

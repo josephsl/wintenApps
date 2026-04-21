@@ -6,7 +6,7 @@ Ten dodatek to zbiór modułów aplikacji dla różnych nowoczesnych aplikacji s
 
 Notatki:
 
-* Ten dodatek wymaga systemu Windows 11 24H2 (kompilacja 26100) lub nowszych wersji.
+* Ten dodatek wymaga systemu Windows 11 25H2 (kompilacja 26200) lub nowszych wersji.
 * Czas trwania pomocy technicznej dotyczącej aktualizacji funkcji jest powiązany z czasem trwania pomocy technicznej dla klientów (wersje Home, Pro, Pro Education, Pro dla stacji roboczych), a dodatek może zakończyć świadczenie pomocy technicznej dla aktualizacji funkcji przed zakończeniem świadczenia pomocy technicznej dla klientów indywidualnych. Zobacz <https://aka.ms/WindowsTargetVersioninfo>, aby uzyskać więcej informacji i daty pomocy technicznej.
 * Chociaż instalacja jest możliwa, ten dodatek nie obsługuje wersji Windows Enterprise LTSC (Long-Term Servicing Channel) i Server.
 * Nie wszystkie funkcje kompilacji Windows Insider Preview będą obsługiwane, tym bardziej w przypadku funkcji wprowadzonych do podzbioru niejawnych testerów systemu Windows w kanałach kanarkowych i deweloperskich.

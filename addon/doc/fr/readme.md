@@ -6,7 +6,7 @@ Cette extension est une collection d'app modules pour diverses applications Wind
 
 Notes:
 
-* Cette extension nécessite Windows 11 24H2 (build 26100) ou version ultérieure.
+* Cette extension nécessite Windows 11 25H2 (build 26200) ou version ultérieure.
 * La durée du support de mise à jour des fonctionnalités est liée à la durée du support des consommateurs (Home, Pro, Pro Education, Pro for Workstations Editions) et l'extension peut mettre fin à la prise en charge d'une mise à jour des fonctionnalités avant la fin du support des consommateurs. Voir <https://aka.ms/WindowsTargetVersioninfo> pour plus d'informations et les dates de support.
 * Bien que l'installation soit possible, cette extension ne prend pas en charge les versions Windows Enterprise LTSC (Long-Term Servicing Channel) et Windows Server.
 * Toutes les fonctionnalités des builds Windows Insider Preview ne seront pas prises en charge, plus encore pour les fonctionnalités introduites dans un sous-ensemble de Windows Insiders.
