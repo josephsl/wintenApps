@@ -23,7 +23,7 @@ addon_info = AddonInfo(
 	# Translators: Long description to be shown for this add-on on add-on information from add-on store
 	addon_description=_("""Improving support for various apps and controls on Windows 11"""),
 	# version
-	addon_version="26.05",
+	addon_version="26.06",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
 	addon_changelog=_("""* Requires Windows 11 Version 25H2 or later, end of support for Server 2025 from the add-on."""),
