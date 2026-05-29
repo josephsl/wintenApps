@@ -25,9 +25,9 @@ You can contribute to Windows App Essentials in a number of ways:
 
 You must:
 
-1. Be running the latest supported version of Windows 11 (as of October 2025, this means Windows 11 2025 Update (Version 25H2) and latest Insider Preview (canary/dev/beta/release preview) build).
-2. Be running the latest stable version of NVDA or later (as of October 2025, this means NVDA 2025.3 or latest alpha release).
-3. If you wish to offer code/pull requests, you must be running latest stable NVDA (2025.3) and Windows 11 (25H2) release or later.
+1. Be running the latest supported version of Windows 11 (as of June 2026, this means Windows 11 2025 Update (Version 25H2) and latest Insider Preview (experimental/beta/release preview) build).
+2. Be running the latest stable version of NVDA or later (as of June 2026, this means NVDA 2026.1.1 or latest alpha release).
+3. If you wish to offer code/pull requests, you must be running latest stable NVDA (2026.1.1) and Windows 11 (25H2) release or later.
 4. To package your modifications into an add-on build, you must be using Python 3.13 or later.
 
 ## Contribution process
@@ -88,7 +88,7 @@ For NVDA releases, Windows App Essentials supports latest NVDA releases, includi
 
 For Windows releases, a stable Windows release (typically a feature update) is supported for at least 12 months and no more than consumer support duration (typically two years). Although the add-on will indicate support for a Windows release (or a feature update) months in advance, official support begins the moment a given release is made available to the general public. For example, although Windows 10 November 2021 Update was marked as supported since August 2021, official support duration is from November 2021 to at least December 2022 and no later than June 2023. For Windows 11 2023 Update, preview (and experimental) support began in July 2023, and official support duration is from October 2023 to at least April 2025 and no later than November 2025. As a rule of thumb, Windows App Essentials uses consumer (Home, Pro, Pro for Workstations) support duration for a feature update to determine support duration. See release information page from Microsoft for details on support duration for Windows releases, and see below for support duration for Windows releases across add-on releases.
 
-Regarding end of support for a Windows release from the add-on, for stable Windows releases, support duration is tied to consumer support. Prior to end of support, a grace period (at least 30 days) will be given to let users upgrade to newer releases (for Windows 11 original release, support from the add-on ended in August 2023, and the grace period was from June 2023 to August 2023). For Windows Insiders, only the latest Insider Preview build is supported, particularly if using canary and dev channel builds. Consequently, there is no concept of grace period from the add-on for Windows Insider Preview builds.
+Regarding end of support for a Windows release from the add-on, for stable Windows releases, support duration is tied to consumer support. Prior to end of support, a grace period (at least 30 days) will be given to let users upgrade to newer releases (for Windows 11 original release, support from the add-on ended in August 2023, and the grace period was from June 2023 to August 2023). For Windows Insiders, only the latest Insider Preview build is supported, particularly if using experimental channel builds. Consequently, there is no concept of grace period from the add-on for Windows Insider Preview builds.
 
 Note: until July 2025, the only exception to support duration policy was the very last Windows 10 feature update (2022 Update/Version 22H2), which was supported until October 2025 (official support until August 2025 followed by 60-day grace period; no support for extended security updates). Subsequently, Windows 11 24H2 and 25H2 were added as support for these releases depend on overall add-on maintenance duration (24H2 support did meet the minimum support duration requirement of 18 months).
 
