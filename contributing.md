@@ -123,6 +123,7 @@ Note: support duration also depends on add-on maintenance - duration can be shor
 * Version 24H2 and Windows Server 2025 (build 26100): April 2024-May 2026
 * Version 25H2 (build 26200): July 2025-present
 * Version 26H1 (build 28000 for 2026 ARM64 devices, experimental support): April 2026-present
+* Version 26H2 (build 26300): July 2026-present
 
 ### Development process and milestone releases
 
