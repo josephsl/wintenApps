@@ -26,7 +26,7 @@ addon_info = AddonInfo(
 	addon_version="26.06",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_("""* Requires Windows 11 Version 25H2 or later, end of support for Server 2025 from the add-on."""),
+	addon_changelog=_("""* Initial support for Windows 11 Version 26H2 (2026 Update)."""),
 	# Author(s)
 	addon_author="Joseph Lee <joseph.lee22590@gmail.com>, Derek Riemer <driemer.riemer@gmail.com> and others",
 	# URL for the add-on documentation support
