@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
+<file id="readme.md" original="https://raw.githubusercontent.com/josephsl/wintenApps/a3514164c8a31ee02acb45093fd0e4691b69f062/readme.md">
+<skeleton>
+# $(ID:f5513b0a-a661-4375-9734-175df0cb8dbe)
+
+* $(ID:cd2fa553-2725-45dc-b547-6aff61861058)
+
+$(ID:fd466826-f0a8-4a2a-807a-eaa317b56006)
+
+$(ID:0805a55e-1994-43a4-b738-8121678ba06b)
+
+$(ID:2421ac54-85c1-47b8-aa56-d12753a94067)
+
+* $(ID:c4d38bcb-09c0-4863-bf1d-a60c71083b14)
+* $(ID:d19ed883-42a5-456f-93dd-b5b9242af3c1)
+* $(ID:04497048-0db6-4eec-b8d5-43b95ba81c81)
+* $(ID:e9c6d484-a1eb-41ec-9440-6ef6f772db36)
+
+$(ID:d8d8115c-d866-4486-9206-7e8d22401ef1)
+
+$(ID:40df31f8-5c97-4b90-b213-487ad36057b3)
+
+</skeleton>
+<unit id="f5513b0a-a661-4375-9734-175df0cb8dbe">
+<notes>
+<note appliesTo="source">line: 2</note>
+<note appliesTo="source">prefix: # </note>
+</notes>
+<segment>
+<source>Windows App Essentials</source>
+</segment>
+</unit>
+<unit id="cd2fa553-2725-45dc-b547-6aff61861058">
+<notes>
+<note appliesTo="source">line: 4</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Authors: Joseph Lee, Derek Riemer and others</source>
+</segment>
+</unit>
+<unit id="fd466826-f0a8-4a2a-807a-eaa317b56006">
+<notes>
+<note appliesTo="source">line: 6</note>
+</notes>
+<segment>
+<source>IMPORTANT: Windows App Essentials add-on is officially end of life as of October 14, 2025. No changes except to improve NVDA's support and compatibility with Windows features and releases.</source>
+</segment>
+</unit>
+<unit id="0805a55e-1994-43a4-b738-8121678ba06b">
+<notes>
+<note appliesTo="source">line: 8</note>
+</notes>
+<segment>
+<source>This add-on is a collection of app modules for various modern Windows apps, as well as enhancements and fixes for certain controls found in Windows 11.</source>
+</segment>
+</unit>
+<unit id="2421ac54-85c1-47b8-aa56-d12753a94067">
+<notes>
+<note appliesTo="source">line: 10</note>
+</notes>
+<segment>
+<source>Notes:</source>
+</segment>
+</unit>
+<unit id="c4d38bcb-09c0-4863-bf1d-a60c71083b14">
+<notes>
+<note appliesTo="source">line: 12</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>This add-on requires Windows 11 25H2 (build 26200) or later.</source>
+</segment>
+</unit>
+<unit id="d19ed883-42a5-456f-93dd-b5b9242af3c1">
+<notes>
+<note appliesTo="source">line: 13</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Feature update support duration is tied to consumer support duration (Home, Pro, Pro Education, Pro for Workstations editions) and the add-on may end support for a feature update prior to end of consumer support. See &lt;https://aka.ms/WindowsTargetVersioninfo&gt; for more information and support dates.</source>
+</segment>
+</unit>
+<unit id="04497048-0db6-4eec-b8d5-43b95ba81c81">
+<notes>
+<note appliesTo="source">line: 14</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.</source>
+</segment>
+</unit>
+<unit id="e9c6d484-a1eb-41ec-9440-6ef6f772db36">
+<notes>
+<note appliesTo="source">line: 15</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Not all features from Windows Insider Preview builds will be supported, more so for features introduced to a subset of Windows Insiders.</source>
+</segment>
+</unit>
+<unit id="d8d8115c-d866-4486-9206-7e8d22401ef1">
+<notes>
+<note appliesTo="source">line: 17</note>
+</notes>
+<segment>
+<source>For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.</source>
+</segment>
+</unit>
+<unit id="40df31f8-5c97-4b90-b213-487ad36057b3">
+<notes>
+<note appliesTo="source">line: 19</note>
+</notes>
+<segment>
+<source>[1]: https://github.com/josephsl/wintenapps/blob/main/changes.md</source>
+</segment>
+</unit>
+</file>
+</xliff>
