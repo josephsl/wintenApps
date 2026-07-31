@@ -1,48 +1,51 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: wintenApps\n"
-"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-05-02 15:27-0600\n"
-"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
-"Language-Team: \n"
-"Language: de\n"
+"Project-Id-Version: nvdaaddons\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2026-07-29 18:51+0000\n"
+"PO-Revision-Date: 2026-07-31 15:50\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Crowdin-Project: nvdaaddons\n"
+"X-Crowdin-Project-ID: 780748\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: wintenApps.pot\n"
+"X-Crowdin-File-ID: 639\n"
 
 #. Translators: dialog text shown when trying to install the add-on on unsupported systems.
+#: addon\installTasks.py:27
 #, python-brace-format
-msgid ""
-"You are using {releaseName} ({build}), a Windows release not supported by "
-"Windows App Essentials NVDA add-on.\n"
+msgid "You are using {releaseName} ({build}), a Windows release not supported by Windows App Essentials NVDA add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-msgstr ""
-"Sie verwenden {releaseName} ({build}), das von Windows App Essentials nicht "
-"unterstützt wird.\n"
-"Diese NVDA-Erweiterung benötigt {supportedReleaseName} ({supportedBuild}) "
-"oder neuer."
+msgstr "Sie verwenden {releaseName} ({build}), das von Windows App Essentials nicht unterstützt wird.\n"
+"Diese NVDA-Erweiterung benötigt {supportedReleaseName} ({supportedBuild}) oder neuer."
 
 #. Translators: dialog title shown when trying to install the add-on on unsupported systems.
+#: addon\installTasks.py:37
 msgid "Windows App Essentials install error"
 msgstr "Installationsfehler von Windows App Essentials"
 
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
+#: buildVars.py:21
 msgid "Windows App Essentials"
 msgstr "Windows App Essentials"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
+#: buildVars.py:24
 msgid "Improving support for various apps and controls on Windows 11"
-msgstr ""
-"Verbesserte Unterstützung für verschiedene Apps und Steuerelemente in "
-"Windows 11"
+msgstr "Verbesserte Unterstützung für verschiedene Apps und Steuerelemente in Windows 11"
+
+#. Brief changelog for this version
+#. Translators: what's new content for the add-on version to be shown in the add-on store
+#: buildVars.py:29
+msgid "* Initial support for Windows 11 Version 26H2 (2026 Update)."
+msgstr "* Initial support for Windows 11 Version 26H2 (2026 Update)."
+
