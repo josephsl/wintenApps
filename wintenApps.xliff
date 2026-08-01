@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
-<file id="readme.md" original="https://raw.githubusercontent.com/josephsl/wintenApps/ce4a3a7dcc636ea46baf143bf6d2bf3529cf9f95/readme.md">
+<file id="readme.md" original="https://raw.githubusercontent.com/josephsl/wintenApps/92d30a6ba68bf127cae1923fdd68c961d895281f/readme.md">
 <skeleton>
 # $(ID:f5513b0a-a661-4375-9734-175df0cb8dbe)
 
 * $(ID:cd2fa553-2725-45dc-b547-6aff61861058)
 
-$(ID:fd466826-f0a8-4a2a-807a-eaa317b56006)
+$(ID:b2c34190-2a94-4451-bbdd-a0e4f6a9b341)
 
 $(ID:0805a55e-1994-43a4-b738-8121678ba06b)
 
@@ -39,12 +39,12 @@ $(ID:40df31f8-5c97-4b90-b213-487ad36057b3)
 <source>Authors: Joseph Lee, Derek Riemer and others</source>
 </segment>
 </unit>
-<unit id="fd466826-f0a8-4a2a-807a-eaa317b56006">
+<unit id="b2c34190-2a94-4451-bbdd-a0e4f6a9b341">
 <notes>
 <note appliesTo="source">line: 6</note>
 </notes>
 <segment>
-<source>IMPORTANT: Windows App Essentials add-on is officially end of life as of October 14, 2025. No changes except to improve NVDA's support and compatibility with Windows features and releases.</source>
+<source>IMPORTANT: Windows App Essentials add-on is in deep maintenance mode (no longer actively developed) since October 14, 2025. No changes except to improve NVDA's support and compatibility with Windows features and releases.</source>
 </segment>
 </unit>
 <unit id="0805a55e-1994-43a4-b738-8121678ba06b">
