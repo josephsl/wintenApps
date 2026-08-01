@@ -2,7 +2,7 @@
 
 * Yazarlar: Joseph Lee, Derek Riemer ve diğerleri
 
-ÖNEMLİ: Windows Temel Uygulamalar eklentisi, 14 Ekim 2025 itibarıyla resmi olarak kullanım ömrünün sonuna gelmiştir. NVDA'nın desteğini ve Windows özellikleri ve sürümleriyle uyumluluğunu geliştirmek dışında herhangi bir değişiklik yapılmayacaktır.
+IMPORTANT: Windows App Essentials add-on is in deep maintenance mode (no longer actively developed) since October 14, 2025. No changes except to improve NVDA's support and compatibility with Windows features and releases.
 
 Bu eklenti, çeşitli modern Windows uygulamalarına yönelik uygulama modüllerinin yanı sıra Windows 11'de bulunan belirli kontrollere yönelik geliştirmeler ve düzeltmelerden oluşan bir koleksiyondur.
 
