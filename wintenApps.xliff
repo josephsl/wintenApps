@@ -1,10 +1,12 @@
 <?xml version="1.0"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
-<file id="readme.md" original="https://raw.githubusercontent.com/josephsl/wintenApps/e19742ea5848bd92363f199281e5e4895b1619ae/readme.md">
+<file id="readme.md" original="https://raw.githubusercontent.com/josephsl/wintenApps/445a472f0911e3ab54b3c9b1db5cb033a599e588/readme.md">
 <skeleton>
 # $(ID:f5513b0a-a661-4375-9734-175df0cb8dbe)
 
 * $(ID:cd2fa553-2725-45dc-b547-6aff61861058)
+
+$(ID:f4fbd0a0-eb4b-4517-adf8-edd4cf8e3db6)
 
 $(ID:b2c34190-2a94-4451-bbdd-a0e4f6a9b341)
 
@@ -39,9 +41,17 @@ $(ID:40df31f8-5c97-4b90-b213-487ad36057b3)
 <source>Authors: Joseph Lee, Derek Riemer and others</source>
 </segment>
 </unit>
-<unit id="b2c34190-2a94-4451-bbdd-a0e4f6a9b341">
+<unit id="f4fbd0a0-eb4b-4517-adf8-edd4cf8e3db6">
 <notes>
 <note appliesTo="source">line: 6</note>
+</notes>
+<segment>
+<source>Improving support for various apps and controls on Windows 11.</source>
+</segment>
+</unit>
+<unit id="b2c34190-2a94-4451-bbdd-a0e4f6a9b341">
+<notes>
+<note appliesTo="source">line: 8</note>
 </notes>
 <segment>
 <source>IMPORTANT: Windows App Essentials add-on is in deep maintenance mode (no longer actively developed) since October 14, 2025. No changes except to improve NVDA's support and compatibility with Windows features and releases.</source>
@@ -49,7 +59,7 @@ $(ID:40df31f8-5c97-4b90-b213-487ad36057b3)
 </unit>
 <unit id="0805a55e-1994-43a4-b738-8121678ba06b">
 <notes>
-<note appliesTo="source">line: 8</note>
+<note appliesTo="source">line: 10</note>
 </notes>
 <segment>
 <source>This add-on is a collection of app modules for various modern Windows apps, as well as enhancements and fixes for certain controls found in Windows 11.</source>
@@ -57,7 +67,7 @@ $(ID:40df31f8-5c97-4b90-b213-487ad36057b3)
 </unit>
 <unit id="2421ac54-85c1-47b8-aa56-d12753a94067">
 <notes>
-<note appliesTo="source">line: 10</note>
+<note appliesTo="source">line: 12</note>
 </notes>
 <segment>
 <source>Notes:</source>
@@ -65,7 +75,7 @@ $(ID:40df31f8-5c97-4b90-b213-487ad36057b3)
 </unit>
 <unit id="c4d38bcb-09c0-4863-bf1d-a60c71083b14">
 <notes>
-<note appliesTo="source">line: 12</note>
+<note appliesTo="source">line: 14</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -74,7 +84,7 @@ $(ID:40df31f8-5c97-4b90-b213-487ad36057b3)
 </unit>
 <unit id="d19ed883-42a5-456f-93dd-b5b9242af3c1">
 <notes>
-<note appliesTo="source">line: 13</note>
+<note appliesTo="source">line: 15</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -83,7 +93,7 @@ $(ID:40df31f8-5c97-4b90-b213-487ad36057b3)
 </unit>
 <unit id="04497048-0db6-4eec-b8d5-43b95ba81c81">
 <notes>
-<note appliesTo="source">line: 14</note>
+<note appliesTo="source">line: 16</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -92,7 +102,7 @@ $(ID:40df31f8-5c97-4b90-b213-487ad36057b3)
 </unit>
 <unit id="e9c6d484-a1eb-41ec-9440-6ef6f772db36">
 <notes>
-<note appliesTo="source">line: 15</note>
+<note appliesTo="source">line: 17</note>
 <note appliesTo="source">prefix: * </note>
 </notes>
 <segment>
@@ -101,7 +111,7 @@ $(ID:40df31f8-5c97-4b90-b213-487ad36057b3)
 </unit>
 <unit id="d8d8115c-d866-4486-9206-7e8d22401ef1">
 <notes>
-<note appliesTo="source">line: 17</note>
+<note appliesTo="source">line: 19</note>
 </notes>
 <segment>
 <source>For a list of changes made between each add-on releases, refer to [changelogs for add-on releases][1] document.</source>
@@ -109,7 +119,7 @@ $(ID:40df31f8-5c97-4b90-b213-487ad36057b3)
 </unit>
 <unit id="40df31f8-5c97-4b90-b213-487ad36057b3">
 <notes>
-<note appliesTo="source">line: 19</note>
+<note appliesTo="source">line: 21</note>
 </notes>
 <segment>
 <source>[1]: https://github.com/josephsl/wintenapps/blob/main/changes.md</source>
