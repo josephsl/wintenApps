@@ -2,6 +2,8 @@
 
 * Yazarlar: Joseph Lee, Derek Riemer ve diğerleri
 
+Improving support for various apps and controls on Windows 11.
+
 ÖNEMLİ: Windows Temel Uygulamalar eklentisi, 14 Ekim 2025 tarihinden itibaren kapsamlı bakım modundadır (artık aktif olarak geliştirilmemektedir). NVDA’nın Windows özellikleri ve sürümleriyle olan desteği ve uyumluluğunu iyileştirmeye yönelik değişiklikler dışında herhangi bir değişiklik yapılmayacaktır.
 
 Bu eklenti, çeşitli modern Windows uygulamalarına yönelik uygulama modüllerinin yanı sıra Windows 11'de bulunan belirli kontrollere yönelik geliştirmeler ve düzeltmelerden oluşan bir koleksiyondur.
