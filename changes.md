@@ -8,6 +8,11 @@ Note: originally called Windows 10 App Essentials, this add-on was renamed to Wi
 
 For each add-on version entry, minor versions (such as 18.06.1) are included under major release (18.06, for example).
 
+## Version 26.09
+
+* NVDA 2026.2 or later is required.
+* Removed app module for File Explorer.
+
 ## Version 26.08
 
 * Updated the add-on documentation to state that the add-on is in deep maintenance mode (no longer actively developed).
