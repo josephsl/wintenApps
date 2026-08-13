@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-07-29 18:51+0000\n"
-"PO-Revision-Date: 2026-07-31 15:50\n"
+"POT-Creation-Date: 2026-08-13 16:51+0000\n"
+"PO-Revision-Date: 2026-08-13 16:53\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
@@ -46,6 +46,7 @@ msgstr "Amélioration de la prise en charge de diverses applications et contrôl
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* Initial support for Windows 11 Version 26H2 (2026 Update)."
-msgstr "* Initial support for Windows 11 Version 26H2 (2026 Update)."
+msgid "* NVDA 2026.2 or later is required.\n"
+"* Removed app module for File Explorer."
+msgstr ""
 
