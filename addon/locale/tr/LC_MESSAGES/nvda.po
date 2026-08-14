@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-08-13 16:51+0000\n"
-"PO-Revision-Date: 2026-08-13 16:53\n"
+"PO-Revision-Date: 2026-08-14 04:02\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -48,5 +48,6 @@ msgstr "Windows 11'deki çeşitli uygulamalar ve denetimler için desteği geli�
 #: buildVars.py:29
 msgid "* NVDA 2026.2 or later is required.\n"
 "* Removed app module for File Explorer."
-msgstr ""
+msgstr "* NVDA 2026.2 veya sonrası sürümler gerekli.\n"
+"* Dosya Gezgini için uygulama modülü kaldırıldı."
 
