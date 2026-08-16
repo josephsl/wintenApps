@@ -10,7 +10,7 @@ For each add-on version entry, minor versions (such as 18.06.1) are included und
 
 ## Version 26.09
 
-* NVDA 2026.2 or later is required.
+* NVDA 2026.2 (64-bit) or later is required.
 * Removed app module for File Explorer.
 
 ## Version 26.08
