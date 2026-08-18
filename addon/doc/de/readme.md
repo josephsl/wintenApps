@@ -2,6 +2,10 @@
 
 * Autoren: Joseph Lee, Derek Riemer und weitere
 
+Improving support for various apps and controls on Windows 11.
+
+IMPORTANT: Windows App Essentials add-on is in deep maintenance mode (no longer actively developed) since October 14, 2025. No changes except to improve NVDA's support and compatibility with Windows features and releases.
+
 Diese Erweiterung ist eine Sammlung von App-Modulen für verschiedene moderne Windows-Apps sowie Verbesserungen und Korrekturen für bestimmte Steuerelemente in Windows 11.
 
 Hinweise:
