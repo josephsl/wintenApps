@@ -12,7 +12,7 @@ Napomene:
 
 * Ovaj dodatak zahteva Windows 11 25H2 (podverziju 26200) ili noviji.
 * Trajanje podrške određenog funkcionalnog ažuriranja je vezano za trajanje korisničke podrške (Home, Pro, Pro Education, Pro for Workstations editions) i dodatak će možda prestati da podržava određeno ažuriranje pre kraja korisničke podrške. Pogledajte <https://aka.ms/WindowsTargetVersioninfo> za više informacija i datume podrške.
-* Although installation is possible, this add-on does not support Windows Enterprise LTSC (Long-Term Servicing Channel) and Windows Server releases.
+* Iako je instalacija moguća, ovaj dodatak ne podržava Windows Enterprise LTSC (Long-Term Servicing Channel) i serverska izdanja Windowsa.
 * Sve funkcije Windows insajderskih verzija neće biti podržane, naročito funkcije koje se predstavljaju određenog skupu insajdera.
 
 Za listu promena izvršenih u različitim verzijama dodatka, pogledajte dokument [changelogs for add-on releases][1].
