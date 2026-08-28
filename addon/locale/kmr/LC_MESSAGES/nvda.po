@@ -5,15 +5,15 @@ msgstr ""
 "POT-Creation-Date: 2026-08-17 00:50+0000\n"
 "PO-Revision-Date: 2026-08-28 06:29\n"
 "Last-Translator: \n"
-"Language-Team: Serbian (Latin)\n"
-"Language: sr_CS\n"
+"Language-Team: Kurmanji (Kurdish)\n"
+"Language: kmr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: nvdaaddons\n"
 "X-Crowdin-Project-ID: 780748\n"
-"X-Crowdin-Language: sr-CS\n"
+"X-Crowdin-Language: kmr\n"
 "X-Crowdin-File: wintenApps.pot\n"
 "X-Crowdin-File-ID: 639\n"
 
@@ -22,31 +22,32 @@ msgstr ""
 #, python-brace-format
 msgid "You are using {releaseName} ({build}), a Windows release not supported by Windows App Essentials NVDA add-on.\n"
 "This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
-msgstr "Koristite {releaseName} ({build}), Windows verziju koju NVDA dodatak Windows App Essentials ne podržava.\n"
-"Ovaj dodatak zahteva {supportedReleaseName} ({supportedBuild}) ili noviji."
+msgstr "Hûn {releaseName} ({build}) bi kar tînin, guhertoyek Windows-ê ye ku ji hêla pêveka Windows App Essentials NVDA ve nayê piştgirî kirin.\n"
+"Ev pêvek hewceyê {supportedReleaseName} ({supportedBuild}) an guhertoyek nûtir e."
 
 #. Translators: dialog title shown when trying to install the add-on on unsupported systems.
 #: addon\installTasks.py:37
 msgid "Windows App Essentials install error"
-msgstr "Windows App Essentials greška instalacije"
+msgstr "Çewtiya sazkirina Windows App Essentials"
 
 #. Add-on summary/title, usually the user visible name of the add-on
 #. Translators: Summary/title for this add-on
 #. to be shown on installation and add-on information found in add-on store
 #: buildVars.py:21
 msgid "Windows App Essentials"
-msgstr "Windows App Essentials"
+msgstr "Pêdiviyên bingehîn ên sepanên Windows-ê"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-on store
 #: buildVars.py:24
 msgid "Improving support for various apps and controls on Windows 11"
-msgstr "Poboljšava podršku za razne aplikacije i kontrole na Windowsu 11"
+msgstr "Baştirkirina piştgiriya ji bo sepan û kontrolên cûrbecûr li ser Windows 11"
 
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
 msgid "* NVDA 2026.2 (64-bit) or later is required.\n"
 "* Removed app module for File Explorer."
-msgstr ""
+msgstr "* NVDA 2026.2 (64-bit) an jî guhertoyek nûtir pêwîst e.\n"
+"* Modula sepanê ji bo File Explorer hat rakirin."
 
