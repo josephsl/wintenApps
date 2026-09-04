@@ -2,7 +2,7 @@
 
 * 저자: Joseph Lee(이성원), Derek Riemer 외 다수
 
-Improving support for various apps and controls on Windows 11.
+윈도우 11에서의 앱 지원 기능 향상
 
 IMPORTANT: Windows App Essentials add-on is in deep maintenance mode (no longer actively developed) since October 14, 2025. No changes except to improve NVDA's support and compatibility with Windows features and releases.
 
