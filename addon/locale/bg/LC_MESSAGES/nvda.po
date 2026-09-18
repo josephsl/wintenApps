@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2026-08-29 03:26+0000\n"
-"PO-Revision-Date: 2026-09-04 11:59\n"
+"PO-Revision-Date: 2026-09-15 00:25\n"
 "Last-Translator: \n"
 "Language-Team: Bulgarian\n"
 "Language: bg_BG\n"
@@ -48,5 +48,6 @@ msgstr "Подобряване на поддръжката за различни
 #: buildVars.py:29
 msgid "* NVDA 2026.2 (64-bit) or later is required.\n"
 "* Removed app module for File Explorer."
-msgstr ""
+msgstr "* Изисква се 64-битово издание на NVDA 2026.2 или по-нова версия.\n"
+"* Премахнат е модула за приложението File Explorer."
 
