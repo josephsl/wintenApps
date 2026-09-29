@@ -2,9 +2,9 @@
 
 Author: Joseph Lee
 
-Revision: October 2025
+Revision: October 2026
 
-IMPORTANT: Windows App Essentials add-on is officially end of life as of October 14, 2025. No changes except to improve NVDA's support and compatibility with Windows features and releases.
+IMPORTANT: Windows App Essentials add-on is in deep maintenance mode since October 14, 2025 (previously end of life in October 2025, revivied in 2026 and entered deep maintenance mode). No changes except to improve NVDA's support and compatibility with Windows features and releases.
 
 Note: originally called Windows 10 App Essentials, the add-on was renamed to Windows App Essentials in 2021 with the introduction of Windows 11. Parts of this document will refer to the original add-on name or Windows 10.
 
@@ -97,7 +97,7 @@ This article will sometimes reference add-on update feature, which is gone in 20
 
 ### Special note on feature updates support on Windows 10 and later
 
-Windows App Essentials add-on supports a given Windows feature update (release) for at least one year and no more than end of consumer level support (Home, Pro, Pro Education, Pro for Workstations); exceptions are Windows 10 22H2 (the final Windows 10 feature update which will be supported until October 2025) and 11 24H2/25H2 (supported until the add-on is discontinued in October 2025; 24H2 support did fulfill minimum one year support criteria). In addition, it comes with support for features found in Windows Insider Preview (WIP) builds, including features that may not appear in subsequent feature updates.
+Windows App Essentials add-on supports a given Windows feature update (release) for at least one year and no more than end of consumer level support (Home, Pro, Pro Education, Pro for Workstations); exceptions are Windows 10 22H2 (the final Windows 10 feature update which was supported until October 2025) and 11 24H2/25H2 (supported until the add-on was discontinued in October 2025 then support resumed with 25H2 in 2026; 24H2 support did fulfill minimum one year support criteria). In addition, it comes with support for features found in Windows Insider Preview (WIP) builds, including features that may not appear in subsequent feature updates.
 
 ### Important note on add-on end of life
 
