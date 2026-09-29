@@ -25,9 +25,9 @@ You can contribute to Windows App Essentials in a number of ways:
 
 You must:
 
-1. Be running the latest supported version of Windows 11 (as of September 2026, this means Windows 11 2025 Update (Version 25H2) and latest Insider Preview (experimental/beta/release preview) build).
+1. Be running the latest supported version of Windows 11 (as of October 2026, this means Windows 11 2026 Update (Version 26H2) and latest Insider Preview (experimental/beta/release preview) build).
 2. Be running the latest stable version of NVDA or later (as of September 2026, this means NVDA 2026.2 or latest alpha release).
-3. If you wish to offer code/pull requests, you must be running latest stable NVDA (2026.2) and Windows 11 (25H2) release or later.
+3. If you wish to offer code/pull requests, you must be running latest stable NVDA (2026.2) and Windows 11 (26H2) release or later.
 4. To package your modifications into an add-on build, you must be using Python 3.13 or later.
 
 ## Contribution process
@@ -65,7 +65,7 @@ Historical, no longer accepted: you must do this through NVDA translations workf
 
 #### Windows release requirement
 
-To contribute code and pull requests, you must use latest stable Windows 11 (25H2) release or Windows Insider build.
+To contribute code and pull requests, you must use latest stable Windows 11 (26H2) release or Windows Insider build.
 
 #### Coding style
 
