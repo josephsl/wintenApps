@@ -3,8 +3,8 @@ name: Crowdin l10n
 on:
   workflow_dispatch:
   schedule:
-    # Every Friday at 22:00 UTC
-    - cron: '0 22 * * 5'
+    # Every Monday at 00:00 UTC
+    - cron: '0 0 * * 1'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
