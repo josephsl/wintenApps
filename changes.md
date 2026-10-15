@@ -8,6 +8,10 @@ Note: originally called Windows 10 App Essentials, this add-on was renamed to Wi
 
 For each add-on version entry, minor versions (such as 18.06.1) are included under major release (18.06, for example).
 
+## Version 26.11
+
+* NVDA 2026.3 or later is required.
+
 ## Version 26.09
 
 * NVDA 2026.2 (64-bit) or later is required.
