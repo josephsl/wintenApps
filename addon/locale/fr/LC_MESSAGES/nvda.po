@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nvdaaddons\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-09-26 00:15+0000\n"
-"PO-Revision-Date: 2026-10-07 01:16\n"
+"POT-Creation-Date: 2026-10-19 01:59+0000\n"
+"PO-Revision-Date: 2026-10-19 02:00\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
@@ -46,7 +46,6 @@ msgstr "Amélioration de la prise en charge de diverses applications et contrôl
 #. Brief changelog for this version
 #. Translators: what's new content for the add-on version to be shown in the add-on store
 #: buildVars.py:29
-msgid "* NVDA 2026.2 (64-bit) or later is required.\n"
-"* Removed app module for File Explorer."
+msgid "* NVDA 2026.3 or later is required."
 msgstr ""
 
