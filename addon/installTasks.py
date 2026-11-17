@@ -19,7 +19,7 @@ def onInstall() -> None:
 	# (Home, Pro, Pro Education, Pro for Workstations)
 	# and the add-on may end support for a feature update prior to end of consumer support.
 	# See aka.ms/WindowsTargetVersioninfo.
-	# For Insider Preview, only the latest canary/dev/beta/release preview builds are supported.
+	# For Insider Preview, only the latest experimental/beta/release preview builds are supported.
 	minimumWinVer = winVersion.WinVersion(major=10, minor=0, build=26200, releaseName="Windows 11 25H2")
 	if (currentWinVer := winVersion.getWinVer()) < minimumWinVer:
 		gui.MessageDialog.alert(
